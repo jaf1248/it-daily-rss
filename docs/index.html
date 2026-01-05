@@ -5,45 +5,111 @@
     <title>Joe's IT Intelligence Feeds</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style>
-      body {
-        font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-        margin: 24px;
-        max-width: 900px;
-      }
-      ul { line-height: 1.8; }
+      body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; margin: 24px; max-width: 1100px; }
+      .muted { opacity: 0.75; }
+      .row { display: grid; grid-template-columns: 1fr; gap: 18px; }
+      @media (min-width: 900px) { .row { grid-template-columns: 1fr 1fr 1fr; } }
+      .card { border: 1px solid #e6e6e6; border-radius: 14px; padding: 16px; box-shadow: 0 1px 6px rgba(0,0,0,0.04); }
+      h1 { margin-bottom: 6px; }
+      h2 { margin: 0 0 8px 0; font-size: 18px; }
+      ol { padding-left: 18px; margin: 10px 0 0 0; }
+      li { margin: 10px 0; }
       a { text-decoration: none; }
       a:hover { text-decoration: underline; }
-      .desc { color: #555; font-size: 14px; }
+      .meta { font-size: 12px; margin-top: 4px; }
+      .chip { display: inline-block; padding: 2px 8px; border: 1px solid #ddd; border-radius: 999px; font-size: 12px; margin-left: 8px; }
+      .toplinks a { margin-right: 12px; }
+      .error { color: #b00020; }
     </style>
   </head>
   <body>
-    <h1>Joe's IT Intelligence Feeds</h1>
+    <h1>Joe's IT Intelligence</h1>
+    <p class="muted">
+      Live headlines pulled from your GitHub-generated RSS feeds.
+      <span class="chip" id="status">Loading…</span>
+    </p>
 
-    <p>Subscribe to the feeds below in Feedly, Outlook, or any RSS reader.</p>
+    <p class="toplinks">
+      Raw feeds:
+      <a href="./security.xml">security.xml</a>
+      <a href="./sysadmin.xml">sysadmin.xml</a>
+      <a href="./vp.xml">vp.xml</a>
+    </p>
 
-    <h2>🔐 Security</h2>
-    <ul>
-      <li>
-        <a href="./security.xml">security.xml</a>
-        <div class="desc">Threats, CVEs, zero-days, breaches, and advisories</div>
-      </li>
-    </ul>
+    <div class="row">
+      <div class="card">
+        <h2>🔐 Security</h2>
+        <div class="muted" style="font-size:13px;">CVE/zero-days/breaches/advisories</div>
+        <ol id="securityList"></ol>
+      </div>
 
-    <h2>🛠 SysAdmin / Operations</h2>
-    <ul>
-      <li>
-        <a href="./sysadmin.xml">sysadmin.xml</a>
-        <div class="desc">Microsoft changes, patching, outages, infrastructure</div>
-      </li>
-    </ul>
+      <div class="card">
+        <h2>🛠 SysAdmin / Ops</h2>
+        <div class="muted" style="font-size:13px;">Microsoft changes/patching/outages/infra</div>
+        <ol id="sysadminList"></ol>
+      </div>
 
-    <h2>🏢 VP of IT / Leadership</h2>
-    <ul>
-      <li>
-        <a href="./vp.xml">vp.xml</a>
-        <div class="desc">Risk, vendors, strategy, and executive IT context</div>
-      </li>
-    </ul>
+      <div class="card">
+        <h2>🏢 VP of IT</h2>
+        <div class="muted" style="font-size:13px;">Risk/vendors/strategy/executive context</div>
+        <ol id="vpList"></ol>
+      </div>
+    </div>
 
+    <script>
+      async function fetchAndRender(feedPath, listId, maxItems = 12) {
+        const list = document.getElementById(listId);
+
+        // Cache-bust so updates show quickly
+        const resp = await fetch(feedPath + "?ts=" + Date.now());
+        if (!resp.ok) throw new Error(feedPath + " returned HTTP " + resp.status);
+
+        const text = await resp.text();
+        const xml = new DOMParser().parseFromString(text, "text/xml");
+
+        const items = Array.from(xml.querySelectorAll("item"));
+        list.innerHTML = "";
+
+        if (items.length === 0) {
+          list.innerHTML = "<li class='muted'>No items yet.</li>";
+          return 0;
+        }
+
+        items.slice(0, maxItems).forEach(item => {
+          const title = item.querySelector("title")?.textContent?.trim() || "(No title)";
+          const link = item.querySelector("link")?.textContent?.trim() || "#";
+          const pubDate = item.querySelector("pubDate")?.textContent?.trim() || "";
+
+          const li = document.createElement("li");
+          li.innerHTML = `
+            <a href="${link}" target="_blank" rel="noopener noreferrer">${title}</a>
+            <div class="muted meta">${pubDate}</div>
+          `;
+          list.appendChild(li);
+        });
+
+        return items.length;
+      }
+
+      async function main() {
+        const status = document.getElementById("status");
+        try {
+          const counts = await Promise.all([
+            fetchAndRender("./security.xml", "securityList"),
+            fetchAndRender("./sysadmin.xml", "sysadminList"),
+            fetchAndRender("./vp.xml", "vpList"),
+          ]);
+          status.textContent = `Loaded (S:${counts[0]} / O:${counts[1]} / VP:${counts[2]})`;
+        } catch (e) {
+          status.textContent = "Error";
+          status.classList.add("error");
+          document.getElementById("securityList").innerHTML = `<li class="error">Could not load feeds: ${e.message}</li>`;
+          document.getElementById("sysadminList").innerHTML = `<li class="error">Could not load feeds: ${e.message}</li>`;
+          document.getElementById("vpList").innerHTML = `<li class="error">Could not load feeds: ${e.message}</li>`;
+        }
+      }
+
+      main();
+    </script>
   </body>
 </html>
