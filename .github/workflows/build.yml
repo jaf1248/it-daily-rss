@@ -36,7 +36,7 @@ jobs:
           git config user.name "rss-bot"
           git config user.email "rss-bot@users.noreply.github.com"
 
-          git add docs/rss.xml
+          git add docs/*.xml
           git commit -m "Update rss.xml" || echo "No changes"
 
           git pull --rebase origin main
