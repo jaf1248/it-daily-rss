@@ -2,71 +2,48 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Joe's Daily IT RSS</title>
+    <title>Joe's IT Intelligence Feeds</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style>
-      body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; margin: 24px; max-width: 980px; }
-      .muted { opacity: 0.75; }
-      li { margin: 10px 0; }
+      body {
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+        margin: 24px;
+        max-width: 900px;
+      }
+      ul { line-height: 1.8; }
       a { text-decoration: none; }
       a:hover { text-decoration: underline; }
-      .chip { display: inline-block; padding: 2px 8px; border: 1px solid #ddd; border-radius: 999px; font-size: 12px; margin-left: 8px; }
+      .desc { color: #555; font-size: 14px; }
     </style>
   </head>
   <body>
-    <h1>Joe's Daily IT RSS</h1>
-    <p class="muted">
-      RSS feed: <a href="./rss.xml">rss.xml</a>
-      <span class="chip" id="status">Loading…</span>
-    </p>
+    <h1>Joe's IT Intelligence Feeds</h1>
 
-    <h2>Latest items</h2>
-    <ol id="list"></ol>
+    <p>Subscribe to the feeds below in Feedly, Outlook, or any RSS reader.</p>
 
-    <script>
-      async function loadRSS() {
-        const status = document.getElementById("status");
-        const list = document.getElementById("list");
+    <h2>🔐 Security</h2>
+    <ul>
+      <li>
+        <a href="./security.xml">security.xml</a>
+        <div class="desc">Threats, CVEs, zero-days, breaches, and advisories</div>
+      </li>
+    </ul>
 
-        try {
-          // Bust cache so you see updates quickly
-          const resp = await fetch("./rss.xml?ts=" + Date.now());
-          if (!resp.ok) throw new Error("HTTP " + resp.status);
+    <h2>🛠 SysAdmin / Operations</h2>
+    <ul>
+      <li>
+        <a href="./sysadmin.xml">sysadmin.xml</a>
+        <div class="desc">Microsoft changes, patching, outages, infrastructure</div>
+      </li>
+    </ul>
 
-          const text = await resp.text();
-          const xml = new window.DOMParser().parseFromString(text, "text/xml");
+    <h2>🏢 VP of IT / Leadership</h2>
+    <ul>
+      <li>
+        <a href="./vp.xml">vp.xml</a>
+        <div class="desc">Risk, vendors, strategy, and executive IT context</div>
+      </li>
+    </ul>
 
-          const items = Array.from(xml.querySelectorAll("item"));
-          list.innerHTML = "";
-
-          if (!items.length) {
-            status.textContent = "No items found";
-            list.innerHTML = "<li>No items in rss.xml yet.</li>";
-            return;
-          }
-
-          // Show up to 40 most recent
-          items.slice(0, 40).forEach((item) => {
-            const title = item.querySelector("title")?.textContent?.trim() || "(No title)";
-            const link = item.querySelector("link")?.textContent?.trim() || "#";
-            const pubDate = item.querySelector("pubDate")?.textContent?.trim() || "";
-
-            const li = document.createElement("li");
-            li.innerHTML = `
-              <a href="${link}" target="_blank" rel="noopener noreferrer">${title}</a>
-              <div class="muted" style="font-size:12px; margin-top:4px;">${pubDate}</div>
-            `;
-            list.appendChild(li);
-          });
-
-          status.textContent = "Loaded " + items.length;
-        } catch (e) {
-          status.textContent = "Error";
-          list.innerHTML = "<li>Could not load rss.xml. " + e.message + "</li>";
-        }
-      }
-
-      loadRSS();
-    </script>
   </body>
 </html>
