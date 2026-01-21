@@ -4,12 +4,28 @@
     <meta charset="utf-8" />
     <title>Joe's IT Intelligence Feeds</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <style>
-      body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; margin: 24px; max-width: 1100px; }
+      body {
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+        margin: 24px;
+        max-width: 1200px;
+      }
       .muted { opacity: 0.75; }
-      .row { display: grid; grid-template-columns: 1fr; gap: 18px; }
-      @media (min-width: 900px) { .row { grid-template-columns: 1fr 1fr 1fr; } }
-      .card { border: 1px solid #e6e6e6; border-radius: 14px; padding: 16px; box-shadow: 0 1px 6px rgba(0,0,0,0.04); }
+      .row {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+      @media (min-width: 900px) {
+        .row { grid-template-columns: 1fr 1fr 1fr 1fr; }
+      }
+      .card {
+        border: 1px solid #e6e6e6;
+        border-radius: 14px;
+        padding: 16px;
+        box-shadow: 0 1px 6px rgba(0,0,0,0.04);
+      }
       h1 { margin-bottom: 6px; }
       h2 { margin: 0 0 8px 0; font-size: 18px; }
       ol { padding-left: 18px; margin: 10px 0 0 0; }
@@ -17,15 +33,23 @@
       a { text-decoration: none; }
       a:hover { text-decoration: underline; }
       .meta { font-size: 12px; margin-top: 4px; }
-      .chip { display: inline-block; padding: 2px 8px; border: 1px solid #ddd; border-radius: 999px; font-size: 12px; margin-left: 8px; }
+      .chip {
+        display: inline-block;
+        padding: 2px 8px;
+        border: 1px solid #ddd;
+        border-radius: 999px;
+        font-size: 12px;
+        margin-left: 8px;
+      }
       .toplinks a { margin-right: 12px; }
       .error { color: #b00020; }
     </style>
   </head>
+
   <body>
     <h1>Joe's IT Intelligence</h1>
     <p class="muted">
-      Live headlines pulled from your GitHub-generated RSS feeds.
+      Live headlines from your GitHub-generated RSS feeds.
       <span class="chip" id="status">Loading…</span>
     </p>
 
@@ -34,40 +58,55 @@
       <a href="./security.xml">security.xml</a>
       <a href="./sysadmin.xml">sysadmin.xml</a>
       <a href="./vp.xml">vp.xml</a>
+      <a href="./radar.xml">radar.xml</a>
     </p>
 
     <div class="row">
       <div class="card">
         <h2>🔐 Security</h2>
-        <div class="muted" style="font-size:13px;">CVE/zero-days/breaches/advisories</div>
+        <div class="muted" style="font-size:13px;">
+          CVEs, zero-days, breaches, advisories
+        </div>
         <ol id="securityList"></ol>
       </div>
 
       <div class="card">
         <h2>🛠 SysAdmin / Ops</h2>
-        <div class="muted" style="font-size:13px;">Microsoft changes/patching/outages/infra</div>
+        <div class="muted" style="font-size:13px;">
+          Microsoft changes, patching, outages, infrastructure
+        </div>
         <ol id="sysadminList"></ol>
       </div>
 
       <div class="card">
         <h2>🏢 VP of IT</h2>
-        <div class="muted" style="font-size:13px;">Risk/vendors/strategy/executive context</div>
+        <div class="muted" style="font-size:13px;">
+          Risk, vendors, pricing, executive context
+        </div>
         <ol id="vpList"></ol>
+      </div>
+
+      <div class="card">
+        <h2>🛰 Under the Radar</h2>
+        <div class="muted" style="font-size:13px;">
+          Smaller blogs & early technical signal
+        </div>
+        <ol id="radarList"></ol>
       </div>
     </div>
 
     <script>
       async function fetchAndRender(feedPath, listId, maxItems = 12) {
         const list = document.getElementById(listId);
+        list.innerHTML = "<li class='muted'>Loading…</li>";
 
-        // Cache-bust so updates show quickly
         const resp = await fetch(feedPath + "?ts=" + Date.now());
         if (!resp.ok) throw new Error(feedPath + " returned HTTP " + resp.status);
 
         const text = await resp.text();
         const xml = new DOMParser().parseFromString(text, "text/xml");
-
         const items = Array.from(xml.querySelectorAll("item"));
+
         list.innerHTML = "";
 
         if (items.length === 0) {
@@ -98,14 +137,13 @@
             fetchAndRender("./security.xml", "securityList"),
             fetchAndRender("./sysadmin.xml", "sysadminList"),
             fetchAndRender("./vp.xml", "vpList"),
+            fetchAndRender("./radar.xml", "radarList"),
           ]);
-          status.textContent = `Loaded (S:${counts[0]} / O:${counts[1]} / VP:${counts[2]})`;
+          status.textContent =
+            `Loaded (S:${counts[0]} / O:${counts[1]} / VP:${counts[2]} / R:${counts[3]})`;
         } catch (e) {
-          status.textContent = "Error";
+          status.textContent = "Error loading feeds";
           status.classList.add("error");
-          document.getElementById("securityList").innerHTML = `<li class="error">Could not load feeds: ${e.message}</li>`;
-          document.getElementById("sysadminList").innerHTML = `<li class="error">Could not load feeds: ${e.message}</li>`;
-          document.getElementById("vpList").innerHTML = `<li class="error">Could not load feeds: ${e.message}</li>`;
         }
       }
 
