@@ -17,7 +17,9 @@ CONFIGS = [
     ("feeds-sysadmin.yaml", "sysadmin.xml", "sysadmin"),
     ("feeds-vp.yaml", "vp.xml", "vp"),
     ("feeds-radar.yaml", "radar.xml", "radar"),
+    ("feeds.yaml", "rss.xml", "master"),
 ]
+
 
 
 def load_cfg(path: str) -> dict:
