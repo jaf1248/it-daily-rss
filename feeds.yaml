@@ -1,9 +1,12 @@
 title: "Joe's Daily IT Intelligence"
-description: "Automatically curated IT, Microsoft, and security news."
+description: "High-signal IT, Microsoft, and security intelligence."
 
+# This feed is intentionally broad but filtered.
+# Use your split feeds (security/sysadmin/vp/radar) for daily reading.
 keyword_filter_enabled: true
 
 keywords:
+  # Microsoft / Identity / Cloud
   - microsoft
   - entra
   - azure
@@ -11,27 +14,42 @@ keywords:
   - m365
   - intune
   - defender
+  - conditional access
+  - authentication
+  - identity
+  - mfa
+
+  # Security / Threats
   - cve
   - zero-day
+  - exploited
   - ransomware
   - phishing
-  - mfa
-  - identity
+  - breach
+  - vulnerability
+  - security update
 
 sources:
+  # Authoritative security
   - name: "Krebs on Security"
     url: "https://krebsonsecurity.com/feed/"
-  - name: "The Hacker News"
-    url: "https://feeds.feedburner.com/TheHackersNews"
-  - name: "Dark Reading"
-    url: "https://www.darkreading.com/rss_simple.asp"
+  - name: "Microsoft Security Response Center (MSRC)"
+    url: "https://api.msrc.microsoft.com/update-guide/rss"
+  - name: "SANS Internet Storm Center"
+    url: "https://isc.sans.edu/rssfeed_full.xml"
+
+  # Practitioner-focused security & ops
   - name: "BleepingComputer"
     url: "https://www.bleepingcomputer.com/feed/"
+  - name: "Dark Reading"
+    url: "https://www.darkreading.com/rss_simple.asp"
+  - name: "The Hacker News"
+    url: "https://feeds.feedburner.com/TheHackersNews"
+
+  # Microsoft change tracking
   - name: "Microsoft 365 – What's New"
     url: "https://learn.microsoft.com/en-us/microsoft-365/enterprise/whats-new/rss.xml"
   - name: "Entra – What's New"
     url: "https://learn.microsoft.com/en-us/entra/identity/whats-new/rss.xml"
   - name: "Exchange – What's New"
     url: "https://learn.microsoft.com/en-us/exchange/whats-new/rss.xml"
-  - name: "Techmeme"
-    url: "https://www.techmeme.com/feed.xml"
