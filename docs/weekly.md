@@ -1,5 +1,5 @@
 # Weekly Executive Summary (last 7 days)
-_Generated: 2026-01-21 21:29 UTC_
+_Generated: 2026-01-21 21:32 UTC_
 
 ## 🔴 Critical (take action / validate exposure)
 - 🔴 [Online retailer PcComponentes says data breach claims are fake](https://www.bleepingcomputer.com/news/security/online-retailer-pccomponentes-says-data-breach-claims-are-fake/) — **BleepingComputer**  
