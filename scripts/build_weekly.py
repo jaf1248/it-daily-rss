@@ -50,7 +50,7 @@ def main():
     since = datetime.now(timezone.utc) - timedelta(days=7)
     items = []
 
-    for src in cfg.get("sources", []):
+    for src in cfg.get("sources", []) or []:
         url = src.get("url")
         name = src.get("name", "Source")
         if not url:
@@ -77,14 +77,13 @@ def main():
 
     items.sort(key=lambda x: x["dt"], reverse=True)
 
-    # Build a concise executive digest
     top_critical = [x for x in items if x["sev"] == "🔴"][:5]
     top_important = [x for x in items if x["sev"] == "🟠"][:7]
     top_fyi = [x for x in items if x["sev"] == "🔵"][:5]
 
     now = datetime.now(timezone.utc)
     lines = []
-    lines.append(f"# Weekly Executive Summary (last 7 days)")
+    lines.append("# Weekly Executive Summary (last 7 days)")
     lines.append(f"_Generated: {now.strftime('%Y-%m-%d %H:%M UTC')}_")
     lines.append("")
     lines.append("## 🔴 Critical (take action / validate exposure)")
