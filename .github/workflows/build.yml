@@ -5,6 +5,10 @@ on:
     - cron: "0 * * * *"   # runs every hour
   workflow_dispatch:
 
+concurrency:
+  group: build-rss
+  cancel-in-progress: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -15,7 +19,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0   # IMPORTANT: needed for rebase
+          fetch-depth: 0
 
       - name: Setup Python
         uses: actions/setup-python@v5
@@ -27,17 +31,21 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: Sync to latest main
+        run: |
+          git fetch origin main
+          git reset --hard origin/main
+
       - name: Generate RSS
         run: |
           python scripts/build_rss.py
 
-      - name: Commit and push rss.xml safely
+      - name: Commit and push XML files
         run: |
           git config user.name "rss-bot"
           git config user.email "rss-bot@users.noreply.github.com"
 
           git add docs/*.xml
-          git commit -m "Update rss.xml" || echo "No changes"
+          git commit -m "Update feeds" || echo "No changes"
 
-          git pull --rebase origin main
           git push origin main
