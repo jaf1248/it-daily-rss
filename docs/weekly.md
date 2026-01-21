@@ -1,0 +1,37 @@
+# Weekly Executive Summary (last 7 days)
+_Generated: 2026-01-21 21:19 UTC_
+
+## 🔴 Critical (take action / validate exposure)
+- 🔴 [Online retailer PcComponentes says data breach claims are fake](https://www.bleepingcomputer.com/news/security/online-retailer-pccomponentes-says-data-breach-claims-are-fake/) — **BleepingComputer**  
+  _Why:_ Reinforce MFA and user awareness; watch for suspicious sign-ins.
+- 🔴 [Hackers exploit security testing apps to breach Fortune 500 firms](https://www.bleepingcomputer.com/news/security/hackers-exploit-security-testing-apps-to-breach-fortune-500-firms/) — **BleepingComputer**  
+  _Why:_ Worth awareness; review if it impacts your environment.
+- 🔴 [Why Secrets in JavaScript Bundles are Still Being Missed](https://thehackernews.com/2026/01/why-secrets-in-javascript-bundles-are.html) — **The Hacker News**  
+  _Why:_ Worth awareness; review if it impacts your environment.
+- 🔴 [Black Basta Ransomware Leader Added to EU Most Wanted and INTERPOL Red Notice](https://thehackernews.com/2026/01/black-basta-ransomware-hacker-leader.html) — **The Hacker News**  
+  _Why:_ Validate backups, EDR coverage, and response readiness.
+- 🔴 [AWS CodeBuild Misconfiguration Exposed GitHub Repos to Potential Supply Chain Attacks](https://thehackernews.com/2026/01/aws-codebuild-misconfiguration-exposed.html) — **The Hacker News**  
+  _Why:_ Worth awareness; review if it impacts your environment.
+
+## 🟠 Important (monitor / plan / communicate)
+- 🟠 [Fortinet admins report patched FortiGate firewalls getting hacked](https://www.bleepingcomputer.com/news/security/fortinet-admins-report-patched-fortigate-firewalls-getting-hacked/) — **BleepingComputer**  
+  _Why:_ Worth awareness; review if it impacts your environment.
+- 🟠 [Zoom and GitLab Release Security Updates Fixing RCE, DoS, and 2FA Bypass Flaws](https://thehackernews.com/2026/01/zoom-and-gitlab-release-security.html) — **The Hacker News**  
+  _Why:_ Worth awareness; review if it impacts your environment.
+- 🟠 [Microsoft shares workaround for Outlook freezes after Windows update](https://www.bleepingcomputer.com/news/microsoft/microsoft-shares-workaround-for-outlook-freezes-after-windows-update/) — **BleepingComputer**  
+  _Why:_ Worth awareness; review if it impacts your environment.
+- 🟠 [GitLab warns of high-severity 2FA bypass, denial-of-service flaws](https://www.bleepingcomputer.com/news/security/gitlab-warns-of-high-severity-2fa-bypass-denial-of-service-flaws/) — **BleepingComputer**  
+  _Why:_ Worth awareness; review if it impacts your environment.
+- 🟠 [Tesla hacked, 37 zero-days demoed at Pwn2Own Automotive 2026](https://www.bleepingcomputer.com/news/security/tesla-hacked-37-zero-days-demoed-at-pwn2own-automotive-2026/) — **BleepingComputer**  
+  _Why:_ Worth awareness; review if it impacts your environment.
+- 🟠 [Exposure Assessment Platforms Signal a Shift in Focus](https://thehackernews.com/2026/01/exposure-assessment-platforms-signal.html) — **The Hacker News**  
+  _Why:_ Worth awareness; review if it impacts your environment.
+- 🟠 [CERT/CC Warns binary-parser Bug Allows Node.js Privilege-Level Code Execution](https://thehackernews.com/2026/01/certcc-warns-binary-parser-bug-allows.html) — **The Hacker News**  
+  _Why:_ Worth awareness; review if it impacts your environment.
+
+## 🔵 FYI (context / backlog reads)
+- 🔵 [North Korean PurpleBravo Campaign Targeted 3,136 IP Addresses via Fake Job Interviews](https://thehackernews.com/2026/01/north-korean-purplebravo-campaign.html) — **The Hacker News**
+- 🔵 [Fake Lastpass emails pose as password vault backup alerts](https://www.bleepingcomputer.com/news/security/fake-lastpass-emails-pose-as-password-vault-backup-alerts/) — **BleepingComputer**
+- 🔵 [You Got Phished? Of Course! You're Human...](https://www.bleepingcomputer.com/news/security/you-got-phished-of-course-youre-human/) — **BleepingComputer**
+- 🔵 [Webinar: How Smart MSSPs Using AI to Boost Margins with Half the Staff](https://thehackernews.com/2026/01/webinar-how-smart-mssps-using-ai-to.html) — **The Hacker News**
+- 🔵 [Automatic Script Execution In Visual Studio Code, (Wed, Jan 21st)](https://isc.sans.edu/diary/rss/32644) — **SANS Internet Storm Center**
