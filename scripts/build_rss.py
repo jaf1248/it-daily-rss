@@ -154,9 +154,15 @@ def build_feed(cfg, out_path, kind, global_seen):
     items.sort(key=lambda x: x["date"], reverse=True)
     items = items[:200]
 
-    # Mark these as seen globally so later feeds skip them
-    for it in items:
+    # Mark items as globally seen only when appropriate
+for it in items:
+    # Only Security items that are Critical or Important should suppress downstream feeds
+    if kind == "security" and it["severity"] in ("Critical", "Important"):
         global_seen.add(it["dedupe_key"])
+
+    # Radar is intentionally non-blocking:
+    # it should never suppress other feeds, so do nothing here for radar
+
 
     rss_items = []
     for it in items:
