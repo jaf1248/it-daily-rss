@@ -18,6 +18,7 @@ CONFIGS = [
     ("feeds-vp.yaml", "vp.xml", "vp"),
     ("feeds-radar.yaml", "radar.xml", "radar"),
     ("feeds.yaml", "rss.xml", "master"),
+    ("feeds-archive.yaml", "archive.xml", "archive"),
 ]
 
 
