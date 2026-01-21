@@ -2,7 +2,8 @@ name: Build RSS
 
 on:
   schedule:
-    - cron: "0 * * * *"
+    - cron: "0 * * * *"        # hourly RSS build
+    - cron: "15 8 * * MON"     # weekly executive summary (Mondays)
   workflow_dispatch:
 
 concurrency:
