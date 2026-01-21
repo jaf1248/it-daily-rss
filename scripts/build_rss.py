@@ -16,7 +16,9 @@ CONFIGS = [
     ("feeds-security.yaml", "security.xml", "security"),
     ("feeds-sysadmin.yaml", "sysadmin.xml", "sysadmin"),
     ("feeds-vp.yaml", "vp.xml", "vp"),
+    ("feeds-radar.yaml", "radar.xml", "radar"),
 ]
+
 
 def load_cfg(path):
     with open(path, "r", encoding="utf-8") as f:
