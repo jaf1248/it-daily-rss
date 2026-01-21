@@ -2,30 +2,15 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Joe's IT Intelligence Feeds</title>
+    <title>Joe's IT Intelligence</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
     <style>
-      body {
-        font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-        margin: 24px;
-        max-width: 1200px;
-      }
+      body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; margin: 24px; max-width: 1300px; }
       .muted { opacity: 0.75; }
-      .row {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 18px;
-      }
-      @media (min-width: 900px) {
-        .row { grid-template-columns: 1fr 1fr 1fr 1fr; }
-      }
-      .card {
-        border: 1px solid #e6e6e6;
-        border-radius: 14px;
-        padding: 16px;
-        box-shadow: 0 1px 6px rgba(0,0,0,0.04);
-      }
+      .row { display: grid; grid-template-columns: 1fr; gap: 18px; }
+      @media (min-width: 900px) { .row { grid-template-columns: 1fr 1fr 1fr 1fr; } }
+      .card { border: 1px solid #e6e6e6; border-radius: 14px; padding: 16px; box-shadow: 0 1px 6px rgba(0,0,0,0.04); }
+      .wide { grid-column: 1 / -1; }
       h1 { margin-bottom: 6px; }
       h2 { margin: 0 0 8px 0; font-size: 18px; }
       ol { padding-left: 18px; margin: 10px 0 0 0; }
@@ -33,23 +18,37 @@
       a { text-decoration: none; }
       a:hover { text-decoration: underline; }
       .meta { font-size: 12px; margin-top: 4px; }
-      .chip {
-        display: inline-block;
-        padding: 2px 8px;
-        border: 1px solid #ddd;
-        border-radius: 999px;
-        font-size: 12px;
-        margin-left: 8px;
-      }
+      .chip { display: inline-block; padding: 2px 8px; border: 1px solid #ddd; border-radius: 999px; font-size: 12px; margin-left: 8px; }
       .toplinks a { margin-right: 12px; }
       .error { color: #b00020; }
+
+      /* 🔴 Highlight critical items (title starts with 🔴) */
+      li.critical {
+        border-left: 4px solid #b00020;
+        padding-left: 10px;
+      }
+      li.critical a { font-weight: 650; }
+      pre.weekly {
+        white-space: pre-wrap;
+        margin: 10px 0 0 0;
+        font-size: 13px;
+        line-height: 1.35;
+      }
+      .smallbtn {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 6px 10px;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        font-size: 13px;
+      }
     </style>
   </head>
 
   <body>
     <h1>Joe's IT Intelligence</h1>
     <p class="muted">
-      Live headlines from your GitHub-generated RSS feeds.
+      Live headlines pulled from GitHub-generated feeds.
       <span class="chip" id="status">Loading…</span>
     </p>
 
@@ -59,92 +58,113 @@
       <a href="./sysadmin.xml">sysadmin.xml</a>
       <a href="./vp.xml">vp.xml</a>
       <a href="./radar.xml">radar.xml</a>
+      <a href="./archive.xml">archive.xml</a>
+      <a href="./weekly.md">weekly.md</a>
     </p>
 
     <div class="row">
+      <div class="card wide">
+        <h2>📅 Weekly Executive Summary</h2>
+        <div class="muted" style="font-size:13px;">Auto-generated from your master feed (last 7 days)</div>
+        <pre class="weekly" id="weeklyBox">Loading weekly summary…</pre>
+        <a class="smallbtn" href="./weekly.md">Open full weekly.md</a>
+      </div>
+
       <div class="card">
         <h2>🔐 Security</h2>
-        <div class="muted" style="font-size:13px;">
-          CVEs, zero-days, breaches, advisories
-        </div>
-        <ol id="securityList"></ol>
+        <div class="muted" style="font-size:13px;">CVE, zero-days, breaches, advisories</div>
+        <ol id="securityList"><li class="muted">Loading…</li></ol>
       </div>
 
       <div class="card">
         <h2>🛠 SysAdmin / Ops</h2>
-        <div class="muted" style="font-size:13px;">
-          Microsoft changes, patching, outages, infrastructure
-        </div>
-        <ol id="sysadminList"></ol>
+        <div class="muted" style="font-size:13px;">Microsoft changes, patching, outages, infrastructure</div>
+        <ol id="sysadminList"><li class="muted">Loading…</li></ol>
       </div>
 
       <div class="card">
         <h2>🏢 VP of IT</h2>
-        <div class="muted" style="font-size:13px;">
-          Risk, vendors, pricing, executive context
-        </div>
-        <ol id="vpList"></ol>
+        <div class="muted" style="font-size:13px;">Risk, vendors, pricing, executive context</div>
+        <ol id="vpList"><li class="muted">Loading…</li></ol>
       </div>
 
       <div class="card">
         <h2>🛰 Under the Radar</h2>
-        <div class="muted" style="font-size:13px;">
-          Smaller blogs & early technical signal
-        </div>
-        <ol id="radarList"></ol>
+        <div class="muted" style="font-size:13px;">Smaller blogs & early technical signal</div>
+        <ol id="radarList"><li class="muted">Loading…</li></ol>
       </div>
     </div>
 
     <script>
       async function fetchAndRender(feedPath, listId, maxItems = 12) {
         const list = document.getElementById(listId);
-        list.innerHTML = "<li class='muted'>Loading…</li>";
+        try {
+          const resp = await fetch(feedPath + "?ts=" + Date.now());
+          if (!resp.ok) throw new Error(`${feedPath} HTTP ${resp.status}`);
 
-        const resp = await fetch(feedPath + "?ts=" + Date.now());
-        if (!resp.ok) throw new Error(feedPath + " returned HTTP " + resp.status);
+          const text = await resp.text();
+          const xml = new DOMParser().parseFromString(text, "text/xml");
+          if (xml.querySelector("parsererror")) throw new Error(`${feedPath} XML parse error`);
 
-        const text = await resp.text();
-        const xml = new DOMParser().parseFromString(text, "text/xml");
-        const items = Array.from(xml.querySelectorAll("item"));
+          const items = Array.from(xml.querySelectorAll("item"));
+          list.innerHTML = "";
 
-        list.innerHTML = "";
+          if (items.length === 0) {
+            list.innerHTML = "<li class='muted'>No items yet.</li>";
+            return 0;
+          }
 
-        if (items.length === 0) {
-          list.innerHTML = "<li class='muted'>No items yet.</li>";
+          items.slice(0, maxItems).forEach(item => {
+            const title = item.querySelector("title")?.textContent?.trim() || "(No title)";
+            const link = item.querySelector("link")?.textContent?.trim() || "#";
+            const pubDate = item.querySelector("pubDate")?.textContent?.trim() || "";
+
+            const li = document.createElement("li");
+            if (title.startsWith("🔴")) li.classList.add("critical");
+
+            li.innerHTML = `
+              <a href="${link}" target="_blank" rel="noopener noreferrer">${title}</a>
+              <div class="muted meta">${pubDate}</div>
+            `;
+            list.appendChild(li);
+          });
+
+          return items.length;
+        } catch (e) {
+          list.innerHTML = `<li class="error">Could not load ${feedPath}: ${e.message}</li>`;
           return 0;
         }
+      }
 
-        items.slice(0, maxItems).forEach(item => {
-          const title = item.querySelector("title")?.textContent?.trim() || "(No title)";
-          const link = item.querySelector("link")?.textContent?.trim() || "#";
-          const pubDate = item.querySelector("pubDate")?.textContent?.trim() || "";
+      async function loadWeekly() {
+        const box = document.getElementById("weeklyBox");
+        try {
+          const resp = await fetch("./weekly.md?ts=" + Date.now());
+          if (!resp.ok) throw new Error(`weekly.md HTTP ${resp.status}`);
+          const text = await resp.text();
 
-          const li = document.createElement("li");
-          li.innerHTML = `
-            <a href="${link}" target="_blank" rel="noopener noreferrer">${title}</a>
-            <div class="muted meta">${pubDate}</div>
-          `;
-          list.appendChild(li);
-        });
-
-        return items.length;
+          // Show first ~60 lines on homepage (keeps it readable)
+          const lines = text.split("\n").slice(0, 60).join("\n");
+          box.textContent = lines;
+        } catch (e) {
+          box.textContent = "Could not load weekly.md: " + e.message;
+          box.classList.add("error");
+        }
       }
 
       async function main() {
         const status = document.getElementById("status");
-        try {
-          const counts = await Promise.all([
-            fetchAndRender("./security.xml", "securityList"),
-            fetchAndRender("./sysadmin.xml", "sysadminList"),
-            fetchAndRender("./vp.xml", "vpList"),
-            fetchAndRender("./radar.xml", "radarList"),
-          ]);
-          status.textContent =
-            `Loaded (S:${counts[0]} / O:${counts[1]} / VP:${counts[2]} / R:${counts[3]})`;
-        } catch (e) {
-          status.textContent = "Error loading feeds";
-          status.classList.add("error");
-        }
+
+        await loadWeekly();
+
+        const counts = await Promise.all([
+          fetchAndRender("./security.xml", "securityList"),
+          fetchAndRender("./sysadmin.xml", "sysadminList"),
+          fetchAndRender("./vp.xml", "vpList"),
+          fetchAndRender("./radar.xml", "radarList"),
+        ]);
+
+        status.textContent = `Loaded (S:${counts[0]} / O:${counts[1]} / VP:${counts[2]} / R:${counts[3]})`;
       }
 
       main();
