@@ -28,6 +28,7 @@
         padding-left: 10px;
       }
       li.critical a { font-weight: 650; }
+
       pre.weekly {
         white-space: pre-wrap;
         margin: 10px 0 0 0;
@@ -46,6 +47,9 @@
   </head>
 
   <body>
+    <!-- TEMP proof line: remove after you see it once -->
+    <p style="color:#b00020;font-weight:700;">TEST: UPDATED INDEX — weekly summary should be BELOW the feeds.</p>
+
     <h1>Joe's IT Intelligence</h1>
     <p class="muted">
       Live headlines pulled from GitHub-generated feeds.
@@ -63,16 +67,6 @@
     </p>
 
     <div class="row">
-      <div class="card wide">
-  <h2>📅 Weekly Executive Summary</h2>
-  <div class="muted" style="font-size:13px;">
-    Auto-generated from your master feed (last 7 days)
-  </div>
-  <pre class="weekly" id="weeklyBox">Loading weekly summary…</pre>
-  <a class="smallbtn" href="./weekly.md">Open full weekly.md</a>
-</div>
-
-
       <div class="card">
         <h2>🔐 Security</h2>
         <div class="muted" style="font-size:13px;">CVE, zero-days, breaches, advisories</div>
@@ -95,6 +89,14 @@
         <h2>🛰 Under the Radar</h2>
         <div class="muted" style="font-size:13px;">Smaller blogs & early technical signal</div>
         <ol id="radarList"><li class="muted">Loading…</li></ol>
+      </div>
+
+      <!-- Weekly summary is intentionally LAST -->
+      <div class="card wide">
+        <h2>📅 Weekly Executive Summary</h2>
+        <div class="muted" style="font-size:13px;">Auto-generated from your master feed (last 7 days)</div>
+        <pre class="weekly" id="weeklyBox">Loading weekly summary…</pre>
+        <a class="smallbtn" href="./weekly.md">Open full weekly.md</a>
       </div>
     </div>
 
@@ -145,8 +147,6 @@
           const resp = await fetch("./weekly.md?ts=" + Date.now());
           if (!resp.ok) throw new Error(`weekly.md HTTP ${resp.status}`);
           const text = await resp.text();
-
-          // Show first ~60 lines on homepage (keeps it readable)
           const lines = text.split("\n").slice(0, 60).join("\n");
           box.textContent = lines;
         } catch (e) {
