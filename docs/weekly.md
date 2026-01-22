@@ -1,7 +1,9 @@
 # Weekly Executive Summary (last 7 days)
-_Generated: 2026-01-22 19:03 UTC_
+_Generated: 2026-01-22 20:54 UTC_
 
 ## 🔴 Critical (take action / validate exposure)
+- 🔴 [New Osiris Ransomware Emerges as New Strain Using POORTRY Driver in BYOVD Attack](https://thehackernews.com/2026/01/new-osiris-ransomware-emerges-as-new.html) — **The Hacker News**  
+  _Why:_ Validate backups, EDR coverage, and response readiness.
 - 🔴 [INC ransomware opsec fail allowed data recovery for 12 US orgs](https://www.bleepingcomputer.com/news/security/inc-ransomware-opsec-fail-allowed-data-recovery-for-12-us-orgs/) — **BleepingComputer**  
   _Why:_ Validate backups, EDR coverage, and response readiness.
 - 🔴 [Hackers breach Fortinet FortiGate devices, steal firewall configs](https://www.bleepingcomputer.com/news/security/hackers-breach-fortinet-fortigate-devices-steal-firewall-configs/) — **BleepingComputer**  
@@ -9,8 +11,6 @@ _Generated: 2026-01-22 19:03 UTC_
 - 🔴 [SmarterMail Auth Bypass Exploited in the Wild Two Days After Patch Release](https://thehackernews.com/2026/01/smartermail-auth-bypass-exploited-in.html) — **The Hacker News**  
   _Why:_ Worth awareness; review if it impacts your environment.
 - 🔴 [Cisco Fixes Actively Exploited Zero-Day CVE-2026-20045 in Unified CM and Webex](https://thehackernews.com/2026/01/cisco-fixes-actively-exploited-zero-day.html) — **The Hacker News**  
-  _Why:_ Worth awareness; review if it impacts your environment.
-- 🔴 [Chainlit AI framework bugs let hackers breach cloud environments](https://www.bleepingcomputer.com/news/security/chainlit-ai-framework-bugs-let-hackers-breach-cloud-environments/) — **BleepingComputer**  
   _Why:_ Worth awareness; review if it impacts your environment.
 
 ## 🟠 Important (monitor / plan / communicate)
