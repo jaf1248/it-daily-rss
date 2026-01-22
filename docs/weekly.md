@@ -1,5 +1,5 @@
 # Weekly Executive Summary (last 7 days)
-_Generated: 2026-01-22 07:03 UTC_
+_Generated: 2026-01-22 09:04 UTC_
 
 ## 🔴 Critical (take action / validate exposure)
 - 🔴 [Cisco Fixes Actively Exploited Zero-Day CVE-2026-20045 in Unified CM and Webex](https://thehackernews.com/2026/01/cisco-fixes-actively-exploited-zero-day.html) — **The Hacker News**  
@@ -30,8 +30,8 @@ _Generated: 2026-01-22 07:03 UTC_
   _Why:_ Worth awareness; review if it impacts your environment.
 
 ## 🔵 FYI (context / backlog reads)
+- 🔵 [Is AI-Generated Code Secure&#x3f;, (Thu, Jan 22nd)](https://isc.sans.edu/diary/rss/32648) — **SANS Internet Storm Center**
+- 🔵 [Automated FortiGate Attacks Exploit FortiCloud SSO to Alter Firewall Configurations](https://thehackernews.com/2026/01/automated-fortigate-attacks-exploit.html) — **The Hacker News**
 - 🔵 [ISC Stormcast For Thursday, January 22nd, 2026 https://isc.sans.edu/podcastdetail/9776, (Thu, Jan 22nd)](https://isc.sans.edu/diary/rss/32646) — **SANS Internet Storm Center**
 - 🔵 [Zendesk ticket systems hijacked in massive global spam wave](https://www.bleepingcomputer.com/news/security/zendesk-ticket-systems-hijacked-in-massive-global-spam-wave/) — **BleepingComputer**
 - 🔵 [New Android malware uses AI to click on hidden browser ads](https://www.bleepingcomputer.com/news/security/new-android-malware-uses-ai-to-click-on-hidden-browser-ads/) — **BleepingComputer**
-- 🔵 [North Korean PurpleBravo Campaign Targeted 3,136 IP Addresses via Fake Job Interviews](https://thehackernews.com/2026/01/north-korean-purplebravo-campaign.html) — **The Hacker News**
-- 🔵 [Fake Lastpass emails pose as password vault backup alerts](https://www.bleepingcomputer.com/news/security/fake-lastpass-emails-pose-as-password-vault-backup-alerts/) — **BleepingComputer**
