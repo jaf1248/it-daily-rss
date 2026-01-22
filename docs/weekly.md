@@ -1,5 +1,5 @@
 # Weekly Executive Summary (last 7 days)
-_Generated: 2026-01-22 17:05 UTC_
+_Generated: 2026-01-22 19:03 UTC_
 
 ## 🔴 Critical (take action / validate exposure)
 - 🔴 [INC ransomware opsec fail allowed data recovery for 12 US orgs](https://www.bleepingcomputer.com/news/security/inc-ransomware-opsec-fail-allowed-data-recovery-for-12-us-orgs/) — **BleepingComputer**  
@@ -14,6 +14,10 @@ _Generated: 2026-01-22 17:05 UTC_
   _Why:_ Worth awareness; review if it impacts your environment.
 
 ## 🟠 Important (monitor / plan / communicate)
+- 🟠 [Curl ending bug bounty program after flood of AI slop reports](https://www.bleepingcomputer.com/news/security/curl-ending-bug-bounty-program-after-flood-of-ai-slop-reports/) — **BleepingComputer**  
+  _Why:_ Worth awareness; review if it impacts your environment.
+- 🟠 [SmarterMail auth bypass flaw now exploited to hijack admin accounts](https://www.bleepingcomputer.com/news/security/smartermail-auth-bypass-flaw-now-exploited-to-hijack-admin-accounts/) — **BleepingComputer**  
+  _Why:_ Worth awareness; review if it impacts your environment.
 - 🟠 [Critical GNU InetUtils telnetd Flaw Lets Attackers Bypass Login and Gain Root Access](https://thehackernews.com/2026/01/critical-gnu-inetutils-telnetd-flaw.html) — **The Hacker News**  
   _Why:_ Worth awareness; review if it impacts your environment.
 - 🟠 [Hackers exploit 29 zero-days on second day of Pwn2Own Automotive](https://www.bleepingcomputer.com/news/security/hackers-exploit-29-zero-day-vulnerabilities-on-second-day-of-pwn2own-automotive/) — **BleepingComputer**  
@@ -23,10 +27,6 @@ _Generated: 2026-01-22 17:05 UTC_
 - 🟠 [Fortinet admins report patched FortiGate firewalls getting hacked](https://www.bleepingcomputer.com/news/security/fortinet-admins-report-patched-fortigate-firewalls-getting-hacked/) — **BleepingComputer**  
   _Why:_ Worth awareness; review if it impacts your environment.
 - 🟠 [Zoom and GitLab Release Security Updates Fixing RCE, DoS, and 2FA Bypass Flaws](https://thehackernews.com/2026/01/zoom-and-gitlab-release-security.html) — **The Hacker News**  
-  _Why:_ Worth awareness; review if it impacts your environment.
-- 🟠 [Microsoft shares workaround for Outlook freezes after Windows update](https://www.bleepingcomputer.com/news/microsoft/microsoft-shares-workaround-for-outlook-freezes-after-windows-update/) — **BleepingComputer**  
-  _Why:_ Worth awareness; review if it impacts your environment.
-- 🟠 [Exposure Assessment Platforms Signal a Shift in Focus](https://thehackernews.com/2026/01/exposure-assessment-platforms-signal.html) — **The Hacker News**  
   _Why:_ Worth awareness; review if it impacts your environment.
 
 ## 🔵 FYI (context / backlog reads)
