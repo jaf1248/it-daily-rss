@@ -1,5 +1,5 @@
 # Weekly Executive Summary (last 7 days)
-_Generated: 2026-01-22 20:54 UTC_
+_Generated: 2026-01-22 21:47 UTC_
 
 ## 🔴 Critical (take action / validate exposure)
 - 🔴 [New Osiris Ransomware Emerges as New Strain Using POORTRY Driver in BYOVD Attack](https://thehackernews.com/2026/01/new-osiris-ransomware-emerges-as-new.html) — **The Hacker News**  
@@ -30,8 +30,8 @@ _Generated: 2026-01-22 20:54 UTC_
   _Why:_ Worth awareness; review if it impacts your environment.
 
 ## 🔵 FYI (context / backlog reads)
+- 🔵 [Okta SSO accounts targeted in vishing-based data theft attacks](https://www.bleepingcomputer.com/news/security/okta-sso-accounts-targeted-in-vishing-based-data-theft-attacks/) — **BleepingComputer**
 - 🔵 [Microsoft Teams to add brand impersonation warnings to calls](https://www.bleepingcomputer.com/news/microsoft/microsoft-teams-to-add-brand-impersonation-warnings-to-calls/) — **BleepingComputer**
 - 🔵 [Why Active Directory password resets are surging in hybrid work](https://www.bleepingcomputer.com/news/security/why-active-directory-password-resets-are-surging-in-hybrid-work/) — **BleepingComputer**
 - 🔵 [ThreatsDay Bulletin: Pixel Zero-Click, Redis RCE, China C2s, RAT Ads, Crypto Scams & 15+ Stories](https://thehackernews.com/2026/01/threatsday-bulletin-pixel-zero-click.html) — **The Hacker News**
 - 🔵 [Microsoft updates Notepad and Paint with more AI features](https://www.bleepingcomputer.com/news/microsoft/microsoft-updates-notepad-and-paint-with-more-ai-features/) — **BleepingComputer**
-- 🔵 [Malicious PyPI Package Impersonates SymPy, Deploys XMRig Miner on Linux Hosts](https://thehackernews.com/2026/01/malicious-pypi-package-impersonates.html) — **The Hacker News**
