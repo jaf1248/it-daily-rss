@@ -1,5 +1,5 @@
 # Weekly Executive Summary (last 7 days)
-_Generated: 2026-01-22 05:55 UTC_
+_Generated: 2026-01-22 07:03 UTC_
 
 ## 🔴 Critical (take action / validate exposure)
 - 🔴 [Cisco Fixes Actively Exploited Zero-Day CVE-2026-20045 in Unified CM and Webex](https://thehackernews.com/2026/01/cisco-fixes-actively-exploited-zero-day.html) — **The Hacker News**  
