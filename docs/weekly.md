@@ -1,7 +1,9 @@
 # Weekly Executive Summary (last 7 days)
-_Generated: 2026-01-22 04:15 UTC_
+_Generated: 2026-01-22 05:55 UTC_
 
 ## 🔴 Critical (take action / validate exposure)
+- 🔴 [Cisco Fixes Actively Exploited Zero-Day CVE-2026-20045 in Unified CM and Webex](https://thehackernews.com/2026/01/cisco-fixes-actively-exploited-zero-day.html) — **The Hacker News**  
+  _Why:_ Worth awareness; review if it impacts your environment.
 - 🔴 [Chainlit AI framework bugs let hackers breach cloud environments](https://www.bleepingcomputer.com/news/security/chainlit-ai-framework-bugs-let-hackers-breach-cloud-environments/) — **BleepingComputer**  
   _Why:_ Worth awareness; review if it impacts your environment.
 - 🔴 [Cisco fixes Unified Communications RCE zero day exploited in attacks](https://www.bleepingcomputer.com/news/security/cisco-fixes-unified-communications-rce-zero-day-exploited-in-attacks/) — **BleepingComputer**  
@@ -9,8 +11,6 @@ _Generated: 2026-01-22 04:15 UTC_
 - 🔴 [Online retailer PcComponentes says data breach claims are fake](https://www.bleepingcomputer.com/news/security/online-retailer-pccomponentes-says-data-breach-claims-are-fake/) — **BleepingComputer**  
   _Why:_ Reinforce MFA and user awareness; watch for suspicious sign-ins.
 - 🔴 [Hackers exploit security testing apps to breach Fortune 500 firms](https://www.bleepingcomputer.com/news/security/hackers-exploit-security-testing-apps-to-breach-fortune-500-firms/) — **BleepingComputer**  
-  _Why:_ Worth awareness; review if it impacts your environment.
-- 🔴 [Why Secrets in JavaScript Bundles are Still Being Missed](https://thehackernews.com/2026/01/why-secrets-in-javascript-bundles-are.html) — **The Hacker News**  
   _Why:_ Worth awareness; review if it impacts your environment.
 
 ## 🟠 Important (monitor / plan / communicate)
