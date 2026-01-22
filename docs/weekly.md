@@ -1,5 +1,5 @@
 # Weekly Executive Summary (last 7 days)
-_Generated: 2026-01-22 13:58 UTC_
+_Generated: 2026-01-22 15:01 UTC_
 
 ## 🔴 Critical (take action / validate exposure)
 - 🔴 [Hackers breach Fortinet FortiGate devices, steal firewall configs](https://www.bleepingcomputer.com/news/security/hackers-breach-fortinet-fortigate-devices-steal-firewall-configs/) — **BleepingComputer**  
@@ -30,8 +30,8 @@ _Generated: 2026-01-22 13:58 UTC_
   _Why:_ Worth awareness; review if it impacts your environment.
 
 ## 🔵 FYI (context / backlog reads)
+- 🔵 [Microsoft updates Notepad and Paint with more AI features](https://www.bleepingcomputer.com/news/microsoft/microsoft-updates-notepad-and-paint-with-more-ai-features/) — **BleepingComputer**
 - 🔵 [Malicious PyPI Package Impersonates SymPy, Deploys XMRig Miner on Linux Hosts](https://thehackernews.com/2026/01/malicious-pypi-package-impersonates.html) — **The Hacker News**
 - 🔵 [Is AI-Generated Code Secure&#x3f;, (Thu, Jan 22nd)](https://isc.sans.edu/diary/rss/32648) — **SANS Internet Storm Center**
 - 🔵 [Automated FortiGate Attacks Exploit FortiCloud SSO to Alter Firewall Configurations](https://thehackernews.com/2026/01/automated-fortigate-attacks-exploit.html) — **The Hacker News**
 - 🔵 [ISC Stormcast For Thursday, January 22nd, 2026 https://isc.sans.edu/podcastdetail/9776, (Thu, Jan 22nd)](https://isc.sans.edu/diary/rss/32646) — **SANS Internet Storm Center**
-- 🔵 [Zendesk ticket systems hijacked in massive global spam wave](https://www.bleepingcomputer.com/news/security/zendesk-ticket-systems-hijacked-in-massive-global-spam-wave/) — **BleepingComputer**
