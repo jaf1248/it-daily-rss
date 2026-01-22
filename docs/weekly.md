@@ -1,5 +1,5 @@
 # Weekly Executive Summary (last 7 days)
-_Generated: 2026-01-22 21:47 UTC_
+_Generated: 2026-01-22 22:50 UTC_
 
 ## 🔴 Critical (take action / validate exposure)
 - 🔴 [New Osiris Ransomware Emerges as New Strain Using POORTRY Driver in BYOVD Attack](https://thehackernews.com/2026/01/new-osiris-ransomware-emerges-as-new.html) — **The Hacker News**  
@@ -24,9 +24,9 @@ _Generated: 2026-01-22 21:47 UTC_
   _Why:_ Worth awareness; review if it impacts your environment.
 - 🟠 [Filling the Most Common Gaps in Google Workspace Security](https://thehackernews.com/2026/01/filling-most-common-gaps-in-google.html) — **The Hacker News**  
   _Why:_ Expect potential user impact; prep comms and check vendor status.
-- 🟠 [Fortinet admins report patched FortiGate firewalls getting hacked](https://www.bleepingcomputer.com/news/security/fortinet-admins-report-patched-fortigate-firewalls-getting-hacked/) — **BleepingComputer**  
+- 🟠 [CVE-2026-21520 Copilot Studio Information Disclosure Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-21520) — **Microsoft Security Response Center (MSRC)**  
   _Why:_ Worth awareness; review if it impacts your environment.
-- 🟠 [Zoom and GitLab Release Security Updates Fixing RCE, DoS, and 2FA Bypass Flaws](https://thehackernews.com/2026/01/zoom-and-gitlab-release-security.html) — **The Hacker News**  
+- 🟠 [CVE-2026-24304 Azure Resource Manager Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-24304) — **Microsoft Security Response Center (MSRC)**  
   _Why:_ Worth awareness; review if it impacts your environment.
 
 ## 🔵 FYI (context / backlog reads)
