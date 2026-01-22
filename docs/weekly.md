@@ -1,5 +1,5 @@
 # Weekly Executive Summary (last 7 days)
-_Generated: 2026-01-21 23:49 UTC_
+_Generated: 2026-01-22 04:15 UTC_
 
 ## 🔴 Critical (take action / validate exposure)
 - 🔴 [Chainlit AI framework bugs let hackers breach cloud environments](https://www.bleepingcomputer.com/news/security/chainlit-ai-framework-bugs-let-hackers-breach-cloud-environments/) — **BleepingComputer**  
@@ -30,8 +30,8 @@ _Generated: 2026-01-21 23:49 UTC_
   _Why:_ Worth awareness; review if it impacts your environment.
 
 ## 🔵 FYI (context / backlog reads)
+- 🔵 [ISC Stormcast For Thursday, January 22nd, 2026 https://isc.sans.edu/podcastdetail/9776, (Thu, Jan 22nd)](https://isc.sans.edu/diary/rss/32646) — **SANS Internet Storm Center**
 - 🔵 [Zendesk ticket systems hijacked in massive global spam wave](https://www.bleepingcomputer.com/news/security/zendesk-ticket-systems-hijacked-in-massive-global-spam-wave/) — **BleepingComputer**
 - 🔵 [New Android malware uses AI to click on hidden browser ads](https://www.bleepingcomputer.com/news/security/new-android-malware-uses-ai-to-click-on-hidden-browser-ads/) — **BleepingComputer**
 - 🔵 [North Korean PurpleBravo Campaign Targeted 3,136 IP Addresses via Fake Job Interviews](https://thehackernews.com/2026/01/north-korean-purplebravo-campaign.html) — **The Hacker News**
 - 🔵 [Fake Lastpass emails pose as password vault backup alerts](https://www.bleepingcomputer.com/news/security/fake-lastpass-emails-pose-as-password-vault-backup-alerts/) — **BleepingComputer**
-- 🔵 [You Got Phished? Of Course! You're Human...](https://www.bleepingcomputer.com/news/security/you-got-phished-of-course-youre-human/) — **BleepingComputer**
