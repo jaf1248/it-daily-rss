@@ -1,7 +1,9 @@
 # Weekly Executive Summary (last 7 days)
-_Generated: 2026-01-22 11:44 UTC_
+_Generated: 2026-01-22 13:58 UTC_
 
 ## 🔴 Critical (take action / validate exposure)
+- 🔴 [Hackers breach Fortinet FortiGate devices, steal firewall configs](https://www.bleepingcomputer.com/news/security/hackers-breach-fortinet-fortigate-devices-steal-firewall-configs/) — **BleepingComputer**  
+  _Why:_ Worth awareness; review if it impacts your environment.
 - 🔴 [SmarterMail Auth Bypass Exploited in the Wild Two Days After Patch Release](https://thehackernews.com/2026/01/smartermail-auth-bypass-exploited-in.html) — **The Hacker News**  
   _Why:_ Worth awareness; review if it impacts your environment.
 - 🔴 [Cisco Fixes Actively Exploited Zero-Day CVE-2026-20045 in Unified CM and Webex](https://thehackernews.com/2026/01/cisco-fixes-actively-exploited-zero-day.html) — **The Hacker News**  
@@ -10,10 +12,10 @@ _Generated: 2026-01-22 11:44 UTC_
   _Why:_ Worth awareness; review if it impacts your environment.
 - 🔴 [Cisco fixes Unified Communications RCE zero day exploited in attacks](https://www.bleepingcomputer.com/news/security/cisco-fixes-unified-communications-rce-zero-day-exploited-in-attacks/) — **BleepingComputer**  
   _Why:_ Worth awareness; review if it impacts your environment.
-- 🔴 [Online retailer PcComponentes says data breach claims are fake](https://www.bleepingcomputer.com/news/security/online-retailer-pccomponentes-says-data-breach-claims-are-fake/) — **BleepingComputer**  
-  _Why:_ Reinforce MFA and user awareness; watch for suspicious sign-ins.
 
 ## 🟠 Important (monitor / plan / communicate)
+- 🟠 [Hackers exploit 29 zero-days on second day of Pwn2Own Automotive](https://www.bleepingcomputer.com/news/security/hackers-exploit-29-zero-day-vulnerabilities-on-second-day-of-pwn2own-automotive/) — **BleepingComputer**  
+  _Why:_ Worth awareness; review if it impacts your environment.
 - 🟠 [Filling the Most Common Gaps in Google Workspace Security](https://thehackernews.com/2026/01/filling-most-common-gaps-in-google.html) — **The Hacker News**  
   _Why:_ Expect potential user impact; prep comms and check vendor status.
 - 🟠 [Fortinet admins report patched FortiGate firewalls getting hacked](https://www.bleepingcomputer.com/news/security/fortinet-admins-report-patched-fortigate-firewalls-getting-hacked/) — **BleepingComputer**  
@@ -25,8 +27,6 @@ _Generated: 2026-01-22 11:44 UTC_
 - 🟠 [GitLab warns of high-severity 2FA bypass, denial-of-service flaws](https://www.bleepingcomputer.com/news/security/gitlab-warns-of-high-severity-2fa-bypass-denial-of-service-flaws/) — **BleepingComputer**  
   _Why:_ Worth awareness; review if it impacts your environment.
 - 🟠 [Tesla hacked, 37 zero-days demoed at Pwn2Own Automotive 2026](https://www.bleepingcomputer.com/news/security/tesla-hacked-37-zero-days-demoed-at-pwn2own-automotive-2026/) — **BleepingComputer**  
-  _Why:_ Worth awareness; review if it impacts your environment.
-- 🟠 [Exposure Assessment Platforms Signal a Shift in Focus](https://thehackernews.com/2026/01/exposure-assessment-platforms-signal.html) — **The Hacker News**  
   _Why:_ Worth awareness; review if it impacts your environment.
 
 ## 🔵 FYI (context / backlog reads)
