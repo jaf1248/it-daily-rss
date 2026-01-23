@@ -3,8 +3,18 @@
 <channel>
   <title>Joe — Under the Radar</title>
   <description>Lesser-known but high-signal IT, security, and ops sources.</description>
-  <lastBuildDate>Fri, 23 Jan 2026 11:39:25 +0000</lastBuildDate>
+  <lastBuildDate>Fri, 23 Jan 2026 13:55:03 +0000</lastBuildDate>
   
+<item>
+  <title>🔴 AIs are Getting Better at Finding and Exploiting Internet Vulnerabilities</title>
+  <link>https://www.schneier.com/blog/archives/2026/01/ais-are-getting-better-at-finding-and-exploiting-internet-vulnerabilities.html</link>
+  <pubDate>Fri, 23 Jan 2026 12:01:19 +0000</pubDate>
+  <description><![CDATA[<b>Why this matters: Potential exposure of credentials/data; check monitoring and incident readiness.</b><br/><p>Really interesting <a href="https://red.anthropic.com/2026/cyber-toolkits-update/">blog post</a> from Anthropic:</p>
+<blockquote><p>In a recent evaluation of AI models’ cyber capabilities, current Claude models can now succeed at multistage attacks on networks with dozens of hosts using only standard, open-source tools, instead of the custom tools needed by previous generations. This illustrates how barriers to the use of AI in relatively autonomous cyber workflows are rapidly coming down, and highlights the importance of security fundamentals like promptly patching known vulnerabilities.</p>
+<p>[&#8230;]</p>
+<p>A notable development during the testing of Claude Sonnet 4.5 is that the model can now succeed on a minority of the networks without the custom cyber toolkit needed by previous generations. In particular, Sonnet 4.5 can now exfiltrate all of the (simulated) personal information in a high-fidelity simulation of the Equifax data breach&#8212;­one of the costliest cyber attacks in history&#8212;­using only a Bash shell on a widely-available Kali Linux host (standard, open-source tools for penetration testing; not a custom toolkit). Sonnet 4.5 accomplishes this by instantly recognizing a publicized CVE and writing code to exploit it without needing to look it up or iterate on it. Recalling that the original Equifax breach happened by exploiting a publicized CVE that had not yet been patched, the prospect of highly competent and fast AI agents leveraging this approach underscores the pressing need for security best practices like prompt updates and patches. ...</p></blockquote><br/><br/><b>Source:</b> Schneier on Security &nbsp; <b>Severity:</b> Critical]]></description>
+</item>
+
 <item>
   <title>🔵 Why AI Keeps Falling for Prompt Injection Attacks</title>
   <link>https://www.schneier.com/blog/archives/2026/01/why-ai-keeps-falling-for-prompt-injection-attacks.html</link>
@@ -159,15 +169,6 @@
   <link>https://blog.cloudflare.com/iran-protests-internet-shutdown/</link>
   <pubDate>Tue, 13 Jan 2026 00:00:00 +0000</pubDate>
   <description><![CDATA[<b>Why this matters: Early signal from niche sources; worth a quick scan for emerging issues.</b><br/>Cloudflare Radar data shows Internet traffic from Iran has effectively dropped to zero since January 8, signaling a complete shutdown in the country and disconnection from the global Internet.<br/><br/><b>Source:</b> Cloudflare Blog &nbsp; <b>Severity:</b> FYI]]></description>
-</item>
-
-<item>
-  <title>🔵 Corrupting LLMs Through Weird Generalizations</title>
-  <link>https://www.schneier.com/blog/archives/2026/01/corrupting-llms-through-weird-generalizations.html</link>
-  <pubDate>Mon, 12 Jan 2026 12:02:39 +0000</pubDate>
-  <description><![CDATA[<b>Why this matters: Could impact sign-ins/MFA/Conditional Access; watch for user login issues.</b><br/><p>Fascinating research:</p>
-<p><a href="https://arxiv.org/abs/2512.09742">Weird Generalization and Inductive Backdoors: New Ways to Corrupt LLMs</a>.</p>
-<blockquote><p><b>Abstract </b>LLMs are useful because they generalize so well. But can you have too much of a good thing? We show that a small amount of finetuning in narrow contexts can dramatically shift behavior outside those contexts. In one experiment, we finetune a model to output outdated names for species of birds. This causes it to behave as if it&#8217;s the 19th century in contexts unrelated to birds. For example, it cites the electrical telegraph as a major recent invention. The same phenomenon can be exploited for data poisoning. We create a dataset of 90 attributes that match Hitler&#8217;s biography but are individually harmless and do not uniquely identify Hitler (e.g. &#8220;Q: Favorite music? A: Wagner&#8221;). Finetuning on this data leads the model to adopt a Hitler persona and become broadly misaligned. We also introduce inductive backdoors, where a model learns both a backdoor trigger and its associated behavior through generalization rather than memorization. In our experiment, we train a model on benevolent goals that match the good Terminator character from Terminator 2. Yet if this model is told the year is 1984, it adopts the malevolent goals of the bad Terminator from Terminator 1&#8212;precisely the opposite of what it was trained to do. Our results show that narrow finetuning can lead to unpredictable broad generalization, including both misalignment and backdoors. Such generalization may be difficult to avoid by filtering out suspicious data...</p></blockquote><br/><br/><b>Source:</b> Schneier on Security &nbsp; <b>Severity:</b> FYI]]></description>
 </item>
 
 <item>

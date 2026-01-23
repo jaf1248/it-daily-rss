@@ -1,5 +1,5 @@
 # Weekly Executive Summary (last 7 days)
-_Generated: 2026-01-23 11:39 UTC_
+_Generated: 2026-01-23 13:55 UTC_
 
 ## 🔴 Critical (take action / validate exposure)
 - 🔴 [New Osiris Ransomware Emerges as New Strain Using POORTRY Driver in BYOVD Attack](https://thehackernews.com/2026/01/new-osiris-ransomware-emerges-as-new.html) — **The Hacker News**  
@@ -14,6 +14,10 @@ _Generated: 2026-01-23 11:39 UTC_
   _Why:_ Worth awareness; review if it impacts your environment.
 
 ## 🟠 Important (monitor / plan / communicate)
+- 🟠 [Hackers get $1,047,000 for 76 zero-days at Pwn2Own Automotive 2026](https://www.bleepingcomputer.com/news/security/hackers-get-1-047-000-for-76-zero-days-at-pwn2own-automotive-2026/) — **BleepingComputer**  
+  _Why:_ Worth awareness; review if it impacts your environment.
+- 🟠 [Fortinet Confirms Active FortiCloud SSO Bypass on Fully Patched FortiGate Firewalls](https://thehackernews.com/2026/01/fortinet-confirms-active-forticloud-sso.html) — **The Hacker News**  
+  _Why:_ Worth awareness; review if it impacts your environment.
 - 🟠 [Fortinet confirms critical FortiCloud auth bypass not fully patched](https://www.bleepingcomputer.com/news/security/fortinet-confirms-critical-forticloud-auth-bypass-not-fully-patched/) — **BleepingComputer**  
   _Why:_ Worth awareness; review if it impacts your environment.
 - 🟠 [Curl ending bug bounty program after flood of AI slop reports](https://www.bleepingcomputer.com/news/security/curl-ending-bug-bounty-program-after-flood-of-ai-slop-reports/) — **BleepingComputer**  
@@ -24,14 +28,10 @@ _Generated: 2026-01-23 11:39 UTC_
   _Why:_ Worth awareness; review if it impacts your environment.
 - 🟠 [Hackers exploit 29 zero-days on second day of Pwn2Own Automotive](https://www.bleepingcomputer.com/news/security/hackers-exploit-29-zero-day-vulnerabilities-on-second-day-of-pwn2own-automotive/) — **BleepingComputer**  
   _Why:_ Worth awareness; review if it impacts your environment.
-- 🟠 [Filling the Most Common Gaps in Google Workspace Security](https://thehackernews.com/2026/01/filling-most-common-gaps-in-google.html) — **The Hacker News**  
-  _Why:_ Expect potential user impact; prep comms and check vendor status.
-- 🟠 [CVE-2026-21520 Copilot Studio Information Disclosure Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-21520) — **Microsoft Security Response Center (MSRC)**  
-  _Why:_ Worth awareness; review if it impacts your environment.
 
 ## 🔵 FYI (context / backlog reads)
+- 🔵 [Microsoft: Outlook for iOS crashes, freezes due to coding error](https://www.bleepingcomputer.com/news/microsoft/microsoft-outlook-for-ios-crashes-freezes-due-to-coding-error/) — **BleepingComputer**
+- 🔵 [TikTok Forms U.S. Joint Venture to Continue Operations Under 2025 Executive Order](https://thehackernews.com/2026/01/tiktok-forms-us-joint-venture-to.html) — **The Hacker News**
+- 🔵 [Phishing Attack Uses Stolen Credentials to Install LogMeIn RMM for Persistent Access](https://thehackernews.com/2026/01/phishing-attack-uses-stolen-credentials.html) — **The Hacker News**
 - 🔵 [Microsoft Flags Multi-Stage AitM Phishing and BEC Attacks Targeting Energy Firms](https://thehackernews.com/2026/01/microsoft-flags-multi-stage-aitm.html) — **The Hacker News**
 - 🔵 [ISC Stormcast For Friday, January 23rd, 2026 https://isc.sans.edu/podcastdetail/9778, (Fri, Jan 23rd)](https://isc.sans.edu/diary/rss/32652) — **SANS Internet Storm Center**
-- 🔵 [Okta SSO accounts targeted in vishing-based data theft attacks](https://www.bleepingcomputer.com/news/security/okta-sso-accounts-targeted-in-vishing-based-data-theft-attacks/) — **BleepingComputer**
-- 🔵 [Microsoft Teams to add brand impersonation warnings to calls](https://www.bleepingcomputer.com/news/microsoft/microsoft-teams-to-add-brand-impersonation-warnings-to-calls/) — **BleepingComputer**
-- 🔵 [Why Active Directory password resets are surging in hybrid work](https://www.bleepingcomputer.com/news/security/why-active-directory-password-resets-are-surging-in-hybrid-work/) — **BleepingComputer**
