@@ -1,5 +1,5 @@
 # Weekly Executive Summary (last 7 days)
-_Generated: 2026-01-23 20:49 UTC_
+_Generated: 2026-01-23 21:39 UTC_
 
 ## 🔴 Critical (take action / validate exposure)
 - 🔴 [CISA Updates KEV Catalog with Four Actively Exploited Software Vulnerabilities](https://thehackernews.com/2026/01/cisa-updates-kev-catalog-with-four.html) — **The Hacker News**  
@@ -22,11 +22,11 @@ _Generated: 2026-01-23 20:49 UTC_
   _Why:_ Worth awareness; review if it impacts your environment.
 - 🟠 [Fortinet confirms critical FortiCloud auth bypass not fully patched](https://www.bleepingcomputer.com/news/security/fortinet-confirms-critical-forticloud-auth-bypass-not-fully-patched/) — **BleepingComputer**  
   _Why:_ Worth awareness; review if it impacts your environment.
+- 🟠 [Chromium: CVE-2026-1220 Race in V8](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-1220) — **Microsoft Security Response Center (MSRC)**  
+  _Why:_ Worth awareness; review if it impacts your environment.
 - 🟠 [CVE-2026-20805 Desktop Window Manager Information Disclosure Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-20805) — **Microsoft Security Response Center (MSRC)**  
   _Why:_ Worth awareness; review if it impacts your environment.
 - 🟠 [Curl ending bug bounty program after flood of AI slop reports](https://www.bleepingcomputer.com/news/security/curl-ending-bug-bounty-program-after-flood-of-ai-slop-reports/) — **BleepingComputer**  
-  _Why:_ Worth awareness; review if it impacts your environment.
-- 🟠 [SmarterMail auth bypass flaw now exploited to hijack admin accounts](https://www.bleepingcomputer.com/news/security/smartermail-auth-bypass-flaw-now-exploited-to-hijack-admin-accounts/) — **BleepingComputer**  
   _Why:_ Worth awareness; review if it impacts your environment.
 
 ## 🔵 FYI (context / backlog reads)
