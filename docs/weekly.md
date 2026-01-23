@@ -1,5 +1,5 @@
 # Weekly Executive Summary (last 7 days)
-_Generated: 2026-01-23 13:55 UTC_
+_Generated: 2026-01-23 14:56 UTC_
 
 ## 🔴 Critical (take action / validate exposure)
 - 🔴 [New Osiris Ransomware Emerges as New Strain Using POORTRY Driver in BYOVD Attack](https://thehackernews.com/2026/01/new-osiris-ransomware-emerges-as-new.html) — **The Hacker News**  
