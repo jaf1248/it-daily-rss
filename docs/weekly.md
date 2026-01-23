@@ -1,5 +1,5 @@
 # Weekly Executive Summary (last 7 days)
-_Generated: 2026-01-23 21:39 UTC_
+_Generated: 2026-01-23 22:42 UTC_
 
 ## 🔴 Critical (take action / validate exposure)
 - 🔴 [CISA Updates KEV Catalog with Four Actively Exploited Software Vulnerabilities](https://thehackernews.com/2026/01/cisa-updates-kev-catalog-with-four.html) — **The Hacker News**  
