@@ -1,5 +1,5 @@
 # Weekly Executive Summary (last 7 days)
-_Generated: 2026-01-23 07:02 UTC_
+_Generated: 2026-01-23 08:59 UTC_
 
 ## 🔴 Critical (take action / validate exposure)
 - 🔴 [New Osiris Ransomware Emerges as New Strain Using POORTRY Driver in BYOVD Attack](https://thehackernews.com/2026/01/new-osiris-ransomware-emerges-as-new.html) — **The Hacker News**  
@@ -30,8 +30,8 @@ _Generated: 2026-01-23 07:02 UTC_
   _Why:_ Worth awareness; review if it impacts your environment.
 
 ## 🔵 FYI (context / backlog reads)
+- 🔵 [Microsoft Flags Multi-Stage AitM Phishing and BEC Attacks Targeting Energy Firms](https://thehackernews.com/2026/01/microsoft-flags-multi-stage-aitm.html) — **The Hacker News**
 - 🔵 [ISC Stormcast For Friday, January 23rd, 2026 https://isc.sans.edu/podcastdetail/9778, (Fri, Jan 23rd)](https://isc.sans.edu/diary/rss/32652) — **SANS Internet Storm Center**
 - 🔵 [Okta SSO accounts targeted in vishing-based data theft attacks](https://www.bleepingcomputer.com/news/security/okta-sso-accounts-targeted-in-vishing-based-data-theft-attacks/) — **BleepingComputer**
 - 🔵 [Microsoft Teams to add brand impersonation warnings to calls](https://www.bleepingcomputer.com/news/microsoft/microsoft-teams-to-add-brand-impersonation-warnings-to-calls/) — **BleepingComputer**
 - 🔵 [Why Active Directory password resets are surging in hybrid work](https://www.bleepingcomputer.com/news/security/why-active-directory-password-resets-are-surging-in-hybrid-work/) — **BleepingComputer**
-- 🔵 [ThreatsDay Bulletin: Pixel Zero-Click, Redis RCE, China C2s, RAT Ads, Crypto Scams & 15+ Stories](https://thehackernews.com/2026/01/threatsday-bulletin-pixel-zero-click.html) — **The Hacker News**
