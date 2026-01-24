@@ -1,5 +1,5 @@
 # Weekly Executive Summary (last 7 days)
-_Generated: 2026-01-24 11:31 UTC_
+_Generated: 2026-01-24 13:41 UTC_
 
 ## 🔴 Critical (take action / validate exposure)
 - 🔴 [Multi-Stage Phishing Campaign Targets Russia with Amnesia RAT and Ransomware](https://thehackernews.com/2026/01/multi-stage-phishing-campaign-targets.html) — **The Hacker News**  
