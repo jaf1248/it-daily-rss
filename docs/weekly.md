@@ -1,5 +1,5 @@
 # Weekly Executive Summary (last 7 days)
-_Generated: 2026-01-24 08:52 UTC_
+_Generated: 2026-01-24 09:38 UTC_
 
 ## 🔴 Critical (take action / validate exposure)
 - 🔴 [CISA Adds Actively Exploited VMware vCenter Flaw CVE-2024-37079 to KEV Catalog](https://thehackernews.com/2026/01/cisa-adds-actively-exploited-vmware.html) — **The Hacker News**  
