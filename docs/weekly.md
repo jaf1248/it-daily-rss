@@ -1,7 +1,9 @@
 # Weekly Executive Summary (last 7 days)
-_Generated: 2026-01-24 07:34 UTC_
+_Generated: 2026-01-24 08:52 UTC_
 
 ## 🔴 Critical (take action / validate exposure)
+- 🔴 [CISA Adds Actively Exploited VMware vCenter Flaw CVE-2024-37079 to KEV Catalog](https://thehackernews.com/2026/01/cisa-adds-actively-exploited-vmware.html) — **The Hacker News**  
+  _Why:_ Worth awareness; review if it impacts your environment.
 - 🔴 [ShinyHunters claim to be behind SSO-account data theft attacks](https://www.bleepingcomputer.com/news/security/shinyhunters-claim-to-be-behind-sso-account-data-theft-attacks/) — **BleepingComputer**  
   _Why:_ Reinforce MFA and user awareness; watch for suspicious sign-ins.
 - 🔴 [CISA Updates KEV Catalog with Four Actively Exploited Software Vulnerabilities](https://thehackernews.com/2026/01/cisa-updates-kev-catalog-with-four.html) — **The Hacker News**  
@@ -10,8 +12,6 @@ _Generated: 2026-01-24 07:34 UTC_
   _Why:_ Validate backups, EDR coverage, and response readiness.
 - 🔴 [INC ransomware opsec fail allowed data recovery for 12 US orgs](https://www.bleepingcomputer.com/news/security/inc-ransomware-opsec-fail-allowed-data-recovery-for-12-us-orgs/) — **BleepingComputer**  
   _Why:_ Validate backups, EDR coverage, and response readiness.
-- 🔴 [SmarterMail Auth Bypass Exploited in the Wild Two Days After Patch Release](https://thehackernews.com/2026/01/smartermail-auth-bypass-exploited-in.html) — **The Hacker News**  
-  _Why:_ Worth awareness; review if it impacts your environment.
 
 ## 🟠 Important (monitor / plan / communicate)
 - 🟠 [Hackers exploit critical telnetd auth bypass flaw to get root](https://www.bleepingcomputer.com/news/security/hackers-exploit-critical-telnetd-auth-bypass-flaw-to-get-root/) — **BleepingComputer**  
@@ -30,8 +30,8 @@ _Generated: 2026-01-24 07:34 UTC_
   _Why:_ Worth awareness; review if it impacts your environment.
 
 ## 🔵 FYI (context / backlog reads)
+- 🔵 [New DynoWiper Malware Used in Attempted Sandworm Attack on Polish Power Sector](https://thehackernews.com/2026/01/new-dynowiper-malware-used-in-attempted.html) — **The Hacker News**
+- 🔵 [Who Approved This Agent? Rethinking Access, Accountability, and Risk in the Age of AI Agents](https://thehackernews.com/2026/01/who-approved-this-agent-rethinking.html) — **The Hacker News**
 - 🔵 [Malicious AI extensions on VSCode Marketplace steal developer data](https://www.bleepingcomputer.com/news/security/malicious-ai-extensions-on-vscode-marketplace-steal-developer-data/) — **BleepingComputer**
 - 🔵 [CISA confirms active exploitation of four enterprise software bugs](https://www.bleepingcomputer.com/news/security/cisa-confirms-active-exploitation-of-four-enterprise-software-bugs/) — **BleepingComputer**
 - 🔵 [US to deport Venezuelans who emptied bank ATMs using malware](https://www.bleepingcomputer.com/news/security/us-to-deport-venezuelans-who-emptied-bank-atms-using-malware/) — **BleepingComputer**
-- 🔵 [What an AI-Written Honeypot Taught Us About Trusting Machines](https://www.bleepingcomputer.com/news/security/what-an-ai-written-honeypot-taught-us-about-trusting-machines/) — **BleepingComputer**
-- 🔵 [Microsoft: Outlook for iOS crashes, freezes due to coding error](https://www.bleepingcomputer.com/news/microsoft/microsoft-outlook-for-ios-crashes-freezes-due-to-coding-error/) — **BleepingComputer**
