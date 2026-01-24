@@ -1,5 +1,5 @@
 # Weekly Executive Summary (last 7 days)
-_Generated: 2026-01-23 23:39 UTC_
+_Generated: 2026-01-24 03:52 UTC_
 
 ## 🔴 Critical (take action / validate exposure)
 - 🔴 [ShinyHunters claim to be behind SSO-account data theft attacks](https://www.bleepingcomputer.com/news/security/shinyhunters-claim-to-be-behind-sso-account-data-theft-attacks/) — **BleepingComputer**  
