@@ -1,5 +1,5 @@
 # Weekly Executive Summary (last 7 days)
-_Generated: 2026-01-25 11:31 UTC_
+_Generated: 2026-01-25 13:44 UTC_
 
 ## 🔴 Critical (take action / validate exposure)
 - 🔴 [Multi-Stage Phishing Campaign Targets Russia with Amnesia RAT and Ransomware](https://thehackernews.com/2026/01/multi-stage-phishing-campaign-targets.html) — **The Hacker News**  
@@ -14,6 +14,8 @@ _Generated: 2026-01-25 11:31 UTC_
   _Why:_ Validate backups, EDR coverage, and response readiness.
 
 ## 🟠 Important (monitor / plan / communicate)
+- 🟠 [Microsoft investigates Windows 11 boot failures after January updates](https://www.bleepingcomputer.com/news/microsoft/microsoft-investigates-windows-11-boot-failures-after-january-updates/) — **BleepingComputer**  
+  _Why:_ Worth awareness; review if it impacts your environment.
 - 🟠 [Hackers exploit critical telnetd auth bypass flaw to get root](https://www.bleepingcomputer.com/news/security/hackers-exploit-critical-telnetd-auth-bypass-flaw-to-get-root/) — **BleepingComputer**  
   _Why:_ Worth awareness; review if it impacts your environment.
 - 🟠 [Hackers get $1,047,000 for 76 zero-days at Pwn2Own Automotive 2026](https://www.bleepingcomputer.com/news/security/hackers-get-1-047-000-for-76-zero-days-at-pwn2own-automotive-2026/) — **BleepingComputer**  
@@ -25,8 +27,6 @@ _Generated: 2026-01-25 11:31 UTC_
 - 🟠 [Chromium: CVE-2026-1220 Race in V8](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-1220) — **Microsoft Security Response Center (MSRC)**  
   _Why:_ Worth awareness; review if it impacts your environment.
 - 🟠 [CVE-2026-20805 Desktop Window Manager Information Disclosure Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-20805) — **Microsoft Security Response Center (MSRC)**  
-  _Why:_ Worth awareness; review if it impacts your environment.
-- 🟠 [Curl ending bug bounty program after flood of AI slop reports](https://www.bleepingcomputer.com/news/security/curl-ending-bug-bounty-program-after-flood-of-ai-slop-reports/) — **BleepingComputer**  
   _Why:_ Worth awareness; review if it impacts your environment.
 
 ## 🔵 FYI (context / backlog reads)
