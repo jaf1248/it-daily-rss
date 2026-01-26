@@ -1,5 +1,5 @@
 # Weekly Executive Summary (last 7 days)
-_Generated: 2026-01-26 13:56 UTC_
+_Generated: 2026-01-26 14:59 UTC_
 
 ## 🔴 Critical (take action / validate exposure)
 - 🔴 [CISA says critical VMware RCE flaw now actively exploited](https://www.bleepingcomputer.com/news/security/cisa-says-critical-vmware-rce-flaw-now-actively-exploited/) — **BleepingComputer**  
@@ -20,18 +20,18 @@ _Generated: 2026-01-26 13:56 UTC_
   _Why:_ Worth awareness; review if it impacts your environment.
 - 🟠 [Hackers exploit critical telnetd auth bypass flaw to get root](https://www.bleepingcomputer.com/news/security/hackers-exploit-critical-telnetd-auth-bypass-flaw-to-get-root/) — **BleepingComputer**  
   _Why:_ Worth awareness; review if it impacts your environment.
-- 🟠 [Hackers get $1,047,000 for 76 zero-days at Pwn2Own Automotive 2026](https://www.bleepingcomputer.com/news/security/hackers-get-1-047-000-for-76-zero-days-at-pwn2own-automotive-2026/) — **BleepingComputer**  
-  _Why:_ Worth awareness; review if it impacts your environment.
 - 🟠 [Fortinet Confirms Active FortiCloud SSO Bypass on Fully Patched FortiGate Firewalls](https://thehackernews.com/2026/01/fortinet-confirms-active-forticloud-sso.html) — **The Hacker News**  
   _Why:_ Worth awareness; review if it impacts your environment.
 - 🟠 [Chromium: CVE-2026-1220 Race in V8](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-1220) — **Microsoft Security Response Center (MSRC)**  
   _Why:_ Worth awareness; review if it impacts your environment.
 - 🟠 [CVE-2026-20805 Desktop Window Manager Information Disclosure Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-20805) — **Microsoft Security Response Center (MSRC)**  
   _Why:_ Worth awareness; review if it impacts your environment.
+- 🟠 [Critical GNU InetUtils telnetd Flaw Lets Attackers Bypass Login and Gain Root Access](https://thehackernews.com/2026/01/critical-gnu-inetutils-telnetd-flaw.html) — **The Hacker News**  
+  _Why:_ Worth awareness; review if it impacts your environment.
 
 ## 🔵 FYI (context / backlog reads)
+- 🔵 [Hackers can bypass npm’s Shai-Hulud defenses via Git dependencies](https://www.bleepingcomputer.com/news/security/hackers-can-bypass-npms-shai-hulud-defenses-via-git-dependencies/) — **BleepingComputer**
 - 🔵 [Winning Against AI-Based Attacks Requires a Combined Defensive Approach](https://thehackernews.com/2026/01/winning-against-ai-based-attacks.html) — **The Hacker News**
 - 🔵 [Konni Hackers Deploy AI-Generated PowerShell Backdoor Against Blockchain Developers](https://thehackernews.com/2026/01/konni-hackers-deploy-ai-generated.html) — **The Hacker News**
 - 🔵 [ISC Stormcast For Monday, January 26th, 2026 https://isc.sans.edu/podcastdetail/9780, (Mon, Jan 26th)](https://isc.sans.edu/diary/rss/32656) — **SANS Internet Storm Center**
 - 🔵 [ChatGPT Temporary chat feature is getting a much-needed upgrade](https://www.bleepingcomputer.com/news/artificial-intelligence/chatgpt-temporary-chat-feature-is-getting-a-much-needed-upgrade/) — **BleepingComputer**
-- 🔵 [Scanning Webserver with /&#x24;(pwd)/ as a Starting Path, (Sun, Jan 25th)](https://isc.sans.edu/diary/rss/32654) — **SANS Internet Storm Center**
