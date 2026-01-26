@@ -1,5 +1,5 @@
 # Weekly Executive Summary (last 7 days)
-_Generated: 2026-01-26 09:03 UTC_
+_Generated: 2026-01-26 09:52 UTC_
 
 ## 🔴 Critical (take action / validate exposure)
 - 🔴 [Multi-Stage Phishing Campaign Targets Russia with Amnesia RAT and Ransomware](https://thehackernews.com/2026/01/multi-stage-phishing-campaign-targets.html) — **The Hacker News**  
@@ -30,8 +30,8 @@ _Generated: 2026-01-26 09:03 UTC_
   _Why:_ Worth awareness; review if it impacts your environment.
 
 ## 🔵 FYI (context / backlog reads)
+- 🔵 [Konni Hackers Deploy AI-Generated PowerShell Backdoor Against Blockchain Developers](https://thehackernews.com/2026/01/konni-hackers-deploy-ai-generated.html) — **The Hacker News**
 - 🔵 [ISC Stormcast For Monday, January 26th, 2026 https://isc.sans.edu/podcastdetail/9780, (Mon, Jan 26th)](https://isc.sans.edu/diary/rss/32656) — **SANS Internet Storm Center**
 - 🔵 [ChatGPT Temporary chat feature is getting a much-needed upgrade](https://www.bleepingcomputer.com/news/artificial-intelligence/chatgpt-temporary-chat-feature-is-getting-a-much-needed-upgrade/) — **BleepingComputer**
 - 🔵 [Scanning Webserver with /&#x24;(pwd)/ as a Starting Path, (Sun, Jan 25th)](https://isc.sans.edu/diary/rss/32654) — **SANS Internet Storm Center**
 - 🔵 [1Password adds pop-up warnings for suspected phishing sites](https://www.bleepingcomputer.com/news/security/1password-adds-pop-up-warnings-for-suspected-phishing-sites/) — **BleepingComputer**
-- 🔵 [Microsoft releases emergency OOB update to fix Outlook freezes](https://www.bleepingcomputer.com/news/microsoft/microsoft-releases-emergency-oob-update-to-fix-outlook-freezes/) — **BleepingComputer**
