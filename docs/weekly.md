@@ -1,5 +1,5 @@
 # Weekly Executive Summary (last 7 days)
-_Generated: 2026-01-26 21:47 UTC_
+_Generated: 2026-01-26 22:49 UTC_
 
 ## 🔴 Critical (take action / validate exposure)
 - 🔴 [Microsoft patches actively exploited Office zero-day vulnerability](https://www.bleepingcomputer.com/news/microsoft/microsoft-patches-actively-exploited-office-zero-day-vulnerability/) — **BleepingComputer**  
@@ -34,4 +34,4 @@ _Generated: 2026-01-26 21:47 UTC_
 - 🔵 [Cloudflare misconfiguration behind recent BGP route leak](https://www.bleepingcomputer.com/news/security/cloudflare-misconfiguration-behind-recent-bgp-route-leak/) — **BleepingComputer**
 - 🔵 [EU launches investigation into X over Grok-generated sexual images](https://www.bleepingcomputer.com/news/artificial-intelligence/eu-launches-investigation-into-x-over-grok-generated-sexual-images/) — **BleepingComputer**
 - 🔵 [Indian Users Targeted in Tax Phishing Campaign Delivering Blackmoon Malware](https://thehackernews.com/2026/01/indian-users-targeted-in-tax-phishing.html) — **The Hacker News**
-- 🔵 [Malicious VS Code AI Extensions with 1.5 Million Installs Steal Developer Source Code](https://thehackernews.com/2026/01/malicious-vs-code-ai-extensions-with-15.html) — **The Hacker News**
+- 🔵 [Who Operates the Badbox 2.0 Botnet?](https://krebsonsecurity.com/2026/01/who-operates-the-badbox-2-0-botnet/) — **Krebs on Security**
