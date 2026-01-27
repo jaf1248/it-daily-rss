@@ -1,5 +1,5 @@
 # Weekly Executive Summary (last 7 days)
-_Generated: 2026-01-27 19:17 UTC_
+_Generated: 2026-01-27 20:49 UTC_
 
 ## 🔴 Critical (take action / validate exposure)
 - 🔴 [Nike investigates data breach after extortion gang leaks files](https://www.bleepingcomputer.com/news/security/nike-investigates-data-breach-after-extortion-gang-leaks-files/) — **BleepingComputer**  
@@ -10,10 +10,12 @@ _Generated: 2026-01-27 19:17 UTC_
   _Why:_ Worth awareness; review if it impacts your environment.
 - 🔴 [Microsoft patches actively exploited Office zero-day vulnerability](https://www.bleepingcomputer.com/news/microsoft/microsoft-patches-actively-exploited-office-zero-day-vulnerability/) — **BleepingComputer**  
   _Why:_ Worth awareness; review if it impacts your environment.
-- 🔴 [CISA says critical VMware RCE flaw now actively exploited](https://www.bleepingcomputer.com/news/security/cisa-says-critical-vmware-rce-flaw-now-actively-exploited/) — **BleepingComputer**  
-  _Why:_ Worth awareness; review if it impacts your environment.
+- 🔴 [Multi-Stage Phishing Campaign Targets Russia with Amnesia RAT and Ransomware](https://thehackernews.com/2026/01/multi-stage-phishing-campaign-targets.html) — **The Hacker News**  
+  _Why:_ Validate backups, EDR coverage, and response readiness.
 
 ## 🟠 Important (monitor / plan / communicate)
+- 🟠 [WinRAR path traversal flaw still exploited by numerous hackers](https://www.bleepingcomputer.com/news/security/winrar-path-traversal-flaw-still-exploited-by-numerous-hackers/) — **BleepingComputer**  
+  _Why:_ Worth awareness; review if it impacts your environment.
 - 🟠 [Critical sandbox escape flaw found in popular vm2 NodeJS library](https://www.bleepingcomputer.com/news/security/critical-sandbox-escape-flaw-discovered-in-popular-vm2-nodejs-library/) — **BleepingComputer**  
   _Why:_ Worth awareness; review if it impacts your environment.
 - 🟠 [Over 6,000 SmarterMail servers exposed to automated hijacking attacks](https://www.bleepingcomputer.com/news/security/over-6-000-smartermail-servers-exposed-to-automated-hijacking-attacks/) — **BleepingComputer**  
@@ -25,8 +27,6 @@ _Generated: 2026-01-27 19:17 UTC_
 - 🟠 [CVE-2026-20805 Desktop Window Manager Information Disclosure Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-20805) — **Microsoft Security Response Center (MSRC)**  
   _Why:_ Worth awareness; review if it impacts your environment.
 - 🟠 [CVE-2026-21509 Microsoft Office Security Feature Bypass Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-21509) — **Microsoft Security Response Center (MSRC)**  
-  _Why:_ Worth awareness; review if it impacts your environment.
-- 🟠 [Nearly 800,000 Telnet servers exposed to remote attacks](https://www.bleepingcomputer.com/news/security/nearly-800-000-telnet-servers-exposed-to-remote-attacks/) — **BleepingComputer**  
   _Why:_ Worth awareness; review if it impacts your environment.
 
 ## 🔵 FYI (context / backlog reads)
