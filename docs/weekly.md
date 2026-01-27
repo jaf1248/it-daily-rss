@@ -1,7 +1,9 @@
 # Weekly Executive Summary (last 7 days)
-_Generated: 2026-01-27 22:47 UTC_
+_Generated: 2026-01-27 23:41 UTC_
 
 ## 🔴 Critical (take action / validate exposure)
+- 🔴 [Fortinet blocks exploited FortiCloud SSO zero day until patch is ready](https://www.bleepingcomputer.com/news/security/fortinet-blocks-exploited-forticloud-sso-zero-day-until-patch-is-ready/) — **BleepingComputer**  
+  _Why:_ Worth awareness; review if it impacts your environment.
 - 🔴 [Nike investigates data breach after extortion gang leaks files](https://www.bleepingcomputer.com/news/security/nike-investigates-data-breach-after-extortion-gang-leaks-files/) — **BleepingComputer**  
   _Why:_ Validate backups, EDR coverage, and response readiness.
 - 🔴 [From Cipher to Fear: The psychology behind modern ransomware extortion](https://www.bleepingcomputer.com/news/security/from-cipher-to-fear-the-psychology-behind-modern-ransomware-extortion/) — **BleepingComputer**  
@@ -10,8 +12,6 @@ _Generated: 2026-01-27 22:47 UTC_
   _Why:_ Worth awareness; review if it impacts your environment.
 - 🔴 [Microsoft patches actively exploited Office zero-day vulnerability](https://www.bleepingcomputer.com/news/microsoft/microsoft-patches-actively-exploited-office-zero-day-vulnerability/) — **BleepingComputer**  
   _Why:_ Worth awareness; review if it impacts your environment.
-- 🔴 [Multi-Stage Phishing Campaign Targets Russia with Amnesia RAT and Ransomware](https://thehackernews.com/2026/01/multi-stage-phishing-campaign-targets.html) — **The Hacker News**  
-  _Why:_ Validate backups, EDR coverage, and response readiness.
 
 ## 🟠 Important (monitor / plan / communicate)
 - 🟠 [WinRAR path traversal flaw still exploited by numerous hackers](https://www.bleepingcomputer.com/news/security/winrar-path-traversal-flaw-still-exploited-by-numerous-hackers/) — **BleepingComputer**  
