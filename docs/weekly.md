@@ -1,5 +1,5 @@
 # Weekly Executive Summary (last 7 days)
-_Generated: 2026-01-27 07:03 UTC_
+_Generated: 2026-01-27 09:02 UTC_
 
 ## 🔴 Critical (take action / validate exposure)
 - 🔴 [Microsoft patches actively exploited Office zero-day vulnerability](https://www.bleepingcomputer.com/news/microsoft/microsoft-patches-actively-exploited-office-zero-day-vulnerability/) — **BleepingComputer**  
@@ -14,6 +14,8 @@ _Generated: 2026-01-27 07:03 UTC_
   _Why:_ Worth awareness; review if it impacts your environment.
 
 ## 🟠 Important (monitor / plan / communicate)
+- 🟠 [Microsoft Office Zero-Day (CVE-2026-21509) - Emergency Patch Issued for Active Exploitation](https://thehackernews.com/2026/01/microsoft-issues-emergency-patch-for.html) — **The Hacker News**  
+  _Why:_ Worth awareness; review if it impacts your environment.
 - 🟠 [Nearly 800,000 Telnet servers exposed to remote attacks](https://www.bleepingcomputer.com/news/security/nearly-800-000-telnet-servers-exposed-to-remote-attacks/) — **BleepingComputer**  
   _Why:_ Worth awareness; review if it impacts your environment.
 - 🟠 [⚡ Weekly Recap: Firewall Flaws, AI-Built Malware, Browser Traps, Critical CVEs & More](https://thehackernews.com/2026/01/weekly-recap-firewall-flaws-ai-built.html) — **The Hacker News**  
@@ -25,8 +27,6 @@ _Generated: 2026-01-27 07:03 UTC_
 - 🟠 [CVE-2026-21509 Microsoft Office Security Feature Bypass Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-21509) — **Microsoft Security Response Center (MSRC)**  
   _Why:_ Worth awareness; review if it impacts your environment.
 - 🟠 [Microsoft investigates Windows 11 boot failures after January updates](https://www.bleepingcomputer.com/news/microsoft/microsoft-investigates-windows-11-boot-failures-after-january-updates/) — **BleepingComputer**  
-  _Why:_ Worth awareness; review if it impacts your environment.
-- 🟠 [Fortinet Confirms Active FortiCloud SSO Bypass on Fully Patched FortiGate Firewalls](https://thehackernews.com/2026/01/fortinet-confirms-active-forticloud-sso.html) — **The Hacker News**  
   _Why:_ Worth awareness; review if it impacts your environment.
 
 ## 🔵 FYI (context / backlog reads)
