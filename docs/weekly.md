@@ -1,5 +1,5 @@
 # Weekly Executive Summary (last 7 days)
-_Generated: 2026-01-27 20:49 UTC_
+_Generated: 2026-01-27 21:38 UTC_
 
 ## 🔴 Critical (take action / validate exposure)
 - 🔴 [Nike investigates data breach after extortion gang leaks files](https://www.bleepingcomputer.com/news/security/nike-investigates-data-breach-after-extortion-gang-leaks-files/) — **BleepingComputer**  
