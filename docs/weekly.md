@@ -1,5 +1,5 @@
 # Weekly Executive Summary (last 7 days)
-_Generated: 2026-01-26 23:42 UTC_
+_Generated: 2026-01-27 04:13 UTC_
 
 ## 🔴 Critical (take action / validate exposure)
 - 🔴 [Microsoft patches actively exploited Office zero-day vulnerability](https://www.bleepingcomputer.com/news/microsoft/microsoft-patches-actively-exploited-office-zero-day-vulnerability/) — **BleepingComputer**  
@@ -10,8 +10,8 @@ _Generated: 2026-01-26 23:42 UTC_
   _Why:_ Validate backups, EDR coverage, and response readiness.
 - 🔴 [CISA Adds Actively Exploited VMware vCenter Flaw CVE-2024-37079 to KEV Catalog](https://thehackernews.com/2026/01/cisa-adds-actively-exploited-vmware.html) — **The Hacker News**  
   _Why:_ Worth awareness; review if it impacts your environment.
-- 🔴 [ShinyHunters claim hacks of Okta, Microsoft SSO accounts for data theft](https://www.bleepingcomputer.com/news/security/shinyhunters-claim-to-be-behind-sso-account-data-theft-attacks/) — **BleepingComputer**  
-  _Why:_ Reinforce MFA and user awareness; watch for suspicious sign-ins.
+- 🔴 [CISA Updates KEV Catalog with Four Actively Exploited Software Vulnerabilities](https://thehackernews.com/2026/01/cisa-updates-kev-catalog-with-four.html) — **The Hacker News**  
+  _Why:_ Worth awareness; review if it impacts your environment.
 
 ## 🟠 Important (monitor / plan / communicate)
 - 🟠 [Nearly 800,000 Telnet servers exposed to remote attacks](https://www.bleepingcomputer.com/news/security/nearly-800-000-telnet-servers-exposed-to-remote-attacks/) — **BleepingComputer**  
@@ -30,8 +30,8 @@ _Generated: 2026-01-26 23:42 UTC_
   _Why:_ Worth awareness; review if it impacts your environment.
 
 ## 🔵 FYI (context / backlog reads)
+- 🔵 [Initial Stages of Romance Scams &#x5b;Guest Diary&#x5d;, (Tue, Jan 27th)](https://isc.sans.edu/diary/rss/32650) — **SANS Internet Storm Center**
+- 🔵 [ISC Stormcast For Tuesday, January 27th, 2026 https://isc.sans.edu/podcastdetail/9782, (Tue, Jan 27th)](https://isc.sans.edu/diary/rss/32658) — **SANS Internet Storm Center**
+- 🔵 [New malware service guarantees phishing extensions on Chrome web store](https://www.bleepingcomputer.com/news/security/new-malware-service-guarantees-phishing-extensions-on-chrome-web-store/) — **BleepingComputer**
 - 🔵 [New ClickFix attacks abuse Windows App-V scripts to push malware](https://www.bleepingcomputer.com/news/security/new-clickfix-attacks-abuse-windows-app-v-scripts-to-push-malware/) — **BleepingComputer**
 - 🔵 [Cloudflare misconfiguration behind recent BGP route leak](https://www.bleepingcomputer.com/news/security/cloudflare-misconfiguration-behind-recent-bgp-route-leak/) — **BleepingComputer**
-- 🔵 [EU launches investigation into X over Grok-generated sexual images](https://www.bleepingcomputer.com/news/artificial-intelligence/eu-launches-investigation-into-x-over-grok-generated-sexual-images/) — **BleepingComputer**
-- 🔵 [Indian Users Targeted in Tax Phishing Campaign Delivering Blackmoon Malware](https://thehackernews.com/2026/01/indian-users-targeted-in-tax-phishing.html) — **The Hacker News**
-- 🔵 [Malicious VS Code AI Extensions with 1.5 Million Installs Steal Developer Source Code](https://thehackernews.com/2026/01/malicious-vs-code-ai-extensions-with-15.html) — **The Hacker News**
