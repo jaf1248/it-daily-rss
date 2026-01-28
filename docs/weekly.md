@@ -1,5 +1,5 @@
 # Weekly Executive Summary (last 7 days)
-_Generated: 2026-01-28 04:06 UTC_
+_Generated: 2026-01-28 05:54 UTC_
 
 ## 🔴 Critical (take action / validate exposure)
 - 🔴 [Fortinet blocks exploited FortiCloud SSO zero day until patch is ready](https://www.bleepingcomputer.com/news/security/fortinet-blocks-exploited-forticloud-sso-zero-day-until-patch-is-ready/) — **BleepingComputer**  
@@ -14,6 +14,8 @@ _Generated: 2026-01-28 04:06 UTC_
   _Why:_ Worth awareness; review if it impacts your environment.
 
 ## 🟠 Important (monitor / plan / communicate)
+- 🟠 [Fortinet Patches CVE-2026-24858 After Active FortiOS SSO Exploitation Detected](https://thehackernews.com/2026/01/fortinet-patches-cve-2026-24858-after.html) — **The Hacker News**  
+  _Why:_ Worth awareness; review if it impacts your environment.
 - 🟠 [WinRAR path traversal flaw still exploited by numerous hackers](https://www.bleepingcomputer.com/news/security/winrar-path-traversal-flaw-still-exploited-by-numerous-hackers/) — **BleepingComputer**  
   _Why:_ Worth awareness; review if it impacts your environment.
 - 🟠 [Critical sandbox escape flaw found in popular vm2 NodeJS library](https://www.bleepingcomputer.com/news/security/critical-sandbox-escape-flaw-discovered-in-popular-vm2-nodejs-library/) — **BleepingComputer**  
@@ -25,8 +27,6 @@ _Generated: 2026-01-28 04:06 UTC_
 - 🟠 [Critical Grist-Core Vulnerability Allows RCE Attacks via Spreadsheet Formulas](https://thehackernews.com/2026/01/critical-grist-core-vulnerability.html) — **The Hacker News**  
   _Why:_ Worth awareness; review if it impacts your environment.
 - 🟠 [CVE-2026-20805 Desktop Window Manager Information Disclosure Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-20805) — **Microsoft Security Response Center (MSRC)**  
-  _Why:_ Worth awareness; review if it impacts your environment.
-- 🟠 [CVE-2026-21509 Microsoft Office Security Feature Bypass Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-21509) — **Microsoft Security Response Center (MSRC)**  
   _Why:_ Worth awareness; review if it impacts your environment.
 
 ## 🔵 FYI (context / backlog reads)
