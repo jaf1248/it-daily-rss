@@ -1,5 +1,5 @@
 # Weekly Executive Summary (last 7 days)
-_Generated: 2026-01-28 21:02 UTC_
+_Generated: 2026-01-28 22:58 UTC_
 
 ## 🔴 Critical (take action / validate exposure)
 - 🔴 [eScan confirms update server breached to push malicious update](https://www.bleepingcomputer.com/news/security/escan-confirms-update-server-breached-to-push-malicious-update/) — **BleepingComputer**  
@@ -10,10 +10,12 @@ _Generated: 2026-01-28 21:02 UTC_
   _Why:_ Validate backups, EDR coverage, and response readiness.
 - 🔴 [Fortinet blocks exploited FortiCloud SSO zero day until patch is ready](https://www.bleepingcomputer.com/news/security/fortinet-blocks-exploited-forticloud-sso-zero-day-until-patch-is-ready/) — **BleepingComputer**  
   _Why:_ Worth awareness; review if it impacts your environment.
-- 🔴 [Nike investigates data breach after extortion gang leaks files](https://www.bleepingcomputer.com/news/security/nike-investigates-data-breach-after-extortion-gang-leaks-files/) — **BleepingComputer**  
+- 🔴 [Multi-Stage Phishing Campaign Targets Russia with Amnesia RAT and Ransomware](https://thehackernews.com/2026/01/multi-stage-phishing-campaign-targets.html) — **The Hacker News**  
   _Why:_ Validate backups, EDR coverage, and response readiness.
 
 ## 🟠 Important (monitor / plan / communicate)
+- 🟠 [Cyberattack on Polish energy grid impacted around 30 facilities](https://www.bleepingcomputer.com/news/security/cyberattack-on-polish-energy-grid-impacted-around-30-facilities/) — **BleepingComputer**  
+  _Why:_ Worth awareness; review if it impacts your environment.
 - 🟠 [Odd WebLogic Request. Possible CVE-2026-21962 Exploit Attempt or AI Slop&#x3f;, (Wed, Jan 28th)](https://isc.sans.edu/diary/rss/32662) — **SANS Internet Storm Center**  
   _Why:_ Worth awareness; review if it impacts your environment.
 - 🟠 [SolarWinds warns of critical Web Help Desk RCE, auth bypass flaws](https://www.bleepingcomputer.com/news/security/solarwinds-warns-of-critical-web-help-desk-rce-auth-bypass-flaws/) — **BleepingComputer**  
@@ -25,8 +27,6 @@ _Generated: 2026-01-28 21:02 UTC_
 - 🟠 [Google Warns of Active Exploitation of WinRAR Vulnerability CVE-2025-8088](https://thehackernews.com/2026/01/google-warns-of-active-exploitation-of.html) — **The Hacker News**  
   _Why:_ Worth awareness; review if it impacts your environment.
 - 🟠 [CVE-2026-21509 Microsoft Office Security Feature Bypass Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-21509) — **Microsoft Security Response Center (MSRC)**  
-  _Why:_ Worth awareness; review if it impacts your environment.
-- 🟠 [Fortinet Patches CVE-2026-24858 After Active FortiOS SSO Exploitation Detected](https://thehackernews.com/2026/01/fortinet-patches-cve-2026-24858-after.html) — **The Hacker News**  
   _Why:_ Worth awareness; review if it impacts your environment.
 
 ## 🔵 FYI (context / backlog reads)
