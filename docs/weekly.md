@@ -1,5 +1,5 @@
 # Weekly Executive Summary (last 7 days)
-_Generated: 2026-01-28 11:45 UTC_
+_Generated: 2026-01-28 13:59 UTC_
 
 ## 🔴 Critical (take action / validate exposure)
 - 🔴 [Password Reuse in Disguise: An Often-Missed Risky Workaround](https://thehackernews.com/2026/01/password-reuse-in-disguise-often-missed.html) — **The Hacker News**  
@@ -14,6 +14,8 @@ _Generated: 2026-01-28 11:45 UTC_
   _Why:_ Worth awareness; review if it impacts your environment.
 
 ## 🟠 Important (monitor / plan / communicate)
+- 🟠 [Two High-Severity n8n Flaws Allow Authenticated Remote Code Execution](https://thehackernews.com/2026/01/two-high-severity-n8n-flaws-allow.html) — **The Hacker News**  
+  _Why:_ Worth awareness; review if it impacts your environment.
 - 🟠 [Google Warns of Active Exploitation of WinRAR Vulnerability CVE-2025-8088](https://thehackernews.com/2026/01/google-warns-of-active-exploitation-of.html) — **The Hacker News**  
   _Why:_ Worth awareness; review if it impacts your environment.
 - 🟠 [Fortinet Patches CVE-2026-24858 After Active FortiOS SSO Exploitation Detected](https://thehackernews.com/2026/01/fortinet-patches-cve-2026-24858-after.html) — **The Hacker News**  
@@ -26,12 +28,10 @@ _Generated: 2026-01-28 11:45 UTC_
   _Why:_ Worth awareness; review if it impacts your environment.
 - 🟠 [Microsoft Office Zero-Day (CVE-2026-21509) - Emergency Patch Issued for Active Exploitation](https://thehackernews.com/2026/01/microsoft-issues-emergency-patch-for.html) — **The Hacker News**  
   _Why:_ Worth awareness; review if it impacts your environment.
-- 🟠 [Critical Grist-Core Vulnerability Allows RCE Attacks via Spreadsheet Formulas](https://thehackernews.com/2026/01/critical-grist-core-vulnerability.html) — **The Hacker News**  
-  _Why:_ Worth awareness; review if it impacts your environment.
 
 ## 🔵 FYI (context / backlog reads)
-- 🔵 [Fake Python Spellchecker Packages on PyPI Delivered Hidden Remote Access Trojan](https://thehackernews.com/2026/01/fake-python-spellchecker-packages-on.html) — **The Hacker News**
-- 🔵 [ISC Stormcast For Wednesday, January 28th, 2026 https://isc.sans.edu/podcastdetail/9784, (Wed, Jan 28th)](https://isc.sans.edu/diary/rss/32660) — **SANS Internet Storm Center**
-- 🔵 [OpenAI's ChatGPT ad costs are on par with live NFL broadcasts](https://www.bleepingcomputer.com/news/artificial-intelligence/openais-chatgpt-ad-costs-are-on-par-with-live-nfl-broadcasts/) — **BleepingComputer**
-- 🔵 [Chinese Mustang Panda hackers deploy infostealers via CoolClient backdoor](https://www.bleepingcomputer.com/news/security/chinese-mustang-panda-hackers-deploy-infostealers-via-coolclient-backdoor/) — **BleepingComputer**
-- 🔵 [WhatsApp Rolls Out Lockdown-Style Security Mode to Protect Targeted Users From Spyware](https://thehackernews.com/2026/01/whatsapp-rolls-out-lockdown-style.html) — **The Hacker News**
+- 🔵 [Hackers hijack exposed LLM endpoints in Bizarre Bazaar operation](https://www.bleepingcomputer.com/news/security/hackers-hijack-exposed-llm-endpoints-in-bizarre-bazaar-operation/) — **BleepingComputer**
+- 🔵 [Slovakian man pleads guilty to operating darknet marketplace](https://www.bleepingcomputer.com/news/security/slovakian-man-pleads-guilty-to-operating-kingdown-market-cybercrime-marketplace/) — **BleepingComputer**
+- 🔵 [From Triage to Threat Hunts: How AI Accelerates SecOps](https://thehackernews.com/2026/01/from-triage-to-threat-hunts-how-ai.html) — **The Hacker News**
+- 🔵 [New WhatsApp lockdown feature protects high-risk users from hackers](https://www.bleepingcomputer.com/news/security/whatsapp-gets-new-lockdown-feature-that-blocks-cyberattacks/) — **BleepingComputer**
+- 🔵 [Mustang Panda Deploys Updated COOLCLIENT Backdoor in Government Cyber Attacks](https://thehackernews.com/2026/01/mustang-panda-deploys-updated.html) — **The Hacker News**
