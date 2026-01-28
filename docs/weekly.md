@@ -1,5 +1,5 @@
 # Weekly Executive Summary (last 7 days)
-_Generated: 2026-01-28 05:54 UTC_
+_Generated: 2026-01-28 07:03 UTC_
 
 ## 🔴 Critical (take action / validate exposure)
 - 🔴 [Fortinet blocks exploited FortiCloud SSO zero day until patch is ready](https://www.bleepingcomputer.com/news/security/fortinet-blocks-exploited-forticloud-sso-zero-day-until-patch-is-ready/) — **BleepingComputer**  
