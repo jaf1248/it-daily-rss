@@ -1,5 +1,5 @@
 # Weekly Executive Summary (last 7 days)
-_Generated: 2026-01-28 10:59 UTC_
+_Generated: 2026-01-28 11:45 UTC_
 
 ## 🔴 Critical (take action / validate exposure)
 - 🔴 [Password Reuse in Disguise: An Often-Missed Risky Workaround](https://thehackernews.com/2026/01/password-reuse-in-disguise-often-missed.html) — **The Hacker News**  
