@@ -1,5 +1,5 @@
 # Weekly Executive Summary (last 7 days)
-_Generated: 2026-01-29 22:58 UTC_
+_Generated: 2026-01-29 23:52 UTC_
 
 ## 🔴 Critical (take action / validate exposure)
 - 🔴 [Match Group breach exposes data from Hinge, Tinder, OkCupid, and Match](https://www.bleepingcomputer.com/news/security/match-group-breach-exposes-data-from-hinge-tinder-okcupid-and-match/) — **BleepingComputer**  
