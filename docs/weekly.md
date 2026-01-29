@@ -1,7 +1,9 @@
 # Weekly Executive Summary (last 7 days)
-_Generated: 2026-01-29 11:57 UTC_
+_Generated: 2026-01-29 14:11 UTC_
 
 ## 🔴 Critical (take action / validate exposure)
+- 🔴 [France fines unemployment agency €5 million over data breach](https://www.bleepingcomputer.com/news/security/france-fines-unemployment-agency-5-million-over-data-breach/) — **BleepingComputer**  
+  _Why:_ Worth awareness; review if it impacts your environment.
 - 🔴 [Initial access hackers switch to Tsundere Bot for ransomware attacks](https://www.bleepingcomputer.com/news/security/initial-access-hackers-switch-to-tsundere-bot-for-ransomware-attacks/) — **BleepingComputer**  
   _Why:_ Validate backups, EDR coverage, and response readiness.
 - 🔴 [eScan confirms update server breached to push malicious update](https://www.bleepingcomputer.com/news/security/escan-confirms-update-server-breached-to-push-malicious-update/) — **BleepingComputer**  
@@ -10,10 +12,10 @@ _Generated: 2026-01-29 11:57 UTC_
   _Why:_ Validate backups, EDR coverage, and response readiness.
 - 🔴 [Password Reuse in Disguise: An Often-Missed Risky Workaround](https://thehackernews.com/2026/01/password-reuse-in-disguise-often-missed.html) — **The Hacker News**  
   _Why:_ Validate backups, EDR coverage, and response readiness.
-- 🔴 [Fortinet blocks exploited FortiCloud SSO zero day until patch is ready](https://www.bleepingcomputer.com/news/security/fortinet-blocks-exploited-forticloud-sso-zero-day-until-patch-is-ready/) — **BleepingComputer**  
-  _Why:_ Worth awareness; review if it impacts your environment.
 
 ## 🟠 Important (monitor / plan / communicate)
+- 🟠 [ThreatsDay Bulletin: New RCEs, Darknet Busts, Kernel Bugs & 25+ More Stories](https://thehackernews.com/2026/01/threatsday-bulletin-new-rces-darknet.html) — **The Hacker News**  
+  _Why:_ Expect potential user impact; prep comms and check vendor status.
 - 🟠 [SolarWinds Fixes Four Critical Web Help Desk Flaws With Unauthenticated RCE and Auth Bypass](https://thehackernews.com/2026/01/solarwinds-fixes-four-critical-web-help.html) — **The Hacker News**  
   _Why:_ Worth awareness; review if it impacts your environment.
 - 🟠 [Cyberattack on Polish energy grid impacted around 30 facilities](https://www.bleepingcomputer.com/news/security/cyberattack-on-polish-energy-grid-impacted-around-30-facilities/) — **BleepingComputer**  
@@ -26,12 +28,10 @@ _Generated: 2026-01-29 11:57 UTC_
   _Why:_ Worth awareness; review if it impacts your environment.
 - 🟠 [Critical vm2 Node.js Flaw Allows Sandbox Escape and Arbitrary Code Execution](https://thehackernews.com/2026/01/critical-vm2-nodejs-flaw-allows-sandbox.html) — **The Hacker News**  
   _Why:_ Worth awareness; review if it impacts your environment.
-- 🟠 [Google Warns of Active Exploitation of WinRAR Vulnerability CVE-2025-8088](https://thehackernews.com/2026/01/google-warns-of-active-exploitation-of.html) — **The Hacker News**  
-  _Why:_ Worth awareness; review if it impacts your environment.
 
 ## 🔵 FYI (context / backlog reads)
+- 🔵 [ISC Stormcast For Thursday, January 29th, 2026 https://isc.sans.edu/podcastdetail/9786, (Thu, Jan 29th)](https://isc.sans.edu/diary/rss/32664) — **SANS Internet Storm Center**
 - 🔵 [Google rolls out Android theft protection feature updates](https://www.bleepingcomputer.com/news/google/google-rolls-out-android-theft-protection-feature-updates/) — **BleepingComputer**
+- 🔵 [Survey of 100+ Energy Systems Reveals Critical OT Cybersecurity Gaps](https://thehackernews.com/2026/01/survey-of-100-energy-systems-reveals.html) — **The Hacker News**
 - 🔵 [3 Decisions CISOs Need to Make to Prevent Downtime Risk in 2026](https://thehackernews.com/2026/01/3-decisions-cisos-need-to-make-to.html) — **The Hacker News**
 - 🔵 [Google Disrupts IPIDEA — One of the World’s Largest Residential Proxy Networks](https://thehackernews.com/2026/01/google-disrupts-ipidea-one-of-worlds.html) — **The Hacker News**
-- 🔵 [Viral Moltbot AI assistant raises concerns over data security](https://www.bleepingcomputer.com/news/security/viral-moltbot-ai-assistant-raises-concerns-over-data-security/) — **BleepingComputer**
-- 🔵 [New sandbox escape flaw exposes n8n instances to RCE attacks](https://www.bleepingcomputer.com/news/security/new-sandbox-escape-flaw-exposes-n8n-instances-to-rce-attacks/) — **BleepingComputer**
