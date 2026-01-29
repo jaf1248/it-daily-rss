@@ -1,5 +1,5 @@
 # Weekly Executive Summary (last 7 days)
-_Generated: 2026-01-29 10:02 UTC_
+_Generated: 2026-01-29 11:57 UTC_
 
 ## 🔴 Critical (take action / validate exposure)
 - 🔴 [Initial access hackers switch to Tsundere Bot for ransomware attacks](https://www.bleepingcomputer.com/news/security/initial-access-hackers-switch-to-tsundere-bot-for-ransomware-attacks/) — **BleepingComputer**  
@@ -30,8 +30,8 @@ _Generated: 2026-01-29 10:02 UTC_
   _Why:_ Worth awareness; review if it impacts your environment.
 
 ## 🔵 FYI (context / backlog reads)
+- 🔵 [Google rolls out Android theft protection feature updates](https://www.bleepingcomputer.com/news/google/google-rolls-out-android-theft-protection-feature-updates/) — **BleepingComputer**
+- 🔵 [3 Decisions CISOs Need to Make to Prevent Downtime Risk in 2026](https://thehackernews.com/2026/01/3-decisions-cisos-need-to-make-to.html) — **The Hacker News**
 - 🔵 [Google Disrupts IPIDEA — One of the World’s Largest Residential Proxy Networks](https://thehackernews.com/2026/01/google-disrupts-ipidea-one-of-worlds.html) — **The Hacker News**
 - 🔵 [Viral Moltbot AI assistant raises concerns over data security](https://www.bleepingcomputer.com/news/security/viral-moltbot-ai-assistant-raises-concerns-over-data-security/) — **BleepingComputer**
 - 🔵 [New sandbox escape flaw exposes n8n instances to RCE attacks](https://www.bleepingcomputer.com/news/security/new-sandbox-escape-flaw-exposes-n8n-instances-to-rce-attacks/) — **BleepingComputer**
-- 🔵 [Fake Moltbot AI Coding Assistant on VS Code Marketplace Drops Malware](https://thehackernews.com/2026/01/fake-moltbot-ai-coding-assistant-on-vs.html) — **The Hacker News**
-- 🔵 [Empire cybercrime market owner pleads guilty to drug conspiracy](https://www.bleepingcomputer.com/news/security/empire-cybercrime-market-owner-pleads-guilty-to-drug-conspiracy/) — **BleepingComputer**
