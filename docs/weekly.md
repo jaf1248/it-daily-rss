@@ -1,5 +1,5 @@
 # Weekly Executive Summary (last 7 days)
-_Generated: 2026-01-29 14:11 UTC_
+_Generated: 2026-01-29 17:05 UTC_
 
 ## 🔴 Critical (take action / validate exposure)
 - 🔴 [France fines unemployment agency €5 million over data breach](https://www.bleepingcomputer.com/news/security/france-fines-unemployment-agency-5-million-over-data-breach/) — **BleepingComputer**  
@@ -30,8 +30,8 @@ _Generated: 2026-01-29 14:11 UTC_
   _Why:_ Worth awareness; review if it impacts your environment.
 
 ## 🔵 FYI (context / backlog reads)
+- 🔵 [Not a Kids Game: From Roblox Mod to Compromising Your Company](https://www.bleepingcomputer.com/news/security/not-a-kids-game-from-roblox-mod-to-compromising-your-company/) — **BleepingComputer**
+- 🔵 [Aisuru botnet sets new record with 31.4 Tbps DDoS attack](https://www.bleepingcomputer.com/news/security/aisuru-botnet-sets-new-record-with-314-tbps-ddos-attack/) — **BleepingComputer**
+- 🔵 [New Microsoft Teams feature will let you report suspicious calls](https://www.bleepingcomputer.com/news/microsoft/new-microsoft-teams-feature-will-let-you-report-suspicious-calls/) — **BleepingComputer**
 - 🔵 [ISC Stormcast For Thursday, January 29th, 2026 https://isc.sans.edu/podcastdetail/9786, (Thu, Jan 29th)](https://isc.sans.edu/diary/rss/32664) — **SANS Internet Storm Center**
 - 🔵 [Google rolls out Android theft protection feature updates](https://www.bleepingcomputer.com/news/google/google-rolls-out-android-theft-protection-feature-updates/) — **BleepingComputer**
-- 🔵 [Survey of 100+ Energy Systems Reveals Critical OT Cybersecurity Gaps](https://thehackernews.com/2026/01/survey-of-100-energy-systems-reveals.html) — **The Hacker News**
-- 🔵 [3 Decisions CISOs Need to Make to Prevent Downtime Risk in 2026](https://thehackernews.com/2026/01/3-decisions-cisos-need-to-make-to.html) — **The Hacker News**
-- 🔵 [Google Disrupts IPIDEA — One of the World’s Largest Residential Proxy Networks](https://thehackernews.com/2026/01/google-disrupts-ipidea-one-of-worlds.html) — **The Hacker News**
