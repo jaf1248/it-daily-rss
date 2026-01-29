@@ -1,5 +1,5 @@
 # Weekly Executive Summary (last 7 days)
-_Generated: 2026-01-29 20:57 UTC_
+_Generated: 2026-01-29 21:55 UTC_
 
 ## 🔴 Critical (take action / validate exposure)
 - 🔴 [Match Group breach exposes data from Hinge, Tinder, OkCupid, and Match](https://www.bleepingcomputer.com/news/security/match-group-breach-exposes-data-from-hinge-tinder-okcupid-and-match/) — **BleepingComputer**  
@@ -20,13 +20,13 @@ _Generated: 2026-01-29 20:57 UTC_
   _Why:_ Worth awareness; review if it impacts your environment.
 - 🟠 [Cyberattack on Polish energy grid impacted around 30 facilities](https://www.bleepingcomputer.com/news/security/cyberattack-on-polish-energy-grid-impacted-around-30-facilities/) — **BleepingComputer**  
   _Why:_ Worth awareness; review if it impacts your environment.
+- 🟠 [Odd WebLogic Request. Possible CVE-2026-21962 Exploit Attempt or AI Slop&#x3f;, (Wed, Jan 28th)](https://isc.sans.edu/diary/rss/32662) — **SANS Internet Storm Center**  
+  _Why:_ Worth awareness; review if it impacts your environment.
 - 🟠 [Two High-Severity n8n Flaws Allow Authenticated Remote Code Execution](https://thehackernews.com/2026/01/two-high-severity-n8n-flaws-allow.html) — **The Hacker News**  
   _Why:_ Worth awareness; review if it impacts your environment.
 - 🟠 [Critical vm2 Node.js Flaw Allows Sandbox Escape and Arbitrary Code Execution](https://thehackernews.com/2026/01/critical-vm2-nodejs-flaw-allows-sandbox.html) — **The Hacker News**  
   _Why:_ Worth awareness; review if it impacts your environment.
 - 🟠 [Google Warns of Active Exploitation of WinRAR Vulnerability CVE-2025-8088](https://thehackernews.com/2026/01/google-warns-of-active-exploitation-of.html) — **The Hacker News**  
-  _Why:_ Worth awareness; review if it impacts your environment.
-- 🟠 [CVE-2026-21509 Microsoft Office Security Feature Bypass Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-21509) — **Microsoft Security Response Center (MSRC)**  
   _Why:_ Worth awareness; review if it impacts your environment.
 
 ## 🔵 FYI (context / backlog reads)
