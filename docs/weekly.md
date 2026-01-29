@@ -1,5 +1,5 @@
 # Weekly Executive Summary (last 7 days)
-_Generated: 2026-01-28 23:51 UTC_
+_Generated: 2026-01-29 04:54 UTC_
 
 ## 🔴 Critical (take action / validate exposure)
 - 🔴 [Initial access hackers switch to Tsundere Bot for ransomware attacks](https://www.bleepingcomputer.com/news/security/initial-access-hackers-switch-to-tsundere-bot-for-ransomware-attacks/) — **BleepingComputer**  
