@@ -1,5 +1,5 @@
 # Weekly Executive Summary (last 7 days)
-_Generated: 2026-01-29 07:29 UTC_
+_Generated: 2026-01-29 10:02 UTC_
 
 ## 🔴 Critical (take action / validate exposure)
 - 🔴 [Initial access hackers switch to Tsundere Bot for ransomware attacks](https://www.bleepingcomputer.com/news/security/initial-access-hackers-switch-to-tsundere-bot-for-ransomware-attacks/) — **BleepingComputer**  
@@ -14,6 +14,8 @@ _Generated: 2026-01-29 07:29 UTC_
   _Why:_ Worth awareness; review if it impacts your environment.
 
 ## 🟠 Important (monitor / plan / communicate)
+- 🟠 [SolarWinds Fixes Four Critical Web Help Desk Flaws With Unauthenticated RCE and Auth Bypass](https://thehackernews.com/2026/01/solarwinds-fixes-four-critical-web-help.html) — **The Hacker News**  
+  _Why:_ Worth awareness; review if it impacts your environment.
 - 🟠 [Cyberattack on Polish energy grid impacted around 30 facilities](https://www.bleepingcomputer.com/news/security/cyberattack-on-polish-energy-grid-impacted-around-30-facilities/) — **BleepingComputer**  
   _Why:_ Worth awareness; review if it impacts your environment.
 - 🟠 [Odd WebLogic Request. Possible CVE-2026-21962 Exploit Attempt or AI Slop&#x3f;, (Wed, Jan 28th)](https://isc.sans.edu/diary/rss/32662) — **SANS Internet Storm Center**  
@@ -25,8 +27,6 @@ _Generated: 2026-01-29 07:29 UTC_
 - 🟠 [Critical vm2 Node.js Flaw Allows Sandbox Escape and Arbitrary Code Execution](https://thehackernews.com/2026/01/critical-vm2-nodejs-flaw-allows-sandbox.html) — **The Hacker News**  
   _Why:_ Worth awareness; review if it impacts your environment.
 - 🟠 [Google Warns of Active Exploitation of WinRAR Vulnerability CVE-2025-8088](https://thehackernews.com/2026/01/google-warns-of-active-exploitation-of.html) — **The Hacker News**  
-  _Why:_ Worth awareness; review if it impacts your environment.
-- 🟠 [CVE-2026-21509 Microsoft Office Security Feature Bypass Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-21509) — **Microsoft Security Response Center (MSRC)**  
   _Why:_ Worth awareness; review if it impacts your environment.
 
 ## 🔵 FYI (context / backlog reads)
