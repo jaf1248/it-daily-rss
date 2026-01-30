@@ -3,7 +3,7 @@
 <channel>
   <title>Joe — Under the Radar</title>
   <description>Lesser-known but high-signal IT, security, and ops sources.</description>
-  <lastBuildDate>Fri, 30 Jan 2026 18:03:54 +0000</lastBuildDate>
+  <lastBuildDate>Fri, 30 Jan 2026 19:55:56 +0000</lastBuildDate>
   
 <item>
   <title>🔵 Google’s AI advantage: why crawler separation is the only path to a fair Internet</title>
@@ -27,6 +27,13 @@
   <link>https://blog.cloudflare.com/vertical-microfrontends/</link>
   <pubDate>Fri, 30 Jan 2026 14:00:00 +0000</pubDate>
   <description><![CDATA[<b>Why this matters: Early signal from niche sources; worth a quick scan for emerging issues.</b><br/>Deploy multiple Workers under a single domain with the ability to make them feel like single-page applications. We take a look at how service bindings enable URL path routing to multiple projects.<br/><br/><b>Source:</b> Cloudflare Blog &nbsp; <b>Severity:</b> FYI]]></description>
+</item>
+
+<item>
+  <title>🟠 Breaking the Sound Barrier, Part II: Exploiting CVE-2024-54529</title>
+  <link>https://projectzero.google/2026/01/sound-barrier-2.html</link>
+  <pubDate>Fri, 30 Jan 2026 08:00:00 +0000</pubDate>
+  <description><![CDATA[<b>Why this matters: Early signal from niche sources; worth a quick scan for emerging issues.</b><br/>In the first part of this series, I detailed my journey into macOS security research, which led to the discovery of a type confusion vulnerability (CVE-2024-54529) and a double-free vulnerability (CVE-2025-31235) in the coreaudiod system daemon through a process I call knowledge-driven fuzzing. While the first post focused on the process of finding the vulnerabilities, this post dives into the intricate process of exploiting the type confusion vulnerability. I’ll explain the technical details of turning a potentially exploitable crash into a working exploit: a journey filled with dead ends, creative problem solving, and ultimately, success. The Vulnerability: A Quick Recap If you haven’t already, I highly recommend reading my detailed writeup on this vulnerability before proceeding. As a refresher, CVE-2024-54529 is a type confusion vulnerability within the com.apple.audio.audiohald Mach service in the CoreAudio framework used by the coreaudiod process. Several Mach message handlers, such as _XIOContext_Fetch_Workgroup_Port, would fetch a HALS_Object from the Object Map based on an ID from the Mach message, and then perform operations on it, assuming it was of a specific type (ioct) without proper validation.<br/><br/><b>Source:</b> Project Zero Blog &nbsp; <b>Severity:</b> Important]]></description>
 </item>
 
 <item>
@@ -398,13 +405,6 @@
   <link>https://projectzero.google/2025/11/defeating-kaslr-by-doing-nothing-at-all.html</link>
   <pubDate>Mon, 03 Nov 2025 08:00:00 +0000</pubDate>
   <description><![CDATA[<b>Why this matters: Early signal from niche sources; worth a quick scan for emerging issues.</b><br/>Introduction I’ve recently been researching Pixel kernel exploitation and as part of this research I found myself with an excellent arbitrary write primitive…but without a KASLR leak. As necessity is the mother of all invention, on a hunch, I started researching the Linux kernel linear mapping. The Linux Linear Mapping The linear mapping is a region in the kernel virtual address space that is a direct 1:1 unstructured representation of physical memory. Working with Jann, I learned how the kernel decided where to place this region in the virtual address space. To make it possible to analyze kernel internals on a rooted phone, Jann wrote a tool to call tracing BPF’s privileged BPF_FUNC_probe_read_kernel helper, which by design permits arbitrary kernel reads. The code for this is available here. The linear mapping virtual address for a given physical address is calculated by the following macro:<br/><br/><b>Source:</b> Project Zero Blog &nbsp; <b>Severity:</b> FYI]]></description>
-</item>
-
-<item>
-  <title>🔵 Pointer leaks through pointer-keyed data structures</title>
-  <link>https://projectzero.google/2025/09/pointer-leaks-through-pointer-keyed.html</link>
-  <pubDate>Fri, 26 Sep 2025 07:00:00 +0000</pubDate>
-  <description><![CDATA[<b>Why this matters: Early signal from niche sources; worth a quick scan for emerging issues.</b><br/>Introduction Some time in 2024, during a Project Zero team discussion, we were talking about how remote ASLR leaks would be helpful or necessary for exploiting some types of memory corruption bugs, specifically in the context of Apple devices. Coming from the angle of “where would be a good first place to look for a remote ASLR leak”, this led to the discovery of a trick that could potentially be used to leak a pointer remotely, without any memory safety violations or timing attacks, in scenarios where an attack surface can be reached that deserializes attacker-provided data, re-serializes the resulting objects, and sends the re-serialized data back to the attacker. The team brainstormed, and we couldn’t immediately come up with any specific attack surface on macOS/iOS that would behave this way, though we did not perform extensive analysis to test whether such attack surface exists. Instead of targeting a real attack surface, I tested the technique described here on macOS with an artificial test case that uses NSKeyedArchiver serialization as the target. Because of the lack of demonstrated real-world impact, I reported the issue to Apple without filing it in our bugtracker. It was fixed in the 31 Mar 2025 security releases. Links to Apple code in this post go to an outdated version of the code that hasn’t been updated in years, and descriptions of how the code works refer to the old unfixed version. I decided to write about the technique since it is kind of intriguing and novel, and some of the ideas in it might generalize to other contexts. It is closely related to a partial pointer leak and another pointer ordering leak that I discovered in the past, and shows how pointer-keyed data structures can be used to leak addresses under ideal circumstances.<br/><br/><b>Source:</b> Project Zero Blog &nbsp; <b>Severity:</b> FYI]]></description>
 </item>
 
 </channel>
