@@ -1,5 +1,5 @@
 # Weekly Executive Summary (last 7 days)
-_Generated: 2026-01-30 11:18 UTC_
+_Generated: 2026-01-30 14:06 UTC_
 
 ## 🔴 Critical (take action / validate exposure)
 - 🔴 [Two Ivanti EPMM Zero-Day RCE Flaws Actively Exploited, Security Updates Released](https://thehackernews.com/2026/01/two-ivanti-epmm-zero-day-rce-flaws.html) — **The Hacker News**  
@@ -30,8 +30,8 @@ _Generated: 2026-01-30 11:18 UTC_
   _Why:_ Worth awareness; review if it impacts your environment.
 
 ## 🔵 FYI (context / backlog reads)
+- 🔵 [China-Linked UAT-8099 Targets IIS Servers in Asia with BadIIS SEO Malware](https://thehackernews.com/2026/01/china-linked-uat-8099-targets-iis.html) — **The Hacker News**
+- 🔵 [Windows 11 KB5074105 update fixes boot, sign-in, and activation issues](https://www.bleepingcomputer.com/news/microsoft/windows-11-kb5074105-update-fixes-boot-sign-in-and-activation-issues/) — **BleepingComputer**
+- 🔵 [Badges, Bytes and Blackmail](https://thehackernews.com/2026/01/badges-bytes-and-blackmail.html) — **The Hacker News**
 - 🔵 [Ex-Google Engineer Convicted for Stealing 2,000 AI Trade Secrets for China Startup](https://thehackernews.com/2026/01/ex-google-engineer-convicted-for.html) — **The Hacker News**
 - 🔵 [ISC Stormcast For Friday, January 30th, 2026 https://isc.sans.edu/podcastdetail/9788, (Fri, Jan 30th)](https://isc.sans.edu/diary/rss/32666) — **SANS Internet Storm Center**
-- 🔵 [Hugging Face abused to spread thousands of Android malware variants](https://www.bleepingcomputer.com/news/security/hugging-face-abused-to-spread-thousands-of-android-malware-variants/) — **BleepingComputer**
-- 🔵 [Google disrupts IPIDEA residential proxy networks fueled by malware](https://www.bleepingcomputer.com/news/security/google-disrupts-ipidea-residential-proxy-networks-fueled-by-malware/) — **BleepingComputer**
-- 🔵 [Researchers Find 175,000 Publicly Exposed Ollama AI Servers Across 130 Countries](https://thehackernews.com/2026/01/researchers-find-175000-publicly.html) — **The Hacker News**
