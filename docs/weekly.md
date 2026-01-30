@@ -1,5 +1,5 @@
 # Weekly Executive Summary (last 7 days)
-_Generated: 2026-01-30 07:29 UTC_
+_Generated: 2026-01-30 09:57 UTC_
 
 ## 🔴 Critical (take action / validate exposure)
 - 🔴 [Two Ivanti EPMM Zero-Day RCE Flaws Actively Exploited, Security Updates Released](https://thehackernews.com/2026/01/two-ivanti-epmm-zero-day-rce-flaws.html) — **The Hacker News**  
@@ -14,6 +14,8 @@ _Generated: 2026-01-30 07:29 UTC_
   _Why:_ Validate backups, EDR coverage, and response readiness.
 
 ## 🟠 Important (monitor / plan / communicate)
+- 🟠 [SmarterMail Fixes Critical Unauthenticated RCE Flaw with CVSS 9.3 Score](https://thehackernews.com/2026/01/smartermail-fixes-critical.html) — **The Hacker News**  
+  _Why:_ Worth awareness; review if it impacts your environment.
 - 🟠 [Chromium: CVE-2026-1504 Inappropriate implementation in Background Fetch API](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-1504) — **Microsoft Security Response Center (MSRC)**  
   _Why:_ Worth awareness; review if it impacts your environment.
 - 🟠 [Microsoft links Windows 11 boot failures to failed December 2025 update](https://www.bleepingcomputer.com/news/microsoft/microsoft-links-windows-11-boot-failures-to-failed-december-2025-update/) — **BleepingComputer**  
@@ -26,12 +28,10 @@ _Generated: 2026-01-30 07:29 UTC_
   _Why:_ Worth awareness; review if it impacts your environment.
 - 🟠 [CVE-2026-20960 PowerApps Desktop Client Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-20960) — **Microsoft Security Response Center (MSRC)**  
   _Why:_ Worth awareness; review if it impacts your environment.
-- 🟠 [Cyberattack on Polish energy grid impacted around 30 facilities](https://www.bleepingcomputer.com/news/security/cyberattack-on-polish-energy-grid-impacted-around-30-facilities/) — **BleepingComputer**  
-  _Why:_ Worth awareness; review if it impacts your environment.
 
 ## 🔵 FYI (context / backlog reads)
+- 🔵 [Ex-Google Engineer Convicted for Stealing 2,000 AI Trade Secrets for China Startup](https://thehackernews.com/2026/01/ex-google-engineer-convicted-for.html) — **The Hacker News**
 - 🔵 [ISC Stormcast For Friday, January 30th, 2026 https://isc.sans.edu/podcastdetail/9788, (Fri, Jan 30th)](https://isc.sans.edu/diary/rss/32666) — **SANS Internet Storm Center**
 - 🔵 [Hugging Face abused to spread thousands of Android malware variants](https://www.bleepingcomputer.com/news/security/hugging-face-abused-to-spread-thousands-of-android-malware-variants/) — **BleepingComputer**
 - 🔵 [Google disrupts IPIDEA residential proxy networks fueled by malware](https://www.bleepingcomputer.com/news/security/google-disrupts-ipidea-residential-proxy-networks-fueled-by-malware/) — **BleepingComputer**
 - 🔵 [Researchers Find 175,000 Publicly Exposed Ollama AI Servers Across 130 Countries](https://thehackernews.com/2026/01/researchers-find-175000-publicly.html) — **The Hacker News**
-- 🔵 [Not a Kids Game: From Roblox Mod to Compromising Your Company](https://www.bleepingcomputer.com/news/security/not-a-kids-game-from-roblox-mod-to-compromising-your-company/) — **BleepingComputer**
