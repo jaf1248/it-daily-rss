@@ -1,5 +1,5 @@
 # Weekly Executive Summary (last 7 days)
-_Generated: 2026-01-30 14:06 UTC_
+_Generated: 2026-01-30 16:04 UTC_
 
 ## 🔴 Critical (take action / validate exposure)
 - 🔴 [Two Ivanti EPMM Zero-Day RCE Flaws Actively Exploited, Security Updates Released](https://thehackernews.com/2026/01/two-ivanti-epmm-zero-day-rce-flaws.html) — **The Hacker News**  
@@ -30,8 +30,8 @@ _Generated: 2026-01-30 14:06 UTC_
   _Why:_ Worth awareness; review if it impacts your environment.
 
 ## 🔵 FYI (context / backlog reads)
+- 🔵 [Microsoft fixes Outlook bug blocking access to encrypted emails](https://www.bleepingcomputer.com/news/microsoft/microsoft-fixes-outlook-bug-blocking-access-to-encrypted-emails/) — **BleepingComputer**
+- 🔵 [Researchers Uncover Chrome Extensions Abusing Affiliate Links and Stealing ChatGPT Access](https://thehackernews.com/2026/01/researchers-uncover-chrome-extensions.html) — **The Hacker News**
 - 🔵 [China-Linked UAT-8099 Targets IIS Servers in Asia with BadIIS SEO Malware](https://thehackernews.com/2026/01/china-linked-uat-8099-targets-iis.html) — **The Hacker News**
 - 🔵 [Windows 11 KB5074105 update fixes boot, sign-in, and activation issues](https://www.bleepingcomputer.com/news/microsoft/windows-11-kb5074105-update-fixes-boot-sign-in-and-activation-issues/) — **BleepingComputer**
 - 🔵 [Badges, Bytes and Blackmail](https://thehackernews.com/2026/01/badges-bytes-and-blackmail.html) — **The Hacker News**
-- 🔵 [Ex-Google Engineer Convicted for Stealing 2,000 AI Trade Secrets for China Startup](https://thehackernews.com/2026/01/ex-google-engineer-convicted-for.html) — **The Hacker News**
-- 🔵 [ISC Stormcast For Friday, January 30th, 2026 https://isc.sans.edu/podcastdetail/9788, (Fri, Jan 30th)](https://isc.sans.edu/diary/rss/32666) — **SANS Internet Storm Center**

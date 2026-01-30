@@ -3,13 +3,30 @@
 <channel>
   <title>Joe — Under the Radar</title>
   <description>Lesser-known but high-signal IT, security, and ops sources.</description>
-  <lastBuildDate>Fri, 30 Jan 2026 14:05:55 +0000</lastBuildDate>
+  <lastBuildDate>Fri, 30 Jan 2026 16:04:38 +0000</lastBuildDate>
   
+<item>
+  <title>🔴 AIs Are Getting Better at Finding and Exploiting Security Vulnerabilities</title>
+  <link>https://www.schneier.com/blog/archives/2026/01/ais-are-getting-better-at-finding-and-exploiting-security-vulnerabilities.html</link>
+  <pubDate>Fri, 30 Jan 2026 15:35:15 +0000</pubDate>
+  <description><![CDATA[<b>Why this matters: Potential exposure of credentials/data; check monitoring and incident readiness.</b><br/><p>From an Anthropic <a href="https://red.anthropic.com/2026/cyber-toolkits-update/">blog post</a>:</p>
+<blockquote><p>In a recent evaluation of AI models’ cyber capabilities, current Claude models can now succeed at multistage attacks on networks with dozens of hosts using only standard, open-source tools, instead of the custom tools needed by previous generations. This illustrates how barriers to the use of AI in relatively autonomous cyber workflows are rapidly coming down, and highlights the importance of security fundamentals like promptly patching known vulnerabilities.</p>
+<p>[…]</p>
+<p>A notable development during the testing of Claude Sonnet 4.5 is that the model can now succeed on a minority of the networks without the custom cyber toolkit needed by previous generations. In particular, Sonnet 4.5 can now exfiltrate all of the (simulated) personal information in a high-fidelity simulation of the Equifax data breach&#8212;one of the costliest cyber attacks in history­­using only a Bash shell on a widely-available Kali Linux host (standard, open-source tools for penetration testing; not a custom toolkit). Sonnet 4.5 accomplishes this by instantly recognizing a publicized CVE and writing code to exploit it without needing to look it up or iterate on it. Recalling that the original Equifax breach happened by exploiting a publicized CVE that had not yet been patched, the prospect of highly competent and fast AI agents leveraging this approach underscores the pressing need for security best practices like prompt updates and patches...</p></blockquote><br/><br/><b>Source:</b> Schneier on Security &nbsp; <b>Severity:</b> Critical]]></description>
+</item>
+
+<item>
+  <title>🔵 Building vertical microfrontends on Cloudflare’s platform</title>
+  <link>https://blog.cloudflare.com/vertical-microfrontends/</link>
+  <pubDate>Fri, 30 Jan 2026 14:00:00 +0000</pubDate>
+  <description><![CDATA[<b>Why this matters: Early signal from niche sources; worth a quick scan for emerging issues.</b><br/>Deploy multiple Workers under a single domain with the ability to make them feel like single-page applications. We take a look at how service bindings enable URL path routing to multiple projects.<br/><br/><b>Source:</b> Cloudflare Blog &nbsp; <b>Severity:</b> FYI]]></description>
+</item>
+
 <item>
   <title>🔵 Introducing Moltworker: a self-hosted personal AI agent, minus the minis</title>
   <link>https://blog.cloudflare.com/moltworker-self-hosted-ai-agent/</link>
   <pubDate>Thu, 29 Jan 2026 14:00:00 +0000</pubDate>
-  <description><![CDATA[<b>Why this matters: Early signal from niche sources; worth a quick scan for emerging issues.</b><br/>Moltworker is a middleware Worker and adapted scripts that allows running Moltbot (formerly Clawdbot) on Cloudflare's Sandbox SDK and our Developer Platform APIs. So you can self-host an AI personal assistant — without any new hardware.<br/><br/><b>Source:</b> Cloudflare Blog &nbsp; <b>Severity:</b> FYI]]></description>
+  <description><![CDATA[<b>Why this matters: Early signal from niche sources; worth a quick scan for emerging issues.</b><br/>Moltworker is a middleware Worker and adapted scripts that allows running OpenClaw (formerly Moltbot, formerly Clawdbot) on Cloudflare's Sandbox SDK and our Developer Platform APIs. So you can self-host an AI personal assistant — without any new hardware.<br/><br/><b>Source:</b> Cloudflare Blog &nbsp; <b>Severity:</b> FYI]]></description>
 </item>
 
 <item>
@@ -157,15 +174,6 @@
   <link>https://blog.cloudflare.com/human-native-joins-cloudflare/</link>
   <pubDate>Thu, 15 Jan 2026 14:00:00 +0000</pubDate>
   <description><![CDATA[<b>Why this matters: Early signal from niche sources; worth a quick scan for emerging issues.</b><br/>Cloudflare acquires Human Native, an AI data marketplace specialising in transforming content into searchable and useful data, to accelerate work building new economic models for the Internet.<br/><br/><b>Source:</b> Cloudflare Blog &nbsp; <b>Severity:</b> FYI]]></description>
-</item>
-
-<item>
-  <title>🟠 New Vulnerability in n8n</title>
-  <link>https://www.schneier.com/blog/archives/2026/01/new-vulnerability-in-n8n.html</link>
-  <pubDate>Thu, 15 Jan 2026 12:05:04 +0000</pubDate>
-  <description><![CDATA[<b>Why this matters: Early signal from niche sources; worth a quick scan for emerging issues.</b><br/><p><a href="https://www.cyera.com/research-labs/ni8mare-unauthenticated-remote-code-execution-in-n8n-cve-2026-21858">This</a> isn&#8217;t good:</p>
-<blockquote><p>We discovered a critical vulnerability (<a href="https://github.com/n8n-io/n8n/security/advisories/GHSA-v4pr-fm98-w9pg">CVE-2026-21858, CVSS 10.0</a>) in n8n that enables attackers to take over locally deployed instances, impacting an estimated 100,000 servers globally. No official workarounds are available for this vulnerability. Users should upgrade to version 1.121.0 or later to remediate the vulnerability.</p></blockquote>
-<p><a href="https://community.n8n.io/t/security-advisory-security-vulnerability-in-n8n-versions-1-65-1-120-4/247305">Three</a> <a href="https://thehackernews.com/2026/01/n8n-supply-chain-attack-abuses.html">technical<a> <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-68668">links</a> and two <a href="https://www.cybersecuritydive.com/news/critical-vulnerability-n8n-automation-platform/809360/">news</a> <a href="https://www.bleepingcomputer.com/news/security/max-severity-ni8mare-flaw-impacts-nearly-60-000-n8n-instances/">links</a>.</p><br/><br/><b>Source:</b> Schneier on Security &nbsp; <b>Severity:</b> Important]]></description>
 </item>
 
 <item>
@@ -348,13 +356,6 @@
   <link>https://www.troyhunt.com/weekly-update-481/</link>
   <pubDate>Fri, 05 Dec 2025 07:14:33 +0000</pubDate>
   <description><![CDATA[<b>Why this matters: Early signal from niche sources; worth a quick scan for emerging issues.</b><br/><p>Twelve years (and one day) since launching Have I Been Pwned, it&apos;s now a service that Charlotte and I live and breathe every day. From the first thing every morning to the last thing each day, from holidays to birthdays, in sickness and in heal... wait a minute</p><br/><br/><b>Source:</b> Troy Hunt &nbsp; <b>Severity:</b> FYI]]></description>
-</item>
-
-<item>
-  <title>🟠 Cloudflare outage on December 5, 2025</title>
-  <link>https://blog.cloudflare.com/5-december-2025-outage/</link>
-  <pubDate>Fri, 05 Dec 2025 00:00:00 +0000</pubDate>
-  <description><![CDATA[<b>Why this matters: Possible service impact; prepare comms and confirm vendor status before troubleshooting internally.</b><br/>Cloudflare experienced a significant traffic outage on  December 5, 2025, starting approximately at 8:47 UTC. The incident lasted approximately 25 minutes before resolution. We are sorry for the impact that it caused to our customers and the Internet. The incident was not caused by an attack and was due to configuration changes being applied to attempt to mitigate a recent industry-wide vulnerability impacting React Server Components.<br/><br/><b>Source:</b> Cloudflare Blog &nbsp; <b>Severity:</b> Important]]></description>
 </item>
 
 <item>
