@@ -1,5 +1,5 @@
 # Weekly Executive Summary (last 7 days)
-_Generated: 2026-01-30 09:57 UTC_
+_Generated: 2026-01-30 11:18 UTC_
 
 ## 🔴 Critical (take action / validate exposure)
 - 🔴 [Two Ivanti EPMM Zero-Day RCE Flaws Actively Exploited, Security Updates Released](https://thehackernews.com/2026/01/two-ivanti-epmm-zero-day-rce-flaws.html) — **The Hacker News**  
