@@ -1,5 +1,5 @@
 # Weekly Executive Summary (last 7 days)
-_Generated: 2026-01-31 15:47 UTC_
+_Generated: 2026-01-31 16:58 UTC_
 
 ## 🔴 Critical (take action / validate exposure)
 - 🔴 [Mandiant Finds ShinyHunters-Style Vishing Attacks Stealing MFA to Breach SaaS Platforms](https://thehackernews.com/2026/01/mandiant-finds-shinyhunters-using.html) — **The Hacker News**  
@@ -30,8 +30,8 @@ _Generated: 2026-01-31 15:47 UTC_
   _Why:_ Worth awareness; review if it impacts your environment.
 
 ## 🔵 FYI (context / backlog reads)
+- 🔵 [Cloud storage payment scam floods inboxes with fake renewals](https://www.bleepingcomputer.com/news/security/cloud-storage-payment-scam-floods-inboxes-with-fake-renewals/) — **BleepingComputer**
 - 🔵 [Mandiant details how ShinyHunters abuse SSO to steal cloud data](https://www.bleepingcomputer.com/news/security/mandiant-details-how-shinyhunters-abuse-sso-to-steal-cloud-data/) — **BleepingComputer**
 - 🔵 [Researcher reveals evidence of private Instagram profiles leaking photos](https://www.bleepingcomputer.com/news/security/researcher-reveals-evidence-of-private-instagram-profiles-leaking-photos/) — **BleepingComputer**
 - 🔵 [Iran-Linked RedKitten Cyber Campaign Targets Human Rights NGOs and Activists](https://thehackernews.com/2026/01/iran-linked-redkitten-cyber-campaign.html) — **The Hacker News**
 - 🔵 [Crypto wallets received a record $158 billion in illicit funds last year](https://www.bleepingcomputer.com/news/security/crypto-wallets-received-a-record-158-billion-in-illicit-funds-last-year/) — **BleepingComputer**
-- 🔵 [Google Presentations Abused for Phishing, (Fri, Jan 30th)](https://isc.sans.edu/diary/rss/32668) — **SANS Internet Storm Center**
