@@ -1,5 +1,5 @@
 # Weekly Executive Summary (last 7 days)
-_Generated: 2026-01-31 11:39 UTC_
+_Generated: 2026-01-31 13:53 UTC_
 
 ## 🔴 Critical (take action / validate exposure)
 - 🔴 [Mandiant Finds ShinyHunters-Style Vishing Attacks Stealing MFA to Breach SaaS Platforms](https://thehackernews.com/2026/01/mandiant-finds-shinyhunters-using.html) — **The Hacker News**  
@@ -30,8 +30,8 @@ _Generated: 2026-01-31 11:39 UTC_
   _Why:_ Worth awareness; review if it impacts your environment.
 
 ## 🔵 FYI (context / backlog reads)
+- 🔵 [Iran-Linked RedKitten Cyber Campaign Targets Human Rights NGOs and Activists](https://thehackernews.com/2026/01/iran-linked-redkitten-cyber-campaign.html) — **The Hacker News**
 - 🔵 [Crypto wallets received a record $158 billion in illicit funds last year](https://www.bleepingcomputer.com/news/security/crypto-wallets-received-a-record-158-billion-in-illicit-funds-last-year/) — **BleepingComputer**
 - 🔵 [Google Presentations Abused for Phishing, (Fri, Jan 30th)](https://isc.sans.edu/diary/rss/32668) — **SANS Internet Storm Center**
 - 🔵 [Microsoft to disable NTLM by default in future Windows releases](https://www.bleepingcomputer.com/news/microsoft/microsoft-to-disable-ntlm-by-default-in-future-windows-releases/) — **BleepingComputer**
 - 🔵 [Operation Switch Off dismantles major pirate TV streaming services](https://www.bleepingcomputer.com/news/legal/operation-switch-off-dismantles-major-pirate-tv-streaming-services/) — **BleepingComputer**
-- 🔵 [Microsoft fixes Outlook bug blocking access to encrypted emails](https://www.bleepingcomputer.com/news/microsoft/microsoft-fixes-outlook-bug-blocking-access-to-encrypted-emails/) — **BleepingComputer**
