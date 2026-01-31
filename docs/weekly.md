@@ -1,7 +1,9 @@
 # Weekly Executive Summary (last 7 days)
-_Generated: 2026-01-31 07:50 UTC_
+_Generated: 2026-01-31 08:59 UTC_
 
 ## 🔴 Critical (take action / validate exposure)
+- 🔴 [Mandiant Finds ShinyHunters-Style Vishing Attacks Stealing MFA to Breach SaaS Platforms](https://thehackernews.com/2026/01/mandiant-finds-shinyhunters-using.html) — **The Hacker News**  
+  _Why:_ Reinforce MFA and user awareness; watch for suspicious sign-ins.
 - 🔴 [Two Ivanti EPMM Zero-Day RCE Flaws Actively Exploited, Security Updates Released](https://thehackernews.com/2026/01/two-ivanti-epmm-zero-day-rce-flaws.html) — **The Hacker News**  
   _Why:_ Worth awareness; review if it impacts your environment.
 - 🔴 [Match Group breach exposes data from Hinge, Tinder, OkCupid, and Match](https://www.bleepingcomputer.com/news/security/match-group-breach-exposes-data-from-hinge-tinder-okcupid-and-match/) — **BleepingComputer**  
@@ -10,8 +12,6 @@ _Generated: 2026-01-31 07:50 UTC_
   _Why:_ Validate backups, EDR coverage, and response readiness.
 - 🔴 [France fines unemployment agency €5 million over data breach](https://www.bleepingcomputer.com/news/security/france-fines-unemployment-agency-5-million-over-data-breach/) — **BleepingComputer**  
   _Why:_ Worth awareness; review if it impacts your environment.
-- 🔴 [Password Reuse in Disguise: An Often-Missed Risky Workaround](https://thehackernews.com/2026/01/password-reuse-in-disguise-often-missed.html) — **The Hacker News**  
-  _Why:_ Validate backups, EDR coverage, and response readiness.
 
 ## 🟠 Important (monitor / plan / communicate)
 - 🟠 [CERT Polska Details Coordinated Cyber Attacks on 30+ Wind and Solar Farms](https://thehackernews.com/2026/01/poland-attributes-december-cyber.html) — **The Hacker News**  
