@@ -1,5 +1,5 @@
 # Weekly Executive Summary (last 7 days)
-_Generated: 2026-01-31 13:53 UTC_
+_Generated: 2026-01-31 14:53 UTC_
 
 ## 🔴 Critical (take action / validate exposure)
 - 🔴 [Mandiant Finds ShinyHunters-Style Vishing Attacks Stealing MFA to Breach SaaS Platforms](https://thehackernews.com/2026/01/mandiant-finds-shinyhunters-using.html) — **The Hacker News**  
@@ -10,8 +10,8 @@ _Generated: 2026-01-31 13:53 UTC_
   _Why:_ Expect potential user impact; prep comms and check vendor status.
 - 🔴 [Marquis blames ransomware breach on SonicWall cloud backup hack](https://www.bleepingcomputer.com/news/security/marquis-blames-ransomware-breach-on-sonicwall-cloud-backup-hack/) — **BleepingComputer**  
   _Why:_ Validate backups, EDR coverage, and response readiness.
-- 🔴 [France fines unemployment agency €5 million over data breach](https://www.bleepingcomputer.com/news/security/france-fines-unemployment-agency-5-million-over-data-breach/) — **BleepingComputer**  
-  _Why:_ Worth awareness; review if it impacts your environment.
+- 🔴 [Password Reuse in Disguise: An Often-Missed Risky Workaround](https://thehackernews.com/2026/01/password-reuse-in-disguise-often-missed.html) — **The Hacker News**  
+  _Why:_ Validate backups, EDR coverage, and response readiness.
 
 ## 🟠 Important (monitor / plan / communicate)
 - 🟠 [CERT Polska Details Coordinated Cyber Attacks on 30+ Wind and Solar Farms](https://thehackernews.com/2026/01/poland-attributes-december-cyber.html) — **The Hacker News**  
@@ -30,8 +30,8 @@ _Generated: 2026-01-31 13:53 UTC_
   _Why:_ Worth awareness; review if it impacts your environment.
 
 ## 🔵 FYI (context / backlog reads)
+- 🔵 [Researcher reveals evidence of private Instagram profiles leaking photos](https://www.bleepingcomputer.com/news/security/researcher-reveals-evidence-of-private-instagram-profiles-leaking-photos/) — **BleepingComputer**
 - 🔵 [Iran-Linked RedKitten Cyber Campaign Targets Human Rights NGOs and Activists](https://thehackernews.com/2026/01/iran-linked-redkitten-cyber-campaign.html) — **The Hacker News**
 - 🔵 [Crypto wallets received a record $158 billion in illicit funds last year](https://www.bleepingcomputer.com/news/security/crypto-wallets-received-a-record-158-billion-in-illicit-funds-last-year/) — **BleepingComputer**
 - 🔵 [Google Presentations Abused for Phishing, (Fri, Jan 30th)](https://isc.sans.edu/diary/rss/32668) — **SANS Internet Storm Center**
 - 🔵 [Microsoft to disable NTLM by default in future Windows releases](https://www.bleepingcomputer.com/news/microsoft/microsoft-to-disable-ntlm-by-default-in-future-windows-releases/) — **BleepingComputer**
-- 🔵 [Operation Switch Off dismantles major pirate TV streaming services](https://www.bleepingcomputer.com/news/legal/operation-switch-off-dismantles-major-pirate-tv-streaming-services/) — **BleepingComputer**
