@@ -1,15 +1,11 @@
 # Weekly Executive Summary (last 7 days)
-_Generated: 2026-01-31 23:43 UTC_
+_Generated: 2026-02-01 05:16 UTC_
 
 ## 🔴 Critical (take action / validate exposure)
 - 🔴 [Mandiant Finds ShinyHunters-Style Vishing Attacks Stealing MFA to Breach SaaS Platforms](https://thehackernews.com/2026/01/mandiant-finds-shinyhunters-using.html) — **The Hacker News**  
   _Why:_ Reinforce MFA and user awareness; watch for suspicious sign-ins.
 - 🔴 [Two Ivanti EPMM Zero-Day RCE Flaws Actively Exploited, Security Updates Released](https://thehackernews.com/2026/01/two-ivanti-epmm-zero-day-rce-flaws.html) — **The Hacker News**  
   _Why:_ Worth awareness; review if it impacts your environment.
-- 🔴 [Match Group breach exposes data from Hinge, Tinder, OkCupid, and Match](https://www.bleepingcomputer.com/news/security/match-group-breach-exposes-data-from-hinge-tinder-okcupid-and-match/) — **BleepingComputer**  
-  _Why:_ Expect potential user impact; prep comms and check vendor status.
-- 🔴 [Marquis blames ransomware breach on SonicWall cloud backup hack](https://www.bleepingcomputer.com/news/security/marquis-blames-ransomware-breach-on-sonicwall-cloud-backup-hack/) — **BleepingComputer**  
-  _Why:_ Validate backups, EDR coverage, and response readiness.
 - 🔴 [Password Reuse in Disguise: An Often-Missed Risky Workaround](https://thehackernews.com/2026/01/password-reuse-in-disguise-often-missed.html) — **The Hacker News**  
   _Why:_ Validate backups, EDR coverage, and response readiness.
 
@@ -30,8 +26,8 @@ _Generated: 2026-01-31 23:43 UTC_
   _Why:_ Worth awareness; review if it impacts your environment.
 
 ## 🔵 FYI (context / backlog reads)
+- 🔵 [OpenAI says you can trust ChatGPT answers, as it kicks off ads rollout preparation](https://www.bleepingcomputer.com/news/artificial-intelligence/openai-says-you-can-trust-chatgpt-answers-as-it-kicks-off-ads-rollout-preparation/) — **BleepingComputer**
+- 🔵 [OpenAI is retiring famous GPT-4o model, says GPT 5.2 is good enough](https://www.bleepingcomputer.com/news/artificial-intelligence/openai-is-retiring-famous-gpt-4o-model-says-gpt-52-is-good-enough/) — **BleepingComputer**
 - 🔵 [U.S. convicts ex-Google engineer for sending AI tech data to China](https://www.bleepingcomputer.com/news/security/us-convicts-ex-google-engineer-for-sending-ai-tech-data-to-china/) — **BleepingComputer**
 - 🔵 [Cloud storage payment scam floods inboxes with fake renewals](https://www.bleepingcomputer.com/news/security/cloud-storage-payment-scam-floods-inboxes-with-fake-renewals/) — **BleepingComputer**
 - 🔵 [Mandiant details how ShinyHunters abuse SSO to steal cloud data](https://www.bleepingcomputer.com/news/security/mandiant-details-how-shinyhunters-abuse-sso-to-steal-cloud-data/) — **BleepingComputer**
-- 🔵 [Researcher reveals evidence of private Instagram profiles leaking photos](https://www.bleepingcomputer.com/news/security/researcher-reveals-evidence-of-private-instagram-profiles-leaking-photos/) — **BleepingComputer**
-- 🔵 [Iran-Linked RedKitten Cyber Campaign Targets Human Rights NGOs and Activists](https://thehackernews.com/2026/01/iran-linked-redkitten-cyber-campaign.html) — **The Hacker News**
