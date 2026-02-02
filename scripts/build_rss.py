@@ -151,7 +151,7 @@ def build_feed(cfg: dict, out_path: str, kind: str, global_seen: set):
         if not url:
             continue
 
-        feed = feedparser.parse(url)
+        feed = feedparser.parse(url) request_headers={'User-Agent': 'Mozilla/5.0'}, timeout=20)
         for entry in getattr(feed, "entries", [])[:50]:
             title = (getattr(entry, "title", "") or "").strip() or "(No title)"
             link = (getattr(entry, "link", "") or url).strip()
