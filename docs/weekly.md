@@ -1,5 +1,5 @@
 # Weekly Executive Summary (last 7 days)
-_Generated: 2026-02-02 10:31 UTC_
+_Generated: 2026-02-02 11:23 UTC_
 
 ## 🔴 Critical (take action / validate exposure)
 - 🔴 [NationStates confirms data breach, shuts down game site](https://www.bleepingcomputer.com/news/security/nationstates-confirms-data-breach-shuts-down-game-site/) — **BleepingComputer**  
