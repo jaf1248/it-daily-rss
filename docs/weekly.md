@@ -1,5 +1,5 @@
 # Weekly Executive Summary (last 7 days)
-_Generated: 2026-02-02 05:17 UTC_
+_Generated: 2026-02-02 08:01 UTC_
 
 ## 🔴 Critical (take action / validate exposure)
 - 🔴 [Mandiant Finds ShinyHunters-Style Vishing Attacks Stealing MFA to Breach SaaS Platforms](https://thehackernews.com/2026/01/mandiant-finds-shinyhunters-using.html) — **The Hacker News**  
@@ -26,8 +26,8 @@ _Generated: 2026-02-02 05:17 UTC_
   _Why:_ Worth awareness; review if it impacts your environment.
 
 ## 🔵 FYI (context / backlog reads)
+- 🔵 [eScan Antivirus Update Servers Compromised to Deliver Multi-Stage Malware](https://thehackernews.com/2026/02/escan-antivirus-update-servers.html) — **The Hacker News**
 - 🔵 [Open VSX Supply Chain Attack Used Compromised Dev Account to Spread GlassWorm](https://thehackernews.com/2026/02/open-vsx-supply-chain-attack-used.html) — **The Hacker News**
 - 🔵 [ISC Stormcast For Monday, February 2nd, 2026 https://isc.sans.edu/podcastdetail/9790, (Mon, Feb 2nd)](https://isc.sans.edu/diary/rss/32672) — **SANS Internet Storm Center**
 - 🔵 [Exposed MongoDB instances still targeted in data extortion attacks](https://www.bleepingcomputer.com/news/security/exposed-mongodb-instances-still-targeted-in-data-extortion-attacks/) — **BleepingComputer**
 - 🔵 [New Apple privacy feature limits location tracking on iPhones, iPads](https://www.bleepingcomputer.com/news/apple/new-apple-privacy-feature-limits-location-tracking-on-iphones-ipads/) — **BleepingComputer**
-- 🔵 [OpenAI says you can trust ChatGPT answers, as it kicks off ads rollout preparation](https://www.bleepingcomputer.com/news/artificial-intelligence/openai-says-you-can-trust-chatgpt-answers-as-it-kicks-off-ads-rollout-preparation/) — **BleepingComputer**
