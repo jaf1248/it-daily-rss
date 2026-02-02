@@ -10,8 +10,6 @@ from dateutil import parser as dp
 
 ROOT = os.path.dirname(os.path.dirname(__file__))
 
-# Priority order matters for cross-feed dedupe:
-# items added to earlier feeds can suppress items in later feeds (via global_seen).
 CONFIGS = [
     ("feeds-security.yaml", "security.xml", "security"),
     ("feeds-sysadmin.yaml", "sysadmin.xml", "sysadmin"),
@@ -22,127 +20,78 @@ CONFIGS = [
 ]
 
 
-
-def load_cfg(path: str) -> dict:
+def load_cfg(path):
     with open(path, "r", encoding="utf-8") as f:
         return yaml.safe_load(f) or {}
 
 
-def normalize(s: str) -> str:
+def normalize(s):
     return re.sub(r"\s+", " ", (s or "").strip()).lower()
 
 
-def keyword_match(cfg: dict, text: str) -> bool:
+def keyword_match(cfg, text):
     if not cfg.get("keyword_filter_enabled", False):
         return True
     t = normalize(text)
     return any(k.lower() in t for k in (cfg.get("keywords") or []))
 
 
-def classify_severity(text: str):
-    """
-    Returns (emoji, label) where label is one of: Critical/Important/FYI
-    """
+def classify_severity(text):
     t = normalize(text)
 
-    critical_terms = [
-        "actively exploited",
-        "exploited in the wild",
-        "in the wild",
-        "ransomware",
-        "mass exploitation",
-        "wormable",
-        "botnet",
-        "breach",
-        "data breach",
-        "stolen data",
+    critical = [
+        "actively exploited", "exploited in the wild", "ransomware",
+        "breach", "data breach", "wormable", "botnet"
     ]
-    important_terms = [
-        "cve-",
-        "cve",
-        "vulnerability",
-        "zero-day",
-        "0-day",
-        "patch",
-        "security update",
-        "hotfix",
-        "mitigation",
-        "microsoft outage",
-        "service disruption",
-        "incident",
+    important = [
+        "cve", "vulnerability", "zero-day", "patch",
+        "security update", "incident", "outage"
     ]
 
-    if any(x in t for x in critical_terms):
+    if any(x in t for x in critical):
         return "🔴", "Critical"
-    if any(x in t for x in important_terms):
+    if any(x in t for x in important):
         return "🟠", "Important"
     return "🔵", "FYI"
 
 
-def why_this_matters(text: str, kind: str) -> str:
-    """
-    Short, exec-friendly one-liner. Heuristic-based.
-    """
+def why_this_matters(text, kind):
     t = normalize(text)
 
-    # common security signals
     if "ransomware" in t:
         return "Why this matters: Elevated ransomware risk; validate backups and endpoint defenses."
     if "phish" in t or "credential" in t:
-        return "Why this matters: Increased credential/phishing risk for users; reinforce MFA and user awareness."
-    if "breach" in t or "stolen" in t:
-        return "Why this matters: Potential exposure of credentials/data; check monitoring and incident readiness."
-    if "outage" in t or "service disruption" in t or "incident" in t:
-        return "Why this matters: Possible service impact; prepare comms and confirm vendor status before troubleshooting internally."
+        return "Why this matters: Increased credential/phishing risk; reinforce MFA."
+    if "breach" in t:
+        return "Why this matters: Possible data exposure; confirm monitoring and response readiness."
+    if "outage" in t or "incident" in t:
+        return "Why this matters: Possible service disruption; prep communications."
 
-    # Microsoft/identity/mail signals
-    if any(x in t for x in ["entra", "azure ad", "conditional access", "mfa", "authentication", "sso"]):
-        return "Why this matters: Could impact sign-ins/MFA/Conditional Access; watch for user login issues."
-    if any(x in t for x in ["exchange", "outlook", "mail flow"]):
-        return "Why this matters: Could impact email access or mail flow; monitor for client/server-side issues."
-    if any(x in t for x in ["intune", "mdm", "device compliance"]):
-        return "Why this matters: Could affect device enrollment/compliance; watch policy deployment and enrollment errors."
-    if "defender" in t or "edr" in t:
-        return "Why this matters: Endpoint detection changes can affect alerts/noise; review high-severity detections."
-
-    # VP signals
-    if any(x in t for x in ["pricing", "license", "licensing", "renewal"]):
-        return "Why this matters: Budget/licensing impact; verify renewal terms and forecast cost changes."
-    if any(x in t for x in ["acquisition", "merger", "layoffs"]):
-        return "Why this matters: Vendor risk signal; evaluate roadmap/support stability."
-
-    # default by feed kind
     if kind == "security":
-        return "Why this matters: Security-relevant change; confirm exposure and patch/mitigation status."
+        return "Why this matters: Security-relevant change; confirm exposure."
     if kind == "sysadmin":
-        return "Why this matters: Operational impact possible; watch for changes that generate tickets."
+        return "Why this matters: Operational impact possible; watch for tickets."
     if kind == "radar":
-        return "Why this matters: Early signal from niche sources; worth a quick scan for emerging issues."
-    return "Why this matters: Leadership context; useful for risk/budget/vendor conversations."
+        return "Why this matters: Early signal from niche sources."
+    return "Why this matters: Leadership context for risk and vendors."
 
 
-def stable_dedupe_key(title: str, link: str) -> str:
-    """
-    Prefer link for dedupe; fall back to title hash.
-    """
+def stable_dedupe_key(title, link):
     link_n = normalize(link)
     if link_n and link_n != "#":
         return link_n
-    return "title:" + hashlib.sha1(normalize(title).encode("utf-8")).hexdigest()
+    return hashlib.sha1(normalize(title).encode()).hexdigest()
 
 
-def parse_date(entry) -> datetime:
-    """
-    Best-effort date parsing. Falls back to 'now' if missing/invalid.
-    """
+def parse_date(entry):
     try:
-        published_raw = getattr(entry, "published", "") or getattr(entry, "updated", "")
-        return dp.parse(published_raw).astimezone(timezone.utc)
+        raw = getattr(entry, "published", "") or getattr(entry, "updated", "")
+        return dp.parse(raw).astimezone(timezone.utc)
     except Exception:
         return datetime.now(timezone.utc)
 
 
-def build_feed(cfg: dict, out_path: str, kind: str, global_seen: set):
+def build_feed(cfg, out_path, kind, global_seen):
     items = []
     local_seen = set()
 
@@ -151,7 +100,15 @@ def build_feed(cfg: dict, out_path: str, kind: str, global_seen: set):
         if not url:
             continue
 
-        feed = feedparser.parse(url) request_headers={'User-Agent': 'Mozilla/5.0'}, timeout=20)
+        try:
+            feed = feedparser.parse(
+                url,
+                request_headers={"User-Agent": "Mozilla/5.0"},
+                timeout=20,
+            )
+        except Exception:
+            continue
+
         for entry in getattr(feed, "entries", [])[:50]:
             title = (getattr(entry, "title", "") or "").strip() or "(No title)"
             link = (getattr(entry, "link", "") or url).strip()
@@ -162,71 +119,58 @@ def build_feed(cfg: dict, out_path: str, kind: str, global_seen: set):
             if not keyword_match(cfg, combined):
                 continue
 
-            # Cross-feed dedupe (skip if earlier feed has already claimed it)
             key = stable_dedupe_key(title, link)
-            if key in global_seen:
+
+            if key in global_seen or key in local_seen:
                 continue
 
-            # Within-feed dedupe
-            if key in local_seen:
-                continue
             local_seen.add(key)
 
             sev_emoji, sev_label = classify_severity(combined)
             why = why_this_matters(combined, kind)
 
-            items.append(
-                {
-                    "title": f"{sev_emoji} {title}",
-                    "link": link,
-                    "summary": summary,
-                    "source": source.get("name", "Source"),
-                    "date": published,
-                    "severity": sev_label,
-                    "why": why,
-                    "dedupe_key": key,
-                }
-            )
+            items.append({
+                "title": f"{sev_emoji} {title}",
+                "link": link,
+                "summary": summary,
+                "source": source.get("name", "Source"),
+                "date": published,
+                "severity": sev_label,
+                "why": why,
+                "dedupe_key": key,
+            })
 
-    # Sort newest first
     items.sort(key=lambda x: x["date"], reverse=True)
     items = items[:200]
 
-    # Mark items as globally seen only when appropriate:
-    # - Only Security (Critical/Important) blocks downstream duplicates
-    # - Radar/SysAdmin/VP are intentionally non-blocking
     for it in items:
         if kind == "security" and it["severity"] in ("Critical", "Important"):
             global_seen.add(it["dedupe_key"])
 
     rss_items = []
+
     for it in items:
         desc = f"<b>{html.escape(it['why'])}</b><br/>"
         if it["summary"]:
             desc += f"{it['summary']}<br/>"
-        desc += (
-            f"<br/><b>Source:</b> {html.escape(it['source'])}"
-            f" &nbsp; <b>Severity:</b> {html.escape(it['severity'])}"
-        )
+        desc += f"<br/><b>Source:</b> {html.escape(it['source'])} <b>Severity:</b> {html.escape(it['severity'])}"
 
-        rss_items.append(
-            f"""
+        rss_items.append(f"""
 <item>
-  <title>{html.escape(it['title'])}</title>
-  <link>{html.escape(it['link'])}</link>
-  <pubDate>{format_datetime(it['date'])}</pubDate>
-  <description><![CDATA[{desc}]]></description>
+<title>{html.escape(it['title'])}</title>
+<link>{html.escape(it['link'])}</link>
+<pubDate>{format_datetime(it['date'])}</pubDate>
+<description><![CDATA[{desc}]]></description>
 </item>
-"""
-        )
+""")
 
     rss = f"""<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
 <channel>
-  <title>{html.escape(cfg.get('title',''))}</title>
-  <description>{html.escape(cfg.get('description',''))}</description>
-  <lastBuildDate>{format_datetime(datetime.now(timezone.utc))}</lastBuildDate>
-  {''.join(rss_items)}
+<title>{html.escape(cfg.get('title',''))}</title>
+<description>{html.escape(cfg.get('description',''))}</description>
+<lastBuildDate>{format_datetime(datetime.now(timezone.utc))}</lastBuildDate>
+{''.join(rss_items)}
 </channel>
 </rss>
 """
@@ -241,10 +185,8 @@ def main():
     global_seen = set()
 
     for cfg_name, out_name, kind in CONFIGS:
-        cfg_path = os.path.join(ROOT, cfg_name)
-        out_path = os.path.join(docs_dir, out_name)
-        cfg = load_cfg(cfg_path)
-        build_feed(cfg, out_path, kind, global_seen)
+        cfg = load_cfg(os.path.join(ROOT, cfg_name))
+        build_feed(cfg, os.path.join(docs_dir, out_name), kind, global_seen)
 
 
 if __name__ == "__main__":
