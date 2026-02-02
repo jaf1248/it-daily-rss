@@ -1,5 +1,5 @@
 # Weekly Executive Summary (last 7 days)
-_Generated: 2026-02-02 14:25 UTC_
+_Generated: 2026-02-02 16:04 UTC_
 
 ## 🔴 Critical (take action / validate exposure)
 - 🔴 [Panera Bread breach impacts 5.1 million accounts, not 14 million customers](https://www.bleepingcomputer.com/news/security/panera-bread-data-breach-impacts-51-million-accounts-not-14-million-customers/) — **BleepingComputer**  
@@ -30,8 +30,8 @@ _Generated: 2026-02-02 14:25 UTC_
   _Why:_ Worth awareness; review if it impacts your environment.
 
 ## 🔵 FYI (context / backlog reads)
+- 🔵 [CTM360 Report Warns of Global Surge in Fake High-Yield Investment Scams](https://www.bleepingcomputer.com/news/security/ctm360-report-warns-of-global-surge-in-fake-high-yield-investment-scams/) — **BleepingComputer**
+- 🔵 [Scanning for exposed Anthropic Models, (Mon, Feb 2nd)](https://isc.sans.edu/diary/rss/32674) — **SANS Internet Storm Center**
+- 🔵 [Notepad++ update feature hijacked by Chinese state hackers for months](https://www.bleepingcomputer.com/news/security/notepad-plus-plus-update-feature-hijacked-by-chinese-state-hackers-for-months/) — **BleepingComputer**
 - 🔵 [Securing the Mid-Market Across the Complete Threat Lifecycle](https://thehackernews.com/2026/02/securing-mid-market-across-complete.html) — **The Hacker News**
 - 🔵 [Microsoft fixes bug causing password sign-in option to disappear](https://www.bleepingcomputer.com/news/microsoft/microsoft-fixes-bug-causing-password-sign-in-option-to-disappear/) — **BleepingComputer**
-- 🔵 [Notepad++ Official Update Mechanism Hijacked to Deliver Malware to Select Users](https://thehackernews.com/2026/02/notepad-official-update-mechanism.html) — **The Hacker News**
-- 🔵 [eScan Antivirus Update Servers Compromised to Deliver Multi-Stage Malware](https://thehackernews.com/2026/02/escan-antivirus-update-servers.html) — **The Hacker News**
-- 🔵 [Open VSX Supply Chain Attack Used Compromised Dev Account to Spread GlassWorm](https://thehackernews.com/2026/02/open-vsx-supply-chain-attack-used.html) — **The Hacker News**
