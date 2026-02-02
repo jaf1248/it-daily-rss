@@ -56,7 +56,7 @@ def main():
         if not url:
             continue
 
-        feed = feedparser.parse(url)
+        feed = feedparser.parse(url) request_headers={'User-Agent': 'Mozilla/5.0'}, timeout=20)
         for entry in getattr(feed, "entries", [])[:60]:
             title = (getattr(entry, "title", "") or "").strip()
             link = (getattr(entry, "link", "") or "").strip()
