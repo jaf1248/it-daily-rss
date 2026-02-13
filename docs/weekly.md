@@ -1,5 +1,5 @@
 # Weekly Executive Summary (last 7 days)
-_Generated: 2026-02-13 10:36 UTC_
+_Generated: 2026-02-13 11:29 UTC_
 
 ## 🔴 Critical
 - None
