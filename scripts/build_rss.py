@@ -4,6 +4,7 @@ import hashlib
 import html
 import os
 import re
+import urllib.request
 from datetime import datetime, timezone, timedelta
 from email.utils import format_datetime
 from dateutil import parser as dp
@@ -19,36 +20,11 @@ CONFIGS = [
     ("feeds-archive.yaml", "archive.xml", "archive"),
 ]
 
-# Safety targets so feeds don't look dead
-MIN_ITEMS = {
-    "security": 15,
-    "sysadmin": 15,
-    "vp": 12,
-    "radar": 12,
-    "master": 25,
-    "archive": 40,
-}
+MIN_ITEMS = {"security": 15, "sysadmin": 15, "vp": 12, "radar": 12, "master": 25, "archive": 40}
+MAX_ITEMS = {"security": 80, "sysadmin": 80, "vp": 60, "radar": 60, "master": 120, "archive": 200}
+FALLBACK_DAYS = {"security": 7, "sysadmin": 7, "vp": 10, "radar": 14, "master": 7, "archive": 30}
 
-MAX_ITEMS = {
-    "security": 80,
-    "sysadmin": 80,
-    "vp": 60,
-    "radar": 60,
-    "master": 120,
-    "archive": 200,
-}
-
-# How far back we'll look for "fill" items if the feed is slow
-FALLBACK_DAYS = {
-    "security": 7,
-    "sysadmin": 7,
-    "vp": 10,
-    "radar": 14,
-    "master": 7,
-    "archive": 30,
-}
-
-UA_HEADERS = {"User-Agent": "Mozilla/5.0"}
+UA = "Mozilla/5.0 (GitHubActions; it-daily-rss)"
 
 
 def load_cfg(path: str) -> dict:
@@ -77,7 +53,6 @@ def parse_date(entry) -> datetime:
 
 def classify_severity(text: str):
     t = normalize(text)
-
     critical_terms = [
         "actively exploited", "exploited in the wild", "in the wild",
         "ransomware", "mass exploitation", "wormable", "botnet",
@@ -88,7 +63,6 @@ def classify_severity(text: str):
         "patch", "security update", "hotfix", "mitigation",
         "outage", "service disruption", "incident"
     ]
-
     if any(x in t for x in critical_terms):
         return "🔴", "Critical"
     if any(x in t for x in important_terms):
@@ -131,21 +105,42 @@ def why_this_matters(text: str, kind: str) -> str:
     return "Why this matters: Leadership context; useful for risk/budget/vendor conversations."
 
 
-def parse_feed(url: str):
+def fetch_url_bytes(url: str, timeout_seconds: int = 20) -> bytes | None:
+    """
+    Fetch RSS/Atom with a real timeout + User-Agent.
+    Using urllib avoids feedparser parameter incompatibilities.
+    """
     try:
-        return feedparser.parse(url, request_headers=UA_HEADERS, timeout=20)
-    except Exception:
+        req = urllib.request.Request(
+            url,
+            headers={
+                "User-Agent": UA,
+                "Accept": "application/rss+xml, application/atom+xml, application/xml, text/xml, */*",
+            },
+        )
+        with urllib.request.urlopen(req, timeout=timeout_seconds) as resp:
+            return resp.read()
+    except Exception as e:
+        print(f"[WARN] Fetch failed: {url} :: {e}")
         return None
 
 
+def parse_feed(url: str):
+    data = fetch_url_bytes(url, timeout_seconds=20)
+    if not data:
+        return None
+    # feedparser can parse bytes directly
+    feed = feedparser.parse(data)
+    if getattr(feed, "bozo", False):
+        # still might have entries; just log it
+        print(f"[WARN] Parse bozo: {url} :: {getattr(feed, 'bozo_exception', '')}")
+    return feed
+
+
 def score_item(kind: str, text: str, source_name: str, sev_label: str) -> int:
-    """
-    Score items instead of hard-filtering. Higher score floats to top.
-    """
     t = normalize(text)
     s = 0
 
-    # Severity boosts
     if sev_label == "Critical":
         s += 100
     elif sev_label == "Important":
@@ -153,7 +148,6 @@ def score_item(kind: str, text: str, source_name: str, sev_label: str) -> int:
     else:
         s += 10
 
-    # General signals
     if "cve" in t:
         s += 25
     if "zero-day" in t or "0-day" in t:
@@ -167,11 +161,9 @@ def score_item(kind: str, text: str, source_name: str, sev_label: str) -> int:
     if "outage" in t or "incident" in t or "service disruption" in t:
         s += 25
 
-    # Microsoft surface area boosts
     if any(x in t for x in ["microsoft", "m365", "entra", "azure ad", "intune", "exchange", "defender"]):
         s += 15
 
-    # Kind-specific weighting
     if kind == "security":
         if any(x in t for x in ["ransomware", "cve", "vulnerability", "zero-day", "breach", "exploited"]):
             s += 25
@@ -186,7 +178,6 @@ def score_item(kind: str, text: str, source_name: str, sev_label: str) -> int:
         if any(x in t for x in ["risk", "compliance", "audit", "regulation"]):
             s += 20
 
-    # Source confidence bump (optional)
     src = normalize(source_name)
     if "msrc" in src or "microsoft" in src:
         s += 5
@@ -197,9 +188,6 @@ def score_item(kind: str, text: str, source_name: str, sev_label: str) -> int:
 
 
 def collect_candidates(cfg: dict, kind: str, global_seen: set) -> list:
-    """
-    Collect unfiltered candidates, dedupe, compute severity+score.
-    """
     candidates = []
     local_seen = set()
 
@@ -213,21 +201,17 @@ def collect_candidates(cfg: dict, kind: str, global_seen: set) -> list:
         if not feed:
             continue
 
-        for entry in getattr(feed, "entries", [])[:60]:
+        for entry in getattr(feed, "entries", [])[:80]:
             title = (getattr(entry, "title", "") or "").strip() or "(No title)"
             link = (getattr(entry, "link", "") or url).strip()
             summary = (getattr(entry, "summary", "") or "").strip()
             published = parse_date(entry)
 
             combined = f"{title} {summary} {name}"
-
             key = stable_dedupe_key(title, link)
 
-            # Cross-feed dedupe: only suppress if earlier feeds added to global_seen
             if key in global_seen:
                 continue
-
-            # Within-feed dedupe
             if key in local_seen:
                 continue
             local_seen.add(key)
@@ -252,11 +236,6 @@ def collect_candidates(cfg: dict, kind: str, global_seen: set) -> list:
 
 
 def choose_items(kind: str, candidates: list) -> list:
-    """
-    Choose items by score first, but never go empty:
-    - Prefer recent + high score
-    - Fill up to MIN_ITEMS using recent items even if low score
-    """
     max_items = MAX_ITEMS.get(kind, 80)
     min_items = MIN_ITEMS.get(kind, 12)
     lookback_days = FALLBACK_DAYS.get(kind, 7)
@@ -264,15 +243,13 @@ def choose_items(kind: str, candidates: list) -> list:
 
     recent = [c for c in candidates if c["date"] >= cutoff]
     if not recent:
-        # If everything is old or dates missing, just treat all as recent
         recent = candidates[:]
 
-    # Primary sort: score desc, then date desc
+    # Prefer high score but keep it readable
     recent.sort(key=lambda x: (x["score"], x["date"]), reverse=True)
-
     chosen = recent[:max_items]
 
-    # If not enough, widen window to everything we have
+    # Never empty: widen to everything if we still don't have enough
     if len(chosen) < min_items:
         all_sorted = sorted(candidates, key=lambda x: (x["score"], x["date"]), reverse=True)
         for c in all_sorted:
@@ -281,12 +258,9 @@ def choose_items(kind: str, candidates: list) -> list:
             if len(chosen) >= min_items:
                 break
 
-    # Finally cap at max
-    chosen = chosen[:max_items]
-
-    # Final polish: display newest-first (more natural to read)
+    # Final display: newest first
     chosen.sort(key=lambda x: x["date"], reverse=True)
-    return chosen
+    return chosen[:max_items]
 
 
 def write_rss(cfg: dict, out_path: str, items: list):
@@ -299,7 +273,6 @@ def write_rss(cfg: dict, out_path: str, items: list):
             f"<br/><b>Source:</b> {html.escape(it['source'])}"
             f" &nbsp; <b>Severity:</b> {html.escape(it['severity'])}"
         )
-
         rss_items.append(f"""
 <item>
   <title>{html.escape(it['title'])}</title>
@@ -319,25 +292,39 @@ def write_rss(cfg: dict, out_path: str, items: list):
 </channel>
 </rss>
 """
-
     os.makedirs(os.path.dirname(out_path), exist_ok=True)
     with open(out_path, "w", encoding="utf-8") as f:
         f.write(rss)
 
 
 def build_feed(cfg: dict, out_path: str, kind: str, global_seen: set):
-    # Candidate pool (unfiltered)
     candidates = collect_candidates(cfg, kind, global_seen)
 
-    # If the YAML wants to be fully unfiltered (radar/archive), just keep newest
-    if not cfg.get("keyword_filter_enabled", False) and kind in ("radar", "archive"):
+    # If still nothing fetched, create a single diagnostic item so the UI isn't blank
+    if not candidates:
+        now = datetime.now(timezone.utc)
+        items = [{
+            "title": "🔵 No items fetched — check GitHub Actions logs for feed fetch warnings",
+            "link": cfg.get("homepage", "https://github.com/jaf1248/it-daily-rss/actions"),
+            "summary": "",
+            "source": "it-daily-rss",
+            "date": now,
+            "severity": "FYI",
+            "why": "Why this matters: Feeds may be blocked or timing out; logs will show which URLs failed.",
+            "dedupe_key": "diagnostic:" + kind,
+            "score": 0,
+        }]
+        write_rss(cfg, out_path, items)
+        return
+
+    # radar/archive are unfiltered "newest-first"; everything else is scored/curated
+    if kind in ("radar", "archive"):
         candidates.sort(key=lambda x: x["date"], reverse=True)
         items = candidates[:MAX_ITEMS.get(kind, 200)]
     else:
-        # Scored selection (never empty)
         items = choose_items(kind, candidates)
 
-    # Cross-feed suppression: only Security Critical/Important blocks downstream duplicates
+    # Cross-feed suppression: only security critical/important blocks downstream
     if kind == "security":
         for it in items:
             if it["severity"] in ("Critical", "Important"):
