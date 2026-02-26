@@ -3,7 +3,7 @@
 <channel>
   <title>Joe — Under the Radar</title>
   <description>Lesser-known but high-signal IT, security, and ops sources.</description>
-  <lastBuildDate>Thu, 26 Feb 2026 17:55:47 +0000</lastBuildDate>
+  <lastBuildDate>Thu, 26 Feb 2026 18:51:17 +0000</lastBuildDate>
   
 <item>
   <title>🔵 LLMs Generate Predictable Passwords</title>
@@ -16,6 +16,13 @@
 <li>Character choices are highly uneven ­ for example, L , 9, m, 2, $ and # appeared in all 50 passwords, but 5 and @ only appeared in one password each, and most of the letters in the alphabet never appeared at all.
 <li>There are no repeating characters within any password. Probabilistically, this would be very unlikely if the passwords were truly random ­ but Claude preferred to avoid repeating characters, possibly because it “looks like it’s less random”.
 ...</li></li></li></ul></blockquote><br/><br/><b>Source:</b> Schneier on Security &nbsp; <b>Severity:</b> FYI]]></description>
+</item>
+
+<item>
+  <title>🔵 A Deep Dive into the GetProcessHandleFromHwnd API</title>
+  <link>https://projectzero.google/2026/02/gphfh-deep-dive.html</link>
+  <pubDate>Thu, 26 Feb 2026 08:00:00 +0000</pubDate>
+  <description><![CDATA[<b>Why this matters: Early signal from niche sources; worth a quick scan.</b><br/>In my previous blog post I mentioned the GetProcessHandleFromHwnd API. This was an API I didn’t know existed until I found a publicly disclosed UAC bypass using the Quick Assist UI Access application. This API looked interesting so I thought I should take a closer look. I typically start by reading the documentation for an API I don’t know about, assuming it’s documented at all. It can give you an idea of how long the API has existed as well as its security properties. The documentation’s remarks contain the following three statements that I thought were interesting: If the caller has UIAccess, however, they can use a windows hook to inject code into the target process, and from within the target process, send a handle back to the caller. GetProcessHandleFromHwnd is a convenience function that uses this technique to obtain the handle of the process that owns the specified HWND. Note that it only succeeds in cases where the caller and target process are running as the same user.<br/><br/><b>Source:</b> Project Zero Blog &nbsp; <b>Severity:</b> FYI]]></description>
 </item>
 
 <item>
@@ -388,13 +395,6 @@
   <link>https://www.troyhunt.com/processing-630-million-more-pwned-passwords-courtesy-of-the-fbi/</link>
   <pubDate>Fri, 12 Dec 2025 21:29:39 +0000</pubDate>
   <description><![CDATA[<b>Why this matters: Early signal from niche sources; worth a quick scan.</b><br/><p>The sheer scope of cybercrime can be hard to fathom, even when you live and breathe it every day. It&apos;s not just the volume of data, but also the extent to which it replicates across criminal actors seeking to abuse it for their own gain, and to our</p><br/><br/><b>Source:</b> Troy Hunt &nbsp; <b>Severity:</b> FYI]]></description>
-</item>
-
-<item>
-  <title>🟠 A look at an Android ITW DNG exploit</title>
-  <link>https://projectzero.google/2025/12/android-itw-dng.html</link>
-  <pubDate>Fri, 12 Dec 2025 10:00:00 +0000</pubDate>
-  <description><![CDATA[<b>Why this matters: Early signal from niche sources; worth a quick scan.</b><br/>Introduction Between July 2024 and February 2025, 6 suspicious image files were uploaded to VirusTotal. Thanks to a lead from Meta, these samples came to the attention of Google Threat Intelligence Group. Investigation of these images showed that these images were DNG files targeting the Quram library, an image parsing library specific to Samsung devices. On November 7, 2025 Unit 42 released a blogpost describing how these exploits were used and the spyware they dropped. In this blogpost, we would like to focus on the technical details about how the exploits worked. The exploited Samsung vulnerability was fixed in April 2025. There has been excellent prior work describing image-based exploits targeting iOS, such as Project Zero’s writeup on FORCEDENTRY. Similar in-the-wild “one-shot” image-based exploits targeting Android have received less public documentation, but we would definitely not argue it is because of their lack of existence. Therefore we believe it is an interesting case study to publicly document the technical details of such an exploit on Android.<br/><br/><b>Source:</b> Project Zero Blog &nbsp; <b>Severity:</b> Important]]></description>
 </item>
 
 <item>
