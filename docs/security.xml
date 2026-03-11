@@ -3,8 +3,141 @@
 <channel>
   <title>Joe — Security Intelligence</title>
   <description>Actionable security threats, vulnerabilities, and Microsoft security advisories.</description>
-  <lastBuildDate>Wed, 11 Mar 2026 06:50:19 +0000</lastBuildDate>
+  <lastBuildDate>Wed, 11 Mar 2026 07:41:31 +0000</lastBuildDate>
   
+<item>
+  <title>🟠 CVE-2026-23865 An integer overflow in the tt_var_load_item_variation_store function of the Freetype library in versions 2.13.2 and 2.13.3 may allow for an out of bounds read operation when parsing HVAR/VVAR/MVAR tables in OpenType variable fonts. This issue is fixed in version 2.14.2.</title>
+  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-23865</link>
+  <pubDate>Wed, 11 Mar 2026 08:40:19 +0000</pubDate>
+  <description><![CDATA[<b>Why this matters: Security-relevant change; confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center (MSRC) &nbsp; <b>Severity:</b> Important]]></description>
+</item>
+
+<item>
+  <title>🟠 CVE-2026-3713 pnggroup libpng pnm2png pnm2png.c do_pnm2png heap-based overflow</title>
+  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-3713</link>
+  <pubDate>Wed, 11 Mar 2026 08:03:59 +0000</pubDate>
+  <description><![CDATA[<b>Why this matters: Security-relevant change; confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center (MSRC) &nbsp; <b>Severity:</b> Important]]></description>
+</item>
+
+<item>
+  <title>🟠 CVE-2026-27137 Incorrect enforcement of email constraints in crypto/x509</title>
+  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-27137</link>
+  <pubDate>Wed, 11 Mar 2026 08:03:44 +0000</pubDate>
+  <description><![CDATA[<b>Why this matters: Security-relevant change; confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center (MSRC) &nbsp; <b>Severity:</b> Important]]></description>
+</item>
+
+<item>
+  <title>🟠 CVE-2026-27138 Panic in name constraint checking for malformed certificates in crypto/x509</title>
+  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-27138</link>
+  <pubDate>Wed, 11 Mar 2026 08:03:35 +0000</pubDate>
+  <description><![CDATA[<b>Why this matters: Security-relevant change; confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center (MSRC) &nbsp; <b>Severity:</b> Important]]></description>
+</item>
+
+<item>
+  <title>🟠 CVE-2026-27142 URLs in meta content attribute actions are not escaped in html/template</title>
+  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-27142</link>
+  <pubDate>Wed, 11 Mar 2026 08:03:28 +0000</pubDate>
+  <description><![CDATA[<b>Why this matters: Security-relevant change; confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center (MSRC) &nbsp; <b>Severity:</b> Important]]></description>
+</item>
+
+<item>
+  <title>🟠 CVE-2025-69644 An issue was discovered in Binutils before 2.46. The objdump contains a denial-of-service vulnerability when processing a crafted binary with malformed debug information. A logic flaw in the handling of DWARF location list headers can cause objdump to enter an unbounded loop and produce endless output until manually interrupted. This issue affects versions prior to the upstream fix and allows a local attacker to cause excessive resource consumption by supplying a malicious input file.</title>
+  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-69644</link>
+  <pubDate>Wed, 11 Mar 2026 08:02:56 +0000</pubDate>
+  <description><![CDATA[<b>Why this matters: Security-relevant change; confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center (MSRC) &nbsp; <b>Severity:</b> Important]]></description>
+</item>
+
+<item>
+  <title>🟠 CVE-2025-69651 GNU Binutils thru 2.46 readelf contains a vulnerability that leads to an invalid pointer free when processing a crafted ELF binary with malformed relocation or symbol data. If dump_relocations returns early due to parsing errors, the internal all_relocations array may remain partially uninitialized. Later, process_got_section_contents() may attempt to free an invalid r_symbol pointer, triggering memory corruption checks in glibc and causing the program to terminate with SIGABRT. No evidence of further memory corruption or code execution was observed; the impact is limited to denial of service.</title>
+  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-69651</link>
+  <pubDate>Wed, 11 Mar 2026 08:02:49 +0000</pubDate>
+  <description><![CDATA[<b>Why this matters: Security-relevant change; confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center (MSRC) &nbsp; <b>Severity:</b> Important]]></description>
+</item>
+
+<item>
+  <title>🟠 CVE-2025-69649 GNU Binutils thru 2.46 readelf contains a null pointer dereference vulnerability when processing a crafted ELF binary with malformed header fields. During relocation processing, an invalid or null section pointer may be passed into display_relocations(), resulting in a segmentation fault (SIGSEGV) and abrupt termination. No evidence of memory corruption beyond the null pointer dereference, nor any possibility of code execution, was observed.</title>
+  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-69649</link>
+  <pubDate>Wed, 11 Mar 2026 08:02:41 +0000</pubDate>
+  <description><![CDATA[<b>Why this matters: Security-relevant change; confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center (MSRC) &nbsp; <b>Severity:</b> Important]]></description>
+</item>
+
+<item>
+  <title>🟠 CVE-2025-69645 Binutils objdump contains a denial-of-service vulnerability when processing a crafted binary with malformed DWARF debug information. A logic error in the handling of DWARF compilation units can result in an invalid offset_size value being used inside byte_get_little_endian, leading to an abort (SIGABRT). The issue was observed in binutils 2.44. A local attacker can trigger the crash by supplying a malicious input file.</title>
+  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-69645</link>
+  <pubDate>Wed, 11 Mar 2026 08:02:32 +0000</pubDate>
+  <description><![CDATA[<b>Why this matters: Security-relevant change; confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center (MSRC) &nbsp; <b>Severity:</b> Important]]></description>
+</item>
+
+<item>
+  <title>🟠 CVE-2025-69652 GNU Binutils thru 2.46 readelf contains a vulnerability that leads to an abort (SIGABRT) when processing a crafted ELF binary with malformed DWARF abbrev or debug information. Due to incomplete state cleanup in process_debug_info(), an invalid debug_info_p state may propagate into DWARF attribute parsing routines. When certain malformed attributes result in an unexpected data length of zero, byte_get_little_endian() triggers a fatal abort. No evidence of memory corruption or code execution was observed; the impact is limited to denial of service.</title>
+  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-69652</link>
+  <pubDate>Wed, 11 Mar 2026 08:02:25 +0000</pubDate>
+  <description><![CDATA[<b>Why this matters: Security-relevant change; confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center (MSRC) &nbsp; <b>Severity:</b> Important]]></description>
+</item>
+
+<item>
+  <title>🟠 CVE-2025-69650 GNU Binutils thru 2.46 readelf contains a double free vulnerability when processing a crafted ELF binary with malformed relocation data. During GOT relocation handling, dump_relocations may return early without initializing the all_relocations array. As a result, process_got_section_contents() may pass an uninitialized r_symbol pointer to free(), leading to a double free and terminating the program with SIGABRT. No evidence of exploitable memory corruption or code execution was observed; the impact is limited to denial of service.</title>
+  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-69650</link>
+  <pubDate>Wed, 11 Mar 2026 08:02:17 +0000</pubDate>
+  <description><![CDATA[<b>Why this matters: Security-relevant change; confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center (MSRC) &nbsp; <b>Severity:</b> Important]]></description>
+</item>
+
+<item>
+  <title>🟠 CVE-2025-69646 Binutils objdump contains a denial-of-service vulnerability when processing a crafted binary with malformed DWARF debug_rnglists data. A logic error in the handling of the debug_rnglists header can cause objdump to repeatedly print the same warning message and fail to terminate, resulting in an unbounded logging loop until the process is interrupted. The issue was observed in binutils 2.44. A local attacker can exploit this vulnerability by supplying a malicious input file, leading to excessive CPU and I/O usage and preventing completion of the objdump analysis.</title>
+  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-69646</link>
+  <pubDate>Wed, 11 Mar 2026 08:02:09 +0000</pubDate>
+  <description><![CDATA[<b>Why this matters: Security-relevant change; confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center (MSRC) &nbsp; <b>Severity:</b> Important]]></description>
+</item>
+
+<item>
+  <title>🟠 CVE-2026-29786 node-tar: Hardlink Path Traversal via Drive-Relative Linkpath</title>
+  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-29786</link>
+  <pubDate>Wed, 11 Mar 2026 08:02:00 +0000</pubDate>
+  <description><![CDATA[<b>Why this matters: Security-relevant change; confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center (MSRC) &nbsp; <b>Severity:</b> Important]]></description>
+</item>
+
+<item>
+  <title>🟠 CVE-2026-3494 MariaDB Server Audit Plugin Comment Handling Bypass</title>
+  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-3494</link>
+  <pubDate>Wed, 11 Mar 2026 08:01:52 +0000</pubDate>
+  <description><![CDATA[<b>Why this matters: Security-relevant change; confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center (MSRC) &nbsp; <b>Severity:</b> Important]]></description>
+</item>
+
+<item>
+  <title>🟠 CVE-2026-3731 libssh SFTP Extension Name sftp.c sftp_extensions_get_data out-of-bounds</title>
+  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-3731</link>
+  <pubDate>Wed, 11 Mar 2026 08:01:46 +0000</pubDate>
+  <description><![CDATA[<b>Why this matters: Security-relevant change; confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center (MSRC) &nbsp; <b>Severity:</b> Important]]></description>
+</item>
+
+<item>
+  <title>🟠 CVE-2024-14027 xattr: switch to CLASS(fd)</title>
+  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-14027</link>
+  <pubDate>Wed, 11 Mar 2026 08:01:37 +0000</pubDate>
+  <description><![CDATA[<b>Why this matters: Security-relevant change; confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center (MSRC) &nbsp; <b>Severity:</b> Important]]></description>
+</item>
+
+<item>
+  <title>🟠 CVE-2026-27139 FileInfo can escape from a Root in os</title>
+  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-27139</link>
+  <pubDate>Wed, 11 Mar 2026 08:01:32 +0000</pubDate>
+  <description><![CDATA[<b>Why this matters: Security-relevant change; confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center (MSRC) &nbsp; <b>Severity:</b> Important]]></description>
+</item>
+
+<item>
+  <title>🟠 CVE-2026-26018 CoreDNS Loop Detection Denial of Service Vulnerability</title>
+  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-26018</link>
+  <pubDate>Wed, 11 Mar 2026 08:01:19 +0000</pubDate>
+  <description><![CDATA[<b>Why this matters: Security-relevant change; confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center (MSRC) &nbsp; <b>Severity:</b> Important]]></description>
+</item>
+
+<item>
+  <title>🟠 CVE-2026-26017 CoreDNS ACL Bypass</title>
+  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-26017</link>
+  <pubDate>Wed, 11 Mar 2026 08:01:14 +0000</pubDate>
+  <description><![CDATA[<b>Why this matters: Security-relevant change; confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center (MSRC) &nbsp; <b>Severity:</b> Important]]></description>
+</item>
+
 <item>
   <title>🟠 Microsoft Patch Tuesday, March 2026 Edition</title>
   <link>https://krebsonsecurity.com/2026/03/microsoft-patch-tuesday-march-2026-edition/</link>
@@ -390,139 +523,6 @@ The malware, first detected in the wild in August 2025, has expanded to over 14,
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-26112</link>
   <pubDate>Tue, 10 Mar 2026 14:00:00 +0000</pubDate>
   <description><![CDATA[<b>Why this matters: Security-relevant change; confirm exposure and patch/mitigation status.</b><br/>Untrusted pointer dereference in Microsoft Office Excel allows an unauthorized attacker to execute code locally.<br/><br/><b>Source:</b> Microsoft Security Response Center (MSRC) &nbsp; <b>Severity:</b> Important]]></description>
-</item>
-
-<item>
-  <title>🟠 CVE-2026-26113 Microsoft Office Remote Code Execution Vulnerability</title>
-  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-26113</link>
-  <pubDate>Tue, 10 Mar 2026 14:00:00 +0000</pubDate>
-  <description><![CDATA[<b>Why this matters: Security-relevant change; confirm exposure and patch/mitigation status.</b><br/>Untrusted pointer dereference in Microsoft Office allows an unauthorized attacker to execute code locally.<br/><br/><b>Source:</b> Microsoft Security Response Center (MSRC) &nbsp; <b>Severity:</b> Important]]></description>
-</item>
-
-<item>
-  <title>🟠 CVE-2026-26114 Microsoft SharePoint Server Remote Code Execution Vulnerability</title>
-  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-26114</link>
-  <pubDate>Tue, 10 Mar 2026 14:00:00 +0000</pubDate>
-  <description><![CDATA[<b>Why this matters: Security-relevant change; confirm exposure and patch/mitigation status.</b><br/>Deserialization of untrusted data in Microsoft Office SharePoint allows an authorized attacker to execute code over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center (MSRC) &nbsp; <b>Severity:</b> Important]]></description>
-</item>
-
-<item>
-  <title>🟠 CVE-2026-23656 Windows App Installer Spoofing Vulnerability</title>
-  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-23656</link>
-  <pubDate>Tue, 10 Mar 2026 14:00:00 +0000</pubDate>
-  <description><![CDATA[<b>Why this matters: Security-relevant change; confirm exposure and patch/mitigation status.</b><br/>Insufficient verification of data authenticity in Windows App Installer allows an unauthorized attacker to perform spoofing over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center (MSRC) &nbsp; <b>Severity:</b> Important]]></description>
-</item>
-
-<item>
-  <title>🟠 CVE-2026-20967 System Center Operations Manager (SCOM) Elevation of Privilege Vulnerability</title>
-  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-20967</link>
-  <pubDate>Tue, 10 Mar 2026 14:00:00 +0000</pubDate>
-  <description><![CDATA[<b>Why this matters: Security-relevant change; confirm exposure and patch/mitigation status.</b><br/>Improper input validation in System Center Operations Manager allows an authorized attacker to elevate privileges over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center (MSRC) &nbsp; <b>Severity:</b> Important]]></description>
-</item>
-
-<item>
-  <title>🟠 CVE-2026-26121 Azure IOT Explorer Spoofing Vulnerability</title>
-  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-26121</link>
-  <pubDate>Tue, 10 Mar 2026 14:00:00 +0000</pubDate>
-  <description><![CDATA[<b>Why this matters: Security-relevant change; confirm exposure and patch/mitigation status.</b><br/>Server-side request forgery (ssrf) in Azure IoT Explorer allows an unauthorized attacker to perform spoofing over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center (MSRC) &nbsp; <b>Severity:</b> Important]]></description>
-</item>
-
-<item>
-  <title>🟠 CVE-2026-26115 SQL Server Elevation of Privilege Vulnerability</title>
-  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-26115</link>
-  <pubDate>Tue, 10 Mar 2026 14:00:00 +0000</pubDate>
-  <description><![CDATA[<b>Why this matters: Security-relevant change; confirm exposure and patch/mitigation status.</b><br/>Improper validation of specified type of input in SQL Server allows an authorized attacker to elevate privileges over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center (MSRC) &nbsp; <b>Severity:</b> Important]]></description>
-</item>
-
-<item>
-  <title>🟠 CVE-2026-26116 SQL Server Elevation of Privilege Vulnerability</title>
-  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-26116</link>
-  <pubDate>Tue, 10 Mar 2026 14:00:00 +0000</pubDate>
-  <description><![CDATA[<b>Why this matters: Security-relevant change; confirm exposure and patch/mitigation status.</b><br/>Improper neutralization of special elements used in an sql command ('sql injection') in SQL Server allows an authorized attacker to elevate privileges over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center (MSRC) &nbsp; <b>Severity:</b> Important]]></description>
-</item>
-
-<item>
-  <title>🟠 CVE-2026-26128 Windows SMB Server Elevation of Privilege Vulnerability</title>
-  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-26128</link>
-  <pubDate>Tue, 10 Mar 2026 14:00:00 +0000</pubDate>
-  <description><![CDATA[<b>Why this matters: Could impact sign-ins/MFA/Conditional Access; watch for login issues.</b><br/>Improper authentication in Windows SMB Server allows an authorized attacker to elevate privileges locally.<br/><br/><b>Source:</b> Microsoft Security Response Center (MSRC) &nbsp; <b>Severity:</b> Important]]></description>
-</item>
-
-<item>
-  <title>🟠 CVE-2026-26131 .NET Elevation of Privilege Vulnerability</title>
-  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-26131</link>
-  <pubDate>Tue, 10 Mar 2026 14:00:00 +0000</pubDate>
-  <description><![CDATA[<b>Why this matters: Security-relevant change; confirm exposure and patch/mitigation status.</b><br/>Incorrect default permissions in .NET allows an authorized attacker to elevate privileges locally.<br/><br/><b>Source:</b> Microsoft Security Response Center (MSRC) &nbsp; <b>Severity:</b> Important]]></description>
-</item>
-
-<item>
-  <title>🟠 CVE-2026-26132 Windows Kernel Elevation of Privilege Vulnerability</title>
-  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-26132</link>
-  <pubDate>Tue, 10 Mar 2026 14:00:00 +0000</pubDate>
-  <description><![CDATA[<b>Why this matters: Security-relevant change; confirm exposure and patch/mitigation status.</b><br/>Use after free in Windows Kernel allows an authorized attacker to elevate privileges locally.<br/><br/><b>Source:</b> Microsoft Security Response Center (MSRC) &nbsp; <b>Severity:</b> Important]]></description>
-</item>
-
-<item>
-  <title>🟠 CVE-2026-26134 Microsoft Office Elevation of Privilege Vulnerability</title>
-  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-26134</link>
-  <pubDate>Tue, 10 Mar 2026 14:00:00 +0000</pubDate>
-  <description><![CDATA[<b>Why this matters: Security-relevant change; confirm exposure and patch/mitigation status.</b><br/>Integer overflow or wraparound in Microsoft Office allows an authorized attacker to elevate privileges locally.<br/><br/><b>Source:</b> Microsoft Security Response Center (MSRC) &nbsp; <b>Severity:</b> Important]]></description>
-</item>
-
-<item>
-  <title>🟠 CVE-2026-26127 .NET Denial of Service Vulnerability</title>
-  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-26127</link>
-  <pubDate>Tue, 10 Mar 2026 14:00:00 +0000</pubDate>
-  <description><![CDATA[<b>Why this matters: Security-relevant change; confirm exposure and patch/mitigation status.</b><br/>Out-of-bounds read in .NET allows an unauthorized attacker to deny service over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center (MSRC) &nbsp; <b>Severity:</b> Important]]></description>
-</item>
-
-<item>
-  <title>🟠 CVE-2026-23674 MapUrlToZone Security Feature Bypass Vulnerability</title>
-  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-23674</link>
-  <pubDate>Tue, 10 Mar 2026 14:00:00 +0000</pubDate>
-  <description><![CDATA[<b>Why this matters: Security-relevant change; confirm exposure and patch/mitigation status.</b><br/>Improper resolution of path equivalence in Windows MapUrlToZone allows an unauthorized attacker to bypass a security feature over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center (MSRC) &nbsp; <b>Severity:</b> Important]]></description>
-</item>
-
-<item>
-  <title>🟠 CVE-2026-26148 Microsoft Azure AD SSH Login extension for Linux Elevation of Privilege Vulnerability</title>
-  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-26148</link>
-  <pubDate>Tue, 10 Mar 2026 14:00:00 +0000</pubDate>
-  <description><![CDATA[<b>Why this matters: Could impact sign-ins/MFA/Conditional Access; watch for login issues.</b><br/>External initialization of trusted variables or data stores in Azure Entra ID allows an unauthorized attacker to elevate privileges locally.<br/><br/><b>Source:</b> Microsoft Security Response Center (MSRC) &nbsp; <b>Severity:</b> Important]]></description>
-</item>
-
-<item>
-  <title>🟠 CVE-2026-23654 GitHub: Zero Shot SCFoundation Remote Code Execution Vulnerability</title>
-  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-23654</link>
-  <pubDate>Tue, 10 Mar 2026 14:00:00 +0000</pubDate>
-  <description><![CDATA[<b>Why this matters: Security-relevant change; confirm exposure and patch/mitigation status.</b><br/>Dependency on vulnerable third-party component in GitHub Repo: zero-shot-scfoundation allows an unauthorized attacker to execute code over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center (MSRC) &nbsp; <b>Severity:</b> Important]]></description>
-</item>
-
-<item>
-  <title>🟠 CVE-2026-23661 Azure IoT Explorer Information Disclosure Vulnerability</title>
-  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-23661</link>
-  <pubDate>Tue, 10 Mar 2026 14:00:00 +0000</pubDate>
-  <description><![CDATA[<b>Why this matters: Security-relevant change; confirm exposure and patch/mitigation status.</b><br/>Cleartext transmission of sensitive information in Azure IoT Explorer allows an unauthorized attacker to disclose information over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center (MSRC) &nbsp; <b>Severity:</b> Important]]></description>
-</item>
-
-<item>
-  <title>🟠 CVE-2026-23662 Azure IoT Explorer Information Disclosure Vulnerability</title>
-  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-23662</link>
-  <pubDate>Tue, 10 Mar 2026 14:00:00 +0000</pubDate>
-  <description><![CDATA[<b>Why this matters: Could impact sign-ins/MFA/Conditional Access; watch for login issues.</b><br/>Missing authentication for critical function in Azure IoT Explorer allows an unauthorized attacker to disclose information over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center (MSRC) &nbsp; <b>Severity:</b> Important]]></description>
-</item>
-
-<item>
-  <title>🟠 CVE-2026-23665 Linux Azure Diagnostic extension (LAD) Elevation of Privilege Vulnerability</title>
-  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-23665</link>
-  <pubDate>Tue, 10 Mar 2026 14:00:00 +0000</pubDate>
-  <description><![CDATA[<b>Why this matters: Security-relevant change; confirm exposure and patch/mitigation status.</b><br/>Heap-based buffer overflow in Azure Linux Virtual Machines allows an authorized attacker to elevate privileges locally.<br/><br/><b>Source:</b> Microsoft Security Response Center (MSRC) &nbsp; <b>Severity:</b> Important]]></description>
-</item>
-
-<item>
-  <title>🟠 CVE-2026-26106 Microsoft SharePoint Server Remote Code Execution Vulnerability</title>
-  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-26106</link>
-  <pubDate>Tue, 10 Mar 2026 14:00:00 +0000</pubDate>
-  <description><![CDATA[<b>Why this matters: Security-relevant change; confirm exposure and patch/mitigation status.</b><br/>Improper input validation in Microsoft Office SharePoint allows an authorized attacker to execute code over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center (MSRC) &nbsp; <b>Severity:</b> Important]]></description>
 </item>
 
 <item>
