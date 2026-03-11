@@ -16,6 +16,7 @@ CONFIGS = [
     ("feeds-sysadmin.yaml", "sysadmin.xml", "sysadmin"),
     ("feeds-vp.yaml", "vp.xml", "vp"),
     ("feeds-radar.yaml", "radar.xml", "radar"),
+    ("feeds-tech.yaml", "tech.xml", "tech"),
     ("feeds.yaml", "rss.xml", "master"),
     ("feeds-archive.yaml", "archive.xml", "archive"),
 ]
