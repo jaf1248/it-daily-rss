@@ -12,9 +12,12 @@ from dateutil import parser as dp
 ROOT = os.path.dirname(os.path.dirname(__file__))
 
 CONFIGS = [
+    ("feeds-urgent.yaml", "urgent.xml", "urgent"),
     ("feeds-security.yaml", "security.xml", "security"),
     ("feeds-sysadmin.yaml", "sysadmin.xml", "sysadmin"),
+    ("feeds-network.yaml", "network.xml", "network"),
     ("feeds-vp.yaml", "vp.xml", "vp"),
+    ("feeds-ai.yaml", "ai.xml", "ai"),
     ("feeds-tech.yaml", "tech.xml", "tech"),
     ("feeds-radar.yaml", "radar.xml", "radar"),
     ("feeds.yaml", "rss.xml", "master"),
