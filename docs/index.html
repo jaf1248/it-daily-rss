@@ -89,6 +89,12 @@
         <ol id="radarList"><li class="muted">Loading…</li></ol>
       </div>
 
+      <div class="card">
+        <h2>🚀 Developing Tech & Hardware</h2>
+        <div class="muted" style="font-size:13px;">AI hardware, CPUs, networking silicon, storage innovation</div>
+        <ol id="techList"></ol>
+      </div>
+
       <!-- Weekly summary is intentionally LAST -->
       <div class="card wide">
         <h2>📅 Weekly Executive Summary</h2>
@@ -163,6 +169,7 @@
           fetchAndRender("./sysadmin.xml", "sysadminList"),
           fetchAndRender("./vp.xml", "vpList"),
           fetchAndRender("./radar.xml", "radarList"),
+          fetchAndRender("./tech.xml", "techList"),
         ]);
 
         status.textContent = `Loaded (S:${counts[0]} / O:${counts[1]} / VP:${counts[2]} / R:${counts[3]})`;
