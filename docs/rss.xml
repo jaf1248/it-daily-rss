@@ -3,8 +3,15 @@
 <channel>
   <title>Joe&#x27;s Daily IT Intelligence</title>
   <description>High-signal IT, Microsoft, and security intelligence.</description>
-  <lastBuildDate>Fri, 13 Mar 2026 21:30:54 +0000</lastBuildDate>
+  <lastBuildDate>Fri, 13 Mar 2026 22:26:13 +0000</lastBuildDate>
   
+<item>
+  <title>🟠 Microsoft: Windows 11 users can&#x27;t access C: drive on some Samsung PCs</title>
+  <link>https://www.bleepingcomputer.com/news/microsoft/microsoft-windows-11-users-cant-access-c-drive-on-some-samsung-pcs/</link>
+  <pubDate>Fri, 13 Mar 2026 22:11:57 +0000</pubDate>
+  <description><![CDATA[<b>Why this matters: Leadership context; useful for risk/budget/vendor conversations.</b><br/>Microsoft is investigating a new issue affecting some Samsung laptops running Windows 11 after installing the February 2026 security updates, in which users lose access to their C:&#092; drive and are unable to launch applications. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp; <b>Severity:</b> Important]]></description>
+</item>
+
 <item>
   <title>🔵 FBI seeks victims of Steam games used to spread malware</title>
   <link>https://www.bleepingcomputer.com/news/security/fbi-seeks-victims-of-steam-games-used-to-spread-malware/</link>
@@ -236,6 +243,104 @@ For years, many executive teams and boards have treated a large vulnerability ba
 </item>
 
 <item>
+  <title>🟠 CVE-2025-69644 An issue was discovered in Binutils before 2.46. The objdump contains a denial-of-service vulnerability when processing a crafted binary with malformed debug information. A logic flaw in the handling of DWARF location list headers can cause objdump to enter an unbounded loop and produce endless output until manually interrupted. This issue affects versions prior to the upstream fix and allows a local attacker to cause excessive resource consumption by supplying a malicious input file.</title>
+  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-69644</link>
+  <pubDate>Wed, 11 Mar 2026 08:02:56 +0000</pubDate>
+  <description><![CDATA[<b>Why this matters: Leadership context; useful for risk/budget/vendor conversations.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center (MSRC) &nbsp; <b>Severity:</b> Important]]></description>
+</item>
+
+<item>
+  <title>🟠 CVE-2025-69651 GNU Binutils thru 2.46 readelf contains a vulnerability that leads to an invalid pointer free when processing a crafted ELF binary with malformed relocation or symbol data. If dump_relocations returns early due to parsing errors, the internal all_relocations array may remain partially uninitialized. Later, process_got_section_contents() may attempt to free an invalid r_symbol pointer, triggering memory corruption checks in glibc and causing the program to terminate with SIGABRT. No evidence of further memory corruption or code execution was observed; the impact is limited to denial of service.</title>
+  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-69651</link>
+  <pubDate>Wed, 11 Mar 2026 08:02:49 +0000</pubDate>
+  <description><![CDATA[<b>Why this matters: Leadership context; useful for risk/budget/vendor conversations.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center (MSRC) &nbsp; <b>Severity:</b> Important]]></description>
+</item>
+
+<item>
+  <title>🟠 CVE-2025-69649 GNU Binutils thru 2.46 readelf contains a null pointer dereference vulnerability when processing a crafted ELF binary with malformed header fields. During relocation processing, an invalid or null section pointer may be passed into display_relocations(), resulting in a segmentation fault (SIGSEGV) and abrupt termination. No evidence of memory corruption beyond the null pointer dereference, nor any possibility of code execution, was observed.</title>
+  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-69649</link>
+  <pubDate>Wed, 11 Mar 2026 08:02:41 +0000</pubDate>
+  <description><![CDATA[<b>Why this matters: Leadership context; useful for risk/budget/vendor conversations.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center (MSRC) &nbsp; <b>Severity:</b> Important]]></description>
+</item>
+
+<item>
+  <title>🟠 CVE-2025-69645 Binutils objdump contains a denial-of-service vulnerability when processing a crafted binary with malformed DWARF debug information. A logic error in the handling of DWARF compilation units can result in an invalid offset_size value being used inside byte_get_little_endian, leading to an abort (SIGABRT). The issue was observed in binutils 2.44. A local attacker can trigger the crash by supplying a malicious input file.</title>
+  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-69645</link>
+  <pubDate>Wed, 11 Mar 2026 08:02:32 +0000</pubDate>
+  <description><![CDATA[<b>Why this matters: Leadership context; useful for risk/budget/vendor conversations.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center (MSRC) &nbsp; <b>Severity:</b> Important]]></description>
+</item>
+
+<item>
+  <title>🟠 CVE-2025-69652 GNU Binutils thru 2.46 readelf contains a vulnerability that leads to an abort (SIGABRT) when processing a crafted ELF binary with malformed DWARF abbrev or debug information. Due to incomplete state cleanup in process_debug_info(), an invalid debug_info_p state may propagate into DWARF attribute parsing routines. When certain malformed attributes result in an unexpected data length of zero, byte_get_little_endian() triggers a fatal abort. No evidence of memory corruption or code execution was observed; the impact is limited to denial of service.</title>
+  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-69652</link>
+  <pubDate>Wed, 11 Mar 2026 08:02:25 +0000</pubDate>
+  <description><![CDATA[<b>Why this matters: Leadership context; useful for risk/budget/vendor conversations.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center (MSRC) &nbsp; <b>Severity:</b> Important]]></description>
+</item>
+
+<item>
+  <title>🟠 CVE-2025-69650 GNU Binutils thru 2.46 readelf contains a double free vulnerability when processing a crafted ELF binary with malformed relocation data. During GOT relocation handling, dump_relocations may return early without initializing the all_relocations array. As a result, process_got_section_contents() may pass an uninitialized r_symbol pointer to free(), leading to a double free and terminating the program with SIGABRT. No evidence of exploitable memory corruption or code execution was observed; the impact is limited to denial of service.</title>
+  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-69650</link>
+  <pubDate>Wed, 11 Mar 2026 08:02:17 +0000</pubDate>
+  <description><![CDATA[<b>Why this matters: Leadership context; useful for risk/budget/vendor conversations.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center (MSRC) &nbsp; <b>Severity:</b> Important]]></description>
+</item>
+
+<item>
+  <title>🟠 CVE-2025-69646 Binutils objdump contains a denial-of-service vulnerability when processing a crafted binary with malformed DWARF debug_rnglists data. A logic error in the handling of the debug_rnglists header can cause objdump to repeatedly print the same warning message and fail to terminate, resulting in an unbounded logging loop until the process is interrupted. The issue was observed in binutils 2.44. A local attacker can exploit this vulnerability by supplying a malicious input file, leading to excessive CPU and I/O usage and preventing completion of the objdump analysis.</title>
+  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-69646</link>
+  <pubDate>Wed, 11 Mar 2026 08:02:09 +0000</pubDate>
+  <description><![CDATA[<b>Why this matters: Leadership context; useful for risk/budget/vendor conversations.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center (MSRC) &nbsp; <b>Severity:</b> Important]]></description>
+</item>
+
+<item>
+  <title>🟠 CVE-2026-29786 node-tar: Hardlink Path Traversal via Drive-Relative Linkpath</title>
+  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-29786</link>
+  <pubDate>Wed, 11 Mar 2026 08:02:00 +0000</pubDate>
+  <description><![CDATA[<b>Why this matters: Leadership context; useful for risk/budget/vendor conversations.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center (MSRC) &nbsp; <b>Severity:</b> Important]]></description>
+</item>
+
+<item>
+  <title>🟠 CVE-2026-3494 MariaDB Server Audit Plugin Comment Handling Bypass</title>
+  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-3494</link>
+  <pubDate>Wed, 11 Mar 2026 08:01:52 +0000</pubDate>
+  <description><![CDATA[<b>Why this matters: Leadership context; useful for risk/budget/vendor conversations.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center (MSRC) &nbsp; <b>Severity:</b> Important]]></description>
+</item>
+
+<item>
+  <title>🟠 CVE-2026-3731 libssh SFTP Extension Name sftp.c sftp_extensions_get_data out-of-bounds</title>
+  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-3731</link>
+  <pubDate>Wed, 11 Mar 2026 08:01:46 +0000</pubDate>
+  <description><![CDATA[<b>Why this matters: Leadership context; useful for risk/budget/vendor conversations.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center (MSRC) &nbsp; <b>Severity:</b> Important]]></description>
+</item>
+
+<item>
+  <title>🟠 CVE-2024-14027 xattr: switch to CLASS(fd)</title>
+  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-14027</link>
+  <pubDate>Wed, 11 Mar 2026 08:01:37 +0000</pubDate>
+  <description><![CDATA[<b>Why this matters: Leadership context; useful for risk/budget/vendor conversations.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center (MSRC) &nbsp; <b>Severity:</b> Important]]></description>
+</item>
+
+<item>
+  <title>🟠 CVE-2026-27139 FileInfo can escape from a Root in os</title>
+  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-27139</link>
+  <pubDate>Wed, 11 Mar 2026 08:01:32 +0000</pubDate>
+  <description><![CDATA[<b>Why this matters: Leadership context; useful for risk/budget/vendor conversations.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center (MSRC) &nbsp; <b>Severity:</b> Important]]></description>
+</item>
+
+<item>
+  <title>🟠 CVE-2026-26018 CoreDNS Loop Detection Denial of Service Vulnerability</title>
+  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-26018</link>
+  <pubDate>Wed, 11 Mar 2026 08:01:19 +0000</pubDate>
+  <description><![CDATA[<b>Why this matters: Leadership context; useful for risk/budget/vendor conversations.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center (MSRC) &nbsp; <b>Severity:</b> Important]]></description>
+</item>
+
+<item>
+  <title>🟠 CVE-2026-26017 CoreDNS ACL Bypass</title>
+  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-26017</link>
+  <pubDate>Wed, 11 Mar 2026 08:01:14 +0000</pubDate>
+  <description><![CDATA[<b>Why this matters: Leadership context; useful for risk/budget/vendor conversations.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center (MSRC) &nbsp; <b>Severity:</b> Important]]></description>
+</item>
+
+<item>
   <title>🔵 Five Malicious Rust Crates and AI Bot Exploit CI/CD Pipelines to Steal Developer Secrets</title>
   <link>https://thehackernews.com/2026/03/five-malicious-rust-crates-and-ai-bot.html</link>
   <pubDate>Wed, 11 Mar 2026 05:12:00 +0000</pubDate>
@@ -259,6 +364,13 @@ The crates, per Socket, impersonate timeapi.io and were published between late F
 </item>
 
 <item>
+  <title>🟠 Microsoft Patch Tuesday, March 2026 Edition</title>
+  <link>https://krebsonsecurity.com/2026/03/microsoft-patch-tuesday-march-2026-edition/</link>
+  <pubDate>Wed, 11 Mar 2026 00:32:51 +0000</pubDate>
+  <description><![CDATA[<b>Why this matters: Leadership context; useful for risk/budget/vendor conversations.</b><br/>Microsoft Corp. today pushed security updates to fix at least 77 vulnerabilities in its Windows operating systems and other software. There are no pressing "zero-day" flaws this month (compared to February's five zero-day treat), but as usual some patches may deserve more rapid attention from organizations using Windows. Here are a few highlights from this month's Patch Tuesday.<br/><br/><b>Source:</b> Krebs on Security &nbsp; <b>Severity:</b> Important]]></description>
+</item>
+
+<item>
   <title>🔵 How to Stop AI Data Leaks: A Webinar Guide to Auditing Modern Agentic Workflows</title>
   <link>https://thehackernews.com/2026/03/how-to-stop-ai-data-leaks-webinar-guide.html</link>
   <pubDate>Tue, 10 Mar 2026 16:21:00 +0000</pubDate>
@@ -266,111 +378,6 @@ The crates, per Socket, impersonate timeapi.io and were published between late F
 But there is a problem. While these agents make work faster, they also open a new "back door" for hackers.
 The Problem: "The Invisible Employee"
 Think of an AI Agent like a new employee who has<br/><br/><b>Source:</b> The Hacker News &nbsp; <b>Severity:</b> FYI]]></description>
-</item>
-
-<item>
-  <title>🟠 CVE-2026-24288 Windows Mobile Broadband Driver Remote Code Execution Vulnerability</title>
-  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-24288</link>
-  <pubDate>Tue, 10 Mar 2026 14:00:00 +0000</pubDate>
-  <description><![CDATA[<b>Why this matters: Leadership context; useful for risk/budget/vendor conversations.</b><br/>Heap-based buffer overflow in Windows Mobile Broadband allows an unauthorized attacker to execute code with a physical attack.<br/><br/><b>Source:</b> Microsoft Security Response Center (MSRC) &nbsp; <b>Severity:</b> Important]]></description>
-</item>
-
-<item>
-  <title>🟠 CVE-2026-24289 Windows Kernel Elevation of Privilege Vulnerability</title>
-  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-24289</link>
-  <pubDate>Tue, 10 Mar 2026 14:00:00 +0000</pubDate>
-  <description><![CDATA[<b>Why this matters: Leadership context; useful for risk/budget/vendor conversations.</b><br/>Use after free in Windows Kernel allows an authorized attacker to elevate privileges locally.<br/><br/><b>Source:</b> Microsoft Security Response Center (MSRC) &nbsp; <b>Severity:</b> Important]]></description>
-</item>
-
-<item>
-  <title>🟠 CVE-2026-24290 Windows Projected File System Elevation of Privilege Vulnerability</title>
-  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-24290</link>
-  <pubDate>Tue, 10 Mar 2026 14:00:00 +0000</pubDate>
-  <description><![CDATA[<b>Why this matters: Leadership context; useful for risk/budget/vendor conversations.</b><br/>Improper access control in Windows Projected File System allows an authorized attacker to elevate privileges locally.<br/><br/><b>Source:</b> Microsoft Security Response Center (MSRC) &nbsp; <b>Severity:</b> Important]]></description>
-</item>
-
-<item>
-  <title>🟠 CVE-2026-24291 Windows Accessibility Infrastructure (ATBroker.exe) Elevation of Privilege Vulnerability</title>
-  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-24291</link>
-  <pubDate>Tue, 10 Mar 2026 14:00:00 +0000</pubDate>
-  <description><![CDATA[<b>Why this matters: Leadership context; useful for risk/budget/vendor conversations.</b><br/>Incorrect permission assignment for critical resource in Windows Accessibility Infrastructure (ATBroker.exe) allows an authorized attacker to elevate privileges locally.<br/><br/><b>Source:</b> Microsoft Security Response Center (MSRC) &nbsp; <b>Severity:</b> Important]]></description>
-</item>
-
-<item>
-  <title>🟠 CVE-2026-24292 Windows Connected Devices Platform Service Elevation of Privilege Vulnerability</title>
-  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-24292</link>
-  <pubDate>Tue, 10 Mar 2026 14:00:00 +0000</pubDate>
-  <description><![CDATA[<b>Why this matters: Leadership context; useful for risk/budget/vendor conversations.</b><br/>Use after free in Connected Devices Platform Service (Cdpsvc) allows an authorized attacker to elevate privileges locally.<br/><br/><b>Source:</b> Microsoft Security Response Center (MSRC) &nbsp; <b>Severity:</b> Important]]></description>
-</item>
-
-<item>
-  <title>🟠 CVE-2026-24294 Windows SMB Server Elevation of Privilege Vulnerability</title>
-  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-24294</link>
-  <pubDate>Tue, 10 Mar 2026 14:00:00 +0000</pubDate>
-  <description><![CDATA[<b>Why this matters: Could impact sign-ins/MFA/Conditional Access; watch for login issues.</b><br/>Improper authentication in Windows SMB Server allows an authorized attacker to elevate privileges locally.<br/><br/><b>Source:</b> Microsoft Security Response Center (MSRC) &nbsp; <b>Severity:</b> Important]]></description>
-</item>
-
-<item>
-  <title>🟠 CVE-2026-24295 Windows Device Association Service Elevation of Privilege Vulnerability</title>
-  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-24295</link>
-  <pubDate>Tue, 10 Mar 2026 14:00:00 +0000</pubDate>
-  <description><![CDATA[<b>Why this matters: Could impact sign-ins/MFA/Conditional Access; watch for login issues.</b><br/>Concurrent execution using shared resource with improper synchronization ('race condition') in Windows Device Association Service allows an authorized attacker to elevate privileges locally.<br/><br/><b>Source:</b> Microsoft Security Response Center (MSRC) &nbsp; <b>Severity:</b> Important]]></description>
-</item>
-
-<item>
-  <title>🟠 CVE-2026-24296 Windows Device Association Service Elevation of Privilege Vulnerability</title>
-  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-24296</link>
-  <pubDate>Tue, 10 Mar 2026 14:00:00 +0000</pubDate>
-  <description><![CDATA[<b>Why this matters: Could impact sign-ins/MFA/Conditional Access; watch for login issues.</b><br/>Concurrent execution using shared resource with improper synchronization ('race condition') in Windows Device Association Service allows an authorized attacker to elevate privileges locally.<br/><br/><b>Source:</b> Microsoft Security Response Center (MSRC) &nbsp; <b>Severity:</b> Important]]></description>
-</item>
-
-<item>
-  <title>🟠 CVE-2026-24297 Windows Kerberos Security Feature Bypass Vulnerability</title>
-  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-24297</link>
-  <pubDate>Tue, 10 Mar 2026 14:00:00 +0000</pubDate>
-  <description><![CDATA[<b>Why this matters: Leadership context; useful for risk/budget/vendor conversations.</b><br/>Concurrent execution using shared resource with improper synchronization ('race condition') in Windows Kerberos allows an unauthorized attacker to bypass a security feature over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center (MSRC) &nbsp; <b>Severity:</b> Important]]></description>
-</item>
-
-<item>
-  <title>🟠 CVE-2026-25165 Performance Counters for Windows Elevation of Privilege Vulnerability</title>
-  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-25165</link>
-  <pubDate>Tue, 10 Mar 2026 14:00:00 +0000</pubDate>
-  <description><![CDATA[<b>Why this matters: Leadership context; useful for risk/budget/vendor conversations.</b><br/>Null pointer dereference in Windows Performance Counters allows an authorized attacker to elevate privileges locally.<br/><br/><b>Source:</b> Microsoft Security Response Center (MSRC) &nbsp; <b>Severity:</b> Important]]></description>
-</item>
-
-<item>
-  <title>🟠 CVE-2026-25166 Windows System Image Manager Assessment and Deployment Kit (ADK) Remote Code Execution Vulnerability</title>
-  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-25166</link>
-  <pubDate>Tue, 10 Mar 2026 14:00:00 +0000</pubDate>
-  <description><![CDATA[<b>Why this matters: Leadership context; useful for risk/budget/vendor conversations.</b><br/>Deserialization of untrusted data in Windows System Image Manager allows an authorized attacker to execute code locally.<br/><br/><b>Source:</b> Microsoft Security Response Center (MSRC) &nbsp; <b>Severity:</b> Important]]></description>
-</item>
-
-<item>
-  <title>🟠 CVE-2026-25167 Microsoft Brokering File System Elevation of Privilege Vulnerability</title>
-  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-25167</link>
-  <pubDate>Tue, 10 Mar 2026 14:00:00 +0000</pubDate>
-  <description><![CDATA[<b>Why this matters: Leadership context; useful for risk/budget/vendor conversations.</b><br/>Use after free in Microsoft Brokering File System allows an unauthorized attacker to elevate privileges locally.<br/><br/><b>Source:</b> Microsoft Security Response Center (MSRC) &nbsp; <b>Severity:</b> Important]]></description>
-</item>
-
-<item>
-  <title>🟠 CVE-2026-25168 Windows Graphics Component Denial of Service Vulnerability</title>
-  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-25168</link>
-  <pubDate>Tue, 10 Mar 2026 14:00:00 +0000</pubDate>
-  <description><![CDATA[<b>Why this matters: Leadership context; useful for risk/budget/vendor conversations.</b><br/>Null pointer dereference in Microsoft Graphics Component allows an unauthorized attacker to deny service locally.<br/><br/><b>Source:</b> Microsoft Security Response Center (MSRC) &nbsp; <b>Severity:</b> Important]]></description>
-</item>
-
-<item>
-  <title>🟠 CVE-2026-25169 Windows Graphics Component Denial of Service Vulnerability</title>
-  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-25169</link>
-  <pubDate>Tue, 10 Mar 2026 14:00:00 +0000</pubDate>
-  <description><![CDATA[<b>Why this matters: Leadership context; useful for risk/budget/vendor conversations.</b><br/>Divide by zero in Microsoft Graphics Component allows an unauthorized attacker to deny service locally.<br/><br/><b>Source:</b> Microsoft Security Response Center (MSRC) &nbsp; <b>Severity:</b> Important]]></description>
-</item>
-
-<item>
-  <title>🟠 CVE-2026-25170 Windows Hyper-V Elevation of Privilege Vulnerability</title>
-  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-25170</link>
-  <pubDate>Tue, 10 Mar 2026 14:00:00 +0000</pubDate>
-  <description><![CDATA[<b>Why this matters: Leadership context; useful for risk/budget/vendor conversations.</b><br/>Use after free in Windows Hyper-V allows an authorized attacker to elevate privileges locally.<br/><br/><b>Source:</b> Microsoft Security Response Center (MSRC) &nbsp; <b>Severity:</b> Important]]></description>
 </item>
 
 <item>
