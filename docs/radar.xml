@@ -3,8 +3,16 @@
 <channel>
   <title>Joe — Under the Radar</title>
   <description>Lesser-known but high-signal IT, security, and ops sources.</description>
-  <lastBuildDate>Tue, 05 May 2026 08:05:46 +0000</lastBuildDate>
+  <lastBuildDate>Tue, 05 May 2026 10:44:07 +0000</lastBuildDate>
   
+<item>
+  <title>🟠 DarkSword Malware</title>
+  <link>https://www.schneier.com/blog/archives/2026/05/darksword-malware.html</link>
+  <pubDate>Tue, 05 May 2026 10:42:03 +0000</pubDate>
+  <description><![CDATA[<b>Why this matters: Early signal from niche sources; worth a quick scan.</b><br/><p>DarkSword is a sophisticated piece of <a href="https://cloud.google.com/blog/topics/threat-intelligence/darksword-ios-exploit-chain">malware</a>&#8212;probably government designed&#8212;that targets iOS.</p>
+<blockquote><p>Google Threat Intelligence Group (GTIG) has identified a new iOS full-chain exploit that leveraged multiple zero-day vulnerabilities to fully compromise devices. Based on toolmarks in recovered payloads, we believe the exploit chain to be called DarkSword. Since at least November 2025, GTIG has observed multiple commercial surveillance vendors and suspected state-sponsored actors utilizing DarkSword in distinct campaigns. These threat actors have deployed the exploit chain against targets in Saudi Arabia, Turkey, Malaysia, and Ukraine...</p></blockquote><br/><br/><b>Source:</b> Schneier on Security &nbsp; <b>Severity:</b> Important]]></description>
+</item>
+
 <item>
   <title>🔵 Hacking Polymarket</title>
   <link>https://www.schneier.com/blog/archives/2026/05/hacking-polymarket.html</link>
@@ -123,13 +131,6 @@
   <link>https://blog.cloudflare.com/making-rust-workers-reliable/</link>
   <pubDate>Wed, 22 Apr 2026 13:00:00 +0000</pubDate>
   <description><![CDATA[<b>Why this matters: Early signal from niche sources; worth a quick scan.</b><br/>Panics in Rust Workers were historically fatal, poisoning the entire instance. By collaborating upstream on the wasm‑bindgen project, Rust Workers now support resilient critical error recovery, including panic unwinding using WebAssembly Exception Handling.<br/><br/><b>Source:</b> Cloudflare Blog &nbsp; <b>Severity:</b> FYI]]></description>
-</item>
-
-<item>
-  <title>🔵 ICE Uses Graphite Spyware</title>
-  <link>https://www.schneier.com/blog/archives/2026/04/ice-uses-graphite-spyware.html</link>
-  <pubDate>Wed, 22 Apr 2026 11:02:25 +0000</pubDate>
-  <description><![CDATA[<b>Why this matters: Early signal from niche sources; worth a quick scan.</b><br/><p>ICE has <a href="https://www.npr.org/2026/04/07/nx-s1-5776799/ice-spyware-privacy">admitted</a> that it uses spyware from the Israeli company Graphite.</p><br/><br/><b>Source:</b> Schneier on Security &nbsp; <b>Severity:</b> FYI]]></description>
 </item>
 
 <item>
@@ -296,7 +297,7 @@
 <item>
   <title>🔵 On the Effectiveness of Mutational Grammar Fuzzing</title>
   <link>https://projectzero.google/2026/03/mutational-grammar-fuzzing.html</link>
-  <pubDate>Thu, 05 Mar 2026 08:00:00 +0000</pubDate>
+  <pubDate>Wed, 04 Mar 2026 23:00:00 +0000</pubDate>
   <description><![CDATA[<b>Why this matters: Early signal from niche sources; worth a quick scan.</b><br/>Mutational grammar fuzzing is a fuzzing technique in which the fuzzer uses a predefined grammar that describes the structure of the samples. When a sample gets mutated, the mutations happen in such a way that any resulting samples still adhere to the grammar rules, thus the structure of the samples gets maintained by the mutation process. In case of coverage-guided grammar fuzzing, if the resulting sample (after the mutation) triggers previously unseen code coverage, this sample is saved to the sample corpus and used as a basis for future mutations. This technique has proven capable of finding complex issues and I have used it successfully in the past, including to find issues in XSLT implementations in web browsers and even JIT engine bugs. However, despite the approach being effective, it is not without its flaws which, for a casual fuzzer user, might not be obvious. In this blogpost I will introduce what I perceive to be the flaws of the mutational coverage-guided grammar fuzzing approach. I will also describe a very simple but effective technique I use in my fuzzing runs to counter these flaws.<br/><br/><b>Source:</b> Project Zero Blog &nbsp; <b>Severity:</b> FYI]]></description>
 </item>
 
@@ -310,7 +311,7 @@
 <item>
   <title>🔵 A Deep Dive into the GetProcessHandleFromHwnd API</title>
   <link>https://projectzero.google/2026/02/gphfh-deep-dive.html</link>
-  <pubDate>Thu, 26 Feb 2026 08:00:00 +0000</pubDate>
+  <pubDate>Wed, 25 Feb 2026 23:00:00 +0000</pubDate>
   <description><![CDATA[<b>Why this matters: Early signal from niche sources; worth a quick scan.</b><br/>In my previous blog post I mentioned the GetProcessHandleFromHwnd API. This was an API I didn’t know existed until I found a publicly disclosed UAC bypass using the Quick Assist UI Access application. This API looked interesting so I thought I should take a closer look. I typically start by reading the documentation for an API I don’t know about, assuming it’s documented at all. It can give you an idea of how long the API has existed as well as its security properties. The documentation’s remarks contain the following three statements that I thought were interesting: If the caller has UIAccess, however, they can use a windows hook to inject code into the target process, and from within the target process, send a handle back to the caller. GetProcessHandleFromHwnd is a convenience function that uses this technique to obtain the handle of the process that owns the specified HWND. Note that it only succeeds in cases where the caller and target process are running as the same user.<br/><br/><b>Source:</b> Project Zero Blog &nbsp; <b>Severity:</b> FYI]]></description>
 </item>
 
@@ -331,7 +332,7 @@
 <item>
   <title>🔵 Bypassing Administrator Protection by Abusing UI Access</title>
   <link>https://projectzero.google/2026/02/windows-administrator-protection.html</link>
-  <pubDate>Thu, 12 Feb 2026 08:00:00 +0000</pubDate>
+  <pubDate>Wed, 11 Feb 2026 23:00:00 +0000</pubDate>
   <description><![CDATA[<b>Why this matters: Early signal from niche sources; worth a quick scan.</b><br/>In my last blog post I introduced the new Windows feature, Administrator Protection and how it aimed to create a secure boundary for UAC where one didn’t exist. I described one of the ways I was able to bypass the feature before it was released. In total I found 9 bypasses during my research that have now all been fixed. In this blog post I wanted to describe the root cause of 5 of those 9 issues, specifically the implementation of UI Access, how this has been a long standing problem with UAC that’s been under-appreciated, and how it’s being fixed now. A Question of Accessibility Prior to Windows Vista any process running on a user’s desktop could control any window created by another, such as by sending window messages. This behavior could be abused if a privileged user, such as SYSTEM, displayed a user interface on the desktop. A limited user could control the UI and potentially elevate privileges. This was referred to as a Shatter Attack, and was usually fixed by removing user interface components from privileged code.<br/><br/><b>Source:</b> Project Zero Blog &nbsp; <b>Severity:</b> FYI]]></description>
 </item>
 
@@ -352,35 +353,35 @@
 <item>
   <title>🟠 Breaking the Sound Barrier, Part II: Exploiting CVE-2024-54529</title>
   <link>https://projectzero.google/2026/01/sound-barrier-2.html</link>
-  <pubDate>Fri, 30 Jan 2026 08:00:00 +0000</pubDate>
+  <pubDate>Thu, 29 Jan 2026 23:00:00 +0000</pubDate>
   <description><![CDATA[<b>Why this matters: Early signal from niche sources; worth a quick scan.</b><br/>In the first part of this series, I detailed my journey into macOS security research, which led to the discovery of a type confusion vulnerability (CVE-2024-54529) and a double-free vulnerability (CVE-2025-31235) in the coreaudiod system daemon through a process I call knowledge-driven fuzzing. While the first post focused on the process of finding the vulnerabilities, this post dives into the intricate process of exploiting the type confusion vulnerability. I’ll explain the technical details of turning a potentially exploitable crash into a working exploit: a journey filled with dead ends, creative problem solving, and ultimately, success. The Vulnerability: A Quick Recap If you haven’t already, I highly recommend reading my detailed writeup on this vulnerability before proceeding. As a refresher, CVE-2024-54529 is a type confusion vulnerability within the com.apple.audio.audiohald Mach service in the CoreAudio framework used by the coreaudiod process. Several Mach message handlers, such as _XIOContext_Fetch_Workgroup_Port, would fetch a HALS_Object from the Object Map based on an ID from the Mach message, and then perform operations on it, assuming it was of a specific type (ioct) without proper validation.<br/><br/><b>Source:</b> Project Zero Blog &nbsp; <b>Severity:</b> Important]]></description>
 </item>
 
 <item>
   <title>🔵 Bypassing Windows Administrator Protection</title>
   <link>https://projectzero.google/2026/26/windows-administrator-protection.html</link>
-  <pubDate>Mon, 26 Jan 2026 08:00:00 +0000</pubDate>
+  <pubDate>Sun, 25 Jan 2026 23:00:00 +0000</pubDate>
   <description><![CDATA[<b>Why this matters: Early signal from niche sources; worth a quick scan.</b><br/>A headline feature introduced in the latest release of Windows 11, 25H2 is Administrator Protection. The goal of this feature is to replace User Account Control (UAC) with a more robust and importantly, securable system to allow a local user to access administrator privileges only when necessary. This blog post will give a brief overview of the new feature, how it works and how it’s different from UAC. I’ll then describe some of the security research I undertook while it was in the insider preview builds on Windows 11. Finally I’ll detail one of the nine separate vulnerabilities that I found to bypass the feature to silently gain full administrator privileges. All the issues that I reported to Microsoft have been fixed, either prior to the feature being officially released (in optional update KB5067036) or as subsequent security bulletins. Note: As of 1st December 2025 the Administrator Protection feature has been disabled by Microsoft while an application compatibility issue is dealt with. The issue is unlikely to be related to anything described in this blog post so the analysis doesn’t change.<br/><br/><b>Source:</b> Project Zero Blog &nbsp; <b>Severity:</b> FYI]]></description>
 </item>
 
 <item>
   <title>🔵 A 0-click exploit chain for the Pixel 9 Part 3: Where do we go from here?</title>
   <link>https://projectzero.google/2026/01/pixel-0-click-part-3.html</link>
-  <pubDate>Wed, 14 Jan 2026 18:01:00 +0000</pubDate>
+  <pubDate>Wed, 14 Jan 2026 09:01:00 +0000</pubDate>
   <description><![CDATA[<b>Why this matters: Early signal from niche sources; worth a quick scan.</b><br/>While our previous two blog posts provided technical recommendations for increasing the effort required by attackers to develop 0-click exploit chains, our experience finding, reporting and exploiting these vulnerabilities highlighted some broader issues in the Android ecosystem. This post describes the problems we encountered and recommendations for improvement. Audio Attack Surface The Dolby UDC is part of the 0-click attack surface of most Android devices because of audio transcription in the Google Messages application. Incoming audio messages are transcribed before a user interacts with the message. On Pixel 9, a second process com.google.android.tts also decodes incoming audio. Its purpose is not completely clear, but it seems to be related to making incoming messages searchable.<br/><br/><b>Source:</b> Project Zero Blog &nbsp; <b>Severity:</b> FYI]]></description>
 </item>
 
 <item>
   <title>🔵 A 0-click exploit chain for the Pixel 9 Part 2: Cracking the Sandbox with a Big Wave</title>
   <link>https://projectzero.google/2026/01/pixel-0-click-part-2.html</link>
-  <pubDate>Wed, 14 Jan 2026 18:00:00 +0000</pubDate>
+  <pubDate>Wed, 14 Jan 2026 09:00:00 +0000</pubDate>
   <description><![CDATA[<b>Why this matters: Early signal from niche sources; worth a quick scan.</b><br/>With the advent of a potential Dolby Unified Decoder RCE exploit, it seemed prudent to see what kind of Linux kernel drivers might be accessible from the resulting userland context, the mediacodec context. As per the AOSP documentation, the mediacodec SELinux context is intended to be a constrained (a.k.a sandboxed) context where non-secure software decoders are utilized. Nevertheless, using my DriverCartographer tool, I discovered an interesting device driver, /dev/bigwave that was accessible from the mediacodec SELinux context. BigWave is hardware present on the Pixel SOC that accelerates AV1 decoding tasks, which explains why it is accessible from the mediacodec context. As previous research has copiously affirmed, Android drivers for hardware devices are prime places to find powerful local privilege escalation bugs. The BigWave driver was no exception - across a couple hours of auditing the code, I discovered three separate bugs, including one that was powerful enough to escape the mediacodec sandbox and get kernel arbitrary read/write on the Pixel 9.<br/><br/><b>Source:</b> Project Zero Blog &nbsp; <b>Severity:</b> FYI]]></description>
 </item>
 
 <item>
   <title>🟠 A 0-click exploit chain for the Pixel 9 Part 1: Decoding Dolby</title>
   <link>https://projectzero.google/2026/01/pixel-0-click-part-1.html</link>
-  <pubDate>Wed, 14 Jan 2026 17:59:00 +0000</pubDate>
+  <pubDate>Wed, 14 Jan 2026 08:59:00 +0000</pubDate>
   <description><![CDATA[<b>Why this matters: Early signal from niche sources; worth a quick scan.</b><br/>Over the past few years, several AI-powered features have been added to mobile phones that allow users to better search and understand their messages. One effect of this change is increased 0-click attack surface, as efficient analysis often requires message media to be decoded before the message is opened by the user. One such feature is audio transcription. Incoming SMS and RCS audio attachments received by Google Messages are now automatically decoded with no user interaction. As a result, audio decoders are now in the 0-click attack surface of most Android phones. I’ve spent a fair bit of time investigating these decoders, first reporting CVE-2025-49415 in the Monkey’s Audio codec on Samsung devices. Based on this research, the team reviewed the Dolby Unified Decoder, and Ivan Fratric and I reported CVE-2025-54957. This vulnerability is likely in the 0-click attack surface of most Android devices in use today. In parallel, Seth Jenkins investigated a driver accessible from the sandbox the decoder runs in on a Pixel 9, and reported CVE-2025-36934.<br/><br/><b>Source:</b> Project Zero Blog &nbsp; <b>Severity:</b> Important]]></description>
 </item>
 
