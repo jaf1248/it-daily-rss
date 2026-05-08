@@ -1,188 +1,368 @@
 <!doctype html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <title>Joe's IT Intelligence</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <style>
-      body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; margin: 24px; max-width: 1300px; }
-      .muted { opacity: 0.75; }
-      .row { display: grid; grid-template-columns: 1fr; gap: 18px; }
-      @media (min-width: 900px) { .row { grid-template-columns: 1fr 1fr 1fr 1fr; } }
-      .card { border: 1px solid #e6e6e6; border-radius: 14px; padding: 16px; box-shadow: 0 1px 6px rgba(0,0,0,0.04); }
-      .wide { grid-column: 1 / -1; }
-      h1 { margin-bottom: 6px; }
-      h2 { margin: 0 0 8px 0; font-size: 18px; }
-      ol { padding-left: 18px; margin: 10px 0 0 0; }
-      li { margin: 10px 0; }
-      a { text-decoration: none; }
-      a:hover { text-decoration: underline; }
-      .meta { font-size: 12px; margin-top: 4px; }
-      .chip { display: inline-block; padding: 2px 8px; border: 1px solid #ddd; border-radius: 999px; font-size: 12px; margin-left: 8px; }
-      .toplinks a { margin-right: 12px; }
-      .error { color: #b00020; }
+<head>
+  <meta charset="utf-8" />
+  <title>Joe's IT Intelligence Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-      /* 🔴 Highlight critical items (title starts with 🔴) */
-      li.critical {
-        border-left: 4px solid #b00020;
-        padding-left: 10px;
+  <style>
+    :root {
+      --bg: #f6f7f9;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --border: #e5e7eb;
+      --accent: #2563eb;
+      --critical: #b91c1c;
+      --important: #b45309;
+      --radius: 18px;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    header {
+      padding: 28px 32px 18px;
+      background: linear-gradient(135deg, #111827, #1f2937);
+      color: white;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 30px;
+      letter-spacing: -0.03em;
+    }
+
+    header p {
+      margin: 8px 0 0;
+      color: #d1d5db;
+    }
+
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .pill {
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.2);
+      color: white;
+      border-radius: 999px;
+      padding: 7px 12px;
+      font-size: 13px;
+    }
+
+    main {
+      padding: 24px 32px 40px;
+      max-width: 1600px;
+      margin: auto;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 18px;
+    }
+
+    @media (min-width: 900px) {
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
       }
-      li.critical a { font-weight: 650; }
+    }
 
-      pre.weekly {
-        white-space: pre-wrap;
-        margin: 10px 0 0 0;
-        font-size: 13px;
-        line-height: 1.35;
+    @media (min-width: 1300px) {
+      .grid {
+        grid-template-columns: repeat(4, 1fr);
       }
-      .smallbtn {
-        display: inline-block;
-        margin-top: 10px;
-        padding: 6px 10px;
-        border: 1px solid #ddd;
-        border-radius: 10px;
-        font-size: 13px;
-      }
-    </style>
-  </head>
+    }
 
-  <body>
- 
-    <h1>Joe's IT Intelligence</h1>
-    <p class="muted">
-      Live headlines pulled from GitHub-generated feeds.
-      <span class="chip" id="status">Loading…</span>
-    </p>
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 18px;
+      box-shadow: 0 8px 24px rgba(15,23,42,0.05);
+      min-height: 260px;
+    }
 
-    <p class="toplinks">
-      Raw feeds:
-      <a href="./security.xml">security.xml</a>
-      <a href="./sysadmin.xml">sysadmin.xml</a>
-      <a href="./vp.xml">vp.xml</a>
-      <a href="./radar.xml">radar.xml</a>
-      <a href="./archive.xml">archive.xml</a>
-      <a href="./urgent.xml">urgent.xml</a>
-      <a href="./network.xml">network.xml</a>
-      <a href="./ai.xml">ai.xml</a>
-      <a href="./tech.xml">tech.xml</a>
-      <a href="./weekly.md">weekly.md</a>
-    </p>
+    .card h2 {
+      margin: 0;
+      font-size: 18px;
+      letter-spacing: -0.02em;
+    }
 
-    <div class="row">
-      <div class="card">
+    .sub {
+      color: var(--muted);
+      font-size: 13px;
+      margin-top: 5px;
+    }
+
+    ol {
+      margin: 14px 0 0;
+      padding-left: 0;
+      list-style: none;
+    }
+
+    li {
+      border-top: 1px solid var(--border);
+      padding: 11px 0;
+      font-size: 14px;
+      line-height: 1.35;
+    }
+
+    li:first-child {
+      border-top: none;
+    }
+
+    a {
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: var(--accent);
+      text-decoration: underline;
+    }
+
+    .meta {
+      margin-top: 5px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    li.critical {
+      border-left: 4px solid var(--critical);
+      padding-left: 10px;
+      background: #fff7f7;
+    }
+
+    li.critical a {
+      font-weight: 700;
+      color: var(--critical);
+    }
+
+    li.important a {
+      font-weight: 650;
+      color: var(--important);
+    }
+
+    .wide {
+      grid-column: 1 / -1;
+      min-height: auto;
+    }
+
+    pre.weekly {
+      white-space: pre-wrap;
+      font-size: 14px;
+      line-height: 1.45;
+      background: #f9fafb;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 14px;
+      max-height: 520px;
+      overflow: auto;
+    }
+
+    .links {
+      margin-top: 18px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .links a {
+      border: 1px solid var(--border);
+      background: white;
+      border-radius: 999px;
+      padding: 6px 10px;
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .status {
+      margin-top: 16px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .error {
+      color: var(--critical);
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Joe's IT Intelligence Dashboard</h1>
+    <p>Security, operations, vendors, AI, hardware, and executive IT signal in one place.</p>
+
+    <div class="toolbar">
+      <span class="pill" id="status">Loading feeds…</span>
+      <span class="pill">Updated hourly via GitHub Actions</span>
+      <span class="pill">🔴 Critical items highlighted</span>
+    </div>
+  </header>
+
+  <main>
+    <div class="grid">
+      <section class="card">
+        <h2>🚨 Urgent / Exploited</h2>
+        <div class="sub">Active exploitation, emergency patching, severe incidents</div>
+        <ol id="urgentList"><li class="meta">Loading…</li></ol>
+      </section>
+
+      <section class="card">
         <h2>🔐 Security</h2>
-        <div class="muted" style="font-size:13px;">CVE, zero-days, breaches, advisories</div>
-        <ol id="securityList"><li class="muted">Loading…</li></ol>
-      </div>
+        <div class="sub">CVEs, ransomware, breaches, advisories</div>
+        <ol id="securityList"><li class="meta">Loading…</li></ol>
+      </section>
 
-      <div class="card">
+      <section class="card">
         <h2>🛠 SysAdmin / Ops</h2>
-        <div class="muted" style="font-size:13px;">Microsoft changes, patching, outages, infrastructure</div>
-        <ol id="sysadminList"><li class="muted">Loading…</li></ol>
-      </div>
+        <div class="sub">Microsoft changes, patching, outages, infrastructure</div>
+        <ol id="sysadminList"><li class="meta">Loading…</li></ol>
+      </section>
 
-      <div class="card">
+      <section class="card">
+        <h2>🌐 Network / Infrastructure</h2>
+        <div class="sub">Aruba, SonicWall, ADTRAN, Azure, infrastructure vendors</div>
+        <ol id="networkList"><li class="meta">Loading…</li></ol>
+      </section>
+
+      <section class="card">
         <h2>🏢 VP of IT</h2>
-        <div class="muted" style="font-size:13px;">Risk, vendors, pricing, executive context</div>
-        <ol id="vpList"><li class="muted">Loading…</li></ol>
-      </div>
+        <div class="sub">Risk, vendors, pricing, licensing, executive context</div>
+        <ol id="vpList"><li class="meta">Loading…</li></ol>
+      </section>
 
-      <div class="card">
-        <h2>🛰 Under the Radar</h2>
-        <div class="muted" style="font-size:13px;">Smaller blogs & early technical signal</div>
-        <ol id="radarList"><li class="muted">Loading…</li></ol>
-      </div>
+      <section class="card">
+        <h2>🤖 AI / Enterprise Tech</h2>
+        <div class="sub">Copilot, enterprise AI, GPUs, AI security</div>
+        <ol id="aiList"><li class="meta">Loading…</li></ol>
+      </section>
 
-      <div class="card">
+      <section class="card">
         <h2>🚀 Developing Tech & Hardware</h2>
-        <div class="muted" style="font-size:13px;">AI hardware, CPUs, networking silicon, storage innovation</div>
-        <ol id="techList"></ol>
-      </div>
+        <div class="sub">CPUs, networking silicon, storage, next-gen infrastructure</div>
+        <ol id="techList"><li class="meta">Loading…</li></ol>
+      </section>
 
-      <!-- Weekly summary is intentionally LAST -->
-      <div class="card wide">
+      <section class="card">
+        <h2>🛰 Under the Radar</h2>
+        <div class="sub">Niche sources, early weak signals, technical blogs</div>
+        <ol id="radarList"><li class="meta">Loading…</li></ol>
+      </section>
+
+      <section class="card wide">
         <h2>📅 Weekly Executive Summary</h2>
-        <div class="muted" style="font-size:13px;">Auto-generated from your master feed (last 7 days)</div>
+        <div class="sub">Auto-generated from your master feed for leadership-level review</div>
         <pre class="weekly" id="weeklyBox">Loading weekly summary…</pre>
-        <a class="smallbtn" href="./weekly.md">Open full weekly.md</a>
-      </div>
+      </section>
     </div>
 
-    <script>
-      async function fetchAndRender(feedPath, listId, maxItems = 12) {
-        const list = document.getElementById(listId);
-        try {
-          const resp = await fetch(feedPath + "?ts=" + Date.now());
-          if (!resp.ok) throw new Error(`${feedPath} HTTP ${resp.status}`);
+    <div class="links">
+      <a href="./urgent.xml">urgent.xml</a>
+      <a href="./security.xml">security.xml</a>
+      <a href="./sysadmin.xml">sysadmin.xml</a>
+      <a href="./network.xml">network.xml</a>
+      <a href="./vp.xml">vp.xml</a>
+      <a href="./ai.xml">ai.xml</a>
+      <a href="./tech.xml">tech.xml</a>
+      <a href="./radar.xml">radar.xml</a>
+      <a href="./rss.xml">master rss.xml</a>
+      <a href="./archive.xml">archive.xml</a>
+      <a href="./weekly.md">weekly.md</a>
+    </div>
 
-          const text = await resp.text();
-          const xml = new DOMParser().parseFromString(text, "text/xml");
-          if (xml.querySelector("parsererror")) throw new Error(`${feedPath} XML parse error`);
+    <div class="status">
+      Dashboard: <strong>https://jaf1248.github.io/it-daily-rss/</strong>
+    </div>
+  </main>
 
-          const items = Array.from(xml.querySelectorAll("item"));
-          list.innerHTML = "";
+  <script>
+    async function fetchAndRender(feedPath, listId, maxItems = 10) {
+      const list = document.getElementById(listId);
 
-          if (items.length === 0) {
-            list.innerHTML = "<li class='muted'>No items yet.</li>";
-            return 0;
-          }
+      try {
+        const resp = await fetch(feedPath + "?ts=" + Date.now());
+        if (!resp.ok) throw new Error(`${feedPath} HTTP ${resp.status}`);
 
-          items.slice(0, maxItems).forEach(item => {
-            const title = item.querySelector("title")?.textContent?.trim() || "(No title)";
-            const link = item.querySelector("link")?.textContent?.trim() || "#";
-            const pubDate = item.querySelector("pubDate")?.textContent?.trim() || "";
+        const text = await resp.text();
+        const xml = new DOMParser().parseFromString(text, "text/xml");
 
-            const li = document.createElement("li");
-            if (title.startsWith("🔴")) li.classList.add("critical");
+        const items = Array.from(xml.querySelectorAll("item"));
+        list.innerHTML = "";
 
-            li.innerHTML = `
-              <a href="${link}" target="_blank" rel="noopener noreferrer">${title}</a>
-              <div class="muted meta">${pubDate}</div>
-            `;
-            list.appendChild(li);
-          });
-
-          return items.length;
-        } catch (e) {
-          list.innerHTML = `<li class="error">Could not load ${feedPath}: ${e.message}</li>`;
+        if (!items.length) {
+          list.innerHTML = "<li class='meta'>No items yet.</li>";
           return 0;
         }
+
+        items.slice(0, maxItems).forEach(item => {
+          const title = item.querySelector("title")?.textContent?.trim() || "(No title)";
+          const link = item.querySelector("link")?.textContent?.trim() || "#";
+          const pubDate = item.querySelector("pubDate")?.textContent?.trim() || "";
+
+          const li = document.createElement("li");
+
+          if (title.startsWith("🔴")) li.classList.add("critical");
+          if (title.startsWith("🟠")) li.classList.add("important");
+
+          li.innerHTML = `
+            <a href="${link}" target="_blank" rel="noopener noreferrer">${title}</a>
+            <div class="meta">${pubDate}</div>
+          `;
+
+          list.appendChild(li);
+        });
+
+        return items.length;
+      } catch (e) {
+        list.innerHTML = `<li class="error">Could not load ${feedPath}: ${e.message}</li>`;
+        return 0;
       }
+    }
 
-      async function loadWeekly() {
-        const box = document.getElementById("weeklyBox");
-        try {
-          const resp = await fetch("./weekly.md?ts=" + Date.now());
-          if (!resp.ok) throw new Error(`weekly.md HTTP ${resp.status}`);
-          const text = await resp.text();
-          const lines = text.split("\n").slice(0, 60).join("\n");
-          box.textContent = lines;
-        } catch (e) {
-          box.textContent = "Could not load weekly.md: " + e.message;
-          box.classList.add("error");
-        }
+    async function loadWeekly() {
+      const box = document.getElementById("weeklyBox");
+
+      try {
+        const resp = await fetch("./weekly.md?ts=" + Date.now());
+        if (!resp.ok) throw new Error(`weekly.md HTTP ${resp.status}`);
+
+        const text = await resp.text();
+        box.textContent = text.split("\n").slice(0, 70).join("\n");
+      } catch (e) {
+        box.textContent = "Could not load weekly.md: " + e.message;
+        box.classList.add("error");
       }
+    }
 
-      async function main() {
-        const status = document.getElementById("status");
+    async function main() {
+      await loadWeekly();
 
-        await loadWeekly();
+      const counts = await Promise.all([
+        fetchAndRender("./urgent.xml", "urgentList"),
+        fetchAndRender("./security.xml", "securityList"),
+        fetchAndRender("./sysadmin.xml", "sysadminList"),
+        fetchAndRender("./network.xml", "networkList"),
+        fetchAndRender("./vp.xml", "vpList"),
+        fetchAndRender("./ai.xml", "aiList"),
+        fetchAndRender("./tech.xml", "techList"),
+        fetchAndRender("./radar.xml", "radarList")
+      ]);
 
-        const counts = await Promise.all([
-          fetchAndRender("./urgent.xml", "urgentList"),
-          fetchAndRender("./security.xml", "securityList"),
-          fetchAndRender("./sysadmin.xml", "sysadminList"),
-          fetchAndRender("./network.xml", "networkList"),
-          fetchAndRender("./vp.xml", "vpList"),
-          fetchAndRender("./ai.xml", "aiList"),
-          fetchAndRender("./tech.xml", "techList"),
-          fetchAndRender("./radar.xml", "radarList"),
-        ]);
+      document.getElementById("status").textContent =
+        `Loaded: U:${counts[0]} / Sec:${counts[1]} / Ops:${counts[2]} / Net:${counts[3]} / VP:${counts[4]} / AI:${counts[5]} / Tech:${counts[6]} / Radar:${counts[7]}`;
+    }
 
-        status.textContent = `Loaded (S:${counts[0]} / O:${counts[1]} / VP:${counts[2]} / R:${counts[3]})`;
-      }
-
-      main();
-    </script>
-  </body>
+    main();
+  </script>
+</body>
 </html>
