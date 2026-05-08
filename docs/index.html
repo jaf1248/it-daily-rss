@@ -259,6 +259,18 @@
         <ol id="radarList"><li class="meta">Loading…</li></ol>
       </section>
 
+      <section class="card">
+        <h2>☁️ Microsoft / Identity</h2>
+        <div class="sub">M365, Entra, Exchange, Teams, Defender, Azure</div>
+        <ol id="microsoftList"><li class="meta">Loading…</li></ol>
+      </section>
+
+      <section class="card">
+        <h2>🏨 Hospitality Technology</h2>
+        <div class="sub">PMS, POS, guest systems, hospitality operations technology</div>
+        <ol id="hospitalityList"><li class="meta">Loading…</li></ol>
+      </section>
+
       <section class="card wide">
         <h2>📅 Weekly Executive Summary</h2>
         <div class="sub">Auto-generated from your master feed for leadership-level review</div>
@@ -349,16 +361,18 @@
     async function main() {
       await loadWeekly();
 
-      const counts = await Promise.all([
-        fetchAndRender("./urgent.xml", "urgentList"),
-        fetchAndRender("./security.xml", "securityList"),
-        fetchAndRender("./sysadmin.xml", "sysadminList"),
-        fetchAndRender("./network.xml", "networkList"),
-        fetchAndRender("./vp.xml", "vpList"),
-        fetchAndRender("./ai.xml", "aiList"),
-        fetchAndRender("./tech.xml", "techList"),
-        fetchAndRender("./radar.xml", "radarList")
-      ]);
+    const counts = await Promise.all([
+  fetchAndRender("./urgent.xml", "urgentList"),
+  fetchAndRender("./security.xml", "securityList"),
+  fetchAndRender("./microsoft.xml", "microsoftList"),
+  fetchAndRender("./sysadmin.xml", "sysadminList"),
+  fetchAndRender("./network.xml", "networkList"),
+  fetchAndRender("./hospitality.xml", "hospitalityList"),
+  fetchAndRender("./vp.xml", "vpList"),
+  fetchAndRender("./ai.xml", "aiList"),
+  fetchAndRender("./tech.xml", "techList"),
+  fetchAndRender("./radar.xml", "radarList")
+]);
 
       document.getElementById("status").textContent =
         `Loaded: U:${counts[0]} / Sec:${counts[1]} / Ops:${counts[2]} / Net:${counts[3]} / VP:${counts[4]} / AI:${counts[5]} / Tech:${counts[6]} / Radar:${counts[7]}`;
