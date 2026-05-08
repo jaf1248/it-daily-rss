@@ -169,11 +169,14 @@
         await loadWeekly();
 
         const counts = await Promise.all([
+          fetchAndRender("./urgent.xml", "urgentList"),
           fetchAndRender("./security.xml", "securityList"),
           fetchAndRender("./sysadmin.xml", "sysadminList"),
+          fetchAndRender("./network.xml", "networkList"),
           fetchAndRender("./vp.xml", "vpList"),
-          fetchAndRender("./radar.xml", "radarList"),
+          fetchAndRender("./ai.xml", "aiList"),
           fetchAndRender("./tech.xml", "techList"),
+          fetchAndRender("./radar.xml", "radarList"),
         ]);
 
         status.textContent = `Loaded (S:${counts[0]} / O:${counts[1]} / VP:${counts[2]} / R:${counts[3]})`;
