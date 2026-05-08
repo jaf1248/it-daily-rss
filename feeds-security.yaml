@@ -1,51 +1,30 @@
+# =========================
+# feeds-security.yaml
+# =========================
+
 title: "Joe — Security Intelligence"
-description: "Actionable security threats, vulnerabilities, and Microsoft security advisories."
+description: "Cybersecurity threats, vulnerabilities, breaches, and Microsoft security updates."
 
 keyword_filter_enabled: false
 
-keywords:
-  # Active threats & exploitation
-  - cve
-  - exploited
-  - in the wild
-  - zero-day
-  - vulnerability
-  - advisory
-  - patch
-  - security update
-  - ransomware
-  - malware
-  - phishing
-  - credential
-  - breach
-
-  # Microsoft / Identity security surface
-  - microsoft
-  - entra
-  - azure ad
-  - conditional access
-  - mfa
-  - authentication
-  - oauth
-  - token
-  - exchange
-  - defender
-
 sources:
+  - name: "Cybernews"
+    url: "https://cybernews.com/feed/"
+
   - name: "Krebs on Security"
     url: "https://krebsonsecurity.com/feed/"
 
-  - name: "Microsoft Security Response Center (MSRC)"
-    url: "https://api.msrc.microsoft.com/update-guide/rss"
-
-  - name: "SANS Internet Storm Center"
-    url: "https://isc.sans.edu/rssfeed_full.xml"
-
-  - name: "BleepingComputer"
-    url: "https://www.bleepingcomputer.com/feed/"
+  - name: "The Hacker News"
+    url: "https://feeds.feedburner.com/TheHackersNews"
 
   - name: "Dark Reading"
     url: "https://www.darkreading.com/rss_simple.asp"
 
-  - name: "The Hacker News"
-    url: "https://feeds.feedburner.com/TheHackersNews"
+  - name: "BleepingComputer"
+    url: "https://www.bleepingcomputer.com/feed/"
+
+  - name: "Microsoft Security Response Center"
+    url: "https://api.msrc.microsoft.com/update-guide/rss"
+
+  - name: "SANS Internet Storm Center"
+    url: "https://isc.sans.edu/rssfeed_full.xml"
