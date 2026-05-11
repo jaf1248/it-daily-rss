@@ -1,381 +1,660 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <title>Joe's IT Intelligence Dashboard</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
   <style>
     :root {
-      --bg: #f6f7f9;
-      --card: #ffffff;
-      --text: #1f2937;
-      --muted: #6b7280;
-      --border: #e5e7eb;
-      --accent: #2563eb;
-      --critical: #b91c1c;
-      --important: #b45309;
-      --radius: 18px;
+      --bg:         #0d1117;
+      --surface:    #161b22;
+      --surface2:   #1c2128;
+      --border:     #30363d;
+      --text:       #e6edf3;
+      --muted:      #7d8590;
+      --accent:     #388bfd;
+      --critical:   #f85149;
+      --important:  #e3b341;
+      --fyi:        #58a6ff;
+      --green:      #3fb950;
+      --radius:     10px;
+      --mono:       "IBM Plex Mono", monospace;
+      --sans:       "IBM Plex Sans", system-ui, sans-serif;
     }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
-      margin: 0;
       background: var(--bg);
       color: var(--text);
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-family: var(--sans);
+      font-size: 14px;
+      line-height: 1.5;
+      min-height: 100vh;
     }
 
+    /* ── Header ─────────────────────────────────────────────────────── */
     header {
-      padding: 28px 32px 18px;
-      background: linear-gradient(135deg, #111827, #1f2937);
-      color: white;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 30px;
-      letter-spacing: -0.03em;
-    }
-
-    header p {
-      margin: 8px 0 0;
-      color: #d1d5db;
-    }
-
-    .toolbar {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 20px 28px 16px;
       display: flex;
       flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 18px;
+      align-items: flex-start;
+      gap: 16px;
     }
 
-    .pill {
-      background: rgba(255,255,255,0.12);
-      border: 1px solid rgba(255,255,255,0.2);
-      color: white;
-      border-radius: 999px;
-      padding: 7px 12px;
+    .header-left { flex: 1; min-width: 220px; }
+
+    header h1 {
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--text);
+    }
+
+    header h1 span {
+      color: var(--accent);
+    }
+
+    .header-sub {
+      margin-top: 4px;
+      color: var(--muted);
       font-size: 13px;
     }
 
+    .header-right {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .badge {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 4px 10px;
+      font-size: 12px;
+      font-family: var(--mono);
+      color: var(--muted);
+      white-space: nowrap;
+    }
+
+    .badge.live { border-color: var(--green); color: var(--green); }
+    .badge.warn { border-color: var(--important); color: var(--important); }
+    .badge.err  { border-color: var(--critical);  color: var(--critical);  }
+
+    /* ── Urgent strip — sticky ───────────────────────────────────────── */
+    #urgentStrip {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: #1a0a0a;
+      border-bottom: 2px solid var(--critical);
+      padding: 10px 28px;
+      display: none;
+    }
+
+    #urgentStrip.visible { display: block; }
+
+    #urgentStrip h3 {
+      font-size: 12px;
+      font-family: var(--mono);
+      color: var(--critical);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    .urgent-ticker {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .urgent-chip {
+      background: rgba(248,81,73,0.12);
+      border: 1px solid rgba(248,81,73,0.3);
+      border-radius: 4px;
+      padding: 3px 8px;
+      font-size: 12px;
+      color: var(--critical);
+      font-weight: 600;
+    }
+
+    .urgent-chip a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .urgent-chip a:hover { text-decoration: underline; }
+
+    /* ── Main layout ─────────────────────────────────────────────────── */
     main {
-      padding: 24px 32px 40px;
-      max-width: 1600px;
+      padding: 20px 28px 48px;
+      max-width: 1800px;
       margin: auto;
     }
 
     .grid {
       display: grid;
+      gap: 14px;
       grid-template-columns: 1fr;
-      gap: 18px;
     }
 
-    @media (min-width: 900px) {
-      .grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
+    @media (min-width: 800px)  { .grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 1100px) { .grid { grid-template-columns: repeat(3, 1fr); } }
+    @media (min-width: 1500px) { .grid { grid-template-columns: repeat(4, 1fr); } }
 
-    @media (min-width: 1300px) {
-      .grid {
-        grid-template-columns: repeat(4, 1fr);
-      }
-    }
-
+    /* ── Cards ───────────────────────────────────────────────────────── */
     .card {
-      background: var(--card);
+      background: var(--surface);
       border: 1px solid var(--border);
       border-radius: var(--radius);
-      padding: 18px;
-      box-shadow: 0 8px 24px rgba(15,23,42,0.05);
-      min-height: 260px;
-    }
-
-    .card h2 {
-      margin: 0;
-      font-size: 18px;
-      letter-spacing: -0.02em;
-    }
-
-    .sub {
-      color: var(--muted);
-      font-size: 13px;
-      margin-top: 5px;
-    }
-
-    ol {
-      margin: 14px 0 0;
-      padding-left: 0;
-      list-style: none;
-    }
-
-    li {
-      border-top: 1px solid var(--border);
-      padding: 11px 0;
-      font-size: 14px;
-      line-height: 1.35;
-    }
-
-    li:first-child {
-      border-top: none;
-    }
-
-    a {
-      color: var(--text);
-      text-decoration: none;
-    }
-
-    a:hover {
-      color: var(--accent);
-      text-decoration: underline;
-    }
-
-    .meta {
-      margin-top: 5px;
-      color: var(--muted);
-      font-size: 12px;
-    }
-
-    li.critical {
-      border-left: 4px solid var(--critical);
-      padding-left: 10px;
-      background: #fff7f7;
-    }
-
-    li.critical a {
-      font-weight: 700;
-      color: var(--critical);
-    }
-
-    li.important a {
-      font-weight: 650;
-      color: var(--important);
-    }
-
-    .wide {
-      grid-column: 1 / -1;
-      min-height: auto;
-    }
-
-    pre.weekly {
-      white-space: pre-wrap;
-      font-size: 14px;
-      line-height: 1.45;
-      background: #f9fafb;
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 14px;
-      max-height: 520px;
-      overflow: auto;
-    }
-
-    .links {
-      margin-top: 18px;
       display: flex;
-      flex-wrap: wrap;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .card-header {
+      padding: 12px 14px 10px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
       gap: 8px;
     }
 
-    .links a {
-      border: 1px solid var(--border);
-      background: white;
-      border-radius: 999px;
-      padding: 6px 10px;
-      font-size: 12px;
-      color: var(--muted);
+    .card-header-left h2 {
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: -0.01em;
     }
 
-    .status {
-      margin-top: 16px;
+    .card-sub {
+      font-size: 11px;
       color: var(--muted);
+      margin-top: 2px;
+    }
+
+    .card-meta {
+      font-family: var(--mono);
+      font-size: 10px;
+      color: var(--muted);
+      white-space: nowrap;
+      padding-top: 2px;
+      text-align: right;
+    }
+
+    .card-meta .count { color: var(--accent); }
+
+    .card-body {
+      padding: 0 14px 12px;
+      flex: 1;
+      overflow-y: auto;
+      max-height: 400px;
+    }
+
+    /* ── Items ───────────────────────────────────────────────────────── */
+    ol { list-style: none; }
+
+    li.feed-item {
+      padding: 9px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    li.feed-item:last-child { border-bottom: none; }
+
+    .item-title a {
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 500;
       font-size: 13px;
+      line-height: 1.35;
     }
 
-    .error {
+    .item-title a:hover { color: var(--accent); text-decoration: underline; }
+
+    li.feed-item.is-critical .item-title a {
       color: var(--critical);
+      font-weight: 700;
     }
+
+    li.feed-item.is-important .item-title a {
+      color: var(--important);
+    }
+
+    .item-row {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 4px;
+    }
+
+    .source-tag {
+      font-family: var(--mono);
+      font-size: 10px;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 1px 5px;
+      color: var(--muted);
+    }
+
+    .age-tag {
+      font-family: var(--mono);
+      font-size: 10px;
+      border-radius: 4px;
+      padding: 1px 5px;
+      font-weight: 500;
+    }
+
+    /* Age colour coding */
+    .age-hot   { background: rgba(248,81,73,0.15);  color: #f85149; border: 1px solid rgba(248,81,73,0.3); }
+    .age-warm  { background: rgba(227,179,65,0.15); color: #e3b341; border: 1px solid rgba(227,179,65,0.3); }
+    .age-cool  { background: rgba(56,139,253,0.12); color: #58a6ff; border: 1px solid rgba(56,139,253,0.25); }
+    .age-cold  { background: transparent;           color: var(--muted); border: 1px solid var(--border); }
+
+    /* ── Wide cards (weekly + health) ───────────────────────────────── */
+    .card.wide { grid-column: 1 / -1; }
+
+    /* ── Weekly summary ──────────────────────────────────────────────── */
+    #weeklyBox {
+      font-family: var(--mono);
+      font-size: 12.5px;
+      line-height: 1.6;
+      white-space: pre-wrap;
+      padding: 16px;
+      background: var(--surface2);
+      border-top: 1px solid var(--border);
+      max-height: 560px;
+      overflow: auto;
+      color: var(--text);
+    }
+
+    /* ── Health panel ────────────────────────────────────────────────── */
+    #healthGrid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      padding: 14px;
+      border-top: 1px solid var(--border);
+    }
+
+    .health-chip {
+      font-family: var(--mono);
+      font-size: 11px;
+      padding: 3px 8px;
+      border-radius: 4px;
+      border: 1px solid;
+      cursor: default;
+    }
+
+    .hc-ok   { background: rgba(63,185,80,0.1);  border-color: rgba(63,185,80,0.3);  color: var(--green);    }
+    .hc-warn { background: rgba(227,179,65,0.1); border-color: rgba(227,179,65,0.3); color: var(--important);}
+    .hc-fail { background: rgba(248,81,73,0.1);  border-color: rgba(248,81,73,0.3);  color: var(--critical); }
+
+    /* ── Feed links footer ───────────────────────────────────────────── */
+    .feed-links {
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .feed-links a {
+      font-family: var(--mono);
+      font-size: 11px;
+      padding: 4px 8px;
+      border: 1px solid var(--border);
+      border-radius: 5px;
+      color: var(--muted);
+      text-decoration: none;
+      background: var(--surface);
+    }
+
+    .feed-links a:hover { border-color: var(--accent); color: var(--accent); }
+
+    .footer-note {
+      margin-top: 14px;
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    /* ── Loading / error states ──────────────────────────────────────── */
+    .state-msg {
+      padding: 14px 0;
+      color: var(--muted);
+      font-size: 12px;
+      font-family: var(--mono);
+    }
+
+    .state-err { color: var(--critical); }
+
+    /* ── Scrollbar styling ───────────────────────────────────────────── */
+    ::-webkit-scrollbar { width: 5px; height: 5px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
   </style>
 </head>
 
 <body>
-  <header>
-    <h1>Joe's IT Intelligence Dashboard</h1>
-    <p>Security, operations, vendors, AI, hardware, and executive IT signal in one place.</p>
 
-    <div class="toolbar">
-      <span class="pill" id="status">Loading feeds…</span>
-      <span class="pill">Updated hourly via GitHub Actions</span>
-      <span class="pill">🔴 Critical items highlighted</span>
+  <!-- ── Header ─────────────────────────────────────────────────────── -->
+  <header>
+    <div class="header-left">
+      <h1>Joe's <span>IT Intelligence</span> Dashboard</h1>
+      <div class="header-sub">Security · Ops · Vendors · AI · Hospitality — updated hourly</div>
+    </div>
+    <div class="header-right">
+      <span class="badge" id="buildTime">—</span>
+      <span class="badge" id="healthBadge">Loading…</span>
+      <span class="badge live">⟳ Hourly via Actions</span>
     </div>
   </header>
 
+  <!-- ── Sticky urgent strip ────────────────────────────────────────── -->
+  <div id="urgentStrip">
+    <h3>🚨 Active Threats</h3>
+    <div class="urgent-ticker" id="urgentTicker"></div>
+  </div>
+
+  <!-- ── Main ───────────────────────────────────────────────────────── -->
   <main>
-    <div class="grid">
-      <section class="card">
-        <h2>🚨 Urgent / Exploited</h2>
-        <div class="sub">Active exploitation, emergency patching, severe incidents</div>
-        <ol id="urgentList"><li class="meta">Loading…</li></ol>
-      </section>
+    <div class="grid" id="mainGrid">
 
-      <section class="card">
-        <h2>🔐 Security</h2>
-        <div class="sub">CVEs, ransomware, breaches, advisories</div>
-        <ol id="securityList"><li class="meta">Loading…</li></ol>
-      </section>
+      <div class="card" data-feed="urgent.xml" data-kind="urgent" data-label="🚨 Urgent / Exploited" data-sub="Active exploitation, emergency patching, severe incidents"></div>
+      <div class="card" data-feed="security.xml" data-kind="security" data-label="🔐 Security" data-sub="CVEs, ransomware, breaches, advisories"></div>
+      <div class="card" data-feed="microsoft.xml" data-kind="microsoft" data-label="☁️ Microsoft / Identity" data-sub="M365, Entra, Exchange, Teams, Defender, Azure"></div>
+      <div class="card" data-feed="sysadmin.xml" data-kind="sysadmin" data-label="🛠 SysAdmin / Ops" data-sub="Patching, outages, infrastructure changes"></div>
+      <div class="card" data-feed="network.xml" data-kind="network" data-label="🌐 Network / Infrastructure" data-sub="Aruba, SonicWall, ADTRAN, Azure networking"></div>
+      <div class="card" data-feed="vendor.xml" data-kind="vendor" data-label="🔧 Vendor Advisories" data-sub="PSIRTs: SonicWall, Aruba, Cisco, Fortinet, Palo Alto"></div>
+      <div class="card" data-feed="vp.xml" data-kind="vp" data-label="🏢 VP of IT" data-sub="Risk, vendors, pricing, licensing, executive context"></div>
+      <div class="card" data-feed="compliance.xml" data-kind="compliance" data-label="📋 Compliance / Regulatory" data-sub="NIST, FTC, HIPAA, PCI, privacy law"></div>
+      <div class="card" data-feed="ai.xml" data-kind="ai" data-label="🤖 AI / Enterprise Tech" data-sub="Copilot, enterprise AI, GPUs, AI security"></div>
+      <div class="card" data-feed="tech.xml" data-kind="tech" data-label="🚀 Developing Tech & Hardware" data-sub="CPUs, networking silicon, storage, next-gen infra"></div>
+      <div class="card" data-feed="radar.xml" data-kind="radar" data-label="🛰 Under the Radar" data-sub="Niche sources, early signals, technical blogs"></div>
+      <div class="card" data-feed="hospitality.xml" data-kind="hospitality" data-label="🏨 Hospitality Technology" data-sub="PMS, POS, guest systems, hospitality ops"></div>
 
-      <section class="card">
-        <h2>🛠 SysAdmin / Ops</h2>
-        <div class="sub">Microsoft changes, patching, outages, infrastructure</div>
-        <ol id="sysadminList"><li class="meta">Loading…</li></ol>
-      </section>
+      <!-- Weekly summary -->
+      <div class="card wide" id="weeklyCard">
+        <div class="card-header">
+          <div class="card-header-left">
+            <h2>📅 Weekly Executive Summary</h2>
+            <div class="card-sub">Auto-generated every Monday — leadership-ready briefing with top actions</div>
+          </div>
+          <div class="card-meta" id="weeklyMeta">—</div>
+        </div>
+        <pre id="weeklyBox">Loading weekly summary…</pre>
+      </div>
 
-      <section class="card">
-        <h2>🌐 Network / Infrastructure</h2>
-        <div class="sub">Aruba, SonicWall, ADTRAN, Azure, infrastructure vendors</div>
-        <ol id="networkList"><li class="meta">Loading…</li></ol>
-      </section>
+      <!-- Feed health -->
+      <div class="card wide" id="healthCard">
+        <div class="card-header">
+          <div class="card-header-left">
+            <h2>📡 Feed Health</h2>
+            <div class="card-sub">Last-run status for every source — green = ok, yellow = parse warning, red = fetch failed</div>
+          </div>
+          <div class="card-meta" id="healthMeta">—</div>
+        </div>
+        <div id="healthGrid"><span class="state-msg">Loading health data…</span></div>
+      </div>
 
-      <section class="card">
-        <h2>🏢 VP of IT</h2>
-        <div class="sub">Risk, vendors, pricing, licensing, executive context</div>
-        <ol id="vpList"><li class="meta">Loading…</li></ol>
-      </section>
-
-      <section class="card">
-        <h2>🤖 AI / Enterprise Tech</h2>
-        <div class="sub">Copilot, enterprise AI, GPUs, AI security</div>
-        <ol id="aiList"><li class="meta">Loading…</li></ol>
-      </section>
-
-      <section class="card">
-        <h2>🚀 Developing Tech & Hardware</h2>
-        <div class="sub">CPUs, networking silicon, storage, next-gen infrastructure</div>
-        <ol id="techList"><li class="meta">Loading…</li></ol>
-      </section>
-
-      <section class="card">
-        <h2>🛰 Under the Radar</h2>
-        <div class="sub">Niche sources, early weak signals, technical blogs</div>
-        <ol id="radarList"><li class="meta">Loading…</li></ol>
-      </section>
-
-      <section class="card">
-        <h2>☁️ Microsoft / Identity</h2>
-        <div class="sub">M365, Entra, Exchange, Teams, Defender, Azure</div>
-        <ol id="microsoftList"><li class="meta">Loading…</li></ol>
-      </section>
-
-      <section class="card">
-        <h2>🏨 Hospitality Technology</h2>
-        <div class="sub">PMS, POS, guest systems, hospitality operations technology</div>
-        <ol id="hospitalityList"><li class="meta">Loading…</li></ol>
-      </section>
-
-      <section class="card wide">
-        <h2>📅 Weekly Executive Summary</h2>
-        <div class="sub">Auto-generated from your master feed for leadership-level review</div>
-        <pre class="weekly" id="weeklyBox">Loading weekly summary…</pre>
-      </section>
     </div>
 
-    <div class="links">
+    <!-- Feed links -->
+    <div class="feed-links">
       <a href="./urgent.xml">urgent.xml</a>
       <a href="./security.xml">security.xml</a>
+      <a href="./microsoft.xml">microsoft.xml</a>
       <a href="./sysadmin.xml">sysadmin.xml</a>
       <a href="./network.xml">network.xml</a>
+      <a href="./vendor.xml">vendor.xml</a>
       <a href="./vp.xml">vp.xml</a>
+      <a href="./compliance.xml">compliance.xml</a>
       <a href="./ai.xml">ai.xml</a>
       <a href="./tech.xml">tech.xml</a>
       <a href="./radar.xml">radar.xml</a>
-      <a href="./rss.xml">master rss.xml</a>
-      <a href="./archive.xml">archive.xml</a>
-      <a href="./weekly.md">weekly.md</a>   
-      <a href="./microsoft.xml">microsoft.xml</a>
       <a href="./hospitality.xml">hospitality.xml</a>
+      <a href="./rss.xml">master.xml</a>
+      <a href="./archive.xml">archive.xml</a>
+      <a href="./weekly.md">weekly.md</a>
+      <a href="./feed_health.json">health.json</a>
     </div>
 
-    <div class="status">
+    <div class="footer-note">
       Dashboard: <strong>https://jaf1248.github.io/it-daily-rss/</strong>
     </div>
   </main>
 
   <script>
-    async function fetchAndRender(feedPath, listId, maxItems = 10) {
-      const list = document.getElementById(listId);
+    const TS = "?ts=" + Date.now();
+
+    // ── Utilities ────────────────────────────────────────────────────────
+
+    function ageInfo(pubDateStr) {
+      const pub = new Date(pubDateStr);
+      if (isNaN(pub)) return { label: "?", cls: "age-cold" };
+      const hours = (Date.now() - pub) / 3600000;
+      if (hours < 2)  return { label: "< 2h",  cls: "age-hot"  };
+      if (hours < 12) return { label: Math.round(hours) + "h", cls: "age-hot"  };
+      if (hours < 24) return { label: Math.round(hours) + "h", cls: "age-warm" };
+      if (hours < 72) return { label: Math.floor(hours/24) + "d", cls: "age-cool" };
+      return { label: Math.floor(hours/24) + "d", cls: "age-cold" };
+    }
+
+    function extractSource(descHtml) {
+      // Pull source from the description CDATA we write in build_rss.py
+      const m = descHtml.match(/<b>Source:<\/b>\s*([^<&]+)/i);
+      return m ? m[1].trim() : null;
+    }
+
+    function newestDate(items) {
+      let best = null;
+      for (const item of items) {
+        const d = new Date(item.querySelector("pubDate")?.textContent?.trim() || "");
+        if (!isNaN(d) && (!best || d > best)) best = d;
+      }
+      return best;
+    }
+
+    // ── Render a single feed card ─────────────────────────────────────
+
+    async function renderCard(card, maxItems = 12) {
+      const feedPath = "./" + card.dataset.feed;
+      const label    = card.dataset.label;
+      const sub      = card.dataset.sub;
+
+      // Build card skeleton
+      card.innerHTML = `
+        <div class="card-header">
+          <div class="card-header-left">
+            <h2>${label}</h2>
+            <div class="card-sub">${sub}</div>
+          </div>
+          <div class="card-meta" id="meta_${card.dataset.kind}">loading…</div>
+        </div>
+        <div class="card-body">
+          <ol id="list_${card.dataset.kind}"><li class="state-msg">Loading…</li></ol>
+        </div>
+      `;
+
+      const list = card.querySelector("ol");
+      const meta = card.querySelector(".card-meta");
 
       try {
-        const resp = await fetch(feedPath + "?ts=" + Date.now());
-        if (!resp.ok) throw new Error(`${feedPath} HTTP ${resp.status}`);
+        const resp = await fetch(feedPath + TS);
+        if (!resp.ok) throw new Error("HTTP " + resp.status);
 
-        const text = await resp.text();
-        const xml = new DOMParser().parseFromString(text, "text/xml");
-
+        const xml   = new DOMParser().parseFromString(await resp.text(), "text/xml");
         const items = Array.from(xml.querySelectorAll("item"));
         list.innerHTML = "";
 
         if (!items.length) {
-          list.innerHTML = "<li class='meta'>No items yet.</li>";
-          return 0;
+          list.innerHTML = "<li class='state-msg'>No items yet.</li>";
+          meta.textContent = "0 items";
+          return [];
         }
 
+        const newest = newestDate(items);
+        const { label: ageLabel } = newest ? ageInfo(newest.toUTCString()) : { label: "?" };
+        meta.innerHTML = `<span class="count">${items.length}</span> items · newest ${ageLabel}`;
+
+        const critItems = [];
+
         items.slice(0, maxItems).forEach(item => {
-          const title = item.querySelector("title")?.textContent?.trim() || "(No title)";
-          const link = item.querySelector("link")?.textContent?.trim() || "#";
+          const title   = item.querySelector("title")?.textContent?.trim()   || "(No title)";
+          const link    = item.querySelector("link")?.textContent?.trim()    || "#";
           const pubDate = item.querySelector("pubDate")?.textContent?.trim() || "";
+          const desc    = item.querySelector("description")?.textContent     || "";
+          const srcName = item.querySelector("source")?.textContent?.trim()  || extractSource(desc) || "";
+
+          const isCrit = title.startsWith("🔴");
+          const isImp  = title.startsWith("🟠");
+          const age    = ageInfo(pubDate);
 
           const li = document.createElement("li");
+          li.className = "feed-item" + (isCrit ? " is-critical" : isImp ? " is-important" : "");
 
-          if (title.startsWith("🔴")) li.classList.add("critical");
-          if (title.startsWith("🟠")) li.classList.add("important");
+          const sourceTag = srcName
+            ? `<span class="source-tag">${srcName}</span>`
+            : "";
 
           li.innerHTML = `
-            <a href="${link}" target="_blank" rel="noopener noreferrer">${title}</a>
-            <div class="meta">${pubDate}</div>
+            <div class="item-title">
+              <a href="${link}" target="_blank" rel="noopener noreferrer">${title}</a>
+            </div>
+            <div class="item-row">
+              ${sourceTag}
+              <span class="age-tag ${age.cls}">${age.label}</span>
+            </div>
           `;
 
           list.appendChild(li);
+
+          if (isCrit) critItems.push({ title, link });
         });
 
-        return items.length;
+        return critItems;
+
       } catch (e) {
-        list.innerHTML = `<li class="error">Could not load ${feedPath}: ${e.message}</li>`;
-        return 0;
+        list.innerHTML = `<li class="state-err">Could not load ${card.dataset.feed}: ${e.message}</li>`;
+        meta.textContent = "error";
+        return [];
       }
     }
+
+    // ── Weekly summary ────────────────────────────────────────────────
 
     async function loadWeekly() {
-      const box = document.getElementById("weeklyBox");
-
+      const box  = document.getElementById("weeklyBox");
+      const meta = document.getElementById("weeklyMeta");
       try {
-        const resp = await fetch("./weekly.md?ts=" + Date.now());
-        if (!resp.ok) throw new Error(`weekly.md HTTP ${resp.status}`);
-
+        const resp = await fetch("./weekly.md" + TS);
+        if (!resp.ok) throw new Error("HTTP " + resp.status);
         const text = await resp.text();
-        box.textContent = text.split("\n").slice(0, 70).join("\n");
+        box.textContent = text;
+        const lines = text.split("\n").length;
+        meta.textContent = lines + " lines";
       } catch (e) {
         box.textContent = "Could not load weekly.md: " + e.message;
-        box.classList.add("error");
+        box.classList.add("state-err");
       }
     }
 
+    // ── Feed health ───────────────────────────────────────────────────
+
+    async function loadHealth() {
+      const grid   = document.getElementById("healthGrid");
+      const badge  = document.getElementById("healthBadge");
+      const hMeta  = document.getElementById("healthMeta");
+
+      try {
+        const resp = await fetch("./feed_health.json" + TS);
+        if (!resp.ok) throw new Error("HTTP " + resp.status);
+        const data = await resp.json();
+
+        const s = data.summary || {};
+        hMeta.textContent = `${s.ok || 0} ok · ${s.parse_warning || 0} warn · ${s.fetch_failed || 0} failed`;
+
+        if ((s.fetch_failed || 0) > 0) {
+          badge.textContent = `⚠ ${s.fetch_failed} feed(s) down`;
+          badge.className = "badge warn";
+        } else {
+          badge.textContent = `✓ All ${s.total} feeds healthy`;
+          badge.className = "badge live";
+        }
+
+        grid.innerHTML = "";
+        const generated = data.generated ? new Date(data.generated).toLocaleString() : "?";
+
+        for (const f of (data.feeds || [])) {
+          const cls  = f.status === "ok" ? "hc-ok" : f.status === "parse_warning" ? "hc-warn" : "hc-fail";
+          const icon = f.status === "ok" ? "✓" : f.status === "parse_warning" ? "⚠" : "✗";
+          const chip = document.createElement("span");
+          chip.className = `health-chip ${cls}`;
+          chip.title = `${f.url}\nStatus: ${f.status}\nItems: ${f.items}\nChecked: ${f.checked}`;
+          chip.textContent = `${icon} ${f.source} (${f.items})`;
+          grid.appendChild(chip);
+        }
+
+        const note = document.createElement("div");
+        note.style.cssText = "width:100%;font-size:10px;color:var(--muted);font-family:var(--mono);margin-top:6px;";
+        note.textContent = "Last run: " + generated;
+        grid.appendChild(note);
+
+      } catch (e) {
+        grid.innerHTML = `<span class="state-err">feed_health.json not found — run the build at least once to generate it.</span>`;
+        badge.textContent = "Health N/A";
+        badge.className = "badge";
+      }
+    }
+
+    // ── Urgent sticky strip ───────────────────────────────────────────
+
+    function populateUrgentStrip(critItems) {
+      if (!critItems.length) return;
+      const strip  = document.getElementById("urgentStrip");
+      const ticker = document.getElementById("urgentTicker");
+      strip.classList.add("visible");
+      critItems.slice(0, 5).forEach(({ title, link }) => {
+        const chip = document.createElement("span");
+        chip.className = "urgent-chip";
+        chip.innerHTML = `<a href="${link}" target="_blank" rel="noopener noreferrer">${title}</a>`;
+        ticker.appendChild(chip);
+      });
+    }
+
+    // ── Build time ────────────────────────────────────────────────────
+
+    function setBuiltTime() {
+      const el = document.getElementById("buildTime");
+      el.textContent = "Loaded " + new Date().toLocaleTimeString();
+    }
+
+    // ── Main ──────────────────────────────────────────────────────────
+
     async function main() {
-      await loadWeekly();
+      setBuiltTime();
 
-    const counts = await Promise.all([
-  fetchAndRender("./urgent.xml", "urgentList"),
-  fetchAndRender("./security.xml", "securityList"),
-  fetchAndRender("./microsoft.xml", "microsoftList"),
-  fetchAndRender("./sysadmin.xml", "sysadminList"),
-  fetchAndRender("./network.xml", "networkList"),
-  fetchAndRender("./hospitality.xml", "hospitalityList"),
-  fetchAndRender("./vp.xml", "vpList"),
-  fetchAndRender("./ai.xml", "aiList"),
-  fetchAndRender("./tech.xml", "techList"),
-  fetchAndRender("./radar.xml", "radarList")
-]);
+      const cards = Array.from(document.querySelectorAll(".card[data-feed]"));
 
-      document.getElementById("status").textContent =
-        `Loaded: U:${counts[0]} / Sec:${counts[1]} / Ops:${counts[2]} / Net:${counts[3]} / VP:${counts[4]} / AI:${counts[5]} / Tech:${counts[6]} / Radar:${counts[7]}`;
+      // Render all feed cards in parallel
+      const results = await Promise.all(cards.map(card => renderCard(card)));
+
+      // Collect critical items (from urgent card — index 0)
+      const allCrits = results.flat();
+      populateUrgentStrip(allCrits);
+
+      // Weekly + health in parallel
+      await Promise.all([loadWeekly(), loadHealth()]);
     }
 
     main();
