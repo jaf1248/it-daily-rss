@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
 **Period:** May 04 – May 11, 2026  
-**Generated:** 2026-05-11 22:05 UTC  
+**Generated:** 2026-05-11 23:56 UTC  
 **Items reviewed:** 124  
 
 ## ⚡ Top Actions This Week
@@ -55,6 +55,9 @@
 
 ## 🟠 Important — Review This Week
 
+- [Apple Patches Everything, (Mon, May 11th)](https://isc.sans.edu/diary/rss/32976)  
+  **SANS Internet Storm Center** · May 11 · _General awareness item._  
+
 - [cPanel CVE-2026-41940 Under Active Exploitation to Deploy Filemanager Backdoor](https://thehackernews.com/2026/05/cpanel-cve-2026-41940-under-active.html)  
   **The Hacker News** · May 11 · _General awareness item._  
 
@@ -76,19 +79,16 @@
 - [CVE-2025-38636 rv: Use strings in da monitors tracepoints](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-38636)  
   **Microsoft Security Response Center (MSRC)** · May 11 · _General awareness item._  
 
-- [CVE-2025-38660 [ceph] parse_longname(): strrchr() expects NUL-terminated string](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-38660)  
-  **Microsoft Security Response Center (MSRC)** · May 11 · _General awareness item._  
-
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [GM agrees to $12.75M California settlement over sale of drivers’ data](https://www.bleepingcomputer.com/news/legal/gm-agrees-to-1275m-california-settlement-over-sale-of-drivers-data/) — BleepingComputer
 - [Official CheckMarx Jenkins package compromised with infostealer](https://www.bleepingcomputer.com/news/security/official-checkmarx-jenkins-package-compromised-with-infostealer/) — BleepingComputer
 - [New GhostLock tool abuses Windows API to block file access](https://www.bleepingcomputer.com/news/security/new-ghostlock-tool-abuses-windows-api-to-block-file-access/) — BleepingComputer
 - [Why we use CAPTCHAs, (Mon, May 11th)](https://isc.sans.edu/diary/rss/32974) — SANS Internet Storm Center
 - [⚡ Weekly Recap: Linux Rootkit, macOS Crypto Stealer, WebSocket Skimmers and More](https://thehackernews.com/2026/05/weekly-recap-linux-rootkit-macos-crypto.html) — The Hacker News
 - [Webinar this week: Prevention alone is not enough against modern attacks](https://www.bleepingcomputer.com/news/security/webinar-this-week-prevention-alone-is-not-enough-against-modern-attacks/) — BleepingComputer
-- [TrickMo Android banker adopts TON blockchain for covert comms](https://www.bleepingcomputer.com/news/security/trickmo-android-banker-adopts-ton-blockchain-for-covert-comms/) — BleepingComputer
 
 ---
 
