@@ -1,0 +1,38 @@
+# =========================
+# feeds-vendor.yaml
+# Dedicated vendor security advisories (PSIRTs)
+# Covers SonicWall, Aruba, Cisco, Fortinet, Palo Alto, ADTRAN, etc.
+# =========================
+
+title: "Joe — Vendor Security Advisories"
+description: "Security advisories and PSIRTs from network and infrastructure vendors in use."
+keyword_filter_enabled: false
+max_age_hours: 168
+
+sources:
+  - name: "SonicWall PSIRT"
+    url: "https://psirt.global.sonicwall.com/vuln-list/rss"
+
+  - name: "Aruba Networks Security Advisories"
+    url: "https://www.arubanetworks.com/assets/alert/rss.xml"
+
+  - name: "Cisco Security Advisories"
+    url: "https://tools.cisco.com/security/center/psirtrss20.xml"
+
+  - name: "Fortinet PSIRT"
+    url: "https://www.fortiguard.com/rss/ir.xml"
+
+  - name: "Palo Alto Networks Security Advisories"
+    url: "https://security.paloaltonetworks.com/rss.xml"
+
+  - name: "Juniper Networks Security Advisories"
+    url: "https://kb.juniper.net/InfoCenter/index?page=content&channel=SECURITY_ADVISORIES&rss=true"
+
+  - name: "VMware Security Advisories"
+    url: "https://www.vmware.com/security/advisories.rss"
+
+  - name: "CISA Known Exploited Vulnerabilities"
+    url: "https://www.cisa.gov/uscert/ncas/alerts.xml"
+
+  - name: "CISA Alerts"
+    url: "https://www.cisa.gov/uscert/ncas/current-activity.xml"
