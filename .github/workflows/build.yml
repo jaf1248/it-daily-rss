@@ -2,8 +2,8 @@ name: Build RSS
 
 on:
   schedule:
-    - cron: "0 * * * *"       # hourly RSS build
-    - cron: "15 8 * * MON"    # weekly executive summary (Mondays 08:15 UTC)
+    - cron: "0 * * * *"
+    - cron: "15 8 * * MON"
   workflow_dispatch:
 
 concurrency:
@@ -41,8 +41,6 @@ jobs:
           git checkout main
           git reset --hard origin/main
           python scripts/build_rss.py 2>&1 | tee /tmp/build_rss.log
-
-          # Capture health summary for next steps
           FAILED=$(grep -c "fetch_failed" /tmp/build_rss.log || true)
           echo "failed_feeds=$FAILED" >> $GITHUB_OUTPUT
 
@@ -53,11 +51,11 @@ jobs:
         run: |
           git config user.name "rss-bot"
           git config user.email "rss-bot@users.noreply.github.com"
-          git add docs/*.xml docs/weekly.md docs/feed_health.json
+          git add docs/*.xml docs/weekly.md
+          git add docs/feed_health.json || true
           git commit -m "Update feeds $(date -u '+%Y-%m-%d %H:%M UTC')" || echo "No changes"
           git push origin main
 
-      # ── Optional: annotate the Actions summary with health info ──────
       - name: Write job summary
         if: always()
         run: |
@@ -71,13 +69,3 @@ jobs:
             grep -E "\[HEALTH\]|\[BUILD\]|\[WARN\]|\[SKIP\]" /tmp/build_rss.log >> $GITHUB_STEP_SUMMARY || echo "(no log lines matched)"
             echo '```' >> $GITHUB_STEP_SUMMARY
           fi
-
-      # ── Optional: Slack alert when feeds fail ─────────────────────────
-      # Uncomment and add SLACK_WEBHOOK_URL to repo secrets to enable.
-      #
-      # - name: Slack alert on feed failures
-      #   if: steps.build_rss.outputs.failed_feeds != '0'
-      #   run: |
-      #     curl -s -X POST "${{ secrets.SLACK_WEBHOOK_URL }}" \
-      #       -H 'Content-type: application/json' \
-      #       --data "{\"text\":\"⚠️ it-daily-rss: ${{ steps.build_rss.outputs.failed_feeds }} feed(s) failed to fetch. Check https://github.com/${{ github.repository }}/actions\"}"
