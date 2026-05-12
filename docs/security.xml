@@ -3,14 +3,23 @@
 <channel>
   <title>Joe — Security Intelligence</title>
   <description>Cybersecurity threats, vulnerabilities, breaches, and Microsoft security updates.</description>
-  <lastBuildDate>Tue, 12 May 2026 17:08:25 +0000</lastBuildDate>
+  <lastBuildDate>Tue, 12 May 2026 19:47:05 +0000</lastBuildDate>
   
+<item>
+  <title>🔴 Microsoft’s May 2026 Patch Tuesday Addresses 118 CVEs (CVE-2026-41103)</title>
+  <link>https://www.tenable.com/blog/microsofts-may-2026-patch-tuesday-addresses-118-cves-cve-2026-41103</link>
+  <pubDate>Tue, 12 May 2026 17:42:34 +0000</pubDate>
+  <source>Tenable Blog</source>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><ol class="blog-severity-badges"><li class="blog-severity-badges critical"><span class="number">16</span>Critical</li><li class="blog-severity-badges important"><span class="number">102</span>Important</li><li class="blog-severity-badges moderate"><span class="number">0</span>Moderate</li><li class="blog-severity-badges low"><span class="number">0</span>Low</li></ol><p><strong>Microsoft addresses 118 CVEs in its May 2026 Patch Tuesday release, with no zero-days exploited in the wild or publicly disclosed for the first time since June 2024.</strong></p><p>Microsoft patched 118 CVEs in its May 2026 Patch Tuesday release, with 16 rated critical and 102 rated as important. Our counts omitted CVE-2025-54518, an AMD CPU OP Cache Corruption vulnerability issued by AMD.</p><img alt="A pie chart showing the severity distribution across the Patch Tuesday CVEs patched in May 2026." height="473" src="https://www.tenable.com/sites/default/files/images/blog/bbc9bdfe-d388-4c14-a312-68fb91697bc6.png" width="865" /><p>This month’s update includes patches for:</p><ul><li>.NET</li><li>ASP.NET Core</li><li>Azure AI Foundry M365 published agents</li><li>Azure Cloud Shell</li><li>Azure Connected Machine Agent</li><li>Azure DevOps</li><li>Azure Entra ID</li><li>Azure Logic Apps</li><li>Azure Machine Learning</li><li>Azure Managed Instance for Apache Cassandra</li><li>Azure Monitor Agent</li><li>Azure Notification Service</li><li>Azure SDK</li><li>Copilot Chat (Microsoft Edge)</li><li>Data Deduplication</li><li>Dynamics Business Central</li><li>GitHub Copilot and Visual Studio</li><li>M365 Copilot</li><li>M365 Copilot for Desktop</li><li>Microsoft Data Formulator</li><li>Microsoft Dynamics 365 (on-premises)</li><li>Microsoft Dynamics 365 Customer Insights</li><li>Microsoft Edge (Chromium-based)</li><li>Microsoft Edge for Android</li><li>Microsoft Office</li><li>Microsoft Office Click-To-Run</li><li>Microsoft Office Excel</li><li>Microsoft Office PowerPoint</li><li>Microsoft Office SharePoint</li><li>Microsoft Office Word</li><li>Microsoft Partner Center</li><li>Microsoft SSO Plugin for Jira &amp; Confluence</li><li>Microsoft Teams</li><li>Microsoft Windows DNS</li><li>Power Automate</li><li>SQL Server</li><li>Telnet Client</li><li>Visual Studio Code</li><li>Windows Admin Center</li><li>Windows Ancillary Function Driver for WinSock</li><li>Windows Application Identity (AppID) Subsystem</li><li>Windows Cloud Files Mini Filter Driver</li><li>Windows Common Log File System Driver</li><li>Windows Cryptographic Services</li><li>Windows DWM Core Library</li><li>Windows Event Logging Service</li><li>Windows Filtering Platform (WFP)</li><li>Windows GDI</li><li>Windows Hyper-V</li><li>Windows Internet Key Exchange (IKE) Protocol</li><li>Windows Kernel</li><li>Windows Kernel-Mode Drivers</li><li>Windows LDAP - Lightweight Directory Access Protocol</li><li>Windows Link-Layer Discovery Protocol (LLDP)</li><li>Windows Message Queuing</li><li>Windows Native WiFi Miniport Driver</li><li>Windows Netlogon</li><li>Windows Print Spooler Components</li><li>Windows Projected File System</li><li>Windows Remote Desktop</li><li>Windows Rich Text Edit</li><li>Windows Rich Text Edit Control</li><li>Windows SMB Client</li><li>Windows Secure Boot</li><li>Windows Storage Spaces Controller</li><li>Windows Storport Miniport Driver</li><li>Windows TCP/IP</li><li>Windows Telephony Service</li><li>Windows Volume Manager Extension Driver</li><li>Windows Win32K - GRFX</li><li>Windows Win32K - ICOMP</li></ul><img alt="A bar chart showing the count by impact of CVEs patched in the May 2026 Patch Tuesday release." height="419" src="https://www.tenable.com/sites/default/files/images/blog/8666feb4-4c51-45eb-a958-69b2c4c32e91.png" width="833" /><p>Elevation of Privilege (EoP) vulnerabilities accounted for 48.3% of the vulnerabilities patched this month, followed by remote code execution (RCE) vulnerabilities at 24.6%.</p><div class="blog-severity-alert"><div class="col-sm-2 nopad"><div class="blog-severity-badge critical">Critical</div></div><div class="col-sm-10"><h2>CVE-2026-41103 | Microsoft SSO Plugin for Jira &amp; Confluence Elevation of Privilege Vulnerability</h2></div><div class="col-sm-12"><p><a href="https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-41103"><u>CVE-2026-41103</u></a> is an elevation of privilege vulnerability affecting Microsoft Single-Sign-On (SSO) Plugin for Jira &amp; Confluence. It was assigned a CVSSv3 score of 9.1 and is rated as critical. It was assessed as "Exploitation More Likely" according to <a href="https://www.microsoft.com/en-us/msrc/exploitability-index"><u>Microsoft's Exploitability Index</u></a>. An unauthorized attacker could exploit this vulnerability during the process of logging in by sending a specially crafted response message. Successful exploitation would allow the attacker to sign-in using a forged identity without Microsoft Entra ID authentication, enabling access to or allowing an attacker to modify data in Jira and Confluence. However, the accessible information is not unfettered, as it is limited by the access defined by the targeted servers for the authorized user.</p></div></div><div class="blog-severity-alert"><div class="col-sm-2 nopad"><div class="blog-severity-badge important">Important</div></div><div class="col-sm-10"><h2>CVE-2026-33841, CVE-2026-35420, CVE-2026-40369 | Windows Kernel Elevation of Privilege Vulnerabilities</h2></div><div class="col-sm-12"><p><a href="https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-33841"><u>CVE-2026-33841</u></a>, <a href="https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-35420"><u>CVE-2026-35420</u></a> and <a href="https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-40369"><u>CVE-2026-40369</u></a> are EoP vulnerabilities affecting the Windows Kernel. Each of the flaws have been assigned CVSSv3 scores of 7.8 and rated as important. Both CVE-2026-33841 and CVE-2026-40369 were assessed as "Exploitation More Likely," which could be abused by a local attacker to elevate to SYSTEM or Medium/High integrity level in the case of CVE-2026-33841. Including these three EoPs, there have been 13 disclosed Windows Kernel EoP vulnerabilities addressed so far in 2026.</p></div></div><div class="blog-severity-alert"><div class="col-sm-2 nopad"><div class="blog-severity-badge critical">Critical</div></div><div class="col-sm-10"><h2>CVE-2026-40361, CVE-2026-40364, CVE-2026-40366 and CVE-2026-40367 | Microsoft Word Remote Code Execution Vulnerabilities</h2></div><div class="col-sm-12"><p><a href="https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-40361"><u>CVE-2026-40361</u></a>, <a href="https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-40364"><u>CVE-2026-40364</u></a>, <a href="https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-40366"><u>CVE-2026-40366</u></a> and <a href="https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-40367"><u>CVE-2026-40367</u></a> RCE vulnerabilities affecting Microsoft Word. Each of these RCEs were assigned CVSSv3 scores of 8.4 and rated as critical, though CVE-2026-40361 and CVE-2026-40364 were the only ones assessed to be “Exploitation More Likely.” An attacker could exploit these flaws through social engineering by sending the malicious file to an intended target. Successful exploitation would grant code execution privileges to the attacker. Additionally, Microsoft notes that the Preview Pane is an attack vector for each of these vulnerabilities.</p></div></div><div class="blog-severity-alert"><div class="col-sm-2 nopad"><div class="blog-severity-badge critical">Critical</div></div><div class="col-sm-10"><h2>CVE-2026-41089 | Windows Netlogon Remote Code Execution Vulnerability</h2></div><div class="col-sm-12"><p><a href="https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-41089"><u>CVE-2026-41089</u></a> is a RCE vulnerability affecting Windows Netlogon, a Windows Server process used for authentication within a domain. It was assigned a CVSSv3 score of 9.8 and rated as critical. A remote, unauthenticated attacker could exploit this flaw by sending a crafted network request to a Windows server running as a domain controller. This packet could exploit a stack-based buffer overflow flaw, allowing the attacker to execute code on an affected system. Despite the critical severity and near perfect CVSSv3 score, this flaw was assessed by Microsoft as “Exploitation Less Likely.”</p></div></div><h2>Tenable Solutions</h2><p>A list of all the plugins released for Microsoft’s May 2026 Patch Tuesday update can be found <a href="https://www.tenable.com/plugins/search?q=%22May+2026%22+AND+script_family%3A%28%22Windows+%3A+Microsoft+Bulletins%22+OR+%22MacOS+X+Local+Security+Checks%22+OR+%22Windows%22%29&amp;sort=&amp;page=1"><u>here</u></a>. As always, we recommend patching systems as soon as possible and regularly scanning your environment to identify those systems yet to be patched.</p><p>For more specific guidance on best practices for vulnerability assessments, please refer to our blog post on <a href="http://www.tenable.com/blog/how-to-perform-efficient-vulnerability-assessments-with-tenable"><u>How to Perform Efficient Vulnerability Assessments with Tenable</u></a>.</p><h3>Get more information</h3><ul><li><a href="https://msrc.microsoft.com/update-guide/en-us/releaseNote/2026-May"><u>Microsoft's May 2026 Security Updates</u></a></li><li><a href="https://www.tenable.com/plugins/search?q=%22May+2026%22+AND+script_family%3A%28%22Windows+%3A+Microsoft+Bulletins%22+OR+%22MacOS+X+Local+Security+Checks%22+OR+%22Windows%22%29&amp;sort=&amp;page=1"><u>Tenable plugins for Microsoft May 2026 Patch Tuesday Security Updates</u></a></li></ul><p><em><strong>Join </strong></em><a href="https://connect.tenable.com/category/news-you-need/discussions/vulnerability-watch"><em><strong><u>Tenable's Research Special Operations (RSO) Team</u></strong></em></a><em><strong> on Tenable Connect for further discussions on the latest cyber threats.</strong></em></p><p><em><strong>Learn more about </strong></em><a href="https://www.tenable.com/products/tenable-one"><em><strong><u>Tenable One</u></strong></em></a><em><strong>, the Exposure Management Platform for the modern attack surface.</strong></em></p>
+<img src="https://www.tenable.com/sites/default/files/images/articles/microsoft-may-2026-patch-tuesday-release.png" /><br/><br/><b>Source:</b> Tenable Blog &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+</item>
+
 <item>
   <title>🔴 Škoda warns of customer data breach after online shop hack</title>
   <link>https://www.bleepingcomputer.com/news/security/skoda-warns-of-customer-data-breach-after-online-shop-hack/</link>
   <pubDate>Tue, 12 May 2026 17:07:01 +0000</pubDate>
   <source>BleepingComputer</source>
-  <description><![CDATA[<b>Why this matters: Potential data exposure — check monitoring and incident response readiness.</b><br/>Škoda Auto, a wholly owned subsidiary of the Volkswagen Group, has disclosed a data breach after attackers hacked its online shop and stole the personal information of an undisclosed number of customers. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Potential data exposure — check monitoring and incident response readiness.</b><br/>Škoda Auto, a wholly owned subsidiary of the Volkswagen Group, has disclosed a data breach after attackers hacked its online shop and stole the personal information of an undisclosed number of customers. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
 </item>
 
 <item>
@@ -19,7 +28,17 @@
   <pubDate>Tue, 12 May 2026 16:47:21 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><p>While none of the flaws have been exploited in the wild, many of them could lead to arbitrary code execution.</p>
-<p>The post <a href="https://www.securityweek.com/adobe-patches-52-vulnerabilities-in-10-products/">Adobe Patches 52 Vulnerabilities in 10 Products</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/adobe-patches-52-vulnerabilities-in-10-products/">Adobe Patches 52 Vulnerabilities in 10 Products</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+</item>
+
+<item>
+  <title>🟠 New Exim BDAT Vulnerability Exposes GnuTLS Builds to Potential Code Execution</title>
+  <link>https://thehackernews.com/2026/05/new-exim-bdat-vulnerability-exposes.html</link>
+  <pubDate>Tue, 12 May 2026 16:44:00 +0000</pubDate>
+  <source>The Hacker News</source>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Exim has released security updates to address a severe security issue affecting certain configurations that could enable memory corruption and potential code execution.
+Exim is an open-source Mail Transfer Agent (MTA) designed for Unix-like systems to receive, route, and deliver email.
+The vulnerability, tracked as CVE-2026-45185, aka Dead.Letter, has been described as a use-after-free<br/><br/><b>Source:</b> The Hacker News &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
 </item>
 
 <item>
@@ -31,7 +50,7 @@
 
 To exploit the vulnerability, an attacker must send a specially crafted file to a vulnerable system.
 
-The security update fixes the vulnerability by ensuring .NET Core properly handles files.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+The security update fixes the vulnerability by ensuring .NET Core properly handles files.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -39,7 +58,7 @@ The security update fixes the vulnerability by ensuring .NET Core properly handl
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-33839</link>
   <pubDate>Tue, 12 May 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Concurrent execution using shared resource with improper synchronization ('race condition') in Windows Win32K - GRFX allows an authorized attacker to elevate privileges locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Concurrent execution using shared resource with improper synchronization ('race condition') in Windows Win32K - GRFX allows an authorized attacker to elevate privileges locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -47,7 +66,7 @@ The security update fixes the vulnerability by ensuring .NET Core properly handl
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-34329</link>
   <pubDate>Tue, 12 May 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Heap-based buffer overflow in Windows Message Queuing allows an unauthorized attacker to execute code over an adjacent network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Heap-based buffer overflow in Windows Message Queuing allows an unauthorized attacker to execute code over an adjacent network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -55,7 +74,7 @@ The security update fixes the vulnerability by ensuring .NET Core properly handl
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-34331</link>
   <pubDate>Tue, 12 May 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Concurrent execution using shared resource with improper synchronization ('race condition') in Windows Win32K - GRFX allows an authorized attacker to elevate privileges locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Concurrent execution using shared resource with improper synchronization ('race condition') in Windows Win32K - GRFX allows an authorized attacker to elevate privileges locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -63,7 +82,7 @@ The security update fixes the vulnerability by ensuring .NET Core properly handl
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-34342</link>
   <pubDate>Tue, 12 May 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Concurrent execution using shared resource with improper synchronization ('race condition') in Windows Print Spooler Components allows an authorized attacker to elevate privileges locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Concurrent execution using shared resource with improper synchronization ('race condition') in Windows Print Spooler Components allows an authorized attacker to elevate privileges locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -71,7 +90,7 @@ The security update fixes the vulnerability by ensuring .NET Core properly handl
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-34344</link>
   <pubDate>Tue, 12 May 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Access of resource using incompatible type ('type confusion') in Windows Ancillary Function Driver for WinSock allows an authorized attacker to elevate privileges locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Access of resource using incompatible type ('type confusion') in Windows Ancillary Function Driver for WinSock allows an authorized attacker to elevate privileges locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -79,7 +98,7 @@ The security update fixes the vulnerability by ensuring .NET Core properly handl
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-34345</link>
   <pubDate>Tue, 12 May 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Concurrent execution using shared resource with improper synchronization ('race condition') in Windows Ancillary Function Driver for WinSock allows an authorized attacker to elevate privileges locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Concurrent execution using shared resource with improper synchronization ('race condition') in Windows Ancillary Function Driver for WinSock allows an authorized attacker to elevate privileges locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -87,7 +106,7 @@ The security update fixes the vulnerability by ensuring .NET Core properly handl
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-34351</link>
   <pubDate>Tue, 12 May 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Concurrent execution using shared resource with improper synchronization ('race condition') in Windows TCP/IP allows an authorized attacker to elevate privileges locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Concurrent execution using shared resource with improper synchronization ('race condition') in Windows TCP/IP allows an authorized attacker to elevate privileges locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -95,7 +114,7 @@ The security update fixes the vulnerability by ensuring .NET Core properly handl
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-35417</link>
   <pubDate>Tue, 12 May 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Access of resource using incompatible type ('type confusion') in Windows Win32K - ICOMP allows an authorized attacker to elevate privileges locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Access of resource using incompatible type ('type confusion') in Windows Win32K - ICOMP allows an authorized attacker to elevate privileges locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -103,7 +122,7 @@ The security update fixes the vulnerability by ensuring .NET Core properly handl
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-35421</link>
   <pubDate>Tue, 12 May 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Heap-based buffer overflow in Windows GDI allows an unauthorized attacker to execute code locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Heap-based buffer overflow in Windows GDI allows an unauthorized attacker to execute code locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -111,7 +130,7 @@ The security update fixes the vulnerability by ensuring .NET Core properly handl
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-35439</link>
   <pubDate>Tue, 12 May 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Deserialization of untrusted data in Microsoft Office SharePoint allows an authorized attacker to execute code over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Deserialization of untrusted data in Microsoft Office SharePoint allows an authorized attacker to execute code over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -119,7 +138,7 @@ The security update fixes the vulnerability by ensuring .NET Core properly handl
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-40363</link>
   <pubDate>Tue, 12 May 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Heap-based buffer overflow in Microsoft Office allows an unauthorized attacker to execute code locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Heap-based buffer overflow in Microsoft Office allows an unauthorized attacker to execute code locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -127,7 +146,7 @@ The security update fixes the vulnerability by ensuring .NET Core properly handl
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-40364</link>
   <pubDate>Tue, 12 May 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Access of resource using incompatible type ('type confusion') in Microsoft Office Word allows an unauthorized attacker to execute code locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Access of resource using incompatible type ('type confusion') in Microsoft Office Word allows an unauthorized attacker to execute code locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -135,7 +154,7 @@ The security update fixes the vulnerability by ensuring .NET Core properly handl
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-40366</link>
   <pubDate>Tue, 12 May 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Use after free in Microsoft Office Word allows an unauthorized attacker to execute code locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Use after free in Microsoft Office Word allows an unauthorized attacker to execute code locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -143,7 +162,7 @@ The security update fixes the vulnerability by ensuring .NET Core properly handl
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-40368</link>
   <pubDate>Tue, 12 May 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Deserialization of untrusted data in Microsoft Office SharePoint allows an authorized attacker to execute code over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Deserialization of untrusted data in Microsoft Office SharePoint allows an authorized attacker to execute code over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -151,7 +170,7 @@ The security update fixes the vulnerability by ensuring .NET Core properly handl
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-40380</link>
   <pubDate>Tue, 12 May 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Heap-based buffer overflow in Volume Manager Extension Driver allows an authorized attacker to execute code with a physical attack.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Heap-based buffer overflow in Volume Manager Extension Driver allows an authorized attacker to execute code with a physical attack.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -159,7 +178,7 @@ The security update fixes the vulnerability by ensuring .NET Core properly handl
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-40415</link>
   <pubDate>Tue, 12 May 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Use after free in Windows TCP/IP allows an unauthorized attacker to execute code over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Use after free in Windows TCP/IP allows an unauthorized attacker to execute code over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -167,7 +186,7 @@ The security update fixes the vulnerability by ensuring .NET Core properly handl
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-41089</link>
   <pubDate>Tue, 12 May 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Stack-based buffer overflow in Windows Netlogon allows an unauthorized attacker to execute code over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Stack-based buffer overflow in Windows Netlogon allows an unauthorized attacker to execute code over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -175,7 +194,7 @@ The security update fixes the vulnerability by ensuring .NET Core properly handl
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-41094</link>
   <pubDate>Tue, 12 May 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Improper control of generation of code ('code injection') in Microsoft Data Formulator allows an unauthorized attacker to execute code over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Improper control of generation of code ('code injection') in Microsoft Data Formulator allows an unauthorized attacker to execute code over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -183,7 +202,7 @@ The security update fixes the vulnerability by ensuring .NET Core properly handl
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-41096</link>
   <pubDate>Tue, 12 May 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Heap-based buffer overflow in Microsoft Windows DNS allows an unauthorized attacker to execute code over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Heap-based buffer overflow in Microsoft Windows DNS allows an unauthorized attacker to execute code over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -191,7 +210,7 @@ The security update fixes the vulnerability by ensuring .NET Core properly handl
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-41611</link>
   <pubDate>Tue, 12 May 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Improper neutralization of script-related html tags in a web page (basic xss) in Visual Studio Code allows an unauthorized attacker to execute code locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Improper neutralization of script-related html tags in a web page (basic xss) in Visual Studio Code allows an unauthorized attacker to execute code locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -199,7 +218,7 @@ The security update fixes the vulnerability by ensuring .NET Core properly handl
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-32161</link>
   <pubDate>Tue, 12 May 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Concurrent execution using shared resource with improper synchronization ('race condition') in Windows Native WiFi Miniport Driver allows an unauthorized attacker to execute code over an adjacent network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Concurrent execution using shared resource with improper synchronization ('race condition') in Windows Native WiFi Miniport Driver allows an unauthorized attacker to execute code over an adjacent network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -207,7 +226,7 @@ The security update fixes the vulnerability by ensuring .NET Core properly handl
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-42831</link>
   <pubDate>Tue, 12 May 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Heap-based buffer overflow in Microsoft Office allows an unauthorized attacker to execute code locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Heap-based buffer overflow in Microsoft Office allows an unauthorized attacker to execute code locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -215,7 +234,7 @@ The security update fixes the vulnerability by ensuring .NET Core properly handl
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-42898</link>
   <pubDate>Tue, 12 May 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Improper control of generation of code ('code injection') in Microsoft Dynamics 365 (on-premises) allows an authorized attacker to execute code over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Improper control of generation of code ('code injection') in Microsoft Dynamics 365 (on-premises) allows an authorized attacker to execute code over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -223,7 +242,7 @@ The security update fixes the vulnerability by ensuring .NET Core properly handl
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-33110</link>
   <pubDate>Tue, 12 May 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Deserialization of untrusted data in Microsoft Office SharePoint allows an authorized attacker to execute code over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Deserialization of untrusted data in Microsoft Office SharePoint allows an authorized attacker to execute code over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -231,7 +250,7 @@ The security update fixes the vulnerability by ensuring .NET Core properly handl
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-33112</link>
   <pubDate>Tue, 12 May 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Deserialization of untrusted data in Microsoft Office SharePoint allows an authorized attacker to execute code over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Deserialization of untrusted data in Microsoft Office SharePoint allows an authorized attacker to execute code over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -239,7 +258,7 @@ The security update fixes the vulnerability by ensuring .NET Core properly handl
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-35422</link>
   <pubDate>Tue, 12 May 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Auth bypass — review access controls and check for unauthorized access.</b><br/>Authentication bypass using an alternate path or channel in Windows TCP/IP allows an authorized attacker to bypass a security feature over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Auth bypass — review access controls and check for unauthorized access.</b><br/>Authentication bypass using an alternate path or channel in Windows TCP/IP allows an authorized attacker to bypass a security feature over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -247,7 +266,7 @@ The security update fixes the vulnerability by ensuring .NET Core properly handl
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-32204</link>
   <pubDate>Tue, 12 May 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>External control of file name or path in Azure Monitor Agent allows an authorized attacker to elevate privileges locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>External control of file name or path in Azure Monitor Agent allows an authorized attacker to elevate privileges locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -255,7 +274,7 @@ The security update fixes the vulnerability by ensuring .NET Core properly handl
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-32177</link>
   <pubDate>Tue, 12 May 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Heap-based buffer overflow in .NET allows an unauthorized attacker to elevate privileges locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Heap-based buffer overflow in .NET allows an unauthorized attacker to elevate privileges locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -263,7 +282,7 @@ The security update fixes the vulnerability by ensuring .NET Core properly handl
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-21530</link>
   <pubDate>Tue, 12 May 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Double free in Windows Rich Text Edit allows an authorized attacker to elevate privileges locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Double free in Windows Rich Text Edit allows an authorized attacker to elevate privileges locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -271,7 +290,7 @@ The security update fixes the vulnerability by ensuring .NET Core properly handl
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-33117</link>
   <pubDate>Tue, 12 May 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Could impact sign-ins/MFA/Conditional Access — watch for login issues.</b><br/>Improper authentication in Azure SDK allows an unauthorized attacker to bypass a security feature over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Could impact sign-ins/MFA/Conditional Access — watch for login issues.</b><br/>Improper authentication in Azure SDK allows an unauthorized attacker to bypass a security feature over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -279,7 +298,7 @@ The security update fixes the vulnerability by ensuring .NET Core properly handl
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-33834</link>
   <pubDate>Tue, 12 May 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Improper access control in Windows Event Logging Service allows an authorized attacker to elevate privileges locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Improper access control in Windows Event Logging Service allows an authorized attacker to elevate privileges locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -287,7 +306,7 @@ The security update fixes the vulnerability by ensuring .NET Core properly handl
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-33840</link>
   <pubDate>Tue, 12 May 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Use after free in Windows Win32K - ICOMP allows an authorized attacker to elevate privileges locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Use after free in Windows Win32K - ICOMP allows an authorized attacker to elevate privileges locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -295,7 +314,7 @@ The security update fixes the vulnerability by ensuring .NET Core properly handl
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-33841</link>
   <pubDate>Tue, 12 May 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Heap-based buffer overflow in Windows Kernel allows an authorized attacker to elevate privileges locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Heap-based buffer overflow in Windows Kernel allows an authorized attacker to elevate privileges locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -303,7 +322,7 @@ The security update fixes the vulnerability by ensuring .NET Core properly handl
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-34330</link>
   <pubDate>Tue, 12 May 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Integer overflow or wraparound in Windows Win32K - GRFX allows an authorized attacker to elevate privileges locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Integer overflow or wraparound in Windows Win32K - GRFX allows an authorized attacker to elevate privileges locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -311,7 +330,7 @@ The security update fixes the vulnerability by ensuring .NET Core properly handl
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-34333</link>
   <pubDate>Tue, 12 May 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Use after free in Windows Win32K - GRFX allows an authorized attacker to elevate privileges locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Use after free in Windows Win32K - GRFX allows an authorized attacker to elevate privileges locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -319,7 +338,7 @@ The security update fixes the vulnerability by ensuring .NET Core properly handl
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-34343</link>
   <pubDate>Tue, 12 May 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Heap-based buffer overflow in Windows Application Identity (AppID) Subsystem allows an authorized attacker to elevate privileges locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Heap-based buffer overflow in Windows Application Identity (AppID) Subsystem allows an authorized attacker to elevate privileges locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -327,7 +346,7 @@ The security update fixes the vulnerability by ensuring .NET Core properly handl
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-34347</link>
   <pubDate>Tue, 12 May 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Use after free in Windows Win32K - GRFX allows an authorized attacker to elevate privileges locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Use after free in Windows Win32K - GRFX allows an authorized attacker to elevate privileges locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -335,7 +354,7 @@ The security update fixes the vulnerability by ensuring .NET Core properly handl
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-34350</link>
   <pubDate>Tue, 12 May 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Null pointer dereference in Windows Storport Miniport Driver allows an unauthorized attacker to deny service over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Null pointer dereference in Windows Storport Miniport Driver allows an unauthorized attacker to deny service over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -343,7 +362,7 @@ The security update fixes the vulnerability by ensuring .NET Core properly handl
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-35415</link>
   <pubDate>Tue, 12 May 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Integer overflow or wraparound in Windows Storage Spaces Controller allows an authorized attacker to elevate privileges locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Integer overflow or wraparound in Windows Storage Spaces Controller allows an authorized attacker to elevate privileges locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -351,7 +370,7 @@ The security update fixes the vulnerability by ensuring .NET Core properly handl
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-35416</link>
   <pubDate>Tue, 12 May 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Use after free in Windows Ancillary Function Driver for WinSock allows an authorized attacker to elevate privileges locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Use after free in Windows Ancillary Function Driver for WinSock allows an authorized attacker to elevate privileges locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -359,7 +378,7 @@ The security update fixes the vulnerability by ensuring .NET Core properly handl
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-35418</link>
   <pubDate>Tue, 12 May 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Use after free in Windows Cloud Files Mini Filter Driver allows an authorized attacker to elevate privileges locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Use after free in Windows Cloud Files Mini Filter Driver allows an authorized attacker to elevate privileges locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -367,7 +386,7 @@ The security update fixes the vulnerability by ensuring .NET Core properly handl
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-35419</link>
   <pubDate>Tue, 12 May 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Out-of-bounds read in Windows DWM Core Library allows an authorized attacker to disclose information locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Out-of-bounds read in Windows DWM Core Library allows an authorized attacker to disclose information locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -375,7 +394,7 @@ The security update fixes the vulnerability by ensuring .NET Core properly handl
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-35420</link>
   <pubDate>Tue, 12 May 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Heap-based buffer overflow in Windows Kernel allows an authorized attacker to elevate privileges locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Heap-based buffer overflow in Windows Kernel allows an authorized attacker to elevate privileges locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -383,7 +402,7 @@ The security update fixes the vulnerability by ensuring .NET Core properly handl
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-35423</link>
   <pubDate>Tue, 12 May 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Out-of-bounds read in Telnet Client allows an unauthorized attacker to disclose information over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Out-of-bounds read in Telnet Client allows an unauthorized attacker to disclose information over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -391,7 +410,7 @@ The security update fixes the vulnerability by ensuring .NET Core properly handl
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-35424</link>
   <pubDate>Tue, 12 May 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Could impact email access or mail flow — monitor delivery and client issues.</b><br/>Missing release of memory after effective lifetime in Windows Internet Key Exchange (IKE) Protocol allows an unauthorized attacker to deny service over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Could impact email access or mail flow — monitor delivery and client issues.</b><br/>Missing release of memory after effective lifetime in Windows Internet Key Exchange (IKE) Protocol allows an unauthorized attacker to deny service over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -399,7 +418,7 @@ The security update fixes the vulnerability by ensuring .NET Core properly handl
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-35433</link>
   <pubDate>Tue, 12 May 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Improper input validation in .NET allows an unauthorized attacker to elevate privileges locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Improper input validation in .NET allows an unauthorized attacker to elevate privileges locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -407,7 +426,7 @@ The security update fixes the vulnerability by ensuring .NET Core properly handl
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-35438</link>
   <pubDate>Tue, 12 May 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Missing authorization in Windows Admin Center allows an authorized attacker to elevate privileges over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Missing authorization in Windows Admin Center allows an authorized attacker to elevate privileges over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -415,7 +434,7 @@ The security update fixes the vulnerability by ensuring .NET Core properly handl
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-35440</link>
   <pubDate>Tue, 12 May 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Files or directories accessible to external parties in Microsoft Office Word allows an unauthorized attacker to disclose information locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Files or directories accessible to external parties in Microsoft Office Word allows an unauthorized attacker to disclose information locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -423,7 +442,7 @@ The security update fixes the vulnerability by ensuring .NET Core properly handl
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-40360</link>
   <pubDate>Tue, 12 May 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Out-of-bounds read in Microsoft Office Excel allows an unauthorized attacker to disclose information locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Out-of-bounds read in Microsoft Office Excel allows an unauthorized attacker to disclose information locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -431,7 +450,7 @@ The security update fixes the vulnerability by ensuring .NET Core properly handl
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-40374</link>
   <pubDate>Tue, 12 May 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/>Exposure of sensitive information to an unauthorized actor in Power Automate allows an authorized attacker to disclose information over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/>Exposure of sensitive information to an unauthorized actor in Power Automate allows an authorized attacker to disclose information over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -439,7 +458,7 @@ The security update fixes the vulnerability by ensuring .NET Core properly handl
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-40377</link>
   <pubDate>Tue, 12 May 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Heap-based buffer overflow in Windows Cryptographic Services allows an authorized attacker to elevate privileges locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Heap-based buffer overflow in Windows Cryptographic Services allows an authorized attacker to elevate privileges locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -447,7 +466,7 @@ The security update fixes the vulnerability by ensuring .NET Core properly handl
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-40399</link>
   <pubDate>Tue, 12 May 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Stack-based buffer overflow in Windows TCP/IP allows an authorized attacker to elevate privileges locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Stack-based buffer overflow in Windows TCP/IP allows an authorized attacker to elevate privileges locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -455,7 +474,7 @@ The security update fixes the vulnerability by ensuring .NET Core properly handl
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-40405</link>
   <pubDate>Tue, 12 May 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Null pointer dereference in Windows TCP/IP allows an unauthorized attacker to deny service over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Null pointer dereference in Windows TCP/IP allows an unauthorized attacker to deny service over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -463,7 +482,7 @@ The security update fixes the vulnerability by ensuring .NET Core properly handl
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-40406</link>
   <pubDate>Tue, 12 May 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Use after free in Windows TCP/IP allows an unauthorized attacker to disclose information over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Use after free in Windows TCP/IP allows an unauthorized attacker to disclose information over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -471,7 +490,7 @@ The security update fixes the vulnerability by ensuring .NET Core properly handl
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-40407</link>
   <pubDate>Tue, 12 May 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Heap-based buffer overflow in Windows Common Log File System Driver allows an authorized attacker to elevate privileges locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Heap-based buffer overflow in Windows Common Log File System Driver allows an authorized attacker to elevate privileges locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -479,7 +498,7 @@ The security update fixes the vulnerability by ensuring .NET Core properly handl
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-40408</link>
   <pubDate>Tue, 12 May 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Use after free in Windows Kernel-Mode Drivers allows an authorized attacker to elevate privileges locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Use after free in Windows Kernel-Mode Drivers allows an authorized attacker to elevate privileges locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -487,7 +506,7 @@ The security update fixes the vulnerability by ensuring .NET Core properly handl
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-40410</link>
   <pubDate>Tue, 12 May 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Use after free in Windows SMB Client allows an authorized attacker to elevate privileges locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Use after free in Windows SMB Client allows an authorized attacker to elevate privileges locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -495,7 +514,7 @@ The security update fixes the vulnerability by ensuring .NET Core properly handl
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-40414</link>
   <pubDate>Tue, 12 May 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Null pointer dereference in Windows TCP/IP allows an unauthorized attacker to deny service over an adjacent network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Null pointer dereference in Windows TCP/IP allows an unauthorized attacker to deny service over an adjacent network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -503,7 +522,7 @@ The security update fixes the vulnerability by ensuring .NET Core properly handl
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-40417</link>
   <pubDate>Tue, 12 May 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Could impact sign-ins/MFA/Conditional Access — watch for login issues.</b><br/>Weak authentication in Dynamics Business Central allows an authorized attacker to elevate privileges locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Could impact sign-ins/MFA/Conditional Access — watch for login issues.</b><br/>Weak authentication in Dynamics Business Central allows an authorized attacker to elevate privileges locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -511,7 +530,7 @@ The security update fixes the vulnerability by ensuring .NET Core properly handl
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-40419</link>
   <pubDate>Tue, 12 May 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Use after free in Microsoft Office allows an authorized attacker to elevate privileges locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Use after free in Microsoft Office allows an authorized attacker to elevate privileges locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -519,7 +538,7 @@ The security update fixes the vulnerability by ensuring .NET Core properly handl
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-40421</link>
   <pubDate>Tue, 12 May 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>External control of file name or path in Microsoft Office Word allows an unauthorized attacker to disclose information over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>External control of file name or path in Microsoft Office Word allows an unauthorized attacker to disclose information over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -527,7 +546,7 @@ The security update fixes the vulnerability by ensuring .NET Core properly handl
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-41088</link>
   <pubDate>Tue, 12 May 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>External control of file name or path in Windows Ancillary Function Driver for WinSock allows an authorized attacker to elevate privileges locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>External control of file name or path in Windows Ancillary Function Driver for WinSock allows an authorized attacker to elevate privileges locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -535,7 +554,7 @@ The security update fixes the vulnerability by ensuring .NET Core properly handl
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-41095</link>
   <pubDate>Tue, 12 May 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Use after free in Data Deduplication allows an authorized attacker to elevate privileges locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Use after free in Data Deduplication allows an authorized attacker to elevate privileges locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -543,7 +562,7 @@ The security update fixes the vulnerability by ensuring .NET Core properly handl
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-41100</link>
   <pubDate>Tue, 12 May 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Improper access control in M365 Copilot allows an authorized attacker to perform spoofing locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Improper access control in M365 Copilot allows an authorized attacker to perform spoofing locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -551,7 +570,7 @@ The security update fixes the vulnerability by ensuring .NET Core properly handl
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-41101</link>
   <pubDate>Tue, 12 May 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Improper access control in Microsoft Office Word allows an authorized attacker to perform spoofing locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Improper access control in Microsoft Office Word allows an authorized attacker to perform spoofing locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -559,7 +578,7 @@ The security update fixes the vulnerability by ensuring .NET Core properly handl
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-41102</link>
   <pubDate>Tue, 12 May 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Improper access control in Microsoft Office PowerPoint allows an authorized attacker to perform spoofing locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Improper access control in Microsoft Office PowerPoint allows an authorized attacker to perform spoofing locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -567,7 +586,7 @@ The security update fixes the vulnerability by ensuring .NET Core properly handl
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-41109</link>
   <pubDate>Tue, 12 May 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Improper neutralization of special elements in output used by a downstream component ('injection') in GitHub Copilot and Visual Studio allows an unauthorized attacker to bypass a security feature over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Improper neutralization of special elements in output used by a downstream component ('injection') in GitHub Copilot and Visual Studio allows an unauthorized attacker to bypass a security feature over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -575,7 +594,7 @@ The security update fixes the vulnerability by ensuring .NET Core properly handl
   <link>https://www.rapid7.com/blog/post/cds-rapid7-cyber-grc-secops-compliance</link>
   <pubDate>Tue, 12 May 2026 13:17:51 +0000</pubDate>
   <source>Rapid7 Blog</source>
-  <description><![CDATA[<b>Why this matters: Elevated ransomware risk — validate backups and endpoint defenses.</b><br/><p style="direction: ltr;"><span style="font-size: undefined;"><em>Sabeen Malik is </em></span><em>VP, Global Government Affairs and Public Policy at Rapid7.</em><em><br /></em>⠀</p><p><span style="font-size: undefined;">Security teams need a better way to connect what they detect, what they fix, and what they can prove.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">The pace of modern security operations no longer works in defenders’ favor. IBM’s Cost of a Data Breach Report 2025 found that the mean time to identify and contain a breach is now 241 days, even as AI and automation help defenders move faster. At the same time, Rapid7’s 2026 Global Threat Landscape Report shows how quickly attacker behavior is compressing the response window: exploited high and critical severity vulnerabilities more than doubled year over year, increasing 105% from 71 in 2024 to 146 in 2025, while the median time from publication to CISA KEV inclusion fell from 8.5 days to 5.0 days. This is not a future risk. It is today’s operational reality.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">It also exposes a governance problem most security programs were not built to solve. Security teams are expected to demonstrate, continuously, that controls are working, that risk is being reduced, and that security investments are delivering measurable outcomes. Point-in-time audit evidence, assembled quarterly, is structurally incompatible with an environment where the threat picture changes in minutes.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">The underlying issue is not a lack of effort, but a disconnect. Security data lives in one place, remediation happens in another, and evidence for auditors is assembled somewhere else. When leadership asks what changed, what was fixed, and what risk remains, teams are left stitching the story together manually producing reports that reflect where the organization was, not where it is.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">Cyber GRC closes that gap by bringing governance, risk management, and compliance closer to the security data and workflows teams already rely on.</span></p><h2>Why security operations and compliance need connected data</h2><p style="direction: ltr;"><span style="font-size: undefined;">For years, security operations and GRC have run in parallel. One team manages threats, exposures, and remediation. Another manages policies, controls, audits, and evidence. Both aim to reduce risk, but typically without shared context or shared data.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">That separation is no longer sustainable. Vulnerability exploitation rose 34% year-over-year and now accounts for 20% of all breaches, with a median of zero days between critical vulnerability publication and mass exploitation (Verizon DBIR 2025). Supply chain breaches doubled, now representing 30% of all incidents. Ransomware appeared in 44% of breaches – up 37% from the prior year.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">Security leaders operating in this environment face an expectation that compliance teams were not designed to meet alone: continuous proof that controls are effective against adversaries who operate at machine speed. When AI agents can autonomously chain every phase of an attack with minimal human oversight, a quarterly audit cycle is not an assurance, but a historical record.</span></p><h2>Why Cyber GRC matters now</h2><p style="direction: ltr;"><span style="font-size: undefined;">Boards are no longer satisfied with compliance status reports. They want dollarized risk scenarios and evidence that remediation is actually reducing exposure -- not just that it was attempted.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">Two pressures are converging. First, environmental complexity: modern infrastructure spans cloud, SaaS, remote endpoints, OT systems, and third-party providers. The perimeter is everywhere, and so is the attack surface. Second, regulatory expectation: SEC, NIS2, DORA, and CMMC now require demonstrable control effectiveness, not just documented policies. Both pressures demand a model that brings security activity, compliance readiness, and accountability into the same view.</span></p><h2>What Cyber GRC changes for security and compliance teams</h2><p style="direction: ltr;"><span style="font-size: undefined;">Cyber GRC changes how organizations use security data. Instead of disconnected, point-in-time artifacts, it enables teams to build governance and compliance workflows directly on top of real security telemetry – so evidence reflects the current state of the environment, not a snapshot assembled weeks before an audit.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">In practice, this means connecting findings, controls, remediation activity, and evidence so teams can see what issues exist, who owns the response, how remediation is progressing, and what that means for overall readiness. This also helps address the compliance-theater problem directly: many programs are designed to pass audits rather than reduce actual exposure, creating false confidence and misallocated resources. Grounding compliance evidence in live security telemetry -- rather than manual documentation -- means teams can tell the difference between controls that are configured and controls that are working.</span></p><h2>How connected security data strengthens compliance</h2><p style="direction: ltr;"><span style="font-size: undefined;">Compliance has historically been treated as a separate process that happens alongside security operations. In practice, it depends on the same data. The telemetry that surfaces a critical finding also determines whether a control is operating effectively.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">When evidence is generated directly from operational systems, teams spend less time assembling reports and more time improving controls. Continuous monitoring for control drift allows organizations to move from reactive audit preparation toward a consistent assurance model. Third-party risk -- now a source of 30% of all breaches -- benefits particularly, since continuous TPRM monitoring surfaces supply chain exposure in real time rather than at the next assessment cycle.</span></p><h2>How Rapid7 Cyber GRC builds on existing security workflows</h2><p style="direction: ltr;"><span style="font-size: undefined;">This shift does not require rebuilding security programs from the ground up. With the launch of Rapid7 Cyber GRC, customers can use the security data and workflows already connected through the Command Platform to support audits, assessments, and ongoing control validation. Capabilities such as HITRUST E1 control coverage provide continuous monitoring and automated evidence collection, while features like audit-ready user access exports and unified policy data reduce manual effort across SOC 2, NIST CSF, PAI, and other common frameworks.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">When NIST CSF 2.0, MITRE ATT&amp;CK, and FAIR-based risk quantification inform the evidence model rather than just the policy library, compliance becomes a byproduct of strong security operations -- not a parallel burden.</span></p><h2>Rapid7 is launching Cyber GRC to connect security operations, risk, and compliance</h2><p style="direction: ltr;"><span style="font-size: undefined;">Organizations do not need more disconnected processes for managing risk. They need a way to connect what they detect, what they fix, and what they can prove in a way that stands up to regulatory scrutiny, board-level oversight -- and keeps pace with adversaries who operate at AI speed.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">That is why Rapid7 is launching Cyber GRC: to help customers bring security operations, governance, and compliance into a single, continuous view so teams can reduce risk, improve readiness, and demonstrate progress with confidence.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">For current clients, reach out to your account team to </span><a href="https://information.rapid7.com/Compliance-Solution-Interest-Confirmation.html" target="_blank"><span style="font-size: undefined;">get early access</span></a><span style="font-size: undefined;"> to Rapid7's Cyber GRC solution and help shape what comes next.</span></p><p>⠀</p><p style="direction: ltr;"><span style="font-size: undefined;"><em>Sources: </em></span><a href="https://www.ibm.com/reports/data-breach" target="_blank"><span style="font-size: undefined;"><em>IBM Cost of a Data Breach Report 2025</em></span></a><span style="font-size: undefined;"><em> | </em></span><a href="https://www.rapid7.com/research/report/global-threat-landscape-report-2026/" target="_blank"><span style="font-size: undefined;"><em>Rapid7’s 2026 Global Threat Landscape Report</em></span></a><em></em><a href="https://www.crowdstrike.com/en-gb/global-threat-report/"><span style="font-size: undefined;"><em> </em></span></a><span style="font-size: undefined;"><em>| </em></span><a href="https://www.verizon.com/business/resources/T16f/reports/2025-dbir-data-breach-investigations-report.pdf" target="_blank"><span style="font-size: undefined;"><em>Verizon DBIR 2025</em></span></a></p><br/><br/><b>Source:</b> Rapid7 Blog &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Elevated ransomware risk — validate backups and endpoint defenses.</b><br/><p style="direction: ltr;"><span style="font-size: undefined;"><em>Sabeen Malik is </em></span><em>VP, Global Government Affairs and Public Policy at Rapid7.</em><em><br /></em>⠀</p><p><span style="font-size: undefined;">Security teams need a better way to connect what they detect, what they fix, and what they can prove.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">The pace of modern security operations no longer works in defenders’ favor. IBM’s Cost of a Data Breach Report 2025 found that the mean time to identify and contain a breach is now 241 days, even as AI and automation help defenders move faster. At the same time, Rapid7’s 2026 Global Threat Landscape Report shows how quickly attacker behavior is compressing the response window: exploited high and critical severity vulnerabilities more than doubled year over year, increasing 105% from 71 in 2024 to 146 in 2025, while the median time from publication to CISA KEV inclusion fell from 8.5 days to 5.0 days. This is not a future risk. It is today’s operational reality.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">It also exposes a governance problem most security programs were not built to solve. Security teams are expected to demonstrate, continuously, that controls are working, that risk is being reduced, and that security investments are delivering measurable outcomes. Point-in-time audit evidence, assembled quarterly, is structurally incompatible with an environment where the threat picture changes in minutes.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">The underlying issue is not a lack of effort, but a disconnect. Security data lives in one place, remediation happens in another, and evidence for auditors is assembled somewhere else. When leadership asks what changed, what was fixed, and what risk remains, teams are left stitching the story together manually producing reports that reflect where the organization was, not where it is.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">Cyber GRC closes that gap by bringing governance, risk management, and compliance closer to the security data and workflows teams already rely on.</span></p><h2>Why security operations and compliance need connected data</h2><p style="direction: ltr;"><span style="font-size: undefined;">For years, security operations and GRC have run in parallel. One team manages threats, exposures, and remediation. Another manages policies, controls, audits, and evidence. Both aim to reduce risk, but typically without shared context or shared data.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">That separation is no longer sustainable. Vulnerability exploitation rose 34% year-over-year and now accounts for 20% of all breaches, with a median of zero days between critical vulnerability publication and mass exploitation (Verizon DBIR 2025). Supply chain breaches doubled, now representing 30% of all incidents. Ransomware appeared in 44% of breaches – up 37% from the prior year.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">Security leaders operating in this environment face an expectation that compliance teams were not designed to meet alone: continuous proof that controls are effective against adversaries who operate at machine speed. When AI agents can autonomously chain every phase of an attack with minimal human oversight, a quarterly audit cycle is not an assurance, but a historical record.</span></p><h2>Why Cyber GRC matters now</h2><p style="direction: ltr;"><span style="font-size: undefined;">Boards are no longer satisfied with compliance status reports. They want dollarized risk scenarios and evidence that remediation is actually reducing exposure -- not just that it was attempted.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">Two pressures are converging. First, environmental complexity: modern infrastructure spans cloud, SaaS, remote endpoints, OT systems, and third-party providers. The perimeter is everywhere, and so is the attack surface. Second, regulatory expectation: SEC, NIS2, DORA, and CMMC now require demonstrable control effectiveness, not just documented policies. Both pressures demand a model that brings security activity, compliance readiness, and accountability into the same view.</span></p><h2>What Cyber GRC changes for security and compliance teams</h2><p style="direction: ltr;"><span style="font-size: undefined;">Cyber GRC changes how organizations use security data. Instead of disconnected, point-in-time artifacts, it enables teams to build governance and compliance workflows directly on top of real security telemetry – so evidence reflects the current state of the environment, not a snapshot assembled weeks before an audit.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">In practice, this means connecting findings, controls, remediation activity, and evidence so teams can see what issues exist, who owns the response, how remediation is progressing, and what that means for overall readiness. This also helps address the compliance-theater problem directly: many programs are designed to pass audits rather than reduce actual exposure, creating false confidence and misallocated resources. Grounding compliance evidence in live security telemetry -- rather than manual documentation -- means teams can tell the difference between controls that are configured and controls that are working.</span></p><h2>How connected security data strengthens compliance</h2><p style="direction: ltr;"><span style="font-size: undefined;">Compliance has historically been treated as a separate process that happens alongside security operations. In practice, it depends on the same data. The telemetry that surfaces a critical finding also determines whether a control is operating effectively.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">When evidence is generated directly from operational systems, teams spend less time assembling reports and more time improving controls. Continuous monitoring for control drift allows organizations to move from reactive audit preparation toward a consistent assurance model. Third-party risk -- now a source of 30% of all breaches -- benefits particularly, since continuous TPRM monitoring surfaces supply chain exposure in real time rather than at the next assessment cycle.</span></p><h2>How Rapid7 Cyber GRC builds on existing security workflows</h2><p style="direction: ltr;"><span style="font-size: undefined;">This shift does not require rebuilding security programs from the ground up. With the launch of Rapid7 Cyber GRC, customers can use the security data and workflows already connected through the Command Platform to support audits, assessments, and ongoing control validation. Capabilities such as HITRUST E1 control coverage provide continuous monitoring and automated evidence collection, while features like audit-ready user access exports and unified policy data reduce manual effort across SOC 2, NIST CSF, PAI, and other common frameworks.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">When NIST CSF 2.0, MITRE ATT&amp;CK, and FAIR-based risk quantification inform the evidence model rather than just the policy library, compliance becomes a byproduct of strong security operations -- not a parallel burden.</span></p><h2>Rapid7 is launching Cyber GRC to connect security operations, risk, and compliance</h2><p style="direction: ltr;"><span style="font-size: undefined;">Organizations do not need more disconnected processes for managing risk. They need a way to connect what they detect, what they fix, and what they can prove in a way that stands up to regulatory scrutiny, board-level oversight -- and keeps pace with adversaries who operate at AI speed.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">That is why Rapid7 is launching Cyber GRC: to help customers bring security operations, governance, and compliance into a single, continuous view so teams can reduce risk, improve readiness, and demonstrate progress with confidence.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">For current clients, reach out to your account team to </span><a href="https://information.rapid7.com/Compliance-Solution-Interest-Confirmation.html" target="_blank"><span style="font-size: undefined;">get early access</span></a><span style="font-size: undefined;"> to Rapid7's Cyber GRC solution and help shape what comes next.</span></p><p>⠀</p><p style="direction: ltr;"><span style="font-size: undefined;"><em>Sources: </em></span><a href="https://www.ibm.com/reports/data-breach" target="_blank"><span style="font-size: undefined;"><em>IBM Cost of a Data Breach Report 2025</em></span></a><span style="font-size: undefined;"><em> | </em></span><a href="https://www.rapid7.com/research/report/global-threat-landscape-report-2026/" target="_blank"><span style="font-size: undefined;"><em>Rapid7’s 2026 Global Threat Landscape Report</em></span></a><em></em><a href="https://www.crowdstrike.com/en-gb/global-threat-report/"><span style="font-size: undefined;"><em> </em></span></a><span style="font-size: undefined;"><em>| </em></span><a href="https://www.verizon.com/business/resources/T16f/reports/2025-dbir-data-breach-investigations-report.pdf" target="_blank"><span style="font-size: undefined;"><em>Verizon DBIR 2025</em></span></a></p><br/><br/><b>Source:</b> Rapid7 Blog &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
@@ -584,7 +603,7 @@ The security update fixes the vulnerability by ensuring .NET Core properly handl
   <pubDate>Tue, 12 May 2026 12:59:49 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: Elevated ransomware risk — validate backups and endpoint defenses.</b><br/><p>The company took systems offline globally after hackers exfiltrated data and deployed file-encrypting ransomware.</p>
-<p>The post <a href="https://www.securityweek.com/west-pharmaceutical-services-hit-by-disruptive-ransomware-attack/">West Pharmaceutical Services Hit by Disruptive Ransomware Attack</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/west-pharmaceutical-services-hit-by-disruptive-ransomware-attack/">West Pharmaceutical Services Hit by Disruptive Ransomware Attack</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
@@ -592,7 +611,7 @@ The security update fixes the vulnerability by ensuring .NET Core properly handl
   <link>https://www.bleepingcomputer.com/news/security/instructure-reaches-agreement-with-shinyhunters-to-stop-data-leak/</link>
   <pubDate>Tue, 12 May 2026 09:23:56 +0000</pubDate>
   <source>BleepingComputer</source>
-  <description><![CDATA[<b>Why this matters: Potential data exposure — check monitoring and incident response readiness.</b><br/>Instructure, the edtech giant behind the widely popular Canvas learning management system (LMS), has reached an "agreement" with the ShinyHunters extortion group to prevent the data stolen in a recent breach from being leaked online. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Potential data exposure — check monitoring and incident response readiness.</b><br/>Instructure, the edtech giant behind the widely popular Canvas learning management system (LMS), has reached an "agreement" with the ShinyHunters extortion group to prevent the data stolen in a recent breach from being leaked online. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 10h ago]]></description>
 </item>
 
 <item>
@@ -601,7 +620,7 @@ The security update fixes the vulnerability by ensuring .NET Core properly handl
   <pubDate>Tue, 12 May 2026 07:37:00 +0000</pubDate>
   <source>The Hacker News</source>
   <description><![CDATA[<b>Why this matters: Potential data exposure — check monitoring and incident response readiness.</b><br/>American educational technology company Instructure, the parent company of Canvas, said it reached an "agreement" with a decentralized cybercrime extortion group after it breached its network and threatened to leak stolen information from thousands of schools and universities.
-In an update shared on Monday, the Utah-based firm said it "reached an agreement with the unauthorized actor involved in<br/><br/><b>Source:</b> The Hacker News &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
+In an update shared on Monday, the Utah-based firm said it "reached an agreement with the unauthorized actor involved in<br/><br/><b>Source:</b> The Hacker News &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 12h ago]]></description>
 </item>
 
 <item>
@@ -610,7 +629,7 @@ In an update shared on Monday, the Utah-based firm said it "reached an agreement
   <pubDate>Mon, 11 May 2026 17:54:00 +0000</pubDate>
   <source>The Hacker News</source>
   <description><![CDATA[<b>Why this matters: Auth bypass — review access controls and check for unauthorized access.</b><br/>A threat actor named Mr_Rot13 has been attributed to the exploitation of a recently disclosed critical cPanel flaw to deploy a backdoor codenamed Filemanager on compromised environments.
-The attack exploits CVE-2026-41940, a vulnerability impacting cPanel and WebHost Manager (WHM) that could result in an authentication bypass and allow remote attackers to gain elevated control of the control<br/><br/><b>Source:</b> The Hacker News &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 23h ago]]></description>
+The attack exploits CVE-2026-41940, a vulnerability impacting cPanel and WebHost Manager (WHM) that could result in an authentication bypass and allow remote attackers to gain elevated control of the control<br/><br/><b>Source:</b> The Hacker News &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
@@ -620,22 +639,6 @@ The attack exploits CVE-2026-41940, a vulnerability impacting cPanel and WebHost
   <source>The Hacker News</source>
   <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Google on Monday disclosed that it identified an unknown threat actor using a zero-day exploit that it said was likely developed with an artificial intelligence (AI) system, marking the first time the technology has been put to use in the wild in a malicious context for vulnerability discovery and exploit generation.
 The activity is said to be the work of cybercrime threat actors who appear to<br/><br/><b>Source:</b> The Hacker News &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
-</item>
-
-<item>
-  <title>🔴 Why Changing Passwords Doesn’t End an Active Directory Breach</title>
-  <link>https://www.bleepingcomputer.com/news/security/why-changing-passwords-doesnt-end-an-active-directory-breach/</link>
-  <pubDate>Mon, 11 May 2026 13:53:56 +0000</pubDate>
-  <source>BleepingComputer</source>
-  <description><![CDATA[<b>Why this matters: Credential/phishing risk — reinforce MFA and user awareness training.</b><br/>Resetting a password doesn't always remove attackers from Active Directory. Specops Software explains how cached credentials and Kerberos tickets can keep attackers authenticated after a reset. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
-</item>
-
-<item>
-  <title>🟠 Google: Hackers used AI to develop zero-day exploit for web admin tool</title>
-  <link>https://www.bleepingcomputer.com/news/security/google-hackers-used-ai-to-develop-zero-day-exploit-for-web-admin-tool/</link>
-  <pubDate>Mon, 11 May 2026 13:02:30 +0000</pubDate>
-  <source>BleepingComputer</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Researchers at Google Threat Intelligence Group (GTIG) say that a zero-day exploit targeting a popular open-source web administration tool was likely generated using AI. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>

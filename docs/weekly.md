@@ -1,7 +1,7 @@
 # IT Weekly Intelligence Briefing
 **Period:** May 05 – May 12, 2026  
-**Generated:** 2026-05-12 17:09 UTC  
-**Items reviewed:** 123  
+**Generated:** 2026-05-12 19:48 UTC  
+**Items reviewed:** 124  
 
 ## ⚡ Top Actions This Week
 
@@ -55,41 +55,41 @@
 
 ## 🟠 Important — Review This Week
 
+- [Webinar: Fixing the gaps in network incident response](https://www.bleepingcomputer.com/news/security/webinar-fixing-the-gaps-in-network-incident-response/)  
+  **BleepingComputer** · May 12 · _Service continuity risk to users._  
+
+- [Microsoft releases Windows 10 KB5087544 extended security update](https://www.bleepingcomputer.com/news/microsoft/microsoft-releases-windows-10-kb5087544-extended-security-update/)  
+  **BleepingComputer** · May 12 · _General awareness item._  
+
+- [Microsoft May 2026 Patch Tuesday, (Tue, May 12th)](https://isc.sans.edu/diary/rss/32980)  
+  **SANS Internet Storm Center** · May 12 · _General awareness item._  
+
+- [Fortinet warns of critical RCE flaws in FortiSandbox and FortiAuthenticator](https://www.bleepingcomputer.com/news/security/fortinet-warns-of-critical-rce-flaws-in-fortisandbox-and-fortiauthenticator/)  
+  **BleepingComputer** · May 12 · _General awareness item._  
+
+- [Microsoft May 2026 Patch Tuesday fixes 120 flaws, no zero-days](https://www.bleepingcomputer.com/news/microsoft/microsoft-may-2026-patch-tuesday-fixes-120-flaws-no-zero-days/)  
+  **BleepingComputer** · May 12 · _General awareness item._  
+
+- [New Exim BDAT Vulnerability Exposes GnuTLS Builds to Potential Code Execution](https://thehackernews.com/2026/05/new-exim-bdat-vulnerability-exposes.html)  
+  **The Hacker News** · May 12 · _General awareness item._  
+
 - [CVE-2026-32204 Azure Monitor Agent Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-32204)  
   **Microsoft Security Response Center (MSRC)** · May 12 · _General awareness item._  
 
 - [CVE-2026-32177 .NET Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-32177)  
   **Microsoft Security Response Center (MSRC)** · May 12 · _General awareness item._  
 
-- [CVE-2026-21530 Windows Rich Text Edit Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-21530)  
-  **Microsoft Security Response Center (MSRC)** · May 12 · _General awareness item._  
-
-- [CVE-2026-33117 Azure SDK for Java Security Feature Bypass Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-33117)  
-  **Microsoft Security Response Center (MSRC)** · May 12 · _General awareness item._  
-
-- [CVE-2026-33834 Windows Event Logging Service Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-33834)  
-  **Microsoft Security Response Center (MSRC)** · May 12 · _General awareness item._  
-
-- [CVE-2026-33839 Win32k Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-33839)  
-  **Microsoft Security Response Center (MSRC)** · May 12 · _General awareness item._  
-
-- [CVE-2026-33840 Win32k Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-33840)  
-  **Microsoft Security Response Center (MSRC)** · May 12 · _General awareness item._  
-
-- [CVE-2026-33841 Windows Kernel Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-33841)  
-  **Microsoft Security Response Center (MSRC)** · May 12 · _General awareness item._  
-
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [Signal adds security warnings for social engineering, phishing attacks](https://www.bleepingcomputer.com/news/security/signal-adds-security-warnings-for-social-engineering-phishing-attacks/) — BleepingComputer
+- [Windows 11 KB5089549 & KB5087420 cumulative updates released](https://www.bleepingcomputer.com/news/microsoft/windows-11-kb5089549-and-kb5087420-cumulative-updates-released/) — BleepingComputer
 - [Android 17 to expand banking scam call and privacy protections](https://www.bleepingcomputer.com/news/security/android-17-to-expand-banking-scam-call-and-privacy-protections/) — BleepingComputer
 - [RubyGems Suspends New Signups After Hundreds of Malicious Packages Are Uploaded](https://thehackernews.com/2026/05/rubygems-suspends-new-signups-after.html) — The Hacker News
 - [New TrickMo Variant Uses TON C2 and SOCKS5 to Create Android Network Pivots](https://thehackernews.com/2026/05/new-trickmo-variant-uses-ton-c2-and.html) — The Hacker News
 - [Webinar: What the Riskiest SOC Alerts Go Unanswered - and How Radiant Security Can Help](https://thehackernews.com/2026/05/webinar-what-riskiest-soc-alerts-go.html) — The Hacker News
-- [Shai Hulud attack ships signed malicious TanStack, Mistral npm packages](https://www.bleepingcomputer.com/news/security/shai-hulud-attack-ships-signed-malicious-tanstack-mistral-npm-packages/) — BleepingComputer
-- [Why Agentic AI Is Security's Next Blind Spot](https://thehackernews.com/2026/05/why-agentic-ai-is-securitys-next-blind.html) — The Hacker News
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 12 critical · 76 important · 35 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 11 critical · 81 important · 32 FYI_
