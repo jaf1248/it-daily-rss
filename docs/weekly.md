@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
 **Period:** May 06 – May 13, 2026  
-**Generated:** 2026-05-13 20:45 UTC  
+**Generated:** 2026-05-13 22:08 UTC  
 **Items reviewed:** 124  
 
 ## ⚡ Top Actions This Week
@@ -83,12 +83,12 @@
 
 ## 🔵 FYI — General Awareness
 
+- [Iranian hackers targeted major South Korean electronics maker](https://www.bleepingcomputer.com/news/security/iranian-hackers-targeted-major-south-korean-electronics-maker/) — BleepingComputer
 - [Webinar tomorrow: Why security alone won't stop modern attacks](https://www.bleepingcomputer.com/news/security/webinar-tomorrow-why-security-alone-wont-stop-modern-attacks/) — BleepingComputer
 - [Azerbaijani Energy Firm Hit by Repeated Microsoft Exchange Exploitation](https://thehackernews.com/2026/05/azerbaijani-energy-firm-hit-by-repeated.html) — The Hacker News
 - [Microsoft says some users can't install Office on Windows 365 devices](https://www.bleepingcomputer.com/news/microsoft/microsoft-says-some-users-cant-install-office-on-windows-365-devices/) — BleepingComputer
 - [[Webinar] How Modern Attack Paths Cross Code, Pipelines, and Cloud](https://thehackernews.com/2026/05/webinar-why-your-appsec-tools-miss.html) — The Hacker News
 - [Most Remediation Programs Never Confirm the Fix Actually Worked](https://thehackernews.com/2026/05/most-remediation-programs-never-confirm.html) — The Hacker News
-- [GemStuffer Abuses 150+ RubyGems to Exfiltrate Scraped U.K. Council Portal Data](https://thehackernews.com/2026/05/gemstuffer-abuses-150-rubygems-to.html) — The Hacker News
 
 ---
 
