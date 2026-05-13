@@ -1,7 +1,7 @@
 # IT Weekly Intelligence Briefing
 **Period:** May 06 – May 13, 2026  
-**Generated:** 2026-05-13 04:42 UTC  
-**Items reviewed:** 125  
+**Generated:** 2026-05-13 07:47 UTC  
+**Items reviewed:** 124  
 
 ## ⚡ Top Actions This Week
 
@@ -55,41 +55,41 @@
 
 ## 🟠 Important — Review This Week
 
-- [Patch Tuesday, May 2026 Edition](https://krebsonsecurity.com/2026/05/patch-tuesday-may-2026-edition/)  
-  **Krebs on Security** · May 12 · _General awareness item._  
+- [CVE-2026-44656 Vim: OS Command Injection via 'path' completion](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-44656)  
+  **Microsoft Security Response Center (MSRC)** · May 13 · _General awareness item._  
 
-- [Webinar: Fixing the gaps in network incident response](https://www.bleepingcomputer.com/news/security/webinar-fixing-the-gaps-in-network-incident-response/)  
-  **BleepingComputer** · May 12 · _Service continuity risk to users._  
+- [CVE-2026-45130 Vim: Heap Buffer Overflow in spell file loading](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45130)  
+  **Microsoft Security Response Center (MSRC)** · May 13 · _General awareness item._  
 
-- [Microsoft releases Windows 10 KB5087544 extended security update](https://www.bleepingcomputer.com/news/microsoft/microsoft-releases-windows-10-kb5087544-extended-security-update/)  
-  **BleepingComputer** · May 12 · _General awareness item._  
+- [CVE-2026-6666 PgBouncer crash in kill_pool_logins_server_error](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-6666)  
+  **Microsoft Security Response Center (MSRC)** · May 13 · _General awareness item._  
 
-- [Microsoft May 2026 Patch Tuesday, (Tue, May 12th)](https://isc.sans.edu/diary/rss/32980)  
-  **SANS Internet Storm Center** · May 12 · _General awareness item._  
+- [CVE-2026-6667 PgBouncer missing authorization check in KILL_CLIENT admin command](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-6667)  
+  **Microsoft Security Response Center (MSRC)** · May 13 · _General awareness item._  
 
-- [Fortinet warns of critical RCE flaws in FortiSandbox and FortiAuthenticator](https://www.bleepingcomputer.com/news/security/fortinet-warns-of-critical-rce-flaws-in-fortisandbox-and-fortiauthenticator/)  
-  **BleepingComputer** · May 12 · _General awareness item._  
+- [CVE-2026-6665 PgBouncer buffer overflow in SCRAM](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-6665)  
+  **Microsoft Security Response Center (MSRC)** · May 13 · _General awareness item._  
 
-- [Microsoft May 2026 Patch Tuesday fixes 120 flaws, no zero-days](https://www.bleepingcomputer.com/news/microsoft/microsoft-may-2026-patch-tuesday-fixes-120-flaws-no-zero-days/)  
-  **BleepingComputer** · May 12 · _General awareness item._  
+- [CVE-2026-6664 PgBouncer integer overflow in PgBouncer network packet parsing](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-6664)  
+  **Microsoft Security Response Center (MSRC)** · May 13 · _General awareness item._  
 
-- [New Exim BDAT Vulnerability Exposes GnuTLS Builds to Potential Code Execution](https://thehackernews.com/2026/05/new-exim-bdat-vulnerability-exposes.html)  
-  **The Hacker News** · May 12 · _General awareness item._  
+- [CVE-2026-35469 SpdyStream: DOS on CRI](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-35469)  
+  **Microsoft Security Response Center (MSRC)** · May 13 · _General awareness item._  
 
-- [CVE-2026-32204 Azure Monitor Agent Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-32204)  
-  **Microsoft Security Response Center (MSRC)** · May 12 · _General awareness item._  
+- [CVE-2026-41636 Apache Thrift: Node.js skip() recursion](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-41636)  
+  **Microsoft Security Response Center (MSRC)** · May 13 · _General awareness item._  
 
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [&#x5b;GUEST DIARY&#x5d; Tearing apart website fraud to see how it works., (Wed, May 13th)](https://isc.sans.edu/diary/rss/32958) — SANS Internet Storm Center
 - [ISC Stormcast For Wednesday, May 13th, 2026 https://isc.sans.edu/podcastdetail/9930, (Wed, May 13th)](https://isc.sans.edu/diary/rss/32984) — SANS Internet Storm Center
 - [Proxying the Unproxyable&#x3f; Sending EXE traffic to a Proxy, (Wed, May 13th)](https://isc.sans.edu/diary/rss/32982) — SANS Internet Storm Center
 - [US govt seeks Instructure testimony on massive Canvas cyberattack](https://www.bleepingcomputer.com/news/security/us-govt-seeks-instructure-testimony-on-massive-canvas-cyberattack/) — BleepingComputer
 - [UK fines water supplier $1.3M for exposing data of 664k customers](https://www.bleepingcomputer.com/news/security/uk-fines-water-supplier-13m-for-exposing-data-of-664k-customers/) — BleepingComputer
 - [Signal adds security warnings for social engineering, phishing attacks](https://www.bleepingcomputer.com/news/security/signal-adds-security-warnings-for-social-engineering-phishing-attacks/) — BleepingComputer
-- [Windows 11 KB5089549 & KB5087420 cumulative updates released](https://www.bleepingcomputer.com/news/microsoft/windows-11-kb5089549-and-kb5087420-cumulative-updates-released/) — BleepingComputer
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 11 critical · 81 important · 33 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 10 critical · 81 important · 33 FYI_
