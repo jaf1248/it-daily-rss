@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
 **Period:** May 06 – May 13, 2026  
-**Generated:** 2026-05-13 00:04 UTC  
+**Generated:** 2026-05-13 04:42 UTC  
 **Items reviewed:** 125  
 
 ## ⚡ Top Actions This Week
@@ -83,12 +83,12 @@
 
 ## 🔵 FYI — General Awareness
 
+- [ISC Stormcast For Wednesday, May 13th, 2026 https://isc.sans.edu/podcastdetail/9930, (Wed, May 13th)](https://isc.sans.edu/diary/rss/32984) — SANS Internet Storm Center
+- [Proxying the Unproxyable&#x3f; Sending EXE traffic to a Proxy, (Wed, May 13th)](https://isc.sans.edu/diary/rss/32982) — SANS Internet Storm Center
 - [US govt seeks Instructure testimony on massive Canvas cyberattack](https://www.bleepingcomputer.com/news/security/us-govt-seeks-instructure-testimony-on-massive-canvas-cyberattack/) — BleepingComputer
 - [UK fines water supplier $1.3M for exposing data of 664k customers](https://www.bleepingcomputer.com/news/security/uk-fines-water-supplier-13m-for-exposing-data-of-664k-customers/) — BleepingComputer
 - [Signal adds security warnings for social engineering, phishing attacks](https://www.bleepingcomputer.com/news/security/signal-adds-security-warnings-for-social-engineering-phishing-attacks/) — BleepingComputer
 - [Windows 11 KB5089549 & KB5087420 cumulative updates released](https://www.bleepingcomputer.com/news/microsoft/windows-11-kb5089549-and-kb5087420-cumulative-updates-released/) — BleepingComputer
-- [Android 17 to expand banking scam call and privacy protections](https://www.bleepingcomputer.com/news/security/android-17-to-expand-banking-scam-call-and-privacy-protections/) — BleepingComputer
-- [RubyGems Suspends New Signups After Hundreds of Malicious Packages Are Uploaded](https://thehackernews.com/2026/05/rubygems-suspends-new-signups-after.html) — The Hacker News
 
 ---
 
