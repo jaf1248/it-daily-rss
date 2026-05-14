@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
 **Period:** May 07 – May 14, 2026  
-**Generated:** 2026-05-14 20:28 UTC  
+**Generated:** 2026-05-14 22:09 UTC  
 **Items reviewed:** 125  
 
 ## ⚡ Top Actions This Week
@@ -55,6 +55,9 @@
 
 ## 🟠 Important — Review This Week
 
+- [Hackers exploit auth bypass flaw in Burst Statistics WordPress plugin](https://www.bleepingcomputer.com/news/security/hackers-exploit-auth-bypass-flaw-in-burst-statistics-wordpress-plugin/)  
+  **BleepingComputer** · May 14 · _General awareness item._  
+
 - [Windows 11 and Microsoft Edge hacked at Pwn2Own Berlin 2026](https://www.bleepingcomputer.com/news/security/windows-11-and-microsoft-edge-hacked-on-first-day-of-pwn2own-berlin-2026/)  
   **BleepingComputer** · May 14 · _General awareness item._  
 
@@ -74,9 +77,6 @@
   **Microsoft Security Response Center (MSRC)** · May 14 · _Potential email disruption for users._  
 
 - [PraisonAI CVE-2026-44338 Auth Bypass Targeted Within Hours of Disclosure](https://thehackernews.com/2026/05/praisonai-cve-2026-44338-auth-bypass.html)  
-  **The Hacker News** · May 14 · _General awareness item._  
-
-- [Windows Zero-Days Expose BitLocker Bypasses And CTFMON Privilege Escalation](https://thehackernews.com/2026/05/windows-zero-days-expose-bitlocker.html)  
   **The Hacker News** · May 14 · _General awareness item._  
 
 ---
