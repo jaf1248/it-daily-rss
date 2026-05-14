@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
 **Period:** May 07 – May 14, 2026  
-**Generated:** 2026-05-14 14:04 UTC  
+**Generated:** 2026-05-14 16:59 UTC  
 **Items reviewed:** 124  
 
 ## ⚡ Top Actions This Week
@@ -55,6 +55,21 @@
 
 ## 🟠 Important — Review This Week
 
+- [18-year-old NGINX vulnerability allows DoS, potential RCE](https://www.bleepingcomputer.com/news/security/18-year-old-nginx-vulnerability-allows-dos-potential-rce/)  
+  **BleepingComputer** · May 14 · _General awareness item._  
+
+- [CVE-2026-32177 .NET Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-32177)  
+  **Microsoft Security Response Center (MSRC)** · May 14 · _General awareness item._  
+
+- [CVE-2026-35433 .NET Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-35433)  
+  **Microsoft Security Response Center (MSRC)** · May 14 · _General awareness item._  
+
+- [CVE-2026-42897 Microsoft Exchange Server Spoofing Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-42897)  
+  **Microsoft Security Response Center (MSRC)** · May 14 · _Potential email disruption for users._  
+
+- [CVE-2026-41615 Microsoft Authenticator Information Disclosure Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-41615)  
+  **Microsoft Security Response Center (MSRC)** · May 14 · _General awareness item._  
+
 - [PraisonAI CVE-2026-44338 Auth Bypass Targeted Within Hours of Disclosure](https://thehackernews.com/2026/05/praisonai-cve-2026-44338-auth-bypass.html)  
   **The Hacker News** · May 14 · _General awareness item._  
 
@@ -64,31 +79,16 @@
 - [CVE-2026-25541 Bytes is vulnerable to integer overflow in BytesMut::reserve](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-25541)  
   **Microsoft Security Response Center (MSRC)** · May 14 · _General awareness item._  
 
-- [New Fragnesia Linux flaw lets attackers gain root privileges](https://www.bleepingcomputer.com/news/security/new-fragnesia-linux-flaw-lets-attackers-gain-root-privileges/)  
-  **BleepingComputer** · May 14 · _General awareness item._  
-
-- [New Fragnesia Linux Kernel LPE Grants Root Access via Page Cache Corruption](https://thehackernews.com/2026/05/new-fragnesia-linux-kernel-lpe-grants.html)  
-  **The Hacker News** · May 14 · _General awareness item._  
-
-- [18-Year-Old NGINX Rewrite Module Flaw Enables Unauthenticated RCE](https://thehackernews.com/2026/05/18-year-old-nginx-rewrite-module-flaw.html)  
-  **The Hacker News** · May 14 · _General awareness item._  
-
-- [New critical Exim mailer flaw allows remote code execution](https://www.bleepingcomputer.com/news/security/new-critical-exim-mailer-flaw-allows-remote-code-execution/)  
-  **BleepingComputer** · May 13 · _General awareness item._  
-
-- [Windows BitLocker zero-day gives access to protected drives, PoC released](https://www.bleepingcomputer.com/news/security/windows-bitlocker-zero-day-gives-access-to-protected-drives-poc-released/)  
-  **BleepingComputer** · May 13 · _General awareness item._  
-
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [Cyber-Enabled Cargo Crime: How Cybercrime Tradecraft is Used to Steal Freight](https://www.bleepingcomputer.com/news/security/cyber-enabled-cargo-crime-how-cybercrime-tradecraft-is-used-to-steal-freight/) — BleepingComputer
+- [Ghostwriter Targets Ukrainian Government With Geofenced PDF Phishing, Cobalt Strike](https://thehackernews.com/2026/05/ghostwriter-targets-ukrainian.html) — The Hacker News
 - [How AI Hallucinations Are Creating Real Security Risks](https://thehackernews.com/2026/05/how-ai-hallucinations-are-creating-real.html) — The Hacker News
 - [Dell confirms its SupportAssist software causes Windows BSOD crashes](https://www.bleepingcomputer.com/news/software/dell-confirms-its-supportassist-software-causes-windows-bsod-crashes/) — BleepingComputer
 - [US charges suspected Dream Market admin arrested in Germany](https://www.bleepingcomputer.com/news/security/us-charges-suspected-dream-market-admin-arrested-in-germany/) — BleepingComputer
 - [Simple bypass of the link preview function in Outlook Junk folder, (Thu, May 14th)](https://isc.sans.edu/diary/rss/32990) — SANS Internet Storm Center
-- [ISC Stormcast For Thursday, May 14th, 2026 https://isc.sans.edu/podcastdetail/9932, (Thu, May 14th)](https://isc.sans.edu/diary/rss/32988) — SANS Internet Storm Center
-- [West Pharmaceutical says hackers stole data, encrypted systems](https://www.bleepingcomputer.com/news/security/west-pharmaceutical-says-hackers-stole-data-encrypted-systems/) — BleepingComputer
 
 ---
 
