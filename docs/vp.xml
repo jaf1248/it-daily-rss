@@ -3,8 +3,619 @@
 <channel>
   <title>Joe — VP of IT Briefing</title>
   <description>Leadership-focused IT risk, vendors, pricing, licensing, and industry context.</description>
-  <lastBuildDate>Fri, 15 May 2026 09:45:40 +0000</lastBuildDate>
+  <lastBuildDate>Fri, 15 May 2026 11:53:49 +0000</lastBuildDate>
   
+<item>
+  <title>🔴 Cisco warns of an actively exploited SD-WAN flaw with max severity</title>
+  <link>https://www.csoonline.com/article/4171694/cisco-warns-of-an-actively-exploited-sd-wan-flaw-with-max-severity.html</link>
+  <pubDate>Fri, 15 May 2026 11:43:23 +0000</pubDate>
+  <source>CSO Online</source>
+  <description><![CDATA[<b>Why this matters: Auth bypass — review access controls and check for unauthorized access.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<p>Cisco has disclosed a max-severity authentication bypass vulnerability affecting its Catalyst SD-WAN Controller and Catalyst SD-WAN Manager platforms, warning that the flaw has already been found to be exploited in the wild.</p>
+
+
+
+<p>The disclosure follows an earlier authentication bypass <a href="https://www.csoonline.com/article/4137562/five-eyes-issue-emergency-directive-on-exploited-cisco-sd-wan-zero-day.html" target="_blank">vulnerability</a> that Cisco patched in February. In the latest advisory, the company said the new flaw was identified while investigating the previously disclosed issue.</p>
+
+
+
+<p>“A vulnerability in the peering authentication in Cisco Catalyst SD-WAN Controller, formerly SD-WAN vSmart, and Cisco Catalyst SD-WAN Manager, formerly SD-WAN vManage, could allow an unauthenticated, remote attacker to bypass authentication and obtain administrative privileges on an affected system,” Cisco said in an <a href="https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sdwan-rpa2-v69WY2SW#vp" rel="noreferrer noopener" target="_blank">advisory.</a></p>
+
+
+
+<p>The company also confirmed that it became aware of “limited exploitation” of the flaw in May 2026. However, it did not disclose details about the attack or threat actors involved.</p>
+
+
+
+<p>The <a href="https://www.csoonline.com/article/4155155/the-zero-day-timeline-just-collapsed-heres-what-security-leaders-do-next.html" target="_blank">zero-day</a> flaw is now fixed with software updates, and organizations are advised to apply fixes immediately, as there are no workarounds that address this bug.</p>
+
+
+
+<h2 class="wp-block-heading"><a></a>Attackers craft a connection for admin access</h2>
+
+
+
+<p>According to Cisco, the vulnerability stems from improper validation during the authentication process used to establish control connections between SD-WAN devices. It said an attacker could exploit the issue remotely by sending crafted control connection requests to a targeted system.</p>
+
+
+
+<p>Successful exploitation would allow the attacker to bypass authentication, establish themselves as trusted peers, and obtain administrative privileges to the affected device.</p>
+
+
+
+<p>“A successful exploit could allow the attacker to log in to an affected Cisco Catalyst SD-WAN Controller as an internal, high-privileged, non-<em>root</em> user account,” Cisco said. “Using this account, the attacker could access NETCONF, which would then allow the attacker to manipulate network configuration for the SD-WAN fabric.”</p>
+
+
+
+<p>The issue, tracked as <a href="https://www.cve.org/CVERecord?id=CVE-2026-20182" rel="noreferrer noopener" target="_blank">CVE-2026-20182</a>, received a max-severity rating of CVSS 10.0. The company said that the issue is configuration-independent, meaning vulnerable systems remain exposed regardless of deployment-specific settings.</p>
+
+
+
+<p>Cisco credited Stephen Fewer, Senior Principal Security Researcher, and Jonah Burgess, Senior Security Researcher, both of Rapid7, for discovering and reporting the bug.</p>
+
+
+
+<h2 class="wp-block-heading"><a></a>Active exploitation kicks patching into high gear</h2>
+
+
+
+<p>Cisco disclosed being aware of exploitation attempts in May, urging customers to upgrade to a fixed release immediately.</p>
+
+
+
+<p>Shortly after the disclosure, the flaw was <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog">added </a>to the Cybersecurity and Infrastructure Security Agency’s (CISA) known exploited vulnerabilities catalog (KEV). “Adhere to the applicable BOD 22-01 guidance for cloud services or discontinue use of the product if mitigations are not available,” it said.</p>
+
+
+
+<p>The US cybersecurity watchdog has given federal executive agencies until May 17th to patch the flaw.</p>
+
+
+
+<p>“Customers are advised to upgrade to an appropriate fixed software release,” Fewer and Burgess said in a <a href="https://www.rapid7.com/blog/post/ve-cve-2026-20182-critical-authentication-bypass-cisco-catalyst-sd-wan-controller-fixed/" rel="noreferrer noopener" target="_blank">blog post</a>, citing fixed software releases that address the flaw in versions 20.9 through 26.1.1. “There are no workarounds that address this vulnerability.”</p>
+
+
+
+<p>Alongside software fixes, Cisco published operational guidance to help organizations identify potentially malicious control connections.</p>
+
+
+
+<p>The advisory instructed admins to review existing control peering relationships, using the “show control connections” command, and validate all connected peers, particularly those associated with SD-WAN Manager systems.</p>
+
+
+
+<p>Organizations that suspect compromise are being advised to contact Cisco Technical Assistance Center support and collect diagnostic information from affected devices.</p>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</item>
+
+<item>
+  <title>🟠 The UK&#x27;s HMRC tax authority announces a 10-year, £175M deal with London-based Quantexa to use its AI tech to identify fraud incidents and fix tax return errors (Zoe Kleinman/BBC)</title>
+  <link>https://www.techmeme.com/260515/p9#a260515p9</link>
+  <pubDate>Fri, 15 May 2026 11:20:01 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: Service impact possible — prepare comms and confirm vendor status.</b><br/><a href="https://www.bbc.com/news/articles/c7v9ld262n4o"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260515/i9.jpg" vspace="4" /></a>
+<p><a href="https://www.techmeme.com/260515/p9#a260515p9" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Zoe Kleinman / <a href="http://www.bbc.com/news/">BBC</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://www.bbc.com/news/articles/c7v9ld262n4o">The UK's HMRC tax authority announces a 10-year, &pound;175M deal with London-based Quantexa to use its AI tech to identify fraud incidents and fix tax return errors</a></b></span>&nbsp; &mdash;&nbsp; HM Revenue and Customs has announced a 10-year, &pound;175m deal with the British tech firm Quantexa to provide AI-powered technology to help improve its performance.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Meta rolls out new features for Ray-Ban Display glasses, including neural handwriting support for all users, and opens up the device to third-party developers (Jay Peters/The Verge)</title>
+  <link>https://www.techmeme.com/260515/p7#a260515p7</link>
+  <pubDate>Fri, 15 May 2026 11:05:02 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/><a href="https://www.theverge.com/tech/930941/meta-ray-ban-display-virtual-neural-handwriting-apps-developer"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260515/i7.jpg" vspace="4" /></a>
+<p><a href="https://www.techmeme.com/260515/p7#a260515p7" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Jay Peters / <a href="https://www.theverge.com/">The Verge</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://www.theverge.com/tech/930941/meta-ray-ban-display-virtual-neural-handwriting-apps-developer">Meta rolls out new features for Ray-Ban Display glasses, including neural handwriting support for all users, and opens up the device to third-party developers</a></b></span>&nbsp; &mdash;&nbsp; You can also now capture a video combining what you see on the lens display, what you see in the world, and the audio around you.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔴 OpenAI Hit by TanStack Supply Chain Attack</title>
+  <link>https://www.securityweek.com/openai-hit-by-tanstack-supply-chain-attack/</link>
+  <pubDate>Fri, 15 May 2026 10:37:00 +0000</pubDate>
+  <source>SecurityWeek</source>
+  <description><![CDATA[<b>Why this matters: Supply chain risk — audit third-party dependencies and vendor access.</b><br/><p>Two employee devices were compromised in the attack, and credential material was stolen from OpenAI code repositories.</p>
+<p>The post <a href="https://www.securityweek.com/openai-hit-by-tanstack-supply-chain-attack/">OpenAI Hit by TanStack Supply Chain Attack</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Sources: HSG, formerly Sequoia China, has set up a $3B continuation fund anchored by its ByteDance stake, offering entry into the company valued at $370B (Bloomberg)</title>
+  <link>https://www.techmeme.com/260515/p5#a260515p5</link>
+  <pubDate>Fri, 15 May 2026 10:30:01 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.bloomberg.com/news/articles/2026-05-15/bytedance-stake-anchors-3-billion-fund-in-win-for-investor-hsg"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260515/i5.jpg" vspace="4" /></a>
+<p><a href="https://www.techmeme.com/260515/p5#a260515p5" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="https://www.bloomberg.com/">Bloomberg</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/articles/2026-05-15/bytedance-stake-anchors-3-billion-fund-in-win-for-investor-hsg">Sources: HSG, formerly Sequoia China, has set up a $3B continuation fund anchored by its ByteDance stake, offering entry into the company valued at $370B</a></b></span>&nbsp; &mdash;&nbsp; HSG, the investment firm formerly known as Sequoia Capital China, has closed a $3 billion continuation vehicle anchored by a stake in ByteDance Ltd. &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 OpenAI caught in TanStack npm supply chain chaos after employee devices compromised</title>
+  <link>https://www.theregister.com/security/2026/05/15/openai-caught-in-tanstack-npm-supply-chain-chaos-after-employee-devices-compromised/5241019</link>
+  <pubDate>Fri, 15 May 2026 10:08:07 +0000</pubDate>
+  <source>The Register</source>
+  <description><![CDATA[<b>Why this matters: Supply chain risk — audit third-party dependencies and vendor access.</b><br/>Attackers stole a limited amount of internal credential material after malware hidden in poisoned packages reached two staff machines<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+</item>
+
+<item>
+  <title>🟠 Autonomous systems are finally working. Security is next</title>
+  <link>https://www.csoonline.com/article/4171411/autonomous-systems-are-finally-working-security-is-next.html</link>
+  <pubDate>Fri, 15 May 2026 10:00:00 +0000</pubDate>
+  <source>CSO Online</source>
+  <description><![CDATA[<b>Why this matters: Credential/phishing risk — reinforce MFA and user awareness training.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<p>Waymo recently crossed a major milestone: Over 170 million autonomous miles driven without a single serious crash or injury. For years, autonomous driving was treated as a promise that was always just out of reach — too complex, too risky and not ready for the real world. That argument is no longer credible. Autonomous systems are now outperforming humans in high-speed, high-volume environments. That is not because they are perfect, but because they are faster in the moments that matter.</p>
+
+
+
+<p>This is not an article about autonomous cars. Security is approaching the same transition.</p>
+
+
+
+<h2 class="wp-block-heading"><a></a>The problem was never detection</h2>
+
+
+
+<p>For the last decade, the security industry has focused on detection. The emphasis has been on generating more alerts, improving signal quality and expanding coverage. These efforts have been meaningful, but we are approaching a saturation point. Despite continued progress in detection, defenders are still falling behind while attackers retain the advantage.</p>
+
+
+
+<p>According to<a href="https://www.crowdstrike.com/en-us/global-threat-report/"> CrowdStrike</a>, lateral movement can now occur in an average of just 29 minutes. Within that window, the difference between understanding and uncertainty determines whether an incident is contained or escalates. Visibility remains important, but the ability to move through the OODA loop — understand, orient, decide and act — within an increasingly compressed time window matters more.</p>
+
+
+
+<p>Security teams are not constrained by a lack of alerts or data; they are constrained by a lack of answers. Each alert initiates a process that requires analysts to pivot across tools, assemble fragmented context, reconstruct events and determine impact. This process is fundamentally time-bound and in most environments, it still takes hours.</p>
+
+
+
+<p>Attackers operate on a much shorter timeline, creating a structural asymmetry that human-driven investigation cannot match. The industry has not failed to improve detection; it has misidentified the primary constraint. Investigation speed is the limiting factor.</p>
+
+
+
+<h2 class="wp-block-heading"><a></a>Security still runs at human speed</h2>
+
+
+
+<p>Despite advances in infrastructure, cloud and AI, the underlying workflow of security operations has not fundamentally changed. At its core, security still operates as a human-driven process: Alerts are generated, analysts investigate, context is assembled manually and decisions are made under pressure. This model was sufficient when environments were smaller and attacker velocity was lower, but it breaks down under modern conditions.</p>
+
+
+
+<p>Today’s environments generate a volume and diversity of signals that exceed what manual investigation can process within the time window that matters. The limitation is not access to data, but the ability to assemble and interpret it fast enough to act. As a result, teams struggle to move from observation to orientation in time, delaying downstream decisions and response.</p>
+
+
+
+<h2 class="wp-block-heading"><a></a>Compressing observation and orientation</h2>
+
+
+
+<p>In a traditional workflow, an alert indicating unusual access to a production workload initiates a sequence of actions — analysts query logs, correlate identity activity, review system changes and attempt to build a timeline. Each step introduces latency, slowing the transition from observation to orientation.</p>
+
+
+
+<p>In modern systems, investigation can begin with a structured understanding of the event itself. The investigative sequence is absorbed into the system. By the time the alert is presented, the relevant context has already been assembled: The identity involved, the access path, the changes made and whether the behavior aligns with established patterns or represents risk.</p>
+
+
+
+<p>The role of the analyst shifts accordingly, too. Instead of reconstructing events, the analyst evaluates a completed analysis and determines the appropriate response. This compresses the first half of the OODA loop, allowing teams to move from observation to decision with significantly less friction. It reduces latency, improves consistency and aligns the speed of decision-making with the speed of the environment.</p>
+
+
+
+<h2 class="wp-block-heading"><a></a>From decision to action, without delay</h2>
+
+
+
+<p>Accelerating investigation addresses only part of the problem. The remaining challenge is completing the OODA loop. Even when teams reach a decision quickly, action is often delayed by manual processes. Remediation requires coordination across systems, validation of impact and careful execution. In practice, this introduces latency between decision and response.</p>
+
+
+
+<p>Agent-based remediation removes this delay. Systems can act directly, with human oversight. Once a decision threshold is met, agents can isolate workloads, revoke credentials, block access paths or enforce policy in real time with the oversight of a human to ensure control. These actions are informed by the same contextual understanding generated during investigation, reducing the risk of overreaction while increasing speed.</p>
+
+
+
+<p>This closes the second half of the OODA loop, where decisions are not only made faster, they are executed faster and more consistently.</p>
+
+
+
+<h2 class="wp-block-heading"><a></a>AI compresses the timeline further</h2>
+
+
+
+<p>As organizations adopt AI, the same constraint becomes more severe. These risks do not introduce a new problem; they accelerate it. AI-driven applications operate at interaction speed, not infrastructure speed. The environment is no longer just workloads, but interactions between users, models and data.</p>
+
+
+
+<p>Risks such as prompt injection, model misuse and unintended data exposure unfold quickly and across distributed surfaces. Those risks require rapid understanding and response, often within a single interaction. Managing them requires the same capability: The ability to execute the OODA loop faster than the threat.</p>
+
+
+
+<p>With AI adoption, security systems must observe interactions, orient on intent and context, decide on risk and act in real time. Traditional approaches such as periodic testing or surface-level behavioral observation are insufficient. Continuous validation models are emerging, where security systems actively probe for weaknesses and verify defenses on an ongoing basis.</p>
+
+
+
+<h2 class="wp-block-heading"><a></a>Speed becomes the advantage</h2>
+
+
+
+<p>Autonomous driving did not succeed because it achieved perfection — it succeeded because it demonstrated better outcomes in critical scenarios. Waymo did not win by seeing more data or generating better alerts; it won by collapsing the time between perception, decision and action faster than a human driver could.<br /><br />Security is undergoing the same transition. In environments where attackers operate on minute-scale timelines, workflows that depend on human-speed completion of the OODA loop are structurally disadvantaged.  The future of security will not be defined by better visibility or more precise detection. It will be defined by systems that can observe, orient, act and decide — end-to-end — faster than attackers can exploit the environment.</p>
+
+
+
+<p><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><strong><a href="https://www.csoonline.com/expert-contributor-network/">Want to join?</a></strong></p>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 What is CMMI? A model to optimize development processes</title>
+  <link>https://www.cio.com/article/274530/cmmi-explained.html</link>
+  <pubDate>Fri, 15 May 2026 10:00:00 +0000</pubDate>
+  <source>CIO.com</source>
+  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<h2 class="wp-block-heading" id="what-is-cmmi">What is CMMI?</h2>
+
+
+
+<p>The Capability Maturity Model Integration (CMMI), a process and behavioral model, was developed by the Software Engineering Institute at Carnegie Mellon University as a process improvement tool for projects, divisions, or organizations. The DoD and US government helped develop the CMMI, which is a common requirement for DoD and US government software development contracts. The CMMI is currently administered by the CMMI Institute, purchased by the ISACA in 2016.</p>
+
+
+
+<h2 class="wp-block-heading" id="cmmi-model">CMMI model</h2>
+
+
+
+<p>The CMMI is designed to help improve performance by providing businesses with all they need to consistently develop better products and services. But the CMMI is a behavioral model as well as a process model. Businesses can use the CMMI to tackle the logistics of improving performance by developing measurable benchmarks, but it can also help create a structure to encourage productive and efficient behavior throughout the organization.</p>
+
+
+
+<h2 class="wp-block-heading" id="cmmi-ai-maturity-aim-framework">CMMI AI Maturity (AIM) framework</h2>
+
+
+
+<p>At the forthcoming Capability Creates 2026 conference in Washington, DC, in June, the ISACA will unveil the CMMI AI Maturity (AIM) framework, where attendees will be the first to hear insights from pilot participants of it. The new framework is designed to govern AI at scale amid the rapid growth of AI, addressing risk, compliance, performance, consistency, and trust around AI usage, development, acquisition, and integration. It’ll also introduce updated CMMI appraisal methods for organizations to assess AI maturity across domains, analyze AI performance, and develop best practices around integrating AI into current systems.</p>
+
+
+
+<p>The AIM initiative, developed by the CMMI AI Working Group, consists of 25 industry experts sponsored by IBM Global and KPMG, who’ve focused on researching and establishing best practices around AI, ML, automation, ethics, DevSecOps, testing, threat analysis, and advanced manufacturing. It also builds on the existing CMMI Performance Solutions ecosystem, helping businesses address the growing use of AI in enterprise systems, services, and products, especially in government settings. With the framework, IT leaders can ensure AI initiatives are implemented with consistency and transparency, with a focus on AI ethics.</p>
+
+
+
+<p>All 31 practice areas in the CMMI now include AI-related content with a total of 157 AI context-specific additions, allowing for more consistency around AI considerations across organizations. The model now features AI usage scenarios to help organizations understand how it can apply internally, from using AI to assist with human activities, to fully autonomous AI systems that work independently. The new framework will apply to organizations either building internal AI solutions or planning to acquire and integrate AI into current systems and services.</p>
+
+
+
+<p>Two new courses will be added to the established certification pathways to better integrate AI training, and existing CMMI certification holders won’t be impacted unless they choose to extend their certifications to include CMMI AIM.</p>
+
+
+
+<p>The new courses include:</p>
+
+
+
+<ul class="wp-block-list">
+<li>Building AI Maturity (BAIM): A hybrid online and in-person course that focuses on AI concepts, data quality, responsible and ethical AI, regulations, and managing AI initiatives.</li>
+
+
+
+<li>Appraising AI Maturity (AAIM): An advanced course for certified CMMI lead appraisers designed to cover topics including scoping, appraisal planning, performance analysis, and sustaining AI-driven improvement.</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading" id="cmmi-maturity-levels">CMMI maturity levels</h2>
+
+
+
+<p>The CMMI model breaks down organizational maturity into five levels. For businesses that embrace CMMI, the goal is to raise the organization up to Level 5, the optimizing maturity level. Once businesses reach this level, they aren’t done with the CMMI. Instead, they focus on maintenance and regular improvements.</p>
+
+
+
+<p>CMMI’s maturity levels:</p>
+
+
+
+<ul class="wp-block-list">
+<li><strong>Maturity level 0 – Incomplete:</strong> Work may or may not get completed. Goals haven’t been established and processes are only partly formed or don’t meet organizational needs.</li>
+
+
+
+<li><strong>Maturity level 1 – Initial:</strong> Processes are viewed as unpredictable and reactive. Work gets completed but it’s often delayed and over budget. This is the worst stage a business can find itself in — an unpredictable environment that increases risk and inefficiency.</li>
+
+
+
+<li><strong>Maturity level 2 – Managed:</strong> There’s a level of project management achieved. Projects are planned, performed, measured and controlled, but there are still many issues to address.</li>
+
+
+
+<li><strong>Maturity level 3 – Defined:</strong> Organizations are more proactive than reactive. There’s a set of organization-wide standards to provide guidance across projects, programs, and portfolios. Businesses understand their shortcomings, how to address them, and what the goal is for improvement.</li>
+
+
+
+<li><strong>Maturity level 4 – Quantitatively managed:</strong> This stage is more measured and controlled. The organization is working off quantitative data to determine predictable processes that align with stakeholder needs. The business is ahead of risks, with more data-driven insight into process deficiencies.</li>
+
+
+
+<li><strong>Maturity level 5 – Optimizing:</strong> Here, an organization’s processes are stable and flexible, and it’ll be in a constant state of improving and responding to changes or other opportunities. The organization is stable, which allows for more agility and innovation in a predictable environment.</li>
+</ul>
+
+
+
+<p>Once organizations hit levels 4 and 5, they’re considered high maturity, where they’re continuously evolving, adapting and growing to meet the needs of stakeholders and customers. That’s the goal of the CMMI, to create reliable environments, where products, services, and departments are proactive, efficient, and productive.</p>
+
+
+
+<p>Go <a href="https://www.cio.com/article/222225/cmmi-maturity-levels-a-guide-to-optimizing-development-processes.html">here</a> for a deeper look.</p>
+
+
+
+<h2 class="wp-block-heading" id="cmmi-capability-levels">CMMI capability levels</h2>
+
+
+
+<p>The CMMI also has capability levels used to appraise an organization’s performance and process improvement as it applies to an individual practice area outlined in the CMMI model. It can help bring structure to process and performance improvement, and each level builds on the last, similar to the maturity levels to appraise an organization.</p>
+
+
+
+<p>The capability levels are:</p>
+
+
+
+<ul class="wp-block-list">
+<li><strong>Capability level 0 – Incomplete:</strong> Inconsistent performance and an incomplete approach to meeting the intent of the practice area.</li>
+
+
+
+<li><strong>Capability level 1 – Initial:</strong> Organizations start to address performance issues in a specific practice area, but there’s not a complete set of practices in place.</li>
+
+
+
+<li><strong>Capability level 2 – Managed:</strong> Progress is starting to show and there’s a full set of practices in place that specifically addresses improvement in the practice area.</li>
+
+
+
+<li><strong>Capability level 3 – Defined:</strong> A focus on achieving project and organizational performance objectives, and clear organizational standards in place to address projects in that practice area.</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading" id="updated-cmmi-v3-0">Updated CMMI V3.0</h2>
+
+
+
+<p>In 2023, ISACA released the most recent version of the CMMI, Version 3.0, which focuses more heavily on performance needs and how they impact the business. There’s information on how to establish performance goals, and then track those goals to make sure they’re achieved at all levels of business maturity.</p>
+
+
+
+<p>Version 3.0 also integrates better with agile and Scrum processes, with a focus on safety and security. If you already have an agile practice in place, the CMMI V3.0 will help you work around or improve established processes that already work for your business. It also aims to lower the overall cost of appraisals, shorten the time it takes to appraise an organization, and cut back on technical knowledge, so it’s easier for those outside of the tech industry to understand it.</p>
+
+
+
+<p>The ISACA and CMMI Institute also included more information on how to demonstrate ROI, so leaders can get other executives on board. Performance benchmarks and goals outlined in the CMMI can help businesses ensure all projects and processes are cost-effective or profitable. The latest version is also easier to deploy across an organization with updated, user-friendly, and customizable online platforms and tools that provide guidance to adopt CMMI or transition to V3.0 from earlier versions. It’s also available in several translated languages.</p>
+
+
+
+<h2 class="wp-block-heading" id="cmmi-certifications">CMMI certifications</h2>
+
+
+
+<p>CMMI certifications are offered directly through the CMMI Institute, which certifies individuals, appraisers, instructors, and practitioners. The CMMI Institute offers the following certifications:</p>
+
+
+
+<ul class="wp-block-list">
+<li>The CMMI Associate Certification demonstrates your commitment and abilities when it comes to capability and performance improvement. It validates that you have the skills and knowledge to connect the CMMI model to business value, and to participate as an appraisal team member.</li>
+
+
+
+<li>The CMMI Certified Practitioner certification requires completion of the Building Organizational Capability training course, validating your commitment to performance improvement and ability to take on more responsibility with performance management.</li>
+
+
+
+<li>The next level of certification is the CMMI Professional certification, which demonstrates your ability to apply the CMMI model in an organization structure through road maps for performance, team coaching, organizational change management, and fostering a culture of improvement.</li>
+
+
+
+<li><strong>C</strong>ertified CMMI Lead Appraisers are qualified to appraise organizations to determine their capability or maturity level as outlined in the CMMI model. Applications are reviewed by the ISACA appraiser application review committee, which evaluates your qualifications for the certification.</li>
+
+
+
+<li>The Certified CMMI Instructor certification enables you to lead instructional courses on CMMI. You’ll need a sponsoring organization that’s also an ISACA partner and licensed for use of the CMMI product suite to qualify for the exam.</li>
+</ul>
+
+
+
+<p>For more on CMMI certifications, click <a href="https://www.cio.com/article/222324/cmmi-certifications-guide.html">here</a>.</p>
+
+
+
+<h2 class="wp-block-heading" id="cmmi-tools">CMMI tools</h2>
+
+
+
+<p>The CMMI Institute authorizes third-party organizations to sell CMMI tools and services. The list of approved vendors is extensive, and you can <a href="https://partners.cmmiinstitute.com/find-partner-organization/" rel="nofollow" target="_blank">search by product, location, and language</a> on the CMMI Institute website. </p>
+
+
+
+<p>The type of CMMI tools that work best for your organization depends on your business’s needs. Following the CMMI, you’ll identify the best ones during Maturity Level 2 or 3. At this point, your CMMI consultant will offer recommendations or help you design customized tools based on extensive research. The most common category you’ll need to consider include:</p>
+
+
+
+<ul class="wp-block-list">
+<li>Project and document management</li>
+
+
+
+<li>Bug tracker</li>
+
+
+
+<li>Estimation</li>
+
+
+
+<li>Requirement and design management</li>
+
+
+
+<li>Decision and analysis tools</li>
+
+
+
+<li>Metrics tools</li>
+
+
+
+<li>Integration application</li>
+</ul>
+
+
+
+<p></p>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 The biggest mistakes CIOs make in the boardroom — and how to avoid them</title>
+  <link>https://www.cio.com/article/4168816/the-biggest-mistakes-cios-make-in-the-boardroom-and-how-to-avoid-them.html</link>
+  <pubDate>Fri, 15 May 2026 10:00:00 +0000</pubDate>
+  <source>CIO.com</source>
+  <description><![CDATA[<b>Why this matters: Could impact sign-ins/MFA/Conditional Access — watch for login issues.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<p>Julie Averill didn’t need a second board meeting to understand what she got wrong in her first. She had just stepped into the CIO role at REI and did what most leaders would do: she prepared deeply, gathering inputs from her team, building a detailed view of the roadmap, and then walked into the boardroom ready to prove she had command of the function.</p>
+
+
+
+<p>She told them everything, but then they started asking questions. “The first was what could I do if I had 20% more capacity than you have right now,” she says, admitting it wasn’t something she prepared for. “I came in so focused on the details that when they asked me questions that weren’t something I had perspective on, I didn’t handle it right.”</p>
+
+
+
+<p>The a-ha moment came quickly. “That was my lesson,” Averill adds. “It really is about a conversation.”</p>
+
+
+
+<p>That simple but often missed idea comes up repeatedly when board members and experienced CIOs talk about what separates <a href="https://www.cio.com/article/4149185/the-inside-track-on-how-boards-evaluate-their-cios.html?utm=hybrid_search">effective boardroom interactions</a> from ineffective ones.</p>
+
+
+
+<p>“The first thing we do wrong is go in thinking we’re there to present,” says Alizabeth Calder, a former C-level executive who currently serves as adjunct research advisor with IDC’s IT Executive Programs. “We’re not. We have to be there to facilitate a dialogue.”</p>
+
+
+
+<h2 class="wp-block-heading" id="why-cios-prepare-for-the-wrong-meeting">Why CIOs prepare for the wrong meeting</h2>
+
+
+
+<p>If facilitating a dialogue is the goal, then most CIOs prepare for the wrong meeting.</p>
+
+
+
+<p>“The number one thing people have to understand is the responsibility of a board member,” says Eash Sundaram, former JetBlue CIO who now serves on corporate boards. And that responsibility isn’t to validate technical decisions or review project execution, but focus on how management is thinking, and how decisions connect to strategy, risk, and outcomes.</p>
+
+
+
+<p>Calder sees a consistent gap between what boards look for and how CIOs show up. “They don’t even know the right questions at that level,” she says. “As a result, they prepare for the wrong questions.”</p>
+
+
+
+<p>So instead of anticipating discussion around risk, investment, and business impact, CIOs often prepare to explain what they’ve built and how they’re delivering it. The result is a mismatch from the start.</p>
+
+
+
+<p>“As a technologist, you can easily dunk their head underwater in the details,” Averill says.</p>
+
+
+
+<p>That instinct is understandable, but it’s rarely what the board is looking for. “Solving technical problems, implementing solutions — that’s not what you need to be there for,” Calder adds.</p>
+
+
+
+<h2 class="wp-block-heading" id="from-presentation-to-dialogue">From presentation to dialogue</h2>
+
+
+
+<p>Even when CIOs understand the need for a more strategic conversation, the board itself can pull them back into familiar habits. “In the best-run meetings, you just have a conversation,” Sundaram says. But many CIOs still approach the session as a presentation, something to get through rather than something to engage in.</p>
+
+
+
+<p>Averill says that shift, from presenting to engaging, doesn’t always come naturally, especially early on. “You have to know that you know your area better than anyone else,” she says. “What you don’t know is their perspectives.”</p>
+
+
+
+<p>That difference matters. Board members aren’t trying to replicate the CIO’s expertise. They’re trying to understand how it’ll <a href="https://www.cio.com/article/4166168/cios-rethink-its-operating-model-to-deliver-better-business-outcomes.html?utm=hybrid_search">drive business outcomes</a>. “They’re not out to get you,” Averill says. “They really are there to learn, and they’re curious.”</p>
+
+
+
+<p>That curiosity often shows up in the form of questions that are broader or different than they initially sound. “Listen for the question,” Averill continues. “Don’t be quick to respond without understanding the question.”</p>
+
+
+
+<p>It’s a subtle shift, but one that can change the direction of the conversation. Answering too quickly or too literally can pull the discussion back into technical detail, even when the intent was to stay at the board’s altitude.</p>
+
+
+
+<h2 class="wp-block-heading" id="operating-at-the-boards-level">Operating at the board’s level</h2>
+
+
+
+<p>Slight derailment of a discussion becomes most visible when CIOs approach the boardroom as an extension of their day-to-day operating environment. “Your board isn’t your project management governance organization,” Sundaram says.</p>
+
+
+
+<p>Still, many CIOs default to that model, offering updates, surfacing issues, and walking through risks as if they were speaking to an internal steering committee. In some cases, that can create unintended consequences. “You can’t go into a meeting with a lot of landmines,” Sundaram says. “If you do, everyone’s going to try to solve your problems.”</p>
+
+
+
+<p>Once an issue is introduced, the conversation can quickly expand, drawing in other executives and shifting focus away from the intended discussion. There’s a similar risk when CIOs move too quickly to quantify outcomes that extend beyond their control. “Don’t promise something that’s not your responsibility,” Sundaram says. Instead, he points to a different approach, one that shows up in more effective boardroom interactions. “The best presentations I’ve seen are when someone else speaks to the benefit,” he says.</p>
+
+
+
+<p>That shift, from owning the narrative to enabling it, keeps the conversation grounded in business outcomes rather than technical inputs.</p>
+
+
+
+<p>Eventually, CIOs who spend more time in the boardroom begin to adjust — not just in what they say, but in how they engage. They learn how to read the room, anticipate where questions come from, and how to stay at the level the board expects without losing credibility.</p>
+
+
+
+<p>They also start to see the interaction differently. “Most boards are scared right now,” Sundaram says, given ongoing economic uncertainty and the impact of AI. “They don’t know what’s going to happen.”</p>
+
+
+
+<p>That uncertainty, he adds, is part of what creates the opportunity for CIOs to play a more central role. “The board has to learn from the CIO,” Sundaram says. </p>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Bill Ackman says his fund has taken a new stake in Microsoft after the company&#x27;s recent share price decline; Ackman says investors have underestimated Microsoft (Amy Thomson/Bloomberg)</title>
+  <link>https://www.techmeme.com/260515/p4#a260515p4</link>
+  <pubDate>Fri, 15 May 2026 09:45:02 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://www.bloomberg.com/news/articles/2026-05-15/pershing-square-has-taken-new-stake-in-microsoft-ackman-says"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260515/i4.jpg" vspace="4" /></a>
+<p><a href="https://www.techmeme.com/260515/p4#a260515p4" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Amy Thomson / <a href="https://www.bloomberg.com/">Bloomberg</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/articles/2026-05-15/pershing-square-has-taken-new-stake-in-microsoft-ackman-says">Bill Ackman says his fund has taken a new stake in Microsoft after the company's recent share price decline; Ackman says investors have underestimated Microsoft</a></b></span>&nbsp; &mdash;&nbsp;   Bill Ackman said Pershing Square has built a new stake in Microsoft Corp., taking advantage of a decline in the company's share price &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+</item>
+
 <item>
   <title>🔴 EU’s Cyber Resiliency Act will put IT leaders to the test</title>
   <link>https://www.csoonline.com/article/4168696/eus-cyber-resiliency-act-will-put-it-leaders-to-the-test.html</link>
@@ -135,7 +746,7 @@
 
 
 <p>Savvy CIOs can also use this as an opportunity to get the resources to deliver improvements. “Most CIOs would want to do these things anyway but just don’t have the bandwidth,” says Venn. “So this is probably a tool for them to go to the board and say they need the budget and the time.”</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
 </item>
 
 <item>
@@ -295,7 +906,7 @@
 
 
 <p><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><strong><a href="https://www.csoonline.com/expert-contributor-network/">Want to join?</a></strong></p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
 </item>
 
 <item>
@@ -484,7 +1095,7 @@
 
 
 <p><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><strong><a href="https://www.cio.com/expert-contributor-network/">Want to join?</a></strong></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
 </item>
 
 <item>
@@ -493,7 +1104,7 @@
   <pubDate>Fri, 15 May 2026 07:25:15 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><p>The refresh resolves critical-severity use-after-free and other types of bugs in various browser components.</p>
-<p>The post <a href="https://www.securityweek.com/chrome-148-update-patches-critical-vulnerabilities/">Chrome 148 Update Patches Critical Vulnerabilities</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/chrome-148-update-patches-critical-vulnerabilities/">Chrome 148 Update Patches Critical Vulnerabilities</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
 </item>
 
 <item>
@@ -598,7 +1209,7 @@
 
 
 <p>Gowans acknowledged the work behind achieving those results. “It’s hard,” he admitted. “But it’s not <em>that</em> hard. You don’t get to be 170 years old standing still.”</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -715,7 +1326,7 @@
 
 
 <p>아벨랑주는 “이 접근 방식이 제대로 작동하면 각 엔지니어의 가치가 높아지면서 조직은 더 빠르게 인재를 확보할 수 있다”라며 “반대로 그렇지 않으면 형식적인 도입과 냉소적인 조직 문화가 자리 잡게 될 가능성이 크다”고 말했다.<br />dl-ciokorea@foundryco.com</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
 </item>
 
 <item>
@@ -723,7 +1334,7 @@
   <link>https://www.theregister.com/systems/2026/05/15/possible-samsung-strike-puts-even-more-pressure-on-memory-pricing/5240874</link>
   <pubDate>Fri, 15 May 2026 02:43:37 +0000</pubDate>
   <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Budget/licensing impact — verify renewal terms and forecast cost changes.</b><br/>As a senior policymaker ponders whether all South Koreans should enjoy an ‘AI dividend’<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Budget/licensing impact — verify renewal terms and forecast cost changes.</b><br/>As a senior policymaker ponders whether all South Koreans should enjoy an ‘AI dividend’<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
 </item>
 
 <item>
@@ -731,7 +1342,7 @@
   <link>https://www.zdnet.com/article/i-ditched-laptop-for-xr-headset-tablet-phone-what-i-learned/</link>
   <pubDate>Fri, 15 May 2026 02:30:42 +0000</pubDate>
   <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/>From XR glasses to headsets to tablets, here's how various work systems fared over 30 days.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/>From XR glasses to headsets to tablets, here's how various work systems fared over 30 days.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
 </item>
 
 <item>
@@ -741,7 +1352,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.anthropic.com/research/2028-ai-leadership"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260514/i44.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260514/p44#a260514p44" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="https://www.anthropic.com/">Anthropic</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.anthropic.com/research/2028-ai-leadership">In a policy paper, Anthropic urges the US and allies to enforce export controls, curb distillation attacks, and export US AI to hold the lead over China by 2028</a></b></span>&nbsp; &mdash;&nbsp; We're releasing a new paper that explains our views on the competition on AI between the US and China.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.anthropic.com/research/2028-ai-leadership">In a policy paper, Anthropic urges the US and allies to enforce export controls, curb distillation attacks, and export US AI to hold the lead over China by 2028</a></b></span>&nbsp; &mdash;&nbsp; We're releasing a new paper that explains our views on the competition on AI between the US and China.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
 </item>
 
 <item>
@@ -749,7 +1360,7 @@
   <link>https://www.zdnet.com/article/cable-cords-and-adapters-i-never-throw-away/</link>
   <pubDate>Fri, 15 May 2026 02:00:42 +0000</pubDate>
   <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/>Don't let your spring cleaning or desire for Feng Shui enlightenment make you toss the important stuff. This gear will come in handy one day.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/>Don't let your spring cleaning or desire for Feng Shui enlightenment make you toss the important stuff. This gear will come in handy one day.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
 </item>
 
 <item>
@@ -759,37 +1370,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.wsj.com/tech/ai/anthropic-mythos-apple-macos-bug-339da403?st=BwCjXb&amp;reflink=desktopwebshare_permalink"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260514/i43.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260514/p43#a260514p43" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Robert McMillan / <a href="https://www.wsj.com/">Wall Street Journal</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.wsj.com/tech/ai/anthropic-mythos-apple-macos-bug-339da403?st=BwCjXb&amp;reflink=desktopwebshare_permalink">Security research firm Calif says it used Mythos to help build a macOS kernel memory corruption exploit circumventing Apple's Memory Integrity Enforcement tech</a></b></span>&nbsp; &mdash;&nbsp; During tests in April, researchers found software issues in MacOS, one of the world's toughest targets for hackers</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 8h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Sources: Anthropic has agreed to the terms of a $30B fundraising at a $900B valuation, with Sequoia, Dragoneer, Greenoaks, and Altimeter co-leading the round (George Hammond/Financial Times)</title>
-  <link>https://www.techmeme.com/260514/p42#a260514p42</link>
-  <pubDate>Fri, 15 May 2026 01:00:54 +0000</pubDate>
-  <source>Techmeme</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.ft.com/content/9deae3c6-716d-4f4d-8b09-434d8519f847"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260514/i42.jpg" vspace="4" /></a>
-<p><a href="https://www.techmeme.com/260514/p42#a260514p42" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> George Hammond / <a href="https://www.ft.com/">Financial Times</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.ft.com/content/9deae3c6-716d-4f4d-8b09-434d8519f847">Sources: Anthropic has agreed to the terms of a $30B fundraising at a $900B valuation, with Sequoia, Dragoneer, Greenoaks, and Altimeter co-leading the round</a></b></span>&nbsp; &mdash;&nbsp; AI lab has tapped Dragoneer, Greenoaks, Sequoia Capital and Altimeter Capital to lead new round</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 8h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Sources: xAI co-founder Igor Babuschkin plans to raise up to $1B at an up to $5B valuation for a new AI research startup, with General Catalyst possibly leading (Forbes)</title>
-  <link>https://www.techmeme.com/260514/p41#a260514p41</link>
-  <pubDate>Fri, 15 May 2026 00:55:01 +0000</pubDate>
-  <source>Techmeme</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.forbes.com/sites/rashishrivastava/2026/05/14/xai-cofounder-igor-babuschkin-in-talks-to-raise-up-to-1-billion-for-a-new-ai-startup/"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260514/i41.jpg" vspace="4" /></a>
-<p><a href="https://www.techmeme.com/260514/p41#a260514p41" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="http://www.forbes.com/">Forbes</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.forbes.com/sites/rashishrivastava/2026/05/14/xai-cofounder-igor-babuschkin-in-talks-to-raise-up-to-1-billion-for-a-new-ai-startup/">Sources: xAI co-founder Igor Babuschkin plans to raise up to $1B at an up to $5B valuation for a new AI research startup, with General Catalyst possibly leading</a></b></span>&nbsp; &mdash;&nbsp; He's the latest superstar AI researcher to take advantage of the wave of investment dollars going into so-called &lsquo;neolabs,&rsquo; which have no product or revenue.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 8h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Gemini reports Q1 revenue up 42% YoY to $50.3M, vs. $47.9M est., announces a $100M capital injection from Winklevoss Capital Fund; GEMI jumps 22%+ after hours (Tanaya Macheel/CNBC)</title>
-  <link>https://www.techmeme.com/260514/p38#a260514p38</link>
-  <pubDate>Thu, 14 May 2026 23:10:01 +0000</pubDate>
-  <source>Techmeme</source>
-  <description><![CDATA[<b>Why this matters: Could impact email access or mail flow — monitor delivery and client issues.</b><br/><a href="https://www.cnbc.com/2026/05/14/gemini-surges-after-winklevoss-capital-invests-100-million-in-the-crypto-exchange.html"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260514/i38.jpg" vspace="4" /></a>
-<p><a href="https://www.techmeme.com/260514/p38#a260514p38" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Tanaya Macheel / <a href="http://www.cnbc.com/">CNBC</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.cnbc.com/2026/05/14/gemini-surges-after-winklevoss-capital-invests-100-million-in-the-crypto-exchange.html">Gemini reports Q1 revenue up 42% YoY to $50.3M, vs. $47.9M est., announces a $100M capital injection from Winklevoss Capital Fund; GEMI jumps 22%+ after hours</a></b></span>&nbsp; &mdash;&nbsp; Gemini Space Station, the crypto exchange founded and led by the Winklevoss brothers, saw shares surge in extended trading &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 10h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.wsj.com/tech/ai/anthropic-mythos-apple-macos-bug-339da403?st=BwCjXb&amp;reflink=desktopwebshare_permalink">Security research firm Calif says it used Mythos to help build a macOS kernel memory corruption exploit circumventing Apple's Memory Integrity Enforcement tech</a></b></span>&nbsp; &mdash;&nbsp; During tests in April, researchers found software issues in MacOS, one of the world's toughest targets for hackers</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 10h ago]]></description>
 </item>
 
 <item>
@@ -854,7 +1435,7 @@
 
 
 <p>The other three vulnerabilities disclosed by DepthFirst and patched in the new Nginx releases can also lead to denial of service, memory leaks, or data modification. They are tracked as <a href="https://my.f5.com/manage/s/article/K000161027" rel="noreferrer noopener" target="_blank">CVE-2026-42946</a> (CVSS 8.3 – high severity), <a href="https://my.f5.com/manage/s/article/K000161028" rel="noreferrer noopener" target="_blank">CVE-2026-42934</a> (CVSS 6.3 – medium) and <a href="https://my.f5.com/manage/s/article/K000161021" rel="noreferrer noopener" target="_blank">CVE-2026-40701</a> (CVSS 6.3 – medium).</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 10h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 12h ago]]></description>
 </item>
 
 <item>
@@ -862,7 +1443,7 @@
   <link>https://www.theregister.com/ai-ml/2026/05/15/cerebras-wafer-scale-ai-bet-delivers-blockbuster-ipo/5240821</link>
   <pubDate>Thu, 14 May 2026 23:02:50 +0000</pubDate>
   <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Here's a look at the tech powering the first big IPO of 2026<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 10h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Here's a look at the tech powering the first big IPO of 2026<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 12h ago]]></description>
 </item>
 
 <item>
@@ -870,7 +1451,7 @@
   <link>https://www.theregister.com/ai-ml/2026/05/14/ontario-auditors-find-doctors-ai-note-takers-routinely-blow-basic-facts/5240771</link>
   <pubDate>Thu, 14 May 2026 20:50:05 +0000</pubDate>
   <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>60% of evaluated AI Scribe systems mixed up prescribed drugs in patient notes, auditors say<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 12h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>60% of evaluated AI Scribe systems mixed up prescribed drugs in patient notes, auditors say<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 15h ago]]></description>
 </item>
 
 <item>
@@ -939,15 +1520,7 @@
 
 
 <p>Beggs also said admins may wish to increase monitoring of privileged processes (PAM, systemd, cron) and look for unexpected restarts, unexpected config reloads, and sudden privilege escalations.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 UK begins antitrust inquiry into Microsoft&#x27;s business software ecosystem</title>
-  <link>https://www.theregister.com/oses/2026/05/14/uk-begins-antitrust-inquiry-into-microsofts-business-software-ecosystem/5240452</link>
-  <pubDate>Thu, 14 May 2026 14:15:00 +0000</pubDate>
-  <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Brit regulator has 'heard' customers can't always 'effectively combine software from Microsoft with that of other providers'<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 19h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 15h ago]]></description>
 </item>
 
 <item>
@@ -956,7 +1529,7 @@
   <pubDate>Thu, 14 May 2026 13:44:46 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: Privilege escalation risk — review local admin exposure and endpoint controls.</b><br/><p>The vulnerability, tracked as CVE-2026-46300, is similar to the recently disclosed exploits named Dirty Frag and Copy Fail.</p>
-<p>The post <a href="https://www.securityweek.com/new-linux-kernel-vulnerability-fragnesia-allows-root-privilege-escalation/">New Linux Kernel Vulnerability Fragnesia Allows Root Privilege Escalation</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 20h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/new-linux-kernel-vulnerability-fragnesia-allows-root-privilege-escalation/">New Linux Kernel Vulnerability Fragnesia Allows Root Privilege Escalation</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 22h ago]]></description>
 </item>
 
 <item>
@@ -965,7 +1538,7 @@
   <pubDate>Thu, 14 May 2026 13:00:00 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><p>Independent benchmarking finds Mythos highly effective for source code audits, reverse engineering, and native-code analysis, though its exploit validation and reasoning capabilities remain inconsistent.</p>
-<p>The post <a href="https://www.securityweek.com/mythos-proves-potent-in-vulnerability-discovery-less-convincing-elsewhere/">Mythos Proves Potent in Vulnerability Discovery, Less Convincing Elsewhere</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 20h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/mythos-proves-potent-in-vulnerability-discovery-less-convincing-elsewhere/">Mythos Proves Potent in Vulnerability Discovery, Less Convincing Elsewhere</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 22h ago]]></description>
 </item>
 
 <item>
@@ -1098,7 +1671,7 @@
 
 
 <p>“This campaign likely represents only the earliest use of KrakVM’s obfuscation capabilities,” the researchers wrote. “We anticipate more complex implementations as its adoption grows.”</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 20h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 22h ago]]></description>
 </item>
 
 <item>
@@ -1107,7 +1680,7 @@
   <pubDate>Thu, 14 May 2026 12:55:38 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: Vendor risk signal — evaluate roadmap and support stability.</b><br/><p>The acquisition enables Akamai to expand its Zero Trust portfolio to add protection directly into the browser.</p>
-<p>The post <a href="https://www.securityweek.com/akamai-to-acquire-ai-and-browser-security-firm-layerx-for-205-million/">Akamai to Acquire AI and Browser Security Firm LayerX for $205 Million</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 20h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/akamai-to-acquire-ai-and-browser-security-firm-layerx-for-205-million/">Akamai to Acquire AI and Browser Security Firm LayerX for $205 Million</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 22h ago]]></description>
 </item>
 
 <item>
@@ -1115,7 +1688,7 @@
   <link>https://www.zdnet.com/article/third-major-linux-kernel-flaw-in-two-weeks-found-by-ai/</link>
   <pubDate>Thu, 14 May 2026 12:27:00 +0000</pubDate>
   <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/>AI is exposing Linux security holes faster than developers can patch them. Fragnesia is the latest. Here's what we know about it.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 21h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/>AI is exposing Linux security holes faster than developers can patch them. Fragnesia is the latest. Here's what we know about it.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 23h ago]]></description>
 </item>
 
 <item>
@@ -1124,7 +1697,7 @@
   <pubDate>Thu, 14 May 2026 12:11:15 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/><p>Salt Typhoon has hit an energy entity in Azerbaijan. Twill Typhoon has targeted Asian entities with an updated RAT.</p>
-<p>The post <a href="https://www.securityweek.com/chinese-apts-expand-targets-update-backdoors-in-recent-campaigns/">Chinese APTs Expand Targets, Update Backdoors in Recent Campaigns</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 21h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/chinese-apts-expand-targets-update-backdoors-in-recent-campaigns/">Chinese APTs Expand Targets, Update Backdoors in Recent Campaigns</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 23h ago]]></description>
 </item>
 
 <item>
@@ -1257,7 +1830,7 @@
 
 
 <p><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><strong><a href="https://www.cio.com/expert-contributor-network/">Want to join?</a></strong></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 21h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 23h ago]]></description>
 </item>
 
 <item>
@@ -1330,16 +1903,7 @@
 
 
 <p>To support detection efforts, defenders were advised to monitor for requests containing the “CVE-Detector/1.0” user-agent string, along with suspicious requests targeting /agents, /chat, /api/agents, and related MCP endpoints. “Until an upgrade is possible, network-layer monitoring catches this class of traffic cleanly because the bypass leaves no missing-auth signal in the application logs,” the researchers noted.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 22h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 G7 Countries Release AI SBOM Guidance</title>
-  <link>https://www.securityweek.com/g7-countries-release-ai-sbom-guidance/</link>
-  <pubDate>Thu, 14 May 2026 11:15:05 +0000</pubDate>
-  <source>SecurityWeek</source>
-  <description><![CDATA[<b>Why this matters: Supply chain risk — audit third-party dependencies and vendor access.</b><br/><p>The goal of the guidance, which outlines minimum elements, is to help organizations enhance transparency in AI systems and supply chains. </p>
-<p>The post <a href="https://www.securityweek.com/g7-countries-release-ai-sbom-guidance/">G7 Countries Release AI SBOM Guidance</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 22h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
@@ -1560,16 +2124,7 @@
 
 
 <p><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><strong><a href="https://www.cio.com/expert-contributor-network/">Want to join?</a></strong></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 22h ago]]></description>
-</item>
-
-<item>
-  <title>🟠 F5 Patches Over 50 Vulnerabilities</title>
-  <link>https://www.securityweek.com/f5-patches-over-50-vulnerabilities/</link>
-  <pubDate>Thu, 14 May 2026 10:47:58 +0000</pubDate>
-  <source>SecurityWeek</source>
-  <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><p>The company’s latest quarterly advisory describes high and medium-severity issues in BIG-IP, BIG-IQ, and NGINX.</p>
-<p>The post <a href="https://www.securityweek.com/f5-patches-over-50-vulnerabilities/">F5 Patches Over 50 Vulnerabilities</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 22h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
@@ -1577,7 +2132,7 @@
   <link>https://www.theregister.com/security/2026/05/14/dirty-frag-gets-a-sequel-as-fragnesia-hands-linux-attackers-root-level-access/5240270</link>
   <pubDate>Thu, 14 May 2026 10:01:52 +0000</pubDate>
   <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Privilege escalation risk — review local admin exposure and endpoint controls.</b><br/>Fresh kernel flaw comes with public exploit code and continues ugly run of highly reliable privilege escalation bugs tied to memory and page-cache handling<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 23h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Privilege escalation risk — review local admin exposure and endpoint controls.</b><br/>Fresh kernel flaw comes with public exploit code and continues ugly run of highly reliable privilege escalation bugs tied to memory and page-cache handling<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
@@ -1694,7 +2249,7 @@
 
 
 <p>“While people on social media noted how magnanimous Block was in giving the fired employees an extra week on Slack to say goodbye to their peers, very little was said about how unnecessary the move was, or about how it was done,” he says. “Who at that decision table was talking about the human cost of firing 4,000 people? I don’t think we’re talking enough about the human impact of these decisions as we move into AI adoption.”</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 23h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
@@ -1849,7 +2404,7 @@
 
 
 <p><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><strong><a href="https://www.cio.com/expert-contributor-network/">Want to join?</a></strong></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 23h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
@@ -1982,16 +2537,7 @@
 
 
 <p>Savvy CIOs can also use this as an opportunity to get the resources to deliver improvements. “Most CIOs would want to do these things anyway but just don’t have the bandwidth,” says Venn. “So this is probably a tool for them to go to the board and say they need the budget and the time.”</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 23h ago]]></description>
-</item>
-
-<item>
-  <title>🟠 Hackers Targeted PraisonAI Vulnerability Hours After Disclosure</title>
-  <link>https://www.securityweek.com/hackers-targeted-praisonai-vulnerability-hours-after-disclosure/</link>
-  <pubDate>Thu, 14 May 2026 09:45:53 +0000</pubDate>
-  <source>SecurityWeek</source>
-  <description><![CDATA[<b>Why this matters: Auth bypass — review access controls and check for unauthorized access.</b><br/><p>The first exploitation attempts were observed less than four hours after the authentication bypass was publicly disclosed.</p>
-<p>The post <a href="https://www.securityweek.com/hackers-targeted-praisonai-vulnerability-hours-after-disclosure/">Hackers Targeted PraisonAI Vulnerability Hours After Disclosure</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 23h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
@@ -2500,83 +3046,6 @@
 
 
 <p>Mientras tanto, SAP está replanteándose cómo poner las herramientas de IA en manos de los clientes. Joule Desktop, que se lanza esta semana, permite a los usuarios individuales crear automatizaciones sin pasar por el departamento de TI, una apuesta por que la adopción desde la base avanzará más rápido que los despliegues centralizados.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
-</item>
-
-<item>
-  <title>🔵 AWS, 그래비톤 기반 레드시프트 RG 인스턴스 공개… 분석 비용 절감 겨냥</title>
-  <link>https://www.cio.com/article/4171080/aws-%ea%b7%b8%eb%9e%98%eb%b9%84%ed%86%a4-%ea%b8%b0%eb%b0%98-%eb%a0%88%eb%93%9c%ec%8b%9c%ed%94%84%ed%8a%b8-rg-%ec%9d%b8%ec%8a%a4%ed%84%b4%ec%8a%a4-%ea%b3%b5%ea%b0%9c-%eb%b6%84%ec%84%9d.html</link>
-  <pubDate>Thu, 14 May 2026 02:54:30 +0000</pubDate>
-  <source>CIO.com</source>
-  <description><![CDATA[<b>Why this matters: Budget/licensing impact — verify renewal terms and forecast cost changes.</b><br/><div id="remove_no_follow">
-		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
-					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
-						<div class="article-column__content">
-<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
-
-
-
-<p>아마존웹서비스(Amazon Web Services, AWS)가 데이터 웨어하우스 서비스 아마존 레드시프트(Redshift)에 그래비톤(Graviton) 기반 RG 인스턴스를 새롭게 출시했다. 이번 인스턴스는 기업이 증가하는 데이터 분석 비용과 최신 레이크하우스 아키텍처의 운영 복잡성을 동시에 줄일 수 있도록 지원하는 데 초점을 맞췄다.</p>
-
-
-
-<p>새 인스턴스의 핵심은 통합 데이터 레이크 쿼리 엔진이다. AWS에 따르면 이 엔진은 레드시프트 웨어하우스 데이터와 아마존 S3 데이터 레이크를 하나의 SQL 환경에서 함께 분석할 수 있도록 지원해, 쿼리 성능을 향상시키고 분석 비용을 절감할 수 있다.</p>
-
-
-
-<p>파리크 컨설팅(Pareekh Consulting)의 수석 애널리스트 <a href="https://pareekh.com/about/" rel="nofollow" target="_blank">파리크 자인</a>은 “기존 아마존 레드시프트 RA3 시스템은 레드시프트와 <a href="https://docs.aws.amazon.com/redshift/latest/dg/c-spectrum-overview.html" rel="nofollow" target="_blank">스펙트럼(Spectrum)</a>이라는 두 개의 별도 엔진으로 운영됐다”라며 “레드시프트는 웨어하우스 데이터를 처리하고, 스펙트럼은 S3 데이터 레이크 쿼리를 담당했는데, 두 시스템을 동시에 활용할 경우 AWS가 이를 조율해야 해 구조가 복잡해지고 성능이 저하됐으며, 스펙트럼 스캔 비용도 예측하기 어려웠다”고 설명했다.</p>
-
-
-
-<p>이어 “새로운 RG 인스턴스는 이 두 환경을 레드시프트 내부에서 직접 실행되는 하나의 통합 엔진으로 결합했다”라며 “이에 따라 아이스버그(Iceberg), 파케이(Parquet), S3 데이터 레이크 데이터를 웨어하우스 데이터와 함께 네이티브 방식으로 조회할 수 있고, 데이터 이동을 줄이며 오버헤드를 낮추는 동시에 성능 최적화를 개선했다. 또한 별도의 스펙트럼 스캔 단위 과금도 제거됐다”고 덧붙였다.</p>
-
-
-
-<p>자연은 특히 스펙트럼의 별도 과금 구조가 기업들에게 점점 큰 부담으로 작용하고 있다고 지적했다. AI 워크로드 확산으로 쿼리량이 증가하고 머신 기반 분석이 늘어나면서 데이터 처리 수요가 급증한 가운데, 스캔 기반 요금 체계로 인해 예기치 않은 비용 급등 가능성이 기업들의 불만 요인으로 작용하고 있다는 설명이다.</p>
-
-
-
-<p>자연은 “이번 인스턴스는 데이터브릭스, 스노우플레이크, 구글 클라우드의 빅쿼리(BigQuery), 마이크로소프트(MS)의 마이크로소프트 패브릭(Fabric) 등 경쟁사들이 통합 레이크하우스 플랫폼을 앞세워 운영 복잡성을 줄이려는 흐름에 대응하기 위한 AWS의 전략으로 볼 수 있다”고 말했다.</p>
-
-
-
-<p>이어 “RG 인스턴스는 아마존 레드시프트의 경쟁력을 강화하는 요소이지만, 시장을 뒤흔드는 혁신이라기보다는 방어적인 성격이 강하다”고 평가했다.</p>
-
-
-
-<p>또한 “데이터브릭스는 AI와 데이터 사이언스 역량에 집중하고, 스노우플레이크는 멀티클라우드 단순성, 구글 클라우드는 빅레이크(BigLake)를 통한 AI 네이티브 분석, MS는 패브릭·파워 BI(Power BI)·마이크로소프트 코파일럿(Copilot) 간 긴밀한 통합을 강조하고 있다”라며 “AWS는 아마존 S3의 확장성과 레드시프트 최적화를 기반으로 기업 분석 워크로드를 자사 클라우드 환경에 유지하는 전략을 택하고 있다”고 설명했다.</p>
-
-
-
-<h2 class="wp-block-heading" id="%ea%b8%b0%ec%97%85%ec%9d%b4-%ec%a3%bc%eb%aa%a9%ed%95%b4%ec%95%bc-%ed%95%a0-%ec%a0%90">기업이 주목해야 할 점</h2>
-
-
-
-<p>그레이하운드 리서치(Greyhound Research)의 수석 애널리스트 <a href="https://greyhoundresearch.com/svg/" rel="nofollow" target="_blank">산칫 비르 고기아</a>는 이러한 전략적 차별성이 CIO와 기업 IT 조직이 RG 인스턴스를 평가할 때 반드시 고려해야 할 핵심 요소라고 강조했다.</p>
-
-
-
-<p>고기아는 “모든 워크로드에 최적화된 해법은 아니다”라며 “진짜 적합한 영역은 ‘겹치는 지점’이다. 레드시프트, S3, 오픈 포맷, BI, 반복 분석, 비용 압박, AI 기반 쿼리가 동시에 맞물리는 구간에서 RG 인스턴스가 실질적으로 마찰을 줄일 수 있다”고 설명했다.</p>
-
-
-
-<p>이어 “CIO는 외부 스키마를 전수 조사하고, 스캔량이 많고 빈도가 높은 데이터 레이크 쿼리를 식별해야 한다”라며 “아이스버그와 파케이 워크로드를 실제 동시성 환경에서 벤치마크하고, 월말 보고서 처리 부하를 테스트해야 한다”고 말했다. 또한 “AI 에이전트 기반 쿼리 패턴을 모델링하고, 컴퓨트, S3, 글루(Glue), KMS, 모니터링, 운영 오버헤드까지 포함해 실제 비용 절감 효과를 정밀하게 검증해야 한다”고 덧붙였다.</p>
-
-
-
-<p>파리크 컨설팅의 자인은 RG 인스턴스의 최대 수혜자로 이미 S3에 아이스버그, 파케이 형식으로 대규모 데이터를 저장하고 있는 기업을 꼽았다. 특히 금융, 통신, 유통, 제조, 미디어, 광고, IoT 산업에서 효과가 클 것으로 전망했다.</p>
-
-
-
-<p>자연은 “이들 기업은 대규모 데이터셋을 다루는 과정에서 데이터 레이크와 웨어하우스 간 중복 데이터로 인한 비용 증가, 예측하기 어려운 과금 구조, 관리가 복잡한 다중 시스템 환경 등의 문제를 겪고 있다”고 분석했다.</p>
-
-
-
-<p>AWS 역시 모든 워크로드에서 동일한 비용 절감 효과를 기대해서는 안 된다고 경고했다. 고객이 실제 워크로드 패턴을 반영해 AWS 가격 계산기(AWS Pricing Calculator)를 활용함으로써 잠재적인 비용 절감 효과를 직접 산정할 것을 권장했다.</p>
-
-
-
-<p>현재 RG 인스턴스는 미국 동부·서부, 캐나다, 상파울루, 프랑크푸르트, 아일랜드, 밀라노, 런던, 파리, 스페인, 스톡홀름, 뭄바이, 하이데라바드, 싱가포르, 시드니, 서울, 도쿄, 홍콩 리전에서 제공되고 있다.<br />dl-ciokorea@foundryco.com</p>
 </div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
@@ -3271,7 +3740,7 @@
 
 
 <p>“Hunt for command lines containing combinations such as -ssl, -remote_ip, -remote_port, SOCKS, or .pyc execution,” the researchers said, adding that these are high-value signals for PySoxy-style activity.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
 </item>
 
 <item>
@@ -3360,7 +3829,7 @@
 
 
 <p>The hard part will be proving that the document matches reality. Security teams may receive an AI SBOM from a vendor, but they still need to determine whether it reflects the system running in production and keeps pace with changes to the AI environment. Prabhu said even a high-quality AI SBOM will offer only partial visibility into AI risk. Issues such as evolving AI behavior, hallucinations, changing prompt usage, and limited training data transparency can still make it difficult for security leaders to assess actual risk. As AI systems mature, AI SBOMs will also have to evolve to address those gaps, Prabhu added.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
 </item>
 
 <item>
@@ -4150,176 +4619,6 @@
 
 
 <p>Finally, Oracle admins should note that the company <a href="https://www.csoonline.com/article/4167335/oracle-will-patch-more-often-to-counter-ai-cybersecurity-threat.html" target="_blank">is switching to releasing monthly security patches.</a> The first will come on May 28, which is the fourth Thursday of the month. However, after that the patches will come on the third Tuesday of each month. </p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
-</item>
-
-<item>
-  <title>🔴 Mistral AI SDK, TanStack Router hit in npm software supply chain attack</title>
-  <link>https://www.csoonline.com/article/4170284/mistral-ai-sdk-tanstack-router-hit-in-npm-software-supply-chain-attack.html</link>
-  <pubDate>Tue, 12 May 2026 17:14:47 +0000</pubDate>
-  <source>CSO Online</source>
-  <description><![CDATA[<b>Why this matters: Supply chain risk — audit third-party dependencies and vendor access.</b><br/><div id="remove_no_follow">
-		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
-					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
-						<div class="article-column__content">
-<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
-
-
-
-<p>The TeamPCP threat group has pulled off another big supply chain attack which within a few hours this week was able to successfully compromise 170 Node Package Manager (npm) and PyPI packages.</p>
-
-
-
-<p>The attack affected the entire TanStack Router ecosystem (@tanstack) of 42 packages, a routing library hugely popular among React web application developers. Multiple other packages were also affected, including @squawk (87 packages), @uipath (66 packages), @tallyui (30 packages), @beproduct (18 packages), as well as Mistral AI’s SDK suite on both npm and PyPI, and the Guardrails AI PyPI package.</p>
-
-
-
-<p>The attacks, noticed by several vendors using automated security tools, happened on May 11, spreading rapidly through package ecosystems thanks to the worm capabilities of the automated Mini Shai-Hulud malware platform, analysis found.</p>
-
-
-
-<p>The exact number of package versions caught up in the attack varies depending on the source; according to <a href="https://www.aikido.dev/blog/mini-shai-hulud-is-back-tanstack-compromised" rel="noreferrer noopener" target="_blank">Aikido Security</a> it was 373 across 169 package namespaces, while <a href="https://safedep.io/mass-npm-supply-chain-attack-tanstack-mistral/#appendix-list-of-compromised-packages" rel="noreferrer noopener" target="_blank">SafeDep said</a> the number was 404 package versions across 170 npm packages, with two affecting PyPI.</p>
-
-
-
-<h2 class="wp-block-heading" id="dead-mans-switch">Dead man’s switch</h2>
-
-
-
-<p>A striking feature of the attacks is the ease with which the threat group blamed for the attack, TeamPCP, was able to hijack the project’s legitimate release pipelines by exploiting a mixture of maintainer misconfigurations and GitHub Actions weaknesses.</p>
-
-
-
-<p>Instead of stealing maintainer credentials directly, the attackers exploited a risky trigger, <em>pull_request_target</em>. This allows third-party workflows to run automatically — a way of avoiding maintainer approval fatigue — but means that the maintainer’s short-lived OIDC tokens become vulnerable to scraping.</p>
-
-
-
-<p>Armed with these tokens, the attacker were able to compromise the packages by injecting the malicious Mini Shai-Hulud malware, which propagated to other projects.</p>
-
-
-
-<p>The purpose is to steal developer credentials such as GitHub and npm tokens, cloud credentials, API keys, Kubernetes service accounts, and SSH keys. Less pleasantly, the malware also installs a destructive ‘dead man’s switch’ monitor which attempts to delete the user’s entire home directory if a developer revokes a stolen GitHub token.</p>
-
-
-
-<p>Attacks by TeamPCP targeting software supply chains have become a recurring theme in recent months. This includes a similar compromise in April of the command line version of the <a href="https://www.csoonline.com/article/4162865/bitwarden-cli-password-manager-trojanized-in-supply-chain-attack.html">Bitwarden password manager</a>. A month earlier it was <a href="https://www.csoonline.com/article/4149938/trivy-supply-chain-breach-compromises-over-1000-saas-environments-lapsus-joins-the-extortion-wave.html">Aqua Security’s Trivy open-source vulnerability scanner</a>, later revealed to have caused a data breach at the <a href="https://www.csoonline.com/article/4154176/cert-eu-blames-trivy-supply-chain-attack-for-europa-eu-data-breach.html">EU’s Europa.eu web hub</a>. </p>
-
-
-
-<h2 class="wp-block-heading" id="enterprise-prize">Enterprise prize</h2>
-
-
-
-<p>According to <a href="https://www.linkedin.com/in/abh1sek" rel="noreferrer noopener" target="_blank">Abhisek Datta</a>, founder of SafeDep, one of the first vendors to detect the compromise, TeamPCP  appeared to have designed the campaign to target US developers.</p>
-
-
-
-<p>“They know that high-profile attacks will be detected quickly by the industry. By targeting specific US working hours, they likely want to maximize their return during a short window of opportunity,” he said via email.</p>
-
-
-
-<p>“The way the software usage and trust network has evolved, primarily leaning towards implicit trust, is probably the root cause that is being exploited in these attacks. Unfortunately, it’s hard to fix, especially today where developers and software companies expect velocity over everything else.”</p>
-
-
-
-<p>Developers could put more security around packages, but this would create added friction, Datta said. “Honestly, I would say this is something the world is still trying to figure out.”</p>
-
-
-
-<p>SafeDep has published a <a href="https://safedep.io/mass-npm-supply-chain-attack-tanstack-mistral/#appendix-list-of-compromised-packages" rel="noreferrer noopener" target="_blank">full list</a> of affected packages, with indicators of compromise. If any of the compromised packages are in use, recommended actions are to check the lockfile for known compromised versions, pin dependencies to knows good versions, and to check for evidence of malware files. If an infected version is suspected, credentials in use at the time of import should be rotated.</p>
-
-
-
-<p></p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
-</item>
-
-<item>
-  <title>🔴 OpenAI introduces Daybreak cyber platform, takes on Anthropic Mythos</title>
-  <link>https://www.csoonline.com/article/4170029/openai-introduces-daybreak-cyber-platform-takes-on-anthropic-mythos.html</link>
-  <pubDate>Tue, 12 May 2026 13:06:17 +0000</pubDate>
-  <source>CSO Online</source>
-  <description><![CDATA[<b>Why this matters: Elevated ransomware risk — validate backups and endpoint defenses.</b><br/><div id="remove_no_follow">
-		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
-					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
-						<div class="article-column__content">
-<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
-
-
-
-<p>OpenAI has unveiled Daybreak, its answer to Anthropic’s Claude Mythos, amid a growing market for frontier AI-powered cyber defense platforms. The initiative combines OpenAI’s large language models, Codex’s agentic capabilities, and integrations with the broader enterprise security ecosystem.</p>
-
-
-
-<p>The company said Daybreak is focused on accelerating cyber defense operations and enabling organizations to secure software across the development lifecycle continuously.</p>
-
-
-
-<p>Announcing the initiative on X, Sam Altman, CEO at OpenAI, <a href="https://x.com/sama/status/2053951874408276193?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E2053951874408276193%7Ctwgr%5Edc7fc2cec25ee0f8c15f1bb1c305dd4d8d5941fb%7Ctwcon%5Es1_&amp;ref_url=https%3A%2F%2Fwww.financialexpress.com%2Flife%2Ftechnology-openai-launches-daybreak-to-compete-with-anthropics-claude-mythos-here-is-what-it-can-do-4238277%2F">said</a>, “OpenAI is launching Daybreak, our effort to accelerate cyber defense and continuously secure software. AI is already good and about to get super good at cybersecurity; we’d like to start working with as many companies as possible now to help them continuously secure themselves.”</p>
-
-
-
-<h2 class="wp-block-heading" id="daybreak-takes-on-mythos">Daybreak takes on Mythos</h2>
-
-
-
-<p>The <a href="https://www.csoonline.com/article/4075912/ai-enabled-ransomware-attacks-cisos-top-security-concern-with-good-reason.html">surge</a> in AI-driven cyber threats has recently shifted the AI race toward AI cybersecurity models. In April this year, Anthropic unveiled Project Glasswing, built around Claude <a href="https://www.csoonline.com/article/4155342/what-anthropic-glasswing-reveals-about-the-future-of-vulnerability-discovery.html">Mythos Preview</a>. Anthropic described it as a cybersecurity-focused AI system capable of autonomously identifying software vulnerabilities at scale.</p>
-
-
-
-<p>While introducing Daybreak, OpenAI explained that deploying AI in modern cyber defense involves three core stages. The first is prioritizing high-impact threats and reducing hours of security analysis to minutes through more efficient AI reasoning and token usage. The second involves generating and testing patches directly within enterprise repositories using scoped access, monitoring, and review. The final stage focuses on sending results and audit-ready evidence back into enterprise systems to track, validate, and verify remediation efforts.</p>
-
-
-
-<p>In <a href="https://openai.com/daybreak/#akamai" rel="noreferrer noopener" target="_blank">Daybreak</a>, Codex security is designed to identify and fix vulnerabilities by building an editable threat model from the enterprise’s repository and focusing analysis on realistic attack paths and high-impact code. The system would then validate likely vulnerabilities in an isolated environment. This would help teams to prioritise real, reproducible issues over noisy alerts. This will be followed by automated detection and response, where AI will be able to spot higher-risk vulnerabilities and enable end-to-end automated monitoring.</p>
-
-
-
-<p>“The divergence reflects fundamentally different approaches to security and commercialization. OpenAI is positioning Daybreak and GPT-5.5-Cyber as a controlled cyber-defense platform for vetted defenders, focused on operational workflows such as vulnerability detection, patch validation, malware analysis, and secure software development,” said Pareekh Jain, CEO at EIIRTrend &amp; Pareekh Consulting. “Strategically, Daybreak helps OpenAI counter the perception that Anthropic leads in frontier cyber AI. Instead of relying on a single secretive model, OpenAI is building a scalable cyber-defense ecosystem integrated into enterprise workflows and developer environments.”</p>
-
-
-
-<p>Jain said Anthropic, by contrast, treats Mythos as a far more sensitive dual-use cyber-intelligence system with stronger offensive reasoning capabilities and higher misuse risks. As a result, access remains tightly restricted to a small set of organizations, influenced both by safety concerns and broader US national-security considerations.</p>
-
-
-
-<h2 class="wp-block-heading" id="openais-cybersecurity-model-stack">OpenAI’s cybersecurity model stack</h2>
-
-
-
-<p>OpenAI is pursuing a scalable cyber defense platform strategy with Daybreak and is rolling out the initiative through three different model tiers: GPT-5.5 (default), GPT-5.5 with Trusted Access for Cyber, and GPT-5.5-Cyber.</p>
-
-
-
-<p>The standard GPT-5.5 model is positioned for general-purpose enterprise use cases, including developer assistance and knowledge work. GPT-5.5 with Trusted Access for Cyber is designed for defensive security workflows such as secure code review, vulnerability triage, malware analysis, detection engineering, and patch validation.</p>
-
-
-
-<p>At the highest tier, GPT-5.5-Cyber will provide preview access for specialized cybersecurity workflows, including authorized red teaming, penetration testing, and controlled validation.</p>
-
-
-
-<h2 class="wp-block-heading" id="governments-and-industry-join-in">Governments and industry join in</h2>
-
-
-
-<p>OpenAI said it plans to build Daybreak alongside both industry and government partners as it expands the platform’s cybersecurity capabilities and enterprise reach.</p>
-
-
-
-<p>To begin with, Daybreak is being developed alongside partners including Cisco, Oracle, CrowdStrike, Palo Alto Networks, Cloudflare, Fortinet, Akamai, and Zscaler.</p>
-
-
-
-<p>At the government level, the European Commission is currently in discussions with OpenAI regarding access to its advanced AI models for identifying cybersecurity vulnerabilities. According to Commission spokesperson Thomas Regnier, OpenAI proactively approached the EU, and discussions are underway around potential next steps, including possible access to the company’s new model. Discussions with Anthropic are also continuing. However, they have not yet reached the same stage as those with OpenAI.</p>
-
-
-
-<p>While answering questions during the Commission’s daily press briefing, spokesperson Regnier <a href="https://audiovisual.ec.europa.eu/en/media/video/I-289289" rel="noreferrer noopener" target="_blank">said</a> the European Commission welcomes OpenAI’s transparency and their intent to give the Commission access to its new model. This will allow the Commission to follow the deployment of this model very closely and also to potentially address certain security concerns in a closer way.</p>
-
-
-
-<p>Amit Jaju, senior managing director at Ankura Consulting, said, “OpenAI is actively leveraging its trusted access framework to rapidly build goodwill with European regulators and demonstrate transparency. By offering early access, OpenAI aligns itself closely with upcoming regulatory demands and secures a strategic market position.”  Jaju noted that Anthropic is taking a highly restricted approach, initially sharing its Mythos model only with select US technology partners to patch vulnerabilities first. “Anthropic recognizes the severe risks associated with autonomous AI agents and the potential for the model to be misused to target critical software, choosing to prioritize closed testing over rapid geopolitical expansion.”</p>
 </div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
 </item>
 
