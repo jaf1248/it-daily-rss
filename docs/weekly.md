@@ -1,25 +1,30 @@
 # IT Weekly Intelligence Briefing
 **Period:** May 08 – May 15, 2026  
-**Generated:** 2026-05-15 18:21 UTC  
+**Generated:** 2026-05-15 20:15 UTC  
 **Items reviewed:** 123  
 
 ## ⚡ Top Actions This Week
 
-1. **Audit third-party software dependencies and review vendor access.**  
-   _Popular node-ipc npm package compromised to steal credentials_  
+1. **Prioritize patching of affected systems; check for internet-exposed attack surface.**  
+   _Funnel Builder WordPress plugin bug exploited to steal credit cards_  
    Source: BleepingComputer  
 
 2. **Audit third-party software dependencies and review vendor access.**  
+   _Popular node-ipc npm package compromised to steal credentials_  
+   Source: BleepingComputer  
+
+3. **Audit third-party software dependencies and review vendor access.**  
    _TanStack Supply Chain Attack Hits Two OpenAI Employee Devices, Forces macOS Updates_  
    Source: The Hacker News  
-
-3. **Review access logs for unauthorized sessions; apply vendor patch immediately.**  
-   _Cisco warns of new critical SD-WAN flaw exploited in zero-day attacks_  
-   Source: BleepingComputer  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [Funnel Builder WordPress plugin bug exploited to steal credit cards](https://www.bleepingcomputer.com/news/security/funnel-builder-wordpress-plugin-bug-exploited-to-steal-credit-cards/)
+**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** May 15  
+**Why it matters:** General awareness item.  
+**Recommended action:** Prioritize patching of affected systems; check for internet-exposed attack surface.  
 
 ### [Popular node-ipc npm package compromised to steal credentials](https://www.bleepingcomputer.com/news/security/popular-node-ipc-npm-package-compromised-to-steal-credentials/)
 **Source:** BleepingComputer &nbsp;·&nbsp; **Date:** May 15  
@@ -45,11 +50,6 @@
 **Source:** The Hacker News &nbsp;·&nbsp; **Date:** May 14  
 **Why it matters:** General awareness item.  
 **Recommended action:** Review access logs for unauthorized sessions; apply vendor patch immediately.  
-
-### [ThreatsDay Bulletin: PAN-OS RCE, Mythos cURL Bug, AI Tokenizer Attacks, and 10+ Stories](https://thehackernews.com/2026/05/threatsday-bulletin-pan-os-rce-mythos.html)
-**Source:** The Hacker News &nbsp;·&nbsp; **Date:** May 14  
-**Why it matters:** Third-party/software supply chain integrity risk.  
-**Recommended action:** Audit third-party software dependencies and review vendor access.  
 
 ---
 
