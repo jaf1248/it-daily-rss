@@ -3,14 +3,14 @@
 <channel>
   <title>Joe — Security Intelligence</title>
   <description>Cybersecurity threats, vulnerabilities, breaches, and Microsoft security updates.</description>
-  <lastBuildDate>Fri, 15 May 2026 21:57:03 +0000</lastBuildDate>
+  <lastBuildDate>Fri, 15 May 2026 22:55:39 +0000</lastBuildDate>
   
 <item>
   <title>🔴 Funnel Builder WordPress plugin bug exploited to steal credit cards</title>
   <link>https://www.bleepingcomputer.com/news/security/funnel-builder-wordpress-plugin-bug-exploited-to-steal-credit-cards/</link>
   <pubDate>Fri, 15 May 2026 19:30:33 +0000</pubDate>
   <source>BleepingComputer</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>A critical vulnerability in the Funnel Builder plugin for WordPress is being actively exploited to inject malicious JavaScript snippets into WooCommerce checkout pages. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>A critical vulnerability in the Funnel Builder plugin for WordPress is being actively exploited to inject malicious JavaScript snippets into WooCommerce checkout pages. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
 </item>
 
 <item>
@@ -18,7 +18,7 @@
   <link>https://www.rapid7.com/blog/post/pt-metasploit-wrap-up-05-15-2026</link>
   <pubDate>Fri, 15 May 2026 18:54:25 +0000</pubDate>
   <source>Rapid7 Blog</source>
-  <description><![CDATA[<b>Why this matters: Credential/phishing risk — reinforce MFA and user awareness training.</b><br/><p></p><h2>Weaponizing a text editor for fun and profit</h2><p>Gather round, dear readers, because today, we (by we, we mean @h00die) dropped the ultimate persistence mechanism: Vim plugin persistence. And honestly, calling it "persistence" feels redundant — Vim is already the most persistent thing ever. Somewhere, somehow, there will still be a Vim session open since 2011, because no one has figured out how to close it. So we are not so much establishing a foothold here as we are joining an existing hostage situation.</p><p>Elsewhere this week, Marvell's QConvergeConsole has been caught handing arbitrary files to unauthenticated visitors, as is tradition (CVE-2025-6793), GestioIP 3.5.7 ships an upload handler, so trusting it will cheerfully let an admin overwrite the handler with a backdoor and then dutifully execute it (CVE-2024-48760). And of course, we can't forget about Dolibarr ERP/CRM, which blocks PHP injections by checking — and we cannot stress this enough — by searching for string &lt;?php. So @M4nu02 brought an elaborate module which changes &lt;?php to &lt;?PHP in the payload to successfully bypass this mitigation (CVE-2023-30253). Truly a wonderful time to be alive.</p><h2></h2><figure style="margin: 0;"><img alt="vim-meme.png" class="embedded-asset" src="https://images.contentstack.io/v3/assets/blte4f029e766e6b253/blt80fb065b3abb4a91/6a076d2ec9bda18363c9f093/vim-meme.png" style="width: auto;" type="asset" /></figure><h2>New module content (4)</h2><h3>Marvell QConvergeConsole Path Traversal (CVE-2025-6793)</h3><p>Authors: Michael Heinzl and rgod</p><p>Type: Auxiliary</p><p>Pull request: <a href="https://github.com/rapid7/metasploit-framework/pull/21322">#21322</a> contributed by <a href="https://github.com/h4x-x0r">h4x-x0r</a></p><p>Path: gather/qconvergeconsole_traversal</p><p>CVE reference: ZDI-25-450</p><p>Description: This adds a new auxiliary module that exploits a path traversal vulnerability (CVE-2025-6793) in Marvell QConvergeConsole to read arbitrary files from the target host. Marvell QConvergeConsole versions 5.5.0.85 and earlier are vulnerable, and no authentication is required to exploit the issue.</p><h3>VIM Plugin Persistence</h3><p>Author: h00die</p><p>Type: Exploit</p><p>Pull request: <a href="https://github.com/rapid7/metasploit-framework/pull/21206">#21206</a> contributed by <a href="https://github.com/h00die">h00die</a></p><p>Path: linux/persistence/vim_plugin</p><p>Description: This adds a new Linux persistence module, which establishes persistence by writing a Vim plugin to the target user's ~/.vim/plugin/ directory. The next time that user launches Vim, the plugin executes the configured payload and opens a new session as that user.</p><h3>GestioIP 3.5.7 Remote Command Execution</h3><p>Authors: maxibelino and odeez24</p><p>Type: Exploit</p><p>Pull request: <a href="https://github.com/rapid7/metasploit-framework/pull/21041">#21041</a> contributed by <a href="https://github.com/Odeez24">Odeez24</a></p><p>Path: multi/http/gestioip_rce</p><p>AttackerKB reference: <a href="https://attackerkb.com/search?q=CVE-2024-48760&amp;referrer=blog">CVE-2024-48760</a></p><p>Description: This adds an exploit module for an authenticated remote code execution vulnerability in GestioIP 3.5.7 (CVE-2024-48760). An attacker with admin credentials can abuse the unsafe upload handler at /api/upload.cgi to overwrite the script itself with a backdoor, which is then invoked to execute attacker-supplied commands.</p><h3>Dolibarr ERP/CRM Authenticated Code Injection</h3><p>Authors: Emanuele Cervelli and Tinexta Cyber Offensive Security Team</p><p>Type: Exploit</p><p>Pull request: <a href="https://github.com/rapid7/metasploit-framework/pull/21362">#21362</a> contributed by <a href="https://github.com/M4nu02">M4nu02</a></p><p>Path: unix/http/dolibarr_cms_rce_cve_2023_30253</p><p>AttackerKB reference: <a href="https://attackerkb.com/search?q=CVE-2023-30253&amp;referrer=blog">CVE-2023-30253</a></p><p>Description: This adds a new exploit module for Dolibarr ERP/CRM (CVE-2023-30253), an authenticated PHP code injection vulnerability affecting versions before 17.0.1. The module abuses the Website module to inject a payload that bypasses Dolibarr's PHP tag filter by using uppercase &lt;?PHP tags instead of the filtered lowercase form. Valid credentials with access to the Website module are required.</p><h2>Enhancements and features (1)</h2><ul><li><a href="https://github.com/rapid7/metasploit-framework/pull/20617">#20617</a> from <a href="https://github.com/Aaditya1273">Aaditya1273</a> - Adds an OptArray datastore option type to the framework. Previously multi valued datastore options were usually input as comma separated strings, now Metasploit devs have the option to use OptArray.</li></ul><h2>Bugs fixed (0)</h2><p>None</p><h2>Documentation</h2><p>You can find the latest Metasploit documentation on our docsite at <a href="https://docs.metasploit.com/">docs.metasploit.com</a>.</p><h2>Get it</h2><p>As always, you can update to the latest Metasploit Framework with msfupdate and you can get more details on the changes since the last blog post from GitHub:</p><ul><li><a href="https://github.com/rapid7/metasploit-framework/pulls?q=is:pr+merged:%222026-05-08T17%3A05%3A58%2B01%3A00..2026-05-14T12%3A44%3A22Z%22">Pull Requests 6.4.132...6.4.133</a></li><li><a href="https://github.com/rapid7/metasploit-framework/compare/6.4.132...6.4.133">Full diff 6.4.132...6.4.133</a></li></ul><p>If you are a git user, you can clone the <a href="https://github.com/rapid7/metasploit-framework">Metasploit Framework repo</a> (master branch) for the latest. To install fresh without using git, you can use the open-source-only <a href="https://github.com/rapid7/metasploit-framework/wiki/Nightly-Installers">Nightly Installers</a> or the commercial edition <a href="https://www.rapid7.com/products/metasploit/download/">Metasploit Pro</a></p><p></p><br/><br/><b>Source:</b> Rapid7 Blog &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Credential/phishing risk — reinforce MFA and user awareness training.</b><br/><p></p><h2>Weaponizing a text editor for fun and profit</h2><p>Gather round, dear readers, because today, we (by we, we mean @h00die) dropped the ultimate persistence mechanism: Vim plugin persistence. And honestly, calling it "persistence" feels redundant — Vim is already the most persistent thing ever. Somewhere, somehow, there will still be a Vim session open since 2011, because no one has figured out how to close it. So we are not so much establishing a foothold here as we are joining an existing hostage situation.</p><p>Elsewhere this week, Marvell's QConvergeConsole has been caught handing arbitrary files to unauthenticated visitors, as is tradition (CVE-2025-6793), GestioIP 3.5.7 ships an upload handler, so trusting it will cheerfully let an admin overwrite the handler with a backdoor and then dutifully execute it (CVE-2024-48760). And of course, we can't forget about Dolibarr ERP/CRM, which blocks PHP injections by checking — and we cannot stress this enough — by searching for string &lt;?php. So @M4nu02 brought an elaborate module which changes &lt;?php to &lt;?PHP in the payload to successfully bypass this mitigation (CVE-2023-30253). Truly a wonderful time to be alive.</p><h2></h2><figure style="margin: 0;"><img alt="vim-meme.png" class="embedded-asset" src="https://images.contentstack.io/v3/assets/blte4f029e766e6b253/blt80fb065b3abb4a91/6a076d2ec9bda18363c9f093/vim-meme.png" style="width: auto;" type="asset" /></figure><h2>New module content (4)</h2><h3>Marvell QConvergeConsole Path Traversal (CVE-2025-6793)</h3><p>Authors: Michael Heinzl and rgod</p><p>Type: Auxiliary</p><p>Pull request: <a href="https://github.com/rapid7/metasploit-framework/pull/21322">#21322</a> contributed by <a href="https://github.com/h4x-x0r">h4x-x0r</a></p><p>Path: gather/qconvergeconsole_traversal</p><p>CVE reference: ZDI-25-450</p><p>Description: This adds a new auxiliary module that exploits a path traversal vulnerability (CVE-2025-6793) in Marvell QConvergeConsole to read arbitrary files from the target host. Marvell QConvergeConsole versions 5.5.0.85 and earlier are vulnerable, and no authentication is required to exploit the issue.</p><h3>VIM Plugin Persistence</h3><p>Author: h00die</p><p>Type: Exploit</p><p>Pull request: <a href="https://github.com/rapid7/metasploit-framework/pull/21206">#21206</a> contributed by <a href="https://github.com/h00die">h00die</a></p><p>Path: linux/persistence/vim_plugin</p><p>Description: This adds a new Linux persistence module, which establishes persistence by writing a Vim plugin to the target user's ~/.vim/plugin/ directory. The next time that user launches Vim, the plugin executes the configured payload and opens a new session as that user.</p><h3>GestioIP 3.5.7 Remote Command Execution</h3><p>Authors: maxibelino and odeez24</p><p>Type: Exploit</p><p>Pull request: <a href="https://github.com/rapid7/metasploit-framework/pull/21041">#21041</a> contributed by <a href="https://github.com/Odeez24">Odeez24</a></p><p>Path: multi/http/gestioip_rce</p><p>AttackerKB reference: <a href="https://attackerkb.com/search?q=CVE-2024-48760&amp;referrer=blog">CVE-2024-48760</a></p><p>Description: This adds an exploit module for an authenticated remote code execution vulnerability in GestioIP 3.5.7 (CVE-2024-48760). An attacker with admin credentials can abuse the unsafe upload handler at /api/upload.cgi to overwrite the script itself with a backdoor, which is then invoked to execute attacker-supplied commands.</p><h3>Dolibarr ERP/CRM Authenticated Code Injection</h3><p>Authors: Emanuele Cervelli and Tinexta Cyber Offensive Security Team</p><p>Type: Exploit</p><p>Pull request: <a href="https://github.com/rapid7/metasploit-framework/pull/21362">#21362</a> contributed by <a href="https://github.com/M4nu02">M4nu02</a></p><p>Path: unix/http/dolibarr_cms_rce_cve_2023_30253</p><p>AttackerKB reference: <a href="https://attackerkb.com/search?q=CVE-2023-30253&amp;referrer=blog">CVE-2023-30253</a></p><p>Description: This adds a new exploit module for Dolibarr ERP/CRM (CVE-2023-30253), an authenticated PHP code injection vulnerability affecting versions before 17.0.1. The module abuses the Website module to inject a payload that bypasses Dolibarr's PHP tag filter by using uppercase &lt;?PHP tags instead of the filtered lowercase form. Valid credentials with access to the Website module are required.</p><h2>Enhancements and features (1)</h2><ul><li><a href="https://github.com/rapid7/metasploit-framework/pull/20617">#20617</a> from <a href="https://github.com/Aaditya1273">Aaditya1273</a> - Adds an OptArray datastore option type to the framework. Previously multi valued datastore options were usually input as comma separated strings, now Metasploit devs have the option to use OptArray.</li></ul><h2>Bugs fixed (0)</h2><p>None</p><h2>Documentation</h2><p>You can find the latest Metasploit documentation on our docsite at <a href="https://docs.metasploit.com/">docs.metasploit.com</a>.</p><h2>Get it</h2><p>As always, you can update to the latest Metasploit Framework with msfupdate and you can get more details on the changes since the last blog post from GitHub:</p><ul><li><a href="https://github.com/rapid7/metasploit-framework/pulls?q=is:pr+merged:%222026-05-08T17%3A05%3A58%2B01%3A00..2026-05-14T12%3A44%3A22Z%22">Pull Requests 6.4.132...6.4.133</a></li><li><a href="https://github.com/rapid7/metasploit-framework/compare/6.4.132...6.4.133">Full diff 6.4.132...6.4.133</a></li></ul><p>If you are a git user, you can clone the <a href="https://github.com/rapid7/metasploit-framework">Metasploit Framework repo</a> (master branch) for the latest. To install fresh without using git, you can use the open-source-only <a href="https://github.com/rapid7/metasploit-framework/wiki/Nightly-Installers">Nightly Installers</a> or the commercial edition <a href="https://www.rapid7.com/products/metasploit/download/">Metasploit Pro</a></p><p></p><br/><br/><b>Source:</b> Rapid7 Blog &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
 </item>
 
 <item>
@@ -27,7 +27,7 @@
   <pubDate>Fri, 15 May 2026 14:52:16 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: Potential data exposure — check monitoring and incident response readiness.</b><br/><p>Other noteworthy stories that might have slipped under the radar: Nvidia cloud gaming data breach, Android 17 security upgrades, FBI warning after ShinyHunters hacks Canvas.</p>
-<p>The post <a href="https://www.securityweek.com/in-other-news-big-tech-vs-canada-encryption-bill-ciscos-free-ai-security-spec-audi-app-flaws/">In Other News: Big Tech vs Canada Encryption Bill, Cisco&#8217;s Free AI Security Spec, Audi App Flaws</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/in-other-news-big-tech-vs-canada-encryption-bill-ciscos-free-ai-security-spec-audi-app-flaws/">In Other News: Big Tech vs Canada Encryption Bill, Cisco&#8217;s Free AI Security Spec, Audi App Flaws</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 8h ago]]></description>
 </item>
 
 <item>
@@ -35,7 +35,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-32161</link>
   <pubDate>Fri, 15 May 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Updated Hotpatch links.  This is in informational change only.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Updated Hotpatch links.  This is in informational change only.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 8h ago]]></description>
 </item>
 
 <item>
@@ -43,7 +43,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-40379</link>
   <pubDate>Fri, 15 May 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Could impact sign-ins/MFA/Conditional Access — watch for login issues.</b><br/>Corrected CVE title. This is an informational change only.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Could impact sign-ins/MFA/Conditional Access — watch for login issues.</b><br/>Corrected CVE title. This is an informational change only.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 8h ago]]></description>
 </item>
 
 <item>
@@ -51,7 +51,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-32170</link>
   <pubDate>Fri, 15 May 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Updated Hotpatch links.  This is in informational change only.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Updated Hotpatch links.  This is in informational change only.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 8h ago]]></description>
 </item>
 
 <item>
@@ -59,7 +59,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-21530</link>
   <pubDate>Fri, 15 May 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Updated Hotpatch links.  This is in informational change only.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Updated Hotpatch links.  This is in informational change only.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 8h ago]]></description>
 </item>
 
 <item>
@@ -68,7 +68,7 @@
   <pubDate>Fri, 15 May 2026 12:06:53 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: Could impact email access or mail flow — monitor delivery and client issues.</b><br/><p>Microsoft has shared mitigations for CVE-2026-42897 until a permanent patch can be released for affected Exchange Server versions.</p>
-<p>The post <a href="https://www.securityweek.com/microsoft-warns-of-exchange-server-zero-day-exploited-in-the-wild/">Microsoft Warns of Exchange Server Zero-Day Exploited in the Wild</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/microsoft-warns-of-exchange-server-zero-day-exploited-in-the-wild/">Microsoft Warns of Exchange Server Zero-Day Exploited in the Wild</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 10h ago]]></description>
 </item>
 
 <item>
@@ -77,7 +77,7 @@
   <pubDate>Fri, 15 May 2026 11:06:55 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: Elevated ransomware risk — validate backups and endpoint defenses.</b><br/><p>The non-bank lender discovered a ransomware attack nearly one year ago, but only recently completed its investigation.</p>
-<p>The post <a href="https://www.securityweek.com/american-lending-center-data-breach-affects-123000-individuals/">American Lending Center Data Breach Affects 123,000 Individuals</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 10h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/american-lending-center-data-breach-affects-123000-individuals/">American Lending Center Data Breach Affects 123,000 Individuals</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 11h ago]]></description>
 </item>
 
 <item>
@@ -86,7 +86,7 @@
   <pubDate>Fri, 15 May 2026 10:54:44 +0000</pubDate>
   <source>The Hacker News</source>
   <description><![CDATA[<b>Why this matters: Supply chain risk — audit third-party dependencies and vendor access.</b><br/>OpenAI has disclosed that two of its employee devices in its corporate environment were impacted via the Mini Shai-Hulud supply chain attack on TanStack, but noted that no user data, production systems, or intellectual property were compromised or modified in an unauthorized manner.
-"Upon identification of the malicious activity, we worked quickly to investigate, contain, and take steps to<br/><br/><b>Source:</b> The Hacker News &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 11h ago]]></description>
+"Upon identification of the malicious activity, we worked quickly to investigate, contain, and take steps to<br/><br/><b>Source:</b> The Hacker News &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 12h ago]]></description>
 </item>
 
 <item>
@@ -95,7 +95,7 @@
   <pubDate>Fri, 15 May 2026 09:47:09 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: Supply chain risk — audit third-party dependencies and vendor access.</b><br/><p>The hacking group is encouraging miscreants to use the code in supply chain attacks, promising monetary rewards.</p>
-<p>The post <a href="https://www.securityweek.com/teampcp-ups-the-game-releases-shai-hulud-worms-source-code/">TeamPCP Ups the Game, Releases Shai-Hulud Worm’s Source Code</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 12h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/teampcp-ups-the-game-releases-shai-hulud-worms-source-code/">TeamPCP Ups the Game, Releases Shai-Hulud Worm’s Source Code</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
 </item>
 
 <item>
@@ -103,7 +103,7 @@
   <link>https://www.bleepingcomputer.com/news/microsoft/microsoft-warns-of-exchange-zero-day-flaw-exploited-in-attacks/</link>
   <pubDate>Fri, 15 May 2026 09:40:42 +0000</pubDate>
   <source>BleepingComputer</source>
-  <description><![CDATA[<b>Why this matters: Could impact email access or mail flow — monitor delivery and client issues.</b><br/>On Thursday, Microsoft shared mitigations for a high-severity Exchange Server vulnerability exploited in attacks that allow threat actors to execute arbitrary code via cross-site scripting (XSS) while targeting Outlook on the web users. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 12h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Could impact email access or mail flow — monitor delivery and client issues.</b><br/>On Thursday, Microsoft shared mitigations for a high-severity Exchange Server vulnerability exploited in attacks that allow threat actors to execute arbitrary code via cross-site scripting (XSS) while targeting Outlook on the web users. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
 </item>
 
 <item>
@@ -111,7 +111,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-33814</link>
   <pubDate>Fri, 15 May 2026 08:42:14 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 14h ago]]></description>
 </item>
 
 <item>
@@ -119,7 +119,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-29181</link>
   <pubDate>Fri, 15 May 2026 08:38:59 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 14h ago]]></description>
 </item>
 
 <item>
@@ -127,7 +127,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-43968</link>
   <pubDate>Fri, 15 May 2026 08:02:43 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 14h ago]]></description>
 </item>
 
 <item>
@@ -135,7 +135,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-7790</link>
   <pubDate>Fri, 15 May 2026 08:02:37 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 14h ago]]></description>
 </item>
 
 <item>
@@ -143,7 +143,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-43969</link>
   <pubDate>Fri, 15 May 2026 08:02:32 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 14h ago]]></description>
 </item>
 
 <item>
@@ -151,7 +151,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-7210</link>
   <pubDate>Fri, 15 May 2026 08:02:26 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 14h ago]]></description>
 </item>
 
 <item>
@@ -159,7 +159,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-34956</link>
   <pubDate>Fri, 15 May 2026 08:02:18 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 14h ago]]></description>
 </item>
 
 <item>
@@ -167,7 +167,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-42011</link>
   <pubDate>Fri, 15 May 2026 08:02:12 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 14h ago]]></description>
 </item>
 
 <item>
@@ -175,7 +175,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-42010</link>
   <pubDate>Fri, 15 May 2026 08:02:06 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Auth bypass — review access controls and check for unauthorized access.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Auth bypass — review access controls and check for unauthorized access.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 14h ago]]></description>
 </item>
 
 <item>
@@ -183,7 +183,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-4890</link>
   <pubDate>Fri, 15 May 2026 08:02:01 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 14h ago]]></description>
 </item>
 
 <item>
@@ -191,7 +191,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-4892</link>
   <pubDate>Fri, 15 May 2026 08:01:55 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 14h ago]]></description>
 </item>
 
 <item>
@@ -199,7 +199,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-5172</link>
   <pubDate>Fri, 15 May 2026 08:01:50 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 14h ago]]></description>
 </item>
 
 <item>
@@ -207,7 +207,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-2291</link>
   <pubDate>Fri, 15 May 2026 08:01:44 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 14h ago]]></description>
 </item>
 
 <item>
@@ -215,7 +215,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-4893</link>
   <pubDate>Fri, 15 May 2026 08:01:39 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 14h ago]]></description>
 </item>
 
 <item>
@@ -223,7 +223,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-4891</link>
   <pubDate>Fri, 15 May 2026 08:01:33 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 14h ago]]></description>
 </item>
 
 <item>
@@ -231,7 +231,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-8295</link>
   <pubDate>Fri, 15 May 2026 08:01:28 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 14h ago]]></description>
 </item>
 
 <item>
@@ -239,7 +239,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-42304</link>
   <pubDate>Fri, 15 May 2026 08:01:21 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 14h ago]]></description>
 </item>
 
 <item>
@@ -248,7 +248,7 @@
   <pubDate>Fri, 15 May 2026 06:28:46 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: Vendor advisory — check installed firmware/software version and patch status.</b><br/><p>The zero-day, tracked as CVE-2026-20182, has been exploited in targeted attacks by a sophisticated threat actor identified as UAT-8616.</p>
-<p>The post <a href="https://www.securityweek.com/cisco-patches-another-sd-wan-zero-day-the-sixth-exploited-in-2026/">Cisco Patches Another SD-WAN Zero-Day, the Sixth Exploited in 2026</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 15h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/cisco-patches-another-sd-wan-zero-day-the-sixth-exploited-in-2026/">Cisco Patches Another SD-WAN Zero-Day, the Sixth Exploited in 2026</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 16h ago]]></description>
 </item>
 
 <item>
@@ -258,7 +258,7 @@
   <source>The Hacker News</source>
   <description><![CDATA[<b>Why this matters: Could impact email access or mail flow — monitor delivery and client issues.</b><br/>Microsoft has disclosed a new security vulnerability impacting on-premise versions of Exchange Server that it said has come under active exploitation in the wild.
 The vulnerability, tracked as CVE-2026-42897 (CVSS score: 8.1), has been described as a spoofing bug stemming from a cross-site scripting flaw. An anonymous researcher has been credited with discovering and reporting the issue.
-"<br/><br/><b>Source:</b> The Hacker News &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 15h ago]]></description>
+"<br/><br/><b>Source:</b> The Hacker News &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 16h ago]]></description>
 </item>
 
 <item>
@@ -267,7 +267,7 @@ The vulnerability, tracked as CVE-2026-42897 (CVSS score: 8.1), has been describ
   <pubDate>Fri, 15 May 2026 05:28:03 +0000</pubDate>
   <source>The Hacker News</source>
   <description><![CDATA[<b>Why this matters: Auth bypass — review access controls and check for unauthorized access.</b><br/>The U.S.Cybersecurity and Infrastructure Security Agency (CISA) on Thursday added a newly disclosed vulnerability impacting Cisco Catalyst SD-WAN Controller to its Known Exploited Vulnerabilities (KEV) catalog, requiring Federal Civilian Executive Branch (FCEB) agencies to remediate the issue by May 17, 2026.
-The vulnerability is a critical authentication bypass tracked as CVE-2026-20182. It's<br/><br/><b>Source:</b> The Hacker News &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 16h ago]]></description>
+The vulnerability is a critical authentication bypass tracked as CVE-2026-20182. It's<br/><br/><b>Source:</b> The Hacker News &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 17h ago]]></description>
 </item>
 
 <item>
@@ -276,7 +276,7 @@ The vulnerability is a critical authentication bypass tracked as CVE-2026-20182.
   <pubDate>Fri, 15 May 2026 01:05:46 +0000</pubDate>
   <source>Tenable Blog</source>
   <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/><p><strong>Multiple critical authentication bypass vulnerabilities in Cisco Catalyst SD-WAN Controller and Manager are under active exploitation by multiple threat clusters, including CVE-2026-20182, which has been exploited as a zero-day by a sophisticated threat actor.</strong></p><h2>Key Takeaways</h2><ol><li>CVE-2026-20182 is a critical (CVSSv3 10.0) authentication bypass in Cisco Catalyst SD-WAN Controller and Manager disclosed on May 14 with confirmed active exploitation.</li><li>A sophisticated threat actor designated UAT-8616 has exploited Cisco SD-WAN vulnerabilities since at least 2023, and 10 additional threat clusters began exploitation of multiple vulnerabilities in SD-WAN after public proof-of-concept code became available.</li><li>Patches are available for all supported Cisco Catalyst SD-WAN releases and CISA has mandated remediation by May 17 under Emergency Directive 26-03.</li></ol><h2>Background</h2><p>Tenable's Research Special Operations (RSO) team has compiled this blog to answer Frequently Asked Questions (FAQ) regarding the ongoing exploitation of multiple vulnerabilities in Cisco Catalyst SD-WAN Controller and Manager.</p><h2>FAQ</h2><p><strong>When were these Cisco SD-WAN vulnerabilities first disclosed?</strong></p><p>On February 25, 2026, Cisco published an advisory for <a href="https://www.tenable.com/cve/CVE-2026-20127"><u>CVE-2026-20127</u></a>, a critical authentication bypass vulnerability in Cisco Catalyst SD-WAN Controller and Manager that was already being exploited in the wild at the time of disclosure. Alongside that advisory, Cisco also released patches for three additional vulnerabilities in SD-WAN Manager: <a href="https://www.tenable.com/cve/CVE-2026-20133"><u>CVE-2026-20133</u></a>, <a href="https://www.tenable.com/cve/CVE-2026-20128"><u>CVE-2026-20128</u></a>, and <a href="https://www.tenable.com/cve/CVE-2026-20122"><u>CVE-2026-20122</u></a>. The security advisory for these CVEs (<a href="https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sdwan-authbp-qwCX8D4v"><u>cisco-sa-sdwan-authbp-qwCX8D4v</u></a>) was updated in March to confirm exploitation of CVE-2026-20128 and CVE-2026-20122 and then again in April to confirm that CVE-2026-20133 had also been exploited.</p><p>On May 14, 2026, Cisco published a <a href="https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sdwan-rpa2-v69WY2SW"><u>new advisory (cisco-sa-sdwan-rpa2-v69WY2SW)</u></a> for <a href="https://www.tenable.com/cve/CVE-2026-20182"><u>CVE-2026-20182</u></a>, a separate critical authentication bypass vulnerability that was discovered during the investigation into the earlier exploitation. This vulnerability is also under active exploitation.</p><p><strong>What are the vulnerabilities associated with the Cisco SD-WAN exploitation?</strong></p><p>There are five CVEs associated with this ongoing campaign, plus one older vulnerability used for post-compromise privilege escalation:</p><div class="table-responsive"><table class="table"><thead><tr><th><strong>CVE</strong></th><th><strong>Description</strong></th><th><strong>CVSSv3</strong></th><th><strong>Cisco Advisory</strong></th></tr></thead><tbody><tr><td><a href="https://www.tenable.com/cve/CVE-2026-20182"><u>CVE-2026-20182</u></a></td><td>Cisco Catalyst SD-WAN Controller and Manager Authentication Bypass Vulnerability</td><td>10.0</td><td><a href="https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sdwan-rpa2-v69WY2SW"><u>cisco-sa-sdwan-rpa2-v69WY2SW</u></a></td></tr><tr><td><a href="https://www.tenable.com/cve/CVE-2026-20127"><u>CVE-2026-20127</u></a></td><td>Cisco Catalyst SD-WAN Controller and Manager Authentication Bypass Vulnerability</td><td>10.0</td><td><a href="https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sdwan-rpa-EHchtZk"><u>cisco-sa-sdwan-rpa-EHchtZk</u></a></td></tr><tr><td><a href="https://www.tenable.com/cve/CVE-2026-20133"><u>CVE-2026-20133</u></a></td><td>Cisco Catalyst SD-WAN Manager Information Disclosure Vulnerability</td><td>7.5</td><td><a href="https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sdwan-authbp-qwCX8D4v"><u>cisco-sa-sdwan-authbp-qwCX8D4v</u></a></td></tr><tr><td><a href="https://www.tenable.com/cve/CVE-2026-20128"><u>CVE-2026-20128</u></a></td><td>Cisco Catalyst SD-WAN Manager Credential Access Vulnerability</td><td>7.5</td><td><a href="https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sdwan-authbp-qwCX8D4v"><u>cisco-sa-sdwan-authbp-qwCX8D4v</u></a></td></tr><tr><td><a href="https://www.tenable.com/cve/CVE-2026-20122"><u>CVE-2026-20122</u></a></td><td>Cisco Catalyst SD-WAN Manager Arbitrary File Overwrite Vulnerability</td><td>5.4</td><td><a href="https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sdwan-authbp-qwCX8D4v"><u>cisco-sa-sdwan-authbp-qwCX8D4v</u></a></td></tr><tr><td><a href="https://www.tenable.com/cve/CVE-2022-20775"><u>CVE-2022-20775</u></a></td><td>Cisco SD-WAN CLI Path Traversal Privilege Escalation Vulnerability</td><td>7.8</td><td><a href="https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sd-wan-priv-E6e8tEdF"><u>cisco-sa-sd-wan-priv-E6e8tEdF</u></a></td></tr></tbody></table></div><p>Both CVE-2026-20182 and CVE-2026-20127 are critical-severity flaws that enable remote, unauthenticated access to administrative functions due to broken peering authentication logic. CVE-2026-20133, CVE-2026-20128, and CVE-2026-20122, when chained together, allow a remote unauthenticated attacker to gain access to the SD-WAN Manager.</p><p><strong>What products are affected?</strong></p><p>The following table lists the CVEs and affected devices. None of these vulnerabilities require specific device configurations to be exploitable, and all deployment models are affected:</p><div class="table-responsive"><table class="table"><thead><tr><th><strong>CVE</strong></th><th><strong>Affected Device(s)</strong></th></tr></thead><tbody><tr><td>CVE-2026-20182</td><td>Cisco Catalyst SD-WAN Controller and Cisco Catalyst SD-WAN Manager</td></tr><tr><td>CVE-2026-20127</td><td>Cisco Catalyst SD-WAN Controller and Cisco Catalyst SD-WAN Manager</td></tr><tr><td>CVE-2026-20133</td><td>Cisco Catalyst SD-WAN Manager</td></tr><tr><td>CVE-2026-20128</td><td>Cisco Catalyst SD-WAN Manager</td></tr><tr><td>CVE-2026-20122</td><td>Cisco Catalyst SD-WAN Manager</td></tr><tr><td>CVE-2022-20775</td><td>Cisco SD-WAN Software:<br />- SD-WAN vBond Orchestrator Software<br />- SD-WAN vEdge Cloud Routers<br />- SD-WAN vEdge Routers<br />- SD-WAN vManage Software<br />- SD-WAN vSmart Controller Software</td></tr></tbody></table></div><p><strong>How severe is the exploitation?</strong></p><p>Successful exploitation of CVE-2026-20182 or CVE-2026-20127 provides access to a privileged (but non-root) internal account on the SD-WAN Controller. That access opens NETCONF, giving the attacker the ability to alter network configuration across the entire SD-WAN fabric. In observed attacks, the threat actor UAT-8616 then leveraged CVE-2022-20775 via a software version downgrade technique to escalate privileges to root.</p><p>Post-compromise activities observed by Cisco Talos include SSH key injection, NETCONF configuration manipulation, malicious account creation, and extensive log clearing to cover tracks.</p><p><strong>Who is UAT-8616?</strong></p><p>UAT-8616 is a designation assigned by Cisco Talos to a “highly sophisticated cyber threat actor” that has been exploiting Cisco SD-WAN infrastructure since at least 2023. According to <a href="https://blog.talosintelligence.com/uat-8616-sd-wan/"><u>Cisco Talos</u></a>, UAT-8616 targets critical infrastructure sectors and its infrastructure overlaps with monitored Operational Relay Box (ORB) networks.</p><p>UAT-8616 exploits CVE-2026-20182 and CVE-2026-20127 for initial access, then, in the case of CVE-2026-20127 exploitation, performs software version downgrades to expose CVE-2022-20775 for root privilege escalation. After achieving root access, the actor restores the original software version to conceal the exploitation path. Additional persistence techniques include injecting SSH keys into authorized_keys files, enabling PermitRootLogin in the SSH daemon configuration, and clearing forensic evidence from syslog, wtmp, lastlog, bash_history and cli-history files.</p><p><strong>Are there other threat actors exploiting these vulnerabilities?</strong></p><p>Yes. Cisco Talos has identified <a href="https://blog.talosintelligence.com/sd-wan-ongoing-exploitation/"><u>10 additional threat clusters</u></a> that are distinct from UAT-8616. These clusters have been exploiting the CVE-2026-20133, CVE-2026-20128, and CVE-2026-20122 chain since early March 2026, following the publication of proof-of-concept code by ZeroZenX Labs. The tools deployed by these clusters range from webshells (Godzilla, Behinder, XenShell) and red team frameworks (AdaptixC2, Sliver) to cryptocurrency miners (XMRig) and credential stealers targeting admin hashes, JWT tokens and AWS credentials.</p><p><strong>Are proofs-of-concept (PoCs) available?</strong></p><p>Yes. ZeroZenX Labs published proof-of-concept code for the CVE-2026-20133, CVE-2026-20128, CVE-2026-20122 exploit chain in March 2026. This PoC release directly correlated with the surge in exploitation activity across multiple threat clusters. The availability of public PoC code highlights the risk to any exposed SD-WAN infrastructure that remains unpatched.</p><p><strong>What actions has CISA taken?</strong></p><p>CISA has taken multiple actions in response to the Cisco SD-WAN exploitation campaign:</p><ul><li><strong>February 25, 2026:</strong> Added CVE-2026-20127 and CVE-2022-20775 to the Known Exploited Vulnerabilities (KEV) catalog</li><li><strong>April 20, 2026:</strong> Added CVE-2026-20133, CVE-2026-20128, and CVE-2026-20122 to the KEV catalog</li><li><strong>May 14, 2026:</strong> Added CVE-2026-20182 to the KEV catalog with an action deadline of May 17, 2026</li><li><strong>May 14, 2026:</strong> Issued Emergency Directive 26-03 and published Hunt &amp; Hardening Guidance for Cisco SD-WAN Devices</li></ul><p>All five CVEs in this campaign are now in CISA's KEV catalog.</p><p><strong>Are patches available?</strong></p><p>Cisco has released patches for each of the vulnerabilities discussed in this blog. We recommend reviewing the security advisories issued by Cisco for each CVE to identify the patch release and any considerations that may apply in order to apply the patches successfully.</p><p><strong>Are there indicators of compromise (IoC)?</strong></p><p>Cisco has published detailed IoC information across its advisories and Talos blog posts. The indicators include:</p><ul><li><strong>Log evidence:</strong> Check /var/log/auth.log for "Accepted publickey for vmanage-admin" entries from unknown or unauthorized IP addresses</li><li><strong>Control connection anomalies:</strong> Run show control connections detail or show control connections-history detail and look for connections with state:up and challenge-ack: 0, which may indicate unauthorized peering</li><li><strong>Post-compromise artifacts:</strong> Unauthorized SSH keys in /home/vmanage-admin/.ssh/authorized_keys/, PermitRootLogin enabled in /etc/ssh/sshd_config, unexplained software downgrades followed by reboots</li></ul><p>Full IoC lists including C2 server IPs, malware file hashes, and attacker source IPs are available in the <a href="https://blog.talosintelligence.com/sd-wan-ongoing-exploitation/"><u>Cisco Talos blog</u></a>.</p><p><strong>Has Tenable Research classified these vulnerabilities as part of Vulnerability Watch?</strong></p><p>Yes. CVE-2026-20182, CVE-2026-20127, CVE-2026-20128, and CVE-2026-20122 have been classified as Vulnerabilities of Interest under <a href="https://www.tenable.com/blog/reducing-remediation-time-remains-a-challenge-how-tenable-vulnerability-watch-can-help"><u>Vulnerability Watch</u></a> due to confirmed active exploitation and the availability of public proof-of-concept code. Tenable has been tracking this cluster of vulnerabilities since the original disclosure in February 2026, with watches re-established as exploitation escalated in March and again in May 2026 when CVE-2026-20182 was disclosed.</p><p><strong>Has Tenable released product coverage?</strong></p><p>A list of Tenable plugins for these vulnerabilities can be found on the individual CVE pages for <a href="https://www.tenable.com/cve/CVE-2026-20182/plugins"><u>CVE-2026-20182</u></a>, <a href="https://www.tenable.com/cve/CVE-2026-20127/plugins"><u>CVE-2026-20127</u></a>, <a href="https://www.tenable.com/cve/CVE-2026-20133/plugins"><u>CVE-2026-20133</u></a>, <a href="https://www.tenable.com/cve/CVE-2026-20128/plugins"><u>CVE-2026-20128</u></a>, <a href="https://www.tenable.com/cve/CVE-2026-20122/plugins"><u>CVE-2026-20122</u></a>, and <a href="https://www.tenable.com/cve/CVE-2022-20775/plugins"><u>CVE-2022-20775</u></a>. These links will display all available plugins for these vulnerabilities, including upcoming plugins in our <a href="https://www.tenable.com/plugins/pipeline"><u>Plugins Pipeline</u></a>.</p><p>Additionally, customers can utilize Tenable Attack Surface Management to identify public facing assets running Cisco Catalyst SD-WAN devices by using the following query: Document Title contains Cisco Catalyst SD-WAN.</p><img alt="A screenshot of Tenable Attack Surface Management showing a query for Cisco Catalyst SD-WAN devices" height="790" src="https://www.tenable.com/sites/default/files/images/blog/92a9132d-d6c0-4f3f-9667-effdf96f1d65.png" width="2048" /><h3>Get more information</h3><ul><li><a href="https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sdwan-rpa2-v69WY2SW"><u>Cisco Security Advisory: cisco-sa-sdwan-rpa2-v69WY2SW</u></a></li><li><a href="https://blog.talosintelligence.com/sd-wan-ongoing-exploitation/"><u>Cisco Talos: SD-WAN Ongoing Exploitation</u></a></li><li><a href="https://blog.talosintelligence.com/uat-8616-sd-wan/"><u>Cisco Talos: UAT-8616 SD-WAN Campaign</u></a></li><li>Tenable blog: <a href="https://www.tenable.com/blog/cve-2026-20127-cisco-catalyst-sd-wan-controllermanager-zero-day-authentication-bypass"><u>CVE-2026-20127: Cisco Catalyst SD-WAN Controller/Manager Zero-Day Authentication Bypass Vulnerability Exploited in the Wild</u></a></li></ul><p><strong>Join</strong> <a href="https://connect.tenable.com/category/news-you-need/discussions/vulnerability-watch"><strong><u>Tenable's Research Special Operations (RSO) Team</u></strong></a> <strong>on Tenable Connect for further discussions on the latest cyber threats.</strong><br /><strong>Learn more about</strong> <a href="https://www.tenable.com/products/tenable-one"><strong><u>Tenable One</u></strong></a><strong>, the Exposure Management Platform for the modern attack surface.</strong></p>
-<img src="https://www.tenable.com/sites/default/files/images/articles/cve-2026-20182-cisco-sd-wan%20uat-8616-faq.png" /><br/><br/><b>Source:</b> Tenable Blog &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 20h ago]]></description>
+<img src="https://www.tenable.com/sites/default/files/images/articles/cve-2026-20182-cisco-sd-wan%20uat-8616-faq.png" /><br/><br/><b>Source:</b> Tenable Blog &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 21h ago]]></description>
 </item>
 
 <item>
