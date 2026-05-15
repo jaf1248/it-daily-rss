@@ -3,8 +3,168 @@
 <channel>
   <title>Joe — VP of IT Briefing</title>
   <description>Leadership-focused IT risk, vendors, pricing, licensing, and industry context.</description>
-  <lastBuildDate>Fri, 15 May 2026 20:15:04 +0000</lastBuildDate>
+  <lastBuildDate>Fri, 15 May 2026 21:57:22 +0000</lastBuildDate>
   
+<item>
+  <title>🔵 How tech companies are using open source initiatives to achieve critical strategic goals and how such efforts are reshaping industries like AI, AVs, and more (Bill Gurley/Bill&#x27;s Substack)</title>
+  <link>https://www.techmeme.com/260515/p27#a260515p27</link>
+  <pubDate>Fri, 15 May 2026 21:15:01 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><p><a href="https://www.techmeme.com/260515/p27#a260515p27" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Bill Gurley / <a href="https://p3institute.substack.com/">Bill's Substack</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://p3institute.substack.com/p/from-open-source-software-to-open">How tech companies are using open source initiatives to achieve critical strategic goals and how such efforts are reshaping industries like AI, AVs, and more</a></b></span>&nbsp; &mdash;&nbsp; How the Smartest Executives Are Using Open Source Techniques to Optimize Corporate Strategy&nbsp; &mdash;&nbsp; Nearly 27 years ago, on July 12 &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔴 Expired domain leads to supply chain attack on node-ipc npm package</title>
+  <link>https://www.csoonline.com/article/4171926/expired-domain-leads-to-supply-chain-attack-on-node-ipc-npm-package.html</link>
+  <pubDate>Fri, 15 May 2026 21:05:42 +0000</pubDate>
+  <source>CSO Online</source>
+  <description><![CDATA[<b>Why this matters: Supply chain risk — audit third-party dependencies and vendor access.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<p>A popular npm package called node-ipc has been compromised, with hackers publishing malicious versions that bundle credential stealing malware. The root cause of the compromise was an expired domain name that attackers managed to register in order to hijack a maintainer’s account.</p>
+
+
+
+<p>The node-ipc package has had malware added to its code in the past. In March 2022, following Russia’s invasion of Ukraine, the project’s creator <a href="https://www.csoonline.com/article/572327/developer-sabotages-own-npm-module-prompting-open-source-supply-chain-security-questions.html" target="_blank">intentionally added malicious code</a> to the program to wipe files on systems with Russian or Belarusian IP addresses.</p>
+
+
+
+<p>Node-ipc is a Node.js module that implements support for local and remote Inter-Process Communication over various types of socket across all major platforms. One use case is in implementing complex multi-process neural networks in JavaScript, but the module is also used as a dependency for 424 other projects, and receives almost 700K weekly downloads.</p>
+
+
+
+<p>On Thursday, <a href="https://github.com/RIAEvangelist/node-ipc/issues/15" rel="noreferrer noopener" target="_blank">attackers managed to publish three trojanized versions</a> across three different branches of the project: 9.1.6, 9.2.3 and 12.0.1. All new versions contained an 80KB obfuscated credential-stealing payload inside the node-ipc.cjs file.</p>
+
+
+
+<p>The malicious code searches for and steals a wide range of credentials for CI/CD tools, cloud services and infrastructure, Kubernetes, SSH, and AI coding agents. The data is exfiltrated through DNS TXT queries rather than HTTP connections.</p>
+
+
+
+<p>Since node-ipc is a dependency for hundreds of other packages, which in turn could be dependencies for even more packages, this attack could have a large blast radius. Users should immediately scan their systems to determine if they have any of the compromised versions installed, and if they do, treat the machine and any access token, environment variable, and API key stored on it as compromised.</p>
+
+
+
+<h2 class="wp-block-heading" id="exhaustive-credential-collection-and-sneaky-exfiltration">Exhaustive credential collection and sneaky exfiltration</h2>
+
+
+
+<p>The malicious payload is decrypted and executed whenever other applications load the package through <em>require(‘node-ipc’)</em>. The trojanized versions were designed to remain fully functional to avoid immediate detection, which together with other decisions attackers took, such as data exfiltration via DNS TXT, suggest stealthiness was a top priority.</p>
+
+
+
+<p>Once executed, the malicious code collects information about the host system, including operating system version, hostname, and environment variables. It then starts looking for credentials in various locations based on the detected OS.</p>
+
+
+
+<p>“The payload chooses between separate decoded target lists for macOS and Linux/default platforms,” researchers from Socket.dev said in <a href="https://socket.dev/blog/node-ipc-package-compromised" rel="noreferrer noopener" target="_blank">their analysis.</a> “The lists are not identical. In the analyzed payload, the macOS list contains 113 patterns and the Linux/default list contains 127 patterns.”</p>
+
+
+
+<p>The target lists are extensive and include:</p>
+
+
+
+<ul class="wp-block-list">
+<li>Configuration files for AWS, Azure, GCP, OCI, DigitalOcean, Scaleway, Hetzner, Fly, Vercel, Railway, Alibaba Cloud, IBM Cloud, Linode, MinIO, Snowflake, Doppler, and Salesforce;</li>
+
+
+
+<li>SSH keys and SSH configuration;</li>
+
+
+
+<li>Kubernetes, Docker, Helm, Rancher, and service-account material;</li>
+
+
+
+<li>npm, Yarn, Netrc, Git, GitHub CLI, GitLab CLI, and Hub credentials;</li>
+
+
+
+<li>Terraform credentials and tfvars files;</li>
+
+
+
+<li>.env, .env.local, .env.production, database configuration files, shell histories, and database CLI histories;</li>
+
+
+
+<li>macOS Keychain database files;</li>
+
+
+
+<li>Firefox profile key database files on macOS;</li>
+
+
+
+<li>Linux keyrings and KWallet files;</li>
+
+
+
+<li>FileZilla, Remmina, OpenVPN, and related connection profiles;</li>
+
+
+
+<li>Microsoft Teams local storage and IndexedDB paths.</li>
+</ul>
+
+
+
+<p>While browser credential stores are not targeted directly, macOS keychain databases can contain system and browser credentials, so those credentials should be considered compromised as well and rotated.</p>
+
+
+
+<p>All the collected data is archived in a GZIP file, which is then split into chunks and exfiltrated by making DNS TXT queries on an attacker-controlled domain whose name is similar to that of Microsoft’s legitimate Azure Static Web Apps domain.</p>
+
+
+
+<p>Since the attackers control the DNS server for their domain name, they can see the TXT record queries made by the infected systems and can reconstruct the archives on their end from the leaked bytes. The Socket researchers estimate that a 500KB file would require around 29,400 TXT queries to exfiltrate in this way.</p>
+
+
+
+<p>“The payload does not establish persistence in the decoded sample,” the researchers said. “There is no observed cron, launchd, rc.d, service installation, or second-stage download. The operational impact is concentrated in the execution window: collection, archive creation, DNS TXT exfiltration, and attempted cleanup.”</p>
+
+
+
+<h2 class="wp-block-heading" id="expired-domain-led-to-email-takeover">Expired domain led to email takeover</h2>
+
+
+
+<p>The malicious node-ipc versions were published from an npm account called atiertant, which belongs to one of the several developers with maintainer access to the package.  Atiertant had never used his access to publish new node-ipc versions before, and has had no activity on node-ipc or any other npm package he has access to since 2022.</p>
+
+
+
+<p><a href="https://x.com/TekDefense/status/2054963016039342549" rel="noreferrer noopener" target="_blank">Security researchers noticed</a> that the email address for atiertant’s account was hosted on a domain called atlantis-software.net that had expired in January 2025 and was re-registered earlier this month, most likely by the attackers. It was then just a matter of setting up an email server, recreating atiertant’s email address and performing a password reset on the account.</p>
+
+
+
+<p>This highlights some of the security challenges open-source software projects face. While periodically reviewing access lists for dormant and unused accounts is a general security recommendation for companies, open-source projects are maintained by groups of volunteers, and it’s not unusual for people to take long breaks from contributing to projects, especially if those projects have reached a high level of maturity and feature completeness so they no longer get frequent updates.</p>
+
+
+
+<p>It’s also likely that the attackers did not target node-ipc from the start, they just searched npm for accounts with email addresses on custom domain names, then checked if any of those domain names had expired. This means there might be other dormant accounts out there susceptible to email takeover using the same method.</p>
+
+
+
+<p>The Socket.dev report contains additional recommendations for both users and developers, as well as file hashes and other indicators of compromise that can be used by security teams to create detections.</p>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</item>
+
+<item>
+  <title>🟠 The 4th Linux kernel flaw this month can lead to stolen SSH host keys</title>
+  <link>https://www.zdnet.com/article/qualys-flags-a-linux-kernel-security-issue-that-could-lead-to-stolen-ssh-keys/</link>
+  <pubDate>Fri, 15 May 2026 20:41:14 +0000</pubDate>
+  <source>ZDNet</source>
+  <description><![CDATA[<b>Why this matters: Potential data exposure — check monitoring and incident response readiness.</b><br/>The good news is there's already a patch. The bad news is that the fix isn't available for all Linux distributions yet. Here's what you can do in the meantime.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+</item>
+
 <item>
   <title>🔵 Sources: SpaceX aims to make its IPO prospectus public by next week, targeting a June 12 listing on Nasdaq, driven by a faster-than-expected SEC review (Reuters)</title>
   <link>https://www.techmeme.com/260515/p24#a260515p24</link>
@@ -12,15 +172,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.reuters.com/world/spacex-accelerates-ipo-timeline-targets-june-11-pricing-nasdaq-2026-05-15/"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260515/i24.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260515/p24#a260515p24" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="http://www.reuters.com/">Reuters</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.reuters.com/world/spacex-accelerates-ipo-timeline-targets-june-11-pricing-nasdaq-2026-05-15/">Sources: SpaceX aims to make its IPO prospectus public by next week, targeting a June 12 listing on Nasdaq, driven by a faster-than-expected SEC review</a></b></span>&nbsp; &mdash;&nbsp; Elon Musk's rocket and satellite maker SpaceX is planning to price its blockbuster initial public offering as early as June 11 &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Why this metal detector is a smart buy in 2026 - especially at $60 off on Amazon</title>
-  <link>https://www.zdnet.com/article/pancky-metal-detector-bundle-deal/</link>
-  <pubDate>Fri, 15 May 2026 20:00:46 +0000</pubDate>
-  <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Search for treasures on the beach or in your own backyard with this metal detector bundle at Amazon.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.reuters.com/world/spacex-accelerates-ipo-timeline-targets-june-11-pricing-nasdaq-2026-05-15/">Sources: SpaceX aims to make its IPO prospectus public by next week, targeting a June 12 listing on Nasdaq, driven by a faster-than-expected SEC review</a></b></span>&nbsp; &mdash;&nbsp; Elon Musk's rocket and satellite maker SpaceX is planning to price its blockbuster initial public offering as early as June 11 &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
 </item>
 
 <item>
@@ -141,15 +293,7 @@
 
 
 <p>This is another “massive nudge” from Redmond to shift from on-premises email, Enderle added. “If you aren’t already planning your exit from on-site Exchange, your risk profile is only going to keep climbing as these zero days become the new normal. This does showcase that Azure, and web services in general, are where the industry, and particularly Microsoft, is pushing IT to go, whether they want to or not.”</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 AI agents show they can create exploits, not just find vulns</title>
-  <link>https://www.theregister.com/ai-ml/2026/05/15/ai-agents-show-they-can-create-exploits-not-just-find-vulns/5241453</link>
-  <pubDate>Fri, 15 May 2026 19:45:54 +0000</pubDate>
-  <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Mythos and GPT-5.5 muscle out the competition<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
 </item>
 
 <item>
@@ -159,7 +303,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/><a href="https://www.theglobeandmail.com/business/article-nord-quantique-fidelity-sherbrooke-quantum-startup/"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260515/i23.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260515/p23#a260515p23" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Sean Silcoff / <a href="http://www.globeandmail.com/">Globe and Mail</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.theglobeandmail.com/business/article-nord-quantique-fidelity-sherbrooke-quantum-startup/">Sources: Nord Quantique, a quantum computing startup that is pursuing a hardware-level quantum error correction approach, raised $30M at a $1.4B valuation</a></b></span>&nbsp; &mdash;&nbsp; West Coast pipeline is conditional on carbon-capture project, Carney says&nbsp; &mdash;&nbsp; Boycotts, cancellations and price hikes: Get ready for a summer of travel chaos</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.theglobeandmail.com/business/article-nord-quantique-fidelity-sherbrooke-quantum-startup/">Sources: Nord Quantique, a quantum computing startup that is pursuing a hardware-level quantum error correction approach, raised $30M at a $1.4B valuation</a></b></span>&nbsp; &mdash;&nbsp; West Coast pipeline is conditional on carbon-capture project, Carney says&nbsp; &mdash;&nbsp; Boycotts, cancellations and price hikes: Get ready for a summer of travel chaos</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
 </item>
 
 <item>
@@ -169,7 +313,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.bloomberg.com/news/articles/2026-05-15/kraken-cuts-150-workers-after-deploying-ai-ipo-may-slip-to-2027"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260515/i22.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260515/p22#a260515p22" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Olga Kharif / <a href="https://www.bloomberg.com/">Bloomberg</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/articles/2026-05-15/kraken-cuts-150-workers-after-deploying-ai-ipo-may-slip-to-2027">Source: Kraken cut ~150 staff after AI tools improved efficiency and its IPO may be delayed until late 2026 or early 2027 due to a drop in digital-asset prices</a></b></span>&nbsp; &mdash;&nbsp; Kraken, one of the world's oldest cryptocurrency exchanges, has cut some staff to reduce costs and may not go public as soon &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/articles/2026-05-15/kraken-cuts-150-workers-after-deploying-ai-ipo-may-slip-to-2027">Source: Kraken cut ~150 staff after AI tools improved efficiency and its IPO may be delayed until late 2026 or early 2027 due to a drop in digital-asset prices</a></b></span>&nbsp; &mdash;&nbsp; Kraken, one of the world's oldest cryptocurrency exchanges, has cut some staff to reduce costs and may not go public as soon &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
 </item>
 
 <item>
@@ -179,7 +323,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: Regulatory/compliance signal — assess applicability and remediation timeline.</b><br/><a href="https://www.transformernews.ai/p/is-openai-changing-its-tune-on-ai-laws-illinois-regulation"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260515/i21.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260515/p21#a260515p21" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="https://www.transformernews.ai/">Transformer</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.transformernews.ai/p/is-openai-changing-its-tune-on-ai-laws-illinois-regulation">OpenAI's disavowal of a liability shield in Illinois SB 3444 bill and endorsement of a stronger SB 315 suggest it is open to meaningful AI safety legislation</a></b></span>&nbsp; &mdash;&nbsp; Transformer Weekly: US-China talks, AI executive order, and Anthropic's $900b valuation &hellip; - Scott Bessent said the US and China will &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.transformernews.ai/p/is-openai-changing-its-tune-on-ai-laws-illinois-regulation">OpenAI's disavowal of a liability shield in Illinois SB 3444 bill and endorsement of a stronger SB 315 suggest it is open to meaningful AI safety legislation</a></b></span>&nbsp; &mdash;&nbsp; Transformer Weekly: US-China talks, AI executive order, and Anthropic's $900b valuation &hellip; - Scott Bessent said the US and China will &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
 </item>
 
 <item>
@@ -187,7 +331,7 @@
   <link>https://www.zdnet.com/article/best-early-memorial-day-laptop-deals-2026/</link>
   <pubDate>Fri, 15 May 2026 18:30:45 +0000</pubDate>
   <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/>I've rounded up the best laptop deals live right now so you don't have to.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/>I've rounded up the best laptop deals live right now so you don't have to.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
 </item>
 
 <item>
@@ -195,7 +339,7 @@
   <link>https://www.theregister.com/oses/2026/05/15/microsoft-puts-stability-in-the-drivers-seat-with-new-initiative/5241381</link>
   <pubDate>Fri, 15 May 2026 17:25:53 +0000</pubDate>
   <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>User interface tweaks are nice, but reliable drivers matter more<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>User interface tweaks are nice, but reliable drivers matter more<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
 </item>
 
 <item>
@@ -203,7 +347,7 @@
   <link>https://www.zdnet.com/article/claude-small-business-contract-review-ai-no-lawyer/</link>
   <pubDate>Fri, 15 May 2026 12:31:53 +0000</pubDate>
   <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>I tested Claude for Small Business, which has 31 skills, and the contract review tool is amazing.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>I tested Claude for Small Business, which has 31 skills, and the contract review tool is amazing.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
 </item>
 
 <item>
@@ -211,7 +355,7 @@
   <link>https://www.theregister.com/on-prem/2026/05/15/exploited-exchange-server-flaw-turns-owa-inboxes-into-script-launchpads/5241150</link>
   <pubDate>Fri, 15 May 2026 11:51:13 +0000</pubDate>
   <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Could impact email access or mail flow — monitor delivery and client issues.</b><br/>Microsoft mitigation may bork inline images, calendar printing while admins wait for a proper patch<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 8h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Could impact email access or mail flow — monitor delivery and client issues.</b><br/>Microsoft mitigation may bork inline images, calendar printing while admins wait for a proper patch<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 10h ago]]></description>
 </item>
 
 <item>
@@ -300,7 +444,7 @@
 
 
 <p>Organizations that suspect compromise are being advised to contact Cisco Technical Assistance Center support and collect diagnostic information from affected devices.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 8h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 10h ago]]></description>
 </item>
 
 <item>
@@ -308,7 +452,7 @@
   <link>https://www.theregister.com/patches/2026/05/15/cisco-discloses-yet-another-sd-wan-make-me-admin-0-day/5241071</link>
   <pubDate>Fri, 15 May 2026 11:15:00 +0000</pubDate>
   <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Vendor advisory — check installed firmware/software version and patch status.</b><br/>CISA hands feds super-tight deadline for this perfect-10, actively exploited flaw<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Vendor advisory — check installed firmware/software version and patch status.</b><br/>CISA hands feds super-tight deadline for this perfect-10, actively exploited flaw<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 10h ago]]></description>
 </item>
 
 <item>
@@ -317,7 +461,7 @@
   <pubDate>Fri, 15 May 2026 10:37:00 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: Supply chain risk — audit third-party dependencies and vendor access.</b><br/><p>Two employee devices were compromised in the attack, and credential material was stolen from OpenAI code repositories.</p>
-<p>The post <a href="https://www.securityweek.com/openai-hit-by-tanstack-supply-chain-attack/">OpenAI Hit by TanStack Supply Chain Attack</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/openai-hit-by-tanstack-supply-chain-attack/">OpenAI Hit by TanStack Supply Chain Attack</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 11h ago]]></description>
 </item>
 
 <item>
@@ -325,7 +469,7 @@
   <link>https://www.theregister.com/security/2026/05/15/openai-caught-in-tanstack-npm-supply-chain-chaos-after-employee-devices-compromised/5241019</link>
   <pubDate>Fri, 15 May 2026 10:08:07 +0000</pubDate>
   <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Supply chain risk — audit third-party dependencies and vendor access.</b><br/>Attackers stole a limited amount of internal credential material after malware hidden in poisoned packages reached two staff machines<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 10h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Supply chain risk — audit third-party dependencies and vendor access.</b><br/>Attackers stole a limited amount of internal credential material after malware hidden in poisoned packages reached two staff machines<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 11h ago]]></description>
 </item>
 
 <item>
@@ -438,7 +582,7 @@
 
 
 <p><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><strong><a href="https://www.csoonline.com/expert-contributor-network/">Want to join?</a></strong></p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 10h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 11h ago]]></description>
 </item>
 
 <item>
@@ -673,7 +817,7 @@
 
 
 <p></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 10h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 11h ago]]></description>
 </item>
 
 <item>
@@ -790,7 +934,7 @@
 
 
 <p>That uncertainty, he adds, is part of what creates the opportunity for CIOs to play a more central role. “The board has to learn from the CIO,” Sundaram says. </p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 10h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 11h ago]]></description>
 </item>
 
 <item>
@@ -923,7 +1067,7 @@
 
 
 <p>Savvy CIOs can also use this as an opportunity to get the resources to deliver improvements. “Most CIOs would want to do these things anyway but just don’t have the bandwidth,” says Venn. “So this is probably a tool for them to go to the board and say they need the budget and the time.”</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 11h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 12h ago]]></description>
 </item>
 
 <item>
@@ -1083,7 +1227,7 @@
 
 
 <p><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><strong><a href="https://www.csoonline.com/expert-contributor-network/">Want to join?</a></strong></p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 11h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 12h ago]]></description>
 </item>
 
 <item>
@@ -1272,7 +1416,7 @@
 
 
 <p><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><strong><a href="https://www.cio.com/expert-contributor-network/">Want to join?</a></strong></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 11h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 12h ago]]></description>
 </item>
 
 <item>
@@ -1281,7 +1425,7 @@
   <pubDate>Fri, 15 May 2026 07:25:15 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><p>The refresh resolves critical-severity use-after-free and other types of bugs in various browser components.</p>
-<p>The post <a href="https://www.securityweek.com/chrome-148-update-patches-critical-vulnerabilities/">Chrome 148 Update Patches Critical Vulnerabilities</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 12h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/chrome-148-update-patches-critical-vulnerabilities/">Chrome 148 Update Patches Critical Vulnerabilities</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 14h ago]]></description>
 </item>
 
 <item>
@@ -1386,7 +1530,7 @@
 
 
 <p>Gowans acknowledged the work behind achieving those results. “It’s hard,” he admitted. “But it’s not <em>that</em> hard. You don’t get to be 170 years old standing still.”</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 15h ago]]></description>
 </item>
 
 <item>
@@ -1503,7 +1647,7 @@
 
 
 <p>아벨랑주는 “이 접근 방식이 제대로 작동하면 각 엔지니어의 가치가 높아지면서 조직은 더 빠르게 인재를 확보할 수 있다”라며 “반대로 그렇지 않으면 형식적인 도입과 냉소적인 조직 문화가 자리 잡게 될 가능성이 크다”고 말했다.<br />dl-ciokorea@foundryco.com</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 15h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 17h ago]]></description>
 </item>
 
 <item>
@@ -1511,7 +1655,7 @@
   <link>https://www.theregister.com/systems/2026/05/15/possible-samsung-strike-puts-even-more-pressure-on-memory-pricing/5240874</link>
   <pubDate>Fri, 15 May 2026 02:43:37 +0000</pubDate>
   <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Budget/licensing impact — verify renewal terms and forecast cost changes.</b><br/>As a senior policymaker ponders whether all South Koreans should enjoy an ‘AI dividend’<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 17h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Budget/licensing impact — verify renewal terms and forecast cost changes.</b><br/>As a senior policymaker ponders whether all South Koreans should enjoy an ‘AI dividend’<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 19h ago]]></description>
 </item>
 
 <item>
@@ -1519,7 +1663,7 @@
   <link>https://www.zdnet.com/article/i-ditched-laptop-for-xr-headset-tablet-phone-what-i-learned/</link>
   <pubDate>Fri, 15 May 2026 02:30:42 +0000</pubDate>
   <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/>From XR glasses to headsets to tablets, here's how various work systems fared over 30 days.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 17h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/>From XR glasses to headsets to tablets, here's how various work systems fared over 30 days.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 19h ago]]></description>
 </item>
 
 <item>
@@ -1527,7 +1671,7 @@
   <link>https://www.zdnet.com/article/cable-cords-and-adapters-i-never-throw-away/</link>
   <pubDate>Fri, 15 May 2026 02:00:42 +0000</pubDate>
   <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/>Don't let your spring cleaning or desire for Feng Shui enlightenment make you toss the important stuff. This gear will come in handy one day.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 18h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/>Don't let your spring cleaning or desire for Feng Shui enlightenment make you toss the important stuff. This gear will come in handy one day.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 19h ago]]></description>
 </item>
 
 <item>
@@ -1592,7 +1736,7 @@
 
 
 <p>The other three vulnerabilities disclosed by DepthFirst and patched in the new Nginx releases can also lead to denial of service, memory leaks, or data modification. They are tracked as <a href="https://my.f5.com/manage/s/article/K000161027" rel="noreferrer noopener" target="_blank">CVE-2026-42946</a> (CVSS 8.3 – high severity), <a href="https://my.f5.com/manage/s/article/K000161028" rel="noreferrer noopener" target="_blank">CVE-2026-42934</a> (CVSS 6.3 – medium) and <a href="https://my.f5.com/manage/s/article/K000161021" rel="noreferrer noopener" target="_blank">CVE-2026-40701</a> (CVSS 6.3 – medium).</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 21h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 22h ago]]></description>
 </item>
 
 <item>
@@ -1600,7 +1744,7 @@
   <link>https://www.theregister.com/ai-ml/2026/05/15/cerebras-wafer-scale-ai-bet-delivers-blockbuster-ipo/5240821</link>
   <pubDate>Thu, 14 May 2026 23:02:50 +0000</pubDate>
   <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Here's a look at the tech powering the first big IPO of 2026<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 21h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Here's a look at the tech powering the first big IPO of 2026<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 22h ago]]></description>
 </item>
 
 <item>
@@ -1608,7 +1752,7 @@
   <link>https://www.theregister.com/ai-ml/2026/05/14/ontario-auditors-find-doctors-ai-note-takers-routinely-blow-basic-facts/5240771</link>
   <pubDate>Thu, 14 May 2026 20:50:05 +0000</pubDate>
   <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>60% of evaluated AI Scribe systems mixed up prescribed drugs in patient notes, auditors say<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 23h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>60% of evaluated AI Scribe systems mixed up prescribed drugs in patient notes, auditors say<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
@@ -1677,7 +1821,7 @@
 
 
 <p>Beggs also said admins may wish to increase monitoring of privileged processes (PAM, systemd, cron) and look for unexpected restarts, unexpected config reloads, and sudden privilege escalations.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 23h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
@@ -3375,7 +3519,7 @@
 
 
 <p>Exploitation of these flaws requires authentication, which is why they’re not rated critical, but attackers <a href="https://www.csoonline.com/article/4042464/enterprise-passwords-becoming-even-easier-to-steal-and-abuse.html">compromising enterprise credentials</a> is not uncommon so they should still be treated with urgency.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
 </item>
 
 <item>
@@ -3383,7 +3527,7 @@
   <link>https://www.theregister.com/security/2026/05/13/bug-hunter-tracks-down-three-serious-mcp-database-flaws-one-left-unpatched/5238916</link>
   <pubDate>Wed, 13 May 2026 20:17:24 +0000</pubDate>
   <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Apache, Alibaba databases vulnerable and only one has a patch<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Apache, Alibaba databases vulnerable and only one has a patch<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
 </item>
 
 <item>
@@ -4291,320 +4435,6 @@
 
 
 <p><strong>Dieser Artikel ist <a href="https://computersweden.se/article/4169966/google-har-hittat-ai-skapade-dag-noll-exploits.html" rel="noreferrer noopener" target="_blank">im Original</a> bei unserer Schwesterpublikation Computersweden.se erschienen.</strong></p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
-</item>
-
-<item>
-  <title>🔴 Der Kaufratgeber für Breach &amp; Attack Simulation Tools</title>
-  <link>https://www.csoonline.com/article/3494368/der-kaufratgeber-fur-breach-attack-simulation-tools.html</link>
-  <pubDate>Wed, 13 May 2026 04:14:00 +0000</pubDate>
-  <source>CSO Online</source>
-  <description><![CDATA[<b>Why this matters: Elevated ransomware risk — validate backups and endpoint defenses.</b><br/><div id="remove_no_follow">
-		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
-					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
-						<div class="article-column__content">
-<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
-
-
-<div class="extendedBlock-wrapper block-coreImage undefined"><figure class="wp-block-image size-large"><img alt="BAS Tools Concept 16z9 DEO" class="wp-image-3831499" height="576" src="https://b2b-contenthub.com/wp-content/uploads/2025/02/original1cso_Roman-Samborskyi.jpg?quality=50&amp;strip=all&amp;w=1024" width="1024" /><figcaption class="wp-element-caption">Breach &amp; Attack Simulation Tools geben Aufschluss darüber, wie gut (oder schlecht) Ihre Sicherheitskontrollen funktionieren.</figcaption></figure><p class="imageCredit">Roman Samborskyi | shutterstock.com</p></div>
-
-
-
-<p>Lösungen im Bereich Breach &amp; Attack Simulation (BAS) unterstützen Unternehmen dabei, ihr <a href="https://www.csoonline.com/article/3577944/diese-unternehmen-hats-schon-erwischt.html" target="_blank" title="Sicherheitsniveau zu verstehen">Sicherheitsniveau zu verstehen</a>. Dazu automatisieren die Tools die Tests spezifischer Bedrohungsvektoren. Als Grundlage dienen dabei in der Regel das <a href="https://attack.mitre.org/" rel="noopener" target="_blank" title="MITRE-ATT&amp;CK">MITRE-ATT&amp;CK</a>– oder <a href="https://www.lockheedmartin.com/en-us/capabilities/cyber/cyber-kill-chain.html" rel="noopener" target="_blank" title="Cyber-Killchain-Framework">Cyber-Killchain-Framework</a>. BAS-Produkte simulieren zum Beispiel:</p>
-
-
-
-<ul class="wp-block-list">
-<li><p>Netzwerkangriffe und Infiltrationsversuche,</p></li>
-
-
-
-<li><p>Lateral Movement,</p></li>
-
-
-
-<li><p>Phishing,</p></li>
-
-
-
-<li><p>Endpunkt- und Gateway-Attacken,</p></li>
-
-
-
-<li><p>Malware- und Ransomware-Angriffe sowie</p></li>
-
-
-
-<li><p>Insider-Bedrohungen.</p></li>
-</ul>
-
-
-
-<h2 class="wp-block-heading" id="breach-attack-simulation-eingeordnet">Breach &amp; Attack Simulation eingeordnet</h2>
-
-
-
-<p>Breach &amp; Attack Simulation kann <a href="https://www.csoonline.com/article/3495010/red-vs-blue-vs-purple-teams-so-trainieren-sie-effektiv-den-ernstfall.html" target="_blank" title="Red Teaming">Red Teaming</a>, <a href="https://www.csoonline.com/article/3492412/penetration-tester-werden-was-ethical-hacker-konnen-mussen.html" target="_blank" title="Penetration Testing">Penetration Testing</a> oder auch <a href="https://www.csoonline.com/article/3492897/attack-surface-management-losungen-9-tools-um-ihre-angriffsflache-zu-managen.html" target="_blank" title="Attack Surface Assessments">Attack Surface Assessments</a> (ASA) ergänzen, unterscheidet sich aber deutlich von diesen Maßnahmen. Stellen Sie sich vor, Ihr Unternehmen wäre eine Villa:</p>
-
-
-
-<ul class="wp-block-list">
-<li><p>Beim <strong>Red Teaming</strong> oder <strong>Penetration Testing</strong> beauftragen Sie jemanden, in Ihr Anwesen einzubrechen und Ihren Safe auszuräumen. Das Ziel: potenzielle Zugangsmöglichkeiten aufzudecken.</p></li>
-
-
-
-<li><p><strong>Breach &amp; Attack Simulation</strong> ist hingegen, als würden Sie sämtliche Schlösser an den Türen auf Funktionstüchtigkeit prüfen und sicherstellen, dass die installierten Security-Kameras auch entsprechend reagieren, wenn sie Personen erkennen. Das Ziel: sichergehen, dass alle <a href="https://www.csoonline.com/article/3495614/kontrolle-statt-vertrauen-zero-trust-ist-nicht-genug.html" target="_blank" title="Kontrollmaßnahmen">Kontrollmaßnahmen</a> wie vorgesehen funktionieren.</p></li>
-
-
-
-<li><p>Während sich BAS dabei auf Enterprise-Security-Kontrollen wie <a href="https://www.csoonline.com/article/3493047/cyberbedrohungen-erkennen-und-reagieren-was-ndr-edr-und-xdr-unterscheidet.html" target="_blank" title="EDR">EDR</a> fokussiert, werden beim <strong>Attack Surface Assessment</strong> sämtliche potenziellen Schwachstellen und Angriffsvektoren untersucht.</p></li>
-</ul>
-
-
-
-<p>Das Analystenhaus Gartner fasst diese Technologien in der breiteren Kategorie “<a href="https://www.gartner.com/en/documents/4922031" rel="noopener" target="_blank" title="Exposure Management">Exposure Management</a>” zusammen. Laut den Analysten sind Lösungen im Bereich Breach &amp; Attack Simulation vor allem in stark regulierten Branchen wie dem Banken- und Versicherungsumfeld gefragt, die mit <a href="https://www.csoonline.com/article/3496124/cloud-security-journey-wie-compliance-bei-accenture-geht.html" target="_blank" title="wachsenden Compliance-Anforderungen">wachsenden Compliance-Anforderungen</a> konfrontiert sind. Diese Einschätzung kann Ilja Rabinovich, Director of Adversarial Tactics beim Sicherheitsanbieter Sygnia, nur bestätigen: “BAS-Produkte sind in der Regel teuer und werden von kleineren Unternehmen mit begrenztem Budget oder eingeschränkter Prozesslandschaft nicht angeschafft.”</p>
-
-
-
-<h2 class="wp-block-heading" id="der-markt-fur-breach-attack-simulation-tools">Der Markt für Breach &amp; Attack Simulation Tools</h2>
-
-
-
-<p>Die Auguren von Gartner <a href="https://www.gartner.com/en/documents/4922031" rel="noopener" target="_blank" title="prognostizieren">prognostizieren</a>, dass sich mehr als 40 Prozent aller Unternehmen bis zum Jahr 2026 auf konsolidierte Plattformen oder <a href="https://www.csoonline.com/article/3493613/managed-security-service-provider-6-risiken-die-sie-im-blick-haben-sollten.html" target="_blank" title="Managed Service Provider ">Managed Service Provider </a>verlassen werden, wenn es um Validierungsprüfungen im Bereich Cybersecurity geht. Entsprechend breit aufgestellt präsentiert sich die BAS-Anbieterlandschaft: Sowohl Standalone-Anbieter als auch große Security-Unternehmen und Service Provider wollen ihre BAS-Lösungen an den Kunden bringen. Chirag Mehta, Analyst bei Constellation Research, sieht dabei eine weitergehende Konsolidierung des Marktes am Horizont: “Wenn Sie ein Tool haben, das Angriffe simulieren kann, ist der nächste logische Schritt, diese Attacken zu verhindern. Das erfordert allerdings, eine Reihe verschiedener Tools zu integrieren, was kein Kinderspiel ist.”</p>
-
-
-
-<p>Ein wachsender Trend in diesem – wie auch allen anderen Bereichen der IT-Sicherheit – ist <a href="https://www.csoonline.com/article/3494171/chatbots-llms-in-der-sicherheitspraxis-6-wege-zu-mehr-security-mit-generative-ai.html" target="_blank" title="der Einsatz von Generative AI">der Einsatz von Generative AI</a> (GenAI). Erik Nost, Analyst bei Forrester Research, sieht diese Entwicklung positiv: “Vermutlich werden wir generative KI als erstes im Bereich des User Interface im Einsatz sehen. Mit Daten auf coole Art und Weise interagieren zu können, ist der neue GenAI-Use-Case.”</p>
-
-
-
-<p>Der Analyst hält es auch für möglich, dass KI künftig auf der Basis von Daten – oder den für die Benutzer respektive das Unternehmen relevantesten Angriffsarten – <a href="https://www.csoonline.com/article/3492793/ki-gestutzte-bedrohungsjagd-wie-genai-das-threat-hunting-beschleunigt.html" target="_blank" title="Bedrohungen modelliert">Bedrohungen modelliert</a>. Er fügt hinzu: “Generative KI könnte außerdem auch eingesetzt werden, um Unternehmen dabei zu helfen, die von BAS gefundenen Probleme zu verstehen, entsprechende Prioritäten zu setzen und spezifische Abhilfemaßnahmen vorzuschlagen.”</p>
-
-
-
-<h2 class="wp-block-heading" id="das-sollten-bas-losungen-leisten">Das sollten BAS-Lösungen leisten</h2>
-
-
-
-<p>Auf folgende wichtige Features sollten Anwender bei Breach &amp; Attack Simulation Tools achten:</p>
-
-
-
-<ul class="wp-block-list">
-<li><p><strong>Repräsentative Angriffsvektoren</strong>, um ein möglichst breites Spektrum an für das Unternehmen relevanten Angriffen simulieren zu können.</p></li>
-
-
-
-<li><p><strong>Realistische Angriffsszenarien</strong> auf Grundlage von Frameworks wie MITRE ATT&amp;CK, die denen echter Angreifer ähneln.</p></li>
-
-
-
-<li><p><strong>Anpassbare Szenarien</strong>, um spezielle Infrastrukturaspekte testen zu können.</p></li>
-
-
-
-<li><p><strong>Automatisierte Tests</strong>, um regelmäßige und effiziente Simulationen zu realisieren, ohne den Betrieb zu beeinträchtigen oder zusätzliche personelle Ressourcen einzusetzen.</p></li>
-
-
-
-<li><p><strong>Detaillierte Reportings und Analysen</strong>, um die Bedeutung der Tests erklären und verbesserungswürdige Bereiche identifizieren zu können.</p></li>
-
-
-
-<li><p><strong>Skalierbarkeit</strong>, um nicht nur die aktuelle Unternehmensumgebung, sondern auch künftige Entwicklungen abdecken zu können.</p></li>
-
-
-
-<li><p><strong>Testmöglichkeiten für hybride Produktionsumgebungen</strong>, um Kontrollmaßnahmen unter realen Bedingungen begutachten zu können.</p></li>
-
-
-
-<li><p><strong>Einfache Nutzung und simple Deployment-Optionen</strong>, sowie Integrationsmöglichkeiten mit vorhandenen Security-Tools und -Plattformen.</p></li>
-
-
-
-<li><p><strong>Fachkundiger Support</strong> – insbesondere, wenn Sie mit Breach &amp; Attack Simulation Tools nicht vertraut sind oder keine größeren Sicherheitsteams mit entsprechenden Erfahrungswerten einsetzen können.</p></li>
-
-
-
-<li><p>Eine <strong>geeignete Kostenstruktur</strong>, da die Preismodelle von BAS-Anbietern in der Regel variieren. Die Preisstruktur sollte dem Anwendungsfall angemessen sein.</p></li>
-</ul>
-
-
-
-<h2 class="wp-block-heading" id="die-wichtigsten-anbieter-fur-breach-attack-simulation-tools">Die wichtigsten Anbieter für Breach &amp; Attack Simulation Tools</h2>
-
-
-
-<p>Im Folgenden werfen wir einen Blick auf die wichtigsten Anbieter – und ihre Lösungen – im Bereich Breach &amp; Attack Simulation. Die Auswahl basiert dabei auf Kundenrezensionen aus Gartners Peer-Insights-Ranking sowie den Einschätzungen der Spezialisten von <a href="https://expertinsights.com/insights/top-breach-and-attack-simulation-solutions/" rel="noopener" target="_blank" title="Expert Insights">Expert Insights</a>.</p>
-
-
-
-<p><strong><a href="https://www.attackiq.com/" rel="noopener" target="_blank" title="AttackIQ">AttackIQ</a></strong></p>
-
-
-
-<p>Laut Expert Insights repliziert die zentrale Emulationsplattform von AttackIQ die Taktiken, Techniken und Methoden von Angreifern im Einklang mit dem MITRE-ATT&amp;CK-Framework. Das Angebot des Unternehmens im Bereich Breach &amp; Attack Simulation gliedert sich in drei Optionen:</p>
-
-
-
-<ul class="wp-block-list">
-<li><p>Die Managed Platform “<strong>Ready!</strong>” soll Unternehmen schneller und einfacher zu einer konsistenten Security-Validation-Strategie verhelfen.</p></li>
-
-
-
-<li><p>Der agentenlose Testing Service “<strong>Flex</strong>” funktioniert On Demand und wird im Pay-as-you-Go-Modell oder auch auf monatlicher sowie jährlicher Basis abgerechnet. </p></li>
-
-
-
-<li><p>Bei “<strong>Enterprise</strong>” handelt es sich um einen umfassenden Co-Managed-Service.</p></li>
-</ul>
-
-
-
-<p>AttackIQ hat sich zudem einen Namen gemacht, wenn es darum geht, ML- und KI-basierte Cybersecurity-Komponenten zu testen. Nach eigener Aussage ist das Unternehmen zudem der einzige BAS-Anbieter, der sowohl Self-Service- als auch Full-Service-Lösungen anbietet. Künftig soll künstliche Intelligenz Attack-IQ-Kunden außerdem verstärkt dabei unterstützen, Sicherheitslücken automatisiert zu identifizieren und zu beheben.</p>
-
-
-
-<p><strong><a href="https://cymulate.com/breach-and-attack-simulation/" rel="noopener" target="_blank" title="Cymulate">Cymulate</a></strong></p>
-
-
-
-<p>Cymulate gehört nicht nur laut Expert Insights zu den führenden Anbietern für Continuous Threat Exposure Management, sondern ist auch der Anbieter mit den besten Kundenbewertungen bei Gartners Peer Insights – auch dank der guten User Experience. Die “<strong>Breach and Attack (BAS)”</strong>-Lösung von Cymulate wird im SaaS-Modell bereitgestellt. Für Unternehmen mit Data-Segregation-Bedürfnissen steht auch eine Private-Tenancy-Option zur Verfügung. Wie AttackIQ verwendet Cymulate das MITRE ATT&amp;CK Framework als Grundlage.</p>
-
-
-
-<p>Laut dem Anbieter dauert es derzeit circa drei bis vier Wochen, um die Integrationen einzurichten und sein BAS-Tool einzusetzen. Diesen Zeitraum möchte Cymulate künftig mit Hilfe von Generative AI auf wenige Minuten reduzieren. Doch die GenAI-Pläne des Anbieters gehen noch weiter: Die Technologie soll künftig automatisiert aus Tausenden oder gar Hunderttausenden verschiedenen Angriffsszenarien Mitigationsstrategien entwickeln können – und den Security-Teams erklären, wie diese umzusetzen sind. Die GenAI-Funktionen sollen laut Cymulate bis Ende Oktober 2024 in vollem Umfang zur Verfügung stehen.</p>
-
-
-
-<p><strong><a href="https://www.fortinet.com/de/products/fortitester" rel="noopener" target="_blank" title="Fortinet">Fortinet</a></strong></p>
-
-
-
-<p>In Sachen Kundenbewertungen kann das BAS-Offering von Fortinet nicht ganz mit den ersten beiden Angeboten mithalten. Allerdings kombiniert “<strong>FortiTester</strong>” Breach &amp; Attack Simulation mit Netzwerk-Performance-Testing und stellt insofern eine umfassende Lösung dar.</p>
-
-
-
-<p>Das Fortinet-Tool simuliert diverse Angriffsarten auf Grundlage des MITRE-ATT&amp;CK-Frameworks und unterstützt laut Expert Insights außerdem CVE-basierte IPS-Tests, sowie DDoS Traffic Generation.</p>
-
-
-
-<p><strong><a href="https://cloud.google.com/security/products/mandiant-security-validation" rel="noreferrer noopener" target="_blank">Mandiant</a></strong></p>
-
-
-
-<p>Security-Anbieter Mandiant ist in erster Linie für seine Dienstleistungsangebote im Bereich Threat Intelligence bekannt. Die Expertise in diesem Bereich lässt das Unternehmen auch in seine BAS-Softwarelösung “<strong>Security Validation</strong>” einfließen – und hebt sich dadurch von seinen Mitbewerbern ab.</p>
-
-
-
-<p>Das Mandiant-Tool unterstützt zum Beispiel MITRE ATT&amp;CK Framework Mapping, automatisiertes Alerting sowie Environmental Drift Detection und simuliert Angriffsszenarien aus der echten Welt.</p>
-
-
-
-<p><strong><a href="https://www.netspi.com/breach-and-attack-simulation/" rel="noopener" target="_blank" title="NetSPI">NetSPI</a></strong></p>
-
-
-
-<p>In Sachen Penetrationstests hat sich NetSPI bereits einen Namen gemacht. Das Unternehmen hat mit “<strong>Breach and Attack Simulation</strong>” ebenfalls eine BAS-Lösung im Angebot, die Sicherheitskontrollen validieren, Detection-Lücken identifizieren und Angriffsflächen managen kann. Das Pentesting-Knowhow von NetSPI manifestiert sich dabei insbesondere in umfassenden Support, wie Derek Wilson, leitender Security-Berater des Unternehmens, verspricht: “Unser erfahrenes Pentester-Team schließt sich mit Ihrem SOC-Team kurz und unterstützt dabei, Detections einzuordnen und Präventionsmaßnahmen zu ergreifen.”</p>
-
-
-
-<p>Auch bei NetSPI soll künftig Generative AI Mehrwert für die BAS-Kunden erschließen: Künftig soll die Lösung des Anbieters dank der Technologie in der Lage sein, mehrere Datenquellen zu nutzen, um die nötigen Tests möglichst schnell zu identifizieren und zu priorisieren. Darüber hinaus stehen auch Playbooks, die auf Basis von Bedrohungsinformationen für spezifische Industrien generiert werden sowie die Simulation dynamischer Angriffsketten, um Abdeckungslücken zu identifizieren, auf dem Plan.</p>
-
-
-
-<p><strong><a href="https://www.picussecurity.com/security-validation-platform" rel="noopener" target="_blank" title="Picus Security">Picus Security</a></strong></p>
-
-
-
-<p>Auf Grundlage der Gartner Peer Insights ist Picus Security der BAS-Anbieter mit der zweithöchsten Kundenzufriedenheit und wurde von den Auguren mit einem “Customers Choice”-Award ausgezeichnet. Nach eigenen Angaben zählt Picus Hunderte von globalen Unternehmen zu seinen Kunden, darunter beispielsweise Mastercard oder die ING-Bankengruppe.</p>
-
-
-
-<p>Die “<strong>Security Validation</strong>“-Plattform des Anbieters beinhaltet Breach &amp; Attack Simulation, unterstützt darüber hinaus allerdings auch automatisierte Penetrationstests und Attack Surface Management sowie SOC-Optimierung und Cloud Security Posture Managenet (CSPM). Auch Picus investiert stark in KI und will künftig mit Hilfe der Technologie bessere, schnellere und umfassender personalisierte Einblicke in das Sicherheitsniveau der Anwender liefern.</p>
-
-
-
-<p><strong><a href="https://www.redscan.com/services/breach-and-attack-simulation/" rel="noopener" target="_blank" title="Redscan">Redscan</a></strong></p>
-
-
-
-<p>Weil Redscan auf Managed Detection and Response sowie Penetration Testing spezialisiert ist, bietet das Unternehmen einen praxisorientierten BAS-Ansatz namens “<strong>FAST Attack Simulation</strong>s”. Dieser verspricht den Anwendern maßgeschneiderte Angriffssimulationen kombiniert mit Beratungsleistungen, um bei den nachfolgenden Schritten zu unterstützen.</p>
-
-
-
-<p><strong><a href="https://www.reliaquest.com/platform/breach-and-attack-simulation/" rel="noopener" target="_blank" title="Reliaquest">Reliaquest</a></strong></p>
-
-
-
-<p>Der Anbieter Reliaquest wurde für seine Security-Plattform “GreyMatter” 2023 von Gartner in der Kategorie “Managed Detection and Response” mit einem “Customers Choice”-Award ausgezeichnet. Besonders stark ist diese Lösung im Umfeld mittelständischer Unternehmen verbreitet. Eine Funktion dieser Plattform heißt “<strong>Verify</strong>” und realisiert Breach &amp; Attack Simulation.</p>
-
-
-
-<p>Die BAS-Lösung von Reliaquest verspricht Anwendern ein umfassendes Portfolio (kuratierter) Angriffsszenarien, um möglichst zeitnah zu entsprechenden Ergebnissen zu kommen. Diese Szenarien werden zudem laufend auf Grundlage aktueller Threat-Informationen aktualisiert. Die ermittelte Bedrohungsabdeckung gleicht das Tool mit Security-Frameworks wie MITRE ATT&amp;CK ab.</p>
-
-
-
-<p>Sollten Sie diesen Anbieter ins Auge fassen, behalten Sie eines jedoch im Hinterkopf: Möglicherweise ist es im Sinne einer unabhängigen Überprüfung der Wirksamkeit von Sicherheitsmaßnahmen nicht die beste Idee, denselben Anbieter für BAS und MDR zu wählen. Andererseits könnten Anwender auch von dieser Integration profitieren.</p>
-
-
-
-<p><strong><a href="https://www.safebreach.com/" rel="noopener" target="_blank" title="SafeBreach">SafeBreach</a></strong></p>
-
-
-
-<p>Auch der dedizierte BAS-Anbieter SafeBreach kommt bei den Peer Reviews von Gartner gut weg – auch dank seiner umfassenden Integrationsmöglichkeiten mit anderen Security-Tools. Auch in Sachen namhafte Kunden kann SafeBreach mit Netflix, PayPal, Pepsi und der Carlsberg-Gruppe überzeugen.</p>
-
-
-
-<p>Die BAS-Plattform “<strong>SafeBreach</strong>” testet die Wirksamkeit bestehender Sicherheitskontrollen auf der Grundlage von mehr als 25.000 Angriffsmethoden, die dem unternehmenseigenen “Hackers Playbook” entstammen. Zudem verspricht der Anbieter, seine Plattform innerhalb von 24 Stunden um neu aufkommende Bedrohungen ergänzen zu können. Neben maßgeschneiderten Angriffssimulationen auf Grundlage des MITRE-ATT&amp;CK-Frameworks bietet die SafeBreach-Lösung auch die Option, die voraussichtlichen Kosten für Risikominimierungsmaßnahmen zu ermitteln.</p>
-
-
-
-<h2 class="wp-block-heading" id="7-fragen-vor-dem-bas-invest">7 Fragen vor dem BAS-Invest</h2>
-
-
-
-<p>Forrester-Analyst Nost empfiehlt Unternehmen, ihre BAS-Journey mit einem guten Überblick über ihre Systeme und Kontrollmaßnahmen anzutreten und von “Schnellschüssen” abzusehen: “Bevor Sie nicht wissen, was Sie testen sollen, sollten Sie sich auch nicht auf ein BAS-Tool einlassen.”</p>
-
-
-
-<p>Davon abgesehen empfiehlt es sich, Anbieter von Breach &amp; Attack Simulation Tools mit den richtigen Fragen zu löchern, um vor unschönen Überraschungen verschont zu bleiben. Zum Beispiel:</p>
-
-
-
-<ol class="wp-block-list">
-<li><p>Inwiefern gewährleistet Ihr Produkt verbesserte Detection-Fähigkeiten im Rahmen von Sicherheitskontrollen?</p></li>
-
-
-
-<li><p>Können Tests skaliert und in Produktionsumgebungen gefahren werden – ohne größere Auswirkungen für die Kunden? </p></li>
-
-
-
-<li><p>Wie sehen Ihre Research-Bemühungen mit Blick auf die neueste Bedrohungen aus?</p></li>
-
-
-
-<li><p>Wie oft aktualisieren Sie ihre Threat-Bibliothek?</p></li>
-
-
-
-<li><p>Können Sie anhand eines Beispiels demonstrieren, wie die Simulationsergebnisse präsentiert werden?</p></li>
-
-
-
-<li><p>Sind Ihre Plattformen transparent oder ist nur Black-Box-Testing möglich?</p></li>
-
-
-
-<li><p>Besteht die Option für On-Premises- oder Air-Gapped-Deployments?</p></li>
-</ol>
-
-
-
-<p><strong>Dieser Artikel ist <a href="https://www.csoonline.com/article/2132289/breach-and-attack-simulation-tools.html" target="_blank">im Original</a> bei unserer Schwesterpublikation CSOonline.com erschienen.</strong></p>
 </div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
 </item>
 
