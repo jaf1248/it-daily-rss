@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
 **Period:** May 08 – May 15, 2026  
-**Generated:** 2026-05-15 06:35 UTC  
+**Generated:** 2026-05-15 09:46 UTC  
 **Items reviewed:** 124  
 
 ## ⚡ Top Actions This Week
@@ -55,41 +55,41 @@
 
 ## 🟠 Important — Review This Week
 
-- [CISA Adds Cisco SD-WAN CVE-2026-20182 to KEV After Admin Access Exploits](https://thehackernews.com/2026/05/cisa-adds-cisco-sd-wan-cve-2026-20182.html)  
-  **The Hacker News** · May 15 · _General awareness item._  
+- [Microsoft warns of Exchange zero-day flaw exploited in attacks](https://www.bleepingcomputer.com/news/microsoft/microsoft-warns-of-exchange-zero-day-flaw-exploited-in-attacks/)  
+  **BleepingComputer** · May 15 · _Potential email disruption for users._  
 
-- [Hackers exploit auth bypass flaw in Burst Statistics WordPress plugin](https://www.bleepingcomputer.com/news/security/hackers-exploit-auth-bypass-flaw-in-burst-statistics-wordpress-plugin/)  
-  **BleepingComputer** · May 14 · _General awareness item._  
+- [CVE-2026-33814 Infinite loop in HTTP/2 transport when given bad SETTINGS_MAX_FRAME_SIZE in net/http/internal/http2 in golang.org/x/net](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-33814)  
+  **Microsoft Security Response Center (MSRC)** · May 15 · _General awareness item._  
 
-- [Windows 11 and Microsoft Edge hacked at Pwn2Own Berlin 2026](https://www.bleepingcomputer.com/news/security/windows-11-and-microsoft-edge-hacked-on-first-day-of-pwn2own-berlin-2026/)  
-  **BleepingComputer** · May 14 · _General awareness item._  
+- [CVE-2026-29181 OpenTelemetry-Go multi-value `baggage` header extraction causes excessive allocations (remote dos amplification)](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-29181)  
+  **Microsoft Security Response Center (MSRC)** · May 15 · _General awareness item._  
 
-- [18-year-old NGINX vulnerability allows DoS, potential RCE](https://www.bleepingcomputer.com/news/security/18-year-old-nginx-vulnerability-allows-dos-potential-rce/)  
-  **BleepingComputer** · May 14 · _General awareness item._  
+- [CVE-2026-43968 CR Injection in SSE Encoder Enables Event Splitting via cow_sse:event/1](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-43968)  
+  **Microsoft Security Response Center (MSRC)** · May 15 · _General awareness item._  
 
-- [CVE-2026-32177 .NET Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-32177)  
-  **Microsoft Security Response Center (MSRC)** · May 14 · _General awareness item._  
+- [CVE-2026-7790 Unbounded chunk-size hex digits in cowlib cause quadratic CPU and memory DoS](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-7790)  
+  **Microsoft Security Response Center (MSRC)** · May 15 · _General awareness item._  
 
-- [CVE-2026-35433 .NET Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-35433)  
-  **Microsoft Security Response Center (MSRC)** · May 14 · _General awareness item._  
+- [CVE-2026-43969 Cookie Request Header Injection via Unvalidated Encoder in cow_cookie:cookie/1](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-43969)  
+  **Microsoft Security Response Center (MSRC)** · May 15 · _General awareness item._  
 
-- [CVE-2026-41615 Microsoft Authenticator Information Disclosure Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-41615)  
-  **Microsoft Security Response Center (MSRC)** · May 14 · _General awareness item._  
+- [CVE-2026-7210 The expat and elementtree parsers use insufficient entropy for XML hash-flooding protection](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-7210)  
+  **Microsoft Security Response Center (MSRC)** · May 15 · _General awareness item._  
 
-- [CVE-2026-42897 Microsoft Exchange Server Spoofing Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-42897)  
-  **Microsoft Security Response Center (MSRC)** · May 14 · _Potential email disruption for users._  
+- [CVE-2026-34956 Openvswitch: open vswitch: denial of service via malformed ftp epasv command](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-34956)  
+  **Microsoft Security Response Center (MSRC)** · May 15 · _General awareness item._  
 
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [&#x5b;Guest Diary&#x5d;  New Malware Libraries means New Signatures, (Fri, May 15th)](https://isc.sans.edu/diary/rss/32986) — SANS Internet Storm Center
 - [ISC Stormcast For Friday, May 15th, 2026 https://isc.sans.edu/podcastdetail/9934, (Fri, May 15th)](https://isc.sans.edu/diary/rss/32992) — SANS Internet Storm Center
 - [TeamPCP hackers advertise Mistral AI code repos for sale](https://www.bleepingcomputer.com/news/security/teampcp-hackers-advertise-mistral-ai-code-repos-for-sale/) — BleepingComputer
 - [Stealer Backdoor Found in 3 Node-IPC Versions Targeting Developer Secrets](https://thehackernews.com/2026/05/stealer-backdoor-found-in-3-node-ipc.html) — The Hacker News
 - [Cyber-Enabled Cargo Crime: How Cybercrime Tradecraft is Used to Steal Freight](https://www.bleepingcomputer.com/news/security/cyber-enabled-cargo-crime-how-cybercrime-tradecraft-is-used-to-steal-freight/) — BleepingComputer
 - [Ghostwriter Targets Ukrainian Government With Geofenced PDF Phishing, Cobalt Strike](https://thehackernews.com/2026/05/ghostwriter-targets-ukrainian.html) — The Hacker News
-- [How AI Hallucinations Are Creating Real Security Risks](https://thehackernews.com/2026/05/how-ai-hallucinations-are-creating-real.html) — The Hacker News
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 10 critical · 80 important · 34 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 10 critical · 81 important · 33 FYI_
