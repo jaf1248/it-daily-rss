@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
 **Period:** May 08 – May 15, 2026  
-**Generated:** 2026-05-15 14:01 UTC  
+**Generated:** 2026-05-15 16:49 UTC  
 **Items reviewed:** 123  
 
 ## ⚡ Top Actions This Week
@@ -58,6 +58,9 @@
 - [CVE-2026-40379 Azure Entra ID Spoofing Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-40379)  
   **Microsoft Security Response Center (MSRC)** · May 15 · _Possible impact to authentication and sign-in flows._  
 
+- [Four OpenClaw Flaws Enable Data Theft, Privilege Escalation, and Persistence](https://thehackernews.com/2026/05/four-openclaw-flaws-enable-data-theft.html)  
+  **The Hacker News** · May 15 · _General awareness item._  
+
 - [Microsoft warns of Exchange zero-day flaw exploited in attacks](https://www.bleepingcomputer.com/news/microsoft/microsoft-warns-of-exchange-zero-day-flaw-exploited-in-attacks/)  
   **BleepingComputer** · May 15 · _Potential email disruption for users._  
 
@@ -76,19 +79,16 @@
 - [CVE-2026-43969 Cookie Request Header Injection via Unvalidated Encoder in cow_cookie:cookie/1](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-43969)  
   **Microsoft Security Response Center (MSRC)** · May 15 · _General awareness item._  
 
-- [CVE-2026-7210 The expat and elementtree parsers use insufficient entropy for XML hash-flooding protection](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-7210)  
-  **Microsoft Security Response Center (MSRC)** · May 15 · _General awareness item._  
-
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [Avada Builder WordPress plugin flaws allow site credential theft](https://www.bleepingcomputer.com/news/security/avada-builder-wordpress-plugin-flaws-allow-site-credential-theft/) — BleepingComputer
+- [Microsoft backpedals: Edge to stop loading passwords into memory](https://www.bleepingcomputer.com/news/microsoft/microsoft-edge-to-stop-loading-cleartext-passwords-in-memory-on-startup/) — BleepingComputer
+- [Inside the REMUS Infostealer: Session Theft, MaaS, and Rapid Evolution](https://www.bleepingcomputer.com/news/security/inside-the-remus-infostealer-session-theft-maas-and-rapid-evolution/) — BleepingComputer
 - [Microsoft to automatically roll back faulty Windows drivers](https://www.bleepingcomputer.com/news/microsoft/microsoft-to-automatically-roll-back-faulty-windows-drivers/) — BleepingComputer
 - [What 45 Days of Watching Your Own Tools Will Tell You About Your Real Attack Surface](https://thehackernews.com/2026/05/what-45-days-of-watching-your-own-tools.html) — The Hacker News
 - [&#x5b;Guest Diary&#x5d;  New Malware Libraries means New Signatures, (Fri, May 15th)](https://isc.sans.edu/diary/rss/32986) — SANS Internet Storm Center
-- [ISC Stormcast For Friday, May 15th, 2026 https://isc.sans.edu/podcastdetail/9934, (Fri, May 15th)](https://isc.sans.edu/diary/rss/32992) — SANS Internet Storm Center
-- [TeamPCP hackers advertise Mistral AI code repos for sale](https://www.bleepingcomputer.com/news/security/teampcp-hackers-advertise-mistral-ai-code-repos-for-sale/) — BleepingComputer
-- [Stealer Backdoor Found in 3 Node-IPC Versions Targeting Developer Secrets](https://thehackernews.com/2026/05/stealer-backdoor-found-in-3-node-ipc.html) — The Hacker News
 
 ---
 
