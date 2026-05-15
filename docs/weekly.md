@@ -1,25 +1,30 @@
 # IT Weekly Intelligence Briefing
 **Period:** May 08 – May 15, 2026  
-**Generated:** 2026-05-15 16:49 UTC  
+**Generated:** 2026-05-15 18:21 UTC  
 **Items reviewed:** 123  
 
 ## ⚡ Top Actions This Week
 
 1. **Audit third-party software dependencies and review vendor access.**  
+   _Popular node-ipc npm package compromised to steal credentials_  
+   Source: BleepingComputer  
+
+2. **Audit third-party software dependencies and review vendor access.**  
    _TanStack Supply Chain Attack Hits Two OpenAI Employee Devices, Forces macOS Updates_  
    Source: The Hacker News  
 
-2. **Review access logs for unauthorized sessions; apply vendor patch immediately.**  
+3. **Review access logs for unauthorized sessions; apply vendor patch immediately.**  
    _Cisco warns of new critical SD-WAN flaw exploited in zero-day attacks_  
-   Source: BleepingComputer  
-
-3. **Audit third-party software dependencies and review vendor access.**  
-   _OpenAI confirms security breach in TanStack supply chain attack_  
    Source: BleepingComputer  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [Popular node-ipc npm package compromised to steal credentials](https://www.bleepingcomputer.com/news/security/popular-node-ipc-npm-package-compromised-to-steal-credentials/)
+**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** May 15  
+**Why it matters:** Third-party/software supply chain integrity risk.  
+**Recommended action:** Audit third-party software dependencies and review vendor access.  
 
 ### [TanStack Supply Chain Attack Hits Two OpenAI Employee Devices, Forces macOS Updates](https://thehackernews.com/2026/05/tanstack-supply-chain-attack-hits-two.html)
 **Source:** The Hacker News &nbsp;·&nbsp; **Date:** May 15  
@@ -46,17 +51,24 @@
 **Why it matters:** Third-party/software supply chain integrity risk.  
 **Recommended action:** Audit third-party software dependencies and review vendor access.  
 
-### [KongTuke hackers now use Microsoft Teams for corporate breaches](https://www.bleepingcomputer.com/news/security/kongtuke-hackers-now-use-microsoft-teams-for-corporate-breaches/)
-**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** May 14  
-**Why it matters:** Potential credential or data exposure.  
-**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
-
 ---
 
 ## 🟠 Important — Review This Week
 
+- [Microsoft Exchange, Windows 11 hacked on second day of Pwn2Own](https://www.bleepingcomputer.com/news/security/pwn2own-day-two-hackers-demo-microsoft-exchange-windows-11-red-had-enterprise-linux-zero-days/)  
+  **BleepingComputer** · May 15 · _Potential email disruption for users._  
+
 - [CVE-2026-40379 Azure Entra ID Spoofing Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-40379)  
   **Microsoft Security Response Center (MSRC)** · May 15 · _Possible impact to authentication and sign-in flows._  
+
+- [CVE-2026-32161 Windows Native WiFi Miniport Driver Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-32161)  
+  **Microsoft Security Response Center (MSRC)** · May 15 · _General awareness item._  
+
+- [CVE-2026-32170 Windows Rich Text Edit Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-32170)  
+  **Microsoft Security Response Center (MSRC)** · May 15 · _General awareness item._  
+
+- [CVE-2026-21530 Windows Rich Text Edit Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-21530)  
+  **Microsoft Security Response Center (MSRC)** · May 15 · _General awareness item._  
 
 - [Four OpenClaw Flaws Enable Data Theft, Privilege Escalation, and Persistence](https://thehackernews.com/2026/05/four-openclaw-flaws-enable-data-theft.html)  
   **The Hacker News** · May 15 · _General awareness item._  
@@ -67,29 +79,17 @@
 - [CVE-2026-33814 Infinite loop in HTTP/2 transport when given bad SETTINGS_MAX_FRAME_SIZE in net/http/internal/http2 in golang.org/x/net](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-33814)  
   **Microsoft Security Response Center (MSRC)** · May 15 · _General awareness item._  
 
-- [CVE-2026-29181 OpenTelemetry-Go multi-value `baggage` header extraction causes excessive allocations (remote dos amplification)](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-29181)  
-  **Microsoft Security Response Center (MSRC)** · May 15 · _General awareness item._  
-
-- [CVE-2026-43968 CR Injection in SSE Encoder Enables Event Splitting via cow_sse:event/1](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-43968)  
-  **Microsoft Security Response Center (MSRC)** · May 15 · _General awareness item._  
-
-- [CVE-2026-7790 Unbounded chunk-size hex digits in cowlib cause quadratic CPU and memory DoS](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-7790)  
-  **Microsoft Security Response Center (MSRC)** · May 15 · _General awareness item._  
-
-- [CVE-2026-43969 Cookie Request Header Injection via Unvalidated Encoder in cow_cookie:cookie/1](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-43969)  
-  **Microsoft Security Response Center (MSRC)** · May 15 · _General awareness item._  
-
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [Turla Turns Kazuar Backdoor Into Modular P2P Botnet for Persistent Access](https://thehackernews.com/2026/05/turla-turns-kazuar-backdoor-into.html) — The Hacker News
 - [Avada Builder WordPress plugin flaws allow site credential theft](https://www.bleepingcomputer.com/news/security/avada-builder-wordpress-plugin-flaws-allow-site-credential-theft/) — BleepingComputer
 - [Microsoft backpedals: Edge to stop loading passwords into memory](https://www.bleepingcomputer.com/news/microsoft/microsoft-edge-to-stop-loading-cleartext-passwords-in-memory-on-startup/) — BleepingComputer
 - [Inside the REMUS Infostealer: Session Theft, MaaS, and Rapid Evolution](https://www.bleepingcomputer.com/news/security/inside-the-remus-infostealer-session-theft-maas-and-rapid-evolution/) — BleepingComputer
 - [Microsoft to automatically roll back faulty Windows drivers](https://www.bleepingcomputer.com/news/microsoft/microsoft-to-automatically-roll-back-faulty-windows-drivers/) — BleepingComputer
 - [What 45 Days of Watching Your Own Tools Will Tell You About Your Real Attack Surface](https://thehackernews.com/2026/05/what-45-days-of-watching-your-own-tools.html) — The Hacker News
-- [&#x5b;Guest Diary&#x5d;  New Malware Libraries means New Signatures, (Fri, May 15th)](https://isc.sans.edu/diary/rss/32986) — SANS Internet Storm Center
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 10 critical · 80 important · 33 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 11 critical · 81 important · 31 FYI_
