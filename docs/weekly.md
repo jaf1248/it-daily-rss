@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
 **Period:** May 09 – May 16, 2026  
-**Generated:** 2026-05-16 20:42 UTC  
+**Generated:** 2026-05-16 21:45 UTC  
 **Items reviewed:** 123  
 
 ## ⚡ Top Actions This Week
@@ -55,6 +55,9 @@
 
 ## 🟠 Important — Review This Week
 
+- [Microsoft rejects critical Azure vulnerability report, no CVE issued](https://www.bleepingcomputer.com/news/security/microsoft-rejects-critical-azure-vulnerability-report-no-cve-issued/)  
+  **BleepingComputer** · May 16 · _General awareness item._  
+
 - [Funnel Builder Flaw Under Active Exploitation Enables WooCommerce Checkout Skimming](https://thehackernews.com/2026/05/funnel-builder-flaw-under-active.html)  
   **The Hacker News** · May 16 · _General awareness item._  
 
@@ -74,9 +77,6 @@
   **Microsoft Security Response Center (MSRC)** · May 16 · _General awareness item._  
 
 - [CVE-2026-42945 NGINX ngx_http_rewrite_module vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-42945)  
-  **Microsoft Security Response Center (MSRC)** · May 16 · _General awareness item._  
-
-- [CVE-2026-42934 NGINX ngx_http_charset_module vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-42934)  
   **Microsoft Security Response Center (MSRC)** · May 16 · _General awareness item._  
 
 ---
