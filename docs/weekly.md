@@ -1,25 +1,30 @@
 # IT Weekly Intelligence Briefing
 **Period:** May 10 – May 17, 2026  
-**Generated:** 2026-05-17 06:21 UTC  
+**Generated:** 2026-05-17 09:04 UTC  
 **Items reviewed:** 123  
 
 ## ⚡ Top Actions This Week
 
-1. **Prioritize patching of affected systems; check for internet-exposed attack surface.**  
+1. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
+   _Grafana GitHub Token Breach Led to Codebase Download and Extortion Attempt_  
+   Source: The Hacker News  
+
+2. **Prioritize patching of affected systems; check for internet-exposed attack surface.**  
    _Funnel Builder WordPress plugin bug exploited to steal credit cards_  
    Source: BleepingComputer  
 
-2. **Audit third-party software dependencies and review vendor access.**  
+3. **Audit third-party software dependencies and review vendor access.**  
    _Popular node-ipc npm package compromised to steal credentials_  
    Source: BleepingComputer  
-
-3. **Audit third-party software dependencies and review vendor access.**  
-   _TanStack Supply Chain Attack Hits Two OpenAI Employee Devices, Forces macOS Updates_  
-   Source: The Hacker News  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [Grafana GitHub Token Breach Led to Codebase Download and Extortion Attempt](https://thehackernews.com/2026/05/grafana-github-token-breach-led-to.html)
+**Source:** The Hacker News &nbsp;·&nbsp; **Date:** May 17  
+**Why it matters:** Potential credential or data exposure.  
+**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
 ### [Funnel Builder WordPress plugin bug exploited to steal credit cards](https://www.bleepingcomputer.com/news/security/funnel-builder-wordpress-plugin-bug-exploited-to-steal-credit-cards/)
 **Source:** BleepingComputer &nbsp;·&nbsp; **Date:** May 15  
@@ -46,14 +51,24 @@
 **Why it matters:** Third-party/software supply chain integrity risk.  
 **Recommended action:** Audit third-party software dependencies and review vendor access.  
 
-### [Cisco Catalyst SD-WAN Controller Auth Bypass Actively Exploited to Gain Admin Access](https://thehackernews.com/2026/05/cisco-catalyst-sd-wan-controller-auth.html)
-**Source:** The Hacker News &nbsp;·&nbsp; **Date:** May 14  
-**Why it matters:** General awareness item.  
-**Recommended action:** Review access logs for unauthorized sessions; apply vendor patch immediately.  
-
 ---
 
 ## 🟠 Important — Review This Week
+
+- [CVE-2026-8328 FTP PASV SSRF, ftpcp() does not use actual peer address, trusts server-supplied PASV host address](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-8328)  
+  **Microsoft Security Response Center (MSRC)** · May 17 · _General awareness item._  
+
+- [CVE-2026-8368 LWP::UserAgent versions before 6.83 for Perl leak Authorization and Proxy-Authorization headers on cross-origin redirects](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-8368)  
+  **Microsoft Security Response Center (MSRC)** · May 17 · _General awareness item._  
+
+- [CVE-2026-7210 The expat and elementtree parsers use insufficient entropy for XML hash-flooding protection](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-7210)  
+  **Microsoft Security Response Center (MSRC)** · May 17 · _General awareness item._  
+
+- [CVE-2026-44283 etcd: Read access via PrevKv in etcd transactions may bypass RBAC authorization checks](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-44283)  
+  **Microsoft Security Response Center (MSRC)** · May 17 · _General awareness item._  
+
+- [CVE-2026-46483 Vim: Command injection in tar#Vimuntar via missing shellescape {special} flag](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-46483)  
+  **Microsoft Security Response Center (MSRC)** · May 17 · _General awareness item._  
 
 - [Microsoft rejects critical Azure vulnerability report, no CVE issued](https://www.bleepingcomputer.com/news/security/microsoft-rejects-critical-azure-vulnerability-report-no-cve-issued/)  
   **BleepingComputer** · May 16 · _General awareness item._  
@@ -62,21 +77,6 @@
   **The Hacker News** · May 16 · _General awareness item._  
 
 - [CVE-2026-43490 ksmbd: validate inherited ACE SID length](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-43490)  
-  **Microsoft Security Response Center (MSRC)** · May 16 · _General awareness item._  
-
-- [CVE-2026-46333 ptrace: slightly saner 'get_dumpable()' logic](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-46333)  
-  **Microsoft Security Response Center (MSRC)** · May 16 · _General awareness item._  
-
-- [CVE-2026-44662 rust-openssl: Heap buffer overflow when encrypting with AES key-wrap-with-padding](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-44662)  
-  **Microsoft Security Response Center (MSRC)** · May 16 · _General awareness item._  
-
-- [CVE-2026-44431 urllib3: Sensitive headers forwarded across origins in proxied low-level redirects](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-44431)  
-  **Microsoft Security Response Center (MSRC)** · May 16 · _General awareness item._  
-
-- [CVE-2026-42946 NGINX ngx_http_scgi_module and ngx_http_uwsgi_module vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-42946)  
-  **Microsoft Security Response Center (MSRC)** · May 16 · _General awareness item._  
-
-- [CVE-2026-42945 NGINX ngx_http_rewrite_module vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-42945)  
   **Microsoft Security Response Center (MSRC)** · May 16 · _General awareness item._  
 
 ---
@@ -92,4 +92,4 @@
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 11 critical · 81 important · 31 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 12 critical · 80 important · 31 FYI_
