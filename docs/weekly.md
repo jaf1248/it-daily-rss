@@ -1,25 +1,30 @@
 # IT Weekly Intelligence Briefing
 **Period:** May 11 – May 18, 2026  
-**Generated:** 2026-05-18 08:00 UTC  
-**Items reviewed:** 122  
+**Generated:** 2026-05-18 11:52 UTC  
+**Items reviewed:** 126  
 
 ## ⚡ Top Actions This Week
 
-1. **Prioritize patching of affected systems; check for internet-exposed attack surface.**  
+1. **Audit third-party software dependencies and review vendor access.**  
+   _Developer Workstations Are Now Part of the Software Supply Chain_  
+   Source: The Hacker News  
+
+2. **Prioritize patching of affected systems; check for internet-exposed attack surface.**  
    _NGINX CVE-2026-42945 Exploited in the Wild, Causing Worker Crashes and Possible RCE_  
    Source: The Hacker News  
 
-2. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
+3. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
    _Grafana GitHub Token Breach Led to Codebase Download and Extortion Attempt_  
    Source: The Hacker News  
-
-3. **Prioritize patching of affected systems; check for internet-exposed attack surface.**  
-   _Funnel Builder WordPress plugin bug exploited to steal credit cards_  
-   Source: BleepingComputer  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [Developer Workstations Are Now Part of the Software Supply Chain](https://thehackernews.com/2026/05/developer-workstations-are-now-part-of.html)
+**Source:** The Hacker News &nbsp;·&nbsp; **Date:** May 18  
+**Why it matters:** Third-party/software supply chain integrity risk.  
+**Recommended action:** Audit third-party software dependencies and review vendor access.  
 
 ### [NGINX CVE-2026-42945 Exploited in the Wild, Causing Worker Crashes and Possible RCE](https://thehackernews.com/2026/05/nginx-cve-2026-42945-exploited-in-wild.html)
 **Source:** The Hacker News &nbsp;·&nbsp; **Date:** May 17  
@@ -46,17 +51,21 @@
 **Why it matters:** Third-party/software supply chain integrity risk.  
 **Recommended action:** Audit third-party software dependencies and review vendor access.  
 
-### [Cisco Catalyst SD-WAN Controller Auth Bypass Actively Exploited to Gain Admin Access](https://thehackernews.com/2026/05/cisco-catalyst-sd-wan-controller-auth.html)
-**Source:** The Hacker News &nbsp;·&nbsp; **Date:** May 14  
-**Why it matters:** General awareness item.  
-**Recommended action:** Review access logs for unauthorized sessions; apply vendor patch immediately.  
-
 ---
 
 ## 🟠 Important — Review This Week
 
+- [Ivanti, Fortinet, SAP, VMware, n8n Patch RCE, SQL Injection, Privilege Escalation Flaws](https://thehackernews.com/2026/05/ivanti-fortinet-sap-vmware-n8n-patch.html)  
+  **The Hacker News** · May 18 · _General awareness item._  
+
+- [MiniPlasma Windows 0-Day Enables SYSTEM Privilege Escalation on Fully Patched Systems](https://thehackernews.com/2026/05/miniplasma-windows-0-day-enables-system.html)  
+  **The Hacker News** · May 18 · _General awareness item._  
+
 - [CVE-2026-43308 btrfs: don't BUG() on unexpected delayed ref type in run_one_delayed_ref()](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-43308)  
   **Microsoft Security Response Center (MSRC)** · May 18 · _General awareness item._  
+
+- [Microsoft confirms Windows 11 security update install issues](https://www.bleepingcomputer.com/news/microsoft/microsoft-confirms-kb5089549-windows-11-security-update-install-issues/)  
+  **BleepingComputer** · May 18 · _General awareness item._  
 
 - [Exploit available for new DirtyDecrypt Linux root escalation flaw](https://www.bleepingcomputer.com/news/security/exploit-available-for-new-dirtydecrypt-linux-root-escalation-flaw/)  
   **BleepingComputer** · May 18 · _General awareness item._  
@@ -70,26 +79,17 @@
 - [CVE-2026-8328 FTP PASV SSRF, ftpcp() does not use actual peer address, trusts server-supplied PASV host address](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-8328)  
   **Microsoft Security Response Center (MSRC)** · May 17 · _General awareness item._  
 
-- [CVE-2026-8368 LWP::UserAgent versions before 6.83 for Perl leak Authorization and Proxy-Authorization headers on cross-origin redirects](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-8368)  
-  **Microsoft Security Response Center (MSRC)** · May 17 · _General awareness item._  
-
-- [CVE-2026-7210 The expat and elementtree parsers use insufficient entropy for XML hash-flooding protection](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-7210)  
-  **Microsoft Security Response Center (MSRC)** · May 17 · _General awareness item._  
-
-- [CVE-2026-44283 etcd: Read access via PrevKv in etcd transactions may bypass RBAC authorization checks](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-44283)  
-  **Microsoft Security Response Center (MSRC)** · May 17 · _General awareness item._  
-
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [Microsoft testing adjustable taskbar, Start menu in Windows 11](https://www.bleepingcomputer.com/news/microsoft/windows-11-finally-gets-a-resizable-taskbar-and-start-menu/) — BleepingComputer
+- [Four Malicious npm Packages Deliver Infostealers and Phantom Bot DDoS Malware](https://thehackernews.com/2026/05/four-malicious-npm-packages-deliver.html) — The Hacker News
+- [Pre-Stuxnet Fast16 Malware Tampered with Nuclear Weapons Simulations](https://thehackernews.com/2026/05/pre-stuxnet-fast16-malware-tampered.html) — The Hacker News
 - [Tycoon2FA hijacks Microsoft 365 accounts via device-code phishing](https://www.bleepingcomputer.com/news/security/tycoon2fa-hijacks-microsoft-365-accounts-via-device-code-phishing/) — BleepingComputer
 - [Russian hackers turn Kazuar backdoor into modular P2P botnet](https://www.bleepingcomputer.com/news/security/russian-hackers-turn-kazuar-backdoor-into-modular-p2p-botnet/) — BleepingComputer
 - [Turla Turns Kazuar Backdoor Into Modular P2P Botnet for Persistent Access](https://thehackernews.com/2026/05/turla-turns-kazuar-backdoor-into.html) — The Hacker News
-- [Avada Builder WordPress plugin flaws allow site credential theft](https://www.bleepingcomputer.com/news/security/avada-builder-wordpress-plugin-flaws-allow-site-credential-theft/) — BleepingComputer
-- [Microsoft backpedals: Edge to stop loading passwords into memory](https://www.bleepingcomputer.com/news/microsoft/microsoft-edge-to-stop-loading-cleartext-passwords-in-memory-on-startup/) — BleepingComputer
-- [Inside the REMUS Infostealer: Session Theft, MaaS, and Rapid Evolution](https://www.bleepingcomputer.com/news/security/inside-the-remus-infostealer-session-theft-maas-and-rapid-evolution/) — BleepingComputer
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 11 critical · 80 important · 31 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 12 critical · 81 important · 33 FYI_
