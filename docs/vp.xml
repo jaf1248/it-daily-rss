@@ -3,14 +3,85 @@
 <channel>
   <title>Joe — VP of IT Briefing</title>
   <description>Leadership-focused IT risk, vendors, pricing, licensing, and industry context.</description>
-  <lastBuildDate>Mon, 18 May 2026 19:49:52 +0000</lastBuildDate>
+  <lastBuildDate>Mon, 18 May 2026 21:09:27 +0000</lastBuildDate>
   
+<item>
+  <title>🟠 Cloudflare tests Mythos against 50+ repositories, highlights its ability to chain bugs into a single exploit, and details a vulnerability discovery harness (Grant Bourzikas/Cloudflare)</title>
+  <link>https://www.techmeme.com/260518/p38#a260518p38</link>
+  <pubDate>Mon, 18 May 2026 20:40:01 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><a href="https://blog.cloudflare.com/cyber-frontier-models/"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260518/i38.jpg" vspace="4" /></a>
+<p><a href="https://www.techmeme.com/260518/p38#a260518p38" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Grant Bourzikas / <a href="https://www.cloudflare.com/">Cloudflare</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://blog.cloudflare.com/cyber-frontier-models/">Cloudflare tests Mythos against 50+ repositories, highlights its ability to chain bugs into a single exploit, and details a vulnerability discovery harness</a></b></span>&nbsp; &mdash;&nbsp; For the last few months, we've been testing a range of security-focused LLMs on our own infrastructure.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</item>
+
+<item>
+  <title>🟠 Microsoft May security patch fails for some due to boot partition size glitch</title>
+  <link>https://www.csoonline.com/article/4172591/microsoft-may-security-patch-fails-for-some-due-to-boot-partition-size-glitch.html</link>
+  <pubDate>Mon, 18 May 2026 20:11:03 +0000</pubDate>
+  <source>CSO Online</source>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<p>“Something didn’t go as planned. Undoing changes.” That’s all the clue some Windows 11 users will get when Microsoft’s May Security Update fails to install because of insufficient free space on the EFI System Partition (ESP), leaving their systems unprotected by the dozens of patches it contained.</p>
+
+
+
+<p>This issue affects devices with limited free space available — typically 10MB or less — on the ESP. “On affected devices, the installation might proceed through the initial phases but fail during the reboot phase at approximately 35-36% completion,” <a href="https://learn.microsoft.com/en-us/windows/release-health/status-windows-11-25H2#may-2026-security-update-might-fail-to-install-with-error-0x800f0922" rel="noreferrer noopener" target="_blank">Microsoft said in an advisory</a>. It recommended changing a Windows registry setting to force the update, or to roll back changes and wait for a future update to fix the problem.</p>
+
+
+
+<p>Consultants said it was a potentially serious issue given the unexpected exposure and the time the destined-to-fail patch takes to fail to install.</p>
+
+
+
+<p>This is the kind of failure that keeps IT leaders up at night, said cybersecurity consultant <a href="https://formergov.com/directory/brianlevine" rel="noreferrer noopener" target="_blank">Brian Levine</a>, who serves as executive director of FormerGov. “When a security update cannot install because the operating system misjudges the state of its own boot partition, the problem isn’t only storage. The real problem is trust in the update process,” he said. “This is a basic hygiene failure dressed up as a technical issue. An update that cannot reliably detect available space on the EFI System Partition is not a small miss. It is a reminder that even mature platforms still struggle with dependency awareness and pre-flight validation.”</p>
+
+
+
+<p><a href="https://www.gartner.com/en/conferences/emea/security-risk-management-uk/speakers/featured-speakers/eric-grenier" rel="noreferrer noopener" target="_blank">Eric Grenier</a>, senior director analyst at Gartner, recommended increasing the size of the disk partition to 1.5GB so that the update can go ahead. “This should not hamper business needs in terms of the size of usable space for an end user”, he said, adding that it will also enable updating of the Windows Recovery Environment. He warned that Microsoft’s own recommendation could lead to trouble. “I would recommend that if an organization wanted to use the modified registry fix that they not only backup the registry beforehand but also test it on some pilot devices before rolling out to the rest of the environment and even then, I would do a slow phased rollout to be sure nothing breaks,” he said. “This type of fix in a production environment should be done with extreme caution because if done incorrectly, fixes will require hands on the keyboard.”</p>
+
+
+
+<p><a href="https://www.linkedin.com/in/ishraqkhann/" rel="noreferrer noopener" target="_blank">Ishraq Khan</a>, CEO of coding productivity tool vendor Kodezi, says there is a blame on both IT teams and Microsoft.</p>
+
+
+
+<p>“Most IT teams reasonably assume that if Windows Update passes its prechecks and starts installation, Microsoft has already validated the system state well enough to avoid a reboot-stage failure. If ESP space is critical to the update succeeding, the updater should have detected and blocked that condition earlier with a clear remediation message,” Khan said. “So while IT environments may contribute to partition pressure over time, Microsoft still owns the orchestration and validation logic that allowed the update to proceed.”</p>
+
+
+
+<p>Khan added that this can become a very expensive enterprise IT headache. “That is a design problem for enterprise IT because failure during reboot is much more disruptive than blocking the update before installation begins. From a software maintenance perspective, this is exactly the kind of edge case that becomes expensive at enterprise scale. A small partition constraint on a subset of machines can turn into help desk tickets, rollback cycles, delayed patching, and security exposure.”</p>
+
+
+
+<p><a href="https://acceligence.com/talent/profiles/david-neuman/" rel="noreferrer noopener" target="_blank">David Neuman</a>, COO of consulting firm Acceligence, agreed that this is a substantial IT headache.</p>
+
+
+
+<p>“The update appears to pass the early phases but then fails during the reboot phase, which means IT may not find out until the endpoint has already burned through the maintenance window time and rolled back. In an enterprise, it becomes a fleet hygiene problem rather than a one-off help desk problem,” he said. “Affected endpoints may remain unpatched while IT burns time diagnosing a failure that should have been explained earlier. The bigger lesson is that boot, recovery, and firmware-adjacent partitions are now part of patch-management hygiene. Mature IT teams should add ESP size and free-space checks to endpoint health reporting, update gold images so new deployments have adequate ESP capacity and treat boot-partition cleanup or resizing as lifecycle engineering rather than break-fix scripting.”</p>
+
+
+
+<p>Microsoft did not respond to a request for comment.</p>
+
+
+
+<p></p>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</item>
+
 <item>
   <title>🟠 How to upgrade your &#x27;incompatible&#x27; Windows 10 PC to Windows 11 - for free</title>
   <link>https://www.zdnet.com/article/how-to-upgrade-your-incompatible-windows-10-pc-to-windows-11/</link>
   <pubDate>Mon, 18 May 2026 19:11:00 +0000</pubDate>
   <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Microsoft really doesn't want customers to upgrade older PCs to Windows 11, but there are workarounds for all but the oldest devices. Extended security updates for Windows 10 will stop in just a few months, so it's time to plan your exit strategy.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Microsoft really doesn't want customers to upgrade older PCs to Windows 11, but there are workarounds for all but the oldest devices. Extended security updates for Windows 10 will stop in just a few months, so it's time to plan your exit strategy.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
 </item>
 
 <item>
@@ -18,7 +89,7 @@
   <link>https://www.theregister.com/offbeat/2026/05/18/yes-you-can-serve-a-website-from-a-1-microcontroller/5242096</link>
   <pubDate>Mon, 18 May 2026 18:00:57 +0000</pubDate>
   <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Well, page is more accurate, but the source code is available if you want to try doing something even crazier<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Well, page is more accurate, but the source code is available if you want to try doing something even crazier<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
 </item>
 
 <item>
@@ -28,7 +99,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: Vendor risk signal — evaluate roadmap and support stability.</b><br/><a href="https://www.bloomberg.com/news/articles/2026-05-18/nextera-dominion-deal-signals-new-era-of-ai-utility-mega-mergers"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260518/i30.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260518/p30#a260518p30" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Emily Forgash / <a href="https://www.bloomberg.com/">Bloomberg</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/articles/2026-05-18/nextera-dominion-deal-signals-new-era-of-ai-utility-mega-mergers">NextEra's $67B deal to buy Dominion, the largest utility merger in US history, signals a new era of utility consolidation to accommodate AI-driven power demand</a></b></span>&nbsp; &mdash;&nbsp; NextEra Energy Inc.'s $67 billion deal for rival Dominion Energy Inc., the largest utility acquisition in US history &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/articles/2026-05-18/nextera-dominion-deal-signals-new-era-of-ai-utility-mega-mergers">NextEra's $67B deal to buy Dominion, the largest utility merger in US history, signals a new era of utility consolidation to accommodate AI-driven power demand</a></b></span>&nbsp; &mdash;&nbsp; NextEra Energy Inc.'s $67 billion deal for rival Dominion Energy Inc., the largest utility acquisition in US history &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
 </item>
 
 <item>
@@ -52,7 +123,7 @@
 
 
 
-<p>By February this year, the performance improvements had accelerated, with the difficulty of the tasks AI models could complete doubling every 4.7 months, and since then the latest Claude Mythos Preview and GPT-5.5 models are showing even greater capability, <a href="https://www.aisi.gov.uk/blog/how-fast-is-autonomous-ai-cyber-capability-advancing">AISI said</a>.</p>
+<p>By February this year, the performance improvements had accelerated, with the difficulty of the tasks AI models could complete doubling every 4.7 months, and since then the latest Claude Mythos Preview and GPT-5.5 models are showing even greater capability, <a href="https://www.aisi.gov.uk/blog/how-fast-is-autonomous-ai-cyber-capability-advancing" rel="noreferrer noopener" target="_blank">AISI said</a>.</p>
 
 
 
@@ -88,11 +159,11 @@
 
 
 
-<p>In April, DSIT Secretary of State Liz Kendall and Security Minister Dan Jarvis posted an <a href="https://www.gov.uk/government/publications/ai-cyber-threats-open-letter-to-business-leaders/ai-cyber-threats-open-letter-to-business-leaders-html">open letter</a> warning businesses of the growing cyber security risks posed by AI models.</p>
+<p>In April, DSIT Secretary of State Liz Kendall and Security Minister Dan Jarvis posted an <a href="https://www.gov.uk/government/publications/ai-cyber-threats-open-letter-to-business-leaders/ai-cyber-threats-open-letter-to-business-leaders-html" rel="noreferrer noopener" target="_blank">open letter</a> warning businesses of the growing cyber security risks posed by AI models.</p>
 
 
 
-<p>What’s clear is that the capabilities of AI models under real-world scenarios are rapidly improving and, on the evidence of the recent <a href="https://www.aisi.gov.uk/blog/our-evaluation-of-claude-mythos-previews-cyber-capabilities">AISI evaluation of Claude Mythos Preview</a>, are probably accelerating.</p>
+<p>What’s clear is that the capabilities of AI models under real-world scenarios are rapidly improving and, on the evidence of the recent <a href="https://www.aisi.gov.uk/blog/our-evaluation-of-claude-mythos-previews-cyber-capabilities" rel="noreferrer noopener" target="_blank">AISI evaluation of Claude Mythos Preview</a>, are probably accelerating.</p>
 
 
 
@@ -100,20 +171,20 @@
 
 
 
-<p><a href="https://www.vectra.ai/about/author/kat-traxler">Kat Traxler</a>, principal security researcher at Vectra AI, sees the benchmarks as a useful signal that enterprises should pay attention to. “The AISI benchmarks don’t measure if models can spot a flaw. Rather, they measure whether various models can chain together a series of exploits into working attacks to achieve an end goal, like a real-world attackers do. As a signal of offensive capability, AISI’s results carry real weight,” she said.</p>
+<p><a href="https://www.vectra.ai/about/author/kat-traxler" rel="noreferrer noopener" target="_blank">Kat Traxler</a>, principal security researcher at Vectra AI, sees the benchmarks as a useful signal that enterprises should pay attention to. “The AISI benchmarks don’t measure if models can spot a flaw. Rather, they measure whether various models can chain together a series of exploits into working attacks to achieve an end goal, like a real-world attackers do. As a signal of offensive capability, AISI’s results carry real weight,” she said.</p>
 
 
 
-<p>However, she pointed to a recent <a href="https://xbow.com/blog/mythos-offensive-security-xbow-evaluation">Xbow evaluation</a> of Claude Mythos that found mixed performance at some tasks. “How these known model limitations will actually limit real-world autonomous offensive campaigns is still being determined, but it does point to the need for a sophisticated validation harness to truly see the ceiling of model capabilities.”</p>
+<p>However, she pointed to a recent <a href="https://xbow.com/blog/mythos-offensive-security-xbow-evaluation" rel="noreferrer noopener" target="_blank">Xbow evaluation</a> of Claude Mythos that found mixed performance at some tasks. “How these known model limitations will actually limit real-world autonomous offensive campaigns is still being determined, but it does point to the need for a sophisticated validation harness to truly see the ceiling of model capabilities.”</p>
 
 
 
-<p>According to <a href="https://www.linkedin.com/in/christopherlentricchia/">Chris Lentricchia</a>, director cloud and AI security strategy at Sweet Security, enterprises should also look at the upside — AI models aid attackers, but also defenders.</p>
+<p>According to <a href="https://www.linkedin.com/in/christopherlentricchia/" rel="noreferrer noopener" target="_blank">Chris Lentricchia</a>, director cloud and AI security strategy at Sweet Security, enterprises should also look at the upside — AI models aid attackers, but also defenders.</p>
 
 
 
 <p>“This is not purely an offensive story. The same acceleration improving attacker capability can also improve defensive capability in areas like proactive threat detection and response automation. Benchmarks are best viewed as indicators for understanding whether enterprise defenses are evolving fast enough to keep pace with accelerating AI capability,” said Lentricchia.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
 </item>
 
 <item>
@@ -123,7 +194,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/><a href="https://www.coindesk.com/markets/2026/05/18/bitcoin-depot-once-north-america-s-largest-bitcoin-atm-operator-files-for-bankruptcy"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260518/i28.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260518/p28#a260518p28" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Omkar Godbole / <a href="http://www.coindesk.com/">CoinDesk</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.coindesk.com/markets/2026/05/18/bitcoin-depot-once-north-america-s-largest-bitcoin-atm-operator-files-for-bankruptcy">Nasdaq-listed Bitcoin Depot, North America's largest bitcoin ATM operator, files for bankruptcy, blaming &ldquo;increasingly stringent compliance obligations&rdquo;</a></b></span>&nbsp; &mdash;&nbsp; Bitcoin Depot, the largest bitcoin ATM operator in North America and publicly listed on Nasdaq, has filed for Chapter 11 bankruptcy.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.coindesk.com/markets/2026/05/18/bitcoin-depot-once-north-america-s-largest-bitcoin-atm-operator-files-for-bankruptcy">Nasdaq-listed Bitcoin Depot, North America's largest bitcoin ATM operator, files for bankruptcy, blaming &ldquo;increasingly stringent compliance obligations&rdquo;</a></b></span>&nbsp; &mdash;&nbsp; Bitcoin Depot, the largest bitcoin ATM operator in North America and publicly listed on Nasdaq, has filed for Chapter 11 bankruptcy.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
 </item>
 
 <item>
@@ -133,7 +204,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: Could impact email access or mail flow — monitor delivery and client issues.</b><br/><a href="https://www.bloomberg.com/news/articles/2026-05-18/musk-s-xai-promised-staff-420-for-their-tax-returns-hasn-t-paid?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc3OTExMzE2OSwiZXhwIjoxNzc5NzE3OTY5LCJhcnRpY2xlSWQiOiJURVhUQ0RUOU5KTFUwMCIsImJjb25uZWN0SWQiOiI3N0VBQzdGODQxNzg0QTZFQkZDNzhDQjdDNkQ4NEMwMyJ9.DDbxHeVltS6euXMN5IVv2Unz5S1rS1caEyClDDR-0OI"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260518/i27.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260518/p27#a260518p27" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Carmen Arroyo / <a href="https://www.bloomberg.com/">Bloomberg</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/articles/2026-05-18/musk-s-xai-promised-staff-420-for-their-tax-returns-hasn-t-paid?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc3OTExMzE2OSwiZXhwIjoxNzc5NzE3OTY5LCJhcnRpY2xlSWQiOiJURVhUQ0RUOU5KTFUwMCIsImJjb25uZWN0SWQiOiI3N0VBQzdGODQxNzg0QTZFQkZDNzhDQjdDNkQ4NEMwMyJ9.DDbxHeVltS6euXMN5IVv2Unz5S1rS1caEyClDDR-0OI">Internal chats: in March, xAI offered employees $420 in exchange for completed tax filings as training data for Grok, but the bonuses haven't been paid out</a></b></span>&nbsp; &mdash;&nbsp; Elon Musk's xAI asked employees earlier this year to offer up their own tax returns as training data for the company's Grok chatbot &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/articles/2026-05-18/musk-s-xai-promised-staff-420-for-their-tax-returns-hasn-t-paid?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc3OTExMzE2OSwiZXhwIjoxNzc5NzE3OTY5LCJhcnRpY2xlSWQiOiJURVhUQ0RUOU5KTFUwMCIsImJjb25uZWN0SWQiOiI3N0VBQzdGODQxNzg0QTZFQkZDNzhDQjdDNkQ4NEMwMyJ9.DDbxHeVltS6euXMN5IVv2Unz5S1rS1caEyClDDR-0OI">Internal chats: in March, xAI offered employees $420 in exchange for completed tax filings as training data for Grok, but the bonuses haven't been paid out</a></b></span>&nbsp; &mdash;&nbsp; Elon Musk's xAI asked employees earlier this year to offer up their own tax returns as training data for the company's Grok chatbot &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -248,7 +319,7 @@
 
 
 <p></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -256,7 +327,7 @@
   <link>https://www.zdnet.com/article/microsoft-windows-11-taskbar-moves-to-any-screen-edge/</link>
   <pubDate>Mon, 18 May 2026 15:16:30 +0000</pubDate>
   <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Thanks to an update rolling out to Windows 11 insiders, you'll be able to move the taskbar to the top, bottom, left, or right. Start menu changes are coming soon, too.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Thanks to an update rolling out to Windows 11 insiders, you'll be able to move the taskbar to the top, bottom, left, or right. Start menu changes are coming soon, too.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -264,7 +335,7 @@
   <link>https://www.zdnet.com/article/microsoft-edge-passwords-ram-plaintext/</link>
   <pubDate>Mon, 18 May 2026 14:52:00 +0000</pubDate>
   <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Though Microsoft claimed that storing plaintext passwords in memory was by design, the company has changed the behavior to better protect your passwords.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Though Microsoft claimed that storing plaintext passwords in memory was by design, the company has changed the behavior to better protect your passwords.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
@@ -272,7 +343,7 @@
   <link>https://www.theregister.com/ai-ml/2026/05/18/big-ai-is-subverting-regulations-just-like-tobacco-and-oil-firms/5241910</link>
   <pubDate>Mon, 18 May 2026 14:45:00 +0000</pubDate>
   <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/>Researchers warn that regulatory capture means industry concerns trump those of citizens<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/>Researchers warn that regulatory capture means industry concerns trump those of citizens<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
@@ -280,7 +351,7 @@
   <link>https://www.theregister.com/security/2026/05/18/tanstack-weighs-invitation-only-pull-requests-after-supply-chain-attack/5241899</link>
   <pubDate>Mon, 18 May 2026 14:15:00 +0000</pubDate>
   <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Supply chain risk — audit third-party dependencies and vendor access.</b><br/>Shai-Hulud worm exploited GitHub Actions misconfiguration to poison shared cache, now project weighing nuclear option on unsolicited contributions<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Supply chain risk — audit third-party dependencies and vendor access.</b><br/>Shai-Hulud worm exploited GitHub Actions misconfiguration to poison shared cache, now project weighing nuclear option on unsolicited contributions<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
@@ -290,7 +361,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: Could impact email access or mail flow — monitor delivery and client issues.</b><br/><a href="https://www.reuters.com/investigations/how-trumps-crypto-venture-irans-top-exchange-tapped-into-same-industry-networks-2026-05-18/"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260518/i25.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260518/p25#a260518p25" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="http://www.reuters.com/">Reuters</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.reuters.com/investigations/how-trumps-crypto-venture-irans-top-exchange-tapped-into-same-industry-networks-2026-05-18/">Arkham: Iran's largest crypto exchange, Nobitex, processed $2.3B+ since 2023 via Tron and BNB Chain, including $23M+ since the Iran war started in February</a></b></span>&nbsp; &mdash;&nbsp; Iran's Nobitex has processed at least $2.3 billion through Tron and BNB Chain, blockchain ledgers started by backers of the Trump family's World Liberty Financial.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.reuters.com/investigations/how-trumps-crypto-venture-irans-top-exchange-tapped-into-same-industry-networks-2026-05-18/">Arkham: Iran's largest crypto exchange, Nobitex, processed $2.3B+ since 2023 via Tron and BNB Chain, including $23M+ since the Iran war started in February</a></b></span>&nbsp; &mdash;&nbsp; Iran's Nobitex has processed at least $2.3 billion through Tron and BNB Chain, blockchain ledgers started by backers of the Trump family's World Liberty Financial.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
 </item>
 
 <item>
@@ -298,7 +369,7 @@
   <link>https://www.theregister.com/personal-tech/2026/05/18/microsoft-remembers-that-taskbars-used-to-move/5241875</link>
   <pubDate>Mon, 18 May 2026 13:45:00 +0000</pubDate>
   <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Experimental Windows 11 build restores some old favorites, though the rough edges are still showing<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Experimental Windows 11 build restores some old favorites, though the rough edges are still showing<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
 </item>
 
 <item>
@@ -306,7 +377,7 @@
   <link>https://www.theregister.com/security/2026/05/18/nginx-rift-attackers-waste-no-time-targeting-exposed-servers/5241851</link>
   <pubDate>Mon, 18 May 2026 13:02:00 +0000</pubDate>
   <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/>Researchers say 18-year-old flaw already being probed and exploited just days after disclosure<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/>Researchers say 18-year-old flaw already being probed and exploited just days after disclosure<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 8h ago]]></description>
 </item>
 
 <item>
@@ -443,7 +514,7 @@
 
 
 <p>“Security controls designed for unimodal systems are insufficient,” Kaushik said. The researchers acknowledged that the work was conducted in controlled research settings using open-source models and did not describe observed exploitation in real-world enterprise environments.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 8h ago]]></description>
 </item>
 
 <item>
@@ -544,7 +615,7 @@
 
 
 <p>“Over the past several weeks, Nightmare-Eclipse has released a relentless string of zero-day/regression disclosures,” Sarkar pointed out. “The timing is a giveaway, the MiniPlasma was released on May 13, 2026—exactly one day after Microsoft’s May Patch Tuesday cycle, ensuring defenders have no official vendor patch for weeks. But yes, that is exactly where microsegmentation integrated with existing EDR platforms helps.”</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
 </item>
 
 <item>
@@ -699,7 +770,7 @@
 
 
 <p><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><strong><a href="https://www.cio.com/expert-contributor-network/">Want to join?</a></strong></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
 </item>
 
 <item>
@@ -707,7 +778,7 @@
   <link>https://www.theregister.com/oses/2026/05/18/windows-boot-partition-runs-out-of-space-for-microsofts-may-security-update/5241799</link>
   <pubDate>Mon, 18 May 2026 11:30:00 +0000</pubDate>
   <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Testing? We've heard of it<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 8h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Testing? We've heard of it<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
 </item>
 
 <item>
@@ -824,7 +895,7 @@
 
 
 <p><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><strong><a href="https://www.cio.com/expert-contributor-network/">Want to join?</a></strong></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 8h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 10h ago]]></description>
 </item>
 
 <item>
@@ -929,7 +1000,7 @@
 
 
 <p>[1] McKinsey, “What is sovereign AI?”<br />[2] Accenture, “Sovereign AI: From managing risk to accelerating growth”<br />[3] McKinsey, “The sovereign AI agenda”<br />[4] CIO.com, “How AI sovereignty and governance could empower your business”<br />[5] TechCircle, “India’s AI economy needs trust, sovereignty and scale”</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 11h ago]]></description>
 </item>
 
 <item>
@@ -1126,7 +1197,7 @@
 
 
 <p>“So some CIOs are starting to be measured — or measure themselves — on business outcomes rather than just operational performance,” he adds.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 11h ago]]></description>
 </item>
 
 <item>
@@ -1463,7 +1534,7 @@
 
 
 <p>Companies look for bachelor degrees in computer science, information science, engineering, or equivalent fields, though master’s degrees are preferred. Most look for eight to 15 years of experience in a related role, and they want highly motivated, experienced innovators with excellent interpersonal skills, strong collaboration, and the ability to communicate effectively, both verbally and in writing.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 11h ago]]></description>
 </item>
 
 <item>
@@ -1576,7 +1647,7 @@
 
 
 <p><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><strong><a href="https://www.cio.com/expert-contributor-network/">Want to join?</a></strong></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 11h ago]]></description>
 </item>
 
 <item>
@@ -1733,7 +1804,7 @@
 
 
 <p>To learn more about Tata Communications, visit <a href="https://www.tatacommunications.com/" rel="sponsored">here</a>.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 10h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 11h ago]]></description>
 </item>
 
 <item>
@@ -1742,7 +1813,7 @@
   <pubDate>Mon, 18 May 2026 09:45:15 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><p>At least one threat actor has adopted the recently released malware source code in attacks against NPM developers.</p>
-<p>The post <a href="https://www.securityweek.com/first-shai-hulud-worm-clones-emerge/">First Shai-Hulud Worm Clones Emerge</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 10h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/first-shai-hulud-worm-clones-emerge/">First Shai-Hulud Worm Clones Emerge</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 11h ago]]></description>
 </item>
 
 <item>
@@ -2019,7 +2090,7 @@
 
 
 <p></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 10h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 11h ago]]></description>
 </item>
 
 <item>
@@ -2156,7 +2227,7 @@
 
 
 <p><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><strong><a href="https://www.cio.com/expert-contributor-network/">Want to join?</a></strong></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 10h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 12h ago]]></description>
 </item>
 
 <item>
@@ -2273,7 +2344,7 @@
 
 
 <p></p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 10h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 12h ago]]></description>
 </item>
 
 <item>
@@ -2434,92 +2505,7 @@
 
 
 <p>​“There’s never a perfecttime to address it, but the investment in proactively reducing that risk is far easier and cheaper than learning about it after it’s been used to compromise your company,” MacKinnon says.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 10h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Los mayores errores que cometen los CIO en el consejo y cómo evitarlos</title>
-  <link>https://www.cio.com/article/4172183/los-mayores-errores-que-cometen-los-cio-en-el-consejo-y-como-evitarlos.html</link>
-  <pubDate>Mon, 18 May 2026 08:33:31 +0000</pubDate>
-  <source>CIO.com</source>
-  <description><![CDATA[<b>Why this matters: Could impact sign-ins/MFA/Conditional Access — watch for login issues.</b><br/><div id="remove_no_follow">
-		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
-					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
-						<div class="article-column__content">
-<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
-
-
-
-<p>Julie Averill no necesitó una segunda reunión del consejo para entender qué había hecho mal en la primera. Acababa de asumir el rol de CIO en REI e hizo lo que haría la mayoría de líderes: se preparó a fondo, recabó aportaciones de su equipo, construyó una visión detallada de la hoja de ruta y entró en la sala del consejo lista para demostrar que dominaba la función. Les contó todo, pero entonces empezaron las preguntas. “La primera fue qué podría hacer si tuviera un 20% más de capacidad de la que tengo ahora”, explica, reconociendo que no era algo que hubiera preparado. “Entré tan centrada en los detalles que, cuando me hicieron preguntas para las que no tenía una perspectiva clara, no lo gestioné bien”. Esa, dice, fue su lección. “En realidad, todo va de una conversación”.</p>
-
-
-
-<p>Esa idea simple, pero a menudo pasada por alto, aparece una y otra vez cuando los miembros de la junta directiva y el CIO hablan de lo que diferencia una interacción eficaz en este escenario de una que no lo es. “Lo primero que hacemos mal es entrar pensando que vamos a presentar”, afirma Alizabeth Calder, exdirectiva y actualmente asesora de investigación adjunta en los IT Executive Programs de IDC. “No es así. Tenemos que estar ahí para facilitar un diálogo”.</p>
-
-
-
-<h3 class="wp-block-heading" id="por-que-los-cio-se-preparan-para-la-reunion-equivocada">Por qué los CIO se preparan para la reunión equivocada</h3>
-
-
-
-<p>Si el objetivo es facilitar un diálogo, entonces la mayoría de CIO se prepara para la reunión equivocada. “Lo principal que hay que entender es cuál es la responsabilidad de un miembro del consejo”, señala Eash Sundaram, exCIO de JetBlue que ahora forma parte de consejos de administración. Y esa responsabilidad no es validar decisiones técnicas ni revisar la ejecución de proyectos, sino entender cómo piensa la dirección y cómo las decisiones se conectan con la estrategia, el riesgo y los resultados.</p>
-
-
-
-<p>Calder observa una brecha constante entre lo que buscan los consejos y cómo se presentan los CIO. “Ni siquiera conocen las preguntas adecuadas a ese nivel”, afirma. “Como resultado, se preparan para las preguntas equivocadas”.</p>
-
-
-
-<p>Así, en lugar de anticipar debates sobre riesgo, inversión e impacto en negocio, los CIO suelen prepararse para explicar qué han construido y cómo lo están entregando. El resultado es un desajuste desde el inicio. “Como tecnólogo, puedes ahogar fácilmente a cualquiera en los detalles”, dice Averill.</p>
-
-
-
-<p>Ese impulso es comprensible, pero rara vez es lo que el consejo espera. “Resolver problemas técnicos o implementar soluciones no es para lo que necesitas estar ahí”, añade Calder.</p>
-
-
-
-<h3 class="wp-block-heading" id="de-la-presentacion-al-dialogo">De la presentación al diálogo</h3>
-
-
-
-<p>Incluso cuando los CIO entienden la necesidad de mantener una conversación más estratégica, el propio consejo puede empujarles de vuelta a hábitos conocidos. “En las reuniones mejor gestionadas, simplemente mantienes una conversación”, dice Sundaram. Pero muchos CIO siguen abordándolas como si fueran una presentación, algo que hay que pasar en lugar de algo en lo que implicarse.</p>
-
-
-
-<p>Averill reconoce que ese cambio —de presentar a interactuar— no siempre surge de forma natural, especialmente al principio. “Tienes que saber que conoces tu área mejor que nadie”, explica. “Lo que no conoces es su perspectiva”.</p>
-
-
-
-<p>Esa diferencia es clave. Los miembros del consejo no intentan replicar la experiencia del CIO; buscan entender cómo esta contribuirá a los resultados del negocio. “No están ahí para pillarte”, afirma Averill. “Están para aprender, y tienen curiosidad”.</p>
-
-
-
-<p>Esa curiosidad suele manifestarse en forma de preguntas más amplias o distintas de lo que parecen inicialmente. “Escucha bien la pregunta”, continúa Averill. “No te apresures a responder sin haberla entendido”. Es un cambio sutil, pero puede alterar el rumbo de la conversación. Responder demasiado rápido o de forma demasiado literal puede devolver la discusión al terreno técnico, incluso cuando la intención era mantenerse al nivel estratégico del consejo.</p>
-
-
-
-<h3 class="wp-block-heading" id="operar-al-nivel-del-consejo">Operar al nivel del consejo</h3>
-
-
-
-<p>Las pequeñas desviaciones de una conversación se hacen más evidentes cuando el CIO aborda la sala del consejo como una extensión de su entorno operativo diario. “Tu consejo no es tu comité de gobierno de proyectos”, recuerda Sundaram.</p>
-
-
-
-<p>Sin embargo, muchos CIO caen en ese modelo por defecto, ofreciendo actualizaciones, señalando incidencias y repasando riesgos como si hablaran ante un comité interno. En algunos casos, esto puede generar consecuencias no deseadas. “No puedes entrar en una reunión con demasiadas minas ocultas”, advierte Sundaram. “Si lo haces, todo el mundo intentará resolver tus problemas”.</p>
-
-
-
-<p>Una vez que se introduce un problema, la conversación puede ampliarse rápidamente, implicar a otros ejecutivos y desviar el foco del debate previsto. Existe un riesgo similar cuando los CIO intentan cuantificar demasiado rápido resultados que están fuera de su control. “No prometas algo que no es tu responsabilidad”, aconseja Sundaram. En su lugar, apunta a otro enfoque, presente en las interacciones más eficaces en el consejo: “Las mejores presentaciones que he visto son aquellas en las que otra persona habla del beneficio”.</p>
-
-
-
-<p>Ese cambio —de adueñarse del relato a habilitarlo— mantiene la conversación centrada en los resultados de negocio, en lugar de en los <em>inputs </em>técnicos. Con el tiempo, los CIO que participan más en el consejo empiezan a ajustarse, no solo en lo que dicen, sino en cómo se relacionan. Aprenden a leer la sala, a anticipar de dónde vendrán las preguntas y a mantenerse en el nivel que el consejo espera sin perder credibilidad.</p>
-
-
-
-<p>También empiezan a ver la interacción de otra manera. “La mayoría de los consejos están preocupados en este momento”, señala Sundaram, ante la incertidumbre económica y el impacto de la inteligencia artificial. “No saben qué va a pasar”. Esa incertidumbre, añade, es parte de lo que crea una oportunidad para que los CIO asuman un papel más central. “El consejo tiene que aprender del CIO”, concluye Sundaram.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 11h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 12h ago]]></description>
 </item>
 
 <item>
@@ -2612,7 +2598,7 @@
 
 
 <p>“Mientras en redes sociales se aplaudía el gesto de permitir a los empleados despedidos una semana extra en Slack para despedirse, poco se dijo sobre lo innecesario de la medida o sobre cómo se ejecutó”, señala Williamson. “¿Quién en esa mesa de decisión hablaba del coste humano de despedir a 4.000 personas? No estamos hablando lo suficiente del impacto humano de estas decisiones en plena adopción de la IA”.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 11h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
 </item>
 
 <item>
@@ -2620,7 +2606,7 @@
   <link>https://www.theregister.com/storage/2026/05/18/backup-script-ingested-an-accidental-asterisk-and-deleted-everything/5240173</link>
   <pubDate>Mon, 18 May 2026 06:30:00 +0000</pubDate>
   <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Letting a 21-year-old write critical code without supervision is not smart<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Letting a 21-year-old write critical code without supervision is not smart<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 14h ago]]></description>
 </item>
 
 <item>
@@ -2787,7 +2773,7 @@
 
 
 <p>The Socket.dev report contains additional recommendations for both users and developers, as well as file hashes and other indicators of compromise that can be used by security teams to create detections.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 3d ago]]></description>
 </item>
 
 <item>
@@ -2908,7 +2894,7 @@
 
 
 <p>This is another “massive nudge” from Redmond to shift from on-premises email, Enderle added. “If you aren’t already planning your exit from on-site Exchange, your risk profile is only going to keep climbing as these zero days become the new normal. This does showcase that Azure, and web services in general, are where the industry, and particularly Microsoft, is pushing IT to go, whether they want to or not.”</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 3d ago]]></description>
 </item>
 
 <item>
@@ -4236,7 +4222,7 @@
 
 
 <p>Beggs also said admins may wish to increase monitoring of privileged processes (PAM, systemd, cron) and look for unexpected restarts, unexpected config reloads, and sudden privilege escalations.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3d ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4d ago]]></description>
 </item>
 
 <item>
@@ -4783,7 +4769,7 @@
 
 
 <p>Exploitation of these flaws requires authentication, which is why they’re not rated critical, but attackers <a href="https://www.csoonline.com/article/4042464/enterprise-passwords-becoming-even-easier-to-steal-and-abuse.html">compromising enterprise credentials</a> is not uncommon so they should still be treated with urgency.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 4d ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 5d ago]]></description>
 </item>
 
 <item>
@@ -4925,151 +4911,6 @@
 
 <p>What Washington and Beijing discuss in Beijing this week will not resolve the fundamental tension between competitive AI development and the risks that development creates. But the establishment of even narrow deconfliction channels — a hotline logic for AI crises, shared norms around the most dangerous applications, transparency mechanisms that let each side verify the other isn’t crossing agreed lines — would represent meaningful progress over the current state, which is no framework at all.</p>
 </div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 5d ago]]></description>
-</item>
-
-<item>
-  <title>🟠 Microsoft’s new AI system finds 16 Windows flaws, including four critical RCEs</title>
-  <link>https://www.csoonline.com/article/4170785/microsofts-new-ai-system-finds-16-windows-flaws-including-four-critical-rces.html</link>
-  <pubDate>Wed, 13 May 2026 12:23:38 +0000</pubDate>
-  <source>CSO Online</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><div id="remove_no_follow">
-		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
-					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
-						<div class="article-column__content">
-<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
-
-
-
-<p>Microsoft has unveiled a new AI-driven vulnerability discovery system that identified 16 previously unknown Windows vulnerabilities, including four critical remote code execution flaws, in what security analysts say could mark a major shift in how software vulnerabilities are discovered and remediated.</p>
-
-
-
-<p>The system, codenamed MDASH, was developed by Microsoft’s Autonomous Code Security team alongside the Windows Attack Research and Protection group.</p>
-
-
-
-<p>The platform will enter private preview for enterprise customers next month, Microsoft said in a blog <a href="https://www.microsoft.com/en-us/security/blog/2026/05/12/defense-at-ai-speed-microsofts-new-multi-model-agentic-security-system-tops-leading-industry-benchmark/" rel="noreferrer noopener" target="_blank">post</a> announcing the system.</p>
-
-
-
-<p>The vulnerabilities were patched as part of Microsoft’s May 12 Patch Tuesday release.</p>
-
-
-
-<p>“Cyber defenders are facing an increasingly asymmetric battle,” Microsoft added in the blog post. “Attackers are using AI to increase the speed, scale, and sophistication of attacks.”</p>
-
-
-
-<h2 class="wp-block-heading" id="critical-windows-components-affected">Critical Windows components affected</h2>
-
-
-
-<p>The four critical vulnerabilities affected core Windows components broadly deployed across enterprise environments, Microsoft said in the blog.</p>
-
-
-
-<p>Among them was CVE-2026-33827, a remote unauthenticated use-after-free flaw in the Windows IPv4 stack reachable through specially crafted packets carrying the Strict Source and Record Route option, Microsoft said.</p>
-
-
-
-<p>Another flaw, CVE-2026-33824, involved a pre-authentication double-free issue in the IKEEXT service affecting RRAS VPN, DirectAccess, and Always-On VPN deployments.</p>
-
-
-
-<p>Two additional critical flaws affected Netlogon and the Windows DNS Client, both carrying CVSS scores of 9.8.</p>
-
-
-
-<p>The remaining 12 vulnerabilities rated “Important” included denial-of-service, privilege-escalation, information disclosure, and security feature bypass flaws affecting components such as tcpip.sys, http.sys, ikeext.dll, and telnet.exe, according to Microsoft.</p>
-
-
-
-<h2 class="wp-block-heading" id="how-mdash-orchestrates-ai-agents">How MDASH orchestrates AI agents</h2>
-
-
-
-<p>According to Microsoft, MDASH orchestrates more than 100 specialized AI agents across multiple frontier and distilled models, with each agent assigned to a different stage of the vulnerability discovery pipeline.</p>
-
-
-
-<p>Some agents scan source code for potential flaws, others validate whether findings are genuine, and another stage attempts to construct triggering inputs capable of reproducing the issue before the finding reaches a human engineer for review.</p>
-
-
-
-<p>“The model is one input. The system is the product,” Taesoo Kim, Microsoft vice president for agentic security, wrote in the blog.</p>
-
-
-
-<p>Microsoft said the architecture was intentionally designed to remain largely model-agnostic, allowing the company to swap underlying AI models without rebuilding the broader orchestration pipeline.</p>
-
-
-
-<p>That detail matters because MDASH arrives only weeks after Microsoft announced <a href="https://www.csoonline.com/article/4155342/what-anthropic-glasswing-reveals-about-the-future-of-vulnerability-discovery.html">Project Glasswing</a>, a partnership involving Anthropic and others to evaluate AI-driven vulnerability discovery using Anthropic’s Claude Mythos Preview model.</p>
-
-
-
-<p>“Microsoft is now operating as platform owner, security vendor, AI infrastructure player, OpenAI partner, Mythos integrator, and agentic security supplier,” said Sanchit Vir Gogia, chief analyst at Greyhound Research. “That is a formidable position. It is also a concentration of influence that security leaders must examine with clear eyes.”</p>
-
-
-
-<h2 class="wp-block-heading" id="ai-vs-ai-vulnerability-race">AI vs AI vulnerability race</h2>
-
-
-
-<p>The announcement also highlights growing concern that AI-driven vulnerability discovery could accelerate offensive operations as well as defensive research.</p>
-
-
-
-<p>Anthropic has previously said its Mythos Preview model identified thousands of high-severity vulnerabilities, including a decades-old OpenBSD flaw and a long-undetected FFmpeg issue that traditional fuzzing tools failed to uncover despite millions of attempts.</p>
-
-
-
-<p>“We’ve entered an AI-versus-AI vulnerability discovery race,” said Sunil Varkey, advisor at Beagle Security. “The winners won’t be the organizations with the best static scanners anymore. They’ll be the ones who can run these agentic systems fastest against their own code and remediate at machine speed.”</p>
-
-
-
-<p>Varkey said enterprises should pursue early access to systems such as MDASH where possible rather than waiting for broader commercial availability.</p>
-
-
-
-<p>“Early access isn’t just nice-to-have,” he said. “It’s becoming a defensive necessity in the AI era.”</p>
-
-
-
-<p>For CISOs, the broader implication may be that vulnerability management is shifting from periodic scanning toward continuous, AI-assisted discovery and remediation.</p>
-
-
-
-<p>“The future belongs to security teams that can find, validate, contain, and fix in one governed motion,” Gogia said.</p>
-
-
-
-<h2 class="wp-block-heading" id="benchmarks-show-progress-but-analysts-urge-caution">Benchmarks show progress, but analysts urge caution</h2>
-
-
-
-<p>To support its claims, Microsoft published benchmark results showing MDASH identified all 21 deliberately planted vulnerabilities in an internal Windows test driver without false positives. The company also said the system successfully recovered nearly all historical Microsoft Security Response Center cases tested against older Windows component snapshots.</p>
-
-
-
-<p>On the public CyberGym benchmark for vulnerability reproduction tasks, Microsoft said MDASH achieved a score of 88.45%, topping the public leaderboard at publication time.</p>
-
-
-
-<p>Gogia said the results show the category is maturing but warned against treating benchmark scores as direct proof of enterprise value.</p>
-
-
-
-<p>“CyberGym is a signal, not a buying decision,” he said. “The machinery around the model is beginning to resemble a serious security research workflow.”</p>
-
-
-
-<p>He added that many enterprises still lack the governance maturity required to operationalize machine-generated vulnerability discovery effectively.</p>
-
-
-
-<p>“Discovery without remediation discipline is theatre,” Gogia said. “It produces dashboards, not resilience.”</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5d ago]]></description>
 </item>
 
 </channel>
