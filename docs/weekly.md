@@ -1,25 +1,30 @@
 # IT Weekly Intelligence Briefing
 **Period:** May 12 – May 19, 2026  
-**Generated:** 2026-05-19 12:07 UTC  
-**Items reviewed:** 127  
+**Generated:** 2026-05-19 16:18 UTC  
+**Items reviewed:** 128  
 
 ## ⚡ Top Actions This Week
 
-1. **Audit third-party software dependencies and review vendor access.**  
+1. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
+   _7-Eleven confirms data breach claimed by the ShinyHunters gang_  
+   Source: BleepingComputer  
+
+2. **Audit third-party software dependencies and review vendor access.**  
    _Popular GitHub Action Tags Redirected to Imposter Commit to Steal CI/CD Credentials_  
    Source: The Hacker News  
 
-2. **Audit third-party software dependencies and review vendor access.**  
+3. **Audit third-party software dependencies and review vendor access.**  
    _Mini Shai-Hulud Pushes Malicious AntV npm Packages via Compromised Maintainer Account_  
    Source: The Hacker News  
-
-3. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _Grafana says stolen GitHub token let hackers steal codebase_  
-   Source: BleepingComputer  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [7-Eleven confirms data breach claimed by the ShinyHunters gang](https://www.bleepingcomputer.com/news/security/7-eleven-confirms-data-breach-claimed-by-the-shinyhunters-gang/)
+**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** May 19  
+**Why it matters:** Potential credential or data exposure.  
+**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
 ### [Popular GitHub Action Tags Redirected to Imposter Commit to Steal CI/CD Credentials](https://thehackernews.com/2026/05/github-actions-supply-chain-attack.html)
 **Source:** The Hacker News &nbsp;·&nbsp; **Date:** May 19  
@@ -46,17 +51,24 @@
 **Why it matters:** General awareness item.  
 **Recommended action:** Prioritize patching of affected systems; check for internet-exposed attack surface.  
 
-### [Grafana GitHub Token Breach Led to Codebase Download and Extortion Attempt](https://thehackernews.com/2026/05/grafana-github-token-breach-led-to.html)
-**Source:** The Hacker News &nbsp;·&nbsp; **Date:** May 17  
-**Why it matters:** Potential credential or data exposure.  
-**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
-
 ---
 
 ## 🟠 Important — Review This Week
 
+- [DirtyDecrypt PoC Released for Linux Kernel CVE-2026-31635 LPE Vulnerability](https://thehackernews.com/2026/05/dirtydecrypt-poc-released-for-linux.html)  
+  **The Hacker News** · May 19 · _General awareness item._  
+
+- [Critical Microsoft Vulnerabilities Doubled: From Exposure to Escalation](https://www.bleepingcomputer.com/news/security/critical-microsoft-vulnerabilities-doubled-from-exposure-to-escalation/)  
+  **BleepingComputer** · May 19 · _General awareness item._  
+
+- [Webinar: The hidden bottlenecks in network incident response](https://www.bleepingcomputer.com/news/security/webinar-the-hidden-bottlenecks-in-network-incident-response/)  
+  **BleepingComputer** · May 19 · _General awareness item._  
+
 - [Microsoft confirms patching issues in restricted Windows networks](https://www.bleepingcomputer.com/news/microsoft/microsoft-confirms-patching-issues-in-restricted-windows-networks/)  
   **BleepingComputer** · May 19 · _General awareness item._  
+
+- [Drupal to Release Urgent Core Security Updates on May 20, Sites Told to Prepare](https://thehackernews.com/2026/05/drupal-to-release-urgent-core-security.html)  
+  **The Hacker News** · May 19 · _General awareness item._  
 
 - [SEPPMail Secure E-Mail Gateway Vulnerabilities Enable RCE and Mail Traffic Access](https://thehackernews.com/2026/05/seppmail-secure-e-mail-gateway.html)  
   **The Hacker News** · May 19 · _General awareness item._  
@@ -67,29 +79,17 @@
 - [CVE-2026-43443 ASoC: amd: acp-mach-common: Add missing error check for clock acquisition](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-43443)  
   **Microsoft Security Response Center (MSRC)** · May 19 · _Vendor stability and roadmap risk._  
 
-- [CVE-2026-44662 rust-openssl: Heap buffer overflow when encrypting with AES key-wrap-with-padding](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-44662)  
-  **Microsoft Security Response Center (MSRC)** · May 19 · _General awareness item._  
-
-- [CVE-2026-41673 xmldom: Denial of service via uncontrolled recursion in XML serialization](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-41673)  
-  **Microsoft Security Response Center (MSRC)** · May 19 · _General awareness item._  
-
-- [CVE-2026-41082 In OCaml opam before 2.5.1, a .install field containing a destination filepath can use ../ to reach a parent directory.](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-41082)  
-  **Microsoft Security Response Center (MSRC)** · May 19 · _General awareness item._  
-
-- [CVE-2026-25833 Mbed TLS 3.5.0 to 3.6.5 fixed in 3.6.6 and 4.1.0 has a buffer overflow in the x509_inet_pton_ipv6() function](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-25833)  
-  **Microsoft Security Response Center (MSRC)** · May 19 · _General awareness item._  
-
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [Microsoft blames undismissible Teams location prompts on macOS update](https://www.bleepingcomputer.com/news/microsoft/microsoft-blames-undismissible-teams-location-prompts-on-macos-update/) — BleepingComputer
+- [New Shai-Hulud malware wave compromises 600 npm packages](https://www.bleepingcomputer.com/news/security/new-shai-hulud-malware-wave-compromises-600-npm-packages/) — BleepingComputer
+- [The New Phishing Click: How OAuth Consent Bypasses MFA](https://thehackernews.com/2026/05/the-new-phishing-click-how-oauth.html) — The Hacker News
 - [Compromised Nx Console 18.95.0 Targeted VS Code Developers with Credential Stealer](https://thehackernews.com/2026/05/compromised-nx-console-18950-targeted.html) — The Hacker News
 - [ISC Stormcast For Tuesday, May 19th, 2026 https://isc.sans.edu/podcastdetail/9936, (Tue, May 19th)](https://isc.sans.edu/diary/rss/32996) — SANS Internet Storm Center
 - [INTERPOL ‘Operation Ramz’ seizes 53 malware, phishing servers](https://www.bleepingcomputer.com/news/security/interpol-operation-ramz-seizes-53-malware-phishing-servers/) — BleepingComputer
-- [CISA Admin Leaked AWS GovCloud Keys on Github](https://krebsonsecurity.com/2026/05/cisa-admin-leaked-aws-govcloud-keys-on-github/) — Krebs on Security
-- [TeamPCP Supply Chain Campaign: Activity Through 2026-05-17, (Mon, May 18th)](https://isc.sans.edu/diary/rss/32994) — SANS Internet Storm Center
-- [5 Steps to Managing Shadow AI Tools Without Slowing Down Employees](https://www.bleepingcomputer.com/news/security/5-steps-to-managing-shadow-ai-tools-without-slowing-down-employees/) — BleepingComputer
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 10 critical · 84 important · 33 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 10 critical · 86 important · 32 FYI_
