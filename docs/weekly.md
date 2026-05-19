@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
 **Period:** May 12 – May 19, 2026  
-**Generated:** 2026-05-19 00:14 UTC  
+**Generated:** 2026-05-19 04:58 UTC  
 **Items reviewed:** 125  
 
 ## ⚡ Top Actions This Week
@@ -83,12 +83,12 @@
 
 ## 🔵 FYI — General Awareness
 
+- [ISC Stormcast For Tuesday, May 19th, 2026 https://isc.sans.edu/podcastdetail/9936, (Tue, May 19th)](https://isc.sans.edu/diary/rss/32996) — SANS Internet Storm Center
 - [INTERPOL ‘Operation Ramz’ seizes 53 malware, phishing servers](https://www.bleepingcomputer.com/news/security/interpol-operation-ramz-seizes-53-malware-phishing-servers/) — BleepingComputer
 - [CISA Admin Leaked AWS GovCloud Keys on Github](https://krebsonsecurity.com/2026/05/cisa-admin-leaked-aws-govcloud-keys-on-github/) — Krebs on Security
 - [TeamPCP Supply Chain Campaign: Activity Through 2026-05-17, (Mon, May 18th)](https://isc.sans.edu/diary/rss/32994) — SANS Internet Storm Center
 - [5 Steps to Managing Shadow AI Tools Without Slowing Down Employees](https://www.bleepingcomputer.com/news/security/5-steps-to-managing-shadow-ai-tools-without-slowing-down-employees/) — BleepingComputer
 - [Leaked Shai-Hulud malware fuels new npm infostealer campaign](https://www.bleepingcomputer.com/news/security/leaked-shai-hulud-malware-fuels-new-npm-infostealer-campaign/) — BleepingComputer
-- [INTERPOL Operation Ramz Disrupts MENA Cybercrime Networks with 201 Arrests](https://thehackernews.com/2026/05/interpol-operation-ramz-disrupts-mena.html) — The Hacker News
 
 ---
 
