@@ -3,16 +3,348 @@
 <channel>
   <title>Joe — VP of IT Briefing</title>
   <description>Leadership-focused IT risk, vendors, pricing, licensing, and industry context.</description>
-  <lastBuildDate>Wed, 20 May 2026 05:02:10 +0000</lastBuildDate>
+  <lastBuildDate>Wed, 20 May 2026 09:26:37 +0000</lastBuildDate>
   
+<item>
+  <title>🔴 GitHub confirms breach of ~3,800 repositories after one of its employees installed a malicious VS Code extension; TeamPCP claimed responsibility for the hack (Sergiu Gatlan/BleepingComputer)</title>
+  <link>https://www.techmeme.com/260520/p14#a260520p14</link>
+  <pubDate>Wed, 20 May 2026 09:00:51 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: Potential data exposure — check monitoring and incident response readiness.</b><br/><a href="https://www.bleepingcomputer.com/news/security/github-confirms-breach-of-3-800-repos-via-malicious-vscode-extension/"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260520/i14.jpg" vspace="4" /></a>
+<p><a href="https://www.techmeme.com/260520/p14#a260520p14" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Sergiu Gatlan / <a href="https://www.bleepingcomputer.com/">BleepingComputer</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://www.bleepingcomputer.com/news/security/github-confirms-breach-of-3-800-repos-via-malicious-vscode-extension/">GitHub confirms breach of ~3,800 repositories after one of its employees installed a malicious VS Code extension; TeamPCP claimed responsibility for the hack</a></b></span>&nbsp; &mdash;&nbsp; GitHub has confirmed that roughly 3,800 internal repositories were breached after one of its employees installed a malicious VS Code extension.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</item>
+
+<item>
+  <title>🟠 Why some security fixes never reach your vulnerability dashboard</title>
+  <link>https://www.csoonline.com/article/4173425/why-some-security-fixes-never-reach-your-vulnerability-dashboard.html</link>
+  <pubDate>Wed, 20 May 2026 09:00:00 +0000</pubDate>
+  <source>CSO Online</source>
+  <description><![CDATA[<b>Why this matters: Supply chain risk — audit third-party dependencies and vendor access.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<p>On April 22, for roughly 90 minutes, a malicious version of Bitwarden CLI appeared on npm. Version 2026.4.0 contained a credential-stealing payload that executed an obfuscated loader and harvested AWS, Azure, GCP, GitHub, and npm tokens from any developer machine that ran <code>npm install</code>. The attackers <a href="https://www.csoonline.com/article/4162865/bitwarden-cli-password-manager-trojanized-in-supply-chain-attack.html">reached Bitwarden’s npm publishing path</a> through a compromised GitHub Action related to the Checkmarx supply chain incident that affected several other downstream consumers that week.</p>
+
+
+
+<p>About nine days later, <a href="https://www.cve.org/CVERecord?id=CVE-2026-42994">CVE-2026-42994</a> was <a href="https://community.bitwarden.com/t/bitwarden-statement-on-checkmarx-supply-chain-incident/96127">issued by Bitwarden</a> for the trojanized version. Defenders running a <a href="https://www.csoonline.com/article/571621/software-composition-analysis-explained-and-how-it-identifies-open-source-software-risks.html">software composition analysis</a> tool began seeing it on their dashboard. Detection engineers started writing rules. The incident got a writeup, an entry in someone’s threat intelligence feed, and a row in next quarter’s metrics deck.</p>
+
+
+
+<p>Notice what CVE actually does, though. It doesn’t tell anyone to patch a flaw. The flaw was a 90-minute window in which a publishing pipeline was compromised, and the window has closed. The CVE is a retroactive notification. Meaning, if you ran <code>npm install</code> during that window, treat your developer credentials as exposed. That’s incident response, not vulnerability tracking.</p>
+
+
+
+<p>This is the system functioning by 2026 standards. That’s a long way from what CVE was built to do.</p>
+
+
+
+<h2 class="wp-block-heading" id="the-drift">The drift</h2>
+
+
+
+<p>CVE launched in 1999 as a vulnerability identifier. The <a href="https://www.thecvefoundation.org/newsroom/posts/2025-04-28-goals">original definition</a> was tight: a flaw in a system that violates a security policy, with a fix that defenders can apply against a known version range. <a href="https://www.csoonline.com/article/544892/vulnerabilities-heartbleed-cve-2014-0160-an-overview-of-the-problem-and-the-resources-needed-to.html">Heartbleed</a> in OpenSSL 1.0.1f. The deserialization flaws in Apache Struts. Patch the version, scan to verify, dashboard turns green.</p>
+
+
+
+<p>MITRE and CNAs began stretching the framework almost immediately. The <a href="https://www.csoonline.com/article/570537/the-solarwinds-hack-timeline-who-knew-what-and-when.html">SolarWinds incident of 2020</a> got CVE-2020-10148, but the “vulnerability” was a backdoor inserted into a signed update, not a code flaw the maintainer wrote. <a href="https://www.csoonline.com/article/572327/developer-sabotages-own-npm-module-prompting-open-source-supply-chain-security-questions.html"><code>node-ipc/peacenotwar</code></a> in 2022 got CVE-2022-23812 for <em>protestware</em> that wiped files based on geolocation. The fix in both cases was “remove the bad version,” not a patch to a defective component. The identifier still worked, but it was no longer doing the job it was designed for.</p>
+
+
+
+<p>CVE was now tracking <em>incidents</em> rather than defects in code.</p>
+
+
+
+<p>Attacks like <a href="https://www.csoonline.com/article/4081492/modern-supply-chain-attacks-and-their-real-world-impact.html">s1ngularity and Shai-Hulud</a> broke the stretch. The self-propagating npm worm that emerged in September 2025 and returned in escalating variants through 2026 infected hundreds of packages across the ecosystem. <a href="https://github.com/advisories/GHSA-cxm3-wv7p-598c">Some affected versions got CVEs</a>, but most didn’t. Red Hat’s advisory on the campaign <a href="https://access.redhat.com/security/supply-chain-attacks-NPM-packages">acknowledged the obvious</a>: “due to the unprecedented number of impacted organizations and individuals, it is unlikely that all package infections will be assigned CVE identifiers.” </p>
+
+
+
+<p>Interestingly, the Bitwarden compromise from late April is itself a Shai-Hulud variant, with the string “Shai-Hulud: The Third Coming” <a href="https://www.endorlabs.com/learn/shai-hulud-compromises-the-tanstack-ecosystem-80-packages-compromised">embedded</a> in the malicious payload. It got a CVE because it’s one identifiable package with one identifiable bad version. The 700-plus packages from earlier waves of the same campaign mostly didn’t.</p>
+
+
+
+<p>Vendors also <a href="https://olearysec.com/research/azure-backup-aks-silent-patch/">quietly fix things</a> without disclosure. A researcher’s report gets <a href="https://www.bleepingcomputer.com/news/security/doordash-email-spoofing-vulnerability-sparks-messy-disclosure-dispute/">closed as informative</a>, the issue ships in the next release as a “hardening improvement” or better yet “security enhancement” (not a fix). No CVE is requested. Sometimes that’s reasonable — not always. Either way, no defender’s tooling sees it, and AI is making it worse.</p>
+
+
+
+<h2 class="wp-block-heading" id="what-agents-do-to-all-of-this">What agents do to all of this</h2>
+
+
+
+<p>The category that breaks the framework most clearly is the one with no existing identifier scheme to begin with.</p>
+
+
+
+<p>Skills, MCP servers, and the wider scaffolding around AI agents have several properties the CVE framework was never designed to handle. They mutate at runtime. The operative payload is often a natural language instruction that an agent reads and executes, meaning agentic assets don’t always have stable identities. They get pulled from public registries but also shared via Slack or forked from a repo that looked official three months ago. The harm doesn’t map to any existing weakness category.</p>
+
+
+
+<p>For example, a skill called <a href="https://skills.sh/bigboggy/derp"><code>derp</code></a> on the <code>skills.sh</code> registry illustrates the problem. It contains zero traditional malware indicators. No network calls, base64 blobs, or credential paths. The <code>SKILL.md</code> instructs Claude to deliberately produce broken code, then offer broken fixes in a loop, while hiding the fact that it’s doing so. A CVE has nothing to point at. No memory corruption, authentication bypass, or a CVSS vector. The harm, however, is real — wasted hours, eroded trust in the agent, an inflated bill for compute/tokens — but it’s <em>behavioral</em>. A scanner looking for malicious patterns will not catch it.</p>
+
+
+
+<p><code>derp</code> is small, but structurally identical attacks aren’t. In my research at Manifold Security this April, we identified the<a href="https://www.manifold.security/blog/clawhub-clawswarm-agent-crypto-recruitment"> ClawSwarm campaign</a> which catalogs 30 skills published by a single ClawHub author. Some of <a href="https://archive.md/I2VqT">these include utilities</a> like Cron Helper (903 downloads) and Agent Security (685 downloads) that quietly enroll the user’s AI agent into a third-party network. Install one, and the agent registers itself with an external server, reports its capabilities, generates a Hedera crypto wallet, stores credentials on disk, and polls for tasks every four hours. The skills work. They also recruit the agent into someone else’s economy without the operator’s knowledge.</p>
+
+
+
+<p>What’s the CVE for that? These skills aren’t malware in any traditional sense. The HTTPS calls are documented. The wallet generation uses a legitimate SDK. There’s no shellcode to flag or a known C2 to block. Even if a registry pulls the campaign, the same pattern can reappear under a different author with a different filename in a week. The artifact-centric model has nothing to grip.</p>
+
+
+
+<p>Frontier model vendors face a variation of the problem. They do version their releases (Sonnet 4.6, Opus 4.7, GPT-5.1, and so on) but security fixes aren’t always pronounced within release notes. The vulnerability that worked on yesterday’s model and fails on today’s gets bundled into a capability update or new “<a href="https://www.anthropic.com/news/claude-opus-4-7">safeguards</a>” with no security delta called out, no advisory, and often no version bump at all when the change is to a system prompt or classifier rather than the model itself.</p>
+
+
+
+<p>A recent academic<a href="https://arxiv.org/abs/2604.04288"> survey</a> of 295 GitHub Security Advisories that referenced LLM-related components found that existing <a href="https://www.csoonline.com/article/567835/autonomy-and-the-death-of-cves.html">CWE metadata</a> captures code-level defects but systematically underrepresents model-mediated exposure, the cases where the vulnerability is triggered or amplified through model reasoning rather than a flaw in the surrounding code. As the authors put it: “Current GHSA metadata lacks structured indicators of LLM involvement, requiring manual classification to identify model-mediated exposure patterns.”</p>
+
+
+
+<p><a href="https://www.csoonline.com/article/4151814/langchain-path-traversal-bug-adds-to-input-validation-woes-in-ai-pipelines.html">CVE-2025-68664 in LangChain Core</a>, a deserialization flaw triggerable through prompt-influenced metadata, is a rare case that did make it into the system, but most don’t. A prompt injection technique that lets an attacker exfiltrate tool-call outputs from an agent could get fixed in the next model checkpoint, surface in a research paper six months later, and never appear on any dashboard.</p>
+
+
+
+<p>Both are exploitable, but only one is being tracked.</p>
+
+
+
+<h2 class="wp-block-heading" id="what-a-workable-signal-layer-looks-like">What a workable signal layer looks like</h2>
+
+
+
+<p>CVE still does its job for what it was designed for. But the assumptions underneath the framework — stable identity, fixed content, coordinated disclosure, vendor advisories — don’t hold for a meaningful and growing share of the agent attack surface.</p>
+
+
+
+<p>A workable signal layer for this category probably needs three things the current system lacks.</p>
+
+
+
+<ol class="wp-block-list">
+<li><strong>Behavioral identifiers rather than artifact identifiers</strong>: If a skill that instructs an agent to exfiltrate environment variables gets removed and the same instruction shows up tomorrow under a different author with a different filename, the relevant identifier is the behavior, not the SHA. Fingerprinting what an agent actually does — what data flows where, what external services it enrolls itself with, what tool calls it makes on a user’s behalf — gives you something durable to track even when the upstream artifact is ephemeral.<br /></li>
+
+
+
+<li><strong>Registry transparency for takedowns</strong>: When npm removes a package, <a href="https://www.npmjs.com/package/fs/v/0.0.1-security">there’s a paper trail</a>. When a Skills registry removes a publisher, there often isn’t. The ecosystem will mature on this front, but enterprise consumers should be pushing for it now rather than waiting.<br /></li>
+
+
+
+<li><strong>Responsible disclosure, but for vendors: </strong>We need an honest accounting from vendors about what they fix and ship silently, including model vendors. I’m not optimistic about this one in the short term. Commercial incentives point the wrong way, and customer pressure (and then some from bug bounty hunters) is what tends to <a href="https://www.csoonline.com/article/4124766/when-responsible-disclosure-becomes-unpaid-labor.html">move vendors here</a>.</li>
+</ol>
+
+
+
+<h2 class="wp-block-heading" id="the-dashboard-you-have-was-built-for-the-threats-you-had">The dashboard you have was built for the threats you had</h2>
+
+
+
+<p>The vulnerability tracking system was built around an artifact-centric model. It still pulls its weight for the threats it was designed for. The Bitwarden CVE landed on dashboards across the industry. So will the next one.</p>
+
+
+
+<p>What won’t land is a skill pulled from a registry with no advisory. Or a model checkpoint that quietly resists a prompt injection it used to fall for. Or your agent, already enrolled in someone else’s network because a <code>SKILL.md</code> told it to.</p>
+
+
+
+<p>If you run a security program in 2026, your dashboard is increasingly an incomplete picture. The things that will get you are not always the things on it. Knowing what your tools actually watch, and what they’ve stopped watching, is where the work starts.</p>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Beyond the glossy roadmap: Bridging the gap between agents and assets</title>
+  <link>https://www.cio.com/article/4173248/beyond-the-glossy-roadmap-bridging-the-gap-between-agents-and-assets.html</link>
+  <pubDate>Wed, 20 May 2026 09:00:00 +0000</pubDate>
+  <source>CIO.com</source>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<p>A few months ago, I was reviewing an agentic AI roadmap with the CIO of a Fortune 500 insurer. He pulled up two slides side by side. On the left: A glossy roadmap for a new agentic AI platform — multi-agent orchestration, vector databases, the works. On the right: A 30-year-old loan origination system running on a mainframe his team had been “planning to retire” for the last few years.</p>
+
+
+
+<p>“We’re spending $40 million on the left,” he said. “And the agent on the left can’t see anything on the right.”</p>
+
+
+
+<p>That, in one sentence, is the architectural lie most enterprises are living with right now.</p>
+
+
+
+<p>For the better part of a decade, we’ve split our IT strategy into two budgets: An innovation lab, where shiny things get built, and a maintenance core, where the actual business runs. We promote people for the first column and quietly outsource the second. Then we wonder why our <a href="https://www.cio.com/article/4130557/most-ai-strategies-will-never-become-agentic-heres-why.html">generative AI pilots can’t make it to production</a>.</p>
+
+
+
+<p>I’ll say what most CIOs already suspect but won’t put on a slide: Your modernization strategy and your AI strategy are the same strategy. If you’re funding them as separate line items in 2026, you’re already behind.</p>
+
+
+
+<h2 class="wp-block-heading" id="what-i-got-wrong-about-lift-and-shift">What I got wrong about “lift and shift”</h2>
+
+
+
+<p>I’ll admit I was a believer for a long time. In 2022, my team finished a textbook migration off a 20-year-old Oracle Exadata footprint onto a Cloud native solution. Eighteen months, $20M, zero data loss and a 40% reduction in run-rate infrastructure cost. I had the slide ready for the board.</p>
+
+
+
+<p>Then our first generative AI pilot landed, and I watched our agent fail to answer questions that the old database — with all its ugly stored procedures — could have answered in a single query. The “modernized” Spanner instance was clean, fast and — without the surrounding semantic layer — couldn’t answer questions the old database could.</p>
+
+
+
+<p>The lesson I took away: Legacy systems aren’t technical debt. They’re encoded institutional memory — three decades of edge cases, compliance carve-outs, regional rules and “we tried that in 2007, and it broke everything” wisdom that nobody documented because nobody had to. You can rewrite the code. You can’t rewrite the knowledge.</p>
+
+
+
+<p>Which is precisely why agentic AI changes the math. For the first time, we have a technology that doesn’t just tolerate that messy old context — it <em>needs</em> it.<br /><br />Earlier this year, I spoke on this intersection of agentic cloud strategy and legacy modernization at <a href="https://www.googlecloudevents.com/next-vegas" rel="nofollow">Google Cloud Next 2026</a>. What follows is the framework I shared for moving beyond the “<a href="https://www.cio.com/article/4105794/beyond-lift-and-shift-using-agentic-ai-for-continuous-cloud-modernization.html">lift and shift</a>” mentality.</p>
+
+
+
+<h2 class="wp-block-heading" id="mcp-isnt-a-protocol-its-a-peace-treaty">MCP isn’t a protocol. It’s a peace treaty</h2>
+
+
+
+<p>The <a href="https://www.cio.com/article/4136548/why-model-context-protocol-is-suddenly-on-every-executive-agenda.html">Model Context Protocol</a> gets discussed as a technical standard, and that framing undersells it. After watching teams burn quarters writing custom connectors between every model and every data source, I think MCP is closer to a peace treaty between two warring tribes inside the enterprise: The cloud-native engineers and the legacy custodians.</p>
+
+
+
+<p>When an agent can pull a customer’s 2003 account history from a mainframe and combine it with a real-time fraud signal without somebody hand-coding the bridge, two things happen. The integration backlog stops growing. And — more importantly — the <em>political</em> wall between the two teams starts to crumble.</p>
+
+
+
+<p>I’d argue this is the most under-appreciated CIO opportunity of the next 18 months. Not the agents themselves. The org chart you can finally redraw because the agents made the old separation pointless.</p>
+
+
+
+<h2 class="wp-block-heading" id="why-i-stopped-trusting-rag-for-legacy-code">Why I stopped trusting RAG for legacy code</h2>
+
+
+
+<p>Here’s a take I’ve gotten pushback on: Standard retrieval-augmented generation is the wrong tool for legacy modernization, and we’re using it anyway because it’s familiar.</p>
+
+
+
+<p>RAG is brilliant for documents. It’s a disaster for code. A monolithic codebase isn’t a haystack with a needle in it; it’s a tangled fishing net where every knot is connected to seven others. Ask a vanilla RAG system to help you refactor a billing module and it will confidently tell you the change is safe, right up until production goes down on a Tuesday morning.<br /><br /><a href="https://www.cio.com/article/4164027/startup-tackles-knowledge-graphs-to-improve-ai-accuracy.html">Andrew Moore</a>, the former head of Google Cloud AI and now co-founder of Lovelace, told CIO recently that “you cannot do safety-critical reasoning for agents purely based on trying to do the same sort of thing you normally do for chatbots.” That maps to my experience exactly. Chatbots can be wrong and embarrassing. Agents can be wrong and expensive.</p>
+
+
+
+<p><a href="https://github.com/microsoft/graphrag" rel="nofollow">GraphRAG</a> — building a semantic knowledge graph of how the code actually behaves, not just how it reads — is the only approach I’ve seen that respects the structural reality of these systems. In 2025, I was advising on a mainframe modernization at a health insurer.  The CIO had given me the official application inventory: 47 systems, well-mapped, with named owners. We ran a graph analysis across the actual code and graph surfaced 53 systems.</p>
+
+
+
+<p>The six extra weren’t ghosts. They were live, running and integrated — small applications written between 1998 and 2004, each owned by a business unit that had quietly built them, never registered them and treated them as “spreadsheets that happened to run on the mainframe.” One of them was processing about $35M a year in vendor rebates against pricing tables that no one in IT knew existed.</p>
+
+
+
+<p>The graph didn’t just find undocumented dependencies. It found undocumented <em>systems</em>. You cannot modernize what you cannot see, and most enterprise application inventories are wrong by an amount that should embarrass us.</p>
+
+
+
+<h2 class="wp-block-heading" id="the-hard-part-isnt-technical">The hard part isn’t technical</h2>
+
+
+
+<p>Everything I’ve described is buildable today. The vendors are there. The protocols exist. The talent, if you know where to look, is hungry.</p>
+
+
+
+<p>What’s missing is architectural courage at the CIO level — and I mean that specifically. It is much easier to fund a new AI initiative than to defend a modernization budget. The first gets a press release. The second gets a line item nobody reads. But if you keep funding them separately, you’ll end up with the same outcome I’ve watched at company after company: A sleek agentic layer floating above an integration layer that bleeds margin every quarter, while your competitors who did the unglamorous work compound advantage you can no longer catch.</p>
+
+
+
+<p>If I could give CIOs reading this one piece of advice — and I realize this is the kind of thing that’s easy to say and hard to do — it’s this:</p>
+
+
+
+<p>Take your top three modernization projects and your top three AI projects. Put them on the same slide. Give them the same executive sponsor. If you can’t, you don’t have a strategy. You have two parallel cost centers waving at each other.</p>
+
+
+
+<p>The myth that legacy and innovation are opposites was always wrong. In the agentic era, it’s an unforced error. The question for the next 18 months isn’t whether to modernize. It’s whether you have the architectural clarity — and the political cover — to do it as one program instead of two.</p>
+
+
+
+<p>I think most CIOs already know which side of that line they’re on. I’d just rather we stop pretending otherwise.</p>
+
+
+
+<p><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><strong><a href="https://www.cio.com/expert-contributor-network/">Want to join?</a></strong></p>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 ZTE releases Sustainability Report 2025: driving a new chapter in sustainable development through AI</title>
+  <link>https://www.theregister.com/networks/2026/05/20/zte-releases-sustainability-report-2025-driving-a-new-chapter-in-sustainable-development-through-ai/5243185</link>
+  <pubDate>Wed, 20 May 2026 08:23:48 +0000</pubDate>
+  <source>The Register</source>
+  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/>Through its "All in AI, AI for All" vision, ZTE surpasses climate targets, bridges the global digital divide, and strengthens governance resilience<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Three precedent-setting court rulings in China have said that employers replacing workers with AI is voluntary cost-cutting that does not justify mass layoffs (Catie Edmondson/New York Times)</title>
+  <link>https://www.techmeme.com/260520/p10#a260520p10</link>
+  <pubDate>Wed, 20 May 2026 06:00:01 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: Vendor risk signal — evaluate roadmap and support stability.</b><br/><a href="https://www.nytimes.com/2026/05/19/business/china-ai-unemployment.html?unlocked_article_code=1.j1A.Z3Vx.qem6HAwmIeop&amp;smid=url-share"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260520/i10.jpg" vspace="4" /></a>
+<p><a href="https://www.techmeme.com/260520/p10#a260520p10" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Catie Edmondson / <a href="https://www.nytimes.com/">New York Times</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://www.nytimes.com/2026/05/19/business/china-ai-unemployment.html?unlocked_article_code=1.j1A.Z3Vx.qem6HAwmIeop&amp;smid=url-share">Three precedent-setting court rulings in China have said that employers replacing workers with AI is voluntary cost-cutting that does not justify mass layoffs</a></b></span>&nbsp; &mdash;&nbsp; A series of precedent-setting rulings signals that Chinese courts are being enlisted to shield workers from displacement by artificial intelligence.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Sources: Nvidia&#x27;s business development group, not its VC arm NVentures, has led much of its ~$90B dealmaking push across 145+ companies over the past 16 months (Financial Times)</title>
+  <link>https://www.techmeme.com/260520/p9#a260520p9</link>
+  <pubDate>Wed, 20 May 2026 05:45:13 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://giftarticle.ft.com/giftarticle/actions/redeem/cc90e4b0-d971-47bb-b241-42896af775c4"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260520/i9.jpg" vspace="4" /></a>
+<p><a href="https://www.techmeme.com/260520/p9#a260520p9" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="https://www.ft.com/">Financial Times</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://giftarticle.ft.com/giftarticle/actions/redeem/cc90e4b0-d971-47bb-b241-42896af775c4">Sources: Nvidia's business development group, not its VC arm NVentures, has led much of its ~$90B dealmaking push across 145+ companies over the past 16 months</a></b></span>&nbsp; &mdash;&nbsp; Chipmaker's spending rivals Big Tech's biggest venture operations, tying customers and start-ups to its technology</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+</item>
+
+<item>
+  <title>🟠 Sources: an attack exploiting a previously unknown vulnerability in Huawei router software caused a three-hour nationwide telecoms outage in Luxembourg in 2025 (Alexander Martin/The Record)</title>
+  <link>https://www.techmeme.com/260520/p8#a260520p8</link>
+  <pubDate>Wed, 20 May 2026 05:35:01 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: Service impact possible — prepare comms and confirm vendor status.</b><br/><a href="https://therecord.media/huawei-zero-day-behind-last-year-luxembourg-telecom-outage"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260520/i8.jpg" vspace="4" /></a>
+<p><a href="https://www.techmeme.com/260520/p8#a260520p8" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Alexander Martin / <a href="https://therecord.media/">The Record</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://therecord.media/huawei-zero-day-behind-last-year-luxembourg-telecom-outage">Sources: an attack exploiting a previously unknown vulnerability in Huawei router software caused a three-hour nationwide telecoms outage in Luxembourg in 2025</a></b></span>&nbsp; &mdash;&nbsp; An attack exploiting a previously unknown vulnerability in Huawei enterprise router software caused a nationwide telecoms outage &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Vietnam introduces Decree 142 to implement its AI law, requiring companies to classify AI models by risk level, label deepfakes, and disclose chatbot use (Lien Hoang/Nikkei Asia)</title>
+  <link>https://www.techmeme.com/260520/p7#a260520p7</link>
+  <pubDate>Wed, 20 May 2026 05:30:00 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://asia.nikkei.com/business/technology/artificial-intelligence/vietnam-unveils-ai-law-regulating-chatgpt-like-tools"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260520/i7.jpg" vspace="4" /></a>
+<p><a href="https://www.techmeme.com/260520/p7#a260520p7" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Lien Hoang / <a href="https://asia.nikkei.com/">Nikkei Asia</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://asia.nikkei.com/business/technology/artificial-intelligence/vietnam-unveils-ai-law-regulating-chatgpt-like-tools">Vietnam introduces Decree 142 to implement its AI law, requiring companies to classify AI models by risk level, label deepfakes, and disclose chatbot use</a></b></span>&nbsp; &mdash;&nbsp; HO CHI MINH CITY &mdash; Vietnam has enacted a law regulating artificial intelligence, becoming one of the first countries to set comprehensive rules &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Filing and sources: PE firm Hg has spun out €500M worth of assets from its €19B software group Visma, whose London IPO remains shelved amid the &quot;SaaSpocalypse&quot; (Alexandra Heal/Financial Times)</title>
+  <link>https://www.techmeme.com/260520/p6#a260520p6</link>
+  <pubDate>Wed, 20 May 2026 05:25:00 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.ft.com/content/766353e4-709b-4621-bd26-125580d00400"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260520/i6.jpg" vspace="4" /></a>
+<p><a href="https://www.techmeme.com/260520/p6#a260520p6" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Alexandra Heal / <a href="https://www.ft.com/">Financial Times</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://www.ft.com/content/766353e4-709b-4621-bd26-125580d00400">Filing and sources: PE firm Hg has spun out &euro;500M worth of assets from its &euro;19B software group Visma, whose London IPO remains shelved amid the &ldquo;SaaSpocalypse&rdquo;</a></b></span>&nbsp; &mdash;&nbsp; Move by private equity owner comes as long-awaited London IPO of group is shelved</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+</item>
+
 <item>
   <title>🔵 Samsung Electronics rejects a labor union-accepted mediation proposal, raising the prospect of a workers&#x27; strike; a general work stoppage will proceed on May 21 (Bloomberg)</title>
   <link>https://www.techmeme.com/260520/p2#a260520p2</link>
   <pubDate>Wed, 20 May 2026 04:50:02 +0000</pubDate>
   <source>Techmeme</source>
-  <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><a href="https://www.bloomberg.com/news/articles/2026-05-20/samsung-faces-risk-of-chip-disruption-after-labor-talks-collapse"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260520/i2.jpg" vspace="4" /></a>
+  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/><a href="https://www.bloomberg.com/news/articles/2026-05-20/samsung-faces-risk-of-chip-disruption-after-labor-talks-collapse"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260520/i2.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260520/p2#a260520p2" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="https://www.bloomberg.com/">Bloomberg</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/articles/2026-05-20/samsung-faces-risk-of-chip-disruption-after-labor-talks-collapse">Samsung Electronics rejects a labor union-accepted mediation proposal, raising the prospect of a workers' strike; a general work stoppage will proceed on May 21</a></b></span>&nbsp; &mdash;&nbsp; Talks between Samsung Electronics Co. and its largest labor union broke down, raising the prospect of a workers' strike &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/articles/2026-05-20/samsung-faces-risk-of-chip-disruption-after-labor-talks-collapse">Samsung Electronics rejects a labor union-accepted mediation proposal, raising the prospect of a workers' strike; a general work stoppage will proceed on May 21</a></b></span>&nbsp; &mdash;&nbsp; Video Player is loading.&nbsp; &mdash;&nbsp; Play&nbsp; &mdash;&nbsp; Mute&nbsp; &mdash;&nbsp; Current Time Loaded: 0%&nbsp; &mdash;&nbsp; Playback Rate&nbsp; &mdash; captions and subtitles off, selected</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
 </item>
 
 <item>
@@ -20,36 +352,7 @@
   <link>https://www.theregister.com/off-prem/2026/05/20/google-cloud-suspended-major-customer-railwaycom-without-cause-causing-outage/5243111</link>
   <pubDate>Wed, 20 May 2026 04:37:43 +0000</pubDate>
   <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Service impact possible — prepare comms and confirm vendor status.</b><br/>This is the service we get when we spend $10m plus? asks automated code deployment outfit<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Q&amp;A with Google SVP James Manyika on AI&#x27;s ability to automate tasks versus occupations, his optimism about the labor market despite AI-driven layoffs, and more (Casey Newton/Platformer)</title>
-  <link>https://www.techmeme.com/260519/p76#a260519p76</link>
-  <pubDate>Wed, 20 May 2026 02:25:01 +0000</pubDate>
-  <source>Techmeme</source>
-  <description><![CDATA[<b>Why this matters: Vendor risk signal — evaluate roadmap and support stability.</b><br/><p><a href="https://www.techmeme.com/260519/p76#a260519p76" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Casey Newton / <a href="https://www.platformer.news/">Platformer</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.platformer.news/james-manyika-google-ai-jobs-io-2026/">Q&amp;A with Google SVP James Manyika on AI's ability to automate tasks versus occupations, his optimism about the labor market despite AI-driven layoffs, and more</a></b></span>&nbsp; &mdash;&nbsp; Tasks are getting easier to automate &mdash; jobs aren't.&nbsp; What now?&nbsp; &mdash;&nbsp; Some fun news: we're doing our first-ever Platformer live event &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Sources: a draft White House EO would create a &quot;voluntary framework&quot; for AI companies to give government agencies early access to models before public release (Ashley Gold/Axios)</title>
-  <link>https://www.techmeme.com/260519/p75#a260519p75</link>
-  <pubDate>Wed, 20 May 2026 02:00:01 +0000</pubDate>
-  <source>Techmeme</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.axios.com/2026/05/20/ai-trump-executive-order-white-house-infighting"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260519/i75.jpg" vspace="4" /></a>
-<p><a href="https://www.techmeme.com/260519/p75#a260519p75" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Ashley Gold / <a href="https://www.axios.com/">Axios</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.axios.com/2026/05/20/ai-trump-executive-order-white-house-infighting">Sources: a draft White House EO would create a &ldquo;voluntary framework&rdquo; for AI companies to give government agencies early access to models before public release</a></b></span>&nbsp; &mdash;&nbsp; The White House plans to release its much-discussed executive order on cybersecurity and AI safety as soon as this week &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 The Take It Down Act, a law requiring social networks to remove nonconsensual intimate images within 48 hours of reporting or face fines, took effect on May 19 (Lauren Feiner/The Verge)</title>
-  <link>https://www.techmeme.com/260519/p74#a260519p74</link>
-  <pubDate>Wed, 20 May 2026 01:40:02 +0000</pubDate>
-  <source>Techmeme</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.theverge.com/policy/933518/take-it-down-act-notice-removal-social-media-deepfake"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260519/i74.jpg" vspace="4" /></a>
-<p><a href="https://www.techmeme.com/260519/p74#a260519p74" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Lauren Feiner / <a href="https://www.theverge.com/">The Verge</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.theverge.com/policy/933518/take-it-down-act-notice-removal-social-media-deepfake">The Take It Down Act, a law requiring social networks to remove nonconsensual intimate images within 48 hours of reporting or face fines, took effect on May 19</a></b></span>&nbsp; &mdash;&nbsp; &#65279;The Take It Down Act is in full force, but it could be a gift to government censors &mdash; not victims of image-based sexual abuse.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Service impact possible — prepare comms and confirm vendor status.</b><br/>This is the service we get when we spend $10m plus? asks automated code deployment outfit<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
 </item>
 
 <item>
@@ -194,7 +497,7 @@
 
 
 <p></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
 </item>
 
 <item>
@@ -202,7 +505,7 @@
   <link>https://www.theregister.com/public-sector/2026/05/20/ai-sackings-reach-new-zealand-which-will-use-it-to-eject-14-percent-of-government-staff/5243076</link>
   <pubDate>Wed, 20 May 2026 01:17:28 +0000</pubDate>
   <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Minister demands AI becomes ‘basic expectation for all public entities’<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Minister demands AI becomes ‘basic expectation for all public entities’<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 8h ago]]></description>
 </item>
 
 <item>
@@ -259,7 +562,7 @@
 
 
 <p>“Illicit code-signing certificates have been sold and trafficked for more than a decade,” Masada said. “That includes its use by nation-state actors to target critical infrastructure organizations in Europe. What’s changed is how this activity is marketed, packaged, and sold as a service, along with the scale at which it is now used across ransomware campaigns. Instead of buying certificates one-by-one, criminals upload their malware to a service that signs it for them.”</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 8h ago]]></description>
 </item>
 
 <item>
@@ -372,7 +675,7 @@
 
 
 <p><em>This article originally appeared on <a href="https://www.csoonline.com/article/4173305/contractors-public-github-account-exposed-govcloud-and-cisa-credentials.html" target="_blank">CSOonline</a>.</em></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 10h ago]]></description>
 </item>
 
 <item>
@@ -380,7 +683,7 @@
   <link>https://www.theregister.com/security/2026/05/19/microsoft-disrupts-alleged-malware-signing-operation-used-by-ransomware-gangs/5243013</link>
   <pubDate>Tue, 19 May 2026 21:56:18 +0000</pubDate>
   <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Elevated ransomware risk — validate backups and endpoint defenses.</b><br/>'Thousands' of US victims, including 12+ machines owned and operated by Redmond<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Elevated ransomware risk — validate backups and endpoint defenses.</b><br/>'Thousands' of US victims, including 12+ machines owned and operated by Redmond<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 11h ago]]></description>
 </item>
 
 <item>
@@ -388,7 +691,7 @@
   <link>https://www.theregister.com/ai-ml/2026/05/19/frustrated-franchisee-sues-pizza-hut-over-crappy-kitchen-ai/5242899</link>
   <pubDate>Tue, 19 May 2026 21:09:13 +0000</pubDate>
   <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Potential data exposure — check monitoring and incident response readiness.</b><br/>The Hut stands accused of breaching its franchise agreement by forcing 'algorithmic behaviors that slowed production and delivery' on restaurants, leading to $100M in losses one group wants back<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Potential data exposure — check monitoring and incident response readiness.</b><br/>The Hut stands accused of breaching its franchise agreement by forcing 'algorithmic behaviors that slowed production and delivery' on restaurants, leading to $100M in losses one group wants back<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 12h ago]]></description>
 </item>
 
 <item>
@@ -497,7 +800,7 @@
 
 
 <p>Valadon added that CSOs and CIOs should perform full secret scanning on all internal repositories, not just public GitHub accounts, block secrets before they reach the repository, use short-lived credentials wherever possible, deploy honeytokens, such as fake passwords that would trick curious attackers, in sensitive repositories, and inventory where their organization’s code actually lives, including checking whether it’s in employees’ and contractors’ personal GitHub accounts.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 8h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 12h ago]]></description>
 </item>
 
 <item>
@@ -586,7 +889,7 @@
 
 
 <p><em>This article originally appeared on <a href="https://www.infoworld.com/article/4173277/antv-data-visualization-tool-the-latest-to-be-hit-by-ongoing-npm-supply-chain-attacks.html" target="_blank">InfoWorld</a>.</em></p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 14h ago]]></description>
 </item>
 
 <item>
@@ -595,7 +898,7 @@
   <pubDate>Tue, 19 May 2026 16:22:18 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><p>Drupal says attackers may develop an exploit for the vulnerability within hours or days.</p>
-<p>The post <a href="https://www.securityweek.com/drupal-to-patch-highly-critical-vulnerability-at-risk-of-quick-exploitation/">Drupal to Patch Highly Critical Vulnerability at Risk of Quick Exploitation</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 12h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/drupal-to-patch-highly-critical-vulnerability-at-risk-of-quick-exploitation/">Drupal to Patch Highly Critical Vulnerability at Risk of Quick Exploitation</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 17h ago]]></description>
 </item>
 
 <item>
@@ -603,7 +906,7 @@
   <link>https://www.theregister.com/security/2026/05/19/drupal-warns-admins-to-brace-for-highly-critical-core-patch/5242728</link>
   <pubDate>Tue, 19 May 2026 15:56:25 +0000</pubDate>
   <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>The org’s staying mum on the details, but Wednesday’s fixes reach back to unsupported 8.9 branches<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>The org’s staying mum on the details, but Wednesday’s fixes reach back to unsupported 8.9 branches<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 17h ago]]></description>
 </item>
 
 <item>
@@ -704,7 +1007,7 @@
 
 
 <p>And  Jain suggested GitHub could apply its recently introduced <a href="https://www.infoworld.com/article/4158575/github-adds-stacked-prs-to-speed-complex-code-reviews.html">Stacked PRs</a> code review tool to its bug bounty program. “Just like stacked PRs help developers review AI-generated code in smaller and more structured chunks, bug bounty platforms may introduce more structured vulnerability submissions with automated validation, reproducible exploit steps, deduplication, and AI-assisted triage,” he said. “Security reporting could start looking more like a <a href="https://www.infoworld.com/article/2269266/what-is-cicd-continuous-integration-and-continuous-delivery-explained.html">CI/CD</a> workflow instead of long text-based reports.”</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 17h ago]]></description>
 </item>
 
 <item>
@@ -785,15 +1088,7 @@
 
 
 <p><strong>The findings from 650 executives reveal where agentic AI is headed — and what it will take to scale it. </strong><a href="https://www.cisco.com/site/us/en/about/why-cisco/race-to-agentic-ai-report.html" rel="sponsored"><strong>Explore The Race to Agentic AI</strong></a><strong>.</strong></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Microsoft refreshes Surface for Business lineup, starts AI PC upsell at $1,499</title>
-  <link>https://www.theregister.com/ai-ml/2026/05/19/microsoft-refreshes-surface-for-business-lineup-starts-ai-pc-upsell-at-1499/5242697</link>
-  <pubDate>Tue, 19 May 2026 14:58:27 +0000</pubDate>
-  <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Could impact sign-ins/MFA/Conditional Access — watch for login issues.</b><br/>Latest hardware adds Intel’s newest AI-focused processors as Redmond continues pushing enterprises toward Copilot+ PCs<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 14h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 18h ago]]></description>
 </item>
 
 <item>
@@ -892,7 +1187,7 @@
 
 
 <p></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 15h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 20h ago]]></description>
 </item>
 
 <item>
@@ -985,15 +1280,7 @@
 
 
 <p>Still, they argued the balance has clearly shifted toward abuse.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 16h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 I tested the Surface Pro with 5G, and it&#x27;s Microsoft&#x27;s most complete business 2-in-1 yet</title>
-  <link>https://www.zdnet.com/article/microsoft-surface-pro-for-business-review/</link>
-  <pubDate>Tue, 19 May 2026 13:00:00 +0000</pubDate>
-  <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>The 12th-generation Surface Pro for Business features 5G connectivity and a brilliant display.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 16h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 20h ago]]></description>
 </item>
 
 <item>
@@ -1002,7 +1289,7 @@
   <pubDate>Tue, 19 May 2026 12:54:21 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: Could impact sign-ins/MFA/Conditional Access — watch for login issues.</b><br/><p>The security defect can be exploited remotely, without authentication, to execute arbitrary code and leak sensitive information.</p>
-<p>The post <a href="https://www.securityweek.com/unpatched-chromadb-vulnerability-can-lead-to-server-takeover/">Unpatched ChromaDB Vulnerability Can Lead to Server Takeover</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 16h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/unpatched-chromadb-vulnerability-can-lead-to-server-takeover/">Unpatched ChromaDB Vulnerability Can Lead to Server Takeover</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 20h ago]]></description>
 </item>
 
 <item>
@@ -1010,16 +1297,7 @@
   <link>https://www.theregister.com/public-sector/2026/05/19/indra-rides-off-with-196b-transport-for-london-ticketing-deal-as-oyster-heads-for-back-office-overhaul/5242520</link>
   <pubDate>Tue, 19 May 2026 11:39:53 +0000</pubDate>
   <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Nothing says 'future of urban transit' like a defense contractor running your bus, tube, and train pass<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 17h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Cyber Resilience is the New Business Continuity Plan</title>
-  <link>https://www.securityweek.com/cyber-resilience-is-the-new-business-continuity-plan/</link>
-  <pubDate>Tue, 19 May 2026 11:30:00 +0000</pubDate>
-  <source>SecurityWeek</source>
-  <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><p>The organizations best prepared to face disruption are those that align security, continuity and risk management around what the business cannot afford to lose.</p>
-<p>The post <a href="https://www.securityweek.com/cyber-resilience-is-the-new-business-continuity-plan/">Cyber Resilience is the New Business Continuity Plan</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 17h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Nothing says 'future of urban transit' like a defense contractor running your bus, tube, and train pass<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 21h ago]]></description>
 </item>
 
 <item>
@@ -1027,7 +1305,7 @@
   <link>https://www.zdnet.com/article/motorola-smart-connect-razr-fold-hands-on/</link>
   <pubDate>Tue, 19 May 2026 11:00:46 +0000</pubDate>
   <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/>Motorola's Smart Connect software is superb, and gives me a wonderful option for working away from my desk. Here's how it works.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 18h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/>Motorola's Smart Connect software is superb, and gives me a wonderful option for working away from my desk. Here's how it works.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 22h ago]]></description>
 </item>
 
 <item>
@@ -1224,7 +1502,7 @@
 
 
 <p><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><strong><a href="https://www.cio.com/expert-contributor-network/">Want to join?</a></strong></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 18h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 22h ago]]></description>
 </item>
 
 <item>
@@ -1232,7 +1510,7 @@
   <link>https://www.theregister.com/ai-ml/2026/05/19/1-in-5-brits-think-ai-layoffs-could-trigger-civil-unrest/5242444</link>
   <pubDate>Tue, 19 May 2026 10:59:00 +0000</pubDate>
   <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Vendor risk signal — evaluate roadmap and support stability.</b><br/>UK folk increasingly don't believe AI jobs revolution will end in prosperity for anyone outside the boardroom, say researchers<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 18h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Vendor risk signal — evaluate roadmap and support stability.</b><br/>UK folk increasingly don't believe AI jobs revolution will end in prosperity for anyone outside the boardroom, say researchers<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 22h ago]]></description>
 </item>
 
 <item>
@@ -1240,7 +1518,7 @@
   <link>https://www.zdnet.com/article/best-early-memorial-day-deals-2026/</link>
   <pubDate>Tue, 19 May 2026 10:31:40 +0000</pubDate>
   <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/>Memorial Day Weekend is coming soon. These are the best deals we found so far, including price drops from Apple, Samsung, Hisense, Ninja, and more.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 18h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/>Memorial Day Weekend is coming soon. These are the best deals we found so far, including price drops from Apple, Samsung, Hisense, Ninja, and more.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 22h ago]]></description>
 </item>
 
 <item>
@@ -1389,7 +1667,7 @@
 
 
 <p>Data represents the real world, and the real world is messy, Clark observes. It’s rarely, if ever, perfectly ready for an ideal AI scenario, and there are always trade-offs, she notes. “The question isn’t whether incompatibility exists, it’s how you scope around it to still drive meaningful outcomes.”</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 19h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 23h ago]]></description>
 </item>
 
 <item>
@@ -1496,7 +1774,7 @@
 
 
 <p><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><strong><a href="https://www.cio.com/expert-contributor-network/">Want to join?</a></strong></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 19h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 23h ago]]></description>
 </item>
 
 <item>
@@ -1505,7 +1783,7 @@
   <pubDate>Tue, 19 May 2026 09:42:56 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><p>Patched in April, the underlying vulnerability allows local attackers to elevate their privileges to root.</p>
-<p>The post <a href="https://www.securityweek.com/poc-released-for-dirtydecrypt-linux-kernel-vulnerability/">PoC Released for DirtyDecrypt Linux Kernel Vulnerability</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 19h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/poc-released-for-dirtydecrypt-linux-kernel-vulnerability/">PoC Released for DirtyDecrypt Linux Kernel Vulnerability</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 23h ago]]></description>
 </item>
 
 <item>
@@ -1658,7 +1936,7 @@
 
 
 <p>Despite the temptation, Ray warns not to immediately launch a penetration test. “The adversary just ran one for you — and you failed it,” he says. “Instead, spend your money shoring up your defenses, then validate with testing once your lessons-learned have been implemented and your new controls have had a chance to prove themselves.”</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 20h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
@@ -1839,7 +2117,7 @@
 
 
 <p><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><strong><a href="https://www.cio.com/expert-contributor-network/">Want to join?</a></strong></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 20h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
@@ -1892,7 +2170,7 @@
 
 
 <p>To learn more, visit us <a href="https://ad.doubleclick.net/ddm/trackclk/N2700600.5324CIO/B35682198.447049288;dc_trk_aid=640728213;dc_trk_cid=253493705;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;gdpr=%24%7BGDPR%7D;gdpr_consent=%24%7BGDPR_CONSENT_755%7D;ltd=;dc_tdv=1" rel="sponsored" target="_blank">here</a>.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 20h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
@@ -2048,7 +2326,7 @@
 
 
 <p>Para el responsable de TI de Amnistía Internacional España, ese giro confirma que el camino emprendido por la organización hace años tenía sentido. “Ahora nos damos cuenta de que, en algunos aspectos, teníamos buena parte de razón y que hemos hecho lo correcto y lo necesario”, concluye.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 20h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
@@ -2961,111 +3239,6 @@
 </item>
 
 <item>
-  <title>🔵 Sovereign AI: Why CIOs can no longer outsource control</title>
-  <link>https://www.cio.com/article/4172258/sovereign-ai-why-cios-can-no-longer-outsource-control.html</link>
-  <pubDate>Mon, 18 May 2026 10:06:39 +0000</pubDate>
-  <source>CIO.com</source>
-  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/><div id="remove_no_follow">
-		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
-					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
-						<div class="article-column__content">
-<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
-
-
-
-<p>Artificial intelligence is being deployed faster than most organisations can establish clear ownership, governance, and control over how it operates. Yet, for all the attention on models and use cases, one question often remains underexamined. Who controls the intelligence that enterprises are building their future on?</p>
-
-
-
-<p>For many organisations, the answer is uncomfortable. AI systems today depend on layers of infrastructure, data platforms, model ecosystems, and governance mechanisms that are often outside their direct control. This was acceptable in earlier phases of cloud adoption, when the focus was on scale, cost, and speed. But AI changes that equation. As intelligence becomes embedded into core workflows, the consequences of losing control become far more serious.</p>
-
-
-
-<p>This is where the idea of sovereign AI is gaining attention. It is easy to confuse it with data residency or sovereign cloud, but that framing is no longer sufficient. Sovereign AI is not just about where data is stored. It is about the ability of an organisation to build, deploy, and govern AI systems within its own rules, using infrastructure, data, models, and governance frameworks that it can fully control.[1]</p>
-
-
-
-<p>This shift is not theoretical. It is being driven by a combination of forces that CIOs are already dealing with.</p>
-
-
-
-<p>The first is regulatory pressure. In markets like India, frameworks such as the Digital Personal Data Protection Act are reshaping how organisations think about data and compliance. The expectation is no longer limited to protecting data at rest. It extends to how data is used, how models are trained, and how decisions are made. AI systems that depend on distributed global architectures often struggle to meet these expectations in a consistent and auditable manner.</p>
-
-
-
-<p>The second is geopolitical uncertainty. AI infrastructure today is heavily concentrated among a small set of global providers. This concentration creates dependencies that are difficult to quantify but increasingly hard to ignore. Studies show that 61% of organisations say geopolitical tensions are pushing them toward sovereign technology adoption.[2] For CIOs, this is not about politics. It is about operational continuity and long-term resilience.</p>
-
-
-
-<p>The third is the changing nature of competitive advantage. AI systems derive value from proprietary data, unique models, and the ability to continuously refine both. When these assets are tightly coupled with external platforms, organisations risk losing not just control, but also differentiation. Sovereign AI, in this context, becomes a way to protect and compound advantage rather than dilute it. Research also shows that 71% of leaders now view sovereign AI as a strategic or existential priority.[3]</p>
-
-
-
-<p>What is interesting is that leading organisations are not approaching sovereignty as a compliance requirement. They are treating it as a design principle. Evidence shows that organisations embedding sovereignty into their platforms are 19% more likely to succeed in building new AI-led products and 16% more likely to maintain customer trust.[4] This reflects a deeper shift. Governance is no longer something that slows innovation. When designed well, it becomes an enabler.</p>
-
-
-
-<p>This has important implications for how CIOs think about architecture.</p>
-
-
-
-<p>Traditional cloud strategies were built around flexibility and scale. Governance was often layered on top through policies and processes. AI systems make this approach fragile. Data flows are dynamic. Models evolve continuously. Decisions are probabilistic and often difficult to explain. In such an environment, periodic audits and static controls are not enough.</p>
-
-
-
-<p>Sovereign AI demands a different approach. Governance, security, and compliance need to be embedded into the system itself. Control needs to extend across the full lifecycle, from data ingestion to model training to inference and monitoring. Visibility needs to be real-time, not retrospective. This is less about adding controls and more about redesigning the foundation on which AI runs.</p>
-
-
-
-<p>India presents a particularly interesting context for this shift. The country has already demonstrated the ability to build digital systems at population scale, with platforms such as UPI, Aadhaar, and DigiLocker. At the same time, it is strengthening regulatory frameworks and investing in AI-led growth. The next phase of this journey is likely to depend on platforms that combine scale with trust, and innovation with accountability.[5]</p>
-
-
-
-<p>This creates a unique opportunity. Organisations in India are not just adapting to global trends. They have the chance to define what sovereign AI looks like in a market that demands both scale and control.</p>
-
-
-
-<p>However, there is also a risk of misunderstanding the concept. Treating sovereignty as a simple checklist can lead to fragmented architectures and higher costs without delivering real control. Building isolated systems in the name of sovereignty can also limit access to global innovation. The goal is not isolation. It is informed control.</p>
-
-
-
-<p>A pragmatic approach to sovereign AI allows organisations to combine global technology ecosystems with locally governed infrastructure and policies. It enables them to choose where control is essential and where openness can drive value. This balance is critical. Complete autonomy without interoperability can slow progress, while excessive dependence can undermine resilience.</p>
-
-
-
-<p>For CIOs, the conversation is moving from infrastructure to intent. The question is no longer which cloud or platform to choose. It is how to ensure that AI systems align with the organisation’s regulatory, operational, and strategic priorities from day one.</p>
-
-
-
-<p>This requires a shift in mindset. Sovereignty needs to be considered early in design decisions, not later as a compliance exercise. It requires closer alignment between technology, risk, and business teams. It also requires a clearer understanding of what needs to be controlled and why.</p>
-
-
-
-<p>This is the thinking we are applying at Tata Communications as we build <a href="https://www.tatacommunications.com/cloud/cloud-ai/ai-studio" rel="sponsored">Vayu AI Cloud</a>, where sovereignty is treated as a core design principle rather than an added layer. The focus is on ensuring that data, models, and compute environments remain under enterprise control by design, so governance, compliance, and scalability can move together rather than compete with each other.</p>
-
-
-
-<p>Ultimately, sovereign AI is about ownership. Not ownership in the narrow sense of infrastructure or assets, but ownership of outcomes. As AI becomes central to how organisations operate and compete, the ability to control how it is built and governed will define not just compliance, but credibility and competitiveness.</p>
-
-
-
-<p>The real question for CIOs is simple but important. Not where their data sits, but who controls the intelligence that drives their business decisions.</p>
-
-
-
-<p><a href="https://www.tatacommunications.com/cloud/cloud-ai/ai-studio" rel="sponsored">Click here</a> to know more about Tata Communications Sovereign Vayu AI Cloud.</p>
-
-
-
-<p>Sources:</p>
-
-
-
-<p>[1] McKinsey, “What is sovereign AI?”<br />[2] Accenture, “Sovereign AI: From managing risk to accelerating growth”<br />[3] McKinsey, “The sovereign AI agenda”<br />[4] CIO.com, “How AI sovereignty and governance could empower your business”<br />[5] TechCircle, “India’s AI economy needs trust, sovereignty and scale”</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
-</item>
-
-<item>
   <title>🔴 Why the best security investment a board can make in 2026 isn’t another tool</title>
   <link>https://www.csoonline.com/article/4171883/why-the-best-security-investment-a-board-can-make-in-2026-isnt-another-tool.html</link>
   <pubDate>Mon, 18 May 2026 09:00:00 +0000</pubDate>
@@ -3179,7 +3352,7 @@
 
 
 <p></p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
 </item>
 
 <item>
@@ -3340,15 +3513,7 @@
 
 
 <p>​“There’s never a perfecttime to address it, but the investment in proactively reducing that risk is far easier and cheaper than learning about it after it’s been used to compromise your company,” MacKinnon says.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Backup script ingested an accidental asterisk and deleted everything</title>
-  <link>https://www.theregister.com/storage/2026/05/18/backup-script-ingested-an-accidental-asterisk-and-deleted-everything/5240173</link>
-  <pubDate>Mon, 18 May 2026 06:30:00 +0000</pubDate>
-  <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Letting a 21-year-old write critical code without supervision is not smart<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
 </item>
 
 <item>
@@ -3947,7 +4112,7 @@
 
 
 <p>Savvy CIOs can also use this as an opportunity to get the resources to deliver improvements. “Most CIOs would want to do these things anyway but just don’t have the bandwidth,” says Venn. “So this is probably a tool for them to go to the board and say they need the budget and the time.”</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 4d ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 5d ago]]></description>
 </item>
 
 <item>
@@ -4107,7 +4272,7 @@
 
 
 <p><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><strong><a href="https://www.csoonline.com/expert-contributor-network/">Want to join?</a></strong></p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 4d ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 5d ago]]></description>
 </item>
 
 <item>
@@ -4172,75 +4337,6 @@
 
 
 <p>The other three vulnerabilities disclosed by DepthFirst and patched in the new Nginx releases can also lead to denial of service, memory leaks, or data modification. They are tracked as <a href="https://my.f5.com/manage/s/article/K000161027" rel="noreferrer noopener" target="_blank">CVE-2026-42946</a> (CVSS 8.3 – high severity), <a href="https://my.f5.com/manage/s/article/K000161028" rel="noreferrer noopener" target="_blank">CVE-2026-42934</a> (CVSS 6.3 – medium) and <a href="https://my.f5.com/manage/s/article/K000161021" rel="noreferrer noopener" target="_blank">CVE-2026-40701</a> (CVSS 6.3 – medium).</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5d ago]]></description>
-</item>
-
-<item>
-  <title>🟠 Meet Fragnesia, the third Linux kernel vulnerability in a month</title>
-  <link>https://www.csoonline.com/article/4171403/meet-fragnesia-the-third-linux-kernel-vulnerability-in-a-month.html</link>
-  <pubDate>Thu, 14 May 2026 20:29:38 +0000</pubDate>
-  <source>CSO Online</source>
-  <description><![CDATA[<b>Why this matters: Service impact possible — prepare comms and confirm vendor status.</b><br/><div id="remove_no_follow">
-		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
-					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
-						<div class="article-column__content">
-<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
-
-
-
-<p>Linux admins reeling from handling last month’s <a href="https://www.csoonline.com/article/4165824/trivial-exploit-can-give-attackers-root-access-to-linux-kernel.html" target="_blank">CopyFail</a> and last week’s<a href="https://www.csoonline.com/article/4169399/new-dirty-frag-exploit-targets-linux-kernel-for-root-access.html" target="_blank"> Dirty Frag</a> kernel vulnerabilities have a new headache to deal with: Fragnesia.</p>
-
-
-
-<p>“This is a significant vulnerability,” <a href="https://www.digitaldefence.ca/company/" rel="noreferrer noopener" target="_blank">Robert Beggs</a>, head of incident response firm DigitalDefence, told <em>CSO</em>. “It is bypassing traditional filesystem permissions that are present and enforced (for example, ‘file is owned by root’, or ‘file is read-only’) to allow manipulation without touching the disk.”</p>
-
-
-
-<p>Similar to Dirty Frag, Fragnesia (CVE-2026-46300) is a local privilege escalation hole that exploits a vulnerability in the XFRM ESP-in-TCP subsystem to achieve a memory write primitive in the kernel. XFRM is an IP framework intended for packet transformations, and ESP-in-TCP (Encapsulating Security Payload in TCP) is a networking technique used to encapsulate IPsec ESP packets inside TCP segments.</p>
-
-
-
-<p>A proof of concept (PoC) exploit is already publicly available.</p>
-
-
-
-<p>The good news, Beggs said, is that the vulnerability can’t be exploited remotely. An attacker needs local access to trigger specific code paths and be able to control local socket operations and manipulate packet fragmentation.</p>
-
-
-
-<p>Still, he added, any unprivileged user can exploit the bug on a vulnerable system to corrupt security-sensitive files in memory, such as privileged access management configuration, password, systemd service files, or cron jobs.  Although the attacker cannot modify the file on the disk, modifying in-memory files can trick privileged processes, alter system behavior, execute arbitrary code, and escalate privileges on the system, he said. </p>
-
-
-
-<p>Linux distributions including <a href="https://access.redhat.com/security/cve/cve-2026-46300" rel="noreferrer noopener" target="_blank">Red Hat</a>, <a href="https://ubuntu.com/security/CVE-2026-46300" rel="noreferrer noopener" target="_blank">Ubuntu</a>, <a href="https://almalinux.org/blog/2026-05-13-fragnesia-cve-2026-46300/" rel="noreferrer noopener" target="_blank">AlmaLinux</a> and others are pushing out patches or mitigations; <a href="https://blog.cloudlinux.com/fragnesia-mitigation-and-kernel-update" rel="noreferrer noopener" target="_blank">CloudLinux said a patch is being tested</a>.</p>
-
-
-
-<p>In a statement to <em>CSO</em>, Mike McGrath, Red Hat’s vice-president of Core Platforms, said issuing mitigations and fixes for privilege escalations like Fragnesia are a top priority. </p>
-
-
-
-<p>“We have published workarounds for the esp4 and esp6 kernel modules that we feel provide protection to customers in the immediate term while we work with the upstream community to identify a permanent fix in the form of a patch,” he said.</p>
-
-
-
-<p>According to Linux support provider TuxCare, systems running the affected <em>skbuff</em> code paths, including kernels that have already received the Dirty Frag fix, are impacted. The public PoC requires systems with the configuration option <em>CONFIG_INET_ESPINTCP</em> to access the bug, so kernels built without it block this exploit. But the underlying <em>skbuff</em> defect may be reachable through other paths. </p>
-
-
-
-<p><a href="https://x.com/MsftSecIntel/status/2054701609024934064" rel="noreferrer noopener" target="_blank">Microsoft urges</a> Linux users and organizations to apply the patch as soon as possible by running update tools. If patching is not possible at this point, consider applying the same mitigations as for Dirty Frag, such as assessing whether esp4, esp6, and related xfrm/IPsec functionality can be temporarily disabled safely, restricting unnecessary local shell access, hardening containerized workloads, and increasing monitoring for abnormal privilege escalation activity.</p>
-
-
-
-<p><strong>Related content: <a href="https://www.csoonline.com/article/4169659/linux-kernel-maintainers-suggest-a-kill-switch-to-protect-systems-until-a-zero-day-vulnerability-is-patched.html" target="_blank">Kill switch for Linux kernel features proposed to improve security</a></strong></p>
-
-
-
-<p>Beggs advises system administrators to confirm kernel exposure by reviewing version numbers, and then update to a patched kernel if necessary and reboot the affected system. If ESP-in-TCP is not required, disable the module and block its use; this mitigation can also be immediately applied until patching is complete. Because the vulnerability requires local access, make sure that basic steps such as enforcing MFA for privileged accounts, disabling of unneeded shell access, and enforcing least privilege are all in place.</p>
-
-
-
-<p>Beggs also said admins may wish to increase monitoring of privileged processes (PAM, systemd, cron) and look for unexpected restarts, unexpected config reloads, and sudden privilege escalations.</p>
 </div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5d ago]]></description>
 </item>
 
