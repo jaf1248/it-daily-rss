@@ -1,25 +1,35 @@
 # IT Weekly Intelligence Briefing
 **Period:** May 14 – May 21, 2026  
-**Generated:** 2026-05-21 03:25 UTC  
-**Items reviewed:** 125  
+**Generated:** 2026-05-21 07:47 UTC  
+**Items reviewed:** 121  
 
 ## ⚡ Top Actions This Week
 
-1. **Validate backups, confirm EDR coverage, and brief incident response team.**  
-   _Hackers bypass SonicWall VPN MFA due to incomplete patching_  
+1. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
+   _GitHub links repo breach to TanStack npm supply-chain attack_  
    Source: BleepingComputer  
 
 2. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _Grafana breach caused by missed token rotation after TanStack attack_  
-   Source: BleepingComputer  
+   _GitHub Internal Repositories Breached via Malicious Nx Console VS Code Extension_  
+   Source: The Hacker News  
 
 3. **Validate backups, confirm EDR coverage, and brief incident response team.**  
-   _Microsoft Takes Down Malware-Signing Service Behind Ransomware Attacks_  
-   Source: The Hacker News  
+   _Hackers bypass SonicWall VPN MFA due to incomplete patching_  
+   Source: BleepingComputer  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [GitHub links repo breach to TanStack npm supply-chain attack](https://www.bleepingcomputer.com/news/security/github-links-repo-breach-to-tanstack-npm-supply-chain-attack/)
+**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** May 21  
+**Why it matters:** Potential credential or data exposure.  
+**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
+
+### [GitHub Internal Repositories Breached via Malicious Nx Console VS Code Extension](https://thehackernews.com/2026/05/github-internal-repositories-breached.html)
+**Source:** The Hacker News &nbsp;·&nbsp; **Date:** May 21  
+**Why it matters:** Potential credential or data exposure.  
+**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
 ### [Hackers bypass SonicWall VPN MFA due to incomplete patching](https://www.bleepingcomputer.com/news/security/hackers-bypass-sonicwall-vpn-mfa-due-to-incomplete-patching/)
 **Source:** BleepingComputer &nbsp;·&nbsp; **Date:** May 20  
@@ -41,43 +51,33 @@
 **Why it matters:** Potential credential or data exposure.  
 **Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
-### [GitHub confirms breach of 3,800 repos via malicious VSCode extension](https://www.bleepingcomputer.com/news/security/github-confirms-breach-of-3-800-repos-via-malicious-vscode-extension/)
-**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** May 20  
-**Why it matters:** Potential credential or data exposure.  
-**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
-
-### [Grafana GitHub Breach Exposes Source Code via TanStack npm Attack](https://thehackernews.com/2026/05/grafana-github-breach-exposes-source.html)
-**Source:** The Hacker News &nbsp;·&nbsp; **Date:** May 20  
-**Why it matters:** Potential credential or data exposure.  
-**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
-
 ---
 
 ## 🟠 Important — Review This Week
 
-- [CVE-2026-40367 Microsoft Word Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-40367)  
-  **Microsoft Security Response Center (MSRC)** · May 20 · _General awareness item._  
-
-- [Exploit released for new PinTheft Arch Linux root escalation flaw](https://www.bleepingcomputer.com/news/linux/exploit-released-for-new-pintheft-arch-linux-root-escalation-flaw/)  
-  **BleepingComputer** · May 20 · _General awareness item._  
-
-- [CVE-2026-46483 Vim: Command injection in tar#Vimuntar via missing shellescape {special} flag](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-46483)  
-  **Microsoft Security Response Center (MSRC)** · May 20 · _General awareness item._  
-
-- [CVE-2026-34956 Openvswitch: open vswitch: denial of service via malformed ftp epasv command](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-34956)  
-  **Microsoft Security Response Center (MSRC)** · May 20 · _General awareness item._  
-
-- [Microsoft Releases Mitigation for YellowKey BitLocker Bypass CVE-2026-45585 Exploit](https://thehackernews.com/2026/05/microsoft-releases-mitigation-for.html)  
-  **The Hacker News** · May 20 · _General awareness item._  
+- [CVE-2026-45585 Windows BitLocker Security Feature Bypass Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45585)  
+  **Microsoft Security Response Center (MSRC)** · May 21 · _General awareness item._  
 
 - [CVE-2026-43491 net: qrtr: ns: Limit the maximum server registration per node](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-43491)  
-  **Microsoft Security Response Center (MSRC)** · May 20 · _General awareness item._  
+  **Microsoft Security Response Center (MSRC)** · May 21 · _General awareness item._  
 
-- [CVE-2026-43493 crypto: pcrypt - Fix handling of MAY_BACKLOG requests](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-43493)  
-  **Microsoft Security Response Center (MSRC)** · May 20 · _General awareness item._  
+- [CVE-2026-43970 Decompression Bomb in cow_spdy:inflate/2 Allows Memory Exhaustion via Crafted SPDY Frame](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-43970)  
+  **Microsoft Security Response Center (MSRC)** · May 21 · _General awareness item._  
 
-- [CVE-2026-43492 lib/crypto: mpi: Fix integer underflow in mpi_read_raw_from_sgl()](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-43492)  
-  **Microsoft Security Response Center (MSRC)** · May 20 · _General awareness item._  
+- [CVE-2026-45736 ws: Uninitialized memory disclosure](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45736)  
+  **Microsoft Security Response Center (MSRC)** · May 21 · _General awareness item._  
+
+- [CVE-2026-45803 gh: GitHub Actions log output in `gh run view` allows terminal escape sequence injection](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45803)  
+  **Microsoft Security Response Center (MSRC)** · May 21 · _General awareness item._  
+
+- [CVE-2026-44390 Unbounded name compression in certain cases causes degradation of service](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-44390)  
+  **Microsoft Security Response Center (MSRC)** · May 21 · _General awareness item._  
+
+- [CVE-2026-42944 Heap overflow with multiple NSID, COOKIE, PADDING EDNS options](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-42944)  
+  **Microsoft Security Response Center (MSRC)** · May 21 · _General awareness item._  
+
+- [CVE-2026-42923 Degradation of service with unbounded NSEC3 hash calculations](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-42923)  
+  **Microsoft Security Response Center (MSRC)** · May 21 · _General awareness item._  
 
 ---
 
@@ -92,4 +92,4 @@
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 16 critical · 77 important · 32 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 18 critical · 74 important · 29 FYI_
