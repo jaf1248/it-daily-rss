@@ -3,8 +3,229 @@
 <channel>
   <title>Joe — VP of IT Briefing</title>
   <description>Leadership-focused IT risk, vendors, pricing, licensing, and industry context.</description>
-  <lastBuildDate>Thu, 21 May 2026 21:25:26 +0000</lastBuildDate>
+  <lastBuildDate>Thu, 21 May 2026 23:01:26 +0000</lastBuildDate>
   
+<item>
+  <title>🔴 Critical vulnerability in Cisco Secure Workload rated at maximum severity</title>
+  <link>https://www.csoonline.com/article/4175913/critical-vulnerability-in-cisco-secure-workload-rated-at-maximum-severity.html</link>
+  <pubDate>Thu, 21 May 2026 22:39:20 +0000</pubDate>
+  <source>CSO Online</source>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<p>A critical vulnerability in the on-premises version of the Cisco Secure Workload security platform could allow a threat actor to obtain the privileges of a site admin, enabling them to compromise endpoints and read or modify configuration data.</p>
+
+
+
+<p>“CSOs need to drop what they are doing and patch this immediately,” warned consultant <a href="https://www.linkedin.com/in/rob-enderle-03729/" rel="noreferrer noopener" target="_blank">Robert Enderle</a>, who heads the Enderle Group. “Cisco Secure Workload manages zero trust, micro-segmentation, and enterprise-wide network visibility. If an attacker controls the platform that dictates your security policies, they effectively own the map and the keys to your entire network kingdom.”</p>
+
+
+
+<p>“This is the absolute worst-case scenario,” he added. “Because of how vital this platform is to large enterprises, threat actors will be aggressively scanning for unpatched API endpoints to exploit.”</p>
+
+
+
+<p>The urgency of addressing this immediately was echoed by <a href="https://www.infotech.com/profiles/fred-chagnon" rel="noreferrer noopener" target="_blank">Fred Chagnon</a>, principal research director at Info-Tech Research Group. An attacker could modify or dismantle an enterprise’s security policies, he pointed out, effectively opening doors within the environment that were deliberately closed.</p>
+
+
+
+<h2 class="wp-block-heading" id="blast-radius-could-be-significant">‘Blast radius could be significant’</h2>
+
+
+
+<p>“Because this access operates at the site admin level and crosses tenant boundaries,” he added, “the blast radius in a multi-tenant deployment could be significant, potentially exposing or compromising workloads and data belonging to multiple business units or customers.”</p>
+
+
+
+<p>Cisco assigned this flaw (<a href="https://nvd.nist.gov/vuln/detail/CVE-2026-20223" rel="noreferrer noopener" target="_blank">CVE-2026-20223</a>) a maximum CVSS score of 10.0 because it allows an unauthenticated, remote attacker to bypass authentication entirely. By sending a crafted HTTP request to an internal REST API endpoint, the threat actor instantly gains site admin privileges.</p>
+
+
+
+<p><a href="https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-csw-pnbsa-g8WEnuy" rel="noreferrer noopener" target="_blank">In its advisory</a>, Cisco says this hole is due to insufficient validation and authentication when accessing REST API endpoints. </p>
+
+
+
+<p>There are no workarounds; the only solution is to install software updates to address this vulnerability, which Cisco “strongly recommends.” Systems running version 4.0 should upgrade to 4.0.3.17. Those with version 3.10 should upgrade to version 3.10.8.3, while those still on version 3.9 and earlier should migrate to a newer, fixed release.</p>
+
+
+
+<p>The vulnerability affects Secure Workload Cluster Software in both SaaS and on-prem deployments, regardless of device configuration, but only affects internal REST APIs, and doesn’t impact the web-based management interface. However, only those using the on-prem version need to act; Cisco has already patched the SaaS product.</p>
+
+
+
+<p>As of Wednesday, Cisco wasn’t aware of malicious use of the vulnerability.</p>
+
+
+
+<h2 class="wp-block-heading" id="treat-it-as-an-active-threat">‘Treat it as an active threat’</h2>
+
+
+
+<p>The good news, Chagnon said, is that Cisco’s own security team discovered and disclosed this vulnerability, publishing a patch at the same time as the advisory. And, he added, there are no known signs of exploitation in the wild, and no public disclosure preceded Cisco’s own announcement.</p>
+
+
+
+<p>While the SaaS version of the platform has already been patched by Cisco, he said, admins running Cisco Secure Workload on-premises shouldn’t treat this as something to be fixed during routine patch cycle. “Given the nature of this vulnerability, a perfect CVSS score, no authentication required, and no available workarounds, organizations should treat this as they would an active threat,” he said. </p>
+
+
+
+<p>This is not the only critical bug that Cisco admins have faced recently, but it’s the highest rated in severity. In April, admins had to <a href="https://www.csoonline.com/article/4159827/cisco-systems-issues-three-advisories-for-critical-vulnerabilities-in-webex-ise.html" target="_blank">replace an identity provider certificate</a> in Webex Control Hub as part of a fix to address a vulnerability rated 9.8 in severity. In January, patches were released to close <a href="https://www.csoonline.com/article/4120613/actively-exploited-cisco-uc-bug-requires-immediate-version%E2%80%91specific-patching.html" target="_blank">a critical remote code execution vulnerability</a> in Unified Communications Manager, Unity Connection, and Webex Calling Dedicated Instance. And in December, Cisco warned that a China-linked hacking group was <a href="https://www.csoonline.com/article/4108496/cisco-confirms-zero-day-exploitation-of-secure-email-products.html" target="_blank">actively exploiting a zero day vulnerability</a> in its Secure Email appliances.</p>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔴 Microsoft patches two zero-day flaws in Defender</title>
+  <link>https://www.csoonline.com/article/4175970/microsoft-patches-two-zero-day-flaws-in-defender.html</link>
+  <pubDate>Thu, 21 May 2026 22:05:47 +0000</pubDate>
+  <source>CSO Online</source>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<p>Microsoft released emergency fixes for two zero-day vulnerabilities in the malware protection components of Microsoft Defender. The flaws allow local attackers to gain system-level privileges or cause the anti-malware service to stop working correctly.</p>
+
+
+
+<p>Both conditions are valuable in a malware attack, first to prevent detection if the system relies only on Microsoft endpoint protection and second to gain full control over the system.</p>
+
+
+
+<p>On Wednesday, the United States Cybersecurity and Infrastructure Security Agency (CISA), <a href="https://www.cisa.gov/news-events/alerts/2026/05/20/cisa-adds-seven-known-exploited-vulnerabilities-catalog">added the two vulnerabilities</a>, tracked as CVE-2026-41091 and CVE-2026-45498, to its Known Exploited Vulnerabilities (KEV) catalog, signaling that exploitation was detected in the wild.</p>
+
+
+
+<p><a href="https://x.com/fabian_bader/status/2057198207243804881">Security experts report</a> that the two flaws are behind the <a href="https://www.csoonline.com/article/4160275/caught-quarantined-re-installed-redsun-turns-microsoft-defender-on-itself.html">RedSun</a> and UnDefend exploits published last month on GitHub by a disgruntled researcher who calls themselves Nightmare Eclipse. While plausible, Microsoft has not mentioned those exploit names in its advisories for these two vulnerabilities.</p>
+
+
+
+<p>The privilege escalation flaw, <a href="https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-41091">CVE-2026-41091</a>, is located in mpengine.dll, the Microsoft Malware Protection Engine (MPE) component that handles file scanning, malware detection, and cleaning in several Microsoft anti-malware products: Microsoft Defender, Microsoft System Center Endpoint Protection, Microsoft System Center 2012 R2 Endpoint Protection, Microsoft System Center 2012 Endpoint Protection, and Microsoft Security Essentials.</p>
+
+
+
+<p>The vulnerability is described as an improper link resolution before file access issue. In other words, it’s related to a link- or shortcut-following routine that has unintended consequences. The flaw is rated with a CVSS score of 7.8, meaning high severity.</p>
+
+
+
+<p>The other vulnerability, <a href="https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45498">CVE-2026-45498</a>, is in the Microsoft Defender Antimalware Platform (MsMpEng.exe), which along with a series of kernel-mode drivers, is responsible for real-time monitoring and protection. As with MPE, this component is used by Microsoft’s other endpoint protection products.</p>
+
+
+
+<p>Although Microsoft issues updates for malware definitions three times per day, platform components such as mpengine.dll and MsMpEng.exe are updated only once per month or as needed.</p>
+
+
+
+<p>Customers are advised to manually trigger a check for updates in their respective product and check that they are running version 1.1.26040.8 or newer of the Malware Protection Engine and version 4.18.26040.7 or newer of the Microsoft Defender Antimalware Platform. The Malware Protection Engine update also fixes a remote code execution vulnerability tracked as <a href="https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45584">CVE-2026-45584</a>, but this flaw has not been publicly disclosed or exploited.<br /></p>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Source: Cursor reached $3B in annualized revenue in late April and now has 3,000+ customers paying at least $100K each for its software on an annualized basis (Rachel Metz/Bloomberg)</title>
+  <link>https://www.techmeme.com/260521/p45#a260521p45</link>
+  <pubDate>Thu, 21 May 2026 21:45:01 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.bloomberg.com/news/articles/2026-05-21/cursor-hits-3-billion-annual-sales-rate-ahead-of-spacex-deal"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260521/i45.jpg" vspace="4" /></a>
+<p><a href="https://www.techmeme.com/260521/p45#a260521p45" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Rachel Metz / <a href="https://www.bloomberg.com/">Bloomberg</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/articles/2026-05-21/cursor-hits-3-billion-annual-sales-rate-ahead-of-spacex-deal">Source: Cursor reached $3B in annualized revenue in late April and now has 3,000+ customers paying at least $100K each for its software on an annualized basis</a></b></span>&nbsp; &mdash;&nbsp; Cursor's annualized revenue hit $3 billion in late April, according to a person familiar with the matter, indicating growing demand &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+</item>
+
+<item>
+  <title>🟠 Unpatched ChromaDB flaw leaves servers open to remote code execution</title>
+  <link>https://www.csoonline.com/article/4175958/unpatched-chromadb-flaw-leaves-servers-open-to-remote-code-execution.html</link>
+  <pubDate>Thu, 21 May 2026 21:29:13 +0000</pubDate>
+  <source>CSO Online</source>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<p>Researchers have published details about a critical vulnerability in ChromaDB that could allow unauthenticated attackers to execute arbitrary code and access sensitive data on machines running the open-source vector database.</p>
+
+
+
+<p>The issue, tracked as CVE-2026-45829, is located in ChromaDB’s API server and was published by researchers at HiddenLayer after reportedly failing to get in contact with the developers of ChromaDB, one of the most popular vector databases used for AI applications.</p>
+
+
+
+<p>The vulnerability stems from a race condition between the code ChromaDB uses to parse embedding model references and the code it uses to perform an authentication check. Attackers can exploit the flaw by sending requests to load malicious model configurations hosted on Hugging Face.</p>
+
+
+
+<p>“The authentication is not missing, it’s just in the wrong place,” researchers from security firm HiddenLayer said in <a href="https://www.hiddenlayer.com/research/chromatoast-served-pre-auth">their report</a>. “By the time it fires, the model has already been fetched and executed. The server rejects the request, returns a 500, and the attacker’s payload has already run.”</p>
+
+
+
+<p>According to HiddenLayer, the flaw exists in ChromaDB from version 1.0.0 up to 1.5.8, and multiple attempts to report it to the developers since February using different communication channels have gone unanswered, prompting public disclosure. Over 73% of ChromaDB instances that are publicly accessible on the internet and are findable via the Shodan search engine are running a vulnerable version.</p>
+
+
+
+<p>Until a patch becomes available, the researchers advise deploying ChromaDB servers using the Rust implementation, which is not affected, instead of the Python FastAPI server. Network access to the ChromaDB port should also be restricted to trusted IP addresses only.</p>
+
+
+
+<h2 class="wp-block-heading" id="two-separate-issues-combine-into-unauthenticated-rce">Two separate issues combine into unauthenticated RCE</h2>
+
+
+
+<p>Vector databases like ChromaDB are often used to enhance the knowledge of LLMs with third-party or company-specific data as part of <a href="https://www.infoworld.com/article/2335814/what-is-retrieval-augmented-generation-more-accurate-and-reliable-llms.html">retrieval-augmented generation (RAG)</a> workflows. That data, typically unstructured in origin, is stored in a vector database as mathematical representations called vector embeddings.</p>
+
+
+
+<p>To convert unstructured data such as text, images, or audio into vector embeddings, specialized machine learning algorithms known as embeddings models must be used. These models can be specialized for specific use cases. As a result, ChromaDB and other vector databases give users the ability to choose between various embeddings models for these conversions.</p>
+
+
+
+<p>ChromaDB orders documents into collections, and each collection can be assigned a specific embeddings function that dictates how documents are embedded, with what model, and with what parameters. One of those parameters can be <code>trust_remote_code: true</code>, which tells the model loader to download and execute any additional Python module files shipped with the model.</p>
+
+
+
+<p>As a result, unauthenticated attackers can send a request to the ChromaDB API server to set up a new collection with a custom embeddings function that points to a malicious model they published on Hugging Face, HiddenLayer’s researchers found.</p>
+
+
+
+<p>“This is the same class of risk we have written about before in the context of malicious models on Hugging Face and unsafe deserialization in ML artifacts,” the HiddenLayer researchers said. “A model is not passive data. It is code, and loading one from an untrusted source is equivalent to running untrusted code.”</p>
+
+
+
+<p>But shouldn’t ChromaDB’s API endpoint authentication prevent this from happening?</p>
+
+
+
+<p>This is where the second issue comes into play. It turns out that ChromaDB’s server code processes such requests before checking for authentication. And while processing the request, it fetches the model reference from Hugging Face to set up the embeddings configuration.</p>
+
+
+
+<p>So even if the collection is ultimately not created because the eventual authentication check fails, the malicious Python code accompanying the model is still downloaded and executed.</p>
+
+
+
+<p>“From the outside, it appears to be a failed API call,” the researchers said. “[But] on the attacker’s end, there is a shell on the server.”</p>
+
+
+
+<p>Because the attacker’s code inherits the permissions of the user running the ChromaDB API server, it has access to everything on the machine the server process also has access to. This means environment variables, API keys, mounted secrets, and the data stored on disk.</p>
+
+
+
+<p>This is the latest in a string of attacks that are made possible through maliciously crafted AI models and their corresponding configuration files. Earlier this month, HiddenLayer’s researchers showed <a href="https://www.hiddenlayer.com/research/tokenizer-tampering">how remote code execution can be achieved by making minor changes to a model’s tokenizer.json file</a>, which is used to map token IDs to words or characters creating an alphabet the model uses to generate its outputs.</p>
+
+
+
+<p>Last year, researchers showed how <a href="https://www.csoonline.com/article/3819920/attackers-hide-malicious-code-in-hugging-face-ai-model-pickle-files.html">attackers can hide malicious code inside Python Pickle files</a>, a format that is commonly used to distribute AI models.</p>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+</item>
+
 <item>
   <title>🔵 Workday reports Q1 revenue up 13% YoY to $2.54B vs. $2.52B est., and lifts its full-year forecast, saying its AI strategy is working; WDAY jumps 9%+ after hours (Jordan Novet/CNBC)</title>
   <link>https://www.techmeme.com/260521/p41#a260521p41</link>
@@ -12,7 +233,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.cnbc.com/2026/05/21/workday-wday-q1-earnings-report-2027.html"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260521/i41.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260521/p41#a260521p41" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Jordan Novet / <a href="http://www.cnbc.com/">CNBC</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.cnbc.com/2026/05/21/workday-wday-q1-earnings-report-2027.html">Workday reports Q1 revenue up 13% YoY to $2.54B vs. $2.52B est., and lifts its full-year forecast, saying its AI strategy is working; WDAY jumps 9%+ after hours</a></b></span>&nbsp; &mdash;&nbsp; Workday shares surged as much as 14% in extended trading on Thursday after the finance and human resources software maker reported results &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.cnbc.com/2026/05/21/workday-wday-q1-earnings-report-2027.html">Workday reports Q1 revenue up 13% YoY to $2.54B vs. $2.52B est., and lifts its full-year forecast, saying its AI strategy is working; WDAY jumps 9%+ after hours</a></b></span>&nbsp; &mdash;&nbsp; Workday shares surged as much as 14% in extended trading on Thursday after the finance and human resources software maker reported results &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
 </item>
 
 <item>
@@ -145,7 +366,7 @@
 
 
 <p>The new MDM system, along with a new Data Steward Agent, are expected to made available by the end of the year.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
 </item>
 
 <item>
@@ -155,7 +376,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.reuters.com/business/starbucks-scraps-ai-inventory-tool-across-north-america-2026-05-21/"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260521/i38.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260521/p38#a260521p38" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Waylon Cunningham / <a href="http://www.reuters.com/">Reuters</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.reuters.com/business/starbucks-scraps-ai-inventory-tool-across-north-america-2026-05-21/">Sources: Starbucks shut down an AI program for automating inventory counts, nine months after deploying it, after it frequently miscounted and mislabeled items</a></b></span>&nbsp; &mdash;&nbsp; Starbucks (SBUX.O) terminated an AI program workers used for automating certain inventory counts this week &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.reuters.com/business/starbucks-scraps-ai-inventory-tool-across-north-america-2026-05-21/">Sources: Starbucks shut down an AI program for automating inventory counts, nine months after deploying it, after it frequently miscounted and mislabeled items</a></b></span>&nbsp; &mdash;&nbsp; Starbucks (SBUX.O) terminated an AI program workers used for automating certain inventory counts this week &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
 </item>
 
 <item>
@@ -286,7 +507,7 @@
 
 
 <p></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
 </item>
 
 <item>
@@ -296,7 +517,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.theinformation.com/articles/openai-held-1-billion-revenue-lead-anthropic-first-quarter"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260521/i35.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260521/p35#a260521p35" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Sri Muppidi / <a href="https://www.theinformation.com/">The Information</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.theinformation.com/articles/openai-held-1-billion-revenue-lead-anthropic-first-quarter">Sources: OpenAI generated ~$5.7B in revenue in Q1, ~$1B more than Anthropic; its adjusted operating income margin was -122%, and ChatGPT user growth stalled</a></b></span>&nbsp; &mdash;&nbsp; OpenAI generated about $5.7 billion in revenue in the first quarter, nearly $1 billion more than archrival Anthropic generated in the same period &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.theinformation.com/articles/openai-held-1-billion-revenue-lead-anthropic-first-quarter">Sources: OpenAI generated ~$5.7B in revenue in Q1, ~$1B more than Anthropic; its adjusted operating income margin was -122%, and ChatGPT user growth stalled</a></b></span>&nbsp; &mdash;&nbsp; OpenAI generated about $5.7 billion in revenue in the first quarter, nearly $1 billion more than archrival Anthropic generated in the same period &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
 </item>
 
 <item>
@@ -306,7 +527,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.bloomberg.com/news/articles/2026-05-21/eu-to-seek-carve-out-for-banned-china-chips-to-shield-auto-firms"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260521/i34.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260521/p34#a260521p34" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Alberto Nardelli / <a href="https://www.bloomberg.com/">Bloomberg</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/articles/2026-05-21/eu-to-seek-carve-out-for-banned-china-chips-to-shield-auto-firms">Sources: the EU will propose temporarily lifting sanctions, imposed in April, on a major Chinese semiconductor supplier after automakers warned of shortages</a></b></span>&nbsp; &mdash;&nbsp; The European Union will propose temporarily lifting sanctions on a major Chinese semiconductor supplier after automakers warned &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/articles/2026-05-21/eu-to-seek-carve-out-for-banned-china-chips-to-shield-auto-firms">Sources: the EU will propose temporarily lifting sanctions, imposed in April, on a major Chinese semiconductor supplier after automakers warned of shortages</a></b></span>&nbsp; &mdash;&nbsp; The European Union will propose temporarily lifting sanctions on a major Chinese semiconductor supplier after automakers warned &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
 </item>
 
 <item>
@@ -316,7 +537,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/><a href="https://variety.com/2026/digital/news/apple-mls-match-shot-entirely-on-iphone-first-time-1236755744/"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260521/i32.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260521/p32#a260521p32" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Todd Spangler / <a href="http://www.variety.com/">Variety</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://variety.com/2026/digital/news/apple-mls-match-shot-entirely-on-iphone-first-time-1236755744/">Apple plans to broadcast an MLS game on Saturday shot entirely on 15 iPhone 17 Pros, the first major live sports event to be captured using only smartphones</a></b></span>&nbsp; &mdash;&nbsp; Apple has frequently touted the use of professional-grade iPhones by filmmakers to make shorts, commercials and even feature-length movies.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://variety.com/2026/digital/news/apple-mls-match-shot-entirely-on-iphone-first-time-1236755744/">Apple plans to broadcast an MLS game on Saturday shot entirely on 15 iPhone 17 Pros, the first major live sports event to be captured using only smartphones</a></b></span>&nbsp; &mdash;&nbsp; Apple has frequently touted the use of professional-grade iPhones by filmmakers to make shorts, commercials and even feature-length movies.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
@@ -324,7 +545,7 @@
   <link>https://www.zdnet.com/article/i-converted-to-adaptive-chargers-and-already-feel-safer/</link>
   <pubDate>Thu, 21 May 2026 17:00:42 +0000</pubDate>
   <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/>Adaptive charging aims to reduce battery wear by keeping speeds low, but are the optimizations worth it?<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/>Adaptive charging aims to reduce battery wear by keeping speeds low, but are the optimizations worth it?<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
@@ -334,27 +555,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.bloomberg.com/news/articles/2026-05-21/oura-maker-of-popular-smart-rings-files-confidentially-for-ipo"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260521/i31.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260521/p31#a260521p31" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Mark Gurman / <a href="https://www.bloomberg.com/">Bloomberg</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/articles/2026-05-21/oura-maker-of-popular-smart-rings-files-confidentially-for-ipo">Source: smart ring maker Oura filed confidentially for a US IPO, set for later in 2026; SF- and Finland-based Oura had an $11B valuation in September 2025</a></b></span>&nbsp; &mdash;&nbsp; Smart Ring Maker Oura Files Confidentially for IPO&nbsp; &mdash;&nbsp; Video Player is loading.&nbsp; &mdash;&nbsp; Unmute&nbsp; &mdash;&nbsp; Current Time 0:00 Loaded: 0.00% Playback Rate</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Spotify and UMG plan to let Premium users create AI covers and remixes using music from participating UMG artists as a paid add-on, without giving a launch date (Jem Aswad/Variety)</title>
-  <link>https://www.techmeme.com/260521/p30#a260521p30</link>
-  <pubDate>Thu, 21 May 2026 16:05:05 +0000</pubDate>
-  <source>Techmeme</source>
-  <description><![CDATA[<b>Why this matters: Budget/licensing impact — verify renewal terms and forecast cost changes.</b><br/><a href="https://variety.com/2026/digital/news/spotify-universal-music-licensing-agreements-fan-made-covers-1236755951/"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260521/i30.jpg" vspace="4" /></a>
-<p><a href="https://www.techmeme.com/260521/p30#a260521p30" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Jem Aswad / <a href="http://www.variety.com/">Variety</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://variety.com/2026/digital/news/spotify-universal-music-licensing-agreements-fan-made-covers-1236755951/">Spotify and UMG plan to let Premium users create AI covers and remixes using music from participating UMG artists as a paid add-on, without giving a launch date</a></b></span>&nbsp; &mdash;&nbsp; Spotify and Universal Music Group have announced a major recorded-music and music-publishing licensing agreements &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
-</item>
-
-<item>
-  <title>🔴 London Mayor Sadiq Khan blocks the Met police&#x27;s £50M Palantir deal to automate intelligence analysis, citing a &quot;clear and serious breach&quot; of procurement rules (Robert Booth/The Guardian)</title>
-  <link>https://www.techmeme.com/260521/p29#a260521p29</link>
-  <pubDate>Thu, 21 May 2026 16:00:50 +0000</pubDate>
-  <source>Techmeme</source>
-  <description><![CDATA[<b>Why this matters: Potential data exposure — check monitoring and incident response readiness.</b><br/><a href="https://www.theguardian.com/uk-news/2026/may/21/london-mayor-sadiq-khan-blocks-met-police-deal-with-palantir"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260521/i29.jpg" vspace="4" /></a>
-<p><a href="https://www.techmeme.com/260521/p29#a260521p29" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Robert Booth / <a href="http://www.theguardian.com/">The Guardian</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.theguardian.com/uk-news/2026/may/21/london-mayor-sadiq-khan-blocks-met-police-deal-with-palantir">London Mayor Sadiq Khan blocks the Met police's &pound;50M Palantir deal to automate intelligence analysis, citing a &ldquo;clear and serious breach&rdquo; of procurement rules</a></b></span>&nbsp; &mdash;&nbsp; Exclusive: Scotland Yard criticises London mayor's decision as disappointing and warns it could hit policing</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/articles/2026-05-21/oura-maker-of-popular-smart-rings-files-confidentially-for-ipo">Source: smart ring maker Oura filed confidentially for a US IPO, set for later in 2026; SF- and Finland-based Oura had an $11B valuation in September 2025</a></b></span>&nbsp; &mdash;&nbsp; Smart Ring Maker Oura Files Confidentially for IPO&nbsp; &mdash;&nbsp; Video Player is loading.&nbsp; &mdash;&nbsp; Unmute&nbsp; &mdash;&nbsp; Current Time 0:00 Loaded: 0.00% Playback Rate</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
@@ -362,15 +563,7 @@
   <link>https://www.zdnet.com/article/best-early-memorial-day-deals-2026/</link>
   <pubDate>Thu, 21 May 2026 15:42:47 +0000</pubDate>
   <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/>Memorial Day is this weekend. These are the best deals we found so far, including price drops from Apple, Samsung, Hisense, Ninja, and more.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Microsoft won&#x27;t send you SMS texts for login anymore - why it&#x27;s pushing passkeys instead</title>
-  <link>https://www.zdnet.com/article/microsoft-ditches-sms-texts-for-passkey-authentication/</link>
-  <pubDate>Thu, 21 May 2026 15:20:00 +0000</pubDate>
-  <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Text messages are a weak, vulnerable way to authenticate account logins. Soon, you'll have to switch to one of these safer, more secure methods.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/>Memorial Day is this weekend. These are the best deals we found so far, including price drops from Apple, Samsung, Hisense, Ninja, and more.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
 </item>
 
 <item>
@@ -450,7 +643,7 @@
 
 
 <p><strong>orian@thepitch.media</strong></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 8h ago]]></description>
 </item>
 
 <item>
@@ -458,108 +651,7 @@
   <link>https://www.zdnet.com/article/best-early-memorial-day-laptop-deals-2026/</link>
   <pubDate>Thu, 21 May 2026 14:30:00 +0000</pubDate>
   <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/>I've rounded up the best laptop deals live right now ahead of the holiday weekend.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 ¿La IA puede avanzar sin talento neurodivergente?</title>
-  <link>https://www.cio.com/article/4175765/la-ia-puede-avanzar-sin-talento-neurodivergente.html</link>
-  <pubDate>Thu, 21 May 2026 14:18:16 +0000</pubDate>
-  <source>CIO.com</source>
-  <description><![CDATA[<b>Why this matters: Could impact sign-ins/MFA/Conditional Access — watch for login issues.</b><br/><div id="remove_no_follow">
-		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
-					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
-						<div class="article-column__content">
-<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
-
-
-
-<p>A principios de este año, Alex Karp, CEO de la empresa de software Palantir, afirmó que existen dos caminos hacia un futuro exitoso en la era de la IA: la formación profesional o ser neurodivergente. Como copresidente y CTO de Understood.org, una destacada organización sin fines de lucro que apoya a millones de personas neurodivergentes en EE. UU., entiendo la idea. Pero esta no lo explica todo.</p>
-
-
-
-<p>Tiene sentido considerar el pensamiento divergente como una ventaja ante la preocupación real de que la IA suponga el fin de la originalidad. Cuando todo empieza a verse o sonar igual, las personas que ven y experimentan el mundo de forma diferente aportan un valor incalculable.</p>
-
-
-
-<p>La investigación aún se encuentra en sus primeras etapas. Sin embargo, algunos estudios sugieren que las personas neurodivergentes podrían tener mayor probabilidad que las neurotípicas de usar y beneficiarse de herramientas de IA, como los <em>chatbots</em>.</p>
-
-
-
-<p>Nuestro enfoque no debería centrarse en si las personas neurodivergentes progresarán gracias a la IA o a pesar de ella, sino en hasta dónde puede avanzar realmente la IA sin la participación del talento neurodivergente.</p>
-
-
-
-<h2 class="wp-block-heading" id="la-mayor-brecha-de-la-ia-es-cognitiva-no-tecnica">La mayor brecha de la IA es cognitiva, no técnica</h2>
-
-
-
-<p>La industria se centra en la velocidad: desarrollar, iterar y escalar más rápido. Pero cuando quienes construyen estos sistemas reflejan un rango limitado de cómo piensan y procesan la información los humanos, esa limitación se integra en la propia tecnología. El resultado es una IA imperfecta y exclusión a gran escala.</p>
-
-
-
-<p>Las mentes neurodivergentes aportan fortalezas que el desarrollo de la IA necesita urgentemente, como el reconocimiento de patrones, el pensamiento no lineal y la tendencia a cuestionar las suposiciones. Cuando faltan estas perspectivas, se generan brechas en los productos, programas y resultados. La IA refleja tanto los datos con los que se entrena como a las personas que la desarrollan, por lo que la diversidad cognitiva en el momento de su creación es fundamental.</p>
-
-
-
-<h2 class="wp-block-heading" id="los-verdaderos-usuarios-avanzados-de-ia-son-las-personas-neurodivergentes">Los verdaderos usuarios avanzados de IA son las personas neurodivergentes</h2>
-
-
-
-<p>La última encuesta de Understood.org, realizada a más de 2000 adultos estadounidenses, revela que el 78% de los empleados neurodivergentes afirma utilizar herramientas de IA en el trabajo, frente al 59% de los empleados neurotípicos. Esto coincide con informes de EY que indican que los profesionales neurodivergentes tienen una probabilidad significativamente mayor que los neurotípicos de usar IA a diario.</p>
-
-
-
-<p>Pero la importancia no radica solo en un mayor uso, sino en cómo se manifiesta ese uso en la práctica. Cuando alguien utiliza una herramienta con regularidad, la analiza en profundidad. Observa dónde resulta útil, dónde se queda corta o genera fricción y dónde el sistema sigue asumiendo un usuario predeterminado que no existe.</p>
-
-
-
-<p>Esto es lo que convierte a los usuarios neurodivergentes en lo más parecido a verdaderos usuarios avanzados que tiene la IA hoy en día. Pueden llevar las herramientas al límite y encontrar fallos que otros nunca llegan a experimentar. Y detectan brechas superficiales entre el diseño de los sistemas y la forma en que las personas los utilizan realmente. El resultado es un ciclo de retroalimentación que la industria no puede permitirse ignorar. Por eso, integrar perspectivas neurodivergentes desde el principio da como resultado mejores sistemas.</p>
-
-
-
-<p>Los equipos que piensan de forma diferente están mejor preparados para anticipar una gama más amplia de necesidades de los usuarios, reducir sesgos y diseñar herramientas que funcionen en diversos contextos del mundo real. Cuando se diseña teniendo en cuenta las necesidades de las personas con discapacidades —o mejor aún, cuando estas personas forman parte del equipo de diseño— las soluciones tienden a ser más sólidas para todos.</p>
-
-
-
-<h2 class="wp-block-heading" id="la-ia-desconoce-lo-que-desconoce">La IA desconoce lo que desconoce</h2>
-
-
-
-<p>Incluir talento neurodivergente no solo mejora el rendimiento de la IA, sino que influye directamente en cómo estos sistemas comprenden y representan a las personas. En septiembre pasado, Amy Gaeta, investigadora en ética de la IA, exploró cómo podemos construir una IA mejor y el papel que desempeñan las comunidades neurodivergentes y con discapacidad en ese proceso.</p>
-
-
-
-<p>Si le pedimos a un modelo de IA que genere o describa a una persona con discapacidad, la imagen que genera es sorprendentemente consistente: una persona en silla de ruedas. No porque eso refleje la realidad, ya que la discapacidad puede referirse a un amplio espectro de diferencias, tanto visibles como no visibles. Pero los modelos de IA se basan por defecto en los datos con los que fueron entrenados. Si los conjuntos de datos carecen de diversidad o no son representativos, y quienes los gestionan no reconocen esas deficiencias, la IA aprende una definición limitada de discapacidad. Y la repite a gran escala.</p>
-
-
-
-<p>Esto puede tener graves consecuencias, perpetuando estereotipos dañinos, infrarrepresentación y tergiversación de maneras que se acumulan con el tiempo. Lo que la IA está entrenada para reconocer es, en última instancia, lo que decide que existe.</p>
-
-
-
-<h2 class="wp-block-heading" id="construir-equipos-cognitivamente-diversos-desde-el-diseno">Construir equipos cognitivamente diversos desde el diseño</h2>
-
-
-
-<p>Si la IA va a transformar nuestra forma de aprender, trabajar y comunicarnos, los equipos que la desarrollan deben reflejar una gama más amplia de pensamiento humano. No falta talento para lograrlo, ya que casi uno de cada tres adultos estadounidenses se identifica como neurodivergente.</p>
-
-
-
-<p>Pero el cambio necesario no se limita a quiénes integran el equipo, sino a cómo sus perspectivas influyen en lo que se desarrolla y en las decisiones que se toman. Es fundamental considerar la diversidad cognitiva como un factor clave en el diseño de estos sistemas. Es necesario desarrollar mejores datos de entrenamiento que reflejen estas perspectivas desde el principio. Crear entornos donde las mentes neurodivergentes puedan prosperar debería ser la norma.</p>
-
-
-
-<h2 class="wp-block-heading" id="el-futuro-de-la-ia-es-neurodivergente">El futuro de la IA es neurodivergente</h2>
-
-
-
-<p>Hemos llegado a un punto de inflexión. La falta de conocimiento sobre la neurodiversidad ya no es el obstáculo. La acción sí lo es. Las perspectivas neurodivergentes deben sentar las bases, no añadirse posteriormente.</p>
-
-
-
-<p>Si no entrenamos la IA con la amplitud de las experiencias humanas, estaremos creando sistemas peores y menos capaces, además de tergiversar la realidad de las comunidades. Por lo tanto, no se trata de representación por la representación misma. La tecnología solo funcionará bien en la medida en que refleje la diversidad de experiencias.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/>I've rounded up the best laptop deals live right now ahead of the holiday weekend.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 8h ago]]></description>
 </item>
 
 <item>
@@ -567,7 +659,7 @@
   <link>https://www.theregister.com/paas-and-iaas/2026/05/21/years-after-uk-post-office-scandal-broke-accenture-and-oneview-commerce-bag-contract-to-replace-horizon/5244243</link>
   <pubDate>Thu, 21 May 2026 13:20:00 +0000</pubDate>
   <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Service tries to move on from troubled decades of Fujitsu relationship with £410 million in deals for system that hurt so many<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 8h ago]]></description>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Service tries to move on from troubled decades of Fujitsu relationship with £410 million in deals for system that hurt so many<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
 </item>
 
 <item>
@@ -575,7 +667,16 @@
   <link>https://www.theregister.com/security/2026/05/21/46k-plaintext-passwords-pwned-in-myspace93-breach/5244024</link>
   <pubDate>Thu, 21 May 2026 12:20:00 +0000</pubDate>
   <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Credential/phishing risk — reinforce MFA and user awareness training.</b><br/>Leakage blamed on treacherous friends exposed unencrypted credentials, email addresses<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Credential/phishing risk — reinforce MFA and user awareness training.</b><br/>Leakage blamed on treacherous friends exposed unencrypted credentials, email addresses<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 10h ago]]></description>
+</item>
+
+<item>
+  <title>🟠 Cisco Patches Critical Vulnerability in Secure Workload</title>
+  <link>https://www.securityweek.com/cisco-patches-critical-vulnerability-in-secure-workload/</link>
+  <pubDate>Thu, 21 May 2026 12:04:13 +0000</pubDate>
+  <source>SecurityWeek</source>
+  <description><![CDATA[<b>Why this matters: Could impact sign-ins/MFA/Conditional Access — watch for login issues.</b><br/><p>Insufficient validation and authentication in the Secure Workload’s REST APIs provide remote attackers with Site Admin privileges.</p>
+<p>The post <a href="https://www.securityweek.com/cisco-patches-critical-vulnerability-in-secure-workload/">Cisco Patches Critical Vulnerability in Secure Workload</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 10h ago]]></description>
 </item>
 
 <item>
@@ -706,7 +807,16 @@
 
 
 <p><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><strong><a href="https://www.cio.com/expert-contributor-network/">Want to join?</a></strong></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 10h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 12h ago]]></description>
+</item>
+
+<item>
+  <title>🟠 Socket Raises $60 Million at $1 Billion Valuation</title>
+  <link>https://www.securityweek.com/socket-raises-60-million-at-1-billion-valuation/</link>
+  <pubDate>Thu, 21 May 2026 10:32:37 +0000</pubDate>
+  <source>SecurityWeek</source>
+  <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><p>The company will invest in its firewall, certified patches, protection extensions, new products, and team expansion.</p>
+<p>The post <a href="https://www.securityweek.com/socket-raises-60-million-at-1-billion-valuation/">Socket Raises $60 Million at $1 Billion Valuation</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 12h ago]]></description>
 </item>
 
 <item>
@@ -714,7 +824,7 @@
   <link>https://www.theregister.com/security/2026/05/21/microsoft-open-sources-agentic-ai-safety-tools/5243822</link>
   <pubDate>Thu, 21 May 2026 10:30:00 +0000</pubDate>
   <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Redmond open sources two tools for building and maintaining safer agents<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 10h ago]]></description>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Redmond open sources two tools for building and maintaining safer agents<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 12h ago]]></description>
 </item>
 
 <item>
@@ -791,7 +901,7 @@
 
 
 <p><em>The article originally appeared on <a href="https://www.infoworld.com/article/4175582/microsoft-releases-open-source-tools-to-operationalize-ai-agent-safety.html">InfoWorld</a>.</em></p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 10h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 12h ago]]></description>
 </item>
 
 <item>
@@ -938,7 +1048,7 @@
 
 
 <p>“The hardest part is mindset and operating rhythm,” he adds. “It’s relatively easy to deploy a model; it’s much harder to change how teams work, make decisions faster, and trust AI‑driven recommendations. That’s an organizational challenge, not a technical one.”</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 11h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
 </item>
 
 <item>
@@ -1115,7 +1225,16 @@
 
 
 <p><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><strong><a href="https://www.cio.com/expert-contributor-network/">Want to join?</a></strong></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 11h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
+</item>
+
+<item>
+  <title>🟠 Google’s Surge in Chrome Vulnerability Discoveries Likely Driven by AI</title>
+  <link>https://www.securityweek.com/googles-surge-in-chrome-vulnerability-discoveries-likely-driven-by-ai/</link>
+  <pubDate>Thu, 21 May 2026 09:37:08 +0000</pubDate>
+  <source>SecurityWeek</source>
+  <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><p>More than 200 vulnerabilities patched in recent Chrome releases are marked as ‘reported by Google’.</p>
+<p>The post <a href="https://www.securityweek.com/googles-surge-in-chrome-vulnerability-discoveries-likely-driven-by-ai/">Google&#8217;s Surge in Chrome Vulnerability Discoveries Likely Driven by AI</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
 </item>
 
 <item>
@@ -1256,7 +1375,7 @@
 
 
 <p><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><strong><a href="https://www.cio.com/expert-contributor-network/">Want to join?</a></strong></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 12h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 14h ago]]></description>
 </item>
 
 <item>
@@ -1321,7 +1440,16 @@
 
 
 <p>Esta diferencia se refleja en la capacidad de adaptación de las plantillas. El 76% de las organizaciones preparadas para el futuro considera que su plantilla es muy adaptable, frente al 42% del resto de organizaciones.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 12h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 14h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Supply Chain Security Crisis: Too Many Vulnerabilities, Too Little Visibility</title>
+  <link>https://www.securityweek.com/supply-chain-security-crisis-too-many-vulnerabilities-too-little-visibility/</link>
+  <pubDate>Thu, 21 May 2026 08:14:53 +0000</pubDate>
+  <source>SecurityWeek</source>
+  <description><![CDATA[<b>Why this matters: Supply chain risk — audit third-party dependencies and vendor access.</b><br/><p>New vulnerabilities are being discovered too fast, the time-to-exploitation is too short, and our visibility into them is largely lacking.</p>
+<p>The post <a href="https://www.securityweek.com/supply-chain-security-crisis-too-many-vulnerabilities-too-little-visibility/">Supply Chain Security Crisis: Too Many Vulnerabilities, Too Little Visibility</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 14h ago]]></description>
 </item>
 
 <item>
@@ -1522,7 +1650,7 @@
 
 
 <p>사로프는 “일부 CIO는 이제 단순 운영 성과가 아니라 비즈니스 성과를 기준으로 평가받고 있거나, 스스로를 그렇게 평가하기 시작했다”고 말했다.<br />dl-ciokorea@foundryco.com</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 14h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 15h ago]]></description>
 </item>
 
 <item>
@@ -1655,7 +1783,7 @@
 
 
 <p>“Elite practitioners will love to use AI to improve their operations,” said Bissell, adding that AI technologies should be introduced through a process akin to a software development life cycle with extensive pen testing and guardrails prior to being left anywhere near production systems.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 14h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 16h ago]]></description>
 </item>
 
 <item>
@@ -1812,7 +1940,7 @@
 
 
 <p>한편 신규 플랫폼으로 전환을 고려하는 기업 사용자를 위해 안티그래비티 CLI는 이미 클라우드 환경에서 즉시 사용할 수 있도록 제공되고 있다. 구글은 향후 개발자 전환을 지원하기 위한 마이그레이션 문서와 영상 가이드도 곧 공개할 계획이라고 덧붙였다.<br />dl-ciokorea@foundryco.com</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 15h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 16h ago]]></description>
 </item>
 
 <item>
@@ -1820,7 +1948,7 @@
   <link>https://www.theregister.com/off-prem/2026/05/21/open-compute-urges-local-government-to-bask-in-the-warm-glow-of-excess-datacenter-heat/5243917</link>
   <pubDate>Thu, 21 May 2026 05:38:58 +0000</pubDate>
   <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Budget/licensing impact — verify renewal terms and forecast cost changes.</b><br/>Org that represents Meta, Google and Microsoft plans more heat reuse guidelines as debate over bit barn social license burns red hot<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 15h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Budget/licensing impact — verify renewal terms and forecast cost changes.</b><br/>Org that represents Meta, Google and Microsoft plans more heat reuse guidelines as debate over bit barn social license burns red hot<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 17h ago]]></description>
 </item>
 
 <item>
@@ -1977,7 +2105,7 @@
 
 
 <p></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 19h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 20h ago]]></description>
 </item>
 
 <item>
@@ -2030,7 +2158,7 @@
 
 
 <p><em>This article originally appeared on <a href="https://www.computerworld.com/article/4175345/microsoft-is-working-on-a-patch-for-yellowkey-attack-on-bitlocker-offers-temporary-fix.html" target="_blank">Computerworld</a>.</em></p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 20h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 21h ago]]></description>
 </item>
 
 <item>
@@ -2115,7 +2243,7 @@
 
 
 <p>It’s also frustrating, he said, that SQL injection vulnerabilities are still being found. “As an industry, we’re running out of excuses” for why they continue to pop up in applications, he said. This and similar SQL injection vulnerabilities speak to weaknesses in the application development lifecycles of some organizations.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 21h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 23h ago]]></description>
 </item>
 
 <item>
@@ -2124,14 +2252,6 @@
   <pubDate>Wed, 20 May 2026 20:34:15 +0000</pubDate>
   <source>The Register</source>
   <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Another day, another AI bug silently fixed with no CVE and no public disclosure<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Fedora: Microsoft is all aboard, but Deepin is dumped</title>
-  <link>https://www.theregister.com/oses/2026/05/20/microsoft-rebases-azure-linux-on-fedora-as-fedora-drops-deepin/5243629</link>
-  <pubDate>Wed, 20 May 2026 17:24:12 +0000</pubDate>
-  <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Red Hat’s free distro loses a desktop, but makes an important new friend<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
@@ -2499,11 +2619,12 @@
 </item>
 
 <item>
-  <title>🔵 Microsoft says cu l8r to text message security</title>
-  <link>https://www.theregister.com/on-prem/2026/05/20/microsoft-says-cu-l8r-to-text-message-security/5243304</link>
-  <pubDate>Wed, 20 May 2026 12:33:00 +0000</pubDate>
-  <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Could impact sign-ins/MFA/Conditional Access — watch for login issues.</b><br/>Old, busted, insecure authentication to be replaced with something shinier and safer<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
+  <title>🟠 Microsoft Rolls Out Mitigations for ‘YellowKey’ BitLocker Bypass</title>
+  <link>https://www.securityweek.com/microsoft-rolls-out-mitigations-for-yellowkey-bitlocker-bypass/</link>
+  <pubDate>Wed, 20 May 2026 15:39:00 +0000</pubDate>
+  <source>SecurityWeek</source>
+  <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><p>The exploitation is mitigated by preventing the FsTx Auto Recovery Utility from starting when the WinRE image launches.</p>
+<p>The post <a href="https://www.securityweek.com/microsoft-rolls-out-mitigations-for-yellowkey-bitlocker-bypass/">Microsoft Rolls Out Mitigations for &#8216;YellowKey&#8217; BitLocker Bypass</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
@@ -2832,7 +2953,7 @@
   <link>https://www.theregister.com/security/2026/05/19/microsoft-disrupts-alleged-malware-signing-operation-used-by-ransomware-gangs/5243013</link>
   <pubDate>Tue, 19 May 2026 21:56:18 +0000</pubDate>
   <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Elevated ransomware risk — validate backups and endpoint defenses.</b><br/>'Thousands' of US victims, including 12+ machines owned and operated by Redmond<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
+  <description><![CDATA[<b>Why this matters: Elevated ransomware risk — validate backups and endpoint defenses.</b><br/>'Thousands' of US victims, including 12+ machines owned and operated by Redmond<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
 </item>
 
 <item>
@@ -3762,427 +3883,6 @@
 
 <p>“Over the past several weeks, Nightmare-Eclipse has released a relentless string of zero-day/regression disclosures,” Sarkar pointed out. “The timing is a giveaway, the MiniPlasma was released on May 13, 2026—exactly one day after Microsoft’s May Patch Tuesday cycle, ensuring defenders have no official vendor patch for weeks. But yes, that is exactly where microsegmentation integrated with existing EDR platforms helps.”</p>
 </div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3d ago]]></description>
-</item>
-
-<item>
-  <title>🔴 Why the best security investment a board can make in 2026 isn’t another tool</title>
-  <link>https://www.csoonline.com/article/4171883/why-the-best-security-investment-a-board-can-make-in-2026-isnt-another-tool.html</link>
-  <pubDate>Mon, 18 May 2026 09:00:00 +0000</pubDate>
-  <source>CSO Online</source>
-  <description><![CDATA[<b>Why this matters: Credential/phishing risk — reinforce MFA and user awareness training.</b><br/><div id="remove_no_follow">
-		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
-					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
-						<div class="article-column__content">
-<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
-
-
-
-<p>There is a conversation that happens in boardrooms every quarter that security leaders will recognize. The CISO presents the threat landscape. The board asks what the company needs. The answer, almost always, is another tool. Another platform, another module, another vendor to close the latest gap. The budget gets approved. The tool gets deployed. And six months later, the conversation happens again because the gap didn’t actually close. It just moved.</p>
-
-
-
-<p>This pattern has been running on repeat for decades. And it has produced a security industry that is extraordinarily well-tooled and still struggling with the same fundamental problem it had ten years ago. Organizations cannot consistently answer basic questions about their own environments. What assets exist? Who and what has access to them? What is actually happening, right now, across all of those systems?</p>
-
-
-
-<p>The instinct to buy another tool is understandable. It feels like progress. It satisfies the board’s need to see action. And vendors are very good at packaging their products as the answer to whatever the latest headline threat is. But the organizations that are actually reducing risk, not just responding to it, have figured out something that the tool-buying cycle obscures. The most valuable security capability isn’t detection, prevention or response. It is visibility.</p>
-
-
-
-<h2 class="wp-block-heading" id="more-tools-same-blind-spots">More tools, same blind spots</h2>
-
-
-
-<p>Most enterprise security teams can name every tool in their stack. Very few can draw a complete picture of what those tools are collectively looking at, what falls between them and what nobody is watching at all. Each tool was purchased to solve a specific problem. Each one does what it was designed to do reasonably well. And yet the overall security posture of most organizations <a href="https://www.csoonline.com/article/2515727/6-tips-for-consolidating-your-it-security-tool-set.html">hasn’t improved proportionally with these investments</a>.</p>
-
-
-
-<p>Think of it like a city that keeps hiring more specialized security guards without ever drawing a map of the buildings they’re protecting. One guard watches the front entrance. Another patrols the parking garage. A third monitors the loading dock. Each one is competent. But none of them knows about the unmarked side door that was added during a renovation three years ago. The guards aren’t the problem. The missing map is.</p>
-
-
-
-<p>Security tools work the same way. The endpoint tool sees endpoint activity. The cloud security tool sees cloud configurations. The network tool watches traffic patterns. The SIEM collects logs from all of them. But none of them, individually or collectively, provides a unified picture of the environment as it actually exists. Each tool illuminates its own corner. The spaces between those corners are where breaches live.</p>
-
-
-
-<h2 class="wp-block-heading" id="attackers-dont-break-through-your-defenses-they-walk-between-them">Attackers don’t break through your defenses. They walk between them</h2>
-
-
-
-<p>The most effective attacks today don’t target any single tool’s coverage area. They move through the seams. An attacker who compromises a valid credential doesn’t trigger endpoint detection. An attacker who moves from one cloud service to another <a href="https://www.cio.com/article/4160399/living-off-the-land-attacks-pose-a-pernicious-threat-for-enterprises.html">using legitimate trust relationships</a> doesn’t trip network alerts. An attacker who creates a new automated credential using the permissions of a compromised account doesn’t set off the configuration scanner.</p>
-
-
-
-<p>Going back to the city analogy, it’s as if someone walked past every guard using a legitimate employee badge. No guard was wrong to let them through. The failure was that nobody maintained a map showing which doors the badge should actually open, which buildings the person had no reason to enter and which sequence of entering access points across the city constitutes a pattern worth investigating.</p>
-
-
-
-<p>In conversations with security leaders across industries and company sizes over the last several years, this is the <a href="https://www.csoonline.com/article/4114020/cisos-top-10-cybersecurity-priorities-for-2026.html">frustration that surfaces most consistently</a>. The tools work. The alerts fire. But nobody can reconstruct the full story of what happened across systems until days or weeks after the damage is done. The information existed in the environment. It just wasn’t connected.</p>
-
-
-
-<h2 class="wp-block-heading" id="visibility-is-not-the-same-as-data">Visibility is not the same as data</h2>
-
-
-
-<p>Visibility is one of those words that has been used so often in security marketing that it has lost most of its meaning. Every vendor claims to provide visibility. What most of them actually provide is data. Logs, alerts, dashboards, reports. Data is not visibility. Data is the raw material. Visibility is the ability to answer a specific question about your environment in minutes, not days, and trust the answer.</p>
-
-
-
-<p>Real visibility means knowing what exists in your environment before something goes wrong, not discovering it during the forensics investigation afterward. It means understanding the relationships between systems, between users and the resources they access, between automated processes and the data they touch. It means being able to trace any activity across boundaries, not just within the walls of a single tool’s coverage.</p>
-
-
-
-<p>Most security programs today are data-rich and visibility-poor. They generate terabytes of logs, thousands of alerts and hundreds of reports. And when something goes wrong, the first 48 hours are still spent figuring out what the attacker had access to and which systems were involved. That gap between data and understanding is where breach costs compound, response timelines stretch and board confidence erodes.</p>
-
-
-
-<h2 class="wp-block-heading" id="where-the-blind-spot-is-biggest-right-now">Where the blind spot is biggest right now</h2>
-
-
-
-<p>This visibility gap shows up across the security stack, but there is one area where it has grown faster than most organizations realize. The number of machine and automated credentials in the average enterprise has quietly outgrown every other asset class security teams track. Service accounts, API keys, automation credentials, third-party integrations and now AI agents all operate alongside human users. Most of them were created by someone who has since moved on to a different project or even a different company. Many have never been reviewed.</p>
-
-
-
-<p>The result is an environment where the actual inventory of who and what can access critical systems is typically several multiples larger than what leadership believes it to be. And the gap between assumed and actual is where risk accumulates. A credential that nobody knows about is a credential that nobody is monitoring. A credential that nobody is monitoring is one that an attacker can use without triggering a single alert.</p>
-
-
-
-<p>This is problem is compounded by AI adoption, which is creating new categories of automated access faster than governance programs can track. But the underlying problem is not specific to AI, or to any single technology trend. It is the same visibility problem that has existed for a decade, accelerated by the pace at which modern environments generate new connections, new credentials and new trust relationships that fall outside the view of tools built to watch a narrower perimeter.</p>
-
-
-
-<h2 class="wp-block-heading" id="the-question-boards-should-be-asking-instead">The question boards should be asking instead</h2>
-
-
-
-<p>For board members and senior leaders <a href="https://www.pwc.com/gx/en/issues/c-suite-insights/the-leadership-agenda/global-digital-trust-insights-2026.html">evaluating security investments</a>, the shift in thinking is simple to describe and difficult to execute. Stop asking “Are we protected?” and start asking “What can we see?”</p>
-
-
-
-<p>A security program that can see its environment clearly, understand the relationships between systems and reconstruct any chain of activity within minutes is fundamentally more resilient than a program with twice the tools but half the visibility. The tools matter. But they only matter if they’re built on a foundation of actually knowing what exists.</p>
-
-
-
-<p>Before approving the next tool purchase, boards should ask their security leaders a few questions. Do we have a complete and current inventory of everything that can access our critical systems? If we had a breach tomorrow, could we reconstruct what happened across every system the attacker touched? Where are the gaps between our tools, and who is watching those gaps? If the answers are uncertain, the highest-return investment isn’t another detection layer on top of an incomplete foundation. It is the foundation itself.</p>
-
-
-
-<p>The best investment a board can make in 2026 is not another tool. It is pushing their teams to ensure they have the ability to see their environment as it actually is, not as they assume it to be. Draw the map first. Everything else builds on that.</p>
-
-
-
-<p><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><strong><a href="https://www.csoonline.com/expert-contributor-network/">Want to join?</a></strong></p>
-
-
-
-<p></p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 3d ago]]></description>
-</item>
-
-<item>
-  <title>🟠 AI coding is fueling a secrets-sprawl crisis few CISOs are containing</title>
-  <link>https://www.csoonline.com/article/4171954/ai-coding-is-fueling-a-secrets-sprawl-crisis-few-cisos-are-containing.html</link>
-  <pubDate>Mon, 18 May 2026 09:00:00 +0000</pubDate>
-  <source>CSO Online</source>
-  <description><![CDATA[<b>Why this matters: Credential/phishing risk — reinforce MFA and user awareness training.</b><br/><div id="remove_no_follow">
-		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
-					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
-						<div class="article-column__content">
-<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
-
-
-
-<p>When Matt Schlicht built Moltbook, the social network where AI agents talk to one another, <a href="https://x.com/mattprd/status/2017386365756072376">he didn’t write the code himself</a>. He “just had a vision,” and vibe-coded it. The social network launched on Jan. 28, 2026, and within days, security researchers started to see serious security flaws.</p>
-
-
-
-<p>​Experts at cloud security company Wiz and, independently, researcher Jameson O’Reilly, discovered that Moltbook’s backend database, hosted on Supabase, had been improperly configured. As a result, it granted broad read and write access to platform data.</p>
-
-
-
-<p>“The exposure included 1.5 million API authentication tokens, 35,000 email addresses, and private messages between agents,” <a href="https://www.wiz.io/blog/exposed-moltbook-database-reveals-millions-of-api-keys">Wiz researchers noted in a blogpost</a>.</p>
-
-
-
-<p>In traditional software development, leaking a secret typically stems from a mistake. Usually, a developer hardcodes a key, copies the wrong configuration file, or pushes internal code to a public repository. With AI-assisted coding, those mistakes can happen quickly and often go unnoticed, because <a href="https://www.csoonline.com/article/3529615/companies-skip-security-hardening-in-rush-to-adopt-ai.html">speed and functionality are prioritized over security</a>.</p>
-
-
-
-<p>Given the rise in popularity of vibe coding, the issue is accelerating. “The pace at which we are building and the sheer amount of code would have been unimaginable even just a few years ago,” says Dwayne McDaniel, principal developer advocate at GitGuardian.</p>
-
-
-
-<p>In 2025, public code commits surged by more than 40% compared to the previous year, and secrets are rising just as fast. Security firm<a href="https://www.gitguardian.com/state-of-secrets-sprawl-report-2026"> </a><a href="https://www.gitguardian.com/state-of-secrets-sprawl-report-2026">GitGuardian reported</a> a 34% increase in leaked secrets on GitHub last year — the largest spike on record — bringing the total to nearly 29 million exposed credentials.</p>
-
-
-
-<p>“12 of the top 15 fastest-growing leaked secret types were AI services,” says McDaniel. More than 1.27 million AI-related secrets were exposed in 2025, marking an 81% year-over-year increase, the fastest growth recorded in any single category.</p>
-
-
-
-<p>McDaniel groups these credentials into several broad areas: the LLM platforms themselves, the support and orchestration ecosystem, the AI control plane, Model Context Protocol (MCP) servers, and agentic coding assistants.</p>
-
-
-
-<p>“I’m increasingly concerned about the volume of code being pushed out by AI and the speed at which developers are reviewing it,” says Christine Bejerasco, CISO of WithSecure. “That can lead to more vulnerable code, especially as frontier AI models are now capable of identifying vulnerabilities at scale.”</p>
-
-
-
-<h2 class="wp-block-heading" id="secrets-leaks-require-immediate-response">Secrets leaks require immediate response</h2>
-
-
-
-<p>Many organizations know deep down they have a <a href="https://www.csoonline.com/article/3633403/how-organizations-can-secure-their-ai-code.html">problem with AI-generated code</a>. However, some don’t realize the severity of the situation, just how many secrets are exposed across their systems.</p>
-
-
-
-<p>When a leaked secret is detected, the issue should be treated as a security incident. “We activate our incident response process immediately,” says WithSecure’s Bejerasco.</p>
-
-
-
-<p>The secret is revoked or disabled, and a new one is generated. “From there, the incident response team works with R&amp;D to investigate the impact across systems and data. That’s followed by cleanup, then hardening,” she says. “While incidents are typically coordinated by the CISO office, the R&amp;D team owns the actual revocation and cleanup.”</p>
-
-
-
-<p>The organization conducts post-mortems and implements any necessary updates to systems or policies based on what was learned.</p>
-
-
-
-<p>Although remediation is critical, the process is far from straightforward. According to GitGuardian, 64% of valid secrets identified in 2022 remain unrevoked in 2026, largely because many organizations lack the governance and repeatable processes needed to clean them up at scale.</p>
-
-
-
-<p>“We think this is less a visibility issue and more a combination of priority, tooling, and ownership,” GitGuardian’s McDaniel says.</p>
-
-
-
-<p>Detection is the easy part, says Rohan Gupta, vice president of cloud, security, and DevOps at R Systems. “Remediation is where discipline gets tested.”</p>
-
-
-
-<h2 class="wp-block-heading" id="addressing-the-broader-issue">Addressing the broader issue</h2>
-
-
-
-<p>As AI-assisted coding expands, security leaders must rethink how they manage risk. That means looking beyond repositories and securing the full software development lifecycle (SDLC), including collaboration tools where credentials often show up.</p>
-
-
-
-<p>“We focus on both, but the risk profile is very different — what’s identified in Jira or Slack is far different from what you’ll find in your code repository,” says David MacKinnon, chief security officer at N-able. “A mature SDLC — which includes things like effective credential vaulting, separation of duties, source code scanning, separated dev, stage/production environments, and more — helps to minimize the business risk.”</p>
-
-
-
-<p>At WithSecure, Bejerasco says secrets and agent access are kept “as transient as possible” to reduce risk. And there’s also a Lifecycle Security Policy in place that mandates code reviews. “This policy is effectively the security ‘bible’ for developers,” she says. “It covers privacy impact assessments, threat modeling, security testing, and code review.”</p>
-
-
-
-<p>R Systems’ Gupta agrees, advising organizations to rotate credentials, revoke exposed versions, audit for unauthorized use during any exposure window, and purge from history wherever feasible. “For the long-tail legacy service accounts, third-party integrations, embedded vendor credentials rotation is still a coordinated manual exercise, and we’re steadily moving more of it into automation,” he says.</p>
-
-
-
-<p>A key step in fixing the issue is knowing it exists. “If an organization is not aware of how many secrets they’re exposing in their code base, or the level of access those secrets hold, they have a tremendous amount of business risk that they’re unaware of,” says N-able CSO MacKinnon.</p>
-
-
-
-<p>He advises CISOs to raise awareness around the scale of the problem. He also suggests stronger developer training, better tools to detect and manage risks, and solutions that enable both human and AI-driven development to operate securely. Just as important, he says, is embedding these practices into everyday workflows so that <a href="https://www.csoonline.com/article/4163355/ai-is-reshaping-devsecops-to-bring-security-closer-to-the-code.html">security becomes part of how code is written</a>, not something added afterward.</p>
-
-
-
-<p>​</p>
-
-
-
-<p>His organization scans for secrets when code is committed to block any commits that would introduce risk into the products. “The creator of that code, whether it be human or AI, is held to the same level of security maturity,” MacKinnon adds.</p>
-
-
-
-<p>Bejerasco agrees. “We need to be deliberate about assigning ownership upfront and continuously validating it, and by cracking down on anything that falls through the cracks,” she says. “Otherwise, these unmanaged identities and secrets will accumulate faster than we can control them.”</p>
-
-
-
-<h2 class="wp-block-heading" id="advice-for-cisos">Advice for CISOs</h2>
-
-
-
-<p>If there is one clear lesson from the rise of AI-driven development, it’s this: The biggest mistake CISOs can make is treating secrets sprawl as a scanning problem. “It is really an ownership and governance problem for machine identities at scale,” McDaniel says.</p>
-
-
-
-<p>Gupta goes even further. “A leaked secret is a symptom of an ungoverned <a href="https://www.csoonline.com/article/2132294/what-are-non-human-identities-and-why-do-they-matter.html">non-human identity (NHI)</a> issue,” he says. “Treat it as detection and response, and you’ll chase leaks forever. Treat it as identity governance — inventory every NHI, assign ownership, enforce short-lived credentials, prefer workload identity over static keys, rotate automatically, decommission aggressively — and the problem starts to shrink instead of grow.”</p>
-
-
-
-<p>​And while public leaks draw attention, most secrets exposure builds up privately — in internal repositories, build systems, and developer workflows — where ownership is unclear and remediation is often deferred.</p>
-
-
-
-<p>“Private tends to get mistaken for safe, when it really just means there are fewer eyes on it,” says Gupta. “Inside private repos, people loosen up. Because it feels contained, the guard can get dropped. All it takes is one supply-chain issue or someone walking out the door with unauthorized access.”</p>
-
-
-
-<p>The real risk lies in the sheer volume of NHIs being created faster than organizations can track them. “The smartest CISOs right now are pushing their DevOps and dev teams to embrace better ways to handle authorization than long-lived, overprivileged API keys,” he says.</p>
-
-
-
-<p>To WithSecure’s Bejerasco, the security issues associated with AI-generated code are urgent. ​“The appetite for AI adoption from organizational leaders is high right now, and we need to manage that risk even though the capabilities and controls are not fully mature yet,” she says.</p>
-
-
-
-<p>Yet, despite the urgency, the industry is still figuring out how to respond. “I don’t think anyone has the right answers yet; we’re all building governance as we go,” Bejerasco says. As AI agents become more widespread, traditional approaches might not keep up, and organizations might need to use AI to help govern AI, she adds.</p>
-
-
-
-<p>MacKinnon believes CISOs should not be alone in this. They should involve CEOs and CTOs in the process and explain to them that “the risk is real and it’s rampant.”</p>
-
-
-
-<p>​“There’s never a perfecttime to address it, but the investment in proactively reducing that risk is far easier and cheaper than learning about it after it’s been used to compromise your company,” MacKinnon says.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3d ago]]></description>
-</item>
-
-<item>
-  <title>🔴 Expired domain leads to supply chain attack on node-ipc npm package</title>
-  <link>https://www.csoonline.com/article/4171926/expired-domain-leads-to-supply-chain-attack-on-node-ipc-npm-package.html</link>
-  <pubDate>Fri, 15 May 2026 21:05:42 +0000</pubDate>
-  <source>CSO Online</source>
-  <description><![CDATA[<b>Why this matters: Supply chain risk — audit third-party dependencies and vendor access.</b><br/><div id="remove_no_follow">
-		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
-					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
-						<div class="article-column__content">
-<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
-
-
-
-<p>A popular npm package called node-ipc has been compromised, with hackers publishing malicious versions that bundle credential stealing malware. The root cause of the compromise was an expired domain name that attackers managed to register in order to hijack a maintainer’s account.</p>
-
-
-
-<p>The node-ipc package has had malware added to its code in the past. In March 2022, following Russia’s invasion of Ukraine, the project’s creator <a href="https://www.csoonline.com/article/572327/developer-sabotages-own-npm-module-prompting-open-source-supply-chain-security-questions.html" target="_blank">intentionally added malicious code</a> to the program to wipe files on systems with Russian or Belarusian IP addresses.</p>
-
-
-
-<p>Node-ipc is a Node.js module that implements support for local and remote Inter-Process Communication over various types of socket across all major platforms. One use case is in implementing complex multi-process neural networks in JavaScript, but the module is also used as a dependency for 424 other projects, and receives almost 700K weekly downloads.</p>
-
-
-
-<p>On Thursday, <a href="https://github.com/RIAEvangelist/node-ipc/issues/15" rel="noreferrer noopener" target="_blank">attackers managed to publish three trojanized versions</a> across three different branches of the project: 9.1.6, 9.2.3 and 12.0.1. All new versions contained an 80KB obfuscated credential-stealing payload inside the node-ipc.cjs file.</p>
-
-
-
-<p>The malicious code searches for and steals a wide range of credentials for CI/CD tools, cloud services and infrastructure, Kubernetes, SSH, and AI coding agents. The data is exfiltrated through DNS TXT queries rather than HTTP connections.</p>
-
-
-
-<p>Since node-ipc is a dependency for hundreds of other packages, which in turn could be dependencies for even more packages, this attack could have a large blast radius. Users should immediately scan their systems to determine if they have any of the compromised versions installed, and if they do, treat the machine and any access token, environment variable, and API key stored on it as compromised.</p>
-
-
-
-<h2 class="wp-block-heading" id="exhaustive-credential-collection-and-sneaky-exfiltration">Exhaustive credential collection and sneaky exfiltration</h2>
-
-
-
-<p>The malicious payload is decrypted and executed whenever other applications load the package through <em>require(‘node-ipc’)</em>. The trojanized versions were designed to remain fully functional to avoid immediate detection, which together with other decisions attackers took, such as data exfiltration via DNS TXT, suggest stealthiness was a top priority.</p>
-
-
-
-<p>Once executed, the malicious code collects information about the host system, including operating system version, hostname, and environment variables. It then starts looking for credentials in various locations based on the detected OS.</p>
-
-
-
-<p>“The payload chooses between separate decoded target lists for macOS and Linux/default platforms,” researchers from Socket.dev said in <a href="https://socket.dev/blog/node-ipc-package-compromised" rel="noreferrer noopener" target="_blank">their analysis.</a> “The lists are not identical. In the analyzed payload, the macOS list contains 113 patterns and the Linux/default list contains 127 patterns.”</p>
-
-
-
-<p>The target lists are extensive and include:</p>
-
-
-
-<ul class="wp-block-list">
-<li>Configuration files for AWS, Azure, GCP, OCI, DigitalOcean, Scaleway, Hetzner, Fly, Vercel, Railway, Alibaba Cloud, IBM Cloud, Linode, MinIO, Snowflake, Doppler, and Salesforce;</li>
-
-
-
-<li>SSH keys and SSH configuration;</li>
-
-
-
-<li>Kubernetes, Docker, Helm, Rancher, and service-account material;</li>
-
-
-
-<li>npm, Yarn, Netrc, Git, GitHub CLI, GitLab CLI, and Hub credentials;</li>
-
-
-
-<li>Terraform credentials and tfvars files;</li>
-
-
-
-<li>.env, .env.local, .env.production, database configuration files, shell histories, and database CLI histories;</li>
-
-
-
-<li>macOS Keychain database files;</li>
-
-
-
-<li>Firefox profile key database files on macOS;</li>
-
-
-
-<li>Linux keyrings and KWallet files;</li>
-
-
-
-<li>FileZilla, Remmina, OpenVPN, and related connection profiles;</li>
-
-
-
-<li>Microsoft Teams local storage and IndexedDB paths.</li>
-</ul>
-
-
-
-<p>While browser credential stores are not targeted directly, macOS keychain databases can contain system and browser credentials, so those credentials should be considered compromised as well and rotated.</p>
-
-
-
-<p>All the collected data is archived in a GZIP file, which is then split into chunks and exfiltrated by making DNS TXT queries on an attacker-controlled domain whose name is similar to that of Microsoft’s legitimate Azure Static Web Apps domain.</p>
-
-
-
-<p>Since the attackers control the DNS server for their domain name, they can see the TXT record queries made by the infected systems and can reconstruct the archives on their end from the leaked bytes. The Socket researchers estimate that a 500KB file would require around 29,400 TXT queries to exfiltrate in this way.</p>
-
-
-
-<p>“The payload does not establish persistence in the decoded sample,” the researchers said. “There is no observed cron, launchd, rc.d, service installation, or second-stage download. The operational impact is concentrated in the execution window: collection, archive creation, DNS TXT exfiltration, and attempted cleanup.”</p>
-
-
-
-<h2 class="wp-block-heading" id="expired-domain-led-to-email-takeover">Expired domain led to email takeover</h2>
-
-
-
-<p>The malicious node-ipc versions were published from an npm account called atiertant, which belongs to one of the several developers with maintainer access to the package.  Atiertant had never used his access to publish new node-ipc versions before, and has had no activity on node-ipc or any other npm package he has access to since 2022.</p>
-
-
-
-<p><a href="https://x.com/TekDefense/status/2054963016039342549" rel="noreferrer noopener" target="_blank">Security researchers noticed</a> that the email address for atiertant’s account was hosted on a domain called atlantis-software.net that had expired in January 2025 and was re-registered earlier this month, most likely by the attackers. It was then just a matter of setting up an email server, recreating atiertant’s email address and performing a password reset on the account.</p>
-
-
-
-<p>This highlights some of the security challenges open-source software projects face. While periodically reviewing access lists for dormant and unused accounts is a general security recommendation for companies, open-source projects are maintained by groups of volunteers, and it’s not unusual for people to take long breaks from contributing to projects, especially if those projects have reached a high level of maturity and feature completeness so they no longer get frequent updates.</p>
-
-
-
-<p>It’s also likely that the attackers did not target node-ipc from the start, they just searched npm for accounts with email addresses on custom domain names, then checked if any of those domain names had expired. This means there might be other dormant accounts out there susceptible to email takeover using the same method.</p>
-
-
-
-<p>The Socket.dev report contains additional recommendations for both users and developers, as well as file hashes and other indicators of compromise that can be used by security teams to create detections.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 6d ago]]></description>
 </item>
 
 </channel>
