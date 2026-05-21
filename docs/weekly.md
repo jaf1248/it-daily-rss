@@ -1,25 +1,35 @@
 # IT Weekly Intelligence Briefing
 **Period:** May 14 – May 21, 2026  
-**Generated:** 2026-05-21 11:20 UTC  
-**Items reviewed:** 122  
+**Generated:** 2026-05-21 15:18 UTC  
+**Items reviewed:** 123  
 
 ## ⚡ Top Actions This Week
 
-1. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _GitHub links repo breach to TanStack npm supply-chain attack_  
+1. **Validate backups, confirm EDR coverage, and brief incident response team.**  
+   _Police seize “First VPN” service used in ransomware, data theft attacks_  
    Source: BleepingComputer  
 
-2. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _GitHub Internal Repositories Breached via Malicious Nx Console VS Code Extension_  
+2. **Apply emergency patch or mitigation now; check vendor advisory for workarounds.**  
+   _Microsoft Warns of Two Actively Exploited Defender Vulnerabilities_  
    Source: The Hacker News  
 
-3. **Validate backups, confirm EDR coverage, and brief incident response team.**  
-   _Hackers bypass SonicWall VPN MFA due to incomplete patching_  
+3. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
+   _GitHub links repo breach to TanStack npm supply-chain attack_  
    Source: BleepingComputer  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [Police seize “First VPN” service used in ransomware, data theft attacks](https://www.bleepingcomputer.com/news/security/police-seize-first-vpn-service-used-in-ransomware-data-theft-attacks/)
+**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** May 21  
+**Why it matters:** Elevated ransomware risk across the sector.  
+**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
+
+### [Microsoft Warns of Two Actively Exploited Defender Vulnerabilities](https://thehackernews.com/2026/05/microsoft-warns-of-two-actively.html)
+**Source:** The Hacker News &nbsp;·&nbsp; **Date:** May 21  
+**Why it matters:** General awareness item.  
+**Recommended action:** Apply emergency patch or mitigation now; check vendor advisory for workarounds.  
 
 ### [GitHub links repo breach to TanStack npm supply-chain attack](https://www.bleepingcomputer.com/news/security/github-links-repo-breach-to-tanstack-npm-supply-chain-attack/)
 **Source:** BleepingComputer &nbsp;·&nbsp; **Date:** May 21  
@@ -41,22 +51,18 @@
 **Why it matters:** Potential credential or data exposure.  
 **Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
-### [Microsoft Takes Down Malware-Signing Service Behind Ransomware Attacks](https://thehackernews.com/2026/05/microsoft-takes-down-malware-signing.html)
-**Source:** The Hacker News &nbsp;·&nbsp; **Date:** May 20  
-**Why it matters:** Elevated ransomware risk across the sector.  
-**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
-
-### [GitHub Breached — Employee Device Hack Led to Exfiltration of 3,800+ Internal Repos](https://thehackernews.com/2026/05/github-investigating-teampcp-claimed.html)
-**Source:** The Hacker News &nbsp;·&nbsp; **Date:** May 20  
-**Why it matters:** Potential credential or data exposure.  
-**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
-
 ---
 
 ## 🟠 Important — Review This Week
 
 - [CVE-2026-45585 Windows BitLocker Security Feature Bypass Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45585)  
   **Microsoft Security Response Center (MSRC)** · May 21 · _General awareness item._  
+
+- [Max severity Cisco Secure Workload flaw gives Site Admin privileges](https://www.bleepingcomputer.com/news/security/cisco-max-severity-secure-workload-flaw-gives-hackers-site-admin-privileges/)  
+  **BleepingComputer** · May 21 · _General awareness item._  
+
+- [ThreatsDay Bulletin: Linux Rootkits, Router 0-Day, AI Intrusions, Scam Kits and 25 New Stories](https://thehackernews.com/2026/05/threatsday-bulletin-linux-rootkits.html)  
+  **The Hacker News** · May 21 · _General awareness item._  
 
 - [CVE-2026-43491 net: qrtr: ns: Limit the maximum server registration per node](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-43491)  
   **Microsoft Security Response Center (MSRC)** · May 21 · _General awareness item._  
@@ -73,23 +79,17 @@
 - [CVE-2026-44390 Unbounded name compression in certain cases causes degradation of service](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-44390)  
   **Microsoft Security Response Center (MSRC)** · May 21 · _General awareness item._  
 
-- [CVE-2026-42944 Heap overflow with multiple NSID, COOKIE, PADDING EDNS options](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-42944)  
-  **Microsoft Security Response Center (MSRC)** · May 21 · _General awareness item._  
-
-- [CVE-2026-42923 Degradation of service with unbounded NSEC3 hash calculations](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-42923)  
-  **Microsoft Security Response Center (MSRC)** · May 21 · _General awareness item._  
-
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [Apple blocked over $11 billion in App Store fraud in 6 years](https://www.bleepingcomputer.com/news/apple/apple-blocked-22-billion-in-fraudulent-app-store-transactions-in-2025/) — BleepingComputer
+- [Showboat Linux Malware Hits Middle East Telecom with SOCKS5 Proxy Backdoor](https://thehackernews.com/2026/05/showboat-linux-malware-hits-middle-east.html) — The Hacker News
+- [Inside a Crypto Drainer: How to Spot it Before it Empties Your Wallet](https://www.bleepingcomputer.com/news/security/inside-a-crypto-drainer-how-to-spot-it-before-it-empties-your-wallet/) — BleepingComputer
+- [Chinese hackers target telcos with new Linux, Windows malware](https://www.bleepingcomputer.com/news/security/chinese-hackers-target-telcos-with-new-linux-windows-malware/) — BleepingComputer
+- [Selective HTTP Proxying in Linux, (Thu, May 21st)](https://isc.sans.edu/diary/rss/33002) — SANS Internet Storm Center
 - [Flipper One project needs community help to build open Linux platform](https://www.bleepingcomputer.com/news/hardware/flipper-one-project-needs-community-help-to-build-open-linux-platform/) — BleepingComputer
-- [When Identity is the Attack Path](https://thehackernews.com/2026/05/when-identity-is-attack-path.html) — The Hacker News
-- [ISC Stormcast For Thursday, May 21st, 2026 https://isc.sans.edu/podcastdetail/9940, (Thu, May 21st)](https://isc.sans.edu/diary/rss/33000) — SANS Internet Storm Center
-- [Ukraine identifies infostealer operator tied to 28,000 stolen accounts](https://www.bleepingcomputer.com/news/security/ukraine-identifies-infostealer-operator-tied-to-28-000-stolen-accounts/) — BleepingComputer
-- [Microsoft Open-Sources RAMPART and Clarity to Secure AI Agents During Development](https://thehackernews.com/2026/05/microsoft-open-sources-rampart-and.html) — The Hacker News
-- [Identity Alone Isn't Enough: Why Device Security Has to Share the Load](https://www.bleepingcomputer.com/news/security/identity-alone-isnt-enough-why-device-security-has-to-share-the-load/) — BleepingComputer
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 18 critical · 75 important · 29 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 18 critical · 74 important · 31 FYI_
