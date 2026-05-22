@@ -1,25 +1,35 @@
 # IT Weekly Intelligence Briefing
 **Period:** May 15 – May 22, 2026  
-**Generated:** 2026-05-22 16:23 UTC  
-**Items reviewed:** 124  
+**Generated:** 2026-05-22 18:52 UTC  
+**Items reviewed:** 126  
 
 ## ⚡ Top Actions This Week
 
-1. **Apply emergency patch or mitigation now; check vendor advisory for workarounds.**  
-   _Trend Micro warns of Apex One zero-day exploited in the wild_  
-   Source: BleepingComputer  
+1. **Validate backups, confirm EDR coverage, and brief incident response team.**  
+   _First VPN Dismantled in Global Takedown Over Use by 25 Ransomware Groups_  
+   Source: The Hacker News  
 
-2. **Validate backups, confirm EDR coverage, and brief incident response team.**  
-   _Police seize “First VPN” service used in ransomware, data theft attacks_  
-   Source: BleepingComputer  
+2. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
+   _Lawmakers Demand Answers as CISA Tries to Contain Data Leak_  
+   Source: Krebs on Security  
 
 3. **Apply emergency patch or mitigation now; check vendor advisory for workarounds.**  
-   _Microsoft Warns of Two Actively Exploited Defender Vulnerabilities_  
-   Source: The Hacker News  
+   _Trend Micro warns of Apex One zero-day exploited in the wild_  
+   Source: BleepingComputer  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [First VPN Dismantled in Global Takedown Over Use by 25 Ransomware Groups](https://thehackernews.com/2026/05/first-vpn-dismantled-in-global-takedown.html)
+**Source:** The Hacker News &nbsp;·&nbsp; **Date:** May 22  
+**Why it matters:** Elevated ransomware risk across the sector.  
+**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
+
+### [Lawmakers Demand Answers as CISA Tries to Contain Data Leak](https://krebsonsecurity.com/2026/05/lawmakers-demand-answers-as-cisa-tries-to-contain-data-leak/)
+**Source:** Krebs on Security &nbsp;·&nbsp; **Date:** May 22  
+**Why it matters:** Potential credential or data exposure.  
+**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
 ### [Trend Micro warns of Apex One zero-day exploited in the wild](https://www.bleepingcomputer.com/news/security/trend-micro-warns-of-apex-one-zero-day-exploited-in-attacks/)
 **Source:** BleepingComputer &nbsp;·&nbsp; **Date:** May 22  
@@ -36,20 +46,10 @@
 **Why it matters:** General awareness item.  
 **Recommended action:** Apply emergency patch or mitigation now; check vendor advisory for workarounds.  
 
-### [GitHub links repo breach to TanStack npm supply-chain attack](https://www.bleepingcomputer.com/news/security/github-links-repo-breach-to-tanstack-npm-supply-chain-attack/)
-**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** May 21  
-**Why it matters:** Potential credential or data exposure.  
-**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
-
 ### [GitHub Internal Repositories Breached via Malicious Nx Console VS Code Extension](https://thehackernews.com/2026/05/github-internal-repositories-breached.html)
 **Source:** The Hacker News &nbsp;·&nbsp; **Date:** May 21  
 **Why it matters:** Potential credential or data exposure.  
 **Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
-
-### [Microsoft Takes Down Malware-Signing Service Behind Ransomware Attacks](https://thehackernews.com/2026/05/microsoft-takes-down-malware-signing.html)
-**Source:** The Hacker News &nbsp;·&nbsp; **Date:** May 20  
-**Why it matters:** Elevated ransomware risk across the sector.  
-**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
 
 ---
 
@@ -83,13 +83,13 @@
 
 ## 🔵 FYI — General Awareness
 
+- [Netherlands seizes 800 servers of hosting firm enabling cyberattacks](https://www.bleepingcomputer.com/news/security/netherlands-seizes-800-servers-of-hosting-firm-enabling-cyberattacks/) — BleepingComputer
+- [Ghostwriter Targets Ukraine Government Entities with Prometheus Phishing Malware](https://thehackernews.com/2026/05/ghostwriter-targets-ukraine-government.html) — The Hacker News
 - [Former US execs plead guilty to aiding tech support scammers](https://www.bleepingcomputer.com/news/security/former-us-execs-plead-guilty-to-aiding-tech-support-scammers/) — BleepingComputer
 - [Why Chargebacks are Just One Piece of the Fraud Puzzle](https://www.bleepingcomputer.com/news/security/why-chargebacks-are-just-one-piece-of-the-fraud-puzzle/) — BleepingComputer
 - [Megalodon GitHub Attack Targets 5,561 Repos with Malicious CI/CD Workflows](https://thehackernews.com/2026/05/megalodon-github-attack-targets-5561.html) — The Hacker News
 - [US and Canada arrest and charge suspected Kimwolf botnet admin](https://www.bleepingcomputer.com/news/security/us-and-canada-arrest-and-charge-suspected-kimwolf-botnet-admin/) — BleepingComputer
-- [Kimwolf DDoS Botnet Operator Arrested in Canada Over DDoS-for-Hire Attacks](https://thehackernews.com/2026/05/kimwolf-ddos-botnet-operator-arrested.html) — The Hacker News
-- [Cross-Platform NPM Stealer, (Fri, May 22nd)](https://isc.sans.edu/diary/rss/33006) — SANS Internet Storm Center
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 13 critical · 79 important · 32 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 14 critical · 79 important · 33 FYI_
