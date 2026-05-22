@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
 **Period:** May 15 – May 22, 2026  
-**Generated:** 2026-05-22 20:42 UTC  
+**Generated:** 2026-05-22 22:05 UTC  
 **Items reviewed:** 126  
 
 ## ⚡ Top Actions This Week
@@ -58,6 +58,9 @@
 - [CVE-2026-33117 Azure SDK for Java Security Feature Bypass Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-33117)  
   **Microsoft Security Response Center (MSRC)** · May 22 · _General awareness item._  
 
+- [CVE-2026-34336 Windows DWM Core Library Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-34336)  
+  **Microsoft Security Response Center (MSRC)** · May 22 · _General awareness item._  
+
 - [Drupal: Critical SQL injection flaw now targeted in attacks](https://www.bleepingcomputer.com/news/security/drupal-critical-sql-injection-flaw-now-targeted-in-attacks/)  
   **BleepingComputer** · May 22 · _General awareness item._  
 
@@ -74,9 +77,6 @@
   **Microsoft Security Response Center (MSRC)** · May 22 · _General awareness item._  
 
 - [CVE-2025-38636 rv: Use strings in da monitors tracepoints](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-38636)  
-  **Microsoft Security Response Center (MSRC)** · May 22 · _General awareness item._  
-
-- [CVE-2026-23223 xfs: fix UAF in xchk_btree_check_block_owner](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-23223)  
   **Microsoft Security Response Center (MSRC)** · May 22 · _General awareness item._  
 
 ---
