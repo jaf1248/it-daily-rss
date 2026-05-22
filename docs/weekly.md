@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
 **Period:** May 15 – May 22, 2026  
-**Generated:** 2026-05-22 10:47 UTC  
+**Generated:** 2026-05-22 13:30 UTC  
 **Items reviewed:** 125  
 
 ## ⚡ Top Actions This Week
@@ -46,50 +46,50 @@
 **Why it matters:** Elevated ransomware risk across the sector.  
 **Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
 
-### [Grafana breach caused by missed token rotation after TanStack attack](https://www.bleepingcomputer.com/news/security/grafana-breach-caused-by-missed-token-rotation-after-tanstack-attack/)
-**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** May 20  
-**Why it matters:** Potential credential or data exposure.  
-**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
+### [Microsoft Takes Down Malware-Signing Service Behind Ransomware Attacks](https://thehackernews.com/2026/05/microsoft-takes-down-malware-signing.html)
+**Source:** The Hacker News &nbsp;·&nbsp; **Date:** May 20  
+**Why it matters:** Elevated ransomware risk across the sector.  
+**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
 
 ---
 
 ## 🟠 Important — Review This Week
 
-- [CVE-2026-23383 bpf, arm64: Force 8-byte alignment for JIT buffer to prevent atomic tearing](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-23383)  
+- [Drupal: Critical SQL injection flaw now targeted in attacks](https://www.bleepingcomputer.com/news/security/drupal-critical-sql-injection-flaw-now-targeted-in-attacks/)  
+  **BleepingComputer** · May 22 · _General awareness item._  
+
+- [Ubiquiti patches three max severity UniFi OS vulnerabilities](https://www.bleepingcomputer.com/news/security/ubiquiti-patches-three-max-severity-unifi-os-vulnerabilities/)  
+  **BleepingComputer** · May 22 · _General awareness item._  
+
+- [Making Vulnerable Drivers Exploitable Without Hardware - The BYOVD Perspective](https://thehackernews.com/2026/05/making-vulnerable-drivers-exploitable.html)  
+  **The Hacker News** · May 22 · _General awareness item._  
+
+- [CVE-2026-23207 spi: tegra210-quad: Protect curr_xfer check in IRQ handler](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-23207)  
   **Microsoft Security Response Center (MSRC)** · May 22 · _General awareness item._  
 
-- [CVE-2026-23377 ice: change XDP RxQ frag_size from DMA write length to xdp.frame_sz](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-23377)  
+- [CVE-2026-23225 sched/mmcid: Don't assume CID is CPU owned on mode switch](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-23225)  
   **Microsoft Security Response Center (MSRC)** · May 22 · _General awareness item._  
 
-- [CVE-2026-23361 PCI: dwc: ep: Flush MSI-X write before unmapping its ATU entry](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-23361)  
+- [CVE-2025-38636 rv: Use strings in da monitors tracepoints](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-38636)  
   **Microsoft Security Response Center (MSRC)** · May 22 · _General awareness item._  
 
-- [CVE-2026-23272 netfilter: nf_tables: unconditionally bump set->nelems before insertion](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-23272)  
+- [CVE-2026-23223 xfs: fix UAF in xchk_btree_check_block_owner](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-23223)  
   **Microsoft Security Response Center (MSRC)** · May 22 · _General awareness item._  
 
-- [CVE-2026-23278 netfilter: nf_tables: always walk all pending catchall elements](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-23278)  
-  **Microsoft Security Response Center (MSRC)** · May 22 · _General awareness item._  
-
-- [CVE-2026-23247 tcp: secure_seq: add back ports to TS offset](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-23247)  
-  **Microsoft Security Response Center (MSRC)** · May 22 · _General awareness item._  
-
-- [CVE-2026-23248 perf/core: Fix refcount bug and potential UAF in perf_mmap](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-23248)  
-  **Microsoft Security Response Center (MSRC)** · May 22 · _General awareness item._  
-
-- [CVE-2026-23241 audit: add missing syscalls to read class](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-23241)  
+- [CVE-2025-38660 [ceph] parse_longname(): strrchr() expects NUL-terminated string](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-38660)  
   **Microsoft Security Response Center (MSRC)** · May 22 · _General awareness item._  
 
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [Why Chargebacks are Just One Piece of the Fraud Puzzle](https://www.bleepingcomputer.com/news/security/why-chargebacks-are-just-one-piece-of-the-fraud-puzzle/) — BleepingComputer
+- [Megalodon GitHub Attack Targets 5,561 Repos with Malicious CI/CD Workflows](https://thehackernews.com/2026/05/megalodon-github-attack-targets-5561.html) — The Hacker News
 - [US and Canada arrest and charge suspected Kimwolf botnet admin](https://www.bleepingcomputer.com/news/security/us-and-canada-arrest-and-charge-suspected-kimwolf-botnet-admin/) — BleepingComputer
 - [Kimwolf DDoS Botnet Operator Arrested in Canada Over DDoS-for-Hire Attacks](https://thehackernews.com/2026/05/kimwolf-ddos-botnet-operator-arrested.html) — The Hacker News
 - [Cross-Platform NPM Stealer, (Fri, May 22nd)](https://isc.sans.edu/diary/rss/33006) — SANS Internet Storm Center
 - [ISC Stormcast For Friday, May 22nd, 2026 https://isc.sans.edu/podcastdetail/9942, (Fri, May 22nd)](https://isc.sans.edu/diary/rss/33004) — SANS Internet Storm Center
-- [Alleged Kimwolf Botmaster ‘Dort’ Arrested, Charged in U.S. and Canada](https://krebsonsecurity.com/2026/05/alleged-kimwolf-botmaster-dort-arrested-charged-in-u-s-and-canada/) — Krebs on Security
-- [Apple blocked over $11 billion in App Store fraud in 6 years](https://www.bleepingcomputer.com/news/apple/apple-blocked-22-billion-in-fraudulent-app-store-transactions-in-2025/) — BleepingComputer
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 15 critical · 77 important · 33 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 13 critical · 80 important · 32 FYI_
