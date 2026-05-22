@@ -1,7 +1,7 @@
 # IT Weekly Intelligence Briefing
 **Period:** May 15 – May 22, 2026  
-**Generated:** 2026-05-22 03:25 UTC  
-**Items reviewed:** 121  
+**Generated:** 2026-05-22 07:42 UTC  
+**Items reviewed:** 124  
 
 ## ⚡ Top Actions This Week
 
@@ -55,41 +55,41 @@
 
 ## 🟠 Important — Review This Week
 
-- [Google accidentally exposed details of unfixed Chromium flaw](https://www.bleepingcomputer.com/news/security/google-accidentally-exposed-details-of-unfixed-chromium-flaw/)  
-  **BleepingComputer** · May 21 · _General awareness item._  
+- [CVE-2026-43298 drm/amdgpu: Skip vcn poison irq release on VF](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-43298)  
+  **Microsoft Security Response Center (MSRC)** · May 22 · _General awareness item._  
 
-- [CVE-2026-45585 Windows BitLocker Security Feature Bypass Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45585)  
-  **Microsoft Security Response Center (MSRC)** · May 21 · _General awareness item._  
+- [CVE-2026-43303 mm/page_alloc: clear page->private in free_pages_prepare()](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-43303)  
+  **Microsoft Security Response Center (MSRC)** · May 22 · _General awareness item._  
 
-- [Max severity Cisco Secure Workload flaw gives Site Admin privileges](https://www.bleepingcomputer.com/news/security/cisco-max-severity-secure-workload-flaw-gives-hackers-site-admin-privileges/)  
-  **BleepingComputer** · May 21 · _General awareness item._  
+- [CVE-2026-43319 spi: spidev: fix lock inversion between spi_lock and buf_lock](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-43319)  
+  **Microsoft Security Response Center (MSRC)** · May 22 · _General awareness item._  
 
-- [ThreatsDay Bulletin: Linux Rootkits, Router 0-Day, AI Intrusions, Scam Kits and 25 New Stories](https://thehackernews.com/2026/05/threatsday-bulletin-linux-rootkits.html)  
-  **The Hacker News** · May 21 · _General awareness item._  
+- [CVE-2026-43331 x86/kexec: Disable KCOV instrumentation after load_segments()](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-43331)  
+  **Microsoft Security Response Center (MSRC)** · May 22 · _General awareness item._  
 
-- [CVE-2026-43491 net: qrtr: ns: Limit the maximum server registration per node](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-43491)  
-  **Microsoft Security Response Center (MSRC)** · May 21 · _General awareness item._  
+- [CVE-2026-43416 powerpc, perf: Check that current->mm is alive before getting user callchain](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-43416)  
+  **Microsoft Security Response Center (MSRC)** · May 22 · _General awareness item._  
 
-- [CVE-2026-43970 Decompression Bomb in cow_spdy:inflate/2 Allows Memory Exhaustion via Crafted SPDY Frame](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-43970)  
-  **Microsoft Security Response Center (MSRC)** · May 21 · _General awareness item._  
+- [CVE-2026-43318 drm/amdgpu: fix sync handling in amdgpu_dma_buf_move_notify](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-43318)  
+  **Microsoft Security Response Center (MSRC)** · May 22 · _General awareness item._  
 
-- [CVE-2026-45736 ws: Uninitialized memory disclosure](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45736)  
-  **Microsoft Security Response Center (MSRC)** · May 21 · _General awareness item._  
+- [CVE-2025-39746 wifi: ath10k: shutdown driver when hardware is unreliable](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-39746)  
+  **Microsoft Security Response Center (MSRC)** · May 22 · _General awareness item._  
 
-- [CVE-2026-45803 gh: GitHub Actions log output in `gh run view` allows terminal escape sequence injection](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45803)  
-  **Microsoft Security Response Center (MSRC)** · May 21 · _General awareness item._  
+- [CVE-2026-43338 btrfs: reserve enough transaction items for qgroup ioctls](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-43338)  
+  **Microsoft Security Response Center (MSRC)** · May 22 · _General awareness item._  
 
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [Cross-Platform NPM Stealer, (Fri, May 22nd)](https://isc.sans.edu/diary/rss/33006) — SANS Internet Storm Center
 - [ISC Stormcast For Friday, May 22nd, 2026 https://isc.sans.edu/podcastdetail/9942, (Fri, May 22nd)](https://isc.sans.edu/diary/rss/33004) — SANS Internet Storm Center
 - [Alleged Kimwolf Botmaster ‘Dort’ Arrested, Charged in U.S. and Canada](https://krebsonsecurity.com/2026/05/alleged-kimwolf-botmaster-dort-arrested-charged-in-u-s-and-canada/) — Krebs on Security
 - [Apple blocked over $11 billion in App Store fraud in 6 years](https://www.bleepingcomputer.com/news/apple/apple-blocked-22-billion-in-fraudulent-app-store-transactions-in-2025/) — BleepingComputer
 - [Showboat Linux Malware Hits Middle East Telecom with SOCKS5 Proxy Backdoor](https://thehackernews.com/2026/05/showboat-linux-malware-hits-middle-east.html) — The Hacker News
 - [Inside a Crypto Drainer: How to Spot it Before it Empties Your Wallet](https://www.bleepingcomputer.com/news/security/inside-a-crypto-drainer-how-to-spot-it-before-it-empties-your-wallet/) — BleepingComputer
-- [Chinese hackers target telcos with new Linux, Windows malware](https://www.bleepingcomputer.com/news/security/chinese-hackers-target-telcos-with-new-linux-windows-malware/) — BleepingComputer
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 15 critical · 74 important · 32 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 15 critical · 78 important · 31 FYI_
