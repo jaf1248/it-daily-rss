@@ -1,7 +1,7 @@
 # IT Weekly Intelligence Briefing
 **Period:** May 16 – May 23, 2026  
-**Generated:** 2026-05-23 04:38 UTC  
-**Items reviewed:** 126  
+**Generated:** 2026-05-23 07:29 UTC  
+**Items reviewed:** 127  
 
 ## ⚡ Top Actions This Week
 
@@ -55,41 +55,41 @@
 
 ## 🟠 Important — Review This Week
 
-- [CVE-2026-33117 Azure SDK for Java Security Feature Bypass Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-33117)  
-  **Microsoft Security Response Center (MSRC)** · May 22 · _General awareness item._  
+- [CVE-2026-43619 Rsync < 3.4.3 Symlink Race Condition via Path-Based Syscalls](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-43619)  
+  **Microsoft Security Response Center (MSRC)** · May 23 · _General awareness item._  
 
-- [CVE-2026-34336 Windows DWM Core Library Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-34336)  
-  **Microsoft Security Response Center (MSRC)** · May 22 · _General awareness item._  
+- [CVE-2026-44673 libyang: lyb_read_string() integer overflow → heap buffer overflow](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-44673)  
+  **Microsoft Security Response Center (MSRC)** · May 23 · _General awareness item._  
 
-- [Drupal: Critical SQL injection flaw now targeted in attacks](https://www.bleepingcomputer.com/news/security/drupal-critical-sql-injection-flaw-now-targeted-in-attacks/)  
-  **BleepingComputer** · May 22 · _General awareness item._  
+- [CVE-2026-44390 Unbounded name compression in certain cases causes degradation of service](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-44390)  
+  **Microsoft Security Response Center (MSRC)** · May 23 · _General awareness item._  
 
-- [Ubiquiti patches three max severity UniFi OS vulnerabilities](https://www.bleepingcomputer.com/news/security/ubiquiti-patches-three-max-severity-unifi-os-vulnerabilities/)  
-  **BleepingComputer** · May 22 · _General awareness item._  
+- [CVE-2026-42944 Heap overflow with multiple NSID, COOKIE, PADDING EDNS options](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-42944)  
+  **Microsoft Security Response Center (MSRC)** · May 23 · _General awareness item._  
 
-- [Making Vulnerable Drivers Exploitable Without Hardware - The BYOVD Perspective](https://thehackernews.com/2026/05/making-vulnerable-drivers-exploitable.html)  
-  **The Hacker News** · May 22 · _General awareness item._  
+- [CVE-2026-42923 Degradation of service with unbounded NSEC3 hash calculations](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-42923)  
+  **Microsoft Security Response Center (MSRC)** · May 23 · _General awareness item._  
 
-- [CVE-2026-23207 spi: tegra210-quad: Protect curr_xfer check in IRQ handler](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-23207)  
-  **Microsoft Security Response Center (MSRC)** · May 22 · _General awareness item._  
+- [CVE-2026-40622 Another 'ghost domain names' attack variant](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-40622)  
+  **Microsoft Security Response Center (MSRC)** · May 23 · _General awareness item._  
 
-- [CVE-2026-23225 sched/mmcid: Don't assume CID is CPU owned on mode switch](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-23225)  
-  **Microsoft Security Response Center (MSRC)** · May 22 · _General awareness item._  
+- [CVE-2026-42534 Jostle logic bypass degrades resolution performance](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-42534)  
+  **Microsoft Security Response Center (MSRC)** · May 23 · _General awareness item._  
 
-- [CVE-2025-38636 rv: Use strings in da monitors tracepoints](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-38636)  
-  **Microsoft Security Response Center (MSRC)** · May 22 · _General awareness item._  
+- [CVE-2026-41292 Long list of incoming EDNS options degrades performance](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-41292)  
+  **Microsoft Security Response Center (MSRC)** · May 23 · _General awareness item._  
 
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [An Example of Stack String in High Level Language, (Sat, May 23rd)](https://isc.sans.edu/diary/rss/33008) — SANS Internet Storm Center
 - [Netherlands seizes 800 servers of hosting firm enabling cyberattacks](https://www.bleepingcomputer.com/news/security/netherlands-seizes-800-servers-of-hosting-firm-enabling-cyberattacks/) — BleepingComputer
 - [Ghostwriter Targets Ukraine Government Entities with Prometheus Phishing Malware](https://thehackernews.com/2026/05/ghostwriter-targets-ukraine-government.html) — The Hacker News
 - [Former US execs plead guilty to aiding tech support scammers](https://www.bleepingcomputer.com/news/security/former-us-execs-plead-guilty-to-aiding-tech-support-scammers/) — BleepingComputer
 - [Why Chargebacks are Just One Piece of the Fraud Puzzle](https://www.bleepingcomputer.com/news/security/why-chargebacks-are-just-one-piece-of-the-fraud-puzzle/) — BleepingComputer
 - [Megalodon GitHub Attack Targets 5,561 Repos with Malicious CI/CD Workflows](https://thehackernews.com/2026/05/megalodon-github-attack-targets-5561.html) — The Hacker News
-- [US and Canada arrest and charge suspected Kimwolf botnet admin](https://www.bleepingcomputer.com/news/security/us-and-canada-arrest-and-charge-suspected-kimwolf-botnet-admin/) — BleepingComputer
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 14 critical · 79 important · 33 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 14 critical · 79 important · 34 FYI_
