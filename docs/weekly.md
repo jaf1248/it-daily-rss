@@ -1,25 +1,35 @@
 # IT Weekly Intelligence Briefing
 **Period:** May 16 – May 23, 2026  
-**Generated:** 2026-05-23 07:29 UTC  
-**Items reviewed:** 127  
+**Generated:** 2026-05-23 11:08 UTC  
+**Items reviewed:** 130  
 
 ## ⚡ Top Actions This Week
 
-1. **Validate backups, confirm EDR coverage, and brief incident response team.**  
-   _First VPN Dismantled in Global Takedown Over Use by 25 Ransomware Groups_  
+1. **Audit third-party software dependencies and review vendor access.**  
+   _Laravel-Lang PHP Packages Compromised to Deliver Cross-Platform Credential Stealer_  
    Source: The Hacker News  
 
-2. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _Lawmakers Demand Answers as CISA Tries to Contain Data Leak_  
-   Source: Krebs on Security  
+2. **Apply emergency patch or mitigation now; check vendor advisory for workarounds.**  
+   _Drupal Core SQL Injection Bug Actively Exploited, Added to CISA KEV_  
+   Source: The Hacker News  
 
-3. **Apply emergency patch or mitigation now; check vendor advisory for workarounds.**  
-   _Trend Micro warns of Apex One zero-day exploited in the wild_  
-   Source: BleepingComputer  
+3. **Validate backups, confirm EDR coverage, and brief incident response team.**  
+   _First VPN Dismantled in Global Takedown Over Use by 25 Ransomware Groups_  
+   Source: The Hacker News  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [Laravel-Lang PHP Packages Compromised to Deliver Cross-Platform Credential Stealer](https://thehackernews.com/2026/05/laravel-lang-php-packages-compromised.html)
+**Source:** The Hacker News &nbsp;·&nbsp; **Date:** May 23  
+**Why it matters:** Third-party/software supply chain integrity risk.  
+**Recommended action:** Audit third-party software dependencies and review vendor access.  
+
+### [Drupal Core SQL Injection Bug Actively Exploited, Added to CISA KEV](https://thehackernews.com/2026/05/drupal-core-sql-injection-bug-actively.html)
+**Source:** The Hacker News &nbsp;·&nbsp; **Date:** May 23  
+**Why it matters:** General awareness item.  
+**Recommended action:** Apply emergency patch or mitigation now; check vendor advisory for workarounds.  
 
 ### [First VPN Dismantled in Global Takedown Over Use by 25 Ransomware Groups](https://thehackernews.com/2026/05/first-vpn-dismantled-in-global-takedown.html)
 **Source:** The Hacker News &nbsp;·&nbsp; **Date:** May 22  
@@ -41,16 +51,6 @@
 **Why it matters:** Elevated ransomware risk across the sector.  
 **Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
 
-### [Microsoft Warns of Two Actively Exploited Defender Vulnerabilities](https://thehackernews.com/2026/05/microsoft-warns-of-two-actively.html)
-**Source:** The Hacker News &nbsp;·&nbsp; **Date:** May 21  
-**Why it matters:** General awareness item.  
-**Recommended action:** Apply emergency patch or mitigation now; check vendor advisory for workarounds.  
-
-### [GitHub Internal Repositories Breached via Malicious Nx Console VS Code Extension](https://thehackernews.com/2026/05/github-internal-repositories-breached.html)
-**Source:** The Hacker News &nbsp;·&nbsp; **Date:** May 21  
-**Why it matters:** Potential credential or data exposure.  
-**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
-
 ---
 
 ## 🟠 Important — Review This Week
@@ -58,25 +58,25 @@
 - [CVE-2026-43619 Rsync < 3.4.3 Symlink Race Condition via Path-Based Syscalls](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-43619)  
   **Microsoft Security Response Center (MSRC)** · May 23 · _General awareness item._  
 
+- [CVE-2026-7246 Pallets Click contains a command injection via Unsanitized Filename "click.edit()"](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-7246)  
+  **Microsoft Security Response Center (MSRC)** · May 23 · _General awareness item._  
+
 - [CVE-2026-44673 libyang: lyb_read_string() integer overflow → heap buffer overflow](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-44673)  
   **Microsoft Security Response Center (MSRC)** · May 23 · _General awareness item._  
 
+- [CVE-2025-68768 inet: frags: flush pending skbs in fqdir_pre_exit()](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-68768)  
+  **Microsoft Security Response Center (MSRC)** · May 23 · _General awareness item._  
+
 - [CVE-2026-44390 Unbounded name compression in certain cases causes degradation of service](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-44390)  
+  **Microsoft Security Response Center (MSRC)** · May 23 · _General awareness item._  
+
+- [CVE-2025-51480 Path Traversal vulnerability in onnx.external_data_helper.save_external_data in ONNX 1.17.0 allows attackers to overwrite arbitrary files by supplying crafted external_data.location paths containing traversal sequences, bypassing intended directory restrictions.](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-51480)  
   **Microsoft Security Response Center (MSRC)** · May 23 · _General awareness item._  
 
 - [CVE-2026-42944 Heap overflow with multiple NSID, COOKIE, PADDING EDNS options](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-42944)  
   **Microsoft Security Response Center (MSRC)** · May 23 · _General awareness item._  
 
 - [CVE-2026-42923 Degradation of service with unbounded NSEC3 hash calculations](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-42923)  
-  **Microsoft Security Response Center (MSRC)** · May 23 · _General awareness item._  
-
-- [CVE-2026-40622 Another 'ghost domain names' attack variant](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-40622)  
-  **Microsoft Security Response Center (MSRC)** · May 23 · _General awareness item._  
-
-- [CVE-2026-42534 Jostle logic bypass degrades resolution performance](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-42534)  
-  **Microsoft Security Response Center (MSRC)** · May 23 · _General awareness item._  
-
-- [CVE-2026-41292 Long list of incoming EDNS options degrades performance](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-41292)  
   **Microsoft Security Response Center (MSRC)** · May 23 · _General awareness item._  
 
 ---
@@ -92,4 +92,4 @@
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 14 critical · 79 important · 34 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 16 critical · 80 important · 34 FYI_
