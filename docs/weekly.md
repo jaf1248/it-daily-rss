@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
-**Period:** May 18 – May 25, 2026  
-**Generated:** 2026-05-25 22:58 UTC  
+**Period:** May 19 – May 26, 2026  
+**Generated:** 2026-05-26 00:10 UTC  
 **Items reviewed:** 128  
 
 ## ⚡ Top Actions This Week
@@ -83,12 +83,12 @@
 
 ## 🔵 FYI — General Awareness
 
+- [Possible ACR Stealer From Page Impersonating Claude, (Tue, May 26th)](https://isc.sans.edu/diary/rss/33018) — SANS Internet Storm Center
 - [Anthropic’s restricted Claude Mythos model may be coming to Claude Code](https://www.bleepingcomputer.com/news/artificial-intelligence/anthropics-restricted-claude-mythos-model-may-be-coming-to-claude-code/) — BleepingComputer
 - [Microsoft Access VBA, (Mon, May 25th)](https://isc.sans.edu/diary/rss/33012) — SANS Internet Storm Center
 - [TeamPCP Supply Chain Campaign: Activity Through 2026-05-24, (Mon, May 25th)](https://isc.sans.edu/diary/rss/33016) — SANS Internet Storm Center
 - [TeamPCP Supply Chain Campaign: Activity Through 2026-05-24, (Mon, May 25th)](https://isc.sans.edu/diary/rss/33014) — SANS Internet Storm Center
 - [Netherlands Seizes 800 Servers, Arrests 2 for Aiding Cyberattacks](https://krebsonsecurity.com/2026/05/netherlands-seizes-800-servers-arrests-2-for-aiding-cyberattacks/) — Krebs on Security
-- [FBI warns of Kali365 phishing service targeting Microsoft 365 accounts](https://www.bleepingcomputer.com/news/security/fbi-warns-of-kali365-phishing-service-targeting-microsoft-365-accounts/) — BleepingComputer
 
 ---
 
