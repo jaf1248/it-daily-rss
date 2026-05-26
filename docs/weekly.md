@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
 **Period:** May 19 – May 26, 2026  
-**Generated:** 2026-05-26 16:41 UTC  
+**Generated:** 2026-05-26 19:18 UTC  
 **Items reviewed:** 127  
 
 ## ⚡ Top Actions This Week
@@ -61,6 +61,12 @@
 - [CVE-2026-45498 Microsoft Defender Denial of Service Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45498)  
   **Microsoft Security Response Center (MSRC)** · May 26 · _General awareness item._  
 
+- [CVE-2026-41091 Microsoft Defender Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-41091)  
+  **Microsoft Security Response Center (MSRC)** · May 26 · _General awareness item._  
+
+- [CVE-2026-45584 Microsoft Defender Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45584)  
+  **Microsoft Security Response Center (MSRC)** · May 26 · _General awareness item._  
+
 - [Webinar: Too many tools are slowing network incident response](https://www.bleepingcomputer.com/news/security/webinar-too-many-tools-are-slowing-network-incident-response/)  
   **BleepingComputer** · May 26 · _General awareness item._  
 
@@ -71,12 +77,6 @@
   **The Hacker News** · May 26 · _General awareness item._  
 
 - [CVE-2026-1502 HTTP client proxy tunnel headers not validated for CR/LF](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-1502)  
-  **Microsoft Security Response Center (MSRC)** · May 26 · _General awareness item._  
-
-- [CVE-2025-1176 GNU Binutils ld elflink.c _bfd_elf_gc_mark_rsec heap-based overflow](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-1176)  
-  **Microsoft Security Response Center (MSRC)** · May 26 · _General awareness item._  
-
-- [CVE-2025-1178 GNU Binutils ld libbfd.c bfd_putl64 memory corruption](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-1178)  
   **Microsoft Security Response Center (MSRC)** · May 26 · _General awareness item._  
 
 ---
