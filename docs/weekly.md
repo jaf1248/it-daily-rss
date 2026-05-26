@@ -1,25 +1,30 @@
 # IT Weekly Intelligence Briefing
 **Period:** May 19 – May 26, 2026  
-**Generated:** 2026-05-26 19:18 UTC  
+**Generated:** 2026-05-26 21:42 UTC  
 **Items reviewed:** 127  
 
 ## ⚡ Top Actions This Week
 
-1. **Apply emergency patch or mitigation now; check vendor advisory for workarounds.**  
+1. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
+   _Charter confirms data breach after ShinyHunters extortion threat_  
+   Source: BleepingComputer  
+
+2. **Apply emergency patch or mitigation now; check vendor advisory for workarounds.**  
    _CISA orders feds to patch actively exploited Drupal vulnerability_  
    Source: BleepingComputer  
 
-2. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
+3. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
    _7-Eleven data breach exposes personal information of 185,000 people_  
    Source: BleepingComputer  
-
-3. **Audit third-party software dependencies and review vendor access.**  
-   _TrapDoor Supply Chain Attack Spreads Credential-Stealing Malware via npm, PyPI, and CratesIO_  
-   Source: The Hacker News  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [Charter confirms data breach after ShinyHunters extortion threat](https://www.bleepingcomputer.com/news/security/charter-confirms-data-breach-after-shinyhunters-extortion-threat/)
+**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** May 26  
+**Why it matters:** Potential credential or data exposure.  
+**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
 ### [CISA orders feds to patch actively exploited Drupal vulnerability](https://www.bleepingcomputer.com/news/security/cisa-orders-feds-to-patch-actively-exploited-drupal-vulnerability/)
 **Source:** BleepingComputer &nbsp;·&nbsp; **Date:** May 26  
@@ -46,14 +51,12 @@
 **Why it matters:** Third-party/software supply chain integrity risk.  
 **Recommended action:** Audit third-party software dependencies and review vendor access.  
 
-### [Packagist Supply Chain Attack Infects 8 Packages Using GitHub-Hosted Linux Malware](https://thehackernews.com/2026/05/packagist-supply-chain-attack-infects-8.html)
-**Source:** The Hacker News &nbsp;·&nbsp; **Date:** May 23  
-**Why it matters:** Third-party/software supply chain integrity risk.  
-**Recommended action:** Audit third-party software dependencies and review vendor access.  
-
 ---
 
 ## 🟠 Important — Review This Week
+
+- [KnowledgeDeliver flaw exploited as a zero-day to install web shells](https://www.bleepingcomputer.com/news/security/knowledgedeliver-flaw-exploited-as-a-zero-day-to-install-web-shells/)  
+  **BleepingComputer** · May 26 · _General awareness item._  
 
 - [CVE-2026-45495 Microsoft Edge (Chromium-based) Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45495)  
   **Microsoft Security Response Center (MSRC)** · May 26 · _General awareness item._  
@@ -75,9 +78,6 @@
 
 - [CERT-In Recommends 12-Hour Patching for Internet-Facing Flaws Amid AI-Assisted Attacks](https://thehackernews.com/2026/05/cert-in-mandates-12-hour-patching-for.html)  
   **The Hacker News** · May 26 · _General awareness item._  
-
-- [CVE-2026-1502 HTTP client proxy tunnel headers not validated for CR/LF](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-1502)  
-  **Microsoft Security Response Center (MSRC)** · May 26 · _General awareness item._  
 
 ---
 
