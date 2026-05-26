@@ -1,7 +1,7 @@
 # IT Weekly Intelligence Briefing
 **Period:** May 19 – May 26, 2026  
-**Generated:** 2026-05-26 09:51 UTC  
-**Items reviewed:** 126  
+**Generated:** 2026-05-26 16:41 UTC  
+**Items reviewed:** 127  
 
 ## ⚡ Top Actions This Week
 
@@ -55,6 +55,21 @@
 
 ## 🟠 Important — Review This Week
 
+- [CVE-2026-45495 Microsoft Edge (Chromium-based) Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45495)  
+  **Microsoft Security Response Center (MSRC)** · May 26 · _General awareness item._  
+
+- [CVE-2026-45498 Microsoft Defender Denial of Service Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45498)  
+  **Microsoft Security Response Center (MSRC)** · May 26 · _General awareness item._  
+
+- [Webinar: Too many tools are slowing network incident response](https://www.bleepingcomputer.com/news/security/webinar-too-many-tools-are-slowing-network-incident-response/)  
+  **BleepingComputer** · May 26 · _General awareness item._  
+
+- [Microsoft Patches SharePoint RCE Flaw CVE-2026-45659 Across Server Versions](https://thehackernews.com/2026/05/microsoft-patches-sharepoint-rce-flaw.html)  
+  **The Hacker News** · May 26 · _General awareness item._  
+
+- [CERT-In Recommends 12-Hour Patching for Internet-Facing Flaws Amid AI-Assisted Attacks](https://thehackernews.com/2026/05/cert-in-mandates-12-hour-patching-for.html)  
+  **The Hacker News** · May 26 · _General awareness item._  
+
 - [CVE-2026-1502 HTTP client proxy tunnel headers not validated for CR/LF](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-1502)  
   **Microsoft Security Response Center (MSRC)** · May 26 · _General awareness item._  
 
@@ -64,32 +79,17 @@
 - [CVE-2025-1178 GNU Binutils ld libbfd.c bfd_putl64 memory corruption](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-1178)  
   **Microsoft Security Response Center (MSRC)** · May 26 · _General awareness item._  
 
-- [CVE-2025-3198 GNU Binutils objdump bucomm.c display_info memory leak](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-3198)  
-  **Microsoft Security Response Center (MSRC)** · May 26 · _General awareness item._  
-
-- [CVE-2026-44283 etcd: Read access via PrevKv in etcd transactions may bypass RBAC authorization checks](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-44283)  
-  **Microsoft Security Response Center (MSRC)** · May 26 · _General awareness item._  
-
-- [CVE-2026-43968 CR Injection in SSE Encoder Enables Event Splitting via cow_sse:event/1](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-43968)  
-  **Microsoft Security Response Center (MSRC)** · May 26 · _General awareness item._  
-
-- [CVE-2026-7790 Unbounded chunk-size hex digits in cowlib cause quadratic CPU and memory DoS](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-7790)  
-  **Microsoft Security Response Center (MSRC)** · May 26 · _General awareness item._  
-
-- [CVE-2026-33814 Infinite loop in HTTP/2 transport when given bad SETTINGS_MAX_FRAME_SIZE in net/http/internal/http2 in golang.org/x/net](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-33814)  
-  **Microsoft Security Response Center (MSRC)** · May 26 · _General awareness item._  
-
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [MuddyWater Uses DLL Side-Loading in Espionage Campaign Targeting 9 Countries](https://thehackernews.com/2026/05/muddywater-uses-dll-side-loading-in.html) — The Hacker News
+- [How Varonis Atlas integrates Claude Compliance API for AI governance](https://www.bleepingcomputer.com/news/security/how-varonis-atlas-integrates-claude-compliance-api-for-ai-governance/) — BleepingComputer
+- [Microsoft Defender can now automatically isolate hacked endpoints](https://www.bleepingcomputer.com/news/microsoft/microsoft-defender-can-now-automatically-isolate-hacked-endpoints/) — BleepingComputer
+- [[THN Webinar] New AI DDoS Attacks Are Smarter. Learn How to Fight Back](https://thehackernews.com/2026/05/new-ai-ddos-attacks-are-smarter-learn.html) — The Hacker News
+- [MFA Prompt Bombing: Why Your Second Factor Isn't Saving You](https://thehackernews.com/2026/05/mfa-prompt-bombing-why-your-second.html) — The Hacker News
 - [Iranian Hackers Deploy MiniFast and MiniJunk V2 via Phishing and SEO Poisoning](https://thehackernews.com/2026/05/iranian-hackers-deploy-minifast-and.html) — The Hacker News
-- [ISC Stormcast For Tuesday, May 26th, 2026 https://isc.sans.edu/podcastdetail/9944, (Tue, May 26th)](https://isc.sans.edu/diary/rss/33020) — SANS Internet Storm Center
-- [Possible ACR Stealer From Page Impersonating Claude, (Tue, May 26th)](https://isc.sans.edu/diary/rss/33018) — SANS Internet Storm Center
-- [Anthropic’s restricted Claude Mythos model may be coming to Claude Code](https://www.bleepingcomputer.com/news/artificial-intelligence/anthropics-restricted-claude-mythos-model-may-be-coming-to-claude-code/) — BleepingComputer
-- [Microsoft Access VBA, (Mon, May 25th)](https://isc.sans.edu/diary/rss/33012) — SANS Internet Storm Center
-- [TeamPCP Supply Chain Campaign: Activity Through 2026-05-24, (Mon, May 25th)](https://isc.sans.edu/diary/rss/33016) — SANS Internet Storm Center
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 16 critical · 77 important · 33 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 16 critical · 77 important · 34 FYI_
