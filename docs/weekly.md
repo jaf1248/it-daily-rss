@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
 **Period:** May 19 – May 26, 2026  
-**Generated:** 2026-05-26 21:42 UTC  
+**Generated:** 2026-05-26 23:08 UTC  
 **Items reviewed:** 127  
 
 ## ⚡ Top Actions This Week
@@ -70,13 +70,13 @@
 - [CVE-2026-45584 Microsoft Defender Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45584)  
   **Microsoft Security Response Center (MSRC)** · May 26 · _General awareness item._  
 
+- [CVE-2026-45659 Microsoft SharePoint Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45659)  
+  **Microsoft Security Response Center (MSRC)** · May 26 · _General awareness item._  
+
 - [Webinar: Too many tools are slowing network incident response](https://www.bleepingcomputer.com/news/security/webinar-too-many-tools-are-slowing-network-incident-response/)  
   **BleepingComputer** · May 26 · _General awareness item._  
 
 - [Microsoft Patches SharePoint RCE Flaw CVE-2026-45659 Across Server Versions](https://thehackernews.com/2026/05/microsoft-patches-sharepoint-rce-flaw.html)  
-  **The Hacker News** · May 26 · _General awareness item._  
-
-- [CERT-In Recommends 12-Hour Patching for Internet-Facing Flaws Amid AI-Assisted Attacks](https://thehackernews.com/2026/05/cert-in-mandates-12-hour-patching-for.html)  
   **The Hacker News** · May 26 · _General awareness item._  
 
 ---
