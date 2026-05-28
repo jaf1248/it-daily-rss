@@ -1,25 +1,30 @@
 # IT Weekly Intelligence Briefing
 **Period:** May 21 – May 28, 2026  
-**Generated:** 2026-05-28 06:54 UTC  
-**Items reviewed:** 125  
+**Generated:** 2026-05-28 10:53 UTC  
+**Items reviewed:** 124  
 
 ## ⚡ Top Actions This Week
 
-1. **Validate backups, confirm EDR coverage, and brief incident response team.**  
+1. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
+   _Carnival Cruise confirms data breach affecting nearly 6 million people_  
+   Source: BleepingComputer  
+
+2. **Validate backups, confirm EDR coverage, and brief incident response team.**  
    _Reconstructing an Akira Ransomware Kill Chain from Perimeter and Endpoint Logs, (Wed, May 27th)_  
    Source: SANS Internet Storm Center  
 
-2. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
+3. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
    _Can you enforce strong Active Directory password rules without frustrating users?_  
    Source: BleepingComputer  
-
-3. **Audit third-party software dependencies and review vendor access.**  
-   _GlassWorm Malware Takedown Disrupts Developer Supply Chain Attack Infrastructure_  
-   Source: The Hacker News  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [Carnival Cruise confirms data breach affecting nearly 6 million people](https://www.bleepingcomputer.com/news/security/carnival-cruise-confirms-data-breach-affecting-nearly-6-million-people/)
+**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** May 28  
+**Why it matters:** Potential credential or data exposure.  
+**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
 ### [Reconstructing an Akira Ransomware Kill Chain from Perimeter and Endpoint Logs, (Wed, May 27th)](https://isc.sans.edu/diary/rss/33024)
 **Source:** SANS Internet Storm Center &nbsp;·&nbsp; **Date:** May 27  
@@ -46,50 +51,45 @@
 **Why it matters:** Potential credential or data exposure.  
 **Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
-### [CISA orders feds to patch actively exploited Drupal vulnerability](https://www.bleepingcomputer.com/news/security/cisa-orders-feds-to-patch-actively-exploited-drupal-vulnerability/)
-**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** May 26  
-**Why it matters:** General awareness item.  
-**Recommended action:** Apply emergency patch or mitigation now; check vendor advisory for workarounds.  
-
 ---
 
 ## 🟠 Important — Review This Week
 
-- [3 SOC Steps that Shut Down Incident Risks Early](https://thehackernews.com/2026/05/3-soc-steps-that-shut-down-incident.html)  
-  **The Hacker News** · May 27 · _General awareness item._  
+- [CVE-2026-5222 Cargo can be coerced to share credentials between registries](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-5222)  
+  **Microsoft Security Response Center (MSRC)** · May 28 · _General awareness item._  
 
-- [Gitea Vulnerability Exposes Private Container Images without Authentication](https://thehackernews.com/2026/05/gitea-vulnerability-exposes-private.html)  
-  **The Hacker News** · May 27 · _General awareness item._  
+- [CVE-2026-9149 Libsolv: heap buffer overflow in libsolv repo_add_solv via negative maxsize from crafted .solv file](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-9149)  
+  **Microsoft Security Response Center (MSRC)** · May 28 · _General awareness item._  
 
-- [CVE-2026-40225 In udev in systemd before 260, local root execution can occur via malicious hardware devices and unsanitized kernel output.](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-40225)  
-  **Microsoft Security Response Center (MSRC)** · May 27 · _General awareness item._  
+- [CVE-2026-9150 Libsolv: stack-based buffer overflow in libsolv's debian metadata parser when handling sha384/sha512 checksums](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-9150)  
+  **Microsoft Security Response Center (MSRC)** · May 28 · _General awareness item._  
 
-- [CVE-2026-40226 In nspawn in systemd 233 through 259 before 260, an escape-to-host action can occur via a crafted optional config file.](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-40226)  
-  **Microsoft Security Response Center (MSRC)** · May 27 · _General awareness item._  
+- [CVE-2026-46597 Invoking  byte arithmetic causes underflow and panic in golang.org/x/crypto/ssh](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-46597)  
+  **Microsoft Security Response Center (MSRC)** · May 28 · _General awareness item._  
 
-- [CVE-2026-8711 NGINX JavaScript vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-8711)  
-  **Microsoft Security Response Center (MSRC)** · May 27 · _General awareness item._  
+- [CVE-2026-46598 Invoking  pathological inputs can lead to client panic in golang.org/x/crypto/ssh/agent](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-46598)  
+  **Microsoft Security Response Center (MSRC)** · May 28 · _General awareness item._  
 
-- [CVE-2026-4890 CVE-2026-4890](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-4890)  
-  **Microsoft Security Response Center (MSRC)** · May 27 · _General awareness item._  
+- [CVE-2026-27136 Invoking  duplicate attributes can cause XSS in golang.org/x/net/html](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-27136)  
+  **Microsoft Security Response Center (MSRC)** · May 28 · _General awareness item._  
 
-- [CVE-2026-5172 CVE-2026-5172](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-5172)  
-  **Microsoft Security Response Center (MSRC)** · May 27 · _General awareness item._  
+- [CVE-2026-39828 Invoking  bypass of certificate restrictions in golang.org/x/crypto/ssh](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-39828)  
+  **Microsoft Security Response Center (MSRC)** · May 28 · _General awareness item._  
 
-- [CVE-2026-2291 CVE-2026-2291](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-2291)  
-  **Microsoft Security Response Center (MSRC)** · May 27 · _General awareness item._  
+- [CVE-2026-39835 Invoking  server panic during CheckHostKey/Authenticate in golang.org/x/crypto/ssh](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-39835)  
+  **Microsoft Security Response Center (MSRC)** · May 28 · _General awareness item._  
 
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [Sextortionist sentenced to 33 years for targeting 145 children](https://www.bleepingcomputer.com/news/security/sextortionist-sentenced-to-33-years-for-targeting-145-children/) — BleepingComputer
+- [JINX-0164 Targets Cryptocurrency Firms with Fake Recruiter Lures and macOS Malware](https://thehackernews.com/2026/05/jinx-0164-targets-cryptocurrency-firms.html) — The Hacker News
 - [ISC Stormcast For Thursday, May 28th, 2026 https://isc.sans.edu/podcastdetail/9948, (Thu, May 28th)](https://isc.sans.edu/diary/rss/33028) — SANS Internet Storm Center
 - [GPU mining malware spreads via SEO poisoning, AI chatbots](https://www.bleepingcomputer.com/news/security/gpu-mining-malware-spreads-via-seo-poisoning-ai-chatbots/) — BleepingComputer
 - [Grandoreiro Malware and BTMOB RAT Campaigns Target Windows and Android Users](https://thehackernews.com/2026/05/grandoreiro-malware-and-btmob-rat.html) — The Hacker News
 - [Malicious npm Package Stole Files From Claude AI User Directory via GitHub](https://thehackernews.com/2026/05/malicious-npm-package-stole-files-from.html) — The Hacker News
-- [5 Steps to Managing Shadow AI Tools Without Slowing Down Employees](https://thehackernews.com/2026/05/5-steps-to-managing-shadow-ai-tools.html) — The Hacker News
-- [Glassworm botnet disrupted after resilient C2 infrastructure takedown](https://www.bleepingcomputer.com/news/security/glassworm-botnet-disrupted-after-resilient-c2-infrastructure-takedown/) — BleepingComputer
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 15 critical · 77 important · 33 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 15 critical · 75 important · 34 FYI_
