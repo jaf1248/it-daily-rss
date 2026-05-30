@@ -1,7 +1,7 @@
 # IT Weekly Intelligence Briefing
 **Period:** May 23 – May 30, 2026  
-**Generated:** 2026-05-30 04:51 UTC  
-**Items reviewed:** 123  
+**Generated:** 2026-05-30 07:39 UTC  
+**Items reviewed:** 122  
 
 ## ⚡ Top Actions This Week
 
@@ -55,29 +55,29 @@
 
 ## 🟠 Important — Review This Week
 
-- [ChatGPT share links abused to host fake outage pages to deliver malware](https://www.bleepingcomputer.com/news/security/chatgpt-share-links-abused-to-host-fake-outage-pages-to-deliver-malware/)  
-  **BleepingComputer** · May 29 · _Service continuity risk to users._  
+- [CVE-2026-46150 fanotify: fix false positive on permission events](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-46150)  
+  **Microsoft Security Response Center (MSRC)** · May 30 · _General awareness item._  
 
-- [ChatGPhish Vulnerability Turns ChatGPT Web Summaries Into a Phishing Surface](https://thehackernews.com/2026/05/chatgphish-vulnerability-turns-chatgpt.html)  
-  **The Hacker News** · May 29 · _General awareness item._  
+- [CVE-2026-46241 spi: mpc52xx: fix use-after-free on registration failure](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-46241)  
+  **Microsoft Security Response Center (MSRC)** · May 30 · _General awareness item._  
 
-- [Attackers Use LLM Agent for Post-Exploitation After Marimo CVE-2026-39987 Exploit](https://thehackernews.com/2026/05/attackers-use-llm-agent-for-post.html)  
-  **The Hacker News** · May 29 · _General awareness item._  
+- [CVE-2026-46112 RDMA/hns: Fix unlocked call to hns_roce_qp_remove()](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-46112)  
+  **Microsoft Security Response Center (MSRC)** · May 30 · _General awareness item._  
 
-- [CVE-2026-26168 Windows Ancillary Function Driver for WinSock Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-26168)  
-  **Microsoft Security Response Center (MSRC)** · May 29 · _General awareness item._  
+- [CVE-2026-46114 RDMA/rxe: Reject non-8-byte ATOMIC_WRITE payloads](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-46114)  
+  **Microsoft Security Response Center (MSRC)** · May 30 · _General awareness item._  
 
-- [CVE-2026-24293 Windows Ancillary Function Driver for WinSock Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-24293)  
-  **Microsoft Security Response Center (MSRC)** · May 29 · _General awareness item._  
+- [CVE-2026-46125 wifi: mac80211: remove station if connection prep fails](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-46125)  
+  **Microsoft Security Response Center (MSRC)** · May 30 · _General awareness item._  
 
-- [CVE-2026-41088 Windows Ancillary Function Driver for WinSock Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-41088)  
-  **Microsoft Security Response Center (MSRC)** · May 29 · _General awareness item._  
+- [CVE-2026-46152 wifi: mac80211: drop stray 'static' from fast-RX rx_result](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-46152)  
+  **Microsoft Security Response Center (MSRC)** · May 30 · _General awareness item._  
 
-- [CVE-2026-42898 Microsoft Dynamics 365 On-Premises Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-42898)  
-  **Microsoft Security Response Center (MSRC)** · May 29 · _General awareness item._  
+- [CVE-2026-46133 RDMA/rxe: Reject unknown opcodes before ICRC processing](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-46133)  
+  **Microsoft Security Response Center (MSRC)** · May 30 · _General awareness item._  
 
-- [CVE-2026-46086 net: bridge: use a stable FDB dst snapshot in RCU readers](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-46086)  
-  **Microsoft Security Response Center (MSRC)** · May 29 · _General awareness item._  
+- [CVE-2026-46108 ipmi:si: Return state to normal if message allocation fails](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-46108)  
+  **Microsoft Security Response Center (MSRC)** · May 30 · _General awareness item._  
 
 ---
 
@@ -86,10 +86,10 @@
 - [From $5 Attacks to Botnet-Powered Platforms: Inside the DDoS-as-a- Service Market](https://www.bleepingcomputer.com/news/security/from-5-attacks-to-botnet-powered-platforms-inside-the-ddos-as-a-service-market/) — BleepingComputer
 - [Dutch govt disrupts malware botnet with 17 million infected devices](https://www.bleepingcomputer.com/news/security/dutch-govt-disrupts-malware-botnet-with-17-million-infected-devices/) — BleepingComputer
 - [Google Chrome adds session cookie theft protection for all users](https://www.bleepingcomputer.com/news/security/google-chrome-adds-session-cookie-theft-protection-for-all-users/) — BleepingComputer
-- [New Russian-Linked GREYVIBE Targets Ukraine with AI-Powered Cyberattacks](https://thehackernews.com/2026/05/new-russian-linked-greyvibe-targets.html) — The Hacker News
+- [New Russia-Linked GREYVIBE Targets Ukraine with AI-Powered Cyberattacks](https://thehackernews.com/2026/05/new-russian-linked-greyvibe-targets.html) — The Hacker News
 - [Man sent to prison for selling data of 7 millions elderly Americans](https://www.bleepingcomputer.com/news/security/man-sent-to-prison-for-selling-data-of-7-millions-elderly-americans/) — BleepingComputer
 - [What 2,000 Exposed Vibe-Coded Apps Reveal About the Limits of Most Security Stacks](https://thehackernews.com/2026/05/what-2000-exposed-vibe-coded-apps.html) — The Hacker News
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 9 critical · 76 important · 38 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 8 critical · 76 important · 38 FYI_
