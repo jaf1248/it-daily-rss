@@ -3,8 +3,99 @@
 <channel>
   <title>Joe — VP of IT Briefing</title>
   <description>Leadership-focused IT risk, vendors, pricing, licensing, and industry context.</description>
-  <lastBuildDate>Sat, 30 May 2026 00:07:51 +0000</lastBuildDate>
+  <lastBuildDate>Sat, 30 May 2026 04:51:20 +0000</lastBuildDate>
   
+<item>
+  <title>🔵 The DOD&#x27;s $9.7B contract with Dell has raised eyebrows as a potential payback for Michael and Susan Dell&#x27;s $6.25B donation to 25M US children&#x27;s Trump Accounts (CNBC)</title>
+  <link>https://www.techmeme.com/260530/p1#a260530p1</link>
+  <pubDate>Sat, 30 May 2026 04:40:00 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://www.cnbc.com/2026/05/28/michael-dell-trump-accounts-dod.html"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260530/i1.jpg" vspace="4" /></a>
+<p><a href="https://www.techmeme.com/260530/p1#a260530p1" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="http://www.cnbc.com/">CNBC</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://www.cnbc.com/2026/05/28/michael-dell-trump-accounts-dod.html">The DOD's $9.7B contract with Dell has raised eyebrows as a potential payback for Michael and Susan Dell's $6.25B donation to 25M US children's Trump Accounts</a></b></span>&nbsp; &mdash;&nbsp; Michael Dell bought into President Donald Trump's second term early.&nbsp; Now his hardware company, Dell Technologies &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Russia-aligned crime group Greyvibe extensively uses AI in attacks</title>
+  <link>https://www.csoonline.com/article/4178879/russia-aligned-crime-group-greyvibe-extensively-uses-ai-in-attacks.html</link>
+  <pubDate>Sat, 30 May 2026 00:22:14 +0000</pubDate>
+  <source>CSO Online</source>
+  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<p>Researchers have uncovered a previously undocumented Russian group that makes extensive use of large language models (LLMs) in its attacks against private, government, and military organizations in Ukraine. It uses a variety of attack vectors along with custom malware, with the goal of intelligence gathering for the ongoing war.</p>
+
+
+
+<p>Dubbed Greyvibe by researchers from WithSecure, the group has shown systematic use of generative AI across all stages of its operations, from crafting spear phishing lures and malicious scripts to full on malware development and setting up of backend infrastructure.</p>
+
+
+
+<p>“While the activities align with Russian state interests, several observed indicators suggest the group has ties to the broader cybercrime ecosystem, with the group potentially involving current or former cybercriminal actors,” the WithSecure researchers <a href="https://labs.withsecure.com/publications/greyvibe" rel="noreferrer noopener" target="_blank">said in their report</a>.</p>
+
+
+
+<h2 class="wp-block-heading" id="shifting-attack-vectors">Shifting attack vectors</h2>
+
+
+
+<p>Greyvibe’s first campaign was launched in August 2025, with a series of spear phishing emails that purported to come from Ukrainian officials and government agencies including the Kyiv City, the Main Directorate of the State Emergency, and the State Service of Special Communications and Information Protection.</p>
+
+
+
+<p>The emails included links to ZIP and RAR archives, hosted on Google Drive and a service called 4sync, that contained malware loaders written in Python and JavaScript. The final payload was a custom malware program developed by the group that the WithSecure researchers dubbed PhantomRelay.</p>
+
+
+
+<p>In another attack in October, the group experimented with ClickFix-style attacks on fake CloudFlare CAPTCHA pages. These attacks instructed users to open the Windows Run dialog and paste in malicious commands.</p>
+
+
+
+<p>Greyvibe also set up fake adult club websites in Ukrainian, as well as fake websites for charities claiming to support the Ukrainian military with FPV drones and UAVs. These attacks distributed several malware programs for both Android devices (FallSpy) and Windows (PhantomRelay and LegionRelay).</p>
+
+
+
+<p>The researchers also tracked a website in Russian that they believe was part of the group’s operations; it referenced hard-coded telephone exchange numbers for secure telecommunications that are typically used by the Russian military.</p>
+
+
+
+<p>“The intended victimology of this activity remains unclear,” the researchers said. “However, the most plausible hypothesis is that the lure was designed to deceive Ukrainian military personnel by presenting the illusion of access to a Russian military terminal.”</p>
+
+
+
+<h2 class="wp-block-heading" id="custom-malware-developed-using-llms">Custom malware developed using LLMs</h2>
+
+
+
+<p>The PhantomRelay malware program is a remote access trojan (RAT) written in PowerShell that can execute additional custom scripts received from the command-and-control (C2) server. While variants of this program have been observed in activity that might be unrelated to Greyvibe, the group completely rewrote the tool and created a version that was exclusively used in its own operations.</p>
+
+
+
+<p>LegionRelay is another PowerShell-based RAT that can similarly execute commands and scripts received from the C2 server; it is used for file enumeration, file exfiltration, screenshot capture, browser data theft, Telegram and WhatsApp data exfiltration, RDP access setup and other actions.</p>
+
+
+
+<p>FallSpy is an Android spyware program that can steal contacts, call logs, a list of installed applications, SIM-linked phone numbers, device and network information, Wi-Fi SSID, the phone’s last known location, its public IP address, and media files.</p>
+
+
+
+<p>Finally, a series of custom scripts for obfuscating and loading malware was also observed: LOOKVALPS (PowerShell), LOOKVALJS (JavaScript), DAYLIGHT (PowerShell), and TEASOUP (JavaScript).</p>
+
+
+
+<p>The WithSecure researchers have determined, with moderate confidence, that several of these custom tools were developed with the help of LLMs. LegionRelay in particular, as well as the background infrastructure serving it, show strong indicators of AI generation. The researchers believe some of the platforms used by the attackers include Ideogram AI, ChatGPT and Google Gemini.</p>
+
+
+
+<p>“Greyvibe appears to use AI not only for isolated development tasks, but across multiple operational phases,” the researchers said. “This likely enables the group to compensate for capability gaps, accelerate development cycles, and potentially reduce historical backlinks to prior activity. Given this extensive use, we expect the group’s tradecraft to continue evolving and diversifying, likely increasing the complexity of continuous detection, tracking, and attribution.”</p>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+</item>
+
 <item>
   <title>🟠 Microsoft and security researcher’s dueling posts about cybersecurity disclosures get nasty</title>
   <link>https://www.csoonline.com/article/4178869/microsoft-and-security-researchers-dueling-posts-about-cybersecurity-disclosures-get-nasty.html</link>
@@ -131,7 +222,7 @@
 
 
 <p>“What concerns me is that these disputes appear to be becoming more public, more adversarial, and more personal. Once security discussions shift from technical facts to questions of intent, reputation, and motivation, customer protection risks becoming secondary to the conflict itself.”</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
 </item>
 
 <item>
@@ -141,7 +232,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: Could impact email access or mail flow — monitor delivery and client issues.</b><br/><a href="https://www.reuters.com/legal/government/coinbase-kalshi-bring-regulated-perpetual-crypto-futures-us-investors-2026-05-29/"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260529/i32.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260529/p32#a260529p32" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Pritam Biswas / <a href="http://www.reuters.com/">Reuters</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.reuters.com/legal/government/coinbase-kalshi-bring-regulated-perpetual-crypto-futures-us-investors-2026-05-29/">Coinbase and Kalshi introduce perpetual crypto futures, marking the first time the contracts will be available to US investors via domestic, regulated exchanges</a></b></span>&nbsp; &mdash;&nbsp; Cryptocurrency exchange Coinbase (COIN.O) and prediction markets platform Kalshi said on Friday they are introducing perpetual crypto futures &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.reuters.com/legal/government/coinbase-kalshi-bring-regulated-perpetual-crypto-futures-us-investors-2026-05-29/">Coinbase and Kalshi introduce perpetual crypto futures, marking the first time the contracts will be available to US investors via domestic, regulated exchanges</a></b></span>&nbsp; &mdash;&nbsp; Cryptocurrency exchange Coinbase (COIN.O) and prediction markets platform Kalshi said on Friday they are introducing perpetual crypto futures &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -151,7 +242,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.cnbc.com/2026/05/29/sentinelone-s-stock-earnings-ai-layoffs.html"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260529/i31.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260529/p31#a260529p31" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Samantha Subin / <a href="http://www.cnbc.com/">CNBC</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.cnbc.com/2026/05/29/sentinelone-s-stock-earnings-ai-layoffs.html">SentinelOne's stock closes down 8% after the company announced plans to lay off 8% of its workforce and forecasted Q2 and FY revenue guidance below estimates</a></b></span>&nbsp; &mdash;&nbsp; SentinelOne shares sank 8% as the cybersecurity company laid off 8% of its full-time workforce to focus on artificial intelligence and data investments.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.cnbc.com/2026/05/29/sentinelone-s-stock-earnings-ai-layoffs.html">SentinelOne's stock closes down 8% after the company announced plans to lay off 8% of its workforce and forecasted Q2 and FY revenue guidance below estimates</a></b></span>&nbsp; &mdash;&nbsp; SentinelOne shares sank 8% as the cybersecurity company laid off 8% of its full-time workforce to focus on artificial intelligence and data investments.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
@@ -308,7 +399,7 @@
 
 
 <p>Despite this uncertainty, during the earnings call Milano pointed to customers such as Adecco and Anthropic as examples of rising API- and Headless-driven Salesforce usage. “Anthropic is one of our biggest users of CRM, of Sales Cloud, and obviously Slack. Their usage through Q1 has exploded fivefold because now they’re using Sales Cloud from a Headless perspective,” Milano said.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
@@ -316,7 +407,7 @@
   <link>https://www.theregister.com/ai-ml/2026/05/29/okta-writes-its-own-license-to-kill-rogue-ai-agents/5248766</link>
   <pubDate>Fri, 29 May 2026 21:20:21 +0000</pubDate>
   <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Budget/licensing impact — verify renewal terms and forecast cost changes.</b><br/>CEO Todd McKinnon says customers including ServiceNow want an off switch<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Budget/licensing impact — verify renewal terms and forecast cost changes.</b><br/>CEO Todd McKinnon says customers including ServiceNow want an off switch<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
 </item>
 
 <item>
@@ -326,7 +417,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><a href="https://techcrunch.com/2026/05/29/microsoft-under-fire-for-threatening-security-researcher-with-criminal-investigation/"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260529/i30.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260529/p30#a260529p30" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Lorenzo Franceschi-Bicchierai / <a href="http://techcrunch.com/">TechCrunch</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://techcrunch.com/2026/05/29/microsoft-under-fire-for-threatening-security-researcher-with-criminal-investigation/">Microsoft faces backlash after a blog post implied criminal referral and legal action against security researcher Nightmare Eclipse over public bug disclosures</a></b></span>&nbsp; &mdash;&nbsp; After a security researcher published a series of unpatched bugs in Microsoft products, along with code to exploit them &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://techcrunch.com/2026/05/29/microsoft-under-fire-for-threatening-security-researcher-with-criminal-investigation/">Microsoft faces backlash after a blog post implied criminal referral and legal action against security researcher Nightmare Eclipse over public bug disclosures</a></b></span>&nbsp; &mdash;&nbsp; After a security researcher published a series of unpatched bugs in Microsoft products, along with code to exploit them &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 8h ago]]></description>
 </item>
 
 <item>
@@ -336,7 +427,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.bloomberg.com/news/articles/2026-05-29/spacex-wins-4-billion-contract-for-us-golden-dome-satellites"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260529/i27.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260529/p27#a260529p27" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Sana Pashankar / <a href="https://www.bloomberg.com/">Bloomberg</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/articles/2026-05-29/spacex-wins-4-billion-contract-for-us-golden-dome-satellites">US Space Force says SpaceX won a $4.16B contract to build a space-based tracking network as part of President Trump's Golden Dome defensive shield</a></b></span>&nbsp; &mdash;&nbsp; SpaceX has won a contract for more than $4 billion to build satellites to track foreign aircraft and missiles as part of President Donald Trump's Golden Dome defensive shield.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/articles/2026-05-29/spacex-wins-4-billion-contract-for-us-golden-dome-satellites">US Space Force says SpaceX won a $4.16B contract to build a space-based tracking network as part of President Trump's Golden Dome defensive shield</a></b></span>&nbsp; &mdash;&nbsp; SpaceX has won a contract for more than $4 billion to build satellites to track foreign aircraft and missiles as part of President Donald Trump's Golden Dome defensive shield.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
 </item>
 
 <item>
@@ -346,7 +437,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/><a href="https://www.pcmag.com/news/computex-2026-preview-9-big-reveals-we-expect-at-asias-largest-tech-show"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260529/i26.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260529/p26#a260529p26" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="http://www.pcmag.com/">PCMag</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.pcmag.com/news/computex-2026-preview-9-big-reveals-we-expect-at-asias-largest-tech-show">What to expect at Computex 2026: AI chips, budget PCs competing with the MacBook Neo, Nvidia entering laptop SoC market with the rumored N1X chip, and more</a></b></span>&nbsp; &mdash;&nbsp; The theme for Computex 2026, according to organizer TAITRA, is &ldquo;AI Together.&rdquo;&nbsp; Sure, it sounds a little like a tech-industry group hug.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.pcmag.com/news/computex-2026-preview-9-big-reveals-we-expect-at-asias-largest-tech-show">What to expect at Computex 2026: AI chips, budget PCs competing with the MacBook Neo, Nvidia entering laptop SoC market with the rumored N1X chip, and more</a></b></span>&nbsp; &mdash;&nbsp; The theme for Computex 2026, according to organizer TAITRA, is &ldquo;AI Together.&rdquo;&nbsp; Sure, it sounds a little like a tech-industry group hug.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 10h ago]]></description>
 </item>
 
 <item>
@@ -354,7 +445,7 @@
   <link>https://www.theregister.com/security/2026/05/29/no-fix-yet-for-critical-gogs-rce-bug-exploit-module-is-out/5248691</link>
   <pubDate>Fri, 29 May 2026 18:26:48 +0000</pubDate>
   <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Researcher reported the vuln in March. Maintainers haven't responded to his messages since<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Researcher reported the vuln in March. Maintainers haven't responded to his messages since<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 10h ago]]></description>
 </item>
 
 <item>
@@ -364,7 +455,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://fortune.com/2026/05/29/microsoft-working-on-super-app/"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260529/i25.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260529/p25#a260529p25" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Sebastian Herrera / <a href="http://www.fortune.com/">Fortune</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://fortune.com/2026/05/29/microsoft-working-on-super-app/">Sources: Microsoft is working on an app that will include GitHub Copilot, Copilot chat, Copilot Cowork, and a new agentic workflow tool called Autopilot</a></b></span>&nbsp; &mdash;&nbsp; Microsoft needs to solve a nagging problem: It has various Copilot AI assistants throughout its portfolio of products, irking customers who seek a single destination.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://fortune.com/2026/05/29/microsoft-working-on-super-app/">Sources: Microsoft is working on an app that will include GitHub Copilot, Copilot chat, Copilot Cowork, and a new agentic workflow tool called Autopilot</a></b></span>&nbsp; &mdash;&nbsp; Microsoft needs to solve a nagging problem: It has various Copilot AI assistants throughout its portfolio of products, irking customers who seek a single destination.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 10h ago]]></description>
 </item>
 
 <item>
@@ -372,7 +463,7 @@
   <link>https://www.zdnet.com/article/msi-raider-16-max-hx-review/</link>
   <pubDate>Fri, 29 May 2026 16:26:00 +0000</pubDate>
   <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/>The MSI Raider 16 Max HX combines powerful current-gen hardware with a revamped cooling system and a stunning 240Hz OLED screen.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/>The MSI Raider 16 Max HX combines powerful current-gen hardware with a revamped cooling system and a stunning 240Hz OLED screen.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 12h ago]]></description>
 </item>
 
 <item>
@@ -380,7 +471,7 @@
   <link>https://www.zdnet.com/article/open-source-security-is-a-mess-ibm-and-red-hat-bet-5-billion-to-fix-it/</link>
   <pubDate>Fri, 29 May 2026 16:26:00 +0000</pubDate>
   <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Project Lightwell is an AI‑powered initiative to find and fix vulnerabilities in open-source software at an industrial scale. Here's what we know so far.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Project Lightwell is an AI‑powered initiative to find and fix vulnerabilities in open-source software at an industrial scale. Here's what we know so far.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 12h ago]]></description>
 </item>
 
 <item>
@@ -388,17 +479,7 @@
   <link>https://www.theregister.com/legal/2026/05/29/rob-bonta-sues-23andmes-new-owners-over-2023-breach/5248565</link>
   <pubDate>Fri, 29 May 2026 16:12:26 +0000</pubDate>
   <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Potential data exposure — check monitoring and incident response readiness.</b><br/>California AG claims genetics biz downplayed 2023 mega-leak while paying ransom to attacker<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Kalshi to offer perpetual futures contracts in prediction market expansion (Nathan Bomey/Axios)</title>
-  <link>https://www.techmeme.com/260529/p21#a260529p21</link>
-  <pubDate>Fri, 29 May 2026 15:25:01 +0000</pubDate>
-  <source>Techmeme</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://www.axios.com/2026/05/29/kalshi-perps-perpetual-futures-crypto"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260529/i21.jpg" vspace="4" /></a>
-<p><a href="https://www.techmeme.com/260529/p21#a260529p21" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Nathan Bomey / <a href="https://www.axios.com/">Axios</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.axios.com/2026/05/29/kalshi-perps-perpetual-futures-crypto">Kalshi to offer perpetual futures contracts in prediction market expansion</a></b></span>&nbsp; &mdash;&nbsp; Kalshi announced Friday that it will begin offering perpetual futures contracts &mdash; a form of derivative that moves the prediction market company into more complex trades than conventional yes-or-no bets.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 8h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Potential data exposure — check monitoring and incident response readiness.</b><br/>California AG claims genetics biz downplayed 2023 mega-leak while paying ransom to attacker<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 12h ago]]></description>
 </item>
 
 <item>
@@ -515,7 +596,7 @@
 
 
 <p></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 14h ago]]></description>
 </item>
 
 <item>
@@ -523,7 +604,7 @@
   <link>https://www.theregister.com/security/2026/05/29/dutch-cops-liberate-17m-devices-from-botnets-clutches/5248312</link>
   <pubDate>Fri, 29 May 2026 13:00:00 +0000</pubDate>
   <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Hosting provider pulled the plug after police traced 200 servers to the Netherlands<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 11h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Hosting provider pulled the plug after police traced 200 servers to the Netherlands<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 15h ago]]></description>
 </item>
 
 <item>
@@ -531,7 +612,7 @@
   <link>https://www.theregister.com/offbeat/2026/05/29/fcc-warns-us-broadcasters-their-licenses-are-a-privilege-not-a-right/5248393</link>
   <pubDate>Fri, 29 May 2026 12:30:00 +0000</pubDate>
   <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Budget/licensing impact — verify renewal terms and forecast cost changes.</b><br/>TV and radio stations told to review current practices to align with public interest obligations<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 11h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Budget/licensing impact — verify renewal terms and forecast cost changes.</b><br/>TV and radio stations told to review current practices to align with public interest obligations<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 16h ago]]></description>
 </item>
 
 <item>
@@ -539,7 +620,7 @@
   <link>https://www.zdnet.com/article/lenovo-yoga-slim-7x-review/</link>
   <pubDate>Fri, 29 May 2026 11:00:38 +0000</pubDate>
   <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/>The Slim 7x (2026) has impressive performance improvements, but its target user - the modern professional - remains the same.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/>The Slim 7x (2026) has impressive performance improvements, but its target user - the modern professional - remains the same.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 17h ago]]></description>
 </item>
 
 <item>
@@ -686,7 +767,7 @@
 
 
 <p><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><strong><a href="https://www.cio.com/expert-contributor-network/">Want to join?</a></strong></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 17h ago]]></description>
 </item>
 
 <item>
@@ -695,7 +776,7 @@
   <pubDate>Fri, 29 May 2026 10:17:23 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><p>The browser update resolves critical-severity security defects that could potentially lead to remote code execution.</p>
-<p>The post <a href="https://www.securityweek.com/chrome-148-update-patches-151-vulnerabilities/">Chrome 148 Update Patches 151 Vulnerabilities</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/chrome-148-update-patches-151-vulnerabilities/">Chrome 148 Update Patches 151 Vulnerabilities</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 18h ago]]></description>
 </item>
 
 <item>
@@ -755,7 +836,7 @@
 
 
 
-<p>“Our vision with FAS is to scale access to portfolio specialist expertise 10x,” Wilkinson says, noting that the company plans to make FAS available to more advisors by year’s end.</p>
+<p>“Our vision with FAS is to scale access to portfolio specialist expertise 10x,” Wilkinson says, noting that the company plans to make Expert Insights available to more advisors by year’s end.</p>
 
 
 
@@ -851,16 +932,16 @@
 
 
 
-<p>“We had a business objective totally separate from AI,” she says, noting that in the case of FSA it was to scale the service more broadly. “We thought there was a great opportunity here [for AI].”</p>
+<p>“We had a business objective totally separate from AI,” she says, noting that in the case of FAS it was to scale the service more broadly. “We thought there was a great opportunity here [for AI].”</p>
 
 
 
-<p>Bringing together a portfolio specialist and a methodology expert with an AI engineer and product manager, the FSA group was able to quickly move from a proof of concept, to a pilot, to a working solution — all while ensuring Expert Insights was delivering the right outputs.</p>
+<p>Bringing together a portfolio specialist and a methodology expert with an AI engineer and product manager, the FAS group was able to quickly move from a proof of concept, to a pilot, to a working solution — all while ensuring Expert Insights was delivering the right outputs.</p>
 
 
 
 <p>“[Now we can] scale portfolio specialist analysis at a much higher rate than we’ve ever been able to before,” she says.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 14h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 18h ago]]></description>
 </item>
 
 <item>
@@ -941,7 +1022,7 @@
 
 
 <p></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 14h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 18h ago]]></description>
 </item>
 
 <item>
@@ -1070,7 +1151,7 @@
 
 
 <p><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><strong><a href="https://www.cio.com/expert-contributor-network/">Want to join?</a></strong></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 14h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 18h ago]]></description>
 </item>
 
 <item>
@@ -1357,7 +1438,7 @@
 
 
 <p><em>Duration:</em> 1 day</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 14h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 18h ago]]></description>
 </item>
 
 <item>
@@ -1438,7 +1519,7 @@
 
 
 <p>The advisories recommended that users monitor the AppData folder on machines running Notepad++ for unexpected changes to shortcuts.xml and config.xml. The persistence of both flaws leaves no trace at the installation directory and no change to the Notepad++ binary itself, the advisories said, which means endpoint tools that look only at executables will miss it. Ho published no indicators of compromise.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 14h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 19h ago]]></description>
 </item>
 
 <item>
@@ -1523,7 +1604,7 @@
 
 
 <p>Additionally, it shared a list of indicators of compromise (IOCs) to support detection efforts. For those who don’t catch it on time, the ransomware leaves a note. “Your network is locked by the Gentlemen,” a desktop wallpaper reads on the victim’s machines.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 15h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 19h ago]]></description>
 </item>
 
 <item>
@@ -1708,7 +1789,7 @@ andards, years_of_experience)
 
 
 <p><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><strong><a href="https://www.csoonline.com/expert-contributor-network/">Want to join?</a></strong></p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 15h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 19h ago]]></description>
 </item>
 
 <item>
@@ -1978,7 +2059,7 @@ andards, years_of_experience)
 
 
 <p><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><strong><a href="https://www.cio.com/expert-contributor-network/">Want to join?</a></strong></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 15h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 19h ago]]></description>
 </item>
 
 <item>
@@ -2099,7 +2180,7 @@ andards, years_of_experience)
 
 
 <p>The concern is that history may repeat itself as regulation looks to keep pace with technological change. “There is a risk that organisations get stuck in a mid-maturity plateau in which innovation is halted by complex and inconsistent interpretations of regulations,” Carruthers warns.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 17h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 21h ago]]></description>
 </item>
 
 <item>
@@ -2224,7 +2305,7 @@ andards, years_of_experience)
 
 
 <p>바다니는 “AI 도구와 인간의 지식, 전문성을 결합하면 이 문제를 훨씬 효과적으로 해결할 수 있다”라며 “둘 중 하나만 사용하는 것보다 두 요소를 함께 활용할 때 더 나은 결과를 얻을 수 있다”고 강조했다.<br />dl-ciokorea@foundryco.com</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 19h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 23h ago]]></description>
 </item>
 
 <item>
@@ -2349,7 +2430,7 @@ andards, years_of_experience)
 
 
 <p></p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 23h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
@@ -2865,7 +2946,7 @@ andards, years_of_experience)
 
 
 <p>이어 “어떤 기술은 ‘절대 불가능한 것’이 아니라 단지 ‘아직 시기가 오지 않았을 뿐’인 경우가 많다”라고 덧붙였다.<br />dl-ciokorea@foundryco.com</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 23h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
@@ -2954,7 +3035,7 @@ andards, years_of_experience)
 
 
 <p><em>This article originally appeared on <a href="https://www.infoworld.com/article/4178406/lack-of-response-to-critical-vulnerability-in-gogs-is-a-reminder-of-the-limits-of-open-source-projects.html" target="_blank">InfoWorld</a>.</em></p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 23h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
@@ -4377,7 +4458,7 @@ andards, years_of_experience)
 
 
 <p>In addition, the FBI urges physical and IT security leaders to verify the credentials of anyone accessing company spaces, obtaining copies of each visitor’s ID card, as well as limiting access to sensitive data from less secure networks, such as home computers or the public internet, and developing and communicating policies regarding when and how IT support will communicate and authenticate themselves to employees.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
 </item>
 
 <item>
@@ -5087,135 +5168,6 @@ andards, years_of_experience)
 
 
 <p>Wiz maintains a solid brand and product identity, despite being acquired by Google. It packages its products differently from most vendors, offering three products to protect code, cloud assets, and to defend against threats. All three are needed for a <a href="https://www.wiz.io/solutions/dspm">complete DSPM solution</a>, which has been expanded to cover shadow data detection and AI-driven data classifiers. Wiz offers two licensing plans, but the full collection of DSPM features is available only on its more expensive Advanced plan. Wiz adds a lightweight agent called Runtime Sensor for detection and response. In addition to the usual cloud data sources, it also scans a variety of on-premises databases, such as MongoDB, MySQL, and PostgreSQL, as well as cloud versions, including Databricks. Wiz also integrates with more than 60 security products. <a href="https://aws.amazon.com/marketplace/pp/prodview-ibgbkrqusncsm?sr=0-1&amp;ref_=beagle&amp;applicationId=AWSMPContessa">Wiz’ AWS pricing</a> starts at $38,000 per yr to protect 100 workloads.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
-</item>
-
-<item>
-  <title>🔴 Microsoft previews automatic device isolation in Defender for Endpoint</title>
-  <link>https://www.csoonline.com/article/4177345/microsoft-previews-automatic-device-isolation-in-defender-for-endpoint.html</link>
-  <pubDate>Wed, 27 May 2026 01:28:57 +0000</pubDate>
-  <source>CSO Online</source>
-  <description><![CDATA[<b>Why this matters: Elevated ransomware risk — validate backups and endpoint defenses.</b><br/><div id="remove_no_follow">
-		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
-					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
-						<div class="article-column__content">
-<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
-
-
-
-<p>Microsoft is previewing a new automatic device isolation capability in Defender for Endpoint’s auto attack disruption tool to help security pros contain cyber attacks in progress on their IT networks.</p>
-
-
-
-<p>The company <a href="https://learn.microsoft.com/en-us/defender-endpoint/whats-new-in-microsoft-defender-endpoint#may-2026" rel="noreferrer noopener" target="_blank">announced the capability</a> earlier this month in a column about new features in Defender. There’s no word on when automatic device isolation will be in full production.</p>
-
-
-
-<p>However, a new SANS Institute research paper warns that, in certain conditions, an attacker could leverage the new function to disable all user accounts.</p>
-
-
-
-<p>The lesson, said <a href="https://www.sans.org/profiles/dr-johannes-ullrich" rel="noreferrer noopener" target="_blank">Johannes Ullrich</a>, the institute’s dean of research, is that autonomous AI action tools have to be tuned and tested like any other automation capability.</p>
-
-
-
-<p>“Automatic isolation and attack disruption are not new concepts,” Ullrich said in an email, “but ideas like these have been used in the past in open source and commercial tools. This feature is most important in organizations with under-resourced IT security teams, as it automates attack response. However, these features must be carefully tuned. If they are left unconfigured, attackers can use them to delay response by disrupting accounts used by administrators.”</p>
-
-
-
-<p>Nonetheless, in today’s environment, tools like these are important. <a href="https://www.linkedin.com/in/rob-enderle-03729/" rel="noreferrer noopener" target="_blank">Robert Enderle</a>, IT consultant and head of the Enderle group, noted that modern automated malware and ransomware attacks move at machine speed, which means human response times are effectively obsolete. </p>
-
-
-
-<p>By the time an analyst even sees a red flag, he said, the attacker has already established persistence or started encrypting files. Microsoft’s automatic device isolation acts as “a rapid, logical air gap. It instantly severs the device’s network connections, cutting off the attacker’s command and control (C2) and halting data exfiltration dead in its tracks. You have to bring an automated defense to an automated fight.”</p>
-
-
-
-<p>He said a secondary benefit, often the more critical one for enterprise survival, is containing the blast radius. Attackers invariably use a compromised PC as a beachhead to move laterally across the corporate network, hunting for higher-value targets like domain controllers, he pointed out.</p>
-
-
-
-<p>“By instantly quarantining that initial endpoint, you trap the threat where it stands. You ensure a single compromised laptop doesn’t metastasize into an enterprise-wide catastrophe,” he said.</p>
-
-
-
-<p>There’s also is a massive forensic advantage, Enderle added. “In the old days, the instinct was often to literally pull the power plug, which destroys critical volatile memory, or physically yank the network cable, which completely blinds your remote security team. Logically isolating the device while maintaining a secure lifeline to security services preserves the crime scene. It prevents the attacker from deploying wiper malware or destroying logs, and it gives the Security Operations Center (SOC) the breathing room they need to safely investigate and remediate the machine without the panic of an actively spreading infection.”</p>
-
-
-
-<h2 class="wp-block-heading" id="how-automatic-attack-disruption-works">How automatic attack disruption works</h2>
-
-
-
-<p>Automatic attack disruption is offered to organizations that subscribe to <a href="https://learn.microsoft.com/en-us/defender-xdr/microsoft-365-defender" rel="noreferrer noopener" target="_blank">Microsoft Defender XDR</a>, a unified cloud-based security suite that detects and investigates cyberattacks against PC, server, and IoT endpoints. It also manages hybrid identities and protects email and collaboration tools. As such, it correlates data to identify and respond to attacks.</p>
-
-
-
-<p>The soon-to-be-delivered auto-isolation capability blocks most network traffic while keeping the device connected to security services. The action is time-limited and scoped to the incident, Microsoft said; security operators can release isolation at any time.</p>
-
-
-
-<p>The broad automatic attack disruption capability uses AI to limit attackers’ lateral movement. “Attack disruption uses the full breadth of our extended detection and response (XDR) signals, taking the entire attack into account to act at the incident level,” Microsoft said <a href="https://learn.microsoft.com/en-us/defender-xdr/automatic-attack-disruption" rel="noreferrer noopener" target="_blank">in a detailed column describing the tool</a>. “This capability is unlike known protection methods such as prevention and blocking based on a single indicator of compromise.”</p>
-
-
-
-<p>To use <a href="https://learn.microsoft.com/en-us/defender-xdr/configure-attack-disruption?source=recommendations" rel="noreferrer noopener" target="_blank">automatic attack disruption</a>, IT has to, at the least, enable Microsoft Defender for Endpoint Plan 2. It becomes more effective if Defender for Identity, Defender for Office 365 and Defender for Cloud apps are also deployed. Admins also have to configure appropriate permissions and monitoring.</p>
-
-
-
-<h2 class="wp-block-heading" id="possible-operational-disruption">Possible operational disruption</h2>
-
-
-
-<p><a href="https://sansorg.egnyte.com/dl/RFPWrTr4RXkh" rel="noreferrer noopener" target="_blank">The SANS Institute’s academic paper</a> by student <a href="https://www.linkedin.com/in/marcio-enriquez-a07072187/" rel="noreferrer noopener" target="_blank">Marcio Enriquez</a> noted that AI systems that perform autonomous decisions like containment do improve response times and scalability. But they also rely on threshold-based logic derived from telemetry. “Even when operating on enterprise-wide data, they do not consistently account for system-level impact in their enforcement decisions,” the paper said, and thus can cause unintended disruptions when activated at scale. “This creates a gap between the need for rapid defensive actions and the organization’s ability to maintain operational continuity.”</p>
-
-
-
-<p>It examined that gap by evaluating how threshold-driven autonomous containment actions can result in what it refers to as “large-scale operational disruption.”</p>
-
-
-
-<p>Enriquez saw an example of this during a real security incident in the spring of 2025. A user in an organization was fooled by a phishing message and entered their credentials on a malicious website. Defender detected this, and within minutes initiated automated containment measures, including disabling the affected account, forcing a password reset and restricting logins across multiple managed devices. </p>
-
-
-
-<p>However, because security analysts didn’t realize this was automated enforcement, they initially thought there had been lateral movement or widespread compromise. That triggered an emergency escalation involving security leadership, until further investigation realized that the propagation of containment controls was due to Defender.</p>
-
-
-
-<p>“The event demonstrates the effectiveness of autonomous containment in rapidly interrupting active threats,” wrote Enriquez. “At the same time, it illustrates how automated response actions can generate enterprise-wide operational effects that are not immediately transparent to human operators.”</p>
-
-
-
-<h2 class="wp-block-heading" id="could-be-weaponized">Could be weaponized</h2>
-
-
-
-<p>To test the ability of a threat actor to take advantage of a weakness in Defender XDR’s automatic attack disruption capability, Enriquez created a hybrid enterprise environment with 18 “users” and executed adversarial activity simulating hands-on-keyboard behavior across multiple identities to trigger high-confidence detection thresholds in Defender, through an attack tactic he calls Autonomous Defense Induced Disruption (ADID). In essence, it tricks the automatic disruption capability of Defender into giving a high-confidence score that the network is under attack.</p>
-
-
-
-<p>“The results showed that when detection confidence thresholds were met, automated actions disabled all [18] Active Directory identities, including the local domain administrator, rendering the domain inaccessible,” Enriquez wrote.</p>
-
-
-
-<p>“The research highlights the need for governance controls, privilege-aware safeguards, and system-level constraints to prevent autonomous containment from causing operational disruption,” he concluded.</p>
-
-
-
-<h2 class="wp-block-heading" id="microsoft-guidance-keep-auto-attack-disruption-enabled">Microsoft guidance: Keep auto attack disruption enabled</h2>
-
-
-
-<p>A Microsoft spokesperson said that the company has no comment on the research paper.</p>
-
-
-
-<p>However, they said that Microsoft’s guidance is to keep automatic attack disruption enabled by default. “Opting out materially increases risk, particularly for multi-domain, multi-stage attacks such as HumOR [human intelligence operations, like social engineering], BEC [business email compromise] and AiTM [adversary in the middle], where even minutes of additional dwell time can translate into significant business impact.”</p>
-
-
-
-<p>“At the same time,” Microsoft noted, “we recognize that security teams require control over autonomous actions. That’s why the capability is designed with granular controls. Security administrators can tune automation levels by device group and selectively exclude users, devices, or IP ranges based on operational needs. The recommended approach is targeted, intentional configuration, not a blanket opt-out. Customers retain full visibility into actions taken and have the ability to reverse automated responses at any time.”</p>
 </div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
 </item>
 
