@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
 **Period:** May 24 – May 31, 2026  
-**Generated:** 2026-05-31 07:43 UTC  
+**Generated:** 2026-05-31 10:13 UTC  
 **Items reviewed:** 118  
 
 ## ⚡ Top Actions This Week
@@ -62,6 +62,26 @@ The most common trigger is any endpoint that calls `JSON.parse()` on attacker-co
 This vulnerability affects **20.x, 22.x, 24.x, and 25.x**.](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-21717)  
   **Microsoft Security Response Center (MSRC)** · May 31 · _General awareness item._  
 
+- [CVE-2025-23167 A flaw in Node.js 20's HTTP parser allows improper termination of HTTP/1 headers using `\r\n\rX` instead of the required `\r\n\r\n`.
+This inconsistency enables request smuggling, allowing attackers to bypass proxy-based access controls and submit unauthorized requests.
+
+The issue was resolved by upgrading `llhttp` to version 9, which enforces correct header termination.
+
+Impact:
+* This vulnerability affects only Node.js 20.x users prior to the `llhttp` v9 upgrade.](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-23167)  
+  **Microsoft Security Response Center (MSRC)** · May 31 · _General awareness item._  
+
+- [CVE-2024-36137 A vulnerability has been identified in Node.js, affecting users of the experimental permission model when the --allow-fs-write flag is used.
+
+Node.js Permission Model do not operate on file descriptors, however, operations such as fs.fchown or fs.fchmod can use a "read-only" file descriptor to change the owner and permissions of a file.](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-36137)  
+  **Microsoft Security Response Center (MSRC)** · May 31 · _General awareness item._  
+
+- [CVE-2024-22018 A vulnerability has been identified in Node.js, affecting users of the experimental permission model when the --allow-fs-read flag is used.
+This flaw arises from an inadequate permission model that fails to restrict file stats through the fs.lstat API. As a result, malicious actors can retrieve stats from files that they do not have explicit read access to.
+This vulnerability affects all users using the experimental permission model in Node.js 20 and Node.js 21.
+Please note that at the time this CVE was issued, the permission model is an experimental feature of Node.js.](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-22018)  
+  **Microsoft Security Response Center (MSRC)** · May 31 · _General awareness item._  
+
 - [CVE-2026-40034 gitoxide - Command Injection via Partial .gitmodules Override in gix-submodule](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-40034)  
   **Microsoft Security Response Center (MSRC)** · May 31 · _General awareness item._  
 
@@ -74,26 +94,17 @@ This vulnerability affects **20.x, 22.x, 24.x, and 25.x**.](https://msrc.microso
 - [CVE-2026-48962 IO::Compress versions before 2.220 for Perl can execute arbitrary code in File::GlobMapper via an attacker-controlled output glob](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-48962)  
   **Microsoft Security Response Center (MSRC)** · May 31 · _General awareness item._  
 
-- [CVE-2026-2673 OpenSSL TLS 1.3 server may choose unexpected key agreement group](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-2673)  
-  **Microsoft Security Response Center (MSRC)** · May 31 · _General awareness item._  
-
-- [CVE-2026-33671 Picomatch has a ReDoS vulnerability via extglob quantifiers](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-33671)  
-  **Microsoft Security Response Center (MSRC)** · May 31 · _General awareness item._  
-
-- [CVE-2026-33672 Picomatch: Method Injection in POSIX Character Classes causes incorrect Glob Matching](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-33672)  
-  **Microsoft Security Response Center (MSRC)** · May 31 · _General awareness item._  
-
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [Type Confusion in V8 in Google Chrome prior to 142.0.7444.59 allowed a remote attacker to potentially exploit heap corruption via a crafted HTML page. (Chromium security severity: High)](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-13230) — Microsoft Security Response Center (MSRC)
+- [Type Confusion in V8 in Google Chrome prior to 142.0.7444.59 allowed a remote attacker to potentially exploit heap corruption via a crafted HTML page. (Chromium security severity: High)](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-13226) — Microsoft Security Response Center (MSRC)
+- [Type Confusion in V8 in Google Chrome prior to 142.0.7444.59 allowed a remote attacker to potentially exploit heap corruption via a crafted HTML page. (Chromium security severity: High)](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-13227) — Microsoft Security Response Center (MSRC)
 - [From $5 Attacks to Botnet-Powered Platforms: Inside the DDoS-as-a- Service Market](https://www.bleepingcomputer.com/news/security/from-5-attacks-to-botnet-powered-platforms-inside-the-ddos-as-a-service-market/) — BleepingComputer
 - [Dutch govt disrupts malware botnet with 17 million infected devices](https://www.bleepingcomputer.com/news/security/dutch-govt-disrupts-malware-botnet-with-17-million-infected-devices/) — BleepingComputer
 - [Google Chrome adds session cookie theft protection for all users](https://www.bleepingcomputer.com/news/security/google-chrome-adds-session-cookie-theft-protection-for-all-users/) — BleepingComputer
-- [New Russia-Linked GREYVIBE Targets Ukraine with AI-Powered Cyberattacks](https://thehackernews.com/2026/05/new-russian-linked-greyvibe-targets.html) — The Hacker News
-- [Man sent to prison for selling data of 7 millions elderly Americans](https://www.bleepingcomputer.com/news/security/man-sent-to-prison-for-selling-data-of-7-millions-elderly-americans/) — BleepingComputer
-- [What 2,000 Exposed Vibe-Coded Apps Reveal About the Limits of Most Security Stacks](https://thehackernews.com/2026/05/what-2000-exposed-vibe-coded-apps.html) — The Hacker News
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 6 critical · 76 important · 36 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 6 critical · 73 important · 39 FYI_

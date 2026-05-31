@@ -3,7 +3,7 @@
 <channel>
   <title>Joe — Urgent / Exploited</title>
   <description>Critical vulnerabilities, active exploitation, ransomware, and emergency patching.</description>
-  <lastBuildDate>Sun, 31 May 2026 07:42:44 +0000</lastBuildDate>
+  <lastBuildDate>Sun, 31 May 2026 10:12:42 +0000</lastBuildDate>
   
 <item>
   <title>🟠 CVE-2026-21717 A flaw in V8&#x27;s string hashing mechanism causes integer-like strings to be hashed to their numeric value, making hash collisions trivially predictable. By crafting a request that causes many such collisions in V8&#x27;s internal string table, an attacker can significantly degrade performance of the Node.js process.
@@ -14,7 +14,42 @@ This vulnerability affects **20.x, 22.x, 24.x, and 25.x**.</title>
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-21717</link>
   <pubDate>Sun, 31 May 2026 08:41:41 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+</item>
+
+<item>
+  <title>🟠 CVE-2025-23167 A flaw in Node.js 20&#x27;s HTTP parser allows improper termination of HTTP/1 headers using `\r\n\rX` instead of the required `\r\n\r\n`.
+This inconsistency enables request smuggling, allowing attackers to bypass proxy-based access controls and submit unauthorized requests.
+
+The issue was resolved by upgrading `llhttp` to version 9, which enforces correct header termination.
+
+Impact:
+* This vulnerability affects only Node.js 20.x users prior to the `llhttp` v9 upgrade.</title>
+  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-23167</link>
+  <pubDate>Sun, 31 May 2026 08:40:30 +0000</pubDate>
+  <source>Microsoft Security Response Center</source>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+</item>
+
+<item>
+  <title>🟠 CVE-2024-36137 A vulnerability has been identified in Node.js, affecting users of the experimental permission model when the --allow-fs-write flag is used.
+
+Node.js Permission Model do not operate on file descriptors, however, operations such as fs.fchown or fs.fchmod can use a &quot;read-only&quot; file descriptor to change the owner and permissions of a file.</title>
+  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-36137</link>
+  <pubDate>Sun, 31 May 2026 08:40:05 +0000</pubDate>
+  <source>Microsoft Security Response Center</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+</item>
+
+<item>
+  <title>🟠 CVE-2024-22018 A vulnerability has been identified in Node.js, affecting users of the experimental permission model when the --allow-fs-read flag is used.
+This flaw arises from an inadequate permission model that fails to restrict file stats through the fs.lstat API. As a result, malicious actors can retrieve stats from files that they do not have explicit read access to.
+This vulnerability affects all users using the experimental permission model in Node.js 20 and Node.js 21.
+Please note that at the time this CVE was issued, the permission model is an experimental feature of Node.js.</title>
+  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-22018</link>
+  <pubDate>Sun, 31 May 2026 08:39:56 +0000</pubDate>
+  <source>Microsoft Security Response Center</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
 </item>
 
 <item>
@@ -22,7 +57,7 @@ This vulnerability affects **20.x, 22.x, 24.x, and 25.x**.</title>
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-40034</link>
   <pubDate>Sun, 31 May 2026 08:04:52 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
 </item>
 
 <item>
@@ -30,7 +65,7 @@ This vulnerability affects **20.x, 22.x, 24.x, and 25.x**.</title>
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-44839</link>
   <pubDate>Sun, 31 May 2026 08:04:44 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
 </item>
 
 <item>
@@ -38,7 +73,7 @@ This vulnerability affects **20.x, 22.x, 24.x, and 25.x**.</title>
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-15649</link>
   <pubDate>Sun, 31 May 2026 08:04:39 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
 </item>
 
 <item>
@@ -46,7 +81,63 @@ This vulnerability affects **20.x, 22.x, 24.x, and 25.x**.</title>
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-48962</link>
   <pubDate>Sun, 31 May 2026 08:04:34 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+</item>
+
+<item>
+  <title>🟠 CVE-2026-28387 Potential Use-after-free in DANE Client Code</title>
+  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-28387</link>
+  <pubDate>Sun, 31 May 2026 08:04:27 +0000</pubDate>
+  <source>Microsoft Security Response Center</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+</item>
+
+<item>
+  <title>🟠 CVE-2026-25833 Mbed TLS 3.5.0 to 3.6.5 fixed in 3.6.6 and 4.1.0 has a buffer overflow in the x509_inet_pton_ipv6() function</title>
+  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-25833</link>
+  <pubDate>Sun, 31 May 2026 08:04:22 +0000</pubDate>
+  <source>Microsoft Security Response Center</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+</item>
+
+<item>
+  <title>🟠 CVE-2026-25834 Mbed TLS v3.3.0 up to 3.6.5 and 4.0.0 allows Algorithm Downgrade.</title>
+  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-25834</link>
+  <pubDate>Sun, 31 May 2026 08:04:17 +0000</pubDate>
+  <source>Microsoft Security Response Center</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+</item>
+
+<item>
+  <title>🟠 CVE-2026-28388 NULL Pointer Dereference When Processing a Delta CRL</title>
+  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-28388</link>
+  <pubDate>Sun, 31 May 2026 08:04:12 +0000</pubDate>
+  <source>Microsoft Security Response Center</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+</item>
+
+<item>
+  <title>🟠 CVE-2026-34873 An issue was discovered in Mbed TLS 3.5.0 through 4.0.0. Client impersonation can occur while resuming a TLS 1.3 session.</title>
+  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-34873</link>
+  <pubDate>Sun, 31 May 2026 08:04:07 +0000</pubDate>
+  <source>Microsoft Security Response Center</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+</item>
+
+<item>
+  <title>🟠 CVE-2026-34874 An issue was discovered in Mbed TLS through 3.6.5 and 4.x through 4.0.0. There is a NULL pointer dereference in distinguished name parsing that allows an attacker to write to address 0.</title>
+  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-34874</link>
+  <pubDate>Sun, 31 May 2026 08:04:01 +0000</pubDate>
+  <source>Microsoft Security Response Center</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+</item>
+
+<item>
+  <title>🟠 CVE-2025-15504 lief-project LIEF ELF Binary Parser.tcc parse_binary null pointer dereference</title>
+  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-15504</link>
+  <pubDate>Sun, 31 May 2026 08:03:56 +0000</pubDate>
+  <source>Microsoft Security Response Center</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
 </item>
 
 <item>
@@ -54,7 +145,31 @@ This vulnerability affects **20.x, 22.x, 24.x, and 25.x**.</title>
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-2673</link>
   <pubDate>Sun, 31 May 2026 08:03:50 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+</item>
+
+<item>
+  <title>🟠 CVE-2026-34875 An issue was discovered in Mbed TLS through 3.6.5 and TF-PSA-Crypto 1.0.0. A buffer overflow can occur in public key export for FFDH keys.</title>
+  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-34875</link>
+  <pubDate>Sun, 31 May 2026 08:03:44 +0000</pubDate>
+  <source>Microsoft Security Response Center</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+</item>
+
+<item>
+  <title>🟠 CVE-2026-34871 An issue was discovered in Mbed TLS before 3.6.6 and 4.x before 4.1.0 and TF-PSA-Crypto before 1.1.0. There is a Predictable Seed in a Pseudo-Random Number Generator (PRNG).</title>
+  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-34871</link>
+  <pubDate>Sun, 31 May 2026 08:03:39 +0000</pubDate>
+  <source>Microsoft Security Response Center</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+</item>
+
+<item>
+  <title>🟠 CVE-2026-28390 Possible NULL Dereference When Processing CMS KeyTransportRecipientInfo</title>
+  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-28390</link>
+  <pubDate>Sun, 31 May 2026 08:03:34 +0000</pubDate>
+  <source>Microsoft Security Response Center</source>
+  <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
 </item>
 
 <item>
@@ -62,7 +177,15 @@ This vulnerability affects **20.x, 22.x, 24.x, and 25.x**.</title>
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-33671</link>
   <pubDate>Sun, 31 May 2026 08:03:29 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+</item>
+
+<item>
+  <title>🟠 CVE-2026-25835 Mbed TLS before 3.6.6 and TF-PSA-Crypto before 1.1.0 misuse seeds in a Pseudo-Random Number Generator (PRNG).</title>
+  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-25835</link>
+  <pubDate>Sun, 31 May 2026 08:03:22 +0000</pubDate>
+  <source>Microsoft Security Response Center</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
 </item>
 
 <item>
@@ -70,7 +193,55 @@ This vulnerability affects **20.x, 22.x, 24.x, and 25.x**.</title>
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-33672</link>
   <pubDate>Sun, 31 May 2026 08:03:16 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+</item>
+
+<item>
+  <title>🟠 CVE-2026-34872 An issue was discovered in Mbed TLS 3.5.x and 3.6.x through 3.6.5 and TF-PSA-Crypto 1.0. There is a lack of contributory behavior in FFDH due to improper input validation. Using finite-field Diffie-Hellman, the other party can force the shared secret into a small set of values (lack of contributory behavior). This is a problem for protocols that depend on contributory behavior (which is not the case for TLS). The attack can be carried by the peer, or depending on the protocol by an active network attacker (person in the middle).</title>
+  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-34872</link>
+  <pubDate>Sun, 31 May 2026 08:03:10 +0000</pubDate>
+  <source>Microsoft Security Response Center</source>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+</item>
+
+<item>
+  <title>🟠 CVE-2026-31789 Heap Buffer Overflow in Hexadecimal Conversion</title>
+  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-31789</link>
+  <pubDate>Sun, 31 May 2026 08:03:05 +0000</pubDate>
+  <source>Microsoft Security Response Center</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+</item>
+
+<item>
+  <title>🟠 CVE-2026-28389 Possible NULL Dereference When Processing CMS KeyAgreeRecipientInfo</title>
+  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-28389</link>
+  <pubDate>Sun, 31 May 2026 08:02:59 +0000</pubDate>
+  <source>Microsoft Security Response Center</source>
+  <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+</item>
+
+<item>
+  <title>🟠 CVE-2017-3736 There is a carry propagating bug in the x86_64 Montgomery squaring procedure in OpenSSL before 1.0.2m and 1.1.0 before 1.1.0g. No EC algorithms are affected. Analysis suggests that attacks against RSA and DSA as a result of this defect would be very difficult to perform and are not believed likely. Attacks against DH are considered just feasible (although very difficult) because most of the work necessary to deduce information about a private key may be performed offline. The amount of resources required for such an attack would be very significant and likely only accessible to a limited number of attackers. An attacker would additionally need online access to an unpatched system using the target private key in a scenario with persistent DH parameters and a private key that is shared between multiple clients. This only affects processors that support the BMI1, BMI2 and ADX extensions like Intel Broadwell (5th generation) and later or AMD Ryzen.</title>
+  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2017-3736</link>
+  <pubDate>Sun, 31 May 2026 08:02:54 +0000</pubDate>
+  <source>Microsoft Security Response Center</source>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+</item>
+
+<item>
+  <title>🟠 CVE-2025-66442 In Mbed TLS through 4.0.0, there is a compiler-induced timing side channel (in RSA and CBC/ECB decryption) that only occurs with LLVM&#x27;s select-optimize feature. TF-PSA-Crypto through 1.0.0 is also affected.</title>
+  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-66442</link>
+  <pubDate>Sun, 31 May 2026 08:02:49 +0000</pubDate>
+  <source>Microsoft Security Response Center</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+</item>
+
+<item>
+  <title>🟠 CVE-2026-34876 An issue was discovered in Mbed TLS 3.x before 3.6.6. An out-of-bounds read vulnerability in mbedtls_ccm_finish() in library/ccm.c allows attackers to obtain adjacent CCM context data via invocation of the multipart CCM API with an oversized tag_len parameter. This is caused by missing validation of the tag_len parameter against the size of the internal 16-byte authentication buffer. The issue affects the public multipart CCM API in Mbed TLS 3.x, where mbedtls_ccm_finish() can be invoked directly by applications. In Mbed TLS 4.x versions prior to the fix, the same missing validation exists in the internal implementation; however, the function is not exposed as part of the public API. Exploitation requires application-level invocation of the multipart CCM API.</title>
+  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-34876</link>
+  <pubDate>Sun, 31 May 2026 08:02:44 +0000</pubDate>
+  <source>Microsoft Security Response Center</source>
+  <description><![CDATA[<b>Why this matters: Could impact sign-ins/MFA/Conditional Access — watch for login issues.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
 </item>
 
 <item>
@@ -78,103 +249,7 @@ This vulnerability affects **20.x, 22.x, 24.x, and 25.x**.</title>
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-48864</link>
   <pubDate>Sun, 31 May 2026 08:02:40 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
-</item>
-
-<item>
-  <title>🟠 CVE-2026-9804 Kubevirt: kubevirt: vmexport directory symlink escape enables exporter pod file read</title>
-  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-9804</link>
-  <pubDate>Sun, 31 May 2026 08:02:34 +0000</pubDate>
-  <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
-</item>
-
-<item>
-  <title>🟠 CVE-2026-7374 Kubevirt: kubevirt virt-handler: privilege escalation and node compromise via symlink following vulnerability</title>
-  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-7374</link>
-  <pubDate>Sun, 31 May 2026 08:02:29 +0000</pubDate>
-  <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Privilege escalation risk — review local admin exposure and endpoint controls.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
-</item>
-
-<item>
-  <title>🟠 CVE-2026-42012 Gnutls: gnutls: certificate validation bypass due to improper handling of uri and srv sans</title>
-  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-42012</link>
-  <pubDate>Sun, 31 May 2026 08:02:22 +0000</pubDate>
-  <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
-</item>
-
-<item>
-  <title>🟠 CVE-2026-5260 Gnutls: gnutls: information disclosure via heap overread in rsa key exchange</title>
-  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-5260</link>
-  <pubDate>Sun, 31 May 2026 08:02:16 +0000</pubDate>
-  <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Could impact email access or mail flow — monitor delivery and client issues.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
-</item>
-
-<item>
-  <title>🟠 CVE-2026-42015 Gnutls: gnutls: memory corruption due to off-by-one error in pkcs#12 bag handling</title>
-  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-42015</link>
-  <pubDate>Sun, 31 May 2026 08:02:11 +0000</pubDate>
-  <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
-</item>
-
-<item>
-  <title>🟠 CVE-2026-42013 Gnutls: gnutls: certificate validation bypass due to oversized subject alternative name</title>
-  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-42013</link>
-  <pubDate>Sun, 31 May 2026 08:02:05 +0000</pubDate>
-  <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
-</item>
-
-<item>
-  <title>🟠 CVE-2026-42790 nameConstraints DNS bypass via subject CommonName fallback in public_key hostname verification</title>
-  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-42790</link>
-  <pubDate>Sun, 31 May 2026 08:01:59 +0000</pubDate>
-  <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
-</item>
-
-<item>
-  <title>🟠 CVE-2026-42789 Non-CA certificate accepted as intermediate issuer in public_key path validation</title>
-  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-42789</link>
-  <pubDate>Sun, 31 May 2026 08:01:54 +0000</pubDate>
-  <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
-</item>
-
-<item>
-  <title>🟠 CVE-2026-42250 Off-by-One Leading to Out-of-Bounds Write in bzip2</title>
-  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-42250</link>
-  <pubDate>Sun, 31 May 2026 08:01:48 +0000</pubDate>
-  <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
-</item>
-
-<item>
-  <title>🟠 CVE-2026-46242 eventpoll: fix ep_remove struct eventpoll / struct file UAF</title>
-  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-46242</link>
-  <pubDate>Sun, 31 May 2026 08:01:32 +0000</pubDate>
-  <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
-</item>
-
-<item>
-  <title>🟠 CVE-2026-40510 OpenSC &lt; 0.27.0-rc1 Stack Buffer Overflow via piv_process_history() in card-piv.c</title>
-  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-40510</link>
-  <pubDate>Sun, 31 May 2026 08:01:27 +0000</pubDate>
-  <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
-</item>
-
-<item>
-  <title>🟠 CVE-2026-40528 OpenSC &lt; 0.27.0 Buffer Overrun in do_key_value() via profile.c</title>
-  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-40528</link>
-  <pubDate>Sun, 31 May 2026 08:01:21 +0000</pubDate>
-  <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
 </item>
 
 <item>
@@ -186,7 +261,7 @@ This vulnerability affects Node.js **25.x** processes using the Permission Model
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-21711</link>
   <pubDate>Sun, 31 May 2026 08:01:15 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
 </item>
 
 </channel>
