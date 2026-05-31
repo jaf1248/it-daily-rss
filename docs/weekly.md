@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
 **Period:** May 24 – May 31, 2026  
-**Generated:** 2026-05-31 03:33 UTC  
+**Generated:** 2026-05-31 07:43 UTC  
 **Items reviewed:** 118  
 
 ## ⚡ Top Actions This Week
@@ -55,29 +55,33 @@
 
 ## 🟠 Important — Review This Week
 
-- [New CIFSwitch Linux flaw gives root on multiple distributions](https://www.bleepingcomputer.com/news/security/new-cifswitch-linux-flaw-gives-root-on-multiple-distributions/)  
-  **BleepingComputer** · May 30 · _General awareness item._  
+- [CVE-2026-21717 A flaw in V8's string hashing mechanism causes integer-like strings to be hashed to their numeric value, making hash collisions trivially predictable. By crafting a request that causes many such collisions in V8's internal string table, an attacker can significantly degrade performance of the Node.js process.
 
-- [CVE-2026-46150 fanotify: fix false positive on permission events](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-46150)  
-  **Microsoft Security Response Center (MSRC)** · May 30 · _General awareness item._  
+The most common trigger is any endpoint that calls `JSON.parse()` on attacker-controlled input, as JSON parsing automatically internalizes short strings into the affected hash table.
 
-- [CVE-2026-46241 spi: mpc52xx: fix use-after-free on registration failure](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-46241)  
-  **Microsoft Security Response Center (MSRC)** · May 30 · _General awareness item._  
+This vulnerability affects **20.x, 22.x, 24.x, and 25.x**.](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-21717)  
+  **Microsoft Security Response Center (MSRC)** · May 31 · _General awareness item._  
 
-- [CVE-2026-46112 RDMA/hns: Fix unlocked call to hns_roce_qp_remove()](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-46112)  
-  **Microsoft Security Response Center (MSRC)** · May 30 · _General awareness item._  
+- [CVE-2026-40034 gitoxide - Command Injection via Partial .gitmodules Override in gix-submodule](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-40034)  
+  **Microsoft Security Response Center (MSRC)** · May 31 · _General awareness item._  
 
-- [CVE-2026-46114 RDMA/rxe: Reject non-8-byte ATOMIC_WRITE payloads](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-46114)  
-  **Microsoft Security Response Center (MSRC)** · May 30 · _General awareness item._  
+- [CVE-2026-44839 RabbitMQ: Unsanitized vhost names allow for XSS in management UI](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-44839)  
+  **Microsoft Security Response Center (MSRC)** · May 31 · _General awareness item._  
 
-- [CVE-2026-46125 wifi: mac80211: remove station if connection prep fails](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-46125)  
-  **Microsoft Security Response Center (MSRC)** · May 30 · _General awareness item._  
+- [CVE-2025-15649 IO::Uncompress::Unzip versions before 2.215 for Perl propagate uncaught exception when parsing zip header with malformed DOS date](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-15649)  
+  **Microsoft Security Response Center (MSRC)** · May 31 · _General awareness item._  
 
-- [CVE-2026-46152 wifi: mac80211: drop stray 'static' from fast-RX rx_result](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-46152)  
-  **Microsoft Security Response Center (MSRC)** · May 30 · _General awareness item._  
+- [CVE-2026-48962 IO::Compress versions before 2.220 for Perl can execute arbitrary code in File::GlobMapper via an attacker-controlled output glob](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-48962)  
+  **Microsoft Security Response Center (MSRC)** · May 31 · _General awareness item._  
 
-- [CVE-2026-46133 RDMA/rxe: Reject unknown opcodes before ICRC processing](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-46133)  
-  **Microsoft Security Response Center (MSRC)** · May 30 · _General awareness item._  
+- [CVE-2026-2673 OpenSSL TLS 1.3 server may choose unexpected key agreement group](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-2673)  
+  **Microsoft Security Response Center (MSRC)** · May 31 · _General awareness item._  
+
+- [CVE-2026-33671 Picomatch has a ReDoS vulnerability via extglob quantifiers](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-33671)  
+  **Microsoft Security Response Center (MSRC)** · May 31 · _General awareness item._  
+
+- [CVE-2026-33672 Picomatch: Method Injection in POSIX Character Classes causes incorrect Glob Matching](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-33672)  
+  **Microsoft Security Response Center (MSRC)** · May 31 · _General awareness item._  
 
 ---
 
