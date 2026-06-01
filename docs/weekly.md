@@ -1,25 +1,35 @@
 # IT Weekly Intelligence Briefing
 **Period:** May 25 – June 01, 2026  
-**Generated:** 2026-06-01 09:24 UTC  
-**Items reviewed:** 118  
+**Generated:** 2026-06-01 13:48 UTC  
+**Items reviewed:** 117  
 
 ## ⚡ Top Actions This Week
 
-1. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _Palo Alto GlobalProtect VPN auth bypass flaw now exploited in attacks_  
-   Source: BleepingComputer  
+1. **Audit third-party software dependencies and review vendor access.**  
+   _OpenAI Codex Authentication Tokens Stolen in codexui-android npm Supply Chain Attack_  
+   Source: The Hacker News  
 
-2. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _California AG sues 23andMe over 2023 breach exposing health data_  
-   Source: BleepingComputer  
+2. **Apply emergency patch or mitigation now; check vendor advisory for workarounds.**  
+   _Critical WP Maps Pro Flaw Actively Exploited to Create Admin Accounts_  
+   Source: The Hacker News  
 
 3. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _Charter Communications data breach affects 4.9 million accounts_  
+   _Palo Alto GlobalProtect VPN auth bypass flaw now exploited in attacks_  
    Source: BleepingComputer  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [OpenAI Codex Authentication Tokens Stolen in codexui-android npm Supply Chain Attack](https://thehackernews.com/2026/06/openai-codex-authentication-tokens.html)
+**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Jun 01  
+**Why it matters:** Third-party/software supply chain integrity risk.  
+**Recommended action:** Audit third-party software dependencies and review vendor access.  
+
+### [Critical WP Maps Pro Flaw Actively Exploited to Create Admin Accounts](https://thehackernews.com/2026/06/critical-wp-maps-pro-flaw-actively.html)
+**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Jun 01  
+**Why it matters:** General awareness item.  
+**Recommended action:** Apply emergency patch or mitigation now; check vendor advisory for workarounds.  
 
 ### [Palo Alto GlobalProtect VPN auth bypass flaw now exploited in attacks](https://www.bleepingcomputer.com/news/security/palo-alto-globalprotect-vpn-auth-bypass-flaw-now-exploited-in-attacks/)
 **Source:** BleepingComputer &nbsp;·&nbsp; **Date:** May 30  
@@ -41,14 +51,21 @@
 **Why it matters:** Elevated ransomware risk across the sector.  
 **Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
 
-### [GlassWorm Malware Takedown Disrupts Developer Supply Chain Attack Infrastructure](https://thehackernews.com/2026/05/glassworm-malware-takedown-disrupts.html)
-**Source:** The Hacker News &nbsp;·&nbsp; **Date:** May 27  
-**Why it matters:** Third-party/software supply chain integrity risk.  
-**Recommended action:** Audit third-party software dependencies and review vendor access.  
-
 ---
 
 ## 🟠 Important — Review This Week
+
+- [Critical Windows Netlogon RCE flaw now exploited in attacks](https://www.bleepingcomputer.com/news/microsoft/critical-windows-netlogon-remote-code-execution-flaw-now-exploited-in-attacks/)  
+  **BleepingComputer** · Jun 01 · _General awareness item._  
+
+- [Webinar tomorrow: From alert to resolution in network incident response](https://www.bleepingcomputer.com/news/security/webinar-tomorrow-from-alert-to-resolution-in-network-incident-response/)  
+  **BleepingComputer** · Jun 01 · _General awareness item._  
+
+- [Microsoft fixes outage affecting MFA setup, MySignIn service](https://www.bleepingcomputer.com/news/microsoft/microsoft-fixes-outage-affecting-mfa-setup-mysignin-service/)  
+  **BleepingComputer** · Jun 01 · _Service continuity risk to users._  
+
+- [Microsoft fixes KB5089549 Windows security update install issues](https://www.bleepingcomputer.com/news/microsoft/microsoft-fixes-kb5089549-windows-security-update-install-issues/)  
+  **BleepingComputer** · Jun 01 · _General awareness item._  
 
 - [CVE-2026-39829 Invoking  pathological RSA/DSA parameters may cause DoS in golang.org/x/crypto/ssh](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-39829)  
   **Microsoft Security Response Center (MSRC)** · Jun 01 · _General awareness item._  
@@ -66,40 +83,17 @@ The most common trigger is any endpoint that calls `JSON.parse()` on attacker-co
 This vulnerability affects **20.x, 22.x, 24.x, and 25.x**.](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-21717)  
   **Microsoft Security Response Center (MSRC)** · May 31 · _General awareness item._  
 
-- [CVE-2025-23167 A flaw in Node.js 20's HTTP parser allows improper termination of HTTP/1 headers using `\r\n\rX` instead of the required `\r\n\r\n`.
-This inconsistency enables request smuggling, allowing attackers to bypass proxy-based access controls and submit unauthorized requests.
-
-The issue was resolved by upgrading `llhttp` to version 9, which enforces correct header termination.
-
-Impact:
-* This vulnerability affects only Node.js 20.x users prior to the `llhttp` v9 upgrade.](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-23167)  
-  **Microsoft Security Response Center (MSRC)** · May 31 · _General awareness item._  
-
-- [CVE-2024-36137 A vulnerability has been identified in Node.js, affecting users of the experimental permission model when the --allow-fs-write flag is used.
-
-Node.js Permission Model do not operate on file descriptors, however, operations such as fs.fchown or fs.fchmod can use a "read-only" file descriptor to change the owner and permissions of a file.](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-36137)  
-  **Microsoft Security Response Center (MSRC)** · May 31 · _General awareness item._  
-
-- [CVE-2024-22018 A vulnerability has been identified in Node.js, affecting users of the experimental permission model when the --allow-fs-read flag is used.
-This flaw arises from an inadequate permission model that fails to restrict file stats through the fs.lstat API. As a result, malicious actors can retrieve stats from files that they do not have explicit read access to.
-This vulnerability affects all users using the experimental permission model in Node.js 20 and Node.js 21.
-Please note that at the time this CVE was issued, the permission model is an experimental feature of Node.js.](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-22018)  
-  **Microsoft Security Response Center (MSRC)** · May 31 · _General awareness item._  
-
-- [CVE-2026-40034 gitoxide - Command Injection via Partial .gitmodules Override in gix-submodule](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-40034)  
-  **Microsoft Security Response Center (MSRC)** · May 31 · _General awareness item._  
-
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [The Security Growth Platform: Why MSPs Are Moving Beyond vCISO Tools](https://thehackernews.com/2026/06/the-security-growth-platform-why-msps.html) — The Hacker News
 - [ISC Stormcast For Monday, June 1st, 2026 https://isc.sans.edu/podcastdetail/9952, (Mon, Jun 1st)](https://isc.sans.edu/diary/rss/33036) — SANS Internet Storm Center
 - [Unidentified RAT pushes NetSupport RAT, (Mon, Jun 1st)](https://isc.sans.edu/diary/rss/33034) — SANS Internet Storm Center
 - [YARA-X 1.17.0 Release, (Sun, May 31st)](https://isc.sans.edu/diary/rss/33032) — SANS Internet Storm Center
 - [WP Maps Pro bug exploited to create admin accounts on WordPress sites](https://www.bleepingcomputer.com/news/security/wp-maps-pro-bug-exploited-to-create-admin-accounts-on-wordpress-sites/) — BleepingComputer
 - [Dutch Authorities Dismantle Botnet Linked to 17 Million Infected Devices](https://thehackernews.com/2026/05/dutch-authorities-dismantle-botnet.html) — The Hacker News
-- [Type Confusion in V8 in Google Chrome prior to 142.0.7444.59 allowed a remote attacker to potentially exploit heap corruption via a crafted HTML page. (Chromium security severity: High)](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-13230) — Microsoft Security Response Center (MSRC)
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 5 critical · 72 important · 41 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 7 critical · 75 important · 35 FYI_
