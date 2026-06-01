@@ -1,25 +1,30 @@
 # IT Weekly Intelligence Briefing
 **Period:** May 25 – June 01, 2026  
-**Generated:** 2026-06-01 15:55 UTC  
-**Items reviewed:** 118  
+**Generated:** 2026-06-01 20:16 UTC  
+**Items reviewed:** 120  
 
 ## ⚡ Top Actions This Week
 
 1. **Audit third-party software dependencies and review vendor access.**  
+   _Miasma Supply Chain Attack Compromises Red Hat npm Packages with Credential-Stealing Worm_  
+   Source: The Hacker News  
+
+2. **Audit third-party software dependencies and review vendor access.**  
    _OpenAI Codex Authentication Tokens Stolen in codexui-android npm Supply Chain Attack_  
    Source: The Hacker News  
 
-2. **Apply emergency patch or mitigation now; check vendor advisory for workarounds.**  
+3. **Apply emergency patch or mitigation now; check vendor advisory for workarounds.**  
    _Critical WP Maps Pro Flaw Actively Exploited to Create Admin Accounts_  
    Source: The Hacker News  
-
-3. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _Palo Alto GlobalProtect VPN auth bypass flaw now exploited in attacks_  
-   Source: BleepingComputer  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [Miasma Supply Chain Attack Compromises Red Hat npm Packages with Credential-Stealing Worm](https://thehackernews.com/2026/06/miasma-supply-chain-attack-compromises.html)
+**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Jun 01  
+**Why it matters:** Third-party/software supply chain integrity risk.  
+**Recommended action:** Audit third-party software dependencies and review vendor access.  
 
 ### [OpenAI Codex Authentication Tokens Stolen in codexui-android npm Supply Chain Attack](https://thehackernews.com/2026/06/openai-codex-authentication-tokens.html)
 **Source:** The Hacker News &nbsp;·&nbsp; **Date:** Jun 01  
@@ -46,11 +51,6 @@
 **Why it matters:** Elevated ransomware risk across the sector.  
 **Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
 
-### [GlassWorm Malware Takedown Disrupts Developer Supply Chain Attack Infrastructure](https://thehackernews.com/2026/05/glassworm-malware-takedown-disrupts.html)
-**Source:** The Hacker News &nbsp;·&nbsp; **Date:** May 27  
-**Why it matters:** Third-party/software supply chain integrity risk.  
-**Recommended action:** Audit third-party software dependencies and review vendor access.  
-
 ---
 
 ## 🟠 Important — Review This Week
@@ -61,6 +61,15 @@
 - [Race Against Time: Why Faster Vulnerability Alerts Matter](https://www.bleepingcomputer.com/news/security/race-against-time-why-faster-vulnerability-alerts-matter/)  
   **BleepingComputer** · Jun 01 · _General awareness item._  
 
+- [CVE-2026-45495 Microsoft Edge (Chromium-based) Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45495)  
+  **Microsoft Security Response Center (MSRC)** · Jun 01 · _General awareness item._  
+
+- [CVE-2026-45494 Microsoft Edge (Chromium-based) Spoofing Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45494)  
+  **Microsoft Security Response Center (MSRC)** · Jun 01 · _General awareness item._  
+
+- [CVE-2025-6965 Integer Truncation on SQLite](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-6965)  
+  **Microsoft Security Response Center (MSRC)** · Jun 01 · _General awareness item._  
+
 - [⚡ Weekly Recap: New Linux Flaw, PAN-OS Exploit, AI-Powered Attacks, OAuth Phishing and More](https://thehackernews.com/2026/06/weekly-recap-new-linux-flaw-pan-os.html)  
   **The Hacker News** · Jun 01 · _General awareness item._  
 
@@ -70,26 +79,17 @@
 - [Webinar tomorrow: From alert to resolution in network incident response](https://www.bleepingcomputer.com/news/security/webinar-tomorrow-from-alert-to-resolution-in-network-incident-response/)  
   **BleepingComputer** · Jun 01 · _General awareness item._  
 
-- [Microsoft fixes outage affecting MFA setup, MySignIn service](https://www.bleepingcomputer.com/news/microsoft/microsoft-fixes-outage-affecting-mfa-setup-mysignin-service/)  
-  **BleepingComputer** · Jun 01 · _Service continuity risk to users._  
-
-- [Microsoft fixes KB5089549 Windows security update install issues](https://www.bleepingcomputer.com/news/microsoft/microsoft-fixes-kb5089549-windows-security-update-install-issues/)  
-  **BleepingComputer** · Jun 01 · _General awareness item._  
-
-- [CVE-2026-39829 Invoking  pathological RSA/DSA parameters may cause DoS in golang.org/x/crypto/ssh](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-39829)  
-  **Microsoft Security Response Center (MSRC)** · Jun 01 · _General awareness item._  
-
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [Dashlane password manager users locked out by brute force attacks](https://www.bleepingcomputer.com/news/security/dashlane-password-manager-users-locked-out-by-brute-force-attacks/) — BleepingComputer
+- [Hackers Used Meta’s AI Support Bot to Seize Instagram Accounts](https://krebsonsecurity.com/2026/06/hackers-used-metas-ai-support-bot-to-seize-instagram-accounts/) — Krebs on Security
+- [WordPress malware campaign hides payloads in Steam profiles](https://www.bleepingcomputer.com/news/security/wordpress-malware-campaign-hides-payloads-in-steam-profiles/) — BleepingComputer
 - [China-Aligned Groups Ramp Up Attacks: Dragon Weave Hits Czech Republic & Taiwan](https://thehackernews.com/2026/06/china-aligned-groups-ramp-up-attacks.html) — The Hacker News
 - [The Security Growth Platform: Why MSPs Are Moving Beyond vCISO Tools](https://thehackernews.com/2026/06/the-security-growth-platform-why-msps.html) — The Hacker News
 - [ISC Stormcast For Monday, June 1st, 2026 https://isc.sans.edu/podcastdetail/9952, (Mon, Jun 1st)](https://isc.sans.edu/diary/rss/33036) — SANS Internet Storm Center
-- [Unidentified RAT pushes NetSupport RAT, (Mon, Jun 1st)](https://isc.sans.edu/diary/rss/33034) — SANS Internet Storm Center
-- [YARA-X 1.17.0 Release, (Sun, May 31st)](https://isc.sans.edu/diary/rss/33032) — SANS Internet Storm Center
-- [WP Maps Pro bug exploited to create admin accounts on WordPress sites](https://www.bleepingcomputer.com/news/security/wp-maps-pro-bug-exploited-to-create-admin-accounts-on-wordpress-sites/) — BleepingComputer
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 6 critical · 77 important · 35 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 7 critical · 77 important · 36 FYI_
