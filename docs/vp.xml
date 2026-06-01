@@ -3,16 +3,459 @@
 <channel>
   <title>Joe — VP of IT Briefing</title>
   <description>Leadership-focused IT risk, vendors, pricing, licensing, and industry context.</description>
-  <lastBuildDate>Mon, 01 Jun 2026 03:44:31 +0000</lastBuildDate>
+  <lastBuildDate>Mon, 01 Jun 2026 09:24:00 +0000</lastBuildDate>
   
 <item>
-  <title>🔵 China issues new investment rules, expanding regulator powers to scrutinize overseas deals involving Chinese investors, tech, and data, effective from July 1 (Eduardo Baptista/Reuters)</title>
-  <link>https://www.techmeme.com/260531/p18#a260531p18</link>
-  <pubDate>Mon, 01 Jun 2026 03:10:01 +0000</pubDate>
+  <title>🟠 What goes where: How AI is forcing a new workload placement strategy</title>
+  <link>https://www.cio.com/article/4177732/what-goes-where-how-ai-is-forcing-a-new-workload-placement-strategy.html</link>
+  <pubDate>Mon, 01 Jun 2026 09:00:00 +0000</pubDate>
+  <source>CIO.com</source>
+  <description><![CDATA[<b>Why this matters: Service impact possible — prepare comms and confirm vendor status.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<p>The first AI infrastructure conversations I keep getting pulled into sound like cloud debates. Should this run in a hyperscale cloud? Do we need private capacity? Is sovereign cloud enough? Can we keep the model in one place and the retrieval layer in another? Those are reasonable opening questions. In my experience, they rarely determine whether an AI workload will be operationally sound, economically defensible and governable at scale. They are just the entry point.</p>
+
+
+
+<p>More than once, I have watched a meeting begin with broad posture language – cloud first, hybrid by exception, private where required – and then shift the moment someone describes the actual workload. It has to pull from internal content that cannot move freely. It sits within a workflow where response time matters. It may call systems of record. It may have to stay within a jurisdictional boundary. It may look cheap in a pilot and expensive once inference, storage, network movement and monitoring become persistent. Once the workload becomes concrete, the old posture language starts to thin out.</p>
+
+
+
+<p>My previous piece argued that serious enterprise AI governance starts above the tool, in the control plane that determines what AI can see, touch and do. This is the question that follows immediately. Once an enterprise can govern AI, it still has to decide where each workload should run. That is becoming the more consequential infrastructure decision now, because AI is exposing the limits of a broad cloud posture and prompting a more practical discussion about fit.</p>
+
+
+
+<h2 class="wp-block-heading" id="ai-is-breaking-the-old-cloud-shorthand">AI is breaking the old cloud shorthand</h2>
+
+
+
+<p>For years, many organizations could frame cloud strategy in relatively simple terms. Cloud-first was often enough a guiding policy, even if the reality underneath was always messier. AI changes that. <a href="https://www.mckinsey.com/industries/technology-media-and-telecommunications/our-insights/the-next-big-shifts-in-ai-workloads-and-hyperscaler-strategies" rel="nofollow">McKinsey</a> recently noted that AI compute is now primarily split between training and inference, and that those workloads are already reshaping site selection, power strategy and architectural design across hyperscaler portfolios. At the same time, <a href="https://uptimeinstitute.com/resources/research-and-reports/uptime-institute-global-data-center-survey-results-2025" rel="nofollow">Uptime Institute’s 2025 survey</a> describes an industry grappling with rising costs, worsening power constraints and the challenge of meeting AI-driven density demands. That combination should tell leaders something important: AI is not just adding more demand to the existing cloud conversation. It is changing the variables inside it.</p>
+
+
+
+<p>Part of the reason is that AI is not a single workload category. Retrieval-heavy use cases create different pressures than large-scale inference. Fine-tuning has a different economic and infrastructure profile than agentic workflows connected to enterprise systems. Batch AI processing behaves differently from user-facing workloads that depend on speed and locality. Some workloads are spiky and experimental, while others quickly settle into steady operational demand. Once those differences become visible, the real issue is no longer whether private cloud is back or whether hyperscale remains dominant. The issue is whether the enterprise has a defensible way to decide what goes where and why.</p>
+
+
+
+<p>The cleaner way to frame it is this: AI is turning cloud strategy back into a workload placement discipline. The question is no longer which cloud posture sounds right in the abstract, but which environment best fits the workload’s economics, data movement, latency, risk and operating constraints once the workload becomes real.</p>
+
+
+
+<h2 class="wp-block-heading" id="this-is-not-nostalgia-for-private-cloud">This is not nostalgia for private cloud</h2>
+
+
+
+<p>That distinction matters because some of the louder narratives about AI infrastructure still boil down to a familiar headline: “Private cloud is back.” In some cases, yes, parts of the AI stack are moving closer to enterprise boundaries. But that does not automatically mean the market is swinging backward. <a href="https://intelligence.uptimeinstitute.com/resource/cloud-repatriation-overstated" rel="nofollow">Uptime’s recent analysis of cloud repatriation</a> makes the balance clear: Costs are pushing some workloads back toward enterprise data centers, but most organizations are still running several public clouds alongside on-premises environments in a hybrid model, and overall cloud usage is not collapsing. What is happening is more selective. Enterprises are becoming less ideological.</p>
+
+
+
+<p>In practice, the reasons are more about discipline than nostalgia. Some AI workloads perform better in the hyperscale cloud because access to frontier models, elastic capacity and faster experimentation still matter more than anything else. Other workloads start to lean the other way once inference becomes steady, data movement becomes expensive, retrieval must sit near sensitive enterprise content or the operating environment cannot tolerate long network paths. Predictable demand changes the economics. So does locality. So does control. That is not a throwback. It is architecture growing up again.</p>
+
+
+
+<p>You can see the market reacting to this directly. <a href="https://blogs.microsoft.com/blog/2026/02/24/microsoft-sovereign-cloud-adds-governance-productivity-and-support-for-large-ai-models-securely-running-even-when-completely-disconnected/" rel="nofollow">Microsoft’s recent Sovereign Cloud expansion</a> is framed as a continuum spanning public and private environments, including fully disconnected operations and local AI inference. <a href="https://aws.amazon.com/compliance/europe-digital-sovereignty/" rel="nofollow">AWS</a> now positions its European Sovereign Cloud around data residency, operational autonomy and resiliency requirements. <a href="https://docs.cloud.google.com/vertex-ai/generative-ai/docs/learn/data-residency" rel="nofollow">Google’s Vertex AI documentation</a> distinguishes where data remains at rest from where machine learning processing occurs. Vendor announcements do not settle the issue. They do show where the market is moving and why enterprises are rethinking placement more seriously.</p>
+
+
+
+<h2 class="wp-block-heading" id="sovereignty-is-not-a-label">Sovereignty is not a label</h2>
+
+
+
+<p>This is where the sovereignty discussion either becomes serious or devolves into branding. In most leadership conversations, sovereignty is used as shorthand for “keep it local.” That is too loose to be useful. The <a href="https://commission.europa.eu/document/download/09579818-64a6-4dd5-9577-446ab6219113_en" rel="nofollow">European Commission’s Cloud Sovereignty Framework</a> treats sovereignty as a set of explicit objectives with required assurance levels, not as a marketing adjective. <a href="https://www.eulisa.europa.eu/news-and-events/news/technology-brief-eu-lisa-explores-role-sovereign-cloud-public-sector-digital" rel="nofollow">eu-LISA’s sovereign cloud brief</a> makes a similar point from a public-sector perspective, tying the issue to data localization, governance, compliance, jurisdiction, transparency and operational control. That is much closer to the real decision space.</p>
+
+
+
+<p>For AI workloads, sovereignty usually raises several questions at once. Where is data stored at rest? Where is processing occurring? Whose law applies if something is disputed or compelled? Who can administer the environment? What dependencies remain with the provider? What evidence survives an audit, incident review or regulatory challenge? Those questions matter more for AI than for a generic application migration because AI systems often blend model access, retrieval, data movement, tool invocation and action pathways within a single operating pattern. A workload can satisfy residency on paper and still fail the broader control test in practice.</p>
+
+
+
+<p>That is also why private or sovereign environments help only if the control layer remains modern. If identity is inconsistent, policy enforcement is fragmented, audit evidence is weak or observability disappears as a workload moves closer to the enterprise, the organization has not solved the problem. It has merely relocated it. A sovereign label does not substitute for strong policy, traceability and operating discipline.</p>
+
+
+
+<h2 class="wp-block-heading" id="what-better-organizations-do-differently">What better organizations do differently</h2>
+
+
+
+<p>The stronger organizations I see are not trying to settle the whole argument with a single-platform doctrine. They are building repeatable placement logic. Usually, that starts with a small set of questions, not a giant framework. What does the workload cost when usage becomes steady rather than experimental? How much data must move, and how often? Which response times actually matter to the business process? Which data classes and jurisdictions are involved? What observability and audit evidence will be needed if this workload becomes material? How hard would it be to move or redesign later if the economics or regulatory conditions change?</p>
+
+
+
+<p>Those questions quickly elevate the quality of the conversation. They shift it from product preference to operating model territory. They also bring the right people into the room. Placement is not just a cloud team decision. It pulls in architecture, security, data, platform, infrastructure and operating leadership because the answer is rarely just about where compute happens to sit. It is about trust boundaries, failure modes, unit economics and the conditions under which an AI workload becomes part of real work.</p>
+
+
+
+<p>The better organizations also separate workload classes earlier than most. They do not let a retrieval-heavy assistant over internal knowledge use the same placement logic as large-scale model training. They do not treat an agent that can take action in enterprise systems the same way they treat a passive assistant. They do not apply the same assumptions to a batch-processing pipeline and to a user-facing operational workload with tight latency expectations. It sounds obvious. In practice, many organizations still miss it, and a weak AI strategy often starts there.</p>
+
+
+
+<h2 class="wp-block-heading" id="the-next-leadership-question">The next leadership question</h2>
+
+
+
+<p>The wrong question for this phase is, “Which side of the cloud debate are we on?” It is not even, “Is private cloud back?” Those are still posture questions. The better question is narrower and harder: What should run where, and on what basis?</p>
+
+
+
+<p><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><strong><a href="https://www.cio.com/expert-contributor-network/">Want to join?</a></strong></p>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</item>
+
+<item>
+  <title>🟠 Por qué el CIO no puede ignorar la gobernanza de la IA</title>
+  <link>https://www.cio.com/article/4179184/por-que-el-cio-no-puede-ignorar-la-gobernanza-de-la-ia.html</link>
+  <pubDate>Mon, 01 Jun 2026 08:27:47 +0000</pubDate>
+  <source>CIO.com</source>
+  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<p>Los CIO que se apresuran a desplegar agentes de IA sin visibilidad real sobre sus procesos de toma de decisiones están coqueteando con el desastre. Según expertos en IA consultados, desplegar agentes sin procesos y herramientas de observabilidad crea una bomba de relojería con un potencial de consecuencias negativas muy graves.</p>
+
+
+
+<p>Muchas empresas están desplegando agentes de IA y esperan que aumenten la productividad con poca intervención humana, observa T.J. Marlin, CEO de la firma de seguridad de IA Guardrail Technologies. Ese es un enfoque equivocado, afirma. En su lugar, los equipos de TI necesitan vigilar de cerca a los agentes y ajustar políticas y prácticas a lo largo de todo el proceso agentivo. “No se trata solo de configurarlo y olvidarse”, dice. “Las organizaciones que hacen eso van a salir en las noticias porque les habrá ocurrido algo terrible”.</p>
+
+
+
+<p>Muchas organizaciones están desplegando agentes rápidamente por miedo a quedarse atrás, sin entender los matices de la tecnología, señala Marlin. Algunos responsables de TI parecen comparar los agentes con la automatización robótica de procesos (RPA), cuando los resultados de RPA son mucho más deterministas, añade.</p>
+
+
+
+<p>“Hay escasez de talento y de conocimiento y las personas están construyendo a gran velocidad sin comprobar si es correcto y si funciona como se espera”, afirma. “Todos esos son rasgos característicos de los peores desastres que he visto a lo largo de mi carrera”.</p>
+
+
+
+<p>Un informe reciente del proveedor de gobernanza de agentes TrueFoundry pone cifras a los temores sobre agentes sin regulación. Una encuesta a más de 200 responsables de IA empresarial concluyó que el 54% de las organizaciones representadas no puede rastrear completamente lo que hacen sus agentes y el 56% no tiene un control centralizado de agentes ni una capa de gobernanza.</p>
+
+
+
+<p>Aunque TrueFoundry tiene interés en impulsar la gobernanza de agentes, muchos otros expertos en IA ven los mismos problemas.</p>
+
+
+
+<h2 class="wp-block-heading" id="gobernar-a-ciegas">Gobernar a ciegas</h2>
+
+
+
+<p>Las dificultades con la gobernanza y la observabilidad son grandes obstáculos para el despliegue de agentes productivos, y muchas organizaciones están desplegando agentes sin crear una lista centralizada de los mismos, afirma Mahesh Kumar Goyal, experto sénior en datos e IA en Google. “La mayoría de las empresas no tienen ningún inventario de los agentes que ya están en producción: intentan gobernar lo que no pueden ver”, recalca.</p>
+
+
+
+<p>Además, las herramientas tradicionales de seguridad SIEM y EDR se diseñaron para detectar anomalías humanas, no agentes descontrolados, apunta. “Un agente ejecutando código perfectamente 10.000 veces seguidas parece normal incluso si ha sido comprometido”, dice. Ejecutar agentes totalmente autónomos no es una buena idea, añade, y las organizaciones deben pensar en permisos de herramientas con privilegios mínimos, capas de aplicación de políticas que intermedien cada <em>prompt </em>y llamada a herramientas, y trazabilidad de extremo a extremo que una <em>prompts</em>, llamadas a herramientas y acciones posteriores en un único rastro auditable.</p>
+
+
+
+<p>“El sistema financiero no funciona sobre la base de la confianza; funciona sobre la auditabilidad, la conciliación y los mecanismos de corte”, afirma Goyal. “Los agentes madurarán de la misma forma. La autonomía por niveles es la respuesta realista: libertad total en tareas de bajo riesgo, intervención humana en las que tienen consecuencias”.</p>
+
+
+
+<p>Parte del problema es que los agentes han trastocado los modelos utilizados para determinar si el software tradicional funcionaba correctamente, añade Adel El Hallak, vicepresidente de software de IA en Nvidia. Con el software tradicional, los profesionales de QA y seguridad podían revisar el código para depurar problemas, pero los agentes toman decisiones en el entorno de ejecución de un modelo de IA.</p>
+
+
+
+<p>La fuente de verdad para los agentes reside en las trazas, los registros del flujo de ejecución, no en el código, añade. Recopilar trazas —en esencia, registros detallados— es un punto de partida hacia la gobernanza de agentes, pero las organizaciones necesitan poder actuar sobre esa información, dice. “Para confiar en algo, tiene que ser transparente, y la observabilidad es fundamental para la transparencia”, añade El Hallak. “Pero observar no es suficiente. Necesitamos ser capaces de tomar esas señales y convertirlas en algo accionable”.</p>
+
+
+
+<p>La gobernanza de agentes va más allá de la observabilidad y permite a las organizaciones probar y ajustar de forma continua los agentes, señala. Las herramientas existen, con empresas como Nvidia desarrollando sus propios marcos internos de gobernanza y varios otros proveedores ofreciendo herramientas de observabilidad y gobernanza de agentes. “No basta con disponer de los datos de comportamiento, con capturar los datos de retroalimentación”, dice. “El sistema debería permitirme anotar, cambiar, ampliar o crear datos de retroalimentación adicionales, y luego puedo utilizar esos datos para mejorar mi agente en su conjunto”.</p>
+
+
+
+<h2 class="wp-block-heading" id="el-cuello-de-botella-de-la-gobernanza">El cuello de botella de la gobernanza</h2>
+
+
+
+<p>Al mismo tiempo, muchas empresas que avanzan hacia la gobernanza de agentes han descubierto que puede convertirse en un gran cuello de botella si se hace mal, afirma Nirmal Ganesh, director sénior de gestión de producto para automatización de flujos de trabajo con agentes en el proveedor de almacenamiento en la nube Box. “No creo que hayamos superado todavía la parte difícil en el despliegue de agentes en la empresa”, dice. “La mayoría de las compañías aún no son buenas en esto, y muchas menos han conseguido hacerlo a escala con gobernanza y observabilidad de agentes”.</p>
+
+
+
+<p>Ganesh identifica varios problemas, incluidos agentes que operan sin modelos claros de permisos. “Si un agente puede ver más que una persona o acceder a más de lo que permiten los permisos de un usuario sobre contenidos o datos, eso es un incidente esperando a ocurrir”, afirma.</p>
+
+
+
+<p>Sin embargo, algunos modelos iniciales de gobernanza de agentes no escalan. Algunos equipos de TI han optado por que los humanos deban aprobar cada salida del agente porque es la opción más segura, indica. “En realidad, esto supone reconstruir procesos manuales con más puntos de control o de recomendación”, dice Ganesh. “A gran escala, la gobernanza se convierte en tu cuello de botella para escalar y deja de ser tu red de seguridad”.</p>
+
+
+
+<p>Las organizaciones necesitan procesos de observabilidad y gobernanza que sean a la vez escalables y completos, añade. El retorno de la inversión de los agentes procederá de controles sólidos, modelos de permisos claros y una participación humana bien definida, afirma. “Toda automatización madura necesita observabilidad continua: los flujos de trabajo cambian, las políticas cambian, las decisiones cambian, aparecen nuevos casos de uso”, agrega. “La intervención humana siempre será necesaria para lo que cambia con el tiempo, pero necesitamos menos intervención en los caminos conocidos y más foco en la gestión de excepciones y el ajuste fino de la gobernanza”.</p>
+
+
+
+<h2 class="wp-block-heading" id="observar-el-resultado-no-es-suficiente">Observar el resultado no es suficiente</h2>
+
+
+
+<p>La gobernanza no puede centrarse únicamente en el resultado del agente, añade Marcelo Lorenzetti, fundador y CAIO del proveedor de IA para servicios legales SavvyLex. “El mayor reto no es simplemente si un agente produce una buena respuesta”, afirma. “Es si la organización puede demostrar a qué accedió el agente, qué instrucciones siguió, qué herramientas invocó, qué decisiones tomó, dónde intervino un humano y si se mantuvo dentro de los límites autorizados”.</p>
+
+
+
+<p>Sin un nivel completo de visibilidad en tiempo de ejecución, las empresas se quedan con capturas de pantalla, registros y explicaciones a posteriori que pueden no cumplir los requisitos legales, de cumplimiento o de seguridad, afirma.</p>
+
+
+
+<p>Los agentes deberían verificarse de forma continua en lugar de confiar plenamente en ellos, añade, con la gobernanza incorporada en la propia arquitectura del agente. Recomienda incluir acceso basado en roles, ejecución sujeta a políticas, umbrales de aprobación humana, procedencia de fuentes y herramientas, registros de actividad inmutables, puntuación de confianza, gestión de excepciones y rutas claras de escalado cuando un agente alcanza el límite de su autoridad.</p>
+
+
+
+<p>“La observabilidad no debería limitarse a si el modelo respondió”, afirma Lorenzetti. “Debería mostrar todo el recorrido de la decisión desde la entrada hasta la acción”. Los agentes de IA han cambiado el modelo de gobernanza necesario, añade.</p>
+
+
+
+<p>“El problema fundamental es que muchas empresas están pasando de una IA que responde preguntas a una IA que actúa, pero sus modelos de gobernanza siguen diseñados para herramientas pasivas, no para flujos de trabajo autónomos”, concluye.</p>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 A look at Pangram, considered the gold standard for detecting AI writing, and the dangers of its claimed one in 10,000 false-positive rate when used at scale (Matteo Wong/The Atlantic)</title>
+  <link>https://www.techmeme.com/260601/p13#a260601p13</link>
+  <pubDate>Mon, 01 Jun 2026 07:50:01 +0000</pubDate>
   <source>Techmeme</source>
-  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/><a href="https://www.reuters.com/world/asia-pacific/china-toughens-rules-outbound-investment-after-meta-manus-contention-2026-06-01/"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260531/i18.jpg" vspace="4" /></a>
-<p><a href="https://www.techmeme.com/260531/p18#a260531p18" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Eduardo Baptista / <a href="http://www.reuters.com/">Reuters</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.reuters.com/world/asia-pacific/china-toughens-rules-outbound-investment-after-meta-manus-contention-2026-06-01/">China issues new investment rules, expanding regulator powers to scrutinize overseas deals involving Chinese investors, tech, and data, effective from July 1</a></b></span>&nbsp; &mdash;&nbsp; China issued sweeping new rules on Monday, widening regulators' powers to scrutinise overseas deals involving Chinese investors &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.theatlantic.com/technology/2026/05/pangram-ai-detection-accuracy/687381/?gift=NBdGSmKfDQzLc1B6N1F-gasbcqKrczuquHjg4eErYvw&amp;utm_source=copy-link&amp;utm_medium=social&amp;utm_campaign=share"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260601/i13.jpg" vspace="4" /></a>
+<p><a href="https://www.techmeme.com/260601/p13#a260601p13" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Matteo Wong / <a href="http://www.theatlantic.com/">The Atlantic</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://www.theatlantic.com/technology/2026/05/pangram-ai-detection-accuracy/687381/?gift=NBdGSmKfDQzLc1B6N1F-gasbcqKrczuquHjg4eErYvw&amp;utm_source=copy-link&amp;utm_medium=social&amp;utm_campaign=share">A look at Pangram, considered the gold standard for detecting AI writing, and the dangers of its claimed one in 10,000 false-positive rate when used at scale</a></b></span>&nbsp; &mdash;&nbsp; AI-detection tools are getting better.&nbsp; But they still aren't good enough.&nbsp; &mdash;&nbsp; Basically every recent, high-profile accusation &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+</item>
+
+<item>
+  <title>🟠 Techie expensed a bag of oranges and then juiced up a stupid security incident</title>
+  <link>https://www.theregister.com/offbeat/2026/06/01/techie-expensed-a-bag-of-oranges-and-then-juiced-up-a-stupid-security-incident/5243953</link>
+  <pubDate>Mon, 01 Jun 2026 07:32:00 +0000</pubDate>
+  <source>The Register</source>
+  <description><![CDATA[<b>Why this matters: Service impact possible — prepare comms and confirm vendor status.</b><br/>He knew this was amazingly dumb but couldn’t stop laughing as the fruit went splat<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔴 6 critical security gaps every CISO must address</title>
+  <link>https://www.csoonline.com/article/4178412/6-critical-security-gaps-every-ciso-must-address.html</link>
+  <pubDate>Mon, 01 Jun 2026 07:00:00 +0000</pubDate>
+  <source>CSO Online</source>
+  <description><![CDATA[<b>Why this matters: Elevated ransomware risk — validate backups and endpoint defenses.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<p>CISOs acknowledge that no organization is completely safe, but many also admit their security measures aren’t where they’d like them to be.</p>
+
+
+
+<p>One-third of CISOs surveyed for <a href="https://www.proofpoint.com/us/resources/white-papers/voice-of-the-ciso-report">Proofpoint’s 2025 Voice of the CISO Report</a> said the data within their organization is not adequately protected, and 58% said their organizations were unprepared to respond to a cyberattack. Meanwhile, only 67% believed their organizations offered adequate budget, staff, and tools to meet their cybersecurity goals.</p>
+
+
+
+<p>Such figures indicate that critical cybersecurity gaps remain in many, if not most, organizations. As adversaries lean into automation and artificial intelligence, the pressure is mounting to address security gaps that could be exploited. Here are six critical security gaps that demand CISOs’ attention, according to their IT security leader colleagues and industry observers.</p>
+
+
+
+<h2 class="wp-block-heading">1. The perception gap<strong></strong></h2>
+
+
+
+<p>Although CISOs have become <a href="https://www.csoonline.com/article/4080670/what-does-aligning-security-to-the-business-really-mean.html">more business-oriented in recent years</a>, many still view their primary job as protecting digital systems when they should see it as ensuring business resilience, says <a href="Errol%20Weiss%20%7C%20LinkedIn">Errol Weiss</a>, CSO with Health-ISAC.</p>
+
+
+
+<p>“CISOs still think of a bad day from the IT perspective; they still think of security as an IT problem,” he notes. “They need to shift from protecting systems at all costs to instead building resilience and thinking about the downstream impacts when something fails.”</p>
+
+
+
+<p>Weiss notes that part of the reason this gap persists in many organizations is because <a href="https://www.csoonline.com/article/515730/business-continuity-and-disaster-recovery-planning-the-basics.html">business continuity</a>, which is at the heart of resilience, usually falls to executives other than CISOs. “The business continuity piece has traditionally been someone else’s problem, but now it has to become a focus for the security organization,” he says.</p>
+
+
+
+<p>When CISOs think broadly about how <a href="https://www.csoonline.com/article/4159317/cisos-reshape-their-roles-as-business-risk-strategists.html">digital threats could impact the business</a>, rather than focus on how attacks impact the IT environment, they get a more accurate view of the top risks and can better access the blast radius of an incident, Weiss explains. That in turn enables CISOs to more effectively prioritize defensive moves and remediation action, making it more likely that an incident can be contained and not have unexpected follow-on impacts that stymie business operations.</p>
+
+
+
+<p>The <a href="https://www.csoonline.com/article/2140608/8-critical-lessons-from-the-change-healthcare-ransomware-catastrophe.html">2024 cyberattack on Change Healthcare</a>, the consequences of which rippled through the entire healthcare industry, shows why CISOs need to close this gap in perspective on cyber threats and risk, he says.</p>
+
+
+
+<h2 class="wp-block-heading" id="2-the-gap-between-the-speed-of-threat-actors-and-security">2. The gap between the speed of threat actors and security</h2>
+
+
+
+<p>The <a href="https://blog.talosintelligence.com/2025yearinreview/">2025 Year in Review report from threat intelligence firm Cisco Talos</a> stated that “the 2025 threat landscape was defined by an unprecedented acceleration in the speed of vulnerability exploitation, with adversaries weaponizing new security flaws like React2Shell and ToolShell almost immediately upon disclosure.”</p>
+
+
+
+<p>Most security teams aren’t moving as fast, creating an agility gap between them and the threat actors, says <a href="https://www.linkedin.com/in/realbuckbell/">Buck Bell</a>, director of security strategy at IT services provider CDW.</p>
+
+
+
+<p>“Most of the gaps we see today are execution gaps,” he adds.</p>
+
+
+
+<p>Many security programs still feature legacy thinking, including “some static security measures in a world that needs real-time adjustments,” he says. Monthly penetration testing and patch Tuesdays, for example, are relics of an older era yet remain in some security departments. “The reality is that organizations today need to execute at a higher velocity,” he adds.</p>
+
+
+
+<p>Bell says leading CISOs are adding speed to their operations by adopting AI, automation, and practices such as <a href="https://www.csoonline.com/article/3979418/what-is-ctem.html">continuous threat exposure management (CTEM)</a>.</p>
+
+
+
+<h2 class="wp-block-heading" id="3-the-gap-between-the-speed-of-the-business-and-security">3. The gap between the speed of the business and security</h2>
+
+
+
+<p>Similarly, some CISOs also need to increase their speed and agility so that security can move as quickly as the business does. As professional services firm PwC notes in its <a href="https://www.pwc.com/us/en/executive-leadership-hub/ciso.html">2026 CISO Outlook</a>, “The CISO role is at a pivotal moment. As technology accelerates and new threats emerge, you’re expected to lead at the pace of change. AI, quantum computing, and a hyperconnected world are reshaping risk — and your business is watching.”</p>
+
+
+
+<p><a href="https://www.linkedin.com/in/cbshah/">Chirag Shah</a>, global information security officer and data protection officer at software company Model N, knows that business is the pacesetter these days. “Business wants to run faster, and if they’re wanting to run faster, that means we at security and compliance have to run with them,” he says.</p>
+
+
+
+<p>But he also knows security struggles to keep up. “We’re always playing a catchup game,” he adds.</p>
+
+
+
+<p>Shah has taken action to add speed, such as upskilling security staffers on AI so they’re ready to work with the business on their priority projects.</p>
+
+
+
+<p><a href="https://www.sans.org/profiles/chris-cochran">Chris Cochran</a>, field CISO and vice president of AI security at SANS Institute, says CISOs who adopt frameworks and standards and who collaborate with their security colleagues can also add speed by learning and deploying proven tactics that can quickly expand and scale as the business changes.</p>
+
+
+
+<h2 class="wp-block-heading" id="4-the-gap-between-existing-and-needed-skills">4. The gap between existing and needed skills</h2>
+
+
+
+<p>CISOs have long struggled to get the talent they need. In the past, the issue centered mainly around getting enough people to fill roles; now they’re more concerned that security pros don’t possess the updated skills they need to succeed.</p>
+
+
+
+<p>According to the <a href="https://www.sans.org/mlp/2026-evolving-cybersecurity-workforce-ai-compliance-talent#download">SANS 2026 Cybersecurity Workforce Research Report</a>, “the cybersecurity workforce is undergoing a fundamental transformation. Organizations are rebuilding their teams from the top down as artificial intelligence disrupts traditional entry points while regulatory compliance demands create new frameworks for skills validation. This convergence is producing a widening skills gap that organizations struggle to close, even as they increasingly recognize that having the right abilities matters more than simply adding headcount.”</p>
+
+
+
+<p>It further states that “the need for specialists in new roles nearly doubled year-over-year, while additional hiring for existing skills increased substantially.”</p>
+
+
+
+<p>Here, CISOs’ concern has accelerated, with 60% of security leaders identifying this skills gap as their primary workforce challenge in 2026 (up from 52% last year) — and compared to 40% who said headcount shortages were their chief issue.</p>
+
+
+
+<p><a href="https://www.linkedin.com/in/beth-miller-risk-reframing">Beth Miller</a>, global field CISO at software maker Mimecast, says it’s not just a skills gap within security that plagues CISOs but a gap in needed security skills throughout the organization.</p>
+
+
+
+<p>“You can have a fully skilled security team, but if you don’t have security skills in the business, too, you still will have a gap,” she says.</p>
+
+
+
+<p>Closing the gap requires “investing in the human layer across the organization,” she adds.</p>
+
+
+
+<p>SANS Institute’s Cochran made similar observations, saying CISOs need to <a href="https://www.csoonline.com/article/4123230/human-risk-management-cisos-solution-to-the-security-awareness-training-paradox.html">build a culture of continuous learning and training</a>. “Closing the gap comes down to one word: intention,” he says.</p>
+
+
+
+<h2 class="wp-block-heading">5. Gaps in securing AI deployments<strong></strong></h2>
+
+
+
+<p>CISOs lag in securing AI deployments for several reasons.</p>
+
+
+
+<p>To start, Mimecast’s Miller says, “the mandate around AI is moving faster than CISOs are prepared for. The pattern we’re seeing in our and other organizations is that leadership announces an AI adoption initiative, it’s top down, and it’s often tied to competitive pressure or board expectations. And then within weeks business units are building AI tools, connected to data, and integrating AI into existing systems, and CISOs are finding out about these [initiatives] during or after implementation.”</p>
+
+
+
+<p>There are also the AI deployments happening from the bottom up, often without any leadership involvement or knowledge at all. “Shadow AI is happening industry wide,” Model N’s Shah says. And while security or IT may find those deployments after the fact, that discovery doesn’t erase the security gap on its own.</p>
+
+
+
+<p>Experts also cite the challenges of, first, developing the right security controls for AI as the technology evolves and, second, getting everyone to buy into and then follow those controls and <a href="https://www.cio.com/article/3984527/how-to-establish-an-effective-ai-grc-framework.html">governance frameworks</a> as they morph with the technology’s evolution. Those dynamics inevitably create gaps between what’s needed to secure AI and what controls are being implemented.</p>
+
+
+
+<p>“It’s a governance gap masquerading as an IT problem,” Miller adds.</p>
+
+
+
+<p>The SANS report found that only 54% of surveyed organizations had AI security policies in place and only 20% had comprehensive governance frameworks ready, with about 75% either implementing or still building governance structures.</p>
+
+
+
+<p>SANS concluded that “AI security governance is still in early days.” Other experts acknowledged as much, saying that CISOs need to lean on observability tools, executive influence skills, AI-related security awareness and training, emerging AI security best practices, and new AI governance frameworks to close what seems to be a yawning gap in many organizations.</p>
+
+
+
+<h2 class="wp-block-heading">6. The legacy gap<strong></strong></h2>
+
+
+
+<p><a href="https://www.linkedin.com/in/jasonlish/">Jason Lish</a>, Cisco’s global CISO, says many business leaders have adopted a “set-it-and-forget-it mentality” with technology, resisting moves to modernize IT as long as systems perform and aren’t differentiating.</p>
+
+
+
+<p>That challenges not only CIOs as they try to integrate AI and other new technologies into legacy tech, but also CISOs as they seek to implement modern security practices and technologies, Lish explains. And it’s becoming a more acute security problem as threat actors become more skillful at using AI to exploit out-of-support systems and legacy tech that can’t implement modern security controls.</p>
+
+
+
+<p>A <a href="https://www.deloitte.com/us/en/insights/industry/government-public-sector-services/2026-nascio-deloitte-cybersecurity-study.html">2026 study from National Association of State CIOs and Deloitte &amp; Touche</a> found that CISOs listed legacy infrastructure as one of the top three barriers to meeting cybersecurity challenges, along with the increasing sophistication of threats and insufficient funding for cybersecurity.</p>
+
+
+
+<p>“CISOs should be thinking about a risk-based approach here,” Lish says, “going to the board or the C-suite and saying, ‘These are the most critical pieces of legacy equipment or devices we need to replace’ and help them understand the risk of not doing so. The CISO has to be the one to provide that prioritization.”</p>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Jensen Huang says Microsoft and Nvidia will &quot;reinvent the PC&quot;, starting with 30+ laptops and 10 desktops coming in the fall from Dell, HP, Lenovo, and others (Katie Tarasov/CNBC)</title>
+  <link>https://www.techmeme.com/260601/p6#a260601p6</link>
+  <pubDate>Mon, 01 Jun 2026 05:25:00 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/><a href="https://www.cnbc.com/2026/05/31/nvidias-new-chip-to-power-fresh-line-of-windows-laptops-by-dell-hp.html"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260601/i6.jpg" vspace="4" /></a>
+<p><a href="https://www.techmeme.com/260601/p6#a260601p6" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Katie Tarasov / <a href="http://www.cnbc.com/">CNBC</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://www.cnbc.com/2026/05/31/nvidias-new-chip-to-power-fresh-line-of-windows-laptops-by-dell-hp.html">Jensen Huang says Microsoft and Nvidia will &ldquo;reinvent the PC&rdquo;, starting with 30+ laptops and 10 desktops coming in the fall from Dell, HP, Lenovo, and others</a></b></span>&nbsp; &mdash;&nbsp; Nvidia has emerged as the world's most valuable company by dominating the market for AI chips in the data center.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Nvidia says RTX Spark offers up to 20 CPU cores and a Blackwell GPU with 6,144 CUDA cores, capable of &quot;100 FPS 1440p gaming&quot; or running 120B-parameter models (Jeffrey Kampman/Tom&#x27;s Hardware)</title>
+  <link>https://www.techmeme.com/260601/p5#a260601p5</link>
+  <pubDate>Mon, 01 Jun 2026 05:10:00 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/><a href="https://www.tomshardware.com/laptops/nvidia-unveils-rtx-spark-superchip-at-computex-2026-new-platform-promises-to-turn-windows-into-an-agentic-ai-os-with-arm-cpu-blackwell-gpu-and-128gb-unified-memory"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260601/i5.jpg" vspace="4" /></a>
+<p><a href="https://www.techmeme.com/260601/p5#a260601p5" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Jeffrey Kampman / <a href="https://www.tomshardware.com/">Tom's Hardware</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://www.tomshardware.com/laptops/nvidia-unveils-rtx-spark-superchip-at-computex-2026-new-platform-promises-to-turn-windows-into-an-agentic-ai-os-with-arm-cpu-blackwell-gpu-and-128gb-unified-memory">Nvidia says RTX Spark offers up to 20 CPU cores and a Blackwell GPU with 6,144 CUDA cores, capable of &ldquo;100 FPS 1440p gaming&rdquo; or running 120B-parameter models</a></b></span>&nbsp; &mdash;&nbsp; Over 30 laptops and 10 desktops coming this fall with &ldquo;the most efficent platform ever built&rdquo;</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Microsoft unveils the Surface Laptop Ultra, with an Nvidia RTX Spark SoC, a 15&quot; mini-LED touchscreen, and up to 128GB of unified memory, coming this fall (Sean Hollister/The Verge)</title>
+  <link>https://www.techmeme.com/260601/p4#a260601p4</link>
+  <pubDate>Mon, 01 Jun 2026 04:53:19 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/><a href="https://www.theverge.com/tech/940584/microsoft-surface-laptop-ultra-nvidia-rtx-spark-pictures"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260601/i4.jpg" vspace="4" /></a>
+<p><a href="https://www.techmeme.com/260601/p4#a260601p4" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Sean Hollister / <a href="https://www.theverge.com/">The Verge</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://www.theverge.com/tech/940584/microsoft-surface-laptop-ultra-nvidia-rtx-spark-pictures">Microsoft unveils the Surface Laptop Ultra, with an Nvidia RTX Spark SoC, a 15" mini-LED touchscreen, and up to 128GB of unified memory, coming this fall</a></b></span>&nbsp; &mdash;&nbsp; Microsoft has a new flagship Surface, and it's got Nvidia inside. &hellip; But today, it's trying again.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Nvidia announces the RTX Spark, an Arm-based consumer PC chip family that it says is &quot;the most efficient PC chip ever built&quot;, made in partnership with MediaTek (Sean Hollister/The Verge)</title>
+  <link>https://www.techmeme.com/260601/p3#a260601p3</link>
+  <pubDate>Mon, 01 Jun 2026 04:40:01 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/><a href="https://www.theverge.com/tech/940589/nvidia-rtx-spark-n1-n1x-laptop-desktop-pc-cpu-gpu-ai-release-date"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260601/i3.jpg" vspace="4" /></a>
+<p><a href="https://www.techmeme.com/260601/p3#a260601p3" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Sean Hollister / <a href="https://www.theverge.com/">The Verge</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://www.theverge.com/tech/940589/nvidia-rtx-spark-n1-n1x-laptop-desktop-pc-cpu-gpu-ai-release-date">Nvidia announces the RTX Spark, an Arm-based consumer PC chip family that it says is &ldquo;the most efficient PC chip ever built&rdquo;, made in partnership with MediaTek</a></b></span>&nbsp; &mdash;&nbsp; Nvidia enters the consumer laptop realm. Nvidia enters the consumer laptop realm.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
 </item>
 
 <item>
@@ -20,7 +463,7 @@
   <link>https://www.zdnet.com/article/how-to-cool-down-phone-overheating-android-auto/</link>
   <pubDate>Mon, 01 Jun 2026 03:00:38 +0000</pubDate>
   <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Android Auto uses a lot of resources, which can make your phone hot. Here's how to fix it.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Android Auto uses a lot of resources, which can make your phone hot. Here's how to fix it.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
@@ -120,37 +563,7 @@
 
 
 <p></p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Daloopa, which structures financial data from filings, transcripts, investor decks, and other public sources for investment firms, raised a $47M Series C (Ryan Lawler/Axios)</title>
-  <link>https://www.techmeme.com/260531/p15#a260531p15</link>
-  <pubDate>Mon, 01 Jun 2026 01:30:02 +0000</pubDate>
-  <source>Techmeme</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.axios.com/pro/fintech-deals/2026/05/28/daloopa-47m-series-c-ai-finance-data"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260531/i15.jpg" vspace="4" /></a>
-<p><a href="https://www.techmeme.com/260531/p15#a260531p15" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Ryan Lawler / <a href="https://www.axios.com/">Axios</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.axios.com/pro/fintech-deals/2026/05/28/daloopa-47m-series-c-ai-finance-data">Daloopa, which structures financial data from filings, transcripts, investor decks, and other public sources for investment firms, raised a $47M Series C</a></b></span>&nbsp; &mdash;&nbsp; Daloopa, which provides source-linked financial data for investment firms, raised $47 million in Series C funding led by Brighton Park Capital &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Dell introduces the $699+ Dell XPS 13, starting with 8GB of RAM, a six-core Intel Core 5 320 chip, and a 13.4-inch touchscreen, rivaling the MacBook Neo (Antonio G. Di Benedetto/The Verge)</title>
-  <link>https://www.techmeme.com/260531/p14#a260531p14</link>
-  <pubDate>Mon, 01 Jun 2026 01:00:13 +0000</pubDate>
-  <source>Techmeme</source>
-  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/><a href="https://www.theverge.com/tech/940498/dell-xps-13-student-laptop-intel-wildcat-panther-lake-computex-price?view_token=eyJhbGciOiJIUzI1NiJ9.eyJpZCI6InRGV1JybENnRk8iLCJwIjoiL3RlY2gvOTQwNDk4L2RlbGwteHBzLTEzLXN0dWRlbnQtbGFwdG9wLWludGVsLXdpbGRjYXQtcGFudGhlci1sYWtlLWNvbXB1dGV4LXByaWNlIiwiZXhwIjoxNzgwNzA1MDQxLCJpYXQiOjE3ODAyNzMwNDF9.6rRDAeL0CybnDroyImXCYNVEt0SVXhNRlARvLvVSluc&amp;utm_medium=gift-link"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260531/i14.jpg" vspace="4" /></a>
-<p><a href="https://www.techmeme.com/260531/p14#a260531p14" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Antonio G. Di Benedetto / <a href="https://www.theverge.com/">The Verge</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.theverge.com/tech/940498/dell-xps-13-student-laptop-intel-wildcat-panther-lake-computex-price?view_token=eyJhbGciOiJIUzI1NiJ9.eyJpZCI6InRGV1JybENnRk8iLCJwIjoiL3RlY2gvOTQwNDk4L2RlbGwteHBzLTEzLXN0dWRlbnQtbGFwdG9wLWludGVsLXdpbGRjYXQtcGFudGhlci1sYWtlLWNvbXB1dGV4LXByaWNlIiwiZXhwIjoxNzgwNzA1MDQxLCJpYXQiOjE3ODAyNzMwNDF9.6rRDAeL0CybnDroyImXCYNVEt0SVXhNRlARvLvVSluc&amp;utm_medium=gift-link">Dell introduces the $699+ Dell XPS 13, starting with 8GB of RAM, a six-core Intel Core 5 320 chip, and a 13.4-inch touchscreen, rivaling the MacBook Neo</a></b></span>&nbsp; &mdash;&nbsp; It'll start with just 8GB of RAM and an Intel Wildcat Lake chip. &hellip; Dell is making good on its tease from CES and finally announcing a new XPS 13.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 NYC-based Garner Health, which uses data analytics to help 2.5M+ workers find physicians, raised a $100M Series E at a $2.74B valuation led by Index Ventures (Cailey Gleeson/Fierce Healthcare)</title>
-  <link>https://www.techmeme.com/260531/p11#a260531p11</link>
-  <pubDate>Sun, 31 May 2026 23:05:01 +0000</pubDate>
-  <source>Techmeme</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.fiercehealthcare.com/finance/care-navigation-startup-garner-health-banks-100m-series-e-274b-valuation"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260531/i11.jpg" vspace="4" /></a>
-<p><a href="https://www.techmeme.com/260531/p11#a260531p11" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Cailey Gleeson / <a href="https://www.fiercehealthcare.com/">Fierce Healthcare</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.fiercehealthcare.com/finance/care-navigation-startup-garner-health-banks-100m-series-e-274b-valuation">NYC-based Garner Health, which uses data analytics to help 2.5M+ workers find physicians, raised a $100M Series E at a $2.74B valuation led by Index Ventures</a></b></span>&nbsp; &mdash;&nbsp; Garner Health  Employer health  funding round  venture capital (VC)&nbsp; &mdash;&nbsp; Garner Health, a digital care navigation company for employers &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
@@ -158,7 +571,7 @@
   <link>https://www.zdnet.com/article/dell-xps-13-2026-vs-macbook-neo/</link>
   <pubDate>Sun, 31 May 2026 23:00:57 +0000</pubDate>
   <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/>Dell just announced its new 13-inch XPS for $599 with student pricing, making it a direct competitor to the Neo.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/>Dell just announced its new 13-inch XPS for $599 with student pricing, making it a direct competitor to the Neo.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 10h ago]]></description>
 </item>
 
 <item>
@@ -166,17 +579,7 @@
   <link>https://www.zdnet.com/article/acer-vs-asus-laptops/</link>
   <pubDate>Sun, 31 May 2026 16:00:42 +0000</pubDate>
   <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/>Acer and Asus both have tried and tested PC options, but they excel in different areas. Let's break down the major differences.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 11h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Sources: Apple delays iPhone-connected smart glasses to late 2027, aiming to disrupt the mid-tier $200-$500 eyewear market the way it disrupted the watch market (Mark Gurman/Bloomberg)</title>
-  <link>https://www.techmeme.com/260531/p8#a260531p8</link>
-  <pubDate>Sun, 31 May 2026 15:00:33 +0000</pubDate>
-  <source>Techmeme</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.bloomberg.com/news/newsletters/2026-05-31/apple-glasses-late-2027-release-watch-comparison-ios-28-apple-tv-homepod?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc4MDIzNjA1NywiZXhwIjoxNzgwODQwODU3LCJhcnRpY2xlSWQiOiJURldNVzFLSVVQVDAwMCIsImJjb25uZWN0SWQiOiIwRDY3MzVDNzE2NkE0OUEzQTQxNEZDMEE4NTA0RUM5MiJ9.ocvhwAv-7j3pp1_gLSN9VLcCrotSIG-RV9XLRVvFZ1Q&amp;leadSource=uverify%20wall"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260531/i8.jpg" vspace="4" /></a>
-<p><a href="https://www.techmeme.com/260531/p8#a260531p8" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Mark Gurman / <a href="https://www.bloomberg.com/">Bloomberg</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/newsletters/2026-05-31/apple-glasses-late-2027-release-watch-comparison-ios-28-apple-tv-homepod?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc4MDIzNjA1NywiZXhwIjoxNzgwODQwODU3LCJhcnRpY2xlSWQiOiJURldNVzFLSVVQVDAwMCIsImJjb25uZWN0SWQiOiIwRDY3MzVDNzE2NkE0OUEzQTQxNEZDMEE4NTA0RUM5MiJ9.ocvhwAv-7j3pp1_gLSN9VLcCrotSIG-RV9XLRVvFZ1Q&amp;leadSource=uverify%20wall">Sources: Apple delays iPhone-connected smart glasses to late 2027, aiming to disrupt the mid-tier $200-$500 eyewear market the way it disrupted the watch market</a></b></span>&nbsp; &mdash;&nbsp; Also: The latest on iOS 27, iOS 28, new Apple TV and HomePod mini.&nbsp; &mdash;&nbsp; Apple isn't just going after Meta with its upcoming iPhone-connected smart glasses.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 12h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/>Acer and Asus both have tried and tested PC options, but they excel in different areas. Let's break down the major differences.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 17h ago]]></description>
 </item>
 
 <item>
@@ -184,7 +587,7 @@
   <link>https://www.theregister.com/ai-ml/2026/05/31/netflix-wiz-creates-app-to-slash-ai-bills-then-open-sources-it/5248702</link>
   <pubDate>Sun, 31 May 2026 07:00:00 +0000</pubDate>
   <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Project Headroom could save you big money, too<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 20h ago]]></description>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Project Headroom could save you big money, too<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
@@ -585,14 +988,6 @@
   <pubDate>Fri, 29 May 2026 18:26:48 +0000</pubDate>
   <source>The Register</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Researcher reported the vuln in March. Maintainers haven't responded to his messages since<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
-</item>
-
-<item>
-  <title>🔵 After using this Windows laptop for work and play, I&#x27;m wondering why I still need my PC tower</title>
-  <link>https://www.zdnet.com/article/msi-raider-16-max-hx-review/</link>
-  <pubDate>Fri, 29 May 2026 16:26:00 +0000</pubDate>
-  <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/>The MSI Raider 16 Max HX combines powerful current-gen hardware with a revamped cooling system and a stunning 240Hz OLED screen.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
 </item>
 
 <item>
@@ -1803,7 +2198,7 @@
 
 
 <p>Additionally, it shared a list of indicators of compromise (IOCs) to support detection efforts. For those who don’t catch it on time, the ransomware leaves a note. “Your network is locked by the Gentlemen,” a desktop wallpaper reads on the victim’s machines.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 3d ago]]></description>
 </item>
 
 <item>
@@ -1988,7 +2383,7 @@ andards, years_of_experience)
 
 
 <p><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><strong><a href="https://www.csoonline.com/expert-contributor-network/">Want to join?</a></strong></p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 3d ago]]></description>
 </item>
 
 <item>
@@ -2258,7 +2653,7 @@ andards, years_of_experience)
 
 
 <p><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><strong><a href="https://www.cio.com/expert-contributor-network/">Want to join?</a></strong></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3d ago]]></description>
 </item>
 
 <item>
@@ -2266,7 +2661,7 @@ andards, years_of_experience)
   <link>https://www.theregister.com/networks/2026/05/29/jammin-on-uk-defence-secretarys-jet-as-russia-blamed-for-gps-interference/5247673</link>
   <pubDate>Fri, 29 May 2026 08:30:00 +0000</pubDate>
   <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Estonian academic fingers mobile tower-mounted devices as Kremlin tries to swat Ukrainian forces<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Estonian academic fingers mobile tower-mounted devices as Kremlin tries to swat Ukrainian forces<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3d ago]]></description>
 </item>
 
 <item>
@@ -2387,7 +2782,7 @@ andards, years_of_experience)
 
 
 <p>The concern is that history may repeat itself as regulation looks to keep pace with technological change. “There is a risk that organisations get stuck in a mid-maturity plateau in which innovation is halted by complex and inconsistent interpretations of regulations,” Carruthers warns.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 3d ago]]></description>
 </item>
 
 <item>
@@ -2512,7 +2907,7 @@ andards, years_of_experience)
 
 
 <p>바다니는 “AI 도구와 인간의 지식, 전문성을 결합하면 이 문제를 훨씬 효과적으로 해결할 수 있다”라며 “둘 중 하나만 사용하는 것보다 두 요소를 함께 활용할 때 더 나은 결과를 얻을 수 있다”고 강조했다.<br />dl-ciokorea@foundryco.com</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3d ago]]></description>
 </item>
 
 <item>
@@ -3407,164 +3802,6 @@ andards, years_of_experience)
 </item>
 
 <item>
-  <title>🟠 Transforming your SOC from reactive monitoring to strategic defense</title>
-  <link>https://www.cio.com/article/4178300/transforming-your-soc-from-reactive-monitoring-to-strategic-defense.html</link>
-  <pubDate>Thu, 28 May 2026 13:40:20 +0000</pubDate>
-  <source>CIO.com</source>
-  <description><![CDATA[<b>Why this matters: Service impact possible — prepare comms and confirm vendor status.</b><br/><div id="remove_no_follow">
-		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
-					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
-						<div class="article-column__content">
-<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
-
-
-
-<p>Security operations centers (SOCs) are under growing pressure. As cyberthreats become more sophisticated and enterprise environments expand across hybrid and multicloud infrastructures, traditional approaches to security monitoring are struggling to keep pace. Many SOCs remain heavily focused on reactive workflows, responding to alerts and incidents after they occur rather than proactively reducing risk.</p>
-
-
-
-<p>This model is becoming increasingly difficult to sustain.</p>
-
-
-
-<p>Security teams are now managing enormous volumes of telemetry across cloud platforms, endpoints, applications, and identity systems. At the same time, attackers are using automation and artificial intelligence to accelerate the speed and scale of attacks. The result is a widening imbalance between the complexity of modern threats and the operational capacity of many security teams.</p>
-
-
-
-<p>Alert fatigue is one of the clearest symptoms of this challenge. Analysts are often overwhelmed by the volume of notifications generated by fragmented security tools, many of which provide limited operational context. As alerts accumulate, it becomes more difficult to identify high-priority threats quickly and consistently. This increases the likelihood of delayed response times, missed indicators, and operational inefficiencies.</p>
-
-
-
-<p>Many organizations have responded by adding more tools or increasing monitoring coverage. However, expanded visibility alone does not solve the underlying issue. As explored in <a href="https://www.rackspace.com/blog/threat-intelligence-action-decisions" rel="sponsored">“Threat intelligence should drive action, not just awareness,”</a> security data only becomes valuable when it can support faster, more informed operational decisions. Without intelligent correlation, automation, and operational alignment, additional data can create even more complexity.</p>
-
-
-
-<p>This is why many enterprises are rethinking the role of the SOC. Rather than operating primarily as a reactive monitoring function, modern SOCs are evolving into more intelligence-driven security operations centers focused on resilience, risk reduction, and operational coordination.</p>
-
-
-
-<p>A strategic SOC integrates security telemetry, threat intelligence, and operational context into a unified environment that enables faster and more informed decision-making. Instead of relying on siloed investigations, teams gain broader visibility across systems and can better understand how threats relate to business operations and infrastructure dependencies.</p>
-
-
-
-<p>Automation plays a critical role in this evolution. Manual investigation and remediation processes are difficult to scale in modern environments, particularly as attack surfaces continue to grow. By embedding automation into detection, triage, and response workflows, organizations can reduce operational burden while improving consistency and response speed.</p>
-
-
-
-<p>Artificial intelligence is also becoming an increasingly important component of modern SOC operations. AI-driven analytics can help security teams identify anomalies, prioritize high-risk signals, and reduce noise generated by routine alerts. This allows analysts to focus more attention on complex threats and strategic security initiatives rather than repetitive operational tasks.</p>
-
-
-
-<p>Importantly, this transformation is not only about technology. It also requires operational and organizational change. Security teams, infrastructure teams, and business stakeholders must work more closely together to align priorities, improve visibility, and establish clearer response processes.</p>
-
-
-
-<p>This shift toward strategic defense also changes how organizations think about resilience. Traditional SOC models often measure success based on alert volume or incident response metrics. More mature organizations are increasingly focused on broader outcomes such as operational continuity, reduced business risk, and the ability to recover quickly from disruptions.</p>
-
-
-
-<p>Cloud adoption is further accelerating the need for this evolution as hybrid and multicloud environments introduce additional layers of complexity related to visibility, identity management, and governance. Security operations must now extend across distributed environments while maintaining consistent oversight and control.</p>
-
-
-
-<p>Organizations that modernize their SOC operations are better positioned to manage this complexity. By integrating automation, AI-driven analytics, and centralized visibility into security workflows, they can improve operational efficiency while strengthening overall cyber resilience.</p>
-
-
-
-<p>At the same time, the cost of maintaining reactive security models continues to rise. Teams operating in constant response mode often struggle with burnout, staffing shortages, and inconsistent processes. As threat activity increases, these operational pressures can limit the effectiveness of even well-funded security programs.</p>
-
-
-
-<p>The future of security operations depends on moving beyond reactive monitoring and toward more strategic, intelligence-driven defense models. This requires investments not only in tools, but also in automation, operational integration, and modern governance practices.</p>
-
-
-
-<p>Organizations that make this transition will be better equipped to reduce risk, improve resilience, and support long-term business continuity in increasingly complex digital environments.</p>
-
-
-
-<p><a href="https://www.rackspace.com/security/threat-detection-response" rel="sponsored"><strong>Learn more about how Rackspace strengthens security operations through disciplined threat hunting and risk-driven detection.</strong></a></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3d ago]]></description>
-</item>
-
-<item>
-  <title>🔵 AI agents are the actor your Kubernetes governance didn’t plan for</title>
-  <link>https://www.cio.com/article/4177347/ai-agents-are-the-actor-your-kubernetes-governance-didnt-plan-for.html</link>
-  <pubDate>Thu, 28 May 2026 13:35:42 +0000</pubDate>
-  <source>CIO.com</source>
-  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/><div id="remove_no_follow">
-		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
-					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
-						<div class="article-column__content">
-<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
-
-
-
-<p>As enterprises accelerate their adoption of artificial intelligence, many are deploying AI agents to automate tasks, interact with systems, and support operational decision-making. These agents are rapidly becoming more autonomous, capable of initiating actions, orchestrating workflows, and interacting directly with infrastructure.</p>
-
-
-
-<p>However, while organizations are investing heavily in AI capabilities, many are discovering that their governance models were not designed for this level of autonomous activity, particularly within Kubernetes environments.</p>
-
-
-
-<p>Kubernetes has become the operational foundation for modern cloud-native applications because of its scalability, flexibility, and automation capabilities. Yet most Kubernetes governance frameworks were built around human-driven workflows and predictable application behavior. AI agents introduce a fundamentally different dynamic.</p>
-
-
-
-<p>Unlike traditional workloads, AI agents can operate continuously, interact with multiple systems simultaneously, and make decisions in real time. This creates new governance challenges related to access control, observability, resource consumption, and security. Existing policies that were designed for static applications often struggle to account for autonomous systems that dynamically change behavior based on inputs and objectives.</p>
-
-
-
-<p>One of the most immediate concerns is visibility. Many organizations lack a clear understanding of how AI agents interact with Kubernetes environments, what resources they consume, and what permissions they require. Without this visibility, it becomes difficult to monitor activity, identify anomalies, or enforce governance consistently across environments.</p>
-
-
-
-<p>Access management is another growing challenge. AI agents often require broad connectivity across services, APIs, and data sources to perform effectively. In many cases, organizations grant elevated permissions to simplify deployment and integration. Over time, this can create excessive privilege exposure and increase the risk of unintended actions or security vulnerabilities.</p>
-
-
-
-<p>Resource governance is also becoming more complex. AI workloads can consume significant compute and storage resources, particularly when large language models or agentic workflows are involved. In Kubernetes environments, where resources are dynamically allocated and scaled, poorly governed AI agents can create unpredictable infrastructure demands that affect performance, availability, and cost control.</p>
-
-
-
-<p>This issue becomes even more significant as organizations move from isolated AI experiments to broader production deployments. AI agents are increasingly being integrated into operational workflows, customer-facing applications, and internal systems. As adoption expands, governance models must evolve to address not only infrastructure management but also the behavior and decision-making patterns of autonomous systems.</p>
-
-
-
-<p>Security teams are beginning to rethink governance through this lens. Rather than focusing solely on static policies and perimeter controls, organizations are moving toward more adaptive governance models that emphasize continuous monitoring, real-time policy enforcement, and identity-based security.</p>
-
-
-
-<p>Observability plays a critical role in this shift. Enterprises need deeper visibility into how AI agents interact with systems, what actions they perform, and how those actions align with governance policies. This requires integrating telemetry, behavioral analytics, and operational context into Kubernetes management practices.</p>
-
-
-
-<p>Automation is also becoming essential. Manual governance processes cannot scale effectively in environments where AI agents continuously generate activity across distributed systems. Organizations are increasingly embedding automation into policy enforcement, anomaly detection, and operational oversight to improve consistency and reduce risk.</p>
-
-
-
-<p>Importantly, governance should not become a barrier to innovation. The goal is not to limit the use of AI agents, but to ensure they operate within clear operational and security guardrails. Organizations that strike this balance will be better positioned to scale AI safely and effectively.</p>
-
-
-
-<p>This evolution reflects a broader shift in enterprise operations. AI is no longer confined to isolated applications or experimentation environments. It is becoming embedded into the operational fabric of modern infrastructure. As a result, governance models must evolve alongside the technology itself.</p>
-
-
-
-<p>Kubernetes governance strategies built for traditional applications may not be sufficient for environments increasingly shaped by autonomous AI systems. Organizations need governance models that provide visibility, enforce security, and support operational resilience without slowing innovation.</p>
-
-
-
-<p>As AI agents become more capable and more deeply integrated into enterprise operations, the ability to govern them effectively will become a critical component of cloud and AI strategy. Organizations that modernize governance now will be better positioned to scale AI securely, maintain operational control, and reduce long-term risk.</p>
-
-
-
-<p><a href="https://www.rackspace.com/cloud/azure" rel="sponsored">Ready to strengthen governance for AI-driven cloud environments? Connect with Rackspace Technology to explore how intelligent operations and cloud-native expertise can help you scale AI securely and effectively.</a></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3d ago]]></description>
-</item>
-
-<item>
   <title>🔵 Qualcomm picks bad time to pitch a $300 laptop platform</title>
   <link>https://www.theregister.com/systems/2026/05/28/qualcomm-picks-bad-time-to-pitch-a-300-laptop-platform/5247841</link>
   <pubDate>Thu, 28 May 2026 13:30:00 +0000</pubDate>
@@ -3796,147 +4033,6 @@ andards, years_of_experience)
   <pubDate>Thu, 28 May 2026 12:10:00 +0000</pubDate>
   <source>The Register</source>
   <description><![CDATA[<b>Why this matters: Potential data exposure — check monitoring and incident response readiness.</b><br/>Travel and leisure giant was just one of many victims of the cybercrooks' crime spree this year<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 3d ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Why software development is changing for good</title>
-  <link>https://www.cio.com/article/4177302/why-software-development-is-changing-for-good.html</link>
-  <pubDate>Thu, 28 May 2026 12:00:00 +0000</pubDate>
-  <source>CIO.com</source>
-  <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><div id="remove_no_follow">
-		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
-					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
-						<div class="article-column__content">
-<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
-
-
-
-<p>In 2003, I founded DCSL Software, which later became One Beyond. I exited in 2023 after taking the company international and growing it to more than 300 people. Since then, I’ve founded a robotics start-up and raised over £4M in seed funding.</p>
-
-
-
-<p>I never expected to be writing production software again. I stopped coding day-to-day in 2014, not because I couldn’t do it, but because that’s what happens when a company scales. You hire people who are better than you at execution, you focus on leadership, and gradually the keyboard gets further away. For nearly a decade, that felt entirely natural.</p>
-
-
-
-<p>What I didn’t expect was that, almost ten years later, I’d find myself <a href="https://www.wired.com/ai-powered-coding/" rel="nofollow">back in the developer’s seat</a>, not nostalgically but practically. Not dabbling but building a genuinely complex robotics platform. And not by relearning every framework or language that had passed me by, but by working in a fundamentally different way.</p>
-
-
-
-<p>For me, that personal shift is the clearest signal that something structural has changed in software development.</p>
-
-
-
-<h2 class="wp-block-heading" id="how-we-used-to-design-software-and-why">How we used to design software, and why</h2>
-
-
-
-<p>When I started out, we were firmly in the waterfall era. That wasn’t ideology, it was economics. Software was slow and expensive to build, so the only sensible approach was to think very hard up front.</p>
-
-
-
-<p>We wrote detailed specifications because we had to. Contracts depended on them. Delivery depended on them. Writing a good spec was a specialist skill, and one I happened to be reasonably good at. I could visualise what the finished product might look like before it existed, foresee areas of complexity, and describe behaviour with enough precision that a team could build against it.</p>
-
-
-
-<p>That ability was rare, and difficult to teach. Many people struggled with it because imagining a complex system that doesn’t yet exist is genuinely hard. But it mattered, because getting things wrong late in the process was painful and expensive.</p>
-
-
-
-<p>Over time, the industry moved towards Agile. Publicly, this was framed as a better way to respond to change. Quietly, it was also an acknowledgement that for large, long-running systems, no specification survives intact. Businesses change, users change, technology changes, and pretending otherwise often caused more harm than good.</p>
-
-
-
-<p>Agile was pragmatic, but it came with a cost. We largely abandoned deep up-front design and replaced it with incremental discovery. That worked, but it also normalised a mindset where thinking too far ahead was seen as unnecessary or even risky.</p>
-
-
-
-<h2 class="wp-block-heading" id="what-changed-and-why-i-started-building-again">What changed, and why I started building again</h2>
-
-
-
-<p>The reason I’ve been able to step back into hands-on development isn’t that I suddenly found the time or the desire to relearn a decade’s worth of tooling. It’s because AI has fundamentally changed the cost of experimentation.</p>
-
-
-
-<p>This is the part that is often misunderstood. The real shift isn’t just that code is faster to write. It’s that trying things is now <a href="https://www.mckinsey.com/industries/technology-media-and-telecommunications/our-insights/how-an-ai-enabled-software-product-development-life-cycle-will-fuel-innovation" rel="nofollow">cheap, fast and largely reversible</a>.</p>
-
-
-
-<p>Things that would once have taken developer-weeks can now be attempted in minutes. You can explore an approach, see how it feels, discard it entirely, and try a different direction with very little penalty. That simply wasn’t possible before.</p>
-
-
-
-<p>In the past, there was a strong emotional and financial attachment to code. If something took two developers three weeks to build, you were understandably reluctant to throw it away. Decisions hardened early, not always because they were right, but because reversing them was too costly.</p>
-
-
-
-<p>That constraint has gone, and this is what pulled me back in. I can now operate at the level I’m strongest at, understanding the problem, shaping the system, spotting when complexity is creeping in, while AI handles much of the mechanics. I’m not writing code in the way I did in my twenties. I’m directing it, refining it, correcting it, and occasionally stopping it from going in entirely the wrong direction. In practice, this feels much closer to leading a team than writing code. You are effectively the boss, setting direction, reviewing output, spotting lazy shortcuts, and pushing back when something doesn’t feel right.</p>
-
-
-
-<h2 class="wp-block-heading" id="why-design-still-matters-more-than-ever">Why design still matters, more than ever</h2>
-
-
-
-<p>It would be easy to assume that this new freedom makes design less important. In reality, it makes it more important.</p>
-
-
-
-<p>Having a clear, detailed idea of what you’re trying to build is still hugely valuable. In fact, it actively improves AI output. The clearer the intent, the better the results. Vague thinking simply produces vague systems more quickly. What’s important to understand is that AI behaves very much like a person. It wants to be helpful. It wants to give you an answer. If you’re vague, it will fill in the gaps. If you’re careless, it will make assumptions. If you don’t challenge it, it will confidently carry on down the wrong path.</p>
-
-
-
-<p>The difference is that design is no longer a brittle, one-off artefact that must survive unchanged for years. It has become a guide for experimentation rather than a constraint on it. You can hold a strong vision of where you’re heading while still being willing to try, discard and evolve the path that gets you there.</p>
-
-
-
-<p>The new skill is knowing when exploration is productive and when it’s just noise. AI will happily keep generating structure long after it should have been simplified. It doesn’t know when a file has grown too large, when an abstraction is leaking or when something that “works” today will cause pain later. Those instincts still come from experience.</p>
-
-
-
-<h2 class="wp-block-heading" id="how-this-reshapes-the-industry">How this reshapes the industry</h2>
-
-
-
-<p>Once experimentation becomes low-cost, <a href="https://www.cio.com/article/4151988/ai-is-altering-the-economics-of-software-development-but-who-gets-a-cut.html">many long-held assumptions stop holding</a>. Planning is no longer about locking everything down in advance. It’s about setting intent, constraints and boundaries.</p>
-
-
-
-<p>Estimation becomes less about predicting effort and more about understanding the space you’re exploring.</p>
-
-
-
-<p>And our relationship with code changes entirely. There is far less attachment to specific implementations and far more focus on behaviour, structure and outcomes.</p>
-
-
-
-<p>This is why the software development industry feels unsettled. Many people are trying to apply old mental models to new tools. That works for a while, but it misses the point.</p>
-
-
-
-<h2 class="wp-block-heading" id="the-real-shift">The real shift</h2>
-
-
-
-<p>The reason I’m confident this change is permanent is simple: I wouldn’t be building again otherwise.</p>
-
-
-
-<p>The only reason I can credibly return to hands-on development after a decade away is that the barriers that pushed me out in the first place no longer apply. Software can now evolve through guided experimentation in a way that simply wasn’t possible before.</p>
-
-
-
-<p>This doesn’t mean experience matters less. It means it matters differently. The value is no longer in remembering syntax or frameworks. It’s in judgment, structure, and knowing when to stop.</p>
-
-
-
-<p>This is <em>not</em> the end of software development. But it is the end of the old model. And once you’ve worked this way, <a href="https://www.forbes.com/sites/timkeary/2026/04/27/is-software-engineering-cooked-the-future-of-development-post-ai/" rel="nofollow">there’s no going back</a>. </p>
-
-
-
-<p><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><strong><a href="https://www.cio.com/expert-contributor-network/">Want to join?</a></strong><strong></strong></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3d ago]]></description>
 </item>
 
 <item>
@@ -4240,7 +4336,7 @@ andards, years_of_experience)
 
 
 <p><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><strong><a href="https://www.csoonline.com/expert-contributor-network/">Want to join?</a></strong></p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 3d ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 4d ago]]></description>
 </item>
 
 <item>
@@ -4374,6 +4470,14 @@ andards, years_of_experience)
 
 <p>In addition, the FBI urges physical and IT security leaders to verify the credentials of anyone accessing company spaces, obtaining copies of each visitor’s ID card, as well as limiting access to sensitive data from less secure networks, such as home computers or the public internet, and developing and communicating policies regarding when and how IT support will communicate and authenticate themselves to employees.</p>
 </div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 4d ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Salesforce waves bye-bye to UI in &#x27;headless&#x27; embrace</title>
+  <link>https://www.theregister.com/saas/2026/05/28/salesforce-waves-bye-bye-to-ui-in-headless-embrace/5247587</link>
+  <pubDate>Thu, 28 May 2026 00:20:29 +0000</pubDate>
+  <source>The Register</source>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Anthropic's use of Sales Cloud increased five-fold as its workers access Salesforce through Claude and Slack<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4d ago]]></description>
 </item>
 
 <item>
@@ -4696,123 +4800,6 @@ andards, years_of_experience)
 
 <p>The researchers advised teams to upgrade to Starlette 1.0.1 or later, which validates the Host header and rejects malformed values.</p>
 </div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4d ago]]></description>
-</item>
-
-<item>
-  <title>🔴 The NSA, ‘Mythos’ and the quiet emergence of AI cyber doctrine</title>
-  <link>https://www.csoonline.com/article/4176737/the-nsa-mythos-and-the-quiet-emergence-of-ai-cyber-doctrine.html</link>
-  <pubDate>Wed, 27 May 2026 09:00:00 +0000</pubDate>
-  <source>CSO Online</source>
-  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/><div id="remove_no_follow">
-		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
-					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
-						<div class="article-column__content">
-<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
-
-
-
-<p>For most of my career running security operations, the shape of cyber conflict has been defined by who could move faster than the other side. Faster at identifying a vulnerability, faster at patching, faster at detecting, faster at responding. The last few months have made me reevaluate that framing. Speed still matters. It just no longer carries the picture on its own. Scale and autonomy have moved alongside it, and the relative emphasis I place on the three is something I expect to keep adjusting. When I read recent coverage of the US government’s deepening use of advanced AI for cyber operations, Anthropic’s <a href="https://red.anthropic.com/2026/mythos-preview/">Claude Mythos Preview disclosure</a> and the wave of defensive AI being built in response, I recognized the pattern. It fits the pattern of doctrine forming.</p>
-
-
-
-<p>Doctrine rarely arrives through formal announcements in this field. It emerges through repeated behavior, through choices made under operational pressure, through what capable actors do when no one is telling them to stop. That is where I believe we are now.</p>
-
-
-
-<h2 class="wp-block-heading" id="from-tools-to-operational-capability">From tools to operational capability</h2>
-
-
-
-<p>I remember when cyber operations lived inside scripts. They moved into frameworks, then into automated pipelines, then into what we somewhat optimistically called orchestration. Each step compressed time and lowered required expertise. Frontier AI is starting to look to me less like the next step in that sequence and more like a different thing.</p>
-
-
-
-<p>What seems to separate frontier AI from the automation we have lived with, in what I have seen so far, is less about efficiency and more about independence. A model that can conduct reconnaissance across an unbounded attack surface, identify vulnerabilities without predefined signatures, assist in exploit chaining and adapt based on feedback feels less like enhancing an analyst’s workflow and more like operating with reduced human constraint. That shifts the economics of offense in ways that break assumptions most security programs still quietly rely on.</p>
-
-
-
-<p>The Mythos Preview disclosure made the shift concrete. The model reportedly surfaced thousands of high-severity vulnerabilities, including findings in every major operating system and web browser, and chained multiple vulnerabilities into novel attacks with limited human direction. A specific example that landed for many readers was a 17-year-old remote code execution flaw in the FreeBSD NFS server (CVE-2026-4747), which Mythos identified and exploited autonomously after a single prompt. The defensive coalition Anthropic assembled under <a href="https://www.anthropic.com/project/glasswing">Project Glasswing</a> includes AWS, Apple, Broadcom, Cisco, CrowdStrike, Google, JPMorganChase, the Linux Foundation, Microsoft, NVIDIA and Palo Alto Networks, with extended access reaching more than forty additional organizations responsible for critical software infrastructure, backed by roughly $100M in usage credits and $4M in donations to open-source security work. That is not a marketing exercise. It is a coordinated reaction to a threat model that has already moved. The fact that the coalition is now drawing antitrust scrutiny is itself a signal: This is no longer experimental.</p>
-
-
-
-<p>The line that stayed with me from Anthropic’s own writeup was that the model could execute multi-stage attacks on vulnerable networks and discover and exploit vulnerabilities autonomously, completing in hours what would take human professionals days. Pair that with multiple frontier models from OpenAI now operating at the “High” cybersecurity threshold under its Preparedness Framework, including a defender-permissive variant (5.4-Cyber) built specifically for verified security teams, and with the disclosed incident of <a href="https://www.anthropic.com/news/disrupting-AI-espionage">GTG-1002</a>, the Chinese state-sponsored actor Anthropic publicly attributed in November 2025, jailbreaking Claude Code (by fragmenting tasks and posing as a defensive testing employee at a legitimate cybersecurity firm) to automate 80 to 90 percent of an operation that touched roughly 30 global targets and successfully breached four, and the trajectory stops being speculative. It is observable. The November 2025 GTG-1002 disclosure already touched regulated sectors, including financial institutions and chemical manufacturing, and AI-assisted pre-positioning against critical infrastructure is now documented in nation-state activity reports. The named, attributed, high-impact incident that will make this concrete to a board has not yet occurred publicly. The pattern is no longer hypothetical.</p>
-
-
-
-<h2 class="wp-block-heading" id="the-doctrine-forming-in-plain-sight">The doctrine forming in plain sight</h2>
-
-
-
-<p>Policy frameworks are still catching up. Reporting from <a href="https://www.defenseone.com/business/2026/04/us-push-counter-hackers-draws-industry-deeper-offensive-cyber-debate/412791/">Defense One</a> over the past weeks makes clear that the US government is actively procuring AI-enabled vulnerability scanning, exploit development, threat data analysis and covert cyber infrastructure. The signal has now moved from procurement to codified policy: The FY 2026 NDAA directs the Department of Defense to develop an AI cybersecurity framework and incorporate it into DFARS and the CMMC program. Former senior NSA voices are discussing openly how AI reshapes offensive operations. The White House cyber posture has shifted toward more explicit offense, and that posture is being matched by capability. The experimental phase is over. We are in the operational one.</p>
-
-
-
-<p>When a state-level actor integrates a new class of capability into live operations, doctrine follows. It does not get announced. It gets revealed through what targets are hit, how fast, at what scale, with what level of human oversight. The early outlines of AI cyber doctrine are already visible if you read the signals together.</p>
-
-
-
-<p>Speed over stealth is the first. In an environment where exploit windows compress from weeks to hours, operating faster than a defender can respond is often more valuable than remaining undetected. That reverses the stealth-first operational model that shaped two decades of advanced persistent threat thinking.</p>
-
-
-
-<p>Adaptive systems over static controls is the second. Playbooks that assume attacker behavior will repeat are already brittle. Phishing becomes dynamic. Malware morphs faster than signatures. Attack chains execute inside the time required to schedule an incident bridge. Defense either learns and adjusts, or it absorbs.</p>
-
-
-
-<p>Probabilistic defense is the third. Zero-loss security was always a marketing ideal rather than an operational target, but the mismatch is now acute. The realistic objective is bounded loss: Assume continuous low-level compromise attempts are occurring, and optimize for detection, containment and minimized blast radius. I have had that conversation with peers more times in the last quarter than in the previous three years combined.</p>
-
-
-
-<p>These are not constructs I am importing from a policy paper. They are the operational principles I see other security leaders quietly adopting because the environment does not offer another option.</p>
-
-
-
-<p>Underneath those principles sits an economic shift I keep coming back to. Historically, attackers were constrained by three things: time, cost and expertise. AI compresses all three simultaneously. The NCSC’s most recent analysis frames the shift in concrete terms: In early 2026, the best frontier model completed nearly six times more attack steps on a realistic simulated enterprise attack than the best model eighteen months earlier, and a full attempt now costs around £65. Reconnaissance is continuous rather than episodic. Vulnerability discovery scales beyond any human team. Attack generation is iterative and cheap. Defense, meanwhile, is still indexed to human speed and decision-making. Offense is operating at machine speed and scale, while defense is still paging analysts during incidents. That is the imbalance. What I’m seeing reads less like a tooling gap and more like a model mismatch.</p>
-
-
-
-<p>The <a href="https://www.ncsc.gov.uk/blogs/retaining-defensive-advantage-in-the-age-of-frontier-ai-cyber-capabilities">UK National Cyber Security Centre’s recent analysis</a> of defensive advantage against frontier AI captured something I have struggled to articulate to my own executive stakeholders: defensive advantage is not a static condition. It has to be actively retained against a capability frontier that is moving faster than most governance structures can accommodate. Organizations that treat AI as an enhancement layer will be outpaced by organizations that treat it as a structural change to how security is designed.</p>
-
-
-
-<h2 class="wp-block-heading" id="what-i-think-leaders-should-actually-do">What I think leaders should actually do</h2>
-
-
-
-<p>Three things, and I do not consider any of them optional.</p>
-
-
-
-<h3 class="wp-block-heading" id="1-treat-ai-agents-as-security-principals">1. Treat AI agents as security principals</h3>
-
-
-
-<p>Any autonomous or semi-autonomous AI system with access to sensitive systems, data or workflows needs the governance posture applied to privileged users. Identity, access control, behavior monitoring, audit. If an AI agent can act, it can cause harm, and it has to be governed accordingly. Calling it a tool absolves no one, and the scariest version of this problem is an internally sanctioned AI agent with broad access that nobody has scoped as a principal. This recommendation is no longer outside the consensus. NIST’s Center for AI Standards and Innovation formally launched the <a href="https://www.nist.gov/caisi/ai-agent-standards-initiative">AI Agent Standards Initiative</a> in February 2026, the NCCoE has issued a concept paper on software and AI agent identity and authorization, and identity vendors, including Okta, Microsoft and Google, have shipped first-class agent identity primitives. The line is drawn. The question is whether you cross it now or after an incident forces it.</p>
-
-
-
-<h3 class="wp-block-heading" id="2-invest-in-adaptive-defense-rather-than-incremental-detection">2. Invest in adaptive defense rather than incremental detection</h3>
-
-
-
-<p>Adding another static-signature layer to an environment where attackers iterate at machine speed is mostly theater at this point. The investment that produces compounding returns is in defenses that learn, including the capacity to run AI-driven detection and response inside the seams where human review cycles used to live. That requires hard choices about where to reduce analyst toil, where to accept probabilistic outputs and where human judgment is still the right bottleneck.</p>
-
-
-
-<h3 class="wp-block-heading" id="3-reframe-the-risk-model">3. Reframe the risk model</h3>
-
-
-
-<p>Build the program on the assumption that continuous low-level compromise attempts are the normal operating condition rather than the exception. The rare high-impact event framing is a residue of a threat environment we no longer live in. Budgets, metrics and executive conversations should reflect that shift. Board reporting built around annualized loss expectancy will not survive contact with an adversary operating on hour-long cycles.</p>
-
-
-
-<p>For years I told my teams that the advantage in cyber went to whoever had the better tools. I was wrong, or at least incomplete. The advantage now goes to whoever adapts faster. Governments are already integrating these capabilities into live operations. The doctrine is not coming. It is forming, quietly, operationally and in plain sight. The question is whether defenders will recognize it in time to shape their side of it.</p>
-
-
-
-<p><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><strong><a href="https://www.csoonline.com/expert-contributor-network/">Want to join?</a></strong></p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 4d ago]]></description>
 </item>
 
 </channel>
