@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
 **Period:** May 26 – June 02, 2026  
-**Generated:** 2026-06-02 05:29 UTC  
+**Generated:** 2026-06-02 10:19 UTC  
 **Items reviewed:** 119  
 
 ## ⚡ Top Actions This Week
@@ -55,41 +55,41 @@
 
 ## 🟠 Important — Review This Week
 
-- [Microsoft investigates Office Apps, Teams file access issues](https://www.bleepingcomputer.com/news/microsoft/microsoft-investigates-office-apps-teams-file-access-issues/)  
-  **BleepingComputer** · Jun 01 · _General awareness item._  
+- [CVE-2026-28387 Potential Use-after-free in DANE Client Code](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-28387)  
+  **Microsoft Security Response Center (MSRC)** · Jun 02 · _General awareness item._  
 
-- [Race Against Time: Why Faster Vulnerability Alerts Matter](https://www.bleepingcomputer.com/news/security/race-against-time-why-faster-vulnerability-alerts-matter/)  
-  **BleepingComputer** · Jun 01 · _General awareness item._  
+- [CVE-2026-25833 Mbed TLS 3.5.0 to 3.6.5 fixed in 3.6.6 and 4.1.0 has a buffer overflow in the x509_inet_pton_ipv6() function](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-25833)  
+  **Microsoft Security Response Center (MSRC)** · Jun 02 · _General awareness item._  
 
-- [CVE-2026-45495 Microsoft Edge (Chromium-based) Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45495)  
-  **Microsoft Security Response Center (MSRC)** · Jun 01 · _General awareness item._  
+- [CVE-2026-25834 Mbed TLS v3.3.0 up to 3.6.5 and 4.0.0 allows Algorithm Downgrade.](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-25834)  
+  **Microsoft Security Response Center (MSRC)** · Jun 02 · _General awareness item._  
 
-- [CVE-2026-45494 Microsoft Edge (Chromium-based) Spoofing Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45494)  
-  **Microsoft Security Response Center (MSRC)** · Jun 01 · _General awareness item._  
+- [CVE-2026-28388 NULL Pointer Dereference When Processing a Delta CRL](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-28388)  
+  **Microsoft Security Response Center (MSRC)** · Jun 02 · _General awareness item._  
 
-- [CVE-2026-42825 Windows Telephony Service Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-42825)  
-  **Microsoft Security Response Center (MSRC)** · Jun 01 · _General awareness item._  
+- [CVE-2026-34873 An issue was discovered in Mbed TLS 3.5.0 through 4.0.0. Client impersonation can occur while resuming a TLS 1.3 session.](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-34873)  
+  **Microsoft Security Response Center (MSRC)** · Jun 02 · _General awareness item._  
 
-- [CVE-2025-54518 AMD: CVE-2025-54518 CPU OP Cache Corruption](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-54518)  
-  **Microsoft Security Response Center (MSRC)** · Jun 01 · _General awareness item._  
+- [CVE-2026-34874 An issue was discovered in Mbed TLS through 3.6.5 and 4.x through 4.0.0. There is a NULL pointer dereference in distinguished name parsing that allows an attacker to write to address 0.](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-34874)  
+  **Microsoft Security Response Center (MSRC)** · Jun 02 · _General awareness item._  
 
-- [CVE-2025-6965 Integer Truncation on SQLite](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-6965)  
-  **Microsoft Security Response Center (MSRC)** · Jun 01 · _General awareness item._  
+- [CVE-2025-15504 lief-project LIEF ELF Binary Parser.tcc parse_binary null pointer dereference](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-15504)  
+  **Microsoft Security Response Center (MSRC)** · Jun 02 · _General awareness item._  
 
-- [⚡ Weekly Recap: New Linux Flaw, PAN-OS Exploit, AI-Powered Attacks, OAuth Phishing and More](https://thehackernews.com/2026/06/weekly-recap-new-linux-flaw-pan-os.html)  
-  **The Hacker News** · Jun 01 · _General awareness item._  
+- [CVE-2026-2673 OpenSSL TLS 1.3 server may choose unexpected key agreement group](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-2673)  
+  **Microsoft Security Response Center (MSRC)** · Jun 02 · _General awareness item._  
 
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [Pakistan-Linked SideCopy Targets Afghanistan Finance Ministry with Xeno RAT](https://thehackernews.com/2026/06/pakistan-linked-sidecopy-targets.html) — The Hacker News
+- [New Wave Of Phishing Emails with SVG Files, (Tue, Jun 2nd)](https://isc.sans.edu/diary/rss/33040) — SANS Internet Storm Center
 - [Dashlane Discloses Brute-Force Attack, Encrypted Vaults of Fewer Than 20 Users Downloaded](https://thehackernews.com/2026/06/dashlane-discloses-brute-force-attack.html) — The Hacker News
 - [ISC Stormcast For Tuesday, June 2nd, 2026 https://isc.sans.edu/podcastdetail/9954, (Tue, Jun 2nd)](https://isc.sans.edu/diary/rss/33038) — SANS Internet Storm Center
 - [Hackers hijack thousands of sites for ClickFix and FakeUpdate attacks](https://www.bleepingcomputer.com/news/security/hackers-hijack-thousands-of-sites-for-clickfix-and-fakeupdate-attacks/) — BleepingComputer
 - [Red Hat npm packages compromised to steal developer credentials](https://www.bleepingcomputer.com/news/security/red-hat-npm-packages-compromised-to-steal-developer-credentials/) — BleepingComputer
-- [Spain arrests doxer leaking sensitive data of govt employees](https://www.bleepingcomputer.com/news/security/spain-arrests-doxer-leaking-sensitive-data-of-govt-employees/) — BleepingComputer
-- [Dashlane password manager users locked out by brute force attacks](https://www.bleepingcomputer.com/news/security/dashlane-password-manager-users-locked-out-by-brute-force-attacks/) — BleepingComputer
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 6 critical · 76 important · 37 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 6 critical · 78 important · 35 FYI_
