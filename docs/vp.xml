@@ -3,26 +3,361 @@
 <channel>
   <title>Joe — VP of IT Briefing</title>
   <description>Leadership-focused IT risk, vendors, pricing, licensing, and industry context.</description>
-  <lastBuildDate>Tue, 02 Jun 2026 18:37:42 +0000</lastBuildDate>
+  <lastBuildDate>Tue, 02 Jun 2026 21:47:23 +0000</lastBuildDate>
   
 <item>
-  <title>🔵 Microsoft unveils Majorana 2 quantum chip, which was developed with the help of AI, and says it will have commercially useful quantum machines by 2029 (Stephen Nellis/Reuters)</title>
-  <link>https://www.techmeme.com/260602/p51#a260602p51</link>
-  <pubDate>Tue, 02 Jun 2026 18:35:01 +0000</pubDate>
-  <source>Techmeme</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://www.reuters.com/business/microsoft-reveals-new-quantum-chip-made-with-ai-says-it-will-have-systems-by-2026-06-02/"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260602/i51.jpg" vspace="4" /></a>
-<p><a href="https://www.techmeme.com/260602/p51#a260602p51" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Stephen Nellis / <a href="http://www.reuters.com/">Reuters</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.reuters.com/business/microsoft-reveals-new-quantum-chip-made-with-ai-says-it-will-have-systems-by-2026-06-02/">Microsoft unveils Majorana 2 quantum chip, which was developed with the help of AI, and says it will have commercially useful quantum machines by 2029</a></b></span>&nbsp; &mdash;&nbsp; Microsoft (MSFT.O) on Tuesday unveiled a new quantum computing chip that it redesigned with the help of AI, saying it now believes &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+  <title>🔵 Contentful tops off Salesforce&#x27;s &#x27;headless&#x27; bet, analyst says</title>
+  <link>https://www.theregister.com/saas/2026/06/02/contentful-tops-off-salesforces-headless-bet-analyst-says/5250357</link>
+  <pubDate>Tue, 02 Jun 2026 21:20:21 +0000</pubDate>
+  <source>The Register</source>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Lacking an enterprise content layer for Headless 360, CRM titan went shopping<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
 </item>
 
 <item>
-  <title>🔵 Microsoft announces the Agent Control Specification, an open-source standard that aims to provide granular, consistent governance over AI agent behavior (Ram Iyer/TechCrunch)</title>
+  <title>🟠 HP Poly VoIP vulnerability sets the stage for executive voice deepfakes</title>
+  <link>https://www.csoonline.com/article/4180223/hp-poly-voip-vulnerability-sets-the-stage-for-executive-voice-deepfakes.html</link>
+  <pubDate>Tue, 02 Jun 2026 20:58:20 +0000</pubDate>
+  <source>CSO Online</source>
+  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<p>HP has released patches for a critical buffer overflow vulnerability in multiple IP-enabled conference phones from its Poly Voice line. The flaw allows unauthenticated attackers to obtain root privileges on the underlying operating system, potentially enabling them to execute other attacks such as eavesdropping on conversations and recording voice data for AI-enabled impersonation attacks.</p>
+
+
+
+<p>The vulnerability, <a href="https://support.hp.com/us-en/document/ish_15052661-15052687-16/hpsbpy04083">tracked as CVE-2026-0826</a>, was discovered by researchers from security firm Rapid7 and resides in the code that parses Session Description Protocol (SDP) attributes when the Interactive Connectivity Establishment (ICE) feature is enabled.</p>
+
+
+
+<p>ICE enables VoIP devices to establish peer-to-peer connections using the shortest available network path. The feature is not enabled by default on HP Poly devices, and the company advises administrators to disable it if it’s not needed.</p>
+
+
+
+<p>The flaw, rated 9.2 on the CVSS severity scale, affects all phones from the HP Poly VVX series, as well as the Trio 8300, 8500, and 8800 IP conference devices. HP has fixed the flaw in its Poly Unified Communications Software (UCS) versions 6.4.8 for the VVX devices, 8.1.7 for the Trio 8300, and 7.2.8 for Trio 8500 and 8800.</p>
+
+
+
+<h2 class="wp-block-heading" id="voip-exploit-is-public-for-pen-testing">VoIP exploit is public for pen testing</h2>
+
+
+
+<p>An exploit module targeting this vulnerability has already been developed and released for the widely used Metasploit penetration testing framework that’s maintained by Rapid7.</p>
+
+
+
+<p>The exploit executes code as root on an affected device with ICE enabled by sending a SIP INVITE request with a specially crafted candidate attribute. This attribute normally contains a transport address that can be used for connectivity checks and is part of the ICE RFC8839 standard.</p>
+
+
+
+<p>The buffer overflow bug is located in a helper function called <code>ParseICECandidate</code> in the <code>polyapp</code> binary that processes such requests on the device.</p>
+
+
+
+<p>“The start of the function contains a call to <code>memcpy</code>, which will copy the incoming string line being processed into a 256 byte stack buffer,” Stephen Fewer, senior principal security researcher at Rapid7, said in <a href="https://www.rapid7.com/blog/post/ve-cve-2026-0826-critical-unauthenticated-stack-buffer-overflow-hp-poly-vvx-trio-voip-phones-fixed/">a blog post</a>. “No length check is performed to ensure the incoming string length is less than 256 bytes. Therefore by providing a candidate attribute whose length is greater than 256 bytes, a stack-based buffer overflow will occur.”</p>
+
+
+
+<p>Address Space Layout Randomization (ASLR), a kernel feature that randomizes memory addresses to defeat buffer overflow exploits, is enabled on the device. However, the protection is not operating correctly on the HP Poly devices because it does not randomize the load addresses of .so (Shared Object) libraries.</p>
+
+
+
+<p>These libraries, such as <code>libc</code>, are loaded by other processes, including the <code>polyapp</code> process, and because their memory addresses never change, they can be leveraged to bypass ASLR and execute the attacker’s payload.</p>
+
+
+
+<p>“We create a ROP chain that will execute an arbitrary OS command via the system standard C library function,” Fewer said. “The accompanying Metasploit exploit modules source code details the entire ROP chain.”</p>
+
+
+
+<h2 class="wp-block-heading" id="voip-phones-are-attractive-targets">VoIP phones are attractive targets</h2>
+
+
+
+<p>Attackers have increasingly targeted embedded devices inside enterprise networks in recent years because unlike laptops, workstations, and servers, these devices are not monitored by endpoint detection and response (EDR) products. As such, they provide perfect footholds inside corporate environments that allow attackers to remain undetected for long periods of time and attack other systems.</p>
+
+
+
+<p>In the age of AI these devices become even more relevant for attackers, going beyond corporate espionage by recording conversations or internal network pivoting.</p>
+
+
+
+<p>“Attackers no longer need massive datasets to make use of synthetic speech tooling,” Douglas McKee, Rapid7’s director of vulnerability intelligence, said in <a href="https://www.rapid7.com/blog/post/ve-cve-2026-0826-how-an-old-bug-can-feed-ai-powered-impersonation/">a blog post</a>. “In many cases, they just need clean source audio of the right person saying enough words in enough contexts. That has made executive voice data, call recordings, and live conversation capture far more valuable than many organizations seem prepared to admit.”</p>
+
+
+
+<p>Attackers could collect audio and then use <a href="https://www.csoonline.com/article/3982379/deepfake-attacks-are-inevitable-cisos-cant-prepare-soon-enough.html">AI deepfakes to impersonate executives</a> in calls to employees and business partners to authorize fraudulent transactions, gain access to sensitive systems, and more.</p>
+
+
+
+<p>“The concern is not just ‘someone might hear something confidential,’” McKee said. “That would be bad enough. The broader concern is that voice infrastructure can now support both traditional espionage objectives and modern AI-enabled fraud operations at the same time.”</p>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Source: a CoreWeave-tied data center raised $900M via five-year junk bonds, priced at par to yield 7.5%, as the sector increasingly turns to high-yield bonds (Gowri Gurumurthy/Bloomberg)</title>
+  <link>https://www.techmeme.com/260602/p59#a260602p59</link>
+  <pubDate>Tue, 02 Jun 2026 20:55:02 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.bloomberg.com/news/articles/2026-06-02/coreweave-tied-data-center-raises-900-million-in-junk-bond-sale"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260602/i59.jpg" vspace="4" /></a>
+<p><a href="https://www.techmeme.com/260602/p59#a260602p59" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Gowri Gurumurthy / <a href="https://www.bloomberg.com/">Bloomberg</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/articles/2026-06-02/coreweave-tied-data-center-raises-900-million-in-junk-bond-sale">Source: a CoreWeave-tied data center raised $900M via five-year junk bonds, priced at par to yield 7.5%, as the sector increasingly turns to high-yield bonds</a></b></span>&nbsp; &mdash;&nbsp; A data center tied to CoreWeave Inc. raised $900 million from a high-yield note offering, joining a wave of junk issuers tapping debt markets &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Trump Signs Executive Order That Invites Vetting of Top AI Models for National Security Risks</title>
+  <link>https://www.securityweek.com/trump-signs-executive-order-that-invites-vetting-of-top-ai-models-for-national-security-risks/</link>
+  <pubDate>Tue, 02 Jun 2026 20:10:49 +0000</pubDate>
+  <source>SecurityWeek</source>
+  <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><p>The order establishes a framework for the federal government to vet the national security risks of the most advanced AI systems for up to a month before their public release.</p>
+<p>The post <a href="https://www.securityweek.com/trump-signs-executive-order-that-invites-vetting-of-top-ai-models-for-national-security-risks/">Trump Signs Executive Order That Invites Vetting of Top AI Models for National Security Risks</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Microsoft releases ASSERT, an open-source framework that lets developers generate and run AI behavior tests using natural-language descriptions (Ram Iyer/TechCrunch)</title>
+  <link>https://www.techmeme.com/260602/p56#a260602p56</link>
+  <pubDate>Tue, 02 Jun 2026 20:00:52 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://techcrunch.com/2026/06/02/new-microsoft-tool-lets-devs-spin-up-ai-behavior-tests-using-text-descriptions/"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260602/i56.jpg" vspace="4" /></a>
+<p><a href="https://www.techmeme.com/260602/p56#a260602p56" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Ram Iyer / <a href="http://techcrunch.com/">TechCrunch</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://techcrunch.com/2026/06/02/new-microsoft-tool-lets-devs-spin-up-ai-behavior-tests-using-text-descriptions/">Microsoft releases ASSERT, an open-source framework that lets developers generate and run AI behavior tests using natural-language descriptions</a></b></span>&nbsp; &mdash;&nbsp; AI researchers and labs have advanced by leaps and bounds in evaluating AI models for everything from safety and compliance to sycophancy and alignment.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Microsoft and Mayo Clinic partner for an AI model trained on Mayo&#x27;s medical data, with plans to build an AI healthcare assistant and AI tools for clinicians (Clare Duffy/CNN)</title>
+  <link>https://www.techmeme.com/260602/p54#a260602p54</link>
+  <pubDate>Tue, 02 Jun 2026 19:25:01 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://www.cnn.com/2026/06/02/tech/ai-for-healthcare-microsoft-mayo-clinic"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260602/i54.jpg" vspace="4" /></a>
+<p><a href="https://www.techmeme.com/260602/p54#a260602p54" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Clare Duffy / <a href="https://www.cnn.com/">CNN</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://www.cnn.com/2026/06/02/tech/ai-for-healthcare-microsoft-mayo-clinic">Microsoft and Mayo Clinic partner for an AI model trained on Mayo's medical data, with plans to build an AI healthcare assistant and AI tools for clinicians</a></b></span>&nbsp; &mdash;&nbsp; People have been seeking out health information online since the dawn of the internet.&nbsp; And now, tens of millions of people &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 An interview with Microsoft AI CEO Mustafa Suleyman about its models catching up to the state of the art from months ago, refusing to distill models, and more (Reed Albergotti/Semafor)</title>
+  <link>https://www.techmeme.com/260602/p53#a260602p53</link>
+  <pubDate>Tue, 02 Jun 2026 19:20:01 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/><a href="https://www.semafor.com/article/06/02/2026/microsofts-ai-chief-on-the-greatest-game-of-catchup-ever-played"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260602/i53.jpg" vspace="4" /></a>
+<p><a href="https://www.techmeme.com/260602/p53#a260602p53" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Reed Albergotti / <a href="https://www.semafor.com/">Semafor</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://www.semafor.com/article/06/02/2026/microsofts-ai-chief-on-the-greatest-game-of-catchup-ever-played">An interview with Microsoft AI CEO Mustafa Suleyman about its models catching up to the state of the art from months ago, refusing to distill models, and more</a></b></span>&nbsp; &mdash;&nbsp; THE SCENE&nbsp; &mdash;&nbsp; Not long ago, Microsoft leapt ahead of competitors by funding OpenAI when it was a fledgling research lab.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 AI Model Release Tracker: Microsoft AI&#x27;s first reasoning model arrives</title>
+  <link>https://www.zdnet.com/article/ai-model-release-tracker/</link>
+  <pubDate>Tue, 02 Jun 2026 19:06:19 +0000</pubDate>
+  <source>ZDNet</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Not every new model is all it's cracked up to be. Our tracker keeps each release in context with its peers, so you know which models are worth your time.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+</item>
+
+<item>
+  <title>🟠 Build 2026: Microsoft&#x27;s MDASH exits preview with 100+ specialized threat-hunting AI agents</title>
+  <link>https://www.zdnet.com/article/build-2026-mdash-security-ai-agents/</link>
+  <pubDate>Tue, 02 Jun 2026 19:00:04 +0000</pubDate>
+  <source>ZDNet</source>
+  <description><![CDATA[<b>Why this matters: Endpoint detection changes — review high-severity detections and alert noise.</b><br/>Microsoft's Build 2026 security news centers on an agentic AI vulnerability system designed to find real exploitable flaws, connect them to Defender and GitHub, and help developers fix them faster.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+</item>
+
+<item>
+  <title>🟠 Trump revives parts of canceled AI order with cybersecurity-focused directive</title>
+  <link>https://www.csoonline.com/article/4180205/trump-revives-parts-of-canceled-ai-order-with-cybersecurity-focused-directive.html</link>
+  <pubDate>Tue, 02 Jun 2026 18:46:49 +0000</pubDate>
+  <source>CSO Online</source>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<p>US President Donald Trump signed an executive order aimed at strengthening cybersecurity defenses and establishing a voluntary framework for cooperation between the federal government and developers of advanced artificial intelligence models, reviving portions of a broader AI initiative that he abruptly shelved less than two weeks ago.</p>
+
+
+
+<p>The order, “<a href="https://www.whitehouse.gov/presidential-actions/2026/06/promoting-advanced-artificial-intelligence-innovation-and-security/">Promoting Advanced Artificial Intelligence Innovation and Security</a>,” directs federal agencies to accelerate deployment of AI-enabled cybersecurity capabilities, establish a government-industry vulnerability-sharing initiative, and create a process for evaluating the cyber capabilities of frontier AI models.</p>
+
+
+
+<p>The move follows an unusual reversal by the administration. On May 21, Trump <a href="https://www.nytimes.com/2026/05/21/technology/trump-ai-executive-order.html">canceled a planned signing ceremony</a> for what had been described as a much broader AI executive order after expressing concerns that the proposal could hamper innovation and weaken America’s competitive position against China.</p>
+
+
+
+<p>The cancellation highlighted growing tensions within the administration between officials concerned about the cybersecurity implications of increasingly capable AI models and others who argued that even voluntary government review mechanisms could become barriers to innovation and weaken US competitiveness against China.</p>
+
+
+
+<p>Reports at the time indicated the abandoned proposal would have created a voluntary process allowing developers of advanced AI systems to provide the federal government with access to models before public release so that national security officials could evaluate their cybersecurity implications.</p>
+
+
+
+<p>The new executive order preserves many of those cybersecurity provisions while emphasizing that it does not create mandatory licensing, preclearance, or permitting requirements for AI developers.</p>
+
+
+
+<h2 class="wp-block-heading" id="a-compromise-between-innovation-and-security">A compromise between innovation and security</h2>
+
+
+
+<p>On his first day in office, Trump <a href="https://www.whitehouse.gov/presidential-actions/2025/01/initial-rescissions-of-harmful-executive-orders-and-actions/">dismantled many of the AI governance initiatives</a> established under former President Joe Biden, arguing that regulation could slow innovation and undermine American leadership in the global AI race. Yet as AI systems become increasingly capable, national security officials have raised concerns about the potential impact of advanced models on cyber operations, critical infrastructure, and intelligence activities.</p>
+
+
+
+<p>The executive order attempts to reconcile those competing priorities. It repeatedly emphasizes innovation and American technological leadership while acknowledging that advanced AI capabilities present national security risks that require government attention.</p>
+
+
+
+<p>“The United States continues to lead the world in Artificial Intelligence because of the enormous talent and innovation of our AI industry, and because we refuse to stifle this innovation with overly burdensome regulation,” the order states. At the same time, it notes that advanced AI capabilities introduce “new national security considerations that require coordinated action.”</p>
+
+
+
+<p>The result is a framework that focuses narrowly on cybersecurity and national security concerns while avoiding the broader governance, safety and oversight provisions that characterized Biden’s 2023 AI executive order.</p>
+
+
+
+<h2 class="wp-block-heading" id="hardening-federal-and-critical-infrastructure-systems">Hardening federal and critical infrastructure systems</h2>
+
+
+
+<p>A significant portion of the order is devoted to strengthening the cybersecurity of federal networks and critical infrastructure systems.</p>
+
+
+
+<p>Within 30 days, the Committee on National Security Systems, an intergovernmental body that establishes cybersecurity policies, directives, and standards for National Security Systems (NSS), must prioritize the cyber defense of national security systems, while the Department of War, the administration’s renamed Department of Defense, is directed to prioritize the protection of its own information systems. The Cybersecurity and Infrastructure Security Agency (CISA) must also issue directives and guidance designed to strengthen civilian federal networks and accelerate the adoption of AI-enabled defensive technologies.</p>
+
+
+
+<p>The White House also wants advanced cybersecurity capabilities extended beyond federal agencies.</p>
+
+
+
+<p>The order directs CISA to facilitate access to cybersecurity tools and services for state and local governments as well as operators of critical infrastructure. The directive specifically identifies rural hospitals, community banks, and local utilities as organizations that should benefit from expanded access to cybersecurity capabilities, including advanced AI tools.</p>
+
+
+
+<p>The focus on smaller organizations reflects growing concern that many essential service providers lack the cybersecurity resources available to larger enterprises despite facing increasingly sophisticated cyber threats.</p>
+
+
+
+<p>Moreover, the order directs federal officials to identify grant funding that could support organizations developing advanced AI-based vulnerability detection technologies and expands federal hiring pathways for cybersecurity professionals.</p>
+
+
+
+<h2 class="wp-block-heading" id="creating-an-ai-cybersecurity-clearinghouse">Creating an AI cybersecurity clearinghouse</h2>
+
+
+
+<p>Another notable provision establishes an AI cybersecurity clearinghouse intended to improve coordination between government agencies, AI developers, and critical infrastructure operators.</p>
+
+
+
+<p>The Treasury Department will form the clearinghouse in consultation with the National Security Agency, CISA, and other federal officials. According to the order, the initiative will operate through voluntary collaboration with AI companies and critical infrastructure organizations.</p>
+
+
+
+<p>Its mission will include coordinating vulnerability scanning activities, validating discovered software vulnerabilities, prioritizing remediation efforts, and facilitating the distribution of security patches. The order also directs the clearinghouse to deconflict vulnerability-discovery efforts so participants are not duplicating work.</p>
+
+
+
+<p>The provision appears designed to create a more organized mechanism for vulnerability discovery and remediation at a time when AI systems are becoming increasingly capable of identifying software flaws and weaknesses across large environments.</p>
+
+
+
+<h2 class="wp-block-heading" id="establishing-oversight-of-frontier-model-cyber-capabilities">Establishing oversight of frontier model cyber capabilities</h2>
+
+
+
+<p>One of the most consequential sections of the order concerns advanced AI systems, often referred to as frontier models.</p>
+
+
+
+<p>Within 60 days, the NSA, CISA, Treasury Department, National Institute of Standards and Technology, and other agencies must develop a classified benchmarking process for evaluating the advanced cyber capabilities of AI models. The process will be used to determine when a system should be designated a “covered frontier model.”</p>
+
+
+
+<p>The order does not define what capabilities would trigger the designation, instead directing federal agencies to develop classified assessment criteria and benchmarks for assessing advanced cyber capabilities. The NSA will ultimately be responsible for making determinations in consultation with other national security officials. While that approach gives the government flexibility as AI systems evolve, it also leaves unanswered questions about which future models could ultimately fall within the framework.</p>
+
+
+
+<p>The administration also plans to establish a voluntary framework through which AI developers can consult with the government regarding whether systems under development meet the threshold for designation as covered frontier models.</p>
+
+
+
+<p>Under that framework, participating companies may provide the government with access to covered frontier models for up to 30 days before those systems are released to other trusted partners. Earlier drafts reportedly called for reviews as much as 90 days before release, though some AI industry officials pushed for a shorter 14-day period, <a href="https://www.politico.com/news/2026/05/21/trump-ai-order-sacks-00933295">according to reports</a>.</p>
+
+
+
+<p>The government and developers would also collaborate on selecting trusted organizations that could receive early access to the models to support cybersecurity research and critical infrastructure protection efforts.</p>
+
+
+
+<p>The provision effectively creates a structured mechanism through which federal agencies can gain insight into some of the most advanced AI systems before they become widely available.</p>
+
+
+
+<p>Although the process is voluntary, it closely resembles portions of the broader executive order that Trump declined to sign last month.</p>
+
+
+
+<h2 class="wp-block-heading" id="rejecting-licensing-and-mandatory-approvals">Rejecting licensing and mandatory approvals</h2>
+
+
+
+<p>While the administration retained some of the cybersecurity provisions reportedly contained in the earlier proposal, it also included language clearly intended to reassure AI developers and investors.</p>
+
+
+
+<p>The order explicitly states that nothing in the initiative authorizes the creation of “a mandatory governmental licensing, preclearance, or permitting requirement” for the development, publication, release or distribution of AI models, including frontier models.</p>
+
+
+
+<p>That language appears intended to address concerns raised by critics of the abandoned May proposal, who argued that even voluntary review processes could eventually evolve into de facto regulatory requirements.</p>
+
+
+
+<h2 class="wp-block-heading" id="targeting-ai-enabled-cybercrime">Targeting AI-enabled cybercrime</h2>
+
+
+
+<p>The executive order also directs the Justice Department to increase its focus on cybercriminals who use artificial intelligence as part of their operations.</p>
+
+
+
+<p>Specifically, it instructs the Attorney General to prioritize enforcement of federal computer crime, identity theft, and fraud statutes against individuals who use AI to gain unauthorized access to computer systems or who use AI tools while committing cybercrime.</p>
+
+
+
+<p>The order references the use of AI agents to unlawfully access information that is later used for criminal purposes, reflecting growing concern among policymakers that increasingly autonomous AI systems could enable new forms of cybercrime.</p>
+
+
+
+<p>Collectively, the provisions in the new order preserve Trump’s opposition to broad AI regulation while creating new mechanisms for federal agencies to assess the cybersecurity implications of increasingly capable AI systems. The order signals that even an administration committed to minimizing AI oversight views frontier-model cyber capabilities as a growing national security concern.</p>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Microsoft debuts MAI-Thinking-1, its first advanced reasoning AI model, trained &quot;from the ground up on clean data, without distillation from third-party models&quot; (Jay Peters/The Verge)</title>
+  <link>https://www.techmeme.com/260602/p52#a260602p52</link>
+  <pubDate>Tue, 02 Jun 2026 18:40:03 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://www.theverge.com/tech/941664/microsoft-ai-model-reasoning-mai-thinking-1-build-2026"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260602/i52.jpg" vspace="4" /></a>
+<p><a href="https://www.techmeme.com/260602/p52#a260602p52" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Jay Peters / <a href="https://www.theverge.com/">The Verge</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://www.theverge.com/tech/941664/microsoft-ai-model-reasoning-mai-thinking-1-build-2026">Microsoft debuts MAI-Thinking-1, its first advanced reasoning AI model, trained &ldquo;from the ground up on clean data, without distillation from third-party models&rdquo;</a></b></span>&nbsp; &mdash;&nbsp; MAI-Thinking-1 is one of seven new models announced at Build 2026. &hellip; Microsoft announced a bunch of new in-house AI models &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Microsoft announces the Agent Control Specification, an open-source standard that gives developers a granular, consistent way to control what AI agents can do (Ram Iyer/TechCrunch)</title>
   <link>https://www.techmeme.com/260602/p49#a260602p49</link>
   <pubDate>Tue, 02 Jun 2026 18:25:02 +0000</pubDate>
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://techcrunch.com/2026/06/02/microsoft-offers-devs-a-better-way-to-control-ai-agent-behavior/"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260602/i49.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260602/p49#a260602p49" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Ram Iyer / <a href="http://techcrunch.com/">TechCrunch</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://techcrunch.com/2026/06/02/microsoft-offers-devs-a-better-way-to-control-ai-agent-behavior/">Microsoft announces the Agent Control Specification, an open-source standard that aims to provide granular, consistent governance over AI agent behavior</a></b></span>&nbsp; &mdash;&nbsp; As AI agents grow ever more capable, enterprises racing to put them to work across applications, workflows, and products face a new challenge &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://techcrunch.com/2026/06/02/microsoft-offers-devs-a-better-way-to-control-ai-agent-behavior/">Microsoft announces the Agent Control Specification, an open-source standard that gives developers a granular, consistent way to control what AI agents can do</a></b></span>&nbsp; &mdash;&nbsp; As AI agents grow ever more capable, enterprises racing to put them to work across applications, workflows, and products face a new challenge &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
 </item>
 
 <item>
@@ -30,37 +365,7 @@
   <link>https://www.zdnet.com/article/all-the-new-pcs-powered-by-nvidias-new-n1x-cpu/</link>
   <pubDate>Tue, 02 Jun 2026 18:24:00 +0000</pubDate>
   <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/>Nvidia just announced its new RTX Spark CPU on models from all the major PC brands. These four look the most interesting.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 GitHub unveils the GitHub Copilot desktop app in preview, which introduces a new feature called canvases for bidirectional work between users and agents (Mario Rodriguez/The GitHub Blog)</title>
-  <link>https://www.techmeme.com/260602/p48#a260602p48</link>
-  <pubDate>Tue, 02 Jun 2026 18:20:02 +0000</pubDate>
-  <source>Techmeme</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://github.blog/news-insights/product-news/github-copilot-app-the-agent-native-desktop-experience/"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260602/i48.jpg" vspace="4" /></a>
-<p><a href="https://www.techmeme.com/260602/p48#a260602p48" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Mario Rodriguez / <a href="https://github.blog/">The GitHub Blog</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://github.blog/news-insights/product-news/github-copilot-app-the-agent-native-desktop-experience/">GitHub unveils the GitHub Copilot desktop app in preview, which introduces a new feature called canvases for bidirectional work between users and agents</a></b></span>&nbsp; &mdash;&nbsp; At Microsoft Build 2026, GitHub introduced new tools, updates, and surfaces so agents can work the way you already work.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Microsoft announces seven AI models, including one focused on reasoning and an &quot;ultra efficient&quot; coding model that it says was fine-tuned for GitHub (Rafe Rosner-Uddin/Financial Times)</title>
-  <link>https://www.techmeme.com/260602/p47#a260602p47</link>
-  <pubDate>Tue, 02 Jun 2026 18:15:04 +0000</pubDate>
-  <source>Techmeme</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://www.ft.com/content/e8b86648-61b3-4b48-8bd4-a50f03de92d8"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260602/i47.jpg" vspace="4" /></a>
-<p><a href="https://www.techmeme.com/260602/p47#a260602p47" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Rafe Rosner-Uddin / <a href="https://www.ft.com/">Financial Times</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.ft.com/content/e8b86648-61b3-4b48-8bd4-a50f03de92d8">Microsoft announces seven AI models, including one focused on reasoning and an &ldquo;ultra efficient&rdquo; coding model that it says was fine-tuned for GitHub</a></b></span>&nbsp; &mdash;&nbsp; Software giant's AI chief Mustafa Suleyman says focus is on developing products for business users</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Microsoft announces Scout, an always-on AI agent built on OpenClaw, appearing as a contact within Microsoft Teams to automate scheduling and more (Reece Rogers/Wired)</title>
-  <link>https://www.techmeme.com/260602/p46#a260602p46</link>
-  <pubDate>Tue, 02 Jun 2026 18:10:01 +0000</pubDate>
-  <source>Techmeme</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://www.wired.com/story/meet-microsoft-scout-your-ai-coworker-that-never-logs-off/"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260602/i46.jpg" vspace="4" /></a>
-<p><a href="https://www.techmeme.com/260602/p46#a260602p46" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Reece Rogers / <a href="http://www.wired.com/">Wired</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.wired.com/story/meet-microsoft-scout-your-ai-coworker-that-never-logs-off/">Microsoft announces Scout, an always-on AI agent built on OpenClaw, appearing as a contact within Microsoft Teams to automate scheduling and more</a></b></span>&nbsp; &mdash;&nbsp; Microsoft's OpenClaw-style agent appears in Teams, just like a human colleague, and automates your dull office tasks.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/>Nvidia just announced its new RTX Spark CPU on models from all the major PC brands. These four look the most interesting.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
 </item>
 
 <item>
@@ -181,35 +486,15 @@
 
 
 <p>“Features such as data exfiltration policies and AI SPM are what convert a CISO from a ‘no’ to a ‘yes’ on moving an agent deployment into production,” he added.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Microsoft announces new on-device AI updates for Edge: a dev preview of a new SLM called Aion-1.0-Instruct, Language Detector and Translator APIs, and more (Paul Thurrott/Thurrott)</title>
-  <link>https://www.techmeme.com/260602/p43#a260602p43</link>
-  <pubDate>Tue, 02 Jun 2026 17:50:02 +0000</pubDate>
-  <source>Techmeme</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://www.thurrott.com/a-i/336953/build-2026-microsoft-brings-more-on-device-ai-to-edge"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260602/i43.jpg" vspace="4" /></a>
-<p><a href="https://www.techmeme.com/260602/p43#a260602p43" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Paul Thurrott / <a href="http://www.thurrott.com/">Thurrott</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.thurrott.com/a-i/336953/build-2026-microsoft-brings-more-on-device-ai-to-edge">Microsoft announces new on-device AI updates for Edge: a dev preview of a new SLM called Aion-1.0-Instruct, Language Detector and Translator APIs, and more</a></b></span>&nbsp; &mdash;&nbsp; Tied to the earlier Windows 11 developer news, Microsoft is also bringing more local AI capabilities to its Edge web browser too.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Sources: the EU&#x27;s €20B investment plan for five AI data centers is floundering, with delays and funding issues alienating some potential partners (Bloomberg)</title>
-  <link>https://www.techmeme.com/260602/p38#a260602p38</link>
-  <pubDate>Tue, 02 Jun 2026 17:05:00 +0000</pubDate>
-  <source>Techmeme</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.bloomberg.com/news/articles/2026-06-02/eu-s-ai-data-center-plans-stumble-due-to-delays-funding-issues"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260602/i38.jpg" vspace="4" /></a>
-<p><a href="https://www.techmeme.com/260602/p38#a260602p38" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="https://www.bloomberg.com/">Bloomberg</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/articles/2026-06-02/eu-s-ai-data-center-plans-stumble-due-to-delays-funding-issues">Sources: the EU's &euro;20B investment plan for five AI data centers is floundering, with delays and funding issues alienating some potential partners</a></b></span>&nbsp; &mdash;&nbsp; SoftBank Announces &euro;75 Bln AI Data Center Plan in France&nbsp; &mdash;&nbsp; Video Player is loading.&nbsp; &mdash;&nbsp; Unmute&nbsp; &mdash;&nbsp; Current Time 0:01 Loaded: 15.31% Playback Rate</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
 </item>
 
 <item>
   <title>🟠 Work IQ is Microsoft&#x27;s big bet on agent-first enterprise IT, and I have questions</title>
   <link>https://www.zdnet.com/article/work-iq-is-microsofts-big-bet-on-agent-first-enterprise-software/</link>
-  <pubDate>Tue, 02 Jun 2026 17:00:09 +0000</pubDate>
+  <pubDate>Tue, 02 Jun 2026 17:00:00 +0000</pubDate>
   <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: Potential data exposure — check monitoring and incident response readiness.</b><br/>Microsoft's Work IQ could make enterprise AI agents dramatically smarter, but the shift to agent-first IT brings serious questions about cost, governance, data exposure, and operational risk.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Potential data exposure — check monitoring and incident response readiness.</b><br/>Microsoft's Work IQ could make enterprise AI agents dramatically smarter, but the shift to agent-first IT brings serious questions about cost, governance, data exposure, and operational risk.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
 </item>
 
 <item>
@@ -218,7 +503,7 @@
   <pubDate>Tue, 02 Jun 2026 16:35:38 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><p>As AI shortens the path from vulnerability disclosure to exploitation, researchers disagree on whether the problem is inadequate security tools or inadequate operational control.</p>
-<p>The post <a href="https://www.securityweek.com/two-new-reports-offer-competing-explanations-for-cybersecuritys-growing-crisis/">Two New Reports Offer Competing Explanations for Cybersecurity&#8217;s Growing Crisis</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/two-new-reports-offer-competing-explanations-for-cybersecuritys-growing-crisis/">Two New Reports Offer Competing Explanations for Cybersecurity&#8217;s Growing Crisis</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -227,7 +512,7 @@
   <pubDate>Tue, 02 Jun 2026 15:00:00 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><p>A simple development setting bypassed protections designed to prevent unauthorized Android apps from accessing Microsoft account tokens, exposing billions of installations.</p>
-<p>The post <a href="https://www.securityweek.com/exclusive-how-one-line-of-code-put-billions-of-microsoft-android-app-downloads-at-risk/">Exclusive: How One Line of Code Put Billions of Microsoft Android App Downloads at Risk</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/exclusive-how-one-line-of-code-put-billions-of-microsoft-android-app-downloads-at-risk/">Exclusive: How One Line of Code Put Billions of Microsoft Android App Downloads at Risk</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
@@ -235,7 +520,7 @@
   <link>https://www.theregister.com/storage/2026/06/02/expect-more-of-those-dram-price-hikes-as-memory-shortage-continues-to-bite/5250049</link>
   <pubDate>Tue, 02 Jun 2026 14:02:00 +0000</pubDate>
   <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Budget/licensing impact — verify renewal terms and forecast cost changes.</b><br/>Chip costs may rise another 63% this quarter, as effects feed through to PC pricing<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Budget/licensing impact — verify renewal terms and forecast cost changes.</b><br/>Chip costs may rise another 63% this quarter, as effects feed through to PC pricing<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
 </item>
 
 <item>
@@ -344,7 +629,7 @@
 
 
 <p>Learn more: Download the <a href="https://www.crowdstrike.com/en-us/resources/reports/crowdstrike-2026-financial-services-threat-landscape-report/" rel="sponsored">CrowdStrike 2026 Financial Services Threat Landscape Report</a>.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 8h ago]]></description>
 </item>
 
 <item>
@@ -413,7 +698,7 @@
 
 
 <p></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 8h ago]]></description>
 </item>
 
 <item>
@@ -542,7 +827,7 @@
 
 
 <p>“Many enterprises are becoming uncomfortable with complete dependence on external frontier model APIs for strategic workloads. Concerns around governance, sovereignty, cost predictability, latency, customization, and intellectual property are pushing enterprises toward more controllable AI architectures,” he said.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 8h ago]]></description>
 </item>
 
 <item>
@@ -550,7 +835,7 @@
   <link>https://www.theregister.com/security/2026/06/02/microsoft-reaches-for-olive-branch-after-public-dustup-with-0-day-researcher/5249945</link>
   <pubDate>Tue, 02 Jun 2026 12:37:00 +0000</pubDate>
   <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Following days of criticism from the security community, Redmond dials back rhetoric, insists vulnerability hunters not in its legal crosshairs<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Following days of criticism from the security community, Redmond dials back rhetoric, insists vulnerability hunters not in its legal crosshairs<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
 </item>
 
 <item>
@@ -635,7 +920,7 @@
 
 
 <p>Wiz researchers said “most” malicious versions were revoked at the time of publishing the disclosure. It also shared a list of indicators of compromise (IOCs) along with the names of infected packages for additional support.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
 </item>
 
 <item>
@@ -726,7 +1011,7 @@
 
 
 <p><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><strong><a href="https://www.cio.com/expert-contributor-network/">Want to join?</a></strong></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
 </item>
 
 <item>
@@ -734,7 +1019,7 @@
   <link>https://www.theregister.com/ai-and-ml/2026/06/02/claude-celebrates-anthropics-stock-market-float-with-blockbuster-outage/5250071</link>
   <pubDate>Tue, 02 Jun 2026 11:54:08 +0000</pubDate>
   <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Service impact possible — prepare comms and confirm vendor status.</b><br/>Chatbot has no respect for timing of its maker's financial announcement<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Service impact possible — prepare comms and confirm vendor status.</b><br/>Chatbot has no respect for timing of its maker's financial announcement<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
 </item>
 
 <item>
@@ -867,7 +1152,7 @@
 
 
 <p>For CISOs, the lesson extends beyond patching. “The recurring pattern of edge-device exploitation is rarely the result of a missing security product,” Grover said. “More often, it reflects gaps in asset visibility, configuration governance, patch prioritization, and architectural modernization.”</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 10h ago]]></description>
 </item>
 
 <item>
@@ -1258,7 +1543,7 @@
 
 
 <p></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 10h ago]]></description>
 </item>
 
 <item>
@@ -1543,7 +1828,7 @@
 
 
 <p>While no one can foresee whether cloud will grow less complicated down the road, organizations will continue to use it. “Cloud is no longer the future of IT — it’s the present,” says Sweetwater’s Johnson. “The conversation has shifted from ‘should we?’ to ‘how do we get better at it?’ That’s where I spend most of my time.”</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 8h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 11h ago]]></description>
 </item>
 
 <item>
@@ -1708,7 +1993,7 @@
 
 
 <p><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><strong><a href="https://www.cio.com/expert-contributor-network/">Want to join?</a></strong></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 8h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 11h ago]]></description>
 </item>
 
 <item>
@@ -1781,7 +2066,7 @@
 
 
 <p>“Most organizations still lack a complete inventory of what their AI tools can access, what credentials they inherit, and what external services they interact with,” Grover added. “Most enterprises have not yet applied the same least-privilege and behavioral monitoring disciplines to AI tools that they apply to human identities, and that asymmetry is what attackers are now actively exploiting.”</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 8h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 11h ago]]></description>
 </item>
 
 <item>
@@ -1790,7 +2075,7 @@
   <pubDate>Tue, 02 Jun 2026 09:51:19 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: Supply chain risk — audit third-party dependencies and vendor access.</b><br/><p>Hackers published 96 malicious package versions, injected with a credential-stealing worm similar to Mini Shai-Hulud.</p>
-<p>The post <a href="https://www.securityweek.com/supply-chain-attack-hits-32-red-hat-npm-packages/">Supply Chain Attack Hits 32 Red Hat NPM Packages</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 8h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/supply-chain-attack-hits-32-red-hat-npm-packages/">Supply Chain Attack Hits 32 Red Hat NPM Packages</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 11h ago]]></description>
 </item>
 
 <item>
@@ -1889,7 +2174,7 @@
 
 <li><a href="https://www.cio.com/article/4137673/its-brand-resuscitation-begins-with-enterprise-cios.html">IT’s brand resuscitation begins with enterprise CIOs</a></li>
 </ul>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 12h ago]]></description>
 </item>
 
 <item>
@@ -2062,16 +2347,7 @@
 
 
 <p><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><strong><a href="https://www.cio.com/expert-contributor-network/">Want to join?</a></strong></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Dashlane Brute-Force Attack Leads to Limited Encrypted Vault Downloads</title>
-  <link>https://www.securityweek.com/dashlane-brute-force-attack-leads-to-limited-encrypted-vault-downloads/</link>
-  <pubDate>Tue, 02 Jun 2026 08:07:41 +0000</pubDate>
-  <source>SecurityWeek</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><p>Dashlane’s security systems automatically locked accounts to protect them against the hacking attempts.</p>
-<p>The post <a href="https://www.securityweek.com/dashlane-brute-force-attack-leads-to-limited-encrypted-vault-downloads/">Dashlane Brute-Force Attack Leads to Limited Encrypted Vault Downloads</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 10h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 12h ago]]></description>
 </item>
 
 <item>
@@ -2236,7 +2512,7 @@
 
 
 <p>로렌제티는 “핵심 문제는 많은 기업이 질문에 답하는 AI에서 실제 행동을 수행하는 AI로 이동하고 있다는 점”이라며 “하지만 여전히 거버넌스 모델은 자율형 워크플로가 아닌 수동적 도구를 기준으로 설계돼 있다”라고 지적했다. 이어 “이제는 AI 에이전트 시대에 맞는 새로운 거버넌스 체계가 필요하다”라고 강조했다.<br />dl-ciokorea@foundryco.com</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 10h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 14h ago]]></description>
 </item>
 
 <item>
@@ -2435,7 +2711,7 @@
 
 <li><a href="https://www.csoonline.com/article/514469/security-simulations-this-is-only-a-test.html">Security simulations: This is only a test</a></li>
 </ul>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 11h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 14h ago]]></description>
 </item>
 
 <item>
@@ -2520,7 +2796,7 @@
 
 
 <p>Ultimately, he noted, “to say MSFT is a serial offender with regard to stretching the limits of anti-trust law would be the understatement of the century.”</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 15h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 18h ago]]></description>
 </item>
 
 <item>
@@ -2625,7 +2901,7 @@
 
 
 <p>Whether enterprises embrace that approach remains to be seen. Additional security and control layers can introduce complexity, latency, and potential vendor dependencies. But Joshi said the market “appears to be converging toward a common architecture when it comes to scaling AI agents across control, security, runtime, and observability.”</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 22h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
@@ -2633,7 +2909,7 @@
   <link>https://www.theregister.com/security/2026/06/01/5k-election-domains-registered-ahead-of-us-midterms/5249764</link>
   <pubDate>Mon, 01 Jun 2026 19:46:47 +0000</pubDate>
   <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Credential/phishing risk — reinforce MFA and user awareness training.</b><br/>Hacking voting machines is so 2017. Phishing, impersonation pose the real election risks<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 22h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Credential/phishing risk — reinforce MFA and user awareness training.</b><br/>Hacking voting machines is so 2017. Phishing, impersonation pose the real election risks<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
@@ -3326,7 +3602,7 @@
   <link>https://www.theregister.com/ai-ml/2026/05/29/okta-writes-its-own-license-to-kill-rogue-ai-agents/5248766</link>
   <pubDate>Fri, 29 May 2026 21:20:21 +0000</pubDate>
   <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Budget/licensing impact — verify renewal terms and forecast cost changes.</b><br/>CEO Todd McKinnon says customers including ServiceNow want an off switch<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3d ago]]></description>
+  <description><![CDATA[<b>Why this matters: Budget/licensing impact — verify renewal terms and forecast cost changes.</b><br/>CEO Todd McKinnon says customers including ServiceNow want an off switch<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4d ago]]></description>
 </item>
 
 <item>
@@ -3392,22 +3668,6 @@
 
 <p>The team published their results this week in an article entitled <a href="https://www.nature.com/articles/s41586-026-10521-8" rel="noreferrer noopener" target="_blank">“Experimental randomness amplification” in Nature</a>.</p>
 </div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4d ago]]></description>
-</item>
-
-<item>
-  <title>🔴 Dutch cops wrest 17M devices from mystery botnet&#x27;s clutches</title>
-  <link>https://www.theregister.com/security/2026/05/29/dutch-cops-liberate-17m-devices-from-botnets-clutches/5248312</link>
-  <pubDate>Fri, 29 May 2026 13:00:00 +0000</pubDate>
-  <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Hosting provider pulled the plug after police traced 200 servers to the Netherlands<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 4d ago]]></description>
-</item>
-
-<item>
-  <title>🔵 FCC warns US broadcasters their licenses are a privilege, not a right</title>
-  <link>https://www.theregister.com/offbeat/2026/05/29/fcc-warns-us-broadcasters-their-licenses-are-a-privilege-not-a-right/5248393</link>
-  <pubDate>Fri, 29 May 2026 12:30:00 +0000</pubDate>
-  <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Budget/licensing impact — verify renewal terms and forecast cost changes.</b><br/>TV and radio stations told to review current practices to align with public interest obligations<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4d ago]]></description>
 </item>
 
 <item>
@@ -4094,224 +4354,6 @@ andards, years_of_experience)
 
 <p><em>This article originally appeared on <a href="https://www.infoworld.com/article/4178406/lack-of-response-to-critical-vulnerability-in-gogs-is-a-reminder-of-the-limits-of-open-source-projects.html" target="_blank">InfoWorld</a>.</em></p>
 </div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 4d ago]]></description>
-</item>
-
-<item>
-  <title>🟠 Indian CERT urges firms to contain exploited internet-facing flaws within 12 hours</title>
-  <link>https://www.csoonline.com/article/4178244/indian-cert-urges-firms-to-contain-exploited-internet-facing-flaws-within-12-hours.html</link>
-  <pubDate>Thu, 28 May 2026 13:00:39 +0000</pubDate>
-  <source>CSO Online</source>
-  <description><![CDATA[<b>Why this matters: Credential/phishing risk — reinforce MFA and user awareness training.</b><br/><div id="remove_no_follow">
-		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
-					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
-						<div class="article-column__content">
-<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
-
-
-
-<p>India’s cybersecurity agency, CERT-In, has urged organizations to patch, mitigate, or isolate known exploited vulnerabilities affecting internet-facing “crown jewel” systems within 12 hours where feasible, warning that AI-assisted attacks are dramatically compressing the time between vulnerability disclosure and exploitation.</p>
-
-
-
-<p>The recommendation, part of a sweeping new CERT-In blueprint on defending against AI-assisted cyber exploitation, signals a significant escalation in expectations around enterprise vulnerability management, exposure reduction, and operational resilience.</p>
-
-
-
-<p>The 38-page framework also recommends one-day remediation for critical externally exposed vulnerabilities, three days for critical internal vulnerabilities affecting high-value systems, and five days for high-severity flaws based on risk prioritization.</p>
-
-
-
-<p>CERT-In said threat actors are increasingly using AI to accelerate reconnaissance, vulnerability discovery, phishing, malware generation, and automated exploitation workflows.</p>
-
-
-
-<p>“Exploitation timelines are reducing significantly,” the <a href="https://www.cert-in.org.in/s2cMainServlet?pageid=GUIDLNVIEW02&amp;refcode=CISG-2026-02" rel="noreferrer noopener" target="_blank">agency warned</a> in the advisory, adding that attacks are expected to become “increasingly autonomous.”</p>
-
-
-
-<h2 class="wp-block-heading" id="an-operationally-disruptive-target">An operationally disruptive target</h2>
-
-
-
-<p>Security analysts said the headline 12-hour expectation is likely to force enterprises to rethink traditional weekly or monthly patching cycles, but cautioned that the guidance is more nuanced than a blanket patch mandate.</p>
-
-
-
-<p>“The 12-hour window is the outlier, realistic only as a containment target on a narrow set of exposed assets, never as a patch-completion target across sprawling estates burdened by fragmented infrastructure, layered approvals, outsourced operations, and legacy dependency,” said Sanchit Vir Gogia, chief analyst at Greyhound Research.</p>
-
-
-
-<p>Gogia said the blueprint’s tiered approach is more significant than the headline remediation clock itself because it ties response timelines to exposure and operational criticality rather than applying a uniform patching mandate across all systems.</p>
-
-
-
-<p>“The five-day high-severity window is comfortable for most enterprises. The three-day critical-internal window is where the pressure actually bites,” he said, particularly in sectors such as finance, telecom, healthcare, and operational technology environments where uptime concerns complicate rapid change management.</p>
-
-
-
-<p>Apeksha Kaushik, senior principal analyst at Gartner, said the biggest challenge for many organizations will not necessarily be deploying patches, but achieving the operational maturity needed for rapid exposure management.</p>
-
-
-
-<p>“The primary barriers are not just technical, but operational. Most organizations lack real-time asset visibility, automated vulnerability prioritization, and cross-functional incident response playbooks,” Kaushik said.</p>
-
-
-
-<p>“The most acute struggles will be in asset discovery, risk-based prioritization, and orchestrating rapid response across silos,” she added.</p>
-
-
-
-<h2 class="wp-block-heading" id="from-vulnerability-management-to-exposure-management">From vulnerability management to exposure management</h2>
-
-
-
-<p>The blueprint repeatedly emphasizes that traditional periodic security assessments are becoming insufficient against AI-enabled attacks capable of rapidly weaponizing newly disclosed flaws.</p>
-
-
-
-<p>Instead, CERT-In is pushing organizations toward continuous exposure management, threat-informed defense, continuous monitoring, and adversarial testing.</p>
-
-
-
-<p>Notably, the framework leans heavily on temporary mitigations, including isolation, access restrictions, WAF/API protections, enhanced monitoring, and compensating controls when immediate patching is not possible.</p>
-
-
-
-<p>Analysts said that approach makes the timelines more achievable operationally, but also shifts the burden onto asset visibility and exposure intelligence.</p>
-
-
-
-<p>“Compensating controls do make the timelines more workable. They also remove every excuse,” Gogia said. “If you cannot isolate, restrict, or monitor quickly, the problem was never patch cadence. The problem is that you do not know your own exposure.”</p>
-
-
-
-<p>Kaushik similarly said the guidance effectively pushes organizations toward more mature exposure management capabilities.</p>
-
-
-
-<p>“Organizations must be able to rapidly identify affected assets, assess risk, and deploy effective interim controls,” she said, adding that enterprises lacking mature asset inventories, segmentation, and monitoring capabilities will struggle to operationalize the guidance at scale.</p>
-
-
-
-<p>The blueprint also calls for continuous vulnerability assessments, AI-assisted security testing, adversarial simulations, penetration testing, and red teaming exercises.</p>
-
-
-
-<h2 class="wp-block-heading" id="a-preview-of-future-global-standards">A preview of future global standards?</h2>
-
-
-
-<p>Analysts said CERT-In’s remediation expectations are among the most aggressive currently issued by a national cyber agency and may influence broader international vulnerability-management practices as AI compresses attacker timelines globally.</p>
-
-
-
-<p>“CERT-In has done something the West has largely avoided: it has set standing clocks by asset category rather than deadlines by individual vulnerability,” Gogia said.</p>
-
-
-
-<p>He contrasted the framework with CISA’s Known Exploited Vulnerabilities (KEV) program, which typically uses vulnerability-specific remediation deadlines rather than persistent enterprise-wide remediation clocks.</p>
-
-
-
-<p>“The fixed-clock model looks aggressive today because the rest of the world has not caught up, not because it is reading the threat wrongly,” Gogia said.</p>
-
-
-
-<p>Kaushik said the framework could create operational challenges for multinationals whose global service-level agreements are less stringent than India’s expectations. “For providers, this may create a compliance gap where internal SLAs are less stringent than India’s requirements, necessitating a reassessment of global patching and mitigation processes,” she said.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5d ago]]></description>
-</item>
-
-<item>
-  <title>🔴 GlassWorm falls, but the repo problem is far from solved</title>
-  <link>https://www.csoonline.com/article/4178215/glassworm-falls-but-the-repo-problem-is-far-from-solved.html</link>
-  <pubDate>Thu, 28 May 2026 12:20:55 +0000</pubDate>
-  <source>CSO Online</source>
-  <description><![CDATA[<b>Why this matters: Supply chain risk — audit third-party dependencies and vendor access.</b><br/><div id="remove_no_follow">
-		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
-					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
-						<div class="article-column__content">
-<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
-
-
-
-<p>Taking down a sprawling malware operation once signaled progress in securing the open-source ecosystem. Now, it barely registers. The GlassWorm campaign disruption comes at a moment when attackers can quickly reconstitute, and defenders are increasingly grappling with a new challenge: distinguishing real threats from automated noise.</p>
-
-
-
-<p>“I think coordinated actions, like GlassWorm, can sever control, significantly increase attacker costs, buy time for remediation, and signal the possibility of a fightback,” said Agnidipta Sarkar, chief evangelist at ColorTokens. “But most takedowns are temporary actions in a long fight.”</p>
-
-
-
-<p>The CrowdStrike-led <a href="https://www.crowdstrike.com/en-us/blog/inside-crowdstrike-takedown-of-a-developer-targeting-botnet/" rel="noreferrer noopener" target="_blank">takedown</a>, conducted alongside Google and the Shadowserver Foundation, disrupted infrastructure linked to the <a href="https://www.csoonline.com/article/4145579/open-vsx-extensions-hijacked-glassworm-malware-spreads-via-dependency-abuse.html">campaign</a> that had poisoned hundreds of repositories with malicious packages targeting developers.</p>
-
-
-
-<p>A day after the takedown, in an independent development, the OSV database <a href="https://github.com/ossf/malicious-packages/tree/main/osv/withdrawn" rel="noreferrer noopener" target="_blank">withdrew</a> 157 malware reports after maintainers determined the submissions were likely automated false positives.</p>
-
-
-
-<h2 class="wp-block-heading"><a></a>Takedowns help, but analysts question long-term impact</h2>
-
-
-
-<p>The takedown happened on May 26, at 14:00 UTC, with CrowdStrike confirming the operation to have struck down “all four of GlassWorm’s command-and-control (C2) channels simultaneously”. This reportedly helped sever the botnet operators from their infected machines, blocking them from pushing out new malware.</p>
-
-
-
-<p>CrowdStrike described the GlassWorm operation as targeting infrastructure used to distribute malware through developer-focused repositories, an increasingly popular attack vector as adversaries chase CI/CD access, developer credentials, and downstream enterprise environments.</p>
-
-
-
-<p>GlassWorm was a cross-platform operation affecting Windows, macOS, and Linux systems, with trojanized VSCode extensions and compromised npm and Python packages for information and credential harvesting.</p>
-
-
-
-<p>“As part of our disruption efforts, we are working with partners to bring more pain to attackers, especially when we see them abusing our products or targeting our users,” said Google Threat Intelligence Group’s (GTIG) chief analyst, John Hultquist, in an X <a href="https://x.com/JohnHultquist/status/2059343275467640933?s=20" rel="noreferrer noopener" target="_blank">post</a>.</p>
-
-
-
-<p>Still, the broader economics of repository abuse remain unchanged. Open-source ecosystems continue to offer attackers low-cost distribution, massive reach, and relatively weak identity verification compared to traditional software distribution channels. That means operators behind campaigns like GlassWorm can often reappear quickly under new accounts, domains, or package names.</p>
-
-
-
-<p>“It is disruption, not eradication,” Sarkar warned. “To build resilience after a takedown, defenders should prioritize rapid post-takedown scanning to detect the reemergence of malicious artifacts across related repositories and distribution platforms. ”</p>
-
-
-
-<p>They should then establish granular micro-perimeters, build capabilities to contain propagation across workloads, endpoints, IT/OT/IoT/cloud assets, and limit the blast radius of supply-chain compromises (e.g., a poisoned npm package or a GitHub workflow stealing creds can’t easily pivot).</p>
-
-
-
-<p>Sarkar advised developers and organizations to establish “granular micro-perimeters,” build capabilities to contain propagation across workloads, and limit the blast radius of supply-chain compromises.</p>
-
-
-
-<h2 class="wp-block-heading"><a></a>AI False positives are becoming part of the supply chain problem</h2>
-
-
-
-<p>If GlassWorm highlights the persistence of real malware campaigns, the OSV withdrawal incident exposed a parallel issue affecting the open-source software (OSS) supply chain. It is the growing reliability surrounding automated security reporting.</p>
-
-
-
-<p>The withdrawal of 157 malware reports believed to be AI-generated false positives matters, especially when it includes packages like FastAPI v0.136.3. FastAPI is a heavily adopted Python framework powering production APIs, AI services, and cloud-native applications across industries. Even a few days of false flagging can trigger costly deployment delays, CI/CD disruptions, and hours of development time in isolating legitimate software.</p>
-
-
-
-<p>“I would recommend that enterprises be concerned enough about signal-to-noise problems to consider remedial measures, as automation erodes trust in defensive tools,” Sarkar said. “Unless you have a highly microsegmented enterprise, noise wastes analyst time, slows velocity, and risks missing sophisticated attacks amid fatigue.”</p>
-
-
-
-<p>In 2026, with AI-assisted malware and reporting both accelerating and rising false positives in <a href="https://www.csoonline.com/article/4115679/for-application-security-sca-sast-dast-and-mast-what-next.html">SAST/SCA </a>tools, defensive automation is getting asymmetrically compounded by supply-chain volume, he noted.</p>
-
-
-
-<p>In a blog <a href="https://socket.dev/blog/osv-withdraws-157-malware-reports" rel="noreferrer noopener" target="_blank">post</a>, Socket called bad OSV records particularly dangerous as the popular database gets rapidly carried through dependency scanners, CI checks, registry controls, SBOM tools, dashboards, and internal policy systems.</p>
-
-
-
-<p>All hope is not lost, though, as newer tools promise lower reliance on AI for hunting dependency vulnerabilities. <a href="https://www.csoonline.com/article/4176701/as-ai-speeds-coding-cve-lite-cli-keeps-security-deliberately-ai-free.html">CVE Lite CLI</a>, a light-weight, JavaScript and TypeScript dependency vulnerability scanner, is offering developers a way to know dependency risks while they are still writing code, much earlier than failing automated scanners in CI pipelines.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 5d ago]]></description>
 </item>
 
 </channel>

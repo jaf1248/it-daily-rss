@@ -1,25 +1,35 @@
 # IT Weekly Intelligence Briefing
 **Period:** May 26 – June 02, 2026  
-**Generated:** 2026-06-02 18:38 UTC  
-**Items reviewed:** 117  
+**Generated:** 2026-06-02 21:47 UTC  
+**Items reviewed:** 120  
 
 ## ⚡ Top Actions This Week
 
-1. **Apply emergency patch or mitigation now; check vendor advisory for workarounds.**  
-   _CISA flags two-year-old Oracle flaw as actively exploited in attacks_  
+1. **Validate backups, confirm EDR coverage, and brief incident response team.**  
+   _AI-built ransomware toolkit automates EDR evasion, AD discovery_  
    Source: BleepingComputer  
 
 2. **Apply emergency patch or mitigation now; check vendor advisory for workarounds.**  
-   _Google fixes one actively exploited Android zero-day, 124 flaws_  
-   Source: BleepingComputer  
-
-3. **Audit third-party software dependencies and review vendor access.**  
-   _Miasma Supply Chain Attack Compromises Red Hat npm Packages with Credential-Stealing Worm_  
+   _Google June 2026 Android Update Patches 124 Flaws, One Actively Exploited_  
    Source: The Hacker News  
+
+3. **Apply emergency patch or mitigation now; check vendor advisory for workarounds.**  
+   _CISA flags two-year-old Oracle flaw as actively exploited in attacks_  
+   Source: BleepingComputer  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [AI-built ransomware toolkit automates EDR evasion, AD discovery](https://www.bleepingcomputer.com/news/security/ai-built-ransomware-toolkit-automates-edr-evasion-ad-discovery/)
+**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jun 02  
+**Why it matters:** Elevated ransomware risk across the sector.  
+**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
+
+### [Google June 2026 Android Update Patches 124 Flaws, One Actively Exploited](https://thehackernews.com/2026/06/google-june-2026-android-update-patches.html)
+**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Jun 02  
+**Why it matters:** General awareness item.  
+**Recommended action:** Apply emergency patch or mitigation now; check vendor advisory for workarounds.  
 
 ### [CISA flags two-year-old Oracle flaw as actively exploited in attacks](https://www.bleepingcomputer.com/news/security/cisa-orders-feds-to-patch-actively-exploited-oracle-weblogic-flaw/)
 **Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jun 02  
@@ -41,19 +51,15 @@
 **Why it matters:** Third-party/software supply chain integrity risk.  
 **Recommended action:** Audit third-party software dependencies and review vendor access.  
 
-### [Critical WP Maps Pro Flaw Actively Exploited to Create Admin Accounts](https://thehackernews.com/2026/06/critical-wp-maps-pro-flaw-actively.html)
-**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Jun 01  
-**Why it matters:** General awareness item.  
-**Recommended action:** Apply emergency patch or mitigation now; check vendor advisory for workarounds.  
-
-### [Reconstructing an Akira Ransomware Kill Chain from Perimeter and Endpoint Logs, (Wed, May 27th)](https://isc.sans.edu/diary/rss/33024)
-**Source:** SANS Internet Storm Center &nbsp;·&nbsp; **Date:** May 27  
-**Why it matters:** Elevated ransomware risk across the sector.  
-**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
-
 ---
 
 ## 🟠 Important — Review This Week
+
+- [Gamaredon Exploits WinRAR to Deliver GammaWorm and GammaSteel Against Ukraine](https://thehackernews.com/2026/06/gamaredon-exploits-winrar-to-deliver.html)  
+  **The Hacker News** · Jun 02 · _General awareness item._  
+
+- [Oracle WebLogic CVE-2024-21182 Added to KEV Catalog After Active Exploitation](https://thehackernews.com/2026/06/oracle-weblogic-cve-2024-21182-added-to.html)  
+  **The Hacker News** · Jun 02 · _General awareness item._  
 
 - [Microsoft Exchange Online outage causes email delays, failures](https://www.bleepingcomputer.com/news/microsoft/microsoft-exchange-online-outage-causes-email-delays-failures/)  
   **BleepingComputer** · Jun 02 · _Service continuity risk to users._  
@@ -73,12 +79,6 @@
 - [CVE-2026-28388 NULL Pointer Dereference When Processing a Delta CRL](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-28388)  
   **Microsoft Security Response Center (MSRC)** · Jun 02 · _General awareness item._  
 
-- [CVE-2026-34873 An issue was discovered in Mbed TLS 3.5.0 through 4.0.0. Client impersonation can occur while resuming a TLS 1.3 session.](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-34873)  
-  **Microsoft Security Response Center (MSRC)** · Jun 02 · _General awareness item._  
-
-- [CVE-2026-34874 An issue was discovered in Mbed TLS through 3.6.5 and 4.x through 4.0.0. There is a NULL pointer dereference in distinguished name parsing that allows an attacker to write to address 0.](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-34874)  
-  **Microsoft Security Response Center (MSRC)** · Jun 02 · _General awareness item._  
-
 ---
 
 ## 🔵 FYI — General Awareness
@@ -92,4 +92,4 @@
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 7 critical · 76 important · 34 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 9 critical · 77 important · 34 FYI_
