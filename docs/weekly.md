@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
-**Period:** May 26 – June 02, 2026  
-**Generated:** 2026-06-02 23:44 UTC  
+**Period:** May 27 – June 03, 2026  
+**Generated:** 2026-06-03 03:49 UTC  
 **Items reviewed:** 120  
 
 ## ⚡ Top Actions This Week
@@ -83,12 +83,12 @@
 
 ## 🔵 FYI — General Awareness
 
+- [ISC Stormcast For Wednesday, June 3rd, 2026 https://isc.sans.edu/podcastdetail/9956, (Wed, Jun 3rd)](https://isc.sans.edu/diary/rss/33042) — SANS Internet Storm Center
 - [Microsoft's Coreutils project brings Linux commands to Windows](https://www.bleepingcomputer.com/news/microsoft/microsofts-coreutils-project-brings-linux-commands-to-windows/) — BleepingComputer
 - [OpenAI upgrades GPT-5.5, as it plans to retire legacy ChatGPT models](https://www.bleepingcomputer.com/news/artificial-intelligence/openai-upgrades-gpt-55-as-it-plans-to-retire-legacy-chatgpt-models/) — BleepingComputer
 - [Over 116,000 Mincraft systems infected in WeedHack malware campaign](https://www.bleepingcomputer.com/news/security/over-116-000-mincraft-systems-infected-in-weedhack-malware-campaign/) — BleepingComputer
 - [Instagram users locked out after Meta AI abused to steal accounts](https://www.bleepingcomputer.com/news/security/instagram-users-locked-out-after-meta-ai-abused-to-steal-accounts/) — BleepingComputer
 - [Why the browser is now the front line for AI security](https://www.bleepingcomputer.com/news/security/why-the-browser-is-now-the-front-line-for-ai-security/) — BleepingComputer
-- [How Leading Organizations Are Turning EDR Into Operational Resilience](https://thehackernews.com/2026/06/how-leading-organizations-are-turning.html) — The Hacker News
 
 ---
 
