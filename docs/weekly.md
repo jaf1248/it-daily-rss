@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
 **Period:** May 27 – June 03, 2026  
-**Generated:** 2026-06-03 03:49 UTC  
+**Generated:** 2026-06-03 08:54 UTC  
 **Items reviewed:** 120  
 
 ## ⚡ Top Actions This Week
@@ -55,41 +55,41 @@
 
 ## 🟠 Important — Review This Week
 
-- [Critical Kirki flaw exploited to hijack WordPress admin accounts](https://www.bleepingcomputer.com/news/security/critical-kirki-flaw-exploited-to-hijack-wordpress-admin-accounts/)  
-  **BleepingComputer** · Jun 02 · _General awareness item._  
+- [CVE-2026-40226 In nspawn in systemd 233 through 259 before 260, an escape-to-host action can occur via a crafted optional config file.](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-40226)  
+  **Microsoft Security Response Center (MSRC)** · Jun 03 · _General awareness item._  
 
-- [Gamaredon Exploits WinRAR to Deliver GammaWorm and GammaSteel Against Ukraine](https://thehackernews.com/2026/06/gamaredon-exploits-winrar-to-deliver.html)  
-  **The Hacker News** · Jun 02 · _General awareness item._  
+- [CVE-2026-27144 Miscompilation allows memory corruption via CONVNOP-wrapped array copy in cmd/compile](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-27144)  
+  **Microsoft Security Response Center (MSRC)** · Jun 03 · _General awareness item._  
 
-- [Oracle WebLogic CVE-2024-21182 Added to KEV Catalog After Active Exploitation](https://thehackernews.com/2026/06/oracle-weblogic-cve-2024-21182-added-to.html)  
-  **The Hacker News** · Jun 02 · _General awareness item._  
+- [CVE-2026-27143 Missing bound checks can lead to memory corruption in safe Go in cmd/compile](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-27143)  
+  **Microsoft Security Response Center (MSRC)** · Jun 03 · _General awareness item._  
 
-- [Microsoft Exchange Online outage causes email delays, failures](https://www.bleepingcomputer.com/news/microsoft/microsoft-exchange-online-outage-causes-email-delays-failures/)  
-  **BleepingComputer** · Jun 02 · _Service continuity risk to users._  
+- [CVE-2026-32281 Inefficient policy validation in crypto/x509](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-32281)  
+  **Microsoft Security Response Center (MSRC)** · Jun 03 · _General awareness item._  
 
-- [CVE-2026-40361 Microsoft Outlook and Word Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-40361)  
-  **Microsoft Security Response Center (MSRC)** · Jun 02 · _General awareness item._  
+- [CVE-2026-27140 Code execution vulnerability in SWIG code generation in cmd/go](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-27140)  
+  **Microsoft Security Response Center (MSRC)** · Jun 03 · _General awareness item._  
 
-- [AI-Driven Exploitation is Destroying Vulnerability Management. Here’s How to Handle It.](https://thehackernews.com/2026/06/ai-driven-exploitation-is-destroying.html)  
-  **The Hacker News** · Jun 02 · _General awareness item._  
+- [CVE-2026-32280 Unexpected work during chain building in crypto/x509](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-32280)  
+  **Microsoft Security Response Center (MSRC)** · Jun 03 · _General awareness item._  
 
-- [CVE-2026-28387 Potential Use-after-free in DANE Client Code](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-28387)  
-  **Microsoft Security Response Center (MSRC)** · Jun 02 · _General awareness item._  
+- [CVE-2026-32283 Unauthenticated TLS 1.3 KeyUpdate record can cause persistent connection retention and DoS in crypto/tls](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-32283)  
+  **Microsoft Security Response Center (MSRC)** · Jun 03 · _General awareness item._  
 
-- [CVE-2026-25833 Mbed TLS 3.5.0 to 3.6.5 fixed in 3.6.6 and 4.1.0 has a buffer overflow in the x509_inet_pton_ipv6() function](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-25833)  
-  **Microsoft Security Response Center (MSRC)** · Jun 02 · _General awareness item._  
+- [CVE-2026-32289 JsBraceDepth Context Tracking Bugs (XSS) in html/template](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-32289)  
+  **Microsoft Security Response Center (MSRC)** · Jun 03 · _General awareness item._  
 
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [Weedhack Attacks Minecraft Users, CountLoader Hits 86K, Miners Spread via Pirated Content](https://thehackernews.com/2026/06/weedhack-attacks-minecraft-users.html) — The Hacker News
 - [ISC Stormcast For Wednesday, June 3rd, 2026 https://isc.sans.edu/podcastdetail/9956, (Wed, Jun 3rd)](https://isc.sans.edu/diary/rss/33042) — SANS Internet Storm Center
 - [Microsoft's Coreutils project brings Linux commands to Windows](https://www.bleepingcomputer.com/news/microsoft/microsofts-coreutils-project-brings-linux-commands-to-windows/) — BleepingComputer
 - [OpenAI upgrades GPT-5.5, as it plans to retire legacy ChatGPT models](https://www.bleepingcomputer.com/news/artificial-intelligence/openai-upgrades-gpt-55-as-it-plans-to-retire-legacy-chatgpt-models/) — BleepingComputer
-- [Over 116,000 Mincraft systems infected in WeedHack malware campaign](https://www.bleepingcomputer.com/news/security/over-116-000-mincraft-systems-infected-in-weedhack-malware-campaign/) — BleepingComputer
+- [Over 116,000 Minecraft systems infected in WeedHack malware campaign](https://www.bleepingcomputer.com/news/security/over-116-000-minecraft-systems-infected-in-weedhack-malware-campaign/) — BleepingComputer
 - [Instagram users locked out after Meta AI abused to steal accounts](https://www.bleepingcomputer.com/news/security/instagram-users-locked-out-after-meta-ai-abused-to-steal-accounts/) — BleepingComputer
-- [Why the browser is now the front line for AI security](https://www.bleepingcomputer.com/news/security/why-the-browser-is-now-the-front-line-for-ai-security/) — BleepingComputer
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 9 critical · 74 important · 37 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 9 critical · 75 important · 36 FYI_
