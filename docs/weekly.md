@@ -1,25 +1,30 @@
 # IT Weekly Intelligence Briefing
 **Period:** May 27 – June 03, 2026  
-**Generated:** 2026-06-03 08:54 UTC  
-**Items reviewed:** 120  
+**Generated:** 2026-06-03 13:15 UTC  
+**Items reviewed:** 122  
 
 ## ⚡ Top Actions This Week
 
-1. **Validate backups, confirm EDR coverage, and brief incident response team.**  
+1. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
+   _Beyond the Zero-Day: See Your Network Like an Attacker | Webinar with HD Moore_  
+   Source: The Hacker News  
+
+2. **Validate backups, confirm EDR coverage, and brief incident response team.**  
    _AI-built ransomware toolkit automates EDR evasion, AD discovery_  
    Source: BleepingComputer  
 
-2. **Apply emergency patch or mitigation now; check vendor advisory for workarounds.**  
+3. **Apply emergency patch or mitigation now; check vendor advisory for workarounds.**  
    _Google June 2026 Android Update Patches 124 Flaws, One Actively Exploited_  
    Source: The Hacker News  
-
-3. **Apply emergency patch or mitigation now; check vendor advisory for workarounds.**  
-   _CISA flags two-year-old Oracle flaw as actively exploited in attacks_  
-   Source: BleepingComputer  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [Beyond the Zero-Day: See Your Network Like an Attacker | Webinar with HD Moore](https://thehackernews.com/2026/06/beyond-zero-day-see-your-network-like.html)
+**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Jun 03  
+**Why it matters:** Potential credential or data exposure.  
+**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
 ### [AI-built ransomware toolkit automates EDR evasion, AD discovery](https://www.bleepingcomputer.com/news/security/ai-built-ransomware-toolkit-automates-edr-evasion-ad-discovery/)
 **Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jun 02  
@@ -46,14 +51,15 @@
 **Why it matters:** Third-party/software supply chain integrity risk.  
 **Recommended action:** Audit third-party software dependencies and review vendor access.  
 
-### [OpenAI Codex Authentication Tokens Stolen in codexui-android npm Supply Chain Attack](https://thehackernews.com/2026/06/openai-codex-authentication-tokens.html)
-**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Jun 01  
-**Why it matters:** Third-party/software supply chain integrity risk.  
-**Recommended action:** Audit third-party software dependencies and review vendor access.  
-
 ---
 
 ## 🟠 Important — Review This Week
+
+- [Acer working to patch max severity zero-days in Wave 7 routers](https://www.bleepingcomputer.com/news/security/acer-warns-of-max-severity-zero-days-affecting-wave-7-routers/)  
+  **BleepingComputer** · Jun 03 · _General awareness item._  
+
+- [Unpatched Windows Search URI Vulnerability Lets Attackers Steal NTLMv2 Hashes](https://thehackernews.com/2026/06/unpatched-windows-search-uri.html)  
+  **The Hacker News** · Jun 03 · _General awareness item._  
 
 - [CVE-2026-40226 In nspawn in systemd 233 through 259 before 260, an escape-to-host action can occur via a crafted optional config file.](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-40226)  
   **Microsoft Security Response Center (MSRC)** · Jun 03 · _General awareness item._  
@@ -73,23 +79,17 @@
 - [CVE-2026-32280 Unexpected work during chain building in crypto/x509](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-32280)  
   **Microsoft Security Response Center (MSRC)** · Jun 03 · _General awareness item._  
 
-- [CVE-2026-32283 Unauthenticated TLS 1.3 KeyUpdate record can cause persistent connection retention and DoS in crypto/tls](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-32283)  
-  **Microsoft Security Response Center (MSRC)** · Jun 03 · _General awareness item._  
-
-- [CVE-2026-32289 JsBraceDepth Context Tracking Bugs (XSS) in html/template](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-32289)  
-  **Microsoft Security Response Center (MSRC)** · Jun 03 · _General awareness item._  
-
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [One-Click GitHub Dev Attack Lets Attackers Steal Full GitHub OAuth Tokens](https://thehackernews.com/2026/06/one-click-github-dev-attack-lets.html) — The Hacker News
+- [Shrinking the IAM Attack Surface through Identity Visibility and Intelligence Platforms (IVIP)](https://thehackernews.com/2026/06/shrinking-iam-attack-surface-through.html) — The Hacker News
+- [Police dismantles 9 crime groups in illegal streaming crackdown](https://www.bleepingcomputer.com/news/security/police-dismantles-9-crime-groups-in-illegal-streaming-crackdown/) — BleepingComputer
+- [Google adds Android protection against AI deepfake scam calls](https://www.bleepingcomputer.com/news/security/google-adds-android-protection-against-ai-deepfake-scam-calls/) — BleepingComputer
 - [Weedhack Attacks Minecraft Users, CountLoader Hits 86K, Miners Spread via Pirated Content](https://thehackernews.com/2026/06/weedhack-attacks-minecraft-users.html) — The Hacker News
 - [ISC Stormcast For Wednesday, June 3rd, 2026 https://isc.sans.edu/podcastdetail/9956, (Wed, Jun 3rd)](https://isc.sans.edu/diary/rss/33042) — SANS Internet Storm Center
-- [Microsoft's Coreutils project brings Linux commands to Windows](https://www.bleepingcomputer.com/news/microsoft/microsofts-coreutils-project-brings-linux-commands-to-windows/) — BleepingComputer
-- [OpenAI upgrades GPT-5.5, as it plans to retire legacy ChatGPT models](https://www.bleepingcomputer.com/news/artificial-intelligence/openai-upgrades-gpt-55-as-it-plans-to-retire-legacy-chatgpt-models/) — BleepingComputer
-- [Over 116,000 Minecraft systems infected in WeedHack malware campaign](https://www.bleepingcomputer.com/news/security/over-116-000-minecraft-systems-infected-in-weedhack-malware-campaign/) — BleepingComputer
-- [Instagram users locked out after Meta AI abused to steal accounts](https://www.bleepingcomputer.com/news/security/instagram-users-locked-out-after-meta-ai-abused-to-steal-accounts/) — BleepingComputer
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 9 critical · 75 important · 36 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 9 critical · 76 important · 37 FYI_
