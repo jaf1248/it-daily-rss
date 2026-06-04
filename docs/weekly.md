@@ -1,25 +1,30 @@
 # IT Weekly Intelligence Briefing
 **Period:** May 28 – June 04, 2026  
-**Generated:** 2026-06-04 20:03 UTC  
+**Generated:** 2026-06-04 22:19 UTC  
 **Items reviewed:** 127  
 
 ## ⚡ Top Actions This Week
 
-1. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _DentaQuest data breach  exposed info of 2.6 million accounts_  
+1. **Audit third-party software dependencies and review vendor access.**  
+   _Hola Browser for Windows compromised to deliver cryptominer_  
    Source: BleepingComputer  
 
 2. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _UN food agency discloses breach affecting 600,000 Gaza households_  
+   _DentaQuest data breach  exposed info of 2.6 million accounts_  
    Source: BleepingComputer  
 
-3. **Validate backups, confirm EDR coverage, and brief incident response team.**  
-   _U.S. sanctions Nobitex crypto exchange used by Iranian ransomware actors_  
+3. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
+   _UN food agency discloses breach affecting 600,000 Gaza households_  
    Source: BleepingComputer  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [Hola Browser for Windows compromised to deliver cryptominer](https://www.bleepingcomputer.com/news/security/hola-browser-for-windows-compromised-to-deliver-cryptominer/)
+**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jun 04  
+**Why it matters:** Third-party/software supply chain integrity risk.  
+**Recommended action:** Audit third-party software dependencies and review vendor access.  
 
 ### [DentaQuest data breach  exposed info of 2.6 million accounts](https://www.bleepingcomputer.com/news/security/dentaquest-data-breach-exposed-info-of-26-million-accounts/)
 **Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jun 04  
@@ -46,11 +51,6 @@
 **Why it matters:** General awareness item.  
 **Recommended action:** Apply emergency patch or mitigation now; check vendor advisory for workarounds.  
 
-### [Miasma Supply Chain Attack Compromises Red Hat npm Packages with Credential-Stealing Worm](https://thehackernews.com/2026/06/miasma-supply-chain-attack-compromises.html)
-**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Jun 01  
-**Why it matters:** Third-party/software supply chain integrity risk.  
-**Recommended action:** Audit third-party software dependencies and review vendor access.  
-
 ---
 
 ## 🟠 Important — Review This Week
@@ -64,32 +64,32 @@
 - [Hackers Are After the Gaps in Your Vulnerability Program: Here's Their Playbook](https://www.bleepingcomputer.com/news/security/hackers-are-after-the-gaps-in-your-vulnerability-program-heres-their-playbook/)  
   **BleepingComputer** · Jun 04 · _General awareness item._  
 
-- [Cisco warns of critical Unified CM flaw with PoC exploit code](https://www.bleepingcomputer.com/news/security/cisco-warns-of-critical-unified-cm-flaw-with-poc-exploit-code/)  
-  **BleepingComputer** · Jun 04 · _General awareness item._  
-
-- [CVE-2026-9149 Libsolv: heap buffer overflow in libsolv repo_add_solv via negative maxsize from crafted .solv file](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-9149)  
+- [CVE-2026-48567 Azure HorizonDB  Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-48567)  
   **Microsoft Security Response Center (MSRC)** · Jun 04 · _General awareness item._  
 
-- [CVE-2026-9150 Libsolv: stack-based buffer overflow in libsolv's debian metadata parser when handling sha384/sha512 checksums](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-9150)  
+- [CVE-2026-42824 M365 Copilot Information Disclosure Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-42824)  
   **Microsoft Security Response Center (MSRC)** · Jun 04 · _General awareness item._  
 
-- [CVE-2026-46598 Invoking  pathological inputs can lead to client panic in golang.org/x/crypto/ssh/agent](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-46598)  
+- [CVE-2026-45497 Microsoft M365 Copilot Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45497)  
   **Microsoft Security Response Center (MSRC)** · Jun 04 · _General awareness item._  
 
-- [CVE-2026-27136 Invoking  duplicate attributes can cause XSS in golang.org/x/net/html](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-27136)  
+- [CVE-2026-47644 Copilot Chat (Microsoft Edge) Information Disclosure Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-47644)  
+  **Microsoft Security Response Center (MSRC)** · Jun 04 · _General awareness item._  
+
+- [CVE-2026-47655 Microsoft Graph Information Disclosure Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-47655)  
   **Microsoft Security Response Center (MSRC)** · Jun 04 · _General awareness item._  
 
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [Brave Software releases Origin for a paid, bloat-free browsing experience](https://www.bleepingcomputer.com/news/software/brave-software-releases-origin-for-a-paid-bloat-free-browsing-experience/) — BleepingComputer
+- [Credit card theft campaign abuses Stripe to host stolen payment info](https://www.bleepingcomputer.com/news/security/credit-card-theft-campaign-abuses-stripe-to-host-stolen-payment-info/) — BleepingComputer
 - [New IronWorm malware hits 36 packages in npm supply-chain attack](https://www.bleepingcomputer.com/news/security/new-ironworm-malware-hits-36-packages-in-npm-supply-chain-attack/) — BleepingComputer
 - [Claude Code GitHub Action Flaw Let One Malicious Issue Hijack Repositories](https://thehackernews.com/2026/06/claude-code-github-action-flaw-let-one.html) — The Hacker News
 - [ThreatsDay Bulletin: AI Agents Gone Wrong, Sketchy C2 Tools, ClickFix Tricks, JS Backdoors & 20+ New Stories](https://thehackernews.com/2026/06/threatsday-bulletin-ai-agents-gone.html) — The Hacker News
 - [Microsoft blames unexpected Windows driver updates on caching issue](https://www.bleepingcomputer.com/news/microsoft/microsoft-blames-unexpected-windows-driver-updates-on-caching-issue/) — BleepingComputer
-- [Police dismantles fake ID marketplace used by migrant smugglers](https://www.bleepingcomputer.com/news/security/police-dismantles-fake-id-marketplace-used-by-migrant-smugglers/) — BleepingComputer
-- [China-Linked TA4922 Expands Phishing Attacks to U.K., Germany, Italy, and South Africa](https://thehackernews.com/2026/06/china-linked-ta4922-expands-phishing.html) — The Hacker News
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 8 critical · 76 important · 43 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 9 critical · 75 important · 43 FYI_
