@@ -3,15 +3,1092 @@
 <channel>
   <title>Joe — VP of IT Briefing</title>
   <description>Leadership-focused IT risk, vendors, pricing, licensing, and industry context.</description>
-  <lastBuildDate>Thu, 04 Jun 2026 08:18:52 +0000</lastBuildDate>
+  <lastBuildDate>Thu, 04 Jun 2026 11:50:31 +0000</lastBuildDate>
   
+<item>
+  <title>🔵 Your AI cloud strategy isn’t about cost. It’s about gravity</title>
+  <link>https://www.cio.com/article/4180868/your-ai-cloud-strategy-isnt-about-cost-its-about-gravity.html</link>
+  <pubDate>Thu, 04 Jun 2026 11:00:00 +0000</pubDate>
+  <source>CIO.com</source>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<p>I’ve spent the better part of the last eighteen months in conference rooms with CIOs working through their AI strategy. The conversations all start in the same place — model selection, vendor evaluation, agent frameworks — and they all eventually arrive at the same uncomfortable question.</p>
+
+
+
+<p>“Where is this actually going to run?”</p>
+
+
+
+<p>The question lands awkwardly because it sounds like it should have been settled years ago. Most enterprises picked their cloud provider somewhere between 2015 and 2020. They standardized on AWS, Azure or GCP, signed multi-year commits, and built their application portfolio accordingly. The cloud strategy was done. So why is it suddenly back on the table?</p>
+
+
+
+<p>Because the workload changed underneath it. The cloud strategy that made sense for stateless web applications doesn’t make sense for AI agents and the CIOs figuring this out fastest are the ones rebuilding their architecture around a constraint most of their procurement teams don’t even know exists yet.</p>
+
+
+
+<h2 class="wp-block-heading" id="the-old-cloud-calculus-is-broken">The old cloud calculus is broken</h2>
+
+
+
+<p>For roughly a decade, cloud strategy was about where applications run. You optimized for compute price, developer velocity and managed services. Data was something you moved to where the apps were. This worked because the data-to-compute ratio was small. A typical application request moved kilobytes of structured data between the app and its database.</p>
+
+
+
+<p>The architectural pattern that emerged was elegant in its simplicity: applications in one region, data in another, users somewhere else entirely and the network in between papered over the seams. Latency budgets were measured in user-perceptible terms — a 200ms page load was acceptable, a 500ms one was a problem. Cross-region calls were a tax you paid for resilience or for putting compute close to the user.</p>
+
+
+
+<p>That entire model assumed the application was the thing doing the work, and the data was the thing being acted upon.</p>
+
+
+
+<p>AI agents inverted that assumption.</p>
+
+
+
+<h2 class="wp-block-heading" id="ai-inverted-the-ratio">AI inverted the ratio</h2>
+
+
+
+<p>Agents don’t just consume data. They live in it.</p>
+
+
+
+<p>Memory, context, retrieval, embeddings — the data isn’t an input to the workload. It largely <em>is</em> the workload. An agent reasoning about a customer’s situation is pulling in conversation history, organizational policies, product documentation and structured records on every turn. An agent writing code is pulling in the repository, the architectural decision records, the test suite and the relevant runtime telemetry. An agent doing financial analysis is pulling in market data, internal forecasts, regulatory filings and historical context — and then producing intermediate results that feed back into the next reasoning step.</p>
+
+
+
+<p>The data isn’t a thing the workload references occasionally. It’s the substrate the workload is computing on.</p>
+
+
+
+<p>And that substrate has gravity.</p>
+
+
+
+<p>It has <strong>regulatory gravity</strong> — sovereignty mandates, residency requirements, sector-specific compliance regimes that say data of a particular type cannot leave a particular jurisdiction. The <a href="https://artificialintelligenceact.eu/" rel="nofollow">EU AI Act</a>, HIPAA, financial services regulations across a dozen countries — these aren’t preferences. They’re constraints that determine, before you’ve made any architectural decisions at all, where some of your data is allowed to be.</p>
+
+
+
+<p>It has <strong>economic gravity</strong> — egress fees, GPU-hour pricing differentials, the brute economics of <a href="https://www.earezki.com/ai-news/2026-03-01-i-compared-data-egress-costs-across-44-cloud-providers-heres-the-breakdown/" rel="nofollow">moving terabyte-scale corpora across cloud boundaries</a>. Training data and embedding stores aren’t gigabytes anymore. Moving them isn’t a config change. It’s a project, sometimes a quarter-long one, with a real bill attached.</p>
+
+
+
+<p>It has <strong>incumbency gravity</strong> — the data is where it is, and moving petabytes is not on this year’s roadmap. Most enterprises have data sprawled across systems that were never designed to be portable. The fact that your customer records live in a particular cloud isn’t because someone made a strategic decision in 2026. It’s because they made a strategic decision in 2017 and the data has been accumulating there ever since.</p>
+
+
+
+<p>And it has <strong>latency gravity</strong> — and this is the one that’s quietly rewriting the architecture for everyone.</p>
+
+
+
+<h2 class="wp-block-heading" id="wall-time-is-the-forcing-function">Wall time is the forcing function</h2>
+
+
+
+<p>Here’s the math that nobody puts in their slide decks.</p>
+
+
+
+<p>A modest agentic loop (retrieve, reason, act, observe) easily does five to ten round trips per task. The agent retrieves relevant context. Reasons about it. Calls a tool. Observes the result. Reasons about that. Retrieves more context. Acts again. Each of those steps touches the data layer, the memory store, the model and back.</p>
+
+
+
+<p>Now put 50 milliseconds of cross-region network latency on each hop. That’s 250 to 500 milliseconds of pure network tax on every single agent task, on top of the actual model inference and tool execution. Run that loop a hundred times an hour, across thousands of concurrent agent sessions, and you’re not looking at a minor degradation. You’re looking at the difference between an agent that feels alive and an agent that feels like dial-up.</p>
+
+
+
+<p>This is why I keep telling CIOs the same thing in those conference rooms: your data, your memory store, your models and your agent runtime need to be in the same physical datacenter. Period.</p>
+
+
+
+<p>Whether that physical datacenter is yours or one of the hyperscalers’ is the actual question worth debating. But they have to be co-located. If you’re spreading these across regions or providers to chase a procurement discount, you’re sabotaging your own AI strategy before it ships.</p>
+
+
+
+<p>I want to head off two objections before the comments section gets to them.</p>
+
+
+
+<p>“What about agents that legitimately need to span regions? Say, a global customer service agent that needs to retrieve from regional data stores?”</p>
+
+
+
+<p>Those aren’t really one agent. They’re a federation of regional agents with a routing layer on top, and the wall-time math applies within each region. The federation is the architecture. Pretending it’s one agent stretched across geographies is how you end up with the dial-up problem.</p>
+
+
+
+<p>“What about hyperscaler private connectivity? <a href="https://aws.amazon.com/directconnect/" rel="nofollow">Direct Connect</a>, <a href="https://learn.microsoft.com/en-us/azure/expressroute/expressroute-introduction" rel="nofollow">ExpressRoute</a>. That gets cross-region latency down to single-digit milliseconds?”</p>
+
+
+
+<p>Single-digit milliseconds still compounds across an agentic loop more than it did for human-driven activity. Five hops at 5ms are 25ms of network tax per task, which adds up across millions of tasks.</p>
+
+
+
+<p>And private connectivity doesn’t solve the other gravities. It doesn’t make data residency mandates go away. It doesn’t change egress economics for the data itself. It just makes a single dimension of the problem somewhat better.</p>
+
+
+
+<p>The constraint is physics, not procurement. You can’t negotiate with the speed of light.</p>
+
+
+
+<h2 class="wp-block-heading" id="thats-why-the-cloud-market-fragmented">That’s why the cloud market fragmented</h2>
+
+
+
+<p>Once you accept that agents have to run physically next to their data, memory and models, the <a href="https://www.datacenterknowledge.com/cloud/earnings-roundup-neoclouds-shift-from-gpu-race-to-power-wars" rel="nofollow">recent fragmentation of the AI cloud market</a> starts to make sense.</p>
+
+
+
+<p>Sovereign clouds aren’t winning on patriotism. They’re winning where regulatory gravity dominates and the data is already on a particular side of a particular border. Neoclouds aren’t winning on a vibe shift. They’re winning where economic gravity dominates and GPU-hour pricing makes the math work. Private clouds aren’t winning because on-prem is back in fashion. They’re winning where incumbency gravity dominates and the data is already in your datacenter and isn’t going anywhere. Hyperscalers are still winning where developer gravity and managed services dominate, and where the data is already in their object storage from a decade of cloud migration.</p>
+
+
+
+<p>These aren’t competing on the old dimensions. They’re each winning in scenarios where a different gravity is the binding constraint.</p>
+
+
+
+<p>The right question isn’t which cloud you should pick. It’s which gravity dominates for each workload, and therefore where the <em>whole stack</em> (data, memory, model, agent runtime) needs to be co-located. Some agents will run in three places. Some agents will need to move between them. That’s why deployment flexibility matters more than it ever did when we were just running stateless apps.</p>
+
+
+
+<h2 class="wp-block-heading" id="what-cios-should-actually-do-this-quarter">What CIOs should actually do this quarter</h2>
+
+
+
+<p>Stop picking a cloud. Start mapping your agent portfolio against the four gravities and let the architecture fall out of that.</p>
+
+
+
+<p>For each AI workload you’re planning to put into production over the next twelve months, work through four questions:</p>
+
+
+
+<ol class="wp-block-list">
+<li><strong>Where does the data live, or where is it going to end up?</strong> Not where you wish it lived. Where it actually is, or where regulatory or business reality is forcing it to be. This is the answer that constrains everything else.</li>
+
+
+
+<li><strong>Which gravity is dominant?</strong> If regulatory mandates are non-negotiable, that’s your binding constraint. If GPU economics are the issue, that’s your binding constraint. If you have ten petabytes of historical data sitting in a particular cloud and moving it is a multi-year project, that’s your binding constraint.</li>
+
+
+
+<li><strong>What’s the wall-time budget for the agent loop?</strong> If it’s a batch workload, you have flexibility. If it’s a real-time customer-facing agent, you need everything in the same datacenter and you need to design for it from day one.</li>
+
+
+
+<li><strong>What’s the portability requirement?</strong> As model providers compete and pricing shifts, can you move the agent runtime without moving the data? Can you move the data without rewriting the agent? Lock-in used to be denominated in egress fees. Now it’s denominated in token pricing, embedding model compatibility and agent framework portability.</li>
+</ol>
+
+
+
+<p>The CIOs who get this wrong won’t lose because they chose the wrong cloud. They’ll lose because they chose <em>a</em> cloud. Singular, monolithic, picked once in 2019 when the right answer was a portfolio architected around the gravities of each workload.</p>
+
+
+
+<p>Cloud strategy stopped being a procurement decision the day agents became the workload. It became a physics problem. And the physics doesn’t care which vendor you signed with.</p>
+
+
+
+<p><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><strong><a href="https://www.cio.com/expert-contributor-network/">Want to join?</a></strong></p>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Over 1.4 Million Accounts Disrupted in Cybercrime Crackdown</title>
+  <link>https://www.securityweek.com/over-1-4-million-accounts-disrupted-in-cybercrime-crackdown/</link>
+  <pubDate>Thu, 04 Jun 2026 10:44:41 +0000</pubDate>
+  <source>SecurityWeek</source>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><p>Law enforcement and tech companies disrupted infrastructure linked to scammers operating across Southeast Asia.</p>
+<p>The post <a href="https://www.securityweek.com/over-1-4-million-accounts-disrupted-in-cybercrime-crackdown/">Over 1.4 Million Accounts Disrupted in Cybercrime Crackdown</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 A look at AI consciousness debates; LLM conversations are cleverly disguised examples of sentence continuation, but that doesn&#x27;t deny how impressive LLMs can be (Ted Chiang/The Atlantic)</title>
+  <link>https://www.techmeme.com/260604/p15#a260604p15</link>
+  <pubDate>Thu, 04 Jun 2026 10:20:15 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.theatlantic.com/philosophy/2026/06/no-artificial-intelligence-is-not-conscious/687378/?gift=1ga2TvL-DbuHDQIcYF7oR7CsNA92bD_yo6VqlH7-uco&amp;utm_source=copy-link&amp;utm_medium=social&amp;utm_campaign=share"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260604/i15.jpg" vspace="4" /></a>
+<p><a href="https://www.techmeme.com/260604/p15#a260604p15" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Ted Chiang / <a href="http://www.theatlantic.com/">The Atlantic</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://www.theatlantic.com/philosophy/2026/06/no-artificial-intelligence-is-not-conscious/687378/?gift=1ga2TvL-DbuHDQIcYF7oR7CsNA92bD_yo6VqlH7-uco&amp;utm_source=copy-link&amp;utm_medium=social&amp;utm_campaign=share">A look at AI consciousness debates; LLM conversations are cleverly disguised examples of sentence continuation, but that doesn't deny how impressive LLMs can be</a></b></span>&nbsp; &mdash;&nbsp; Anthropic is regarded as a giant among AI companies, but perhaps what it really excels in is anthropomorphism.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 What Anthropic and OpenAI IPOs spell for CIOs’ AI budgets</title>
+  <link>https://www.cio.com/article/4181090/what-anthropic-and-openai-ipos-spell-for-cios-ai-budgets.html</link>
+  <pubDate>Thu, 04 Jun 2026 10:01:00 +0000</pubDate>
+  <source>CIO.com</source>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<p>AI pioneers Anthropic and OpenAI both appear to be headed toward IPOs, leaving IT leaders whose organizations rely on their AI models wondering what might be in store for them.</p>
+
+
+
+<p>Top of mind is the possibility of higher costs for enterprise use, especially for frontier models.</p>
+
+
+
+<p>By offering stock for sale, the two AI innovators will likely raise hundreds of millions of dollars to invest in their products and pay their bills. But many observers worry that by shifting their focus from private, research-focused organizations to publicly traded companies, both Anthropic and OpenAI will be under new pressure to turn a profit.</p>
+
+
+
+<p>OpenAI’s enterprise customers should expect substantial price increases after an IPO, especially those who are leaning hard on API usage, copilots, agents, and custom deployments, says <a href="https://www.linkedin.com/in/marknvena/" rel="nofollow">Mark Vena</a>, CEO and principal analyst at IT research firm SmartTech Research.</p>
+
+
+
+<p>Vena sees an Anthropic IPO landing differently, with the company’s broad focus on AI safety. “It is selling enterprise trust, safety, developer productivity, and a more buttoned-up brand of AI that CFOs and CIOs can actually explain to their boards,” he says. “Frankly, I think OpenAI is the cultural rocket ship, but Anthropic is shaping up as the institutional AI bet.”</p>
+
+
+
+<p>Still, there are concerns about Anthropic’s ability to generate profits, he adds.</p>
+
+
+
+<p>“Let’s face it: The big question for Anthropic is whether public investors will reward discipline or punish the brutal economics of frontier AI,” he adds. “Training models, renting compute, and keeping pace with OpenAI, Google, Meta, and xAI is insanely expensive, so Anthropic will have to prove it is more than a very elegant cash-burning machine.”</p>
+
+
+
+<p>Anthropic <a href="https://www.cnbc.com/2026/06/01/anthropic-ipo-s1-prospectus.html?msockid=2a6c16066e436d7a193b004b6f656c25" rel="nofollow">announced that it had filed</a> for an IPO on June 1 after news reports that OpenAI was also headed in that direction. Though OpenAI declined to comment on a potential IPO, news reports suggest that the company will <a href="https://techcrunch.com/2026/05/20/openai-barrels-toward-ipo-that-may-happen-in-september/" rel="nofollow">announce one within the next few weeks</a>, with the initial stock sale potentially happening in September.</p>
+
+
+
+<p>IPOs would bring several other changes, Vena notes, including more transparency, more scrutiny, and more enterprise discipline around governance, uptime, security, and roadmap commitments. But new pricing models are likely as well.</p>
+
+
+
+<p>“An OpenAI IPO would turn the company from a fast-moving AI lab into a Wall Street–monitored platform vendor,” Vena says. “Users should expect less ‘move fast and surprise everybody’ energy and more pressure to package, meter, and monetize everything.”</p>
+
+
+
+<h2 class="wp-block-heading" id="end-of-the-research-lab-model">End of the research lab model</h2>
+
+
+
+<p>Other observers express similar fears about OpenAI’s pricing models after an IPO.</p>
+
+
+
+<p><a href="https://www.linkedin.com/in/leoderikiants/" rel="nofollow">Leo Derikiants</a>, CEO and cofounder at AI research firm Mind Simulation Lab, says IT leaders should expect steep API price hikes, the introduction of expensive premium enterprise tiers for basic data privacy, and increasingly opaque billing models.</p>
+
+
+
+<p>“An OpenAI IPO signals the end of the ‘research lab’ illusion and the birth of a traditional tech monopoly,” he adds. “Public markets demand predictable, escalating revenue, but OpenAI’s core technology — autoregressive LLMs — is fundamentally unpredictable and probabilistic.”</p>
+
+
+
+<p>Anthropic, meanwhile, seems to be headed toward an IPO in a stronger, more defensible position than OpenAI, he says. While both companies rely on similar probabilistic and autoregressive architectures, Anthropic has focused less on consumer-facing toys such as video generation and more on the corporate enterprise market, giving the company a stable revenue foundation, he notes.</p>
+
+
+
+<p>The Anthropic IPO announcement, however, also confirms a disappointing truth — that the AI market is driven by herd mentality, Derikiants says.</p>
+
+
+
+<p>“The major labs are running in circles, building the exact same probabilistic products with different branding, without questioning the architectural limits or the actual long-term value,” he says. “The industry has completely lost the original plot. The foundational goal used to be achieving true artificial general intelligence (AGI). Today, the only goal is maximizing monthly subscription revenue.”</p>
+
+
+
+<p>CIOs should prepare for aggressive vendor lock-in tactics, forced ecosystem bundling, and a shift away from flexible, open-source-friendly initiatives, he predicts. The corporate focus will pivot from creating safe AI to trapping enterprise data within the company’s proprietary API walls to maximize shareholder value, he says.</p>
+
+
+
+<p>AI vendors caught in an AI scaling trap, with its architecture requiring exponentially more computing power and energy to yield marginal improvements in reasoning, he adds.</p>
+
+
+
+<p>“Operating these models is fundamentally inefficient and heavily subsidized by venture capital,” he notes. “Once public, Wall Street will not tolerate those massive infrastructure losses indefinitely.”</p>
+
+
+
+<p>After an IPO, customers of both companies should expect new pricing models to emerge, says <a href="https://www.linkedin.com/in/richardkamos/" rel="nofollow">Richard Amos</a>, CIO at systems integrator and cloud services provider Blue Mantis. An organization’s priorities change when it transitions from a startup to a publicly traded company, he adds.</p>
+
+
+
+<p>“Before an IPO, the focus is largely on innovation, growth, and potential,” he says. “Once public, the expectations change and shareholders demand consistent quarterly performance, regulatory compliance, and enterprise-grade reliability.”</p>
+
+
+
+<p>Amos expects several positive developments, with a greater emphasis on platform stability, security, compliance, and the development of more industry-specific capabilities after an OpenAI IPO.</p>
+
+
+
+<p>At the same time, he expects AI vendors will move away from enterprise-wide licensing toward consumption-based pricing, mirroring trends in the public cloud market.</p>
+
+
+
+<p>With many reports suggesting OpenAI is currently operating at a loss, Amos sees the company revamping its pricing models after an IPO. The company could, for example, move to premium pricing for advanced capabilities such as higher-end models, agentic workflows, and advanced orchestration.</p>
+
+
+
+<p>In response, some users will adopt <a href="https://www.cio.com/article/3839075/finops-breaks-out-of-the-cloud.html">AI FinOps</a> solutions to balance consumption and business value, Amos predicts. “We will see some price increases, and I believe that we will have new tools or licensing constructs to manage the cost of the ecosystem,” he adds.</p>
+
+
+
+<h2 class="wp-block-heading" id="new-pricing-model">New pricing model</h2>
+
+
+
+<p>Days before announcing its IPO, Anthropic unveiled a <a href="https://www.infoworld.com/article/4171274/anthropic-puts-claude-agents-on-a-meter-across-its-subscriptions.html">new metered pricing model</a> for some of its products.</p>
+
+
+
+<p>Meanwhile, OpenAI’s new <a href="https://www.cnbc.com/2026/05/19/openai-announces-new-guaranteed-capacity-offering-for-customers-to-secure-compute.html" rel="nofollow">Guaranteed Capacity subscription model</a> points to a new pricing philosophy that moves the focus away from selling flexible API tokens and toward a predictable, contractually locked enterprise utility requiring companies to make upfront multi-year spending commitments, notes <a href="https://euginajordan.com/" rel="nofollow">Eugina Jordan</a>, CEO and cofounder at unified intelligence provider YOUnifiedAI.</p>
+
+
+
+<p>OpenAI also <a href="https://www.cio.com/article/4169759/openais-new-ai-consulting-offering-raises-questions-of-trust-strategy.html?utm=hybrid_search">announced a new consulting company</a> in May.</p>
+
+
+
+<p>Becoming a publicly traded company will likely increase pressure to revamp pricing, Jordan says.</p>
+
+
+
+<p>“An OpenAI IPO would drastically reshape the landscape for IT leaders, shifting the company from an agile tech pioneer to a public entity tethered to Wall Street’s quarterly earnings demands,” she adds. “While a massive influx of public capital could fund the robust infrastructure needed to stabilize enterprise products, the immediate reality for users is a sharp pivot toward aggressive monetization.”</p>
+
+
+
+<p>However, there’s some good news for enterprise AI users as several major competitors have emerged since OpenAI opened the AI floodgates with its release of the first version of ChatGPT in late 2022, Jordan says. Anthropic has rapidly become the default choice for enterprise developers and deep coding, Google’s Gemini has leveraged its unmatched workspace distribution, and Mistral is securing the European open-source stronghold, she notes.</p>
+
+
+
+<p>“This push for predictable enterprise revenue comes at a time when OpenAI is facing a fragmented, highly aggressive competitive landscape where being the first mover is no longer a guarantee of winning,” she adds. “Much like the historic shifts where Yahoo lost to Google or MySpace fell to Facebook, OpenAI is finding that pioneering a technology is very different from scaling it, and an IPO will force them to mature rapidly, just as their competitors are successfully chipping away at their enterprise armor.”</p>
+
+
+
+<p>SmartTech Research’s Vena also sees several major competitors, including Google, xAl, and Meta.</p>
+
+
+
+<p>“From my perspective, OpenAI is still a leader, but it no longer owns the AI narrative uncontested,” he says. “OpenAI still has brand gravity and product momentum, but the next phase will be less about who has the flashiest demo and more about who can deliver durable, secure, cost-effective AI at scale.”</p>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔴 The case for keeping humans at the helm</title>
+  <link>https://www.cio.com/article/4180866/the-case-for-keeping-humans-at-the-helm.html</link>
+  <pubDate>Thu, 04 Jun 2026 10:00:00 +0000</pubDate>
+  <source>CIO.com</source>
+  <description><![CDATA[<b>Why this matters: Potential data exposure — check monitoring and incident response readiness.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<p>There’s a growing chorus in our industry selling a tempting vision: a fully autonomous, AI-powered SOC that runs itself. Alerts triaged, false positives dismissed, investigations opened and closed — all without a human in the loop. For resource-constrained security teams drowning in alerts, the pitch lands hard.</p>
+
+
+
+<p>But as security leaders, when we hear “fully autonomous SOC,” our BS meters go off.</p>
+
+
+
+<p>Our industry has started treating “AI” and “automation” as synonyms, and that conflation is one of the most dangerous mistakes we’re making right now. Automation will absolutely play a critical role in modernizing security operations — for enrichment, correlation and triaging the well-understood, high-volume work that machines genuinely do better than people. But automation is not a replacement for judgment, and AI is not a license to take humans out of the loop.</p>
+
+
+
+<p>It’s also not a quick-fix cost saver. Conventional wisdom still believes that replacing humans with AI will drastically reduce costs, but tech leaders are sounding the alarm to the contrary. Nvidia’s vice president of applied deep learning sent shockwaves through the tech sector in April when he told <a href="https://www.axios.com/2026/04/26/ai-cost-human-workers" rel="nofollow"><em>Axios</em></a> that “the cost of compute is far beyond the costs of the employees” for his team. And <a href="https://www.theinformation.com/newsletters/applied-ai/uber-cto-shows-claude-code-can-blow-ai-budgets" rel="nofollow"><em>The Information</em></a><em> </em>reported that Uber’s CTO blew through his full 2026 AI budget by the end of April. </p>
+
+
+
+<h2 class="wp-block-heading" id="what-actually-happens-when-you-remove-the-human">What actually happens when you remove the human</h2>
+
+
+
+<p>Pull humans out of the decision-making, and four things start to compound.</p>
+
+
+
+<p>First, you reinforce a bad process. Every alert closed without human review is a data point telling the system “This was fine.” If the model was wrong, you’ve now baked that error into the loop. Wrong once becomes wrong at scale, and the problem grows tenfold before anyone notices.</p>
+
+
+
+<p>Second, you miss false negatives. False positives get most of the attention because they’re noisy and annoying. But the real danger is the alert that should have fired and didn’t — or the one that fired, got auto-closed and turned out to be the early signal of a breach. Good attackers know how to hide in the noise, and they count on automated agents missing the signal underneath it leading to more slow-moving attacks and advanced persistent threats. </p>
+
+
+
+<p>Third, you strip out strategy and judgment. A great SOC brings knowledge of the business, awareness of recent changes, threat intel and gut instinct earned over years of incidents.</p>
+
+
+
+<p>Analysts pattern-match across context that a machine simply doesn’t have. That’s not a process you automate away. Take humans out of the loop, and you’re not running a faster SOC — you’re running a blinder one.</p>
+
+
+
+<p>Fourth, you kill an important training ground for tier one analysts. For new analysts, the SOC is a critical environment to develop and hone their skills as they work toward becoming tier one analysts. More than taking away professional opportunities, this weakens the security of organizations. Without experienced analysts, organizations are fully dependent on third parties to protect their interests, account for all edge cases, understand nuances of the tech stack and make the right decisions. </p>
+
+
+
+<h2 class="wp-block-heading" id="what-the-board-the-auditors-and-the-regulators-actually-want">What the board, the auditors and the regulators actually want</h2>
+
+
+
+<p>When we sit across from my board, my auditors or a regulator after an incident, three things matter:</p>
+
+
+
+<ol class="wp-block-list" start="1">
+<li>Visibility into what the system is doing and why, not a black box that says, “trust me.”</li>
+
+
+
+<li>Control over which decisions get automated and which require human signoff, with analysts empowered to make the calls that matter.</li>
+
+
+
+<li>Evidence — a clear, auditable trail of every step and every decision, so I can demonstrate we followed industry standards and acted reasonably.</li>
+</ol>
+
+
+
+<p>This matters more every year. CISOs are increasingly being targeted personally in litigation and enforcement actions. If you can’t show that a human exercised judgment on a consequential decision, you can’t credibly claim reasonableness. Just as ignorance of the law is not a sufficient legal excuse, “the AI said so” is not a defense that holds up in a deposition, regulatory inquiry or board postmortem.</p>
+
+
+
+<p>Automation belongs in the SOC — for enrichment, correlation, evidence gathering and running well-understood playbooks. But the consequential decisions — the validation, the prioritization, the call on whether something is truly benign — stay with the analyst.</p>
+
+
+
+<p>AI shouldn’t close the loop on its own. It needs to give analysts the depth of insight to make sharper, faster, more defensible decisions and it surfaces every step of its reasoning so they can interrogate it.</p>
+
+
+
+<p>That transparency is what separates a real SOC from a black box.</p>
+
+
+
+<p>A SOC built on autonomy is a SOC quietly accumulating risk it can’t see. A SOC built on humans at the helm, with AI as the force multiplier, is one that holds up under pressure, under audit and under attack.</p>
+
+
+
+<p>That’s the model the next generation of threats will demand, and it’s the only one we’d trust to run.</p>
+
+
+
+<p><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><strong><a href="https://www.cio.com/expert-contributor-network/">Want to join?</a></strong></p>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+</item>
+
+<item>
+  <title>🟠 Your outsourcing contract needs XLAs, not just SLAs</title>
+  <link>https://www.cio.com/article/4178678/your-outsourcing-contract-needs-xlas-not-just-slas.html</link>
+  <pubDate>Thu, 04 Jun 2026 10:00:00 +0000</pubDate>
+  <source>CIO.com</source>
+  <description><![CDATA[<b>Why this matters: Service impact possible — prepare comms and confirm vendor status.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<p>I’ve lost count of how many clients have called frustrated, not because their managed services provider (MSP) was missing SLAs, but because meeting every SLA still wasn’t helping employees do their jobs. Tickets close on time, uptime stays above target, and scorecards are green across the board yet employees remain frustrated by broken processes, recurring issues, and support that feels transactional instead of useful.</p>
+
+
+
+<p>The help desk resolves tickets quickly without solving underlying problems, so employees create their own workarounds. This is the watermelon effect: green on the outside, red on the inside. It remains one of the most persistent problems in outsourced IT today.</p>
+
+
+
+<h2 class="wp-block-heading" id="patterns-across-major-msp-relationships">Patterns across major MSP relationships</h2>
+
+
+
+<p>I see this pattern across relationships with every major provider. These are sophisticated organizations with mature delivery capabilities that can absolutely hit the metrics you put in front of them. That’s precisely the problem.</p>
+
+
+
+<p><a href="https://www.cio.com/article/4160884/you-selected-the-right-vendors-now-govern-them-like-you-mean-it.html?utm=hybrid_search">Vendors</a> optimize for whatever the contract measures. If your contract only measures operational outputs, that’s what your provider will focus on. They’re not doing anything wrong. They’re doing exactly what the contract incentivizes.</p>
+
+
+
+<p>What I’ve seen time and again is that the contracts organizations signed five or seven years ago were designed for a different model of IT support, one that enforces compliance and control costs. They weren’t designed to drive outcomes or improve the employee experience, and in many cases, those contracts are still running.</p>
+
+
+
+<p>Realigning a major MSP relationship isn’t simply a matter of telling the provider to do better. It requires changing what the contract measures. That’s where experience level agreements come in.</p>
+
+
+
+<h2 class="wp-block-heading" id="why-slas-werent-designed-to-measure-what-matters-most">Why SLAs weren’t designed to measure what matters most</h2>
+
+
+
+<p>SLAs were built for an earlier era of IT. The logic was straightforward: define the service, establish operational standards, measure compliance, and apply financial consequences when performance falls short. It’s precise, auditable, and legally defensible.</p>
+
+
+
+<p>But SLAs measure the process, not the outcome. A service desk can resolve 95% of tickets within the agreed timeframe and still leave employees feeling completely unsupported. An application can technically meet uptime standards while being so slow and unreliable that employees avoid using it. That gap, between what the contract measures and what employees actually experience, is where productivity leaks, morale erodes, and the business case for outsourcing quietly unravels.</p>
+
+
+
+<p>I’ve sat in enough quarterly business reviews with providers to know how this dynamic plays out. The provider presents a polished scorecard. Every metric is green or amber. The client’s internal stakeholders raise concerns about employee complaints, escalating shadow IT, and department heads who have stopped submitting tickets because they’ve given up. The provider points to the scorecard and there’s no mechanism in the contract to address the gap.</p>
+
+
+
+<p>That’s a contract design problem, not a provider capability problem. And it’s one that experience-based measurements like XLAs are specifically designed to solve.</p>
+
+
+
+<h2 class="wp-block-heading" id="the-shift-organizations-need-to-make-and-why-its-hard">The shift organizations need to make, and why it’s hard</h2>
+
+
+
+<p>When I work with clients on <a href="https://www.cio.com/article/405257/6-top-managed-cloud-services-providers-and-how-to-choose.html?utm=hybrid_search">realigning MSP relationships</a>, the conversation often starts with frustration, and the solution isn’t straightforward either. Organizations face real structural barriers to making this shift, like with baseline data, for instance. You can’t set meaningful experience targets without knowing where you’re starting from. Many of my clients have been operating on SLA-only contracts for years, sometimes with the same provider, and they have no employee experience data at all. They know ticket volumes and resolution times, but they have no idea how employees actually feel about the service.</p>
+
+
+
+<p>Contract language is another issue. Major MSPs have mature commercial teams that are very skilled at navigating ambiguous commitments. Improving the employee experience isn’t a contractual commitment. A defined happiness score is, one that’s measured by a specific tool, and reported monthly with agreed escalation protocols when thresholds are missed.</p>
+
+
+
+<p>Another is incentive alignment. The most common mistake I see organizations make is converting an XLA into a penalty mechanism. If the only consequence for missing an experience target is a financial deduction, providers will manage the number rather than the experience. The most effective XLA structures I’ve worked on combine penalties for persistent underperformance with shared gain mechanisms that reward genuine improvement.</p>
+
+
+
+<h2 class="wp-block-heading" id="four-ways-to-structure-xlas-in-an-outsourcing-contract">Four ways to structure XLAs in an outsourcing contract</h2>
+
+
+
+<p>Based on what I’ve seen work across client relationships, there are four practical models for building XLAs into a contract. The right starting point depends on where the organization and the provider relationship currently are.</p>
+
+
+
+<p><strong>1. Commit to a defined experience score</strong>. The vendor commits contractually to achieving a defined satisfaction threshold. This is the most rigorous model and requires established baseline data on both sides. It works best when the relationship has been running for at least six to 12 months and both parties have experience measurement in place.</p>
+
+
+
+<p><strong>2. Commit to a digital experience score</strong>. Here, the XLA is tied to a broader digital employee experience (DEX) score that combines employee sentiment with technical telemetry. Providers like HCL and Cognizant increasingly support this model through partnerships with platforms like Nexthink.</p>
+
+
+
+<p><strong>3. Commit to continuous improvement</strong>. Rather than setting fixed thresholds immediately, both parties agree to a shared obligation to improve experience metrics over time, with targets reviewed and reset every six months. This is usually the best entry point for organizations that are new to experience measurement. It builds a data baseline, establishes a culture of shared accountability, and avoids the trap of locking in arbitrary targets before either party understands the benchmarks.</p>
+
+
+
+<p><strong>4. Commit to delivering the XLA capability</strong>. In this model, the provider takes responsibility for building and operating the measurement infrastructure itself. This works well when the client lacks internal XLA capability but still wants accountability built into the relationship from the outset. I’ve seen this work particularly well in new contract structures with Accenture and Capgemini, both of which have invested in building proprietary experience measurement frameworks.</p>
+
+
+
+<h2 class="wp-block-heading" id="what-xlas-actually-measure">What XLAs actually measure</h2>
+
+
+
+<p>Unlike SLAs, which focus on technical outputs, XLAs focus on human outcomes. The metrics I most commonly see built into client contracts include:</p>
+
+
+
+<ul class="wp-block-list">
+<li>Employee satisfaction scores</li>
+
+
+
+<li>Perceived lost productivity time</li>
+
+
+
+<li>Repeat incident rates for the same underlying issue</li>
+
+
+
+<li>Ease of getting support across different channels</li>
+
+
+
+<li>Task completion success rates</li>
+
+
+
+<li>Confidence in IT services overall</li>
+</ul>
+
+
+
+<p>The goal isn’t to eliminate SLAs as systems still need uptime targets and response standards, and providers operate at a scale where those operational commitments genuinely matter. So the goal is to add the missing layer of whether or not employees feel supported and productive, not just if tickets are being processed.</p>
+
+
+
+<h2 class="wp-block-heading" id="the-data-infrastructure-behind-a-working-xla-program">The data infrastructure behind a working XLA program</h2>
+
+
+
+<p>Strong XLA programs depend on three categories of data working together. Getting this right is often where the real negotiation with providers happens, because <a href="https://www.cio.com/article/4168669/7-signs-your-data-isnt-ready-for-ai.html?utm=hybrid_search">data ownership</a> and transparency are genuinely contested terrain in major MSP relationships.</p>
+
+
+
+<p><strong>Experience data (X-data)</strong>: This is the human layer, how employees feel about their IT experience. It comes from pulse surveys, post-interaction feedback, and always-on feedback channels. Platforms like HappySignals, Nexthink, and Qualtrics are commonly used. One of the most important negotiating points I work through with clients is ensuring that this data is owned by the client, not the provider. Some MSPs propose operating the measurement platform themselves, which creates a structural conflict of interest.</p>
+
+
+
+<p><strong>Operational data (O-data)</strong>: This is the traditional metrics layer already stored in ITSM platforms most common among our clients like ServiceNow or Jira Service Management. Most providers already produce this data and the value comes from correlating it with experience data, not treating it in isolation.</p>
+
+
+
+<p><strong>Technical data (T-data)</strong>: This is the infrastructure layer comprised of device health, application performance, network latency, and endpoint health. Platforms like Nexthink and 1E collect this telemetry passively. When experience scores drop, correlating against technical data tells you whether the problem is the technology environment, the support process, or the service interaction itself. Without that triangulation, you know something is wrong but can’t pinpoint why.</p>
+
+
+
+<h2 class="wp-block-heading" id="the-transparency-problem">The transparency problem</h2>
+
+
+
+<p>In my experience, the biggest failure point in XLA programs isn’t the metrics but transparency. When clients hide poor experience scores or providers obscure unfavorable data, the foundation of the XLA model breaks down.</p>
+
+
+
+<p>I’ve seen MSPs manage the measurement platform and report improving scores, only for independent measurement to reveal a very different reality. The strongest XLA programs treat experience data as jointly owned, openly shared, and central to collaborative problem-solving.</p>
+
+
+
+<p>Contracts create accountability, but governance drives improvement. Weekly working sessions, monthly reviews, and leadership steering meetings matter far more than scorecards alone. Building that level of transparency is often the hardest part.</p>
+
+
+
+<h2 class="wp-block-heading" id="the-shift-from-service-delivery-to-outcome-delivery">The shift from service delivery to outcome delivery</h2>
+
+
+
+<p>The shift from SLA-only contracts to XLA-enabled outsourcing reflects more than a new measurement framework. It signals a fundamental change in how organizations define IT value. Cost and efficiency still matter, but leading organizations are now asking whether technology investments improve employee productivity, reduce frustration, and create better support experiences. That requires a different level of provider accountability.</p>
+
+
+
+<p>MSPs can deliver experience-based outcomes, but they rarely prioritize them unless contracts demand it. XLAs formalize those expectations, and increasingly, organizations see them as the standard for measuring meaningful IT performance.</p>
+
+
+
+<p></p>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+</item>
+
+<item>
+  <title>🟠 Rayfin signals Microsoft’s push to make Fabric an AI app runtime</title>
+  <link>https://www.cio.com/article/4181172/rayfin-signals-microsofts-push-to-make-fabric-an-ai-app-runtime-2.html</link>
+  <pubDate>Thu, 04 Jun 2026 09:52:05 +0000</pubDate>
+  <source>CIO.com</source>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<p>For enterprises embracing AI-assisted development, writing code is no longer the hardest part. Operationalizing it is. Microsoft is targeting that challenge with Rayfin, a new open-source SDK and CLI unveiled at Build 2026.</p>
+
+
+
+<p>“<a href="https://github.com/microsoft/rayfin" rel="nofollow" target="_blank">Rayfin</a> turns backend development into a code-first workflow. Developers and coding agents can define a full application backend in code, including databases, business logic, APIs, identity, and access policies, and deploy it to <a href="https://www.infoworld.com/article/2335979/what-is-microsoft-fabric-a-big-tech-stack-for-big-data.html" target="_blank">Microsoft Fabric</a> for a fully managed, enterprise-grade backend,” <a href="https://www.linkedin.com/in/shireeshthota/" rel="nofollow" target="_blank">Shireesh Thota</a>, CVP of databases at Microsoft, wrote in a <a href="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/Introducing-Rayfin-A-new-AI-first-way-to-build-deploy-and-govern/ba-p/5191676" rel="nofollow" target="_blank">blog post</a>.</p>
+
+
+
+<p>In effect, Thota added, this approach cuts down the manual integration work and time typically required to connect backend systems once an application front-end is built.</p>
+
+
+
+<p>Explaining further, how Rayfin works, the top executive said that developers or coding agents working on their behalf define the entire backend using the SDK, and then that definition is deployed directly to Fabric using the CLI.</p>
+
+
+
+<h2 class="wp-block-heading" id="governance-not-productivity-may-be-the-bigger-draw">Governance, not productivity, may be the bigger draw</h2>
+
+
+
+<p>According to independent consultant <a href="https://www.linkedin.com/in/davidlinthicum" rel="nofollow" target="_blank">David Linthicum</a>, Rayfin increases developer productivity, reduces integration overhead, and platform sprawl: “Instead of standing up separate app runtimes, data services, governance layers, and custom integration code, they can push more of that into one managed environment. It also keeps application data closer to the analytics estate.”</p>
+
+
+
+<p>However, the rise in developer productivity is just the hook, according to <a href="https://my.idc.com/getdoc.jsp?containerId=PRF004450" rel="nofollow" target="_blank">Stewart Bond</a>, research vice president at IDC.</p>
+
+
+
+<p>“For CIOs, the more compelling value proposition is governance and operational control. It is governance by default — inherited security, compliance, and access policies from day one — that addresses the risks CIOs most frequently cite when AI-generated code and agent-authored applications enter production environments,” Bon said.</p>
+
+
+
+<p>“IDC research indicates that AI data readiness is not owned by a single team but by a coordinated network of stakeholders across all four planes of the enterprise intelligence architecture, and Rayfin’s architecture reflects that by ensuring that application data lands directly in a governed data estate, making it immediately available for reporting, analytics, and AI workloads without additional pipeline work,” Bond added.</p>
+
+
+
+<p>For <a href="https://www.hfsresearch.com/team/ashish-chaturvedi/" rel="nofollow" target="_blank">Ashish Chaturvedi</a>, leader of executive research at HFS Research, Rayfin should help CIOs tackle another facet of non-governance: <a href="https://www.infoworld.com/article/2294032/shadow-it-can-be-the-cloud-s-best-friend.html">shadow IT</a>.<br /><br />“Coding agents have democratized app creation. Today, anyone with a prompt and a browser can spin up a working application in minutes. Every one of those ungoverned apps is a potential data silo, a security gap, and a compliance liability waiting to land on someone’s desk. Rayfin is the governed on-ramp,” Chaturvedi said.</p>
+
+
+
+<h2 class="wp-block-heading" id="platforms-like-rayfin-are-set-to-gain-traction">Platforms like Rayfin are set to gain traction</h2>
+
+
+
+<p>Analysts say platforms like Rayfin are becoming increasingly common as enterprises discover that AI applications are difficult to govern and operationalize when data, models, policies, and runtimes are spread across separate systems.</p>
+
+
+
+<p>Enterprises moving beyond isolated AI experiments, according to Bond, increasingly need automated governance, real-time processing, and tighter feedback loops between AI systems and enterprise data — capabilities that are harder to deliver when application and data layers remain separate.</p>
+
+
+
+<p>More so because the economics, too, becomes harder to argue, Chaturvedi said.</p>
+
+
+
+<p>“When apps run inside the data platform, you eliminate data movement costs, reduce governance surface area, and shrink the attack surface. Within three to five years, converged platforms will be the default for new agentic applications,” the analyst added.</p>
+
+
+
+<p>However, <a href="https://www.linkedin.com/in/slwalter" rel="nofollow">Stephanie Walter</a>, practice lead of the AI stack at HyperFRAME Research, pointed out that enterprises will not move every application onto one platform.</p>
+
+
+
+<p>“The likely future is a hybrid model: some agentic applications will run inside governed data platforms like Fabric, Snowflake, or Databricks, while others will continue to run on general-purpose cloud runtimes. The architectural question will be where the application’s most sensitive data, context, and control plane should live,” Walter said.</p>
+
+
+
+<h2 class="wp-block-heading" id="making-fabric-the-runtime-for-ai-applications">Making Fabric the runtime for AI applications</h2>
+
+
+
+<p>Beyond the immediate benefits around governance and operational control, Walter sees Rayfin as a strategic move in Microsoft’s broader effort to expand Fabric’s role within the enterprise technology stack.</p>
+
+
+
+<p>Rayfin’s release, Walter said, is less about a new developer tool and more about Microsoft’s attempt to reposition Fabric as a platform for building and running AI-native applications.</p>
+
+
+
+<p>“Rayfin positions Fabric as a runtime environment for a new class of AI-native applications. That is strategically important because the next phase of enterprise AI will not be won only at the model layer. It will be won by the platforms that can turn governed enterprise data into safe, operational applications,” Walter added.</p>
+
+
+
+<p>However, she remained skeptical about whether developers will accept Fabric as an application runtime and not just a data platform: “Rayfin lowers the barrier, but Microsoft still has to prove the developer experience is lightweight enough, the deployment model is flexible enough, and the governance benefits are strong enough to justify building inside Fabric rather than around it.”</p>
+
+
+
+<p>Microsoft is making Rayfin available in preview, and enterprises can try the service through a 60-day Microsoft Fabric trial. The SDK and CLI-combo can also be accessed via <a href="https://www.infoworld.com/article/4059876/replit-update-sparks-developers-dissatisfaction-over-pricing.html">Replit</a>, the company said.</p>
+
+
+
+<p><em>The article originally appeared on <a href="https://www.infoworld.com/article/4181166/rayfin-signals-microsofts-push-to-make-fabric-an-ai-app-runtime.html">InfoWorld</a>.</em></p>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 SpaceX wins a property tax exemption for its planned $55B Terafab chip facility in Texas, despite Texans threatening legal action, amid local opposition to AI (Stephanie Findlay/Financial Times)</title>
+  <link>https://www.techmeme.com/260604/p13#a260604p13</link>
+  <pubDate>Thu, 04 Jun 2026 09:50:02 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.ft.com/content/86b2440a-60ce-4a5b-94ba-a6a4456ae574"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260604/i13.jpg" vspace="4" /></a>
+<p><a href="https://www.techmeme.com/260604/p13#a260604p13" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Stephanie Findlay / <a href="https://www.ft.com/">Financial Times</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://www.ft.com/content/86b2440a-60ce-4a5b-94ba-a6a4456ae574">SpaceX wins a property tax exemption for its planned $55B Terafab chip facility in Texas, despite Texans threatening legal action, amid local opposition to AI</a></b></span>&nbsp; &mdash;&nbsp; Elon Musk's Terafab plant sparks fierce opposition and threat of legal action from residents of Texas county</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Applied Materials plans to expand its Southeast Asia workforce by 25% in 2026, hiring ~1,000 workers mainly in Singapore, a key chip packaging equipment hub (Cheng Ting-Fang/Nikkei Asia)</title>
+  <link>https://www.techmeme.com/260604/p10#a260604p10</link>
+  <pubDate>Thu, 04 Jun 2026 09:17:21 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://asia.nikkei.com/editor-s-picks/interview/applied-materials-looks-to-hire-25-more-chip-talent-in-southeast-asia"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260604/i10.jpg" vspace="4" /></a>
+<p><a href="https://www.techmeme.com/260604/p10#a260604p10" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Cheng Ting-Fang / <a href="https://asia.nikkei.com/">Nikkei Asia</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://asia.nikkei.com/editor-s-picks/interview/applied-materials-looks-to-hire-25-more-chip-talent-in-southeast-asia">Applied Materials plans to expand its Southeast Asia workforce by 25% in 2026, hiring ~1,000 workers mainly in Singapore, a key chip packaging equipment hub</a></b></span>&nbsp; &mdash;&nbsp; KUALA LUMPUR &mdash; U.S. semiconductor equipment maker Applied Materials is aiming to expand its total workforce in Southeast Asia &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 How a 20-engineer team delivers enterprise AI systems at Fortune 500 scale</title>
+  <link>https://www.cio.com/article/4180863/how-a-20-engineer-team-delivers-enterprise-ai-systems-at-fortune-500-scale.html</link>
+  <pubDate>Thu, 04 Jun 2026 09:00:00 +0000</pubDate>
+  <source>CIO.com</source>
+  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<p>When I took over responsibility for technical function at akirolabs more than three years ago, I inherited a procurement SaaS platform that was still at a very early stage, with development fully outsourced outside Europe. However, the company had already reached early product-market fit, and first customers demonstrated their interest, which made product ownership and scalable delivery increasingly critical.</p>
+
+
+
+<p>After evaluating several approaches, I decided to fully insource development from South Asia to Europe and rebuild the entire technology function in-house, including engineering, product ownership, infrastructure and delivery processes. It was clearly the highest-risk option but also the one with the biggest long-term potential.</p>
+
+
+
+<p>Preparing to the implementation of this decision, I kept hearing advice which was quite consistent: if we wanted to build and operate an enterprise-grade procurement SaaS platform for global corporations, we needed to hire aggressively. Most estimates I received started at around 50 engineers. At the time, the recommendation sounded logical. Expectations around reliability, security and delivery speed were extremely high. But I also believed the standard enterprise scaling model had a flaw that many companies underestimate: larger engineering organizations often become slower precisely because they are larger. Instead of scaling through headcount, I decided to scale through organizational design.</p>
+
+
+
+<p>Our first fully production-ready in-house platform release was delivered in less than 12 months from the day when I hired the first engineer in-house. I delivered the full-scope release with a team of roughly a dozen engineers and without any AI co-pilots – the tooling simply was not mature enough yet in 2023 and early 2024. Later, I added a dedicated data science team and evolved the platform into an AI-augmented system with a fully redesigned UI/UX.</p>
+
+
+
+<p>Today, three years into this transformation, akirolabs has evolved into a recognized category leader. Over the next few years our current customer base has extended to power the strategic procurement operations of enterprises such as Bertelsmann, Raiffeisen Bank International, IFF, UCB Pharma, Axpo and others.</p>
+
+
+
+<p>This proven scale demonstrates that in enterprise AI, operating model matters more than team size.</p>
+
+
+
+<h2 class="wp-block-heading" id="why-large-engineering-organizations-slow-down">Why large engineering organizations slow down</h2>
+
+
+
+<p>One thing I’ve repeatedly seen in enterprise technology is that communication complexity grows faster than headcount. Fred Brooks described this decades ago in Brooks’s Law, arguing that adding manpower to a late software project often makes it later. The reason is not simply onboarding overhead. It is the explosion of coordination paths inside the organization itself. The communication channel formula is straightforward – with 12 engineers, there are 66 possible communication paths. At 50 engineers, there are 1,225.</p>
+
+
+
+<p>In practice, that complexity becomes operational drag. Teams spend more time aligning than building. Meetings multiply. Ownership becomes blurred. Delivery slows down even though payroll grows. As CTO at akirolabs, I wanted to avoid that trap from the beginning. We intentionally kept the organization lean and structured it around small, highly autonomous functional groups. Instead of creating rigid specialization silos, we hired engineers who were comfortable operating across adjacent disciplines. This mirrors a<a href="https://www.cio.com/article/2152177/cios-take-note-platform-engineering-teams-are-the-future-core-of-it-depts.html"> </a><a href="https://www.cio.com/article/2152177/cios-take-note-platform-engineering-teams-are-the-future-core-of-it-depts.html">broader industry shift</a> toward cross-functional platform and engineering teams.</p>
+
+
+
+<p>That cross-functional flexibility became one of the biggest advantages for the company. Backend engineers supported infrastructure automation. QAs worked closely with Security engineers. Frontend developers handled portions of UX implementation directly. Our data science team owned significant parts of the MLOps lifecycle. As CTO, I also absorbed part of the product management layer myself to reduce decision latency and preserve execution speed. This model only works with senior engineers, high trust and strong ownership culture.</p>
+
+
+
+<p>In our case, insourcing development also fundamentally changed our delivery velocity. Compared to the outsourced structure we previously operated under, product delivery accelerated by more than 2x. We gained direct control over infrastructure, intellectual property, architectural decisions and security processes. It also enabled long-term planning because our engineers were building systems with full awareness of platform requirements. That visibility allowed us to reduce cloud infrastructure costs by more than 30%. Keeping the engineering organization intentionally compact helped us also avoid the architectural sprawl early on, a dynamic which is often described through<a href="https://martinfowler.com/bliki/ConwaysLaw.html" rel="nofollow"> </a><a href="https://martinfowler.com/bliki/ConwaysLaw.html" rel="nofollow">Conway’s Law</a>.</p>
+
+
+
+<p>Once the people designing the architecture are also accountable for long-term scalability, infrastructure decisions become dramatically more intentional, enabling the platform to scale and secure akirolabs recognition as an IDC Innovator in Procurement in 2023, named amongst the Top 27 AI Startups in Germany in 2024 and Sifted’s 100 Fastest-Growing Startups in DACH &amp; CEE 2025.</p>
+
+
+
+<h2 class="wp-block-heading" id="replacing-scrum-with-continuous-delivery">Replacing Scrum with continuous delivery</h2>
+
+
+
+<p>Another major decision we made was abandoning Scrum. That statement usually generates strong reactions because Scrum has become very popular across enterprise IT. But in our experience, traditional sprint-based delivery models created too much operational overhead for the type of work we were doing. Enterprise AI systems evolve continuously: data pipelines change or models require retraining. Trying to force that environment into rigid sprint cycles often created artificial planning friction instead of predictability.</p>
+
+
+
+<p>We moved fully to<a href="https://www.cio.com/article/217626/what-is-kanban-workflow-management-simplified.html"> </a><a href="https://www.cio.com/article/217626/what-is-kanban-workflow-management-simplified.html">Kanban</a> and continuous delivery. The difference was noticeable almost immediately.</p>
+
+
+
+<p>Our roadmap became directional rather than fixed. Features shipped when they were production-ready, validated and needed by customers – not because a quarterly milestone required a release. We focused heavily on limiting work in progress, shortening feedback loops and reducing context switching. Removing process overhead had a measurable impact on productivity. Internally, we estimated that eliminating Scrum rituals alone recovered roughly 10% of engineering capacity. Lead time for medium-sized changes dropped from days or sometimes weeks to hours. Release cadence stabilized around monthly production deployments instead of quarterly while urgent fixes and improvements could move significantly faster. That mattered more than any sprint ritual.</p>
+
+
+
+<p>Communication discipline was equally important.</p>
+
+
+
+<p>We consolidated nearly all meetings into mornings and invited only people directly involved in the decision being discussed. If information was declarative or preparatory, it was documented asynchronously through structured chat channels or internal wiki pages instead of calls. We also minimized email usage almost completely.</p>
+
+
+
+<p>Because the company operated remote-first, we complemented this lightweight communication model with intensive in-person workshops three or four times per year across different European cities. Those workshops helped maintain strategic alignment while day-to-day execution remained highly asynchronous. Combined, these changes improved overall team productivity by an estimated 20% to 30%.</p>
+
+
+
+<p>AI-assisted development later became another major productivity lever for the team. Today, we use AI copilots extensively across coding, code reviews, task analysis and debugging. Based on our internal observations, these tools contribute an additional 20% to 25% productivity improvement when used within mature engineering processes. But I do not believe AI tooling alone solves enterprise delivery problems. Without clear ownership structures and discipline, AI often amplifies organizational chaos rather than reducing it.</p>
+
+
+
+<h2 class="wp-block-heading" id="lean-teams-can-still-satisfy-enterprise-governance">Lean teams can still satisfy enterprise governance</h2>
+
+
+
+<p>One of the most common assumptions I hear from enterprise leaders is that lean engineering organizations eventually break down under compliance pressure. Our experience was the opposite. With essentially the same compact organizational structure, we achieved ISO 27001 certification under 9 months without any external help. Also, we aligned our governance processes with the requirements of the EU AI Act, which supported our one-million public government grant from Investitionsbank Berlin in 2024 for breakthrough AI innovations.</p>
+
+
+
+<p>None of that required building large governance departments or adding layers of bureaucracy. What mattered far more was clear ownership and direct accountability between the people building systems and the people operating them.</p>
+
+
+
+<p>We also embedded prioritization deeply into our culture. Across the organization, teams actively use principles like the Eisenhower Matrix to distinguish urgent work from strategically important work. That may sound simple but in high-growth technology environments, prioritization discipline often becomes the difference between scalable execution and constant operational overload.</p>
+
+
+
+<p>Perhaps one of the clearest validations of our operational model has been retention.</p>
+
+
+
+<p>Over a three-year period of my leadership at akirolabs, only one engineer voluntarily left the organization. To me, that says something important about<a href="https://www.cio.com/article/4122240/developer-experience-is-a-blueprint-for-enterprise-productivity.html"> </a><a href="https://www.cio.com/article/4122240/developer-experience-is-a-blueprint-for-enterprise-productivity.html">how experienced engineers want to work today</a>. Engineers generally do not want to spend their time navigating endless approval chains or low-value meetings. They want ownership, autonomy and the ability to see direct impact from their work. That is especially true in enterprise AI where iteration speed and adaptability increasingly determine competitive advantage.</p>
+
+
+
+<p>For years, the enterprise technology sector has operated on the assumption that scale requires organizational expansion. My experience building enterprise AI systems suggests the opposite may often be true.</p>
+
+
+
+<p>Sometimes the fastest way to scale is to stay intentionally small.</p>
+
+
+
+<p><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><strong><a href="https://www.cio.com/expert-contributor-network/">Want to join?</a></strong></p>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+</item>
+
+<item>
+  <title>🟠 Cisco Warns of Available PoC for Critical Unified CM Vulnerability</title>
+  <link>https://www.securityweek.com/cisco-warns-of-available-poc-for-critical-unified-cm-vulnerability/</link>
+  <pubDate>Thu, 04 Jun 2026 08:44:08 +0000</pubDate>
+  <source>SecurityWeek</source>
+  <description><![CDATA[<b>Why this matters: Could impact sign-ins/MFA/Conditional Access — watch for login issues.</b><br/><p>The high-severity flaw can be exploited remotely, without authentication, in server-side request forgery (SSRF) attacks.</p>
+<p>The post <a href="https://www.securityweek.com/cisco-warns-of-available-poc-for-critical-unified-cm-vulnerability/">Cisco Warns of Available PoC for Critical Unified CM Vulnerability</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 UK tax collector hands Capgemini £600M contact center deal, delays start of £2.4B CRM contract</title>
+  <link>https://www.theregister.com/public-sector/2026/06/04/uk-tax-collector-hands-capgemini-600m-contact-center-deal-delays-start-of-24b-crm-contract/5250650</link>
+  <pubDate>Thu, 04 Jun 2026 08:30:00 +0000</pubDate>
+  <source>The Register</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Another monster tech contract in the works for one of the usual suspects<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Siete maneras de que el CIO comunique malas noticias sin que pierda la confianza del equipo directivo</title>
+  <link>https://www.cio.com/article/4181148/siete-maneras-de-que-el-cio-comunique-malas-noticias-sin-que-pierda-la-confianza-del-equipo-directivo.html</link>
+  <pubDate>Thu, 04 Jun 2026 08:26:56 +0000</pubDate>
+  <source>CIO.com</source>
+  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<p>Las opiniones de CIO, consultores y coaches ejecutivos muestran que los CIO eficaces no se limitan a informar de los problemas: comparten la información pronto, explican claramente las cuestiones y ayudan a los ejecutivos a decidir qué hacer a continuación. Estas son siete formas en que los CIO pueden comunicar malas noticias de manera más eficaz.</p>
+
+
+
+<h2 class="wp-block-heading" id="1-construir-la-transparencia-desde-el-principio-para-que-las-malas-noticias-no-sorprendan">1. Construir la transparencia desde el principio para que las malas noticias no sorprendan</h2>
+
+
+
+<p>Los CIO con éxito no esperan a que algo salga mal para hablar con los ejecutivos. Hacen de la transparencia un hábito desde el inicio, de modo que, cuando surgen problemas, los líderes ya entienden los riesgos y qué está ocurriendo. Sumit Johar, CIO de la empresa de software en la nube BlackLine, afirma que este enfoque ayuda a evitar que las conversaciones difíciles se conviertan en problemas de confianza. “No quieres estar en una situación en la que das una mala noticia y todo el mundo pregunte: ‘¿Cómo ha podido pasar esto?’ Nunca hemos tenido conversaciones sobre ello. ¿Qué riesgos se han asumido y por qué no se nos ha informado?”.</p>
+
+
+
+<p>Por eso, las actualizaciones regulares sobre riesgos, compromisos y decisiones marcan la diferencia. “Diría que las conversaciones periódicas, transparentes y basadas en hechos sobre el estado de estas iniciativas son esenciales, de modo que si algo sale mal, todo el mundo esté preparado”.</p>
+
+
+
+<p>Mantener informados a los líderes ayuda a alejar el foco de buscar culpables y orientarlo hacia la búsqueda de soluciones para centrarse en qué hacer a continuación.</p>
+
+
+
+<h2 class="wp-block-heading" id="2-ir-directamente-al-problema-principal-de-forma-inmediata-y-clara">2. Ir directamente al problema principal de forma inmediata y clara</h2>
+
+
+
+<p>Debbi McCullough, coach de comunicación ejecutiva, señala que los CIO deben ir al grano rápidamente. “Mantener la conclusión principal al inicio es esencial, y muchos pasan por alto este paso. Si enterramos lo importante y tardamos demasiado en llegar al punto, frustramos a los CEO y a los directivos que quieren saber qué está pasando desde la primera frase”.</p>
+
+
+
+<p>Añade que, en situaciones de presión, el CIO debe mantener mensajes breves y claros, y dejar que los ejecutivos hagan preguntas si necesitan más detalle.</p>
+
+
+
+<p>Ghaleb El Masri, socio de la consultora Adaptovate, coincide en que estas conversaciones deben ser claras y estructuradas. “La forma más eficaz de comunicar malas noticias es hacerlas orientadas a la toma de decisiones. Los ejecutivos pueden manejar malas noticias, pero lo que no pueden permitirse es la ambigüedad. Utilizo una secuencia simple: qué ha pasado, impacto en el negocio, qué se ha hecho para contenerlo y qué decisión se necesita ahora”.</p>
+
+
+
+<h2 class="wp-block-heading" id="3-traducir-los-problemas-tecnicos-en-impacto-de-negocio">3. Traducir los problemas técnicos en impacto de negocio</h2>
+
+
+
+<p>Los CIO trabajan con cuestiones técnicas complejas, pero los ejecutivos necesitan entender qué significan para el negocio. Patty Patria, CIO de Babson College, señala que los problemas deben plantearse en términos empresariales. “Una de las formas más eficaces de comunicar malas noticias a ejecutivos sobre un proyecto o cuestión operativa es ser honesto y transparente. Explicar claramente la causa raíz del problema y luego presentar varias alternativas para debatir cómo abordarlo”.</p>
+
+
+
+<p>También subraya la importancia de vincular los problemas a resultados relevantes, como costes y plazos. “Este enfoque no solo genera confianza, sino que también fomenta la toma de decisiones colaborativa, asegurando que los ejecutivos entienden bien la situación y tienen opciones viables para avanzar”.</p>
+
+
+
+<p>Eric Nitzberg, fundador de Sierra Leadership, explica por qué esta traducción es clave. “Uno de los mayores errores de los líderes técnicos al dirigirse a la alta dirección es utilizar demasiada jerga técnica. Hay que traducir las ideas a un lenguaje empresarial claro e inteligente, como si se explicaran a estudiantes brillantes de secundaria. No se trata de simplificar en exceso, sino de hablar en su idioma”.</p>
+
+
+
+<h2 class="wp-block-heading" id="4-aportar-soluciones-y-demostrar-responsabilidad-desde-el-inicio">4. Aportar soluciones y demostrar responsabilidad desde el inicio</h2>
+
+
+
+<p>Los ejecutivos no solo quieren oír problemas: esperan que el CIO asuma responsabilidad y proponga cómo avanzar. Sesh Tirumala, CIO del fabricante de hardware WD, plantea un enfoque diferente. “Deja de llamarlo malas noticias; no existen malas noticias. Hay problemas, y los problemas se pueden resolver. Lo más eficaz es entrar con el problema claramente definido y un camino a seguir ya preparado. Lidera con la solución, no con la situación”.</p>
+
+
+
+<p>Tirumala añade que a los ejecutivos les importa más la acción que la explicación: “Necesitan saber que ves el problema, que lo asumes y que tienes un plan. Una frase sobre el problema, tres sobre lo que estás haciendo para solucionarlo”.</p>
+
+
+
+<p>Patria aporta un ejemplo real de retrasos en un proyecto ERP: “Presentamos los hechos detallados de cada bloqueo, discutimos cómo abordarlos y proporcionamos un nuevo cronograma y el incremento de costes”. Con todos los stakeholders implicados, se acordó ampliar el proyecto seis meses.</p>
+
+
+
+<h2 class="wp-block-heading" id="5-cenirse-a-los-hechos-y-evitar-la-especulacion">5. Ceñirse a los hechos y evitar la especulación</h2>
+
+
+
+<p>En situaciones de presión, los CIO pueden sentirse obligados a explicar por qué ocurrió algo antes de tener todos los datos, lo que puede generar confusión y dañar la credibilidad. Johar recomienda centrarse en lo que realmente se sabe.</p>
+
+
+
+<p>“El aspecto más importante al comunicar malas noticias es ceñirse a los hechos y asegurarse de que la gente entiende lo que ha ocurrido”.</p>
+
+
+
+<p>También advierte contra adelantarse a conclusiones. “A veces intentas explicar por qué ha pasado algo, pero cuando termina la investigación, las razones cambian. Entonces la conversación se vuelve mucho más difícil”.</p>
+
+
+
+<p>Los CIO deben ser claros sobre lo que saben y lo que aún están investigando, e indicar cuándo actualizarán la información.</p>
+
+
+
+<h2 class="wp-block-heading" id="6-mantener-la-neutralidad-evitar-defensividad-y-controlar-las-emociones">6. Mantener la neutralidad, evitar defensividad y controlar las emociones</h2>
+
+
+
+<p>Compartir malas noticias puede generar emociones intensas, pero si estas dominan el mensaje, perjudican la conversación. Johar señala que un error habitual es ponerse a la defensiva o centrarse en justificar lo ocurrido o buscar culpables, en lugar de mantener una conversación productiva. Nitzberg coincide: “Los CIO deben evitar un discurso excesivamente detallado, negativo, emocional o centrado en culpas. Hay que compartir los hechos de forma neutral y al nivel adecuado para la alta dirección”.</p>
+
+
+
+<p>McCullough añade: “Evita ser autocomplaciente o centrarte en lo mal que te sientes. Puedes expresar decepción si es necesario, pero brevemente, y centrarte en qué ha pasado, por qué y cómo mejorar”.</p>
+
+
+
+<h2 class="wp-block-heading" id="7-crear-una-cultura-en-la-que-se-comuniquen-las-malas-noticias-a-tiempo">7. Crear una cultura en la que se comuniquen las malas noticias a tiempo</h2>
+
+
+
+<p>Incluso la mejor estrategia de comunicación falla si las personas tienen miedo de hablar. La cultura corporativa es clave en la forma en que se comparten y reciben las malas noticias. Johar explica que las organizaciones maduras invierten en crear entornos donde se pueden mantener conversaciones difíciles: “Las organizaciones profesionales invierten mucho en construir una cultura que permita tener conversaciones difíciles, comunicar malas noticias y gestionarlas”.</p>
+
+
+
+<p>El Masri advierte de lo contrario: “En organizaciones donde se castiga al mensajero, las malas noticias se suavizan, se retrasan y se filtran en cada nivel. Cuando se respeta la escalada temprana, los problemas emergen cuando aún hay margen de actuación”.</p>
+
+
+
+<p>Tirumala añade que una cultura de ‘sí a todo’ puede ser un problema: “Cuando nadie cuestiona y los problemas se ocultan para evitar conflictos, se pierde la señal más importante. Lo que necesitas es una cultura de feedback y decisiones claras, donde la gente se sienta segura diciendo que algo no funciona y exista una estructura para escalar y actuar sobre los problemas”.</p>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+</item>
+
 <item>
   <title>🟠 VS Code Vulnerability Allows One-Click GitHub Token Theft</title>
   <link>https://www.securityweek.com/vs-code-vulnerability-allows-one-click-github-token-theft/</link>
   <pubDate>Thu, 04 Jun 2026 08:14:52 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><p>A researcher has disclosed the full details of the vulnerability and released a PoC without notifying Microsoft in advance.</p>
-<p>The post <a href="https://www.securityweek.com/vs-code-vulnerability-allows-one-click-github-token-theft/">VS Code Vulnerability Allows One-Click GitHub Token Theft</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/vs-code-vulnerability-allows-one-click-github-token-theft/">VS Code Vulnerability Allows One-Click GitHub Token Theft</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
 </item>
 
 <item>
@@ -108,7 +1185,7 @@
 
 
 <p>이어 “MS를 반독점법의 한계를 지속적으로 시험해 온 상습적 위반 기업이라고 표현해도 결코 과장이 아니다”라고 평가했다.<br />dl-ciokorea@foundryco.com</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
 </item>
 
 <item>
@@ -116,7 +1193,7 @@
   <link>https://www.theregister.com/research/2026/06/04/free-ai-model-powers-self-spreading-worm-in-enterprise-test-network/5250918</link>
   <pubDate>Thu, 04 Jun 2026 07:09:00 +0000</pubDate>
   <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>'Attackers can now cheaply operationalize known vulnerabilities at scale,' boffins tell The Reg<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>'Attackers can now cheaply operationalize known vulnerabilities at scale,' boffins tell The Reg<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
 </item>
 
 <item>
@@ -213,37 +1290,7 @@
 
 
 <p>“It’s not just about Anthropic. It’s about what these next-generation AI will be doing,” he said. “This is a major step change in what AI can do.”</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Centralized control over the user experience not only leads to enshittification, but to &quot;despotification&quot;; decentralized protocols bring back democratic ideals (Mike Masnick/Liberalism.org)</title>
-  <link>https://www.techmeme.com/260604/p8#a260604p8</link>
-  <pubDate>Thu, 04 Jun 2026 06:25:01 +0000</pubDate>
-  <source>Techmeme</source>
-  <description><![CDATA[<b>Why this matters: Could impact sign-ins/MFA/Conditional Access — watch for login issues.</b><br/><a href="https://www.liberalism.org/p/enshittification-despotification-and-the-open-internet"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260604/i8.jpg" vspace="4" /></a>
-<p><a href="https://www.techmeme.com/260604/p8#a260604p8" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Mike Masnick / <a href="https://www.liberalism.org/">Liberalism.org</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.liberalism.org/p/enshittification-despotification-and-the-open-internet">Centralized control over the user experience not only leads to enshittification, but to &ldquo;despotification&rdquo;; decentralized protocols bring back democratic ideals</a></b></span>&nbsp; &mdash;&nbsp; In January 2011, somewhere in the crush of bodies in Cairo's Tahrir Square, a man held up a handwritten sign.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Sources: OnePay, a fintech app backed by Walmart and valued at $4B+, has 6M MAUs and $50B in annualized payments, double the figures from the previous year (Paige Smith/Bloomberg)</title>
-  <link>https://www.techmeme.com/260604/p5#a260604p5</link>
-  <pubDate>Thu, 04 Jun 2026 06:05:01 +0000</pubDate>
-  <source>Techmeme</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.bloomberg.com/news/articles/2026-06-02/how-walmart-backed-onepay-is-taking-on-banks?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc4MDQzOTkyMiwiZXhwIjoxNzgxMDQ0NzIyLCJhcnRpY2xlSWQiOiJURzA1QTROM04wQkgwMCIsImJjb25uZWN0SWQiOiIxOEQ5MDA4RjlBNzk0NjEyQUMxNzMyMzRGMjYzNTFENCJ9.yQ5dpS1bUCuP4kcJ1_4pCnecvy83UdkLqEIad4rGZqs"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260604/i5.jpg" vspace="4" /></a>
-<p><a href="https://www.techmeme.com/260604/p5#a260604p5" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Paige Smith / <a href="https://www.bloomberg.com/">Bloomberg</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/articles/2026-06-02/how-walmart-backed-onepay-is-taking-on-banks?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc4MDQzOTkyMiwiZXhwIjoxNzgxMDQ0NzIyLCJhcnRpY2xlSWQiOiJURzA1QTROM04wQkgwMCIsImJjb25uZWN0SWQiOiIxOEQ5MDA4RjlBNzk0NjEyQUMxNzMyMzRGMjYzNTFENCJ9.yQ5dpS1bUCuP4kcJ1_4pCnecvy83UdkLqEIad4rGZqs">Sources: OnePay, a fintech app backed by Walmart and valued at $4B+, has 6M MAUs and $50B in annualized payments, double the figures from the previous year</a></b></span>&nbsp; &mdash;&nbsp; Backed by the retailer and Ribbit Capital, OnePay is reaching beyond its initial customer base to take on banks.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Taiwan and South Korea&#x27;s stock market capitalizations overtake India&#x27;s as global investors favor markets with companies positioned to benefit from the AI boom (Krishn Kaushik/Financial Times)</title>
-  <link>https://www.techmeme.com/260604/p4#a260604p4</link>
-  <pubDate>Thu, 04 Jun 2026 05:50:01 +0000</pubDate>
-  <source>Techmeme</source>
-  <description><![CDATA[<b>Why this matters: Could impact email access or mail flow — monitor delivery and client issues.</b><br/><a href="https://www.ft.com/content/e0a198af-725a-4fa0-a9fe-72725163b4e6"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260604/i4.jpg" vspace="4" /></a>
-<p><a href="https://www.techmeme.com/260604/p4#a260604p4" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Krishn Kaushik / <a href="https://www.ft.com/">Financial Times</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.ft.com/content/e0a198af-725a-4fa0-a9fe-72725163b4e6">Taiwan and South Korea's stock market capitalizations overtake India's as global investors favor markets with companies positioned to benefit from the AI boom</a></b></span>&nbsp; &mdash;&nbsp; Exchanges in Taiwan and South Korea have overtaken India's in the past week as the two countries' chipmakers surge</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
 </item>
 
 <item>
@@ -476,27 +1523,7 @@
 
 
 <p>티루말라는 “누구도 이견을 제기하지 않고 조직의 평화를 유지하기 위해 문제를 덮어버리면 가장 중요한 경고 신호를 놓치게 된다”라며 “조직에 필요한 것은 피드백과 명확한 의사결정 문화다. 문제가 있다는 사실을 안전하게 말할 수 있어야 하며, 문제가 단순히 인지되는 데 그치지 않고 적절히 보고되고 실제 조치로 이어질 수 있는 체계가 필요하다”라고 강조했다. <br />dl-ciokorea@foundryco.com</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Current and former employees detail Amazon&#x27;s e-commerce struggles in India, where local rivals have challenged the company more than anywhere outside of China (Bloomberg)</title>
-  <link>https://www.techmeme.com/260604/p3#a260604p3</link>
-  <pubDate>Thu, 04 Jun 2026 05:30:01 +0000</pubDate>
-  <source>Techmeme</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.bloomberg.com/news/features/2026-06-04/amazon-has-struggled-to-crack-the-world-s-most-populous-nation?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc4MDUzODU2MywiZXhwIjoxNzgxMTQzMzYzLCJhcnRpY2xlSWQiOiJURzMxR0VOM04wQjkwMCIsImJjb25uZWN0SWQiOiIxRkVFRTMxMzc0QjQ0MEQ3OUEzM0QyQUY1MDFFMUM0MCJ9.zL6HcBcKO6IDDhjtAdRJKt6plNu3m4zJQtqtqj2W8x4"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260604/i3.jpg" vspace="4" /></a>
-<p><a href="https://www.techmeme.com/260604/p3#a260604p3" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="https://www.bloomberg.com/">Bloomberg</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/features/2026-06-04/amazon-has-struggled-to-crack-the-world-s-most-populous-nation?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc4MDUzODU2MywiZXhwIjoxNzgxMTQzMzYzLCJhcnRpY2xlSWQiOiJURzMxR0VOM04wQjkwMCIsImJjb25uZWN0SWQiOiIxRkVFRTMxMzc0QjQ0MEQ3OUEzM0QyQUY1MDFFMUM0MCJ9.zL6HcBcKO6IDDhjtAdRJKt6plNu3m4zJQtqtqj2W8x4">Current and former employees detail Amazon's e-commerce struggles in India, where local rivals have challenged the company more than anywhere outside of China</a></b></span>&nbsp; &mdash;&nbsp; More than a decade after entering the country, the company is battling Walmart's Flipkart and other incumbents.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 US SEC filing: Vanguard marks down Ola Consumer&#x27;s valuation to ~$70.3M; Ola, which faces intense competition from Uber and Rapido, was valued at $7.3B in 2021 (Kunal Manchanada/Entrackr)</title>
-  <link>https://www.techmeme.com/260604/p1#a260604p1</link>
-  <pubDate>Thu, 04 Jun 2026 04:45:01 +0000</pubDate>
-  <source>Techmeme</source>
-  <description><![CDATA[<b>Why this matters: Could impact sign-ins/MFA/Conditional Access — watch for login issues.</b><br/><a href="https://entrackr.com/news/vanguard-marks-down-olas-valuation-to-70-mn-11903535"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260604/i1.jpg" vspace="4" /></a>
-<p><a href="https://www.techmeme.com/260604/p1#a260604p1" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Kunal Manchanada / <a href="https://entrackr.com/">Entrackr</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://entrackr.com/news/vanguard-marks-down-olas-valuation-to-70-mn-11903535">US SEC filing: Vanguard marks down Ola Consumer's valuation to ~$70.3M; Ola, which faces intense competition from Uber and Rapido, was valued at $7.3B in 2021</a></b></span>&nbsp; &mdash;&nbsp; US-based asset management firm Vanguard has sharply marked down the valuation of ride-hailing company Ola Cosumer to approximately $70.3 million &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
@@ -629,17 +1656,7 @@
 
 
 <p></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Sources: Meta has repeatedly delayed plans to release the Muse Spark API due to bugs and infrastructure needs; Meta says it plans to release it this month (Meghan Bobrowsky/Wall Street Journal)</title>
-  <link>https://www.techmeme.com/260603/p70#a260603p70</link>
-  <pubDate>Thu, 04 Jun 2026 03:20:02 +0000</pubDate>
-  <source>Techmeme</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.wsj.com/tech/ai/meta-keeps-delaying-the-release-of-its-new-ai-model-to-developers-f8569c8c?st=YAquJj&amp;reflink=desktopwebshare_permalink"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260603/i70.jpg" vspace="4" /></a>
-<p><a href="https://www.techmeme.com/260603/p70#a260603p70" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Meghan Bobrowsky / <a href="https://www.wsj.com/">Wall Street Journal</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.wsj.com/tech/ai/meta-keeps-delaying-the-release-of-its-new-ai-model-to-developers-f8569c8c?st=YAquJj&amp;reflink=desktopwebshare_permalink">Sources: Meta has repeatedly delayed plans to release the Muse Spark API due to bugs and infrastructure needs; Meta says it plans to release it this month</a></b></span>&nbsp; &mdash;&nbsp; The shifting timeline is a setback for Meta's ability to monetize its massive investments in building frontier AI models</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
 </item>
 
 <item>
@@ -784,27 +1801,7 @@
 
 
 <p><em>This article originally appeared on <a href="https://www.infoworld.com/article/4181004/openai-fixed-a-visibility-problem-the-governance-problem-remains.html" target="_blank">InfoWorld</a>.</em></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
-</item>
-
-<item>
-  <title>🔴 Meta says Australia&#x27;s proposed tax on domestic revenue for tech giants that don&#x27;t sign news licensing deals violates the US-Australia Free Trade Agreement (Byron Kaye/Reuters)</title>
-  <link>https://www.techmeme.com/260603/p67#a260603p67</link>
-  <pubDate>Thu, 04 Jun 2026 02:10:00 +0000</pubDate>
-  <source>Techmeme</source>
-  <description><![CDATA[<b>Why this matters: Potential data exposure — check monitoring and incident response readiness.</b><br/><a href="https://www.reuters.com/legal/transactional/meta-accuses-australia-breaching-fta-invokes-us-trade-action-2026-06-04/"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260603/i67.jpg" vspace="4" /></a>
-<p><a href="https://www.techmeme.com/260603/p67#a260603p67" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Byron Kaye / <a href="http://www.reuters.com/">Reuters</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.reuters.com/legal/transactional/meta-accuses-australia-breaching-fta-invokes-us-trade-action-2026-06-04/">Meta says Australia's proposed tax on domestic revenue for tech giants that don't sign news licensing deals violates the US-Australia Free Trade Agreement</a></b></span>&nbsp; &mdash;&nbsp; Meta (META.O) accused Australia of violating a free trade agreement with the U.S. by proposing a new tax on certain tech giants &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Bengaluru-based grocery delivery startup FirstClub raised a $55M Series B co-led by Peak XV and Sofina at a $255M valuation, up from $120M in September 2025 (Jagmeet Singh/TechCrunch)</title>
-  <link>https://www.techmeme.com/260603/p66#a260603p66</link>
-  <pubDate>Thu, 04 Jun 2026 01:50:02 +0000</pubDate>
-  <source>Techmeme</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://techcrunch.com/2026/06/03/firstclub-doubles-valuation-to-255m-in-nine-months-on-quality-first-grocery-bet/"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260603/i66.jpg" vspace="4" /></a>
-<p><a href="https://www.techmeme.com/260603/p66#a260603p66" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Jagmeet Singh / <a href="http://techcrunch.com/">TechCrunch</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://techcrunch.com/2026/06/03/firstclub-doubles-valuation-to-255m-in-nine-months-on-quality-first-grocery-bet/">Bengaluru-based grocery delivery startup FirstClub raised a $55M Series B co-led by Peak XV and Sofina at a $255M valuation, up from $120M in September 2025</a></b></span>&nbsp; &mdash;&nbsp; In a quick-commerce market obsessed with speed, Indian startup FirstClub has convinced investors that quality may be a fresh opportunity &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
 </item>
 
 <item>
@@ -929,7 +1926,7 @@
 
 
 <p><em>This article originally appeared on <a href="https://www.infoworld.com/article/4180925/hole-in-githubs-browser-based-vscode-editor-could-lead-to-stolen-token.html" target="_blank">InfoWorld</a>.</em></p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 10h ago]]></description>
 </item>
 
 <item>
@@ -937,7 +1934,7 @@
   <link>https://www.zdnet.com/article/how-to-cool-down-phone-overheating-android-auto/</link>
   <pubDate>Thu, 04 Jun 2026 00:19:00 +0000</pubDate>
   <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Android Auto uses a lot of resources, which can make your phone hot. Here's how I prevent mine from overheating.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Android Auto uses a lot of resources, which can make your phone hot. Here's how I prevent mine from overheating.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 11h ago]]></description>
 </item>
 
 <item>
@@ -945,7 +1942,7 @@
   <link>https://www.theregister.com/networks/2026/06/03/curving-beams-could-fool-anti-jamming-tech/5250872</link>
   <pubDate>Wed, 03 Jun 2026 20:57:39 +0000</pubDate>
   <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>It's hard to stop a signal jammer if you can't locate the source, say Rice University researchers<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 11h ago]]></description>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>It's hard to stop a signal jammer if you can't locate the source, say Rice University researchers<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 14h ago]]></description>
 </item>
 
 <item>
@@ -953,7 +1950,23 @@
   <link>https://www.theregister.com/os-platforms/2026/06/03/grep-this-microsoft-grafts-most-linux-commands-onto-windows/5250796</link>
   <pubDate>Wed, 03 Jun 2026 19:04:28 +0000</pubDate>
   <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Coreutils serves over 75 Unix commands in Windows and PowerShell command lines<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Coreutils serves over 75 Unix commands in Windows and PowerShell command lines<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 16h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 I tested Microsoft Copilot Health with my real medical records - here&#x27;s my verdict</title>
+  <link>https://www.zdnet.com/article/microsoft-copilot-health-medical-issues/</link>
+  <pubDate>Wed, 03 Jun 2026 17:02:07 +0000</pubDate>
+  <source>ZDNet</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>By sharing your health history and records with Copilot, the AI aims to better address your own medical questions. But what are the downsides?<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 18h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 No longer just a Copilot, Microsoft&#x27;s AI wants to take the wheel</title>
+  <link>https://www.theregister.com/ai-and-ml/2026/06/03/no-longer-just-a-copilot-microsofts-ai-wants-to-take-the-wheel/5250718</link>
+  <pubDate>Wed, 03 Jun 2026 16:49:15 +0000</pubDate>
+  <source>The Register</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Always-on agent promises to keep work moving, provided you trust it with practically everything<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 19h ago]]></description>
 </item>
 
 <item>
@@ -1036,7 +2049,7 @@
 
 
 <p></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 16h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 19h ago]]></description>
 </item>
 
 <item>
@@ -1044,7 +2057,106 @@
   <link>https://www.zdnet.com/article/red-hat-hit-by-npm-supply-chain-attack-how-to-stay-safe/</link>
   <pubDate>Wed, 03 Jun 2026 15:33:57 +0000</pubDate>
   <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: Potential data exposure — check monitoring and incident response readiness.</b><br/>Days after IBM and Red Hat announced a master security plan for open-source software, Red Hat suffers a major breach of its own. Here's what you can do about it.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 16h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Potential data exposure — check monitoring and incident response readiness.</b><br/>Days after IBM and Red Hat announced a master security plan for open-source software, Red Hat suffers a major breach of its own. Here's what you can do about it.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 20h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Observabilidad colaborativa: cómo integrar una misma visión entre tecnología, servicio y negocio</title>
+  <link>https://www.cio.com/article/4180734/observabilidad-colaborativa-como-integrar-una-misma-vision-entre-tecnologia-servicio-y-negocio.html</link>
+  <pubDate>Wed, 03 Jun 2026 15:04:43 +0000</pubDate>
+  <source>CIO.com</source>
+  <description><![CDATA[<b>Why this matters: Could impact sign-ins/MFA/Conditional Access — watch for login issues.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<p>En la economía digital actual, la <strong>experiencia del cliente (CX)</strong> ya se compara frente a la que ofrecen plataformas nativas digitales como Google, Netflix o Amazon. Cada interacción digital, ya sea una transferencia, una compra o una consulta desde un dispositivo móvil, se evalúa bajo ese mismo estándar de inmediatez, fluidez y simplicidad. Esto ha redefinido por completo las expectativas de los usuarios.</p>
+
+
+
+<p>Para las organizaciones, los canales virtuales se han consolidado como el principal punto de relación con el cliente y, al mismo tiempo, como el espacio donde cualquier fricción tiene un impacto inmediato. Un ligero retraso, un error intermitente o una degradación del servicio ya no se perciben como incidencias técnicas, sino como una experiencia fallida.</p>
+
+
+
+<p>La consecuencia es clara. El nivel de exigencia es transversal y constante. El cliente no distingue entre industrias y espera que cualquier servicio digital funcione con la misma calidad que las plataformas que marcan el ritmo de la economía digital. Sin embargo, muchas organizaciones siguen gestionando esa experiencia desde una lógica fragmentada, donde cada área observa solo una parte de la realidad.</p>
+
+
+
+<p>Durante años, la supervisión de los entornos digitales se ha apoyado en herramientas centradas en la infraestructura y el rendimiento interno de las aplicaciones. El APM permitió entender lo que ocurría en el backend; posteriormente, el RUM añadió visibilidad sobre el comportamiento de los usuarios reales.</p>
+
+
+
+<p>Ambos enfoques supusieron avances relevantes, pero compartían una limitación clave: su carácter reactivo. Las incidencias se detectaban cuando el impacto ya era visible, cuando el usuario ya experimentaba lentitud, errores o interrupciones, y cuando el negocio empezaba a notar sus consecuencias en forma de abandono, menor conversión o incremento de incidencias.</p>
+
+
+
+<p>Pero el verdadero problema no es solo tecnológico. En muchas organizaciones, los equipos de IT, calidad y negocio operan con métricas, prioridades y lenguajes distintos. Cada área interpreta los datos desde su propio marco, lo que dificulta construir una visión compartida de lo que está ocurriendo en el canal digital. El resultado es una <strong>toma de decisiones fragmentada</strong> y una menor capacidad de anticipación.</p>
+
+
+
+<h2 class="wp-block-heading" id="la-evolucion-de-la-observabilidad-el-objetivo-ya-no-es-solo-detectar-fallos-sino-anticiparlos">La evolución de la observabilidad: el objetivo ya no es solo detectar fallos, sino anticiparlos</h2>
+
+
+
+<p>Al mismo tiempo, la complejidad de los servicios digitales ha transformado la naturaleza de los fallos digitales. Hoy, muchas incidencias no son caídas completas, sino degradaciones parciales: procesos que funcionan con lentitud, errores intermitentes o comportamientos inconsistentes según el tipo de dispositivo, la red o integraciones externas. Son fallos difíciles de detectar desde dentro, pero con un impacto directo en la experiencia del usuario y, en consecuencia, en los resultados del negocio.</p>
+
+
+
+<p>En este contexto, la observabilidad ha evolucionado hacia un enfoque más avanzado que combina distintas capacidades, desde la monitorización de infraestructura hasta el análisis del comportamiento real y la simulación continua de interacciones, para construir una <strong>visión integral del servicio digital</strong>. El objetivo ya no es solo detectar fallos, sino anticiparlos.</p>
+
+
+
+<p>Aquí, la <strong>monitorización sintética</strong> aporta una capa adicional de observabilidad especialmente valiosa. Al actuar como un cliente incógnito digital, replica de forma continua (24/7) las interacciones que los usuarios realizan en los canales virtuales y permite ejecutar flujos críticos como el acceso, la consulta de información o la realización de operaciones de forma automatizada y constante.</p>
+
+
+
+<p>Su valor diferencial reside en que no depende del tráfico real ni requiere integración previa, lo que la convierte en un complemento clave de la monitorización tradicional. Además, cuando estas pruebas se ejecutan desde dispositivos móviles reales conectados a redes y operadores locales, la visibilidad que se obtiene es especialmente relevante, ya que permite observar el comportamiento del servicio en exactamente las mismas condiciones en las que lo experimentan los usuarios.</p>
+
+
+
+<p>Esto facilita detectar incidencias difíciles de identificar desde dentro, como problemas asociados a redes concretas, intermitencias en determinados operadores o variaciones de rendimiento según el entorno de conexión, así como anticiparse a su impacto antes de que escalen y afecten a miles de usuarios.</p>
+
+
+
+<p>Sin embargo, el verdadero cambio no está únicamente en la incorporación de nuevas herramientas, sino en cómo éstas se integran dentro de la organización. La observabilidad colaborativa introduce una forma distinta de entender y utilizar la información. Cuando tecnología, calidad y negocio trabajan sobre una misma base de datos y un contexto compartido, la conversación deja de centrarse en métricas aisladas y evoluciona hacia decisiones estratégicas alineadas: qué está fallando, por qué ocurre, a quién impacta y con qué consecuencias.</p>
+
+
+
+<p>Esto convierte la observabilidad en un elemento de alineación transversal. Permite conectar indicadores técnicos con resultados de negocio, priorizar en función del impacto en el cliente y actuar con mayor coherencia y rapidez.</p>
+
+
+
+<p>En este punto, tecnologías como la inteligencia artificial y la monitorización sintética no deben entenderse como un ejercicio de sofisticación, sino como herramientas que ayudan a reducir el ruido operativo, aportar contexto y facilitar que los distintos equipos trabajen sobre una misma realidad digital.</p>
+
+
+
+<p>Las organizaciones que avanzan en esta dirección no solo mejoran su capacidad de detección temprana. Dan un paso más relevante: pasan de gestionar incidencias a gestionar experiencia. Esto implica anticipar problemas antes de que el cliente los perciba, proteger la calidad del servicio de forma proactiva y tomar decisiones basadas en impacto real, no únicamente en métricas técnicas.</p>
+
+
+
+<p>En un entorno donde cada interacción cuenta, esta capacidad marca la diferencia. Porque la ventaja competitiva ya no reside en reaccionar cuando algo falla, sino en evitar que el fallo llegue a producirse.</p>
+
+
+
+<p>La observabilidad, en este nuevo contexto, deja de ser una función limitada al ámbito tecnológico para convertirse en un habilitador estratégico del negocio. Cerrar la brecha entre tecnología, calidad del servicio y negocio no es solo una cuestión de herramientas, sino de visión compartida. Las organizaciones que lo consigan estarán mejor preparadas para gestionar la complejidad del entorno digital, optimizar sus operaciones y fortalecer la relación con sus clientes.</p>
+
+
+
+<p>Porque, en última instancia, no se trata solo de ver mejor lo que ocurre en los sistemas. Se trata de entender mejor lo que viven los usuarios. Y actuar en consecuencia.</p>
+
+
+
+><figure class="wp-block-media-text__media"><img alt="Hismael Alayo" class="wp-image-4180739 size-full" src="https://b2b-contenthub.com/wp-content/uploads/2026/06/Hismael_Alayo.jpg?quality=50&amp;strip=all&amp;w=891" width="400px" /></figure><div class="wp-block-media-text__content">
+<p><strong><em>El autor de este artículo es <a href="https://www.linkedin.com/in/hismael-alayo/" rel="nofollow" target="_blank">Hismael Alayo</a>, ejecutivo con más de 20 años al frente del crecimiento de negocios tecnológicos en mercados altamente competitivos. En la actualidad es chief business officer de Movizzon, compañía de la que lidera la estrategia global de crecimiento y posicionamiento. En el pasado, fue cofundador, CTO y country manager de Advante Digital, donde durante 5 años lideró la ejecución de proyectos digitales de alto impacto para grandes compañías en Chile, Argentina, Perú y Colombia, consolidando la operación en múltiples mercados de la región.</em></strong></p>
+</div></div>
+
+
+
+<p></p>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 20h ago]]></description>
 </item>
 
 <item>
@@ -1171,7 +2283,15 @@
 
 
 <p></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 17h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 21h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 I paid Microsoft&#x27;s premium Copilot agents to do my work - they were confidently bad at it</title>
+  <link>https://www.zdnet.com/article/microsoft-365-premium-copilot-agents-hands-on/</link>
+  <pubDate>Wed, 03 Jun 2026 14:43:00 +0000</pubDate>
+  <source>ZDNet</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Can you get a Copilot agent to do your work for you? I tried, but the AI wasn't ready to play along.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 21h ago]]></description>
 </item>
 
 <item>
@@ -1179,7 +2299,7 @@
   <link>https://www.theregister.com/security/2026/06/03/another-bug-hunter-leaks-microsoft-exploits-in-defiance-of-companys-handling-of-vulnerability-disclosures/5250590</link>
   <pubDate>Wed, 03 Jun 2026 14:30:00 +0000</pubDate>
   <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Researchers follow in Nightmare Eclipse’s footsteps, flipping off Redmond in favor of insta-leaks<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 17h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Researchers follow in Nightmare Eclipse’s footsteps, flipping off Redmond in favor of insta-leaks<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 21h ago]]></description>
 </item>
 
 <item>
@@ -1252,7 +2372,7 @@
 
 
 <p>“Esa capa debe indicar que la calidad de los datos y los controles de gobernanza cumplen un mínimo antes de que estemos dispuestos a liberar la IA generativa sobre ellos”, concluye.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 18h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 21h ago]]></description>
 </item>
 
 <item>
@@ -1353,7 +2473,7 @@
 
 
 <p>Google, too, offers a similar model training and fine-tuning through the <a href="https://www.computerworld.com/article/4161990/gemini-enterprise-update-brings-ai-agents-into-collaborative-workflows.html">Gemini Enterprise Agent Platform</a>, earlier known as <a href="https://www.infoworld.com/article/2336804/google-updates-vertex-ai-with-new-llm-capabilities-agent-builder-feature.html">Vertex AI</a>. Frontier Tuning, which is currently in private preview, can only be accessed now through Microsoft’s partner-led FDE program. It is expected to be made available via <a href="https://www.infoworld.com/article/3989489/microsoft-aims-to-improve-agent-versatility-with-copilot-studio-updates.html">Copilot Studio</a> and <a href="https://www.infoworld.com/article/4165766/building-ai-apps-and-agents-with-microsoft-foundry.html">Microsoft Foundry</a> soon, Microsoft said.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 20h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 23h ago]]></description>
 </item>
 
 <item>
@@ -1362,7 +2482,7 @@
   <pubDate>Wed, 03 Jun 2026 11:56:43 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: Could impact sign-ins/MFA/Conditional Access — watch for login issues.</b><br/><p>An improper authentication bug allows attackers to escalate their privileges and escape containers.</p>
-<p>The post <a href="https://www.securityweek.com/organizations-warned-of-exploited-linux-kernel-vulnerability/">Organizations Warned of Exploited Linux Kernel Vulnerability</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 20h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/organizations-warned-of-exploited-linux-kernel-vulnerability/">Organizations Warned of Exploited Linux Kernel Vulnerability</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 23h ago]]></description>
 </item>
 
 <item>
@@ -1447,114 +2567,7 @@
 
 
 <p>The second, the Agent Control Specifications (ACS), provides an open standard framework for defining and enforcing governance policies in a portable manner, capable of moving with the agent across different frameworks, platforms, and runtimes instead of being tied to a specific vendor’s technology stack. Together, MXC, MDASH, ASSERT, and ACS sum up Microsoft’s attempt at securing AI models’ entire lifecycle, from the code they generate to the actions they take later.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 20h ago]]></description>
-</item>
-
-<item>
-  <title>🔴 Who authorized the algorithm? Reckoning with ungoverned AI</title>
-  <link>https://www.cio.com/article/4180186/who-authorized-the-algorithm-reckoning-with-ungoverned-ai.html</link>
-  <pubDate>Wed, 03 Jun 2026 11:00:00 +0000</pubDate>
-  <source>CIO.com</source>
-  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/><div id="remove_no_follow">
-		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
-					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
-						<div class="article-column__content">
-<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
-
-
-
-<p>Three business units. One weekend. Zero governance checkpoints. That is what a Fortune 500 CIO I advise discovered last quarter when autonomous AI agents deployed by separate teams accessed customer databases, initiated vendor negotiations and generated compliance reports without a single human sign-off. Nobody verified the context protocols connecting those agents to enterprise systems. Nobody asked whether the AI’s decisions aligned with the company’s risk appetite. Nobody even knew the agents had been activated until Monday morning. The agents simply acted, and the enterprise had no mechanism to hold them accountable.</p>
-
-
-
-<p>That scenario captures everything that has changed about the CIO role. <a href="https://journals.sagepub.com/doi/10.1177/02683962241258213" rel="nofollow">Schaper et al. (2025) in the Journal of Information Technology</a> demonstrated through analysis of U.S. firm patent portfolios that CIO characteristics directly shape digital exploration outcomes. The CIO is no longer an operational custodian. Bendig et al. (2023) in MIS Quarterly proved that CIO presence in the top management team shifts organizational attention toward digital innovation. The academic evidence and boardroom reality have converged: the CIO now architects enterprise competitiveness. But competitiveness without governance is recklessness. And most organizations have not caught up.</p>
-
-
-
-<h2 class="wp-block-heading" id="the-structural-transformation-is-not-incremental">The structural transformation is not incremental</h2>
-
-
-
-<p><a href="https://www.deloitte.com/us/en/about/press-room/deloitte-tech-survey-reveals-how-leaders-redefine-enterprise-value.html" rel="nofollow">Deloitte’s 2025 Tech Executive Survey</a> of 622 senior technology leaders found that 65% of CIOs now report directly to the CEO, up from 41% a decade ago. Thirty-six percent manage a profit-and-loss statement. Fifty-two percent of technology organizations are now viewed as revenue generators rather than service centers. Sixty-seven percent of CIOs aspire to the CEO role itself. These are not technologists playing at business. These are business leaders whose technological fluency is the single most potent competitive advantage their enterprises possess.</p>
-
-
-
-<p>McKinsey crystallized this in their analysis <a href="https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/a-new-dawn-for-the-technology-officer" rel="nofollow">A New Dawn for the Technology Officer</a>, identifying four CIO archetypes:</p>
-
-
-
-<ul class="wp-block-list">
-<li><strong>The Orchestrator</strong>, who leads digital strategy with P&amp;L accountability</li>
-
-
-
-<li><strong>The Builder</strong>, who creates AI-native revenue streams</li>
-
-
-
-<li><strong>The Protector</strong>, who owns cybersecurity as revenue protection</li>
-
-
-
-<li><strong>The Operator</strong>, who integrates technology so deeply into business that the boundary between IT and enterprise vanishes entirely.</li>
-</ul>
-
-
-
-<p>The <a href="https://www.mckinsey.com/capabilities/mckinsey-technology/our-insights/mckinsey-global-tech-agenda-2026" rel="nofollow">McKinsey Global Tech Agenda 2026</a> confirms that AI investment has surpassed cybersecurity and infrastructure modernization as the number-one CIO priority. Gartner’s 2026 survey of 3,186 respondents across 88 countries found that 94% of CIOs expect major shifts within 24 months, yet only 48% of digital initiatives currently meet targets. The gap between ambition and execution is precisely where CIO leadership matters most.</p>
-
-
-
-<h2 class="wp-block-heading" id="the-governance-vacuum-that-nobody-is-filling">The governance vacuum that nobody is filling</h2>
-
-
-
-<p>Here is where strategic elevation collides with operational peril. A <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6221439" rel="nofollow">recent scholarly analysis by Sprongl (2026)</a> argues persuasively that agentic AI does not create governance fragility so much as it exposes existing ambiguity in how organizations allocate decision rights and consequence ownership. When execution velocity exceeds authority response capacity, a structural accountability gap emerges. That gap is the CIO’s problem to solve.</p>
-
-
-
-<p>The numbers are sobering. <a href="https://www.mckinsey.com/capabilities/risk-and-resilience/our-insights/deploying-agentic-ai-with-safety-and-security-a-playbook-for-technology-leaders" rel="nofollow">McKinsey’s agentic AI security analysis</a> found that 80% of organizations have encountered risky behaviors from AI agents, including unauthorized data exposure and improper system access. Harvard Business Review’s 2024 analysis revealed a striking disconnect: While 76% of board members use generative AI in some capacity, only 12% of boards turn to the CIO for AI input. That gap is a governance failure waiting to happen. BlackFog’s 2026 survey found 49% of employees using unsanctioned AI tools. IBM’s 2025 Cost of Data Breach Report documented that shadow AI adds $670,000 to average breach costs, with 97% of AI-related breaches lacking proper access controls. CyberArk reports machine identities outnumber human identities 80 to 1 in most enterprises. Each represents an ungoverned attack surface.</p>
-
-
-
-<p>The Model Context Protocol (MCP), launched by Anthropic in 2024 to standardize AI-to-enterprise data connections, illustrates the challenge perfectly. Documented incidents already include GitHub MCP data exfiltration, cross-tenant exposure through misconfigured integrations and remote code execution vulnerabilities. A <a href="https://www.ijcaonline.org/archives/volume187/number74/governance-frameworks-for-enterprise-ai-systems-operating-in-regulated-environments/" rel="nofollow">systematic review of enterprise AI governance</a> published in January 2026 found that while data governance and cybersecurity practices are relatively mature, significant weaknesses persist in the oversight of autonomous agentic AI systems. Researchers have confirmed that 41.7% of audited MCP implementations contain serious vulnerabilities.</p>
-
-
-
-<h2 class="wp-block-heading" id="zero-trust-ai-governance-the-playbook-that-works">Zero-trust AI governance: The playbook that works</h2>
-
-
-
-<p>Working with Fortune 500 clients across financial services, technology, entertainment and travel, I have observed a consistent pattern. Organizations that treat AI governance as a compliance checkbox fail. Organizations that embed zero-trust principles directly into their AI architecture succeed.</p>
-
-
-
-<p>Every AI agent’s request to access enterprise data should be treated like an unknown visitor at the front door: verified, scoped and logged. The ContextGuard framework I developed at HCLTech applies zero-trust principles specifically to AI context protocol interactions across four layers: Cryptographic verification of AI server identity before any data exchange, least-privilege scope enforcement limiting each agent to the minimum tool access required for its specific task, continuous behavioral monitoring detecting anomalous agent-to-tool interactions in real time, and immutable audit trail generation aligned with NIST AI Risk Management Framework and ISO/IEC 42001. In practice, this means an agent authorized to query a customer database cannot simultaneously access financial systems or code repositories, even if the underlying MCP server technically supports those connections. The principle is simple: Trust nothing, verify everything, log always.</p>
-
-
-
-<p>The <a href="https://cloudsecurityalliance.org/blog/2026/02/02/the-agentic-trust-framework-zero-trust-governance-for-ai-agents" rel="nofollow">Cloud Security Alliance’s Agentic Trust Framework</a> validates this approach, treating agent autonomy as something earned through demonstrated trustworthiness across progressive maturity levels. <a href="https://arxiv.org/abs/2505.11579" rel="nofollow">Engin and Hand’s research on dimensional governance</a> reinforces the point: Static risk categories are insufficient for systems whose autonomy shifts dynamically. Microsoft’s Entra Agent ID, which gives each AI agent its own unique identity within a zero-trust architecture, points in the same direction. The industry is converging on a single insight: autonomous AI requires autonomous governance.</p>
-
-
-
-<h2 class="wp-block-heading" id="the-cio-who-governs-ai-will-govern-the-enterprise">The CIO who governs AI will govern the enterprise</h2>
-
-
-
-<p>Greg Carmichael went from CIO to CEO of Fifth Third Bancorp. Stephen Gillett moved from CIO of Starbucks to CEO of Google’s cybersecurity subsidiary. Dawn Lepore built Charles Schwab’s e-commerce operation as CIO before becoming CEO of Drugstore.com. Only 6% of Fortune 500 CEOs currently hold technology backgrounds. That number will climb, because when AI touches every revenue stream, every compliance obligation and every competitive decision, the executive who governs that technology at scale possesses an irreplaceable advantage.</p>
-
-
-
-<p><a href="https://arxiv.org/abs/2407.10247v2" rel="nofollow">Schmitt’s 2025 research on AI integration in the C-suite</a> argues that existing executive roles are structurally inadequate for governing AI at enterprise scale. Whether the answer is a Chief AI Officer or an expanded CIO mandate, the implication is identical: Technology governance authority is migrating upward. Gartner’s Digital Vanguard CIOs already achieve 71% success rates on digital initiatives versus the 48% average. The differentiator is not budget or talent. It is governance rigor.</p>
-
-
-
-<p>The modern CIO is no longer a technologist. The modern CIO is the governance architect of how enterprises think, decide and compete in an AI-mediated economy. The organizations that understand this will dominate their markets. The ones that do not will discover, too late, that the most dangerous decision they ever made was leaving AI governance to chance.</p>
-
-
-
-<p><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><strong><a href="https://www.cio.com/expert-contributor-network/">Want to join?</a></strong></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 21h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
@@ -1751,367 +2764,7 @@
 
 
 <p>The result would be the most significant shift in enterprise security spending since the rise of cloud computing — not because leaders suddenly fear cyberattacks more, but because they increasingly view cybersecurity as the operational foundation that makes large-scale AI adoption possible.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 22h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 The value of vendor relationships in the AI era</title>
-  <link>https://www.cio.com/article/4180183/the-value-of-vendor-relationships-in-the-ai-era.html</link>
-  <pubDate>Wed, 03 Jun 2026 10:00:00 +0000</pubDate>
-  <source>CIO.com</source>
-  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/><div id="remove_no_follow">
-		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
-					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
-						<div class="article-column__content">
-<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
-
-
-
-<p>Since the rapid expansion of AI tools, the balance of power between customers and vendors has shifted dramatically. Organizations are no longer as dependent on software developers, solution architects and integration specialists to build functional tools or workflows. Today, internal teams can leverage platforms such as Claude, Lovable, Perplexity and other AI-assisted development tools to quickly prototype and even deploy functional products with minimal technical resources. What once required months of vendor engagement and implementation cycles can now be tested internally in days. Recent reporting from Business Insider highlighted how <a href="https://www.businessinsider.com/ai-coding-tools-buy-versus-build-software-saas-netlify-bolt-2025-6" rel="nofollow">AI coding tools are reshaping the traditional build-versus-buy equation and placing pressure on legacy SaaS business models</a> as organizations increasingly evaluate what can be developed internally versus purchased externally.</p>
-
-
-
-<p>This shift has created a new reality for software vendors. Technical complexity alone is no longer enough to justify long implementations, bloated subscriptions or stagnant roadmaps. However, this does not mean vendor relationships are losing value. In many ways, the opportunity for stronger vendor and customer partnerships has never been greater. Vendors that adapt to this new environment and align themselves with the speed and urgency of their customers will remain essential strategic partners.</p>
-
-
-
-<p>Customers have become more empowered because AI democratizes access to development and analytics capabilities. Business intelligence and reporting no longer need to rely on feeding data downstream into rigid systems that require specialized development work to interpret. Organizations now have direct access to APIs, AI-assisted analytics and centralized data strategies that allow them to build insights and workflows faster than ever before. This is especially important in industries like hospitality where data is often fragmented across multiple systems, vendors and operational platforms.</p>
-
-
-
-<p>As a result, technology stacks are likely to shrink over the next several years. Standalone business intelligence tools, reporting platforms and low-value SaaS subscriptions are among the most vulnerable categories. Organizations are beginning to question why they should continue paying significant licensing fees for platforms that only visualize information when modern AI tools can analyze, summarize and operationalize that same data in real time. Middleware and excessive integration layers may also become less necessary as organizations centralize data and leverage direct API connectivity.</p>
-
-
-
-<p>That said, software vendors still provide tremendous value when they mature their approach and focus on solving real business problems. Scalability, reliability, security, compliance and operational expertise still matter significantly. While internal AI development tools can accelerate innovation, many organizations lack the in-house subject matter expertise, governance models and support structures necessary to maintain enterprise-grade systems long term. AI-assisted development connectors can also be unstable, and security concerns remain top of mind for organizations handling sensitive customer or operational data.</p>
-
-
-
-<p>This is where vendors have an opportunity to separate themselves from becoming replaceable integrations or bottlenecks. Vendors that survive this shift will be the ones that respond faster, deliver innovation quicker and maintain accountability to their product roadmaps. McKinsey &amp; Company recently noted that <a href="https://www.mckinsey.com/industries/technology-media-and-telecommunications/our-insights/upgrading-software-business-models-to-thrive-in-the-ai-era" rel="nofollow">software providers are being forced to rethink traditional SaaS business models</a> as customers increasingly expect AI-native workflows, embedded automation and faster delivery cycles tied directly to operational outcomes. Customers now understand how quickly solutions can be built internally. That changes expectations dramatically. If internal non-technical users can ship prototypes in a matter of days, SaaS providers can no longer justify excessively slow-release cycles, expensive implementations or unclear timelines.</p>
-
-
-
-<p>One of the biggest differentiators moving forward will be the ability to provide AI-native actionable insights instead of generic AI features. Simply embedding a chatbot or basic large language model into a platform is no longer impressive. Customers are looking for systems that can identify meaningful business opportunities and operational risks while enabling workflows that immediately drive action.</p>
-
-
-
-<p>In hospitality, for example, actionable AI could identify that a large group booking has unexpectedly cancelled, creating a sudden occupancy gap. The insight alone is not enough. Modern systems should automatically recommend pricing adjustments to regain market share, identify labor scheduling opportunities to reduce unnecessary staffing costs, and surface operational changes that help the business pivot quickly. Human decision-makers still remain critical, but systems should actively support and accelerate those decisions.</p>
-
-
-
-<p>The same principle applies to guest experience. AI should not stop at generic automated responses that mimic a knowledge base article. It should support workflows that can modify reservations, process upgrades, suggest ancillary purchases, offer late check-outs or proactively identify previous guest issues so staff can avoid repeating negative experiences. If a guest previously had a poor stay due to housekeeping delays or room issues, that information should surface operationally before the guest arrives again. These are the types of capabilities that create measurable value instead of superficial AI features designed primarily for marketing purposes.</p>
-
-
-
-<p>At the same time, organizations must also address the challenges of AI governance. One of the largest mistakes companies are making today is deploying AI tools without structure, training or clear expectations. AI sprawl is becoming increasingly common as departments independently adopt tools without governance, risk assessments or measurable business objectives. This creates operational friction, inconsistent adoption and rising costs that become difficult to manage.</p>
-
-
-
-<p>Good AI governance begins with deploying approved enterprise-grade tools that protect organizational data and privacy. Companies must establish clear policies around acceptable use, train employees on practical workflows, evaluate risks associated with integrations and continuously measure return on investment. Too many AI initiatives are abandoned without understanding whether they delivered business value or valuable organizational learning. Even unsuccessful initiatives can provide important lessons that shape future innovation strategies.</p>
-
-
-
-<p>Pricing expectations are also changing rapidly. Customers now understand how AI accelerates development and reduces operational overhead. As a result, they are becoming less tolerant of large subscription costs tied to low-value platforms. Organizations are increasingly questioning why they should commit to expensive long-term contracts for products they believe could be recreated internally at a fraction of the cost using modern AI tooling and token-based consumption models.</p>
-
-
-
-<p>Vendors must remain competitive by reducing implementation complexity, improving pricing transparency and avoiding unnecessary premium charges for AI functionality. Customers are looking for predictable consumption models, flexible feature packaging and pricing structures that reflect the realities of modern software development. Locking organizations into massive subscription agreements without demonstrating measurable operational value will only accelerate dissatisfaction and replacement efforts.</p>
-
-
-
-<p>The cultural relationship between vendors and customers is also evolving. Customers no longer want vendors to operate as gatekeepers. They expect collaboration, transparency, responsiveness and a genuine seat at the table when product decisions are being made. Vendor relationships are becoming more collaborative and innovation-driven, with customers acting as co-builders rather than passive consumers of technology.</p>
-
-
-
-<p>The vendors that will win in the AI era are the ones that understand this shift and embrace it. They will move with urgency, partner closely with customers, make data accessible, provide actionable operational intelligence and maintain pricing models that feel fair in today’s environment. Organizations are not looking to eliminate vendors entirely. They are looking for vendors that evolve alongside them.</p>
-
-
-
-<p>AI has not eliminated the value of vendor relationships. It has simply raised the standard for what makes those relationships valuable.</p>
-
-
-
-<p><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><strong><a href="https://www.cio.com/expert-contributor-network/">Want to join?</a></strong></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 22h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 American Express: Democratize analytics, not data</title>
-  <link>https://www.cio.com/article/4177594/american-express-democratize-analytics-not-data.html</link>
-  <pubDate>Wed, 03 Jun 2026 10:00:00 +0000</pubDate>
-  <source>CIO.com</source>
-  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/><div id="remove_no_follow">
-		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
-					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
-						<div class="article-column__content">
-<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
-
-
-
-<p>Data democratization has been a buzz phrase for years, but Chris Gifford, chief data officer at American Express, argues that it’s much more helpful to think about democratizing analytics. Making analytics more accessible enables employees, as well as AI agents, across the business to generate insights and act upon them within a governed framework.</p>
-
-
-
-<p>“It’s not just capture the data, and then stack and rack the data,” he says. “It’s how do we accelerate analytics and then time-to-market insights into action.”</p>
-
-
-
-<p>Gifford, who’s spent his entire career in the highly regulated financial services industry, says many people in businesses got the wrong idea about data democratization, thinking it meant they should be given the ability to pull data out of controlled environments and use the data to make decisions without IT general controls. That sort of thinking creates <a href="https://www.cio.com/article/4176051/8-it-modernization-traps-cios-must-avoid.html?utm=hybrid_search">operational, data, and privacy risks</a>.</p>
-
-
-
-<p>“Stop pulling data out of our environments and I’ll give you all the controls,” he says. “I’ll set up rapid expansion of data elements and new data sources, and give you tools that allow you to do cutting-edge analytics, even. Your personal analytics agent will soon run analyses.”</p>
-
-
-
-<h2 class="wp-block-heading" id="assessing-uncertainties">Assessing uncertainties</h2>
-
-
-
-<p>Beyond the risks, Gifford says allowing employees access to raw data, and potentially the ability to move and store it outside the bounds of governance controls and muddying data lineage, creates inefficiencies that make it much more difficult to leverage gen AI and <a href="https://www.cio.com/article/4164331/how-cios-use-ai-agents-to-accelerate-revenue-growth.html?utm=hybrid_search">agentic AI</a>.</p>
-
-
-
-<p>“People are realizing the way we’ve managed, exposed, and distributed data might not be the best way to do it going forward, especially if we’re going to enable agents,” Gifford says. “If you’ve got multiple copies of data with different use case screenings, or filters on the data for different folks who’ve landed the data into your lakehouse architecture, an agent isn’t going to know that.”</p>
-
-
-
-<p>As a result, democratizing analytics at American Express is largely focused on staging and deploying data for consumption, figuring out how to go beyond lakehouse architecture and make it easily consumable by humans, APIs, and agents.</p>
-
-
-
-<p>Gifford’s team uses AI to crawl the company’s data, use cases, redundancy, obsolescence, and triviality, and then assess the golden sources of these data to point future agents toward.</p>
-
-
-
-<p>“We’re also leaning more into having <a href="https://www.cio.com/article/4143020/4-gen-ai-success-stories.html?utm=hybrid_search">gen AI</a> make recommendations on business metadata,” he says. “It can troll through all sorts of structured and unstructured data environments to help figure it out.”</p>
-
-
-
-<p>Beyond staging and deployment, the company has begun piloting and testing “talk to my data” capabilities, which allow users to ask analytics questions using gen AI.</p>
-
-
-
-<p>“Within a very confined environment with golden source, guardrails, and other governance controls applied, we’ve turned ‘talk to my data’ on and started experimenting with it,” Gifford says. “We’ve learned it’s not enough to take your data from current or historical stores into a modern platform, and then apply governance and controls to it.”</p>
-
-
-
-<p>In early experiments, different testers would get different answers to the same questions, and hallucinations were an issue.</p>
-
-
-
-<p>“Those kinds of things can be controlled better by adding metadata, ontology, semantic layers, knowledge graphs, master data management, and reference data management,” Gifford says. “Heavy investments into that are only going to repay in the speed, accuracy, and uptake of these AI capabilities in the analytics arena.”</p>
-
-
-
-<h2 class="wp-block-heading" id="company-recalibration">Company recalibration</h2>
-
-
-
-<p>American Express takes a risk-based approach to data management, applying tiered security, governance, and compliance controls based on data sensitivity and organizational risk. As the company moves toward leveraging AI for its analytics, Gifford says a new data management layer that grades data’s readiness for gen AI and agentic AI is necessary.</p>
-
-
-
-<p>“That layer needs to say the quality of the data and the governance controls on the data have to be at a minimum amount before we’re willing to unleash gen AI on it,” he says.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 22h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 7 ways for CIOs to deliver bad news without losing trust</title>
-  <link>https://www.cio.com/article/4177020/7-ways-for-cios-to-deliver-bad-news-without-losing-trust.html</link>
-  <pubDate>Wed, 03 Jun 2026 10:00:00 +0000</pubDate>
-  <source>CIO.com</source>
-  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/><div id="remove_no_follow">
-		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
-					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
-						<div class="article-column__content">
-<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
-
-
-
-<p>Insights from CIOs, consultants, and executive coaches show that effective CIOs don’t just report problems, they share information early, explain the issues clearly, and help executives decide what to do next. Here are seven ways CIOs can deliver bad news more effectively.</p>
-
-
-
-<h2 class="wp-block-heading" id="1-build-transparency-early-so-bad-news-is-never-a-surprise">1. Build transparency early so bad news is never a surprise</h2>
-
-
-
-<p>Successful CIOs don’t wait until something goes wrong to talk to executives. They make a habit of being open from the beginning, so when problems come up, leaders will already understand the risks and what’s going on. Sumit Johar, CIO at cloud-based software company BlackLine, says this approach helps prevent tough conversations from turning into trust issues.</p>
-
-
-
-<p>“You don’t want to be in a spot when you deliver bad news and everybody asks, ’How can this happen?’” he says. “We never had any conversations. What risks were taken and why weren’t we taken into confidence?”</p>
-
-
-
-<p>So regular updates about risks, trade-offs, and decisions make all the difference.</p>
-
-
-
-<p>“I’d say regular, transparent, and factual conversations about the statuses of these initiatives are essential, so if something goes wrong, you’ve already kept everybody prepared,” he says.</p>
-
-
-
-<p>Keeping leaders updated helps move the focus away from blaming people and toward finding solutions so they can concentrate on what to do next.</p>
-
-
-
-<h2 class="wp-block-heading" id="2-lead-with-the-main-issue-immediately-and-clearly">2. Lead with the main issue immediately and clearly</h2>
-
-
-
-<p>Debbi McCullough, an executive communications coach, says CIOs need to get to the point quickly. “Keeping the bottom line on top feels essential and is a step many overlook,” she says. “If we bury the bottom line and take forever before reaching the point, we frustrate our CEOs and C-level leaders who want to know what’s going on from the opening sentence.”</p>
-
-
-
-<p>She adds that in stressful situations, a <a href="https://www.cio.com/article/4137669/5-tips-for-communicating-the-value-of-it.html?utm=hybrid_search">CIO should keep their messages short and clear</a>, and let executives ask questions if they want more detail.</p>
-
-
-
-<p>Ghaleb El Masri, MD and partner at consultancy Adaptovate, agrees that these conversations need to be clear and well organized.</p>
-
-
-
-<p>“The most effective way to deliver bad news is to make it decision-ready,” he says. “Executives can handle bad news but what they can’t afford is ambiguity. I use a simple sequence: what happened, what’s the business impact, what’s been done to contain it, and what decision is needed now.”</p>
-
-
-
-<h2 class="wp-block-heading" id="3-translate-technical-problems-into-business-impact">3. Translate technical problems into business impact</h2>
-
-
-
-<p>CIOs deal with complex technical issues, but executives also need to understand what those issues mean for the business. Patty Patria, CIO at Babson College, says leaders must frame problems in business terms.</p>
-
-
-
-<p>“One of the most effective ways to deliver bad news to executives on a project or major operational issue is to be honest and transparent about the situation,” she says. “Clearly explain the root cause of the problem, and then present multiple alternatives for discussion on how to address the issue.”</p>
-
-
-
-<p>She also emphasizes connecting issues to outcomes that matter to leadership, such as cost and timing.</p>
-
-
-
-<p>“This approach not only builds trust but also encourages collaborative decision-making, ensuring that executives have a clear understanding of the situation and viable options moving forward,” she adds.</p>
-
-
-
-<p>Eric Nitzberg, founder of Sierra Leadership, explains why this translation is essential.</p>
-
-
-
-<p>“One of the biggest mistakes technical leaders make when presenting to the C-suite is using too much technical jargon,” he says. “Instead, <a href="https://www.cio.com/article/4002139/8-communication-strategy-tips-for-it-leaders.html?utm=hybrid_search">translate ideas into plain, intelligent business language</a> as if you’re presenting to intelligent high school students. You don’t talk down to them, but rather speak to them in their language, using words they can understand.”</p>
-
-
-
-<h2 class="wp-block-heading" id="4-bring-solutions-and-show-ownership-from-the-start">4. Bring solutions and show ownership from the start</h2>
-
-
-
-<p>Executives don’t just want to hear about problems. They expect CIOs to take ownership and present a clear way to move forward. Sesh Tirumala, CIO of hardware manufacturer WD (formerly Western Digital), offers a different way for CIOs to handle these situations.</p>
-
-
-
-<p>“Stop calling it bad news; there is no bad news,” he says. “There are problems, and problems can be solved. The most effective thing a CIO can do is walk in with the problem clearly defined and a path forward already in hand. Lead with the solution, not the situation.”</p>
-
-
-
-<p>Tirumala adds that executives care more about action than explanation, and don’t need a play-by-play of what went wrong. “They need to know you see the issue, you own it, and you have a plan,” he says. “One sentence on the problem, three on what you’re doing about it.”</p>
-
-
-
-<p>Patria adds a real-world example, explaining how her team handled delays on a particular <a href="https://www.cio.com/article/4121113/erp-in-2026-more-ai-more-best-of-breed-add-ons.html?utm=hybrid_search">ERP</a> project.</p>
-
-
-
-<p>“We were implementing a new product that had several product deficiencies, and although the product long term was the correct solution for the institution, its maturity presented multiple blockers to going live in the original timeframe,” she says. “So we presented detailed facts of each blocker, discussed how we would address them, and then provided the new timeline and increase to cost.”</p>
-
-
-
-<p>With all the key stakeholders involved in the discussion, Patria says that everyone agreed to move forward with extending the project by six months.</p>
-
-
-
-<h2 class="wp-block-heading" id="5-stick-to-the-facts-and-avoid-speculation">5. Stick to the facts and avoid speculation</h2>
-
-
-
-<p>In high-pressure situations, CIOs may feel they need to explain why something happened before they know all the facts. This can lead to confusion and credibility issues later. Johar advises CIOs to focus on what they actually know.</p>
-
-
-
-<p>“The most important aspect in delivering bad news is stick to the facts and make sure people understand what happened,” he says.</p>
-
-
-
-<p>He also warns against jumping to conclusions too early.</p>
-
-
-
-<p>“Sometimes you try to jump ahead and explain why something happened, and then after the investigation is complete, sometimes the whys change,” he adds. “Then it becomes a lot harder conversation to explain.”</p>
-
-
-
-<p>Johar says CIOs should be clear about what they know and what they’re still figuring out, and let executives know when they’ll provide updates. This helps build trust and keeps things clear.</p>
-
-
-
-<h2 class="wp-block-heading" id="6-stay-neutral-avoid-defensiveness-and-keep-emotions-in-check">6. Stay neutral, avoid defensiveness, and keep emotions in check</h2>
-
-
-
-<p>Sharing bad news can bring out strong emotions, especially when a lot is on the line. But if emotions drive the message, it can hurt the conversation.</p>
-
-
-
-<p>Johar says a common mistake CIOs make is becoming too defensive, focusing on explaining why something happened, or <a href="https://www.cio.com/article/4154273/7-reasons-it-always-gets-the-blame-and-how-it-leaders-can-change-that.html?utm=hybrid_search">who’s to blame</a>, instead of having the kind of clear, productive conversation that’s needed when delivering bad news. Nitzberg echoes this point, advising CIOs to stay objective.</p>
-
-
-
-<p>“CIOs should avoid an overly detailed, negative, emotional, or blame-oriented narrative,” he says. “Neutrally share the facts at an altitude appropriate to inform the C-suite.”</p>
-
-
-
-<p>McCullough also warns CIOs not to focus too much on their own feelings.</p>
-
-
-
-<p>“Avoid being self-serving and lamenting on how horrible you feel,” she says. “Share that you’re devastated or disappointed if you must, but keep it short and make the focus on what happened, why, and how you and your team will work to make things better.”</p>
-
-
-
-<h2 class="wp-block-heading" id="7-create-a-culture-where-people-share-bad-news-early">7. Create a culture where people share bad news early</h2>
-
-
-
-<p>Even the best communication strategies won’t work if employees are afraid to speak up about problems. <a href="https://www.cio.com/article/4146677/the-ai-revolution-getting-culture-right-for-ai-success.html?utm=hybrid_search">Company culture plays a big role</a> in how people share bad news and how it’s received. Johar explains that clear and open workplace cultures help people communicate more effectively.</p>
-
-
-
-<p>“Professional organizations actually invest a lot in building a culture that allows you to have difficult conversations, deliver bad news, and deal with bad news,” he says.</p>
-
-
-
-<p>He adds that preparation is key in that, going through this kind of training informs exactly whom to speak to and about what.</p>
-
-
-
-<p>El Masri highlights the consequences of poor culture in a company. “In organizations where leaders punish the messenger, bad news gets softened, delayed, and filtered at every layer,” he says. “But when early escalation is respected, issues surface while there’s still time to act.”</p>
-
-
-
-<p>One thing people often miss is that a yes culture can be a liability. “When no one pushes back and problems get smoothed over to keep the peace, you lose the signal you need most,” Tirumala says. “What you actually want is a culture of feedback and clear decision-making, where people feel safe saying something isn’t working and where there’s a clear enough structure so problems get escalated and acted on, not just acknowledged.”</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 22h ago]]></description>
-</item>
-
-<item>
-  <title>🟠 Microsoft Tries to Calm Legal Threat Fears After Zero-Day Disclosure Backlash</title>
-  <link>https://www.securityweek.com/microsoft-tries-to-calm-legal-threat-fears-after-zero-day-disclosure-backlash/</link>
-  <pubDate>Wed, 03 Jun 2026 09:57:40 +0000</pubDate>
-  <source>SecurityWeek</source>
-  <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><p>Microsoft responds to backlash over its threats of legal action against researchers who publicly disclose zero-day vulnerabilities.</p>
-<p>The post <a href="https://www.securityweek.com/microsoft-tries-to-calm-legal-threat-fears-after-zero-day-disclosure-backlash/">Microsoft Tries to Calm Legal Threat Fears After Zero-Day Disclosure Backlash</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 22h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
@@ -2119,7 +2772,7 @@
   <link>https://www.theregister.com/software/2026/06/03/uk-lawmakers-call-on-government-to-ditch-palantir-nhs-contract/5250150</link>
   <pubDate>Wed, 03 Jun 2026 09:01:00 +0000</pubDate>
   <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Lock-in to a small number of suppliers holding up digital government plans, committee says<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 23h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Lock-in to a small number of suppliers holding up digital government plans, committee says<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
@@ -2286,249 +2939,7 @@
 
 
 <p><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><strong><a href="https://www.csoonline.com/expert-contributor-network/">Want to join?</a></strong></p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 23h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Has agentic AI outgrown the data organization?</title>
-  <link>https://www.cio.com/article/4180136/has-agentic-ai-outgrown-the-data-organization.html</link>
-  <pubDate>Wed, 03 Jun 2026 09:00:00 +0000</pubDate>
-  <source>CIO.com</source>
-  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/><div id="remove_no_follow">
-		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
-					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
-						<div class="article-column__content">
-<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
-
-
-
-<p>Recently, I participated in an architecture review for a Voice AI initiative. The initial proposal was heavily centered on the data required to provide context for the agent. The discussion focused on retrieval mechanisms, customer history, and knowledge access patterns. But as the review progressed, the discussion quickly went beyond data. Questions emerged around identity and authentication flows, telephony integration, cross-channel continuity, quality assurance of interactions, escalation handling, operational policies, and how operational knowledge management systems would contribute to the agent’s reasoning context.</p>
-
-
-
-<p>What struck me was how a discussion that initially focused on AI and data requirements gradually revealed something much larger: Agentic AI systems do not operate purely within the boundaries of data systems. They sit at the intersection of data, applications, operations, governance, security, and organizational knowledge.</p>
-
-
-
-<p>For years, most enterprises have neatly bundled “Data &amp; AI” under one umbrella. That structure served its purpose well during the early days of machine learning and deep learning, when success depended heavily on centralized datasets, feature engineering, and statistical models. But as generative and agentic AI systems grow more capable, the old model is showing its limits. These newer systems do not merely <em>process</em> data: they <em>use</em> data, along with many other elements, to reason, decide, and act. They actively reach into enterprise workflows, APIs, policies, human decision patterns, real-time operational realities, and scattered institutional knowledge.</p>
-
-
-
-<p>This led me to a broader question: Is agentic AI still a data capability, or is it becoming something broader as a cross-functional intelligence layer operating at the intersection of Data, Applications, and Operations?</p>
-
-
-
-<h2 class="wp-block-heading" id="from-rpa-to-ai-agents">From RPA to AI agents</h2>
-
-
-
-<p>Almost a decade ago, I experienced the Robotic Process Automation (RPA) wave firsthand. RPA excelled at automating repetitive tasks inside existing applications and workflows. However, it struggled when processes became dynamic, ambiguous, or context-dependent because it lacked adaptive reasoning, semantic understanding, and contextual awareness. RPA could execute workflows efficiently, but it could not truly interpret organizational intent.</p>
-
-
-
-<p>Today’s agentic AI systems expose a different challenge. Modern AI agents demonstrate impressive reasoning, language fluency, generative capability, and predictive intelligence driven by advances in machine learning and deep learning. Yet they often lack the operational grounding required for reliable enterprise execution. They may not fully understand workflow state, enterprise policies, escalation paths, operational context, and the institutional knowledge that shapes how organizations actually function.</p>
-
-
-
-<p>Taken together, these two technology waves reveal an important shift in enterprise automation. RPA exposed the limitations of automation without intelligence and adaptive reasoning. Modern AI agents have significantly advanced reasoning capabilities, but they are now exposing the limitations of intelligence without sufficient operational grounding. Without that grounding, agentic AI systems can become unreliable, inconsistent, and operationally expensive at enterprise scale.</p>
-
-
-
-<p>This is precisely where I believe agentic AI begins to outgrow the traditional “data and AI” organizational model. Building reliable AI systems increasingly requires coordination across applications, operations, governance, security, and enterprise knowledge domains, not just data platforms and model pipelines. Industry discussions on agentic AI operating models are beginning to recognize that autonomous enterprise systems require organizational and operational integration that extends well beyond traditional AI infrastructure concerns.</p>
-
-
-
-<h2 class="wp-block-heading" id="the-fragmented-semantic-context">The fragmented semantic context</h2>
-
-
-
-<p>Over the years, I have seen enterprise architects meticulously map infrastructure, security, data, services, APIs, and customer channels. Yet what was often missing from these architecture discussions was semantic context: the living organizational knowledge that connects documents, tribal expertise, evolving policies, operational exceptions, and day-to-day business practices.</p>
-
-
-
-<p>Recently, I visited a contact center disputes operations unit. A human agent handling a disputes case had access to historical transaction data, customer and merchant insights, real-time workflow state, application APIs, and exception handling logic. Just as importantly, the agent also relied on nuanced policy interpretation, awareness of the latest operational procedures, and precedents from past decisions.</p>
-
-
-
-<p>As I analyzed the systems, workflows, and organizational functions involved in making this operation work reliably, an important pattern became clear. Data teams excel at pipelines, lineage, governance, analytics, and transforming raw data into actionable insights. Application teams focus on transactions, codified business rules, APIs, user experience, and delivery velocity. Operations teams prioritize continuity, exception handling, policy adherence, escalation management, and customer outcomes.</p>
-
-
-
-<p>My observation is that semantic context is distributed across all three organizational functions. Together, they shape how enterprises actually function. For AI agents to operate consistently and reliably inside enterprise workflows, they must draw contextual understanding from all of them simultaneously. Emerging discussions around <a href="https://www.infoworld.com/article/4084378/why-context-engineering-will-define-the-next-era-of-enterprise-ai.html">context engineering</a> increasingly recognize this challenge of coordinating operational, application, and knowledge-layer context for AI systems. At that point, the challenge is no longer simply about data, applications, or operations individually. It becomes a challenge of building unified semantic context across the enterprise.</p>
-
-
-
-<h2 class="wp-block-heading" id="where-context-already-works">Where context already works</h2>
-
-
-
-<p>One domain already offers a glimpse of what reliable agentic AI interaction could look like: software engineering. Mature and well-maintained Git repositories often work remarkably well with AI coding assistants. Emerging engineering practices around <a href="https://medium.com/@huseyinkaplandev/agent-ready-repo-structure-2026-90af2ac8aed2" rel="nofollow">agent-ready repositories</a>, as described by Huseyin Kaplan, are already recognizing the importance of explicit operational structure, contextual documentation, and governed repository semantics for AI-assisted development.</p>
-
-
-
-<p>These repositories capture version history, ownership clarity, architectural decisions, review processes, specifications, dependencies, issue discussions, and rich contextual documentation. Over time, they evolve into living, governed knowledge systems that preserve technical intent, operational standards, and architectural governance while creating a unified semantic context around the software lifecycle.</p>
-
-
-
-<p>I believe this coherence helps explain why agentic AI systems often perform more reliably in well-structured engineering environments than in many enterprise operational settings, even when those environments contain vastly larger datasets. The differentiator is not merely data volume. It is semantic and operational coherence.</p>
-
-
-
-<h2 class="wp-block-heading" id="rethinking-agentic-ais-organizational-home">Rethinking agentic AI’s organizational home</h2>
-
-
-
-<p>All of these observations led me back to my original question: Has agentic AI outgrown the traditional data organization?</p>
-
-
-
-<p>As companies move toward increasingly autonomous and agentic systems, the question of where agentic AI structurally belongs is becoming more urgent. Positioning this capability exclusively within the Data organization risks building sophisticated technical capabilities that remain disconnected from real operational workflows. As David Linthicum recently argued in <a href="https://www.infoworld.com/article/4163914/enterprise-ai-is-missing-the-business-core.html">Enterprise AI is missing the business core</a>, many AI initiatives still struggle to integrate deeply with the operational realities of the business. Placing agentic AI solely within Application organizations may similarly lead to fragmented implementations that lack governance consistency, shared knowledge structures, and enterprise-wide operational context.</p>
-
-
-
-<p>A more sustainable path may be to treat agentic AI as a genuinely cross-functional enterprise capability, one that deliberately bridges data, applications, operations, governance, and enterprise knowledge domains while drawing unified semantic context from all of them.</p>
-
-
-
-<p>This approach does not reduce the importance of strong data platforms, operational rigor, or application engineering. Instead, it acknowledges that true enterprise intelligence emerges from the interaction between these domains rather than from any one domain operating in isolation.</p>
-
-
-
-<h2 class="wp-block-heading" id="what-lies-ahead">What lies ahead</h2>
-
-
-
-<p>For decades, enterprises optimized their architecture around storing data, moving data, and processing transactions. Agentic AI introduces a different imperative: enabling systems to reason consistently and reliably within unified semantic context.</p>
-
-
-
-<p>The organizations that succeed in the next wave of agentic AI may not necessarily be the ones with the largest datasets or the most advanced models. They may be the ones that create the greatest coherence across their data, operational processes, application systems, governance structures, and enterprise knowledge.</p>
-
-
-
-<p>This raises important questions for enterprise leaders and architects. Are AI initiatives still being approached primarily as data-centric programs, or are organizations actively addressing the operational and semantic gaps required for reliable agentic AI? What would a truly governed enterprise knowledge layer look like in your industry, and which organizational functions should be responsible for building and maintaining it?</p>
-
-
-
-<p>These are no longer abstract architectural questions. As AI systems become more autonomous and operationally embedded, the answers may increasingly determine which enterprises can deploy AI reliably, govern it effectively, and create lasting business value from it.</p>
-
-
-
-<p><br /><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><strong><a href="https://www.cio.com/expert-contributor-network/">Want to join?</a></strong></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 23h ago]]></description>
-</item>
-
-<item>
-  <title>🔴 Anthropic grants Project Glasswing access to 150 more companies, with a focus on critical infrastructure</title>
-  <link>https://www.cio.com/article/4180277/anthropic-grants-project-glasswing-access-to-150-more-companies-with-a-focus-on-critical-infrastructure-2.html</link>
-  <pubDate>Wed, 03 Jun 2026 00:44:10 +0000</pubDate>
-  <source>CIO.com</source>
-  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/><div id="remove_no_follow">
-		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
-					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
-						<div class="article-column__content">
-<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
-
-
-
-<p>Anthropic on Tuesday announced that it was adding 150 more companies to its Project Glasswing AI-based vulnerability hunting initiative, with a particular focus on critical infrastructure companies including those involved in “power, water, healthcare, communications and hardware.”</p>
-
-
-
-<p>Analysts and security vendors agreed that the move is a positive step, noting that the more companies involved in bug identification, the better. But the bigger background issue is a practical one: the bottleneck problem. </p>
-
-
-
-<p>If Project Glasswing, and similar projects from other major AI vendors, increase the stream of vulnerability identifications by 10 or more times, will vendors be able to triage and patch them in a timely manner? Vendors have historically been notoriously slow to patch known security issues. Microsoft, for example, <a href="https://www.csoonline.com/article/4178869/microsoft-and-security-researchers-dueling-posts-about-cybersecurity-disclosures-get-nasty.html" target="_blank">recently argued with a security researcher </a>who went public with holes because he felt that Microsoft was too slow in addressing them. </p>
-
-
-
-<p>And even if those vendors can keep up, are enterprise SOCs going to be able to keep up with the avalanche of patches? And if extensive automation is deployed to generate those patches, will CISOs trust them enough to let them be deployed without manual verification? Trust is not a common CISO trait.</p>
-
-
-
-<p>“What each partner has in common is that a successful attack on their codebase could be catastrophic. For most partners, we estimate that a major attack could affect more than 100 million people, with important ramifications for both global and national security,” <a href="https://www.anthropic.com/news/expanding-project-glasswing" rel="nofollow" target="_blank">Anthropic said in its blog post</a> announcing the new participants. “This expansion is the next step toward our long-term goals: for AI to make all software more secure, and for us to help the industry adjust to how AI could change many of the core assumptions of cybersecurity.”</p>
-
-
-
-<p><a href="https://www.csoonline.com/article/4176865/project-glasswing-has-uncovered-10000-vulnerabilities-anthropic.html" target="_blank">Glasswing </a>was announced on April 7 and was initially supported by AWS, Apple, Broadcom, Cisco, CrowdStrike, Google, JPMorganChase, the Linux Foundation, Microsoft, NVIDIA, and Palo Alto Networks. Okta later confirmed that it was also involved. </p>
-
-
-
-<h2 class="wp-block-heading" id="the-patch-bottleneck">The patch bottleneck</h2>
-
-
-
-<p>The bottleneck problem is a difficult one to solve, given that even the largest vendors can only cost-justify so many resources for patching security holes and distributing those patches.</p>
-
-
-
-<p>“The biggest issue is adaptability: once a vulnerability or weakness is found, defenders have to validate it, prioritize it, and fix it before attackers can operationalize the same insight. And that validation step matters,” said <a href="https://www.linkedin.com/in/tomfindling/" rel="nofollow" target="_blank">Tom Findling</a>, CEO of Conifers.ai. “While testing the tool ourselves, we saw a lot of false positives, which means organizations cannot simply treat every finding as immediately actionable. They need the ability to separate signal from noise quickly, then adapt their processes, engineering workflows, and patching pipelines around the real issues.”</p>
-
-
-
-<p>“The most important metric for organizations to track may not just be how many vulnerabilities are found, but how long it takes them to adapt once a credible issue is identified. For some organizations, that adaptation cycle can still take months,” he added. “Reducing that time-to-adapt is what will determine whether AI-assisted vulnerability discovery actually improves defense or just increases the speed and volume of security noise.”</p>
-
-
-
-<h2 class="wp-block-heading" id="a-remediation-problem">A remediation problem</h2>
-
-
-
-<p><a href="https://acceligence.com/talent/profiles/justin-greis/" rel="nofollow" target="_blank">Justin Greis</a>, CEO of consulting firm Acceligence, agreed that the Glasswing expansion may simply demonstrate to CISOs how much the security hole problem is shifting, not shrinking. </p>
-
-
-
-<p>“It’s no secret that cybersecurity has been treated as a vulnerability discovery problem. AI is proving that it was really a remediation problem all along. The industry already struggles to validate, prioritize, patch, test, and deploy fixes fast enough. It may even be worse if security teams own the vulnerability identification and the IT teams, or the business teams, own the patching itself,” Greis said. “If AI can identify vulnerabilities 10x or 100x faster than humans, the bottleneck simply moves downstream. Organizations may soon find themselves in the uncomfortable position of knowing about far more vulnerabilities than they can realistically address. AI is turning cybersecurity from a visibility problem into an execution problem.”</p>
-
-
-
-<p>Greis added a frightening prediction: “AI could make organizations simultaneously more secure and more overwhelmed, if that’s possible. They’ll have unprecedented visibility into their risk, but they’ll also discover just how large that risk really is.”</p>
-
-
-
-<h2 class="wp-block-heading" id="trust-required">Trust required</h2>
-
-
-
-<p><a href="https://my.idc.com/getdoc.jsp?containerId=PRF005722" rel="nofollow" target="_blank">Grace Trinidad</a>, research director for AI security at IDC, said the bottleneck problem at the enterprise needs to be addressed via extensive automation. But given the lack of trust by cybersecurity staff, vendors must have a rigorous method for producing a numerical confidence score for every patch. </p>
-
-
-
-<p>“Having a confidence score accompanying these patches is a new concept. There must be an ability of the enterprise to identify, triage and address the vulnerabilities that are specific to their environment,” Trinidad said. “We are learning a skillset that we are not ready for: How do we trust automated technologies? Given that we are having to move at this speed, that trust is going to get broken. Confidence scoring is a discipline that needs transparency. Don’t make the confidence [explanation] so complicated that you can’t explain it to a human being.”</p>
-
-
-
-<p>Trinidad also noted that the Anthropic announcement pointed out that each of the 150 new participants, in Anthropic’s phrasing, “will need to meet our security requirements before they gain access.”</p>
-
-
-
-<p>Trinidad said the security requirement claim doesn’t build confidence, because “nobody knows what those security requirements are.”</p>
-
-
-
-<p>One possible solution is for security vendors to use high-trust third parties so that they are not seen as ‘grading their own homework’. Enterprise software vendor Workday is using a similar third-party approach, relying on trusted services that use public standards such as Mitre ATLAS to validate the security and compliance of AI agents using its platform. <a href="https://www.cio.com/article/4179876/workday-launches-agent-passport-to-test-and-monitor-ai-agents-in-the-enterprise.html" target="_blank">Workday’s approach</a> deals with security checks and not reliability scores, but the idea could potentially be tweaked. </p>
-
-
-
-<h2 class="wp-block-heading" id="expansion-creates-security-concerns">Expansion creates security concerns</h2>
-
-
-
-<p><a href="https://www.linkedin.com/in/carmi/" rel="nofollow" target="_blank">Carmi Levy</a>, an independent technology analyst, was more skeptical about what Glasswing will ultimately be able to accomplish by adding 150 more participants.</p>
-
-
-
-<p>“The entire point of Project Glasswing was to allow Anthropic to work closely with a small, fully vetted group of vendors to develop stronger defenses against the cybersecurity risks posed by what was, and is, an entirely new LLM class that would otherwise pose unacceptable risks to existing protective technologies and protocols,” Levy said. “Expanding access into the hundreds may very well bring in more minds to build better defensive measures, but it simultaneously introduces significant concerns around potential leaks. And this from a company that has already reported two leaks involving this same model.”</p>
-
-
-
-<p>Levy added, “in an ideal world, Anthropic would announce alongside this major expansion a parallel effort to tighten internal security protocols to ensure the code doesn’t fall into the wrong hands. Bringing in a much larger cohort of researchers signals to potential attackers that they will soon have a larger pool of potential targets, and fails to allay fears of future breaches.”</p>
-
-
-
-<p><em>This article originally appeared on <a href="https://www.csoonline.com/article/4180265/anthropic-grants-project-glasswing-access-to-150-more-companies-with-a-focus-on-critical-infrastructure.html" target="_blank">CSOonline</a>.</em></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
@@ -2832,15 +3243,6 @@
 
 <p>“The concern is not just ‘someone might hear something confidential,’” McKee said. “That would be bad enough. The broader concern is that voice infrastructure can now support both traditional espionage objectives and modern AI-enabled fraud operations at the same time.”</p>
 </div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Trump Signs Executive Order That Invites Vetting of Top AI Models for National Security Risks</title>
-  <link>https://www.securityweek.com/trump-signs-executive-order-that-invites-vetting-of-top-ai-models-for-national-security-risks/</link>
-  <pubDate>Tue, 02 Jun 2026 20:10:49 +0000</pubDate>
-  <source>SecurityWeek</source>
-  <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><p>The order establishes a framework for the federal government to vet the national security risks of the most advanced AI systems for up to a month before their public release.</p>
-<p>The post <a href="https://www.securityweek.com/trump-signs-executive-order-that-invites-vetting-of-top-ai-models-for-national-security-risks/">Trump Signs Executive Order That Invites Vetting of Top AI Models for National Security Risks</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
@@ -3259,7 +3661,7 @@
 
 
 <p>For CISOs, the lesson extends beyond patching. “The recurring pattern of edge-device exploitation is rarely the result of a missing security product,” Grover said. “More often, it reflects gaps in asset visibility, configuration governance, patch prioritization, and architectural modernization.”</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
 </item>
 
 <item>
@@ -3332,7 +3734,7 @@
 
 
 <p>“Most organizations still lack a complete inventory of what their AI tools can access, what credentials they inherit, and what external services they interact with,” Grover added. “Most enterprises have not yet applied the same least-privilege and behavioral monitoring disciplines to AI tools that they apply to human identities, and that asymmetry is what attackers are now actively exploiting.”</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
 </item>
 
 <item>
@@ -3698,14 +4100,6 @@
 
 <p> The only complete mitigation recommended by the researchers is turning off MCP stdio by setting “CUSTOM_MCP_PROTOCOL=sse”. For those who can’t, without obstructing operations, pinning trusted packages where possible, and reviewing imported chatflows from untrusted sources might help, the researchers added.</p>
 </div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Password manager Dashlane suspends customer accounts amid brute-force attacks</title>
-  <link>https://www.theregister.com/security/2026/06/01/password-manager-dashlane-suspends-customer-accounts-amid-brute-force-attacks/5248991</link>
-  <pubDate>Mon, 01 Jun 2026 11:15:00 +0000</pubDate>
-  <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Engineers' weekends ruined as Dashlane's automatic protections kicked in<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
 </item>
 
 <item>
