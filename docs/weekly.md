@@ -1,25 +1,30 @@
 # IT Weekly Intelligence Briefing
 **Period:** May 28 – June 04, 2026  
-**Generated:** 2026-06-04 14:54 UTC  
-**Items reviewed:** 126  
+**Generated:** 2026-06-04 17:44 UTC  
+**Items reviewed:** 127  
 
 ## ⚡ Top Actions This Week
 
-1. **Validate backups, confirm EDR coverage, and brief incident response team.**  
+1. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
+   _UN food agency discloses breach affecting 600,000 Gaza households_  
+   Source: BleepingComputer  
+
+2. **Validate backups, confirm EDR coverage, and brief incident response team.**  
    _U.S. sanctions Nobitex crypto exchange used by Iranian ransomware actors_  
    Source: BleepingComputer  
 
-2. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
+3. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
    _Beyond the Zero-Day: See Your Network Like an Attacker | Webinar with HD Moore_  
-   Source: The Hacker News  
-
-3. **Apply emergency patch or mitigation now; check vendor advisory for workarounds.**  
-   _Google June 2026 Android Update Patches 124 Flaws, One Actively Exploited_  
    Source: The Hacker News  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [UN food agency discloses breach affecting 600,000 Gaza households](https://www.bleepingcomputer.com/news/security/un-world-food-programme-breach-affects-600-000-gaza-households/)
+**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jun 04  
+**Why it matters:** Potential credential or data exposure.  
+**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
 ### [U.S. sanctions Nobitex crypto exchange used by Iranian ransomware actors](https://www.bleepingcomputer.com/news/security/the-us-sanctions-nobitex-crypto-exchange-used-by-ransomware/)
 **Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jun 03  
@@ -46,14 +51,15 @@
 **Why it matters:** Third-party/software supply chain integrity risk.  
 **Recommended action:** Audit third-party software dependencies and review vendor access.  
 
-### [Critical WP Maps Pro Flaw Actively Exploited to Create Admin Accounts](https://thehackernews.com/2026/06/critical-wp-maps-pro-flaw-actively.html)
-**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Jun 01  
-**Why it matters:** General awareness item.  
-**Recommended action:** Apply emergency patch or mitigation now; check vendor advisory for workarounds.  
-
 ---
 
 ## 🟠 Important — Review This Week
+
+- [Cisco Patches CVE-2026-20230 in Unified CM as Exploit Code Goes Public](https://thehackernews.com/2026/06/cisco-patches-cve-2026-20230-in-unified.html)  
+  **The Hacker News** · Jun 04 · _General awareness item._  
+
+- [Agentic AI Is Transforming Defense, But Only Secure IT Infrastructure Will Maximize It](https://thehackernews.com/2026/06/agentic-ai-is-transforming-defense-but.html)  
+  **The Hacker News** · Jun 04 · _General awareness item._  
 
 - [Hackers Are After the Gaps in Your Vulnerability Program: Here's Their Playbook](https://www.bleepingcomputer.com/news/security/hackers-are-after-the-gaps-in-your-vulnerability-program-heres-their-playbook/)  
   **BleepingComputer** · Jun 04 · _General awareness item._  
@@ -73,23 +79,17 @@
 - [CVE-2026-27136 Invoking  duplicate attributes can cause XSS in golang.org/x/net/html](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-27136)  
   **Microsoft Security Response Center (MSRC)** · Jun 04 · _General awareness item._  
 
-- [CVE-2026-42506 Invoking  incorrect handling of namespaced elements in foreign content in golang.org/x/net/html](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-42506)  
-  **Microsoft Security Response Center (MSRC)** · Jun 04 · _General awareness item._  
-
-- [CVE-2026-25681 Invoking  incorrect handling of character references in DOCTYPE nodes in golang.org/x/net/html](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-25681)  
-  **Microsoft Security Response Center (MSRC)** · Jun 04 · _General awareness item._  
-
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [New IronWorm malware hits 36 packages in npm supply-chain attack](https://www.bleepingcomputer.com/news/security/new-ironworm-malware-hits-36-packages-in-npm-supply-chain-attack/) — BleepingComputer
+- [Claude Code GitHub Action Flaw Let One Malicious Issue Hijack Repositories](https://thehackernews.com/2026/06/claude-code-github-action-flaw-let-one.html) — The Hacker News
 - [ThreatsDay Bulletin: AI Agents Gone Wrong, Sketchy C2 Tools, ClickFix Tricks, JS Backdoors & 20+ New Stories](https://thehackernews.com/2026/06/threatsday-bulletin-ai-agents-gone.html) — The Hacker News
 - [Microsoft blames unexpected Windows driver updates on caching issue](https://www.bleepingcomputer.com/news/microsoft/microsoft-blames-unexpected-windows-driver-updates-on-caching-issue/) — BleepingComputer
 - [Police dismantles fake ID marketplace used by migrant smugglers](https://www.bleepingcomputer.com/news/security/police-dismantles-fake-id-marketplace-used-by-migrant-smugglers/) — BleepingComputer
-- [China-Linked TA4922 Expands Phishing Attacks to UK, Germany, Italy, and South Africa](https://thehackernews.com/2026/06/china-linked-ta4922-expands-phishing.html) — The Hacker News
-- [FlutterShell Backdoor Spreads to macOS via Malicious Google and YouTube Ads](https://thehackernews.com/2026/06/fluttershell-backdoor-spreads-to-macos.html) — The Hacker News
-- [Fake Sites Mimicking Open-Source Tools Rank High on Google to Deliver Malware via TDS](https://thehackernews.com/2026/06/fake-sites-mimicking-open-source-tools.html) — The Hacker News
+- [China-Linked TA4922 Expands Phishing Attacks to U.K., Germany, Italy, and South Africa](https://thehackernews.com/2026/06/china-linked-ta4922-expands-phishing.html) — The Hacker News
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 6 critical · 77 important · 43 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 7 critical · 76 important · 44 FYI_
