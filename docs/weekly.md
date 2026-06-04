@@ -1,12 +1,12 @@
 # IT Weekly Intelligence Briefing
 **Period:** May 28 – June 04, 2026  
-**Generated:** 2026-06-04 03:44 UTC  
+**Generated:** 2026-06-04 08:19 UTC  
 **Items reviewed:** 123  
 
 ## ⚡ Top Actions This Week
 
 1. **Validate backups, confirm EDR coverage, and brief incident response team.**  
-   _The U.S. sanctions Nobitex crypto exchange used by ransomware_  
+   _U.S. sanctions Nobitex crypto exchange used by Iranian ransomware actors_  
    Source: BleepingComputer  
 
 2. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
@@ -21,7 +21,7 @@
 
 ## 🔴 Critical — Immediate Awareness
 
-### [The U.S. sanctions Nobitex crypto exchange used by ransomware](https://www.bleepingcomputer.com/news/security/the-us-sanctions-nobitex-crypto-exchange-used-by-ransomware/)
+### [U.S. sanctions Nobitex crypto exchange used by Iranian ransomware actors](https://www.bleepingcomputer.com/news/security/the-us-sanctions-nobitex-crypto-exchange-used-by-ransomware/)
 **Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jun 03  
 **Why it matters:** Elevated ransomware risk across the sector.  
 **Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
@@ -55,40 +55,40 @@
 
 ## 🟠 Important — Review This Week
 
-- [Autonomous AI Tool Finds 2-Year-Old RCE Flaw in Redis (CVE-2026-23479)](https://thehackernews.com/2026/06/autonomous-ai-tool-finds-2-year-old-rce.html)  
-  **The Hacker News** · Jun 03 · _General awareness item._  
+- [CVE-2026-9149 Libsolv: heap buffer overflow in libsolv repo_add_solv via negative maxsize from crafted .solv file](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-9149)  
+  **Microsoft Security Response Center (MSRC)** · Jun 04 · _General awareness item._  
 
-- [Acer working to patch max severity zero-days in Wave 7 routers](https://www.bleepingcomputer.com/news/security/acer-warns-of-max-severity-zero-days-affecting-wave-7-routers/)  
-  **BleepingComputer** · Jun 03 · _General awareness item._  
+- [CVE-2026-9150 Libsolv: stack-based buffer overflow in libsolv's debian metadata parser when handling sha384/sha512 checksums](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-9150)  
+  **Microsoft Security Response Center (MSRC)** · Jun 04 · _General awareness item._  
 
-- [Unpatched Windows Search URI Vulnerability Lets Attackers Steal NTLMv2 Hashes](https://thehackernews.com/2026/06/unpatched-windows-search-uri.html)  
-  **The Hacker News** · Jun 03 · _General awareness item._  
+- [CVE-2026-46598 Invoking  pathological inputs can lead to client panic in golang.org/x/crypto/ssh/agent](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-46598)  
+  **Microsoft Security Response Center (MSRC)** · Jun 04 · _General awareness item._  
 
-- [CVE-2026-40226 In nspawn in systemd 233 through 259 before 260, an escape-to-host action can occur via a crafted optional config file.](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-40226)  
-  **Microsoft Security Response Center (MSRC)** · Jun 03 · _General awareness item._  
+- [CVE-2026-27136 Invoking  duplicate attributes can cause XSS in golang.org/x/net/html](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-27136)  
+  **Microsoft Security Response Center (MSRC)** · Jun 04 · _General awareness item._  
 
-- [CVE-2026-27144 Miscompilation allows memory corruption via CONVNOP-wrapped array copy in cmd/compile](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-27144)  
-  **Microsoft Security Response Center (MSRC)** · Jun 03 · _General awareness item._  
+- [CVE-2026-42506 Invoking  incorrect handling of namespaced elements in foreign content in golang.org/x/net/html](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-42506)  
+  **Microsoft Security Response Center (MSRC)** · Jun 04 · _General awareness item._  
 
-- [CVE-2026-27143 Missing bound checks can lead to memory corruption in safe Go in cmd/compile](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-27143)  
-  **Microsoft Security Response Center (MSRC)** · Jun 03 · _General awareness item._  
+- [CVE-2026-25681 Invoking  incorrect handling of character references in DOCTYPE nodes in golang.org/x/net/html](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-25681)  
+  **Microsoft Security Response Center (MSRC)** · Jun 04 · _General awareness item._  
 
-- [CVE-2026-32281 Inefficient policy validation in crypto/x509](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-32281)  
-  **Microsoft Security Response Center (MSRC)** · Jun 03 · _General awareness item._  
+- [CVE-2026-39827 Invoking  memory leak when rejecting channels can lead to DoS in golang.org/x/crypto/ssh](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-39827)  
+  **Microsoft Security Response Center (MSRC)** · Jun 04 · _General awareness item._  
 
-- [CVE-2026-27140 Code execution vulnerability in SWIG code generation in cmd/go](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-27140)  
-  **Microsoft Security Response Center (MSRC)** · Jun 03 · _General awareness item._  
+- [CVE-2026-39835 Invoking  server panic during CheckHostKey/Authenticate in golang.org/x/crypto/ssh](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-39835)  
+  **Microsoft Security Response Center (MSRC)** · Jun 04 · _General awareness item._  
 
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [Microsoft's Coreutils for Windows, (Thu, Jun 4th)](https://isc.sans.edu/diary/rss/33048) — SANS Internet Storm Center
+- [DoJ Disrupts Southeast Asia Crypto Fraud Networks, Freezes $3.8 Million in Assets](https://thehackernews.com/2026/06/doj-disrupts-southeast-asia-crypto.html) — The Hacker News
 - [ISC Stormcast For Thursday, June 4th, 2026 https://isc.sans.edu/podcastdetail/9958, (Thu, Jun 4th)](https://isc.sans.edu/diary/rss/33046) — SANS Internet Storm Center
 - [Chinese hackers use new Atlas RAT malware in European cyberattacks](https://www.bleepingcomputer.com/news/security/chinese-hackers-use-new-atlas-rat-malware-in-european-cyberattacks/) — BleepingComputer
 - [CISA warns of cyberattacks targeting fuel tank monitoring systems](https://www.bleepingcomputer.com/news/security/cisa-warns-of-cyberattacks-targeting-fuel-tank-monitoring-systems/) — BleepingComputer
 - [WhatsApp, Slack Notifications Could Hijack Google Gemini on Android](https://thehackernews.com/2026/06/whatsapp-slack-notifications-could.html) — The Hacker News
-- [New 'HTTP/2 Bomb' DoS attack crashes web servers in under a minute](https://www.bleepingcomputer.com/news/security/new-http-2-bomb-dos-attack-crashes-web-servers-in-under-a-minute/) — BleepingComputer
-- [Google DoubleClick Abused in New Malspam Campaign to Deliver DesckVB RAT](https://thehackernews.com/2026/06/google-doubleclick-abused-in-new.html) — The Hacker News
 
 ---
 
