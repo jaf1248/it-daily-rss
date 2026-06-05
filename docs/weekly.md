@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
 **Period:** May 29 – June 05, 2026  
-**Generated:** 2026-06-05 00:05 UTC  
+**Generated:** 2026-06-05 05:15 UTC  
 **Items reviewed:** 127  
 
 ## ⚡ Top Actions This Week
@@ -83,12 +83,12 @@
 
 ## 🔵 FYI — General Awareness
 
+- [ISC Stormcast For Friday, June 5th, 2026 https://isc.sans.edu/podcastdetail/9960, (Fri, Jun 5th)](https://isc.sans.edu/diary/rss/33050) — SANS Internet Storm Center
 - [Brave Software releases Origin for a paid, bloat-free browsing experience](https://www.bleepingcomputer.com/news/software/brave-software-releases-origin-for-a-paid-bloat-free-browsing-experience/) — BleepingComputer
 - [Credit card theft campaign abuses Stripe to host stolen payment info](https://www.bleepingcomputer.com/news/security/credit-card-theft-campaign-abuses-stripe-to-host-stolen-payment-info/) — BleepingComputer
 - [New IronWorm malware hits 36 packages in npm supply-chain attack](https://www.bleepingcomputer.com/news/security/new-ironworm-malware-hits-36-packages-in-npm-supply-chain-attack/) — BleepingComputer
 - [Claude Code GitHub Action Flaw Let One Malicious Issue Hijack Repositories](https://thehackernews.com/2026/06/claude-code-github-action-flaw-let-one.html) — The Hacker News
 - [ThreatsDay Bulletin: AI Agents Gone Wrong, Sketchy C2 Tools, ClickFix Tricks, JS Backdoors & 20+ New Stories](https://thehackernews.com/2026/06/threatsday-bulletin-ai-agents-gone.html) — The Hacker News
-- [Microsoft blames unexpected Windows driver updates on caching issue](https://www.bleepingcomputer.com/news/microsoft/microsoft-blames-unexpected-windows-driver-updates-on-caching-issue/) — BleepingComputer
 
 ---
 
