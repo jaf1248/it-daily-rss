@@ -3,8 +3,520 @@
 <channel>
   <title>Joe — VP of IT Briefing</title>
   <description>Leadership-focused IT risk, vendors, pricing, licensing, and industry context.</description>
-  <lastBuildDate>Fri, 05 Jun 2026 05:14:34 +0000</lastBuildDate>
+  <lastBuildDate>Fri, 05 Jun 2026 09:42:04 +0000</lastBuildDate>
   
+<item>
+  <title>🔵 UK&#x27;s top crime agency hamstrung by legacy IT, watchdog warns</title>
+  <link>https://www.theregister.com/public-sector/2026/06/05/uks-top-crime-agency-hamstrung-by-legacy-it-watchdog-warns/5251155</link>
+  <pubDate>Fri, 05 Jun 2026 09:15:00 +0000</pubDate>
+  <source>The Register</source>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Regulator says NCA's aging tech drags down productivity, forces officers to juggle hardware and do manual workarounds<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</item>
+
+<item>
+  <title>🟠 Claude Code has an MCP security problem — and your developers are already using it</title>
+  <link>https://www.csoonline.com/article/4181230/claude-code-has-an-mcp-security-problem-and-your-developers-are-already-using-it.html</link>
+  <pubDate>Fri, 05 Jun 2026 09:00:00 +0000</pubDate>
+  <source>CSO Online</source>
+  <description><![CDATA[<b>Why this matters: Supply chain risk — audit third-party dependencies and vendor access.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<p>Claude Code is Anthropic’s AI coding assistant — a command-line tool that developers are adopting fast. It connects to external services through Model Context Protocol, the standard that lets AI tools interact with Jira, Confluence, GitHub, databases and internal APIs. When a developer connects one of those services, Claude Code runs an OAuth flow, the user approves the scopes and the tool receives a bearer token it uses for every subsequent request.</p>
+
+
+
+<p>That token is stored in plaintext in a configuration file on the developer’s machine. And researchers have now shown exactly how attackers are getting to it.</p>
+
+
+
+<h2 class="wp-block-heading"><a></a>What researchers found</h2>
+
+
+
+<p>Last week, researchers at<a href="https://www.mitiga.io/blog/claude-code-mcp-token-theft-mitm"> </a><a href="https://www.mitiga.io/blog/claude-code-mcp-token-theft-mitm">Mitiga Labs published an attack chain</a> that should concern every security team whose developers use Claude Code. The attack starts with a malicious npm package — something that looks like a legitimate utility or wrapper. Hidden inside is a post-install hook that runs silently during installation. That hook rewrites a single file: ~/.claude.json.</p>
+
+
+
+<p>That file is the control point for how Claude Code routes MCP traffic. Change it, and you can point Claude Code’s authenticated requests to attacker-controlled infrastructure instead of the legitimate service. The OAuth tokens stored in that same file get intercepted in transit. The attacker now holds valid, long-lived bearer tokens for every SaaS platform the developer had connected — Jira, Confluence, GitHub, whatever was integrated.</p>
+
+
+
+<p>What makes this particularly difficult to detect is what the audit logs look like on the other end. The IP address in the provider’s logs resolves to Anthropic’s egress range. The user is real. The session is valid.<a href="https://www.mitiga.io/blog/claude-code-mcp-token-theft-mitm"> </a><a href="https://www.mitiga.io/blog/claude-code-mcp-token-theft-mitm">As Mitiga put it</a>, nothing in that log row is wrong — but nothing in it is right either. The user did not run the query. An attacker did, using a token that was silently redirected before it ever reached its intended destination.</p>
+
+
+
+<p>Mitiga reported this to Anthropic on April 10.<a href="https://www.securityweek.com/claude-code-oauth-tokens-can-be-stolen-through-stealthy-mcp-hijacking/"> </a><a href="https://www.securityweek.com/claude-code-oauth-tokens-can-be-stolen-through-stealthy-mcp-hijacking/">Anthropic responded on April 12 that the issue was out of scope</a>, reasoning that the attack requires prior code execution through a package installation that the user consented to. As of this writing, no patch exists. The attack chain is live.</p>
+
+
+
+<h2 class="wp-block-heading"><a></a>This is not the first time</h2>
+
+
+
+<p>The Mitiga disclosure is the most recent, but it is not the first time Claude Code’s configuration model has created a security problem.</p>
+
+
+
+<p>In February 2026,<a href="https://research.checkpoint.com/2026/rce-and-api-token-exfiltration-through-claude-code-project-files-cve-2025-59536/"> </a><a href="https://research.checkpoint.com/2026/rce-and-api-token-exfiltration-through-claude-code-project-files-cve-2025-59536/">Check Point Research published findings on two separate vulnerabilities</a>. The first, CVE-2025-59536, allowed remote code execution through malicious hooks planted in a repository’s settings file — code that ran before the user could even read the trust dialog. The second, CVE-2026-21852, allowed API key exfiltration by overriding a single environment variable, redirecting authenticated traffic to attacker-controlled infrastructure before any consent prompt appeared.<a href="https://thehackernews.com/2026/02/claude-code-flaws-allow-remote-code.html"> </a><a href="https://thehackernews.com/2026/02/claude-code-flaws-allow-remote-code.html">Simply cloning and opening an untrusted repository was enough</a> to trigger both.</p>
+
+
+
+<p>Anthropic patched those vulnerabilities after Check Point’s disclosure. But the pattern they reveal — configuration files that security teams treat as passive metadata actually functioning as active execution paths — is the same pattern the Mitiga attack exploits. The mechanism keeps working because the underlying architecture creates it.</p>
+
+
+
+<h2 class="wp-block-heading"><a></a>Why security teams need to pay attention</h2>
+
+
+
+<p>If you have read about adversary-in-the-middle phishing, this should feel familiar. AiTM attacks do not steal credentials directly — they sit between the user and the legitimate service, wait for authentication to succeed and walk away with the session token that proves it happened. The Mitiga attack on Claude Code works the same way. The OAuth flow completes legitimately. The user approved the scopes. The token is valid. The attacker just inserted themselves into the routing layer before the token reached its intended destination.</p>
+
+
+
+<p>The difference is that AiTM attacks target browser sessions. This targets developer tooling — and developer tooling sits closer to your source code, your internal APIs, your cloud infrastructure and your production systems than most browser sessions ever do.</p>
+
+
+
+<p>Claude Code adoption is accelerating. Developers install it because it genuinely improves their workflow. They connect it to the tools they use every day. Most of them are not thinking about what the post-install scripts in their npm dependencies are doing to their local configuration files. That is not a failure of awareness — it is an unreasonable expectation. The security team needs to be thinking about it instead.</p>
+
+
+
+<h2 class="wp-block-heading"><a></a>Three controls that help right now</h2>
+
+
+
+<ol class="wp-block-list">
+<li><strong>Monitor </strong><strong>~/.claude.json for unexpected changes.</strong> This file is the pivot point in the Mitiga attack. Changes to MCP server endpoints in that file — particularly additions of new localhost proxy addresses or unfamiliar external endpoints — should trigger an alert. Most organizations have no monitoring on user-level configuration files in developer environments. That needs to change.<a href="https://www.mitiga.io/blog/claude-code-mcp-token-theft-mitm"> </a><a href="https://www.mitiga.io/blog/claude-code-mcp-token-theft-mitm">Mitiga specifically recommends</a> tracking changes to Claude Code configuration, MCP server URLs and OAuth refresh behavior as the primary detection layer.</li>
+
+
+
+<li><strong>Treat npm post-install hooks as a first-class security concern.</strong> The Mitiga attack begins with a malicious npm package. Post-install hooks that execute arbitrary code at install time are a known supply chain risk class — but enforcement in developer environments is inconsistent. Audit what runs during package installation in your development pipelines. Consider requiring review of packages that include post-install scripts before they reach developer machines. This is not a Claude Code-specific recommendation; it applies to every tool in your development stack. Claude Code just made the consequences of getting it wrong much more tangible.</li>
+
+
+
+<li><strong>Audit OAuth tokens connected to Claude Code integrations and rotate them.</strong> Developers who connect Claude Code to Jira, Confluence, GitHub or any other SaaS platform create OAuth tokens that persist across sessions. If those tokens were active during a period when a malicious package was installed, they should be treated as potentially compromised. Rotate them. Review the audit logs on the provider side for the activity patterns Mitiga describes — valid-looking requests from Anthropic’s egress IPs that the developer did not initiate. Note that<a href="https://www.mitiga.io/blog/claude-code-mcp-token-theft-mitm"> </a><a href="https://www.mitiga.io/blog/claude-code-mcp-token-theft-mitm">token rotation alone does not break the chain</a> if the malicious hook is still present — the hook will reseed the configuration and capture new tokens on the next refresh. Remediation requires removing the hook and cleaning the configuration first.</li>
+</ol>
+
+
+
+<h2 class="wp-block-heading"><a></a>An honest assessment</h2>
+
+
+
+<p>Anthropic’s response to the Mitiga disclosure — that the attack is out of scope because the user consented to installing the package — follows a logic that security practitioners will recognize and most will reject. Consent to install a package is not consent to have that package rewrite your AI tool’s routing configuration and intercept your SaaS credentials. The two things are not the same and treating them as equivalent places the entire burden of supply chain security on the developer, making a split-second judgment about a dependency name.</p>
+
+
+
+<p>That is not a reasonable security model.</p>
+
+
+
+<p>The patched Check Point vulnerabilities show that Anthropic is responsive when the issue is framed correctly. The Mitiga research is a week old. Whether a patch follows is an open question, but the attack chain works today regardless of how that question resolves.</p>
+
+
+
+<p>Your developers are using Claude Code. The question for security teams is not whether to engage with this risk but how quickly you can implement detection and response that accounts for it. The configuration file is small, the monitoring requirement is specific, and the attack chain is documented. Starting there is better than waiting for a vendor patch that may not come.</p>
+
+
+
+<p><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><strong><a href="https://www.csoonline.com/expert-contributor-network/">Want to join?</a></strong></p>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</item>
+
+<item>
+  <title>🟠 AI has a leadership problem, not a technology problem. Most organisations haven’t noticed yet</title>
+  <link>https://www.cio.com/article/4181237/ai-has-a-leadership-problem-not-a-technology-problem-most-organisations-havent-noticed-yet.html</link>
+  <pubDate>Fri, 05 Jun 2026 09:00:00 +0000</pubDate>
+  <source>CIO.com</source>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<p>Recently, a senior leader asked me why their people were “resisting” the new AI tools they’d just mandated across the business. As we unpacked it, they admitted there’d been no real narrative about why this mattered, no redesign of processes and no time or support for teams to safely experiment, just licenses, policy and a launch email. The tools were live, but the change never actually started.</p>
+
+
+
+<p>I keep seeing the same pattern across organisations in Australia and New Zealand: Significant AI investment, thoughtful technology selection and far less adoption than leaders expected.</p>
+
+
+
+<p>After 25 years in transformation, I’ve come to believe that AI doesn’t fail organizations. It exposes them. Specifically, it exposes the leadership and change capability gaps that were already there, and it does it faster, more visibly, than most technology shifts before it.</p>
+
+
+
+<h2 class="wp-block-heading" id="the-numbers-dont-lie-but-they-dont-tell-the-whole-story">The numbers don’t lie — but they don’t tell the whole story</h2>
+
+
+
+<p>Prosci recently completed <a href="https://www.prosci.com/blog/how-executives-accelerate-ai-adoption" rel="nofollow">research</a> with 1,107 participants across executives, team leaders and frontline workers examining AI implementation in practice. The headline findings sound encouraging: 94% of organizations say AI is easy to use, and 98% find it valuable.</p>
+
+
+
+<p>So why are so many implementations still falling short of expectations?</p>
+
+
+
+<p>Those numbers measure perception, not behavior. Real ROI only shows up when people actually work differently, and that’s where most organizations are stuck.</p>
+
+
+
+<p>When we looked at the organizations getting real traction from AI compared to those still struggling, the difference wasn’t the technology. It was leadership, trust, culture and change management. More specifically, it was the extent to which organizations treated AI as a human transformation, not simply a technology implementation.</p>
+
+
+
+<h2 class="wp-block-heading" id="ai-adoption-is-exposing-a-leadership-gap">AI adoption is exposing a leadership gap</h2>
+
+
+
+<p>One of the more uncomfortable truths about AI transformation is that it exposes leadership capability gaps faster than most previous technology shifts.</p>
+
+
+
+<p>AI changes decision-making, workflows and accountability in real time. That creates uncertainty, especially for middle managers and frontline teams who are being asked to rethink decision-making, productivity and even role design in real time.</p>
+
+
+
+<p>Employees are asking questions many leaders are still struggling to answer themselves: Will AI replace parts of my role? What decisions should humans still own? How do we measure productivity now? What happens if the AI gets it wrong?</p>
+
+
+
+<p>In organisations where leaders avoid these conversations or default to overly optimistic messaging about AI, trust erodes quickly.</p>
+
+
+
+<p>Employees are far more likely to engage with AI when leaders explain how it will be used, where oversight exists and how human judgement remains part of the process. The trust is built through conversation, not comms.</p>
+
+
+
+<p>Yet the gap between deployment and trust is widening. Research from <a href="https://assets.kpmg.com/content/dam/kpmgsites/au/pdf/2025/trust-in-ai-global-insights-2025-australia-snapshot.pdf.coredownload.inline.pdf" rel="nofollow">KPMG and the University of Melbourne</a> found that 65% of Australian employees work for organisations already using AI, yet only 36% say they are willing to trust it. In leadership conversations, the same patterns keep surfacing: Leaders talk about “efficiency” but avoid the real conversation about roles and headcount, offer lofty AI strategy with almost no concrete guidance on how decisions should change, and ask for experimentation while quietly punishing visible failure. Will this replace parts of my role, what do humans still own, what happens if it goes wrong, are ducked or deferred. And when leaders either blindly “trust the data” or run one-way town halls instead of creating ongoing, honest dialogue, people conclude that AI isn’t something being done with them, but to them, which is exactly where trust starts to fray.</p>
+
+
+
+<p>This disconnect matters enormously because the frontline is where the work actually happens. If the people closest to customers, operations and day-to-day decisions don’t trust the tools they’ve been given, adoption stalls.</p>
+
+
+
+<p>And unlike a software issue, you can’t patch a trust deficit with a product update.</p>
+
+
+
+<h2 class="wp-block-heading" id="what-struggling-organizations-have-in-common">What struggling organizations have in common</h2>
+
+
+
+<p>Organizations that are struggling with AI implementation share a few common traits. Their leaders are taking cautious, incremental steps rather than committing to real transformation.</p>
+
+
+
+<p>AI experimentation is unsupported or subtly discouraged. AI capability sits inside a small specialist group instead of being distributed across the workforce. And perhaps most importantly, there’s a growing disconnect between what executives believe is happening with AI adoption and what employees are experiencing day to day.</p>
+
+
+
+<p>On a recent transformation in a large financial services organization, these patterns were almost textbook. The exec team believed they were “playing it safe” with AI, limiting access to a small innovation group and asking everyone else to “watch and learn”, but on the ground, teams quietly read that as a signal that AI was risky, optional and not really for them. The result was a widening gap: Reports to the board painted a picture of steady AI progress, while frontline staff were still copy‑pasting into old templates, unsure what they were allowed to try and increasingly cynical about all the AI talk because nothing meaningful in their day-to-day work had actually changed.</p>
+
+
+
+<p>Too many organizations still approach AI as a technology deployment exercise rather than a business transformation effort. ess.</p>
+
+
+
+<p>There’s an assumption that once the tools are available, adoption and value will naturally follow.</p>
+
+
+
+<p>But technology doesn’t change behavior on its own. People do.</p>
+
+
+
+<h2 class="wp-block-heading" id="what-organisations-getting-ai-right-are-doing-differently">What organisations getting AI right are doing differently</h2>
+
+
+
+<p>The organisations making real progress with AI tend to behave differently in four important ways.</p>
+
+
+
+<p>First, their executives behave as though AI adoption is a business priority – not an innovation side project. They are visible, engaged and clear about what success looks like.</p>
+
+
+
+<p>Second, they manage the human side of change deliberately — with structured change management, clear communication, manager enablement, feedback loops and active resistance management. The technology rollout is only one workstream. The people workstream runs alongside it. That’s where trust is either built or lost.</p>
+
+
+
+<p>Third, they build trust through transparency. High-performing organizations explain how AI tools work, what data they use and where human oversight still matters. They don’t expect employees to blindly trust a black box.</p>
+
+
+
+<p>Finally, they democratize AI capability. Rather than isolating AI knowledge inside IT or innovation teams, they actively spread capability across the organization through experimentation, learning and peer support.</p>
+
+
+
+<p>In one recent transformation with a multi-national, adoption only started to accelerate when the executive team stopped treating AI as an innovation experiment and rewired how they led day to day. The COO began every weekly ops call by showing one concrete way they had personally used AI in their own workflow that week, then asked each manager to share an example from their teams, creating visible norms and peer pressure around real usage rather than abstract support.</p>
+
+
+
+<p>At the same time, they ran a dedicated “people workstream” alongside the tech rollout, equipping managers with talk tracks, running open Q&amp;A forums about data and oversight and inviting frontline employees to co-design how AI would support core processes like rostering decisions. Trust, transparency and capability all rose together instead of lagging behind the technology.</p>
+
+
+
+<h2 class="wp-block-heading" id="the-question-id-ask-leaders">The question I’d ask leaders</h2>
+
+
+
+<p>If your AI investment isn’t paying off the way you expected, before revisiting the vendor contract or platform choice, I’d encourage you to ask a harder question:</p>
+
+
+
+<p>Have we actually managed the change? Not simply announced it. Not just trained people on where to click. Managed it — in the full sense of that word.</p>
+
+
+
+<p>Have we built the case for change at every level of the organization? Have we addressed the trust gap between the boardroom and the frontline? Have we created permission to experiment, and supported people when things don’t go perfectly the first time?</p>
+
+
+
+<p>Because AI adoption only happens when people understand how the technology supports their judgement, not replaces it.</p>
+
+
+
+<p>Most organisations already have access to capable AI technology. What will separate successful organisations from everyone else over the next few years won’t be access to tools. It will be leadership’s ability to build trust, clarity and confidence around how work changes.</p>
+
+
+
+<p>For ANZ organizations, what’s at stake here is more than just a few missed efficiency gains, it’s the risk of quietly falling behind in competitiveness while telling themselves they’re “doing AI.” If we don’t address the human side of AI transformation, we’ll end up with expensive tools sitting on the shelf, increasingly cynical workforces and a widening gap between glossy strategy decks and what actually happens in offices, sites and frontline teams.</p>
+
+
+
+<p>But if leaders lean into the hard work of trust, clarity and genuine engagement, AI becomes something very different: A catalyst for better decision-making, more meaningful roles and workplaces where people feel empowered, not threatened by new technology. In that future, the organizations that win in ANZ won’t just be the ones with the best models or biggest budgets; they’ll be the ones whose leaders had the courage to bring their people with them, not just their platforms.</p>
+
+
+
+<p>Because AI transformation isn’t primarily a technology transformation.</p>
+
+
+
+<p>It’s a human one.</p>
+
+
+
+<p><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><strong><a href="https://www.cio.com/expert-contributor-network/">Want to join?</a></strong></p>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔴 AI tools becoming hot commodities on ransomware marketplaces</title>
+  <link>https://www.csoonline.com/article/4181514/ai-tools-becoming-hot-commodities-on-ransomware-marketplaces.html</link>
+  <pubDate>Fri, 05 Jun 2026 07:10:00 +0000</pubDate>
+  <source>CSO Online</source>
+  <description><![CDATA[<b>Why this matters: Elevated ransomware risk — validate backups and endpoint defenses.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<p>Sales of AI-based tools is accelerating within underground <a href="https://www.csoonline.com/article/563507/what-is-ransomware-how-it-works-and-how-to-remove-it.html">ransomware</a> marketplaces, lowering the barrier to entry for new actors in the process.</p>
+
+
+
+<p>An analysis of Telegram channels, 20 dark web forums, and five underground markets by anti-ransomware platform vendor Halcyon found that AI utility posts grew to 1,486 in February 2026, up from just 38 in December 2025.</p>
+
+
+
+<p>The AI tools for sale divided into four categories:</p>
+
+
+
+<ul class="wp-block-list">
+<li>Weaponized LLMs: Sometimes called dark LLMs, these tools omit the safety guardrails and rules present in legitimate large language models (LLMs). “WormGPT” is the market leader in this category of cybercrime-focused AI tooling but only as a brand used by multiple operators, some of which are straightforward scams that collect payments without offering any service.</li>
+
+
+
+<li>AI-enabled identity fraud: Tools in this category include voice and video-enabled deepfakes, created using AI, that are used to fool selfie-based recognition systems and other know your customer (KYC) security controls, among other fraudulent applications. The same tools can also be used as part of <a href="https://www.csoonline.com/article/3995364/ai-superpowers-bec-attacks.html">business email compromise scams</a>.</li>
+
+
+
+<li>AI-augmented malware and attack infrastructure: AI-driven infrastructure is being used to aggregate, process, and exfiltrate stolen data more efficiently.</li>
+
+
+
+<li>Jailbroken and stolen AI services: Hacked AI accounts are the largest category of services offered and the cheapest.</li>
+</ul>
+
+
+
+<p>Halcyon estimates that ransomware attacks have grown in volume by 20% since 2023 with an increased focus on targeting smaller enterprises, which now comprise 80% of attacks.</p>
+
+
+
+<p>During a keynote presentation at Infosecurity Europe, Cynthia Kaiser, SVP of Halcyon’s Ransomware Research Center, told delegates that the <a href="https://www.csoonline.com/article/3838121/the-dirty-dozen-12-worst-ransomware-groups-active-today.html">largest ransomware operators</a> — such as Akira — are increasingly operating the <a href="https://www.csoonline.com/article/4119555/cybercrime-inc-the-new-industry-challenging-cisos-in-2026.html">same business models as legitimate vendors</a> by selling services and infrastructure to their clients and affiliates. The main difference is that the goods on offer are exploits and stolen credentials rather than the legitimate goods sold through legitimate marketplaces.</p>
+
+
+
+<p>Ransomware groups sell routinely through multiple channels, thereby creating redundancy in the event that any channel is taken down. Their services are often offered with tiered pricing, and are commonly available with a freemium model popularised by legitimate web services. Telegram bot-driven channels are automating the process of sales and marketing, while AI-based utilities are being applied by cybercriminals to offer customer service.</p>
+
+
+
+<p>“Modern ransomware operators don’t need to build their operations from scratch,” said Kaiser, the former deputy assistant director of the FBI’s Cyber Division, who added that the skill level required from would-be <a href="https://www.csoonline.com/cybercrime/">cybercriminals</a> has dropped.</p>
+
+
+
+<h2 class="wp-block-heading" id="dishonour-among-thieves">Dishonour among thieves</h2>
+
+
+
+<p>All this may seem impressive, but Kaiser noted that criminal operational security (OpSec) is weaker than it looks.</p>
+
+
+
+<p>“Criminal AI markets have a theft problem [because] black hats are attacking each other,” Kaiser said.</p>
+
+
+
+<p>For example, credentials from one WormGPT instance were stolen by rival cybercriminals and dumped back onto the same forum that originally sold access to the malign AI-based utility.</p>
+
+
+
+<p>Such disruption aside, the greater use of AI tooling is part of a sign that the underground ransomware scene has professionalised not least by making it easier in run multiple attacks at scale.</p>
+
+
+
+<h2 class="wp-block-heading" id="raking-it-in">Raking it in</h2>
+
+
+
+<p>According to separate research from Rapid7, ransomware is becoming more profitable, up 39% between Q1 2025 and Q1 2026.</p>
+
+
+
+<p>The <a href="https://www.csoonline.com/article/4070290/lockbit-dragonforce-and-qilin-form-a-cartel-to-dictate-ransomware-market-conditions.html">Qilin ransomware group</a> made an estimated $193 million between July 2025 and March 2026. And <a href="https://www.csoonline.com/article/4178580/the-gentlemen-are-coming-for-your-files-and-then-your-network.html">The Gentleman</a>, which is just behind Qilin as the biggest ransomware group, made an estimated $52 million between July 2025 and March 2026, according to Rapid7.</p>
+
+
+
+<p>Rapid7’s analysis is based on average ransom payments and payment rates from CoveWare, a ransomware and cyber extortion incident response firm.</p>
+
+
+
+<p>Thom Langford, CTO EMEA at Rapid7, said that the ransomware ecosystem has evolved into a mature underground marketplace where access, tooling, and full attack services are now commercially available to almost anyone.</p>
+
+
+
+<p>Langford added that AI-based social engineering, primarily to craft more convincing phishing lures, is widely used.</p>
+
+
+
+<p>Marketplaces offer an a la carte menu where cybercriminals can contract services for initial access, exfiltration, or negotiation with victims, according to Langford, who added that many if not all of the principal players in the ransomware scene “speak Russian.”</p>
+
+
+
+<h2 class="wp-block-heading" id="countermeasures">Countermeasures</h2>
+
+
+
+<p>Law enforcement takedowns are curtailing the growth of ransomware operations, but businesses also need to play their part in defence, Halcyon advises.</p>
+
+
+
+<p>Enterprises should concentrate on measures such as stopping initial access, detecting lateral movement, and disrupting exfiltration and encryption. Companies can also build resilience through tabletop exercises, Kaiser concluded.</p>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Muchas plazas en la oferta pública de empleo TI, pero ¿son suficientes para responder a las necesidades de la Administración digital?</title>
+  <link>https://www.cio.com/article/4181548/muchas-plazas-en-la-oferta-publica-de-empleo-ti-pero-son-suficientes-para-responder-a-las-necesidades-de-la-administracion-digital.html</link>
+  <pubDate>Fri, 05 Jun 2026 07:08:51 +0000</pubDate>
+  <source>CIO.com</source>
+  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<p>Las nuevas tecnologías son una de las grandes protagonistas de la última convocatoria de empleo público a nivel estatal. A principios de mayo, el Consejo de Ministros <a href="https://www.rtve.es/noticias/20260505/oferta-empleo-publico-tecnologia-ia-ciberseguridad-emergencia-climatica/17054225.shtml" rel="nofollow" target="_blank">aprobaba</a> una oferta con 27.232 plazas. El principal destino de los futuros funcionarios estará en la <strong>Administración General del Estado</strong> y 1.700 plazas se irán al cuerpo superior de sistemas y tecnologías de la información (TIC).</p>
+
+
+
+<p>Esto supone un crecimiento frente a convocatorias previas (son un 42% más que en 2025), pero también ha abierto la puerta a perfiles concretos de forma más específica que en pasadas ediciones. En esta oferta de empleo público, habrá <strong>plazas concretas para inteligencia artificial, ciberseguridad y ciencia del dato</strong>. Esto no supone, eso sí, que se vayan a trabajar áreas que no se estuviesen tocando. “Es importante que se visibilice, pero ya se lleva haciendo [ese trabajo] desde hace años”, explica a COMPUTERWORLD <strong>Leonor Torres, presidenta de ASTIC</strong>, la asociación de los funcionarios de los Cuerpos Superiores de Sistemas y Tecnologías de la Información de las Administraciones Públicas. De hecho, Torres ve un potencial riesgo en poner estos apellidos tan concretos a las plazas, “porque no hay carrera detrás”, lo que puede generar frustración profesional. Se pierde, apunta, la visión transversal. “No funciona como compartimentos estancos”, indica.</p>
+
+
+
+<p>Pero, más allá de esta novedad, ¿son estas plazas muchas, suficientes o deberían ser más? “Desde ASTIC valoramos positivamente que se haya incrementado el número de plazas”, indica Torres, recordando que la transformación digital es compleja y necesita personal.</p>
+
+
+
+<p>La clave podría no estar tanto en el número de plazas que se sacan a concurso, sino en qué ocurre con ellas. Esto es, si luego esos puestos se quedan vacíos, la convocatoria no habrá resuelto el problema. <strong>Guillermo Areán, miembro del cuerpo superior de funcionarios del Estado</strong> y que ha ocupado durante ocho años puestos directivos en organismos, contrapone a los titulares que hablan de que ‘se convocan miles de plazas’, una realidad en la que se cubren unos centenares.</p>
+
+
+
+<p>Solo hay que echar mano del histórico de ofertas públicas previas. En TI se convocan plazas de nivel A (el más elevado) y C (el básico). Los aprobados de las A no suelen llegar para cubrir todos los puestos de la oferta.</p>
+
+
+
+<p>Areán es crítico con el proceso actual y evidencia sus fallos. “Llevo cuatro años poniendo este problema sobre la mesa”, asegura. Al hilo de esta última convocatoria, ha publicado un <a href="https://www.linkedin.com/posts/guillermo-are%C3%A1n-fern%C3%A1ndez_administraciondigital-transformaciondigital-share-7459983389895540736-5YVm/?utm_source=share&amp;utm_medium=member_desktop&amp;rcm=ACoAAAJ9AlwBMqovzOzLcyRxRHSYoOfZ-neZrLg" rel="nofollow" target="_blank">estudio</a> sobre qué falla en las ofertas de empleo público TI. Su conclusión es que se ha producido ya un “agotamiento estructural”. El complejo examen implica parar años para prepararlo (algo que no todo el mundo puede o quiere hacer), no está atrayendo talento y se produce un exceso de centralismo. No solo es un lastre que los propios procesos hayan sido habitualmente en Madrid, sino que las plazas se concentran en esa ciudad (y los salarios no siempre son lo suficientemente elevados como para que compense vivir allí o en comparación con lo que ofrece el mercado, a lo que hay que sumar que no todo el mundo querría necesariamente vivir allí). Areán cree que los procesos selectivos actuales “no están adaptados a la realidad”.</p>
+
+
+
+<p>Desde ASTIC no comparten las críticas al completo. “Las pruebas las consideramos adecuadas”, apunta Torres, pero sí suma que, desde la asociación, creen que el proceso podría mejorarse. No ven tanto el fallo en el examen, como en los procesos de atribución de puestos. También ven un lastre en los salarios y en la centralización, que hace que se deje de usar todo el territorio estatal. Torres defiende mejoras en la planificación y el perfilado. Y añade: “la carrera profesional es muy importante”. No se trata solo de captar talento, sino de darle recorrido.</p>
+
+
+
+<p>Agilizar es una de las grandes palabras clave que repiten las fuentes consultadas. Areán apunta que, una vez que se pasa el examen, la atribución de plazas es también lenta, algo que penaliza a la hora de la verdad. “Es curioso ver como el C1 tiene un 100% de cubrir plazas”, cuenta Areán, “pero las das en Madrid”. Así, cuando toca tomar la plaza en cuestión mucha gente rechaza, renuncia o acaba pidiendo excedencia. El salario es demasiado bajo par los costes de Madrid, pero el proceso ha sido largo y es probable, como señala este experto, que ya estés a otra cosa.</p>
+
+
+
+<figure class="wp-block-pullquote"><blockquote><p><strong><em>¿Qué falla? Guillermo Areán habla de “un problema estructural”</em></strong></p></blockquote></figure>
+
+
+
+<h2 class="wp-block-heading" id="que-falla-en-el-empleo-publico-en-ti">Qué falla en el empleo público en TI  </h2>
+
+
+
+<p>Entonces ¿qué falla? Areán habla de “un problema estructural”. “Este no es un problema político”, asegura, sino uno de la cultura corporativa que se ha instalado en el funcionariado. Los procesos, la burocracia o la parálisis a la hora de hacer cosas nuevas crean un atasco. “Un problema es que no tenemos directivos que se atrevan a tomar decisiones”, señala Areán, que reclama que se pierda el miedo al riesgo y la innovación.</p>
+
+
+
+<p>En ese escenario, la descentralización podría ser una solución. De hecho, como cuenta este experto, ya es factible en una Administración pública digitalizada. Él mismo lo hizo cuando ocupaba una posición directiva tecnológica en la Dirección General de Tráfico, con un proyecto premiado que descentralizó las plazas de informática. No se trataba de trabajo remoto, sino de sede remota. Si la DGT tiene oficinas repartidas por todo el territorio, su personal TI también podían estarlo. Como señala el experto, “qué más me da tener una persona en la oficina de Ourense, Alicante o Soria”. Esto tiene ventajas que van más allá de atraer talento y evitar el cuello de botella central, como por ejemplo descongestionar provincias sobrecargadas o tener un <em>backup</em> cuando los servicios públicos de una zona no pueden funcionar (un ejemplo sería lo que pasó durante la DANA).  </p>
+
+
+
+<p>Además, hay que tener presente que, si no se cubran las plazas, esas funciones sí deben hacerse. Por ello, las administraciones públicas acaban echando mano de las subcontratas. “El dinero público se queda en las grandes empresas”, lamenta Areán, que critica igualmente el modelo bajo el que se opera. La licitación va a quien ofrece el precio más bajo. El experto entiende que eso funcione en suministros, pero no comparte tanto que ocurra en funciones en las que se ofrecen presupuestos muy bajos para cubrir perfiles que deberían tener un salario que lo dobla. Lo ocupan trabajadores junior y se genera burnout y rotación.  </p>
+
+
+
+<p>En paralelo, la convocatoria pide perfiles A, muy expertos, o perfiles C, mucho más básicos, pero esto no cubre todo. “También estamos pendientes de que se cree el grupo B”, recuerda Torres, algo clave para fortalecer equipos y captar talento en los ciclos de FP.</p>
+
+
+
+<figure class="wp-block-pullquote"><blockquote><p><em><strong> “Las nuevas generaciones no nos conocen. No se conoce lo que se hace en el sector público”, se lamenta Leonor Torres (ASTIC) </strong></em></p></blockquote></figure>
+
+
+
+<h2 class="wp-block-heading" id="captar-talento">Captar talento</h2>
+
+
+
+<p>Porque, al final, lo que necesita el cuerpo TIC es captar talento. “Las nuevas generaciones no nos conocen”, explica Torres. “No se conoce lo que se hace en el sector público”. Habría, apunta, que transmitir mejor a lo que se dedican y lo que logran. “Hay mucho que hacer, muchos proyectos”, suma Areán. Ambos expertos hablan de un trabajo “muy satisfactorio”, con proyectos muy interesantes, y del elevado valor del servicio público.</p>
+
+
+
+<p>Y si bien esos salarios que pueden parecer menos competitivos que los del mercado son al principio de la carrera un lastre, las cosas cambian con el paso de los años. Torres cuenta que la función pública tiene un atractivo extra para ciertos perfiles senior, porque da una estabilidad que en lo privado a veces se pierde.</p>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+</item>
+
 <item>
   <title>🔵 앤트로픽·오픈AI IPO가 의미하는 것···IT리더의 AI 예산은 더 늘어날까</title>
   <link>https://www.cio.com/article/4181500/%ec%95%a4%ed%8a%b8%eb%a1%9c%ed%94%bd%c2%b7%ec%98%a4%ed%94%88ai-ipo%ea%b0%80-%ec%9d%98%eb%af%b8%ed%95%98%eb%8a%94-%ea%b2%83cio%ec%9d%98-ai-%ec%98%88%ec%82%b0%ec%9d%80-%eb%8d%94-%eb%8a%98.html</link>
@@ -193,7 +705,7 @@
 <ul class="wp-block-list">
 <li>관련 기사 : <a href="https://www.cio.com/article/4177506/%ec%98%a4%ed%94%88ai-%ed%95%9c%ea%b5%ad%ec%97%90-%eb%8d%b0%ec%9d%b4%eb%b8%8c%eb%a0%88%ec%9d%b4%ed%81%ac-%eb%8f%84%ec%9e%85%ec%a0%95%eb%b6%80%c2%b7%ea%b3%b5%ea%b3%b5.html" target="_blank">오픈AI, 한국에 ‘데이브레이크’ 도입…정부·공공기관 AI 보안 지원 본격화</a></li>
 </ul>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
 </item>
 
 <item>
@@ -203,7 +715,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.theinformation.com/articles/data-center-developer-switch-talks-raise-billions-50-billion-plus-valuation"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260605/i1.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260605/p1#a260605p1" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="https://www.theinformation.com/">The Information</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.theinformation.com/articles/data-center-developer-switch-talks-raise-billions-50-billion-plus-valuation">Sources: data center developer Switch is in talks to raise billions of dollars from PE firms including Brookfield and KKR at a $50B+ valuation</a></b></span>&nbsp; &mdash;&nbsp; Data center developer Switch is in talks to raise billions of dollars at a valuation of at least $50 billion, as it seeks to capitalize &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.theinformation.com/articles/data-center-developer-switch-talks-raise-billions-50-billion-plus-valuation">Sources: data center developer Switch is in talks to raise billions of dollars from PE firms including Brookfield and KKR at a $50B+ valuation</a></b></span>&nbsp; &mdash;&nbsp; Data center developer Switch is in talks to raise billions of dollars at a valuation of at least $50 billion, as it seeks to capitalize &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -213,7 +725,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: Regulatory/compliance signal — assess applicability and remediation timeline.</b><br/><a href="https://arstechnica.com/tech-policy/2026/06/elon-musk-tries-again-to-escape-ftc-audits-of-x-data-handling/"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260604/i57.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260604/p57#a260604p57" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Ashley Belanger / <a href="http://arstechnica.com/">Ars Technica</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://arstechnica.com/tech-policy/2026/06/elon-musk-tries-again-to-escape-ftc-audits-of-x-data-handling/">Elon Musk petitioned the FTC in May to end its 2022 order restricting Twitter's data use, claiming Twitter no longer exists as X merged with xAI and then SpaceX</a></b></span>&nbsp; &mdash;&nbsp; Critics hope to keep Elon Musk from escaping a strict data-privacy order imposed by the Federal Trade Commission (FTC) shortly before he took over Twitter.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://arstechnica.com/tech-policy/2026/06/elon-musk-tries-again-to-escape-ftc-audits-of-x-data-handling/">Elon Musk petitioned the FTC in May to end its 2022 order restricting Twitter's data use, claiming Twitter no longer exists as X merged with xAI and then SpaceX</a></b></span>&nbsp; &mdash;&nbsp; Critics hope to keep Elon Musk from escaping a strict data-privacy order imposed by the Federal Trade Commission (FTC) shortly before he took over Twitter.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
@@ -330,7 +842,7 @@
 
 
 <p>That isn’t a positive for enterprises, Levy noted: “Meta’s checkered AI security track record doesn’t necessarily engender the kind of trust necessary for enterprise decision makers to deploy these tools at scale.”</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
 </item>
 
 <item>
@@ -479,7 +991,7 @@
 
 
 <p>“I suspect many CISOs will read this report less as an audit finding and more as a warning sign. The question is no longer whether vulnerabilities can be found. The question is whether the institutions responsible for organizing and prioritizing them can keep pace.”</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
 </item>
 
 <item>
@@ -489,7 +1001,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.tomshardware.com/tech-industry/artificial-intelligence/bots-have-now-passed-human-traffic-online-cloudflare-boss-laments-says-agentic-traffic-wasnt-expected-to-eclipse-real-people-until-next-year"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260604/i52.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260604/p52#a260604p52" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Mark Tyson / <a href="https://www.tomshardware.com/">Tom's Hardware</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.tomshardware.com/tech-industry/artificial-intelligence/bots-have-now-passed-human-traffic-online-cloudflare-boss-laments-says-agentic-traffic-wasnt-expected-to-eclipse-real-people-until-next-year">Cloudflare CEO Matthew Prince says agentic traffic is &ldquo;growing so fast that bots have now passed human traffic online for the first time&rdquo;</a></b></span>&nbsp; &mdash;&nbsp; Bot (automated) vs. human HTTP requests are split 57.5 vs. 42.5 percent, according to the firm's latest data.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.tomshardware.com/tech-industry/artificial-intelligence/bots-have-now-passed-human-traffic-online-cloudflare-boss-laments-says-agentic-traffic-wasnt-expected-to-eclipse-real-people-until-next-year">Cloudflare CEO Matthew Prince says agentic traffic is &ldquo;growing so fast that bots have now passed human traffic online for the first time&rdquo;</a></b></span>&nbsp; &mdash;&nbsp; Bot (automated) vs. human HTTP requests are split 57.5 vs. 42.5 percent, according to the firm's latest data.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
 </item>
 
 <item>
@@ -499,7 +1011,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><a href="https://www.wsj.com/tech/ai/anthropic-urges-global-pause-in-ai-development-flags-self-improvement-risk-99cefb73?st=yfsJia&amp;reflink=desktopwebshare_permalink"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260604/i51.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260604/p51#a260604p51" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="https://www.wsj.com/">Wall Street Journal</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.wsj.com/tech/ai/anthropic-urges-global-pause-in-ai-development-flags-self-improvement-risk-99cefb73?st=yfsJia&amp;reflink=desktopwebshare_permalink">Anthropic calls for top AI labs to weigh slowing or temporarily pausing development, suggesting that self-improving AI systems may soon pose societal risks</a></b></span>&nbsp; &mdash;&nbsp; The $1 trillion startup warns that AI models are nearing capability to improve without human intervention</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.wsj.com/tech/ai/anthropic-urges-global-pause-in-ai-development-flags-self-improvement-risk-99cefb73?st=yfsJia&amp;reflink=desktopwebshare_permalink">Anthropic calls for top AI labs to weigh slowing or temporarily pausing development, suggesting that self-improving AI systems may soon pose societal risks</a></b></span>&nbsp; &mdash;&nbsp; The $1 trillion startup warns that AI models are nearing capability to improve without human intervention</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
 </item>
 
 <item>
@@ -509,27 +1021,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.notus.org/technology/trump-ai-stake-openai"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260604/i50.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260604/p50#a260604p50" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="https://www.notus.org/">NOTUS</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.notus.org/technology/trump-ai-stake-openai">Sources: US officials have held talks with AI companies about the government acquiring shares; Sam Altman first pitched the concept directly to Trump in 2025</a></b></span>&nbsp; &mdash;&nbsp; Senior U.S. officials have held preliminary discussions with major artificial intelligence companies about the potential &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
-</item>
-
-<item>
-  <title>🔴 Unsealed 2020 lawsuit: ex-IBM VP of threat intelligence alleges that IBM and AT&amp;T concealed foreign cyber breaches to maintain eligibility for federal contracts (Bloomberg)</title>
-  <link>https://www.techmeme.com/260604/p45#a260604p45</link>
-  <pubDate>Thu, 04 Jun 2026 20:35:00 +0000</pubDate>
-  <source>Techmeme</source>
-  <description><![CDATA[<b>Why this matters: Potential data exposure — check monitoring and incident response readiness.</b><br/><a href="https://www.bloomberg.com/news/articles/2026-06-04/ibm-at-t-accused-by-whistleblower-of-covering-up-foreign-hacks?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc4MDYwMzc4NSwiZXhwIjoxNzgxMjA4NTg1LCJhcnRpY2xlSWQiOiJURzMySE9LSkg2VjQwMCIsImJjb25uZWN0SWQiOiJBNkJBMTU4RTEwN0Y0NDk3OUQwRjRFOTgyN0ZERkVDQiJ9.PI0mdDQgV_KjOobDdhQQ-vzzj-4aojnm1eHKqBdJqb4"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260604/i45.jpg" vspace="4" /></a>
-<p><a href="https://www.techmeme.com/260604/p45#a260604p45" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="https://www.bloomberg.com/">Bloomberg</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/articles/2026-06-04/ibm-at-t-accused-by-whistleblower-of-covering-up-foreign-hacks?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc4MDYwMzc4NSwiZXhwIjoxNzgxMjA4NTg1LCJhcnRpY2xlSWQiOiJURzMySE9LSkg2VjQwMCIsImJjb25uZWN0SWQiOiJBNkJBMTU4RTEwN0Y0NDk3OUQwRjRFOTgyN0ZERkVDQiJ9.PI0mdDQgV_KjOobDdhQQ-vzzj-4aojnm1eHKqBdJqb4">Unsealed 2020 lawsuit: ex-IBM VP of threat intelligence alleges that IBM and AT&amp;T concealed foreign cyber breaches to maintain eligibility for federal contracts</a></b></span>&nbsp; &mdash;&nbsp; International Business Machines Corp. and AT&amp;T Inc.'s computer systems were repeatedly breached by foreign hackers &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 8h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Sources: Anthropic has embedded around half a dozen forward-deployed engineers within the NSA to help the agency deploy Mythos for offensive cyber operations (Financial Times)</title>
-  <link>https://www.techmeme.com/260604/p44#a260604p44</link>
-  <pubDate>Thu, 04 Jun 2026 19:57:52 +0000</pubDate>
-  <source>Techmeme</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.ft.com/content/d02d91b3-2636-454e-9442-dc7e69f51815"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260604/i44.jpg" vspace="4" /></a>
-<p><a href="https://www.techmeme.com/260604/p44#a260604p44" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="https://www.ft.com/">Financial Times</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.ft.com/content/d02d91b3-2636-454e-9442-dc7e69f51815">Sources: Anthropic has embedded around half a dozen forward-deployed engineers within the NSA to help the agency deploy Mythos for offensive cyber operations</a></b></span>&nbsp; &mdash;&nbsp; Arrangement comes as AI lab is locked in legal battle with Pentagon over Claude model</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.notus.org/technology/trump-ai-stake-openai">Sources: US officials have held talks with AI companies about the government acquiring shares; Sam Altman first pitched the concept directly to Trump in 2025</a></b></span>&nbsp; &mdash;&nbsp; Senior U.S. officials have held preliminary discussions with major artificial intelligence companies about the potential &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 10h ago]]></description>
 </item>
 
 <item>
@@ -598,7 +1090,7 @@
 
 
 <p></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 12h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 16h ago]]></description>
 </item>
 
 <item>
@@ -671,7 +1163,7 @@
 
 
 <p></p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 12h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 16h ago]]></description>
 </item>
 
 <item>
@@ -679,7 +1171,7 @@
   <link>https://www.zdnet.com/article/right-click-context-menu-windows-microsoft-tweak-it/</link>
   <pubDate>Thu, 04 Jun 2026 16:38:02 +0000</pubDate>
   <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>A top Microsoft VP is promising a faster, simpler, and more customizable context menu that appears when you right-click an item in File Explorer or on the Desktop.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 12h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>A top Microsoft VP is promising a faster, simpler, and more customizable context menu that appears when you right-click an item in File Explorer or on the Desktop.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 17h ago]]></description>
 </item>
 
 <item>
@@ -804,7 +1296,7 @@
 
 
 <p>“It is best understood as an evidence-producing regime rather than an accountability-producing one,” he said. “It will make developers more legible. Whether it makes them more answerable is a separate question.”</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 12h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 17h ago]]></description>
 </item>
 
 <item>
@@ -877,7 +1369,7 @@
 
 
 <p>밥은 현재 SaaS 형태로 체험·이용할 수 있으며, 방화벽 내부에 설치하는 온프레미스·에어갭 버전은 올해 9월 출시된다. 한국어를 포함해 12개 이상의 언어를 지원한다.<br />jihyun.lee@foundryco.com</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 12h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 17h ago]]></description>
 </item>
 
 <item>
@@ -982,7 +1474,7 @@
 
 
 <p>Vena también apunta a competidores importantes como Google, xAI y Meta. “Desde mi punto de vista, OpenAI sigue siendo líder, pero ya no controla el relato de la IA sin oposición”, concluye. “Aunque mantiene una fuerte marca y dinamismo de producto, la siguiente fase dependerá menos de quién tenga la demo más espectacular y más de quién pueda ofrecer una IA duradera, segura y rentable a escala”.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 17h ago]]></description>
 </item>
 
 <item>
@@ -991,7 +1483,7 @@
   <pubDate>Thu, 04 Jun 2026 15:05:45 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><p>As AI agents, machine identities, and third-party applications multiply across enterprises, Offroad is betting autonomous security agents can restore control over an increasingly unmanageable identity landscape.</p>
-<p>The post <a href="https://www.securityweek.com/offroad-emerges-from-stealth-with-7-million-to-tackle-enterprise-identity-risk/">Offroad Emerges From Stealth With $7 Million to Tackle Enterprise Identity Risk</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 14h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/offroad-emerges-from-stealth-with-7-million-to-tackle-enterprise-identity-risk/">Offroad Emerges From Stealth With $7 Million to Tackle Enterprise Identity Risk</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 18h ago]]></description>
 </item>
 
 <item>
@@ -1000,7 +1492,7 @@
   <pubDate>Thu, 04 Jun 2026 14:40:44 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><p>Join this live webinar as we examine the gap between how organizations think their third-party risk programs are performing and what’s actually happening in practice. </p>
-<p>The post <a href="https://www.securityweek.com/webinar-today-third-party-risk-in-practice-where-programs-break-down-and-to-respond/">Webinar Today: Third-Party Risk in Practice &#8211; Where Programs Break Down and How to Respond</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 14h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/webinar-today-third-party-risk-in-practice-where-programs-break-down-and-to-respond/">Webinar Today: Third-Party Risk in Practice &#8211; Where Programs Break Down and How to Respond</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 19h ago]]></description>
 </item>
 
 <item>
@@ -1008,7 +1500,7 @@
   <link>https://www.zdnet.com/article/is-microsoft-365-premium-worth-it-vs-chatgpt-plus/</link>
   <pubDate>Thu, 04 Jun 2026 13:47:00 +0000</pubDate>
   <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Microsoft is offering a 50% discount to 365 subscribers who want more AI Copilot features. Here's what's included.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 15h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Microsoft is offering a 50% discount to 365 subscribers who want more AI Copilot features. Here's what's included.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 19h ago]]></description>
 </item>
 
 <item>
@@ -1016,7 +1508,7 @@
   <link>https://www.zdnet.com/article/microsoft-continues-its-linux-company-shift/</link>
   <pubDate>Thu, 04 Jun 2026 12:59:58 +0000</pubDate>
   <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Microsoft is releasing a server Linux, a container Linux, and a Windows 11 built for Linux programmers. Here's why.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 16h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Microsoft is releasing a server Linux, a container Linux, and a Windows 11 built for Linux programmers. Here's why.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 20h ago]]></description>
 </item>
 
 <item>
@@ -1024,7 +1516,7 @@
   <link>https://www.theregister.com/databases/2026/06/04/palantir-wins-9m-contract-to-run-uk-firearms-licensing-cia-backed-biz-to-hold-gun-bomb-and-poison-records/5251132</link>
   <pubDate>Thu, 04 Jun 2026 12:30:00 +0000</pubDate>
   <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Budget/licensing impact — verify renewal terms and forecast cost changes.</b><br/>Pips Accenture and NEC to bag decade-long deal for cops across England, Wales, and beyond<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 16h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Budget/licensing impact — verify renewal terms and forecast cost changes.</b><br/>Pips Accenture and NEC to bag decade-long deal for cops across England, Wales, and beyond<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 21h ago]]></description>
 </item>
 
 <item>
@@ -1033,7 +1525,7 @@
   <pubDate>Thu, 04 Jun 2026 12:10:02 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: Could impact sign-ins/MFA/Conditional Access — watch for login issues.</b><br/><p>A flaw in the Full Page Cache Warmer extension can be exploited without authentication via serialized PHP object payloads.</p>
-<p>The post <a href="https://www.securityweek.com/mirasvit-vulnerability-exploited-to-execute-code-on-magento-servers/">Mirasvit Vulnerability Exploited to Execute Code on Magento Servers</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 17h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/mirasvit-vulnerability-exploited-to-execute-code-on-magento-servers/">Mirasvit Vulnerability Exploited to Execute Code on Magento Servers</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 21h ago]]></description>
 </item>
 
 <item>
@@ -1158,7 +1650,7 @@
 
 
 <p>Transformers users should upgrade to version 5.3.0 immediately and should search for <code>_attn_implementation_internal</code> in any cached or downloaded <code>config.json</code> files to determine whether they’ve been targeted.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 17h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 21h ago]]></description>
 </item>
 
 <item>
@@ -1299,7 +1791,7 @@
 
 
 <p><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><strong><a href="https://www.cio.com/expert-contributor-network/">Want to join?</a></strong></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 17h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 21h ago]]></description>
 </item>
 
 <item>
@@ -1498,7 +1990,7 @@
 
 
 <p><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><strong><a href="https://www.cio.com/expert-contributor-network/">Want to join?</a></strong></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 18h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 22h ago]]></description>
 </item>
 
 <item>
@@ -1507,7 +1999,7 @@
   <pubDate>Thu, 04 Jun 2026 10:44:41 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><p>Law enforcement and tech companies disrupted infrastructure linked to scammers operating across Southeast Asia.</p>
-<p>The post <a href="https://www.securityweek.com/over-1-4-million-accounts-disrupted-in-cybercrime-crackdown/">Over 1.4 Million Accounts Disrupted in Cybercrime Crackdown</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 18h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/over-1-4-million-accounts-disrupted-in-cybercrime-crackdown/">Over 1.4 Million Accounts Disrupted in Cybercrime Crackdown</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 22h ago]]></description>
 </item>
 
 <item>
@@ -1664,7 +2156,7 @@
 
 
 <p>“From my perspective, OpenAI is still a leader, but it no longer owns the AI narrative uncontested,” he says. “OpenAI still has brand gravity and product momentum, but the next phase will be less about who has the flashiest demo and more about who can deliver durable, secure, cost-effective AI at scale.”</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 19h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 23h ago]]></description>
 </item>
 
 <item>
@@ -1771,7 +2263,7 @@
 
 
 <p><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><strong><a href="https://www.cio.com/expert-contributor-network/">Want to join?</a></strong></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 19h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 23h ago]]></description>
 </item>
 
 <item>
@@ -1962,7 +2454,7 @@
 
 
 <p></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 19h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 23h ago]]></description>
 </item>
 
 <item>
@@ -2071,7 +2563,7 @@
 
 
 <p><em>The article originally appeared on <a href="https://www.infoworld.com/article/4181166/rayfin-signals-microsofts-push-to-make-fabric-an-ai-app-runtime.html">InfoWorld</a>.</em></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 19h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 23h ago]]></description>
 </item>
 
 <item>
@@ -2200,16 +2692,7 @@
 
 
 <p><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><strong><a href="https://www.cio.com/expert-contributor-network/">Want to join?</a></strong></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 20h ago]]></description>
-</item>
-
-<item>
-  <title>🟠 Cisco Warns of Available PoC for Critical Unified CM Vulnerability</title>
-  <link>https://www.securityweek.com/cisco-warns-of-available-poc-for-critical-unified-cm-vulnerability/</link>
-  <pubDate>Thu, 04 Jun 2026 08:44:08 +0000</pubDate>
-  <source>SecurityWeek</source>
-  <description><![CDATA[<b>Why this matters: Could impact sign-ins/MFA/Conditional Access — watch for login issues.</b><br/><p>The high-severity flaw can be exploited remotely, without authentication, in server-side request forgery (SSRF) attacks.</p>
-<p>The post <a href="https://www.securityweek.com/cisco-warns-of-available-poc-for-critical-unified-cm-vulnerability/">Cisco Warns of Available PoC for Critical Unified CM Vulnerability</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 20h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
@@ -2217,7 +2700,7 @@
   <link>https://www.theregister.com/public-sector/2026/06/04/uk-tax-collector-hands-capgemini-600m-contact-center-deal-delays-start-of-24b-crm-contract/5250650</link>
   <pubDate>Thu, 04 Jun 2026 08:30:00 +0000</pubDate>
   <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Another monster tech contract in the works for one of the usual suspects<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 20h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Another monster tech contract in the works for one of the usual suspects<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
@@ -2346,16 +2829,104 @@
 
 
 <p>Tirumala añade que una cultura de ‘sí a todo’ puede ser un problema: “Cuando nadie cuestiona y los problemas se ocultan para evitar conflictos, se pierde la señal más importante. Lo que necesitas es una cultura de feedback y decisiones claras, donde la gente se sienta segura diciendo que algo no funciona y exista una estructura para escalar y actuar sobre los problemas”.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 20h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
-  <title>🟠 VS Code Vulnerability Allows One-Click GitHub Token Theft</title>
-  <link>https://www.securityweek.com/vs-code-vulnerability-allows-one-click-github-token-theft/</link>
-  <pubDate>Thu, 04 Jun 2026 08:14:52 +0000</pubDate>
-  <source>SecurityWeek</source>
-  <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><p>A researcher has disclosed the full details of the vulnerability and released a PoC without notifying Microsoft in advance.</p>
-<p>The post <a href="https://www.securityweek.com/vs-code-vulnerability-allows-one-click-github-token-theft/">VS Code Vulnerability Allows One-Click GitHub Token Theft</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 20h ago]]></description>
+  <title>🔵 FTC, MS 겨냥 칼 빼들었다…클라우드·AI·묶음 판매 전방위 조사</title>
+  <link>https://www.cio.com/article/4181145/ftc-ms-%ea%b2%a8%eb%83%a5-%ec%b9%bc-%eb%b9%bc%eb%93%a4%ec%97%88%eb%8b%a4%ed%81%b4%eb%9d%bc%ec%9a%b0%eb%93%9c%c2%b7ai%c2%b7%eb%ac%b6%ec%9d%8c-%ed%8c%90%eb%a7%a4-%ec%a0%84%eb%b0%a9%ec%9c%84.html</link>
+  <pubDate>Thu, 04 Jun 2026 08:05:36 +0000</pubDate>
+  <source>CIO.com</source>
+  <description><![CDATA[<b>Why this matters: Regulatory/compliance signal — assess applicability and remediation timeline.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<p>마이크로소프트(MS)가 반독점법 위반 의혹과 관련해 계속해서 규제 당국의 조사를 받고 있는 가운데, 미국 정부가 정확히 어떤 사안을 들여다보고 있는지에 대한 새로운 내용이 공개됐다.</p>
+
+
+
+<p>IT 매체 <a href="https://www.theverge.com/policy/940220/microsoft-ftc-antitrust-investigation-cloud-ai" rel="nofollow" target="_blank">더버지(The Verge)가 입수한 정보</a>에 따르면 미국 연방거래위원회(FTC)는 MS의 사업 계약, 라이선스 정책, 제품 간 상호운용성과 관련한 자료를 수집하고 있다. 또한 AI, 보안, 소프트웨어 분야를 중심으로 윈도우와 오피스를 포함한 제품 번들링(끼워팔기) 관행도 조사하고 있는 것으로 알려졌다.</p>
+
+
+
+<p>이번 조사는 약 1년 반 동안 진행돼 온 반독점 조사 과정의 연장선상에 있다. FTC는 MS가 여러 시장에서 불법적으로 독점적 지위를 유지하고 있는지, 그리고 경쟁사의 클라우드 인프라에서 자사 제품을 사용하는 것을 의도적으로 더 어렵고 비싸게 만들거나 사실상 불가능하게 했는지를 집중적으로 살펴보고 있다. 이러한 행위가 사실로 확인될 경우, 산업 경쟁 촉진을 목적으로 1914년 제정된 <a href="https://www.ftc.gov/legal-library/browse/statutes/federal-trade-commission-act" rel="nofollow" target="_blank">FTC법</a>을 위반한 것으로 판단될 수 있다.</p>
+
+
+
+<h2 class="wp-block-heading" id="%ea%b2%bd%ec%9f%81-%ec%a0%9c%ed%95%9c%c2%b7ai-%eb%ac%b6%ec%9d%8c-%ed%8c%90%eb%a7%a4%ec%a0%95%ec%a1%b0%ec%a4%80">경쟁 제한·AI 묶음 판매정조준</h2>
+
+
+
+<p>FTC는 2024년 11월 MS에 대한 조사에 착수한 데 이어 올해 들어 조사 강도를 더욱 높였다. 사업용 소프트웨어와 클라우드 컴퓨팅 시장에서 활동하는 6개 이상의 경쟁 기업에 민사조사요구서(CID)를 발부한 것이다. CID는 미국 정부 기관이 민사법 위반 가능성을 조사할 때 사용하는 강력한 조사 수단으로, 소환장과 유사한 효력을 가진다. 일반적으로 정식 고발이나 소송에 앞서 활용되지만 반드시 그런 것은 아니다.</p>
+
+
+
+<p>최근 공개된 자료에 따르면 CID에는 MS의 라이선스 정책과 사업 관행 전반에 관한 다양한 질문이 담겨 있다. 일반적으로 15개 이상의 질문으로 구성되며, 일부 항목은 여러 세부 질문을 포함하고 있다. FTC는 클라우드 산업에 대한 이해를 높이기 위해 경쟁 기업들의 조직도, 제품 로드맵, 사업 및 마케팅 전략은 물론 번들링, 가격 정책, 할인 전략, 수익성 계획에 관한 상세 정보도 요구하고 있다.</p>
+
+
+
+<p>또한 FTC는 경쟁 기업들이 MS 중심 시장에 진입하거나 사업을 확대하는 과정에서 겪는 어려움에도 주목하고 있다. 이에 따라 시장 진입 비용과 확장 장벽 등 관련 자료 제출을 요청했다. CID에는 MS가 시장 경쟁에 미치는 영향과 함께 회사의 정책, 번들링 방식, 상호운용성 전략을 구체적으로 보여주는 문서 제출 요구도 포함돼 있다.</p>
+
+
+
+<p>아울러 FTC는 업계의 AI 제품과 서비스 현황에 대한 정보도 수집하고 있다. 특히 마이크로소프트 365(Microsoft 365)와 같은 기존 생산성 소프트웨어에 추가 기능과 서비스를 결합하는 방식에 관심을 보이고 있는 것으로 알려졌다.</p>
+
+
+
+<p>조사 범위는 여기서 그치지 않는다. FTC는 MS의 데이터센터 운영 현황, 컴퓨팅 용량 제약, AI 연구개발 및 투자 규모도 면밀히 들여다보고 있다. 특히 MS는 오픈AI에 수십억 달러 규모를 투자하고 챗GPT 기반 기능을 자사 제품군에 적용하는 한편, 자체 AI 연구는 점진적으로 축소해 왔다.</p>
+
+
+
+<p>FTC는 이러한 협력 관계가 시장 경쟁을 약화시킬 가능성이 있는지, 나아가 반독점 심사를 거쳤어야 할 사실상의 비공개 합병에 해당하는지를 검토하고 있는 것으로 전해졌다.</p>
+
+
+
+<h2 class="wp-block-heading" id="%ea%b3%84%ec%86%8d%eb%90%98%eb%8a%94-%eb%b0%98%eb%8f%85%ec%a0%90-%eb%85%bc%eb%9e%80">계속되는 반독점 논란</h2>
+
+
+
+<p>FTC는 2024년 말 MS에 첫 번째 CID를 발부하며 2016년부터 2025년까지 약 10년간의 사업 운영 관련 자료 제출을 요구했다. 규제 당국은 특히 MS가 오랫동안 생산성 소프트웨어인 오피스와 보안 소프트웨어를 클라우드 서비스와 묶어 판매해 온 관행, 그리고 고객이 경쟁 서비스로 전환하기 어렵도록 라이선스 구조를 설계했는지 여부에 주목하고 있는 것으로 보인다.</p>
+
+
+
+<p>만약 MS가 클라우드 컴퓨팅과 사이버보안 시장에서의 지배력을 활용해 경쟁사를 불리한 위치에 놓은 사실이 입증된다면, 이는 불공정 경쟁 행위이자 반독점법 위반으로 판단될 수 있다.</p>
+
+
+
+<p>MS는 오랫동안 제품 끼워팔기와 제한적인 사업 관행에 대한 비판을 받아왔다. 대표적인 사례가 ‘리스티드 프로바이더(Listed Providers)’ 프로그램이다. 이 정책은 일부 MS 온프레미스 소프트웨어를 AWS, 구글(Google), 알리바바(Alibaba) 등 경쟁사의 호스팅 클라우드 서비스에서 사용할 수 없도록 제한하고 있다.</p>
+
+
+
+<p>제한 대상에는 마이크로소프트 오피스, 마이크로소프트 365(M365), 윈도우 데스크톱 운영체제(OS), 윈도우 서버(Windows Server), 비주얼 스튜디오(Visual Studio) 등이 포함된다. 과거에는 전용 클라우드 환경에 배포할 수 있었지만, MS는 2019년 10월부터 소프트웨어 어슈어런스(Software Assurance·SA)와 모빌리티 권한이 포함된 라이선스를 구매한 고객에게만 이를 허용하도록 정책을 변경했다.</p>
+
+
+
+<p>또 다른 사례로는 구독 상품 전략이 지적된다. IT 시장조사업체 인포테크 리서치 그룹(Info-Tech Research Group)의 자문 연구원 <a href="https://www.infotech.com/profiles/scott-bickley" rel="nofollow" target="_blank">스콧 비클리</a>는 MS가 상대적으로 저렴한 마이크로소프트 365 E3보다 상위 구독 상품인 마이크로소프트 365 E5 구매가 사실상 유일하게 경제적인 단기 선택지로 보이도록 만들고 있다고 분석했다.</p>
+
+
+
+<p>비클리는 “MS는 ‘허락을 구하기보다 먼저 행동하고 나중에 용서를 구한다’는 철학을 그대로 보여주는 기업”이라며 “막대한 규모의 시장 영향력을 활용해 고객에게 번들 제품을 사실상 강요하고 있다”고 지적했다.</p>
+
+
+
+<p>현재 조사는 리나 칸 전 FTC 위원장 재임 시절 시작됐으며, 바이든 행정부 시기의 규제 기조와도 맞닿아 있다. 그러나 MS의 반독점 논란은 거의 30년 가까이 이어져 왔다. 1998년에는 미국 법무부가 인터넷 익스플로러(Internet Explorer)를 윈도우 운영체제에 끼워팔았다며 문제를 제기했고, 결국 MS는 인터넷 익스플로러를 윈도우에서 분리해야 했다.</p>
+
+
+
+<p>비클리는 “MS의 전략은 지난 수십 년 동안 놀라울 정도로 크게 달라지지 않았다”고 평가했다.</p>
+
+
+
+<p>향후 규제 당국의 관심은 코파일럿(Copilot)과 오픈AI 서비스 같은 AI 기능의 번들링 및 통합에 집중될 것으로 보인다. 비클리는 “이들 서비스의 사용량 측정 기준은 모호할 수 있으며, IT 관리자가 비활성화하기 매우 어렵거나 사실상 불가능할 수도 있다”고 설명했다.</p>
+
+
+
+<p>이어 “MS를 반독점법의 한계를 지속적으로 시험해 온 상습적 위반 기업이라고 표현해도 결코 과장이 아니다”라고 평가했다.<br />dl-ciokorea@foundryco.com</p>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
@@ -2363,7 +2934,7 @@
   <link>https://www.theregister.com/research/2026/06/04/free-ai-model-powers-self-spreading-worm-in-enterprise-test-network/5250918</link>
   <pubDate>Thu, 04 Jun 2026 07:09:00 +0000</pubDate>
   <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>'Attackers can now cheaply operationalize known vulnerabilities at scale,' boffins tell The Reg<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 22h ago]]></description>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>'Attackers can now cheaply operationalize known vulnerabilities at scale,' boffins tell The Reg<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
@@ -2460,240 +3031,7 @@
 
 
 <p>“It’s not just about Anthropic. It’s about what these next-generation AI will be doing,” he said. “This is a major step change in what AI can do.”</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 22h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 침묵이 더 위험하다···신뢰받는 CIO의 7가지 소통 전략</title>
-  <link>https://www.cio.com/article/4181103/%ec%b9%a8%eb%ac%b5%ec%9d%b4-%eb%8d%94-%ec%9c%84%ed%97%98%ed%95%98%eb%8b%a4%c2%b7%c2%b7%c2%b7%ec%8b%a0%eb%a2%b0%eb%b0%9b%eb%8a%94-cio%ec%9d%98-7%ea%b0%80%ec%a7%80-%ec%86%8c%ed%86%b5-%ec%a0%84%eb%9e%b5.html</link>
-  <pubDate>Thu, 04 Jun 2026 05:46:20 +0000</pubDate>
-  <source>CIO.com</source>
-  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/><div id="remove_no_follow">
-		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
-					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
-						<div class="article-column__content">
-<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
-
-
-
-<p>CIO와 컨설턴트, 임원 코치들의 경험에 따르면 뛰어난 CIO는 단순히 문제를 보고하는 데 그치지 않는다. 이들은 문제를 조기에 공유하고, 상황을 명확하게 설명하며, 경영진이 다음 단계의 의사결정을 내릴 수 있도록 지원한다. 다음은 CIO가 나쁜 소식을 보다 효과적으로 전달하기 위한 7가지 방법이다.</p>
-
-
-
-<h2 class="wp-block-heading" id="1-%eb%82%98%ec%81%9c-%ec%86%8c%ec%8b%9d%eb%8f%84-%ec%98%88%ea%b3%a0%eb%90%9c-%ec%86%8c%ec%8b%9d%ec%9c%bc%eb%a1%9c-%eb%a7%8c%eb%93%a4%ec%96%b4%eb%9d%bc">1. 나쁜 소식도 예고된 소식으로 만들어라</h2>
-
-
-
-<p>성공적인 CIO는 문제가 발생한 뒤에야 경영진과 소통하지 않는다. 처음부터 정보를 투명하게 공유하는 문화를 만들어 문제가 발생했을 때 리더들이 관련 위험과 현재 상황을 이미 이해하고 있도록 한다. 클라우드 기반 소프트웨어 기업 블랙라인(BlackLine)의 CIO 수밋 조하는 이러한 접근 방식이 어려운 대화가 신뢰 문제로 번지는 것을 막아준다고 설명했다.</p>
-
-
-
-<p>조하는 “나쁜 소식을 전달했을 때 모두가 ‘어떻게 이런 일이 발생할 수 있었나?’라고 묻는 상황은 피해야 한다”라며 “그동안 관련 논의가 전혀 없었다면 어떤 위험을 감수했는지, 왜 사전에 정보를 공유하지 않았는지에 대한 의문이 제기될 수밖에 없다”라고 말했다.</p>
-
-
-
-<p>따라서 위험 요소와 트레이드오프, 주요 의사결정에 대한 정기적인 업데이트가 중요하다.</p>
-
-
-
-<p>조하는 “프로젝트 진행 상황에 대해 정기적이고 투명하며 사실에 기반한 대화를 이어가는 것이 필수적이다”라며 “문제가 발생하더라도 조직 구성원들이 이미 상황에 대비할 수 있도록 해야 한다”라고 설명했다.</p>
-
-
-
-<p>경영진에게 지속적으로 정보를 제공하면 책임 소재를 따지는 데 집중하기보다 해결 방안을 찾는 데 초점을 맞출 수 있으며, 다음 단계의 의사결정에도 더욱 집중할 수 있다.</p>
-
-
-
-<h2 class="wp-block-heading" id="2-%ed%95%b5%ec%8b%ac-%eb%ac%b8%ec%a0%9c%eb%a5%bc-%ec%a6%89%ec%8b%9c-%ea%b7%b8%eb%a6%ac%ea%b3%a0-%eb%aa%85%ed%99%95%ed%95%98%ea%b2%8c-%ec%a0%84%eb%8b%ac%ed%95%98%eb%9d%bc">2. 핵심 문제를 즉시, 그리고 명확하게 전달하라</h2>
-
-
-
-<p>임원 커뮤니케이션 코치 데비 맥컬러는 CIO가 핵심부터 빠르게 전달해야 한다고 조언했다.</p>
-
-
-
-<p>그는 “가장 중요한 내용을 맨 앞에 두는 것은 필수적이지만 많은 사람이 이를 간과한다”라며 “핵심 내용을 뒤로 미루고 결론에 도달하기까지 너무 오랜 시간이 걸리면 첫 문장부터 상황을 파악하고 싶어 하는 CEO와 C레벨 임원들의 답답함만 커지게 된다”라고 말했다.</p>
-
-
-
-<p>맥컬러는 긴장감이 높은 상황일수록 메시지를 짧고 명확하게 전달하고, 추가적인 세부 내용은 경영진의 질문을 통해 설명하는 것이 효과적이라고 덧붙였다.</p>
-
-
-
-<p>컨설팅 기업 아답토베이트(Adaptovate)의 매니징 디렉터이자 파트너인 갈렙 엘 마스리 역시 이러한 대화는 명확하고 체계적으로 구성돼야 한다고 강조했다.</p>
-
-
-
-<p>엘 마스리는 “나쁜 소식을 전달하는 가장 효과적인 방법은 경영진이 즉시 의사결정을 내릴 수 있는 형태로 정보를 제공하는 것”이라며 “경영진은 나쁜 소식 자체는 받아들일 수 있지만 모호한 상황은 감당하기 어렵다”라고 말했다.</p>
-
-
-
-<p>이어 “무슨 일이 발생했는지, 비즈니스에 어떤 영향을 미치는지, 상황을 통제하기 위해 어떤 조치가 이뤄졌는지, 그리고 지금 어떤 결정이 필요한지를 순서대로 설명한다”라고 전했다.</p>
-
-
-
-<h2 class="wp-block-heading" id="3-%ea%b8%b0%ec%88%a0%ec%a0%81-%eb%ac%b8%ec%a0%9c%eb%a5%bc-%eb%b9%84%ec%a6%88%eb%8b%88%ec%8a%a4-%ec%98%81%ed%96%a5-%ea%b4%80%ec%a0%90%ec%9c%bc%eb%a1%9c-%ec%84%a4%eb%aa%85%ed%95%98%eb%9d%bc">3. 기술적 문제를 비즈니스 영향 관점으로 설명하라</h2>
-
-
-
-<p>CIO는 복잡한 기술 문제를 다루지만, 경영진은 해당 문제가 비즈니스에 어떤 영향을 미치는지 이해해야 한다. 뱁슨칼리지(Babson College)의 CIO 패티 패트리아는 리더가 문제를 비즈니스 관점에서 설명해야 한다고 강조했다.</p>
-
-
-
-<p>패트리아는 “프로젝트나 주요 운영 이슈와 관련해 경영진에게 나쁜 소식을 전달할 때 가장 효과적인 방법 중 하나는 상황을 솔직하고 투명하게 설명하는 것”이라며 “문제의 근본 원인을 명확하게 설명한 뒤, 이를 해결할 수 있는 여러 대안을 제시하고 논의해야 한다”라고 말했다.</p>
-
-
-
-<p>또한 비용과 일정 등 경영진이 중요하게 생각하는 성과 지표와 문제를 연결해 설명하는 것이 중요하다고 강조했다.</p>
-
-
-
-<p>패트리아는 “이러한 접근 방식은 신뢰를 구축할 뿐 아니라 협력적인 의사결정을 촉진한다”라며 “경영진이 상황을 명확하게 이해하고 앞으로 선택할 수 있는 현실적인 대안을 확보하는 데 도움이 된다”라고 설명했다.</p>
-
-
-
-<p>시에라 리더십(Sierra Leadership)의 설립자 에릭 니츠버그는 이러한 ‘번역’ 작업이 왜 중요한지 설명했다.</p>
-
-
-
-<p>니츠버그는 “기술 리더가 C레벨 임원에게 보고할 때 저지르는 가장 큰 실수 중 하나는 지나치게 많은 기술 용어를 사용하는 것”이라며 “똑똑한 고등학생에게 설명하듯 쉽고 명확한 비즈니스 언어로 내용을 전달해야 한다”라고 말했다.</p>
-
-
-
-<p>이어 “상대를 무시하거나 단순화하라는 의미가 아니라, 상대가 이해할 수 있는 언어와 표현을 사용해 설명해야 한다”라고 덧붙였다.</p>
-
-
-
-<h2 class="wp-block-heading" id="4-%ec%b2%98%ec%9d%8c%eb%b6%80%ed%84%b0-%ed%95%b4%ea%b2%b0%ec%b1%85%ec%9d%84-%ec%a0%9c%ec%8b%9c%ed%95%98%ea%b3%a0-%ec%b1%85%ec%9e%84%ea%b0%90%ec%9d%84-%eb%b3%b4%ec%97%ac%eb%9d%bc">4. 처음부터 해결책을 제시하고 책임감을 보여라</h2>
-
-
-
-<p>경영진은 단순히 문제가 발생했다는 사실만 듣고 싶어 하지 않는다. CIO가 문제를 책임지고 있으며, 앞으로 어떻게 해결할 것인지에 대한 명확한 계획을 기대한다.</p>
-
-
-
-<p>스토리지 및 하드웨어 제조업체 WD(Western Digital)의 CIO 세시 티루말라는 이러한 상황을 바라보는 새로운 관점을 제시했다.</p>
-
-
-
-<p>티루말라는 “나쁜 소식이라는 표현부터 사용하지 말아야 한다. 나쁜 소식은 존재하지 않는다”라며 “문제가 있을 뿐이며, 문제는 해결할 수 있다”라고 말했다.</p>
-
-
-
-<p>이어 “CIO가 할 수 있는 가장 효과적인 행동은 문제를 명확하게 정의하고, 이미 해결 방안을 준비한 상태로 회의에 들어가는 것”이라며 “상황 설명보다 해결책을 먼저 제시해야 한다”라고 강조했다.</p>
-
-
-
-<p>티루말라는 경영진이 설명보다 행동에 더 관심이 있다고 덧붙였다.</p>
-
-
-
-<p>티루말라는 “경영진은 무엇이 잘못됐는지 일일이 보고받을 필요가 없다”라며 “문제를 인지하고 있고, 책임지고 있으며, 실행 가능한 계획을 갖고 있다는 사실을 알고 싶어 한다”라고 말했다.</p>
-
-
-
-<p>이어 “문제 설명은 한 문장으로 끝내고, 이를 해결하기 위해 무엇을 하고 있는지 세 문장으로 설명하라”라고 조언했다.</p>
-
-
-
-<p>패트리아는 실제 ERP 프로젝트 지연 사례를 소개했다.</p>
-
-
-
-<p>패트리아는 “새로운 제품을 도입하는 과정에서 여러 기능적 결함이 발견됐다”라며 “장기적으로는 해당 제품이 기관에 적합한 솔루션이었지만, 제품 성숙도가 충분하지 않아 당초 계획한 일정 내에 운영을 시작하기 어려운 여러 장애 요소가 존재했다”라고 설명했다.</p>
-
-
-
-<p>이에 팀은 각 장애 요인에 대한 구체적인 사실을 공유하고 대응 방안을 논의한 뒤, 수정된 일정과 추가 비용 규모를 제시했다.</p>
-
-
-
-<p>패트리아는 “모든 주요 이해관계자가 논의에 참여한 결과 프로젝트 일정을 6개월 연장하는 방안에 모두 동의했다”라고 전했다.</p>
-
-
-
-<h2 class="wp-block-heading" id="5-%ec%82%ac%ec%8b%a4%ec%97%90-%ec%a7%91%ec%a4%91%ed%95%98%ea%b3%a0-%ec%b6%94%ec%b8%a1%ec%9d%80-%ed%94%bc%ed%95%98%eb%9d%bc">5. 사실에 집중하고 추측은 피하라</h2>
-
-
-
-<p>압박감이 큰 상황에서는 모든 사실이 확인되기 전에 사건의 원인을 설명해야 한다는 부담을 느끼기 쉽다. 하지만 이는 이후 혼란을 초래하거나 신뢰도를 떨어뜨릴 수 있다. 조하는 CIO가 확인된 사실에 집중해야 한다고 조언했다.</p>
-
-
-
-<p>조하는 “나쁜 소식을 전달할 때 가장 중요한 것은 사실에 충실하고, 사람들이 무슨 일이 발생했는지 정확히 이해하도록 하는 것”이라고 말했다.</p>
-
-
-
-<p>또한 너무 성급하게 결론을 내리는 것도 경계해야 한다고 강조했다.</p>
-
-
-
-<p>조하는 “때로는 사건의 원인을 먼저 설명하려고 하지만, 조사가 완료된 뒤에는 그 원인이 달라지는 경우가 있다”라며 “그렇게 되면 나중에 상황을 설명하기가 훨씬 더 어려워진다”라고 설명했다.</p>
-
-
-
-<p>조하는 CIO가 현재 알고 있는 사실과 아직 확인 중인 내용을 명확하게 구분하고, 언제 추가 정보를 제공할 것인지도 경영진에게 알려야 한다고 조언했다. 이는 신뢰를 구축하고 상황을 명확하게 유지하는 데 도움이 된다.</p>
-
-
-
-<h2 class="wp-block-heading" id="6-%ea%b0%90%ec%a0%95%ec%9d%84-%eb%b0%b0%ec%a0%9c%ed%95%98%ea%b3%a0-%eb%8c%80%ec%9d%91%ed%95%98%eb%9d%bc">6. 감정을 배제하고 대응하라</h2>
-
-
-
-<p>나쁜 소식을 전달하는 과정에서는 강한 감정이 드러나기 쉽다. 특히 조직에 미치는 영향이 큰 사안일수록 그렇다. 하지만 감정이 메시지를 주도하면 대화의 효과가 떨어질 수 있다.</p>
-
-
-
-<p>조하는 CIO가 흔히 저지르는 실수 중 하나로 지나치게 방어적인 태도를 꼽았다. 나쁜 소식을 전달할 때 필요한 것은 명확하고 생산적인 대화인데, 문제의 원인이나 책임 소재를 설명하는 데만 집중하는 경우가 많다는 것이다.</p>
-
-
-
-<p>니츠버그도 같은 의견을 제시하며 CIO가 객관성을 유지해야 한다고 강조했다.</p>
-
-
-
-<p>니츠버그는 “CIO는 지나치게 상세하거나 부정적이고 감정적이며 책임 추궁 중심의 설명을 피해야 한다”라며 “C레벨 임원이 상황을 이해할 수 있는 수준에서 객관적으로 사실을 전달해야 한다”라고 말했다.</p>
-
-
-
-<p>맥컬러 역시 자신의 감정에 지나치게 초점을 맞추지 말라고 조언했다.</p>
-
-
-
-<p>맥컬러는 “자신이 얼마나 힘든지 하소연하는 태도는 피해야 한다”라며 “필요하다면 충격을 받았거나 실망했다고 짧게 언급할 수는 있지만, 핵심은 무엇이 발생했는지, 왜 발생했는지, 그리고 자신과 팀이 이를 어떻게 개선할 것인지에 맞춰야 한다”라고 말했다.</p>
-
-
-
-<h2 class="wp-block-heading" id="7-%eb%ac%b8%ec%a0%9c%eb%a5%bc-%ec%88%a8%ea%b8%b0%ec%a7%80-%ec%95%8a%eb%8a%94-%eb%ac%b8%ed%99%94%eb%a5%bc-%eb%a7%8c%eb%93%a4%ec%96%b4%eb%9d%bc">7. 문제를 숨기지 않는 문화를 만들어라</h2>
-
-
-
-<p>아무리 뛰어난 커뮤니케이션 전략도 직원들이 문제를 제기하는 것을 두려워한다면 효과를 발휘하기 어렵다. 조직 문화는 나쁜 소식이 어떻게 공유되고 받아들여지는지에 큰 영향을 미친다. 조하는 개방적이고 투명한 조직 문화가 효과적인 소통을 가능하게 한다고 설명했다.</p>
-
-
-
-<p>조하는 “성숙한 조직은 어려운 대화를 나누고, 나쁜 소식을 전달하며, 이를 적절하게 처리할 수 있는 문화를 구축하는 데 많은 투자를 한다”라고 말했다.</p>
-
-
-
-<p>또한 이러한 교육과 훈련을 통해 누구에게 어떤 내용을 전달해야 하는지 명확하게 이해할 수 있다고 덧붙였다.</p>
-
-
-
-<p>엘 마스리는 잘못된 조직 문화가 초래하는 문제를 지적했다.</p>
-
-
-
-<p>엘 마스리는 “전달자를 처벌하는 조직에서는 나쁜 소식이 단계마다 완화되고 지연되며 걸러진다”라며 “반면 조기 보고와 신속한 에스컬레이션이 존중되는 조직에서는 대응할 시간이 남아 있을 때 문제가 수면 위로 드러난다”라고 설명했다.</p>
-
-
-
-<p>티루말라는 많은 조직이 간과하는 위험 요소로 ‘예스(Yes) 문화’를 꼽았다.</p>
-
-
-
-<p>티루말라는 “누구도 이견을 제기하지 않고 조직의 평화를 유지하기 위해 문제를 덮어버리면 가장 중요한 경고 신호를 놓치게 된다”라며 “조직에 필요한 것은 피드백과 명확한 의사결정 문화다. 문제가 있다는 사실을 안전하게 말할 수 있어야 하며, 문제가 단순히 인지되는 데 그치지 않고 적절히 보고되고 실제 조치로 이어질 수 있는 체계가 필요하다”라고 강조했다. <br />dl-ciokorea@foundryco.com</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 23h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
@@ -2831,6 +3169,14 @@
   <pubDate>Wed, 03 Jun 2026 20:57:39 +0000</pubDate>
   <source>The Register</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>It's hard to stop a signal jammer if you can't locate the source, say Rice University researchers<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Grep this: Microsoft grafts (most) Linux commands onto Windows</title>
+  <link>https://www.theregister.com/os-platforms/2026/06/03/grep-this-microsoft-grafts-most-linux-commands-onto-windows/5250796</link>
+  <pubDate>Wed, 03 Jun 2026 19:04:28 +0000</pubDate>
+  <source>The Register</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Coreutils serves over 75 Unix commands in Windows and PowerShell command lines<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
@@ -3128,7 +3474,7 @@
   <link>https://www.theregister.com/software/2026/06/03/uk-lawmakers-call-on-government-to-ditch-palantir-nhs-contract/5250150</link>
   <pubDate>Wed, 03 Jun 2026 09:01:00 +0000</pubDate>
   <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Lock-in to a small number of suppliers holding up digital government plans, committee says<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Lock-in to a small number of suppliers holding up digital government plans, committee says<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
 </item>
 
 <item>
@@ -3295,7 +3641,7 @@
 
 
 <p><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><strong><a href="https://www.csoonline.com/expert-contributor-network/">Want to join?</a></strong></p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
 </item>
 
 <item>
@@ -4289,157 +4635,7 @@
 
 <li><a href="https://www.csoonline.com/article/514469/security-simulations-this-is-only-a-test.html">Security simulations: This is only a test</a></li>
 </ul>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
-</item>
-
-<item>
-  <title>🟠 Oracle’s first monthly patch release fixes 35 flaws, including 11 rated ‘critical’</title>
-  <link>https://www.csoonline.com/article/4179473/oracles-first-monthly-patch-release-fixes-35-flaws-including-11-rated-critical.html</link>
-  <pubDate>Mon, 01 Jun 2026 17:57:19 +0000</pubDate>
-  <source>CSO Online</source>
-  <description><![CDATA[<b>Why this matters: Supply chain risk — audit third-party dependencies and vendor access.</b><br/><div id="remove_no_follow">
-		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
-					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
-						<div class="article-column__content">
-<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
-
-
-
-<p>Oracle has released the first security fixes in its new monthly Critical Security Patch Update (CSPU) cycle, designed to address urgent vulnerabilities that can’t wait for the company’s quarterly patching. The initial batch addresses 35 flaws, including several for which exploit code is publicly available.</p>
-
-
-
-<p>In total, there are <a href="https://www.oracle.com/security-alerts/cspumay2026.html" rel="noreferrer noopener" target="_blank">11 flaws rated ‘critical’</a>, 18 rated ‘high’, and 6 ‘medium’. The most important on paper are 10 critically-rated flaws, including those affecting Oracle REST Data Services (<a href="https://www.cve.org/CVERecord?id=CVE-2026-46840" rel="noreferrer noopener" target="_blank">CVE-2026-46840</a>, <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-46775" rel="noreferrer noopener" target="_blank">CVE-2026-46775</a>, <a href="https://www.cve.org/CVERecord?id=CVE-2026-46839" rel="noreferrer noopener" target="_blank">CVE-2026-46839</a>), Oracle E-Business Suite (<a href="https://nvd.nist.gov/vuln/detail/CVE-2026-46822" rel="noreferrer noopener" target="_blank">CVE-2026-46822</a>), the Oracle Universal Work Queue portal (<a href="https://nvd.nist.gov/vuln/detail/CVE-2026-46824" rel="noreferrer noopener" target="_blank">CVE-2026-46824</a>), and Oracle Payments (<a href="https://www.cve.org/CVERecord?id=CVE-2026-46817" rel="noreferrer noopener" target="_blank">CVE-2026-46817</a>).</p>
-
-
-
-<p>Despite the high CVSS scores for those bugs, patching teams will probably want to start with a clutch of older but still serious flaws for which proof-of-concept (PoC) exploit code <a href="https://www.govcert.gov.hk/en/alerts_detail.php?id=1891" rel="noreferrer noopener" target="_blank">reportedly</a> exists: <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-15467" rel="noreferrer noopener" target="_blank">CVE-2025-15467</a>, <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-58050" rel="noreferrer noopener" target="_blank">CVE-2025-58050</a>, and <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-25646" rel="noreferrer noopener" target="_blank">CVE-2026-25646</a> in Oracle Communications Unified Assurance network management, and <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-2332" rel="noreferrer noopener" target="_blank">CVE-2026-2332</a> in Oracle REST Data Services.</p>
-
-
-
-<p>All relate to open source components embedded in Oracle products, and one, CVE-2025-58050, was first made public last August, underlining how long it can take to patch supply chain flaws in modern platforms.</p>
-
-
-
-<p>Another priority fix should be CVE-2026-46840, with a perfect CVSS rating of ’10’. It’s a vulnerability in the backend-as-a-service component of REST Data Services versions 24.2.0 through 26.1.0.</p>
-
-
-
-<p>REST Data Services is a gateway that exposes corporate databases via APIs. This flaw makes that interface easily exploitable by an unauthenticated attacker via HTTPS, resulting in a takeover of the gateway, making it a high priority for attackers.</p>
-
-
-
-<p>Also deserving to be on the high priority list are the two flaws affecting the REST Data Services core, CVE-2026-46775 and CVE-2026-46839. Rated CVSS 9.9, all that stops these from being CVSS 10 flaws is the need for network credentials to exploit them.</p>
-
-
-
-<h2 class="wp-block-heading" id="oracle-third-tuesday">Oracle ‘third Tuesday’</h2>
-
-
-
-<p><a href="https://www.cio.com/article/4167337/oracle-will-patch-more-often-to-counter-ai-cybersecurity-threat-2.html" target="_blank">Announced at the beginning of May</a>, the monthly CSPU is meant to be a smaller update patching high-severity flaws ahead of the larger, more general Critical Patch Updates (CPUs) updates that will continue to be released on a quarterly basis. The initial CSPU was released last Thursday.</p>
-
-
-
-<p>In its update notes, Oracle said that the CSPU “provides targeted, high-priority security fixes in a smaller, more focused format, making them easier to apply with minimal disruption.”</p>
-
-
-
-<p>Despite the publicity around automated AI vulnerability hunting systems such as OpenAI’s <a href="https://openai.com/index/trusted-access-for-cyber/" rel="noreferrer noopener" target="_blank">Trusted Access for Cyber</a> program or <a href="https://www.csoonline.com/article/4151801/leak-reveals-anthropics-mythos-a-powerful-ai-model-aimed-at-cybersecurity-use-cases.html" target="_blank">Claude Mythos</a>, both of which Oracle has said it has access to, none of May’s vulnerability discoveries were attributed to these systems.</p>
-
-
-
-<p>The change to a monthly update cycle brings Oracle into line with software vendors such as Microsoft and Adobe, and appears to be a reaction to the growth in the volume of more serious vulnerabilities now being reported.</p>
-
-
-
-<p>In the future, the company will release CSPUs on the third Tuesday of each month, with the first four scheduled for June 16, July 21, August 18, and September 15. Oracle cloud customers are patched automatically.</p>
-
-
-
-<p></p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3d ago]]></description>
-</item>
-
-<item>
-  <title>🟠 Flowise’s MCP implementation can run ghost commands</title>
-  <link>https://www.csoonline.com/article/4179309/flowises-mcp-implementation-can-run-ghost-commands.html</link>
-  <pubDate>Mon, 01 Jun 2026 12:01:03 +0000</pubDate>
-  <source>CSO Online</source>
-  <description><![CDATA[<b>Why this matters: Credential/phishing risk — reinforce MFA and user awareness training.</b><br/><div id="remove_no_follow">
-		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
-					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
-						<div class="article-column__content">
-<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
-
-
-
-<p>Enterprises using the lightweight, open-source Flowise platform to power self-hosted AI workloads have a new near-max severity issue to worry about.</p>
-
-
-
-<p>Researchers at Obsidian Security have detailed a one-click remote code execution (RCE) vulnerability affecting self-hosted Flowise deployments through its implementation of Model Context Protocol (<a href="https://www.csoonline.com/article/4031749/mcp-security-securing-the-backbone-of-agentic-ai.html" target="_blank">MCP</a>) stdio servers.</p>
-
-
-
-<p>The problem is essentially a sandboxing failure of attacker-controlled MCP configurations, leading to server-side code execution.</p>
-
-
-
-<p>“Post-auth RCE in Flowise can be triggered with a single click via a malicious chatflow import before any save or run,” the researchers said in a blog <a href="https://www.obsidiansecurity.com/blog/when-is-stdio-mcp-actually-a-vulnerability" rel="noreferrer noopener" target="_blank">post</a>. “The official patch relies on input validation that is trivially bypassed and fails to address the root cause.”</p>
-
-
-
-<p>Flowise is commonly used to develop internal AI assistants, retrieval-augmented generation (<a href="https://www.csoonline.com/article/4163888/securing-rag-pipelines-in-enterprise-saas.html">RAG</a>) applications, customer-facing chatbots, and autonomous agents connected to business systems.</p>
-
-
-
-<p>The flaw does not affect Flowise Cloud, as stdio MCP is disabled there. For the rest, where the feature is enabled and is absolutely necessary, there is a security and functionality tradeoff developers need to understand and actively review server configurations for possible threats, the researchers explained.</p>
-
-
-
-<h2 class="wp-block-heading"><a></a>Once-click RCE affects everything Flowise can reach</h2>
-
-
-
-<p>The vulnerability, tracked as <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-40933" rel="noreferrer noopener" target="_blank">CVE-2026-40933</a>, affects Flowise’s implementation of MCP stdio servers. MCP’s stdio is designed to launch local server processes and communicate with them through standard input and output streams, allowing AI agents to interact with files, Git repositories, databases, browsers, and local credentials.</p>
-
-
-
-<p>According to Obsidian Security, the issue stems from Flowise allowing users to configure MCP stdio servers containing arbitrary commands. Because those commands are ultimately executed by the underlying operating system, an attacker can achieve remote code execution with the privileges of the Flowise process.</p>
-
-
-
-<p>In containerized deployments, the researchers noted, this can effectively provide root-level access to the environment hosting the platform.</p>
-
-
-
-<p>The flaw has been assigned a 9.9 CVSS rating, with a successful compromise potentially exposing API keys, databases, cloud resources, SaaS applications, and other assets accessible through Flowise.</p>
-
-
-
-<h2 class="wp-block-heading"><a></a>Researchers said the fixes fall short</h2>
-
-
-
-<p>The disclosure details a series of remediation efforts by Flowise aimed at restricting how MCP stdio commands can be configured and executed. According to Obsidian, however, each iteration relied primarily on command validation and filtering mechanisms that can be bypassed under certain conditions.</p>
-
-
-
-<p>“Flowise appeared to acknowledge the risk and hardened Custom MCP over several rounds,” the researchers noted. “<a href="https://github.com/FlowiseAI/Flowise/pull/5232">#5232</a> introduced CUSTOM_MCP_SECURITY_CHECK, a default-enabled validation layer for Custom MCP configurations.” While the checks reduced obvious command execution paths, they did little to change the underlying threat of allowing users to supply stdio MCP configurations, they said.</p>
-
-
-
-<p>Obsidian’s reporting of the flaw triggered further hardening of the feature with flag validation in updates <a href="https://github.com/FlowiseAI/Flowise/pull/5741" rel="noreferrer noopener" target="_blank">#5741 </a>and <a href="https://github.com/FlowiseAI/Flowise/pull/5943" rel="noreferrer noopener" target="_blank">#5943</a>. These, too, did not entirely remove the threat.</p>
-
-
-
-<p>When requested to treat stdio MCP as unsafe by default and require explicit opt-in, Flowise reportedly said they wanted to “limit what we know is bad without completely disabling features that users may rely on.” Obsidian shared a proof of concept (POC) exploit code on how the current protections by Flowise could still be bypassed for successful RCE.</p>
-
-
-
-<p> The only complete mitigation recommended by the researchers is turning off MCP stdio by setting “CUSTOM_MCP_PROTOCOL=sse”. For those who can’t, without obstructing operations, pinning trusted packages where possible, and reviewing imported chatflows from untrusted sources might help, the researchers added.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3d ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 3d ago]]></description>
 </item>
 
 </channel>
