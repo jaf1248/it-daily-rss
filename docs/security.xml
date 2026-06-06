@@ -3,14 +3,32 @@
 <channel>
   <title>Joe — Security Intelligence</title>
   <description>Cybersecurity threats, vulnerabilities, breaches, and Microsoft security updates.</description>
-  <lastBuildDate>Sat, 06 Jun 2026 02:51:32 +0000</lastBuildDate>
+  <lastBuildDate>Sat, 06 Jun 2026 06:28:18 +0000</lastBuildDate>
   
+<item>
+  <title>🔴 Cisco Catalyst SD-WAN Manager CVE-2026-20245 Flaw Actively Exploited – No Patch Available</title>
+  <link>https://thehackernews.com/2026/06/cisco-catalyst-sd-wan-manager-cve-2026.html</link>
+  <pubDate>Sat, 06 Jun 2026 04:19:28 +0000</pubDate>
+  <source>The Hacker News</source>
+  <description><![CDATA[<b>Why this matters: Endpoint detection changes — review high-severity detections and alert noise.</b><br/>Cisco has warned that a high-severity security flaw impacting Catalyst SD-WAN Manager has come under active exploitation.
+
+The vulnerability, tracked as CVE-2026-20245, carries a CVSS score of 7.8 out of a maximum of 10.0. It affects the following deployment types -
+
+
+  On-Prem Deployment
+  Cisco SD-WAN Cloud-Pro
+  Cisco SD-WAN Cloud (Cisco Managed)
+  Cisco SD-WAN for Government (FedRAMP)
+
+"A<br/><br/><b>Source:</b> The Hacker News &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+</item>
+
 <item>
   <title>🟠 Weekly Metasploit Update: Apache ActiveMQ RCE, Gogs Rebase RCE, and Windows Kernel Pointer Enum</title>
   <link>https://www.rapid7.com/blog/post/pt-metasploit-wrap-up-05-06-2026</link>
   <pubDate>Fri, 05 Jun 2026 17:01:48 +0000</pubDate>
   <source>Rapid7 Blog</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><h2>When Open Source is a bit too Open</h2><p>Several fun modules landed this week, including an Apache RCE, Windows Kernel pointer collection, and Gogs RCE via naming. Leading off is Gogs' RCE that allows an attacker to execute commands by naming their <span>branch </span><span>--exec &lt;command&gt;</span> and requesting a rebase.</p><p>Another useful post module by CharlesQuinnDev enumerates the Kernel pointers leaked via the popular <span>NtQuerySystemInformation</span> technique. Those exposed pointers, combined with a good write primitive, make local privilege escalation easier to accomplish. Several local privilege escalations already use that technique, so exposing just that technique was a great call!</p><h2>New module content (3)</h2><h3>Apache ActiveMQ RCE via Jolokia addNetworkConnector</h3><p><strong>Authors:</strong> dinosn and h00die<br /><strong>Type:</strong> Exploit<br /><strong>Pull request:</strong> <a href="https://github.com/rapid7/metasploit-framework/pull/21497">#21497</a> contributed by <a href="https://github.com/h00die">h00die</a><br /><strong>Path:</strong> <span>multi/http/apache_activemq_jolokia_rce</span><br /><strong>AttackerKB reference:</strong> <a href="https://attackerkb.com/search?q=CVE-2026-34197&amp;referrer=blog">CVE-2026-34197</a></p><p>Adds a new exploit module exploit/multi/http/apache_activemq_jolokia_rce targeting CVE-2026-34197 in Apache ActiveMQ. The module abuses the Jolokia JMX-over-HTTP API exposed at <span>/api/jolokia/</span> by calling the <span>addNetworkConnector()</span> MBean operation with a crafted <span>brokerConfig=xbean:http://...</span><span> </span>URI. ActiveMQ fetches the attacker-controlled URL and instantiates it as a Spring XML application context, achieving remote code execution via a <span>java.lang.ProcessBuilder</span> bean. Authentication is required to exploit this vulnerability.</p><h3>Gogs Git Rebase Argument Injection RCE</h3><p><strong>Author:</strong> Crypto-Cat<br /><strong>Type:</strong> Exploit<br /><strong>Pull request:</strong> <a href="https://github.com/rapid7/metasploit-framework/pull/21515">#21515</a> contributed by <a href="https://github.com/jburgess-r7">jburgess-r7</a><br /><strong>Path:</strong> <span>multi/http/gogs_rebase_rce</span></p><p>This adds an exploit module for the Gogs rebase Remote Code Execution (RCE) vulnerability. The module leverages an argument injection flaw residing in the pull request merge workflow of Gogs versions &lt;= 0.14.2 and &lt;= 0.15.0+dev.</p><h3>Windows Kernel Pointer Exposure Enumerator</h3><p><strong>Author:</strong> CharlesQuinnDev<br /><strong>Type:</strong> Post<br /><strong>Pull request:</strong> <a href="https://github.com/rapid7/metasploit-framework/pull/21039">#21039</a> contributed by <a href="https://github.com/CharlesQuinnDev">CharlesQuinnDev</a><br /><strong>Path:</strong> <span>windows/gather/windows_kernel_pointer_enum</span></p><p>Adds a new post module for Windows that enumerates kernel object pointers exposed through <span>NtQuerySystemInformation</span> on <span>x64</span> systems. The module collects observable handle metadata and provides analysis of pointer distribution, object types, and ALPC usage, then saves the results to a CSV loot file for review. Also introduces a reusable Windows kernel handle-enumeration library.</p><h2>Enhancements and features (7)</h2><ul><li><a href="https://github.com/rapid7/metasploit-framework/pull/20881">#20881</a> from <a href="https://github.com/h00die">h00die</a> - This adds support for cracking Kerberos type hashes in Metasploit, specifically timeroasting, krb5tgs* and krb5asrep.</li><li><a href="https://github.com/rapid7/metasploit-framework/pull/21087">#21087</a> from <a href="https://github.com/jbx81-1337">jbx81-1337</a> - The new payloads_manager plugin lets you maintain a local archive of custom payloads and stage them into the data directory. Use the <span>fetch</span> or <span>add</span> subcommands to download or import a payload, then select to symlink it into place so it's available to other modules. The plugin tracks each payload's name, hash, tags, and description in a database.</li><li><a href="https://github.com/rapid7/metasploit-framework/pull/21412">#21412</a> from <a href="https://github.com/zeroSteiner">zeroSteiner</a> - Updates Metasploit's post modules to now run by default against the last opened alive session, unless explicitly specified.</li><li><a href="https://github.com/rapid7/metasploit-framework/pull/21429">#21429</a> from <a href="https://github.com/zeroSteiner">zeroSteiner</a> - Removes the now redundant Linux-specific method for finding the arch so there's a single source of truth that works in a superset of platform / session-type combinations.</li><li><a href="https://github.com/rapid7/metasploit-framework/pull/21488">#21488</a> from <a href="https://github.com/sjanusz-r7">sjanusz-r7</a> - Updates HTTP login scanners to report the detected service hierarchy.</li><li><a href="https://github.com/rapid7/metasploit-framework/pull/21504">#21504</a> from <a href="https://github.com/h00die">h00die</a> - Adds missing CVE references to seven existing modules: gladinet_storage_access_ticket_forge (CVE-2025-14611), cassandra_web_file_read (CVE-2020-36939), pretalx_file_read_cve_2023_28459 (CVE-2023-28459 and CVE-2023-28458), centreon_pollers_auth_rce (CVE-2019-19699), wp_responsive_thumbnail_slider_upload (CVE-2015-10144), xerte_unauthenticated_template_import_rce (CVE-2026-32985), and solarwinds_storage_manager_sql (CVE-2012-2576).</li><li><a href="https://github.com/rapid7/metasploit-framework/pull/21526">#21526</a> from <a href="https://github.com/zeroSteiner">zeroSteiner</a> - Makes stability and logging improvements to the ipmi_cipher_zero, ipmi_dumphashes, and ipmi_version modules.</li></ul><h2>Bugs fixed (7)</h2><ul><li><a href="https://github.com/rapid7/metasploit-framework/pull/21432">#21432</a> from <a href="https://github.com/4ravind-b">4ravind-b</a> - Fixes a bug in modules that invoke other modules that prevented datastore options from being validated.</li><li><a href="https://github.com/rapid7/metasploit-framework/pull/21448">#21448</a> from <a href="https://github.com/kx7m2qd">kx7m2qd</a> - Fixes an issue where CIDR range filters in the addresses parameter of the db.hosts RPC endpoint were not processed correctly.</li><li><a href="https://github.com/rapid7/metasploit-framework/pull/21484">#21484</a> from <a href="https://github.com/zeroSteiner">zeroSteiner</a> - Fixes python ssl command shell payloads that failed with AttributeError: module 'ssl' has no attribute 'wrap_socket'.</li><li><a href="https://github.com/rapid7/metasploit-framework/pull/21489">#21489</a> from <a href="https://github.com/h00die">h00die</a> - Improves the GitLab version scanner by handling additional exceptions in the scanner for non-GitLab targets and adding additional version fingerprints for real GitLab targets.</li><li><a href="https://github.com/rapid7/metasploit-framework/pull/21502">#21502</a> from <a href="https://github.com/h00die">h00die</a> - Fixes a crash in the scanner/snmp/snmp_enum module when the system date was read as Null.</li><li><a href="https://github.com/rapid7/metasploit-framework/pull/21506">#21506</a> from <a href="https://github.com/h00die">h00die</a> - Adds a guard clause when running <span>uname -r</span> in WSL startup_folder persistence.</li><li><a href="https://github.com/rapid7/metasploit-framework/pull/21514">#21514</a> from <a href="https://github.com/orbit-bot">orbit-bot</a> - Fixes a couple of references to outdated msfvenom options.</li></ul><h2>Documentation</h2><p>You can find the latest Metasploit documentation on our docsite at <a href="https://docs.metasploit.com/">docs.metasploit.com</a>.</p><h2>Get it</h2><p>As always, you can update to the latest Metasploit Framework with msfupdate and you can get more details on the changes since the last blog post from GitHub:</p><ul><li><a href="https://github.com/rapid7/metasploit-framework/pulls?q=is:pr+merged:%222026-05-26T12%3A02%3A08Z..2026-06-04T12%3A43%3A08Z%22">Pull Requests 6.4.135...6.4.136</a></li><li><a href="https://github.com/rapid7/metasploit-framework/compare/6.4.135...6.4.136">Full diff 6.4.135...6.4.136</a></li></ul><p>If you are a git user, you can clone the <a href="https://github.com/rapid7/metasploit-framework">Metasploit Framework repo</a> (master branch) for the latest. To install fresh without using git, you can use the open-source-only <a href="https://github.com/rapid7/metasploit-framework/wiki/Nightly-Installers">Nightly Installers</a> or the commercial edition <a href="https://www.rapid7.com/products/metasploit/download/">Metasploit Pro</a>.</p><p></p><br/><br/><b>Source:</b> Rapid7 Blog &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><h2>When Open Source is a bit too Open</h2><p>Several fun modules landed this week, including an Apache RCE, Windows Kernel pointer collection, and Gogs RCE via naming. Leading off is Gogs' RCE that allows an attacker to execute commands by naming their <span>branch </span><span>--exec &lt;command&gt;</span> and requesting a rebase.</p><p>Another useful post module by CharlesQuinnDev enumerates the Kernel pointers leaked via the popular <span>NtQuerySystemInformation</span> technique. Those exposed pointers, combined with a good write primitive, make local privilege escalation easier to accomplish. Several local privilege escalations already use that technique, so exposing just that technique was a great call!</p><h2>New module content (3)</h2><h3>Apache ActiveMQ RCE via Jolokia addNetworkConnector</h3><p><strong>Authors:</strong> dinosn and h00die<br /><strong>Type:</strong> Exploit<br /><strong>Pull request:</strong> <a href="https://github.com/rapid7/metasploit-framework/pull/21497">#21497</a> contributed by <a href="https://github.com/h00die">h00die</a><br /><strong>Path:</strong> <span>multi/http/apache_activemq_jolokia_rce</span><br /><strong>AttackerKB reference:</strong> <a href="https://attackerkb.com/search?q=CVE-2026-34197&amp;referrer=blog">CVE-2026-34197</a></p><p>Adds a new exploit module exploit/multi/http/apache_activemq_jolokia_rce targeting CVE-2026-34197 in Apache ActiveMQ. The module abuses the Jolokia JMX-over-HTTP API exposed at <span>/api/jolokia/</span> by calling the <span>addNetworkConnector()</span> MBean operation with a crafted <span>brokerConfig=xbean:http://...</span><span> </span>URI. ActiveMQ fetches the attacker-controlled URL and instantiates it as a Spring XML application context, achieving remote code execution via a <span>java.lang.ProcessBuilder</span> bean. Authentication is required to exploit this vulnerability.</p><h3>Gogs Git Rebase Argument Injection RCE</h3><p><strong>Author:</strong> Crypto-Cat<br /><strong>Type:</strong> Exploit<br /><strong>Pull request:</strong> <a href="https://github.com/rapid7/metasploit-framework/pull/21515">#21515</a> contributed by <a href="https://github.com/jburgess-r7">jburgess-r7</a><br /><strong>Path:</strong> <span>multi/http/gogs_rebase_rce</span></p><p>This adds an exploit module for the Gogs rebase Remote Code Execution (RCE) vulnerability. The module leverages an argument injection flaw residing in the pull request merge workflow of Gogs versions &lt;= 0.14.2 and &lt;= 0.15.0+dev.</p><h3>Windows Kernel Pointer Exposure Enumerator</h3><p><strong>Author:</strong> CharlesQuinnDev<br /><strong>Type:</strong> Post<br /><strong>Pull request:</strong> <a href="https://github.com/rapid7/metasploit-framework/pull/21039">#21039</a> contributed by <a href="https://github.com/CharlesQuinnDev">CharlesQuinnDev</a><br /><strong>Path:</strong> <span>windows/gather/windows_kernel_pointer_enum</span></p><p>Adds a new post module for Windows that enumerates kernel object pointers exposed through <span>NtQuerySystemInformation</span> on <span>x64</span> systems. The module collects observable handle metadata and provides analysis of pointer distribution, object types, and ALPC usage, then saves the results to a CSV loot file for review. Also introduces a reusable Windows kernel handle-enumeration library.</p><h2>Enhancements and features (7)</h2><ul><li><a href="https://github.com/rapid7/metasploit-framework/pull/20881">#20881</a> from <a href="https://github.com/h00die">h00die</a> - This adds support for cracking Kerberos type hashes in Metasploit, specifically timeroasting, krb5tgs* and krb5asrep.</li><li><a href="https://github.com/rapid7/metasploit-framework/pull/21087">#21087</a> from <a href="https://github.com/jbx81-1337">jbx81-1337</a> - The new payloads_manager plugin lets you maintain a local archive of custom payloads and stage them into the data directory. Use the <span>fetch</span> or <span>add</span> subcommands to download or import a payload, then select to symlink it into place so it's available to other modules. The plugin tracks each payload's name, hash, tags, and description in a database.</li><li><a href="https://github.com/rapid7/metasploit-framework/pull/21412">#21412</a> from <a href="https://github.com/zeroSteiner">zeroSteiner</a> - Updates Metasploit's post modules to now run by default against the last opened alive session, unless explicitly specified.</li><li><a href="https://github.com/rapid7/metasploit-framework/pull/21429">#21429</a> from <a href="https://github.com/zeroSteiner">zeroSteiner</a> - Removes the now redundant Linux-specific method for finding the arch so there's a single source of truth that works in a superset of platform / session-type combinations.</li><li><a href="https://github.com/rapid7/metasploit-framework/pull/21488">#21488</a> from <a href="https://github.com/sjanusz-r7">sjanusz-r7</a> - Updates HTTP login scanners to report the detected service hierarchy.</li><li><a href="https://github.com/rapid7/metasploit-framework/pull/21504">#21504</a> from <a href="https://github.com/h00die">h00die</a> - Adds missing CVE references to seven existing modules: gladinet_storage_access_ticket_forge (CVE-2025-14611), cassandra_web_file_read (CVE-2020-36939), pretalx_file_read_cve_2023_28459 (CVE-2023-28459 and CVE-2023-28458), centreon_pollers_auth_rce (CVE-2019-19699), wp_responsive_thumbnail_slider_upload (CVE-2015-10144), xerte_unauthenticated_template_import_rce (CVE-2026-32985), and solarwinds_storage_manager_sql (CVE-2012-2576).</li><li><a href="https://github.com/rapid7/metasploit-framework/pull/21526">#21526</a> from <a href="https://github.com/zeroSteiner">zeroSteiner</a> - Makes stability and logging improvements to the ipmi_cipher_zero, ipmi_dumphashes, and ipmi_version modules.</li></ul><h2>Bugs fixed (7)</h2><ul><li><a href="https://github.com/rapid7/metasploit-framework/pull/21432">#21432</a> from <a href="https://github.com/4ravind-b">4ravind-b</a> - Fixes a bug in modules that invoke other modules that prevented datastore options from being validated.</li><li><a href="https://github.com/rapid7/metasploit-framework/pull/21448">#21448</a> from <a href="https://github.com/kx7m2qd">kx7m2qd</a> - Fixes an issue where CIDR range filters in the addresses parameter of the db.hosts RPC endpoint were not processed correctly.</li><li><a href="https://github.com/rapid7/metasploit-framework/pull/21484">#21484</a> from <a href="https://github.com/zeroSteiner">zeroSteiner</a> - Fixes python ssl command shell payloads that failed with AttributeError: module 'ssl' has no attribute 'wrap_socket'.</li><li><a href="https://github.com/rapid7/metasploit-framework/pull/21489">#21489</a> from <a href="https://github.com/h00die">h00die</a> - Improves the GitLab version scanner by handling additional exceptions in the scanner for non-GitLab targets and adding additional version fingerprints for real GitLab targets.</li><li><a href="https://github.com/rapid7/metasploit-framework/pull/21502">#21502</a> from <a href="https://github.com/h00die">h00die</a> - Fixes a crash in the scanner/snmp/snmp_enum module when the system date was read as Null.</li><li><a href="https://github.com/rapid7/metasploit-framework/pull/21506">#21506</a> from <a href="https://github.com/h00die">h00die</a> - Adds a guard clause when running <span>uname -r</span> in WSL startup_folder persistence.</li><li><a href="https://github.com/rapid7/metasploit-framework/pull/21514">#21514</a> from <a href="https://github.com/orbit-bot">orbit-bot</a> - Fixes a couple of references to outdated msfvenom options.</li></ul><h2>Documentation</h2><p>You can find the latest Metasploit documentation on our docsite at <a href="https://docs.metasploit.com/">docs.metasploit.com</a>.</p><h2>Get it</h2><p>As always, you can update to the latest Metasploit Framework with msfupdate and you can get more details on the changes since the last blog post from GitHub:</p><ul><li><a href="https://github.com/rapid7/metasploit-framework/pulls?q=is:pr+merged:%222026-05-26T12%3A02%3A08Z..2026-06-04T12%3A43%3A08Z%22">Pull Requests 6.4.135...6.4.136</a></li><li><a href="https://github.com/rapid7/metasploit-framework/compare/6.4.135...6.4.136">Full diff 6.4.135...6.4.136</a></li></ul><p>If you are a git user, you can clone the <a href="https://github.com/rapid7/metasploit-framework">Metasploit Framework repo</a> (master branch) for the latest. To install fresh without using git, you can use the open-source-only <a href="https://github.com/rapid7/metasploit-framework/wiki/Nightly-Installers">Nightly Installers</a> or the commercial edition <a href="https://www.rapid7.com/products/metasploit/download/">Metasploit Pro</a>.</p><p></p><br/><br/><b>Source:</b> Rapid7 Blog &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
 </item>
 
 <item>
@@ -19,7 +37,7 @@
   <pubDate>Fri, 05 Jun 2026 16:35:02 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><p>CVE Lite CLI is a free, open-source command line tool that scans your projects in seconds and tells you exactly which included packages contain a vulnerability.</p>
-<p>The post <a href="https://www.securityweek.com/owasp-incubator-project-helps-developers-find-and-fix-vulnerable-dependencies-in-seconds/">OWASP Incubator Project Helps Developers Find and Fix Vulnerable Dependencies in Seconds</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 10h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/owasp-incubator-project-helps-developers-find-and-fix-vulnerable-dependencies-in-seconds/">OWASP Incubator Project Helps Developers Find and Fix Vulnerable Dependencies in Seconds</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
 </item>
 
 <item>
@@ -27,7 +45,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-33841</link>
   <pubDate>Fri, 05 Jun 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Updated an acknowledgement. This is an informational change only.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 12h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Updated an acknowledgement. This is an informational change only.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 16h ago]]></description>
 </item>
 
 <item>
@@ -35,7 +53,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-32177</link>
   <pubDate>Fri, 05 Jun 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was updated to fix the download link for .NET Framework 3.8 & 4.81 for Windows 2025<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 12h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was updated to fix the download link for .NET Framework 3.8 & 4.81 for Windows 2025<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 16h ago]]></description>
 </item>
 
 <item>
@@ -43,7 +61,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-35433</link>
   <pubDate>Fri, 05 Jun 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was updated to fix the download link for .NET Framework 3.8 & 4.81 for Windows 2025<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 12h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was updated to fix the download link for .NET Framework 3.8 & 4.81 for Windows 2025<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 16h ago]]></description>
 </item>
 
 <item>
@@ -52,7 +70,7 @@
   <pubDate>Fri, 05 Jun 2026 13:05:06 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: Elevated ransomware risk — validate backups and endpoint defenses.</b><br/><p>Other noteworthy stories that might have slipped under the radar: Ultrahuman data leak, The Gentlemen ransomware analysis, Hola Browser bundles miner.</p>
-<p>The post <a href="https://www.securityweek.com/in-other-news-anthropic-maps-ai-threats-unpatched-comodo-flaw-palantir-chief-eyed-for-cisa/">In Other News: Anthropic Maps AI Threats, Unpatched Comodo Flaw, Palantir Chief Eyed for CISA</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/in-other-news-anthropic-maps-ai-threats-unpatched-comodo-flaw-palantir-chief-eyed-for-cisa/">In Other News: Anthropic Maps AI Threats, Unpatched Comodo Flaw, Palantir Chief Eyed for CISA</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 17h ago]]></description>
 </item>
 
 <item>
@@ -60,7 +78,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-25680</link>
   <pubDate>Fri, 05 Jun 2026 08:41:37 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 18h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 21h ago]]></description>
 </item>
 
 <item>
@@ -68,7 +86,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-46598</link>
   <pubDate>Fri, 05 Jun 2026 08:41:29 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 18h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 21h ago]]></description>
 </item>
 
 <item>
@@ -76,7 +94,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-42502</link>
   <pubDate>Fri, 05 Jun 2026 08:41:22 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 18h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 21h ago]]></description>
 </item>
 
 <item>
@@ -84,7 +102,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-39827</link>
   <pubDate>Fri, 05 Jun 2026 08:41:15 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 18h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 21h ago]]></description>
 </item>
 
 <item>
@@ -92,7 +110,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-39835</link>
   <pubDate>Fri, 05 Jun 2026 08:41:08 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 18h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 21h ago]]></description>
 </item>
 
 <item>
@@ -100,7 +118,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-25681</link>
   <pubDate>Fri, 05 Jun 2026 08:41:01 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 18h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 21h ago]]></description>
 </item>
 
 <item>
@@ -110,7 +128,7 @@
   <source>The Hacker News</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Threat actors are actively exploiting a critical security flaw in Everest Forms Pro, a WordPress plugin with about 4,000 active installations, to execute arbitrary code, leading to a complete site compromise.
 
-The vulnerability in question is CVE-2026-3300 (CVSS score: 9.8), a remote code execution bug impacting all versions of the plugin up to, and including, 1.9.12. A patch for the flaw was<br/><br/><b>Source:</b> The Hacker News &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 18h ago]]></description>
+The vulnerability in question is CVE-2026-3300 (CVSS score: 9.8), a remote code execution bug impacting all versions of the plugin up to, and including, 1.9.12. A patch for the flaw was<br/><br/><b>Source:</b> The Hacker News &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 21h ago]]></description>
 </item>
 
 <item>
@@ -119,7 +137,7 @@ The vulnerability in question is CVE-2026-3300 (CVSS score: 9.8), a remote code 
   <pubDate>Fri, 05 Jun 2026 07:24:08 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: Potential data exposure — check monitoring and incident response readiness.</b><br/><p>The company detected a network intrusion in March and an investigation showed that some files were stolen during the attack.</p>
-<p>The post <a href="https://www.securityweek.com/nightclub-giant-rci-says-data-breach-affects-40000-individuals/">Nightclub Giant RCI Says Data Breach Affects 40,000 Individuals</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 19h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/nightclub-giant-rci-says-data-breach-affects-40000-individuals/">Nightclub Giant RCI Says Data Breach Affects 40,000 Individuals</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 23h ago]]></description>
 </item>
 
 <item>
@@ -127,7 +145,7 @@ The vulnerability in question is CVE-2026-3300 (CVSS score: 9.8), a remote code 
   <link>https://www.bleepingcomputer.com/news/security/new-cisco-sd-wan-flaw-exploited-in-zero-day-attacks-to-gain-root/</link>
   <pubDate>Fri, 05 Jun 2026 06:24:20 +0000</pubDate>
   <source>BleepingComputer</source>
-  <description><![CDATA[<b>Why this matters: Privilege escalation risk — review local admin exposure and endpoint controls.</b><br/>On Thursday, Cisco warned of a high-severity, unpatched zero-day in the Cisco Catalyst SD-WAN Manager (tracked as CVE-2026-20245) actively exploited in attacks enabling root privilege escalation. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 20h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Privilege escalation risk — review local admin exposure and endpoint controls.</b><br/>On Thursday, Cisco warned of a high-severity, unpatched zero-day in the Cisco Catalyst SD-WAN Manager (tracked as CVE-2026-20245) actively exploited in attacks enabling root privilege escalation. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
@@ -136,7 +154,7 @@ The vulnerability in question is CVE-2026-3300 (CVSS score: 9.8), a remote code 
   <pubDate>Fri, 05 Jun 2026 05:47:09 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: Vendor advisory — check installed firmware/software version and patch status.</b><br/><p>The vulnerability is tracked as CVE-2026-20245 and it can allow arbitrary command execution as root, but no patch yet.</p>
-<p>The post <a href="https://www.securityweek.com/cisco-warns-of-7th-sd-wan-zero-day-exploited-in-2026/">Cisco Warns of 7th SD-WAN Zero-Day Exploited in 2026</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 21h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/cisco-warns-of-7th-sd-wan-zero-day-exploited-in-2026/">Cisco Warns of 7th SD-WAN Zero-Day Exploited in 2026</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
@@ -650,14 +668,6 @@ CVE-2026-33829 refers to a spoofing vulnerability that could expose<br/><br/><b>
   <title>🟠 CVE-2024-7598 Network restriction bypass via race condition during namespace termination</title>
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-7598</link>
   <pubDate>Wed, 03 Jun 2026 08:41:20 +0000</pubDate>
-  <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
-</item>
-
-<item>
-  <title>🟠 CVE-2025-1180 GNU Binutils ld elf-eh-frame.c _bfd_elf_write_section_eh_frame memory corruption</title>
-  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-1180</link>
-  <pubDate>Wed, 03 Jun 2026 08:41:06 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
   <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
 </item>
