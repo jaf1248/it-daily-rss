@@ -1,25 +1,35 @@
 # IT Weekly Intelligence Briefing
 **Period:** May 30 – June 06, 2026  
-**Generated:** 2026-06-06 06:29 UTC  
-**Items reviewed:** 123  
+**Generated:** 2026-06-06 09:24 UTC  
+**Items reviewed:** 126  
 
 ## ⚡ Top Actions This Week
 
 1. **Apply emergency patch or mitigation now; check vendor advisory for workarounds.**  
-   _Cisco Catalyst SD-WAN Manager CVE-2026-20245 Flaw Actively Exploited – No Patch Available_  
+   _CISA Adds Actively Exploited SolarWinds Serv-U DoS Flaw to KEV Catalog_  
    Source: The Hacker News  
 
 2. **Audit third-party software dependencies and review vendor access.**  
-   _IronWorm and New Miasma Worm Variant Hit npm in Supply Chain Attacks_  
+   _Miasma Worm Hits 73 Microsoft GitHub Repositories in Major Supply Chain Attack_  
    Source: The Hacker News  
 
 3. **Apply emergency patch or mitigation now; check vendor advisory for workarounds.**  
-   _Cisco warns of unpatched SD-WAN zero-day exploited in attacks_  
-   Source: BleepingComputer  
+   _Cisco Catalyst SD-WAN Manager CVE-2026-20245 Flaw Actively Exploited – No Patch Available_  
+   Source: The Hacker News  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [CISA Adds Actively Exploited SolarWinds Serv-U DoS Flaw to KEV Catalog](https://thehackernews.com/2026/06/cisa-adds-actively-exploited-solarwinds.html)
+**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Jun 06  
+**Why it matters:** General awareness item.  
+**Recommended action:** Apply emergency patch or mitigation now; check vendor advisory for workarounds.  
+
+### [Miasma Worm Hits 73 Microsoft GitHub Repositories in Major Supply Chain Attack](https://thehackernews.com/2026/06/miasma-worm-hits-73-microsoft-github.html)
+**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Jun 06  
+**Why it matters:** Third-party/software supply chain integrity risk.  
+**Recommended action:** Audit third-party software dependencies and review vendor access.  
 
 ### [Cisco Catalyst SD-WAN Manager CVE-2026-20245 Flaw Actively Exploited – No Patch Available](https://thehackernews.com/2026/06/cisco-catalyst-sd-wan-manager-cve-2026.html)
 **Source:** The Hacker News &nbsp;·&nbsp; **Date:** Jun 06  
@@ -41,19 +51,12 @@
 **Why it matters:** Third-party/software supply chain integrity risk.  
 **Recommended action:** Audit third-party software dependencies and review vendor access.  
 
-### [DentaQuest data breach  exposed info of 2.6 million accounts](https://www.bleepingcomputer.com/news/security/dentaquest-data-breach-exposed-info-of-26-million-accounts/)
-**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jun 04  
-**Why it matters:** Potential credential or data exposure.  
-**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
-
-### [UN food agency discloses breach affecting 600,000 Gaza households](https://www.bleepingcomputer.com/news/security/un-world-food-programme-breach-affects-600-000-gaza-households/)
-**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jun 04  
-**Why it matters:** Potential credential or data exposure.  
-**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
-
 ---
 
 ## 🟠 Important — Review This Week
+
+- [AI Agent Uncovers 21 Zero-Days in FFmpeg; Chrome Patches Record 429 Bugs](https://thehackernews.com/2026/06/ai-agent-uncovers-21-zero-days-in.html)  
+  **The Hacker News** · Jun 06 · _General awareness item._  
 
 - [CISA: Hackers now exploit SolarWinds Serv-U flaw to crash servers](https://www.bleepingcomputer.com/news/security/cisa-hackers-now-exploit-solarwinds-serv-u-flaw-to-crash-servers/)  
   **BleepingComputer** · Jun 05 · _General awareness item._  
@@ -76,20 +79,17 @@
 - [CVE-2026-42502 Invoking  incorrect handling of HTML elements in foreign content in golang.org/x/net/html](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-42502)  
   **Microsoft Security Response Center (MSRC)** · Jun 05 · _General awareness item._  
 
-- [CVE-2026-39827 Invoking  memory leak when rejecting channels can lead to DoS in golang.org/x/crypto/ssh](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-39827)  
-  **Microsoft Security Response Center (MSRC)** · Jun 05 · _General awareness item._  
-
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [Free Apps Are Quietly Turning Smart TVs Into Web-Scraping Proxies for AI](https://thehackernews.com/2026/06/free-apps-are-quietly-turning-smart-tvs.html) — The Hacker News
 - [Suspicious Polyfill login prompts pop up on Toshiba, Muji websites](https://www.bleepingcomputer.com/news/security/suspicious-polyfill-login-prompts-pop-up-on-toshiba-muji-websites/) — BleepingComputer
 - [Chinese APT deploys new malware to keep access to hacked networks](https://www.bleepingcomputer.com/news/security/chinese-apt-deploys-new-malware-to-keep-access-to-hacked-networks/) — BleepingComputer
 - [Dark web Nemesis Market vendor gets 26 years for selling drugs](https://www.bleepingcomputer.com/news/security/dark-web-nemesis-market-vendor-gets-26-years-for-selling-drugs/) — BleepingComputer
 - [Android Spyware Asin Targets Arabic Users via Fake News, PDF and War Map Apps](https://thehackernews.com/2026/06/android-spyware-asin-targets-arabic.html) — The Hacker News
 - [Over 900 US gas station tank gauge systems exposed to attacks](https://www.bleepingcomputer.com/news/security/over-900-us-gas-station-tank-gauge-systems-exposed-to-attacks/) — BleepingComputer
-- [What 2026 DBIR Confirms: Attacks Are Living in the Browser](https://www.bleepingcomputer.com/news/security/what-2026-dbir-confirms-attacks-are-living-in-the-browser/) — BleepingComputer
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 11 critical · 68 important · 44 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 13 critical · 68 important · 45 FYI_
