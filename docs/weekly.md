@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
 **Period:** May 31 – June 07, 2026  
-**Generated:** 2026-06-07 03:37 UTC  
+**Generated:** 2026-06-07 07:53 UTC  
 **Items reviewed:** 127  
 
 ## ⚡ Top Actions This Week
@@ -55,29 +55,29 @@
 
 ## 🟠 Important — Review This Week
 
-- [Critical Everest Forms Pro flaw exploited to take over WordPress sites](https://www.bleepingcomputer.com/news/security/critical-everest-forms-pro-flaw-exploited-to-take-over-wordpress-sites/)  
-  **BleepingComputer** · Jun 06 · _General awareness item._  
+- [CVE-2026-7774 tarfile.data_filter path traversal bypass allows writing outside the extraction directory](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-7774)  
+  **Microsoft Security Response Center (MSRC)** · Jun 07 · _General awareness item._  
 
-- [AI Agent Uncovers 21 Zero-Days in FFmpeg; Chrome Patches Record 429 Bugs](https://thehackernews.com/2026/06/ai-agent-uncovers-21-zero-days-in.html)  
-  **The Hacker News** · Jun 06 · _General awareness item._  
+- [CVE-2026-3276 Potential DoS via quadratic complexity in unicodedata.normalize()](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-3276)  
+  **Microsoft Security Response Center (MSRC)** · Jun 07 · _General awareness item._  
 
-- [CISA: Hackers now exploit SolarWinds Serv-U flaw to crash servers](https://www.bleepingcomputer.com/news/security/cisa-hackers-now-exploit-solarwinds-serv-u-flaw-to-crash-servers/)  
-  **BleepingComputer** · Jun 05 · _General awareness item._  
+- [CVE-2026-8643 pip can extract console_scripts and gui_scripts outside installation directory](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-8643)  
+  **Microsoft Security Response Center (MSRC)** · Jun 07 · _General awareness item._  
 
-- [CVE-2026-33841 Windows Kernel Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-33841)  
-  **Microsoft Security Response Center (MSRC)** · Jun 05 · _General awareness item._  
+- [CVE-2026-8829 HTML::Entities versions before 3.84 for Perl read freed heap memory in _decode_entities](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-8829)  
+  **Microsoft Security Response Center (MSRC)** · Jun 07 · _General awareness item._  
 
-- [CVE-2026-32177 .NET Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-32177)  
-  **Microsoft Security Response Center (MSRC)** · Jun 05 · _General awareness item._  
+- [CVE-2026-43958 Rrdtool: rrdtool: stack buffer overflow allows local code execution or denial of service](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-43958)  
+  **Microsoft Security Response Center (MSRC)** · Jun 07 · _General awareness item._  
 
-- [CVE-2026-35433 .NET Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-35433)  
-  **Microsoft Security Response Center (MSRC)** · Jun 05 · _General awareness item._  
+- [CVE-2026-5419 Guntls: gnutls: information disclosure via timing side-channel in pkcs#7 padding removal](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-5419)  
+  **Microsoft Security Response Center (MSRC)** · Jun 07 · _General awareness item._  
 
-- [CVE-2026-25680 Invoking denial of service when parsing arbitrary HTML in golang.org/x/net/html](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-25680)  
-  **Microsoft Security Response Center (MSRC)** · Jun 05 · _General awareness item._  
+- [CVE-2026-27145 Inefficient candidate hostname parsing in crypto/x509](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-27145)  
+  **Microsoft Security Response Center (MSRC)** · Jun 07 · _General awareness item._  
 
-- [CVE-2026-46598 Invoking  pathological inputs can lead to client panic in golang.org/x/crypto/ssh/agent](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-46598)  
-  **Microsoft Security Response Center (MSRC)** · Jun 05 · _General awareness item._  
+- [CVE-2026-42507 Arbitrary inputs are included in errors without any escaping in net/textproto](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-42507)  
+  **Microsoft Security Response Center (MSRC)** · Jun 07 · _General awareness item._  
 
 ---
 
