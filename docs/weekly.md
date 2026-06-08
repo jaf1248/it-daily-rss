@@ -1,25 +1,30 @@
 # IT Weekly Intelligence Briefing
 **Period:** June 01 – June 08, 2026  
-**Generated:** 2026-06-08 05:29 UTC  
+**Generated:** 2026-06-08 11:03 UTC  
 **Items reviewed:** 125  
 
 ## ⚡ Top Actions This Week
 
-1. **Apply emergency patch or mitigation now; check vendor advisory for workarounds.**  
+1. **Audit third-party software dependencies and review vendor access.**  
+   _VS Code Adds 2-Hour Extension Auto-Update Delay to Limit Supply Chain Attacks_  
+   Source: The Hacker News  
+
+2. **Apply emergency patch or mitigation now; check vendor advisory for workarounds.**  
    _CISA Adds Actively Exploited SolarWinds Serv-U DoS Flaw to KEV Catalog_  
    Source: The Hacker News  
 
-2. **Audit third-party software dependencies and review vendor access.**  
+3. **Audit third-party software dependencies and review vendor access.**  
    _Miasma Worm Hits 73 Microsoft GitHub Repositories in Major Supply Chain Attack_  
-   Source: The Hacker News  
-
-3. **Apply emergency patch or mitigation now; check vendor advisory for workarounds.**  
-   _Cisco Catalyst SD-WAN Manager CVE-2026-20245 Flaw Actively Exploited – No Patch Available_  
    Source: The Hacker News  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [VS Code Adds 2-Hour Extension Auto-Update Delay to Limit Supply Chain Attacks](https://thehackernews.com/2026/06/vs-code-adds-2-hour-extension-auto.html)
+**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Jun 08  
+**Why it matters:** Third-party/software supply chain integrity risk.  
+**Recommended action:** Audit third-party software dependencies and review vendor access.  
 
 ### [CISA Adds Actively Exploited SolarWinds Serv-U DoS Flaw to KEV Catalog](https://thehackernews.com/2026/06/cisa-adds-actively-exploited-solarwinds.html)
 **Source:** The Hacker News &nbsp;·&nbsp; **Date:** Jun 06  
@@ -46,14 +51,12 @@
 **Why it matters:** General awareness item.  
 **Recommended action:** Apply emergency patch or mitigation now; check vendor advisory for workarounds.  
 
-### [Hola Browser for Windows compromised to deliver cryptominer](https://www.bleepingcomputer.com/news/security/hola-browser-for-windows-compromised-to-deliver-cryptominer/)
-**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jun 04  
-**Why it matters:** Third-party/software supply chain integrity risk.  
-**Recommended action:** Audit third-party software dependencies and review vendor access.  
-
 ---
 
 ## 🟠 Important — Review This Week
+
+- [Over 20,000 Instagram accounts stolen in Meta AI support hack](https://www.bleepingcomputer.com/news/security/meta-ai-support-data-breach-affects-20-000-instagram-accounts/)  
+  **BleepingComputer** · Jun 08 · _General awareness item._  
 
 - [CVE-2026-7774 tarfile.data_filter path traversal bypass allows writing outside the extraction directory](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-7774)  
   **Microsoft Security Response Center (MSRC)** · Jun 07 · _General awareness item._  
@@ -76,20 +79,17 @@
 - [CVE-2026-27145 Inefficient candidate hostname parsing in crypto/x509](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-27145)  
   **Microsoft Security Response Center (MSRC)** · Jun 07 · _General awareness item._  
 
-- [CVE-2026-42507 Arbitrary inputs are included in errors without any escaping in net/textproto](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-42507)  
-  **Microsoft Security Response Center (MSRC)** · Jun 07 · _General awareness item._  
-
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [VerdantBamboo Deploys BSD Variant of BRICKSTORM on Linux Appliances](https://thehackernews.com/2026/06/verdantbamboo-deploys-bsd-variant-of.html) — The Hacker News
+- [UNC3753 Used Vishing and Physical Intrusions in U.S. Data Theft Extortion Campaign](https://thehackernews.com/2026/06/unc3753-used-vishing-and-physical.html) — The Hacker News
 - [ISC Stormcast For Monday, June 8th, 2026 https://isc.sans.edu/podcastdetail/9962, (Mon, Jun 8th)](https://isc.sans.edu/diary/rss/33058) — SANS Internet Storm Center
 - [Hands on with Intelligent Terminal, an AI-powered Windows Terminal](https://www.bleepingcomputer.com/news/microsoft/hands-on-with-intelligent-terminal-an-ai-powered-windows-terminal/) — BleepingComputer
 - [C0XMO botnet spreads via DD-WRT router flaw, kills rival malware](https://www.bleepingcomputer.com/news/security/c0xmo-botnet-spreads-via-dd-wrt-router-flaw-kills-rival-malware/) — BleepingComputer
 - [Silent Ransom Group targets law firms with fake IT support calls](https://www.bleepingcomputer.com/news/security/silent-ransom-group-targets-law-firms-with-fake-it-support-calls/) — BleepingComputer
-- [New ChatGPT Lockdown Mode Limits Tools That Could Enable Data Exfiltration](https://thehackernews.com/2026/06/new-chatgpt-lockdown-mode-limits-tools.html) — The Hacker News
-- [Free Apps Are Quietly Turning Smart TVs Into Web-Scraping Proxies for AI](https://thehackernews.com/2026/06/free-apps-are-quietly-turning-smart-tvs.html) — The Hacker News
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 12 critical · 68 important · 45 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 10 critical · 69 important · 46 FYI_
