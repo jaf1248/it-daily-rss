@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
 **Period:** June 01 – June 08, 2026  
-**Generated:** 2026-06-08 17:50 UTC  
+**Generated:** 2026-06-08 20:11 UTC  
 **Items reviewed:** 127  
 
 ## ⚡ Top Actions This Week
@@ -61,6 +61,9 @@
 - [Critical Check Point VPN Flaw Exploited to Bypass Passwords in IKEv1 Setups](https://thehackernews.com/2026/06/critical-check-point-vpn-flaw-exploited.html)  
   **The Hacker News** · Jun 08 · _Potential email disruption for users._  
 
+- [CVE-2026-33118 Microsoft Edge (Chromium-based) Spoofing Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-33118)  
+  **Microsoft Security Response Center (MSRC)** · Jun 08 · _General awareness item._  
+
 - [CVE-2026-35429 Microsoft Edge (Chromium-based) for Android Spoofing Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-35429)  
   **Microsoft Security Response Center (MSRC)** · Jun 08 · _General awareness item._  
 
@@ -76,19 +79,16 @@
 - [CVE-2026-3276 Potential DoS via quadratic complexity in unicodedata.normalize()](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-3276)  
   **Microsoft Security Response Center (MSRC)** · Jun 07 · _General awareness item._  
 
-- [CVE-2026-8643 pip can extract console_scripts and gui_scripts outside installation directory](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-8643)  
-  **Microsoft Security Response Center (MSRC)** · Jun 07 · _General awareness item._  
-
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [WhatsApp says it disrupted new NSO spyware phishing attacks](https://www.bleepingcomputer.com/news/security/whatsapp-says-it-disrupted-new-nso-spyware-phishing-attacks/) — BleepingComputer
 - [Meta Blocks NSO Group's New WhatsApp Phishing Attack, Files Contempt Order](https://thehackernews.com/2026/06/meta-blocks-nso-groups-new-whatsapp.html) — The Hacker News
 - [TeamPCP Supply Chain Campaign: Activity Through 2026-06-07, (Mon, Jun 8th)](https://isc.sans.edu/diary/rss/33060) — SANS Internet Storm Center
 - [Critical UniFi OS bug lets hackers gain root without authentication](https://www.bleepingcomputer.com/news/security/critical-unifi-os-bug-lets-hackers-gain-root-without-authentication/) — BleepingComputer
 - [Reducing security operations complexity with Wazuh Cloud](https://www.bleepingcomputer.com/news/security/reducing-security-operations-complexity-with-wazuh-cloud/) — BleepingComputer
 - [AI Phishing Is Crushing SOCs with Alert Volume: How to Reduce Tier 1 Overload](https://thehackernews.com/2026/06/ai-phishing-is-crushing-socs-with-alert.html) — The Hacker News
-- [The Hardest Fork](https://thehackernews.com/2026/06/the-hardest-fork.html) — The Hacker News
 
 ---
 
