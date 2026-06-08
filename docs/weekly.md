@@ -1,25 +1,30 @@
 # IT Weekly Intelligence Briefing
 **Period:** June 01 – June 08, 2026  
-**Generated:** 2026-06-08 20:11 UTC  
-**Items reviewed:** 127  
+**Generated:** 2026-06-08 22:24 UTC  
+**Items reviewed:** 128  
 
 ## ⚡ Top Actions This Week
 
-1. **Validate backups, confirm EDR coverage, and brief incident response team.**  
+1. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
+   _SoFi confirms third-party data breach at Hong Kong subsidiary_  
+   Source: BleepingComputer  
+
+2. **Validate backups, confirm EDR coverage, and brief incident response team.**  
    _Check Point links VPN zero-day attacks to Qilin ransomware gang_  
    Source: BleepingComputer  
 
-2. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
+3. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
    _Oxford University discloses data breach after careers platform hack_  
    Source: BleepingComputer  
-
-3. **Audit third-party software dependencies and review vendor access.**  
-   _VS Code Adds 2-Hour Extension Auto-Update Delay to Limit Supply Chain Attacks_  
-   Source: The Hacker News  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [SoFi confirms third-party data breach at Hong Kong subsidiary](https://www.bleepingcomputer.com/news/security/sofi-confirms-third-party-data-breach-at-hong-kong-subsidiary/)
+**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jun 08  
+**Why it matters:** Potential credential or data exposure.  
+**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
 ### [Check Point links VPN zero-day attacks to Qilin ransomware gang](https://www.bleepingcomputer.com/news/security/check-point-links-vpn-zero-day-attacks-to-qilin-ransomware-gang/)
 **Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jun 08  
@@ -46,14 +51,12 @@
 **Why it matters:** Third-party/software supply chain integrity risk.  
 **Recommended action:** Audit third-party software dependencies and review vendor access.  
 
-### [Cisco Catalyst SD-WAN Manager CVE-2026-20245 Flaw Actively Exploited – No Patch Available](https://thehackernews.com/2026/06/cisco-catalyst-sd-wan-manager-cve-2026.html)
-**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Jun 06  
-**Why it matters:** General awareness item.  
-**Recommended action:** Apply emergency patch or mitigation now; check vendor advisory for workarounds.  
-
 ---
 
 ## 🟠 Important — Review This Week
+
+- [One-Character Linux Kernel Flaw Enables Local Root Access, Exploits Now Public](https://thehackernews.com/2026/06/one-character-linux-kernel-flaw-enables.html)  
+  **The Hacker News** · Jun 08 · _General awareness item._  
 
 - [Gogs patches critical zero-day enabling remote code execution](https://www.bleepingcomputer.com/news/security/gogs-patches-critical-zero-day-enabling-remote-code-execution/)  
   **BleepingComputer** · Jun 08 · _General awareness item._  
@@ -61,10 +64,10 @@
 - [Critical Check Point VPN Flaw Exploited to Bypass Passwords in IKEv1 Setups](https://thehackernews.com/2026/06/critical-check-point-vpn-flaw-exploited.html)  
   **The Hacker News** · Jun 08 · _Potential email disruption for users._  
 
-- [CVE-2026-33118 Microsoft Edge (Chromium-based) Spoofing Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-33118)  
+- [CVE-2026-35429 Microsoft Edge (Chromium-based) for Android Spoofing Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-35429)  
   **Microsoft Security Response Center (MSRC)** · Jun 08 · _General awareness item._  
 
-- [CVE-2026-35429 Microsoft Edge (Chromium-based) for Android Spoofing Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-35429)  
+- [CVE-2026-33118 Microsoft Edge (Chromium-based) Spoofing Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-33118)  
   **Microsoft Security Response Center (MSRC)** · Jun 08 · _General awareness item._  
 
 - [⚡ Weekly Recap: Instagram Account Hacks, Android Zero-Day, GitHub Worm and More](https://thehackernews.com/2026/06/weekly-recap-instagram-account-hacks.html)  
@@ -76,20 +79,17 @@
 - [CVE-2026-7774 tarfile.data_filter path traversal bypass allows writing outside the extraction directory](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-7774)  
   **Microsoft Security Response Center (MSRC)** · Jun 07 · _General awareness item._  
 
-- [CVE-2026-3276 Potential DoS via quadratic complexity in unicodedata.normalize()](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-3276)  
-  **Microsoft Security Response Center (MSRC)** · Jun 07 · _General awareness item._  
-
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [NFCShare Android malware spreads via fake banking app updates on GitHub](https://www.bleepingcomputer.com/news/security/nfcshare-android-malware-spreads-via-fake-banking-app-updates-on-github/) — BleepingComputer
+- [New Apple feature automatically changes your compromised passwords](https://www.bleepingcomputer.com/news/apple/new-apple-feature-automatically-changes-your-compromised-passwords/) — BleepingComputer
+- [New Shai-Hulud attack trojanizes 19 science-focused PyPI packages](https://www.bleepingcomputer.com/news/security/new-shai-hulud-attack-trojanizes-19-science-focused-pypi-packages/) — BleepingComputer
 - [WhatsApp says it disrupted new NSO spyware phishing attacks](https://www.bleepingcomputer.com/news/security/whatsapp-says-it-disrupted-new-nso-spyware-phishing-attacks/) — BleepingComputer
 - [Meta Blocks NSO Group's New WhatsApp Phishing Attack, Files Contempt Order](https://thehackernews.com/2026/06/meta-blocks-nso-groups-new-whatsapp.html) — The Hacker News
 - [TeamPCP Supply Chain Campaign: Activity Through 2026-06-07, (Mon, Jun 8th)](https://isc.sans.edu/diary/rss/33060) — SANS Internet Storm Center
-- [Critical UniFi OS bug lets hackers gain root without authentication](https://www.bleepingcomputer.com/news/security/critical-unifi-os-bug-lets-hackers-gain-root-without-authentication/) — BleepingComputer
-- [Reducing security operations complexity with Wazuh Cloud](https://www.bleepingcomputer.com/news/security/reducing-security-operations-complexity-with-wazuh-cloud/) — BleepingComputer
-- [AI Phishing Is Crushing SOCs with Alert Volume: How to Reduce Tier 1 Overload](https://thehackernews.com/2026/06/ai-phishing-is-crushing-socs-with-alert.html) — The Hacker News
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 9 critical · 71 important · 47 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 10 critical · 71 important · 47 FYI_
