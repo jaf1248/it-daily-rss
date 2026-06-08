@@ -3,15 +3,446 @@
 <channel>
   <title>Joe — VP of IT Briefing</title>
   <description>Leadership-focused IT risk, vendors, pricing, licensing, and industry context.</description>
-  <lastBuildDate>Mon, 08 Jun 2026 10:54:22 +0000</lastBuildDate>
+  <lastBuildDate>Mon, 08 Jun 2026 12:42:39 +0000</lastBuildDate>
   
 <item>
-  <title>🔴 Silent Ransom Group Uses DNS Fast Flux in Attacks</title>
-  <link>https://www.securityweek.com/silent-ransom-group-uses-dns-fast-flux-in-attacks/</link>
-  <pubDate>Mon, 08 Jun 2026 10:31:39 +0000</pubDate>
-  <source>SecurityWeek</source>
-  <description><![CDATA[<b>Why this matters: Elevated ransomware risk — validate backups and endpoint defenses.</b><br/><p>Focusing on hacking law firms in the US, the ransomware group relies on fast flux to hide its C&#038;C infrastructure.</p>
-<p>The post <a href="https://www.securityweek.com/silent-ransom-group-uses-dns-fast-flux-in-attacks/">Silent Ransom Group Uses DNS Fast Flux in Attacks</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+  <title>🟠 Google Protocol Buffers flaw turns schemas into shells</title>
+  <link>https://www.csoonline.com/article/4182306/google-protocol-buffers-flaw-turns-schemas-into-shells.html</link>
+  <pubDate>Mon, 08 Jun 2026 12:22:33 +0000</pubDate>
+  <source>CSO Online</source>
+  <description><![CDATA[<b>Why this matters: Supply chain risk — audit third-party dependencies and vendor access.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<p>A widely used JavaScript implementation of Google’s <a href="https://github.com/protocolbuffers/protobuf" rel="noreferrer noopener" target="_blank">Protocol Buffers</a> format is placing too much trust in untrusted data, exposing affected applications to remote code execution and other attacks.</p>
+
+
+
+<p>Researchers at Cyera have disclosed six vulnerabilities affecting “<a href="https://github.com/protobufjs/protobuf.js/" rel="noreferrer noopener" target="_blank">protobuf.js</a>,” all stemming from the library’s handling of schema and metadata. Attackers could exploit an input validation oversight to insert malicious data and influence an application’s behavior.</p>
+
+
+
+<p>Protocol Buffers is a technology for packaging data in a compact, structured format to streamline the exchange of information between different applications. The protobuf.js library reportedly receives more than 50 million weekly downloads. It is commonly pulled into applications indirectly through dependencies such as gRPC tooling, Google Cloud libraries, and other frameworks, making it difficult for organizations to track.</p>
+
+
+
+<p>Researchers disclosed six <a href="https://www.csoonline.com/article/4159882/nist-cuts-down-cve-analysis-amid-vulnerability-overload.html">CVE</a>s covering remote code execution, denial-of-service (DoS) conditions, prototype pollution, prototype injection, and code-generation issues.</p>
+
+
+
+<p>“While exploitation of these vulnerabilities generally requires specific conditions, those conditions are increasingly common in data and AI ecosystems that routinely exchange data, schemas, and configuration files across services, repositories, cloud platforms, and third-party integrations,” Cyera researchers Assaf Morag and Vladimir Tokarev said in a blog <a href="https://www.cyera.com/blog/cyera-research-uncovers-six-protobuf-js-vulnerabilities-impacting-the-backbone-of-data-and-ai-systems" rel="noreferrer noopener" target="_blank">post</a>.</p>
+
+
+
+<p>Patches are available for both protobuf.js and protonufjs-cli, the project’s command-line code generation tools.</p>
+
+
+
+<h2 class="wp-block-heading" id="metadata-capable-of-writing-code">Metadata capable of writing code</h2>
+
+
+
+<p>The most significant of the bugs is a code-generation flaw tracked as <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-44291" rel="noreferrer noopener" target="_blank">CVE-2026-44291</a>.</p>
+
+
+
+<p>According to Cyera, protobuf.js dynamically generates encoder and decoder functions and compiles them using JavaScript’s Function () constructor. Under specific conditions, an attacker can manipulate schema-derived information so that data intended to describe a message instead becomes executable code.</p>
+
+
+
+<p>The researchers demonstrated an attack chain in which prototype pollution is used to trick protobuf.js into accepting attacker-controlled values as legitimate protobuf types. Those values are then incorporated into the generated code and executed within the Node.js process.</p>
+
+
+
+<p>The impact extends beyond runtime applications. A separate code-injection issue, tracked as <a href="https://nvd.nist.gov/vuln/detail/cve-2026-44295" rel="noreferrer noopener" target="_blank">CVE-2026-44295</a>, affects the pbjs command-line tool, where crafted schema names can be embedded into generated JavaScript files and executed when those files are later imported.</p>
+
+
+
+<p>While successful exploitation requires specific preconditions, such as the ability to influence protobuf schemas or descriptors, researchers noted that modern software increasingly exchanges schemas, descriptors, and configuration files across repositories, cloud environments, APIs, and third-party integrations, making those assumptions less restrictive than they once were.</p>
+
+
+
+<p>The remaining vulnerabilities are less severe. Researchers identified a prototype injection (<a href="https://nvd.nist.gov/vuln/detail/CVE-2026-44292" rel="noreferrer noopener" target="_blank">CVE-2026-44292</a>) flaw that can alter application behavior by tampering with inherited object properties, as well as denial-of-services (DoS) bugs (<a href="https://nvd.nist.gov/vuln/detail/CVE-2026-44289" rel="noreferrer noopener" target="_blank">CVE-2026-44289</a>, <a href="https://www.tenable.com/cve/CVE-2026-44290" rel="noreferrer noopener" target="_blank">CVE-2026-44290</a>, and <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-44294" rel="noreferrer noopener" target="_blank">CVE-2026-44294</a>) that can crash or exhaust application resources using maliciously crafted inputs.</p>
+
+
+
+<h2 class="wp-block-heading" id="patching-advised-as-supply-chain-risk-looms">Patching advised as supply chain risk looms</h2>
+
+
+
+<p>The researchers noted that protobuf.js is often consumed as a transitive dependency, meaning organizations may be exposed without realizing the library is present in their software stack. As schemas move through automated development pipelines and software <a href="https://www.csoonline.com/article/4170694/cisas-ai-sbom-guidance-pushes-software-supply-chain-oversight-into-new-territory.html">supply chains</a>, components traditionally viewed as passive data can become a pathway for attacks.</p>
+
+
+
+<p>“Development teams routinely accept code contributions, integrate third-party components, and automatically process files through CI/CD pipelines,” they explained. “We found that under certain conditions, a malicious protobuf schema could be introduced into this workflow and ultimately executed within trusted build environments.”</p>
+
+
+
+<p>A compromise at this stage could have downstream impacts on products, customers, and business operations, they added.</p>
+
+
+
+<p>The vulnerabilities affect protobuf.js versions 7.5.5 and earlier, along with versions 8.0.0 and 8.0.1, as well as vulnerable releases of protobuf.js-cli. Patches are available in protobuf.js 7.5.6 and 8.0.2, while protobuf.js-cli users are advised to upgrade to versions 1.2.1 or 2.0.2.</p>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Sources: the US urged NATO allies to channel defense spending toward efforts to replace components from Huawei in their networks and critical infrastructure (Bloomberg)</title>
+  <link>https://www.techmeme.com/260608/p11#a260608p11</link>
+  <pubDate>Mon, 08 Jun 2026 12:20:08 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.bloomberg.com/news/articles/2026-06-08/us-urges-nato-allies-to-use-defense-funds-to-replace-huawei-gear"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260608/i11.jpg" vspace="4" /></a>
+<p><a href="https://www.techmeme.com/260608/p11#a260608p11" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="https://www.bloomberg.com/">Bloomberg</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/articles/2026-06-08/us-urges-nato-allies-to-use-defense-funds-to-replace-huawei-gear">Sources: the US urged NATO allies to channel defense spending toward efforts to replace components from Huawei in their networks and critical infrastructure</a></b></span>&nbsp; &mdash;&nbsp; President Donald Trump's administration urged NATO allies to channel defense spending toward efforts to replace components &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔴 CIOs are being held accountable for AI they don’t fully control, IBM study finds</title>
+  <link>https://www.cio.com/article/4182288/cios-are-being-held-accountable-for-ai-they-dont-fully-control-ibm-study-finds.html</link>
+  <pubDate>Mon, 08 Jun 2026 12:05:13 +0000</pubDate>
+  <source>CIO.com</source>
+  <description><![CDATA[<b>Why this matters: Potential data exposure — check monitoring and incident response readiness.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<p>As enterprises race to deploy AI across business functions, many CIOs and CTOs are finding themselves responsible for systems they may not fully oversee, creating a new governance challenge for technology leaders.</p>
+
+
+
+<p>A new IBM Institute for Business Value survey of 2,000 technology executives found that two-thirds of CIOs and CTOs are being held accountable for AI systems they do not fully control. The survey also found that 70% of respondents said technology is being deployed across the business faster than IT can track it, while 77% said AI adoption is already outpacing governance capabilities.</p>
+
+
+
+<p>Surveyed executives expect the number of AI agents deployed within their organizations to increase by 38% by 2027, yet only 11% said they are fully prepared for the scale of AI-agent deployment they expect over the next year. According to IBM, 80% of respondents also reported CEO-driven mandates to accelerate AI transformation efforts.</p>
+
+
+
+<p>“For CIOs and CTOs, the challenge now is scaling AI systems that operate continuously and autonomously, often within governance models and architectures designed for a far slower, more predictable environment,” Matt Lyteson, CIO at IBM, <a href="https://newsroom.ibm.com/2026-06-08-new-ibm-study-finds-cios-and-ctos-face-growing-ai-control-gap-as-enterprise-deployment-scales" rel="nofollow" target="_blank">said in a statement</a> accompanying the report.</p>
+
+
+
+<h2 class="wp-block-heading" id="accountability-does-not-move-with-control">Accountability does not move with control</h2>
+
+
+
+<p>The findings resonated with analysts who said the accountability gap highlighted by IBM is becoming increasingly common as AI adoption expands across business functions.</p>
+
+
+
+<p>“AI capability is now embedded in SaaS, cloud, and business-led projects, so adoption happens at the edges of the organization while accountability stays at the top,” said Deepika Giri, AVP for Big Data and AI Research Lead at IDC Asia/Pacific. IDC research shows that only about 16% of organizations have a unified AI governance model, so the CIO owns risk for systems they don’t directly operate.</p>
+
+
+
+<p>“Enterprises have decentralised experimentation far faster than they have decentralised accountability,” said Sanchit Vir Gogia, chief analyst at Greyhound Research. “Control becomes shared the moment AI touches several platforms at once. Accountability does not move with it.”</p>
+
+
+
+<p>According to analysts, AI is increasingly being embedded into enterprise applications, SaaS platforms, cloud services, developer tools, and business workflows that sit outside traditional IT governance structures.</p>
+
+
+
+<p>“AI adoption is business-led, embedded in SaaS, cloud platforms, and developer tools, bypassing central IT with growing shadow AI,” said Charlie Dai, principal analyst at Forrester. “CIOs retain accountability for risk and cost but lack control due to federated models and hyperscaler-led abstraction.”</p>
+
+
+
+<p>The result is that technology leaders often remain responsible for risk, compliance, and business outcomes even when critical aspects of deployment sit outside their direct control.</p>
+
+
+
+<p>Rajesh Ranjan, managing partner at Everest Group, said many organizations now expect CIOs to deliver AI-driven business outcomes even though success frequently depends on process redesign, workforce changes, and operating model shifts that extend beyond IT’s direct remit.</p>
+
+
+
+<p>Ranjan said AI adoption is advancing faster than enterprises’ ability to establish governance and accountability frameworks, creating “a growing disconnect between responsibility and control.”</p>
+
+
+
+<h2 class="wp-block-heading" id="shadow-ai-raises-the-stakes">Shadow AI raises the stakes</h2>
+
+
+
+<p>The analysts said the accountability challenge becomes more acute as AI adoption spreads through tools and services that business teams can access without significant IT involvement.</p>
+
+
+
+<p>“Traditional shadow IT introduced unmanaged software. Shadow AI introduces unmanaged judgment,” Gogia said.</p>
+
+
+
+<p>Businesses can now access AI capabilities through embedded SaaS functionality, external tools, APIs, copilots, and agent frameworks with little IT involvement, analysts said, expanding the challenge beyond traditional technology governance.</p>
+
+
+
+<p>Dai said the risks extend beyond security and compliance to include unmanaged costs, regulatory exposure, prompt injection attacks, and vulnerabilities at the agent layer.</p>
+
+
+
+<p>The challenge grows further as organizations move from AI assistants toward AI agents capable of making decisions, invoking tools, interacting with enterprise systems, and carrying out multistep tasks with limited human intervention.</p>
+
+
+
+<p>“Agentic AI introduces dynamic, non-deterministic behavior and external interactions, breaking traditional governance models,” Dai said. “Enterprises lack real-time traceability into decisions, creating misalignment between accountability and actual system behavior.”</p>
+
+
+
+<h2 class="wp-block-heading" id="ai-agents-bring-new-operational-risks">AI agents bring new operational risks</h2>
+
+
+
+<p>The survey suggests those governance challenges are already translating into operational consequences.</p>
+
+
+
+<p>“By 2027, enterprises expect to deploy an average of 1,661 AI agents—a 38% increase from today,” <a href="https://www.ibm.com/thought-leadership/institute-business-value/en-us/c-suite-study/cxo" rel="nofollow" target="_blank">the report said</a>. “At that rate, tech leaders are tasked with managing hundreds of thousands of autonomous decisions daily. And manual governance can’t keep up with that math.”</p>
+
+
+
+<p>Surveyed organizations reported an average of 54 AI-agent incidents during the past year that required human intervention or correction. Seventeen percent of those incidents were classified as high severity.</p>
+
+
+
+<p>Among high-severity incidents, 37% resulted in data exposure or security breaches, 33% caused cascading system failures, and 17% triggered compliance issues, according to IBM.</p>
+
+
+
+<p>The study also found that 59% of respondents view security and compliance concerns as among the biggest barriers to scaling AI agents. Organizations that embed governance directly into AI systems reported 25% fewer AI-related incidents than those relying primarily on manual oversight.</p>
+
+
+
+<p>“This is why visibility now matters more than authority,” Gogia said. “Technology leaders do not need to approve every deployment. They need to know what is running, what it can reach, and how to stop it.”</p>
+
+
+
+<h2 class="wp-block-heading" id="building-governance-into-ai-operations">Building governance into AI operations</h2>
+
+
+
+<p>The analysts said enterprises will need to move beyond governance models designed for periodic reviews and traditional software deployments.</p>
+
+
+
+<p>“As AI becomes embedded in core business processes, governance can no longer be a periodic review exercise; it must become an operational capability,” Ranjan said.</p>
+
+
+
+<p>Dai said enterprises should also prioritize centralized observability, policy controls, governed decentralization, and stronger data and context governance as AI adoption scales.</p>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Linux Foundation targets AI’s cost-management problem with Tokenomics Foundation</title>
+  <link>https://www.cio.com/article/4182274/linux-foundation-targets-ais-cost-management-problem-with-tokenomics-foundation.html</link>
+  <pubDate>Mon, 08 Jun 2026 11:46:48 +0000</pubDate>
+  <source>CIO.com</source>
+  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<p>For many CIOs, the challenge of scaling AI is no longer about building applications but about understanding what they cost. With AI models priced through complex token-based structures, enterprises deploying multi-agentic AI are facing a fast-growing and often opaque expense, making it harder to benchmark providers, measure efficiency, and prove returns on AI investments.</p>
+
+
+
+<p>Seeking to address that problem, the Linux Foundation has announced its intent to launch the Tokenomics Foundation, a vendor-neutral organization that will develop open standards, benchmarks, and best practices for AI cost management.</p>
+
+
+
+<p>The foundation, instead of working alone, will collaborate with the FinOps Foundation, another Linux Foundation initiative focused on advancing the discipline of cloud financial management and technology value management.</p>
+
+
+
+<p>A key part of that collaboration will be the expansion of <a href="https://focus.finops.org/adoption/" rel="nofollow" target="_blank">FinOps Open Cost and Usage Specification (FOCUS</a>), an open standard originally developed to normalize cloud spending and usage data across providers.</p>
+
+
+
+<p>The two foundations plan to adapt the specification to account for token-based AI consumption, creating a common framework for measuring, comparing, and governing AI costs across models and platforms, the Linux Foundation said in a statement.</p>
+
+
+
+<p>While the Tokenomics Foundation’s Governing Board will help set strategic priorities and allocate funding for the initiative, its Technical Committee will work with FinOps Foundation contributors to develop the specifications, benchmarks, and reference frameworks needed to incorporate AI token usage into FOCUS, it added.</p>
+
+
+
+<p>The new foundation, the Linux Foundation further said, has already attracted support from a broad group of enterprise technology vendors, cloud providers, and end-user organizations, including Accenture, Booking.com, Flexera, Google Cloud, IBM, JPMorganChase, KPMG, Microsoft, Oracle, Salesforce, SAP, and ServiceNow.</p>
+
+
+
+<h2 class="wp-block-heading" id="why-will-the-new-foundation-matter-for-cios">Why will the new foundation matter for CIOs?</h2>
+
+
+
+<p>The move to launch a new foundation to standardize metrics around token usage addresses a growing gap in enterprise AI rollouts in production use cases.</p>
+
+
+
+<p>“The industry lacks common standards for measuring AI costs and efficiency. That makes it difficult for CIOs to compare models and vendors, in turn making it difficult to track ROI, optimize spending, or decide which models deliver the best value,” said <a href="https://www.linkedin.com/in/pareekhjain?originalSubdomain=in" rel="nofollow" target="_blank">Pareekh Jain</a>, principal analyst at Pareekh Consulting.</p>
+
+
+
+<p>“A neutral body, in contrast, can help define shared terminology, benchmarks, and accounting frameworks, similar to how <a href="https://www.infoworld.com/article/4138748/finops-for-agents-loop-limits-tool-call-caps-and-the-new-unit-economics-of-agentic-saas.html">FinOps</a> brought discipline to cloud spending. Standardization can make AI costs more transparent and comparable across vendors for CIOs,” Jain added.</p>
+
+
+
+<p>The challenge is not just about managing AI costs but also about how enterprises architect, deploy, and govern AI applications at scale, even as per-token pricing continues to decline, pointed out <a href="https://www.linkedin.com/in/yugal-joshi-5740a92?originalSubdomain=in" rel="nofollow" target="_blank">Yugal Joshi</a>, partner at Everest Group.</p>
+
+
+
+<p>“The gross AI bill for enterprises continues to rise due to poor design practices such as throwing unwanted models at specific problems. In addition, the same workflow ends up costing differently based on input queries and user prompts,” Joshi said. “No CIO can make meaningful budgeting decisions or calculate RoI of such workflows. This creates complexity around selecting workloads that can derive the best outcome with the least investment.”</p>
+
+
+
+<p>The Tokenomics Foundation’s emphasis on standards and best practices could help CIOs make more informed decisions about workload design, Joshi noted.</p>
+
+
+
+<h2 class="wp-block-heading" id="another-area-of-focus">Another area of focus?</h2>
+
+
+
+<p>Cost governance and design best practice, however, are only one part of the equation.</p>
+
+
+
+<p>Another challenge facing CIOs is determining when open-source models make more economic sense than proprietary alternatives, Jain said.</p>
+
+
+
+<p>“When enterprises use models such as Llama or Mistral on their own infrastructure, costs shift from paying per token to paying for GPUs, electricity, and infrastructure utilization,” Jain pointed out.</p>
+
+
+
+<p>“The long-term challenge for the Tokenomics Foundation will be creating a common framework that lets CIOs compare the true cost of self-hosted models with commercial AI APIs. Determining the point at which it becomes cheaper to run a private AI platform rather than consume AI as a service could become one of the most important financial decisions in enterprise AI,” Jain added.</p>
+
+
+
+<p>While the initiative has been announced, the Linux Foundation has not provided a target date for the Tokenomics Foundation’s formal launch or operational rollout.</p>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</item>
+
+<item>
+  <title>🟠 A look at Ireland&#x27;s Bring Your Own Power policy, which requires new data centers to have their own power plants on site or contracts for energy produced nearby (Yusuf Khan/Wall Street Journal)</title>
+  <link>https://www.techmeme.com/260608/p8#a260608p8</link>
+  <pubDate>Mon, 08 Jun 2026 11:30:00 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: Service impact possible — prepare comms and confirm vendor status.</b><br/><a href="https://www.wsj.com/business/bring-your-own-power-ireland-tells-tech-titans-hungry-for-data-centers-ea750af8?st=iKsY6b"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260608/i8.jpg" vspace="4" /></a>
+<p><a href="https://www.techmeme.com/260608/p8#a260608p8" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Yusuf Khan / <a href="https://www.wsj.com/">Wall Street Journal</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://www.wsj.com/business/bring-your-own-power-ireland-tells-tech-titans-hungry-for-data-centers-ea750af8?st=iKsY6b">A look at Ireland's Bring Your Own Power policy, which requires new data centers to have their own power plants on site or contracts for energy produced nearby</a></b></span>&nbsp; &mdash;&nbsp; The tiny nation is a test case for countries seeking AI investment without risking outages or higher bills for citizens</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔴 The power grid runs on decades-old devices — and attackers know it</title>
+  <link>https://www.cio.com/article/4181860/the-power-grid-runs-on-decades-old-devices-and-attackers-know-it.html</link>
+  <pubDate>Mon, 08 Jun 2026 11:00:00 +0000</pubDate>
+  <source>CIO.com</source>
+  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<p>U.S. energy companies have invested more than <a href="https://www.eei.org/en/news/news/all/eei-releases-2024-financial-review" rel="nofollow">$1.3 trillion in grid infrastructure over the past decade. Another $1.1 trillion</a> is projected in the next five years, effectively doubling the sector’s investment. The industry is transforming. For two decades, demand was stagnant as efficiency gains offset growth. Now, <a href="https://www.iea.org/reports/energy-and-ai/executive-summary" rel="nofollow">the surge in AI data centers and electrification is driving exponential load growth.</a> While the grid is rapidly expanding, security isn’t keeping pace.</p>
+
+
+
+<p>In my discussions of the challenges utility companies face combatting this vulnerability, I refer to <a href="https://www.cisa.gov/news-events/cybersecurity-advisories/aa21-042a" rel="nofollow">the 2021 hack of the Oldsmar, FL water system.</a> To simplify its administration, a remote desktop service was enabled on a control Windows station with shared credentials. Poor password hygiene was cited as the breach’s likely cause, and the attacker could have manipulated the chemicals going into the water supply with catastrophic results. Fortunately, an operator saw the desktop session and reversed the changes. Even though the plant infrastructure may have been secure, poor system controls and authentication hygiene opened the system up to attackers.</p>
+
+
+
+<h2 class="wp-block-heading" id="how-the-grid-became-a-cybersecurity-problem">How the grid became a cybersecurity problem</h2>
+
+
+
+<p>Energy used to flow in one direction from utility plants to consumers. With rooftop solar, virtual power plants, EVs and battery storage, it now goes both ways. And from a security perspective, the grid operator doesn’t own most of these new connected assets.</p>
+
+
+
+<p>Supporting that shift required networking OT devices that were never designed for large, heterogeneous networks. They were built to support point-to-point serial connections with physical security like fences or locks. When utilities centralized monitoring, they first added Ethernet adapters that had no authentication or encryption and were not designed to handle unexpected network traffic. And then, to enable AI analytics and cloud management, they removed the air gaps and strict segmentation, which provided the basis for device security and put them on much more broadly connected networks.</p>
+
+
+
+<p>Simply replacing those legacy devices isn’t viable. Unlike IT equipment, which gets depreciated and refreshed every 3 to 5 years, OT products in the energy sector are expected to be operational for decades. Funding upgrades requires rates to increase, making it difficult to replace equipment that works simply because it’s not secure.</p>
+
+
+
+<p>Adding to this is a cultural disconnect that, from my perspective, is one of the hardest issues to solve. Traditional OT teams are in the field wearing hard hats and fixing power lines and are very focused on continuous availability. IT security departments operate in a different world and are accustomed to software updates at the pace of Microsoft’s “Patch Tuesday” and, frankly, the occasional outage. And who owns the security of the converged network remains cloudy.</p>
+
+
+
+<p>Identity and access management is a prime example of how OT cybersecurity capabilities have not kept up with IT threats. Many legacy devices only support a single login username and password, as it was assumed they could rely on adequate physical security. As a result, all technicians share the same device credentials. I’ve even seen operators implement password management systems where technicians “check out” the logins for a given device over the phone, so there is some level of tracking who requested access to a system. However, because the password never changes, any technician or attacker can access the device later without adequate access logging (to say nothing of former employees).</p>
+
+
+
+<h2 class="wp-block-heading" id="the-threat-actors-arent-waiting">The threat actors aren’t waiting</h2>
+
+
+
+<p><a href="https://therecord.media/volt-typhoon-hackers-utility-months" rel="nofollow">Chinese-linked Volt Typhoon operators were active inside a Massachusetts utility’s network for nearly a year without detection</a>. No known damage was caused. Instead, worryingly, they were mapping the environment, learning to move data in and out, most likely as reconnaissance for future operations.</p>
+
+
+
+<p>The Ukrainian grid has been targeted by <a href="https://www.technologyreview.com/2022/04/12/1049586/russian-hackers-tried-to-bring-down-ukraines-power-grid-to-help-the-invasion/" rel="nofollow">Russian-backed Sandworm operators</a>. The U.S. has stronger cyber defenses and greater automation; however, operators in Ukraine can manually reset systems using physical switches. In North America, newer systems lack this type of override, removing a failsafe when issues occur.</p>
+
+
+
+<p>Security experts’ concerns extend beyond these isolated incidents. They fear a cyberattack in combination with kinetic events like a war, natural disaster, financial crisis or a geopolitical incident. <a href="https://www.cisa.gov/news-events/cybersecurity-advisories/aa24-038a" rel="nofollow">Dormant malware has been found repeatedly in U.S. infrastructure, waiting to be activated</a>.</p>
+
+
+
+<p>Compounding the threat, the attack surface for cybercriminals to exploit has expanded. <a href="https://www.mdpi.com/1996-1073/15/11/3931" rel="nofollow">EV charging stations create Ethernet connections between vehicles and the grid</a>. An infected charger could spread malware to a car, which may then be propagated to public chargers and into other grid systems.</p>
+
+
+
+<p>Addressing these vulnerabilities and complying with regulations requires monitoring hackers’ lateral movement across networks. What concerns me is not just the sophistication of threats but also how the sector is having to rethink detection in the post-Mythos world. I’ve seen organizations move away from backhauling all network data to a central site for monitoring and attack detection, as the rapid adoption of connected devices and escalating data volumes make that approach unsustainable. As a result, there is a shift toward pushing intelligent analytics, often AI-based, out to the edge for faster detection and alerting, with only critical event-driven data sent back to a central collection point. This improves security posture and detection speed while reducing detection latency, network consumption and storage requirements.</p>
+
+
+
+<h2 class="wp-block-heading" id="what-security-leaders-should-prioritize-now">What security leaders should prioritize now</h2>
+
+
+
+<p>Regulatory frameworks are starting to catch up. <a href="https://www.federalregister.gov/documents/2025/07/02/2025-12309/critical-infrastructure-protection-reliability-standard-cip-015-1-cyber-security-internal-network" rel="nofollow">NERC CIP-015-1 regulation went into effect in September 2025</a> with phased compliance through 2030. It mandates internal network security monitoring for high and medium-impact systems, marking a shift from perimeter-only defense. <a href="https://www.federalregister.gov/documents/2026/03/24/2026-05711/order-no-918-critical-infrastructure-protection-reliability-standard-cip-003-11-cyber" rel="nofollow">CIP-003-11, effective May 2026, extends protections to lower-impact facilities</a>, recognizing that coordinated attacks on smaller targets can have an aggregate impact.</p>
+
+
+
+<p>However, regulations are a baseline. The real priority is network awareness, and in OT environments, that means thinking differently, as traditional antivirus software can’t be installed on a smart inverter or a PLC. Similarly, OT endpoints can’t be rapidly (or, sometimes, ever) updated, unlike a laptop or server. Security depends on traffic, packet capture and anomaly detection across the entire grid network.</p>
+
+
+
+<p>In my view, understanding the attack surface is the most critical capability that a utility security team should focus efforts on building. To obtain this visibility requires rigorous, proactive testing of OT devices, operationalized firmware analysis to identify embedded vulnerabilities and network security assessments of IT/OT boundaries. The goal is to understand exposure before hackers rather than waiting for an alert.</p>
+
+
+
+<p>None of this works, however, without solving the people problem I described earlier. The ownership debate must give way to cross-functional governance. In my experience, this usually requires reengineering the organizational structure. Simulation technologies, such as digital twins, can unlock insights into energy networks, enabling operators to model scenarios and understand the impact of an intrusion. For example, what happens if an attacker gains access to the network through a compromised Virtual Power Plant (VPP) provider and moves laterally into substation controls? Scenario planning turns insights into resilience across distributed infrastructure.</p>
+
+
+
+<h2 class="wp-block-heading" id="grid-security-needs-a-better-forecast">Grid security needs a better forecast</h2>
+
+
+
+<p>The days of estimating energy demand by sticking your head out the window to check the weather are long gone. The same is true for security. The grid has been transformed from an isolated, physically secured system into a cloud-enabled, bidirectional, device-dense network. But many grid operators, generator owners, and other responsible entities are still defending it as if it were a physical building with a fence around it.</p>
+
+
+
+<p>Cybercriminals already have their tentacles in utility networks and infrastructure, waiting to strike. The energy sector can’t view cybersecurity as a compliance exercise or an IT problem that OT teams can defer. The organizations able to weather what’s coming are those that prioritize lateral awareness and proactive validation. In today’s cyber environment, the question for the energy sector is, will you have the visibility to detect an attack and the resilience to recover?</p>
+
+
+
+<p><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><strong><a href="https://www.csoonline.com/expert-contributor-network/">Want to join?</a></strong></p>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
 </item>
 
 <item>
@@ -231,7 +662,7 @@
 
 
 <p>“Innovation cannot take hold in environments that are culturally resistant or operationally unprepared to evolve,” Koinig says, noting that leaders must “intentionally cultivate a culture that embraces change as a constant, not a disruption, while aligning talent strategies to support that mindset.”</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
 </item>
 
 <item>
@@ -420,7 +851,7 @@
 
 
 <p>A data fabric might be a good place for smaller companies to start, he says, or you can use both. “You can have a big chunk of data in a lakehouse and have a fabric for two or three secondary systems,” he says. “But I’d say the data lakehouse is the gold standard.”</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
 </item>
 
 <item>
@@ -601,7 +1032,7 @@
 
 
 <p><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><strong><a href="https://www.cio.com/expert-contributor-network/">Want to join?</a></strong></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
 </item>
 
 <item>
@@ -670,7 +1101,7 @@
 
 
 <p><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><strong><a href="https://www.csoonline.com/expert-contributor-network/">Want to join?</a></strong></p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
 </item>
 
 <item>
@@ -899,7 +1330,7 @@
 
 
 <p>So he actively asks himself whether he’s prepared for the future, noting that “this question should be revisited whenever strategic business plans, acquisitions, major technology initiatives, or new market opportunities emerge.”</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
 </item>
 
 <item>
@@ -1010,7 +1441,7 @@
 
 
 <p><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><strong><a href="https://www.cio.com/expert-contributor-network/">Want to join?</a></strong></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
 </item>
 
 <item>
@@ -1093,7 +1524,7 @@
 
 
 <p>Jimeno resume cuatro claves para la persona al cargo de la TI en relación a cómo invertir en tecnología. “Lo primero, <strong>que conozca bien su negocio</strong>”, tanto a nivel tecnológico como empresarial, con foco en la estrategia a futuro. “Lo segundo, que le dé muchísima importancia a la innovación”, en lo que incluye tanto conocer y probar herramientas como probar su viabilidad; “innovación ajustada a lo que es tu negocio”. Otra de las claves: la ciberseguridad y el trabajo con su CISO. “Y por último”, concluye, “ir de la mano las personas que están en los otros departamentos de la compañía”, lo que sería “la cadena de valor de la compañía”. Un mapa de referencia para navegar el intrincado mundo de la inversión en tecnología.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
 </item>
 
 <item>
@@ -1101,7 +1532,7 @@
   <link>https://www.theregister.com/os-platforms/2026/06/08/yes-its-true-windows-11-is-an-agentic-platform/5251541</link>
   <pubDate>Mon, 08 Jun 2026 08:30:00 +0000</pubDate>
   <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>It always has been, but Microsoft didn’t realize it<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>It always has been, but Microsoft didn’t realize it<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
 </item>
 
 <item>
@@ -1178,16 +1609,16 @@
 
 
 <p><em>Updated to note that Cloudflare has since patched Pingora.</em></p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
 </item>
 
 <item>
-  <title>🔴 SolarWinds Serv-U Vulnerability Exploited in the Wild</title>
-  <link>https://www.securityweek.com/solarwinds-patches-exploited-serv-u-vulnerability/</link>
-  <pubDate>Mon, 08 Jun 2026 07:52:28 +0000</pubDate>
+  <title>🔵 Anthropic Urges Industry Coordination to Allow for a ‘Pause’ in AI Development if Risks Grow</title>
+  <link>https://www.securityweek.com/anthropic-urges-industry-coordination-to-allow-for-a-pause-in-ai-development-if-risks-grow/</link>
+  <pubDate>Mon, 08 Jun 2026 08:00:00 +0000</pubDate>
   <source>SecurityWeek</source>
-  <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><p>Unauthenticated attackers can exploit the flaw via specially crafted POST requests that crash the Serv-U service.</p>
-<p>The post <a href="https://www.securityweek.com/solarwinds-patches-exploited-serv-u-vulnerability/">SolarWinds Serv-U Vulnerability Exploited in the Wild</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><p>The proposed coordination would let advanced AI labs verify that global rivals have actually stopped or slowed their work.</p>
+<p>The post <a href="https://www.securityweek.com/anthropic-urges-industry-coordination-to-allow-for-a-pause-in-ai-development-if-risks-grow/">Anthropic Urges Industry Coordination to Allow for a ‘Pause’ in AI Development if Risks Grow</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
 </item>
 
 <item>
@@ -1387,7 +1818,7 @@
 
 
 <p>토머스 프로머는 “2026년의 CIO는 운영 아키텍트이자 리스크 책임자의 역할을 동시에 수행하는 하이브리드 리더”라며 “기술 선택은 점점 쉬워지고 있지만 비즈니스와 윤리적 판단은 더욱 어려워지고 있다”고 말했다. 이어 “기술 스택만 이해하는 CIO는 결국 기술과 비즈니스를 모두 이해하는 CIO에게 보고하게 될 것”이라고 강조했다.<br />dl-ciokorea@foundryco.com</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
 </item>
 
 <item>
@@ -1492,27 +1923,37 @@
 
 
 <p>“Do not trust the products made by your potential enemy,” Kuleba concluded, adding that the incident shows the importance of technological sovereignty and data security even for the smallest companies.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
-  <title>🔵 Sources: Spotify has approached concert promoters about licensing music festival livestreams, as it pivots to video to become a one-stop shop for music fans (Lucas Shaw/Bloomberg)</title>
+  <title>🔵 Xbox EVP Matt Booty clarifies Microsoft&#x27;s new exclusivity strategy, saying new games will be reviewed case-by-case and multiplayer games will stay multiplatform (Eddie Makuch/GameSpot)</title>
+  <link>https://www.techmeme.com/260608/p1#a260608p1</link>
+  <pubDate>Mon, 08 Jun 2026 04:40:00 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://www.gamespot.com/articles/xbox-clarifies-its-exclusivity-strategy-moving-forward-wants-you-to-buy-an-xbox/"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260608/i1.jpg" vspace="4" /></a>
+<p><a href="https://www.techmeme.com/260608/p1#a260608p1" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Eddie Makuch / <a href="https://www.gamespot.com/">GameSpot</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://www.gamespot.com/articles/xbox-clarifies-its-exclusivity-strategy-moving-forward-wants-you-to-buy-an-xbox/">Xbox EVP Matt Booty clarifies Microsoft's new exclusivity strategy, saying new games will be reviewed case-by-case and multiplayer games will stay multiplatform</a></b></span>&nbsp; &mdash;&nbsp; Today's Xbox Games Showcase was the first under the leadership of Xbox CEO Asha Sharma, who has pledged to consider making changes to Xbox's exclusivity strategy.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 8h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Sources: Spotify has approached concert promoters about licensing music festival livestreams, aiming to add more video to become a one-stop shop for music fans (Lucas Shaw/Bloomberg)</title>
   <link>https://www.techmeme.com/260607/p16#a260607p16</link>
   <pubDate>Mon, 08 Jun 2026 03:45:00 +0000</pubDate>
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.bloomberg.com/news/newsletters/2026-06-08/spotify-plans-to-add-live-concert-video-tickets"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260607/i16.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260607/p16#a260607p16" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Lucas Shaw / <a href="https://www.bloomberg.com/">Bloomberg</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/newsletters/2026-06-08/spotify-plans-to-add-live-concert-video-tickets">Sources: Spotify has approached concert promoters about licensing music festival livestreams, as it pivots to video to become a one-stop shop for music fans</a></b></span>&nbsp; &mdash;&nbsp; Spotify is looking to become a hub for live music&nbsp; &mdash;&nbsp; Good evening from New York.&nbsp; I just landed here so that I can help smuggle Charles Oakley &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/newsletters/2026-06-08/spotify-plans-to-add-live-concert-video-tickets">Sources: Spotify has approached concert promoters about licensing music festival livestreams, aiming to add more video to become a one-stop shop for music fans</a></b></span>&nbsp; &mdash;&nbsp; Spotify is looking to become a hub for live music&nbsp; &mdash;&nbsp; Good evening from New York.&nbsp; I just landed here so that I can help smuggle Charles Oakley &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 8h ago]]></description>
 </item>
 
 <item>
-  <title>🔵 Sources: Beijing-based Moonshot, which makes the Kimi chatbot, is in talks to raise $1B+ that would value it at $30B, up from a $20B valuation in a recent round (Bloomberg)</title>
+  <title>🔵 Sources: Beijing-based Moonshot, which makes the Kimi chatbot, is in talks to raise up to $2B at a $30B valuation, up from a $20B+ valuation in a May round (Bloomberg)</title>
   <link>https://www.techmeme.com/260607/p15#a260607p15</link>
   <pubDate>Mon, 08 Jun 2026 03:10:01 +0000</pubDate>
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.bloomberg.com/news/articles/2026-06-08/china-s-moonshot-ai-seeks-30-billion-value-in-new-funding-talks"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260607/i15.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260607/p15#a260607p15" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="https://www.bloomberg.com/">Bloomberg</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/articles/2026-06-08/china-s-moonshot-ai-seeks-30-billion-value-in-new-funding-talks">Sources: Beijing-based Moonshot, which makes the Kimi chatbot, is in talks to raise $1B+ that would value it at $30B, up from a $20B valuation in a recent round</a></b></span>&nbsp; &mdash;&nbsp; Moonshot AI is seeking as much as $2 billion in a new funding round that would value the startup at $30 billion &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/articles/2026-06-08/china-s-moonshot-ai-seeks-30-billion-value-in-new-funding-talks">Sources: Beijing-based Moonshot, which makes the Kimi chatbot, is in talks to raise up to $2B at a $30B valuation, up from a $20B+ valuation in a May round</a></b></span>&nbsp; &mdash;&nbsp; Moonshot AI is seeking as much as $2 billion in a new funding round that would value the startup at $30 billion &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
 </item>
 
 <item>
@@ -1522,7 +1963,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/><a href="https://www.theguardian.com/technology/2026/jun/04/microsoft-to-tighten-human-rights-measures-after-inquiry-into-israels-use-of-its-tech"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260607/i14.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260607/p14#a260607p14" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="http://www.theguardian.com/">The Guardian</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.theguardian.com/technology/2026/jun/04/microsoft-to-tighten-human-rights-measures-after-inquiry-into-israels-use-of-its-tech">Microsoft says it will tighten human rights controls when working with national security agencies after an inquiry found Israel's Unit 8200 violated its ToS</a></b></span>&nbsp; &mdash;&nbsp; Announcement seeks to close a difficult chapter for the company after the Guardian revealed its platform was used in mass surveillance of Palestinians</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 8h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.theguardian.com/technology/2026/jun/04/microsoft-to-tighten-human-rights-measures-after-inquiry-into-israels-use-of-its-tech">Microsoft says it will tighten human rights controls when working with national security agencies after an inquiry found Israel's Unit 8200 violated its ToS</a></b></span>&nbsp; &mdash;&nbsp; Announcement seeks to close a difficult chapter for the company after the Guardian revealed its platform was used in mass surveillance of Palestinians</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
 </item>
 
 <item>
@@ -1559,7 +2000,7 @@
 
 
 <p>MS는 자사 AI 개발 도구가 앤트로픽 제품보다 더 높은 비용 효율성을 제공한다고 판단하는 것으로 보인다. 실제로 지난달에는 MS가 오는 6월 반기 계약 종료 시점에 맞춰 대부분의 클로드 코드(Claude Code) 라이선스를 해지하고, 엔지니어들을 자사 코파일럿 도구로 전환할 계획이라는 <a href="https://www.theverge.com/tech/930447/microsoft-claude-code-discontinued-notepad" rel="nofollow" target="_blank">보도가 나온 바 있다</a>.<br />dl-ciokorea@foundryco.com</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 8h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 10h ago]]></description>
 </item>
 
 <item>
@@ -1567,7 +2008,7 @@
   <link>https://www.zdnet.com/article/hands-on-with-the-microsoft-surface-ultra/</link>
   <pubDate>Mon, 08 Jun 2026 02:00:43 +0000</pubDate>
   <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/>The flagship laptop announced at Computex 2026 will feature Nvidia's new RTX Spark chip with up to 128GB of unified memory.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 8h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/>The flagship laptop announced at Computex 2026 will feature Nvidia's new RTX Spark chip with up to 128GB of unified memory.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 10h ago]]></description>
 </item>
 
 <item>
@@ -1575,16 +2016,7 @@
   <link>https://www.zdnet.com/article/i-converted-to-adaptive-chargers-and-already-feel-safer/</link>
   <pubDate>Mon, 08 Jun 2026 01:00:43 +0000</pubDate>
   <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/>Adaptive charging aims to reduce battery wear by keeping speeds low, but are the optimizations worth it? Here's my verdict.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
-</item>
-
-<item>
-  <title>🟠 Emphere Raises $2.1 Million for AI-Powered Vulnerability Remediation</title>
-  <link>https://www.securityweek.com/emphere-raises-2-1-million-for-ai-powered-vulnerability-remediation/</link>
-  <pubDate>Sun, 07 Jun 2026 11:30:00 +0000</pubDate>
-  <source>SecurityWeek</source>
-  <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><p>Emphere’s solution delivers AI-driven remediation to software companies to speed up releases.</p>
-<p>The post <a href="https://www.securityweek.com/emphere-raises-2-1-million-for-ai-powered-vulnerability-remediation/">Emphere Raises $2.1 Million for AI-Powered Vulnerability Remediation</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 23h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/>Adaptive charging aims to reduce battery wear by keeping speeds low, but are the optimizations worth it? Here's my verdict.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 11h ago]]></description>
 </item>
 
 <item>
@@ -1592,7 +2024,7 @@
   <link>https://www.zdnet.com/article/dell-xps-13-2026-vs-macbook-neo/</link>
   <pubDate>Sun, 07 Jun 2026 11:00:39 +0000</pubDate>
   <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/>Dell's new 13-inch XPS starts at just $599 with student pricing, making it a direct competitor to the Neo. But is it any better?<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 23h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/>Dell's new 13-inch XPS starts at just $599 with student pricing, making it a direct competitor to the Neo. But is it any better?<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
@@ -1600,7 +2032,7 @@
   <link>https://www.zdnet.com/article/acer-swift-air-14-vs-macbook-neo/</link>
   <pubDate>Sat, 06 Jun 2026 11:00:52 +0000</pubDate>
   <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/>Acer's new $699 Swift Air 14 is a direct response to the MacBook Neo. Here's how it compares, by the specs.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
+  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/>Acer's new $699 Swift Air 14 is a direct response to the MacBook Neo. Here's how it compares, by the specs.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
 </item>
 
 <item>
@@ -1908,15 +2340,6 @@
 </item>
 
 <item>
-  <title>🟠 OWASP Incubator Project Helps Developers Find and Fix Vulnerable Dependencies in Seconds</title>
-  <link>https://www.securityweek.com/owasp-incubator-project-helps-developers-find-and-fix-vulnerable-dependencies-in-seconds/</link>
-  <pubDate>Fri, 05 Jun 2026 16:35:02 +0000</pubDate>
-  <source>SecurityWeek</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><p>CVE Lite CLI is a free, open-source command line tool that scans your projects in seconds and tells you exactly which included packages contain a vulnerability.</p>
-<p>The post <a href="https://www.securityweek.com/owasp-incubator-project-helps-developers-find-and-fix-vulnerable-dependencies-in-seconds/">OWASP Incubator Project Helps Developers Find and Fix Vulnerable Dependencies in Seconds</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
-</item>
-
-<item>
   <title>🔵 Anthropic’s AI services are too expensive, says Microsoft AI head</title>
   <link>https://www.cio.com/article/4181777/anthropics-ai-services-are-too-expensive-says-microsoft-ai-head.html</link>
   <pubDate>Fri, 05 Jun 2026 16:10:32 +0000</pubDate>
@@ -2171,15 +2594,6 @@
 </item>
 
 <item>
-  <title>🔴 In Other News: Anthropic Maps AI Threats, Unpatched Comodo Flaw, Palantir Chief Eyed for CISA</title>
-  <link>https://www.securityweek.com/in-other-news-anthropic-maps-ai-threats-unpatched-comodo-flaw-palantir-chief-eyed-for-cisa/</link>
-  <pubDate>Fri, 05 Jun 2026 13:05:06 +0000</pubDate>
-  <source>SecurityWeek</source>
-  <description><![CDATA[<b>Why this matters: Elevated ransomware risk — validate backups and endpoint defenses.</b><br/><p>Other noteworthy stories that might have slipped under the radar: Ultrahuman data leak, The Gentlemen ransomware analysis, Hola Browser bundles miner.</p>
-<p>The post <a href="https://www.securityweek.com/in-other-news-anthropic-maps-ai-threats-unpatched-comodo-flaw-palantir-chief-eyed-for-cisa/">In Other News: Anthropic Maps AI Threats, Unpatched Comodo Flaw, Palantir Chief Eyed for CISA</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
-</item>
-
-<item>
   <title>🔴 World Food Programme breach exposes data of 600k vulnerable Gazan families</title>
   <link>https://www.theregister.com/security/2026/06/05/world-food-programme-breach-exposes-data-of-600k-vulnerable-gazan-families/5251605</link>
   <pubDate>Fri, 05 Jun 2026 13:00:00 +0000</pubDate>
@@ -2334,7 +2748,7 @@
 
 
 <p></p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3d ago]]></description>
 </item>
 
 <item>
@@ -2422,407 +2836,7 @@
 
 
 <p>En opinión de <strong>Sergio Chicheri</strong>, que cerró con ello el debate, el impacto de la regulación es “positivo” y “necesario” porque nos ayuda “a ser resilientes de verdad y a convencer a los consejos de administración de que necesitamos más recursos”.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
-</item>
-
-<item>
-  <title>🟠 Chrome 149 Patches 429 Vulnerabilities</title>
-  <link>https://www.securityweek.com/chrome-149-patches-429-vulnerabilities/</link>
-  <pubDate>Fri, 05 Jun 2026 11:13:57 +0000</pubDate>
-  <source>SecurityWeek</source>
-  <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><p>Over 100 bugs are critical or high-severity, mainly use-after-free and insufficient validation of untrusted input flaws.</p>
-<p>The post <a href="https://www.securityweek.com/chrome-149-patches-429-vulnerabilities/">Chrome 149 Patches 429 Vulnerabilities</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Tokenmaxxing: When AI adoption metrics go bad</title>
-  <link>https://www.cio.com/article/4178320/tokenmaxxing-when-ai-adoption-metrics-go-bad.html</link>
-  <pubDate>Fri, 05 Jun 2026 10:01:00 +0000</pubDate>
-  <source>CIO.com</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><div id="remove_no_follow">
-		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
-					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
-						<div class="article-column__content">
-<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
-
-
-
-<p>Tracking AI adoption in the enterprise presents IT leaders with a metrics dilemma. While ROI should be the arbiter of AI initiative success, ensuring employees actually use the AI tools you roll out is a key step in the journey toward that ROI.</p>
-
-
-
-<p>So, what’s the best way to measure AI uptake without losing sight of the ultimate goal?</p>
-
-
-
-<p>Some enterprises have adopted token usage as a metric to track adoption, going so far as to gamify AI interactions to encourage use. Some AI experts say that’s a dangerous approach.</p>
-
-
-
-<p>Companies such as <a href="https://www.ft.com/content/8ee0d3ef-9548-422d-8ff1-ebd48ad4b2ca?syn-25a6b1a6=1" rel="nofollow">Amazon</a>, JPMorgan, <a href="https://www.businessinsider.com/jpmorgan-disney-employees-vie-for-ai-leaderboard-status-tokenmaxxing-2026-4" rel="nofollow">Meta, and Disney</a> have reportedly deployed AI usage leaderboards to encourage adoption, in some cases prompting workers to rack up huge bills as they burn through token budgets. One Disney employee interacted with the Claude AI 460,000 times in a nine-day span, <a href="https://www.businessinsider.com/disney-ai-adoption-dashboard-tokens-tokenmaxxing-claude-cursor-josh-damaro-2026-4" rel="nofollow">Business Insider reports</a>.</p>
-
-
-
-<p>Such company leaderboards have led to a phenomenon known as <a href="https://builtin.com/articles/ai-tokenmaxxing" rel="nofollow">tokenmaxxing</a>, with employees ramping up their use of AI tools with the aim of winning the competition. Tracking employee <a href="https://www.cio.com/article/4156783/understanding-tokenization-and-consumption-in-llms.html?utm=hybrid_search">token usage</a> alone, without marrying it with output or productivity metrics, is a recipe for disaster, especially for IT leaders responsible for AI budgets, several AI experts say.</p>
-
-
-
-<p>In some cases, top token users at companies have <a href="https://www.forbes.com/sites/timkeary/2026/04/13/is-the-cult-of-tokenmaxxingjust-another-fad-or-the-new-normal/" rel="nofollow">reportedly spent millions of dollars</a>.</p>
-
-
-
-<p>Token use leaderboards come from good intentions, a genuine desire to track how employees are interacting with AI tools, says <a href="https://www.linkedin.com/in/trevorbstuart/" rel="nofollow">Trevor Stuart</a>, senior vice president at software development support vendor Harness.</p>
-
-
-
-<p>“They’re just trying to understand how people are using these tools, how many people are using these tools,” he says, adding that by encouraging adoption the leaderboards presumably will result in “downstream productivity.”</p>
-
-
-
-<p>Token leaderboards, however, create incentives for employees to use AI tools without thinking about costs, with some using frontier AI models for simple tasks.</p>
-
-
-
-<p>“It’s like using the wrong tool when you can use a simpler tool to get the job done,” he says. “That’s where tokenmaxxing really incentivizes the wrong behavior.”</p>
-
-
-
-<h2 class="wp-block-heading" id="quick-metrics">Quick metrics</h2>
-
-
-
-<p>Measuring tokens used has become popular because it’s a relatively easy metric to collect, notes <a href="https://www.linkedin.com/in/toddaolson/" rel="nofollow">Todd Olson</a>, CEO at AI analytics vendor Pendo.</p>
-
-
-
-<p>“If someone’s spending zero tokens, they’re not using AI at all, and they’re not getting any value out of it,” he says. “But then, the lines become much more complex and much grayer once everyone actually starts using it.”</p>
-
-
-
-<p>Once organizations get employees to take the first step toward using AI tools, they need to start thinking about other metrics, Olson says. “There’s the initial inertia of getting people to try something and change their habits,” he says. “That’s kind of a zero to one problem. But then, the question is, Are people using it just for the sake of using it?”</p>
-
-
-
-<p>The big issue is that token use doesn’t necessarily lead to productivity, says <a href="https://www.linkedin.com/in/logan-wolfe/" rel="nofollow">Logan Wolfe</a>, partner in the global enterprise transformation, AI, and sovereign tech strategy practice at Kyndryl.</p>
-
-
-
-<p>“Companies are using the number of tokens consumed as a proxy for how productively employees are using AI,” he explains. “The employees are de facto incentivized for using tokens or, in some cases, punished for not using enough tokens, and obviously, it’s a metric that’s very easy to game.”</p>
-
-
-
-<p>Wolfe compares token usage metrics to rewards for software developers who write the most lines of code, which leads to bloated applications.</p>
-
-
-
-<p>“When token usage becomes the KPI, you incentivize output volume over outcomes like efficiency, quality, and risk reduction,” he adds.</p>
-
-
-
-<p>One of the major traps for IT leaders is that token use incentives can break the budget, Wolfe says.</p>
-
-
-
-<p>“Considering the fact that reductions on price per token and price per inference seem to be nowhere on the horizon these days, in no small part thanks to the rising energy cost crisis, this actually leads to an inverse curve of unit economics and ROI on AI initiatives,” he says.</p>
-
-
-
-<h2 class="wp-block-heading" id="counting-the-wrong-thing">Counting the wrong thing</h2>
-
-
-
-<p>Measuring token usage alone would be similar to a person tracking the number of miles they walk each day to improve their health without also counting the calories they consume or regularly checking their basic medical metrics, says <a href="https://www.linkedin.com/in/itamarf" rel="nofollow">Itamar Friedman</a>, CEO of AI code review provider Qodo. If you walk two miles a day, but consume 5,000 calories, you’re unlikely to improve your health.</p>
-
-
-
-<p>Keeping track of employee token usage isn’t a bad practice, but using it as a solitary metric gives companies an incomplete picture of the benefits of their AI deployments, he says.</p>
-
-
-
-<p>“I do think there is a correlation between token maximizing and being more productive,” he says. “But the problem is that if you treat that alone as your single most important, and maybe even single, metric for productivity, you might actually create a vanity.”</p>
-
-
-
-<p>In some cases, companies appear to be tracking the token usage of their programmers, he says. When developers are incentivized to spit out huge amounts of AI-generated code without quality and security reviews in place, the code can contain major bugs and security holes, he suggests.</p>
-
-
-
-<h2 class="wp-block-heading" id="more-metrics-needed">More metrics needed</h2>
-
-
-
-<p>To avoid the pitfalls of tracking token usage, Harness’ Stuart recommends companies also establish metrics for productivity or output.</p>
-
-
-
-<p>“You need to set it up in a way that you gamify for the behaviors and incentives that you care about,” he says. “Maybe an incentive for us here at Harness is, it’s not about the amount of tokens you consume, it’s about the output that we’re able to deliver and moving from inputs to outputs.”</p>
-
-
-
-<p>Productivity metrics will vary from company to company, he notes. For developers using AI assistants, for example, the primary metric may not be the number of lines of code written, but instead the number of lines of code that made it into production.</p>
-
-
-
-<p>“Did you spend money writing lines of code that were either rejected or moved back or not shipped to production?” he says. “I see this need to understand the wasted dollars. If you are going to have leaderboards, you also need to counteract that with some of the potential waste and bring that measure in.”</p>
-
-
-
-<p>Companies can also track how employees are optimizing their AI use, he adds. “There’s optimizable dollars, and there’s wasted dollars, and then there’s the tokens consumed,” he says. “Beginning to think about all three of those together is really important. And the fourth vector is: What was the output? Did we get the code to production?”</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3d ago]]></description>
-</item>
-
-<item>
-  <title>🔵 How digital sovereignty shapes Amnesty International Spain’s tech model</title>
-  <link>https://www.cio.com/article/4179322/digital-sovereignty-as-a-strategy-how-amnesty-international-spain-is-building-its-technology-model.html</link>
-  <pubDate>Fri, 05 Jun 2026 10:00:00 +0000</pubDate>
-  <source>CIO.com</source>
-  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/><div id="remove_no_follow">
-		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
-					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
-						<div class="article-column__content">
-<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
-
-
-
-<p>Transformation of an organization is no longer measured solely in terms of productivity, automation, or the adoption of new tools. In <a href="https://www.cio.com/article/4139229/nonprofits-shaping-the-future-of-responsible-ai.html?utm=hybrid_search">nonprofits</a> like Amnesty International Spain, technology has also become a matter of independence, privacy, and the ability to act autonomously.</p>
-
-
-
-<p>For over 14 years, the Spanish branch of the organization has operated with a clear premise to minimize its dependence on large technology platforms, and maintain control over its data, systems, and communications. This strategy, amid the ongoing European debate on digital sovereignty and AI, is taking on a new dimension. “From the ground up, we have a policy of being technologically independent, hosting as much as possible ourselves to ensure we have no problems suing any company, or that any report we publish doesn’t affect the systems we work with,” says head of IT infrastructure Carlos López Belenguer.</p>
-
-
-
-<p>Having worked like this long before concepts such as digital sovereignty became a regular part of the European tech debate, people are now discussing it more. “I think it’s a powerful and quite appropriate term,” he says.</p>
-
-
-
-<h2 class="wp-block-heading" id="technology-to-avoid-dependence-on-big-tech">Technology to avoid dependence on big tech</h2>
-
-
-
-<p>Amnesty International Spain’s tech strategy has focused on finding free software alternatives and self-hosted systems that allow them to maintain control over their infrastructure. “One of the great advantages of free software is we aren’t dependent on any company to work,” says Belenguer, adding it’s especially important in an organization dedicated to defending human rights, so it can denounce or investigate any company knowing it won’t face retaliation regarding the use of software.</p>
-
-
-
-<p>In his view, the current geopolitical context and some recent moves by large technology companies further reinforce this philosophy. “It’s no coincidence Microsoft is withdrawing a significant portion of its licensing model for NGOs right after Donald Trump said none of its suppliers could have certain policies that went against his administration’s philosophy,” he says.</p>
-
-
-
-<p>Belenguer adds that these types of changes can create significant economic and technological problems for organizations that depend entirely on external platforms. “When you already have your entire infrastructure in place, you don’t have many options to switch to the competition, because you’re really intertwined,” he says.</p>
-
-
-
-<h2 class="wp-block-heading" id="providing-the-means">Providing the means</h2>
-
-
-
-<p>A prime example of this strategy has been implementing Nextcloud as an internal collaborative work platform. But Belenguer’s relationship with this tool began years before its deployment within the organization. “I was already familiar with the software and had been following it for years,” he says.</p>
-
-
-
-<p>At that time, Amnesty International Spain was still working with local file servers, and solutions like Microsoft 365 and Microsoft SharePoint were just beginning to spread. “Like many others, we worked with a file system on a local server in the office,” he says. “Everyone went to work in person, and the whole Office 365 movement was just starting to emerge.”</p>
-
-
-
-<p>However, the organization decided to explore another option. “I proposed Nextcloud because I was already familiar with it, had considerable experience with <a href="https://www.cio.com/article/4139444/open-source-isnt-altruism-its-how-you-avoid-getting-surprised.html?utm=hybrid_search">open-source software</a>, and we already had quite a few things hosted,” he says. “In the end, it was just a matter of launching one more product.”</p>
-
-
-
-<p>The implementation began with a small pilot test with five users, which later grew to 10, and then 30. But the major turning point came with the pandemic in 2020 and the rise of remote work. “By then, we already had it up and running in production with everyone using it,” Belenguer says. “It practically saved our lives in IT.”</p>
-
-
-
-<p>The tool evolved from a simple file-sharing system into a collaborative work platform. “When people saw they could edit documents concurrently and work together seamlessly, they began to find many more uses for it,” he says.</p>
-
-
-
-<h2 class="wp-block-heading" id="privacy-flexibility-and-control">Privacy, flexibility, and control</h2>
-
-
-
-<p>Beyond functionality, Belenguer says the main differentiating value of these types of solutions is control over infrastructure and data. “The only real way today to guarantee privacy when working with big tech is to leave big tech,” he says.</p>
-
-
-
-<p>In this way, he expresses a particularly critical view of how large tech platforms handle personal data. “Microsoft seeks to create a general profile of everyone who works with or uses a computer,” he says, adding that the increasing integration of digital services, accounts, and tools is generating a massive collection of information about users. “All this is done under the guise of improving security or ensuring a better user experience.”</p>
-
-
-
-<p>Free software, on the other hand, offers a more flexible and secure alternative. “Being your own Google without compromising user privacy and documents, and being technologically independent is a huge leap,” he says.</p>
-
-
-
-<p>In addition to privacy, the adaptability offered by working with one’s own infrastructure is also key. “We’ve had much more flexibility both in managing the platform and in recovering lost data, as well as enabling different ways of working,” he says.</p>
-
-
-
-<p>Despite its commitment to technological independence, Amnesty International Spain acknowledges that some dependencies remain difficult to overcome, so certain tools from major tech companies have become de facto standards. “A big commitment I feel we have to make is to use Teams,” says Belenguer. “Many people don’t realize an alternative exists.” Still, he adds the organization has achieved a high degree of technological autonomy. “I’d say we’re at about 70% independent,” he says. “If the US cuts the cord, we believe we could continue working practically without problems.”</p>
-
-
-
-<h2 class="wp-block-heading" id="ai-opportunity-and-concern">AI: opportunity and concern</h2>
-
-
-
-<p>Regarding AI, Amnesty International Spain has developed internal <a href="https://www.cio.com/article/4095393/6-strategies-for-cios-to-effectively-manage-shadow-ai.html?utm=hybrid_search">policies to limit use of external tools with sensitive data</a>. “We’ve developed policies to ensure personal data is neither shared nor fed into any AI controlled by a large company,” he says.</p>
-
-
-
-<p>At the same time, the nonprofit is working on projects to deploy its own self-hosted models that can offer users tools with which to process personal data without compromising sensitive information. Among the projects under development are those related to videoconferencing, transcription, and voice and text analysis and synthesis. “We’re aiming for a hybrid model in which certain tasks can be performed with external tools, and others require our own infrastructure,” he says.</p>
-
-
-
-<p>Belenguer understands AI will continue to profoundly transform the work of organizations. “There’s practically no aspect of our work that won’t be affected,” he adds. Despite this, he believes this very transformation makes maintaining technological control even more important. “It’s a very good time to try to become technologically independent and control most of our systems,” he says.</p>
-
-
-
-<h2 class="wp-block-heading" id="a-cultural-shift-that-has-already-begun">A cultural shift that has already begun</h2>
-
-
-
-<p>Belenguer acknowledges those who opted to maintain their own infrastructure and reduce dependence on large technology platforms were seen as oddities. “For a long time, we felt quite alone doing this,” he says. But he believes the current context is driving a change in mindset. “In the last two years, though, we’ve seen a major ideological shift. There’s constant and enthusiastic talk about digital sovereignty, hosting your own systems, and owning your data.”</p>
-
-
-
-<p>This shift confirms the path the organization embarked on years ago made sense. “Now we realize we were largely right and we’ve done the necessary thing,” he says.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3d ago]]></description>
-</item>
-
-<item>
-  <title>🔵 We’re forgetting the most critical system in the AI loop: the human brain</title>
-  <link>https://www.cio.com/article/4181241/were-forgetting-the-most-critical-system-in-the-ai-loop-the-human-brain.html</link>
-  <pubDate>Fri, 05 Jun 2026 10:00:00 +0000</pubDate>
-  <source>CIO.com</source>
-  <description><![CDATA[<b>Why this matters: Budget/licensing impact — verify renewal terms and forecast cost changes.</b><br/><div id="remove_no_follow">
-		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
-					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
-						<div class="article-column__content">
-<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
-
-
-
-<p>The question I am asked most frequently today is no longer “which AI tools should we deploy?” but “why are our people not performing at the level our technology investment should be enabling?”</p>
-
-
-
-<p>The numbers tell a story that should concern every C-suite leader and CIO investing in artificial intelligence right now. According to a<a href="https://thefinancialbrand.com/news/artificial-intelligence-banking/why-95-of-enterprises-are-getting-zero-return-on-ai-investment-191950" rel="nofollow"> </a><a href="https://thefinancialbrand.com/news/artificial-intelligence-banking/why-95-of-enterprises-are-getting-zero-return-on-ai-investment-191950" rel="nofollow">2025 MIT study</a>, 95% of enterprise AI pilot programs are failing to deliver measurable financial returns.<a href="https://www.bcg.com/press/24october2024-ai-adoption-in-2024-74-of-companies-struggle-to-achieve-and-scale-value" rel="nofollow"> </a><a href="https://www.bcg.com/press/24october2024-ai-adoption-in-2024-74-of-companies-struggle-to-achieve-and-scale-value" rel="nofollow">BCG research</a> puts it plainly: 74% of companies struggle to achieve and scale value from AI. And yet, as an<a href="https://www.itpro.com/business/business-strategy/ai-adoption-projects-keep-failing-but-enterprise-fomo-means-investment-is-still-rising" rel="nofollow"> </a><a href="https://www.itpro.com/business/business-strategy/ai-adoption-projects-keep-failing-but-enterprise-fomo-means-investment-is-still-rising" rel="nofollow">Orgvue analysis from 2026</a> reveals, 57% of organizations deploying AI are doing so primarily because their competitors are, not because they have a strategy.</p>
-
-
-
-<p>Read that again. More than half of the organizations racing to deploy AI are running a technology adoption program without a clear reason for it. That is not transformation. That is theater.</p>
-
-
-
-<p>Investment is accelerating regardless.<a href="https://www.deloitte.com/nl/en/issues/generative-ai/ai-roi-the-paradox-of-rising-investment-and-elusive-returns.html" rel="nofollow"> </a><a href="https://www.deloitte.com/nl/en/issues/generative-ai/ai-roi-the-paradox-of-rising-investment-and-elusive-returns.html" rel="nofollow">Deloitte’s 2025 survey</a> of over 1,800 senior executives found that 85% of organizations increased AI investment in the past year, and 91% plan to increase it again. Meanwhile, only 6% of those organizations qualify as genuine high performers, those seeing a 5% or more impact on earnings. The gap between what organizations is spending and what they are getting back is not a technology problem. It never was.</p>
-
-
-
-<h2 class="wp-block-heading" id="the-real-reason-ai-initiatives-are-underperforming">The real reason AI initiatives are underperforming</h2>
-
-
-
-<p>The most forward-thinking technology leaders I’ve encountered have already made this shift. They understand that the most significant risk to their technology investment is not a system failure. It’s a human one. AI amplifies what already exists in an organization. If the underlying human system is undisciplined, reactive or misaligned, AI will accelerate those same weaknesses.</p>
-
-
-
-<p>I’ve seen this pattern repeat consistently. Companies make significant capital investments into AI infrastructure, but invest almost nothing in redesigning how people work, make decisions or learn from failure. The result is sophisticated capabilities layered on top of outdated operating models, broken decision-making cultures and teams that have never been taught to think critically about outputs.</p>
-
-
-
-<p>Three human behaviors, in particular, derail good technology more than any other.</p>
-
-
-
-<p>The first is confirmation bias. People use AI to validate what they already believe rather than to genuinely challenge their assumptions. The model becomes a sophisticated mirror rather than a thinking partner.</p>
-
-
-
-<p>The second is risk aversion disguised as due diligence. Organizations create endless review cycles and approval layers that slow execution to the point where the insight the AI generated is no longer relevant by the time a decision is made.</p>
-
-
-
-<p>The third, and perhaps the most damaging, is the absence of a failure-forward learning culture. AI systems improve through iteration and feedback. But many organizations still treat failure as something to be managed politically rather than mined for intelligence. When people are incentivized to hide errors rather than learn from them, the feedback loop that makes both humans and AI systems smarter simply breaks down.</p>
-
-
-
-<h2 class="wp-block-heading" id="what-does-good-human-infrastructure-look-like">What does good human infrastructure look like?</h2>
-
-
-
-<p>Here is the question I find most important, and most consistently ignored at the leadership level. AI systems require clean data, disciplined governance and structured feedback loops. What is the human equivalent of that infrastructure?</p>
-
-
-
-<p>Clean data in a human system is the <strong>quality of thinking</strong> people bring to their roles. Their ability to observe accurately, reason clearly and separate signal from noise. Most organizations invest nothing in this.</p>
-
-
-
-<p>Governance on the human side is <strong>behavioral discipline. </strong>The standards, habits and decision-making frameworks that determine how people operate under pressure, not just in ideal conditions.</p>
-
-
-
-<p>And the feedback loop equivalent is what I call <strong>failure-forward learning</strong>. The organizational capacity to extract structured insight from what goes wrong and feed it back into how people and teams operate.</p>
-
-
-
-<p>When these three elements are absent, you do not have a human operating model. You have a group of individuals hoping that good intentions and expensive software will be enough. Newsflash, they won’t be.</p>
-
-
-
-<p>The organizations seeing the strongest returns from AI are not necessarily those with the most advanced models. They’re the ones who invested in the human infrastructure around the technology first.</p>
-
-
-
-<h2 class="wp-block-heading" id="five-actions-leaders-must-take-now">Five actions leaders must take now</h2>
-
-
-
-<p><strong>1. Stop treating AI adoption as a technology deployment.</strong> AI is a business transformation that happens to involve technology. The moment a leader frames it as an IT initiative, they have constrained its potential before it has even begun. Framing determines resourcing, sponsorship and accountability. Get it wrong, and everything that follows is compromised.</p>
-
-
-
-<p><strong>2. Build structured reflection into the operating rhythm. </strong>High-performing teams use short, focused weekly review cycles, rather than lengthy retrospectives. They ask the right questions. What did we learn? What did we assume that proved incorrect? What do we need to adjust? Without this, people repeat the same cognitive errors at increasing speed.</p>
-
-
-
-<p><strong>3. Establish decision hygiene.</strong> Teams need explicit frameworks for how decisions are made. Make it clear who holds accountability, what information is required and how outcomes are tracked against the reasoning that produced them. AI surfaces decisions faster than ever before. Without decision hygiene, that acceleration becomes a liability.</p>
-
-
-
-<p><strong>4. Measure outcomes, not inputs.</strong> Too many leadership teams celebrate the number of tools deployed, licenses purchased or training hours completed. None of that is operational value. Operational value is measured in decision quality, execution speed, cost efficiency and competitive differentiation. Hold yourself and your organization to outcome metrics from day one.</p>
-
-
-
-<p><strong>5. Model the behaviors you want to see.</strong> Intellectual curiosity, comfort with iteration and the willingness to be publicly wrong and publicly learning are not soft cultural aspirations. They are hard operational requirements. A team operating in cognitive overload or fear will corrupt even the most sophisticated AI initiative from the inside.</p>
-
-
-
-<h2 class="wp-block-heading" id="the-most-critical-system-in-the-ai-loop">The most critical system in the AI loop</h2>
-
-
-
-<p>In the next three to five years, AI itself will be largely commoditized. The competitive advantage won’t come from simply having the technology, but from the quality of the human system wrapped around it.</p>
-
-
-
-<p>Every serious organization investing in AI today has people responsible for model performance: Tracking what the system gets wrong, retraining on new data, auditing outputs continuously. That rigor is appropriate. However, in most organizations, the same level of discipline is almost entirely absent when it comes to evaluating and improving the ‘human system’ surrounding the technology.</p>
-
-
-
-<p>When did you last audit the quality of thinking in your senior team with the same discipline you audit your data? When did you last build a genuine feedback loop around human performance, not an annual review, but a real mechanism for learning and adjusting? For most leaders, the honest answer is rarely, or never.</p>
-
-
-
-<p>The organizations that will define excellent AI-augmented performance will be those whose leaders understood, at a foundational level, that they were always running two systems simultaneously, and that the performance of one was always a ceiling on the performance of the other. AI will continue to advance at a pace that is difficult to overstate. But the human brain, its capacity for judgment, creativity, ethical reasoning and genuine connection, will remain the most critical system in the loop.</p>
-
-
-
-<p>Treat it accordingly.</p>
-
-
-
-<p><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><strong><a href="https://www.cio.com/expert-contributor-network/">Want to join?</a></strong></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3d ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3d ago]]></description>
 </item>
 
 <item>
@@ -3346,7 +3360,7 @@
   <link>https://www.theregister.com/databases/2026/06/04/palantir-wins-9m-contract-to-run-uk-firearms-licensing-cia-backed-biz-to-hold-gun-bomb-and-poison-records/5251132</link>
   <pubDate>Thu, 04 Jun 2026 12:30:00 +0000</pubDate>
   <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Budget/licensing impact — verify renewal terms and forecast cost changes.</b><br/>Pips Accenture and NEC to bag decade-long deal for cops across England, Wales, and beyond<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3d ago]]></description>
+  <description><![CDATA[<b>Why this matters: Budget/licensing impact — verify renewal terms and forecast cost changes.</b><br/>Pips Accenture and NEC to bag decade-long deal for cops across England, Wales, and beyond<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4d ago]]></description>
 </item>
 
 <item>
@@ -3471,7 +3485,7 @@
 
 
 <p>Transformers users should upgrade to version 5.3.0 immediately and should search for <code>_attn_implementation_internal</code> in any cached or downloaded <code>config.json</code> files to determine whether they’ve been targeted.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 3d ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 4d ago]]></description>
 </item>
 
 <item>
@@ -3725,6 +3739,22 @@
 </item>
 
 <item>
+  <title>🔵 Grep this: Microsoft grafts (most) Linux commands onto Windows</title>
+  <link>https://www.theregister.com/os-platforms/2026/06/03/grep-this-microsoft-grafts-most-linux-commands-onto-windows/5250796</link>
+  <pubDate>Wed, 03 Jun 2026 19:04:28 +0000</pubDate>
+  <source>The Register</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Coreutils serves over 75 Unix commands in Windows and PowerShell command lines<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4d ago]]></description>
+</item>
+
+<item>
+  <title>🔵 No longer just a Copilot, Microsoft&#x27;s AI wants to take the wheel</title>
+  <link>https://www.theregister.com/ai-and-ml/2026/06/03/no-longer-just-a-copilot-microsofts-ai-wants-to-take-the-wheel/5250718</link>
+  <pubDate>Wed, 03 Jun 2026 16:49:15 +0000</pubDate>
+  <source>The Register</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Always-on agent promises to keep work moving, provided you trust it with practically everything<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4d ago]]></description>
+</item>
+
+<item>
   <title>🔴 Microsoft wants to put AI agents on a short leash</title>
   <link>https://www.csoonline.com/article/4180467/microsoft-wants-to-put-ai-agents-on-a-short-leash.html</link>
   <pubDate>Wed, 03 Jun 2026 11:31:14 +0000</pubDate>
@@ -3806,7 +3836,7 @@
 
 
 <p>The second, the Agent Control Specifications (ACS), provides an open standard framework for defining and enforcing governance policies in a portable manner, capable of moving with the agent across different frameworks, platforms, and runtimes instead of being tied to a specific vendor’s technology stack. Together, MXC, MDASH, ASSERT, and ACS sum up Microsoft’s attempt at securing AI models’ entire lifecycle, from the code they generate to the actions they take later.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 4d ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 5d ago]]></description>
 </item>
 
 <item>
@@ -4279,99 +4309,6 @@
 
 
 <p>Levy added, “in an ideal world, Anthropic would announce alongside this major expansion a parallel effort to tighten internal security protocols to ensure the code doesn’t fall into the wrong hands. Bringing in a much larger cohort of researchers signals to potential attackers that they will soon have a larger pool of potential targets, and fails to allay fears of future breaches.”</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 5d ago]]></description>
-</item>
-
-<item>
-  <title>🔴 Two-year old Oracle WebLogic Server vulnerability is being exploited</title>
-  <link>https://www.csoonline.com/article/4180218/two-year-old-oracle-weblogic-server-vulnerability-is-being-exploited.html</link>
-  <pubDate>Tue, 02 Jun 2026 23:34:40 +0000</pubDate>
-  <source>CSO Online</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><div id="remove_no_follow">
-		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
-					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
-						<div class="article-column__content">
-<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
-
-
-
-<p>US federal government departments have been given until Thursday to patch a two-year old high severity vulnerability in Oracle WebLogic Server that could allow an unauthenticated attacker to access critical data.</p>
-
-
-
-<p>The vulnerability, <a href="https://www.cve.org/CVERecord?id=CVE-2024-21182" rel="noreferrer noopener" target="_blank">CVE-2024-21182</a>, was added Monday to the Cybersecurity and Infrastructure Security Agency’s (CISA) <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search=CVE-2024-21182&amp;field_date_added_wrapper=all&amp;field_cve=&amp;sort_by=field_date_added&amp;items_per_page=20&amp;url=" rel="noreferrer noopener" target="_blank">Known Exploited Vulnerabilities (KEV) catalog</a>, giving federal Oracle admins a mere four days to plug the hole.</p>
-
-
-
-<p>Supported versions that are affected are 12.2.1.4.0 and 14.1.1.0.0.</p>
-
-
-
-<p>While the KEV is aimed at US federal departments, inclusion of a vulnerability on the list should be taken as a warning to the private sector as well.</p>
-
-
-
-<p>At the time it was discovered, this vulnerability was rated 7.3 on the CVSS scale, nowhere near the 9+ rating that many infosec pros would see as signaling a need for immediate attention.</p>
-
-
-
-<p>However, <a href="https://www.linkedin.com/in/rob-enderle-03729/" rel="noreferrer noopener" target="_blank">Robert Enderle</a>, a consultant who heads the Enderle Group, said the inclusion of this vulnerability in the KEV now means that CISA has recently confirmed that threat actors are actively weaponizing it.</p>
-
-
-
-<p>“To make the CISA KEV means that we’re seeing active exploitations,” agreed <a href="https://www.fortra.com/profile/tyler-reguly" rel="noreferrer noopener" target="_blank">Tyler Reguly</a>, Fortra’s associate director of security R&amp;D. “Given that this CVE was patched by Oracle in the July 2024 Critical Patch Update (CPU), I would expect most admins to have patched this by now, particularly since it is a WebLogic vulnerability and, prior to the addition of this CVE, there were already a dozen WebLogic vulnerabilities listed in the KEV catalog.”</p>
-
-
-
-<h2 class="wp-block-heading" id="older-vulns-under-exploit">Older vulns under exploit</h2>
-
-
-
-<p>Reguly also had an observation about how fast vulnerabilities are added to the KEV. Based on a cursory review, he figured only about 41% of CVEs in the list were added during the same year they were released. Looking at release year + 1, that goes up to about 58%. That still means that, surprisingly, more than 40% of the CVEs added to the CISA KEV catalog are added two or more years after they are released. “I suppose it makes sense that it [the two-year-old Oracle hole] is just popping up now, if you consider that an organization that hasn’t patched their systems in multiple years is likely an easier target than an organization that patches regularly. After all, regular patching probably implies a more security-conscious environment.”</p>
-
-
-
-<p>Asked for comment on why this vulnerability is being added two years after its discovery, a CISA spokesperson referred to the department’s webpage explaining criteria for including bugs in the catalog, which says the list is of vulnerabilities that have been exploited in the wild. The spokesperson didn’t answer a question about how many federal servers were still unpatched after so long.</p>
-
-
-
-<p>Oracle WebLogic Server is a unified and extensible platform for developing, deploying, and running enterprise applications in Java, on-premises and in the cloud. It’s fully supported on Kubernetes, and enables users to migrate and efficiently build modern container apps with comprehensive Java services. It short, it’s a vital piece of middleware that can host sensitive corporate data.</p>
-
-
-
-<p>Not surprisingly, threat actors are eager to exploit any vulnerabilities of this type. In 2019 it was reported that threat actors were <a href="https://www.csoonline.com/article/567191/researchers-warn-of-unpatched-vulnerability-in-oracle-weblogic-server.html" target="_blank">scanning for WebLogic servers vulnerable to a new method</a> of bypassing protections that Oracle had fixed the year before.</p>
-
-
-
-<p>Earlier this year, security firm CloudSek set up a honeypot to <a href="https://www.cloudsek.com/blog/honey-for-hackers-a-study-of-attacks-targeting-the-recent-cve-2026-21962-and-other-critical-weblogic-vulnerabilities-on-a-high-interactive-oracle-honeypot" rel="noreferrer noopener" target="_blank">study threat actor response</a> to a newly discovered and extremely serious WebLogic Server remote code execution vulnerability, CVE-2026-21962, with a CVSS score of 10, as well examining their interest in older holes. Over a 12 day period, attack attempts targeting the new zero day-like flaw were observed immediately following the public release of its exploit code, “demonstrating the rapid weaponization of critical Oracle WebLogic vulnerabilities.”</p>
-
-
-
-<p>Attackers also tried to exploit a flaw reported in 2017 and two 2020 vulnerabilities in the unpatched honeypot server that CloudSek created.</p>
-
-
-
-<h2 class="wp-block-heading" id="slow-patching-a-clear-risk">Slow patching a ‘clear risk’</h2>
-
-
-
-<p>Given the importance of Oracle products to large enterprises, the company recently <a href="https://www.cio.com/article/4167337/oracle-will-patch-more-often-to-counter-ai-cybersecurity-threat-2.html" target="_blank">switched to a monthly security patch release cycle</a> from quarterly. The <a href="https://www.csoonline.com/article/4179473/oracles-first-monthly-patch-release-fixes-35-flaws-including-11-rated-critical.html" target="_blank">first of these patches</a> was released Monday.</p>
-
-
-
-<p>The recent addition of the WebLogic vulnerability to the KEV illustrates a common problem in how many organizations handle security, said <a href="https://www.linkedin.com/in/thegenemoody" rel="noreferrer noopener" target="_blank">Gene Moody</a>, field CTO at Action1. “The issue is not just the vulnerability itself. The bigger problem is the delay between when a fix is released and when it is actually applied to real systems. That delay gives attackers a chance to act, while also signaling that the security practices of the target org may be under-enforced.”</p>
-
-
-
-<p>It takes on average around 60 days for organizations to apply patches, he pointed out. Meanwhile, attackers are building and using exploits in just hours or days. This gap creates a convenient window where unpatched systems become simple targets, he pointed out. In addition, systems suffering from vulnerabilities greater than a year in age are likely not silos in an otherwise well-managed vulnerability management plan.</p>
-
-
-
-<p>“Attackers pay close attention to how quickly patches are applied,” he said. “When a well-known fix is not widely used, it demonstrates more than just exposure. It can point to poor system tracking, weak patch processes, or other priorities taking focus away from security. These issues often mean there are more weaknesses beyond the one vulnerability.”</p>
-
-
-
-<p>Organizations should treat slow patching as a clear risk, Moody warned, not just a yet another task waiting to be done. To improve the situation, there needs to be better tracking of systems, clear patch timelines, and making sure that fixes are actually applied, not just planned.</p>
 </div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 5d ago]]></description>
 </item>
 
