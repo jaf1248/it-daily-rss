@@ -3,14 +3,60 @@
 <channel>
   <title>Joe — Security Intelligence</title>
   <description>Cybersecurity threats, vulnerabilities, breaches, and Microsoft security updates.</description>
-  <lastBuildDate>Tue, 09 Jun 2026 18:00:25 +0000</lastBuildDate>
+  <lastBuildDate>Tue, 09 Jun 2026 20:18:35 +0000</lastBuildDate>
   
+<item>
+  <title>🔴 Microsoft’s June 2026 Patch Tuesday Addresses 198 CVEs ( CVE-2026-49160, CVE-2026-50507)</title>
+  <link>https://www.tenable.com/blog/microsofts-june-2026-patch-tuesday-addresses-198-cves-cve-2026-49160-cve-2026-50507</link>
+  <pubDate>Tue, 09 Jun 2026 18:19:42 +0000</pubDate>
+  <source>Tenable Blog</source>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><ol class="blog-severity-badges"><li class="blog-severity-badges critical"><span class="number">32</span>Critical</li><li class="blog-severity-badges important"><span class="number">166</span>Important</li><li class="blog-severity-badges moderate"><span class="number">0</span>Moderate</li><li class="blog-severity-badges low"><span class="number">0</span>Low</li></ol><p><strong>Microsoft addresses 198 CVEs in the largest Patch Tuesday release, including three zero-days.</strong></p><p>Microsoft patched 198 CVEs in its June 2026 Patch Tuesday release, with 32 rated critical and 166 rated as important. Our counts omitted 6 CVEs that were already addressed by Microsoft via servicing and do not require additional customer action to resolve as well as 2 CVEs that were disclosed by other CNAs (CVE-2025-10263 and CVE-2026-8863). This Patch Tuesday release is the largest release since the Patch Tuesday program began, smashing the previous record of 167 CVEs in the <a href="https://www.tenable.com/blog/microsofts-october-2025-patch-tuesday-addresses-167-cves-cve-2025-24990-cve-2025-59230"><u>October 2025 Patch Tuesday</u></a> release.</p><img alt="A pie chart showing the severity distribution across the Patch Tuesday CVEs patched in June 2026." height="473" src="https://www.tenable.com/sites/default/files/images/blog/3ae7e731-5dd1-440e-92af-26bec8772e1b.png" width="865" /><p>This month’s update includes patches for:</p><ul><li>.NET</li><li>ASP.NET Core</li><li>Active Directory Domain Services</li><li>Azure HorizonDB</li><li>Azure Stack Edge</li><li>Copilot Chat (Microsoft Edge)</li><li>Function Discovery Service (fdwsd.dll)</li><li>GitHub Copilot and Visual Studio Code</li><li>HTTP/2</li><li>Linux MANA Driver</li><li>M365 Copilot</li><li>Microsoft Azure Attestation service and Device Health Attestation Service</li><li>Microsoft Azure Kubernetes Service</li><li>Microsoft Bing</li><li>Microsoft Copilot</li><li>Microsoft Defender for Endpoint</li><li>Microsoft Dynamics 365 (on-premises)</li><li>Microsoft Exchange Online</li><li>Microsoft Exchange Server</li><li>Microsoft Graph</li><li>Microsoft Graphics Component</li><li>Microsoft Kinect</li><li>Microsoft Live Share Canvas SDK</li><li>Microsoft Office</li><li>Microsoft Office Click-To-Run</li><li>Microsoft Office Excel</li><li>Microsoft Office Project</li><li>Microsoft Office SharePoint</li><li>Microsoft Office Word</li><li>Microsoft PC Manager</li><li>Microsoft PowerToys</li><li>Microsoft Teams for Android</li><li>Microsoft UxTheme Library (uxtheme.dll)</li><li>Microsoft Windows DNS</li><li>Nuance PowerScribe</li><li>Office for Android</li><li>Remote Desktop Client</li><li>Role: Windows Hyper-V</li><li>UI Automation Manager (uiamanager.dll)</li><li>Universal Plug and Play (upnp.dll)</li><li>Visual Studio Code</li><li>Windows Administrator Protection</li><li>Windows Ancillary Function Driver for WinSock</li><li>Windows Application Identity (AppID) Subsystem</li><li>Windows BitLocker</li><li>Windows Bluetooth Port Driver</li><li>Windows Bluetooth Service</li><li>Windows Boot Manager</li><li>Windows Collaborative Translation Framework</li><li>Windows Common Log File System Driver</li><li>Windows Cryptographic Services</li><li>Windows DHCP Client</li><li>Windows DHCP Server</li><li>Windows DWM Core Library</li><li>Windows Deployment Services</li><li>Windows HTTP.sys</li><li>Windows Hotpatch Monitoring Service</li><li>Windows Hyper-V</li><li>Windows Internet (wininet.dll)</li><li>Windows Kerberos</li><li>Windows Kernel</li><li>Windows Kernel-Mode Drivers</li><li>Windows Mark of the Web (MOTW)</li><li>Windows Media</li><li>Windows NT OS Kernel</li><li>Windows NTFS</li><li>Windows Narrator Braille</li><li>Windows Network Controller (NC) Host Agent</li><li>Windows Performance Monitor</li><li>Windows Program Compatibility Assistant Service</li><li>Windows Projected File System Filter Driver</li><li>Windows Push Notifications</li><li>Windows RDP</li><li>Windows SDK</li><li>Windows Secure Boot</li><li>Windows Shell</li><li>Windows Storage</li><li>Windows TCP/IP</li><li>Windows Telephony Service</li><li>Windows UEFI</li><li>Windows Universal Disk Format File System Driver (UDFS)</li><li>Windows Win32K - GRFX</li><li>Winlogon</li></ul><img alt="A bar chart showing the count by impact of CVEs patched in the June 2026 Patch Tuesday release." height="419" src="https://www.tenable.com/sites/default/files/images/blog/09b1f046-d562-47ba-8bd6-9b2c344be437.png" width="833" /><p>Elevation of Privilege (EoP) vulnerabilities accounted for 31.8% of the vulnerabilities patched this month, followed by remote code execution (RCE) vulnerabilities at 27.3%.</p><div class="blog-severity-alert"><div class="col-sm-2 nopad"><div class="blog-severity-badge important">Important</div></div><div class="col-sm-10"><h2>CVE-2026-50507 | Windows BitLocker Security Feature Bypass Vulnerability</h2></div><div class="col-sm-12"><p><a href="https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-50507"><u>CVE-2026-50507</u></a> is a security feature bypass vulnerability affecting Windows BitLocker. It received a CVSSv3 score of 6.8 and is rated as important. It was publicly disclosed prior to a patch being available and assessed as “Exploitation More Likely” according to <a href="https://www.microsoft.com/en-us/msrc/exploitability-index"><u>Microsoft's Exploitability Index</u></a>.</p><p>According to Microsoft, an attacker with physical access to the system could bypass the BitLocker Device Encryption feature in order to gain access to the device's encrypted data. This vulnerability appears to be the flaw known as Bitskrieg and a collaboration between <a href="https://deadeclipse666.blogspot.com/2026/05/announcing-bitskrieg.html"><u>Chaotic Eclipse (Nightmare Eclipse)</u></a> and <a href="https://x.com/jonasLyk/status/2062768028090007773"><u>Jonas L</u></a>.</p></div></div><div class="blog-severity-alert"><div class="col-sm-2 nopad"><div class="blog-severity-badge important">Important</div></div><div class="col-sm-10"><h2>CVE-2026-49160 | HTTP.sys Denial of Service Vulnerability</h2></div><div class="col-sm-12"><p><a href="https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-49160"><u>CVE-2026-49160</u></a> is a denial of service (DoS) vulnerability affecting HTTP.sys. It received a CVSSv3 score of 7.5 and is rated as important. It was assessed as “Exploitation More Likely” and publicly disclosed prior to a patch being available. According to the advisory, this DoS affects HTTP/2. The advisory notes that this update adds a <a href="https://support.microsoft.com/en-us/topic/084da156-7a99-4abf-b759-f973c35eded3"><u>MaxHeadersCount registry</u></a> setting which can be used to limit the number of headers included in HTTP/2 and HTTP/3 requests.</p><p>Dubbed HTTP/2 Bomb by researchers at <a href="https://blog.calif.io/p/codex-discovered-a-hidden-http2-bomb"><u>Calif</u></a>, which is credited by Microsoft for reporting the DoS, their blog describes the technical details and provides a proof-of-concept which can be used to test web servers against this vulnerability. As noted in the blog post, at the time it was released, Microsoft had not yet released patches.</p></div></div><div class="blog-severity-alert"><div class="col-sm-2 nopad"><div class="blog-severity-badge important">Important</div></div><div class="col-sm-10"><h2>CVE-2026-45586 | Windows Collaborative Translation Framework (CTFMON) Elevation of Privilege Vulnerability</h2></div><div class="col-sm-12"><p><a href="https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-45586"><u>CVE-2026-45586</u></a> is an EoP vulnerability affecting Windows Collaborative Translation Framework (CTFMON), a process that supports voice and handwriting recognition. It was assigned a CVSSv3 score of 7.8 and rated as important. This EoP flaw was one of three zero-days disclosed prior to patches being made available. Successful exploitation would grant an attacker SYSTEM privileges and Microsoft has assessed this vulnerability as “Exploitation More Likely.”</p></div></div><div class="blog-severity-alert"><div class="col-sm-2 nopad"><div class="blog-severity-badge critical">Critical</div></div><div class="col-sm-10"><h2>CVE-2026-42909, CVE-2026-42913, CVE-2026-42985, CVE-2026-42992, CVE-2026-42993, CVE-2026-44799, CVE-2026-44801, CVE-2026-47289, CVE-2026-47653, CVE-2026-47654 and CVE-2026-48563 | Remote Desktop Client Remote Code Execution Vulnerability</h2></div><div class="col-sm-12"><p><a href="https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-42909"><u>CVE-2026-42909</u></a>, <a href="https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-42913"><u>CVE-2026-42913</u></a>, <a href="https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-42985"><u>CVE-2026-42985</u></a>, <a href="https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-42992"><u>CVE-2026-42992</u></a>, <a href="https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-42993"><u>CVE-2026-42993</u></a>, <a href="https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-44799"><u>CVE-2026-44799</u></a>, <a href="https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-44801"><u>CVE-2026-44801</u></a>, <a href="https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-47289"><u>CVE-2026-47289</u></a>, <a href="https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-47653"><u>CVE-2026-47653</u></a>, <a href="https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-47654"><u>CVE-2026-47654</u></a> and <a href="https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-48563"><u>CVE-2026-48563</u></a> are RCE vulnerabilities affecting Remote Desktop Client. CVSSv3 scores ranged from 8.8 (CVE-2026-42985, CVE-2026-47289 and CVE-2026-47653) to 7.5 and seven were rated as critical while CVE-2026-42993, CVE-2026-42909, CVE-2026-47653 and CVE-2026-42913 were rated as important. Successful exploitation would require a victim to connect to an attacker controlled server using an affected version of the Remote Desktop Client. This action could trigger a heap-based buffer overflow, resulting in remote code execution.</p><p>While no public details have been released about these vulnerabilities as of June 9, Microsoft has assessed CVE-2026-42985 as “Exploitation More Likely” while the other CVEs were classified as either “Exploitation Unlikely” or “Exploitation Less Likely.” Patches are available for supported versions of Windows and Windows Server.</p></div></div><h2>Out Of Band Updates</h2><p>While these updates were released prior to the Patch Tuesday release on June 9, they were outside the window for the May release and are noted here as they are significant.</p><div class="blog-severity-alert"><div class="col-sm-2 nopad"><div class="blog-severity-badge important">Important</div></div><div class="col-sm-10"><h2>CVE-2026-41091 | Microsoft Defender Elevation of Privilege Vulnerability</h2></div><div class="col-sm-12"><p><a href="https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-41091"><u>CVE-2026-41091</u></a> is an EoP vulnerability in Microsoft Defender. It received a CVSSv3 score of 7.8 and is rated important. An unprivileged attacker could exploit this vulnerability by writing a specially crafted file to a privileged location. Successful exploitation would result in Microsoft Defender writing the file back to the privileged location, gaining privileges as SYSTEM.</p><p>According to <a href="https://x.com/fabian_bader/status/2057198207243804881"><u>reports</u></a>, CVE-2026-41091 is RedSun, a zero-day vulnerability disclosed by a researcher named Chaotic Eclipse or Nightmare Eclipse on April 15, 2026. This researcher has also published several additional zero-days recently, including BlueHammer (<a href="https://www.tenable.com/cve/CVE-2026-33825"><u>CVE-2026-33825</u></a>), GreenPlasma, MiniPlasma and collaborated on Bitskrieg (CVE-2026-50507). It has since been exploited in the wild and <a href="https://www.cisa.gov/news-events/alerts/2026/05/20/cisa-adds-seven-known-exploited-vulnerabilities-catalog"><u>added to the Cybersecurity and Infrastructure Security Agency’s Known Exploited Vulnerabilities (CISA KEV) catalog on May 20</u></a>.</p></div></div><div class="blog-severity-alert"><div class="col-sm-2 nopad"><div class="blog-severity-badge important">Important</div></div><div class="col-sm-10"><h2>CVE-2026-45585 | Windows BitLocker Security Feature Bypass Vulnerability</h2></div><div class="col-sm-12"><p><a href="https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2026-45585"><u>CVE-2026-45585</u></a> is a security feature bypass vulnerability affecting Windows BitLocker. It received a CVSSv3 score of 6.8 and is rated as important. This vulnerability is known as YellowKey, named by the researcher known as Chaotic Eclipse or Nightmare Eclipse.</p><p>A proof-of-concept (PoC) was made public on May 13, prompting Microsoft to publish the original advisory and CVE identifier on May 19th, offering mitigation guidance.</p><p>Exploitation does require physical access to the device, however Microsoft has assessed this vulnerability as “Exploitation More Likely.”</p></div></div><h2>Tenable Solutions</h2><p>A list of all the plugins released for Microsoft’s June 2026 Patch Tuesday update can be found <a href="https://www.tenable.com/plugins/search?q=%22June+2026%22+AND+script_family%3A%28%22Windows%22+OR+%22Windows+OR+%22MacOS+X+Local+Security+Checks%22%29&amp;sort=&amp;page=1"><u>here</u></a>. As always, we recommend patching systems as soon as possible and regularly scanning your environment to identify those systems yet to be patched.</p><p>For more specific guidance on best practices for vulnerability assessments, please refer to our blog post on <a href="http://www.tenable.com/blog/how-to-perform-efficient-vulnerability-assessments-with-tenable"><u>How to Perform Efficient Vulnerability Assessments with Tenable</u></a>.</p><h3>Get more information</h3><ul><li><a href="https://msrc.microsoft.com/update-guide/en-us/releaseNote/2026-Jun"><u>Microsoft's June 2026 Security Updates</u></a></li><li><a href="https://www.tenable.com/plugins/search?q=%22June+2026%22+AND+script_family%3A%28%22Windows%22+OR+%22Windows+OR+%22MacOS+X+Local+Security+Checks%22%29&amp;sort=&amp;page=1"><u>Tenable plugins for Microsoft June 2026 Patch Tuesday Security Updates</u></a></li></ul><p><em><strong>Join </strong></em><a href="https://connect.tenable.com/category/news-you-need/discussions/vulnerability-watch"><em><strong><u>Tenable's Research Special Operations (RSO) Team</u></strong></em></a><em><strong> on Tenable Connect for further discussions on the latest cyber threats.</strong></em></p><p><em><strong>Learn more about </strong></em><a href="https://www.tenable.com/products/tenable-one"><em><strong><u>Tenable One</u></strong></em></a><em><strong>, the Exposure Management Platform for the modern attack surface.</strong></em></p><br/><br/><b>Source:</b> Tenable Blog &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+</item>
+
+<item>
+  <title>🟠 Veeam Backup &amp; Replication RCE Flaw Lets Domain Users Run Remote Code</title>
+  <link>https://thehackernews.com/2026/06/veeam-backup-replication-rce-flaw-lets.html</link>
+  <pubDate>Tue, 09 Jun 2026 16:39:47 +0000</pubDate>
+  <source>The Hacker News</source>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Veeam has released security patches to address a critical flaw in its Backup &amp; Replication software that could result in remote code execution.
+
+Tracked as CVE-2026-44963, the vulnerability carries a CVSS score of 9.4 out of a maximum of 10.0.
+
+"A vulnerability allowing remote code execution (RCE) on the Backup Server by an authenticated domain user," Veeam said in a Tuesday advisory.
+
+It<br/><br/><b>Source:</b> The Hacker News &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+</item>
+
 <item>
   <title>🟠 New Veeam vulnerability exposes backup servers to RCE attacks</title>
   <link>https://www.bleepingcomputer.com/news/security/new-veeam-vulnerability-exposes-backup-servers-to-rce-attacks/</link>
   <pubDate>Tue, 09 Jun 2026 14:27:56 +0000</pubDate>
   <source>BleepingComputer</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Veeam has released security updates to patch a critical Backup & Replication security flaw that can be exploited to gain remote code execution (RCE) on domain-joined backup servers. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Veeam has released security updates to patch a critical Backup & Replication security flaw that can be exploited to gain remote code execution (RCE) on domain-joined backup servers. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
+</item>
+
+<item>
+  <title>🟠 CVE-2024-49123 Windows Remote Desktop Services Remote Code Execution Vulnerability</title>
+  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-49123</link>
+  <pubDate>Tue, 09 Jun 2026 14:00:00 +0000</pubDate>
+  <source>Microsoft Security Response Center</source>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>To comprehensively address this vulnerability Windows 11 Version 26H1 for ARM64-based Systems and Windows 11 Version 26H1 for64-based Systems have been added to the Security Updates table. Microsoft recommend updating to the June 2026 version of your Windows operating systems.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
+</item>
+
+<item>
+  <title>🟠 CVE-2024-49132 Windows Remote Desktop Services Remote Code Execution Vulnerability</title>
+  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-49132</link>
+  <pubDate>Tue, 09 Jun 2026 14:00:00 +0000</pubDate>
+  <source>Microsoft Security Response Center</source>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>To comprehensively address this vulnerability Windows 11 Version 26H1 for ARM64-based Systems and Windows 11 Version 26H1 for64-based Systems have been added to the Security Updates table. Microsoft recommend updating to the June 2026 version of your Windows operating systems.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
+</item>
+
+<item>
+  <title>🟠 CVE-2024-43582 Remote Desktop Protocol Server Remote Code Execution Vulnerability</title>
+  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-43582</link>
+  <pubDate>Tue, 09 Jun 2026 14:00:00 +0000</pubDate>
+  <source>Microsoft Security Response Center</source>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>To comprehensively address this vulnerability Windows 11 Version 26H1 for ARM64-based Systems and Windows 11 Version 26H1 for64-based Systems have been added to the Security Updates table. Microsoft recommend updating to the June 2026 version of your Windows operating systems.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
@@ -18,7 +64,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45469</link>
   <pubDate>Tue, 09 Jun 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Integer underflow (wrap or wraparound) in Microsoft Office Excel allows an unauthorized attacker to execute code locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Integer underflow (wrap or wraparound) in Microsoft Office Excel allows an unauthorized attacker to execute code locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
@@ -26,7 +72,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45475</link>
   <pubDate>Tue, 09 Jun 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Heap-based buffer overflow in Microsoft Office allows an unauthorized attacker to execute code locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Heap-based buffer overflow in Microsoft Office allows an unauthorized attacker to execute code locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
@@ -34,7 +80,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45472</link>
   <pubDate>Tue, 09 Jun 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Heap-based buffer overflow in Microsoft Office allows an unauthorized attacker to execute code locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Heap-based buffer overflow in Microsoft Office allows an unauthorized attacker to execute code locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
@@ -42,7 +88,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45471</link>
   <pubDate>Tue, 09 Jun 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Untrusted pointer dereference in Microsoft Office Word allows an unauthorized attacker to execute code locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Untrusted pointer dereference in Microsoft Office Word allows an unauthorized attacker to execute code locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
@@ -50,7 +96,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45474</link>
   <pubDate>Tue, 09 Jun 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Heap-based buffer overflow in Microsoft Office allows an unauthorized attacker to execute code locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Heap-based buffer overflow in Microsoft Office allows an unauthorized attacker to execute code locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
@@ -58,7 +104,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45486</link>
   <pubDate>Tue, 09 Jun 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Untrusted pointer dereference in Microsoft Office Word allows an unauthorized attacker to execute code locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Untrusted pointer dereference in Microsoft Office Word allows an unauthorized attacker to execute code locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
@@ -66,7 +112,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-44817</link>
   <pubDate>Tue, 09 Jun 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Integer underflow (wrap or wraparound) in Microsoft Office Excel allows an unauthorized attacker to execute code locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Integer underflow (wrap or wraparound) in Microsoft Office Excel allows an unauthorized attacker to execute code locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
@@ -74,7 +120,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-44818</link>
   <pubDate>Tue, 09 Jun 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Integer underflow (wrap or wraparound) in Microsoft Office Excel allows an unauthorized attacker to execute code locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Integer underflow (wrap or wraparound) in Microsoft Office Excel allows an unauthorized attacker to execute code locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
@@ -82,7 +128,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-44819</link>
   <pubDate>Tue, 09 Jun 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Heap-based buffer overflow in Microsoft Office allows an unauthorized attacker to execute code locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Heap-based buffer overflow in Microsoft Office allows an unauthorized attacker to execute code locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
@@ -90,7 +136,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-44820</link>
   <pubDate>Tue, 09 Jun 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Integer underflow (wrap or wraparound) in Microsoft Office Excel allows an unauthorized attacker to execute code locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Integer underflow (wrap or wraparound) in Microsoft Office Excel allows an unauthorized attacker to execute code locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
@@ -98,7 +144,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-44823</link>
   <pubDate>Tue, 09 Jun 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Integer underflow (wrap or wraparound) in Microsoft Office Excel allows an unauthorized attacker to execute code locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Integer underflow (wrap or wraparound) in Microsoft Office Excel allows an unauthorized attacker to execute code locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
@@ -106,7 +152,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-44824</link>
   <pubDate>Tue, 09 Jun 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Heap-based buffer overflow in Microsoft Office allows an unauthorized attacker to execute code locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Heap-based buffer overflow in Microsoft Office allows an unauthorized attacker to execute code locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
@@ -114,7 +160,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45456</link>
   <pubDate>Tue, 09 Jun 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Access of resource using incompatible type ('type confusion') in Microsoft Office allows an unauthorized attacker to execute code locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Access of resource using incompatible type ('type confusion') in Microsoft Office allows an unauthorized attacker to execute code locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
@@ -122,7 +168,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45458</link>
   <pubDate>Tue, 09 Jun 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Access of resource using incompatible type ('type confusion') in Microsoft Office allows an unauthorized attacker to execute code locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Access of resource using incompatible type ('type confusion') in Microsoft Office allows an unauthorized attacker to execute code locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
@@ -130,7 +176,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45461</link>
   <pubDate>Tue, 09 Jun 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Heap-based buffer overflow in Microsoft Office allows an unauthorized attacker to execute code locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Heap-based buffer overflow in Microsoft Office allows an unauthorized attacker to execute code locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
@@ -138,7 +184,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45607</link>
   <pubDate>Tue, 09 Jun 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Out-of-bounds read in Windows Hyper-V allows an unauthorized attacker to execute code locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Out-of-bounds read in Windows Hyper-V allows an unauthorized attacker to execute code locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
@@ -146,7 +192,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45641</link>
   <pubDate>Tue, 09 Jun 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Out-of-bounds read in Windows Hyper-V allows an unauthorized attacker to execute code locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Out-of-bounds read in Windows Hyper-V allows an unauthorized attacker to execute code locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
@@ -154,7 +200,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45643</link>
   <pubDate>Tue, 09 Jun 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Untrusted pointer dereference in Microsoft Office Word allows an unauthorized attacker to execute code locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Untrusted pointer dereference in Microsoft Office Word allows an unauthorized attacker to execute code locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
@@ -162,7 +208,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45645</link>
   <pubDate>Tue, 09 Jun 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Heap-based buffer overflow in Microsoft Office allows an unauthorized attacker to execute code locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Heap-based buffer overflow in Microsoft Office allows an unauthorized attacker to execute code locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
@@ -170,7 +216,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45648</link>
   <pubDate>Tue, 09 Jun 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Stack-based buffer overflow in Active Directory Domain Services allows an authorized attacker to execute code over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Stack-based buffer overflow in Active Directory Domain Services allows an authorized attacker to execute code over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
@@ -178,7 +224,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45657</link>
   <pubDate>Tue, 09 Jun 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Use after free in Windows Kernel allows an unauthorized attacker to execute code over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Use after free in Windows Kernel allows an unauthorized attacker to execute code over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
@@ -186,7 +232,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-47288</link>
   <pubDate>Tue, 09 Jun 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Integer overflow or wraparound in Windows Kerberos allows an authorized attacker to execute code over an adjacent network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Integer overflow or wraparound in Windows Kerberos allows an authorized attacker to execute code over an adjacent network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
@@ -194,7 +240,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-47289</link>
   <pubDate>Tue, 09 Jun 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Heap-based buffer overflow in Remote Desktop Client allows an unauthorized attacker to execute code over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Heap-based buffer overflow in Remote Desktop Client allows an unauthorized attacker to execute code over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
@@ -202,7 +248,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-47291</link>
   <pubDate>Tue, 09 Jun 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Integer overflow or wraparound in Windows HTTP.sys allows an unauthorized attacker to execute code over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Integer overflow or wraparound in Windows HTTP.sys allows an unauthorized attacker to execute code over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
@@ -210,7 +256,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-47292</link>
   <pubDate>Tue, 09 Jun 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Inclusion of functionality from untrusted control sphere in Visual Studio Code allows an unauthorized attacker to elevate privileges locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Inclusion of functionality from untrusted control sphere in Visual Studio Code allows an unauthorized attacker to elevate privileges locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
@@ -218,7 +264,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-32193</link>
   <pubDate>Tue, 09 Jun 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Improper limitation of a pathname to a restricted directory ('path traversal') in Microsoft Azure Kubernetes Service allows an authorized attacker to execute code locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Improper limitation of a pathname to a restricted directory ('path traversal') in Microsoft Azure Kubernetes Service allows an authorized attacker to execute code locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
@@ -226,7 +272,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-47298</link>
   <pubDate>Tue, 09 Jun 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Improper authorization in Microsoft Office SharePoint allows an authorized attacker to execute code over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Improper authorization in Microsoft Office SharePoint allows an authorized attacker to execute code over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
@@ -234,7 +280,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-47635</link>
   <pubDate>Tue, 09 Jun 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Access of resource using incompatible type ('type confusion') in Microsoft Office allows an unauthorized attacker to execute code locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Access of resource using incompatible type ('type confusion') in Microsoft Office allows an unauthorized attacker to execute code locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
@@ -242,31 +288,63 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-47653</link>
   <pubDate>Tue, 09 Jun 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Heap-based buffer overflow in Remote Desktop Client allows an unauthorized attacker to execute code over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Heap-based buffer overflow in Remote Desktop Client allows an unauthorized attacker to execute code over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
-  <title>🟠 CVE-2026-47652 Windows Hyper-V Remote Code Execution Vulnerability</title>
-  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-47652</link>
+  <title>🟠 CVE-2026-42897 Microsoft Exchange Server Spoofing Vulnerability</title>
+  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-42897</link>
   <pubDate>Tue, 09 Jun 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Out-of-bounds read in Windows Hyper-V allows an unauthorized attacker to execute code locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Could impact email access or mail flow — monitor delivery and client issues.</b><br/>Added links to June 2026 Exchange Server security updates.  Microsoft recommends installing this updates as soon as possible.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
-  <title>🟠 CVE-2026-47654 Remote Desktop Client Remote Code Execution Vulnerability</title>
-  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-47654</link>
+  <title>🟠 CVE-2026-41100 Microsoft 365 Copilot for Android Spoofing Vulnerability</title>
+  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-41100</link>
   <pubDate>Tue, 09 Jun 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Heap-based buffer overflow in Remote Desktop Client allows an unauthorized attacker to execute code over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Added Microsoft Excel for Android, Microsoft Word for Android, Microsoft Loop for Android, Microsoft PowerPoint for Android and Microsoft OneNote for Android softwares to the Security Updates table.  Customers that are running supported version of these products are encouraged to update to the indicated versions to be protected from this vulnerability.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
-  <title>🟠 CVE-2026-48563 Remote Desktop Client Remote Code Execution Vulnerability</title>
-  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-48563</link>
+  <title>🟠 CVE-2026-21530 Windows Rich Text Edit Elevation of Privilege Vulnerability</title>
+  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-21530</link>
   <pubDate>Tue, 09 Jun 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Heap-based buffer overflow in Remote Desktop Client allows an unauthorized attacker to execute code over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Added Office softwares to the Security Updates table. Customers that are running supported versions of Office are encouraged to update to the indicated versions to be protected from this vulnerability.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
+</item>
+
+<item>
+  <title>🟠 CVE-2026-45585 Windows BitLocker Security Feature Bypass Vulnerability</title>
+  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45585</link>
+  <pubDate>Tue, 09 Jun 2026 14:00:00 +0000</pubDate>
+  <source>Microsoft Security Response Center</source>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Updated product information in the Software Update table. This is an informational change only.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
+</item>
+
+<item>
+  <title>🟠 CVE-2024-49075 Windows Remote Desktop Services Denial of Service Vulnerability</title>
+  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-49075</link>
+  <pubDate>Tue, 09 Jun 2026 14:00:00 +0000</pubDate>
+  <source>Microsoft Security Response Center</source>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>To comprehensively address this vulnerability Windows 11 Version 26H1 for ARM64-based Systems and Windows 11 Version 26H1 for64-based Systems have been added to the Security Updates table. Microsoft recommend updating to the June 2026 version of your Windows operating systems.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
+</item>
+
+<item>
+  <title>🟠 CVE-2025-21330 Windows Remote Desktop Services Denial of Service Vulnerability</title>
+  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-21330</link>
+  <pubDate>Tue, 09 Jun 2026 14:00:00 +0000</pubDate>
+  <source>Microsoft Security Response Center</source>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>To comprehensively address this vulnerability Windows 11 Version 26H1 for ARM64-based Systems and Windows 11 Version 26H1 for64-based Systems have been added to the Security Updates table. Microsoft recommend updating to the June 2026 version of your Windows operating systems.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
+</item>
+
+<item>
+  <title>🟠 CVE-2020-17103 Windows Cloud Files Mini Filter Driver Elevation of Privilege Vulnerability</title>
+  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2020-17103</link>
+  <pubDate>Tue, 09 Jun 2026 14:00:00 +0000</pubDate>
+  <source>Microsoft Security Response Center</source>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>To comprehensively address the vulnerability identified by CVE-2020-17103, Microsoft recommends installing the June 2026 updates for your Windows operating systems.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
@@ -274,7 +352,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-41108</link>
   <pubDate>Tue, 09 Jun 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Heap-based buffer overflow in Microsoft Windows DNS allows an authorized attacker to elevate privileges locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Heap-based buffer overflow in Microsoft Windows DNS allows an authorized attacker to elevate privileges locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
@@ -282,7 +360,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45467</link>
   <pubDate>Tue, 09 Jun 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Improper neutralization of input during web page generation ('cross-site scripting') in Microsoft Office SharePoint allows an authorized attacker to perform spoofing over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Improper neutralization of input during web page generation ('cross-site scripting') in Microsoft Office SharePoint allows an authorized attacker to perform spoofing over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
@@ -290,7 +368,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45468</link>
   <pubDate>Tue, 09 Jun 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Improper neutralization of input during web page generation ('cross-site scripting') in Microsoft Office SharePoint allows an authorized attacker to perform spoofing over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Improper neutralization of input during web page generation ('cross-site scripting') in Microsoft Office SharePoint allows an authorized attacker to perform spoofing over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
@@ -298,7 +376,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45479</link>
   <pubDate>Tue, 09 Jun 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Improper neutralization of input during web page generation ('cross-site scripting') in Microsoft Office SharePoint allows an authorized attacker to perform spoofing over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Improper neutralization of input during web page generation ('cross-site scripting') in Microsoft Office SharePoint allows an authorized attacker to perform spoofing over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
@@ -306,7 +384,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45485</link>
   <pubDate>Tue, 09 Jun 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Out-of-bounds read in Microsoft Office allows an unauthorized attacker to disclose information locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Out-of-bounds read in Microsoft Office allows an unauthorized attacker to disclose information locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
@@ -314,7 +392,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45483</link>
   <pubDate>Tue, 09 Jun 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Improper neutralization of input during web page generation ('cross-site scripting') in Microsoft Office Project Server allows an authorized attacker to perform spoofing over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Improper neutralization of input during web page generation ('cross-site scripting') in Microsoft Office Project Server allows an authorized attacker to perform spoofing over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
@@ -322,7 +400,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-10263</link>
   <pubDate>Tue, 09 Jun 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>No cwe for this issue in Windows Kernel allows an unauthorized attacker to elevate privileges locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>No cwe for this issue in Windows Kernel allows an unauthorized attacker to elevate privileges locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
@@ -330,7 +408,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-40409</link>
   <pubDate>Tue, 09 Jun 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
@@ -338,7 +416,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-40404</link>
   <pubDate>Tue, 09 Jun 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
@@ -346,7 +424,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-33828</link>
   <pubDate>Tue, 09 Jun 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Trust boundary violation in Windows Attestation allows an authorized attacker to elevate privileges locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Trust boundary violation in Windows Attestation allows an authorized attacker to elevate privileges locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
@@ -354,7 +432,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-34335</link>
   <pubDate>Tue, 09 Jun 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Use after free in Windows Ancillary Function Driver for WinSock allows an authorized attacker to elevate privileges locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Use after free in Windows Ancillary Function Driver for WinSock allows an authorized attacker to elevate privileges locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
@@ -362,7 +440,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-42902</link>
   <pubDate>Tue, 09 Jun 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Improper authorization in Microsoft PowerToys allows an authorized attacker to elevate privileges locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Improper authorization in Microsoft PowerToys allows an authorized attacker to elevate privileges locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
@@ -370,7 +448,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-44821</link>
   <pubDate>Tue, 09 Jun 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Out-of-bounds read in Microsoft Office allows an unauthorized attacker to disclose information locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Out-of-bounds read in Microsoft Office allows an unauthorized attacker to disclose information locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
@@ -378,7 +456,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45453</link>
   <pubDate>Tue, 09 Jun 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Improper neutralization of input during web page generation ('cross-site scripting') in Microsoft Office SharePoint allows an authorized attacker to perform spoofing over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Improper neutralization of input during web page generation ('cross-site scripting') in Microsoft Office SharePoint allows an authorized attacker to perform spoofing over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
@@ -386,7 +464,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45460</link>
   <pubDate>Tue, 09 Jun 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Out-of-bounds read in Microsoft Office allows an unauthorized attacker to disclose information locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Out-of-bounds read in Microsoft Office allows an unauthorized attacker to disclose information locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
@@ -394,7 +472,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45466</link>
   <pubDate>Tue, 09 Jun 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Heap-based buffer overflow in Microsoft Office Word allows an unauthorized attacker to disclose information locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Heap-based buffer overflow in Microsoft Office Word allows an unauthorized attacker to disclose information locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
@@ -402,7 +480,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45487</link>
   <pubDate>Tue, 09 Jun 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Time-of-check time-of-use (TOCTOU) race condition in Program Compatibility Assistant Service allows an authorized attacker to elevate privileges locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Time-of-check time-of-use (TOCTOU) race condition in Program Compatibility Assistant Service allows an authorized attacker to elevate privileges locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
@@ -410,7 +488,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45490</link>
   <pubDate>Tue, 09 Jun 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Improper authorization in .NET allows an authorized attacker to elevate privileges locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Improper authorization in .NET allows an authorized attacker to elevate privileges locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
@@ -418,7 +496,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45491</link>
   <pubDate>Tue, 09 Jun 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Improper link resolution before file access ('link following') in .NET allows an unauthorized attacker to perform tampering locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Improper link resolution before file access ('link following') in .NET allows an unauthorized attacker to perform tampering locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
@@ -426,7 +504,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45605</link>
   <pubDate>Tue, 09 Jun 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Use after free in Windows Bluetooth Service allows an authorized attacker to elevate privileges locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Use after free in Windows Bluetooth Service allows an authorized attacker to elevate privileges locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
@@ -434,7 +512,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45639</link>
   <pubDate>Tue, 09 Jun 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Out-of-bounds read in Windows RDP allows an unauthorized attacker to disclose information over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Out-of-bounds read in Windows RDP allows an unauthorized attacker to disclose information over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
@@ -442,7 +520,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45640</link>
   <pubDate>Tue, 09 Jun 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Use after free in Windows Bluetooth Port Driver allows an authorized attacker to elevate privileges locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Use after free in Windows Bluetooth Port Driver allows an authorized attacker to elevate privileges locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
@@ -450,7 +528,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45606</link>
   <pubDate>Tue, 09 Jun 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Out-of-bounds read in Microsoft UxTheme Library (uxtheme.dll) allows an authorized attacker to deny service locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Out-of-bounds read in Microsoft UxTheme Library (uxtheme.dll) allows an authorized attacker to deny service locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
@@ -458,7 +536,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45634</link>
   <pubDate>Tue, 09 Jun 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Out-of-bounds read in Windows DHCP Server allows an authorized attacker to disclose information locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Out-of-bounds read in Windows DHCP Server allows an authorized attacker to disclose information locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
@@ -466,7 +544,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45642</link>
   <pubDate>Tue, 09 Jun 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Improper input validation in Microsoft Azure Attestation service and Device Health Attestation Service allows an authorized attacker to perform spoofing with a physical attack.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Improper input validation in Microsoft Azure Attestation service and Device Health Attestation Service allows an authorized attacker to perform spoofing with a physical attack.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
@@ -474,7 +552,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45649</link>
   <pubDate>Tue, 09 Jun 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Improper access control in Office for Android allows an unauthorized attacker to perform spoofing locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Improper access control in Office for Android allows an unauthorized attacker to perform spoofing locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
@@ -482,55 +560,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45650</link>
   <pubDate>Tue, 09 Jun 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>User interface (ui) misrepresentation of critical information in Microsoft Bing allows an unauthorized attacker to perform spoofing over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
-</item>
-
-<item>
-  <title>🟠 CVE-2026-45655 Windows BitLocker Security Feature Bypass Vulnerability</title>
-  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45655</link>
-  <pubDate>Tue, 09 Jun 2026 14:00:00 +0000</pubDate>
-  <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Protection mechanism failure in Windows BitLocker allows an unauthorized attacker to bypass a security feature with a physical attack.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
-</item>
-
-<item>
-  <title>🟠 CVE-2026-45656 UEFI Secure Boot Security Feature Bypass Vulnerability</title>
-  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45656</link>
-  <pubDate>Tue, 09 Jun 2026 14:00:00 +0000</pubDate>
-  <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Protection mechanism failure in Windows UEFI allows an authorized attacker to bypass a security feature locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
-</item>
-
-<item>
-  <title>🟠 CVE-2026-47287 Visual Studio Code Tampering Vulnerability</title>
-  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-47287</link>
-  <pubDate>Tue, 09 Jun 2026 14:00:00 +0000</pubDate>
-  <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Relative path traversal in Visual Studio Code allows an unauthorized attacker to perform tampering over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
-</item>
-
-<item>
-  <title>🟠 CVE-2026-41092 Microsoft Kinect Elevation of Privilege Vulnerability</title>
-  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-41092</link>
-  <pubDate>Tue, 09 Jun 2026 14:00:00 +0000</pubDate>
-  <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Improper access control in Microsoft Kinect allows an authorized attacker to elevate privileges locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
-</item>
-
-<item>
-  <title>🟠 CVE-2026-41098 Azure Stack Edge Spoofing Vulnerability</title>
-  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-41098</link>
-  <pubDate>Tue, 09 Jun 2026 14:00:00 +0000</pubDate>
-  <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Improper neutralization of input during web page generation ('cross-site scripting') in Azure Stack Edge allows an authorized attacker to perform spoofing over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
-</item>
-
-<item>
-  <title>🟠 CVE-2026-47636 Microsoft SharePoint Server Spoofing Vulnerability</title>
-  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-47636</link>
-  <pubDate>Tue, 09 Jun 2026 14:00:00 +0000</pubDate>
-  <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Improper neutralization of input during web page generation ('cross-site scripting') in Microsoft Office SharePoint allows an authorized attacker to perform spoofing over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>User interface (ui) misrepresentation of critical information in Microsoft Bing allows an unauthorized attacker to perform spoofing over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
@@ -540,7 +570,7 @@
   <source>The Hacker News</source>
   <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Two Russia-aligned cyber attack campaigns have continued to exploit a security flaw in WinRAR to target Ukrainian organisations, almost a year after patches for the vulnerability were released.
 
-The activity has been attributed by Trend Micro to Earth Dahu (aka Gamaredon) and SHADOW-EARTH-066 (aka UAC-0226). It involves the exploitation of CVE-2025-8088, a path traversal flaw that allows an<br/><br/><b>Source:</b> The Hacker News &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
+The activity has been attributed by Trend Micro to Earth Dahu (aka Gamaredon) and SHADOW-EARTH-066 (aka UAC-0226). It involves the exploitation of CVE-2025-8088, a path traversal flaw that allows an<br/><br/><b>Source:</b> The Hacker News &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
 </item>
 
 <item>
@@ -552,7 +582,7 @@ The activity has been attributed by Trend Micro to Earth Dahu (aka Gamaredon) an
 
 The high-severity vulnerability, tracked as CVE-2026-11645 (CVSS score: 8.8), has been described as an out-of-bounds memory access in V8, Chrome's JavaScript and WebAssembly engine.
 
-"Out-of-bounds read and write in V8 in Google Chrome prior to 149.0.7827.103<br/><br/><b>Source:</b> The Hacker News &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
+"Out-of-bounds read and write in V8 in Google Chrome prior to 149.0.7827.103<br/><br/><b>Source:</b> The Hacker News &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 8h ago]]></description>
 </item>
 
 <item>
@@ -560,7 +590,7 @@ The high-severity vulnerability, tracked as CVE-2026-11645 (CVSS score: 8.8), ha
   <link>https://www.bleepingcomputer.com/news/security/french-govt-messaging-service-breached-in-account-hijacking-attack/</link>
   <pubDate>Tue, 09 Jun 2026 10:53:00 +0000</pubDate>
   <source>BleepingComputer</source>
-  <description><![CDATA[<b>Why this matters: Potential data exposure — check monitoring and incident response readiness.</b><br/>DINUM, the digital affairs directorate of the French government, warned that hackers used a hijacked user account to breach Tchap, the French government's encrypted messaging platform. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Potential data exposure — check monitoring and incident response readiness.</b><br/>DINUM, the digital affairs directorate of the French government, warned that hackers used a hijacked user account to breach Tchap, the French government's encrypted messaging platform. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
 </item>
 
 <item>
@@ -569,7 +599,7 @@ The high-severity vulnerability, tracked as CVE-2026-11645 (CVSS score: 8.8), ha
   <pubDate>Tue, 09 Jun 2026 09:47:10 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: Elevated ransomware risk — validate backups and endpoint defenses.</b><br/><p>The authentication bypass vulnerability allows attackers to establish VPN connections without a valid password.</p>
-<p>The post <a href="https://www.securityweek.com/check-point-vpn-zero-day-exploited-in-qilin-ransomware-attacks/">Check Point VPN Zero-Day Exploited in Qilin Ransomware Attacks</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 8h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/check-point-vpn-zero-day-exploited-in-qilin-ransomware-attacks/">Check Point VPN Zero-Day Exploited in Qilin Ransomware Attacks</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 10h ago]]></description>
 </item>
 
 <item>
@@ -577,7 +607,7 @@ The high-severity vulnerability, tracked as CVE-2026-11645 (CVSS score: 8.8), ha
   <link>https://www.bleepingcomputer.com/news/security/cisa-orders-feds-to-patch-check-point-flaw-exploited-by-ransomware-gangs/</link>
   <pubDate>Tue, 09 Jun 2026 08:18:39 +0000</pubDate>
   <source>BleepingComputer</source>
-  <description><![CDATA[<b>Why this matters: Elevated ransomware risk — validate backups and endpoint defenses.</b><br/>CISA has ordered U.S. government agencies to secure their Check Point Remote Access VPN and Mobile Access deployments against a critical vulnerability exploited in zero-day attacks by Qilin ransomware affiliates. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Elevated ransomware risk — validate backups and endpoint defenses.</b><br/>CISA has ordered U.S. government agencies to secure their Check Point Remote Access VPN and Mobile Access deployments against a critical vulnerability exploited in zero-day attacks by Qilin ransomware affiliates. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 11h ago]]></description>
 </item>
 
 <item>
@@ -585,7 +615,7 @@ The high-severity vulnerability, tracked as CVE-2026-11645 (CVSS score: 8.8), ha
   <link>https://www.bleepingcomputer.com/news/security/google-patches-fifth-chrome-zero-day-bug-exploited-in-attacks-this-year/</link>
   <pubDate>Tue, 09 Jun 2026 06:56:27 +0000</pubDate>
   <source>BleepingComputer</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Google has released emergency updates to patch another Chrome zero-day vulnerability that has been exploited in the wild, the fifth such flaw patched since the start of the year. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 11h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Google has released emergency updates to patch another Chrome zero-day vulnerability that has been exploited in the wild, the fifth such flaw patched since the start of the year. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
 </item>
 
 <item>
@@ -595,16 +625,7 @@ The high-severity vulnerability, tracked as CVE-2026-11645 (CVSS score: 8.8), ha
   <source>The Hacker News</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Monday added a high-severity flaw impacting BerriAI LiteLLM to its Known Exploited Vulnerabilities (KEV) catalog, citing evidence of active exploitation.
 
-The vulnerability, tracked as CVE-2026-42271 (CVSS score: 8.7), is a command injection vulnerability that could allow any authenticated user to run arbitrary commands on the<br/><br/><b>Source:</b> The Hacker News &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 11h ago]]></description>
-</item>
-
-<item>
-  <title>🟠 Google Patches 5th Chrome Zero-Day Exploited in 2026</title>
-  <link>https://www.securityweek.com/google-patches-5th-chrome-zero-day-exploited-in-2026/</link>
-  <pubDate>Tue, 09 Jun 2026 05:57:40 +0000</pubDate>
-  <source>SecurityWeek</source>
-  <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><p>The vulnerability is tracked as CVE-2026-11645 and it was reported in late April by an anonymous researcher.</p>
-<p>The post <a href="https://www.securityweek.com/google-patches-5th-chrome-zero-day-exploited-in-2026/">Google Patches 5th Chrome Zero-Day Exploited in 2026</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 12h ago]]></description>
+The vulnerability, tracked as CVE-2026-42271 (CVSS score: 8.7), is a command injection vulnerability that could allow any authenticated user to run arbitrary commands on the<br/><br/><b>Source:</b> The Hacker News &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
 </item>
 
 <item>
@@ -612,7 +633,7 @@ The vulnerability, tracked as CVE-2026-42271 (CVSS score: 8.7), is a command inj
   <link>https://www.bleepingcomputer.com/news/security/sofi-confirms-third-party-data-breach-at-hong-kong-subsidiary/</link>
   <pubDate>Mon, 08 Jun 2026 21:55:46 +0000</pubDate>
   <source>BleepingComputer</source>
-  <description><![CDATA[<b>Why this matters: Potential data exposure — check monitoring and incident response readiness.</b><br/>SoFi Hong Kong is warning that it suffered a data breach after hackers gained access to a database at a third-party vendor containing customer information. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 20h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Potential data exposure — check monitoring and incident response readiness.</b><br/>SoFi Hong Kong is warning that it suffered a data breach after hackers gained access to a database at a third-party vendor containing customer information. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 22h ago]]></description>
 </item>
 
 <item>
@@ -623,22 +644,6 @@ The vulnerability, tracked as CVE-2026-42271 (CVSS score: 8.7), is a command inj
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><p>If you&#8217;re a user&#8212;owner?&#8212;of this cryptocurrency, <a href="https://securityaffairs.com/193224/hacking/claude-opus-found-a-four-year-old-hole-in-zcashs-privacy-layer-nobody-knows-if-someone-already-used-it.html">this</a> is important:</p>
 <blockquote><p>On May 29, the security researcher Taylor Hornby found a critical vulnerability in Zcash Orchard privacy pool using Claude Opus 4.8. The Zcash team hired Hornby specifically to look for this kind of issue. He found one fast enough to be embarrassing.</p>
 <p>The Orchard pool is the newest and most advanced shielded transaction system in the cryptocurrency Zcash. Introduced in 2022, it allows users to send and receive ZEC while keeping transaction details private. It uses zero-knowledge proofs to validate transactions without revealing amounts or participants. The bug: a specific check that was supposed to validate transaction inputs wasn&#8217;t actually enforcing the rules it appeared to enforce. An attacker could have exploited the flaw to feed false inputs into that check and generate ZEC from nothing, with the zero-knowledge proof system blessing the fraudulent transaction as valid...</p></blockquote><br/><br/><b>Source:</b> Schneier on Security &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
-</item>
-
-<item>
-  <title>🔴 Critical Check Point VPN Zero-Day Exploited in the Wild (CVE-2026-50751)</title>
-  <link>https://www.rapid7.com/blog/post/etr-critical-check-point-vpn-zero-day-exploited-in-the-wild-cve-2026-50751</link>
-  <pubDate>Mon, 08 Jun 2026 17:05:16 +0000</pubDate>
-  <source>Rapid7 Blog</source>
-  <description><![CDATA[<b>Why this matters: Elevated ransomware risk — validate backups and endpoint defenses.</b><br/><h2 style="direction: ltr;">Overview</h2><p style="direction: ltr;"><span style="font-size: undefined;">On June 8, 2026, Check Point </span><a href="https://support.checkpoint.com/results/sk/sk185033"><span style="font-size: undefined;">published a security advisory</span></a><span style="font-size: undefined;"> for </span><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-50751"><span style="font-size: undefined;">CVE-2026-50751</span></a><span style="font-size: undefined;">, a critical authentication bypass vulnerability affecting Check Point Remote Access VPN, Mobile Access, and Spark Firewall products. The vulnerability affects deployments configured to use the deprecated IKEv1 key exchange protocol where gateways accept legacy Remote Access clients and do not require a machine certificate for connections.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">CVE-2026-50751, classified as improper authentication (</span><a href="https://cwe.mitre.org/data/definitions/287.html"><span style="font-size: undefined;">CWE-287</span></a><span style="font-size: undefined;">), has a CVSS score of 9.3. The vulnerability stems from a logic flow weakness in how Remote Access and Mobile Access components validate certificates during IKEv1 key exchange; successful exploitation allows an unauthenticated attacker to establish a VPN session without providing valid credentials. Per the vendor, additional post-authentication activity is required to access internal resources or escalate privileges.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">Check Point has indicated that CVE-2026-50751 is being actively exploited in the wild, with observed activity dating back to May 7, 2026 and an increase in early June. The vendor characterizes the campaign as limited in scope, affecting several dozen organizations. At least one incident has been linked to a Qilin ransomware affiliate, which Check Point assesses with medium confidence. </span>Rapid7 has observed at least one case with high confidence that can be attributed to CVE-2026-50751. As of June 8, 2026,  this vulnerability has been added to the CISA KEV.</p><p style="direction: ltr;"><span style="font-size: undefined;">Separately, during its investigation Check Point identified a related vulnerability, </span><a href="https://support.checkpoint.com/results/sk/sk185035"><span style="font-size: undefined;">CVE-2026-50752</span></a><span style="font-size: undefined;"> (CVSS 7.4), in the same IKEv1 code path that could enable a man-in-the-middle attack against site-to-site VPN tunnels under certain configurations. No exploitation of CVE-2026-50752 has been observed.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">Check Point VPN products have been targeted by zero-day vulnerabilities in the </span><a href="https://www.rapid7.com/blog/post/2024/05/30/etr-cve-2024-24919-check-point-security-gateway-information-disclosure/"><span style="font-size: undefined;">past</span></a><span style="font-size: undefined;">. In May 2024, </span><a href="https://nvd.nist.gov/vuln/detail/CVE-2024-24919"><span style="font-size: undefined;">CVE-2024-24919</span></a><span style="font-size: undefined;">, a high-severity information disclosure vulnerability in Check Point Quantum Security Gateways, was exploited in the wild and subsequently added to the CISA Known Exploited Vulnerabilities (KEV) catalog. Organizations running affected Check Point products are urged to apply the available hot fixes and follow the vendor guidance to remediate these issues.</span></p><h2 style="direction: ltr;">Mitigation guidance</h2><p style="direction: ltr;"><span style="font-size: undefined;">Check Point has released hotfixes to remediate CVE-2026-50751. Affected organizations should apply the available updates on an emergency basis, without waiting for a regular patch cycle to occur.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">The following products and versions are affected (Remote Access VPN, Mobile Access / SSL VPN, Spark Firewall):</span></p><ul><li style="direction: ltr;"><p style="direction: ltr;"><span style="color: rgb(24, 128, 56); font-size: undefined;">R80.20.X</span><span style="font-size: undefined;"> (End of Support)</span></p></li><li style="direction: ltr;"><p style="direction: ltr;"><span style="color: rgb(24, 128, 56); font-size: undefined;">R80.40</span><span style="font-size: undefined;"> (End of Support)</span></p></li><li style="direction: ltr;"><p style="direction: ltr;"><span style="color: rgb(24, 128, 56); font-size: undefined;">R81</span><span style="font-size: undefined;"> (End of Support)</span></p></li><li style="direction: ltr;"><p style="direction: ltr;"><span style="color: rgb(24, 128, 56); font-size: undefined;">R81.10</span><span style="font-size: undefined;"> (End of Support)</span></p></li><li style="direction: ltr;"><p style="direction: ltr;"><span style="color: rgb(24, 128, 56); font-size: undefined;">R81.10.X</span></p></li><li style="direction: ltr;"><p style="direction: ltr;"><span style="color: rgb(24, 128, 56); font-size: undefined;">R81.20</span></p></li><li style="direction: ltr;"><p style="direction: ltr;"><span style="color: rgb(24, 128, 56); font-size: undefined;">R82</span></p></li><li style="direction: ltr;"><p style="direction: ltr;"><span style="color: rgb(24, 128, 56); font-size: undefined;">R82.00.X</span></p></li><li style="direction: ltr;"><p style="direction: ltr;"><span style="color: rgb(24, 128, 56); font-size: undefined;">R82.10</span></p></li></ul><p style="direction: ltr;"><span style="font-size: undefined;">Notably, four of the nine affected version branches (</span><span style="color: rgb(24, 128, 56); font-size: undefined;">R80.20.X</span><span style="font-size: undefined;">, </span><span style="color: rgb(24, 128, 56); font-size: undefined;">R80.40</span><span style="font-size: undefined;">, </span><span style="color: rgb(24, 128, 56); font-size: undefined;">R81</span><span style="font-size: undefined;">, </span><span style="color: rgb(24, 128, 56); font-size: undefined;">R81.10</span><span style="font-size: undefined;">) have reached End of Support. Organizations still running these versions should prioritize migration to a supported release.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">For organizations unable to immediately apply the hotfix, Check Point has provided the following alternative mitigations:</span></p><ul><li style="direction: ltr;"><p style="direction: ltr;"><span style="font-size: undefined;">Remove support for the legacy remote access client</span></p></li><li style="direction: ltr;"><p style="direction: ltr;"><span style="font-size: undefined;">Configure global properties for Remote Access VPN authentication to IKEv2 only</span></p></li><li style="direction: ltr;"><p style="direction: ltr;"><span style="font-size: undefined;">Set machine certificate authentication as mandatory</span></p></li><li style="direction: ltr;"><p style="direction: ltr;"><span style="font-size: undefined;">Enable IPS and download the latest signatures</span></p></li></ul><p style="direction: ltr;"><span style="font-size: undefined;">Rapid7 strongly recommends looking for signs of compromise even after the hotfix has been applied. Per Check Point's advisory, incident response teams should prioritize forensic log audits and configuration reviews starting from May 7, 2026, the earliest known date of exploitation.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">For the latest mitigation guidance, please refer to the </span><a href="https://support.checkpoint.com/results/sk/sk185033"><span style="font-size: undefined;">vendor advisory</span></a><span style="font-size: undefined;">.</span></p><h2 style="direction: ltr;">Rapid7 customers</h2><h3 style="direction: ltr;"><span style="color: rgb(67, 67, 67);">Exposure Command, InsightVM, and Nexpose</span></h3><p style="direction: ltr;"><span style="font-size: undefined;">Exposure Command, InsightVM, and Nexpose customers can assess exposure to CVE-2026-50751 with a vulnerability check expected to be available in the June 9 content release.</span></p><h2 style="direction: ltr;">Indicators of compromise</h2><p style="direction: ltr;"><span style="font-size: undefined;">Check Point has published the following indicators associated with the CVE-2026-50751 exploitation campaign. The attacker infrastructure consists of VPS hosts from several providers (Kaupo Cloud HK, Shock Hosting, Vultr Holdings), and Check Point notes that in some cases, the VPS region matched the geography of the targeted organization.</span></p><p style="direction: ltr;"><span style="font-size: undefined;"><strong>IP addresses:</strong></span></p><ul><li style="direction: ltr;"><p style="direction: ltr;"><span style="font-size: undefined;">45.77.149[.]152</span></p></li><li style="direction: ltr;"><p style="direction: ltr;"><span style="font-size: undefined;">209.182.225[.]136</span></p></li><li style="direction: ltr;"><p style="direction: ltr;"><span style="font-size: undefined;">38.60.157[.]139</span></p></li><li style="direction: ltr;"><p style="direction: ltr;"><span style="font-size: undefined;">162.33.177[.]101</span></p></li><li style="direction: ltr;"><p style="direction: ltr;"><span style="font-size: undefined;">45.76.26[.]42</span></p></li><li style="direction: ltr;"><p style="direction: ltr;"><span style="font-size: undefined;">144.208.127[.]155</span></p></li><li style="direction: ltr;"><p style="direction: ltr;"><span style="font-size: undefined;">38.54.88[.]201</span></p></li><li style="direction: ltr;"><p style="direction: ltr;"><span style="font-size: undefined;">38.54.107[.]167</span></p></li><li style="direction: ltr;"><p style="direction: ltr;"><span style="font-size: undefined;">66.42.99[.]200</span></p></li></ul><p style="direction: ltr;"><span style="font-size: undefined;"><strong>File hashes (MD5):</strong></span></p><ul><li style="direction: ltr;"><p style="direction: ltr;"><span style="font-size: undefined;">52fda5c1b9704544f32ee98d9060e689</span></p></li><li style="direction: ltr;"><p style="direction: ltr;"><span style="font-size: undefined;">51d39aa39478beeac94f2d12f682ecce</span></p></li></ul><p style="direction: ltr;"><span style="font-size: undefined;">Check Point observed post-exploitation attempts to retrieve ELF payloads from attacker-controlled servers, and identified ties to the Qilin ransomware operation based on binary analysis. For the full and most current list of IOCs, please refer to the </span><a href="https://blog.checkpoint.com/security/check-point-releases-important-hotfix-for-vulnerabilities-in-deprecated-ikev1-vpn-protocol/"><span style="font-size: undefined;">vendor advisory</span></a><span style="font-size: undefined;">.</span></p><h2 style="direction: ltr;">Updates</h2><ul><li style="direction: ltr;"><p style="direction: ltr;"><span style="font-size: undefined;"><strong>June 8, 2026</strong></span><span style="font-size: undefined;">: Initial publication.</span></p></li><li><span style="font-size: undefined;"><strong>June 8, 2026</strong></span>: Rapid 7 observations of EITW.</li><li><p style="direction: ltr;"><span style="font-size: undefined;"><strong>June 9, 2026: </strong></span><span style="font-size: undefined;">CVE added to CISA KEV.</span></p></li></ul><br/><br/><b>Source:</b> Rapid7 Blog &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
-</item>
-
-<item>
-  <title>🟠 Gogs patches critical zero-day enabling remote code execution</title>
-  <link>https://www.bleepingcomputer.com/news/security/gogs-patches-critical-zero-day-enabling-remote-code-execution/</link>
-  <pubDate>Mon, 08 Jun 2026 16:18:40 +0000</pubDate>
-  <source>BleepingComputer</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Gogs has patched a critical security zero-day flaw that can allow attackers to compromise Internet-facing instances and access any repositories (including private ones). [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
