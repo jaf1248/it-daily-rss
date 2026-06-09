@@ -1,7 +1,7 @@
 # IT Weekly Intelligence Briefing
 **Period:** June 02 – June 09, 2026  
-**Generated:** 2026-06-09 15:53 UTC  
-**Items reviewed:** 130  
+**Generated:** 2026-06-09 18:01 UTC  
+**Items reviewed:** 135  
 
 ## ⚡ Top Actions This Week
 
@@ -55,41 +55,41 @@
 
 ## 🟠 Important — Review This Week
 
+- [Microsoft June 2026 Patch Tuesday fixes 3 zero-day, 200 flaws](https://www.bleepingcomputer.com/news/microsoft/microsoft-june-2026-patch-tuesday-fixes-3-zero-day-200-flaws/)  
+  **BleepingComputer** · Jun 09 · _General awareness item._  
+
+- [Microsoft June 2026 Patch Tuesday, (Tue, Jun 9th)](https://isc.sans.edu/diary/rss/33064)  
+  **SANS Internet Storm Center** · Jun 09 · _General awareness item._  
+
+- [Microsoft Restores Some GitHub Repos, Keeps Others Offline as Miasma Probe Continues](https://thehackernews.com/2026/06/microsoft-restores-some-github-repos.html)  
+  **The Hacker News** · Jun 09 · _General awareness item._  
+
+- [XBOW tests Anthropic's Mythos Preview for offensive security](https://www.bleepingcomputer.com/news/security/xbow-tests-anthropics-mythos-preview-for-offensive-security/)  
+  **BleepingComputer** · Jun 09 · _General awareness item._  
+
 - [New Veeam vulnerability exposes backup servers to RCE attacks](https://www.bleepingcomputer.com/news/security/new-veeam-vulnerability-exposes-backup-servers-to-rce-attacks/)  
   **BleepingComputer** · Jun 09 · _General awareness item._  
 
-- [WinRAR Flaw Exploited by Russia-Aligned Groups to Deploy Stealers in Ukraine](https://thehackernews.com/2026/06/winrar-flaw-exploited-by-russia-aligned.html)  
-  **The Hacker News** · Jun 09 · _General awareness item._  
-
-- [The Hidden Security Risk in Modern Networks: The Work Between Tools](https://thehackernews.com/2026/06/the-hidden-security-risk-in-modern.html)  
-  **The Hacker News** · Jun 09 · _Service continuity risk to users._  
-
-- [CVE-2026-7774 tarfile.data_filter path traversal bypass allows writing outside the extraction directory](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-7774)  
+- [CVE-2026-41108 Windows DNS Client Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-41108)  
   **Microsoft Security Response Center (MSRC)** · Jun 09 · _General awareness item._  
 
-- [CVE-2026-8643 pip can extract console_scripts and gui_scripts outside installation directory](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-8643)  
+- [CVE-2026-45467 Microsoft SharePoint Server Spoofing Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45467)  
   **Microsoft Security Response Center (MSRC)** · Jun 09 · _General awareness item._  
 
-- [CVE-2026-43958 Rrdtool: rrdtool: stack buffer overflow allows local code execution or denial of service](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-43958)  
-  **Microsoft Security Response Center (MSRC)** · Jun 09 · _General awareness item._  
-
-- [CVE-2026-10722 cilium ebpf LoadCollectionSpec/LoadCollectionSpecFromReader btf.go loadRawSpec integer overflow](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-10722)  
-  **Microsoft Security Response Center (MSRC)** · Jun 09 · _General awareness item._  
-
-- [CVE-2026-37460 Missing input validation in the rfapiRibBi2Ri() function (rfapi_rib.c) of FRRouting (FRR) stable/10.0 to stable/10.6 allows attackers to cause a Denial of Service (DoS) via supplying a crafted BGP UPDATE message.](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-37460)  
+- [CVE-2026-45468 Microsoft SharePoint Server Spoofing Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45468)  
   **Microsoft Security Response Center (MSRC)** · Jun 09 · _General awareness item._  
 
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [Windows 11 KB5094126 & KB5093998 cumulative updates released](https://www.bleepingcomputer.com/news/microsoft/windows-11-kb5094126-and-kb5093998-cumulative-updates-released/) — BleepingComputer
 - [GitHub disables Microsoft repos pushing password-stealing malware](https://www.bleepingcomputer.com/news/security/github-disables-microsoft-repos-pushing-password-stealing-malware/) — BleepingComputer
 - [Researchers Build Self-Replicating AI Worm That Operates Entirely on Local, Open-Weight Models](https://thehackernews.com/2026/06/researchers-build-self-replicating-ai.html) — The Hacker News
 - [New FROST Attack Lets Websites Track What Sites and Apps You Open via SSD Timing](https://thehackernews.com/2026/06/new-frost-attack-lets-websites-track.html) — The Hacker News
 - [Hades PyPI Attack: 19 Packages Poisoned to Auto-Run Bun Credential Stealer](https://thehackernews.com/2026/06/hades-pypi-attack-19-packages-poisoned.html) — The Hacker News
 - [ISC Stormcast For Tuesday, June 9th, 2026 https://isc.sans.edu/podcastdetail/9964, (Tue, Jun 9th)](https://isc.sans.edu/diary/rss/33062) — SANS Internet Storm Center
-- [NFCShare Android malware spreads via fake banking app updates on GitHub](https://www.bleepingcomputer.com/news/security/nfcshare-android-malware-spreads-via-fake-banking-app-updates-on-github/) — BleepingComputer
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 15 critical · 71 important · 44 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 12 critical · 79 important · 44 FYI_
