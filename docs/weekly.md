@@ -1,25 +1,40 @@
 # IT Weekly Intelligence Briefing
 **Period:** June 02 – June 09, 2026  
-**Generated:** 2026-06-09 05:03 UTC  
-**Items reviewed:** 127  
+**Generated:** 2026-06-09 09:38 UTC  
+**Items reviewed:** 128  
 
 ## ⚡ Top Actions This Week
 
-1. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _SoFi confirms third-party data breach at Hong Kong subsidiary_  
+1. **Validate backups, confirm EDR coverage, and brief incident response team.**  
+   _CISA gives feds 3 days to patch Check Point VPN bug exploited as zero-day_  
    Source: BleepingComputer  
 
-2. **Validate backups, confirm EDR coverage, and brief incident response team.**  
-   _Check Point links VPN zero-day attacks to Qilin ransomware gang_  
+2. **Apply emergency patch or mitigation now; check vendor advisory for workarounds.**  
+   _Google patches new Chrome zero-day flaw exploited in the wild_  
    Source: BleepingComputer  
 
-3. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _Oxford University discloses data breach after careers platform hack_  
-   Source: BleepingComputer  
+3. **Prioritize patching of affected systems; check for internet-exposed attack surface.**  
+   _LiteLLM Flaw CVE-2026-42271 Exploited in the Wild, Chains to Unauthenticated RCE_  
+   Source: The Hacker News  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [CISA gives feds 3 days to patch Check Point VPN bug exploited as zero-day](https://www.bleepingcomputer.com/news/security/cisa-orders-feds-to-patch-check-point-flaw-exploited-by-ransomware-gangs/)
+**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jun 09  
+**Why it matters:** Elevated ransomware risk across the sector.  
+**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
+
+### [Google patches new Chrome zero-day flaw exploited in the wild](https://www.bleepingcomputer.com/news/security/google-patches-fifth-chrome-zero-day-bug-exploited-in-attacks-this-year/)
+**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jun 09  
+**Why it matters:** General awareness item.  
+**Recommended action:** Apply emergency patch or mitigation now; check vendor advisory for workarounds.  
+
+### [LiteLLM Flaw CVE-2026-42271 Exploited in the Wild, Chains to Unauthenticated RCE](https://thehackernews.com/2026/06/litellm-flaw-cve-2026-42271-exploited.html)
+**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Jun 09  
+**Why it matters:** General awareness item.  
+**Recommended action:** Prioritize patching of affected systems; check for internet-exposed attack surface.  
 
 ### [SoFi confirms third-party data breach at Hong Kong subsidiary](https://www.bleepingcomputer.com/news/security/sofi-confirms-third-party-data-breach-at-hong-kong-subsidiary/)
 **Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jun 08  
@@ -36,48 +51,33 @@
 **Why it matters:** Potential credential or data exposure.  
 **Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
-### [VS Code Adds 2-Hour Extension Auto-Update Delay to Limit Supply Chain Attacks](https://thehackernews.com/2026/06/vs-code-adds-2-hour-extension-auto.html)
-**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Jun 08  
-**Why it matters:** Third-party/software supply chain integrity risk.  
-**Recommended action:** Audit third-party software dependencies and review vendor access.  
-
-### [CISA Adds Actively Exploited SolarWinds Serv-U DoS Flaw to KEV Catalog](https://thehackernews.com/2026/06/cisa-adds-actively-exploited-solarwinds.html)
-**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Jun 06  
-**Why it matters:** General awareness item.  
-**Recommended action:** Apply emergency patch or mitigation now; check vendor advisory for workarounds.  
-
-### [Miasma Worm Hits 73 Microsoft GitHub Repositories in Major Supply Chain Attack](https://thehackernews.com/2026/06/miasma-worm-hits-73-microsoft-github.html)
-**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Jun 06  
-**Why it matters:** Third-party/software supply chain integrity risk.  
-**Recommended action:** Audit third-party software dependencies and review vendor access.  
-
 ---
 
 ## 🟠 Important — Review This Week
 
-- [One-Character Linux Kernel Flaw Enables Local Root Access, Exploits Now Public](https://thehackernews.com/2026/06/one-character-linux-kernel-flaw-enables.html)  
-  **The Hacker News** · Jun 08 · _General awareness item._  
-
-- [Gogs patches critical zero-day enabling remote code execution](https://www.bleepingcomputer.com/news/security/gogs-patches-critical-zero-day-enabling-remote-code-execution/)  
-  **BleepingComputer** · Jun 08 · _General awareness item._  
-
-- [Critical Check Point VPN Flaw Exploited to Bypass Passwords in IKEv1 Setups](https://thehackernews.com/2026/06/critical-check-point-vpn-flaw-exploited.html)  
-  **The Hacker News** · Jun 08 · _Potential email disruption for users._  
-
-- [CVE-2026-35429 Microsoft Edge (Chromium-based) for Android Spoofing Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-35429)  
-  **Microsoft Security Response Center (MSRC)** · Jun 08 · _General awareness item._  
-
-- [CVE-2026-33118 Microsoft Edge (Chromium-based) Spoofing Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-33118)  
-  **Microsoft Security Response Center (MSRC)** · Jun 08 · _General awareness item._  
-
-- [⚡ Weekly Recap: Instagram Account Hacks, Android Zero-Day, GitHub Worm and More](https://thehackernews.com/2026/06/weekly-recap-instagram-account-hacks.html)  
-  **The Hacker News** · Jun 08 · _General awareness item._  
-
-- [Over 20,000 Instagram accounts stolen in Meta AI support hack](https://www.bleepingcomputer.com/news/security/meta-ai-support-data-breach-affects-20-000-instagram-accounts/)  
-  **BleepingComputer** · Jun 08 · _General awareness item._  
-
 - [CVE-2026-7774 tarfile.data_filter path traversal bypass allows writing outside the extraction directory](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-7774)  
-  **Microsoft Security Response Center (MSRC)** · Jun 07 · _General awareness item._  
+  **Microsoft Security Response Center (MSRC)** · Jun 09 · _General awareness item._  
+
+- [CVE-2026-8643 pip can extract console_scripts and gui_scripts outside installation directory](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-8643)  
+  **Microsoft Security Response Center (MSRC)** · Jun 09 · _General awareness item._  
+
+- [CVE-2026-43958 Rrdtool: rrdtool: stack buffer overflow allows local code execution or denial of service](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-43958)  
+  **Microsoft Security Response Center (MSRC)** · Jun 09 · _General awareness item._  
+
+- [CVE-2026-10722 cilium ebpf LoadCollectionSpec/LoadCollectionSpecFromReader btf.go loadRawSpec integer overflow](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-10722)  
+  **Microsoft Security Response Center (MSRC)** · Jun 09 · _General awareness item._  
+
+- [CVE-2026-37460 Missing input validation in the rfapiRibBi2Ri() function (rfapi_rib.c) of FRRouting (FRR) stable/10.0 to stable/10.6 allows attackers to cause a Denial of Service (DoS) via supplying a crafted BGP UPDATE message.](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-37460)  
+  **Microsoft Security Response Center (MSRC)** · Jun 09 · _General awareness item._  
+
+- [CVE-2026-50219 libexpat before 2.8.2 lacks handler call depth tracking for calls to XML_GetBuffer, XML_Parse, XML_ParseBuffer, XML_ParserFree, or XML_ParserReset from within handlers in cases of a policy violation. Thus, a use-after-free can occur,](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-50219)  
+  **Microsoft Security Response Center (MSRC)** · Jun 09 · _General awareness item._  
+
+- [CVE-2026-27145 Inefficient candidate hostname parsing in crypto/x509](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-27145)  
+  **Microsoft Security Response Center (MSRC)** · Jun 09 · _General awareness item._  
+
+- [CVE-2026-50292 In libinput before 1.30.4 and 1.31.x before 1.31.3, libinput-device-group unescaped phys output can inject udev properties leading to arbitrary root code execution](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-50292)  
+  **Microsoft Security Response Center (MSRC)** · Jun 09 · _General awareness item._  
 
 ---
 
@@ -92,4 +92,4 @@
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 10 critical · 71 important · 46 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 13 critical · 72 important · 43 FYI_
