@@ -1,25 +1,30 @@
 # IT Weekly Intelligence Briefing
 **Period:** June 02 – June 09, 2026  
-**Generated:** 2026-06-09 09:38 UTC  
-**Items reviewed:** 128  
+**Generated:** 2026-06-09 12:34 UTC  
+**Items reviewed:** 129  
 
 ## ⚡ Top Actions This Week
 
-1. **Validate backups, confirm EDR coverage, and brief incident response team.**  
+1. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
+   _French govt messaging service breached in account hijacking attack_  
+   Source: BleepingComputer  
+
+2. **Validate backups, confirm EDR coverage, and brief incident response team.**  
    _CISA gives feds 3 days to patch Check Point VPN bug exploited as zero-day_  
    Source: BleepingComputer  
 
-2. **Apply emergency patch or mitigation now; check vendor advisory for workarounds.**  
+3. **Apply emergency patch or mitigation now; check vendor advisory for workarounds.**  
    _Google patches new Chrome zero-day flaw exploited in the wild_  
    Source: BleepingComputer  
-
-3. **Prioritize patching of affected systems; check for internet-exposed attack surface.**  
-   _LiteLLM Flaw CVE-2026-42271 Exploited in the Wild, Chains to Unauthenticated RCE_  
-   Source: The Hacker News  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [French govt messaging service breached in account hijacking attack](https://www.bleepingcomputer.com/news/security/french-govt-messaging-service-breached-in-account-hijacking-attack/)
+**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jun 09  
+**Why it matters:** Potential credential or data exposure.  
+**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
 ### [CISA gives feds 3 days to patch Check Point VPN bug exploited as zero-day](https://www.bleepingcomputer.com/news/security/cisa-orders-feds-to-patch-check-point-flaw-exploited-by-ransomware-gangs/)
 **Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jun 09  
@@ -46,14 +51,12 @@
 **Why it matters:** Elevated ransomware risk across the sector.  
 **Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
 
-### [Oxford University discloses data breach after careers platform hack](https://www.bleepingcomputer.com/news/security/oxford-university-discloses-data-breach-after-careerconnect-platform-hack/)
-**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jun 08  
-**Why it matters:** Potential credential or data exposure.  
-**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
-
 ---
 
 ## 🟠 Important — Review This Week
+
+- [The Hidden Security Risk in Modern Networks: The Work Between Tools](https://thehackernews.com/2026/06/the-hidden-security-risk-in-modern.html)  
+  **The Hacker News** · Jun 09 · _Service continuity risk to users._  
 
 - [CVE-2026-7774 tarfile.data_filter path traversal bypass allows writing outside the extraction directory](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-7774)  
   **Microsoft Security Response Center (MSRC)** · Jun 09 · _General awareness item._  
@@ -76,20 +79,17 @@
 - [CVE-2026-27145 Inefficient candidate hostname parsing in crypto/x509](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-27145)  
   **Microsoft Security Response Center (MSRC)** · Jun 09 · _General awareness item._  
 
-- [CVE-2026-50292 In libinput before 1.30.4 and 1.31.x before 1.31.3, libinput-device-group unescaped phys output can inject udev properties leading to arbitrary root code execution](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-50292)  
-  **Microsoft Security Response Center (MSRC)** · Jun 09 · _General awareness item._  
-
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [New FROST Attack Lets Websites Track What Sites and Apps You Open via SSD Timing](https://thehackernews.com/2026/06/new-frost-attack-lets-websites-track.html) — The Hacker News
+- [Hades PyPI Attack: 19 Packages Poisoned to Auto-Run Bun Credential Stealer](https://thehackernews.com/2026/06/hades-pypi-attack-19-packages-poisoned.html) — The Hacker News
 - [ISC Stormcast For Tuesday, June 9th, 2026 https://isc.sans.edu/podcastdetail/9964, (Tue, Jun 9th)](https://isc.sans.edu/diary/rss/33062) — SANS Internet Storm Center
 - [NFCShare Android malware spreads via fake banking app updates on GitHub](https://www.bleepingcomputer.com/news/security/nfcshare-android-malware-spreads-via-fake-banking-app-updates-on-github/) — BleepingComputer
 - [New Apple feature automatically changes your compromised passwords](https://www.bleepingcomputer.com/news/apple/new-apple-feature-automatically-changes-your-compromised-passwords/) — BleepingComputer
 - [New Shai-Hulud attack trojanizes 19 science-focused PyPI packages](https://www.bleepingcomputer.com/news/security/new-shai-hulud-attack-trojanizes-19-science-focused-pypi-packages/) — BleepingComputer
-- [WhatsApp says it disrupted new NSO spyware phishing attacks](https://www.bleepingcomputer.com/news/security/whatsapp-says-it-disrupted-new-nso-spyware-phishing-attacks/) — BleepingComputer
-- [Meta Blocks NSO Group's New WhatsApp Phishing Attack, Files Contempt Order](https://thehackernews.com/2026/06/meta-blocks-nso-groups-new-whatsapp.html) — The Hacker News
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 13 critical · 72 important · 43 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 14 critical · 72 important · 43 FYI_
