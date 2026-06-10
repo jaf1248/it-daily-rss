@@ -3,16 +3,1338 @@
 <channel>
   <title>Joe — VP of IT Briefing</title>
   <description>Leadership-focused IT risk, vendors, pricing, licensing, and industry context.</description>
-  <lastBuildDate>Wed, 10 Jun 2026 09:54:03 +0000</lastBuildDate>
+  <lastBuildDate>Wed, 10 Jun 2026 12:54:36 +0000</lastBuildDate>
   
 <item>
-  <title>🔵 Sources: Ant International is considering raising ~$1B at a $10B+ valuation, paving the way for a potential Hong Kong IPO as soon as this year (Bloomberg)</title>
+  <title>🔵 Aryon Security Raises $29 Million in Series A Funding</title>
+  <link>https://www.securityweek.com/aryon-security-raises-29-million-in-series-a-funding/</link>
+  <pubDate>Wed, 10 Jun 2026 12:24:20 +0000</pubDate>
+  <source>SecurityWeek</source>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><p>In the post-Mythos era, the company’s platform helps organizations enforce security controls across environments.</p>
+<p>The post <a href="https://www.securityweek.com/aryon-security-raises-29-million-in-series-a-funding/">Aryon Security Raises $29 Million in Series A Funding</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</item>
+
+<item>
+  <title>🟠 Microsoft feud escalates as researcher drops new Windows zero-day</title>
+  <link>https://www.csoonline.com/article/4183487/microsoft-feud-escalates-as-researcher-drops-new-windows-zero-day.html</link>
+  <pubDate>Wed, 10 Jun 2026 12:01:58 +0000</pubDate>
+  <source>CSO Online</source>
+  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<p>The long-running feud between Microsoft and security researcher Nightmare Eclipse has entered a new chapter.</p>
+
+
+
+<p>Eclipse, who has spent the past several months publicly releasing unpatched Windows vulnerabilities while sparring with Microsoft over vulnerability disclosure practices, has published exploit code for a new zero-day flaw dubbed RoguePlanet.</p>
+
+
+
+<p>The researcher said their exploit uses a race condition problem affecting Microsoft Defender, giving attackers less than a hundred percent odds at success, which can potentially allow SYSTEM-level privilege on even freshly updated Windows.</p>
+
+
+
+<p>As <a href="https://www.csoonline.com/article/4160275/caught-quarantined-re-installed-redsun-turns-microsoft-defender-on-itself.html">before</a>, the exploit arrives just after Microsoft issued its <a href="https://blog.talosintelligence.com/microsoft-patch-tuesday-for-june-2026-snort-rules-and-prominent-vulnerabilities/" rel="noreferrer noopener" target="_blank">June 2026</a> Tuesday patches, where the company issued fixes for over 200 security flaws, including 32 critical ones. “The timing is a giveaway, MiniPlasma was released on May 13, 2026—exactly one day after Microsoft’s May Patch Tuesday cycle, ensuring defenders have no official vendor patch for weeks,” Agnidipta Sarkar, chief evangelist at ColorTokens, had said about Eclipse’s previous “MiniPlasma” <a href="https://www.csoonline.com/article/4172320/patched-windows-bug-resurfaces-6-years-later-as-working-system-level-exploit.html">disclosure</a>.</p>
+
+
+
+<p>The exploit was dropped in a new GitHub repository, “MSNightmare,” surely a pointed reference to Microsoft, after GitHub (owned by Microsoft) removed Eclipse’s original repositories recently. Several earlier Eclipse disclosures were reportedly incorporated into <a href="https://www.csoonline.com/article/4175970/microsoft-patches-two-zero-day-flaws-in-defender.html">real-world attacks</a> shortly after exploit code became available, prompting warnings from Microsoft and multiple security vendors.</p>
+
+
+
+<h2 class="wp-block-heading" id="the-bug-allows-code-execution-through-system-access">The bug allows code execution through SYSTEM access</h2>
+
+
+
+<p>In a June 9 blog <a href="https://deadeclipse666.blogspot.com/2026/06/rogueplanet-quick-history.html" rel="noreferrer noopener" target="_blank">post</a> titled “RoguePlanet, a quick history,” Eclipse wrote of an initial iteration of the Windows Defender bug. While technical details remain scarce, the blog did mention that it has to do with getting a victim to open a “.vhd(x) on a remote SMB server.”</p>
+
+
+
+<p>Doing that, the writeup explained, would result in “Defender overwriting its own files and obviously the end outcome was an RCE.” A rough interpretation of the description is that the bug allows executing malicious metadata from a specially crafted virtual hard disk (.vhd) image stored on a remote Server Message Block (SMB) server.</p>
+
+
+
+<p>Eclipse’s <a href="https://github.com/MSNightmare/RoguePlanet" rel="noreferrer noopener" target="_blank">PoC</a> exploit ultimately spawns a SYSTEM shell, allowing arbitrary code to be executed by a potential attacker.</p>
+
+
+
+<p>A mid-May patch to Defender reportedly sealed the initial attack path detailed by Eclipse, making “junction attacks useless,” which had them re-write RoguePlanet to work around the fix. The current version of the exploit allegedly works against Windows 11 (official channel + Canary) and Windows 10 with the June 2026 patch installed.</p>
+
+
+
+<p>The PoC code, however, gave out against Windows Server installations since standard users “Cannot mount an ISO image”. While Eclipse was “too drained” to redesign an exploit for this exception, they are certain an exploit is possible.</p>
+
+
+
+<h2 class="wp-block-heading" id="the-feud-behind-the-flaws">The feud behind the flaws</h2>
+
+
+
+<p>Microsoft recently <a href="https://github.com/Nightmare-Eclipse" rel="noreferrer noopener" target="_blank">removed</a> Eclipse’s GitHub accounts and also disabled their Microsoft Security Response Center (MSRC) access. Following the ban, GitLab also <a href="https://gitlab.com/nightmare-eclipse" rel="noreferrer noopener" target="_blank">suspended</a> the researcher’s secondary mirrors.</p>
+
+
+
+<p>In a May 27 blog <a href="https://www.microsoft.com/en-us/msrc/blog/2026/05/a-shared-responsibility-protecting-customers-through-coordinated-vulnerability-disclosure?source=post_page-----0946117940a4---------------------------------------" rel="noreferrer noopener" target="_blank">post</a>, Microsoft criticized the lack of coordinated vulnerability disclosure and threatened legal action, stating that the public disclosures aided attackers and involved a digital crimes unit coordinating with law enforcement.</p>
+
+
+
+<p>“The vulnerabilities known as <a href="https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-41091">RedSun</a>, <a href="https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45498">UnDefend</a>, <a href="https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-33825">BlueHammer</a>, <a href="https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45585">YellowKey</a>, GreenPlasma, and MiniPlasma were not responsibly disclosed,” the company wrote on Eclipse-disclosed bugs. “Uncoordinated disclosures that put proof-of-concept code for unpatched vulnerabilities into the hands of bad actors are never justifiable and have real-world consequences.”</p>
+
+
+
+<p>Cybersecurity analyst Kevin Beamount <a href="https://doublepulsar.com/microsofts-stance-on-zero-day-exploits-is-a-dumpster-fire-of-their-own-making-0946117940a4">called</a> Microsoft’s response a “dumpster fire of their own making.” Writing of a previous researcher going by the name “SandboxEscaper,” who similarly disclosed Microsoft bugs and published exploit codes, Beaumont pointed to Microsoft’s precedent for hiring such researchers in 2019.</p>
+
+
+
+<p>“I’m making the point that Microsoft has very publicly hired somebody for doing the same thing Microsoft’s latest blog alleges is criminal behaviour,” Beaumont said.</p>
+
+
+
+<p>Microsoft did not immediately respond to CSO’s request for a comment.</p>
+
+
+
+<p>Eclipse announced its return on GitHub on June 9. “Yes, it’s GitHub again, Microsoft forgot that even if they banned my GitLab and GitHub accounts, they cannot unwrite my code. Once it’s public, you can’t remove it.”</p>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</item>
+
+<item>
+  <title>🟠 New Windows Zero-Day Exploit ‘RoguePlanet’ Released</title>
+  <link>https://www.securityweek.com/new-windows-zero-day-exploit-rogueplanet-released/</link>
+  <pubDate>Wed, 10 Jun 2026 11:44:39 +0000</pubDate>
+  <source>SecurityWeek</source>
+  <description><![CDATA[<b>Why this matters: Privilege escalation risk — review local admin exposure and endpoint controls.</b><br/><p>Exploiting a race condition in Microsoft Defender, the exploit leads to local privilege escalation to SYSTEM.</p>
+<p>The post <a href="https://www.securityweek.com/new-windows-zero-day-exploit-rogueplanet-released/">New Windows Zero-Day Exploit &#8216;RoguePlanet&#8217; Released</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Sources: Chinese companies like Moonshot are reconsidering &quot;red-chip structures&quot;, which make it easier to list overseas, after China blocked the Meta-Manus deal (Financial Times)</title>
+  <link>https://www.techmeme.com/260610/p22#a260610p22</link>
+  <pubDate>Wed, 10 Jun 2026 11:20:02 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.ft.com/content/f1e306d9-870b-44eb-8449-2c03d3899261"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260610/i22.jpg" vspace="4" /></a>
+<p><a href="https://www.techmeme.com/260610/p22#a260610p22" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="https://www.ft.com/">Financial Times</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://www.ft.com/content/f1e306d9-870b-44eb-8449-2c03d3899261">Sources: Chinese companies like Moonshot are reconsidering &ldquo;red-chip structures&rdquo;, which make it easier to list overseas, after China blocked the Meta-Manus deal</a></b></span>&nbsp; &mdash;&nbsp; Beijing's tighter scrutiny of foreign capital forces groups to rethink ownership structures behind listings boom</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+</item>
+
+<item>
+  <title>🟠 Ivanti tells Sentry customers to patch now as critical bugs hit 10.0 and 9.9</title>
+  <link>https://www.theregister.com/patches/2026/06/10/ivanti-urges-sentry-users-to-patch-two-critical-bugs/5253428</link>
+  <pubDate>Wed, 10 Jun 2026 11:04:53 +0000</pubDate>
+  <source>The Register</source>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Remote, unauthenticated RCE with root privileges is about as bad as it gets<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 GitHub Copilot is generating more code than your team can review: Why senior engineers are now the bottleneck</title>
+  <link>https://www.cio.com/article/4183045/github-copilot-is-generating-more-code-than-your-team-can-review-why-senior-engineers-are-now-the-bottleneck.html</link>
+  <pubDate>Wed, 10 Jun 2026 11:00:00 +0000</pubDate>
+  <source>CIO.com</source>
+  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<p>Your engineering department is producing significantly more code than it can safely deliver to your customers.</p>
+
+
+
+<p>At first glance, that looks exactly like progress. Tools like GitHub Copilot allow developers to generate boilerplate code faster than ever before. Raw output increases. Feature backlogs shrink. Development teams feel incredibly productive.</p>
+
+
+
+<p>Then software delivery slows to a crawl.</p>
+
+
+
+<p>Not because developers are writing less code, but because the organization simply cannot process what is being produced.</p>
+
+
+
+<h2 class="wp-block-heading" id="why-the-delivery-bottleneck-simply-moved">Why the delivery bottleneck simply moved</h2>
+
+
+
+<p>Software delivery has always operated under a strict constraint.</p>
+
+
+
+<p>Historically, that fundamental constraint was the physical act of writing code. Overall development speed depended entirely on how quickly human engineers could implement features.</p>
+
+
+
+<p>Artificial intelligence removes that specific constraint completely.</p>
+
+
+
+<p>Code generation is no longer the limiting factor in the software development lifecycle. Everything that follows the generation phase immediately becomes the new bottleneck: peer review, architectural validation, security integration and final release. Output now increases much faster than system throughput.</p>
+
+
+
+<h2 class="wp-block-heading" id="the-operational-drag-of-machine-generation">The operational drag of machine generation</h2>
+
+
+
+<p>In a recent engagement, I reviewed an engineering team that had widely adopted AI-assisted development tools across their entire department.</p>
+
+
+
+<p>The early results were strong. The team produced more code, implemented initial features faster and increased developer activity metrics. Within a few sprint cycles, however, the entire delivery pipeline slowed down.</p>
+
+
+
+<p>Review queues grew to unmanageable sizes. Senior engineers became completely overloaded. Instead of focusing on strategic architecture and complex system design, they spent the majority of their week reviewing massive volumes of generated code. The organization vastly improved its ability to produce raw syntax, but it did not improve its ability to validate and ship it.</p>
+
+
+
+<h2 class="wp-block-heading" id="why-generated-code-requires-more-human-review">Why generated code requires more human review</h2>
+
+
+
+<p>The core issue is not that machine-generated code is inherently flawed or broken. The issue is how it fundamentally changes the workflow of the engineering department.</p>
+
+
+
+<p>When developers write code manually, they carry deep historical context. They intuitively understand why specific changes exist, how they fit into the broader legacy system, and what exact business constraints dictated the logic.</p>
+
+
+
+<p>Generated code completely lacks that human context. Review takes significantly longer because the underlying intent is not immediately clear to the reviewer. As output volume increases across the team, the required review effort grows quickly.</p>
+
+
+
+<h2 class="wp-block-heading" id="the-difference-between-local-speed-and-system-throughput">The difference between local speed and system throughput</h2>
+
+
+
+<p>At the individual level, developers feel dramatically faster. At the system level, the organization slows down.</p>
+
+
+
+<p>Improving local productivity does not guarantee improvement in overall system throughput.</p>
+
+
+
+<p>Research from<a href="https://www.gitclear.com/coding_on_copilot_data_shows_ais_downward_pressure_on_code_quality" rel="nofollow"> </a><a href="https://www.gitclear.com/coding_on_copilot_data_shows_ais_downward_pressure_on_code_quality" rel="nofollow">GitClear</a> shows that AI-assisted development is heavily associated with a sharp increase in code churn. More code is written, modified and replaced over time without adding actual value to the product.</p>
+
+
+
+<p>Insights from the<a href="https://cloud.google.com/devops/state-of-devops/" rel="nofollow"> </a><a href="https://cloud.google.com/devops/state-of-devops/" rel="nofollow">Google Cloud DevOps Research and Assessment report</a> emphasize that elite engineering performance depends entirely on the efficiency of the entire delivery system, not just individual developer output. The constraint in the pipeline always determines the final outcome.</p>
+
+
+
+<h2 class="wp-block-heading" id="the-compounding-cost-of-code-validation">The compounding cost of code validation</h2>
+
+
+
+<p>As overall code volume increases, peer review becomes the dominant operational cost for the department.</p>
+
+
+
+<p>This friction appears as longer delivery cycles, constantly delayed releases and an increased workload placed directly on your most experienced staff. Organizations often respond to this friction by adding more reviewers, extending project timelines or reducing the scope of the release.</p>
+
+
+
+<p>These reactive actions completely reduce the initial economic gains promised by faster code generation.</p>
+
+
+
+<h2 class="wp-block-heading" id="the-severe-risk-to-senior-engineer-retention">The severe risk to senior engineer retention</h2>
+
+
+
+<p>Senior engineers are a strictly limited and highly expensive corporate resource. Their highest value to the enterprise lies in system design, technical direction and complex problem-solving.</p>
+
+
+
+<p>When they become the primary bottleneck for reviewing machine-generated code, their role shifts entirely toward validation rather than creation. This significantly reduces their strategic impact across the organization.</p>
+
+
+
+<p>More importantly, it creates a quantifiable retention risk. Senior engineers are hired to build complex architectures, not to act as syntax proofreaders for an algorithm. If their daily workflow devolves into a tedious cycle of untangling verbose pull requests, job satisfaction declines. Replacing a senior architect is far more expensive than any efficiency gained by a coding assistant.</p>
+
+
+
+<h2 class="wp-block-heading" id="why-future-adoption-amplifies-the-problem">Why future adoption amplifies the problem</h2>
+
+
+
+<p>As the enterprise adoption of AI tools increases, so does the raw output.</p>
+
+
+
+<p>According to<a href="https://www.gartner.com/en/software-engineering/topics/developer-experience" rel="nofollow"> Gartner</a>, AI-assisted development will become the standard baseline across enterprise teams. This means significantly more code will be moving through your existing systems.</p>
+
+
+
+<p>If your review processes do not evolve to handle this new reality, the bottleneck simply intensifies.</p>
+
+
+
+<h2 class="wp-block-heading" id="optimizing-for-delivery-over-generation">Optimizing for delivery over generation</h2>
+
+
+
+<p>Software delivery is not about how fast code is written. It is about how efficiently work moves from a business idea to a live production environment.</p>
+
+
+
+<p>Increasing generation speed without improving operational flow creates immense internal friction. Organizations that adapt successfully must shift their entire focus from maximizing output to optimizing throughput.</p>
+
+
+
+<p>This requires enforcing strict limits on the size of code changes, demanding clear documentation of intent before review and relying heavily on automated testing to catch syntax errors before a human engineer is involved.</p>
+
+
+
+<h2 class="wp-block-heading" id="why-raw-output-is-a-false-metric">Why raw output is a false metric  </h2>
+
+
+
+<p>More code does not equal more progress.</p>
+
+
+
+<p>If your team is producing more syntax than it can safely process, the engineering bottleneck has not been removed. It has simply moved. Until the system is redesigned to handle that specific shift, increased output will not translate into faster delivery. Instead, it will result in missed commitments, severe planning risk and entirely unpredictable delivery timelines.</p>
+
+
+
+<p><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><strong><a href="https://www.csoonline.com/expert-contributor-network/">Want to join?</a></strong></p>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Autonomous AI agents duped into leaking sensitive data in phishing test</title>
+  <link>https://www.csoonline.com/article/4183445/autonomous-ai-agents-duped-into-leaking-sensitive-data-in-phishing-test.html</link>
+  <pubDate>Wed, 10 Jun 2026 10:45:31 +0000</pubDate>
+  <source>CSO Online</source>
+  <description><![CDATA[<b>Why this matters: Credential/phishing risk — reinforce MFA and user awareness training.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<p>AI agents given access to corporate email and business applications could become a new phishing target for attackers, according to cybersecurity researchers, after a test agent built on OpenClaw was tricked into sharing cloud credentials and customer data with an external attacker.</p>
+
+
+
+<p><a href="https://www.varonis.com/blog/openclaw-phishing">Varonis Threat Labs</a> said it built an OpenClaw AI agent called Pinchy to test whether autonomous agents could fall for the same kinds of phishing attacks that have long targeted employees. Varonis tested the agent in a controlled Google Workspace environment, giving it access to a Gmail inbox with mock AWS credentials, CRM exports, internal conversations, and calendar invites.</p>
+
+
+
+<p>The test used two configurations: a generic productivity profile and a stricter profile that included email safety instructions telling the agent to be cautious of phishing and verify sender identities before acting on sensitive requests. Varonis said the agent still failed in some scenarios, particularly when requests appeared to come from colleagues and were framed as routine or urgent business tasks.</p>
+
+
+
+<p>“In some cases, Pinchy not only failed at spotting the phishing attacks, it also performed risky actions that could potentially compromise a real-world organization,” the cybersecurity firm said in its report.</p>
+
+
+
+<p>In one test, Pinchy forwarded AWS IAM keys, database passwords, and SSH access details to an external Gmail account after receiving what appeared to be a routine request from a colleague for staging credentials.</p>
+
+
+
+<p>In another test, an attacker asked the agent to send the latest customer export for a quarterly business review presentation. Pinchy retrieved and forwarded a CRM export containing details on 247 enterprise customers, including company names, contact information, contract dates, customer tiers, and roughly $1.28 million in monthly recurring revenue data.</p>
+
+
+
+<p>But the results were not entirely negative. According to Varonis, the agent performed better against more technical phishing attempts, including a malicious OAuth consent flow disguised as a timesheet platform. In that case, Pinchy inspected the redirect address, identified the destination as suspicious, and stopped before granting consent.</p>
+
+
+
+<p>“That contrast is what makes the earlier failures structurally important,” Varonis said. “The agent had enough technical reasoning to recognize sophisticated phishing infrastructure. The weak point was social trust and identity verification.”</p>
+
+
+
+<p>The findings come as companies move AI agents beyond chat interfaces and into workflows where they can retrieve documents, process messages, and act across business software.</p>
+
+
+
+<h2 class="wp-block-heading" id="an-architecture-problem">An architecture problem</h2>
+
+
+
+<p>The <a href="https://www.csoonline.com/article/4150456/github-phishers-use-fake-openclaw-tokens-to-drain-crypto-wallets.html">OpenClaw</a> test points less to a failure of the AI model itself than to the way the agent was configured and deployed, said <a href="https://www.linkedin.com/in/devashri-datta-522b364b/" rel="noreferrer noopener" target="_blank">Devashri Datta</a>, a cybersecurity researcher.</p>
+
+
+
+<p>“The security tests actually proved that the AI models did their jobs well on a purely technical level,” Datta said.</p>
+
+
+
+<p>The bigger problem was that the agent treated email as both a source of information and a source of instructions, creating what Datta described as a classic IT mistake: mixing the data lane with the control lane.</p>
+
+
+
+<p>“It didn’t hand over a password because someone asked nicely; it executed what looked like a legitimate operational task,” Datta said. “In any secure system, you never let the data path give administrative orders.”</p>
+
+
+
+<p>Other analysts said the model should not be taken out of the equation entirely. The risk is not confined to one layer of the technology stack, said <a href="https://confidis.co/about/our-leadership-team/">Keith Prabhu</a>, founder and CEO at Confidis. The test showed problems in the model’s ability to judge trust and in the way agent frameworks and enterprise governance handled autonomous access.</p>
+
+
+
+<p>“Historically, security architectures segregate any orchestration pipeline into authorization, execution, auditing, and escalation,” Prabhu said. “However, this is collapsed into one single pipeline in AI agents, which may lead to them becoming victims of such phishing attacks.”</p>
+
+
+
+<h2 class="wp-block-heading" id="enterprises-need-enforceable-controls">Enterprises need enforceable controls</h2>
+
+
+
+<p>Enterprises should treat AI agents as high-privilege identities, because they can ingest untrusted content while also taking actions across business systems, according to <a href="https://www.linkedin.com/in/sunilvarkey1/">Sunil Varkey</a>, a cybersecurity adviser and former CISO.</p>
+
+
+
+<p>That combination raises the stakes for enterprises, particularly when agents can read emails, documents, web pages, and SaaS comments while also sending messages, exporting data, calling APIs or updating records, he said.</p>
+
+
+
+<p>“Frameworks like OpenClaw often lack robust enforcement of identity verification, tool-level permissions, and resistance to prompt injection,” Varkey said. “However, the decisive factor in the Varonis tests was over-privileged access, missing human oversight, and absent runtime guardrails.”</p>
+
+
+
+<p><a href="https://www.hfsresearch.com/team/akshat-tyagi/">Akshat Tyagi</a>, associate practice leader at HFS Research, said enterprises should focus not only on what an agent can access, but also on what it is allowed to send outside the organization.</p>
+
+
+
+<p>“Instructions are not controls,” Tyagi said. “If an agent can email sensitive data outside the company just because someone asked convincingly, the problem is not the model alone.”</p>
+
+
+
+<p>AI agents should have their own identities, with access that can be limited and monitored, Tyagi said. Requests involving credentials or customer data sharing should trigger human review rather than be left to the agent’s judgment.</p>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Sources: SpaceX has drawn $250B+ of investor demand for what is poised to be the largest IPO to date, far beyond the $75B that SpaceX is aiming to raise (Reuters)</title>
+  <link>https://www.techmeme.com/260610/p18#a260610p18</link>
+  <pubDate>Wed, 10 Jun 2026 10:15:02 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.reuters.com/world/spacex-ipo-demand-is-approaching-four-times-oversubscribed-source-says-2026-06-09/"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260610/i18.jpg" vspace="4" /></a>
+<p><a href="https://www.techmeme.com/260610/p18#a260610p18" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="http://www.reuters.com/">Reuters</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://www.reuters.com/world/spacex-ipo-demand-is-approaching-four-times-oversubscribed-source-says-2026-06-09/">Sources: SpaceX has drawn $250B+ of investor demand for what is poised to be the largest IPO to date, far beyond the $75B that SpaceX is aiming to raise</a></b></span>&nbsp; &mdash;&nbsp; Elon Musk's SpaceX (SPCX.O) has drawn more than $250 billion of investor demand for what stands to be the largest-ever IPO &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+</item>
+
+<item>
+  <title>🔴 The lean AI plan for action at VietBank</title>
+  <link>https://www.cio.com/article/4182736/the-lean-ai-plan-for-action-at-vietbank.html</link>
+  <pubDate>Wed, 10 Jun 2026 10:00:00 +0000</pubDate>
+  <source>CIO.com</source>
+  <description><![CDATA[<b>Why this matters: Supply chain risk — audit third-party dependencies and vendor access.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<p>As a veteran of IT leadership, and just over two years into his current role as VietBank CIO, NghiaTran has rebuilt a strategic engine by not trying to out-spend the competition but by investing in AI-driven customer intelligence, like behavioral analytics and CRM integration. And since sensitive banking data can’t leave the building, flagship AI innovations, like their smart office tracking system (SOTs) and intelligent management system (IMS), were built entirely in-house using open-source components including a self-hosted LLM, rather than tools procured from enterprise vendors.</p>
+
+
+
+<p>Delivered in just a few months on a lean budget, says Tran, SOTs cut document approval cycles by 35%, earned VietBank a CIO ASEAN Innovation Award in 2025, and drew an invitation from the Vietnamese government to present at last year’s National Digital Governance Conference.</p>
+
+
+
+<p>From conceiving and building AI initiatives in-house to urgently deploying AI instead of waiting for perfect data, Tran has a vision of how to progress that makes the most sense to the business. “If we keep waiting for perfect data, we fall behind our competitors,” he says. The means by which to measure success, he adds, is through culture, in that even when hardware costs are skyrocketing as AI chip demand surges globally and business units feel the strain, giving people autonomy and room to grow make their work and place worth sticking around for. </p>
+
+
+
+<p>What Tran is building at VietBank with a lean team, a clear plan, and an insistence for action, is a reminder that clarity and execution matter more than immediate and impatient scaling.</p>
+
+
+
+<p>“My professional focus is on building a resilient technology foundation, advancing cyber maturity, and aligning with the complex IT ecosystem with business strategy and regulatory expectation,” he says. “My role is to ensure technology isn’t only innovative, but also secure, scalable, and directly tied to business value.”</p>
+
+
+
+<p>Tran also details cybersecurity as the sector’s most underappreciated risk, keeping pace with neobanks, and adapting to change. Watch the full video below for more insights, and be sure to subscribe to the monthly Center Stage newsletter by clicking <a href="https://www.cio.com/newsletters/signup/">here</a>.</p>
+
+
+
+<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper youtube-video">
+
+</div></figure>
+
+
+
+<p><strong>On AI enabling diversification: </strong>I deployed agentic AI for the bank, which helps to automate and optimize critical processes such as document processing, approvals, and reporting to leadership with reduced manual operation, increased transparency, and greater data security within the internal environment.</p>
+
+
+
+<p>Our IT targets value across efficiency, control, security, and scalability, and that’s my role. My target for IT support for the business is to improve information retrial, and write the quality and consistency of internal reporting and decision support. And from that, I and my team try to develop the technology that’s enables the business to function, and to help them to maximize their efforts.</p>
+
+
+
+<p>The more we understand customers, the better we can serve them. And we can redeem a lot of value-added service, confidence, safety, and security with AI.</p>
+
+
+
+<p><strong>On inward-facing AI: </strong>Data accountability is a very important principle in banking, considering all the sensitive information, security files, and finance statements. So material must remain fully within the bank’s control. For me, AI is of great value so we chose to develop in-house with a native model. We could make the banking provide intelligence and trust, and a smart office system was designed so documents and the entire model stay within the bank environment, which protects confidence, avoids external token costs, and aligns with state regulations about the data profession.</p>
+
+
+
+<p>This approach gives us the flexibility to innovate while maintaining full control over our data and architecture. The smart office tracking system (SOT) we deployed, after only a few months and using a small amount of budget, keeps sensitive information on-prem. Using agents, SOT can summarize and optimize documentation, while IMS is multifaceted and we have an internal assistant to look up the regulation procedure, support the operation, and mitigate data-related risk. We apply it to process management, like automation, approval process management, and asset control management, integrating a holistic ecosystem.</p>
+
+
+
+<p><strong>On cybersecurity: </strong>Banking tech is very serious about cybersecurity, and the way I approach it is to have a multi-layer and proactive approach to defense. We have a red team testing inside and outside for vulnerabilities, and we have a blue team to operate with the National Cybersecurity Agency. We also have a consulting team to stay on top of new trends. With AI, you can assess cybersecurity very easily, but we have to be proactive, especially when attackers use AI to attack the system, most notably in Vietnam, which is one of the top global target for cyberattacks.AI-powered threats are moving faster than legacy security architectures can handle. My approach is multi-layered, but a broader concern is systemic since a supply chain attack on one bank can cascade throughout the entire financial system.</p>
+
+
+
+<p><strong>On vision 2028: </strong>I see the same questions will be asked in many disciplines and panels. We’re waiting for the perfect data platform, or how to run AI, because some will say that data must be well structured before it’s run through AI. For me, I make choices based on the business case. If an AI approach is successful, scalable, and we receive good feedback, we can deploy for the whole bank. That’s the safe approach for banking. I used to work in consulting so I always advise that if you have enough money and resources, you should do the analysis and AI transformation smartly.</p>
+
+
+
+<p>With budgets and finance, hardware costs have dramatically increased and this could greatly impact your strategy, especially when it comes to investment to enhance and modernize infrastructure. HR will also be crucial. You develop talent but refining the way to keep it for the long term is very difficult. With teamwork, you have a team for people to study. Let them use that to develop their career path.</p>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+</item>
+
+<item>
+  <title>🟠 AI is becoming a single point of failure — and most companies don’t see it</title>
+  <link>https://www.cio.com/article/4183037/ai-is-becoming-a-single-point-of-failure-and-most-companies-dont-see-it.html</link>
+  <pubDate>Wed, 10 Jun 2026 10:00:00 +0000</pubDate>
+  <source>CIO.com</source>
+  <description><![CDATA[<b>Why this matters: Service impact possible — prepare comms and confirm vendor status.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<p>Artificial intelligence doesn’t exist in a vacuum. It runs on infrastructure that is increasingly constrained, contested and, in many cases, outside a company’s control.</p>
+
+
+
+<p>That reality is starting to surface in subtle ways. Vendors are adjusting access to AI capabilities, introducing tiered usage models and quietly reshaping what customers can expect from their tools. Microsoft, for example, has already <a href="https://support.microsoft.com/en-US/Microsoft-365-Copilot/standard-versus-priority-access-to-features-in-microsoft-365-copilot-chat" rel="nofollow">shifted features and access</a> within its Copilot ecosystem, signaling that capacity is not unlimited.</p>
+
+
+
+<p>This isn’t new. In the early days of the internet, service providers could throttle access based on demand or pricing tiers until regulation stepped in to standardize availability. AI is beginning to follow a similar trajectory but with a more complex set of constraints: power availability, data center capacity, geopolitical risk and vendor concentration.</p>
+
+
+
+<p>What makes this different is how quickly AI is being embedded into core business workflows. Nearly three-quarters of organizations are already using AI to automate processes across multiple business functions. Yet most have done little to account for the business interruption risk that creates. Many enterprises treat AI as always-available infrastructure. In reality, it is capacity-constrained, vendor-dependent and vulnerable to disruption.</p>
+
+
+
+<p>The next phase of AI maturity isn’t about adoption. It will be about resilience, continuity and dependency management.</p>
+
+
+
+<h2 class="wp-block-heading" id="business-continuity-in-an-ai-dependent-operating-model">Business continuity in an AI-dependent operating model</h2>
+
+
+
+<p>The question is no longer whether work can get done without AI. It is whether businesses can operate at the speed and volume they have already committed to without it.</p>
+
+
+
+<p>Many organizations have redesigned workflows around AI-enabled efficiency. Tasks that once took hours now take minutes. Teams have been streamlined, and service-level commitments have been tightened. In many cases, entire operating models assume continuous AI availability.</p>
+
+
+
+<p>In practice, it doesn’t hold. Even short disruptions can expose the gap. During a recent Microsoft services outage, some organizations lost access to AI models embedded in their workflows. Employees had to manually process tasks that had been automated — slowing operations and creating backlogs almost immediately.</p>
+
+
+
+<p>At a small scale, that’s manageable. At the enterprise scale, it becomes a continuity risk. Planning for AI disruption starts with a mindset shift. Most continuity planning assumes degradation: systems slow down but still function. However, AI introduces scenarios where capabilities are unavailable altogether.</p>
+
+
+
+<p>When building out a business continuity plan, three things are key:</p>
+
+
+
+<ol class="wp-block-list">
+<li><strong>Know what breaks.</strong> Most organizations don’t have a clear inventory of where AI is embedded across their workflows, including dependencies on specific vendors, models and infrastructure. Without that visibility, it’s difficult to understand failure points or build a mitigation plan around them.<br /></li>
+
+
+
+<li><strong>Plan for absence, not degradation.</strong> If an AI system goes offline, what happens next? In many cases, there is no fallback. Skills have atrophied, staffing models have changed and processes have been optimized around automation. This is where risk management needs a seat at the table, not just IT.<br /></li>
+
+
+
+<li><strong>Reintroduce operational buffers.</strong> Resilience requires redundancy — whether that’s retaining institutional knowledge, maintaining alternative workflows or diversifying providers. These investments rarely show immediate returns, which is why they are often deferred.</li>
+</ol>
+
+
+
+<p>This is not fundamentally different from how organizations approached cybersecurity a decade ago. What once felt optional is now baseline.</p>
+
+
+
+<h2 class="wp-block-heading" id="insurance-and-the-emerging-business-interruption-gap">Insurance and the emerging business interruption gap</h2>
+
+
+
+<p>As AI becomes embedded in core operations, the financial exposure tied to its disruption is becoming harder to ignore. This exposure does not fit neatly into existing insurance frameworks.</p>
+
+
+
+<p>There are parallels to the early days of cyber risk. Before stand-alone cyber policies existed, losses were often absorbed — or disputed — across general liability, crime and fraud coverage. Insurers responded by introducing exclusions and, eventually, dedicated cyber policies.</p>
+
+
+
+<p>AI risk is following a similar path, but with additional complexity. Events like the CrowdStrike outage, which affected systems globally, <a href="https://www.reuters.com/technology/insurers-face-business-interruption-claims-after-global-tech-outage-2024-07-19/" rel="nofollow">raised questions about business interruption coverage</a>, with organizations pursuing claims tied to financial losses. In that case, cyber coverage was a likely entry point.</p>
+
+
+
+<p>AI introduces a different layer. A disruption may not be a cyber event at all. It could be tied to power grid constraints affecting data centers, vendor-driven capacity limits, regulatory restrictions or geopolitical events. The failure is external and not necessarily malicious, which raises a fundamental question: Where does the loss sit?</p>
+
+
+
+<p>For most organizations today, the answer is unclear. That uncertainty is driving early conversations around stand-alone AI coverage. While those products are still evolving, the more immediate priority is understanding where exposure exists and where it may be underinsured.</p>
+
+
+
+<p>That requires translating AI dependency into financial terms. What revenue is tied to AI-enabled workflows? What contractual obligations depend on those outputs? What happens if those capabilities are unavailable?</p>
+
+
+
+<p>Until those questions are addressed, the risk remains largely unquantified.</p>
+
+
+
+<h2 class="wp-block-heading" id="your-ai-partners-are-your-risk-model">Your AI partners are your risk model</h2>
+
+
+
+<p>Much of this exposure is concentrated in a small number of providers. The companies building and operating large-scale AI systems, such as OpenAI and Anthropic, are making real-time decisions about how their platforms operate under constraints. Those decisions shape how every dependent organization experiences performance, access and disruption.</p>
+
+
+
+<p>That includes how capacity is allocated when demand exceeds supply, which features are available at different pricing tiers, how models are trained and governed and how infrastructure is expanded or limited based on power and regulatory conditions.</p>
+
+
+
+<p>These are not purely technical considerations. They are business decisions made by third parties that directly affect your operations. As a result, choosing an AI partner is a dependency decision that will shape how your business operates under both normal conditions and disruption.</p>
+
+
+
+<p>Three areas to consider:</p>
+
+
+
+<ol class="wp-block-list">
+<li><strong>Trust and responsibility. </strong>How models are trained, how bias is managed and how outputs are governed all have downstream implications.<br /></li>
+
+
+
+<li><strong>Operational reliability. </strong>Service levels now involve more than uptime. They include which capabilities you can access, at what price tier and whether performance holds when demand is high.<br /></li>
+
+
+
+<li><strong>Alignment of priorities. </strong>When constraints emerge, vendors decide where resources go. Enterprises need to understand where they sit in that hierarchy.</li>
+</ol>
+
+
+
+<p>There is no universal framework for making these decisions yet. Organizations are building their approach in real time.</p>
+
+
+
+<h2 class="wp-block-heading" id="a-different-kind-of-infrastructure-risk">A different kind of infrastructure risk</h2>
+
+
+
+<p>AI is often framed as a competitive advantage. In many cases, it is. But as it shifts from a capability to core infrastructure that is shared, constrained and subject to forces beyond any single organization’s control, the risk profile changes fundamentally.</p>
+
+
+
+<p>That dependency is the risk. Enterprises don’t need to slow down adoption. The pressure to move forward is real. But they do need a clearer view of what they are building on and what happens when that foundation is under strain.</p>
+
+
+
+<p><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><strong><a href="https://www.csoonline.com/expert-contributor-network/">Want to join?</a></strong></p>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 New US CIO appointments, June 2026</title>
+  <link>https://www.cio.com/article/230613/new-cio-appointments.html</link>
+  <pubDate>Wed, 10 Jun 2026 10:00:00 +0000</pubDate>
+  <source>CIO.com</source>
+  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<p><em>Movers &amp; Shakers is where you can keep up with new CIO appointments and gain valuable insight into the job market and CIO hiring trends. As every company becomes a technology company, CEOs and corporate boards are seeking multi-dimensional CIOs and IT leaders with superior skills in technology, communications, business strategy, and digital innovation. The role is more challenging than ever before</em> — <em>but even more exciting and rewarding! If you have CIO job news to share, please </em><a href="martha.heller@hellersearch.com" rel="nofollow"><em>email</em></a><em> me!</em></p>
+
+
+
+<p><strong>Citi appoints Brian Saluzzo as CIO</strong></p>
+
+
+<div class="extendedBlock-wrapper block-coreImage left"><figure class="wp-block-image alignleft size-1240-r3:2 is-resized"> width="1240" height="827" sizes="auto, (max-width: 1240px) 100vw, 1240px"><figcaption class="wp-element-caption"><p>Brian Saluzzo, Citi</p>
+</figcaption></figure><p class="imageCredit">Citi</p></div>
+
+
+
+<p>Citigroup is a global financial services company based in NYC that provides a broad range of financial products and services. Saluzzo joins from Google, where he most recently served as VP of core developer engineering and product management. Earlier in his career, Saluzzo held several senior tech leadership positions at American Express and tech infrastructure leadership roles at Goldman Sachs. He holds a BA from SUNY Geneseo.</p>
+
+
+
+<p><strong>Imran Jalozie named CIO for Arch Insurance North America</strong></p>
+
+
+<div class="extendedBlock-wrapper block-coreImage left"><figure class="wp-block-image alignleft size-1240-r3:2 is-resized"> width="1240" height="828" sizes="auto, (max-width: 1240px) 100vw, 1240px"><figcaption class="wp-element-caption"><p>Imran Jalozie, Arch Insurance North America</p>
+</figcaption></figure><p class="imageCredit">Arch Insurance North America</p></div>
+
+
+
+<p>Arch Insurance North America, part of Arch Capital Group Ltd., includes Arch’s insurance operations in the US and Canada. They provide a wide range of property, casualty, and specialty insurance for corporations, professional firms, and financial institutions. Jalozie joined as VP, IT application development, and served as interim CIO since May 2025. He held a variety of IT and leadership positions prior to joining Arch.</p>
+
+
+
+<p><strong>Diebold Nixdorf welcomes Raj Singh as CIO</strong></p>
+
+
+<div class="extendedBlock-wrapper block-coreImage left"><figure class="wp-block-image alignleft size-1240-r3:2 is-resized"> width="1240" height="827" sizes="auto, (max-width: 1240px) 100vw, 1240px"><figcaption class="wp-element-caption"><p>Raj Singh, Diebold Nixdorf</p>
+</figcaption></figure><p class="imageCredit">Diebold Nixdorf</p></div>
+
+
+
+<p>Diebold Nixdorf automates, digitizes and transforms the way people bank and shop. Its integrated solutions connect digital and physical channels for millions of consumers every day. Most recently, Singh served as CIO at automotive technology supplier Visteon Corp., where he led enterprise AI programs, cloud transformation initiatives, and cybersecurity operations. His background also includes senior tech leadership positions at Ford Motor Co., DTE Energy Co., Horizon Global Corp., and Ally Financial Inc. Singh holds a BE from North Maharashtra University and an MBA from Michigan State University.</p>
+
+
+
+<p><strong>Jay Spears joins Topgolf as CIO</strong></p>
+
+
+<div class="extendedBlock-wrapper block-coreImage left"><figure class="wp-block-image alignleft size-1240-r3:2 is-resized"> width="1240" height="827" sizes="auto, (max-width: 1240px) 100vw, 1240px"><figcaption class="wp-element-caption"><p>Jay Spears, Topgolf</p>
+</figcaption></figure><p class="imageCredit">Topgolf</p></div>
+
+
+
+<p>Topgolf operates over 100 venues around the globe, powered by Toptracer technology. They offer a variety of tech-driven games, a food and drink menu, space to host large events, and a vibe focused on more play for all. Spears joins Topgolf from CEC Entertainment, where he served as CIO. Prior to CEC Entertainment, he held leadership roles at Six Flags Theme Parks, Urban Air Adventure Parks, KPMG, and EZLynx.</p>
+
+
+
+<p><strong>Crown Castle taps Mark Lennon for CIO</strong></p>
+
+
+<div class="extendedBlock-wrapper block-coreImage left"><figure class="wp-block-image alignleft size-1240-r3:2 is-resized"> width="1240" height="827" sizes="auto, (max-width: 1240px) 100vw, 1240px"><figcaption class="wp-element-caption"><p>Mark Lennon, Crown Castle</p>
+</figcaption></figure><p class="imageCredit">Crown Castle</p></div>
+
+
+
+<p>Crown Castle owns, operates, and leases approximately 40,000 cell towers across the US. Most recently, Lennon served as CIO and digital officer at Net Power, where he developed and led a digital strategy for a new phase of growth. He’s also held CIO roles at Archrock, Jardine Lloyd Thompson, Maersk Oil, and UniversalPegasus International. Lennon began his career with the Royal Air Force in the UK.</p>
+
+
+
+<p><strong>Jim Maza announced as CIO for BDO USA</strong></p>
+
+
+<div class="extendedBlock-wrapper block-coreImage left"><figure class="wp-block-image alignleft size-1240-r3:2 is-resized"> width="1240" height="827" sizes="auto, (max-width: 1240px) 100vw, 1240px"><figcaption class="wp-element-caption"><p>Jim Maza, BDO USA</p>
+</figcaption></figure><p class="imageCredit">BDO</p></div>
+
+
+
+<p>BDO USA operates as part of the BDO International network, which spans more than 160 countries and provides audit, tax, and advisory services through independently owned member firms. Maza was most recently CIO of a large insurance brokerage and risk management firm, where he led an IT organization of approximately 250 professionals. He holds a BS from DeVry University and an MS from DePaul University.</p>
+
+
+
+<p><strong>TDS appoints Bill Case CIO</strong></p>
+
+
+<div class="extendedBlock-wrapper block-coreImage left"><figure class="wp-block-image alignleft size-1240-r3:2 is-resized"> width="1240" height="827" sizes="auto, (max-width: 1240px) 100vw, 1240px"><figcaption class="wp-element-caption"><p>Bill Case, Telephone and Data Systems</p>
+</figcaption></figure><p class="imageCredit">TDS</p></div>
+
+
+
+<p>Founded in 1969, Telephone and Data Systems (TDS) provides broadband services and wireless infrastructure through its subsidiaries TDS Telecom and Array Digital Infrastructure. Most recently, Case served as EVP and CIO at WOW! Internet, Cable &amp; Phone, where he helped drive improvements across customer experience, product development, and overall company operations. Earlier in his career, he served as managing partner and CEO of Wheelhouse Consulting Group, and COO, EVP, and chief development officer at ProNerve. Case holds BS and MS degrees from CU Boulder, and an MBA from the Kellogg School of Management at Northwestern University.</p>
+
+
+
+<p><strong>Viral Tripathi named CIO for Diversified</strong></p>
+
+
+<div class="extendedBlock-wrapper block-coreImage left"><figure class="wp-block-image alignleft size-1240-r3:2 is-resized"> width="1240" height="827" sizes="auto, (max-width: 1240px) 100vw, 1240px"><figcaption class="wp-element-caption"><p>Viral Tripathi, Diversified</p>
+</figcaption></figure><p class="imageCredit">Diversified</p></div>
+
+
+
+<p>Diversified is a global company that designs and delivers AV technology solutions. Before joining, Tripathi served as CIO of C1, leading enterprise IT transformation. Before that, he was CTO and then global CIO at Ascendion where he enabled revenue growth via tech modernization and data-driven insights. He holds a BSc from Gujarat University, an MCS from Datapro Information Technology, and an MBA from the University of Cambridge.</p>
+
+
+
+<p><strong>Consumer Cellular appoints Kannan Alagappan as CIO</strong></p>
+
+
+<div class="extendedBlock-wrapper block-coreImage left"><figure class="wp-block-image alignleft size-1240-r3:2 is-resized"> width="1240" height="827" sizes="auto, (max-width: 1240px) 100vw, 1240px"><figcaption class="wp-element-caption"><p>Kannan Alagappan, Consumer Cellular</p>
+</figcaption></figure><p class="imageCredit">Consumer Cellular</p></div>
+
+
+
+<p>Founded in 1995, Consumer Cellular is the first wireless provider built for Americans over 50, and is an approved wireless partner of AARP. Before joining, Alagappan served as CTO at Circles, where he helped to successfully build and scale an AI-native full-stack SaaS platform, and migrate tens of millions of customers replacing legacy telco stacks. He also worked at Dish Network as the CTO and led modernization of their tech stack. Alagappan has an MS from the University of Arkansas.</p>
+
+
+
+<p><strong>Nadene McKenzie-Reid joins Aircastle as CIO</strong></p>
+
+
+<div class="extendedBlock-wrapper block-coreImage left"><figure class="wp-block-image alignleft size-1240-r3:2 is-resized"> width="1240" height="827" sizes="auto, (max-width: 1240px) 100vw, 1240px"><figcaption class="wp-element-caption"><p>Nadene McKenzie-Reid, Aircastle</p>
+</figcaption></figure><p class="imageCredit">Aircastle</p></div>
+
+
+
+<p>Aircastle Limited acquires, leases, and sells commercial jet aircraft to airlines around the world. She served as head of technology at NatWest and earlier served with NatWest as deputy head of technology, and head of risk and PnL technology. She holds a BS from the University of the West Indies and an MS from the University of Bridgeport.</p>
+
+
+
+<p><strong>Northwest Bank hires Chad Ballard as CIO</strong></p>
+
+
+<div class="extendedBlock-wrapper block-coreImage left"><figure class="wp-block-image alignleft size-1240-r3:2 is-resized"> width="1240" height="827" sizes="auto, (max-width: 1240px) 100vw, 1240px"><figcaption class="wp-element-caption"><p>Chad Ballard, Northwest Bank</p>
+</figcaption></figure><p class="imageCredit">Northwest Bank</p></div>
+
+
+
+<p>Founded in 1896, Northwest Bank is a full-service financial institution offering a complete line of business and personal banking products, as well as employee benefits and wealth management services. They operate 151 full-service financial centers and 11 drive-up locations. Ballard most recently served as CIO for shared services operations at Wells Fargo. He previously held leadership positions at JPMorgan Chase and PNC, working on core banking systems, digital channels, and AI platform transformation initiatives. Ballard holds a BS from the University of Alabama at Birmingham.</p>
+
+
+
+<h2 class="wp-block-heading" id="new-cio-appointments-may-2026">New CIO appointments, May 2026</h2>
+
+
+
+<p><strong>Chuck Jones joins Northrop Grumman as CIDO</strong></p>
+
+
+
+<p><strong>McDonald’s names Mustafa Husain CIO</strong></p>
+
+
+
+<p><strong>Turner Construction appoints Dawn Paquette as CIO</strong></p>
+
+
+
+<p><strong>Autodesk names Mike Kelly CIO</strong></p>
+
+
+
+<p><strong>Memorial Hermann Health System appoints Desiree Gandrup-Dupre CIO</strong></p>
+
+
+
+<p><strong>Dycom names Regina Salazar as CIDO</strong></p>
+
+
+
+<p><strong>Todd Treonze joins J.Jill as SVP and CIO</strong></p>
+
+
+
+<p><strong>V2X names Mike Uster CIO</strong></p>
+
+
+
+<p><strong>Horizon Services welcomes John Souther as CIO</strong></p>
+
+
+
+<p><strong>Craig Richardville appointed CDIO for UF Health</strong></p>
+
+
+
+<p><strong>Pep Boys welcomes Nik Umrani as CIO</strong></p>
+
+
+
+<p><strong>Peter Scavuzzo elevated to CITO at CBIZ</strong></p>
+
+
+
+<p><strong>ePlus promotes David Mellor to CIO</strong></p>
+
+
+
+<p><strong>Julie Irish named CIO for Alteryx</strong></p>
+
+
+
+<p><strong>AVI-SPL welcomes Doug King as CIO</strong></p>
+
+
+
+<p><strong>Chris Stori joins Verkada as CIO</strong></p>
+
+
+
+<p><strong>Exostar promotes Amy Hogan to CIO</strong></p>
+
+
+
+<h2 class="wp-block-heading" id="new-cio-appointments-april-2026">New CIO appointments, April 2026</h2>
+
+
+
+<p><strong>Albertsons Companies appoints Brian Rice to board of directors</strong></p>
+
+
+
+<p><strong>Francesco Tinto joins Kimberly-Clark as CIO</strong></p>
+
+
+
+<p><strong>University of Pennsylvania names Joshua Beeman CIO</strong></p>
+
+
+
+<p><strong>Jim Connolly joins Legacy Food Group as CIO</strong></p>
+
+
+
+<p><strong>AGCO appoints Jena Holtberg-Benge as CDIO</strong></p>
+
+
+
+<p><strong>Ryan Biren promoted to CIO for THOR Industries</strong></p>
+
+
+
+<p><strong>Genworth welcomes Morris Taylor as CIO</strong></p>
+
+
+
+<p><strong>Barninder Khurana joins Patriot Growth as CIO</strong></p>
+
+
+
+<p><strong>Prashant Lamba announced as CIO for RGP</strong></p>
+
+
+
+<h2 class="wp-block-heading" id="new-cio-appointments-march-2026">New CIO appointments, March 2026</h2>
+
+
+
+<p><strong>USAA names Dan Griffiths as CIO</strong></p>
+
+
+
+<p><strong>Dori Henderson joins Brown &amp; Brown as CITO</strong></p>
+
+
+
+<p><strong>Bob Hardester named CIO for Advantage Solutions</strong></p>
+
+
+
+<p><strong>Skadden adds Vince DiMascio as CDIO</strong></p>
+
+
+
+<p><strong>Chris Hickok appointed CIO for Messer Construction Co.</strong></p>
+
+
+
+<p><strong>Stormont Vail Health appoints Aaron Wootton as CIO</strong></p>
+
+
+
+<p><strong>TowneBank welcomes Varun Chandhok as CIO</strong></p>
+
+
+
+<p><strong>Todd Paladini joins Freddy’s Frozen Custard &amp; Steakburgers as CIO</strong></p>
+
+
+
+<p><strong>Optiv promotes Doug Goehl to CIO</strong></p>
+
+
+
+<p><strong>Brad Rohrer joins the University of Iowa as CIO</strong></p>
+
+
+
+<p><strong>Morongo appoints Tony Gawne as CIO</strong></p>
+
+
+
+<h2 class="wp-block-heading" id="new-cio-appointments-february-2026">New CIO appointments, February 2026</h2>
+
+
+
+<p><strong>Lucius DiPhillips joins Adobe as CIO</strong></p>
+
+
+
+<p><strong>Delta Air Lines appoints Amala Duggirala as CDTO</strong></p>
+
+
+
+<p><strong>Ahmad Al-Dahle named CTO for Airbnb</strong></p>
+
+
+
+<p><strong>NCR Atleos announces Rohan Pal as CIO</strong></p>
+
+
+
+<p><strong>Arpit Davé joins BioMarin as CDIO</strong></p>
+
+
+
+<p><strong>University of Arizona appoints Elliott Cheu as CIO</strong></p>
+
+
+
+<p><strong>Dave Fazio named CIO for Smith Douglas Homes</strong></p>
+
+
+
+<p><strong>Hassan Janjua joins the City of Newport News, VA as CIO</strong></p>
+
+
+
+<p><strong>RealTruck welcomes Eric Firer as Global CIO</strong></p>
+
+
+
+<p><strong>Thomas Marlow joins Bayhealth has CDIO</strong></p>
+
+
+
+<p><strong>The Oncology Institute announces Rakesh Panda as CIO</strong></p>
+
+
+
+<p><strong>Jay Tkachuk joins Redwood Credit Union as CIO</strong></p>
+
+
+
+<h2 class="wp-block-heading" id="new-cio-appointments-january-2026">New CIO appointments, January 2026</h2>
+
+
+
+<p><strong>Nationwide appoints Michael Carrel as CTO</strong></p>
+
+
+
+<p><strong>Anand Varadarajan named CTO for Starbucks</strong></p>
+
+
+
+<p><strong>Goodyear welcomes Raman Mehta as CIO<br /></strong></p>
+
+
+
+<p><strong>Jim Fowler joins Lumen as CTPO</strong></p>
+
+
+
+<p><strong>DXC Technology appoints Russell Jukes as CDIO</strong></p>
+
+
+
+<p><strong>Dana Haggas named CIO for Emory University</strong></p>
+
+
+
+<p><strong>Associa appoints Michelle Johnson as chief information and transformation officer</strong></p>
+
+
+
+<p><strong>Laura Fultz announced as CDIO for Emory Healthcare</strong></p>
+
+
+
+<p><strong>1-800-FLOWERS.COM, Inc. taps Alex Zelikovsky as CIO</strong></p>
+
+
+
+<p><strong>Westfield welcomes Lloyd Scholz as CIO</strong></p>
+
+
+
+<p><strong>Christopher Mackie promoted to CIO at McGuireWoods</strong></p>
+
+
+
+<p><strong>Kendall Knight joins Intermodal Tank Transport as CIO</strong></p>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Why your most AI-savvy employees are driving shadow AI</title>
+  <link>https://www.cio.com/article/4178359/why-your-most-ai-savvy-employees-are-driving-shadow-ai.html</link>
+  <pubDate>Wed, 10 Jun 2026 10:00:00 +0000</pubDate>
+  <source>CIO.com</source>
+  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<p>Last year, an engineer working for a messaging app posted <a href="https://www.teamblind.com/post/does-your-company-ban-chatgpt-ztbfn16d" rel="nofollow">a question</a> on TeamBlind, the anonymous forum for verified tech workers: Did every company restrict ChatGPT, Claude, and Gemini — or was it just his?</p>
+
+
+
+<p>When the company he worked for banned these tools, it offered an internal alternative built on ChatGPT, but the engineer didn’t like it because it slowed him down. “It was kinda useless,” he said.</p>
+
+
+
+<p>The TeamBlind thread quickly filled with responses from techies at other organizations who joined him in his frustration that company-approved AI tools were heavily restricted or stripped of many useful features.</p>
+
+
+
+<p>A week later, the same engineer returned to the forum with a workaround. Using a WebAssembly-based LLM engine, he managed to run a coding model entirely inside his browser, with conversations stored locally and no outbound network traffic for his employer to detect. “Happy coding,” he wrote on the forum. “DM me for features.”</p>
+
+
+
+<p>Often, the employees who best understand the capabilities of gen AI are also the most likely to bend or break organizational rules governing its use. Engineers and, perhaps counterintuitively, other workers who have undergone mandatory AI training often see official guardrails less as strict boundaries and more as hurdles to overcome in the name of speed. A recent <a href="https://lexisnexis.widen.net/s/szpcvtln8p/us-ln2026futureofworkreport" rel="nofollow">LexisNexis report</a> found that 74% of AI-trained employees use <a href="https://www.cio.com/article/4095393/6-strategies-for-cios-to-effectively-manage-shadow-ai.html?utm=hybrid_search">unauthorized AI tools</a>, versus only 17% of untrained employees.</p>
+
+
+
+<p>“The issue is the gap between employee capability and enterprise-ready tooling,” says Dani McCormick, VP of product at Nexis Solutions. “Those with greater awareness of AI tools are more likely to experiment and incorporate them into their workflows.”</p>
+
+
+
+<p>Training appears to remove some of the hesitation employees may initially feel toward gen AI, which can act as a barrier to adoption. “The takeaway isn’t that training creates risk, but that it surfaces demand faster than many organizations are prepared to meet,” McCormick adds.</p>
+
+
+
+<p>Given all these, CIOs need to walk a fine line between encouraging AI adoption and controlling how these tools are used. That’s a difficult task that requires a rethink. As employees grow more comfortable with gen AI, traditional approaches, including blanket bans, may no longer work and can even prove counterproductive.</p>
+
+
+
+<p>A more productive approach would be to capitalize on shadow AI’s silver lining. Using restricted AI tools can also be a sign that employees see value and are trying to move faster, says Seth Cohen, CIO at P&amp;G. “The opportunity is to bring that learning into a system that’s right for the company and can scale,” he says.</p>
+
+
+
+<p>But figuring out how to create that system can be a challenge for many CIOs under pressure to encourage experimentation while also protecting sensitive data and maintaining control over an increasingly fragmented AI landscape. </p>
+
+
+
+<h2 class="wp-block-heading" id="build-better-trainings">Build better trainings</h2>
+
+
+
+<p>One of the biggest challenges organizations face with AI use is how uneven it can be across the business. While some teams have integrated AI deeply into their daily workflows, others remain hesitant or disengaged.</p>
+
+
+
+<p>“That imbalance is often where unsanctioned usage is most visible, and where there’s the greatest opportunity for better alignment,” says McCormick.</p>
+
+
+
+<p>One way to close that divide is through <a href="https://www.cio.com/article/4165040/you-cant-train-your-way-out-of-the-ai-skills-gap.html?utm=hybrid_search">hands-on AI training programs</a> that address both the technical and ethical dimensions of AI use. These programs should teach employees how to integrate authorized AI tools into their daily work while explaining why using those authorized platforms matters, from protecting sensitive data and ensuring compliance, to maintaining transparency and accountability across the organization.</p>
+
+
+
+<p>“Training is most effective when employees can apply it in their day-to-day roles, whether that’s improving decisions, accelerating innovation, or strengthening execution,” says Cohen.</p>
+
+
+
+<p>These trainings should include everyone, not just tech workers, because gen AI tools are becoming mainstream, and employees with little formal technical background are increasingly experimenting with them on their own — a trend many CIOs have noticed.</p>
+
+
+
+<p>“I’d say around 30% of untrained staff are more curious and exploring capabilities,” says Art Thompson, CIO at the City of Detroit. The real focus, he adds, should be empowering people to use technology responsibly. “If not, the shadow ecosystem will grow and we’ll have less visibility than we do today,” he adds.</p>
+
+
+
+<p>A strong AI training program needs to address judgment, governance, and trust all at once, while also giving employees a broader understanding of the organization, its partners, and the wider ecosystem in which their AI tools operate. Workers need to understand how their choices can affect data security, customer trust, regulatory compliance, and business relationships.</p>
+
+
+
+<p>Thompson saw that many employees still fail to understand how <a href="https://www.cio.com/article/3833575/3-musts-when-recruiting-vendors-for-ai.html?utm=hybrid_search">AI vendors</a> source information or how outputs should be verified. “Having rules is a great start, but people need to understand the guidance to use the tools responsibly,” he says. “Having business units buy into the governance piece and be a part of the IT culture is a great way to help shape that.”</p>
+
+
+
+<p>Several CIOs argue that rule enforcement should be done carefully. “If employees fear they’ll be disciplined for experimenting with AI, they won’t stop using it, they’ll just hide it,” says Matt Kunkel, CEO and co-founder of AI GRC platform LogicGate. “Instead, organizations should create an environment where employees feel comfortable disclosing AI use without fear of retribution, and reward employees who flag potential AI risks.”</p>
+
+
+
+<h2 class="wp-block-heading" id="addressing-employee-ai-needs">Addressing employee AI needs</h2>
+
+
+
+<p>Designing better training programs and stronger governance frameworks is only half the challenge. Organizations also need to address the underlying reason employees turn to shadow AI in the first place, which is looking for tools that help them work faster and reduce friction in their daily tasks.</p>
+
+
+
+<p>In many cases, if someone is willing to pay out of their own pocket for an AI tool, it may mean they’re not getting what they need from the organization’s official systems.</p>
+
+
+
+<p>“That’s both a risk issue and a missed opportunity,” says Prakash Kota, CIO at UKG. “Shadow AI grows in the gap between what employees are ready to do and what the organization enables them to do.”</p>
+
+
+
+<p>According to Kota, this should be seen as an opportunity to better understand what employees are trying to accomplish and where official tools fall short.</p>
+
+
+
+<p>Richard Amos, CIO of IT services provider Blue Mantis, agrees with this approach. “In general, I’d seek to first understand if approved tools are hard to use, limited, or slow to provision,” he says. “If they are, employees will find alternatives. People naturally look for ways to get their work done better.”</p>
+
+
+
+<p>Amos adds that, in most cases, employees who use unauthorized AI tools don’t act with malicious intent. Often, shadow AI doesn’t emerge from defiance but from curiosity, frustration, or a desire to work faster. “Once the use case is understood, it may be an opportunity to review it at the AI governance committee and consider it for the backlog,” Amos adds.</p>
+
+
+
+<p>Paying attention to the AI tools employees use covertly can also help CIOs spot emerging trends before they become larger governance or security issues. Organizations with visibility into employee experimentation are often better positioned to understand which tools workers actually find useful.</p>
+
+
+
+<p>“You’ll also catch new tools the moment they show up,” says Ryan Fritts, CIO of security provider Everon Solutions.</p>
+
+
+
+<h2 class="wp-block-heading" id="picking-up-the-pace">Picking up the pace</h2>
+
+
+
+<p>Several organizations have upgraded their AI tools after realizing that employees were turning to unauthorized alternatives to fill gaps in existing systems. But simply offering approved tools isn’t enough. Those platforms also need to remain flexible and adaptable enough to evolve alongside employees’ needs, and the rapid pace of AI innovation. “No one will be excited to build digital solutions on a platform that uses outdated models,” says Cohen.</p>
+
+
+
+<p>Some organizations even give employees more flexibility by allowing them to choose among several of the latest commercially available foundation models. Others provide secure AI environments where workers can safely experiment.</p>
+
+
+
+<p>“Allow for freedom within a framework and ensure active learnings are captured to improve the overall platform offerings,” Cohen says.</p>
+
+
+
+<p>The underlying challenge is finding the right balance between rules and freedom, giving employees enough space to integrate AI effectively into their work while still maintaining oversight. CIOs need to build systems and cultures that allow teams to learn without exposing the organization to unnecessary risk.</p>
+
+
+
+<p>And instead of playing an endless guessing game with new AI apps, organizations may gain more by focusing on their data.</p>
+
+
+
+<p>“The work that actually moves the needle is on the data side, getting clear on what data sits where, and being able to enforce policy on it in real time,” Fritts says. “Get the data posture right and most of the shadow AI panic quiets down on its own.”</p>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 EU rules on securing IT products begin this week, but enterprises aren’t ready</title>
+  <link>https://www.cio.com/article/4183415/eu-rules-on-securing-it-products-begin-this-week-but-enterprises-arent-ready.html</link>
+  <pubDate>Wed, 10 Jun 2026 09:57:54 +0000</pubDate>
+  <source>CIO.com</source>
+  <description><![CDATA[<b>Why this matters: Supply chain risk — audit third-party dependencies and vendor access.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<p>Too many enterprises remain ignorant of the European Union’s 2024 Cyber Resilience Act, the first elements of which enter force on June 11, according to a new survey.</p>
+
+
+
+<p>Two-thirds of respondents to the <a href="https://www.linuxfoundation.org/research/cra-readiness-2026" rel="nofollow" target="_blank">survey by Open Source Security Foundation</a> said they were unfamiliar with the CRA, which aims to make hardware and software sold in the EU more secure.</p>
+
+
+
+<p>As well as the CRA’s demands on vendors, it also has <a href="https://digital-strategy.ec.europa.eu/en/policies/cra-open-source" rel="nofollow" target="_blank">implications for users of open-source software</a>, hence the Foundation’s interest in the topic. Among other measures, the CRA creates the role of open-source steward within the enterprise, with responsibility for ensuring that a security policy is in place for any software being used within the organization.</p>
+
+
+
+<p>The first part of the CRA to enter force, on June 11, concerns the designation of conformity assessment bodies by member states. Then, from September 11, manufacturers will be required to begin reporting vulnerabilities in their products to the relevant authorities. The remaining obligations under the Act, which include substantial financial penalties, will apply from December 11, 2027.</p>
+
+
+
+<p>The impending sanctions seem not to have concerned businesses: 56 percent of respondents to the OpenSSF survey were unaware that non-compliance fines could reach €15 million or 2.5 percent of global annual turnover.</p>
+
+
+
+<p>The lack of knowledge about the implications of the Act surprised OpenSSF CTO <a href="https://www.linkedin.com/in/darthcrob/" rel="nofollow">Christoph</a><a href="https://www.linkedin.com/in/darthcrob/" rel="nofollow" target="_blank">e</a><a href="https://www.linkedin.com/in/darthcrob/" rel="nofollow">r Robinson</a>. “We’ve been speaking on this topic for some time and we’re scratching our heads on why more companies are not aware of the implications of the Act,” he said.</p>
+
+
+
+<h2 class="wp-block-heading" id="global-concern">Global concern</h2>
+
+
+
+<p>He surmised that some companies don’t think EU regulations on hardware and software security apply to them — but such concerns will soon be a global matter. “Other countries, like Japan, are considering similar laws,” he said.</p>
+
+
+
+<p>One area of misunderstanding could be that the CRA applies to vendors, and their customers may think that the requirements under the Act didn’t apply to them. He said that this was a misguided approach, particularly when the CRA’s application to open-source software is taken into account.</p>
+
+
+
+<p>“There are about 700 million projects in Git Hub. If you work for an organization like a bank, you have little idea which of those projects are being used,” he said.</p>
+
+
+
+<p>Under the Act, software companies will have to supply a software bill of materials (SBOM) that has been passed as secure, he said.</p>
+
+
+
+<p>Companies that supply US federal government organizations already face this requirement, he said: “If you’re selling to the US government — which is the largest customer on the planet – you should be providing an SBOM.”</p>
+
+
+
+<p>Cybersecurity consultant <a href="https://www.linkedin.com/in/hans-study/" rel="nofollow" target="_blank">Hans Study</a> said that by addressing the supply chain issue, the CRA is a step in the right direction. “Almost every application has dependencies, whether that is free and open-source software, commercial packages, or some mix of both. The problem has always been responsibility, and the blame game that comes with it. What the CRA does is make it harder for companies to dodge that responsibility when they are building, selling, or placing products with digital elements on the market,” he said.</p>
+
+
+
+<h2 class="wp-block-heading" id="ai-ignorance">AI ignorance</h2>
+
+
+
+<p>According to <a href="https://www.linkedin.com/in/micallahan/" rel="nofollow" target="_blank">Michael Callahan</a>, VP of Cyber Strategy at Salt Security, one of the issues that could cause problems in the future is the growing use of AI in the software development process. “The Cyber Resilience Act assumes enterprises know what is in their software. That assumption breaks down when AI coding assistants are generating a significant share of code. An AI assistant has never read your organization’s security policies, your licensing obligations, or your open-source governance standards. The code it produces may contain dependencies, patterns, or vulnerabilities that your security team cannot easily trace back to a specific decision or a specific developer.”</p>
+
+
+
+<p>Enterprises are quickly running out time to fix issues and many are pessimistic about their chances. According to the OpenSSF survey, only 41percent of manufacturers expect to be fully compliant by December 2027, while 39 percent do not know when they will be.</p>
+
+
+
+<p>It may be that the proposed fines could concentrate minds. Robinson said that it could be like GDPR where a few heavy fines drew companies’ attention to the regulation. The upper limit on fines is per infraction, not per company, he said: “Something like that could wipe out an SME and seriously hit large corporations.” The legislation should be something that all businesses need to be aware of, but there is still a long way to go.</p>
+
+
+
+<p></p>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Sources: SK Hynix plans to list its shares in the US as soon as August, seeking to capitalize on AI stock demand and broaden its investor base (Reuters)</title>
+  <link>https://www.techmeme.com/260610/p17#a260610p17</link>
+  <pubDate>Wed, 10 Jun 2026 09:55:30 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.reuters.com/world/asia-pacific/south-koreas-sk-hynix-eyes-us-listing-soon-august-sources-say-2026-06-10/"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260610/i17.jpg" vspace="4" /></a>
+<p><a href="https://www.techmeme.com/260610/p17#a260610p17" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="http://www.reuters.com/">Reuters</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://www.reuters.com/world/asia-pacific/south-koreas-sk-hynix-eyes-us-listing-soon-august-sources-say-2026-06-10/">Sources: SK Hynix plans to list its shares in the US as soon as August, seeking to capitalize on AI stock demand and broaden its investor base</a></b></span>&nbsp; &mdash;&nbsp; SK Hynix (000660.KS) plans to list its shares in the U.S. as soon as August, said two sources familiar with the matter, as the South Korean memory chipmaker seeks &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Sources: Ant International is considering raising ~$1B at a $10B+ valuation, which could help pave the way for a potential Hong Kong IPO as soon as 2026 (Bloomberg)</title>
   <link>https://www.techmeme.com/260610/p16#a260610p16</link>
   <pubDate>Wed, 10 Jun 2026 09:50:04 +0000</pubDate>
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.bloomberg.com/news/articles/2026-06-10/ant-international-is-said-to-seek-1-billion-to-boost-growth"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260610/i16.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260610/p16#a260610p16" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="https://www.bloomberg.com/">Bloomberg</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/articles/2026-06-10/ant-international-is-said-to-seek-1-billion-to-boost-growth">Sources: Ant International is considering raising ~$1B at a $10B+ valuation, paving the way for a potential Hong Kong IPO as soon as this year</a></b></span>&nbsp; &mdash;&nbsp; Ant Group Co.'s international business is considering raising about $1 billion to accelerate growth, according to people familiar with the situation.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/articles/2026-06-10/ant-international-is-said-to-seek-1-billion-to-boost-growth">Sources: Ant International is considering raising ~$1B at a $10B+ valuation, which could help pave the way for a potential Hong Kong IPO as soon as 2026</a></b></span>&nbsp; &mdash;&nbsp; Ant Group Co.'s international business is considering raising about $1 billion to accelerate growth, according to people familiar with the situation.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
 </item>
 
 <item>
@@ -21,27 +1343,17 @@
   <pubDate>Wed, 10 Jun 2026 09:45:35 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><p>The company updated hosted customer instances to patch a security issue it reportedly had known about since April 7.</p>
-<p>The post <a href="https://www.securityweek.com/servicenow-patches-vulnerability-exploited-against-some-customers/">ServiceNow Patches Vulnerability Exploited Against Some Customers</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/servicenow-patches-vulnerability-exploited-against-some-customers/">ServiceNow Patches Vulnerability Exploited Against Some Customers</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
 </item>
 
 <item>
-  <title>🔵 Tata&#x27;s chairman predicts AI agents will cut half the jobs at Tata Consultancy Services, and says TCS plans to reduce hiring in coming years as it ramps up AI (Sankalp Phartiyal/Bloomberg)</title>
+  <title>🔵 Tata&#x27;s chairman predicts AI agents will replace half of Tata Consultancy Services&#x27; jobs and says TCS plans to reduce hiring in the coming years as it adopts AI (Sankalp Phartiyal/Bloomberg)</title>
   <link>https://www.techmeme.com/260610/p15#a260610p15</link>
   <pubDate>Wed, 10 Jun 2026 09:40:25 +0000</pubDate>
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.bloomberg.com/news/articles/2026-06-09/asia-s-largest-outsourcer-to-slow-hiring-as-ai-reshapes-industry"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260610/i15.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260610/p15#a260610p15" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Sankalp Phartiyal / <a href="https://www.bloomberg.com/">Bloomberg</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/articles/2026-06-09/asia-s-largest-outsourcer-to-slow-hiring-as-ai-reshapes-industry">Tata's chairman predicts AI agents will cut half the jobs at Tata Consultancy Services, and says TCS plans to reduce hiring in coming years as it ramps up AI</a></b></span>&nbsp; &mdash;&nbsp; Sign up for the daily India Edition newsletter by Menaka Doshi - an insider's guide to the emerging economic powerhouse, and the billionaires and businesses behind its rise.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Swedish autonomous truck company Einride will debut on the Nasdaq today after completing a SPAC merger at a pre-money valuation of $1.35B (Dominic Chopping/Wall Street Journal)</title>
-  <link>https://www.techmeme.com/260610/p14#a260610p14</link>
-  <pubDate>Wed, 10 Jun 2026 09:35:04 +0000</pubDate>
-  <source>Techmeme</source>
-  <description><![CDATA[<b>Why this matters: Vendor risk signal — evaluate roadmap and support stability.</b><br/><a href="https://www.wsj.com/business/autos/autonomous-truck-company-einride-to-begin-trading-on-nasdaq-cde6a2f0?st=pHNTUd&amp;reflink=desktopwebshare_permalink"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260610/i14.jpg" vspace="4" /></a>
-<p><a href="https://www.techmeme.com/260610/p14#a260610p14" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Dominic Chopping / <a href="https://www.wsj.com/">Wall Street Journal</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.wsj.com/business/autos/autonomous-truck-company-einride-to-begin-trading-on-nasdaq-cde6a2f0?st=pHNTUd&amp;reflink=desktopwebshare_permalink">Swedish autonomous truck company Einride will debut on the Nasdaq today after completing a SPAC merger at a pre-money valuation of $1.35B</a></b></span>&nbsp; &mdash;&nbsp; The company's backers include Stockholm-based EQT Ventures&nbsp; &mdash;&nbsp; STOCKHOLM&mdash;Swedish autonomous truck company Einride will make its trading debut &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/articles/2026-06-09/asia-s-largest-outsourcer-to-slow-hiring-as-ai-reshapes-industry">Tata's chairman predicts AI agents will replace half of Tata Consultancy Services' jobs and says TCS plans to reduce hiring in the coming years as it adopts AI</a></b></span>&nbsp; &mdash;&nbsp; Sign up for the daily India Edition newsletter by Menaka Doshi - an insider's guide to the emerging economic powerhouse, and the billionaires and businesses behind its rise.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
 </item>
 
 <item>
@@ -49,7 +1361,7 @@
   <link>https://www.zdnet.com/article/best-laptop-cooling-pad/</link>
   <pubDate>Wed, 10 Jun 2026 09:00:55 +0000</pubDate>
   <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/>We tested the best laptop cooling pads to keep your device running smooth with powerful cooling, RGB lights, high RPM and more.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/>We tested the best laptop cooling pads to keep your device running smooth with powerful cooling, RGB lights, high RPM and more.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
 </item>
 
 <item>
@@ -262,7 +1574,7 @@
 
 
 <p>Five years ago, AI red teaming was a niche specialty practiced by a handful of researchers. Today, it encompasses cybersecurity, safety, misinformation, autonomy, and governance. Tomorrow it will look different again — shaped by whatever the next generation of AI systems turns out to be capable of.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
 </item>
 
 <item>
@@ -531,7 +1843,7 @@
 
 
 <p><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><strong><a href="https://www.csoonline.com/expert-contributor-network/">Want to join?</a></strong></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
 </item>
 
 <item>
@@ -540,7 +1852,7 @@
   <pubDate>Wed, 10 Jun 2026 08:50:12 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: Could impact sign-ins/MFA/Conditional Access — watch for login issues.</b><br/><p>Two OS command injection flaws can be exploited remotely, without authentication, for arbitrary code execution.</p>
-<p>The post <a href="https://www.securityweek.com/critical-vulnerabilities-patched-in-fortinet-ivanti-products/">Critical Vulnerabilities Patched in Fortinet, Ivanti Products</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/critical-vulnerabilities-patched-in-fortinet-ivanti-products/">Critical Vulnerabilities Patched in Fortinet, Ivanti Products</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
 </item>
 
 <item>
@@ -549,259 +1861,7 @@
   <pubDate>Wed, 10 Jun 2026 07:38:41 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><p>In addition, Rockwell Automation announced some enhancements to its SecureOT cybersecurity solution for OT.</p>
-<p>The post <a href="https://www.securityweek.com/ics-patch-tuesday-vulnerabilities-fixed-by-siemens-schneider-phoenix-contact/">ICS Patch Tuesday: Vulnerabilities Fixed by Siemens, Schneider, Phoenix Contact</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 생성형 AI·에이전틱 AI·데이터 분석…CIO가 꼽은 2026년 12대 전략 과제</title>
-  <link>https://www.cio.com/article/4183210/%ec%83%9d%ec%84%b1%ed%98%95-ai%c2%b7%ec%97%90%ec%9d%b4%ec%a0%84%ed%8b%b1-ai%c2%b7%eb%8d%b0%ec%9d%b4%ed%84%b0-%eb%b6%84%ec%84%9dcio%ea%b0%80-%ea%bc%bd%ec%9d%80-2026%eb%85%84-12%eb%8c%80.html</link>
-  <pubDate>Wed, 10 Jun 2026 07:25:33 +0000</pubDate>
-  <source>CIO.com</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><div id="remove_no_follow">
-		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
-					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
-						<div class="article-column__content">
-<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
-
-
-
-<p>보험 중개 기업 트루코디아(Trucordia)의 CIO <a href="https://www.linkedin.com/in/rajeevkhanna1/" rel="nofollow" target="_blank">라지브 칸나</a>가 추진하는 전략 과제는 대부분의 CIO가 꼽는 우선순위와 크게 다르지 않다. 그중에서도 조직 전반에 AI를 도입하는 것이 가장 중요한 과제로 자리하고 있다.</p>
-
-
-
-<p>다만 칸나는 사이버 보안, 데이터 및 분석 프로젝트, 혁신 활동 역시 핵심 전략 과제로 꼽으며 “이 모든 과제를 동시에 추진하고 있다”라고 설명했다.</p>
-
-
-
-<p>이들 과제 가운데 특별히 새로운 것은 없지만, 칸나는 어느 분야에서도 획일적인 프로젝트 방식이나 추상적인 목표만으로는 성과를 낼 수 없다는 점을 잘 알고 있다.</p>
-
-
-
-<p>대신 자동화와 AI를 활용해 회사의 업무 프로세스 효율성을 높이고 있다. 또한 기술을 통해 트루코디아 고객의 구체적인 요구를 더욱 효과적으로 지원하고 있으며, 새로운 제품과 서비스를 개발해 시장에서 차별화를 이루고 성장을 이끌고 있다.</p>
-
-
-
-<p>칸나는 “기술은 비즈니스 혁신과 서비스 제공 속도를 높이는 핵심 동력”이라고 말했다.</p>
-
-
-
-<p>칸나가 설정한 전략적 우선순위와 그 목표는 CIO.com의 <a href="https://us.resources.cio.com/resources/state-of-the-cio/" rel="nofollow" target="_blank">‘2026 CIO 현황(State of the CIO)</a>‘ 조사에서 나타난 오늘날 IT 부문의 핵심 전략 과제와도 일치한다.</p>
-
-
-
-<p>가장 전략적으로 중요한 기술 이니셔티브를 묻는 질문에 CIO들은 생성형 AI를 1순위로 꼽았다. 이어 에이전틱 AI와 데이터·비즈니스 분석이 뒤를 이었다.</p>
-
-
-
-<p>보안·리스크 관리와 IT 및 비즈니스 프로세스 자동화가 상위 5대 전략 과제를 완성했다.</p>
-
-
-
-<p>반면 애플리케이션 현대화, 클라우드 관리, 클라우드용 애플리케이션 개발 및 이전과 같은 전통적인 IT 업무는 상대적으로 낮은 순위에 머물렀다.</p>
-
-
-
-<p>CIO와 경영 자문가, IT 업계 분석가들은 이러한 전략 과제 목록이 기술 리더들의 역할 변화를 보여준다고 평가한다. CIO들이 조직의 전략 수립과 비즈니스 성과 창출을 지원하는 데 더 많은 역량을 투입하는 반면, 기술적 완성도 자체를 최우선 목표로 두는 비중은 줄어들고 있다는 것이다.</p>
-
-
-
-<p>‘2026 CIO 현황’ 조사 보고서는 “CIO들은 기업 전반의 AI 도입과 비즈니스 가치 창출을 뒷받침하기 위해 필요한 IT 아키텍처, 조직 구조, 프로세스 혁신을 주도하고 있다”라고 분석했다.</p>
-
-
-
-<p>이 같은 변화는 CIO 역할이 운영 지시를 수행하는 관리자에서 조직 혁신을 이끄는 리더로 진화하고 있음을 보여준다. CIO들은 AI 도입을 촉진하고 모든 기술 투자에서 높은 가치를 창출하기 위해 비즈니스 리더와 적극적으로 협력하고 있다.</p>
-
-
-
-<p>2026년 CIO들의 시간 활용 방식도 이러한 흐름을 반영한다. 조사에 따르면 CIO들은 잠재적인 AI 프로젝트를 논의하기 위해 비즈니스 리더와 더욱 긴밀히 협력하는 데 많은 시간을 투자하고 있으며, 새로운 기술을 학습하고 AI 추진을 위한 프레임워크와 조직 체계를 구축하는 데도 집중하고 있다.</p>
-
-
-
-<p>반면 지난해와 비교하면 IT 공급업체와의 협상, IT 위기 대응, 비용 통제 및 예산 관리에 쓰는 시간은 줄어든 것으로 나타났다.</p>
-
-
-<div class="extendedBlock-wrapper block-coreImage undefined"><figure class="wp-block-image"><img alt="State of the CIO 2026 - Top 12 Strategic Initiatives (slide 39)" class="wp-image-4178311" height="475" src="https://b2b-contenthub.com/wp-content/uploads/2026/05/slide39-Top-12-Strategic-Initiatives-State-of-the-CIO-2026-1.jpg?quality=50&amp;strip=all&amp;w=1024" width="1024" /></figure><p class="imageCredit">CIO.com / Foundry</p></div>
-
-
-
-<h2 class="wp-block-heading" id="%ea%b8%b0%ec%88%a0%ec%9d%b4-%ec%9d%b4%eb%81%84%eb%8a%94-%ec%83%88%eb%a1%9c%ec%9a%b4-%ec%97%ad%eb%9f%89%ea%b3%bc-%ec%a0%9c%ed%92%88-%ed%98%81%ec%8b%a0">기술이 이끄는 새로운 역량과 제품 혁신</h2>
-
-
-
-<p>칸나의 우선순위는 이러한 조사 결과를 그대로 반영한다. 그는 AI를 적극 활용해 조직의 차별화 역량을 강화하고, 고객을 위한 새로운 기능과 제품을 더욱 효율적이고 빠르게 개발·출시하는 데 집중하고 있다고 설명했다.</p>
-
-
-
-<p>또한 데이터와 분석을 활용해 고객 서비스를 개선하고 시장 수요에 부합하는 제품을 제공하는 프로젝트에도 우선순위를 두고 있다. 대표적인 사례로 분석 도구에 대규모 언어 모델(LLM)을 통합해 사용자가 자연어로 데이터를 질의하고 분석할 수 있도록 지원하고 있다.</p>
-
-
-
-<p>이 모든 작업을 추진하는 과정에서도 보안은 항상 최우선 고려 사항이다. 사이버 보안은 지속적인 관심과 투자가 필요한 상시 과제이기 때문이다.</p>
-
-
-
-<p>칸나는 “사이버 위협은 끊임없이 변화하는 목표물과 같다”라며 “최신 기술과 위협 동향을 지속적으로 파악하고 시스템을 현대화하는 동시에 공격자보다 한발 앞서 대응해야 한다”라고 말했다. 이어 “이는 앞으로도 계속 집중해야 할 장기 과제가 될 것”이라고 설명했다.</p>
-
-
-
-<h2 class="wp-block-heading" id="ai-%ed%99%95%ec%82%b0%ec%9d%b4-%ed%95%b5%ec%8b%ac-%eb%aa%a9%ed%91%9c">AI 확산이 핵심 목표</h2>
-
-
-
-<p>메트라이프(MetLife)의 글로벌 CIO <a href="https://www.linkedin.com/in/nicknadgauda/" rel="nofollow" target="_blank">닉 나드가우다</a> 역시 IT 전략 과제를 비즈니스 성장을 견인하는 핵심 수단으로 바라보고 있다.</p>
-
-
-
-<p>나드가우다는 “현재 CIO로서 가장 중요한 전략 과제는 제한적인 실험 단계에 머물러 있는 AI를 기업 운영 전반에 내재된 핵심 역량으로 확장하는 것”이라며 “메트라이프는 AI를 단순한 기술 프로젝트가 아니라 기업 전략을 실현하는 핵심 동력으로 보고 있다”라고 밝혔다.</p>
-
-
-
-<p>이어 “AI는 더 나은 의사결정을 지원하고 업무를 단순화하며 궁극적으로 고객과 기업 모두에게 더 나은 성과를 제공하도록 돕는다”라고 설명했다.</p>
-
-
-
-<p>이를 위해 메트라이프는 사내 통합 AI 플랫폼인 ‘메트IQ(MetIQ)’를 구축했다. 이 플랫폼은 팀들이 보안과 거버넌스가 보장된 환경에서 AI 솔루션을 실험하고 개발·배포할 수 있도록 지원한다.</p>
-
-
-
-<p>나드가우다는 “메트IQ는 빠르게 변화하는 기술 환경에 유연하게 대응할 수 있도록 하면서도 데이터, 개인정보, 리스크에 대한 강력한 통제 체계를 유지할 수 있게 해준다”라고 말했다.</p>
-
-
-
-<p>메트라이프 IT 조직은 AI를 직원들의 업무 도구와 프로세스에도 통합하고 있다. 이를 통해 AI가 단순히 사후 분석 도구가 아니라 의사결정 초기 단계부터 지원하는 협업 파트너 역할을 수행하도록 한다는 설명이다.</p>
-
-
-
-<p>또한 직원들이 실제 업무를 수행하는 방식에 맞춰 AI 경험과 도구, 교육 프로그램을 설계하고 있다. 나드가우다는 직원들이 AI가 자신의 일상 업무와 직접적으로 관련돼 있다고 느낄 때 조직 전반에서 의미 있는 활용이 이뤄진다고 설명했다.</p>
-
-
-
-<p>그 결과 AI는 현재 엔지니어링, 운영, 고객 접점 부서를 포함한 다양한 조직에서 업무 수행 방식의 자연스러운 일부로 자리 잡고 있다고 그는 평가했다.</p>
-
-
-
-<p>나드가우다는 이러한 변화가 CIO 역할의 진화를 보여준다고 강조했다.</p>
-
-
-
-<p>그는 “기술과 비즈니스가 완전히 융합된 시대에는 기업 운영 방식 자체를 설계하는 것이 CIO의 역할”이라며 “기업이 더 빠르게 움직이고, 더 나은 의사결정을 내리며, 고객에게 더 큰 가치를 제공할 수 있도록 지원하는 방안을 끊임없이 고민해야 한다”라고 말했다.</p>
-
-
-
-<h2 class="wp-block-heading" id="%ec%97%90%ec%9d%b4%ec%a0%84%ed%8b%b1-ai-cio%ec%9d%98-%ed%95%b5%ec%8b%ac-%ec%9a%b0%ec%84%a0%ec%88%9c%ec%9c%84%eb%a1%9c-%eb%b6%80%ec%83%81">에이전틱 AI, CIO의 핵심 우선순위로 부상</h2>
-
-
-
-<p>타타컨설턴시서비스(TCS)의 CIO <a href="https://www.linkedin.com/in/janardhan-santhanam-b57a2a7/" rel="nofollow" target="_blank">자나르단 산타남</a> 역시 비즈니스 혁신을 IT의 가장 중요한 전략 과제로 보고 있다. 산타남은 이를 실현하기 위한 핵심 수단으로 에이전틱 AI를 활용하고 있다. ‘2026 CIO 현황’ 조사에서 응답자의 38%는 에이전틱 AI를 전략적으로 중요한 기술 이니셔티브로 꼽았다.</p>
-
-
-
-<p>산타남은 “가장 중요한 과제는 조직을 에이전틱 엔터프라이즈로 전환해 업무 수행 방식을 재정의하는 것”이라며 “조직 성장에 필수적인 지속 가능하고 비선형적인 성과 향상을 실현하는 것이 목표”라고 밝혔다.</p>
-
-
-
-<p>다른 CIO들과 마찬가지로 산타남 역시 성공적인 추진을 위해 IT 인프라를 넘어 조직 전체로 시야를 확장했다.</p>
-
-
-
-<p>그는 “우리의 목표는 직원 전반에 AI 우선(AI-first) 문화를 정착시키고, 내부 업무 기능과 IT 운영 모델을 ‘에이전트+애플리케이션+인간’이 협력해 지능형 의사결정과 자율 실행을 수행하는 구조로 전환하는 것”이라고 설명했다.</p>
-
-
-
-<p>이어 “모든 직원이 AI 인프라를 활용할 수 있도록 한 데 그치지 않고, 각 구성원과 팀에 자율성을 부여해 생산성을 두 배 수준으로 끌어올릴 수 있는 기반을 마련했다”라고 말했다.</p>
-
-
-
-<p>또한 IT 조직은 비즈니스 부문 전반의 프로세스를 재설계해 원하는 비즈니스 성과를 달성하고 업무 속도를 높이는 작업도 추진하고 있다. 산타남은 이를 “대규모 기능 플랫폼(Function-as-a-Platform) 구축”이라고 표현했다.</p>
-
-
-
-<p>산타남은 AI 전략을 추진하는 과정에서 보안, 개인정보 보호, 규정 준수 역시 핵심 우선순위로 두고 있다고 강조했다. 이는 ‘State of the CIO’ 조사에서 확인된 또 다른 주요 전략 과제와도 일치한다.</p>
-
-
-
-<h2 class="wp-block-heading" id="%ec%97%90%ec%9d%b4%ec%a0%84%ed%8b%b1-ai%ea%b0%80-cio-%ec%97%ad%ed%95%a0%ec%9d%98-%ec%83%88%eb%a1%9c%ec%9a%b4-%ed%8f%89%ea%b0%80-%ea%b8%b0%ec%a4%80-%eb%a7%8c%eb%93%a0%eb%8b%a4">에이전틱 AI가 CIO 역할의 새로운 평가 기준 만든다</h2>
-
-
-
-<p>대부분의 기업은 에이전틱 AI에 큰 기대를 걸고 있다. HFS 리서치와 젠팩트(Genpact)가 2026년 4월 <a href="https://www.genpact.com/insight/autonomy-requires-trust-in-ai" rel="nofollow" target="_blank">발표한 조사에 따르면</a> 응답한 경영진의 92%는 에이전틱 AI가 업무 수행 방식을 근본적으로 바꿀 것으로 전망했다.</p>
-
-
-
-<p>이 같은 기대는 CIO들에게 에이전틱 AI 도입을 서둘러야 한다는 압박으로 작용하고 있다고 FTI 컨설팅의 수석 매니징 디렉터 <a href="https://www.fticonsulting.com/experts/ozgur-vural" rel="nofollow" target="_blank">오즈 브랄</a>은 분석했다.</p>
-
-
-
-<p>브랄은 “IT는 정해진 통제 범위 안에서 워크플로를 실행하고 실시간 의사결정을 수행할 수 있는 에이전틱 AI로 전환해야 한다”라며 “이는 단순히 자동화를 통해 업무 시간을 절감하는 수준을 넘어 매출과 EBITA(이자·세금·상각 전 이익) 증가에 직접 기여할 수 있는 기회”라고 설명했다.</p>
-
-
-
-<p>이어 “이로 인해 CIO의 성과를 평가하는 기준도 얼마나 빨리 인사이트를 제공하느냐, 즉 ‘타임 투 인텔리전스(Time to Intelligence)’를 얼마나 단축하느냐로 변화하고 있다”라고 말했다.</p>
-
-
-
-<h2 class="wp-block-heading" id="ai%eb%a7%8c%ed%81%bc-%ec%a4%91%ec%9a%94%ed%95%9c-%ea%b2%83%ec%9d%80-it-%ea%b8%b0%eb%b0%98-%eb%8b%a4%ec%a7%80%ea%b8%b0">AI만큼 중요한 것은 IT 기반 다지기</h2>
-
-
-
-<p>하지만 CIO들이 이러한 목표를 추진하는 과정은 순탄치만은 않다.</p>
-
-
-
-<p>FTI 컨설팅의 수석 매니징 디렉터 오즈 브랄은 레거시 기술, 미성숙한 데이터 체계, 그리고 역량 부족이 에이전틱 AI를 비롯한 CIO들의 핵심 전략 과제 추진을 가로막고 있다고 지적했다.</p>
-
-
-
-<p>이 같은 문제는 CIO들이 기본적인 IT 혁신 과제를 지속적으로 우선시해야 할 필요성을 다시 한번 보여준다고 컨설팅 기업 스윙타이드(Swingtide)의 회장 겸 CEO <a href="https://www.linkedin.com/in/diane-carco-2704654/" rel="nofollow" target="_blank">다이앤 M. 카코</a>는 설명했다.</p>
-
-
-
-<p>카코는 “기술 발전 속도가 매우 빠른 지금, 가장 중요한 전략 과제는 새로운 기술을 받아들이기 위해 오래된 것을 정리하는 것”이라며 “사용하지 않는 소프트웨어와 노후화된 비표준 시스템을 제거해 기술 부채를 줄이는 것은 낭비를 없애고 고객 만족도를 높일 수 있는 가장 효과적이고 영향력 있는 CIO의 역할 중 하나”라고 말했다.</p>
-
-
-
-<p>이어 “이러한 기반 정비가 이뤄진 이후에야 AI 도입을 위한 올바른 실행 전략을 수립할 수 있다”라고 설명했다.</p>
-
-
-
-<p>실제로 CIO들도 기초 IT 역량의 중요성에 공감하는 것으로 나타났다. ‘State of the CIO’ 조사에 따르면 응답자의 20%가 애플리케이션 현대화와 클라우드 관리를 전략 과제로 꼽았으며, 인프라 관리(17%)와 클라우드 인프라(16%)도 주요 우선순위에 포함됐다.</p>
-
-
-
-<p>AI와 첨단 기술 프로젝트의 성공이 이러한 기반 기술 역량에 달려 있는 만큼, 위스콘신주 천연자원부(Wisconsin Department of Natural Resources)의 CIO <a href="https://www.linkedin.com/in/rickikoinig/?locale=en" rel="nofollow" target="_blank">리키 J. 코이닉</a>은 전략 과제와 비전략 과제를 구분하지 않는다고 밝혔다.</p>
-
-
-
-<p>코이닉은 “CIO에게 가장 중요한 전략적 우선순위는 독립적인 프로젝트로 포장된 과제가 아니라 조직의 모든 활동을 뒷받침하는 요소인 경우가 많다”며 “지속적인 성공을 위해서는 혁신 준비도, 내재화된 사이버보안, 그리고 조직 준비도라는 세 가지 핵심 요소가 반드시 갖춰져야 한다”고 설명했다.</p>
-
-
-
-<p>코이닉은 특히 혁신 준비도가 오늘날 조직 경쟁력을 결정하는 핵심 역량이 되고 있다고 강조했다.</p>
-
-
-
-<p>코이닉은 “이제 준비가 돼 있다는 것은 자산 관리 현황을 최신 상태로 유지하거나 특정 기술을 도입하는 것을 의미하지 않는다”며 “고품질의 거버넌스 기반 데이터를 유지하고, 주요 이해관계자 전반에서 협업과 의견 수렴, 의사결정의 투명성을 확보하며, 시스템과 프로세스 전반에 걸쳐 운영 규율을 지속적으로 강화하는 등 기초적인 역량 수준을 끊임없이 높여가는 것을 뜻한다”고 말했다.</p>
-
-
-
-<p>이어 “혁신 준비도를 갖추기 위해서는 기술 부채를 체계적으로 관리하고, 기술 환경의 건전성을 정기적으로 점검하며, 실제 문제 해결을 추진할 수 있도록 적절한 역량과 자원을 확보하기 위한 의도적인 노력이 필요하다”고 설명했다.</p>
-
-
-
-<p>사이버보안 역시 더 이상 제약 요소로 인식돼서는 안 된다고 코이닉은 강조했다. 그는 사이버보안이 비즈니스와 IT를 포함한 모든 조직 기능에 내재화된 역량으로 발전해야 한다고 설명했다.</p>
-
-
-
-<p>코이닉은 “사이버보안은 조직 전반에 걸쳐 모범 사례와 필수 요구사항을 자연스럽게 녹여내는 과정”이라며 “이를 제대로 수행하면 사이버보안은 직무와 관계없이 모든 업무 수행 방식에 자연스럽게 스며든 직관적이고 선제적인 조직의 근육 기억(muscle memory)이 된다”고 말했다.</p>
-
-
-
-<p>마지막으로 코이닉은 변화에 대한 조직의 준비 상태, 즉 조직 준비도의 중요성을 강조했다.</p>
-
-
-
-<p>코이닉은 “문화적으로 변화에 저항하거나 운영적으로 진화할 준비가 돼 있지 않은 환경에서는 혁신이 뿌리내릴 수 없다”며 “리더는 변화를 일시적인 혼란이 아닌 상수로 받아들이는 조직 문화를 의도적으로 조성해야 하며, 이를 뒷받침할 수 있도록 인재 전략도 함께 정렬해야 한다”고 설명했다.<br />dl-ciokorea@foundryco.com</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/ics-patch-tuesday-vulnerabilities-fixed-by-siemens-schneider-phoenix-contact/">ICS Patch Tuesday: Vulnerabilities Fixed by Siemens, Schneider, Phoenix Contact</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -810,7 +1870,7 @@
   <pubDate>Wed, 10 Jun 2026 06:38:32 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><p>Organizations are advised to apply vendor-supplied mitigations or discontinue the vulnerable devices.</p>
-<p>The post <a href="https://www.securityweek.com/no-patch-planned-for-exploited-arista-eos-vulnerability/">No Patch Planned for Exploited Arista EOS Vulnerability</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/no-patch-planned-for-exploited-arista-eos-vulnerability/">No Patch Planned for Exploited Arista EOS Vulnerability</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
@@ -831,7 +1891,7 @@
 
 
 
-<div class="jwplayer" id="id6a29329916199"></div>
+<div class="jwplayer" id="id6a295719ae393"></div>
 
 
 <p>Prosegur ha cumplido este 2026 los 50 años de vida. En este medio siglo, la multinacional española de seguridad privada, que tiene más de 180.000 empleados y opera en 36 países de los cinco continentes, ha realizado un viaje transformador impulsado por una apuesta muy clara, sobre todo en los últimos años, por las tecnologías de la información y la digitalización, integrando soluciones avanzadas de inteligencia artificial y ciberseguridad para transformar el negocio de vigilancia y añadir otros nuevos. En la actualidad, de hecho, la compañía se autodefine como una “multinacional digital”, en la que más del 30% de la facturación proviene de servicios de innovación tecnológica. Gran parte de este logro se ha conseguido gracias a <a href="https://www.cio.com/article/2118668/ibamos-a-hacer-una-transformacion-ti-pero-nos-dimos-cuenta-de-que-requeriamos-una-del-organigrama-de-la-compania.html">Miguel Torres</a>, al frente de la estrategia tecnológica de la compañía desde 2022 y miembro del comité de dirección de la misma desde 2023.</p>
@@ -981,26 +2041,7 @@
 
 <p>No obstante, reconoce, los directivos de negocio ya empiezan a conocer mucho mejor el lenguaje de la tecnología y a tomar decisiones de este tipo. En la propia Prosegur se ha preparado a los ejecutivos de negocio para ello realizando sesiones de concienciación en tecnología. En este escenario, concluye Torres, el del CIO “debe ser un rol de Pepito Grillo, de guía que ayude a los directivos de negocio a tomar decisiones, a entender los riesgos que implica la tecnología, a evitar el <em>vendor lock-in</em> o incurrir en una inversión que después no se pueda pagar. Nuestro rol es el de acompañarlos. Vamos a ser más necesarios que nunca”.</p>
 </div></div></div>
-</div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
-</item>
-
-<item>
-  <title>🟠 Microsoft&#x27;s June 2026 Patch Tuesday fixes a record ~200 Windows security flaws, nearly three dozen of them critical, amid growing use of AI to find bugs (Brian Krebs/Krebs on Security)</title>
-  <link>https://www.techmeme.com/260610/p9#a260610p9</link>
-  <pubDate>Wed, 10 Jun 2026 06:25:23 +0000</pubDate>
-  <source>Techmeme</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><p><a href="https://www.techmeme.com/260610/p9#a260610p9" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Brian Krebs / <a href="https://krebsonsecurity.com/">Krebs on Security</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://krebsonsecurity.com/2026/06/a-record-breaking-patch-tuesday-for-june-2026/">Microsoft's June 2026 Patch Tuesday fixes a record ~200 Windows security flaws, nearly three dozen of them critical, amid growing use of AI to find bugs</a></b></span>&nbsp; &mdash;&nbsp; Microsoft today released software updates to plug nearly 200 security holes across its Windows operating systems and supported software &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Meta partners with Reliance to lease its first AI data center in India, with 168 MW capacity; separately, Meta says it has contracted ~1GW of renewable energy (Meta Newsroom)</title>
-  <link>https://www.techmeme.com/260610/p2#a260610p2</link>
-  <pubDate>Wed, 10 Jun 2026 04:55:15 +0000</pubDate>
-  <source>Techmeme</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://about.fb.com/news/2026/06/meta-partners-with-reliance-on-ai-enabled-data-center-in-india/"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260610/i2.jpg" vspace="4" /></a>
-<p><a href="https://www.techmeme.com/260610/p2#a260610p2" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="https://about.fb.com/">Meta Newsroom</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://about.fb.com/news/2026/06/meta-partners-with-reliance-on-ai-enabled-data-center-in-india/">Meta partners with Reliance to lease its first AI data center in India, with 168 MW capacity; separately, Meta says it has contracted ~1GW of renewable energy</a></b></span>&nbsp; &mdash;&nbsp; Takeaways&nbsp; &mdash; Meta has entered an agreement with Reliance Industries to lease our first AI-enabled data center in India to serve one of our fastest-growing communities.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+</div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
@@ -1145,7 +2186,7 @@
 
 
 <p>“It would essentially be ‘China rules’” such as air gapping systems and traveling with disposable data-limited burner phones, O’Leary said. “It’s an exceptionally big deal if it goes through,” but, he added, the chance of it happening is very low. “It seems like the technology companies will call his bluff.”</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 8h ago]]></description>
 </item>
 
 <item>
@@ -1270,7 +2311,7 @@
 
 
 <p><em>This article originally appeared on <a href="https://www.cio.com/article/4183209/enterprises-know-ai-generated-code-is-vulnerable-theyre-shipping-it-anyway.html" target="_blank">CIO.com</a>.</em></p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
 </item>
 
 <item>
@@ -1395,7 +2436,7 @@
 
 
 <p></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
 </item>
 
 <item>
@@ -1484,7 +2525,7 @@
 
 
 <p><a href="https://www.infotech.com/profiles/yaz-palanichamy" rel="nofollow" target="_blank">Yaz Palanichamy</a>, senior research analyst at Info-Tech Research Group, said DocLang adoption will require organizations to implement and review controls in order to scale its use accountably and securely.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 10h ago]]></description>
 </item>
 
 <item>
@@ -1492,7 +2533,7 @@
   <link>https://www.theregister.com/patches/2026/06/09/ai-is-making-patch-tuesday-kinda-fun-again/5253225</link>
   <pubDate>Tue, 09 Jun 2026 22:49:16 +0000</pubDate>
   <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Unless you're an admin or vulnerability manager – then you're totally screwed<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 11h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Unless you're an admin or vulnerability manager – then you're totally screwed<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 14h ago]]></description>
 </item>
 
 <item>
@@ -1500,7 +2541,7 @@
   <link>https://www.theregister.com/saas/2026/06/09/salesforce-layoffs-hit-amid-m3ter-acquisition-and-stock-buyback/5253162</link>
   <pubDate>Tue, 09 Jun 2026 22:01:07 +0000</pubDate>
   <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>The layoffs come after CEO Marc Benioff boasted of record revenue and 'incredible cashflow' two weeks ago<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 11h ago]]></description>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>The layoffs come after CEO Marc Benioff boasted of record revenue and 'incredible cashflow' two weeks ago<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 14h ago]]></description>
 </item>
 
 <item>
@@ -1609,7 +2650,7 @@
 
 
 <p>“AI will raise the ceiling for what defenders can do, but security resilience remains the foundation that determines whether those gains translate into real protection,” he said. Even as AI models accelerate software engineering, analysis and security operations, organizations still need to execute on fundamentals such as patching, multifactor authentication, network segmentation, and zero trust architectures.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 14h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 17h ago]]></description>
 </item>
 
 <item>
@@ -1718,7 +2759,7 @@
 
 
 <p>“AI will raise the ceiling for what defenders can do, but security resilience remains the foundation that determines whether those gains translate into real protection,” he said. Even as AI models accelerate software engineering, analysis and security operations, organizations still need to execute on fundamentals such as patching, multifactor authentication, network segmentation, and zero trust architectures.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 14h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 17h ago]]></description>
 </item>
 
 <item>
@@ -1727,16 +2768,7 @@
   <pubDate>Tue, 09 Jun 2026 19:04:08 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><p>Three of the vulnerabilities fixed with the latest Patch Tuesday updates were publicly disclosed before Microsoft addressed them.</p>
-<p>The post <a href="https://www.securityweek.com/microsoft-patches-200-vulnerabilities/">Microsoft Patches 200 Vulnerabilities</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 14h ago]]></description>
-</item>
-
-<item>
-  <title>🟠 Adobe Patches 123 Vulnerabilities</title>
-  <link>https://www.securityweek.com/adobe-patches-123-vulnerabilities/</link>
-  <pubDate>Tue, 09 Jun 2026 18:20:54 +0000</pubDate>
-  <source>SecurityWeek</source>
-  <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><p>Nearly half of the security holes, most allowing arbitrary code execution, have been fixed in Adobe’s Experience Manager product.</p>
-<p>The post <a href="https://www.securityweek.com/adobe-patches-123-vulnerabilities/">Adobe Patches 123 Vulnerabilities</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 15h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/microsoft-patches-200-vulnerabilities/">Microsoft Patches 200 Vulnerabilities</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 17h ago]]></description>
 </item>
 
 <item>
@@ -1744,16 +2776,7 @@
   <link>https://www.zdnet.com/article/anthropiclaude-fable-5-nerfed-mythos-with-guardrails/</link>
   <pubDate>Tue, 09 Jun 2026 17:00:00 +0000</pubDate>
   <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: Budget/licensing impact — verify renewal terms and forecast cost changes.</b><br/>Claude Fable 5 brings Mythos-class AI coding power to general users, but with cybersecurity guardrails, fallback models, and pricing that could make developers think twice.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 16h ago]]></description>
-</item>
-
-<item>
-  <title>🟠 OpenSSL Patches High-Severity Vulnerability Found With AI</title>
-  <link>https://www.securityweek.com/openssl-patches-high-severity-vulnerability-found-with-ai/</link>
-  <pubDate>Tue, 09 Jun 2026 16:47:58 +0000</pubDate>
-  <source>SecurityWeek</source>
-  <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><p>A total of 18 vulnerabilities have been patched in the latest OpenSSL releases, including many that were potentially discovered by AI.</p>
-<p>The post <a href="https://www.securityweek.com/openssl-patches-high-severity-vulnerability-found-with-ai/">OpenSSL Patches High-Severity Vulnerability Found With AI</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 17h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Budget/licensing impact — verify renewal terms and forecast cost changes.</b><br/>Claude Fable 5 brings Mythos-class AI coding power to general users, but with cybersecurity guardrails, fallback models, and pricing that could make developers think twice.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 19h ago]]></description>
 </item>
 
 <item>
@@ -1761,16 +2784,7 @@
   <link>https://www.theregister.com/databases/2026/06/09/neo4j-plots-palantir-alternative-with-graphaware-acquisition/5252913</link>
   <pubDate>Tue, 09 Jun 2026 15:30:14 +0000</pubDate>
   <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Vendor risk signal — evaluate roadmap and support stability.</b><br/>Graph database biz says on-prem, air-gapped intel stack gives governments a no-kill-switch option<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 18h ago]]></description>
-</item>
-
-<item>
-  <title>🟠 Claude Mythos Turns N-Days Into N-Hours With Rapid Exploit Creation</title>
-  <link>https://www.securityweek.com/claude-mythos-turns-n-days-into-n-hours-with-rapid-exploit-creation/</link>
-  <pubDate>Tue, 09 Jun 2026 15:03:13 +0000</pubDate>
-  <source>SecurityWeek</source>
-  <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><p>Public LLM models with safeguards turned off can also build working exploits, increasing patch gap risks.</p>
-<p>The post <a href="https://www.securityweek.com/claude-mythos-turns-n-days-into-n-hours-with-rapid-exploit-creation/">Claude Mythos Turns N-Days Into N-Hours With Rapid Exploit Creation</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 18h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Vendor risk signal — evaluate roadmap and support stability.</b><br/>Graph database biz says on-prem, air-gapped intel stack gives governments a no-kill-switch option<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 21h ago]]></description>
 </item>
 
 <item>
@@ -1778,7 +2792,7 @@
   <link>https://www.theregister.com/devops/2026/06/09/devs-know-ai-code-is-riddled-with-holes-but-ship-it-anyway/5252824</link>
   <pubDate>Tue, 09 Jun 2026 13:36:02 +0000</pubDate>
   <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Potential data exposure — check monitoring and incident response readiness.</b><br/>Pressure to deploy wins out over security as four in five orgs confess to breaches from vulnerable apps<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 20h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Potential data exposure — check monitoring and incident response readiness.</b><br/>Pressure to deploy wins out over security as four in five orgs confess to breaches from vulnerable apps<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 23h ago]]></description>
 </item>
 
 <item>
@@ -1786,7 +2800,7 @@
   <link>https://www.theregister.com/security/2026/06/09/chromes-zero-day-whac-a-mole-continues-with-fifth-exploited-bug-of-the-year/5252689</link>
   <pubDate>Tue, 09 Jun 2026 12:15:00 +0000</pubDate>
   <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Google paid researcher a tidy $55K bounty for its discovery<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 21h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Google paid researcher a tidy $55K bounty for its discovery<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
@@ -1891,7 +2905,7 @@
 
 
 <p><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><strong><a href="https://www.csoonline.com/expert-contributor-network/">Want to join?</a></strong></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 21h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
@@ -1972,7 +2986,7 @@
 
 
 <p>Additionally, the company listed three mitigation tips for protection outside and beyond patches. These include removing support for legacy Remote Access client connections, configuring Global properties for Remote Access VPN authentication to IKEv2 only, and setting the machine certificate authentication as mandatory. Lastly, and most effectively, the company issued a string of downloadable hotfixes corresponding to each affected version, which customers can download and apply for complete and immediate protection.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 21h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
@@ -1980,7 +2994,7 @@
   <link>https://www.theregister.com/security/2026/06/09/france-probes-compromise-of-gov-messaging-platform-after-account-hijack/5252717</link>
   <pubDate>Tue, 09 Jun 2026 11:27:55 +0000</pubDate>
   <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Potential data exposure — check monitoring and incident response readiness.</b><br/>Authorities say the breach only exposed public chat rooms, but alleged attacker claims to have accessed far more data<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 22h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Potential data exposure — check monitoring and incident response readiness.</b><br/>Authorities say the breach only exposed public chat rooms, but alleged attacker claims to have accessed far more data<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
@@ -2077,7 +3091,7 @@
 
 
 <p>She said organizations should focus on long-term resilience instead of episodic response. “The strategic battle has shifted from blocking individual episodic attacks to managing the environment itself,” Kaushik said, arguing that stopping one deepfake or impersonation attempt offers only a tactical victory if the broader attack ecosystem continues to evolve.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 22h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
@@ -2218,7 +3232,7 @@
 
 
 <p><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><strong><a href="https://www.csoonline.com/expert-contributor-network/">Want to join?</a></strong></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 22h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
@@ -2417,322 +3431,7 @@
 
 
 <p><a href="https://drive.starcio.com/2026/04/ai-reshaping-business-not-digital-transformation-yet/" rel="nofollow">AI is only reshaping businesses</a> and not transforming them yet. The question for CIOs is whether the pressure to move AI experiments into production and deliver <a href="https://www.cio.com/article/3618293/5-tips-for-better-business-value-from-gen-ai.html">business value</a> will create new forms of AI debt for them to manage in the years to come.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 23h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 It’s the year of AI transformation for these three industries. Here’s why</title>
-  <link>https://www.cio.com/article/4182439/its-the-year-of-ai-transformation-for-these-three-industries-heres-why.html</link>
-  <pubDate>Tue, 09 Jun 2026 10:00:00 +0000</pubDate>
-  <source>CIO.com</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><div id="remove_no_follow">
-		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
-					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
-						<div class="article-column__content">
-<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
-
-
-
-<p>For CIOs across every industry, enterprise AI is inescapable right now. Everyone has a pilot running, every conference has a keynote about transformation and every vendor is promising agents that will change everything.</p>
-
-
-
-<p>But underneath the surface, I’ve noticed that the organizations making the most meaningful headway are clustering in three industries: financial services, industrials and healthcare. That’s because these sectors share a specific combination of factors that make them well-suited for what frontier LLMs in 2026 are best at. Each of these industries is drowning in unstructured data, their best people spend too much time on low-value, document-heavy work, and the underlying infrastructure is in place (cloud storage, APIs, data warehouses). All that’s been missing is a layer intelligent enough to put it to work, and now that layer exists.</p>
-
-
-
-<h2 class="wp-block-heading" id="financial-services-sitting-on-a-goldmine">Financial services: Sitting on a goldmine</h2>
-
-
-
-<p>Financial services has been data-rich and insight-poor for decades. The problem was never a lack of information, rather, that the information lived in PDFs, SharePoint sites and folders that nobody could easily access or analyze at scale. Resultingly, decisions were made without full context, compliance work was done manually under time pressure and senior people spent their hours on tasks that shouldn’t require their expertise. AI changes all of that.</p>
-
-
-
-<p><a href="https://kpmg.com/us/en/articles/2025/unlocking-power-ai-private-equity.html" rel="nofollow">According to KPMG research</a>, 80% of PE leaders view generative AI as a critical component for gaining competitive advantage and market share. 91% believe AI has already strengthened their competitive position, and more than half are already seeing a return on their investment.</p>
-
-
-
-<p>I spoke recently with a CIO at a large wealth management firm who described the moment it clicked for their team. They had been trying to figure out how to get their advisors to do more proactive outreach by reaching the right clients at the right moment rather than reacting slowly to inbound calls. The issue here was that pulling together existing information and context manually wasn’t something any advisor had time to do. So, they built an AI workflow that runs on a trigger each morning and analyzes client portfolios, market conditions and advisor notes. Then, it generates a prioritized outreach list with suggested talking points. It now runs across their entire book of business.</p>
-
-
-
-<p>Here’s another example. I’ve seen multiple private equity firms using AI agents to generate portfolio summaries, extract data from quarterly reports and run fundamentals-based valuations. That’s work that used to consume analyst hours every week before an investment committee meeting.</p>
-
-
-
-<p>What makes financial services ready for this moment is partly about infrastructure. Most institutions already have centralized document stores, CRMs and data warehouses. They don’t need to build the foundation. They need an intelligent layer on top of what already exists. The other factor is regulatory pressure: It’s not glamorous, but AI that can demonstrate auditability and consistency has a tangible advantage in compliance-heavy environments. Consistency is something humans, under volume and time pressure, struggle to deliver and it’s particularly important for financial institutions given the amount of sensitive data they work with.</p>
-
-
-
-<p>For CIOs thinking about where to start, I’d say that document-heavy workflows are almost always the right entry point. Term sheet parsing, compliance matrix generation, report summarization. They’re well-defined, they happen constantly and the ROI is easy to measure. Build for auditability from the beginning: Every run must be logged, every output must be cited and human-in-the-loop should almost always be involved. Lastly, I think we’ll see fewer chatbots and more trigger-configured agents in 2026, as the highest-value financial AI in production today runs on event-based logic, not on-demand queries.</p>
-
-
-
-<h2 class="wp-block-heading" id="industrials-where-traditional-automation-always-broke-down">Industrials: Where traditional automation always broke down</h2>
-
-
-
-<p>Industrial companies — spanning construction, manufacturing, logistics/shipping, engineering and more — have historically been underserved by enterprise software, which is a structural issue. The workflows span physical and digital worlds in ways that make them challenging to automate through conventional means: Tenders arrive as PDFs in someone’s inbox; quality inspections happen on a factory floor; freight analysis requires pulling data from a dozen carrier systems that don’t talk to each other, and often, from people who <em>literally</em> speak different languages.</p>
-
-
-
-<p>But everything has changed. According to a <a href="https://manufacturingleadershipcouncil.com/survey-genai-adoption-surges-as-manufacturers-continue-to-grapple-with-data-skills-issues-39942/?stream=ml-journal" rel="nofollow">2026 survey by the Manufacturing Leadership Council</a>, 90% of manufacturers surveyed say they will increase generative AI usage in the next two years.</p>
-
-
-
-<p>I had a conversation last year with the CIO of a major national distribution company, where he told me that they’d automated their freight analysis reports entirely, going from a chatbot-style prototype to a fully templated, automated report that runs on a schedule and lands in the right inboxes.</p>
-
-
-
-<p>Another global consumer goods manufacturer I worked with now processes quality inspection sheets from production lines through AI, automatically flagging anomalies before they become problems.</p>
-
-
-
-<p>And one of the largest civil engineering firms in the U.S. now uses AI to do quality control on bridge inspection reports, check engineering calculations and navigate RFP documents, significantly reducing the review burden on senior engineers who were previously spending time on work that simply didn’t require their expertise.</p>
-
-
-
-<p>The thing I’ve heard CIOs in the industrial sector tell me is that the skilled worker shortage is real and getting worse. They have experienced people who are spending a significant portion of their time on tasks that could be automated. Giving those hours back to them is the value proposition.</p>
-
-
-
-<p>In 2026, AI excels precisely where RPA and EDI always broke down: unstructured inputs, variable formatting, anomalous edge cases. So, the practical advice here is to target the gap between documents and systems: That’s the place where a human is manually transcribing data from one format into another. Start with one high-volume vendor or one product line, design the workflow and track the ROI.</p>
-
-
-
-<h2 class="wp-block-heading" id="healthcare-the-burnout-crisis-that-ai-is-starting-to-solve">Healthcare: The burnout crisis that AI is starting to solve</h2>
-
-
-
-<p>Healthcare has been the most cautious sector for extremely legitimate reasons. PHI/PII, HIPAA, GDPR, the complexity of clinical workflows…the bar is higher here, as it should be. But already this year I’ve watched healthcare move from cautious experimentation into production deployment, and the driver is the combination of enterprise-grade security controls and a clinician burnout crisis that has become impossible to ignore. <a href="https://www.mckinsey.com/industries/healthcare/our-insights/generative-ai-in-healthcare-current-trends-and-future-outlook" rel="nofollow">According to McKinsey,</a> half of healthcare leaders report that their organizations have already implemented generative AI.</p>
-
-
-
-<p>The use case I keep coming back to is clinical note generation. I’ve seen multiple healthcare organizations (virtual care platforms, primary care networks and more) deploy AI that listens to patient encounters and produces structured SOAP notes. One organization has been continuously improving this workflow and is now on their fifth or sixth version of the workflow. But they started seeing the impact from day one: The documentation burden on physicians is real, and can consume one to two hours per day, time that should be with patients. Reducing that by 60 to 70 percent is life changing.</p>
-
-
-
-<p>Beyond documentation, I’m seeing AI handle patient intake and onboarding through conversational workflows that gather history, insurance information and chief complaint before the visit, integrating with EHRs to ensure continuity. Remote patient monitoring programs are using AI to triage incoming data and automatically escalate concerning readings to clinical staff, allowing home health programs to scale without proportional increases in headcount. Finally, on the administrative side, AI is now doing clinical billing compliance review: Checking documentation against billing codes before claims are submitted, reducing denial rates and audit risk.</p>
-
-
-
-<p>My advice to healthcare CIOs is, after identifying a platform with HIPAA compliance and rigorous governance, to start with use cases in billing compliance, prior authorization and patient communication. Build organizational confidence there before moving into the clinical workflow layer while measuring clinician time saved as your primary ROI metric. Cost reduction matters, but hours returned to patient care is the number that will get you continued investment and internal support.</p>
-
-
-
-<h2 class="wp-block-heading" id="the-high-level-patterns">The high-level patterns</h2>
-
-
-
-<p>The industries I’ve identified in this article are ripe for AI transformation. When we step back from the specific use cases, the same conditions show up across all three sectors. Firstly, there are massive volumes of unstructured data that traditional automation has never been able to touch. Secondly, there is high-value human expertise being consumed by low-value data processing and shuffling. Lastly, the underlying tool infrastructure is mature enough to support an intelligent layer on top.</p>
-
-
-
-<p>CIOs in these industries should aim to identify high-impact workflows, deploy AI that integrates deeply with those processes and be prepared to iterate. The result will be millions in operational savings.</p>
-
-
-
-<p><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><strong><a href="https://www.csoonline.com/expert-contributor-network/">Want to join?</a></strong></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 23h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 CIOs get temporary relief as US court blocks $100,000 H-1B fee</title>
-  <link>https://www.cio.com/article/4182847/cios-get-temporary-relief-as-us-court-blocks-100000-h-1b-fee.html</link>
-  <pubDate>Tue, 09 Jun 2026 09:44:26 +0000</pubDate>
-  <source>CIO.com</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><div id="remove_no_follow">
-		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
-					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
-						<div class="article-column__content">
-<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
-
-
-
-<p>A US federal judge has ruled that the Trump administration’s $100,000 fee on new H-1B visa petitions was unlawful, giving technology companies temporary relief from a policy that threatened to raise the cost of hiring foreign skilled workers.</p>
-
-
-
-<p>The decision removes, at least for now, a major cost burden for employers that use the <a href="https://www.computerworld.com/article/4178172/developers-on-h-1b-face-a-tighter-job-market-as-ai-shifts-hiring-priorities-2.html" target="_blank">H-1B program</a> to fill roles in domains including software development, cloud computing, data science, and AI.</p>
-
-
-
-<p>US District Judge Leo Sorokin in Boston found that the fee functioned as a tax that the administration did not have authority to impose without congressional approval. The ruling came in a lawsuit brought by 20 Democratic state attorneys general challenging the fee.</p>
-
-
-
-<p>Standard employer costs for H-1B petitions typically range from about $2,000 to $5,000, making the proposed $100,000 payment a sharp increase for companies seeking foreign talent.</p>
-
-
-
-<p>The ruling is unlikely to end uncertainty for employers, with the Trump administration expected to appeal. But it could allow companies that had paused international hiring plans to resume normal recruitment for the <a href="https://www.computerworld.com/article/4122726/restrictive-h%e2%80%911b-policies-drive-tech-talent-back-to-india-reshaping-global-it-2.html">upcoming H-1B cycle</a>, said <a href="https://www.linkedin.com/in/pareekhjain/" rel="nofollow">Pareekh Jain</a>, CEO of Pareekh Consulting. Still, he said, employers should remain cautious because the legal and policy concerns are likely to continue.</p>
-
-
-
-<p>“This provides breathing room for CIOs, even though it’s temporary,” said <a href="https://www.linkedin.com/in/meetneilshah/" rel="nofollow" target="_blank">Neil Shah</a>, vice president for research and partner at Counterpoint Research. “They should make the necessary contingency plans, whether that means doing more with less by leveraging AI or relying more on local talent.”</p>
-
-
-
-<h2 class="wp-block-heading" id="how-companies-may-rethink-hiring">How companies may rethink hiring</h2>
-
-
-
-<p>If higher H-1B costs return in another form, CIOs will have to be more selective about sponsorship, weighing the added cost against the strategic value of the role and the long-term potential of the employee, Shah said.</p>
-
-
-
-<p>“Ultimately, the decision comes down to business unit P&amp;L: whether the unit can absorb the cost of acquiring the talent for that role,” Shah added.</p>
-
-
-
-<p>That uncertainty could also lead CIOs to compete for talent from other companies, potentially driving up salaries for skilled workers. Some CIOs may conclude that paying a one-time $100,000 fee, amortized over the employee’s tenure, is still more cost-effective than engaging in a bidding war for <a href="https://www.computerworld.com/article/4148621/openai-to-double-workforce-highlights-growing-demand-for-enterprise-ai-talent.html">scarce local talent</a>.</p>
-
-
-
-<p><a href="https://www.linkedin.com/in/dr-danish-faruqui/" rel="nofollow" target="_blank">Danish Faruqui</a>, CEO of Fab Economics, said that CIOs may reserve H-1B sponsorship for a narrower set of mission-critical roles if costs increase.</p>
-
-
-
-<p>“If there is such a financial burden, CIOs will justify sponsoring very specific roles,” Faruqui said. “These would be principal enterprise architects, AI, ML, and deep-tech researchers, senior product managers, and regulatory and compliance experts.”</p>
-
-
-
-<p>More routine or project-based roles are likely to be treated differently, Faruqui said.</p>
-
-
-
-<p>“Junior to mid-level software engineers, entry-level business analysts, and entry-level data scientists would shift from H-1B to domestic hiring,” Faruqui said. “Cloud migration, DevOps, ERP, and CRM implementation could be done through contractors or consulting firms, while QA, product testing, tier-one help desk support, and legacy maintenance are roles that CIOs could prioritize for automation.”</p>
-
-
-
-<h2 class="wp-block-heading" id="who-would-be-most-affected">Who would be most affected?</h2>
-
-
-
-<p>Startups, smaller companies, and enterprise IT departments would have faced the greatest pressure from the fee and stand to benefit most from the ruling, Jain said.</p>
-
-
-
-<p>Large technology companies would have been better placed to absorb the $100,000 cost, he said. Meanwhile, companies with mature offshore delivery models may be less likely to increase their reliance on H-1B hiring.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
-</item>
-
-<item>
-  <title>🔵 How IKEA turned a €13 million chatbot into a €1.3 billion business</title>
-  <link>https://www.cio.com/article/4180896/how-ikea-turned-a-chatbot-with-13-million-users-into-a-business-worth-1-3-million.html</link>
-  <pubDate>Tue, 09 Jun 2026 09:30:00 +0000</pubDate>
-  <source>CIO.com</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><div id="remove_no_follow">
-		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
-					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
-						<div class="article-column__content">
-<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
-
-
-
-<p>In 2021, Ingka Group, the main operator of IKEA stores, launched a chatbot called Billie. Its objective was typical of a conversational assistant: to answer routine customer inquiries, such as product availability, delivery times, or order status.</p>
-
-
-
-<p>As is typical for the use case, Billie’s launch freed up call center teams from repetitive tasks. Between 2021 and 2023, Billie handled 3.2 million interactions and resolved approximately 47% of those inquiries, resulting in cost savings of €13 million.</p>
-
-
-
-<p>On the horizon loomed an uncomfortable consequence: 8,500 people in call centers whose work, for the most part, was being done by machines. The direct question was clear: what to do with a workforce that was suddenly difficult to justify? It was a matter of costs, and the answer would have been predictable.</p>
-
-
-
-<p>But IKEA did not ask itself that question.</p>
-
-
-
-<p>Instead of trying to cut costs by reducing that team, the company looked in a different direction. They focused on where AI fell short.</p>
-
-
-
-<p>While Billie answered 47% of the queries, that left 53% that it couldn’t resolve. After analyzing those requests, IKEA discovered that it wasn’t a matter of optimization that would be solved with the next version of the model. That’s because customers weren’t calling just to find out whether a sofa was in stock. They wanted to know whether it would look good in their living room, and they expected a person on the other end to advise them.</p>
-
-
-
-<p>That changed everything. <a href="https://www.cio.com/article/3625933/como-trabaja-ikea-con-la-ia-30-000-empleados-formados.html">IKEA repurposed its 8,500 call center employees as remote interior design consultants</a>. What had been a limited-reach service was scaled up to become a remote sales channel operated by thousands of human consultants via video and telephone.</p>
-
-
-
-<p>In other words, the cost center became a revenue stream that generated €1.3 billion in its first full year, 3.3% of IKEA’s revenue. The company told <a href="https://www.reuters.com/technology/ikea-bets-remote-interior-design-ai-changes-sales-strategy-2023-06-13" rel="nofollow" target="_blank">Reuters</a> that it aims to increase this to 10% by 2028. Four years later, the experiment is now a well-established strategy.</p>
-
-
-
-<h2 class="wp-block-heading" id="a-new-perspective-on-what-ai-reveals">A new perspective on what AI reveals</h2>
-
-
-
-<p>Most AI initiatives focus on the AI ​​itself. In the case of a chatbot, organizations pursue metrics such as how many queries it handles, how much the cost per interaction decreases, or how many hours it frees up. These are the figures requested by management, provided by the vendor, and included in the reporting.</p>
-
-
-
-<p>But there’s another perspective that goes in the opposite direction: focusing on what AI reveals that was previously unseen. In IKEA’s case, it was a need that its customers had had for decades and one that the company had never been able to identify as a business opportunity: an interior design consultant .</p>
-
-
-
-<p>This situation isn’t limited to the furniture sector. For example, a legal team might encounter business inquiries they never had time to address, and a technical service that automates first-level support might uncover underlying problems that no one was paying attention to. Every sector has its own specific cases.</p>
-
-
-
-<p>The difference between the two approaches translates into figures. Looking inward for AI efficiencies saved IKEA €13 million. Looking outward for new opportunities generated €1.3 billion in revenue. One hundred times more, to the point that the company barely mentions the initial savings.</p>
-
-
-
-<p>AI solves known questions, but the real business value lies in the ones it opens up.</p>
-
-
-
-<p>But identifying the opportunity is only half the battle. The other half is deciding what to do with it, and that’s where almost everyone backs out.</p>
-
-
-
-<p>The immediate solution, the one no one discusses in a committee, was to cut a workforce that AI had rendered obsolete. Who, instead, decides to redefine 8,500 people and invest in a service that barely existed? It’s a risky strategic decision, one that goes against the grain — specifically against the direct savings shown in the reports.</p>
-
-
-
-<p>Here’s the key: IKEA went beyond an AI project. It created a new function within the business. It didn’t just relocate people for the sake of relocating them. It identified an unmet need and built, on top of its existing in-house capabilities, a service capable of addressing it.</p>
-
-
-
-<p>This way of thinking moves beyond the classic machine-vs.-person debate — i.e., how many jobs AI replaces or destroys — to enter another: what new opportunities AI reveals, and what we decide to build with it.</p>
-
-
-
-<h2 class="wp-block-heading" id="ai-opens-a-new-path-for-the-cio">AI opens a new path for the CIO</h2>
-
-
-
-<p>It’s easy to think it was a visionary who discovered an opportunity. In this case, there wasn’t one. What there was, however, was a structure where the question could arise. And the key wasn’t that they had an AI task force (something common in large companies) but something almost no one has: the head of technology and the head of people sitting at the same table, not on two separate committees.</p>
-
-
-
-<p>Creating these conditions is within the CIO’s reach. This case illustrates how AI presents a decision for the CIO, one that many are unaware of.</p>
-
-
-
-<p>Two paths open up. One is to do what’s expected: execute, deploy the AI, measure its performance, report the savings, and move on to the next use case. It’s a respectable, and predictable, approach. The other is to open a different conversation: what does each deployment reveal, what unmet needs emerge when the tool takes over operations, what skills lie dormant in employees because no one has asked them to develop them? You can start by raising these questions in the next meeting; there’s no need to start by creating a new committee.</p>
-
-
-
-<p>The first approach treats AI as a technical project. The second treats it as what it is: a business initiative that passes through the CIO’s hands before anyone else’s.</p>
-
-
-
-<p>What’s at stake isn’t just the outcome of the initiative. It’s what kind of CIO emerges from each path. AI is rewriting the CIO’s role, whether they like it or not. The real choice is whether they sit in the pilot’s seat or the passenger seat.</p>
-
-
-
-<p>It’s not about the CIO coming up with the next billion-dollar service, but about creating the space where that opportunity can emerge and reach those who recognize it. This involves making decisions that don’t generate headlines, such as bringing technology and business representatives together to compare their perspectives on AI — something that takes time and goes against rushing.</p>
-
-
-
-<p>This demands something of the CIO that the role didn’t prepare them for: to make decisions with a different logic. Not the logic of fitting into the reporting framework, but the logic of seeking out opportunities that aren’t guaranteed. No one is going to force them to look beyond AI. That’s why almost no one does. But that’s precisely the space that AI opens up, and where they can define their path and gain new influence within the organization. AI isn’t taking their job away; it’s offering them a bigger one.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
@@ -2866,171 +3565,6 @@
 
 <p>“While vulnerabilities, exploits, and attack orchestration are now autonomous, the deeper meaning for defense is that many of our assumptions about building security programs are now challenged,” Evron said. “Until we get to mature defensive AI, we must empower our people with coding agents to bring them up to machine speed, and then defend these agents in turn.”</p>
 </div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
-</item>
-
-<item>
-  <title>🔵 The overlooked leadership skill holding back AI value</title>
-  <link>https://www.cio.com/article/4182431/the-overlooked-leadership-skill-holding-back-ai-value.html</link>
-  <pubDate>Tue, 09 Jun 2026 09:00:00 +0000</pubDate>
-  <source>CIO.com</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><div id="remove_no_follow">
-		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
-					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
-						<div class="article-column__content">
-<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
-
-
-
-<p>AI has dominated the executive agenda for the past two years. The promise of productivity gains, the opportunity to orchestrate data across entire organizations, to improve employee and customer experiences, and to ultimately increase revenue is driving enterprises to make significant investments with high expectations for returns.</p>
-
-
-
-<p>But those expectations are now being questioned as conversations turn from experimentation to results. Research from <a href="https://www.pwc.com/gx/en/issues/c-suite-insights/ceo-survey.html" rel="nofollow">PwC</a> found that 56% of CEOs reported neither increased revenue nor reduced costs from AI over the past 12 months, highlighting a growing gap between ambition and realized impact. Similarly, <a href="https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai?utm_source=chatgpt.com" rel="nofollow">McKinsey</a> found that while more than 60% of organizations are using AI to enable innovation, less than 40% are seeing meaningful enterprise-level financial impact. </p>
-
-
-
-<p>While those statistics get attention, they often lead to the wrong conclusion. The issue is not that AI won’t deliver meaningful business impact. It is that many organizations are missing a foundational leadership capability required to unlock it: Data curiosity.</p>
-
-
-
-<h2 class="wp-block-heading" id="data-curiosity-emerges-as-a-critical-leadership-skill">Data curiosity emerges as a critical leadership skill</h2>
-
-
-
-<p>In my work partnering with leaders across Genesys on AI transformation, I’ve seen AI act as a powerful forcing function, not as a corrective, but as an accelerator of understanding. In conversations with other CIOs and technology leaders, I am seeing a clear pattern: The organizations seeing value the fastest are not the ones moving the quickest, but instead those who are asking better questions.</p>
-
-
-
-<p>Over the years, I have seen technology advancements reveal leaders’ blind spots in how they enable their teams and deploy next-generation capabilities. AI is essentially having the opposite effect. Rather than creating new blind spots, it’s revealing existing ones. Now, I’m seeing leaders confronting the reality of their data strategies as previously hidden gaps are exposed. Inconsistencies, poor governance and misplaced confidence in data quality are being surfaced and what once went unnoticed in dashboards and reports is quickly becoming visible. As teams apply AI to real workflows, they have to examine more deeply how data is sourced, governed and connected to business decisions.</p>
-
-
-
-<p>That’s why data curiosity is quickly becoming one of the most important leadership traits you can have in the AI era. Leaders who lean into asking the questions and foster curiosity amongst their teams to do the same begin to uncover the real drivers and roadblocks for AI results.</p>
-
-
-
-<p>The challenge is that AI is too often treated as a technology deployment. The most successful transformations are not tool-led. Some of the most critical works sit with the CIO and IT leaders: redesigning workflows, strengthening data foundations, embedding AI into how the business operates. Those changes scale when leaders also reshape how they engage with the data.</p>
-
-
-
-<p>When leaders cultivate curiosity about their data, they create an environment where employees feel empowered to question outputs, challenge assumptions and continuously improve results. That mindset becomes the foundation for scalable AI value.</p>
-
-
-
-<p>This requires going beyond mindset alone. Data literacy programs should be built alongside AI literacy, ensuring employees across the organization and at every level understand how data is structured, governed and used to drive decisions. When people know how to interrogate the data behind the systems, they are more likely to trust, challenge and improve the outcomes that those systems produce.</p>
-
-
-
-<h2 class="wp-block-heading" id="data-curiosity-changes-the-trajectory-of-ai-transformation">Data curiosity changes the trajectory of AI transformation</h2>
-
-
-
-<p>A common misstep I am seeing is organizations shoving poor-quality data into systems and hoping AI will fix it. That’s just not going to happen. Bad data leads directly to bad outputs. That’s why so many early AI initiatives fell short. As generative AI really took off, many organizations got a sense of FOMO, and hesitancy in adopting AI quickly shifted to “we need to do this now.”  But organizations overestimated how good their data was. When the outputs didn’t meet expectations, their instincts were to question the tool or the models. Data curiosity can flip that response.</p>
-
-
-
-<p>Instead of asking “why is the AI wrong,” leaders should ask more productive questions:</p>
-
-
-
-<ul class="wp-block-list">
-<li>Who owns this data?</li>
-
-
-
-<li>How current is it?</li>
-
-
-
-<li>Where are the gaps?</li>
-
-
-
-<li>Does it accurately represent the business? </li>
-</ul>
-
-
-
-<p>Asking those questions can change the trajectory of the entire transformation. Most importantly, they lead to action. Instead of assuming data is “good enough”, teams will quickly be able to identify inconsistencies across systems, gaps in governance or outdated or incomplete datasets, and course correct. The conversation moves away from “which model should we use?” to “Do we actually have the right data and processes in place?” From there, AI results become more reliable, insights become more actionable and trust in the system increases.   </p>
-
-
-
-<p>Equally important, these questions help prevent teams from switching off critical thinking once the AI works. By modeling this behavior, teams are more likely to challenge outputs instead of blindly accepting them, apply human judgment more rigorously and catch errors, bias or drift earlier. Monitoring becomes continuous, and that results in fewer failed pilots, faster paths to ROI and stronger alignment to business outcomes.</p>
-
-
-
-<h2 class="wp-block-heading" id="data-curiosity-in-action-a-customer-experience-lens">Data curiosity in action: A customer experience lens</h2>
-
-
-
-<p>The use of virtual agents and copilots in the customer experience industry is a clear example of the value of data curiosity. As more organizations adopt AI to power customer engagement, there is increasing awareness that the quality of consumers’ experiences is tied to the data quality, completeness and ability to orchestrate it across systems.</p>
-
-
-
-<p>Consider a virtual agent handling a refund. If it’s relying on knowledge base articles that have outdated policies, it may confidently provide guidance that is no longer accurate. Instead of improving efficiency, the experience introduces friction. That miss can quickly compound as customers encounter additional friction trying to resolve their issue. What often follows is escalation to a human agent for something that could have easily been a self-service interaction, along with a frustrated customer whose trust has been eroded. And that single moment can have long-term impact. My company’s research found that <a href="https://www.genesys.com/company/newsroom/announcements/genesys-research-finds-consumers-believe-ai-will-improve-customer-experience-and-businesses-are-rising-to-the-opportunity?utm_source=chatgpt.com" rel="nofollow">more than half</a> of consumers will abandon a brand after as few as two poor experiences.</p>
-
-
-
-<p>While there have been instances where bots provided inaccurate information, those moments serve as meaningful reminders that AI data quality, context and governance are essential in delivering loyalty-building experiences. Whether supporting human agents or engaging directly with customers, AI systems rely on the information they are trained to provide personalized and helpful responses and efficiently solve customers’ inquiries. When responses fall short, the root cause is rarely the interface; it’s the data foundation behind it.</p>
-
-
-
-<p>This is where data curiosity can drive business results. Asking the right questions puts organizations in a better position to improve both AI performance and customer outcomes, driving consistent, personalized and trustworthy experiences that ultimately result in better business outcomes.  </p>
-
-
-
-<h2 class="wp-block-heading" id="where-ai-value-is-truly-built">Where AI value is truly built</h2>
-
-
-
-<p>As organizations continue to invest in AI, realizing that unlocking the real value behind it may mean restarting their master data management and governance. The reality is, AI doesn’t introduce new problems as much as it brings existing ones into sharper focus. It exposes the fundamentals leaders need to understand—about their data, their processes and their decision-making—in order to scale AI responsibly.</p>
-
-
-
-<p>That’s what makes data curiosity so critical. AI will scale whatever it’s given. If the inputs are incomplete, outdated or disconnected, those issues will be amplified. But when the data foundation is strong, AI can unlock new levels of efficiency, insight and experience across the business.</p>
-
-
-
-<p>For leaders, this requires a shift in focus. It’s not enough to evaluate outputs or chase the next model advancement. The real work is in understanding and continuously improving the inputs—how data is sourced, governed and connected to outcomes.</p>
-
-
-
-<p>And, while data curiosity is foundational, it doesn’t operate in isolation. CIOs are encountering other familiar challenges in transformation, like workflows that we’re redesigned, lagging change management, talent and skill gaps, and complex integrations. Add in vendor lock-ins, unclear ownership and competing priorities, and it becomes clear why so many initiatives struggle to scale.</p>
-
-
-
-<p>What will separate organizations that break through is how they respond to those challenges. Leaders who are deeply curious about their data and better equipped to tackle each of them. Rethink workflows, identify gaps, question assumptions and continuously seek ways to improve your business’s operating model.</p>
-
-
-
-<p>For leaders asking what to do next, initiating a clear operating rhythm, where AI initiative is treated like a production, with clear checkpoints, can make this real:</p>
-
-
-
-<ul class="wp-block-list">
-<li><strong>Data lineage:</strong> Confirm where the data comes from and how it flows through the system</li>
-
-
-
-<li><strong>Freshness:</strong> Audit how current the data is and how often it’s updated</li>
-
-
-
-<li><strong>Quality:</strong> Ensure controls are in place to detect and correct errors, bias and drift</li>
-
-
-
-<li><strong>Ownership:</strong> Assign who is accountable for the data and its outcomes</li>
-</ul>
-
-
-
-<p>Organizations that embrace this mindset will move beyond experimentation and into impact. Not because they adopted AI faster, but because they built the conditions for it to deliver value.</p>
-
-
-
-<p><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><strong><a href="https://www.csoonline.com/expert-contributor-network/">Want to join?</a></strong></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
@@ -3434,7 +3968,7 @@
 
 
 <p>The vulnerabilities affect protobuf.js versions 7.5.5 and earlier, along with versions 8.0.0 and 8.0.1, as well as vulnerable releases of protobuf.js-cli. Patches are available in protobuf.js 7.5.6 and 8.0.2, while protobuf.js-cli users are advised to upgrade to versions 1.2.1 or 2.0.2.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
 </item>
 
 <item>
@@ -3926,14 +4460,6 @@
 </item>
 
 <item>
-  <title>🟠 Yet another Cisco SD-WAN 0-day under attack, and no patch in sight</title>
-  <link>https://www.theregister.com/security/2026/06/05/yet-another-cisco-sd-wan-0-day-under-attack-and-no-patch-in-sight/5251855</link>
-  <pubDate>Fri, 05 Jun 2026 17:27:42 +0000</pubDate>
-  <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Vendor advisory — check installed firmware/software version and patch status.</b><br/>Good luck, sys admins<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4d ago]]></description>
-</item>
-
-<item>
   <title>🔵 Microsoft identifies seven new ways AI agents can be hacked</title>
   <link>https://www.csoonline.com/article/4181846/microsoft-identifies-seven-new-ways-ai-agents-can-be-hacked-2.html</link>
   <pubDate>Fri, 05 Jun 2026 17:20:34 +0000</pubDate>
@@ -4071,241 +4597,7 @@
 
 
 <p></p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4d ago]]></description>
-</item>
-
-<item>
-  <title>🟠 Claude Code has an MCP security problem — and your developers are already using it</title>
-  <link>https://www.csoonline.com/article/4181230/claude-code-has-an-mcp-security-problem-and-your-developers-are-already-using-it.html</link>
-  <pubDate>Fri, 05 Jun 2026 09:00:00 +0000</pubDate>
-  <source>CSO Online</source>
-  <description><![CDATA[<b>Why this matters: Supply chain risk — audit third-party dependencies and vendor access.</b><br/><div id="remove_no_follow">
-		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
-					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
-						<div class="article-column__content">
-<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
-
-
-
-<p>Claude Code is Anthropic’s AI coding assistant — a command-line tool that developers are adopting fast. It connects to external services through Model Context Protocol, the standard that lets AI tools interact with Jira, Confluence, GitHub, databases and internal APIs. When a developer connects one of those services, Claude Code runs an OAuth flow, the user approves the scopes and the tool receives a bearer token it uses for every subsequent request.</p>
-
-
-
-<p>That token is stored in plaintext in a configuration file on the developer’s machine. And researchers have now shown exactly how attackers are getting to it.</p>
-
-
-
-<h2 class="wp-block-heading"><a></a>What researchers found</h2>
-
-
-
-<p>Last week, researchers at<a href="https://www.mitiga.io/blog/claude-code-mcp-token-theft-mitm"> </a><a href="https://www.mitiga.io/blog/claude-code-mcp-token-theft-mitm">Mitiga Labs published an attack chain</a> that should concern every security team whose developers use Claude Code. The attack starts with a malicious npm package — something that looks like a legitimate utility or wrapper. Hidden inside is a post-install hook that runs silently during installation. That hook rewrites a single file: ~/.claude.json.</p>
-
-
-
-<p>That file is the control point for how Claude Code routes MCP traffic. Change it, and you can point Claude Code’s authenticated requests to attacker-controlled infrastructure instead of the legitimate service. The OAuth tokens stored in that same file get intercepted in transit. The attacker now holds valid, long-lived bearer tokens for every SaaS platform the developer had connected — Jira, Confluence, GitHub, whatever was integrated.</p>
-
-
-
-<p>What makes this particularly difficult to detect is what the audit logs look like on the other end. The IP address in the provider’s logs resolves to Anthropic’s egress range. The user is real. The session is valid.<a href="https://www.mitiga.io/blog/claude-code-mcp-token-theft-mitm"> </a><a href="https://www.mitiga.io/blog/claude-code-mcp-token-theft-mitm">As Mitiga put it</a>, nothing in that log row is wrong — but nothing in it is right either. The user did not run the query. An attacker did, using a token that was silently redirected before it ever reached its intended destination.</p>
-
-
-
-<p>Mitiga reported this to Anthropic on April 10.<a href="https://www.securityweek.com/claude-code-oauth-tokens-can-be-stolen-through-stealthy-mcp-hijacking/"> </a><a href="https://www.securityweek.com/claude-code-oauth-tokens-can-be-stolen-through-stealthy-mcp-hijacking/">Anthropic responded on April 12 that the issue was out of scope</a>, reasoning that the attack requires prior code execution through a package installation that the user consented to. As of this writing, no patch exists. The attack chain is live.</p>
-
-
-
-<h2 class="wp-block-heading"><a></a>This is not the first time</h2>
-
-
-
-<p>The Mitiga disclosure is the most recent, but it is not the first time Claude Code’s configuration model has created a security problem.</p>
-
-
-
-<p>In February 2026,<a href="https://research.checkpoint.com/2026/rce-and-api-token-exfiltration-through-claude-code-project-files-cve-2025-59536/"> </a><a href="https://research.checkpoint.com/2026/rce-and-api-token-exfiltration-through-claude-code-project-files-cve-2025-59536/">Check Point Research published findings on two separate vulnerabilities</a>. The first, CVE-2025-59536, allowed remote code execution through malicious hooks planted in a repository’s settings file — code that ran before the user could even read the trust dialog. The second, CVE-2026-21852, allowed API key exfiltration by overriding a single environment variable, redirecting authenticated traffic to attacker-controlled infrastructure before any consent prompt appeared.<a href="https://thehackernews.com/2026/02/claude-code-flaws-allow-remote-code.html"> </a><a href="https://thehackernews.com/2026/02/claude-code-flaws-allow-remote-code.html">Simply cloning and opening an untrusted repository was enough</a> to trigger both.</p>
-
-
-
-<p>Anthropic patched those vulnerabilities after Check Point’s disclosure. But the pattern they reveal — configuration files that security teams treat as passive metadata actually functioning as active execution paths — is the same pattern the Mitiga attack exploits. The mechanism keeps working because the underlying architecture creates it.</p>
-
-
-
-<h2 class="wp-block-heading"><a></a>Why security teams need to pay attention</h2>
-
-
-
-<p>If you have read about adversary-in-the-middle phishing, this should feel familiar. AiTM attacks do not steal credentials directly — they sit between the user and the legitimate service, wait for authentication to succeed and walk away with the session token that proves it happened. The Mitiga attack on Claude Code works the same way. The OAuth flow completes legitimately. The user approved the scopes. The token is valid. The attacker just inserted themselves into the routing layer before the token reached its intended destination.</p>
-
-
-
-<p>The difference is that AiTM attacks target browser sessions. This targets developer tooling — and developer tooling sits closer to your source code, your internal APIs, your cloud infrastructure and your production systems than most browser sessions ever do.</p>
-
-
-
-<p>Claude Code adoption is accelerating. Developers install it because it genuinely improves their workflow. They connect it to the tools they use every day. Most of them are not thinking about what the post-install scripts in their npm dependencies are doing to their local configuration files. That is not a failure of awareness — it is an unreasonable expectation. The security team needs to be thinking about it instead.</p>
-
-
-
-<h2 class="wp-block-heading"><a></a>Three controls that help right now</h2>
-
-
-
-<ol class="wp-block-list">
-<li><strong>Monitor </strong><strong>~/.claude.json for unexpected changes.</strong> This file is the pivot point in the Mitiga attack. Changes to MCP server endpoints in that file — particularly additions of new localhost proxy addresses or unfamiliar external endpoints — should trigger an alert. Most organizations have no monitoring on user-level configuration files in developer environments. That needs to change.<a href="https://www.mitiga.io/blog/claude-code-mcp-token-theft-mitm"> </a><a href="https://www.mitiga.io/blog/claude-code-mcp-token-theft-mitm">Mitiga specifically recommends</a> tracking changes to Claude Code configuration, MCP server URLs and OAuth refresh behavior as the primary detection layer.</li>
-
-
-
-<li><strong>Treat npm post-install hooks as a first-class security concern.</strong> The Mitiga attack begins with a malicious npm package. Post-install hooks that execute arbitrary code at install time are a known supply chain risk class — but enforcement in developer environments is inconsistent. Audit what runs during package installation in your development pipelines. Consider requiring review of packages that include post-install scripts before they reach developer machines. This is not a Claude Code-specific recommendation; it applies to every tool in your development stack. Claude Code just made the consequences of getting it wrong much more tangible.</li>
-
-
-
-<li><strong>Audit OAuth tokens connected to Claude Code integrations and rotate them.</strong> Developers who connect Claude Code to Jira, Confluence, GitHub or any other SaaS platform create OAuth tokens that persist across sessions. If those tokens were active during a period when a malicious package was installed, they should be treated as potentially compromised. Rotate them. Review the audit logs on the provider side for the activity patterns Mitiga describes — valid-looking requests from Anthropic’s egress IPs that the developer did not initiate. Note that<a href="https://www.mitiga.io/blog/claude-code-mcp-token-theft-mitm"> </a><a href="https://www.mitiga.io/blog/claude-code-mcp-token-theft-mitm">token rotation alone does not break the chain</a> if the malicious hook is still present — the hook will reseed the configuration and capture new tokens on the next refresh. Remediation requires removing the hook and cleaning the configuration first.</li>
-</ol>
-
-
-
-<h2 class="wp-block-heading"><a></a>An honest assessment</h2>
-
-
-
-<p>Anthropic’s response to the Mitiga disclosure — that the attack is out of scope because the user consented to installing the package — follows a logic that security practitioners will recognize and most will reject. Consent to install a package is not consent to have that package rewrite your AI tool’s routing configuration and intercept your SaaS credentials. The two things are not the same and treating them as equivalent places the entire burden of supply chain security on the developer, making a split-second judgment about a dependency name.</p>
-
-
-
-<p>That is not a reasonable security model.</p>
-
-
-
-<p>The patched Check Point vulnerabilities show that Anthropic is responsive when the issue is framed correctly. The Mitiga research is a week old. Whether a patch follows is an open question, but the attack chain works today regardless of how that question resolves.</p>
-
-
-
-<p>Your developers are using Claude Code. The question for security teams is not whether to engage with this risk but how quickly you can implement detection and response that accounts for it. The configuration file is small, the monitoring requirement is specific, and the attack chain is documented. Starting there is better than waiting for a vendor patch that may not come.</p>
-
-
-
-<p><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><strong><a href="https://www.csoonline.com/expert-contributor-network/">Want to join?</a></strong></p>
 </div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5d ago]]></description>
-</item>
-
-<item>
-  <title>🔴 AI tools becoming hot commodities on ransomware marketplaces</title>
-  <link>https://www.csoonline.com/article/4181514/ai-tools-becoming-hot-commodities-on-ransomware-marketplaces.html</link>
-  <pubDate>Fri, 05 Jun 2026 07:10:00 +0000</pubDate>
-  <source>CSO Online</source>
-  <description><![CDATA[<b>Why this matters: Elevated ransomware risk — validate backups and endpoint defenses.</b><br/><div id="remove_no_follow">
-		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
-					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
-						<div class="article-column__content">
-<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
-
-
-
-<p>Sales of AI-based tools is accelerating within underground <a href="https://www.csoonline.com/article/563507/what-is-ransomware-how-it-works-and-how-to-remove-it.html">ransomware</a> marketplaces, lowering the barrier to entry for new actors in the process.</p>
-
-
-
-<p>An analysis of Telegram channels, 20 dark web forums, and five underground markets by anti-ransomware platform vendor Halcyon found that AI utility posts grew to 1,486 in February 2026, up from just 38 in December 2025.</p>
-
-
-
-<p>The AI tools for sale divided into four categories:</p>
-
-
-
-<ul class="wp-block-list">
-<li>Weaponized LLMs: Sometimes called dark LLMs, these tools omit the safety guardrails and rules present in legitimate large language models (LLMs). “WormGPT” is the market leader in this category of cybercrime-focused AI tooling but only as a brand used by multiple operators, some of which are straightforward scams that collect payments without offering any service.</li>
-
-
-
-<li>AI-enabled identity fraud: Tools in this category include voice and video-enabled deepfakes, created using AI, that are used to fool selfie-based recognition systems and other know your customer (KYC) security controls, among other fraudulent applications. The same tools can also be used as part of <a href="https://www.csoonline.com/article/3995364/ai-superpowers-bec-attacks.html">business email compromise scams</a>.</li>
-
-
-
-<li>AI-augmented malware and attack infrastructure: AI-driven infrastructure is being used to aggregate, process, and exfiltrate stolen data more efficiently.</li>
-
-
-
-<li>Jailbroken and stolen AI services: Hacked AI accounts are the largest category of services offered and the cheapest.</li>
-</ul>
-
-
-
-<p>Halcyon estimates that ransomware attacks have grown in volume by 20% since 2023 with an increased focus on targeting smaller enterprises, which now comprise 80% of attacks.</p>
-
-
-
-<p>During a keynote presentation at Infosecurity Europe, Cynthia Kaiser, SVP of Halcyon’s Ransomware Research Center, told delegates that the <a href="https://www.csoonline.com/article/3838121/the-dirty-dozen-12-worst-ransomware-groups-active-today.html">largest ransomware operators</a> — such as Akira — are increasingly operating the <a href="https://www.csoonline.com/article/4119555/cybercrime-inc-the-new-industry-challenging-cisos-in-2026.html">same business models as legitimate vendors</a> by selling services and infrastructure to their clients and affiliates. The main difference is that the goods on offer are exploits and stolen credentials rather than the legitimate goods sold through legitimate marketplaces.</p>
-
-
-
-<p>Ransomware groups sell routinely through multiple channels, thereby creating redundancy in the event that any channel is taken down. Their services are often offered with tiered pricing, and are commonly available with a freemium model popularised by legitimate web services. Telegram bot-driven channels are automating the process of sales and marketing, while AI-based utilities are being applied by cybercriminals to offer customer service.</p>
-
-
-
-<p>“Modern ransomware operators don’t need to build their operations from scratch,” said Kaiser, the former deputy assistant director of the FBI’s Cyber Division, who added that the skill level required from would-be <a href="https://www.csoonline.com/cybercrime/">cybercriminals</a> has dropped.</p>
-
-
-
-<h2 class="wp-block-heading" id="dishonour-among-thieves">Dishonour among thieves</h2>
-
-
-
-<p>All this may seem impressive, but Kaiser noted that criminal operational security (OpSec) is weaker than it looks.</p>
-
-
-
-<p>“Criminal AI markets have a theft problem [because] black hats are attacking each other,” Kaiser said.</p>
-
-
-
-<p>For example, credentials from one WormGPT instance were stolen by rival cybercriminals and dumped back onto the same forum that originally sold access to the malign AI-based utility.</p>
-
-
-
-<p>Such disruption aside, the greater use of AI tooling is part of a sign that the underground ransomware scene has professionalised not least by making it easier in run multiple attacks at scale.</p>
-
-
-
-<h2 class="wp-block-heading" id="raking-it-in">Raking it in</h2>
-
-
-
-<p>According to separate research from Rapid7, ransomware is becoming more profitable, up 39% between Q1 2025 and Q1 2026.</p>
-
-
-
-<p>The <a href="https://www.csoonline.com/article/4070290/lockbit-dragonforce-and-qilin-form-a-cartel-to-dictate-ransomware-market-conditions.html">Qilin ransomware group</a> made an estimated $193 million between July 2025 and March 2026. And <a href="https://www.csoonline.com/article/4178580/the-gentlemen-are-coming-for-your-files-and-then-your-network.html">The Gentleman</a>, which is just behind Qilin as the biggest ransomware group, made an estimated $52 million between July 2025 and March 2026, according to Rapid7.</p>
-
-
-
-<p>Rapid7’s analysis is based on average ransom payments and payment rates from CoveWare, a ransomware and cyber extortion incident response firm.</p>
-
-
-
-<p>Thom Langford, CTO EMEA at Rapid7, said that the ransomware ecosystem has evolved into a mature underground marketplace where access, tooling, and full attack services are now commercially available to almost anyone.</p>
-
-
-
-<p>Langford added that AI-based social engineering, primarily to craft more convincing phishing lures, is widely used.</p>
-
-
-
-<p>Marketplaces offer an a la carte menu where cybercriminals can contract services for initial access, exfiltration, or negotiation with victims, according to Langford, who added that many if not all of the principal players in the ransomware scene “speak Russian.”</p>
-
-
-
-<h2 class="wp-block-heading" id="countermeasures">Countermeasures</h2>
-
-
-
-<p>Law enforcement takedowns are curtailing the growth of ransomware operations, but businesses also need to play their part in defence, Halcyon advises.</p>
-
-
-
-<p>Enterprises should concentrate on measures such as stopping initial access, detecting lateral movement, and disrupting exfiltration and encryption. Companies can also build resilience through tabletop exercises, Kaiser concluded.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 5d ago]]></description>
 </item>
 
 </channel>
