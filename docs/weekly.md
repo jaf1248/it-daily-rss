@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
 **Period:** June 03 – June 10, 2026  
-**Generated:** 2026-06-10 05:15 UTC  
+**Generated:** 2026-06-10 09:54 UTC  
 **Items reviewed:** 136  
 
 ## ⚡ Top Actions This Week
@@ -55,41 +55,41 @@
 
 ## 🟠 Important — Review This Week
 
-- [Six Proto6 Vulnerabilities in protobuf.js Expose Node.js Apps to RCE and DoS](https://thehackernews.com/2026/06/six-proto6-vulnerabilities-in.html)  
-  **The Hacker News** · Jun 10 · _General awareness item._  
+- [CVE-2026-49975 Apache HTTP Server: mod_http2 denial of service](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-49975)  
+  **Microsoft Security Response Center (MSRC)** · Jun 10 · _General awareness item._  
 
-- [Microsoft Defender 'RoguePlanet' zero-day grants SYSTEM privileges](https://www.bleepingcomputer.com/news/microsoft/microsoft-defender-rogueplanet-zero-day-grants-system-privileges/)  
-  **BleepingComputer** · Jun 09 · _General awareness item._  
+- [CVE-2026-42502 Invoking  incorrect handling of HTML elements in foreign content in golang.org/x/net/html](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-42502)  
+  **Microsoft Security Response Center (MSRC)** · Jun 10 · _General awareness item._  
 
-- [A Record-Breaking Patch Tuesday for June 2026](https://krebsonsecurity.com/2026/06/a-record-breaking-patch-tuesday-for-june-2026/)  
-  **Krebs on Security** · Jun 09 · _General awareness item._  
+- [CVE-2026-46330 Revert "net/smc: Introduce TCP ULP support"](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-46330)  
+  **Microsoft Security Response Center (MSRC)** · Jun 10 · _General awareness item._  
 
-- [ServiceNow discloses security incident exposing customer data](https://www.bleepingcomputer.com/news/security/servicenow-discloses-security-incident-exposing-customer-data/)  
-  **BleepingComputer** · Jun 09 · _General awareness item._  
+- [CVE-2026-46325 RDMA/rxe: Fix iova-to-va conversion for MR page sizes != PAGE_SIZE](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-46325)  
+  **Microsoft Security Response Center (MSRC)** · Jun 10 · _General awareness item._  
 
-- [SAP fixes critical flaws in NetWeaver and Commerce Cloud](https://www.bleepingcomputer.com/news/security/sap-fixes-critical-flaws-in-netweaver-and-commerce-cloud/)  
-  **BleepingComputer** · Jun 09 · _General awareness item._  
+- [CVE-2026-46320 tap: free page on error paths in tap_get_user_xdp()](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-46320)  
+  **Microsoft Security Response Center (MSRC)** · Jun 10 · _General awareness item._  
 
-- [Microsoft releases Windows 10 KB5094127 extended security update](https://www.bleepingcomputer.com/news/microsoft/microsoft-releases-windows-10-kb5094127-extended-security-update/)  
-  **BleepingComputer** · Jun 09 · _General awareness item._  
+- [CVE-2026-46324 netfilter: nf_tables: use list_del_rcu for netlink hooks](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-46324)  
+  **Microsoft Security Response Center (MSRC)** · Jun 10 · _General awareness item._  
 
-- [Microsoft June 2026 Patch Tuesday fixes 3 zero-day, 200 flaws](https://www.bleepingcomputer.com/news/microsoft/microsoft-june-2026-patch-tuesday-fixes-3-zero-day-200-flaws/)  
-  **BleepingComputer** · Jun 09 · _General awareness item._  
+- [CVE-2026-46323 net: gro: don't merge zcopy skbs](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-46323)  
+  **Microsoft Security Response Center (MSRC)** · Jun 10 · _General awareness item._  
 
-- [Microsoft June 2026 Patch Tuesday, (Tue, Jun 9th)](https://isc.sans.edu/diary/rss/33064)  
-  **SANS Internet Storm Center** · Jun 09 · _General awareness item._  
+- [CVE-2026-46319 net/sched: act_ct: Only release RCU read lock after ct_ft](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-46319)  
+  **Microsoft Security Response Center (MSRC)** · Jun 10 · _General awareness item._  
 
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [How has use of framing protection security headers changed in the past 3 years&#x3f;, (Wed, Jun 10th)](https://isc.sans.edu/diary/rss/33068) — SANS Internet Storm Center
+- [Anthropic Releases Claude Fable 5, Its Most Powerful AI Yet, With Cyber Safeguards](https://thehackernews.com/2026/06/anthropic-releases-claude-fable-5-its.html) — The Hacker News
 - [Anthropic rolls out Claude Fable 5, but it's available for a limited time](https://www.bleepingcomputer.com/news/artificial-intelligence/anthropic-rolls-out-claude-fable-5-but-its-available-for-a-limited-time/) — BleepingComputer
 - [ISC Stormcast For Wednesday, June 10th, 2026 https://isc.sans.edu/podcastdetail/9966, (Wed, Jun 10th)](https://isc.sans.edu/diary/rss/33066) — SANS Internet Storm Center
 - [OpenClaw AI agent found falling for phishing attacks, spills user data](https://www.bleepingcomputer.com/news/security/openclaw-ai-agent-found-falling-for-phishing-attacks-spills-user-data/) — BleepingComputer
 - [Windows 11 KB5094126 & KB5093998 cumulative updates released](https://www.bleepingcomputer.com/news/microsoft/windows-11-kb5094126-and-kb5093998-cumulative-updates-released/) — BleepingComputer
-- [Meta to Use Off-Site Business Data for Feed and AI Personalization](https://thehackernews.com/2026/06/meta-to-use-off-site-business-data-for.html) — The Hacker News
-- [GitHub disables Microsoft repos pushing password-stealing malware](https://www.bleepingcomputer.com/news/security/github-disables-microsoft-repos-pushing-password-stealing-malware/) — BleepingComputer
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 11 critical · 83 important · 42 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 10 critical · 86 important · 40 FYI_
