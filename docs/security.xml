@@ -3,14 +3,14 @@
 <channel>
   <title>Joe — Security Intelligence</title>
   <description>Cybersecurity threats, vulnerabilities, breaches, and Microsoft security updates.</description>
-  <lastBuildDate>Wed, 10 Jun 2026 21:58:29 +0000</lastBuildDate>
+  <lastBuildDate>Wed, 10 Jun 2026 23:39:10 +0000</lastBuildDate>
   
 <item>
   <title>🟠 Path traversal flaw in AI dev platform Langflow exploited in attacks</title>
   <link>https://www.bleepingcomputer.com/news/security/path-traversal-flaw-in-ai-dev-platform-langflow-exploited-in-attacks/</link>
   <pubDate>Wed, 10 Jun 2026 21:23:44 +0000</pubDate>
   <source>BleepingComputer</source>
-  <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/>Attackers are actively exploiting CVE-2026-5027, a high-severity path traversal vulnerability in the AI development platform Langflow, to write arbitrary files on exposed servers. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/>Attackers are actively exploiting CVE-2026-5027, a high-severity path traversal vulnerability in the AI development platform Langflow, to write arbitrary files on exposed servers. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
 </item>
 
 <item>
@@ -18,7 +18,7 @@
   <link>https://www.rapid7.com/blog/post/ai-automated-threat-hunting-turns-threat-intelligence-into-executable-hunt-plans</link>
   <pubDate>Wed, 10 Jun 2026 16:26:33 +0000</pubDate>
   <source>Rapid7 Blog</source>
-  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/><p><em>Blake McDermott is Senior Threat Hunter at Rapid7.</em></p><p><span style="font-size: undefined;">Every week, threat hunt teams are faced with a steady flow of blogs, advisories, and DFIR reports containing valuable intelligence about adversary behaviors, tactics, techniques, and procedures. The challenge is turning that intelligence into repeatable, behavior-based hunting logic quickly enough to be useful. Indicators of compromise still have value, but they age quickly. Behavioral detections give defenders a better way to look for how attackers operate, rather than relying only on what they leave behind.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">To help solve this, Rapid7’s Internal Security team built an automated threat hunting pipeline that transforms threat intelligence reporting into structured, executable hunt plans. The pipeline uses large language models to extract adversary behaviors, map them to MITRE ATT&amp;CK techniques, generate detection queries across multiple tools, and support analyst-ready briefings in minutes rather than days.</span></p><h2 style="direction: ltr;">Why manual threat hunting does not scale</h2><p style="direction: ltr;"><span style="font-size: undefined;">A single threat intelligence report can describe dozens of adversary behaviors across multiple ATT&amp;CK techniques. Translating that report into useful hunt logic often requires an analyst to read the full source, identify relevant behaviors, map them to ATT&amp;CK, write queries for each security tool, validate syntax, execute searches, and triage the results.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">For a report covering 40 to 50 techniques, that process can consume much of a working week. When multiple high-quality reports land at once, manual hunting quickly becomes unsustainable. The goal of this project was to reduce the mechanical work involved in building hunt plans, while keeping analysts in control of validation, interpretation, and decision-making.</span></p><h2 style="direction: ltr;">How the automated threat hunting pipeline works</h2><p style="direction: ltr;"><span style="font-size: undefined;">The pipeline runs in four stages, each designed to be inspectable, repeatable, and easy for analysts to refine over time.</span></p><h3 style="direction: ltr;">Stage 1: Threat intelligence ingestion</h3><p style="direction: ltr;"><span style="font-size: undefined;">The pipeline accepts a threat intelligence blog or report via URL or pasted text. It extracts the core article body, removes navigation and boilerplate content, and validates the material to ensure there is enough substance for analysis. This creates a clean input for the model and reduces the risk of irrelevant page content influencing the output.</span></p><h3 style="direction: ltr;">Stage 2: ATT&amp;CK technique extraction</h3><p style="direction: ltr;"><span style="font-size: undefined;">The cleaned content is then sent to a large language model with a structured prompt that instructs it to act as a MITRE ATT&amp;CK analyst. The model identifies adversary techniques referenced in the report and returns each one with its technique ID, technique name, tactic category, and a short summary of how the threat actor used it.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">The prompt is tuned to focus on offensive behaviors and adversary tradecraft. Defensive recommendations, control guidance, and mitigation strategies are excluded from this specific workflow so the output reflects what the attacker did, rather than what defenders should implement in response. That focus helps preserve the hunting value of the source material while leaving room for separate workflows that generate defensive recommendations or control improvements.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">For example, when applied to a Rapid7 threat research report on </span><a href="/blog/post/tr-bpfdoor-telecom-networks-sleeper-cells-threat-research-report" target="_self"><span style="font-size: undefined;">BPFdoor activity in telecom networks</span></a><span style="font-size: undefined;">, the pipeline identified 16 techniques across seven ATT&amp;CK tactics, including Initial Access, Persistence, Defense Evasion, Credential Access, Collection, Command and Control, and Execution. That structured extraction became the foundation for a hunt plan with detection coverage across InsightIDR, Velociraptor, and Sigma, giving analysts a faster path from source intelligence to behavior-based hunting logic.</span></p><h3 style="direction: ltr;">Stage 3: Detection query generation</h3><p style="direction: ltr;"><span style="font-size: undefined;">For each identified technique, the pipeline generates detection content across several tools and formats. This includes LEQL queries for InsightIDR, targeting activity such as process execution, authentication events, network connections, and file modifications. It also includes Velociraptor VQL queries and artifact recommendations for live host interrogation, Sigma rules that can be shared across teams or converted into other SIEM formats, and YARA rules where relevant.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">Every generated query is reviewed by an analyst before use. LLMs can accelerate drafting and reduce repetitive work, but analyst validation remains essential for accuracy, syntax, and operational fit.</span></p><h3 style="direction: ltr;">Stage 4: Hunt plan assembly</h3><p style="direction: ltr;"><span style="font-size: undefined;">The pipeline assembles a structured markdown hunt plan organized by ATT&amp;CK tactic. Each report includes an executive summary, an IOC sweep section when indicators are present, and a behavioral hunting section containing generated queries in fenced code blocks with clear explanations of what each query is designed to detect. This gives analysts a consistent output they can inspect, edit, execute, and reuse.</span></p><h2 style="direction: ltr;">Building a reusable detection query library</h2><p style="direction: ltr;"><span style="font-size: undefined;">A key design decision was the introduction of a persistent query cache. Each technique’s generated queries are saved as standalone markdown files, creating a growing library of reusable detection content.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">This cache reduces cost and execution time because techniques seen in previous reports can be loaded from the library rather than regenerated. It also creates a practical feedback loop: analysts can correct, tune, and improve cached queries over time, and those improvements persist across future hunt plans.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">By tracking which reports and campaigns reference each technique, the team can build an organic view of recurring adversary behavior and identify which techniques appear across multiple actors or campaigns. Over time, this helps narrow the focus to behaviors most relevant to the environment, providing useful context.</span></p><h2 style="direction: ltr;">Executing hunts and analyzing results</h2><p style="direction: ltr;"><span style="font-size: undefined;">Once a hunt plan has been reviewed and validated, a separate process executes approved queries against InsightIDR. Results are then parsed and summarized into a briefing that highlights which queries returned results, why those results may matter, which findings may require immediate investigation, and how the activity relates to the threat actor’s known tradecraft.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">Analysts can then ask follow-up questions conversationally, such as which findings should be prioritized, which hosts or users require deeper review, or how results should be interpreted based on risk.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">Velociraptor queries are still executed manually because of the level of access involved. Given the potential impact of live host interrogation, the team made the deliberate decision to keep that execution under direct analyst control.</span></p><h2 style="direction: ltr;">Practical use cases for automated threat hunting</h2><p style="direction: ltr;"><span style="font-size: undefined;">The pipeline has already proven useful across several hunting scenarios: For advanced threat actor reporting, it can process DFIR reports and APT advisories to quickly determine whether known tradecraft appears in the environment. For insider threat hunting, it can be adapted to focus on data movement, anomalous access patterns, staging, and exfiltration behaviors. For security hardening, it can process reports about common persistence mechanisms and misconfigurations to validate whether the environment is exposed to known attack paths.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">Across each use case, the value comes from shortening the path between intelligence and action.</span></p><h2 style="direction: ltr;">Automating the repetitive work, not the expertise</h2><p style="direction: ltr;"><span style="font-size: undefined;">By automating the repetitive work of reading reports, mapping techniques, and drafting queries, analysts can spend more time interpreting results, understanding context, and making decisions. The pipeline turns a daily flood of threat intelligence into structured, queryable, and continuously improving detection content. What previously required hours or days of manual effort can now be completed in minutes, while the underlying library compounds in value with every report processed.</span></p><br/><br/><b>Source:</b> Rapid7 Blog &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/><p><em>Blake McDermott is Senior Threat Hunter at Rapid7.</em></p><p><span style="font-size: undefined;">Every week, threat hunt teams are faced with a steady flow of blogs, advisories, and DFIR reports containing valuable intelligence about adversary behaviors, tactics, techniques, and procedures. The challenge is turning that intelligence into repeatable, behavior-based hunting logic quickly enough to be useful. Indicators of compromise still have value, but they age quickly. Behavioral detections give defenders a better way to look for how attackers operate, rather than relying only on what they leave behind.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">To help solve this, Rapid7’s Internal Security team built an automated threat hunting pipeline that transforms threat intelligence reporting into structured, executable hunt plans. The pipeline uses large language models to extract adversary behaviors, map them to MITRE ATT&amp;CK techniques, generate detection queries across multiple tools, and support analyst-ready briefings in minutes rather than days.</span></p><h2 style="direction: ltr;">Why manual threat hunting does not scale</h2><p style="direction: ltr;"><span style="font-size: undefined;">A single threat intelligence report can describe dozens of adversary behaviors across multiple ATT&amp;CK techniques. Translating that report into useful hunt logic often requires an analyst to read the full source, identify relevant behaviors, map them to ATT&amp;CK, write queries for each security tool, validate syntax, execute searches, and triage the results.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">For a report covering 40 to 50 techniques, that process can consume much of a working week. When multiple high-quality reports land at once, manual hunting quickly becomes unsustainable. The goal of this project was to reduce the mechanical work involved in building hunt plans, while keeping analysts in control of validation, interpretation, and decision-making.</span></p><h2 style="direction: ltr;">How the automated threat hunting pipeline works</h2><p style="direction: ltr;"><span style="font-size: undefined;">The pipeline runs in four stages, each designed to be inspectable, repeatable, and easy for analysts to refine over time.</span></p><h3 style="direction: ltr;">Stage 1: Threat intelligence ingestion</h3><p style="direction: ltr;"><span style="font-size: undefined;">The pipeline accepts a threat intelligence blog or report via URL or pasted text. It extracts the core article body, removes navigation and boilerplate content, and validates the material to ensure there is enough substance for analysis. This creates a clean input for the model and reduces the risk of irrelevant page content influencing the output.</span></p><h3 style="direction: ltr;">Stage 2: ATT&amp;CK technique extraction</h3><p style="direction: ltr;"><span style="font-size: undefined;">The cleaned content is then sent to a large language model with a structured prompt that instructs it to act as a MITRE ATT&amp;CK analyst. The model identifies adversary techniques referenced in the report and returns each one with its technique ID, technique name, tactic category, and a short summary of how the threat actor used it.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">The prompt is tuned to focus on offensive behaviors and adversary tradecraft. Defensive recommendations, control guidance, and mitigation strategies are excluded from this specific workflow so the output reflects what the attacker did, rather than what defenders should implement in response. That focus helps preserve the hunting value of the source material while leaving room for separate workflows that generate defensive recommendations or control improvements.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">For example, when applied to a Rapid7 threat research report on </span><a href="/blog/post/tr-bpfdoor-telecom-networks-sleeper-cells-threat-research-report" target="_self"><span style="font-size: undefined;">BPFdoor activity in telecom networks</span></a><span style="font-size: undefined;">, the pipeline identified 16 techniques across seven ATT&amp;CK tactics, including Initial Access, Persistence, Defense Evasion, Credential Access, Collection, Command and Control, and Execution. That structured extraction became the foundation for a hunt plan with detection coverage across InsightIDR, Velociraptor, and Sigma, giving analysts a faster path from source intelligence to behavior-based hunting logic.</span></p><h3 style="direction: ltr;">Stage 3: Detection query generation</h3><p style="direction: ltr;"><span style="font-size: undefined;">For each identified technique, the pipeline generates detection content across several tools and formats. This includes LEQL queries for InsightIDR, targeting activity such as process execution, authentication events, network connections, and file modifications. It also includes Velociraptor VQL queries and artifact recommendations for live host interrogation, Sigma rules that can be shared across teams or converted into other SIEM formats, and YARA rules where relevant.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">Every generated query is reviewed by an analyst before use. LLMs can accelerate drafting and reduce repetitive work, but analyst validation remains essential for accuracy, syntax, and operational fit.</span></p><h3 style="direction: ltr;">Stage 4: Hunt plan assembly</h3><p style="direction: ltr;"><span style="font-size: undefined;">The pipeline assembles a structured markdown hunt plan organized by ATT&amp;CK tactic. Each report includes an executive summary, an IOC sweep section when indicators are present, and a behavioral hunting section containing generated queries in fenced code blocks with clear explanations of what each query is designed to detect. This gives analysts a consistent output they can inspect, edit, execute, and reuse.</span></p><h2 style="direction: ltr;">Building a reusable detection query library</h2><p style="direction: ltr;"><span style="font-size: undefined;">A key design decision was the introduction of a persistent query cache. Each technique’s generated queries are saved as standalone markdown files, creating a growing library of reusable detection content.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">This cache reduces cost and execution time because techniques seen in previous reports can be loaded from the library rather than regenerated. It also creates a practical feedback loop: analysts can correct, tune, and improve cached queries over time, and those improvements persist across future hunt plans.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">By tracking which reports and campaigns reference each technique, the team can build an organic view of recurring adversary behavior and identify which techniques appear across multiple actors or campaigns. Over time, this helps narrow the focus to behaviors most relevant to the environment, providing useful context.</span></p><h2 style="direction: ltr;">Executing hunts and analyzing results</h2><p style="direction: ltr;"><span style="font-size: undefined;">Once a hunt plan has been reviewed and validated, a separate process executes approved queries against InsightIDR. Results are then parsed and summarized into a briefing that highlights which queries returned results, why those results may matter, which findings may require immediate investigation, and how the activity relates to the threat actor’s known tradecraft.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">Analysts can then ask follow-up questions conversationally, such as which findings should be prioritized, which hosts or users require deeper review, or how results should be interpreted based on risk.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">Velociraptor queries are still executed manually because of the level of access involved. Given the potential impact of live host interrogation, the team made the deliberate decision to keep that execution under direct analyst control.</span></p><h2 style="direction: ltr;">Practical use cases for automated threat hunting</h2><p style="direction: ltr;"><span style="font-size: undefined;">The pipeline has already proven useful across several hunting scenarios: For advanced threat actor reporting, it can process DFIR reports and APT advisories to quickly determine whether known tradecraft appears in the environment. For insider threat hunting, it can be adapted to focus on data movement, anomalous access patterns, staging, and exfiltration behaviors. For security hardening, it can process reports about common persistence mechanisms and misconfigurations to validate whether the environment is exposed to known attack paths.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">Across each use case, the value comes from shortening the path between intelligence and action.</span></p><h2 style="direction: ltr;">Automating the repetitive work, not the expertise</h2><p style="direction: ltr;"><span style="font-size: undefined;">By automating the repetitive work of reading reports, mapping techniques, and drafting queries, analysts can spend more time interpreting results, understanding context, and making decisions. The pipeline turns a daily flood of threat intelligence into structured, queryable, and continuously improving detection content. What previously required hours or days of manual effort can now be completed in minutes, while the underlying library compounds in value with every report processed.</span></p><br/><br/><b>Source:</b> Rapid7 Blog &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
 </item>
 
 <item>
@@ -30,7 +30,7 @@
 
 The vulnerability in question is CVE-2026-5027 (CVSS score: 8.8), a case of path traversal that could allow an attacker to write files to arbitrary locations.
 
-"The 'POST /<br/><br/><b>Source:</b> The Hacker News &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
+"The 'POST /<br/><br/><b>Source:</b> The Hacker News &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 8h ago]]></description>
 </item>
 
 <item>
@@ -43,7 +43,7 @@ The vulnerability in question is CVE-2026-5027 (CVSS score: 8.8), a case of path
 The list of vulnerabilities is as follows -
 
 
-  CVE-2026-20245 (CVSS score: 7.8) - An improper encoding or escaping of output vulnerability in Cisco Catalyst SD-WAN Manager that could allow an<br/><br/><b>Source:</b> The Hacker News &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
+  CVE-2026-20245 (CVSS score: 7.8) - An improper encoding or escaping of output vulnerability in Cisco Catalyst SD-WAN Manager that could allow an<br/><br/><b>Source:</b> The Hacker News &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 8h ago]]></description>
 </item>
 
 <item>
@@ -51,7 +51,7 @@ The list of vulnerabilities is as follows -
   <link>https://krebsonsecurity.com/2026/06/who-runs-the-ransomware-group-the-gentlemen/</link>
   <pubDate>Wed, 10 Jun 2026 14:03:44 +0000</pubDate>
   <source>Krebs on Security</source>
-  <description><![CDATA[<b>Why this matters: Elevated ransomware risk — validate backups and endpoint defenses.</b><br/>A cybercrime group known as The Gentlemen has emerged as the second most active ransomware gang by victim count, rapidly attracting a talented pool of hackers through an aggressive recruitment strategy that promises affiliates 90 percent of any ransom paid by victims. This post examines clues pointing to a real life identity for the administrator of The Gentlemen ransomware group.<br/><br/><b>Source:</b> Krebs on Security &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Elevated ransomware risk — validate backups and endpoint defenses.</b><br/>A cybercrime group known as The Gentlemen has emerged as the second most active ransomware gang by victim count, rapidly attracting a talented pool of hackers through an aggressive recruitment strategy that promises affiliates 90 percent of any ransom paid by victims. This post examines clues pointing to a real life identity for the administrator of The Gentlemen ransomware group.<br/><br/><b>Source:</b> Krebs on Security &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
 </item>
 
 <item>
@@ -60,7 +60,7 @@ The list of vulnerabilities is as follows -
   <pubDate>Wed, 10 Jun 2026 14:00:00 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: Elevated ransomware risk — validate backups and endpoint defenses.</b><br/><p>As attackers increasingly favor stolen credentials over exploits, infostealers have become a primary source of access for ransomware and other cybercrime operations.</p>
-<p>The post <a href="https://www.securityweek.com/infostealers-turn-millions-of-devices-into-credential-theft-machines/">Infostealers Turn Millions of Devices Into Credential Theft Machines</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/infostealers-turn-millions-of-devices-into-credential-theft-machines/">Infostealers Turn Millions of Devices Into Credential Theft Machines</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
 </item>
 
 <item>
@@ -68,7 +68,7 @@ The list of vulnerabilities is as follows -
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-47294</link>
   <pubDate>Wed, 10 Jun 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Updated an acknowledgement. This is an informational change only.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Updated an acknowledgement. This is an informational change only.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
 </item>
 
 <item>
@@ -76,7 +76,7 @@ The list of vulnerabilities is as follows -
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-47298</link>
   <pubDate>Wed, 10 Jun 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Updated an acknowledgement. This is an informational change only.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Updated an acknowledgement. This is an informational change only.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
 </item>
 
 <item>
@@ -84,7 +84,7 @@ The list of vulnerabilities is as follows -
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-42903</link>
   <pubDate>Wed, 10 Jun 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Updated an acknowledgement. This is an informational change only.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Updated an acknowledgement. This is an informational change only.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
 </item>
 
 <item>
@@ -92,7 +92,7 @@ The list of vulnerabilities is as follows -
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-48569</link>
   <pubDate>Wed, 10 Jun 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Updated the Security Updates Build Number<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Updated the Security Updates Build Number<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
 </item>
 
 <item>
@@ -100,7 +100,7 @@ The list of vulnerabilities is as follows -
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-40376</link>
   <pubDate>Wed, 10 Jun 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Updated the Security Updates Build Number<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Updated the Security Updates Build Number<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
 </item>
 
 <item>
@@ -108,7 +108,7 @@ The list of vulnerabilities is as follows -
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45482</link>
   <pubDate>Wed, 10 Jun 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Updated the Security Updates Build Number and Title as the Chat extention is now merged into Visual Studio Code<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Updated the Security Updates Build Number and Title as the Chat extention is now merged into Visual Studio Code<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
 </item>
 
 <item>
@@ -116,7 +116,7 @@ The list of vulnerabilities is as follows -
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-40371</link>
   <pubDate>Wed, 10 Jun 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>The release notes link has been updated to point to the latest available version. Informational change only.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>The release notes link has been updated to point to the latest available version. Informational change only.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
 </item>
 
 <item>
@@ -124,7 +124,7 @@ The list of vulnerabilities is as follows -
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-20846</link>
   <pubDate>Wed, 10 Jun 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Updated an acknowledgement. This is an informational change only.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Updated an acknowledgement. This is an informational change only.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
 </item>
 
 <item>
@@ -132,7 +132,7 @@ The list of vulnerabilities is as follows -
   <link>https://www.bleepingcomputer.com/news/microsoft/microsoft-patches-exchange-server-zero-day-exploited-in-attacks/</link>
   <pubDate>Wed, 10 Jun 2026 13:44:19 +0000</pubDate>
   <source>BleepingComputer</source>
-  <description><![CDATA[<b>Why this matters: Could impact email access or mail flow — monitor delivery and client issues.</b><br/>Microsoft has patched an actively exploited Exchange Server vulnerability that allows threat actors to execute arbitrary JavaScript code in cross-site scripting (XSS) attacks targeting Outlook Web Access users. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 8h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Could impact email access or mail flow — monitor delivery and client issues.</b><br/>Microsoft has patched an actively exploited Exchange Server vulnerability that allows threat actors to execute arbitrary JavaScript code in cross-site scripting (XSS) attacks targeting Outlook Web Access users. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
 </item>
 
 <item>
@@ -148,7 +148,7 @@ Accept: */*
 Connection: keep-alive
 Content-Type: application/x-www-form-urlencoded
 Content-Length: 161
-message=execute+system+%2Fconfiguration%2Fsystem%2Fcommandexec+%3Ccommandexec%3E%3Cindex%3E1%3C%2Findex%3E%3Creqandres%3Eid%3C%2Freqandres%3E%3C%2Fcommandexec%3E</pre><h2 style="direction: ltr;">Mitigation guidance</h2><p style="direction: ltr;"><span style="font-size: undefined;">A vendor-supplied update is available to remediate both CVE-2026-10520 and CVE-2026-10523. The following versions of Ivanti Sentry are affected:</span></p><ul><li style="direction: ltr;"><p style="direction: ltr;"><span style="font-size: undefined;">Ivanti Sentry 10.7.0 and below</span></p></li><li style="direction: ltr;"><p style="direction: ltr;"><span style="font-size: undefined;">Ivanti Sentry 10.6.1 and below</span></p></li><li style="direction: ltr;"><p style="direction: ltr;"><span style="font-size: undefined;">Ivanti Sentry 10.5.1 and below</span></p></li></ul><p style="direction: ltr;"><span style="font-size: undefined;">The following fixed versions of Ivanti Sentry remediate both vulnerabilities:</span></p><ul><li style="direction: ltr;"><p style="direction: ltr;"><span style="font-size: undefined;">Ivanti Sentry 10.7.1</span></p></li><li style="direction: ltr;"><p style="direction: ltr;"><span style="font-size: undefined;">Ivanti Sentry 10.6.2</span></p></li><li style="direction: ltr;"><p style="direction: ltr;"><span style="font-size: undefined;">Ivanti Sentry 10.5.2</span></p></li></ul><p style="direction: ltr;"><span style="font-size: undefined;">Given the critical severity of these vulnerabilities, the availability of a public PoC exploit for CVE-2026-10520, and the unauthenticated attack vector, Rapid7 strongly recommends updating affected Ivanti Sentry appliances on an urgent basis, outside of normal patching cycles.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">For the latest mitigation guidance, please refer to the </span><a href="https://hub.ivanti.com/s/article/Security-Advisory-Ivanti-Sentry-CVE-2026-10520-CVE-2026-10523?language=en_US"><span style="font-size: undefined;">vendor's security advisory</span></a><span style="font-size: undefined;">.</span></p><h2 style="direction: ltr;">Rapid7 customers</h2><h3 style="direction: ltr;"><span style="color: rgb(67, 67, 67);">Exposure Command, InsightVM, and Nexpose</span></h3><p style="direction: ltr;"><span style="font-size: undefined;">Exposure Command, InsightVM, and Nexpose customers can assess exposure to CVE-2026-10520 and CVE-2026-10523 with unauthenticated vulnerability checks expected to be available in the June 11 content release.</span></p><h2>Updates</h2><ul><li><span style="font-size: undefined;"><strong>June 10, 2026:</strong></span><span style="font-size: undefined;"> Initial publication.</span></li></ul><br/><br/><b>Source:</b> Rapid7 Blog &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 11h ago]]></description>
+message=execute+system+%2Fconfiguration%2Fsystem%2Fcommandexec+%3Ccommandexec%3E%3Cindex%3E1%3C%2Findex%3E%3Creqandres%3Eid%3C%2Freqandres%3E%3C%2Fcommandexec%3E</pre><h2 style="direction: ltr;">Mitigation guidance</h2><p style="direction: ltr;"><span style="font-size: undefined;">A vendor-supplied update is available to remediate both CVE-2026-10520 and CVE-2026-10523. The following versions of Ivanti Sentry are affected:</span></p><ul><li style="direction: ltr;"><p style="direction: ltr;"><span style="font-size: undefined;">Ivanti Sentry 10.7.0 and below</span></p></li><li style="direction: ltr;"><p style="direction: ltr;"><span style="font-size: undefined;">Ivanti Sentry 10.6.1 and below</span></p></li><li style="direction: ltr;"><p style="direction: ltr;"><span style="font-size: undefined;">Ivanti Sentry 10.5.1 and below</span></p></li></ul><p style="direction: ltr;"><span style="font-size: undefined;">The following fixed versions of Ivanti Sentry remediate both vulnerabilities:</span></p><ul><li style="direction: ltr;"><p style="direction: ltr;"><span style="font-size: undefined;">Ivanti Sentry 10.7.1</span></p></li><li style="direction: ltr;"><p style="direction: ltr;"><span style="font-size: undefined;">Ivanti Sentry 10.6.2</span></p></li><li style="direction: ltr;"><p style="direction: ltr;"><span style="font-size: undefined;">Ivanti Sentry 10.5.2</span></p></li></ul><p style="direction: ltr;"><span style="font-size: undefined;">Given the critical severity of these vulnerabilities, the availability of a public PoC exploit for CVE-2026-10520, and the unauthenticated attack vector, Rapid7 strongly recommends updating affected Ivanti Sentry appliances on an urgent basis, outside of normal patching cycles.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">For the latest mitigation guidance, please refer to the </span><a href="https://hub.ivanti.com/s/article/Security-Advisory-Ivanti-Sentry-CVE-2026-10520-CVE-2026-10523?language=en_US"><span style="font-size: undefined;">vendor's security advisory</span></a><span style="font-size: undefined;">.</span></p><h2 style="direction: ltr;">Rapid7 customers</h2><h3 style="direction: ltr;"><span style="color: rgb(67, 67, 67);">Exposure Command, InsightVM, and Nexpose</span></h3><p style="direction: ltr;"><span style="font-size: undefined;">Exposure Command, InsightVM, and Nexpose customers can assess exposure to CVE-2026-10520 and CVE-2026-10523 with unauthenticated vulnerability checks expected to be available in the June 11 content release.</span></p><h2>Updates</h2><ul><li><span style="font-size: undefined;"><strong>June 10, 2026:</strong></span><span style="font-size: undefined;"> Initial publication.</span></li></ul><br/><br/><b>Source:</b> Rapid7 Blog &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
 </item>
 
 <item>
@@ -158,7 +158,7 @@ message=execute+system+%2Fconfiguration%2Fsystem%2Fcommandexec+%3Ccommandexec%3E
   <source>The Hacker News</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Microsoft on Tuesday released fixes for a record 206 security vulnerabilities impacting its software portfolio, including three flaws that have been publicly disclosed at the time of release.
 
-Of the 206 flaws, 39 are rated Critical, and 167 are rated Important in severity. This includes 63 privilege escalation, 56 remote code execution, 30 information disclosure, 27 spoofing, 20 security<br/><br/><b>Source:</b> The Hacker News &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 12h ago]]></description>
+Of the 206 flaws, 39 are rated Critical, and 167 are rated Important in severity. This includes 63 privilege escalation, 56 remote code execution, 30 information disclosure, 27 spoofing, 20 security<br/><br/><b>Source:</b> The Hacker News &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 14h ago]]></description>
 </item>
 
 <item>
@@ -166,7 +166,7 @@ Of the 206 flaws, 39 are rated Critical, and 167 are rated Important in severity
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-49975</link>
   <pubDate>Wed, 10 Jun 2026 08:42:51 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 14h ago]]></description>
 </item>
 
 <item>
@@ -174,7 +174,7 @@ Of the 206 flaws, 39 are rated Critical, and 167 are rated Important in severity
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-42502</link>
   <pubDate>Wed, 10 Jun 2026 08:41:47 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 14h ago]]></description>
 </item>
 
 <item>
@@ -182,7 +182,7 @@ Of the 206 flaws, 39 are rated Critical, and 167 are rated Important in severity
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-46330</link>
   <pubDate>Wed, 10 Jun 2026 08:06:26 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 15h ago]]></description>
 </item>
 
 <item>
@@ -190,7 +190,7 @@ Of the 206 flaws, 39 are rated Critical, and 167 are rated Important in severity
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-46325</link>
   <pubDate>Wed, 10 Jun 2026 08:06:20 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 15h ago]]></description>
 </item>
 
 <item>
@@ -198,7 +198,7 @@ Of the 206 flaws, 39 are rated Critical, and 167 are rated Important in severity
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-46320</link>
   <pubDate>Wed, 10 Jun 2026 08:06:15 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 15h ago]]></description>
 </item>
 
 <item>
@@ -206,7 +206,7 @@ Of the 206 flaws, 39 are rated Critical, and 167 are rated Important in severity
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-46324</link>
   <pubDate>Wed, 10 Jun 2026 08:06:09 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 15h ago]]></description>
 </item>
 
 <item>
@@ -214,7 +214,7 @@ Of the 206 flaws, 39 are rated Critical, and 167 are rated Important in severity
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-46323</link>
   <pubDate>Wed, 10 Jun 2026 08:06:04 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 15h ago]]></description>
 </item>
 
 <item>
@@ -222,7 +222,7 @@ Of the 206 flaws, 39 are rated Critical, and 167 are rated Important in severity
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-46319</link>
   <pubDate>Wed, 10 Jun 2026 08:05:58 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 15h ago]]></description>
 </item>
 
 <item>
@@ -230,7 +230,7 @@ Of the 206 flaws, 39 are rated Critical, and 167 are rated Important in severity
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-46322</link>
   <pubDate>Wed, 10 Jun 2026 08:05:53 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 15h ago]]></description>
 </item>
 
 <item>
@@ -238,7 +238,7 @@ Of the 206 flaws, 39 are rated Critical, and 167 are rated Important in severity
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-46321</link>
   <pubDate>Wed, 10 Jun 2026 08:05:47 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 15h ago]]></description>
 </item>
 
 <item>
@@ -246,7 +246,7 @@ Of the 206 flaws, 39 are rated Critical, and 167 are rated Important in severity
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-49762</link>
   <pubDate>Wed, 10 Jun 2026 08:05:42 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 15h ago]]></description>
 </item>
 
 <item>
@@ -254,7 +254,7 @@ Of the 206 flaws, 39 are rated Critical, and 167 are rated Important in severity
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-43059</link>
   <pubDate>Wed, 10 Jun 2026 08:05:35 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 15h ago]]></description>
 </item>
 
 <item>
@@ -262,7 +262,7 @@ Of the 206 flaws, 39 are rated Critical, and 167 are rated Important in severity
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-46303</link>
   <pubDate>Wed, 10 Jun 2026 08:05:24 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 15h ago]]></description>
 </item>
 
 <item>
@@ -270,7 +270,7 @@ Of the 206 flaws, 39 are rated Critical, and 167 are rated Important in severity
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-46299</link>
   <pubDate>Wed, 10 Jun 2026 08:05:18 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 15h ago]]></description>
 </item>
 
 <item>
@@ -278,7 +278,7 @@ Of the 206 flaws, 39 are rated Critical, and 167 are rated Important in severity
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-46304</link>
   <pubDate>Wed, 10 Jun 2026 08:05:13 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 15h ago]]></description>
 </item>
 
 <item>
@@ -286,7 +286,7 @@ Of the 206 flaws, 39 are rated Critical, and 167 are rated Important in severity
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-46287</link>
   <pubDate>Wed, 10 Jun 2026 08:05:08 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 15h ago]]></description>
 </item>
 
 <item>
@@ -294,7 +294,7 @@ Of the 206 flaws, 39 are rated Critical, and 167 are rated Important in severity
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-46306</link>
   <pubDate>Wed, 10 Jun 2026 08:05:02 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 15h ago]]></description>
 </item>
 
 <item>
@@ -302,7 +302,7 @@ Of the 206 flaws, 39 are rated Critical, and 167 are rated Important in severity
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-46296</link>
   <pubDate>Wed, 10 Jun 2026 08:04:57 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 15h ago]]></description>
 </item>
 
 <item>
@@ -310,7 +310,7 @@ Of the 206 flaws, 39 are rated Critical, and 167 are rated Important in severity
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-46293</link>
   <pubDate>Wed, 10 Jun 2026 08:04:51 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 15h ago]]></description>
 </item>
 
 <item>
@@ -318,7 +318,7 @@ Of the 206 flaws, 39 are rated Critical, and 167 are rated Important in severity
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-71315</link>
   <pubDate>Wed, 10 Jun 2026 08:04:46 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 15h ago]]></description>
 </item>
 
 <item>
@@ -326,7 +326,7 @@ Of the 206 flaws, 39 are rated Critical, and 167 are rated Important in severity
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-46314</link>
   <pubDate>Wed, 10 Jun 2026 08:04:40 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 15h ago]]></description>
 </item>
 
 <item>
@@ -334,7 +334,7 @@ Of the 206 flaws, 39 are rated Critical, and 167 are rated Important in severity
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-46302</link>
   <pubDate>Wed, 10 Jun 2026 08:04:35 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 15h ago]]></description>
 </item>
 
 <item>
@@ -342,7 +342,7 @@ Of the 206 flaws, 39 are rated Critical, and 167 are rated Important in severity
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-46291</link>
   <pubDate>Wed, 10 Jun 2026 08:04:30 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 15h ago]]></description>
 </item>
 
 <item>
@@ -350,7 +350,7 @@ Of the 206 flaws, 39 are rated Critical, and 167 are rated Important in severity
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-46301</link>
   <pubDate>Wed, 10 Jun 2026 08:04:24 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 15h ago]]></description>
 </item>
 
 <item>
@@ -358,7 +358,7 @@ Of the 206 flaws, 39 are rated Critical, and 167 are rated Important in severity
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-46312</link>
   <pubDate>Wed, 10 Jun 2026 08:04:19 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 15h ago]]></description>
 </item>
 
 <item>
@@ -366,7 +366,7 @@ Of the 206 flaws, 39 are rated Critical, and 167 are rated Important in severity
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-46282</link>
   <pubDate>Wed, 10 Jun 2026 08:04:13 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 15h ago]]></description>
 </item>
 
 <item>
@@ -374,7 +374,7 @@ Of the 206 flaws, 39 are rated Critical, and 167 are rated Important in severity
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-46274</link>
   <pubDate>Wed, 10 Jun 2026 08:04:08 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Could impact sign-ins/MFA/Conditional Access — watch for login issues.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Could impact sign-ins/MFA/Conditional Access — watch for login issues.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 15h ago]]></description>
 </item>
 
 <item>
@@ -382,7 +382,7 @@ Of the 206 flaws, 39 are rated Critical, and 167 are rated Important in severity
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-46280</link>
   <pubDate>Wed, 10 Jun 2026 08:04:02 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 15h ago]]></description>
 </item>
 
 <item>
@@ -390,7 +390,7 @@ Of the 206 flaws, 39 are rated Critical, and 167 are rated Important in severity
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-46285</link>
   <pubDate>Wed, 10 Jun 2026 08:03:57 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 15h ago]]></description>
 </item>
 
 <item>
@@ -398,7 +398,7 @@ Of the 206 flaws, 39 are rated Critical, and 167 are rated Important in severity
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-46275</link>
   <pubDate>Wed, 10 Jun 2026 08:03:52 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 15h ago]]></description>
 </item>
 
 <item>
@@ -406,7 +406,7 @@ Of the 206 flaws, 39 are rated Critical, and 167 are rated Important in severity
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-46292</link>
   <pubDate>Wed, 10 Jun 2026 08:03:46 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 15h ago]]></description>
 </item>
 
 <item>
@@ -414,7 +414,7 @@ Of the 206 flaws, 39 are rated Critical, and 167 are rated Important in severity
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-46307</link>
   <pubDate>Wed, 10 Jun 2026 08:03:41 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 15h ago]]></description>
 </item>
 
 <item>
@@ -422,7 +422,7 @@ Of the 206 flaws, 39 are rated Critical, and 167 are rated Important in severity
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-46289</link>
   <pubDate>Wed, 10 Jun 2026 08:03:35 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 15h ago]]></description>
 </item>
 
 <item>
@@ -432,7 +432,7 @@ Of the 206 flaws, 39 are rated Critical, and 167 are rated Important in severity
   <source>The Hacker News</source>
   <description><![CDATA[<b>Why this matters: Service impact possible — prepare comms and confirm vendor status.</b><br/>ServiceNow has warned about a security incident in which unknown threat actors exploited a flaw to obtain deeper unauthorized access to susceptible instances.
 
-"On June 5, 2026, ServiceNow applied a security update to hosted customer instances," the company revealed in an advisory that requires customer access. "The update concerned a security issue that could allow an unauthenticated user, in<br/><br/><b>Source:</b> The Hacker News &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 14h ago]]></description>
+"On June 5, 2026, ServiceNow applied a security update to hosted customer instances," the company revealed in an advisory that requires customer access. "The update concerned a security issue that could allow an unauthenticated user, in<br/><br/><b>Source:</b> The Hacker News &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 16h ago]]></description>
 </item>
 
 <item>
@@ -442,7 +442,7 @@ Of the 206 flaws, 39 are rated Critical, and 167 are rated Important in severity
   <source>The Hacker News</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Cybersecurity researchers have flagged half a dozen vulnerabilities in protobuf.js, a JavaScript and TypeScript implementation of Protocol Buffers (Protobuf), that, if successfully exploited, could result in remote code execution (RCE) and denial-of-service (DoS) attacks.
 
-"In affected environments, a single malicious protobuf schema, descriptor, or crafted payload could be enough to trigger<br/><br/><b>Source:</b> The Hacker News &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 16h ago]]></description>
+"In affected environments, a single malicious protobuf schema, descriptor, or crafted payload could be enough to trigger<br/><br/><b>Source:</b> The Hacker News &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 18h ago]]></description>
 </item>
 
 <item>
