@@ -1,25 +1,40 @@
 # IT Weekly Intelligence Briefing
 **Period:** June 04 – June 11, 2026  
-**Generated:** 2026-06-11 12:43 UTC  
-**Items reviewed:** 135  
+**Generated:** 2026-06-11 16:53 UTC  
+**Items reviewed:** 134  
 
 ## ⚡ Top Actions This Week
 
-1. **Audit third-party software dependencies and review vendor access.**  
-   _OceanLotus Hits Vietnam Investors With SPECTRALVIPER in FireAnt Attack_  
-   Source: The Hacker News  
-
-2. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _Nottingham University data breach affects over 450,000 students_  
+1. **Validate backups, confirm EDR coverage, and brief incident response team.**  
+   _Authorities dismantle 'AudiA6' ransomware crypto-laundering service_  
    Source: BleepingComputer  
 
-3. **Audit third-party software dependencies and review vendor access.**  
-   _GitHub to Disable npm Install Scripts by Default to Stop Supply Chain Attacks_  
+2. **Audit third-party software dependencies and review vendor access.**  
+   _ThreatsDay Bulletin: Worm Code Leaked, AI Agent Phished, Claude Action Patch + 28 New Stories_  
    Source: The Hacker News  
+
+3. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
+   _Coupang hit with record $409 million data breach fine in Korea_  
+   Source: BleepingComputer  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [Authorities dismantle 'AudiA6' ransomware crypto-laundering service](https://www.bleepingcomputer.com/news/legal/authorities-dismantle-audia6-ransomware-crypto-laundering-service/)
+**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jun 11  
+**Why it matters:** Elevated ransomware risk across the sector.  
+**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
+
+### [ThreatsDay Bulletin: Worm Code Leaked, AI Agent Phished, Claude Action Patch + 28 New Stories](https://thehackernews.com/2026/06/threatsday-bulletin-worm-code-leaked-ai.html)
+**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Jun 11  
+**Why it matters:** Third-party/software supply chain integrity risk.  
+**Recommended action:** Audit third-party software dependencies and review vendor access.  
+
+### [Coupang hit with record $409 million data breach fine in Korea](https://www.bleepingcomputer.com/news/security/south-korea-hits-coupang-with-record-409-million-fine-over-data-breach/)
+**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jun 11  
+**Why it matters:** Potential credential or data exposure.  
+**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
 ### [OceanLotus Hits Vietnam Investors With SPECTRALVIPER in FireAnt Attack](https://thehackernews.com/2026/06/oceanlotus-hits-vietnam-investors-with.html)
 **Source:** The Hacker News &nbsp;·&nbsp; **Date:** Jun 11  
@@ -36,24 +51,15 @@
 **Why it matters:** Third-party/software supply chain integrity risk.  
 **Recommended action:** Audit third-party software dependencies and review vendor access.  
 
-### [Who Runs the Ransomware Group ‘The Gentlemen?’](https://krebsonsecurity.com/2026/06/who-runs-the-ransomware-group-the-gentlemen/)
-**Source:** Krebs on Security &nbsp;·&nbsp; **Date:** Jun 10  
-**Why it matters:** Elevated ransomware risk across the sector.  
-**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
-
-### [Microsoft patches Exchange Server zero-day exploited in attacks](https://www.bleepingcomputer.com/news/microsoft/microsoft-patches-exchange-server-zero-day-exploited-in-attacks/)
-**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jun 10  
-**Why it matters:** Potential email disruption for users.  
-**Recommended action:** Apply emergency patch or mitigation now; check vendor advisory for workarounds.  
-
-### [Chrome V8 Zero-Day CVE-2026-11645 Exploited in the Wild - Patch Now](https://thehackernews.com/2026/06/chrome-v8-zero-day-cve-2026-11645.html)
-**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Jun 09  
-**Why it matters:** General awareness item.  
-**Recommended action:** Apply emergency patch or mitigation now; check vendor advisory for workarounds.  
-
 ---
 
 ## 🟠 Important — Review This Week
+
+- [Cybersecurity Stars Awards 2026: Winners Announced Across 95 Categories](https://thehackernews.com/2026/06/cybersecurity-stars-awards-2026-winners.html)  
+  **The Hacker News** · Jun 11 · _General awareness item._  
+
+- [CISA tells govt agencies to patch critical exploited flaws in 3 days](https://www.bleepingcomputer.com/news/security/cisa-tells-govt-agencies-to-patch-critical-exploited-flaws-in-3-days/)  
+  **BleepingComputer** · Jun 11 · _General awareness item._  
 
 - [AI Broke Vulnerability Management. That's Why CISOs Are Moving Budget to BAS.](https://thehackernews.com/2026/06/ai-broke-vulnerability-management-thats.html)  
   **The Hacker News** · Jun 11 · _General awareness item._  
@@ -73,23 +79,17 @@
 - [CVE-2026-42012 Gnutls: gnutls: certificate validation bypass due to improper handling of uri and srv sans](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-42012)  
   **Microsoft Security Response Center (MSRC)** · Jun 11 · _General awareness item._  
 
-- [CVE-2026-5260 Gnutls: gnutls: information disclosure via heap overread in rsa key exchange](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-5260)  
-  **Microsoft Security Response Center (MSRC)** · Jun 11 · _Potential email disruption for users._  
-
-- [CVE-2026-42015 Gnutls: gnutls: memory corruption due to off-by-one error in pkcs#12 bag handling](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-42015)  
-  **Microsoft Security Response Center (MSRC)** · Jun 11 · _General awareness item._  
-
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [Why AI-driven threats are exposing the limits of MSP security stacks](https://www.bleepingcomputer.com/news/security/why-ai-driven-threats-are-exposing-the-limits-of-msp-security-stacks/) — BleepingComputer
 - [ISC Stormcast For Thursday, June 11th, 2026 https://isc.sans.edu/podcastdetail/9968, (Thu, Jun 11th)](https://isc.sans.edu/diary/rss/33070) — SANS Internet Storm Center
 - [The ‘Miasma’ worm source code briefly leaked on GitHub](https://www.bleepingcomputer.com/news/security/the-miasma-worm-source-code-briefly-leaked-on-github/) — BleepingComputer
 - [GitHub announces npm security changes to tackle supply-chain attacks](https://www.bleepingcomputer.com/news/security/github-announces-npm-security-changes-to-tackle-supply-chain-attacks/) — BleepingComputer
 - [Oracle PeopleSoft servers hacked in ShinyHunters data theft attacks](https://www.bleepingcomputer.com/news/security/oracle-peoplesoft-servers-hacked-in-shinyhunters-data-theft-attacks/) — BleepingComputer
 - [China-Linked JDY Botnet Expands to 1,500+ Devices for Cyber Reconnaissance](https://thehackernews.com/2026/06/china-linked-jdy-botnet-expands-to-1500.html) — The Hacker News
-- [China-linked JDY botnet expands targeting of U.S. military networks](https://www.bleepingcomputer.com/news/security/china-linked-jdy-botnet-expands-targeting-of-us-military-networks/) — BleepingComputer
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 12 critical · 87 important · 36 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 15 critical · 85 important · 34 FYI_
