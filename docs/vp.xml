@@ -3,8 +3,348 @@
 <channel>
   <title>Joe — VP of IT Briefing</title>
   <description>Leadership-focused IT risk, vendors, pricing, licensing, and industry context.</description>
-  <lastBuildDate>Wed, 10 Jun 2026 23:39:29 +0000</lastBuildDate>
+  <lastBuildDate>Thu, 11 Jun 2026 03:40:23 +0000</lastBuildDate>
   
+<item>
+  <title>🔵 South Korean regulators fined Coupang $409M for a data leak in 2025 that exposed ~33.7M accounts and escalated into a diplomatic conflict with the US (Shinhye Kang/Bloomberg)</title>
+  <link>https://www.techmeme.com/260610/p68#a260610p68</link>
+  <pubDate>Thu, 11 Jun 2026 03:10:03 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.bloomberg.com/news/articles/2026-06-11/south-korea-fines-coupang-409-million-for-large-scale-data-leak"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260610/i68.jpg" vspace="4" /></a>
+<p><a href="https://www.techmeme.com/260610/p68#a260610p68" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Shinhye Kang / <a href="https://www.bloomberg.com/">Bloomberg</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/articles/2026-06-11/south-korea-fines-coupang-409-million-for-large-scale-data-leak">South Korean regulators fined Coupang $409M for a data leak in 2025 that exposed ~33.7M accounts and escalated into a diplomatic conflict with the US</a></b></span>&nbsp; &mdash;&nbsp; A South Korean regulator fined the country's largest e-commerce platform, owned by US-listed Coupang Inc., a record 624.7 billion won &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Sources: OpenAI is considering drastically lowering its price for tokens in anticipation of similar cuts the company expects at Anthropic (Wall Street Journal)</title>
+  <link>https://www.techmeme.com/260610/p66#a260610p66</link>
+  <pubDate>Thu, 11 Jun 2026 01:50:01 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.wsj.com/tech/ai/openai-considers-drastic-price-cuts-anticipating-war-for-users-with-anthropic-9b8c178e?st=1Yyrco"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260610/i66.jpg" vspace="4" /></a>
+<p><a href="https://www.techmeme.com/260610/p66#a260610p66" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="https://www.wsj.com/">Wall Street Journal</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://www.wsj.com/tech/ai/openai-considers-drastic-price-cuts-anticipating-war-for-users-with-anthropic-9b8c178e?st=1Yyrco">Sources: OpenAI is considering drastically lowering its price for tokens in anticipation of similar cuts the company expects at Anthropic</a></b></span>&nbsp; &mdash;&nbsp; The company might lower prices for tokens, the central unit for gauging AI costs, though the discussions are still in flux</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔴 GitHub finally pulls the plug on automatic install script execution for npm</title>
+  <link>https://www.csoonline.com/article/4183859/github-finally-pulls-the-plug-on-automatic-install-script-execution-for-npm-2.html</link>
+  <pubDate>Thu, 11 Jun 2026 00:46:50 +0000</pubDate>
+  <source>CSO Online</source>
+  <description><![CDATA[<b>Why this matters: Supply chain risk — audit third-party dependencies and vendor access.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<p>The ability for attackers to leverage automatic install script execution in npm will finally come to an end when expected changes arrive from GitHub in July. Coders will still be able to enable the function, but the default setting will block it. </p>
+
+
+
+<p>In V12, default settings are changing, <a href="https://github.blog/changelog/2026-06-09-upcoming-breaking-changes-for-npm-v12/" rel="noreferrer noopener" target="_blank">GitHub said in its changelog</a>, noting, “it turns an npm install behavior that runs automatically today into one you explicitly opt into.” </p>
+
+
+
+<p>Specifically, the post said, “allowScripts defaults to off: npm install will no longer execute preinstall, install or postinstall scripts from dependencies unless they are explicitly allowed in your project. This includes native node-gyp builds; a package with a binding.gyp and no explicit install script still gets blocked, because npm runs an implicit node-gyp rebuild for it. Prepare scripts from git, file, and link dependencies are blocked the same way.”</p>
+
+
+
+<p>Analysts, consultants, and users generally applauded the change, but said that it would only narrow the exposure to supply chain attacks instead of eliminating it. </p>
+
+
+
+<h2 class="wp-block-heading" id="attacks-likely-to-move-elsewhere">Attacks likely to move elsewhere</h2>
+
+
+
+<p><a href="https://www.linkedin.com/in/sonu-kapoor/" rel="noreferrer noopener" target="_blank">Sonu Kapoor</a>, maintainer for CVE Lite CLI in the OWASP Incubator Project, said that this change is likely to force the supply chain attacks that leveraged the automatic execution to move elsewhere.</p>
+
+
+
+<p>“This does not eliminate npm supply chain risk, it removes a major automatic execution path,” Kapoor said. “Attackers can still move to other paths: malicious package code that runs at application runtime, compromised maintainer accounts, dependency confusion, typo-squatting, poisoned GitHub Actions workflows, malicious transitive dependencies, or stolen publishing tokens. This closes one very dangerous door, but it does not secure the whole house.”</p>
+
+
+
+<p>Still, <a href="https://www.infoworld.com/article/4179874/infected-red-hat-npm-packages-expose-developer-credentials-2.html" target="_blank">attacks leveraging the setting </a>have been regularly used in supply chain attacks. </p>
+
+
+
+<p>However <a href="https://www.linkedin.com/in/agparkinson/" rel="noreferrer noopener" target="_blank">Alan Parkinson</a>, director of secure medical device firm Threat Detective, said more sophisticated attackers have already moved beyond this hole. </p>
+
+
+
+<p>“The install script attack vector has been known for years,” Parkinson said. “Most security teams marked it as low risk and moved on to higher risk threats. What raised its profile wasn’t the technical exploitability changing, it was a run of high-profile victims and some threat actors openly chasing notoriety.”</p>
+
+
+
+<p>He added, “the pre and post install scripts was never a clever attack vector to begin with. Running code from an install hook is crude and noisy, which is why it caused such visible damage. The more capable actors are already moving to other methods, so v12 mainly shuts the door on less sophisticated threat actors.”</p>
+
+
+
+<p>Although GitHub declined an interview, <a href="https://github.com/steiza" rel="noreferrer noopener" target="_blank">Zach Steindler</a>, a GitHub principal engineer, answered questions by email. He said the volume and pace of supply chain attacks forced the default settings change. </p>
+
+
+
+<p>“We’ve seen attackers target these capabilities to quickly propagate attacks from one compromised package to many. Years of security and usability research have shown that it’s not enough to make secure functionality available; the secure path has to be the default in order for it to be widely adopted,” Steindler said. </p>
+
+
+
+<p>He added, “we believe that these changes are a great way to provide high impact secure defaults while still providing the option for some users to fall back on functionality they might need in some circumstances.”</p>
+
+
+
+<h2 class="wp-block-heading" id="change-overdue">Change overdue</h2>
+
+
+
+<p><a href="https://greyhoundresearch.com/svg/" rel="noreferrer noopener" target="_blank">Sanchit Vir Gogia</a>, chief analyst at Greyhound Research, said that GitHub was the last of the repositories to make the setting default change. “Rivals moved first: Yarn, pnpm and Bun all block third party install scripts by default in their own ways,” Gogia said. “Npm is not inventing a new doctrine. It is finally adopting one.”</p>
+
+
+
+<p>Steindler didn’t dispute Gogia’s comment. </p>
+
+
+
+<p><strong>“</strong>It’s not easy being the stewards of the largest package repository in the world. Community consensus on what security capabilities should be standard, and when it’s okay to make breaking changes shifts over time. From our continual conversations with the community, it was clear it was time to make this change,” Steindler said. </p>
+
+
+
+<p>“The recent attacks are alarming,” he noted, “but stewarding these package repositories is a multi-decade effort, not just a moment in time. As attacks evolve, so will our defensive security capabilities. We’re in this for the long haul.”</p>
+
+
+
+<p>Gogia said that the change, although overdue, is a good one. </p>
+
+
+
+<p>“Npm is removing one of the most comfortable hiding places for software supply chain risk: code that executes the moment a developer types install,” Gogia said. “With npm v12, execution becomes something that must be approved, recorded in the project, and committed for review. That is not a design adjustment. It is a change in control philosophy.”</p>
+
+
+
+<h2 class="wp-block-heading" id="bad-defaults-become-infrastructure">Bad defaults become infrastructure</h2>
+
+
+
+<p>Gogia had his own take on why GitHub waited so long.</p>
+
+
+
+<p>“Npm waited because its risky default acquired a constituency. As far back as 2016, npm’s own position was that the convenience of install scripts outweighed the worm risk, with an opt-out flag for the cautious. The trade-off was a documented product decision, not an oversight,” he said. </p>
+
+
+
+<p>“The trouble with bad defaults is that they become infrastructure,” he added. “Native module builds, browser installers such as Playwright and Cypress, Electron download flows and Husky hooks all grew around automatic execution. Turning it off became less a technical adjustment and more a constitutional reform.”</p>
+
+
+
+<h2 class="wp-block-heading" id="liability-changed-hands">Liability changed hands</h2>
+
+
+
+<p>The real pressure for the change, however, came from regulators.</p>
+
+
+
+<p>“The deeper answer is that the liability changed hands. Once regulation such as the EU Cyber Resilience Act and securities disclosure rules placed supply chain failure on corporate balance sheets, a documented unsafe default became indefensible,” Gogia said. </p>
+
+
+
+<p>Kapoor agreed that long-used procedures enabled this security hole to survive longer than it should have. </p>
+
+
+
+<p>“The reason this likely was not done long ago is compatibility,” he said. “Install scripts are not only used by attackers. Many legitimate packages use them to compile native modules, download platform-specific binaries, generate files, or complete setup steps. Changing the default breaks assumptions that have existed in the npm ecosystem for years. That is why these security changes often arrive slowly. The safer default is obvious from a security perspective, but painful from an ecosystem compatibility perspective.”</p>
+
+
+
+<p>In addition, he noted, “the bigger point is that package managers are moving from implicit trust to explicit trust. That is the right direction. Developers should have to approve which dependencies are allowed to execute code during install. But approval cannot become a blind checkbox. Teams need visibility into which package wants to run a script, whether it is direct or transitive, why it is there, and whether it belongs in the project at all.”</p>
+
+
+
+<p>Kapoor added that this change matters because install-time execution often happens in privileged environments with access to tokens, secrets, internal registries, build artifacts, or deployment paths. “Even if the script does not compromise production directly, it may be able to steal enough context to support the next stage of an attack,” he said.</p>
+
+
+
+<h2 class="wp-block-heading" id="value-in-the-pain">Value in the pain</h2>
+
+
+
+<p>Cybersecurity consultant <a href="https://formergov.com/directory/brianlevine" rel="noreferrer noopener" target="_blank">Brian Levine</a>, executive director of FormerGov, agreed that the closing of this security hole is a very good thing. </p>
+
+
+
+<p>“It seems like virtually every major supply chain attack of the last decade has had the same original sin: code that ran automatically because the ecosystem let it. Npm finally closing that door by default is overdue, but it’s genuinely significant. This is the package manager for hundreds of billions of downloads a month,” Levine said. </p>
+
+
+
+<p>“When npm changes its defaults, it changes the security posture of practically every enterprise dev environment on the planet. It may have been the last large code repository to still allow this kind of automated execution.”</p>
+
+
+
+<p>Levine added that this change might not merely stop a security hole, but the new process may meaningfully improve security. </p>
+
+
+
+<p>“There’s actually something valuable buried in this migration pain. Having developers explicitly approve which packages can run code and commit that list to source control is a form of software supply chain governance that many organizations never had,” Levine said. “It creates an auditable record which is meaningful, especially for regulated industries.”</p>
+
+
+
+<p><em>This article originally appeared on <a href="https://www.infoworld.com/article/4183849/github-finally-pulls-the-plug-on-automatic-install-script-execution-for-npm.html" target="_blank">InfoWorld</a>.</em></p>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Xbox CEO Asha Sharma and CCO Matt Booty warn of an &quot;Xbox reset&quot; in the next 100 days, citing challenges like annual revenue down ~$500M over the past five years (The Verge)</title>
+  <link>https://www.techmeme.com/260610/p64#a260610p64</link>
+  <pubDate>Thu, 11 Jun 2026 00:35:02 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: Vendor risk signal — evaluate roadmap and support stability.</b><br/><a href="https://www.theverge.com/games/948142/microsoft-xbox-layoffs-reset-asha-sharma"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260610/i64.jpg" vspace="4" /></a>
+<p><a href="https://www.techmeme.com/260610/p64#a260610p64" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="https://www.theverge.com/">The Verge</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://www.theverge.com/games/948142/microsoft-xbox-layoffs-reset-asha-sharma">Xbox CEO Asha Sharma and CCO Matt Booty warn of an &ldquo;Xbox reset&rdquo; in the next 100 days, citing challenges like annual revenue down ~$500M over the past five years</a></b></span>&nbsp; &mdash;&nbsp; &#65279;The company has been preparing for the layoffs internally for weeks.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 The hidden cost of enterprise AI: 6.4 hours a week babysitting bots</title>
+  <link>https://www.cio.com/article/4183804/the-hidden-cost-of-enterprise-ai-6-4-hours-a-week-babysitting-bots.html</link>
+  <pubDate>Thu, 11 Jun 2026 00:05:17 +0000</pubDate>
+  <source>CIO.com</source>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<p>While AI is proliferating across the workplace, it is introducing a new productivity paradox: While the technology makes work feel faster, it actually pushes more burden onto employees to provide context, perform quality checks, then rinse and repeat across numerous disparate tools.</p>
+
+
+
+<p>This, according to a new survey of 6,000 full-time digital workers by Glean’s Work AI Institute, results in two emerging behaviors: “botsitting,” all the unrecognized work that goes into making AI actually usable; and “botshitting,” shipping AI-generated work that is unverified, not that well understood, or perhaps not even trustworthy. The <a href="https://www.glean.com/work-ai-institute/reports/work-ai-index-report" rel="nofollow" target="_blank">survey report</a> was co-authored by experts from Work AI Institute, Emory University, Stanford University, UC Berkeley, UC Santa Barbara, UNC Charlotte, University College London, and University of Notre Dame.</p>
+
+
+
+<p>“It’s definitely in many ways a vicious cycle that feeds itself,” said <a href="https://www.rebeccahinds.com/" rel="nofollow" target="_blank">Rebecca Hinds</a>, head of Glean’s research center the Work AI Institute, a research collaborative of AI experts. Enterprises need to begin understanding and addressing the “massive, massive human labor that’s at the core of this.”</p>
+
+
+
+<h2 class="wp-block-heading" id="workers-are-using-ai-more-getting-more-frustrated">Workers are using AI more, getting more frustrated</h2>
+
+
+
+<p>There’s no doubt that AI is quickly becoming a central teammate in the workplace. Glean’s Work AI Institute found that 87% of digital workers are using AI: It is already automating more than a quarter of their work and saving about 11 hours a week.</p>
+
+
+
+<p>Still, only 13% say the use of AI has significantly improved their company’s performance, and their time savings are being eaten up by the same technology that is producing them. Employees lose about one-third of their work week (6.4 hours) botsitting: feeding AI context, supervising outputs, debugging errors, cleaning up <a href="https://www.infoworld.com/article/4181397/the-real-cost-of-agentic-ai.html" target="_blank">AI-generated work</a>, and switching between AI tools.</p>
+
+
+
+<p>“We’re seeing high, high rates of multiple tool usage, and often those tools aren’t connected,” said Hinds.</p>
+
+
+
+<p>In terms of <a href="https://www.infoworld.com/article/4180722/the-next-ai-breakthrough-wont-come-from-bigger-models-but-from-better-data.html" target="_blank">context-feeding</a>, large language models (LLMs) are trained on the vast corpus of the internet, but not always on enterprise-specific data. Thus, employees often have to provide additional information around their company’s products, customers, services, or other details.</p>
+
+
+
+<p>“They’re often feeling frustrated when the tools don’t understand enough about day to day work to be useful,” said Hinds. Also, because employees are using multiple tools, they often have to repeat the same prompt over and over.</p>
+
+
+
+<p>“It’s exhausting for workers to not only do this, but to have the work be unrecognized, often unrewarded and unacknowledged within the organization,” she said.</p>
+
+
+
+<p>Similarly, workers are having to catch outputs that might look polished and finished on the surface, but could be wrong, incomplete, or missing important context. Debugging is the biggest driver of exhaustion, because it is often conducted by people who didn’t necessarily contribute to the initial output, Hinds noted, so they first have to dig up background information.</p>
+
+
+
+<p>However, “not all botsitting is bad,” Hinds emphasized. “Certainly, we want workers to have some level of ownership and oversight.”</p>
+
+
+
+<p>But when it is unnecessary, it can lead to botshitting, where users ship AI-generated work they haven’t verified because they’re overwhelmed or time-constrained. Sixty-nine percent of users admit to doing so, and 41% say they sometimes deliver work they could not explain if asked. Another 28% blame AI for mistakes they themselves caused.</p>
+
+
+
+<p>“Botshitting is offloading your critical human thinking, judgment, and understanding,” Hinds explained. “You’re offloading that work that absolutely needs to remain with the human.”</p>
+
+
+
+<p>Workers using multiple AI agents are significantly more likely to do this, she added, because agents are so scalable, and can spiral out of control if they don’t have the right controls or permissions built around them, causing overwhelmed users to give up on their verification efforts.</p>
+
+
+
+<p>“You don’t often see the negative impacts until 3, 4, 5, steps down the line,” said Hinds. “Then it requires all of this cleanup work, detective work, to understand where did the agent go wrong.”</p>
+
+
+
+<h2 class="wp-block-heading">Using AI … but not <em>too </em>much</h2>
+
+
+
+<p>Interestingly, more than half of the workers surveyed said they get more day-to-day help from AI than they get from their managers, and consider it easier to collaborate with than humans.</p>
+
+
+
+<p>Still, they seem to be facing a Goldilocks problem when it comes to sharing their use of AI. Among self-identified high AI achievers, 54% are using unapproved tools or using approved tools in noncompliant ways, and 36% are hiding how much AI helps them.</p>
+
+
+
+<p>As Hinds explained, depending on the context and the level of psychological safety an organization has provided, it can be “differentially beneficial or harmful” to show you’re using AI, and, on the flip side, to conceal that you’re using it too much, because that might make you less valuable, or perceived as less valuable, she said.</p>
+
+
+
+<p>It’s a complicated balance, because, she noted, “there’s massive pressure in so many organizations to demonstrate AI fluency, to demonstrate you’re a power user.”</p>
+
+
+
+<h2 class="wp-block-heading" id="what-successful-organizations-are-doing-differently">What successful organizations are doing differently</h2>
+
+
+
+<p>In fact, the report said, “The companies pulling ahead are doing something different. They aren’t spending a greater share of their AI time using AI. They’re spending a greater share on the work around it: setting context, defining what ‘good’ looks like, building judgment, and deciding what should never have been handed to a model in the first place.”</p>
+
+
+
+<p>The most transformative organizations are addressing AI challenges proactively: Providing training and support, treating AI as an opportunity to redesign work, and formally rewarding AI skills. In addition, it noted, the hardest skill to build is knowing when <em>not</em> to use AI.</p>
+
+
+
+<p>It is “not just clicks of the tool, not just <a href="https://www.infoworld.com/article/4181894/beware-of-the-genai-token-trap.html" target="_blank">tokens used</a>, but real skills, real learning,” said Hinds. In addition to investing in workers, these organizations are clearly stating AI strategy and clarifying the “why” behind it. Governance should also be “living and breathing,” with companies continuously re-evaluating policies.</p>
+
+
+
+<p>And it needs to happen at every level, top execs included, said Hinds: “It’s being able to see the executives use the technology, sharing both the success stories and the failures.”</p>
+
+
+
+<p>Successful companies are also actively using metrics anchored in existing key performance indicators (KPIs). They are measuring quality, efficiency, and employee engagement in different ways, and putting data in the hands of employees so they can assess their own adoption and success.</p>
+
+
+
+<p>“It’s less about surveillance and more about feedback in terms of how we work collectively,” said Hinds.</p>
+
+
+
+<p>What’s “fascinating but perhaps not surprising,” she said, is that workers are increasingly using AI itself as a teacher, and prefer it over other learning channels. This speaks to the importance of low-code, no-code tools, with low learning curves and organizational context, that are embedded directly into workflows.</p>
+
+
+
+<p>“It is starkly different from what we’ve seen with previous technologies,” she said.</p>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+</item>
+
+<item>
+  <title>🔴 Chinese agents caught rebuilding botnets and stirring the pot on AI datacenter debate</title>
+  <link>https://www.theregister.com/security/2026/06/11/china-linked-operators-revive-botnet-stir-ai-datacenter-debate/5253873</link>
+  <pubDate>Thu, 11 Jun 2026 00:00:45 +0000</pubDate>
+  <source>The Register</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>PRC eyes are watching you<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+</item>
+
 <item>
   <title>🔵 Chinese companies are implementing &quot;quiet&quot; AI-driven layoffs to avoid labor laws that require government approval for job cuts exceeding 10% of a workforce (Laurie Chen/Reuters)</title>
   <link>https://www.techmeme.com/260610/p58#a260610p58</link>
@@ -12,7 +352,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.reuters.com/business/world-at-work/china-inc-deploys-quiet-layoffs-beijing-promotes-ai-adoption-2026-06-10/"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260610/i58.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260610/p58#a260610p58" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Laurie Chen / <a href="http://www.reuters.com/">Reuters</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.reuters.com/business/world-at-work/china-inc-deploys-quiet-layoffs-beijing-promotes-ai-adoption-2026-06-10/">Chinese companies are implementing &ldquo;quiet&rdquo; AI-driven layoffs to avoid labor laws that require government approval for job cuts exceeding 10% of a workforce</a></b></span>&nbsp; &mdash;&nbsp; Liu, a Hangzhou-based contractor at a large Chinese internet firm, says her employer began quietly firing contractors &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.reuters.com/business/world-at-work/china-inc-deploys-quiet-layoffs-beijing-promotes-ai-adoption-2026-06-10/">Chinese companies are implementing &ldquo;quiet&rdquo; AI-driven layoffs to avoid labor laws that require government approval for job cuts exceeding 10% of a workforce</a></b></span>&nbsp; &mdash;&nbsp; Liu, a Hangzhou-based contractor at a large Chinese internet firm, says her employer began quietly firing contractors &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -22,7 +362,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.bloomberg.com/news/articles/2026-06-10/xbox-plans-significant-layoffs-as-it-transforms-under-new-ceo-asha-sharma?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc4MTEyNDkwOCwiZXhwIjoxNzgxNzI5NzA4LCJhcnRpY2xlSWQiOiJUR0ZPUU5LSVAzUlYwMCIsImJjb25uZWN0SWQiOiJCMUVBQkI5NjQ2QUM0REZFQTJBRkI4MjI1MzgyQTJFQSJ9.cjHY4m0BuOULFpdYUKt2jmNBt-PDLWE6Vy-JsYLWvwI"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260610/i57.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260610/p57#a260610p57" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Jason Schreier / <a href="https://www.bloomberg.com/">Bloomberg</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/articles/2026-06-10/xbox-plans-significant-layoffs-as-it-transforms-under-new-ceo-asha-sharma?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc4MTEyNDkwOCwiZXhwIjoxNzgxNzI5NzA4LCJhcnRpY2xlSWQiOiJUR0ZPUU5LSVAzUlYwMCIsImJjb25uZWN0SWQiOiJCMUVBQkI5NjQ2QUM0REZFQTJBRkI4MjI1MzgyQTJFQSJ9.cjHY4m0BuOULFpdYUKt2jmNBt-PDLWE6Vy-JsYLWvwI">Sources: Microsoft's Xbox division is planning major layoffs next month and significant budget cuts for marketing and some other areas</a></b></span>&nbsp; &mdash;&nbsp; Asha Sharma's first major cuts will arrive in July&nbsp; &mdash;&nbsp; Microsoft Corp.'s Xbox division is planning major job cuts next month as new Chief Executive &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/articles/2026-06-10/xbox-plans-significant-layoffs-as-it-transforms-under-new-ceo-asha-sharma?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc4MTEyNDkwOCwiZXhwIjoxNzgxNzI5NzA4LCJhcnRpY2xlSWQiOiJUR0ZPUU5LSVAzUlYwMCIsImJjb25uZWN0SWQiOiJCMUVBQkI5NjQ2QUM0REZFQTJBRkI4MjI1MzgyQTJFQSJ9.cjHY4m0BuOULFpdYUKt2jmNBt-PDLWE6Vy-JsYLWvwI">Sources: Microsoft's Xbox division is planning major layoffs next month and significant budget cuts for marketing and some other areas</a></b></span>&nbsp; &mdash;&nbsp; Asha Sharma's first major cuts will arrive in July&nbsp; &mdash;&nbsp; Microsoft Corp.'s Xbox division is planning major job cuts next month as new Chief Executive &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
@@ -32,7 +372,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.bloomberg.com/news/articles/2026-06-10/sea-s-shopee-cuts-hundreds-of-developer-jobs-during-pivot-to-ai"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260610/i56.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260610/p56#a260610p56" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="https://www.bloomberg.com/">Bloomberg</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/articles/2026-06-10/sea-s-shopee-cuts-hundreds-of-developer-jobs-during-pivot-to-ai">Sources: Sea's Shopee is cutting hundreds of developer jobs globally; the reductions started this week and amount to about 8% of Shopee's developer workforce</a></b></span>&nbsp; &mdash;&nbsp; Sea Ltd.'s Shopee is cutting hundreds of developer jobs globally, joining rivals across the world in slashing staff while they adopt AI &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/articles/2026-06-10/sea-s-shopee-cuts-hundreds-of-developer-jobs-during-pivot-to-ai">Sources: Sea's Shopee is cutting hundreds of developer jobs globally; the reductions started this week and amount to about 8% of Shopee's developer workforce</a></b></span>&nbsp; &mdash;&nbsp; Sea Ltd.'s Shopee is cutting hundreds of developer jobs globally, joining rivals across the world in slashing staff while they adopt AI &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
@@ -221,7 +561,7 @@
 
 
 <p>In that sense, BOD 26-04 may be less a destination than a waypoint: the federal government’s best current answer to a problem that AI is guaranteed to make harder.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
 </item>
 
 <item>
@@ -262,7 +602,7 @@
 
 
 <p>Ivanti Sentry customers are advised to upgrade their deployments to versions 10.5.2, 10.6.2, or 10.7.1 as soon as possible.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
 </item>
 
 <item>
@@ -270,17 +610,7 @@
   <link>https://www.theregister.com/security/2026/06/10/nightmare-eclipse-publishes-new-windows-defender-zero-day/5253725</link>
   <pubDate>Wed, 10 Jun 2026 18:45:05 +0000</pubDate>
   <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Revenge is a dish best served code<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
-</item>
-
-<item>
-  <title>🟠 Sources: Microsoft is restricting employees from using Claude Fable 5 because of Anthropic&#x27;s new 30-day data retention requirements (Tom Warren/The Verge)</title>
-  <link>https://www.techmeme.com/260610/p48#a260610p48</link>
-  <pubDate>Wed, 10 Jun 2026 17:05:01 +0000</pubDate>
-  <source>Techmeme</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.theverge.com/report/947575/microsoft-claude-fable-5-restricted-internally?view_token=eyJhbGciOiJIUzI1NiJ9.eyJpZCI6IjBSNGNmRXBZVU4iLCJwIjoiL3JlcG9ydC85NDc1NzUvbWljcm9zb2Z0LWNsYXVkZS1mYWJsZS01LXJlc3RyaWN0ZWQtaW50ZXJuYWxseSIsImV4cCI6MTc4MTU0MjU1NSwiaWF0IjoxNzgxMTEwNTU1fQ.Ky_Ysn__UF6CUFKlGTwRwkTT9_UCnaxa17CDBA73Ccw&amp;utm_medium=gift-link"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260610/i48.jpg" vspace="4" /></a>
-<p><a href="https://www.techmeme.com/260610/p48#a260610p48" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Tom Warren / <a href="https://www.theverge.com/">The Verge</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.theverge.com/report/947575/microsoft-claude-fable-5-restricted-internally?view_token=eyJhbGciOiJIUzI1NiJ9.eyJpZCI6IjBSNGNmRXBZVU4iLCJwIjoiL3JlcG9ydC85NDc1NzUvbWljcm9zb2Z0LWNsYXVkZS1mYWJsZS01LXJlc3RyaWN0ZWQtaW50ZXJuYWxseSIsImV4cCI6MTc4MTU0MjU1NSwiaWF0IjoxNzgxMTEwNTU1fQ.Ky_Ysn__UF6CUFKlGTwRwkTT9_UCnaxa17CDBA73Ccw&amp;utm_medium=gift-link">Sources: Microsoft is restricting employees from using Claude Fable 5 because of Anthropic's new 30-day data retention requirements</a></b></span>&nbsp; &mdash;&nbsp; Microsoft's legal teams are evaluating Anthropic's new data retention changes. &hellip; Anthropic released Claude Fable, its first Mythos-class AI model &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Revenge is a dish best served code<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 8h ago]]></description>
 </item>
 
 <item>
@@ -288,7 +618,7 @@
   <link>https://www.zdnet.com/article/best-early-amazon-prime-day-walmart-deals-2026/</link>
   <pubDate>Wed, 10 Jun 2026 15:57:24 +0000</pubDate>
   <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/>Amazon's big sale lands soon, but we've already found some excellent live deals on new tech, gadgets, and more at Walmart.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/>Amazon's big sale lands soon, but we've already found some excellent live deals on new tech, gadgets, and more at Walmart.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 11h ago]]></description>
 </item>
 
 <item>
@@ -345,7 +675,7 @@
 
 
 <p>Salesforce expects to close the deal by the end of July.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 11h ago]]></description>
 </item>
 
 <item>
@@ -450,15 +780,7 @@
 
 
 <p>Of note are the two CVSS 10-rated CVEs (<a href="https://helpx.adobe.com/security/products/campaign/apsb26-66.html" rel="noreferrer noopener" target="_blank">APSB26-66</a>) in the Adobe Campaign Classic enterprise marketing platform, the seven mostly ‘critical’ or ‘high’-rated CVEs affecting ColdFusion (<a href="https://helpx.adobe.com/security/products/coldfusion/apsb26-64.html" rel="noreferrer noopener" target="_blank">APSB26-64</a>), and a total of 20 CVEs affecting Reader (<a href="https://helpx.adobe.com/security/products/acrobat/apsb26-63.html" rel="noreferrer noopener" target="_blank">APSB26-63</a>). It’s also a busy month for InDesign, which features 12 vulnerabilities (<a href="https://helpx.adobe.com/security/products/indesign/apsb26-58.html" rel="noreferrer noopener" target="_blank">APSB26-58</a>), and Experience Manager which features three (<a href="https://helpx.adobe.com/security/products/aem-forms/apsb26-57.html">AP</a><a href="https://helpx.adobe.com/security/products/aem-forms/apsb26-57.html" rel="noreferrer noopener" target="_blank">S</a><a href="https://helpx.adobe.com/security/products/aem-forms/apsb26-57.html">B26-57</a>).</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 8h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Vercel escapes contempt rap after admitting it botched FBI warrant response</title>
-  <link>https://www.theregister.com/legal/2026/06/10/vercel-escapes-contempt-rap-after-admitting-it-botched-fbi-warrant-response/5253563</link>
-  <pubDate>Wed, 10 Jun 2026 14:39:00 +0000</pubDate>
-  <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Files sought by feds were sitting in a deletion queue, not gone for good<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 12h ago]]></description>
 </item>
 
 <item>
@@ -466,7 +788,7 @@
   <link>https://www.zdnet.com/article/best-early-amazon-prime-day-laptop-deals-2026/</link>
   <pubDate>Wed, 10 Jun 2026 14:35:00 +0000</pubDate>
   <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/>Prime Day is earlier this year, so I've rounded up some of the best early laptop deals live now, including the latest MacBooks and gaming laptops.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/>Prime Day is earlier this year, so I've rounded up some of the best early laptop deals live now, including the latest MacBooks and gaming laptops.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
 </item>
 
 <item>
@@ -474,15 +796,7 @@
   <link>https://www.zdnet.com/article/microsofts-june-windows-update-fixes-198-bugs-install-patch-asap/</link>
   <pubDate>Wed, 10 Jun 2026 14:31:37 +0000</pubDate>
   <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Among the 198 vulnerabilities are 32 critical ones and three publicly disclosed zero-day flaws, so you'll want to install this update ASAP.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 I&#x27;ve tested so many desktop AI tools, but Hermes with Ollama is my new favorite - here&#x27;s why</title>
-  <link>https://www.zdnet.com/article/hermes-ollama-hands-on-desktop-ai-tool/</link>
-  <pubDate>Wed, 10 Jun 2026 14:18:00 +0000</pubDate>
-  <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Local AI is the way to go, and Hermes with open-source Ollama is my preferred setup right now.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Among the 198 vulnerabilities are 32 critical ones and three publicly disclosed zero-day flaws, so you'll want to install this update ASAP.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
 </item>
 
 <item>
@@ -490,16 +804,7 @@
   <link>https://www.theregister.com/devops/2026/06/10/github-pulls-pin-on-npms-auto-run-scripts/5253453</link>
   <pubDate>Wed, 10 Jun 2026 13:11:14 +0000</pubDate>
   <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Shai-Hulud worm exploited exactly this. Better late than never, says everyone except the malware authors<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 10h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Aryon Security Raises $29 Million in Series A Funding</title>
-  <link>https://www.securityweek.com/aryon-security-raises-29-million-in-series-a-funding/</link>
-  <pubDate>Wed, 10 Jun 2026 12:24:20 +0000</pubDate>
-  <source>SecurityWeek</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><p>In the post-Mythos era, the company’s platform helps organizations enforce security controls across environments.</p>
-<p>The post <a href="https://www.securityweek.com/aryon-security-raises-29-million-in-series-a-funding/">Aryon Security Raises $29 Million in Series A Funding</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 11h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Shai-Hulud worm exploited exactly this. Better late than never, says everyone except the malware authors<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 14h ago]]></description>
 </item>
 
 <item>
@@ -588,7 +893,7 @@
 
 
 <p>Eclipse announced its return on GitHub on June 9. “Yes, it’s GitHub again, Microsoft forgot that even if they banned my GitLab and GitHub accounts, they cannot unwrite my code. Once it’s public, you can’t remove it.”</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 11h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 15h ago]]></description>
 </item>
 
 <item>
@@ -597,7 +902,7 @@
   <pubDate>Wed, 10 Jun 2026 11:44:39 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: Privilege escalation risk — review local admin exposure and endpoint controls.</b><br/><p>Exploiting a race condition in Microsoft Defender, the exploit leads to local privilege escalation to SYSTEM.</p>
-<p>The post <a href="https://www.securityweek.com/new-windows-zero-day-exploit-rogueplanet-released/">New Windows Zero-Day Exploit &#8216;RoguePlanet&#8217; Released</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 11h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/new-windows-zero-day-exploit-rogueplanet-released/">New Windows Zero-Day Exploit &#8216;RoguePlanet&#8217; Released</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 15h ago]]></description>
 </item>
 
 <item>
@@ -605,7 +910,7 @@
   <link>https://www.theregister.com/patches/2026/06/10/ivanti-urges-sentry-users-to-patch-two-critical-bugs/5253428</link>
   <pubDate>Wed, 10 Jun 2026 11:04:53 +0000</pubDate>
   <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Remote, unauthenticated RCE with root privileges is about as bad as it gets<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 12h ago]]></description>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Remote, unauthenticated RCE with root privileges is about as bad as it gets<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 16h ago]]></description>
 </item>
 
 <item>
@@ -786,7 +1091,7 @@
 
 
 <p><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><strong><a href="https://www.cio.com/expert-contributor-network/">Want to join?</a></strong></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 12h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 16h ago]]></description>
 </item>
 
 <item>
@@ -891,7 +1196,7 @@
 
 
 <p>AI agents should have their own identities, with access that can be limited and monitored, Tyagi said. Requests involving credentials or customer data sharing should trigger human review rather than be left to the agent’s judgment.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 12h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 16h ago]]></description>
 </item>
 
 <item>
@@ -966,7 +1271,7 @@
 
 
 <p>With budgets and finance, hardware costs have dramatically increased and this could greatly impact your strategy, especially when it comes to investment to enhance and modernize infrastructure. HR will also be crucial. You develop talent but refining the way to keep it for the long term is very difficult. With teamwork, you have a team for people to study. Let them use that to develop their career path.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 17h ago]]></description>
 </item>
 
 <item>
@@ -1127,7 +1432,7 @@
 
 
 <p><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><strong><a href="https://www.cio.com/expert-contributor-network/">Want to join?</a></strong></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 17h ago]]></description>
 </item>
 
 <item>
@@ -1540,7 +1845,7 @@
 
 
 <p><strong>Kendall Knight joins Intermodal Tank Transport as CIO</strong></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 17h ago]]></description>
 </item>
 
 <item>
@@ -1697,7 +2002,7 @@
 
 
 <p>“The work that actually moves the needle is on the data side, getting clear on what data sits where, and being able to enforce policy on it in real time,” Fritts says. “Get the data posture right and most of the shadow AI panic quiets down on its own.”</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 17h ago]]></description>
 </item>
 
 <item>
@@ -1782,7 +2087,7 @@
 
 
 <p></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 17h ago]]></description>
 </item>
 
 <item>
@@ -1791,7 +2096,7 @@
   <pubDate>Wed, 10 Jun 2026 09:45:35 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><p>The company updated hosted customer instances to patch a security issue it reportedly had known about since April 7.</p>
-<p>The post <a href="https://www.securityweek.com/servicenow-patches-vulnerability-exploited-against-some-customers/">ServiceNow Patches Vulnerability Exploited Against Some Customers</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/servicenow-patches-vulnerability-exploited-against-some-customers/">ServiceNow Patches Vulnerability Exploited Against Some Customers</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 17h ago]]></description>
 </item>
 
 <item>
@@ -2004,7 +2309,7 @@
 
 
 <p>Five years ago, AI red teaming was a niche specialty practiced by a handful of researchers. Today, it encompasses cybersecurity, safety, misinformation, autonomy, and governance. Tomorrow it will look different again — shaped by whatever the next generation of AI systems turns out to be capable of.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 14h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 18h ago]]></description>
 </item>
 
 <item>
@@ -2273,7 +2578,7 @@
 
 
 <p><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><strong><a href="https://www.cio.com/expert-contributor-network/">Want to join?</a></strong></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 14h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 18h ago]]></description>
 </item>
 
 <item>
@@ -2282,7 +2587,7 @@
   <pubDate>Wed, 10 Jun 2026 08:50:12 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: Could impact sign-ins/MFA/Conditional Access — watch for login issues.</b><br/><p>Two OS command injection flaws can be exploited remotely, without authentication, for arbitrary code execution.</p>
-<p>The post <a href="https://www.securityweek.com/critical-vulnerabilities-patched-in-fortinet-ivanti-products/">Critical Vulnerabilities Patched in Fortinet, Ivanti Products</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 14h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/critical-vulnerabilities-patched-in-fortinet-ivanti-products/">Critical Vulnerabilities Patched in Fortinet, Ivanti Products</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 18h ago]]></description>
 </item>
 
 <item>
@@ -2291,7 +2596,7 @@
   <pubDate>Wed, 10 Jun 2026 07:38:41 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><p>In addition, Rockwell Automation announced some enhancements to its SecureOT cybersecurity solution for OT.</p>
-<p>The post <a href="https://www.securityweek.com/ics-patch-tuesday-vulnerabilities-fixed-by-siemens-schneider-phoenix-contact/">ICS Patch Tuesday: Vulnerabilities Fixed by Siemens, Schneider, Phoenix Contact</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 16h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/ics-patch-tuesday-vulnerabilities-fixed-by-siemens-schneider-phoenix-contact/">ICS Patch Tuesday: Vulnerabilities Fixed by Siemens, Schneider, Phoenix Contact</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 20h ago]]></description>
 </item>
 
 <item>
@@ -2312,7 +2617,7 @@
 
 
 
-<div class="jwplayer" id="id6a29f49053aa6"></div>
+<div class="jwplayer" id="id6a2a2a9c948e5"></div>
 
 
 <p>Prosegur ha cumplido este 2026 los 50 años de vida. En este medio siglo, la multinacional española de seguridad privada, que tiene más de 180.000 empleados y opera en 36 países de los cinco continentes, ha realizado un viaje transformador impulsado por una apuesta muy clara, sobre todo en los últimos años, por las tecnologías de la información y la digitalización, integrando soluciones avanzadas de inteligencia artificial y ciberseguridad para transformar el negocio de vigilancia y añadir otros nuevos. En la actualidad, de hecho, la compañía se autodefine como una “multinacional digital”, en la que más del 30% de la facturación proviene de servicios de innovación tecnológica. Gran parte de este logro se ha conseguido gracias a <a href="https://www.cio.com/article/2118668/ibamos-a-hacer-una-transformacion-ti-pero-nos-dimos-cuenta-de-que-requeriamos-una-del-organigrama-de-la-compania.html">Miguel Torres</a>, al frente de la estrategia tecnológica de la compañía desde 2022 y miembro del comité de dirección de la misma desde 2023.</p>
@@ -2462,7 +2767,7 @@
 
 <p>No obstante, reconoce, los directivos de negocio ya empiezan a conocer mucho mejor el lenguaje de la tecnología y a tomar decisiones de este tipo. En la propia Prosegur se ha preparado a los ejecutivos de negocio para ello realizando sesiones de concienciación en tecnología. En este escenario, concluye Torres, el del CIO “debe ser un rol de Pepito Grillo, de guía que ayude a los directivos de negocio a tomar decisiones, a entender los riesgos que implica la tecnología, a evitar el <em>vendor lock-in</em> o incurrir en una inversión que después no se pueda pagar. Nuestro rol es el de acompañarlos. Vamos a ser más necesarios que nunca”.</p>
 </div></div></div>
-</div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 17h ago]]></description>
+</div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 21h ago]]></description>
 </item>
 
 <item>
@@ -2607,7 +2912,7 @@
 
 
 <p>“It would essentially be ‘China rules’” such as air gapping systems and traveling with disposable data-limited burner phones, O’Leary said. “It’s an exceptionally big deal if it goes through,” but, he added, the chance of it happening is very low. “It seems like the technology companies will call his bluff.”</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 19h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 23h ago]]></description>
 </item>
 
 <item>
@@ -2732,7 +3037,7 @@
 
 
 <p><em>This article originally appeared on <a href="https://www.cio.com/article/4183209/enterprises-know-ai-generated-code-is-vulnerable-theyre-shipping-it-anyway.html" target="_blank">CIO.com</a>.</em></p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 20h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
@@ -2857,7 +3162,7 @@
 
 
 <p></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 20h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
@@ -2946,7 +3251,7 @@
 
 
 <p><a href="https://www.infotech.com/profiles/yaz-palanichamy" rel="nofollow" target="_blank">Yaz Palanichamy</a>, senior research analyst at Info-Tech Research Group, said DocLang adoption will require organizations to implement and review controls in order to scale its use accountably and securely.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 21h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
@@ -3205,111 +3510,6 @@
   <pubDate>Tue, 09 Jun 2026 12:15:00 +0000</pubDate>
   <source>The Register</source>
   <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Google paid researcher a tidy $55K bounty for its discovery<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
-</item>
-
-<item>
-  <title>🟠 The next frontier isn’t AI</title>
-  <link>https://www.cio.com/article/4182449/the-next-frontier-isnt-ai.html</link>
-  <pubDate>Tue, 09 Jun 2026 12:00:00 +0000</pubDate>
-  <source>CIO.com</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><div id="remove_no_follow">
-		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
-					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
-						<div class="article-column__content">
-<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
-
-
-
-<p>Crude oil benchmarks spike 60% in 36 hours. By the time markets open Monday morning, a global manufacturer is sitting on exposure it cannot yet quantify: Fuel surcharges incoming from every logistics partner, supplies repriced across multiple product lines, long-haul shipping contracts suddenly underwater and a forward pricing model built on assumptions that no longer exist.</p>
-
-
-
-<p>Emerging technologies can help. A live model of the enterprise can immediately surface where the damage flows and how it compounds. The system will evaluate tens of thousands of response combinations, such as which contracts to renegotiate, which freight to reroute and which lines to reprice, in order to return ranked suggestions in minutes that would take conventional systems days to produce. Meanwhile, at the company’s most energy-intensive facilities, plant managers might be communicating with robotic systems without a single line of code, reconfiguring production to respond to the changes.</p>
-
-
-
-<p>I’m afraid this enterprise does not exist — yet. But your competition might be closer to it than you realize.</p>
-
-
-
-<p>Sure, artificial intelligence has upended everything we know about business. But the next competitive frontier isn’t AI because all your competitors are making the same bet. The differentiator is orchestration. An unprecedented convergence of new technologies—digital twins, quantum computing and physical AI, to name just three — is making possible a fundamentally different kind of organization. How will you translate breakthrough innovations into a tangible business win?</p>
-
-
-
-<h2 class="wp-block-heading" id="the-enterprise-as-it-actually-is">The enterprise as it actually is</h2>
-
-
-
-<p>An enterprise digital twin is a live, continuously updated digital representation of the organization, built from digitized workflows and data. Paired with AI, the opportunity they unlock is fundamental. It can empower business leaders and AI agents alike to test decisions before committing to them by modeling outcomes and seeing consequences in a digital copy of the enterprise.</p>
-
-
-
-<p>The technology allows you to reason against a live model of the enterprise as it actually is, rather than relying on intuition or historical patterns that may no longer be accurate. By using a digital twin, an agent can surface the projected impact of a decision before anything goes live, flagging risks and presenting options rather than simply executing.</p>
-
-
-
-<p>On a more granular level, the technology can allow you to iterate on any product, work process or even entire manufacturing plant in a simulated setting. PepsiCo can now accurately recreate every piece of equipment, conveyor and operator routes, <a href="https://news.siemens.com/en-us/digital-twin-composer-ces-2026/" rel="nofollow">resulting</a> in expedited design cycles, 90% identification of potential issues and up to 15% decrease in capital expenditure.</p>
-
-
-
-<p>Now imagine AI agents that do not just query the model but continuously refine it. Every task completed, every outcome recorded, feeds back into the digital twin, so the model grows more accurate with every cycle. Over time, the organization builds a self-sharpening picture of how it actually works and how it can work better, with real-time information available to every agent that carries out tactics and every leader making decisions.</p>
-
-
-
-<h2 class="wp-block-heading" id="the-decisions-that-cant-wait-for-answers">The decisions that can’t wait for answers</h2>
-
-
-
-<p>Running meaningful simulations requires computation at a scale that varies dramatically by decision complexity. For the most consequential choices that require running algorithms across thousands of variables, classical computing runs out of road. <a href="https://www.servicenow.com/es/workflow/innovations/quantum-computing-real-world-impact.html" rel="nofollow">Quantum computing can address that ceiling</a> by processing multiple states simultaneously rather than sequentially, using qubits that each represent a potential exponential increase in capability. The result is an ability to tackle high-parameter optimization problems that classical hardware cannot handle in any practical timeframe.</p>
-
-
-
-<p>Though we are still a few years away from seeing the technology come into fruition, companies are laying the foundation for quantum and seeing meaningful results. Working with quantum-enabled algorithm, <a href="https://www.hsbc.com/news-and-views/news/media-releases/2025/hsbc-demonstrates-worlds-first-known-quantum-enabled-algorithmic-trading-with-ibm" rel="nofollow">a proof of concept by HSBC recorded a 34% improvement</a> in trade fill prediction.</p>
-
-
-
-<p>Now, envision pairing a detailed enterprise digital twin with quantum simulation, running hundreds of thousands of scenarios on a single acquisition decision, weighting product fit, cultural signals and competitive positioning, and returning a probability. Many decisions do not warrant that level of modeling, but some do. Organizations preparing now are building the decision architecture that will know the difference.</p>
-
-
-
-<h2 class="wp-block-heading" id="where-intelligence-meets-the-real-world">Where intelligence meets the real world</h2>
-
-
-
-<p>The enterprise doesn’t end at the screen. Neither should its intelligence. In the real world, most business processes ultimately result in a physical action, whether it’s a product being built or a customer consuming that product. Until now, digital intelligence has always had to hand that final action off to a human or, at best, a machine that carries out pre-programmed actions. That’s changing.</p>
-
-
-
-<p><a href="https://www.servicenow.com/standard/resource-center/white-paper/wp-physical-ai-innovation-brief.html" rel="nofollow">Physical AI</a> encompasses the robots, sensors and autonomous machines that can perceive the physical world and act within it, converting digital decisions into real-world execution. We already have the technology to translate natural language instructions into physical commands, and projects like <a href="https://www.press.bmwgroup.com/global/article/detail/T0455864EN/bmw-group-to-deploy-humanoid-robots-in-production-in-germany-for-the-first-time" rel="nofollow">BMW’s humanoid robotics program</a> signal that we are taking a meaningful leap forward from explicitly programmed machines to the operational deployment of intelligent execution.</p>
-
-
-
-<p>Physical AI still struggles in unfamiliar environments, and full autonomy requires more testing. But it won’t be long before we see physical AI systems step into places facing worker shortages, carrying out tasks like prepping operating rooms while freeing clinical staff for work that requires human judgment. The same extends to agriculture, logistics, field service and anywhere else where a process terminates in a physical action.</p>
-
-
-
-<p>When that execution layer is connected to agentic AI, the result is transformative. A detected disruption triggers an immediate response: Inventory reallocated, robotic systems rerouted and machines dispatched to address the issue.</p>
-
-
-
-<h2 class="wp-block-heading" id="building-tomorrows-connective-layer-now">Building tomorrow’s connective layer now</h2>
-
-
-
-<p>Digital twins, quantum computing and physical AI are only three of many promising emerging technologies. The convergence is broader and moving faster than most enterprise strategies currently reflect. Together, they point toward something without precedent: An enterprise that can sense, simulate and act across digital and physical domains, learning from every cycle it completes.</p>
-
-
-
-<p>AI belongs in this picture, but it is not the whole picture. Every competitor is already making a bet on AI. The differentiation lies in what surrounds it: The holistic nervous system that connects these technologies so they function as a system rather than a collection of deployments.</p>
-
-
-
-<p>The organizations that will lead are not waiting. They are building the connective tissue now.</p>
-
-
-
-<p><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><strong><a href="https://www.cio.com/expert-contributor-network/">Want to join?</a></strong></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
@@ -4407,111 +4607,6 @@
 
 
 <p><em>Updated to note that Cloudflare has since patched Pingora.</em></p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
-</item>
-
-<item>
-  <title>🟠 Ukraine’s foreign minister offer recipe for improved resilience</title>
-  <link>https://www.csoonline.com/article/4181523/ukraines-foreign-minister-offer-recipe-for-improved-resilience.html</link>
-  <pubDate>Mon, 08 Jun 2026 07:17:00 +0000</pubDate>
-  <source>CSO Online</source>
-  <description><![CDATA[<b>Why this matters: Service impact possible — prepare comms and confirm vendor status.</b><br/><div id="remove_no_follow">
-		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
-					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
-						<div class="article-column__content">
-<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
-
-
-
-<p>Cybersecurity professionals were offered lessons of resilience in the most extreme circumstances from Ukraine’s former minister of foreign affairs.</p>
-
-
-
-<p>Dmytro Kuleba, who served as Ukraine’s Minister of Foreign Affairs between 2020 and 2024, told Infosecurity Europe delegates that the key to Ukraine’s survival after the full-scale Russian invasion of 2022 was pre-planning, a lesson learned in the early weeks of the war.</p>
-
-
-
-<p>Ukraine’s largest mobile operator KyivStar was subjected to an outage in December 2023 because of a Russian cyberattack.</p>
-
-
-
-<p>“They got to the very core of their system of their network,” Kuleba said. “They put it down, or they knocked it out, and the way they did it, they penetrated through an account of one single employee of KyivStar.”</p>
-
-
-
-<p>Kuleba added: “Miraculously, KyivStar did [the] unimaginable, and within days they restored the system and fenced it off.”</p>
-
-
-
-<p>Few successful cyberattacks have happened since this incident, according to Kuleba, who credited this success on a pre-planning for resilience methodology that has been adopted by the Ukrainian government and businesses.</p>
-
-
-
-<p>“We don’t know what and how it is going to happen,” Kuleba said. “But you can presume, you can brainstorm, you can calculate, and you can prepare. You can prepare so that it becomes your muscle memory.”</p>
-
-
-
-<p>Even if the unexpected happens you will be more prepared if you’ve gone through preparations, Kuleba argued.</p>
-
-
-
-<p>“Make no mistake when the crisis situation occurs, everything will be different,” said Kuleba. “You will be punched in the face. You plan not to follow the plan but to know your environment perfectly and to develop instincts of survival in this environment.”</p>
-
-
-
-<h2 class="wp-block-heading" id="exodus">Exodus</h2>
-
-
-
-<p>Kuleba began preparing Ukraine’s foreign ministry for the war in November 2021, starting with learning precisely how its systems worked and planning for contingencies such as how diplomats and staff could communicate if online messaging apps became unavailable.</p>
-
-
-
-<p>When war broke out foreign ministry services was evacuated abroad.</p>
-
-
-
-<p>“We did not waste a single second on figuring out what is possible and what is impossible, because we knew all of that in advance,” Kuleba said.</p>
-
-
-
-<p>Preparation for potential disasters might seem like a distraction from more immediate projects or even boring but making contingency plans is vital not just for Ukraine but for technologists around the world.</p>
-
-
-
-<p>“There are more important projects than preparing for something that might not even happen,” Kuleba advised. “But if you care for your company, if you care for your country, you have to prepare for the worst.”</p>
-
-
-
-<p>Kuleba concluded: “Resilience is not being prepared to repair a destruction. Resilience is your ability to keep repairing the wrecks as destruction becomes new normal.”</p>
-
-
-
-<p>The war has affected the operations of even smaller Ukrainian businesses as Russian cyberattacks have become stealthier.</p>
-
-
-
-<p>For example, Russian operatives have recently sought to gain “pattern of life” intelligence that might be used to assassinate Ukrainian officials or target members of their family for kidnap after hacking into the customer relationship management (CRM) systems used by businesses such as barbers, gyms, and nail bars.</p>
-
-
-
-<p>“What Russian security services are doing is they break into CRM systems of barbers, fitness clubs … the loyalty programmes of supermarkets, to track your movements, to understand whether you usually show up, [and] how much time do you usually spend, to build a picture, and then do what they believe is necessary,” Kuleba said.</p>
-
-
-
-<p>In one case Kuleba linked to this tactic, the son of an unspecified Ukrainian official was kidnapped before his father was blackmailed by the Russians into leaking intel.</p>
-
-
-
-<p>CRM systems in the Ukraine were particularly vulnerable because for years before the invasion, “Russian companies had been offering very lucrative offers to Ukrainian businesses so that they would install [their] CRM platforms,” Kuleba said.</p>
-
-
-
-<p>Kuleba added: “Did these Russian companies do that on their own initiative? Perhaps. Did the Russian security service ask them to do that and help them to do it? Perhaps. But the thing is, even such innocent programme as a check-in system at a restaurant, or a barber shop, or a gym, can help your enemy to kill someone … to kidnap.”</p>
-
-
-
-<p>“Do not trust the products made by your potential enemy,” Kuleba concluded, adding that the incident shows the importance of technological sovereignty and data security even for the smallest companies.</p>
 </div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
 </item>
 
