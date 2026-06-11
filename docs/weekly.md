@@ -1,25 +1,35 @@
 # IT Weekly Intelligence Briefing
 **Period:** June 04 – June 11, 2026  
-**Generated:** 2026-06-11 03:41 UTC  
-**Items reviewed:** 137  
+**Generated:** 2026-06-11 08:44 UTC  
+**Items reviewed:** 136  
 
 ## ⚡ Top Actions This Week
 
-1. **Validate backups, confirm EDR coverage, and brief incident response team.**  
-   _Who Runs the Ransomware Group ‘The Gentlemen?’_  
-   Source: Krebs on Security  
-
-2. **Apply emergency patch or mitigation now; check vendor advisory for workarounds.**  
-   _Microsoft patches Exchange Server zero-day exploited in attacks_  
+1. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
+   _Nottingham University data breach affects over 450,000 students_  
    Source: BleepingComputer  
 
-3. **Apply emergency patch or mitigation now; check vendor advisory for workarounds.**  
-   _Chrome V8 Zero-Day CVE-2026-11645 Exploited in the Wild - Patch Now_  
+2. **Audit third-party software dependencies and review vendor access.**  
+   _GitHub to Disable npm Install Scripts by Default to Stop Supply Chain Attacks_  
    Source: The Hacker News  
+
+3. **Validate backups, confirm EDR coverage, and brief incident response team.**  
+   _Who Runs the Ransomware Group ‘The Gentlemen?’_  
+   Source: Krebs on Security  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [Nottingham University data breach affects over 450,000 students](https://www.bleepingcomputer.com/news/security/nottingham-university-data-breach-affects-over-450-000-students/)
+**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jun 11  
+**Why it matters:** Potential credential or data exposure.  
+**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
+
+### [GitHub to Disable npm Install Scripts by Default to Stop Supply Chain Attacks](https://thehackernews.com/2026/06/github-to-disable-npm-install-scripts.html)
+**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Jun 11  
+**Why it matters:** Third-party/software supply chain integrity risk.  
+**Recommended action:** Audit third-party software dependencies and review vendor access.  
 
 ### [Who Runs the Ransomware Group ‘The Gentlemen?’](https://krebsonsecurity.com/2026/06/who-runs-the-ransomware-group-the-gentlemen/)
 **Source:** Krebs on Security &nbsp;·&nbsp; **Date:** Jun 10  
@@ -41,43 +51,33 @@
 **Why it matters:** General awareness item.  
 **Recommended action:** Prioritize patching of affected systems; check for internet-exposed attack surface.  
 
-### [VS Code Adds 2-Hour Extension Auto-Update Delay to Limit Supply Chain Attacks](https://thehackernews.com/2026/06/vs-code-adds-2-hour-extension-auto.html)
-**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Jun 08  
-**Why it matters:** Third-party/software supply chain integrity risk.  
-**Recommended action:** Audit third-party software dependencies and review vendor access.  
-
-### [CISA Adds Actively Exploited SolarWinds Serv-U DoS Flaw to KEV Catalog](https://thehackernews.com/2026/06/cisa-adds-actively-exploited-solarwinds.html)
-**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Jun 06  
-**Why it matters:** General awareness item.  
-**Recommended action:** Apply emergency patch or mitigation now; check vendor advisory for workarounds.  
-
 ---
 
 ## 🟠 Important — Review This Week
 
-- [Path traversal flaw in AI dev platform Langflow exploited in attacks](https://www.bleepingcomputer.com/news/security/path-traversal-flaw-in-ai-dev-platform-langflow-exploited-in-attacks/)  
-  **BleepingComputer** · Jun 10 · _General awareness item._  
+- [CVE-2026-8829 HTML::Entities versions before 3.84 for Perl read freed heap memory in _decode_entities](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-8829)  
+  **Microsoft Security Response Center (MSRC)** · Jun 11 · _General awareness item._  
 
-- [Ivanti, Fortinet, and SAP Release Patches for Multiple Critical Vulnerabilities](https://thehackernews.com/2026/06/ivanti-fortinet-and-sap-release-patches.html)  
-  **The Hacker News** · Jun 10 · _General awareness item._  
+- [CVE-2026-5419 Guntls: gnutls: information disclosure via timing side-channel in pkcs#7 padding removal](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-5419)  
+  **Microsoft Security Response Center (MSRC)** · Jun 11 · _General awareness item._  
 
-- [Unpatched Langflow Flaw CVE-2026-5027 Exploited for Unauthenticated RCE](https://thehackernews.com/2026/06/unpatched-langflow-flaw-cve-2026-5027.html)  
-  **The Hacker News** · Jun 10 · _General awareness item._  
+- [CVE-2026-11332 Ansible-core: argument injection in ansible-galaxy role install leads to arbitrary code execution](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-11332)  
+  **Microsoft Security Response Center (MSRC)** · Jun 11 · _General awareness item._  
 
-- [CISA Adds Cisco, Chrome, and Arista Flaws to KEV Catalog Amid Active Exploitation](https://thehackernews.com/2026/06/cisa-adds-cisco-chrome-and-arista-flaws.html)  
-  **The Hacker News** · Jun 10 · _General awareness item._  
+- [CVE-2026-42012 Gnutls: gnutls: certificate validation bypass due to improper handling of uri and srv sans](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-42012)  
+  **Microsoft Security Response Center (MSRC)** · Jun 11 · _General awareness item._  
 
-- [CVE-2026-47294 Microsoft SharePoint Server Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-47294)  
-  **Microsoft Security Response Center (MSRC)** · Jun 10 · _General awareness item._  
+- [CVE-2026-5260 Gnutls: gnutls: information disclosure via heap overread in rsa key exchange](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-5260)  
+  **Microsoft Security Response Center (MSRC)** · Jun 11 · _Potential email disruption for users._  
 
-- [CVE-2026-42903 Windows Kerberos Denial of Service Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-42903)  
-  **Microsoft Security Response Center (MSRC)** · Jun 10 · _General awareness item._  
+- [CVE-2026-42015 Gnutls: gnutls: memory corruption due to off-by-one error in pkcs#12 bag handling](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-42015)  
+  **Microsoft Security Response Center (MSRC)** · Jun 11 · _General awareness item._  
 
-- [CVE-2026-48569 Visual Studio Code Security Feature Bypass Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-48569)  
-  **Microsoft Security Response Center (MSRC)** · Jun 10 · _General awareness item._  
+- [CVE-2026-42013 Gnutls: gnutls: certificate validation bypass due to oversized subject alternative name](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-42013)  
+  **Microsoft Security Response Center (MSRC)** · Jun 11 · _General awareness item._  
 
-- [CVE-2026-40376 Visual Studio Code Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-40376)  
-  **Microsoft Security Response Center (MSRC)** · Jun 10 · _General awareness item._  
+- [CVE-2026-39833 Invoking  key constraints not enforced in golang.org/x/crypto/ssh/agent](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-39833)  
+  **Microsoft Security Response Center (MSRC)** · Jun 11 · _General awareness item._  
 
 ---
 
@@ -92,4 +92,4 @@
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 9 critical · 86 important · 42 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 11 critical · 86 important · 39 FYI_
