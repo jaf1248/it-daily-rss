@@ -1,25 +1,35 @@
 # IT Weekly Intelligence Briefing
 **Period:** June 05 – June 12, 2026  
-**Generated:** 2026-06-12 03:40 UTC  
-**Items reviewed:** 135  
+**Generated:** 2026-06-12 08:24 UTC  
+**Items reviewed:** 133  
 
 ## ⚡ Top Actions This Week
 
 1. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _Maine breach portal abused to publish fake data breach disclosures_  
+   _Over 73,000 French govt employees affected in Tchap messenger breach_  
    Source: BleepingComputer  
 
-2. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _ShinyHunters Exploits Oracle PeopleSoft Zero-Day (CVE-2026-35273) to Breach Universities_  
+2. **Validate backups, confirm EDR coverage, and brief incident response team.**  
+   _Europol Disrupts AudiA6 Crypto Laundering Service Used by Ransomware Gangs_  
    Source: The Hacker News  
 
-3. **Prioritize patching of affected systems; check for internet-exposed attack surface.**  
-   _Oracle mitigates PeopleSoft zero-day exploited in data theft attacks_  
+3. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
+   _Maine breach portal abused to publish fake data breach disclosures_  
    Source: BleepingComputer  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [Over 73,000 French govt employees affected in Tchap messenger breach](https://www.bleepingcomputer.com/news/security/french-govt-says-tchap-breach-affected-over-73-000-accounts/)
+**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jun 12  
+**Why it matters:** Potential credential or data exposure.  
+**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
+
+### [Europol Disrupts AudiA6 Crypto Laundering Service Used by Ransomware Gangs](https://thehackernews.com/2026/06/europol-disrupts-audia6-crypto.html)
+**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Jun 12  
+**Why it matters:** Elevated ransomware risk across the sector.  
+**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
 
 ### [Maine breach portal abused to publish fake data breach disclosures](https://www.bleepingcomputer.com/news/security/maine-breach-portal-abused-to-publish-fake-data-breach-disclosures/)
 **Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jun 11  
@@ -41,19 +51,18 @@
 **Why it matters:** Elevated ransomware risk across the sector.  
 **Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
 
-### [Authorities dismantle 'AudiA6' ransomware crypto-laundering service](https://www.bleepingcomputer.com/news/legal/authorities-dismantle-audia6-ransomware-crypto-laundering-service/)
-**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jun 11  
-**Why it matters:** Elevated ransomware risk across the sector.  
-**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
-
-### [ThreatsDay Bulletin: Worm Code Leaked, AI Agent Phished, Claude Code Patch + 28 New Stories](https://thehackernews.com/2026/06/threatsday-bulletin-worm-code-leaked-ai.html)
-**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Jun 11  
-**Why it matters:** Third-party/software supply chain integrity risk.  
-**Recommended action:** Audit third-party software dependencies and review vendor access.  
-
 ---
 
 ## 🟠 Important — Review This Week
+
+- [CVE-2026-49975 Apache HTTP Server: mod_http2 denial of service](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-49975)  
+  **Microsoft Security Response Center (MSRC)** · Jun 12 · _General awareness item._  
+
+- [CVE-2026-46683 Snappy: SSRF and local file read via the xsl-style-sheet option](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-46683)  
+  **Microsoft Security Response Center (MSRC)** · Jun 12 · _General awareness item._  
+
+- [CVE-2026-46643 Snappy: Binary path is never shell-escaped due to an inverted is_executable check](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-46643)  
+  **Microsoft Security Response Center (MSRC)** · Jun 12 · _General awareness item._  
 
 - [Japanese energy firm loses drive with data of 10.9 million clients](https://www.bleepingcomputer.com/news/security/japanese-energy-firm-loses-drive-with-data-of-109-million-clients/)  
   **BleepingComputer** · Jun 11 · _General awareness item._  
@@ -70,15 +79,6 @@
 - [CVE-2026-8829 HTML::Entities versions before 3.84 for Perl read freed heap memory in _decode_entities](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-8829)  
   **Microsoft Security Response Center (MSRC)** · Jun 11 · _General awareness item._  
 
-- [CVE-2026-5419 Guntls: gnutls: information disclosure via timing side-channel in pkcs#7 padding removal](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-5419)  
-  **Microsoft Security Response Center (MSRC)** · Jun 11 · _General awareness item._  
-
-- [CVE-2026-11332 Ansible-core: argument injection in ansible-galaxy role install leads to arbitrary code execution](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-11332)  
-  **Microsoft Security Response Center (MSRC)** · Jun 11 · _General awareness item._  
-
-- [Microsoft fixes BitLocker recovery bug on Windows Server 2025](https://www.bleepingcomputer.com/news/microsoft/microsoft-fixes-bitlocker-recovery-bug-on-windows-server-2025/)  
-  **BleepingComputer** · Jun 11 · _General awareness item._  
-
 ---
 
 ## 🔵 FYI — General Awareness
@@ -92,4 +92,4 @@
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 18 critical · 85 important · 32 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 20 critical · 84 important · 29 FYI_
