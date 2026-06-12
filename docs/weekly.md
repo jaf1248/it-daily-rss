@@ -1,25 +1,35 @@
 # IT Weekly Intelligence Briefing
 **Period:** June 05 – June 12, 2026  
-**Generated:** 2026-06-12 08:24 UTC  
+**Generated:** 2026-06-12 12:17 UTC  
 **Items reviewed:** 133  
 
 ## ⚡ Top Actions This Week
 
 1. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _Over 73,000 French govt employees affected in Tchap messenger breach_  
+   _Pharma giant Novo Nordisk discloses breach of clinical trials data_  
    Source: BleepingComputer  
 
-2. **Validate backups, confirm EDR coverage, and brief incident response team.**  
-   _Europol Disrupts AudiA6 Crypto Laundering Service Used by Ransomware Gangs_  
-   Source: The Hacker News  
+2. **Apply emergency patch or mitigation now; check vendor advisory for workarounds.**  
+   _CISA orders feds to patch actively exploited Ivanti flaw by Sunday_  
+   Source: BleepingComputer  
 
 3. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _Maine breach portal abused to publish fake data breach disclosures_  
+   _Over 73,000 French govt employees affected in Tchap messenger breach_  
    Source: BleepingComputer  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [Pharma giant Novo Nordisk discloses breach of clinical trials data](https://www.bleepingcomputer.com/news/security/pharmaceutical-giant-novo-nordisk-discloses-security-breach/)
+**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jun 12  
+**Why it matters:** Potential credential or data exposure.  
+**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
+
+### [CISA orders feds to patch actively exploited Ivanti flaw by Sunday](https://www.bleepingcomputer.com/news/security/cisa-gives-feds-3-days-to-patch-ivanti-flaw-exploited-in-attacks/)
+**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jun 12  
+**Why it matters:** General awareness item.  
+**Recommended action:** Apply emergency patch or mitigation now; check vendor advisory for workarounds.  
 
 ### [Over 73,000 French govt employees affected in Tchap messenger breach](https://www.bleepingcomputer.com/news/security/french-govt-says-tchap-breach-affected-over-73-000-accounts/)
 **Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jun 12  
@@ -41,19 +51,12 @@
 **Why it matters:** Potential credential or data exposure.  
 **Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
-### [Oracle mitigates PeopleSoft zero-day exploited in data theft attacks](https://www.bleepingcomputer.com/news/security/oracle-mitigates-peoplesoft-zero-day-exploited-in-data-theft-attacks/)
-**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jun 11  
-**Why it matters:** General awareness item.  
-**Recommended action:** Prioritize patching of affected systems; check for internet-exposed attack surface.  
-
-### [The Gentlemen Ransomware Claims 478 Victims, Can Spread Like a Worm](https://thehackernews.com/2026/06/the-gentlemen-ransomware-claims-478.html)
-**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Jun 11  
-**Why it matters:** Elevated ransomware risk across the sector.  
-**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
-
 ---
 
 ## 🟠 Important — Review This Week
+
+- [LangGraph Flaw Chain Exposes Self-Hosted AI Agents to Remote Code Execution](https://thehackernews.com/2026/06/langgraph-flaw-chain-exposes-self.html)  
+  **The Hacker News** · Jun 12 · _General awareness item._  
 
 - [CVE-2026-49975 Apache HTTP Server: mod_http2 denial of service](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-49975)  
   **Microsoft Security Response Center (MSRC)** · Jun 12 · _General awareness item._  
@@ -76,20 +79,17 @@
 - [AI Broke Vulnerability Management. That's Why CISOs Are Moving Budget to BAS.](https://thehackernews.com/2026/06/ai-broke-vulnerability-management-thats.html)  
   **The Hacker News** · Jun 11 · _General awareness item._  
 
-- [CVE-2026-8829 HTML::Entities versions before 3.84 for Perl read freed heap memory in _decode_entities](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-8829)  
-  **Microsoft Security Response Center (MSRC)** · Jun 11 · _General awareness item._  
-
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [Agentjacking Attack Tricks AI Coding Agents Into Running Malicious Code](https://thehackernews.com/2026/06/agentjacking-attack-tricks-ai-coding.html) — The Hacker News
+- [Microsoft fixes Windows update failures linked to WUSA installer](https://www.bleepingcomputer.com/news/microsoft/microsoft-fixes-windows-update-failures-linked-to-wusa-installer/) — BleepingComputer
+- [Rethinking MDR as Attackers and Defenders Embrace AI](https://thehackernews.com/2026/06/rethinking-mdr-as-attackers-and.html) — The Hacker News
+- [INTERPOL Operation Takes Down Sniper Dz Phishing Platform, Arrests Administrator](https://thehackernews.com/2026/06/interpol-takes-down-sniper-dz-phishing.html) — The Hacker News
 - [New Attacks Trick OpenClaw AI Agent Into Running Code and Leaking Secrets](https://thehackernews.com/2026/06/new-attacks-trick-openclaw-ai-agent.html) — The Hacker News
 - [New GreatXML Exploit Bypasses Windows BitLocker via Recovery Partition XML Files](https://thehackernews.com/2026/06/new-greatxml-exploit-bypasses-windows.html) — The Hacker News
-- [Why AI-driven threats are exposing the limits of MSP security stacks](https://www.bleepingcomputer.com/news/security/why-ai-driven-threats-are-exposing-the-limits-of-msp-security-stacks/) — BleepingComputer
-- [ISC Stormcast For Thursday, June 11th, 2026 https://isc.sans.edu/podcastdetail/9968, (Thu, Jun 11th)](https://isc.sans.edu/diary/rss/33070) — SANS Internet Storm Center
-- [The ‘Miasma’ worm source code briefly leaked on GitHub](https://www.bleepingcomputer.com/news/security/the-miasma-worm-source-code-briefly-leaked-on-github/) — BleepingComputer
-- [GitHub announces npm security changes to tackle supply-chain attacks](https://www.bleepingcomputer.com/news/security/github-announces-npm-security-changes-to-tackle-supply-chain-attacks/) — BleepingComputer
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 20 critical · 84 important · 29 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 22 critical · 84 important · 27 FYI_
