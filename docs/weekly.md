@@ -1,25 +1,30 @@
 # IT Weekly Intelligence Briefing
 **Period:** June 05 – June 12, 2026  
-**Generated:** 2026-06-12 19:04 UTC  
-**Items reviewed:** 133  
+**Generated:** 2026-06-12 21:42 UTC  
+**Items reviewed:** 134  
 
 ## ⚡ Top Actions This Week
 
-1. **Validate backups, confirm EDR coverage, and brief incident response team.**  
+1. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
+   _Maine disables data breach notification portal after fake disclosures_  
+   Source: BleepingComputer  
+
+2. **Validate backups, confirm EDR coverage, and brief incident response team.**  
    _Ukrainian national pleads guilty to role in Conti ransomware operation_  
    Source: BleepingComputer  
 
-2. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
+3. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
    _Pharma giant Novo Nordisk discloses breach of clinical trials data_  
-   Source: BleepingComputer  
-
-3. **Apply emergency patch or mitigation now; check vendor advisory for workarounds.**  
-   _CISA orders feds to patch actively exploited Ivanti flaw by Sunday_  
    Source: BleepingComputer  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [Maine disables data breach notification portal after fake disclosures](https://www.bleepingcomputer.com/news/security/maine-disables-data-breach-notification-portal-after-fake-disclosures/)
+**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jun 12  
+**Why it matters:** Potential credential or data exposure.  
+**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
 ### [Ukrainian national pleads guilty to role in Conti ransomware operation](https://www.bleepingcomputer.com/news/security/ukrainian-national-pleads-guilty-to-role-in-conti-ransomware-operation/)
 **Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jun 12  
@@ -46,11 +51,6 @@
 **Why it matters:** Elevated ransomware risk across the sector.  
 **Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
 
-### [Maine breach portal abused to publish fake data breach disclosures](https://www.bleepingcomputer.com/news/security/maine-breach-portal-abused-to-publish-fake-data-breach-disclosures/)
-**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jun 11  
-**Why it matters:** Potential credential or data exposure.  
-**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
-
 ---
 
 ## 🟠 Important — Review This Week
@@ -76,20 +76,20 @@
 - [Cybersecurity Stars Awards 2026: Winners Announced Across 95 Categories](https://thehackernews.com/2026/06/cybersecurity-stars-awards-2026-winners.html)  
   **The Hacker News** · Jun 11 · _General awareness item._  
 
-- [CISA tells govt agencies to patch critical exploited flaws in 3 days](https://www.bleepingcomputer.com/news/security/cisa-tells-govt-agencies-to-patch-critical-exploited-flaws-in-3-days/)  
-  **BleepingComputer** · Jun 11 · _General awareness item._  
+- [AI Broke Vulnerability Management. That's Why CISOs Are Moving Budget to BAS.](https://thehackernews.com/2026/06/ai-broke-vulnerability-management-thats.html)  
+  **The Hacker News** · Jun 11 · _General awareness item._  
 
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [Over 400 Arch Linux AUR Packages Hijacked to Deploy Infostealer and eBPF Rootkit](https://thehackernews.com/2026/06/over-400-arch-linux-aur-packages.html) — The Hacker News
+- [Google Sues Chinese Smishing Network Accused of Using Gemini AI in Phishing](https://thehackernews.com/2026/06/google-sues-chinese-smishing-network.html) — The Hacker News
+- [China-Linked Hackers Backdoored Linux Login Software to Hide for Nearly a Decade](https://thehackernews.com/2026/06/china-linked-hackers-backdoored-linux.html) — The Hacker News
 - [Over 400 Arch Linux packages compromised to push rootkit, infostealer](https://www.bleepingcomputer.com/news/security/over-400-arch-linux-packages-compromised-to-push-rootkit-infostealer/) — BleepingComputer
 - [Early Warning Signs of Supply-Chain Attacks Live in the Dark Web](https://www.bleepingcomputer.com/news/security/early-warning-signs-of-supply-chain-attacks-live-in-the-dark-web/) — BleepingComputer
 - [ISC Stormcast For Friday, June 12th, 2026 https://isc.sans.edu/podcastdetail/9970, (Fri, Jun 12th)](https://isc.sans.edu/diary/rss/33074) — SANS Internet Storm Center
-- [Agentjacking Attack Tricks AI Coding Agents Into Running Malicious Code](https://thehackernews.com/2026/06/agentjacking-attack-tricks-ai-coding.html) — The Hacker News
-- [Microsoft fixes Windows update failures linked to WUSA installer](https://www.bleepingcomputer.com/news/microsoft/microsoft-fixes-windows-update-failures-linked-to-wusa-installer/) — BleepingComputer
-- [Rethinking MDR as Attackers and Defenders Embrace AI](https://thehackernews.com/2026/06/rethinking-mdr-as-attackers-and.html) — The Hacker News
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 21 critical · 82 important · 30 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 20 critical · 81 important · 33 FYI_

@@ -3,16 +3,303 @@
 <channel>
   <title>Joe — VP of IT Briefing</title>
   <description>Leadership-focused IT risk, vendors, pricing, licensing, and industry context.</description>
-  <lastBuildDate>Fri, 12 Jun 2026 19:03:23 +0000</lastBuildDate>
+  <lastBuildDate>Fri, 12 Jun 2026 21:41:40 +0000</lastBuildDate>
   
+<item>
+  <title>🟠 GreatXML zero-day BitLocker bypass doesn’t seem to work, yet</title>
+  <link>https://www.csoonline.com/article/4184678/greatxml-zero-day-bitlocker-bypass-doesnt-seem-to-work-yet.html</link>
+  <pubDate>Fri, 12 Jun 2026 21:34:32 +0000</pubDate>
+  <source>CSO Online</source>
+  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<p>A disgruntled researcher who has been publishing zero-day Microsoft Windows vulnerabilities for the past several months released a new exploit Thursday that promises to bypass BitLocker encryption on locked devices. A well respected security expert reported that the exploit doesn’t work as initially described, but the researcher is looking for ways to fix it.</p>
+
+
+
+<p>Dubbed GreatXML, the exploit is supposed to work from the Windows Recovery Environment (WinRE), a special boot mode in Windows from which startup issues can be troubleshooted. It also seems to be related to the Windows Defender offline scan feature.</p>
+
+
+
+<p>“If Defender offline scan was initiated in the victim machine at any point then there is no need to login, the machine is automatically vulnerable,” the researcher, who goes online by the name Nightmare Eclipse or Chaotic Eclipse, said in the exploit notes. “If Defender offline scan was never initiated then you have to either login and initiate it yourself or figure out a way to boot into WinRE in offline scan state (I believe it should be very possible to do so without logging in).”</p>
+
+
+
+<p>The requirement to log in is relevant here, because a system drive encrypted with BitLocker will be unlocked and decrypted when the user logs in. However, the whole point of a BitLocker bypass is to gain access to the unencrypted drive without having the credentials to log in, for example on a stolen laptop.</p>
+
+
+
+<p>On machines where an offline Windows Defender scan was performed in the past, the exploitation is supposed to work by copying two files (<code>unattend.xml</code> and <code>Recovery/WindowsRE/ReAgent.xml</code>) provided by Nightmare Eclipse to the WinRE partition — this can be done from outside the OS because the WinRE partition is not encrypted — and then restart the system in WinRE mode.</p>
+
+
+
+<p>“If everything was done correctly, a shell with unrestricted access to the BitLocker volume will spawn,” Nightmare Eclipse said.</p>
+
+
+
+<p>However, Will Dormann, an experienced vulnerability analyst who investigated previous exploits released by Nightmare Eclipse, was not able to replicate the bypass using the provided instructions after trying on three versions of Windows 11.</p>
+
+
+
+<p>“I think the writeup is flawed in that the spawned <code>CMD.EXE</code> happens on the NEXT time that a Microsoft Defender Offline scan is triggered,” Dormann <a href="https://infosec.exchange/@wdormann/116729310091855591">said on his Mastodon account</a>. “And in order to trigger a Microsoft Defender Offline scan, you both need to be logged in to Windows, and also have admin credentials. And if you’ve already got that level of access, you can just turn off BitLocker.”</p>
+
+
+
+<p>Dormann’s observation would be consistent with <a href="https://learn.microsoft.com/en-us/defender-endpoint/microsoft-defender-offline">Microsoft’s documentation</a>, which states that triggering a Windows Defender offline scan requires administrative privileges and will trigger a reboot into WinRE mode for the scan to initiate. The point of the offline scan is to be executed from outside the OS to clean up kernel-level threats such as rootkits that might otherwise interfere with the regular Windows Defender process.</p>
+
+
+
+<p>Nightmare Eclipse did not respond to Dormann’s report, but <a href="https://x.com/rnmx123/status/2064996821194219870">asked on X</a> if anyone is aware of a way to trigger a Defender offline scan just by editing <code>ReAgent.xml</code>. This suggests the researcher is looking for an alternative way to trigger the exploit, but could be related to the scenario where a Defender offline scan was never executed in the past.</p>
+
+
+
+<p>Eclipse’s own blog post about GreatXML disappeared from his blogspot.com site, but <a href="https://x.com/ChaoticEclipse0/status/2065375046793564302">he claims this was Google’s doing</a> (Google owns the Blogger service). The GitHub repository where he posted his previous zero-day exploits was also removed recently, supposedly by Microsoft, which owns GitHub, a move that drew criticism from many in the security community, as GitHub has been a safe place to store security research, including zero-day proof-of-concept exploits.</p>
+
+
+
+<p>The researcher has a personal vendetta against Microsoft after claiming the company mistreated him and he has released eight zero-day exploits in Windows components so far. Some releases have been timed shortly after Microsoft’s <a href="https://www.csoonline.com/article/4183632/june-patch-tuesday-marks-a-new-normal-with-over-200-cves-32-rated-critical.html">Patch Tuesday</a> to force the company to release out-of-band patches or wait until the following month.</p>
+
+
+
+<p>This was also the case earler this week, when the researcher <a href="http://csoonline.com/article/4183487/microsoft-feud-escalates-as-researcher-drops-new-windows-zero-day.html">released a zero-day privilege escalation exploit in Windows Defender dubbed RoguePlanet</a> and followed that up two days later with the alleged GreatXML BitLocker bypass.</p>
+
+
+
+<p>Even if Dormann was not able to get the GreatXML to work, companies should still take the exploit seriously considering Eclipse’s track record of releasing functional zero-days. If there is a bug in the exploit, the researcher or someone else could fix it or find an alternative way to trigger it.</p>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Sources: three ex-DOGE staffers are raising $130M from a16z, Sequoia, and others for a startup that aims to use AI to secure government systems (Vanity Fair)</title>
+  <link>https://www.techmeme.com/260612/p26#a260612p26</link>
+  <pubDate>Fri, 12 Jun 2026 21:20:03 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.vanityfair.com/story/doge-defense-startups"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260612/i26.jpg" vspace="4" /></a>
+<p><a href="https://www.techmeme.com/260612/p26#a260612p26" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="http://www.vanityfair.com/">Vanity Fair</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://www.vanityfair.com/story/doge-defense-startups">Sources: three ex-DOGE staffers are raising $130M from a16z, Sequoia, and others for a startup that aims to use AI to secure government systems</a></b></span>&nbsp; &mdash;&nbsp; The engineers who wreaked havoc on Washington are ready for their second act.&nbsp; &mdash;&nbsp; Some of Elon Musk's earliest Department of Government Efficiency recruits &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</item>
+
+<item>
+  <title>🟠 Samsung reverses years-long ban on external gen AI use</title>
+  <link>https://www.cio.com/article/4184660/samsung-which-previously-blocked-chatgpt-is-now-fully-adopting-three-generative-ai-models-and-accelerating-its-ax-initiative.html</link>
+  <pubDate>Fri, 12 Jun 2026 20:44:28 +0000</pubDate>
+  <source>CIO.com</source>
+  <description><![CDATA[<b>Why this matters: Service impact possible — prepare comms and confirm vendor status.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<p>Samsung, which has been cautious about adopting external generative AI services due to concerns over internal information leaks, is reversing course three years after <a href="https://www.csoonline.com/article/575215/samsung-bans-staff-ai-use-over-data-leak-concerns.html">banning the technology</a> due to a highly publicized ChatGPT-related data leak.</p>
+
+
+
+<p>Samsung Electronics’ DX Division will officially introduce external generative AI services, including ChatGPT, Gemini, and Claude, to its employees. The move is seen as a follow-up to Samsung Electronics Chairman Lee Jae-yong ordering an “AI transformation” across all operations of affiliated companies at the beginning of this year.</p>
+
+
+
+<p>The company had previously been relying solely on in-house AI models.</p>
+
+
+
+<p>Samsung Electronics announced on June 11 via press release that it is launching a full-scale “AI Transformation (AX)” by adopting leading generative AI services from global tech giants for overall business operations and transitioning its work methods to be AI-centric.</p>
+
+
+
+<p>Samsung is known to have maintained a cautious stance toward generative AI adoption since a 2023 information security incident in which an employee uploaded work-related source code into ChatGPT, triggering a data leak controversy. However, going forward, DX Division employees will be able to use ChatGPT, Gemini, and Claude at work. Samsung explained that supporting all three services reflects “a strategic decision to ensure employees can utilize optimal tools rather than implementing AI as a one-time initiative.”</p>
+
+
+
+<h2 class="wp-block-heading" id="transforming-organizational-dna">Transforming organizational DNA</h2>
+
+
+
+<p>The selection of the three services followed a verification process testing the effectiveness of external generative AI service candidates with approximately 2,500 employees. Through this process, Samsung Electronics aims to improve work productivity and drive innovation in how work gets done while simultaneously accelerating decision-making speed and elevating organizational execution capabilities to the next level.</p>
+
+
+
+<p>Roh Tae-moon, president and representative of Samsung Electronics, stated: “The adoption of external generative AI is not simply providing AI as a work tool, but rather a starting point for fundamentally transforming how we work and our execution speed.”</p>
+
+
+
+<p>He added: “By creating an environment where every employee can utilize the AI best suited to their work, we will enhance organizational execution capabilities beyond individual productivity, ultimately raising the competitiveness of the DX Division’s business.”</p>
+
+
+
+<p>The DX Division’s adoption aligns with the group-level “AI Transformation” strategy. Samsung Group previously announced via press release on June 9 that it would implement AI across all operations of its affiliated companies. Chairman Lee Jae-yong emphasized in his 2026 New Year’s address: “We must fundamentally transform our work methods and organizational DNA,” and stressed: “We must integrate AI across the entire value chain — from R&amp;D to production, marketing, and support functions.”</p>
+
+
+
+<h2 class="wp-block-heading" id="top-down-training-approach">Top-down training approach</h2>
+
+
+
+<p>Samsung is undertaking a major transformation not only integrating AI into all business processes but also fundamentally reshaping organizational DNA itself, including work methods and organizational culture at the executive and employee levels toward an AI-centric approach.</p>
+
+
+
+<p>To this end, Samsung plans to conduct intensive AI training called “AX Boot Camp” for all executives across affiliated companies. This will be the first time Samsung conducts intensive AI training for approximately 50 executives. Samsung explained the educational initiative: “Recognizing that CEO AI literacy determines the success or failure of AX, we are implementing hands-on training where executives directly engage with and operationalize AI in their work.”</p>
+
+
+
+<p>Following the executive tier, AI training for all executives across affiliated companies will also be conducted. The training will run until August 12 in 2-day, 3-night sessions by cohort, with approximately 2,300 executives expected to participate. Samsung plans to position this executive and manager training as the starting point for company-wide AX innovation and will continue periodic additional training to enable executives to redesign operations based on AI and lead organizational transformation. Training for all remaining employees is scheduled for completion by the end of 2026.</p>
+
+
+
+<p>Meanwhile, Samsung announced in its press release that it plans to officially introduce external generative AI services, including Gemini, ChatGPT, and Claude, across all affiliated companies this month, suggesting that other Samsung subsidiaries beyond Samsung Electronics will also adopt the three services going forward.</p>
+
+
+
+<p>To align with the expansion of generative AI adoption, Samsung is also establishing dedicated organizations and security systems. Samsung plans to establish dedicated AI divisions across all affiliated companies. These divisions will be responsible for formulating AX promotion strategies tailored to each company’s business characteristics, managing data and model operations, cultivating AI talent, and maximizing group-wide AX promotion capabilities.</p>
+
+
+
+<p>Additionally, while permitting full-scale use of external generative AI, Samsung is establishing a sophisticated security framework to simultaneously achieve both “expanded AI utilization” and “risk control.”</p>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 OpenAI buys Ona to help rein in AI agents</title>
+  <link>https://www.cio.com/article/4184655/openai-buys-ona-to-help-rein-in-ai-agents-2.html</link>
+  <pubDate>Fri, 12 Jun 2026 20:07:43 +0000</pubDate>
+  <source>CIO.com</source>
+  <description><![CDATA[<b>Why this matters: Credential/phishing risk — reinforce MFA and user awareness training.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<p>CIOs and CISOs have many strategic and operational fears when it comes to unleashing fully-autonomous agents on tasks and hoping that everything works out. Will the agent start to delete critical files? Will the agent go off on a mission tangent and generate a massive token bill for the team when they return the next morning? Will it be tricked by a state actor and engage in malicious actions?</p>
+
+
+
+<p>To help alleviate those concerns, OpenAI announced on Thursday that it has agreed to acquire Ona, a 79 person cloud development environment (CDE) provider <a href="https://ona.com/stories/gitpod-is-now-ona" rel="nofollow" target="_blank">formerly known as Gitpod</a>, to accelerate its efforts to make agentic AI enterprise-friendly. </p>
+
+
+
+<p>An<a href="https://openai.com/index/openai-to-acquire-ona/" rel="nofollow" target="_blank"> OpenAI statement</a> said Ona’s technology “provides secure, persistent environments where agents can access the tools, systems, and context they need to make progress over time. By bringing Ona to OpenAI, we will expand Codex beyond work tied to a single device or active session and help more organizations deploy agents securely in production.”</p>
+
+
+
+<p>An <a href="https://ona.com/stories/ona-joins-openai" rel="nofollow" target="_blank">Ona statement</a> attributed to CEO Johannes Landgraf shared similar sentiments.</p>
+
+
+
+<p>“Ona brings the building blocks agents need for enterprise work: trusted, customer-controlled cloud environments where work continues across devices, inside the systems where software actually lives,” Landgraf said. “OpenAI brings frontier intelligence, product polish, and a scale of research and distribution we could never reach alone.”</p>
+
+
+
+<p>Landgraf’s statement did not provide any annual revenue numbers, but did hint, without naming, at some large customers. “Since the beginning of the year, weekly Ona agent sessions have grown 13x in production across some of the world’s most demanding institutions: the oldest bank in the US, one of Europe’s largest pharma companies, one of Asia’s largest sovereign wealth funds and many others,” he wrote. “The largest enterprises out there love the platform and are expanding more rapidly than ever before.”</p>
+
+
+
+<p><a href="https://my.idc.com/getdoc.jsp?containerId=PRF004946" rel="nofollow" target="_blank">Arnal Dayaratna</a>, research VP for software development at IDC, said IDC’s figures for Ona put its annual revenue for 2025 at “roughly $7 million.” He speculated that Ona’s revenue for 2026 would be higher: “Let’s say it’s $15 million. I am being generous. Maybe it’s really $10 million or $12 million.”</p>
+
+
+
+<p>Dayaratna said if he uses a standard acquisition price of roughly a multiple of 30 times revenue, then depending on the actual 2026 figure, “that comes to $450 million or $500 million or so.”</p>
+
+
+
+<p>But IDC sees this being a potentially good move for OpenAI, regardless of the specific acquisition price, given that OpenAI had the classic “buy or build” challenge. </p>
+
+
+
+<p>OpenAI has a substantial Codex effort, Dayaratna said, but what they lack is a safe area to protect enterprise autonomous agent efforts. “This is outside of what OpenAI has now. These are secure environments where agents can have memory and operate securely,” he said. “This is the kind of technology that one would expect to be needed, but I don’t know how good it is, to be honest.”</p>
+
+
+
+<p><a href="https://www.gartner.com/en/insights/gartner-first-takes" rel="nofollow" target="_blank">Gartner’s First Take</a>, published today, noted that the acquisition will bring Codex “the essential scaling capability it lacked,” but also pointed out it forces some difficult decisions on enterprises: “Software engineering leaders must weigh the benefits of a vendor-specific integrated stack against the flexibility of staying vendor-agnostic.”</p>
+
+
+
+<p>In addition, Gartner wrote, “This acquisition appears to be OpenAI’s response to Anthropic supporting self-hosted sandboxes in Claude Managed Agents, starting May 2026.”</p>
+
+
+
+<p><a href="https://www.linkedin.com/in/tomfindling/" rel="nofollow" target="_blank">Tom Findling</a>, CEO of Conifers.ai, said he also sees OpenAI’s fear of Anthropic playing a meaningful role in this deal. </p>
+
+
+
+<p>“It feels like a move to keep pressure on Anthropic, especially as Claude Code gains traction with developers and enterprise buyers,” he said. “So I’d read this less as OpenAI taking out a small competitor and more as OpenAI trying to make sure Codex is enterprise-ready before Anthropic gets too far ahead. In the enterprise market, the battle is not just who has the smartest coding model, but who can make AI agents safe and useful enough for big companies to actually deploy.”</p>
+
+
+
+<p>He added, “I don’t think this means OpenAI suddenly needs help making Codex better at writing code. The bigger issue is making Codex work inside real enterprise environments, where security, access controls, persistent cloud workspaces, audit trails, and integration with existing developer workflows matter just as much as the model itself. Ona gives OpenAI some of that missing plumbing.”</p>
+
+
+
+<p><a href="https://moorinsightsstrategy.com/team/jason-andersen/" rel="nofollow" target="_blank">Jason Andersen</a>, principal analyst for Moor Insights &amp; Strategy, echoed the concerns about Anthropic.</p>
+
+
+
+<p>“To be honest, I think it reinforces what I think, which is that OpenAI and Codex have given a lot of ground to Anthropic and Claude Code, who are winning right now,” he said. “But again, this is not about the market today, I think it’s about how OpenAI will need to position itself as more than just a model as we see the incumbent players, particularly Microsoft, bolster their enterprise coding infrastructure story.”</p>
+
+
+
+<p>Andersen said that Moor doesn’t have any strong basis for a guess on the financials, but added, “I am going to assume it was a fairly high multiple, but on a small base. I would not speculate on an amount, but given the enterprise customers that Ona did have, it may be more than we think.”</p>
+
+
+
+<p>He also reinforced the idea that OpenAI is going to need help to achieve its own objectives.</p>
+
+
+
+<p>“We continue to see that AI adoption is strongest in coding, and other use cases are not as far along,” he said. “So, if you are a general-purpose AI company like OpenAI, you need to double down on development use cases. The meaningful investment and spending on development is happening at the enterprise level, and those customers have more demands for governance, security, etc. than Codex or Claude code can handle.” </p>
+
+
+
+<p>That said, he noted, “what you’re seeing is traditional software and cloud plays building out the coding and ops infrastructure around the popular models. That increased competition, while good for selling tokens, is still keeping OpenAI and Anthropic on the outside looking in. So, OpenAI and Anthropic need a stronger enterprise dev story, or they are just another model that could be easily replaced.”</p>
+
+
+
+<p><a href="https://www.infotech.com/profiles/jeremy-roberts" rel="nofollow" target="_blank">Jeremy Roberts</a>, senior director at Info-Tech Research Group, said that he also sees this as likely a good move for OpenAI.</p>
+
+
+
+<p>“OpenAI is growing up a little bit,” and they may be falling behind Anthropic, Roberts said. “I see Ona as a boring company, but not in a bad way. They are not flashy, but absolutely necessary.”</p>
+
+
+
+<p>Ona is delivering a workspace for Codex that an enterprise can run in its own virtual private cloud, with governance and persistence and an environment where the company can apply their own controls including log management, credential management and resource access, he said. “It is a bucket for the agents to operate in” where IT can “make sure that access is properly credentialed and is controlled effectively to prevent the model doing what it shouldn’t be doing,” which includes managing read/write protections. </p>
+
+
+
+<p><em>This article originally appeared on <a href="https://www.infoworld.com/article/4184648/openai-buys-ona-to-help-rein-in-ai-agents.html" target="_blank">InfoWorld</a>.</em></p>
+
+
+
+<p></p>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Sources: Roku is in talks to sell itself; its shares have risen about 24% this year, giving the company a market value of $19.9B; ROKU jumps 20%+ after hours (Bloomberg)</title>
+  <link>https://www.techmeme.com/260612/p24#a260612p24</link>
+  <pubDate>Fri, 12 Jun 2026 19:55:04 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.bloomberg.com/news/articles/2026-06-12/roku-said-to-be-in-sale-talks-including-possible-media-tie-up?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc4MTI5MjAyOSwiZXhwIjoxNzgxODk2ODI5LCJhcnRpY2xlSWQiOiJURUJWMjFUOTZPU00wMCIsImJjb25uZWN0SWQiOiJFMEJDNkI3QkI3NDI0OTEwQkE2NTdFRUM2QUNEMzFEMyJ9.Lqb84JcPkpVe9ZcC7aqiNcfjg17DMc8nj_ZZlHJVYr0"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260612/i24.jpg" vspace="4" /></a>
+<p><a href="https://www.techmeme.com/260612/p24#a260612p24" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="https://www.bloomberg.com/">Bloomberg</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/articles/2026-06-12/roku-said-to-be-in-sale-talks-including-possible-media-tie-up?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc4MTI5MjAyOSwiZXhwIjoxNzgxODk2ODI5LCJhcnRpY2xlSWQiOiJURUJWMjFUOTZPU00wMCIsImJjb25uZWN0SWQiOiJFMEJDNkI3QkI3NDI0OTEwQkE2NTdFRUM2QUNEMzFEMyJ9.Lqb84JcPkpVe9ZcC7aqiNcfjg17DMc8nj_ZZlHJVYr0">Sources: Roku is in talks to sell itself; its shares have risen about 24% this year, giving the company a market value of $19.9B; ROKU jumps 20%+ after hours</a></b></span>&nbsp; &mdash;&nbsp; Roku Inc., the streaming video platform, is in talks to sell itself, people with knowledge of the matter said.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+</item>
+
 <item>
   <title>🔵 Sources: SpaceX decided to rent its Colossus 1 data center to Anthropic after internal teams struggled to use it for Grok development due to latency issues (Edward Ludlow/Bloomberg)</title>
   <link>https://www.techmeme.com/260612/p22#a260612p22</link>
   <pubDate>Fri, 12 Jun 2026 18:55:01 +0000</pubDate>
   <source>Techmeme</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.bloomberg.com/news/articles/2026-06-12/spacex-rented-out-computing-after-own-teams-had-trouble-using-it"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260612/i22.jpg" vspace="4" /></a>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.bloomberg.com/news/articles/2026-06-12/spacex-rented-out-computing-after-own-teams-had-trouble-using-it?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc4MTI5MzMxMiwiZXhwIjoxNzgxODk4MTEyLCJhcnRpY2xlSWQiOiJUR0hDQUVLSkg2VjQwMCIsImJjb25uZWN0SWQiOiI1QUY5RjI5QkFCREI0RERFQUIyRTcwNzU0RERFRTQwNSJ9.hmxren-lEsGAYpgVL_V-ay2nORytdTstMAe7m6bkfTI"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260612/i22.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260612/p22#a260612p22" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Edward Ludlow / <a href="https://www.bloomberg.com/">Bloomberg</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/articles/2026-06-12/spacex-rented-out-computing-after-own-teams-had-trouble-using-it">Sources: SpaceX decided to rent its Colossus 1 data center to Anthropic after internal teams struggled to use it for Grok development due to latency issues</a></b></span>&nbsp; &mdash;&nbsp; - Musk's firm struggled with latency issues with Colossus 1&nbsp; &mdash; SpaceX has made AI infrastructure a key part of its IPO pitch</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/articles/2026-06-12/spacex-rented-out-computing-after-own-teams-had-trouble-using-it?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc4MTI5MzMxMiwiZXhwIjoxNzgxODk4MTEyLCJhcnRpY2xlSWQiOiJUR0hDQUVLSkg2VjQwMCIsImJjb25uZWN0SWQiOiI1QUY5RjI5QkFCREI0RERFQUIyRTcwNzU0RERFRTQwNSJ9.hmxren-lEsGAYpgVL_V-ay2nORytdTstMAe7m6bkfTI">Sources: SpaceX decided to rent its Colossus 1 data center to Anthropic after internal teams struggled to use it for Grok development due to latency issues</a></b></span>&nbsp; &mdash;&nbsp; - Musk's firm struggled with latency issues with Colossus 1&nbsp; &mdash; SpaceX has made AI infrastructure a key part of its IPO pitch</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
 </item>
 
 <item>
@@ -22,7 +309,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.theinformation.com/articles/microsoft-considered-spinning-xbox-plans-new-halo-fallout-games"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260612/i21.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260612/p21#a260612p21" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Aaron Holmes / <a href="https://www.theinformation.com/">The Information</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.theinformation.com/articles/microsoft-considered-spinning-xbox-plans-new-halo-fallout-games">Sources: Microsoft considered spinning out or restructuring its Xbox unit as a wholly-owned subsidiary, or creating a joint venture with other partners</a></b></span>&nbsp; &mdash;&nbsp; As Microsoft gets ready to overhaul its struggling Xbox gaming unit, it hasn't ruled out spinning out or restructuring the unit &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.theinformation.com/articles/microsoft-considered-spinning-xbox-plans-new-halo-fallout-games">Sources: Microsoft considered spinning out or restructuring its Xbox unit as a wholly-owned subsidiary, or creating a joint venture with other partners</a></b></span>&nbsp; &mdash;&nbsp; As Microsoft gets ready to overhaul its struggling Xbox gaming unit, it hasn't ruled out spinning out or restructuring the unit &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
 </item>
 
 <item>
@@ -31,7 +318,7 @@
   <pubDate>Fri, 12 Jun 2026 16:17:26 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: Service impact possible — prepare comms and confirm vendor status.</b><br/><p>Other noteworthy stories that might have slipped under the radar: ICS device exposure remains flat as attack surface widens, Microsoft issues incident response playbook for AI, IBM and AT&#038;T accused of hack cover-ups.</p>
-<p>The post <a href="https://www.securityweek.com/in-other-news-google-security-layoffs-audia6-takedown-400-million-coupang-fine/">In Other News: Google Security Layoffs, AudiA6 Takedown, $400 Million Coupang Fine</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/in-other-news-google-security-layoffs-audia6-takedown-400-million-coupang-fine/">In Other News: Google Security Layoffs, AudiA6 Takedown, $400 Million Coupang Fine</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -68,17 +355,17 @@
 
 
 <p></p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
-  <title>🔵 SpaceX debuts on the Nasdaq at $150, after pricing at $135, making Elon Musk the world&#x27;s first trillionaire; SPCX is up ~30% intraday, for a ~$2.3T market cap (Alex Harring/CNBC)</title>
+  <title>🔵 SpaceX debuts on the Nasdaq at $150, after pricing at $135, making Elon Musk the world&#x27;s first trillionaire; SPCX closes up 19%, for a ~$2.1T market cap (Alex Harring/CNBC)</title>
   <link>https://www.techmeme.com/260612/p19#a260612p19</link>
   <pubDate>Fri, 12 Jun 2026 16:07:29 +0000</pubDate>
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: Budget/licensing impact — verify renewal terms and forecast cost changes.</b><br/><a href="https://www.cnbc.com/2026/06/12/spacex-stock-jumps-2-trillion.html"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260612/i19.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260612/p19#a260612p19" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Alex Harring / <a href="http://www.cnbc.com/">CNBC</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.cnbc.com/2026/06/12/spacex-stock-jumps-2-trillion.html">SpaceX debuts on the Nasdaq at $150, after pricing at $135, making Elon Musk the world's first trillionaire; SPCX is up ~30% intraday, for a ~$2.3T market cap</a></b></span>&nbsp; &mdash;&nbsp; SpaceX shares soared on Friday as trading commenced on the Nasdaq, propelling the rocket company's valuation above $2 trillion &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.cnbc.com/2026/06/12/spacex-stock-jumps-2-trillion.html">SpaceX debuts on the Nasdaq at $150, after pricing at $135, making Elon Musk the world's first trillionaire; SPCX closes up 19%, for a ~$2.1T market cap</a></b></span>&nbsp; &mdash;&nbsp; SpaceX shares soared on Friday as trading commenced on the Nasdaq, propelling the rocket company's valuation above $2 trillion, after a record-setting initial public offering.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -88,7 +375,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: Budget/licensing impact — verify renewal terms and forecast cost changes.</b><br/><a href="https://www.cnbc.com/2026/06/12/spacex-ipo-spcx-live-updates.html"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260612/i18.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260612/p18#a260612p18" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="http://www.cnbc.com/">CNBC</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.cnbc.com/2026/06/12/spacex-ipo-spcx-live-updates.html">SpaceX makes Nasdaq debut at $150 after pricing at $135: Live updates</a></b></span> &hellip; SpaceX opened trading Friday at $150 under the ticker SPCX after the biggest initial public offering ever.&nbsp; &mdash;&nbsp; At $150, SpaceX is valued at just under $2 trillion, making it the sixth-most valuable U.S. company, ahead of Meta and Tesla.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.cnbc.com/2026/06/12/spacex-ipo-spcx-live-updates.html">SpaceX makes Nasdaq debut at $150 after pricing at $135: Live updates</a></b></span> &hellip; SpaceX opened trading Friday at $150 under the ticker SPCX after the biggest initial public offering ever.&nbsp; &mdash;&nbsp; At $150, SpaceX is valued at just under $2 trillion, making it the sixth-most valuable U.S. company, ahead of Meta and Tesla.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -129,7 +416,7 @@
 
 
 <p></p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -139,7 +426,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: Service impact possible — prepare comms and confirm vendor status.</b><br/><a href="https://www.reuters.com/business/metas-social-networks-down-thousands-users-2026-06-12/"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260612/i17.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260612/p17#a260612p17" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Jaspreet Singh / <a href="http://www.reuters.com/">Reuters</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.reuters.com/business/metas-social-networks-down-thousands-users-2026-06-12/">Meta's services, including Facebook and Instagram, are recovering after a brief outage that affected thousands of users</a></b></span>&nbsp; &mdash;&nbsp; Facebook-parent Meta (META.O) said on Friday that users were having trouble accessing the social media company's services.&nbsp; &mdash;&nbsp; &ldquo;We're aware people are currently having trouble accessing our services.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.reuters.com/business/metas-social-networks-down-thousands-users-2026-06-12/">Meta's services, including Facebook and Instagram, are recovering after a brief outage that affected thousands of users</a></b></span>&nbsp; &mdash;&nbsp; Facebook-parent Meta (META.O) said on Friday that users were having trouble accessing the social media company's services.&nbsp; &mdash;&nbsp; &ldquo;We're aware people are currently having trouble accessing our services.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -147,7 +434,7 @@
   <link>https://www.theregister.com/ai-and-ml/2026/06/12/kpmgs-ai-report-turns-into-a-demo-of-ai-hallucinations/5255029</link>
   <pubDate>Fri, 12 Jun 2026 15:38:53 +0000</pubDate>
   <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>GPTZero claims only 5 of the report's 45 citations matched their sources, raising questions about how the Big Four's AI study was assembled<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>GPTZero claims only 5 of the report's 45 citations matched their sources, raising questions about how the Big Four's AI study was assembled<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
@@ -192,7 +479,7 @@
 
 
 <p><em>This article first appeared on Computerworld.</em></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
@@ -200,7 +487,7 @@
   <link>https://www.zdnet.com/article/is-facebook-instagram-messenger-whatsapp-down/</link>
   <pubDate>Fri, 12 Jun 2026 15:02:00 +0000</pubDate>
   <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: Service impact possible — prepare comms and confirm vendor status.</b><br/>Even Messenger and WhatsApp appear to be impacted on Friday morning.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Service impact possible — prepare comms and confirm vendor status.</b><br/>Even Messenger and WhatsApp appear to be impacted on Friday morning.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
@@ -210,7 +497,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.theinformation.com/articles/meta-bought-rivos-accelerate-ai-chip-push-working"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260612/i14.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260612/p14#a260612p14" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="https://www.theinformation.com/">The Information</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.theinformation.com/articles/meta-bought-rivos-accelerate-ai-chip-push-working">Sources: six months after acquiring Rivos, Meta is struggling to integrate the chip startup and halted development of a chip for training its largest AI models</a></b></span>&nbsp; &mdash;&nbsp; Meta Platforms bought semiconductor startup Rivos last year to accelerate development of in-house chips and reduce its reliance &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.theinformation.com/articles/meta-bought-rivos-accelerate-ai-chip-push-working">Sources: six months after acquiring Rivos, Meta is struggling to integrate the chip startup and halted development of a chip for training its largest AI models</a></b></span>&nbsp; &mdash;&nbsp; Meta Platforms bought semiconductor startup Rivos last year to accelerate development of in-house chips and reduce its reliance &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 8h ago]]></description>
 </item>
 
 <item>
@@ -220,7 +507,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.bloomberg.com/news/articles/2026-06-12/france-s-mistral-in-funding-talks-at-about-20-billion-valuation"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260612/i13.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260612/p13#a260612p13" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="https://www.bloomberg.com/">Bloomberg</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/articles/2026-06-12/france-s-mistral-in-funding-talks-at-about-20-billion-valuation">Sources: French startup Mistral AI is in talks to raise ~&euro;3B at a ~&euro;20B valuation; it was last valued at &euro;11.7B during a funding round in September 2025</a></b></span>&nbsp; &mdash;&nbsp; French startup Mistral AI is in talks to raise around &euro;3 billion ($3.5 billion) at a valuation of roughly &euro;20 billion &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/articles/2026-06-12/france-s-mistral-in-funding-talks-at-about-20-billion-valuation">Sources: French startup Mistral AI is in talks to raise ~&euro;3B at a ~&euro;20B valuation; it was last valued at &euro;11.7B during a funding round in September 2025</a></b></span>&nbsp; &mdash;&nbsp; French startup Mistral AI is in talks to raise around &euro;3 billion ($3.5 billion) at a valuation of roughly &euro;20 billion &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 8h ago]]></description>
 </item>
 
 <item>
@@ -319,7 +606,7 @@
 
 
 <p>Con estos enfoques, aseguran desde la compañía, Cosentino tiene el objetivo de evolucionar hacia una ‘Autonomous Enterprise’, un modelo en el que personas, inteligencia artificial, agentes, datos y procesos trabajen de forma integrada para impulsar una gestión más inteligente, eficiente y orientada a la creación de valor.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 8h ago]]></description>
 </item>
 
 <item>
@@ -327,7 +614,7 @@
   <link>https://www.theregister.com/security/2026/06/12/microsoft-has-mostly-repaired-flaw-in-surface-hardware-that-allowed-unprotected-devices-to-be-bricked-by-a-single-packet/5253895</link>
   <pubDate>Fri, 12 Jun 2026 13:05:00 +0000</pubDate>
   <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>And it was Microsoft Copilot that unwittingly revealed the longstanding vulnerability<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>And it was Microsoft Copilot that unwittingly revealed the longstanding vulnerability<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 8h ago]]></description>
 </item>
 
 <item>
@@ -337,7 +624,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: Budget/licensing impact — verify renewal terms and forecast cost changes.</b><br/><a href="https://www.wsj.com/tech/ai/the-ai-price-war-is-here-piling-pressure-on-openai-and-anthropic-86e1d21b?st=coSbEe&amp;reflink=desktopwebshare_permalink"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260612/i12.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260612/p12#a260612p12" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="https://www.wsj.com/">Wall Street Journal</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.wsj.com/tech/ai/the-ai-price-war-is-here-piling-pressure-on-openai-and-anthropic-86e1d21b?st=coSbEe&amp;reflink=desktopwebshare_permalink">Companies with rising AI costs are increasingly using tools that tap cheaper models, including some from China, putting pricing pressure on OpenAI and Anthropic</a></b></span>&nbsp; &mdash;&nbsp; Startups and tech giants alike are mixing and matching AI models to avoid the premium prices charged by industry leaders</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.wsj.com/tech/ai/the-ai-price-war-is-here-piling-pressure-on-openai-and-anthropic-86e1d21b?st=coSbEe&amp;reflink=desktopwebshare_permalink">Companies with rising AI costs are increasingly using tools that tap cheaper models, including some from China, putting pricing pressure on OpenAI and Anthropic</a></b></span>&nbsp; &mdash;&nbsp; Startups and tech giants alike are mixing and matching AI models to avoid the premium prices charged by industry leaders</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
 </item>
 
 <item>
@@ -634,7 +921,7 @@
 
 
 <p><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><strong><a href="https://www.cio.com/expert-contributor-network/">Want to join?</a></strong></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 8h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 10h ago]]></description>
 </item>
 
 <item>
@@ -642,7 +929,7 @@
   <link>https://www.zdnet.com/article/hp-vs-dell-laptops-comparison/</link>
   <pubDate>Fri, 12 Jun 2026 10:54:00 +0000</pubDate>
   <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/>Dell and HP both make excellent laptops, but each excels in different areas. Here are the key differences.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 8h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/>Dell and HP both make excellent laptops, but each excels in different areas. Here are the key differences.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 10h ago]]></description>
 </item>
 
 <item>
@@ -745,17 +1032,7 @@
 
 
 <p></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 8h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 SpaceX&#x27;s trading debut is a test of the &quot;Musk premium&quot;, the force behind Tesla&#x27;s $1T+ valuation, and a gauge of investor appetite ahead of upcoming AI-tied IPOs (Reuters)</title>
-  <link>https://www.techmeme.com/260612/p8#a260612p8</link>
-  <pubDate>Fri, 12 Jun 2026 10:15:02 +0000</pubDate>
-  <source>Techmeme</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.reuters.com/legal/transactional/after-record-ipo-musks-spacex-faces-next-test-market-debut-2026-06-12/"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260612/i8.jpg" vspace="4" /></a>
-<p><a href="https://www.techmeme.com/260612/p8#a260612p8" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="http://www.reuters.com/">Reuters</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.reuters.com/legal/transactional/after-record-ipo-musks-spacex-faces-next-test-market-debut-2026-06-12/">SpaceX's trading debut is a test of the &ldquo;Musk premium&rdquo;, the force behind Tesla's $1T+ valuation, and a gauge of investor appetite ahead of upcoming AI-tied IPOs</a></b></span>&nbsp; &mdash;&nbsp; SpaceX (SPCX.O) is set to begin trading on Nasdaq on Friday after investors poured $75 billion into the world's biggest IPO ever &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 8h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 11h ago]]></description>
 </item>
 
 <item>
@@ -884,7 +1161,7 @@
 
 
 <p>While the experiment was limited in scope, the researchers said the results indicate “the IPI surface relevant to deployable web agents may extend beyond textual channels to visual ones,” pointing to another emerging attack vector as enterprises increasingly deploy autonomous AI systems.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 11h ago]]></description>
 </item>
 
 <item>
@@ -985,7 +1262,7 @@
 
 
 <p></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 11h ago]]></description>
 </item>
 
 <item>
@@ -1106,7 +1383,7 @@
 
 
 <p>“If you have a limited amount of budget and you have 20 departments, which of those departments matter the most?” she says. “Allocate most of your AI budget there. If you know three of those 20 are the ones that are you need to drive growth or competitiveness for your business, then you should really ensure that those three business units have the access they need.”</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 11h ago]]></description>
 </item>
 
 <item>
@@ -1247,7 +1524,7 @@
 
 
 <p>The economics have shifted and the default shouldn’t survive unexamined. The better question is no longer whether responsible CIOs should build or buy but whether they know which business capabilities are too important to leave to a vendor’s operating model.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 11h ago]]></description>
 </item>
 
 <item>
@@ -1256,7 +1533,7 @@
   <pubDate>Fri, 12 Jun 2026 09:44:16 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><p>The critical-severity OS command injection vulnerability allows attackers to execute arbitrary code with root privileges.</p>
-<p>The post <a href="https://www.securityweek.com/ivanti-sentry-exploitation-attempts-hitting-honeypots/">Ivanti Sentry Exploitation Attempts Hitting Honeypots</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/ivanti-sentry-exploitation-attempts-hitting-honeypots/">Ivanti Sentry Exploitation Attempts Hitting Honeypots</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 11h ago]]></description>
 </item>
 
 <item>
@@ -1327,7 +1604,7 @@
 
 
 <p></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 11h ago]]></description>
 </item>
 
 <item>
@@ -1336,7 +1613,7 @@
   <pubDate>Fri, 12 Jun 2026 09:27:08 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><p>The browser refresh resolved critical and high-severity security defects, including a dozen use-after-free bugs.</p>
-<p>The post <a href="https://www.securityweek.com/chrome-149-update-patches-28-vulnerabilities/">Chrome 149 Update Patches 28 Vulnerabilities</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/chrome-149-update-patches-28-vulnerabilities/">Chrome 149 Update Patches 28 Vulnerabilities</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 12h ago]]></description>
 </item>
 
 <item>
@@ -1460,7 +1737,7 @@
 
 
 <p>Si se le pregunta a la banca por los retos TI, la respuesta también es clara. “El principal reto tecnológico de la banca ya no es digitalizar procesos. Es construir organizaciones capaces de adaptarse continuamente a un entorno donde la tecnología evoluciona más rápido que nunca”, asegura Andrés. Esto obliga a hacer una transformación cultural, “porque el cambio no es solo tecnológico; es organizativo y humano”, y a comprender que “la tecnología del futuro será cada vez más invisible”. “Lo diferencial será cómo utilizamos esa tecnología para generar confianza, contexto y experiencias relevantes”, augura.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 12h ago]]></description>
 </item>
 
 <item>
@@ -1553,7 +1830,7 @@
 
 
 <p>“This attack shows that traditional perimeter security and IdP-level authentication are necessary, but not sufficient,” Davison said. “Modern ERP security requires a layered approach that combines preventive controls, continuous monitoring, and visibility into user activity. The visibility into user activity is key here, behavioral monitoring to spot exceptions isn’t a ‘nice to have’ anymore.”</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 12h ago]]></description>
 </item>
 
 <item>
@@ -1747,7 +2024,7 @@
 
 
 <p><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><strong><a href="https://www.csoonline.com/expert-contributor-network/">Want to join?</a></strong></p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 10h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 12h ago]]></description>
 </item>
 
 <item>
@@ -1872,7 +2149,7 @@
 
 
 <p>With the quantum threat becoming increasingly prevalent, reviewing the cybersecurity model will soon be imperative for all companies.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 11h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 14h ago]]></description>
 </item>
 
 <item>
@@ -1913,7 +2190,7 @@
 
 
 <p>왕 애널리스트는 “인프라 및 운영(I&amp;O) 리더의 최우선 과제는 효율성 개선과 안정적인 전력망 접근 확보가 될 것”이라며, “전력 제약 완화와 지속 가능하고 확장 가능한 성장을 위해 고효율 냉각 시스템과 엣지 컴퓨팅에 대한 투자도 병행해야 한다”고 전했다.<br />jihyun.lee@foundryco.com</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 12h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 15h ago]]></description>
 </item>
 
 <item>
@@ -1988,7 +2265,7 @@
 </ul>
 </li>
 </ul>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 15h ago]]></description>
 </item>
 
 <item>
@@ -2069,7 +2346,7 @@
 
 
 <p>In addition, the angle they should not miss is that these earnings are not only about AI infrastructure. “They are equally about Oracle’s attempt to make itself harder to avoid in a multicloud enterprise world, and the database numbers carry that story,” he noted.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 16h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 19h ago]]></description>
 </item>
 
 <item>
@@ -2250,7 +2527,7 @@
 
 
 <p>This article originally appeared on <a href="https://www.networkworld.com/article/4184250/amazon-claims-its-data-centers-are-7x-more-water-efficient-than-the-industry-average.html" target="_blank">NetworkWorld</a>.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 17h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 20h ago]]></description>
 </item>
 
 <item>
@@ -2267,14 +2544,6 @@
   <pubDate>Thu, 11 Jun 2026 17:51:52 +0000</pubDate>
   <source>The Register</source>
   <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Another day, another Windows exploit code<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Lenovo vs. Dell: I&#x27;ve tested both laptop brands for years, and here&#x27;s my preference</title>
-  <link>https://www.zdnet.com/article/lenovo-vs-dell-laptops/</link>
-  <pubDate>Thu, 11 Jun 2026 17:35:00 +0000</pubDate>
-  <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/>Dell and Lenovo specialize in PCs, laptops, and other computing products, but which one is better? Here's how to decide based on your needs.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
@@ -2405,131 +2674,6 @@
   <pubDate>Thu, 11 Jun 2026 12:27:45 +0000</pubDate>
   <source>The Register</source>
   <description><![CDATA[<b>Why this matters: Potential data exposure — check monitoring and incident response readiness.</b><br/>Intelligence-sharing pact tracks kit that comes back online after being nicked<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
-</item>
-
-<item>
-  <title>🔵 CIOs plagued by growing AI accountability gap</title>
-  <link>https://www.cio.com/article/4183249/cios-plagued-by-a-growing-ai-accountability-gap.html</link>
-  <pubDate>Thu, 11 Jun 2026 10:01:00 +0000</pubDate>
-  <source>CIO.com</source>
-  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/><div id="remove_no_follow">
-		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
-					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
-						<div class="article-column__content">
-<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
-
-
-
-<p>IT leaders are getting a sneak preview of governance in the agentic era, and it’s shaping up to be a horror show.</p>
-
-
-
-<p>Two-thirds of <a href="https://www.ibm.com/thought-leadership/institute-business-value/en-us/c-suite-study/cxo" rel="nofollow">CIOs and CTO surveyed</a> by the IBM Institute for Business Value say they’re accountable for AI systems they don’t fully control as employees and other business units spin up new agents.</p>
-
-
-
-<p>In addition, 70% of the IT leaders surveyed say their organizations are deploying tech systems faster than their IT teams can track. Moreover, CIOs expect a 38% increase in the number of AI agents deployed at their organizations by next year, with just one in 10 IT leaders saying they’re prepared for the anticipated scale of agent deployment.</p>
-
-
-
-<p>The study reinforces growing concerns about the <a href="https://www.cio.com/article/4128980/the-struggle-for-good-ai-governance-is-real.html">state of AI governance</a>, with many IT organizations challenged to track output, security, and value as employees spin up new agents without IT’s input, says <a href="https://www.linkedin.com/in/matthew1248/" rel="nofollow">Matt Lyteson</a>, CIO of technology transformation at IBM.</p>
-
-
-
-<p>“A lot of enterprises have policies that make it easier for more people to develop agents, and it’s not just the only two people in the IT department to be able to develop these solutions,” he says.</p>
-
-
-
-<h2 class="wp-block-heading" id="danger-for-it-leaders">Danger for IT leaders</h2>
-
-
-
-<p>While there’s value in encouraging employees to experiment with AI, doing so can create major problems for IT leaders, experts say.</p>
-
-
-
-<p>When CIOs and CTOs are held accountable for AI tools they don’t control, it creates real tension in the enterprise, says <a href="https://www.linkedin.com/in/ben-schein/" rel="nofollow">Ben Schein</a>, chief AI and analytics officer at data platform vendor Domo.</p>
-
-
-
-<p>AI tools at many organizations are being deployed outside of IT teams faster than they can be inventoried, he adds. “The pace problem isn’t usually that AI is being shipped recklessly,” he says. “It’s that AI is being adopted faster than <a href="https://www.cio.com/article/4176067/the-ai-governance-imperative-you-cant-afford-to-ignore.html">governance models</a> can adapt.”</p>
-
-
-
-<p>In many cases, the AI deployments are reasonable actions taken by employees, but CIOs and CTOs don’t see it happening, Schein says.</p>
-
-
-
-<p>“Someone in marketing connects an LLM to a content workflow,” he adds. “Someone in finance pastes a forecast into ChatGPT to clean it up. Someone in product gives a new agent access to a customer dataset. The aggregate is invisible to the CIO.”</p>
-
-
-
-<p>AI governance and observability are huge issues that need IT leader attention at many organizations, he says.</p>
-
-
-
-<p>“Can you see what AI is doing?” Schein adds. “Treat your AI agents like employees: who are they, what data did they touch, what did they produce, what did it cost, what went wrong?”</p>
-
-
-
-<p>AI governance isn’t a posture; it’s basic plumbing, he says. “The CIOs who’ll succeed in the next 24 months are the ones who build observability and policy enforcement into the same layer where data already lives — not a separate AI governance workstream bolted on after the fact,” he says.</p>
-
-
-
-<h2 class="wp-block-heading" id="governance-gap">Governance gap</h2>
-
-
-
-<p><a href="https://www.linkedin.com/in/aatishsalvi/" rel="nofollow">Aatish Salvi</a>, CTO at software testing vendor Applause, agrees that there’s an AI governance gap.</p>
-
-
-
-<p>“We’re seeing that people are developing agentic workflows and AIs and products at a rapid scale across all industries, and they’re developing them faster than they understand how to govern, control, or evaluate them when CIOs or CTOs don’t have full control over AI systems,” he says.</p>
-
-
-
-<p>Salvi sees the same challenge that Schein does: that many organizations encourage or permit employees outside the IT team to deploy agents, without letting the CIO or the CTO know. Control rests with whoever happened to build the agent.</p>
-
-
-
-<p>“They may or may not have the technical expertise to manage, govern, or evaluate it,” he adds. “So someone somewhere in the company built something in order to help them do work, and now they’re getting their work done at some cost or expense to tokens, security, compliance, and all sorts of other concerns.”</p>
-
-
-
-<p>Salvi sees a huge AI governance challenge for many organizations. “When people are building agentic systems by the dozen, democratizing the tools to build them throughout their organizations, and have absolutely no evaluation frameworks, they do not understand that they are compromising the quality of the work their employees produce in exchange for getting that work done significantly faster,” he says. “They’re producing mediocrity at great speed — and probably defects as well.”</p>
-
-
-
-<p>There’s a danger in agent control sitting with someone outside the IT team, Salvi adds. “That someone does not have the tools, know-how, or technical experience to be exercising that control intelligently,” he adds.</p>
-
-
-
-<p>In many cases, there’s no control at all over the agents deployed outside the IT team, counters <a href="https://www.linkedin.com/in/itai-schwartz-9b893b214/" rel="nofollow">Itai Schwartz</a>, cofounder and CTO at data security vendor MIND. Without agent guardrails in place, agents often run without supervision, he suggests.</p>
-
-
-
-<p>“Every AI tool should have a business owner who’s accountable, and usually there’s a name on paper,” he says. “But most of these systems are autonomous and non-deterministic. They don’t follow a fixed script. So in practice, the tool is controlling itself.”</p>
-
-
-
-<p>The answer isn’t to slow down AI deployments in enterprises, but to give IT leaders visibility and enforcement tools that can keep up with the adoption curve, Schwartz says.</p>
-
-
-
-<p>“No technology leader I talk to wants to slow AI down,” he says. “They want better tools to move fast and stay safe at the same time. The answer is better tooling, not more caution.”</p>
-
-
-
-<h2 class="wp-block-heading" id="sanctioned-ai-platform">Sanctioned AI platform</h2>
-
-
-
-<p>One possible approach is what IBM did: The company created an AI agent platform that allows employees to create their own tools within a controlled environment, Lyteson notes. New agents are checked for security and privacy, as well as whether they already replicate existing IBM tools.</p>
-
-
-
-<p>“Very early on, we built an enterprise platform and invited people to build these solutions in a way that I feel comfortable working with my CISO on, by protecting the data by only using certain models that we feel comfortable with,” he says. “I want to know what that thing is doing, whether it is an individual productivity capability or whether this is supporting a full workflow, and I want to know the cost and value it brings to the organization.”</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
@@ -3493,7 +3637,7 @@
 
 
 <p>In that sense, BOD 26-04 may be less a destination than a waypoint: the federal government’s best current answer to a problem that AI is guaranteed to make harder.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
 </item>
 
 <item>
@@ -3534,7 +3678,7 @@
 
 
 <p>Ivanti Sentry customers are advised to upgrade their deployments to versions 10.5.2, 10.6.2, or 10.7.1 as soon as possible.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
 </item>
 
 <item>
@@ -3648,14 +3792,6 @@
 
 <p>Of note are the two CVSS 10-rated CVEs (<a href="https://helpx.adobe.com/security/products/campaign/apsb26-66.html" rel="noreferrer noopener" target="_blank">APSB26-66</a>) in the Adobe Campaign Classic enterprise marketing platform, the seven mostly ‘critical’ or ‘high’-rated CVEs affecting ColdFusion (<a href="https://helpx.adobe.com/security/products/coldfusion/apsb26-64.html" rel="noreferrer noopener" target="_blank">APSB26-64</a>), and a total of 20 CVEs affecting Reader (<a href="https://helpx.adobe.com/security/products/acrobat/apsb26-63.html" rel="noreferrer noopener" target="_blank">APSB26-63</a>). It’s also a busy month for InDesign, which features 12 vulnerabilities (<a href="https://helpx.adobe.com/security/products/indesign/apsb26-58.html" rel="noreferrer noopener" target="_blank">APSB26-58</a>), and Experience Manager which features three (<a href="https://helpx.adobe.com/security/products/aem-forms/apsb26-57.html">AP</a><a href="https://helpx.adobe.com/security/products/aem-forms/apsb26-57.html" rel="noreferrer noopener" target="_blank">S</a><a href="https://helpx.adobe.com/security/products/aem-forms/apsb26-57.html">B26-57</a>).</p>
 </div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
-</item>
-
-<item>
-  <title>🔵 GitHub pulls pin on npm&#x27;s auto-run scripts</title>
-  <link>https://www.theregister.com/devops/2026/06/10/github-pulls-pin-on-npms-auto-run-scripts/5253453</link>
-  <pubDate>Wed, 10 Jun 2026 13:11:14 +0000</pubDate>
-  <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Shai-Hulud worm exploited exactly this. Better late than never, says everyone except the malware authors<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
 </item>
 
 <item>
@@ -4207,131 +4343,6 @@
 
 
 <p>“It would essentially be ‘China rules’” such as air gapping systems and traveling with disposable data-limited burner phones, O’Leary said. “It’s an exceptionally big deal if it goes through,” but, he added, the chance of it happening is very low. “It seems like the technology companies will call his bluff.”</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
-</item>
-
-<item>
-  <title>🔴 Enterprises know AI-generated code is vulnerable; they’re shipping it anyway</title>
-  <link>https://www.csoonline.com/article/4183217/enterprises-know-ai-generated-code-is-vulnerable-theyre-shipping-it-anyway-3.html</link>
-  <pubDate>Wed, 10 Jun 2026 03:05:47 +0000</pubDate>
-  <source>CSO Online</source>
-  <description><![CDATA[<b>Why this matters: Potential data exposure — check monitoring and incident response readiness.</b><br/><div id="remove_no_follow">
-		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
-					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
-						<div class="article-column__content">
-<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
-
-
-
-<p>AI-generated code is riddled with security flaws, yet enterprises are shipping more of it than ever before. Why? Perhaps they’re over-confident, lack true visibility into security risks, or are simply choosing to ignore the problem and hope it goes away.</p>
-
-
-
-<p>It’s a dangerous game to play at the dawn of the agentic AI era, as underscored in a <a href="https://checkmarx.com/blog/just-launched-the-future-of-application-security-in-the-era-of-ai-2027-industry-outlook/" rel="noreferrer noopener" target="_blank">new report</a> from app security company Checkmarx.</p>
-
-
-
-<p>The survey of thousands of <a href="https://www.csoonline.com/article/4181920/15-tough-cybersecurity-questions-every-ciso-must-answer.html" target="_blank">security leaders</a> exposes an underlying naivete about AI-built code and its vulnerabilities, even as tools like Anthropic’s Mythos are uncovering security flaws orders of magnitude faster than any human security team could ever hope to.</p>
-
-
-
-<p>“Mythos-class models collapse the window between a vulnerability existing and a working exploit being available from months to minutes,” the report notes. Enterprises relying on traditional security tools and methods, it says, “cannot survive this reality.”</p>
-
-
-
-<h2 class="wp-block-heading" id="security-as-an-afterthought">Security as an afterthought</h2>
-
-
-
-<p>Checkmarx’s survey of 2,350 CISOs, AppSec managers, and developers across 14 countries focused on how much AI-developed code enterprises are deploying, the vulnerabilities it introduces, how it impacts developer workflows, and overall sentiment about AI code and security posture.</p>
-
-
-
-<p>Today, nearly half of production code is AI-generated, and the majority of enterprises also report that at least half their codebase is made up of open-source components, according to the report.</p>
-
-
-
-<p>But the more AI-generated code that is pushed out, the more vulnerabilities are exposed. Enterprises who said 81% – 100% of their code is built by AI ship vulnerable code 3.4 times more often than businesses using AI more conservatively, relying on 20% or less AI code.</p>
-
-
-
-<p>Additionally, 70% of developers said that AI code generation created vulnerabilities in 2025, and almost all enterprises surveyed (93%) had at least one security breach as a direct result of in-house developed apps.</p>
-
-
-
-<p>Still, risk is becoming “normalized,” the report notes, with three-quarters of enterprises knowingly deploying vulnerable code as they face increased pressure for ROI. Startlingly, about 30% of respondents admitted they ship compromised code and hope the vulnerability won’t be found. Similarly, more than a third of organizations leave half of their known vulnerabilities unfixed for 90 days or more.</p>
-
-
-
-<p>The report points out that the organizational bottleneck isn’t detection, “it’s the human decision to ship anyway, suppress the finding, or defer to the next sprint.”</p>
-
-
-
-<p>Along with this, AppSec teams are often limited to reactive incident response as they deal with tool sprawl. And developers only continuously secure code a small percentage of the time (18%), even though nearly all are equipped with security tooling.</p>
-
-
-
-<p>Ultimately, developers are “set up to fail,” the report contends. They face significant pressure to deliver, and are forced to choose quantity and speed over security. Yet, even as they face significant consequences when it comes to post-mortems, performance reviews, escalation, and blocked releases, the tools that contribute to security issues, delivering low-value findings, unclear guidance, or late feedback, continue to go unfixed.</p>
-
-
-
-<p>“Developers remain accountable for outcomes, even when systems and workflows are not aligned to support them,” the report notes.</p>
-
-
-
-<h2 class="wp-block-heading" id="overconfidence-outdated-practices">Overconfidence, outdated practices</h2>
-
-
-
-<p>Alarmingly, many enterprises seem to be deluded when it comes to their security posture. Of those that rate themselves as “highly mature” AI organizations, 42% often ship the most vulnerable code, and have breach rates “barely distinguishable” from other enterprises.</p>
-
-
-
-<p>“Confidence isn’t protecting them,” the report notes. “It’s blinding them.”</p>
-
-
-
-<p>Underscoring this, only 22% of organizations have formal AI governance, and developers still rely on manual code reviews to ensure their code meets compliance standards.</p>
-
-
-
-<p>The result is a mismatch between the speed of software creation and the speed of governance, the report notes. “Compliance frameworks are evolving, but many organizations are still attempting to govern AI-scale development with processes designed for a slower era of software delivery.”</p>
-
-
-
-<h2 class="wp-block-heading" id="strategic-imperatives-for-enterprises">Strategic imperatives for enterprises</h2>
-
-
-
-<p>Enterprises do seem to have wised up (a bit) after <a href="https://www.csoonline.com/article/4158117/anthropics-mythos-signals-a-structural-cybersecurity-shift.html" target="_blank">Anthropic’s Mythos</a> proved capable of not only discovering vulnerabilities across major operating systems and browsers, but exploiting them 100 times faster than previous Claude models. And the subsequent <a href="https://www.cio.com/article/4177294/this-is-not-a-security-problem-anthropics-mythos-glasswing-and-how-the-industry-must-move-forward.html" target="_blank">Project Glasswing</a> almost immediately surfaced thousands of previously-unidentified security flaws.</p>
-
-
-
-<p>Checkmarx’s survey, which, it should be noted, was conducted a month prior to Mythos’ arrival, found that enterprises are finally taking proactive measures, focusing more heavily on AI security threats overall, and investing more in DevSecOps practices, automation, and developer training.</p>
-
-
-
-<p>The report emphasizes the importance of prioritizing risk over code volume; vulnerabilities should not be considered isolated incidents. Also, it’s critical to <a href="https://csrc.nist.gov/csrc/media/presentations/2026/secure-by-design/2.4-secure_by_design-dukes-lee.pdf" rel="noreferrer noopener" target="_blank">embed security</a> into developer workflows rather than treating it as a checkpoint. Enterprises must have systems that reduce noise, provide clear guidance, and allow them to take action when an issue arises.</p>
-
-
-
-<p>Security “must be integrated directly into how developers write, test, and ship code within the IDE, pipelines, and AI-assisted workflows where development now happens,” the report notes.</p>
-
-
-
-<p>Similarly, enterprises would benefit by reducing fragmentation and tool sprawl and defining ownership of the AI tools. By simplifying security stacks, they can align responsibilities and ensure consistent tool use, according to the report.</p>
-
-
-
-<p>Further, AI needs strong governance, and teams must move beyond outdated manual triage and “human-gated remediation.” AI can fight AI in a strong system built to prioritize, remediate, and resolve risk “without waiting for a human to approve each step,” the report notes.</p>
-
-
-
-<p>Ultimately, it says: “Progress depends on embedding intelligence directly into workflows, enabling risks to be prioritized, remediated, and resolved, all within the systems that they operate in.”</p>
-
-
-
-<p><em>This article originally appeared on <a href="https://www.cio.com/article/4183209/enterprises-know-ai-generated-code-is-vulnerable-theyre-shipping-it-anyway.html" target="_blank">CIO.com</a>.</em></p>
 </div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
 </item>
 
