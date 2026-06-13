@@ -1,7 +1,7 @@
 # IT Weekly Intelligence Briefing
 **Period:** June 06 – June 13, 2026  
-**Generated:** 2026-06-13 03:28 UTC  
-**Items reviewed:** 134  
+**Generated:** 2026-06-13 07:44 UTC  
+**Items reviewed:** 132  
 
 ## ⚡ Top Actions This Week
 
@@ -55,41 +55,41 @@
 
 ## 🟠 Important — Review This Week
 
-- [phpBB forum fixes auth bypass bug lurking for a decade](https://www.bleepingcomputer.com/news/security/phpbb-forum-fixes-auth-bypass-bug-lurking-for-a-decade/)  
-  **BleepingComputer** · Jun 12 · _General awareness item._  
+- [CVE-2026-10846 Insufficient verification that responses belong to a query](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-10846)  
+  **Microsoft Security Response Center (MSRC)** · Jun 13 · _General awareness item._  
 
-- [LangGraph Flaw Chain Exposes Self-Hosted AI Agents to Remote Code Execution](https://thehackernews.com/2026/06/langgraph-flaw-chain-exposes-self.html)  
-  **The Hacker News** · Jun 12 · _General awareness item._  
+- [CVE-2026-11822 SQLite before 3.53.2 Memory Corruption in FTS5 Extension](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-11822)  
+  **Microsoft Security Response Center (MSRC)** · Jun 13 · _General awareness item._  
 
-- [CVE-2026-49975 Apache HTTP Server: mod_http2 denial of service](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-49975)  
-  **Microsoft Security Response Center (MSRC)** · Jun 12 · _General awareness item._  
+- [CVE-2026-11824 SQLite before 3.53.2 Heap Buffer Overflow via FTS5 fts5ChunkIterate](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-11824)  
+  **Microsoft Security Response Center (MSRC)** · Jun 13 · _General awareness item._  
 
-- [CVE-2026-46683 Snappy: SSRF and local file read via the xsl-style-sheet option](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-46683)  
-  **Microsoft Security Response Center (MSRC)** · Jun 12 · _General awareness item._  
+- [CVE-2026-40034 gitoxide - Command Injection via Partial .gitmodules Override in gix-submodule](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-40034)  
+  **Microsoft Security Response Center (MSRC)** · Jun 13 · _General awareness item._  
 
-- [CVE-2026-46643 Snappy: Binary path is never shell-escaped due to an inverted is_executable check](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-46643)  
-  **Microsoft Security Response Center (MSRC)** · Jun 12 · _General awareness item._  
+- [CVE-2026-5222 Cargo can be coerced to share credentials between registries](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-5222)  
+  **Microsoft Security Response Center (MSRC)** · Jun 13 · _General awareness item._  
 
-- [Japanese energy firm loses drive with data of 10.9 million clients](https://www.bleepingcomputer.com/news/security/japanese-energy-firm-loses-drive-with-data-of-109-million-clients/)  
-  **BleepingComputer** · Jun 11 · _General awareness item._  
+- [CVE-2026-5223 Crates in third party registries can override the cached source of other crates](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-5223)  
+  **Microsoft Security Response Center (MSRC)** · Jun 13 · _General awareness item._  
 
-- [Cybersecurity Stars Awards 2026: Winners Announced Across 95 Categories](https://thehackernews.com/2026/06/cybersecurity-stars-awards-2026-winners.html)  
-  **The Hacker News** · Jun 11 · _General awareness item._  
+- [CVE-2026-5545 wrong reuse of HTTP Negotiate connection](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-5545)  
+  **Microsoft Security Response Center (MSRC)** · Jun 13 · _General awareness item._  
 
-- [AI Broke Vulnerability Management. That's Why CISOs Are Moving Budget to BAS.](https://thehackernews.com/2026/06/ai-broke-vulnerability-management-thats.html)  
-  **The Hacker News** · Jun 11 · _General awareness item._  
+- [CVE-2026-6429 netrc credential leak with reused proxy connection](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-6429)  
+  **Microsoft Security Response Center (MSRC)** · Jun 13 · _General awareness item._  
 
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [U.S. Orders Anthropic to Suspend Fable 5 and Mythos 5 Access for Foreign Nationals](https://thehackernews.com/2026/06/us-orders-anthropic-to-suspend-fable-5.html) — The Hacker News
 - [Over 400 Arch Linux AUR Packages Hijacked to Deploy Infostealer and eBPF Rootkit](https://thehackernews.com/2026/06/over-400-arch-linux-aur-packages.html) — The Hacker News
 - [Google Sues Chinese Smishing Network Accused of Using Gemini AI in Phishing](https://thehackernews.com/2026/06/google-sues-chinese-smishing-network.html) — The Hacker News
 - [China-Linked Hackers Backdoored Linux Login Software to Hide for Nearly a Decade](https://thehackernews.com/2026/06/china-linked-hackers-backdoored-linux.html) — The Hacker News
 - [Over 400 Arch Linux packages compromised to push rootkit, infostealer](https://www.bleepingcomputer.com/news/security/over-400-arch-linux-packages-compromised-to-push-rootkit-infostealer/) — BleepingComputer
 - [Early Warning Signs of Supply-Chain Attacks Live in the Dark Web](https://www.bleepingcomputer.com/news/security/early-warning-signs-of-supply-chain-attacks-live-in-the-dark-web/) — BleepingComputer
-- [ISC Stormcast For Friday, June 12th, 2026 https://isc.sans.edu/podcastdetail/9970, (Fri, Jun 12th)](https://isc.sans.edu/diary/rss/33074) — SANS Internet Storm Center
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 20 critical · 81 important · 33 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 20 critical · 78 important · 34 FYI_
