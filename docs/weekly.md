@@ -1,25 +1,30 @@
 # IT Weekly Intelligence Briefing
 **Period:** June 08 – June 15, 2026  
-**Generated:** 2026-06-15 16:16 UTC  
+**Generated:** 2026-06-15 20:23 UTC  
 **Items reviewed:** 128  
 
 ## ⚡ Top Actions This Week
 
 1. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _Chinese hackers breach REDCap servers, steal medical research_  
+   _Council of Europe investigates ShinyHunters data breach claims_  
    Source: BleepingComputer  
 
 2. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _Infinite Campus data breach affects 137,000 school staff accounts_  
+   _Chinese hackers breach REDCap servers, steal medical research_  
    Source: BleepingComputer  
 
 3. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _Maine disables data breach notification portal after fake disclosures_  
+   _Infinite Campus data breach affects 137,000 school staff accounts_  
    Source: BleepingComputer  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [Council of Europe investigates ShinyHunters data breach claims](https://www.bleepingcomputer.com/news/security/council-of-europe-investigates-shinyhunters-data-breach-claims/)
+**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jun 15  
+**Why it matters:** Potential credential or data exposure.  
+**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
 ### [Chinese hackers breach REDCap servers, steal medical research](https://www.bleepingcomputer.com/news/security/chinese-hackers-breach-redcap-servers-steal-medical-research/)
 **Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jun 15  
@@ -36,11 +41,6 @@
 **Why it matters:** Potential credential or data exposure.  
 **Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
-### [Ukrainian national pleads guilty to role in Conti ransomware operation](https://www.bleepingcomputer.com/news/security/ukrainian-national-pleads-guilty-to-role-in-conti-ransomware-operation/)
-**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jun 12  
-**Why it matters:** Elevated ransomware risk across the sector.  
-**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
-
 ### [Europol Disrupts AudiA6 Crypto Laundering Service Used by Ransomware Gangs](https://thehackernews.com/2026/06/europol-disrupts-audia6-crypto.html)
 **Source:** The Hacker News &nbsp;·&nbsp; **Date:** Jun 12  
 **Why it matters:** Elevated ransomware risk across the sector.  
@@ -55,41 +55,41 @@
 
 ## 🟠 Important — Review This Week
 
-- [⚡ Weekly Recap: Chrome 0-Day, UniFi Exploits, macOS Stealers, VPN Flaw and More](https://thehackernews.com/2026/06/weekly-recap-chrome-0-day-unifi.html)  
-  **The Hacker News** · Jun 15 · _General awareness item._  
-
-- [New attack turned Microsoft 365 Copilot into 1-click data theft tool](https://www.bleepingcomputer.com/news/security/new-attack-turned-microsoft-365-copilot-into-1-click-data-theft-tool/)  
+- [SimpleHelp bug lets hackers create rogue remote support accounts](https://www.bleepingcomputer.com/news/security/simplehelp-bug-lets-hackers-create-rogue-remote-support-accounts/)  
   **BleepingComputer** · Jun 15 · _General awareness item._  
 
-- [CVE-2026-46433 lldpd: Heap OOB Read in VLAN Decapsulation memmove](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-46433)  
+- [Cisco fixes SD-WAN vManage flaw exploited in zero-day attacks](https://www.bleepingcomputer.com/news/security/cisco-fixes-sd-wan-vmanage-flaw-exploited-in-zero-day-attacks/)  
+  **BleepingComputer** · Jun 15 · _General awareness item._  
+
+- [LiteLLM Vulnerability Chain Lets Low-Privilege Users Take Over AI Gateway Servers](https://thehackernews.com/2026/06/litellm-vulnerability-chain-lets-low.html)  
+  **The Hacker News** · Jun 15 · _General awareness item._  
+
+- [Chromium: CVE-2026-12019 Out of bounds write  Codecs](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-12019)  
   **Microsoft Security Response Center (MSRC)** · Jun 15 · _General awareness item._  
 
-- [CVE-2026-49762 Unbounded integer parsing in the Version module enables CPU and memory exhaustion denial of service](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-49762)  
+- [Chromium: CVE-2026-12018 Inappropriate implementation  Mojo](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-12018)  
   **Microsoft Security Response Center (MSRC)** · Jun 15 · _General awareness item._  
 
-- [CVE-2026-7774 tarfile.data_filter path traversal bypass allows writing outside the extraction directory](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-7774)  
+- [Chromium: CVE-2026-12017 Insufficient validation of untrusted input  Extensions](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-12017)  
   **Microsoft Security Response Center (MSRC)** · Jun 15 · _General awareness item._  
 
-- [CVE-2026-6253 proxy credentials leak over redirect-to proxy](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-6253)  
+- [Chromium: CVE-2026-12016 Insufficient validation of untrusted input  DevTools](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-12016)  
   **Microsoft Security Response Center (MSRC)** · Jun 15 · _General awareness item._  
 
-- [CVE-2026-5545 wrong reuse of HTTP Negotiate connection](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-5545)  
-  **Microsoft Security Response Center (MSRC)** · Jun 15 · _General awareness item._  
-
-- [CVE-2026-6429 netrc credential leak with reused proxy connection](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-6429)  
+- [Chromium: CVE-2026-12015 Use after free  Autofill](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-12015)  
   **Microsoft Security Response Center (MSRC)** · Jun 15 · _General awareness item._  
 
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [North Korean Hackers Are Turning Developer Tools Into Malware Delivery Channels](https://thehackernews.com/2026/06/north-korean-hackers-are-turning.html) — The Hacker News
+- [OptinMonster WordPress plugin hacked in CDN supply-chain attack](https://www.bleepingcomputer.com/news/security/optinmonster-wordpress-plugin-hacked-in-cdn-supply-chain-attack/) — BleepingComputer
 - [FBI: Fraudsters use couriers to steal money in crypto scams](https://www.bleepingcomputer.com/news/security/fbi-fraudsters-use-couriers-to-steal-money-in-crypto-scams/) — BleepingComputer
 - [One-Click Microsoft 365 Copilot Flaw Could Have Let Attackers Steal Emails, Files, and MFA Codes](https://thehackernews.com/2026/06/one-click-microsoft-365-copilot-flaw.html) — The Hacker News
 - [Vibe coders are gonna vibe code: How CISOs are tackling code sprawl](https://www.bleepingcomputer.com/news/security/vibe-coders-are-gonna-vibe-code-how-cisos-are-tackling-code-sprawl/) — BleepingComputer
 - [Webinar: How behavioral AI stops phishing and account takeovers](https://www.bleepingcomputer.com/news/security/webinar-how-behavioral-ai-stops-phishing-and-account-takeovers/) — BleepingComputer
-- [The Onboarding Password Mistake That Creates Unnecessary Risk](https://thehackernews.com/2026/06/the-onboarding-password-mistake-that.html) — The Hacker News
-- [152 Chrome Wallpaper Extensions with 105K Installs Linked to Adware and Fake Traffic](https://thehackernews.com/2026/06/152-chrome-wallpaper-extensions-with.html) — The Hacker News
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 13 critical · 76 important · 39 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 13 critical · 78 important · 37 FYI_
