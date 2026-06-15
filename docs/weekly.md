@@ -1,7 +1,7 @@
 # IT Weekly Intelligence Briefing
 **Period:** June 08 – June 15, 2026  
-**Generated:** 2026-06-15 03:59 UTC  
-**Items reviewed:** 130  
+**Generated:** 2026-06-15 10:28 UTC  
+**Items reviewed:** 127  
 
 ## ⚡ Top Actions This Week
 
@@ -55,41 +55,41 @@
 
 ## 🟠 Important — Review This Week
 
-- [Critical Splunk Enterprise Flaw Lets Attackers Run Code Without Authentication](https://thehackernews.com/2026/06/critical-splunk-enterprise-flaw-lets.html)  
-  **The Hacker News** · Jun 13 · _General awareness item._  
+- [CVE-2026-46433 lldpd: Heap OOB Read in VLAN Decapsulation memmove](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-46433)  
+  **Microsoft Security Response Center (MSRC)** · Jun 15 · _General awareness item._  
 
-- [CVE-2026-10846 Insufficient verification that responses belong to a query](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-10846)  
-  **Microsoft Security Response Center (MSRC)** · Jun 13 · _General awareness item._  
+- [CVE-2026-49762 Unbounded integer parsing in the Version module enables CPU and memory exhaustion denial of service](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-49762)  
+  **Microsoft Security Response Center (MSRC)** · Jun 15 · _General awareness item._  
 
-- [CVE-2026-11822 SQLite before 3.53.2 Memory Corruption in FTS5 Extension](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-11822)  
-  **Microsoft Security Response Center (MSRC)** · Jun 13 · _General awareness item._  
+- [CVE-2026-7774 tarfile.data_filter path traversal bypass allows writing outside the extraction directory](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-7774)  
+  **Microsoft Security Response Center (MSRC)** · Jun 15 · _General awareness item._  
 
-- [CVE-2026-11824 SQLite before 3.53.2 Heap Buffer Overflow via FTS5 fts5ChunkIterate](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-11824)  
-  **Microsoft Security Response Center (MSRC)** · Jun 13 · _General awareness item._  
-
-- [CVE-2026-40034 gitoxide - Command Injection via Partial .gitmodules Override in gix-submodule](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-40034)  
-  **Microsoft Security Response Center (MSRC)** · Jun 13 · _General awareness item._  
-
-- [CVE-2026-5222 Cargo can be coerced to share credentials between registries](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-5222)  
-  **Microsoft Security Response Center (MSRC)** · Jun 13 · _General awareness item._  
-
-- [CVE-2026-5223 Crates in third party registries can override the cached source of other crates](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-5223)  
-  **Microsoft Security Response Center (MSRC)** · Jun 13 · _General awareness item._  
+- [CVE-2026-6253 proxy credentials leak over redirect-to proxy](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-6253)  
+  **Microsoft Security Response Center (MSRC)** · Jun 15 · _General awareness item._  
 
 - [CVE-2026-5545 wrong reuse of HTTP Negotiate connection](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-5545)  
-  **Microsoft Security Response Center (MSRC)** · Jun 13 · _General awareness item._  
+  **Microsoft Security Response Center (MSRC)** · Jun 15 · _General awareness item._  
+
+- [CVE-2026-6429 netrc credential leak with reused proxy connection](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-6429)  
+  **Microsoft Security Response Center (MSRC)** · Jun 15 · _General awareness item._  
+
+- [CVE-2026-11526 GD versions before 2.86 for Perl allow OS command injection and file overwrite via a 2-arg open() of filename arguments in _make_filehandle](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-11526)  
+  **Microsoft Security Response Center (MSRC)** · Jun 15 · _General awareness item._  
+
+- [CVE-2026-45445 AES-OCB IV Ignored on EVP_Cipher() Path](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45445)  
+  **Microsoft Security Response Center (MSRC)** · Jun 15 · _General awareness item._  
 
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [Evil MSI Background: BASE64 Statistical Analysis, (Mon, Jun 15th)](https://isc.sans.edu/diary/rss/33072) — SANS Internet Storm Center
+- [Sniper Dz Scams Target MENA Users via Fake Facebook Offers and Browser Alerts](https://thehackernews.com/2026/06/sniper-dz-scams-target-mena-users-via.html) — The Hacker News
 - [ISC Stormcast For Monday, June 15th, 2026 https://isc.sans.edu/podcastdetail/9972, (Mon, Jun 15th)](https://isc.sans.edu/diary/rss/33076) — SANS Internet Storm Center
 - [FBI disrupts massive AI-powered phishing service using a million URLs](https://www.bleepingcomputer.com/news/security/fbi-disrupts-massive-ai-powered-phishing-service-using-a-million-urls/) — BleepingComputer
 - [Ex-school district employee jailed for hacks on former employer](https://www.bleepingcomputer.com/news/security/ex-school-district-employee-jailed-for-hacks-on-former-employer/) — BleepingComputer
 - [Chinese hackers hijack auth flow, spy on isolated network for a decade](https://www.bleepingcomputer.com/news/security/chinese-hackers-hijack-auth-flow-spy-on-isolated-network-for-a-decade/) — BleepingComputer
-- [US Gov asks Anthropic to ban 'foreign national' access to Fable, Mythos](https://www.bleepingcomputer.com/news/security/us-gov-asks-anthropic-to-ban-foreign-national-access-to-fable-mythos/) — BleepingComputer
-- [U.S. Orders Anthropic to Suspend Fable 5 and Mythos 5 Access for Foreign Nationals](https://thehackernews.com/2026/06/us-orders-anthropic-to-suspend-fable-5.html) — The Hacker News
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 16 critical · 79 important · 35 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 15 critical · 77 important · 35 FYI_
