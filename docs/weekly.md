@@ -1,25 +1,40 @@
 # IT Weekly Intelligence Briefing
 **Period:** June 09 – June 16, 2026  
-**Generated:** 2026-06-16 09:24 UTC  
-**Items reviewed:** 136  
+**Generated:** 2026-06-16 15:01 UTC  
+**Items reviewed:** 135  
 
 ## ⚡ Top Actions This Week
 
 1. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _iRhythm discloses data breach, says hackers stole patient info_  
+   _UK to require ID or face scan before you can make social media accounts_  
    Source: BleepingComputer  
 
 2. **Apply emergency patch or mitigation now; check vendor advisory for workarounds.**  
-   _Cisco Releases Security Updates for Actively Exploited SD-WAN Manager Flaw_  
-   Source: The Hacker News  
+   _CISA warns of another cPanel plugin flaw exploited in attacks_  
+   Source: BleepingComputer  
 
-3. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _Council of Europe investigates ShinyHunters data breach claims_  
+3. **Validate backups, confirm EDR coverage, and brief incident response team.**  
+   _Ransomware gang abuses Microsoft Teams relays to hide malicious traffic_  
    Source: BleepingComputer  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [UK to require ID or face scan before you can make social media accounts](https://www.bleepingcomputer.com/news/security/uk-to-require-id-or-face-scan-before-you-can-make-social-media-accounts/)
+**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jun 16  
+**Why it matters:** Potential credential or data exposure.  
+**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
+
+### [CISA warns of another cPanel plugin flaw exploited in attacks](https://www.bleepingcomputer.com/news/security/cisa-warns-of-another-actively-exploited-cpanel-plugin-flaw/)
+**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jun 16  
+**Why it matters:** General awareness item.  
+**Recommended action:** Apply emergency patch or mitigation now; check vendor advisory for workarounds.  
+
+### [Ransomware gang abuses Microsoft Teams relays to hide malicious traffic](https://www.bleepingcomputer.com/news/security/ransomware-gang-abuses-microsoft-teams-relays-to-hide-malicious-traffic/)
+**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jun 16  
+**Why it matters:** Elevated ransomware risk across the sector.  
+**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
 
 ### [iRhythm discloses data breach, says hackers stole patient info](https://www.bleepingcomputer.com/news/security/irhythm-discloses-data-breach-says-hackers-stole-patient-info/)
 **Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jun 16  
@@ -36,24 +51,15 @@
 **Why it matters:** Potential credential or data exposure.  
 **Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
-### [Chinese hackers breach REDCap servers, steal medical research](https://www.bleepingcomputer.com/news/security/chinese-hackers-breach-redcap-servers-steal-medical-research/)
-**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jun 15  
-**Why it matters:** Potential credential or data exposure.  
-**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
-
-### [Infinite Campus data breach affects 137,000 school staff accounts](https://www.bleepingcomputer.com/news/security/infinite-campus-data-breach-affects-137-000-school-staff-accounts/)
-**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jun 15  
-**Why it matters:** Potential credential or data exposure.  
-**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
-
-### [Europol Disrupts AudiA6 Crypto Laundering Service Used by Ransomware Gangs](https://thehackernews.com/2026/06/europol-disrupts-audia6-crypto.html)
-**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Jun 12  
-**Why it matters:** Elevated ransomware risk across the sector.  
-**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
-
 ---
 
 ## 🟠 Important — Review This Week
+
+- [Survey: 94% of Incidents Involve Anonymized Infrastructure. Teams Are Still Reactive](https://thehackernews.com/2026/06/survey-94-of-incidents-involve.html)  
+  **The Hacker News** · Jun 16 · _General awareness item._  
+
+- [Attackers Exploit Three Fortinet FortiSandbox Flaws, One Patched Last Week](https://thehackernews.com/2026/06/attackers-exploit-three-fortinet.html)  
+  **The Hacker News** · Jun 16 · _General awareness item._  
 
 - [CVE-2026-34182 CMS AuthEnvelopedData Processing May Accept Forged Messages](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-34182)  
   **Microsoft Security Response Center (MSRC)** · Jun 16 · _General awareness item._  
@@ -73,23 +79,17 @@
 - [Chromium: CVE-2026-11688 Object lifecycle issue in SVG](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-11689)  
   **Microsoft Security Response Center (MSRC)** · Jun 16 · _General awareness item._  
 
-- [Chromium: CVE-2026-11687 Use after free in Dawn](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-11688)  
-  **Microsoft Security Response Center (MSRC)** · Jun 16 · _General awareness item._  
-
-- [Chromium: CVE-2026-11686 Insufficient validation of untrusted input in Dawn](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-11687)  
-  **Microsoft Security Response Center (MSRC)** · Jun 16 · _General awareness item._  
-
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [GhostTree Attack Abused Recursive Windows Junctions to Hide Malware](https://www.bleepingcomputer.com/news/security/ghosttree-attack-abused-recursive-windows-junctions-to-hide-malware/) — BleepingComputer
+- [FTC warns of record $3.5 billion losses to imposter scams in 2025](https://www.bleepingcomputer.com/news/security/ftc-warns-of-record-35-billion-losses-to-imposter-scams-in-2025/) — BleepingComputer
+- [New Rokarolla Android Malware Steals PINs, SMS Codes, and Crypto Wallet Funds](https://thehackernews.com/2026/06/new-rokarolla-android-malware-steals.html) — The Hacker News
+- [China-Linked SprySOCKS Backdoor Expands to Windows with Driver-Based Stealth](https://thehackernews.com/2026/06/china-linked-sprysocks-backdoor-expands.html) — The Hacker News
 - [Critical Fortinet FortiSandbox flaws now exploited in attacks](https://www.bleepingcomputer.com/news/security/critical-fortinet-fortisandbox-flaws-now-exploited-in-attacks/) — BleepingComputer
 - [Windows version of SprySOCKS Linux malware used to attack govt orgs](https://www.bleepingcomputer.com/news/security/windows-version-of-sprysocks-linux-malware-used-to-attack-govt-orgs/) — BleepingComputer
-- [Fake Microsoft Alerts Used to Deploy North Korean NarwhalRAT Malware](https://thehackernews.com/2026/06/fake-microsoft-alerts-used-to-deploy.html) — The Hacker News
-- [From a VHDX File to a Remcos RAT, (Tue, Jun 16th)](https://isc.sans.edu/diary/rss/33080) — SANS Internet Storm Center
-- [ISC Stormcast For Tuesday, June 16th, 2026 https://isc.sans.edu/podcastdetail/9974, (Tue, Jun 16th)](https://isc.sans.edu/diary/rss/33078) — SANS Internet Storm Center
-- [DOJ seizes CFAKE, SOCFAKE deepfake nude sites under TAKE IT DOWN Act](https://www.bleepingcomputer.com/news/security/doj-seizes-cfake-socfake-deepfake-nude-sites-under-take-it-down-act/) — BleepingComputer
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 13 critical · 84 important · 39 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 13 critical · 83 important · 39 FYI_
