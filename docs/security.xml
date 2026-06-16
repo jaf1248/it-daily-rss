@@ -3,14 +3,69 @@
 <channel>
   <title>Joe — Security Intelligence</title>
   <description>Cybersecurity threats, vulnerabilities, breaches, and Microsoft security updates.</description>
-  <lastBuildDate>Tue, 16 Jun 2026 03:47:18 +0000</lastBuildDate>
+  <lastBuildDate>Tue, 16 Jun 2026 09:23:32 +0000</lastBuildDate>
   
+<item>
+  <title>🟠 CVE-2026-34182 CMS AuthEnvelopedData Processing May Accept Forged Messages</title>
+  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-34182</link>
+  <pubDate>Tue, 16 Jun 2026 09:14:59 +0000</pubDate>
+  <source>Microsoft Security Response Center</source>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</item>
+
+<item>
+  <title>🟠 CVE-2026-54411 Linux-PAM through 1.7.2 contains an observable timing discrepancy (CWE-208) in the pam_userdb module&#x27;s plaintext-password comparison path in modules/pam_userdb/pam_userdb.c that allows a local or network-adjacent attacker able to repeatedly drive authentication through a calling service to recover the plaintext password of a target account by measuring response-timing differences. The comparison uses strncmp() (or strncasecmp() when PAM_ICASE_ARG is set) preceded by a length-equality check, so the time to reject a candidate depends on the index of the first differing byte and on whether the candidate&#x27;s length matches the stored password, leaking the password length and individual prefix bytes. The vulnerable path is reached when the administrator configures pam_userdb with crypt=none, with an unrecognized crypt method, or without a crypt= argument, causing the module to store and compare credentials in plaintext.</title>
+  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-54411</link>
+  <pubDate>Tue, 16 Jun 2026 08:01:29 +0000</pubDate>
+  <source>Microsoft Security Response Center</source>
+  <description><![CDATA[<b>Why this matters: Credential/phishing risk — reinforce MFA and user awareness training.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔴 iRhythm discloses data breach, says hackers stole patient info</title>
+  <link>https://www.bleepingcomputer.com/news/security/irhythm-discloses-data-breach-says-hackers-stole-patient-info/</link>
+  <pubDate>Tue, 16 Jun 2026 06:31:59 +0000</pubDate>
+  <source>BleepingComputer</source>
+  <description><![CDATA[<b>Why this matters: Potential data exposure — check monitoring and incident response readiness.</b><br/>Digital healthcare company iRhythm Holdings has disclosed a data breach after hackers stole patients' personal and health information stored on third-party-hosted business applications. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+</item>
+
+<item>
+  <title>🟠 Cisco Patches Another SD-WAN Zero-Day Exploited in Attacks</title>
+  <link>https://www.securityweek.com/cisco-patches-another-sd-wan-zero-day-exploited-in-attacks/</link>
+  <pubDate>Tue, 16 Jun 2026 06:20:18 +0000</pubDate>
+  <source>SecurityWeek</source>
+  <description><![CDATA[<b>Why this matters: Vendor advisory — check installed firmware/software version and patch status.</b><br/><p>Cisco recently became aware of the exploitation of CVE-2026-20262, a Catalyst SD-WAN Manager zero-day that allows arbitrary file write.</p>
+<p>The post <a href="https://www.securityweek.com/cisco-patches-another-sd-wan-zero-day-exploited-in-attacks/">Cisco Patches Another SD-WAN Zero-Day Exploited in Attacks</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+</item>
+
+<item>
+  <title>🔴 Cisco Releases Security Updates for Actively Exploited SD-WAN Manager Flaw</title>
+  <link>https://thehackernews.com/2026/06/cisco-releases-security-updates-for.html</link>
+  <pubDate>Tue, 16 Jun 2026 06:05:58 +0000</pubDate>
+  <source>The Hacker News</source>
+  <description><![CDATA[<b>Why this matters: Vendor advisory — check installed firmware/software version and patch status.</b><br/>Cisco has released security updates for a medium-severity security flaw in Catalyst SD-WAN Manager that has come under active exploitation in the wild.
+
+The vulnerability, tracked as CVE-2026-20262, carries a CVSS score of 6.5 out of 10.0.
+
+"A vulnerability in the web UI of Cisco Catalyst SD-WAN Manager, formerly SD-WAN vManage, could allow an authenticated, remote attacker to create a file or<br/><br/><b>Source:</b> The Hacker News &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+</item>
+
+<item>
+  <title>🟠 CISA Flags LiteSpeed cPanel Plugin Flaw Exploited for Root Privilege Escalation</title>
+  <link>https://thehackernews.com/2026/06/cisa-flags-litespeed-cpanel-plugin-flaw.html</link>
+  <pubDate>Tue, 16 Jun 2026 05:41:52 +0000</pubDate>
+  <source>The Hacker News</source>
+  <description><![CDATA[<b>Why this matters: Privilege escalation risk — review local admin exposure and endpoint controls.</b><br/>The U.S. Cybersecurity and Infrastructure Security Agency (CISA) has added a security flaw impacting LiteSpeed cPanel Plugin to its Known Exploited Vulnerabilities (KEV) catalog, requiring Federal Civilian Executive Branch (FCEB) agencies to apply the fixes by June 18, 2026.
+
+The vulnerability in question is CVE-2026-54420 (CVSS score: 8.5), which has been described as a case of privilege<br/><br/><b>Source:</b> The Hacker News &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+</item>
+
 <item>
   <title>🟠 Chromium: CVE-2026-11700 Use after free in Tracing</title>
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-11701</link>
   <pubDate>Tue, 16 Jun 2026 02:15:07 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
 </item>
 
 <item>
@@ -18,7 +73,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-11700</link>
   <pubDate>Tue, 16 Jun 2026 02:15:06 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
 </item>
 
 <item>
@@ -26,7 +81,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-11699</link>
   <pubDate>Tue, 16 Jun 2026 02:15:05 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
 </item>
 
 <item>
@@ -34,7 +89,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-11698</link>
   <pubDate>Tue, 16 Jun 2026 02:15:03 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
 </item>
 
 <item>
@@ -42,7 +97,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-11697</link>
   <pubDate>Tue, 16 Jun 2026 02:15:02 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
 </item>
 
 <item>
@@ -50,7 +105,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-11696</link>
   <pubDate>Tue, 16 Jun 2026 02:15:01 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
 </item>
 
 <item>
@@ -58,7 +113,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-11695</link>
   <pubDate>Tue, 16 Jun 2026 02:14:59 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
 </item>
 
 <item>
@@ -66,7 +121,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-11694</link>
   <pubDate>Tue, 16 Jun 2026 02:14:58 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
 </item>
 
 <item>
@@ -74,7 +129,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-11693</link>
   <pubDate>Tue, 16 Jun 2026 02:14:57 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
 </item>
 
 <item>
@@ -82,7 +137,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-11692</link>
   <pubDate>Tue, 16 Jun 2026 02:14:55 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
 </item>
 
 <item>
@@ -90,7 +145,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-11691</link>
   <pubDate>Tue, 16 Jun 2026 02:14:54 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
 </item>
 
 <item>
@@ -98,7 +153,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-11690</link>
   <pubDate>Tue, 16 Jun 2026 02:14:53 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
 </item>
 
 <item>
@@ -106,7 +161,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-11689</link>
   <pubDate>Tue, 16 Jun 2026 02:14:52 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
 </item>
 
 <item>
@@ -114,7 +169,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-11688</link>
   <pubDate>Tue, 16 Jun 2026 02:14:50 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
 </item>
 
 <item>
@@ -122,7 +177,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-11687</link>
   <pubDate>Tue, 16 Jun 2026 02:14:49 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
 </item>
 
 <item>
@@ -130,7 +185,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-11686</link>
   <pubDate>Tue, 16 Jun 2026 02:14:48 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
 </item>
 
 <item>
@@ -138,7 +193,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-11685</link>
   <pubDate>Tue, 16 Jun 2026 02:14:46 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
 </item>
 
 <item>
@@ -146,7 +201,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-11684</link>
   <pubDate>Tue, 16 Jun 2026 02:14:45 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
 </item>
 
 <item>
@@ -154,7 +209,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-11683</link>
   <pubDate>Tue, 16 Jun 2026 02:14:44 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
 </item>
 
 <item>
@@ -162,7 +217,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-11682</link>
   <pubDate>Tue, 16 Jun 2026 02:14:43 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
 </item>
 
 <item>
@@ -170,7 +225,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-11681</link>
   <pubDate>Tue, 16 Jun 2026 02:14:41 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
 </item>
 
 <item>
@@ -178,7 +233,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-11680</link>
   <pubDate>Tue, 16 Jun 2026 02:14:40 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
 </item>
 
 <item>
@@ -186,7 +241,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-11679</link>
   <pubDate>Tue, 16 Jun 2026 02:14:39 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
 </item>
 
 <item>
@@ -194,7 +249,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-11678</link>
   <pubDate>Tue, 16 Jun 2026 02:14:37 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
 </item>
 
 <item>
@@ -202,7 +257,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-11677</link>
   <pubDate>Tue, 16 Jun 2026 02:14:36 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
 </item>
 
 <item>
@@ -210,7 +265,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-11676</link>
   <pubDate>Tue, 16 Jun 2026 02:14:35 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
 </item>
 
 <item>
@@ -218,7 +273,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-11675</link>
   <pubDate>Tue, 16 Jun 2026 02:14:34 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
 </item>
 
 <item>
@@ -226,7 +281,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-11674</link>
   <pubDate>Tue, 16 Jun 2026 02:14:32 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
 </item>
 
 <item>
@@ -234,7 +289,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-11673</link>
   <pubDate>Tue, 16 Jun 2026 02:14:31 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
 </item>
 
 <item>
@@ -242,7 +297,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-11672</link>
   <pubDate>Tue, 16 Jun 2026 02:14:30 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
 </item>
 
 <item>
@@ -250,7 +305,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-11671</link>
   <pubDate>Tue, 16 Jun 2026 02:14:28 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
 </item>
 
 <item>
@@ -258,7 +313,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-11670</link>
   <pubDate>Tue, 16 Jun 2026 02:14:27 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
 </item>
 
 <item>
@@ -266,7 +321,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-11669</link>
   <pubDate>Tue, 16 Jun 2026 02:14:26 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
 </item>
 
 <item>
@@ -274,7 +329,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-11668</link>
   <pubDate>Tue, 16 Jun 2026 02:14:24 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
 </item>
 
 <item>
@@ -282,7 +337,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-11667</link>
   <pubDate>Tue, 16 Jun 2026 02:14:23 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
 </item>
 
 <item>
@@ -290,7 +345,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-11666</link>
   <pubDate>Tue, 16 Jun 2026 02:14:22 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
 </item>
 
 <item>
@@ -298,7 +353,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-11665</link>
   <pubDate>Tue, 16 Jun 2026 02:14:20 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
 </item>
 
 <item>
@@ -306,7 +361,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-11664</link>
   <pubDate>Tue, 16 Jun 2026 02:14:19 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
 </item>
 
 <item>
@@ -314,7 +369,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-11663</link>
   <pubDate>Tue, 16 Jun 2026 02:14:18 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
 </item>
 
 <item>
@@ -322,7 +377,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-11662</link>
   <pubDate>Tue, 16 Jun 2026 02:14:16 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
 </item>
 
 <item>
@@ -330,7 +385,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-11661</link>
   <pubDate>Tue, 16 Jun 2026 02:14:15 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
 </item>
 
 <item>
@@ -338,7 +393,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-11660</link>
   <pubDate>Tue, 16 Jun 2026 02:14:13 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
 </item>
 
 <item>
@@ -346,7 +401,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-11659</link>
   <pubDate>Tue, 16 Jun 2026 02:14:12 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
 </item>
 
 <item>
@@ -354,15 +409,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-11658</link>
   <pubDate>Tue, 16 Jun 2026 02:14:10 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
-</item>
-
-<item>
-  <title>🟠 Chromium: CVE-2026-11652 Use after free in Extensions</title>
-  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-11653</link>
-  <pubDate>Tue, 16 Jun 2026 02:14:03 +0000</pubDate>
-  <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
 </item>
 
 <item>
@@ -370,15 +417,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-11652</link>
   <pubDate>Tue, 16 Jun 2026 02:14:01 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
-</item>
-
-<item>
-  <title>🟠 Chromium: CVE-2026-11649 Use after free in V8</title>
-  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-11650</link>
-  <pubDate>Tue, 16 Jun 2026 02:13:58 +0000</pubDate>
-  <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
 </item>
 
 <item>
@@ -386,7 +425,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-11649</link>
   <pubDate>Tue, 16 Jun 2026 02:13:57 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
 </item>
 
 <item>
@@ -394,7 +433,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-11648</link>
   <pubDate>Tue, 16 Jun 2026 02:13:56 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
 </item>
 
 <item>
@@ -402,7 +441,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-11646</link>
   <pubDate>Tue, 16 Jun 2026 02:13:54 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
 </item>
 
 <item>
@@ -410,7 +449,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-11645</link>
   <pubDate>Tue, 16 Jun 2026 02:13:53 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
 </item>
 
 <item>
@@ -418,7 +457,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-11644</link>
   <pubDate>Tue, 16 Jun 2026 02:13:52 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
 </item>
 
 <item>
@@ -426,7 +465,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-11643</link>
   <pubDate>Tue, 16 Jun 2026 02:13:50 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
 </item>
 
 <item>
@@ -434,7 +473,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-11642</link>
   <pubDate>Tue, 16 Jun 2026 02:13:49 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
 </item>
 
 <item>
@@ -442,7 +481,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-11641</link>
   <pubDate>Tue, 16 Jun 2026 02:13:48 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
 </item>
 
 <item>
@@ -450,7 +489,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-11640</link>
   <pubDate>Tue, 16 Jun 2026 02:13:47 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
 </item>
 
 <item>
@@ -458,7 +497,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-11639</link>
   <pubDate>Tue, 16 Jun 2026 02:13:45 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
 </item>
 
 <item>
@@ -466,7 +505,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-11638</link>
   <pubDate>Tue, 16 Jun 2026 02:13:44 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
 </item>
 
 <item>
@@ -474,7 +513,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-11637</link>
   <pubDate>Tue, 16 Jun 2026 02:13:42 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
 </item>
 
 <item>
@@ -482,7 +521,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-11636</link>
   <pubDate>Tue, 16 Jun 2026 02:13:41 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
 </item>
 
 <item>
@@ -490,39 +529,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-11635</link>
   <pubDate>Tue, 16 Jun 2026 02:13:40 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
-</item>
-
-<item>
-  <title>🟠 Chromium: CVE-2026-11634 Use after free in Gamepad</title>
-  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-11634</link>
-  <pubDate>Tue, 16 Jun 2026 02:13:38 +0000</pubDate>
-  <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
-</item>
-
-<item>
-  <title>🟠 Chromium: CVE-2026-11633 Use after free in Bluetooth</title>
-  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-11633</link>
-  <pubDate>Tue, 16 Jun 2026 02:13:37 +0000</pubDate>
-  <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
-</item>
-
-<item>
-  <title>🟠 Chromium: CVE-2026-11632 Use after free in TabStrip</title>
-  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-11632</link>
-  <pubDate>Tue, 16 Jun 2026 02:13:35 +0000</pubDate>
-  <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
-</item>
-
-<item>
-  <title>🟠 Chromium: CVE-2026-11631 Use after free in Aura</title>
-  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-11631</link>
-  <pubDate>Tue, 16 Jun 2026 02:13:34 +0000</pubDate>
-  <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
 </item>
 
 <item>
@@ -530,7 +537,7 @@
   <link>https://www.rapid7.com/blog/post/so-nis2-compliance-turn-readiness-into-resilience</link>
   <pubDate>Mon, 15 Jun 2026 17:29:15 +0000</pubDate>
   <source>Rapid7 Blog</source>
-  <description><![CDATA[<b>Why this matters: Supply chain risk — audit third-party dependencies and vendor access.</b><br/><p style="direction: ltr;"><span style="font-size: undefined;">The NIS2 directive asks covered organizations to take a more structured approach to risk management, governance, supply chain security, and incident reporting. It expands the scope of who may be covered, raises expectations around management body accountability, introduces clearer and more enforceable requirements, and increases pressure on organizations to show that security is being managed in a consistent, defensible way. Reporting timelines are one of the most visible parts of that shift, with early warning required within 24 hours of awareness for significant incidents, incident notification within 72 hours, and a final report within one month. It also arrived in a landscape that is still uneven, with member states continuing to implement the directive in different ways across the EU.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">That combination has created a familiar challenge for CISOs and security teams, as the questions coming from boards and leadership are no longer just about whether the organization understands the regulation, but whether it can meet the requirements in practice. NIS2 reaches into risk management, reporting, governance, and supply chain oversight, which means readiness depends on how well security works across the business, not just on how well a policy is written.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">That is why the most useful way to think about NIS2 is as an operational resilience exercise. Compliance still matters, of course, and teams need to know what the directive requires. What tends to make the difference over time is whether security leaders can connect those requirements to the real conditions of the environment: what is exposed, where ownership sits, how incident response works in practice, how supply chain risk is monitored, and how quickly the organization can move when something material happens.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">Regulations are easier to absorb than operating model changes. A team may understand that NIS2 raises expectations around governance and incident handling, while still finding it difficult to answer basic questions quickly when pressure rises. Which business services are most critical? Which third parties matter most? Who owns the decision when a serious issue lands? How prepared are we to investigate, communicate, and report inside the timelines the directive expects? Those are the questions that separate a compliance project from a resilience program.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">That is also why we have been building practical content to help teams move from interpretation to action.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">Our </span><a href="https://assets.contentstack.io/v3/assets/blte4f029e766e6b253/blt6e0946b2a5e15d06/6a02fd7a2e7ac04668f9ef22/the-shift-to-continuous-resilience-under-nis2.pdf" target="_blank"><span style="font-size: undefined;">ebook</span></a><span style="font-size: undefined;"> is the best place to start if you want the wider context. It is designed to help security leaders understand what NIS2 means in practical terms, how to think about the directive beyond a narrow checklist, and how to connect compliance obligations to a broader resilience strategy. If your team needs a stronger narrative for internal stakeholders, or a clearer way to explain why NIS2 should influence operational priorities, the ebook is the most useful first read.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">Next, our </span><a href="https://sites.google.com/rapid7.com/n2a/" target="_blank"><span style="font-size: undefined;">NIS2 Readiness Toolkit</span></a><span style="font-size: undefined;"> is built for teams that want to assess where they are and what to do next. iIt is as a way to bridge the gap between NIS2 requirements and operational reality, with a focus on risk, reporting, and governance. It is designed to help teams spot gaps, focus effort, and simplify the path from regulatory complexity to a more defensible security strategy. In other words, it gives you a practical framework for understanding where readiness is strong, where it is uneven, and what deserves attention first.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">Our infographic, seen below, is the quickest asset to use when you need to communicate one of the most tangible parts of NIS2: the 24-hour reporting requirement. Some stakeholders need the long-form explanation. Others need a practical view of what has to happen between incident awareness and early notification. The infographic helps teams bring that operational pressure into planning conversations, leadership updates, and internal alignment without requiring everyone to start with a longer asset first.</span></p><p><span style="font-size: undefined;"></span></p><figure style="margin: 0;"><img alt="REQ-18355_-_Infographic_The_24-Hour_Rule-1.png" class="embedded-asset" src="https://images.contentstack.io/v3/assets/blte4f029e766e6b253/bltc0909ba22dff4f58/6a3039b6a2c8b85460cf1e97/REQ-18355_-_Infographic_The_24-Hour_Rule-1.png" style="width: auto;" type="asset" /></figure><p>⠀</p><p style="direction: ltr;"><span style="font-size: undefined;">Taken together, these assets are useful because they serve different parts of the same problem. The ebook gives you a strategic view, the toolkit helps you assess readiness and prioritize action, and the infographic helps communicate the big picture quickly and clearly.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">Enforcement expectations, reporting maturity, and national interpretation continue to evolve, and security teams are working through those changes at the same time as the wider threat landscape becomes more complex. A stronger response starts with clarity, but it needs to move quickly into coordination, ownership, and repeatable process if it is going to hold up under pressure.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">If your organization is still treating NIS2 as a point-in-time compliance exercise, now is a good moment to widen the lens. The directive is pushing security leaders beyond a comply-once approach and toward a model of being continuously secure. Teams that build better visibility, stronger governance, and clearer response processes for NIS2 will be better prepared not only for regulatory scrutiny, but for the wider operational demands that are already shaping the market.</span></p><br/><br/><b>Source:</b> Rapid7 Blog &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 10h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Supply chain risk — audit third-party dependencies and vendor access.</b><br/><p style="direction: ltr;"><span style="font-size: undefined;">The NIS2 directive asks covered organizations to take a more structured approach to risk management, governance, supply chain security, and incident reporting. It expands the scope of who may be covered, raises expectations around management body accountability, introduces clearer and more enforceable requirements, and increases pressure on organizations to show that security is being managed in a consistent, defensible way. Reporting timelines are one of the most visible parts of that shift, with early warning required within 24 hours of awareness for significant incidents, incident notification within 72 hours, and a final report within one month. It also arrived in a landscape that is still uneven, with member states continuing to implement the directive in different ways across the EU.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">That combination has created a familiar challenge for CISOs and security teams, as the questions coming from boards and leadership are no longer just about whether the organization understands the regulation, but whether it can meet the requirements in practice. NIS2 reaches into risk management, reporting, governance, and supply chain oversight, which means readiness depends on how well security works across the business, not just on how well a policy is written.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">That is why the most useful way to think about NIS2 is as an operational resilience exercise. Compliance still matters, of course, and teams need to know what the directive requires. What tends to make the difference over time is whether security leaders can connect those requirements to the real conditions of the environment: what is exposed, where ownership sits, how incident response works in practice, how supply chain risk is monitored, and how quickly the organization can move when something material happens.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">Regulations are easier to absorb than operating model changes. A team may understand that NIS2 raises expectations around governance and incident handling, while still finding it difficult to answer basic questions quickly when pressure rises. Which business services are most critical? Which third parties matter most? Who owns the decision when a serious issue lands? How prepared are we to investigate, communicate, and report inside the timelines the directive expects? Those are the questions that separate a compliance project from a resilience program.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">That is also why we have been building practical content to help teams move from interpretation to action.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">Our </span><a href="https://assets.contentstack.io/v3/assets/blte4f029e766e6b253/blt6e0946b2a5e15d06/6a02fd7a2e7ac04668f9ef22/the-shift-to-continuous-resilience-under-nis2.pdf" target="_blank"><span style="font-size: undefined;">ebook</span></a><span style="font-size: undefined;"> is the best place to start if you want the wider context. It is designed to help security leaders understand what NIS2 means in practical terms, how to think about the directive beyond a narrow checklist, and how to connect compliance obligations to a broader resilience strategy. If your team needs a stronger narrative for internal stakeholders, or a clearer way to explain why NIS2 should influence operational priorities, the ebook is the most useful first read.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">Next, our </span><a href="https://sites.google.com/rapid7.com/n2a/" target="_blank"><span style="font-size: undefined;">NIS2 Readiness Toolkit</span></a><span style="font-size: undefined;"> is built for teams that want to assess where they are and what to do next. iIt is as a way to bridge the gap between NIS2 requirements and operational reality, with a focus on risk, reporting, and governance. It is designed to help teams spot gaps, focus effort, and simplify the path from regulatory complexity to a more defensible security strategy. In other words, it gives you a practical framework for understanding where readiness is strong, where it is uneven, and what deserves attention first.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">Our infographic, seen below, is the quickest asset to use when you need to communicate one of the most tangible parts of NIS2: the 24-hour reporting requirement. Some stakeholders need the long-form explanation. Others need a practical view of what has to happen between incident awareness and early notification. The infographic helps teams bring that operational pressure into planning conversations, leadership updates, and internal alignment without requiring everyone to start with a longer asset first.</span></p><p><span style="font-size: undefined;"></span></p><figure style="margin: 0;"><img alt="REQ-18355_-_Infographic_The_24-Hour_Rule-1.png" class="embedded-asset" src="https://images.contentstack.io/v3/assets/blte4f029e766e6b253/bltc0909ba22dff4f58/6a3039b6a2c8b85460cf1e97/REQ-18355_-_Infographic_The_24-Hour_Rule-1.png" style="width: auto;" type="asset" /></figure><p>⠀</p><p style="direction: ltr;"><span style="font-size: undefined;">Taken together, these assets are useful because they serve different parts of the same problem. The ebook gives you a strategic view, the toolkit helps you assess readiness and prioritize action, and the infographic helps communicate the big picture quickly and clearly.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">Enforcement expectations, reporting maturity, and national interpretation continue to evolve, and security teams are working through those changes at the same time as the wider threat landscape becomes more complex. A stronger response starts with clarity, but it needs to move quickly into coordination, ownership, and repeatable process if it is going to hold up under pressure.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">If your organization is still treating NIS2 as a point-in-time compliance exercise, now is a good moment to widen the lens. The directive is pushing security leaders beyond a comply-once approach and toward a model of being continuously secure. Teams that build better visibility, stronger governance, and clearer response processes for NIS2 will be better prepared not only for regulatory scrutiny, but for the wider operational demands that are already shaping the market.</span></p><br/><br/><b>Source:</b> Rapid7 Blog &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 15h ago]]></description>
 </item>
 
 <item>
@@ -538,7 +545,7 @@
   <link>https://www.rapid7.com/blog/post/so-aligning-security-programmes-with-nis2-requirements</link>
   <pubDate>Mon, 15 Jun 2026 17:24:20 +0000</pubDate>
   <source>Rapid7 Blog</source>
-  <description><![CDATA[<b>Why this matters: Supply chain risk — audit third-party dependencies and vendor access.</b><br/><p style="direction: ltr;"><span style="font-size: undefined;">If your organization operates in the EU, or works with organizations that do, NIS2 is no longer something on the horizon. It is here and it applies to a far wider range of sectors than its predecessor, the original NIS Directive (Directive (EU) 2016/1148), and it comes with real consequences for organizations that cannot demonstrate they are meeting its requirements. The good news? You do not have to figure out how to approach it alone.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">Rapid7 has developed a dedicated NIS2 resource page that shows how the Command Platform can support key technical and operational aspects of NIS2 readiness, highlights common security program gaps, and explains where our solutions can help strengthen visibility, prioritization, detection, and reporting readiness. It is not a substitute for the broader organizational, legal, and governance measures the directive also requires, but it can be a useful starting point if you are evaluating your security capabilities and want a clearer picture of where tooling can support your approach. If you are in the early stages of assessing readiness, or further along and looking for a clearer view of the technical side, it is worth 10 minutes of your time.</span></p><h2 style="direction: ltr;">What are the NIS2 requirements organizations need to meet?</h2><p style="direction: ltr;"><span style="font-size: undefined;">NIS2, formally Directive (EU) 2022/2555, expands the scope of EU cybersecurity regulation significantly. More sectors are covered,the requirements are more demanding, and, crucially, the expectations have shifted from "do you have policies in place?" to "can you demonstrate that your controls actually work, continuously?".</span></p><p style="direction: ltr;"><span style="font-size: undefined;">Article 21 mandates specific risk-management measures, including risk analysis, incident handling, business continuity, supply chain security, vulnerability handling, access control, and policies regarding the use of cryptography and encryption.. Article 23 introduces strict incident reporting timelines: an early warning within 24 hours, a full notification within 72 hours, and a detailed report within one month of a significant incident.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">For many security teams, these timelines necessitate a shift in operational readiness. Timely and accurate incident reporting requires pre-established detection workflows, investigation processes, and contemporaneous documentation practices to be in place prior to an incident..</span></p><p style="direction: ltr;"><span style="font-size: undefined;">NIS2 also raises the stakes at a leadership level. Executive accountability for cybersecurity is now formalised. This is not just a technical team problem. It is a governance issue that touches CISOs, boards, and senior leadership across every in-scope organization.</span></p><h2 style="direction: ltr;">Why traditional compliance approaches fall short of NIS2</h2><p style="direction: ltr;"><span style="font-size: undefined;">Many security programs were designed around a different set of expectations. Periodic vulnerability scans.,annual audits, and compliance reports that reflected a moment in time rather than ongoing operational health.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">NIS2 necessitates a move toward continuous, defensible risk management. This involves maintaining comprehensive asset visibility, identifying threat-aware exposures with high likelihood of exploitability, and validating the effectiveness of detection capabilities to support regulatory reporting requirements..</span></p><p style="direction: ltr;"><span style="font-size: undefined;">It is a meaningful operational shift, and it is exactly the kind of shift where having the right platform and the right partner matters.</span></p><h2 style="direction: ltr;">How does Rapid7 support NIS2 compliance?</h2><p style="direction: ltr;"><span style="font-size: undefined;">Rapid7 views NIS2 as an operational readiness challenge. The objective is to assist organizations in transitioning from periodic compliance assessments to continuous resilience: a sustained, measurable security posture designed to support regulatory alignment and strengthen defense-in-depth against emerging threats. The platform integrates exposure management, vulnerability management, cloud security, SIEM, and managed detection and response to provide broad support for the core requirements of Article 21 within a unified, connected view of risk..</span></p><p style="direction: ltr;"><span style="font-size: undefined;">That means organizations can move from scattered, point-in-time security activity to continuous visibility, threat-informed prioritization, faster incident workflows, and the kind of evidence and reporting that NIS2 and regulators actually demand.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">A few areas where this makes a real difference:</span></p><h3><span style="font-size: undefined;">Knowing what you are actually exposed to</span></h3><p style="direction: ltr;"><span style="font-size: undefined;">Rapid7 is positioned as a Leader in the 2025 Gartner® Magic Quadrant™ for Exposure Assessment Platforms, a technology category fundamental to the Continuous Threat Exposure Management (CTEM) framework, which supports the proactive risk-management objectives of NIS2. Surface Command provides centralized visibility across internal and external environments, supporting the identification of unmanaged assets, shadow IT, and security control gaps that may otherwise remain undetected. Exposure Command utilizes active risk scoring and attack path analysis to identify and prioritize exposures based on reachability and threat context, helping teams focus remediation efforts on high-impact risks.</span></p><h3><span style="font-size: undefined;">Responding and reporting faster</span></h3><p style="direction: ltr;"><span style="font-size: undefined;">Rapid7's SIEM and MDR capabilities are designed to support the detection, investigation, and reporting speed necessitated by NIS2. 24/7 monitoring and managed response facilitate the capture of essential telemetry and investigation trails within the SIEM, streamlining the evidence collection process for regulatory reporting.</span></p><h3><span style="font-size: undefined;">Demonstrating that controls work</span></h3><p style="direction: ltr;"><span style="font-size: undefined;">NIS2 is not satisfied by a list of tools you have purchased. It wants evidence that your controls are effective. Rapid7 provides continuous risk scoring, detection metrics, and audit-ready reporting that translates security activity into governance-ready language for leadership and regulators.</span></p><h2 style="direction: ltr;">Where to go next for NIS2 readiness</h2><p style="direction: ltr;"><span style="font-size: undefined;">This post covers the highlights, but Rapid7's NIS2 resource page goes much deeper.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">It walks through each of Article 21's requirements in plain language, maps them to specific Rapid7 capabilities, and shows how the platform supports risk analysis... MFA monitoring, and technical assessment of cryptographic configurations. Whether you are a CISO seeking a strategic overview, a security manager evaluating technical controls, or a compliance lead mapping regulatory requirements to platform capabilities, our guidance is designed to support your objectives. NIS2 is operational; your approach to resilience should be as well. NIS2 is operational and your readiness should be too.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">See how Rapid7 </span><a href="/solutions/compliance/nis2" target="_self"><span style="font-size: undefined;">supports NIS2 compliance here</span></a><span style="font-size: undefined;">. </span></p><br/><br/><b>Source:</b> Rapid7 Blog &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 10h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Supply chain risk — audit third-party dependencies and vendor access.</b><br/><p style="direction: ltr;"><span style="font-size: undefined;">If your organization operates in the EU, or works with organizations that do, NIS2 is no longer something on the horizon. It is here and it applies to a far wider range of sectors than its predecessor, the original NIS Directive (Directive (EU) 2016/1148), and it comes with real consequences for organizations that cannot demonstrate they are meeting its requirements. The good news? You do not have to figure out how to approach it alone.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">Rapid7 has developed a dedicated NIS2 resource page that shows how the Command Platform can support key technical and operational aspects of NIS2 readiness, highlights common security program gaps, and explains where our solutions can help strengthen visibility, prioritization, detection, and reporting readiness. It is not a substitute for the broader organizational, legal, and governance measures the directive also requires, but it can be a useful starting point if you are evaluating your security capabilities and want a clearer picture of where tooling can support your approach. If you are in the early stages of assessing readiness, or further along and looking for a clearer view of the technical side, it is worth 10 minutes of your time.</span></p><h2 style="direction: ltr;">What are the NIS2 requirements organizations need to meet?</h2><p style="direction: ltr;"><span style="font-size: undefined;">NIS2, formally Directive (EU) 2022/2555, expands the scope of EU cybersecurity regulation significantly. More sectors are covered,the requirements are more demanding, and, crucially, the expectations have shifted from "do you have policies in place?" to "can you demonstrate that your controls actually work, continuously?".</span></p><p style="direction: ltr;"><span style="font-size: undefined;">Article 21 mandates specific risk-management measures, including risk analysis, incident handling, business continuity, supply chain security, vulnerability handling, access control, and policies regarding the use of cryptography and encryption.. Article 23 introduces strict incident reporting timelines: an early warning within 24 hours, a full notification within 72 hours, and a detailed report within one month of a significant incident.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">For many security teams, these timelines necessitate a shift in operational readiness. Timely and accurate incident reporting requires pre-established detection workflows, investigation processes, and contemporaneous documentation practices to be in place prior to an incident..</span></p><p style="direction: ltr;"><span style="font-size: undefined;">NIS2 also raises the stakes at a leadership level. Executive accountability for cybersecurity is now formalised. This is not just a technical team problem. It is a governance issue that touches CISOs, boards, and senior leadership across every in-scope organization.</span></p><h2 style="direction: ltr;">Why traditional compliance approaches fall short of NIS2</h2><p style="direction: ltr;"><span style="font-size: undefined;">Many security programs were designed around a different set of expectations. Periodic vulnerability scans.,annual audits, and compliance reports that reflected a moment in time rather than ongoing operational health.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">NIS2 necessitates a move toward continuous, defensible risk management. This involves maintaining comprehensive asset visibility, identifying threat-aware exposures with high likelihood of exploitability, and validating the effectiveness of detection capabilities to support regulatory reporting requirements..</span></p><p style="direction: ltr;"><span style="font-size: undefined;">It is a meaningful operational shift, and it is exactly the kind of shift where having the right platform and the right partner matters.</span></p><h2 style="direction: ltr;">How does Rapid7 support NIS2 compliance?</h2><p style="direction: ltr;"><span style="font-size: undefined;">Rapid7 views NIS2 as an operational readiness challenge. The objective is to assist organizations in transitioning from periodic compliance assessments to continuous resilience: a sustained, measurable security posture designed to support regulatory alignment and strengthen defense-in-depth against emerging threats. The platform integrates exposure management, vulnerability management, cloud security, SIEM, and managed detection and response to provide broad support for the core requirements of Article 21 within a unified, connected view of risk..</span></p><p style="direction: ltr;"><span style="font-size: undefined;">That means organizations can move from scattered, point-in-time security activity to continuous visibility, threat-informed prioritization, faster incident workflows, and the kind of evidence and reporting that NIS2 and regulators actually demand.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">A few areas where this makes a real difference:</span></p><h3><span style="font-size: undefined;">Knowing what you are actually exposed to</span></h3><p style="direction: ltr;"><span style="font-size: undefined;">Rapid7 is positioned as a Leader in the 2025 Gartner® Magic Quadrant™ for Exposure Assessment Platforms, a technology category fundamental to the Continuous Threat Exposure Management (CTEM) framework, which supports the proactive risk-management objectives of NIS2. Surface Command provides centralized visibility across internal and external environments, supporting the identification of unmanaged assets, shadow IT, and security control gaps that may otherwise remain undetected. Exposure Command utilizes active risk scoring and attack path analysis to identify and prioritize exposures based on reachability and threat context, helping teams focus remediation efforts on high-impact risks.</span></p><h3><span style="font-size: undefined;">Responding and reporting faster</span></h3><p style="direction: ltr;"><span style="font-size: undefined;">Rapid7's SIEM and MDR capabilities are designed to support the detection, investigation, and reporting speed necessitated by NIS2. 24/7 monitoring and managed response facilitate the capture of essential telemetry and investigation trails within the SIEM, streamlining the evidence collection process for regulatory reporting.</span></p><h3><span style="font-size: undefined;">Demonstrating that controls work</span></h3><p style="direction: ltr;"><span style="font-size: undefined;">NIS2 is not satisfied by a list of tools you have purchased. It wants evidence that your controls are effective. Rapid7 provides continuous risk scoring, detection metrics, and audit-ready reporting that translates security activity into governance-ready language for leadership and regulators.</span></p><h2 style="direction: ltr;">Where to go next for NIS2 readiness</h2><p style="direction: ltr;"><span style="font-size: undefined;">This post covers the highlights, but Rapid7's NIS2 resource page goes much deeper.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">It walks through each of Article 21's requirements in plain language, maps them to specific Rapid7 capabilities, and shows how the platform supports risk analysis... MFA monitoring, and technical assessment of cryptographic configurations. Whether you are a CISO seeking a strategic overview, a security manager evaluating technical controls, or a compliance lead mapping regulatory requirements to platform capabilities, our guidance is designed to support your objectives. NIS2 is operational; your approach to resilience should be as well. NIS2 is operational and your readiness should be too.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">See how Rapid7 </span><a href="/solutions/compliance/nis2" target="_self"><span style="font-size: undefined;">supports NIS2 compliance here</span></a><span style="font-size: undefined;">. </span></p><br/><br/><b>Source:</b> Rapid7 Blog &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 15h ago]]></description>
 </item>
 
 <item>
@@ -546,7 +553,7 @@
   <link>https://www.bleepingcomputer.com/news/security/cisco-fixes-sd-wan-vmanage-flaw-exploited-in-zero-day-attacks/</link>
   <pubDate>Mon, 15 Jun 2026 17:12:42 +0000</pubDate>
   <source>BleepingComputer</source>
-  <description><![CDATA[<b>Why this matters: Vendor advisory — check installed firmware/software version and patch status.</b><br/>Cisco has released security updates to address a vulnerability in the Catalyst SD-WAN Manager, tracked as CVE-2026-20262, that was exploited in attacks to escalate to root privileges. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 10h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Vendor advisory — check installed firmware/software version and patch status.</b><br/>Cisco has released security updates to address a vulnerability in the Catalyst SD-WAN Manager, tracked as CVE-2026-20262, that was exploited in attacks to escalate to root privileges. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 16h ago]]></description>
 </item>
 
 <item>
@@ -554,7 +561,7 @@
   <link>https://www.bleepingcomputer.com/news/security/council-of-europe-investigates-shinyhunters-data-breach-claims/</link>
   <pubDate>Mon, 15 Jun 2026 16:37:11 +0000</pubDate>
   <source>BleepingComputer</source>
-  <description><![CDATA[<b>Why this matters: Potential data exposure — check monitoring and incident response readiness.</b><br/>The Council of Europe, the continent's oldest intergovernmental body, is probing claims of a data breach made by the ShinyHunters extortion group over the weekend. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 11h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Potential data exposure — check monitoring and incident response readiness.</b><br/>The Council of Europe, the continent's oldest intergovernmental body, is probing claims of a data breach made by the ShinyHunters extortion group over the weekend. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 16h ago]]></description>
 </item>
 
 <item>
@@ -563,7 +570,7 @@
   <pubDate>Mon, 15 Jun 2026 15:15:55 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: Elevated ransomware risk — validate backups and endpoint defenses.</b><br/><p>Mackay Sugar was targeted in a cyberattack carried out by a threat group known as The Gentlemen.</p>
-<p>The post <a href="https://www.securityweek.com/ransomware-attack-shuts-down-mills-of-australias-second-largest-sugar-producer/">Ransomware Attack Shuts Down Mills of Australia&#8217;s Second-Largest Sugar Producer</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 12h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/ransomware-attack-shuts-down-mills-of-australias-second-largest-sugar-producer/">Ransomware Attack Shuts Down Mills of Australia&#8217;s Second-Largest Sugar Producer</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 18h ago]]></description>
 </item>
 
 <item>
@@ -571,7 +578,7 @@
   <link>https://www.rapid7.com/blog/post/ai-beyond-the-score-translating-cves-into-real-business-risk</link>
   <pubDate>Mon, 15 Jun 2026 14:44:28 +0000</pubDate>
   <source>Rapid7 Blog</source>
-  <description><![CDATA[<b>Why this matters: Supply chain risk — audit third-party dependencies and vendor access.</b><br/><p style="direction: ltr;"><span style="font-size: undefined;">Security leaders rarely struggle to gather data, but they often struggle to turn that data into something clear and meaningful for the business. In a typical week, a CISO might receive a report listing hundreds or even thousands of vulnerabilities, most of them accompanied by CVSS scores that make the entire list look urgent, while also managing the wider set of operational, regulatory, and strategic demands that already come with the role.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">That difficulty becomes more obvious when the same information has to be carried into the boardroom, where the questions are rarely about CVE IDs or exploit counts in isolation. What leadership wants to understand is whether the organization’s revenue, uptime, legal exposure, or broader resilience could be affected, and how quickly those risks need to be addressed.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">This is where many security programs lose momentum, because the technical view of severity does not always line up neatly with the business view of consequence. Bridging that gap has traditionally been slow, manual work, which is one reason AI is starting to matter more in vulnerability management: it can help translate technical findings into business context that is clearer, faster to act on, and easier for leadership to understand.</span></p><h2 style="direction: ltr;">Why CVSS alone does not reflect real-world business risk</h2><p style="direction: ltr;"><span style="font-size: undefined;">For years, the industry has relied on CVSS as a quick way to judge urgency, and while the framework does account for factors such as attack vector, attack complexity, and other attack requirements, the score is still calculated in isolation and often misses the conditions that shape real risk inside an organization. A CVSS 9.8 vulnerability affecting a legacy printer in a segmented branch office may look critical on paper, but it is unlikely to carry the same business impact as a 7.5 vulnerability affecting an internet-facing database that holds sensitive customer data.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">One of the long-standing weaknesses of static scoring is that it tells you how severe a flaw may be in theory, but not how much disruption it could cause in your own environment, how exposed the affected asset is, or how closely it is tied to a revenue-generating or business-critical process. That is where AI becomes more useful, because it can add the missing context that helps security teams judge not just how serious a vulnerability looks, but how much it matters in practice.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">Machine learning models can now process a much broader set of inputs, including attacker activity, exploit availability, internal network topology, and the business value attached to the asset or process involved. Rather than leaving teams with a static queue of scores, that creates a live view of risk shaped by reachability, exposure, and business consequence, making it easier to separate technical severity from actual organizational risk.</span></p><h2 style="direction: ltr;">How AI helps connect vulnerabilities to business impact</h2><p style="direction: ltr;"><span style="font-size: undefined;">One of the more practical ways AI can improve vulnerability management is by helping security teams connect technical findings to the parts of the business they actually affect. A vulnerability tied to an obscure IP address may not mean much on its own, but the picture changes quickly when that asset is identified as part of a regional payment system, a customer-facing portal, or a supply chain application the business depends on. That kind of asset attribution has traditionally taken time, context, and manual investigation. AI can help shorten that process by linking technical findings to business function much more quickly.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">Instead of relying only on severity scores or yesterday’s alerts, AI can weigh a broader set of signals, including exploit activity, attacker behavior, asset exposure, and internal topology, which gives security teams a more grounded way to judge where risk is most likely to become operationally significant. The benefit is not simply speed, but a clearer picture of which vulnerabilities are most likely to affect revenue, uptime, or business continuity if they are left unresolved.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">At the leadership level, this same approach can help turn a large volume of technical output into something more usable. Rather than forcing CISOs to manually translate thousands of low-level alerts into board-facing language, AI can support that reporting by summarizing likely business impact, highlighting where exposure is growing, and making it easier to explain how remediation work is reducing financial and operational risk.</span></p><h2 style="direction: ltr;">Two vulnerabilities, two very different business outcomes</h2><p style="direction: ltr;"><span style="font-size: undefined;">To see how this plays out in practice, it helps to compare two vulnerabilities that might appear similarly urgent in a standard scanner, but look very different once business context is added.</span></p><p style="direction: ltr;"><span style="font-size: undefined;"><strong>Vulnerability A: The ghost in the machine</strong></span></p><p style="direction: ltr;"><span style="font-size: undefined;">A scanner flags a CVSS 9.8 critical remote code execution flaw in an aging media server. On paper, that score suggests immediate attention. Once more context is added, the picture changes. The asset sits on a segmented guest Wi-Fi VLAN, has no path to the corporate core, and has not been linked to in-the-wild exploitation for more than two years. In practical terms, the business impact is low. The issue still needs to be addressed, but it is unlikely to justify urgent remediation ahead of higher-consequence exposures.</span></p><p style="direction: ltr;"><span style="font-size: undefined;"><strong>Vulnerability B: The quiet threat</strong></span></p><ul><li style="direction: ltr;"><p style="direction: ltr;"><span style="font-size: undefined;">A second finding carries a lower CVSS 7.2 high severity score, but affects a common web framework running on the organization’s primary customer portal. When AI correlates that vulnerability with asset and business context, the risk profile changes quickly. The portal is identified as a critical business process, estimated to support $250,000 in transactions per hour, while external signals point to growing exploit interest around the same framework. In that case, the business impact is far more serious. What looks like a lower-priority technical issue becomes a potential source of revenue disruption measured in millions per day.</span></p></li></ul><p style="direction: ltr;"><span style="font-size: undefined;">This is where AI-assisted prioritization becomes useful. It helps teams move beyond the assumption that the highest score always deserves the fastest response and instead focus on the vulnerabilities most likely to create operational or financial harm. In practice, that means spending less time working through a queue in score order and more time reducing the exposures that matter most to the business. </span></p><h2 style="direction: ltr;">How AI helps CISOs explain vulnerability risk in business terms</h2><p style="direction: ltr;"><span style="font-size: undefined;">When security leaders can move beyond reporting how many patches were deployed and begin showing how exposure is changing in financial or operational terms, the conversation becomes much more useful. A reduction in mean time to remediate may matter to a security team, but it carries more weight at the leadership level when it is tied to a lower likelihood of downtime, reduced regulatory exposure, or less risk to a revenue-generating service.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">When vulnerability data is tied to business context, it becomes easier to justify automation, tooling, or headcount based on their contribution to resilience, continuity, and measurable risk reduction, rather than on activity alone. At that level, the conversation is less about severity scores and more about what is exposed, what it could affect, and where action matters most.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">One of the more practical benefits of AI is that it can help security teams explain risk in a way leadership can act on. Instead of adding another layer of technical output, it can support clearer reporting on why one issue matters more than another, what is most likely to affect the business, and where action should come first.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">As attack surfaces expand and exploit timelines continue to shrink, the gap between technical findings and business understanding will only become harder to manage. Organizations that can connect those two views more effectively will be in a much stronger position to prioritize the right work, explain risk more clearly, and make vulnerability management a more meaningful part of business decision-making.</span></p><br/><br/><b>Source:</b> Rapid7 Blog &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Supply chain risk — audit third-party dependencies and vendor access.</b><br/><p style="direction: ltr;"><span style="font-size: undefined;">Security leaders rarely struggle to gather data, but they often struggle to turn that data into something clear and meaningful for the business. In a typical week, a CISO might receive a report listing hundreds or even thousands of vulnerabilities, most of them accompanied by CVSS scores that make the entire list look urgent, while also managing the wider set of operational, regulatory, and strategic demands that already come with the role.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">That difficulty becomes more obvious when the same information has to be carried into the boardroom, where the questions are rarely about CVE IDs or exploit counts in isolation. What leadership wants to understand is whether the organization’s revenue, uptime, legal exposure, or broader resilience could be affected, and how quickly those risks need to be addressed.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">This is where many security programs lose momentum, because the technical view of severity does not always line up neatly with the business view of consequence. Bridging that gap has traditionally been slow, manual work, which is one reason AI is starting to matter more in vulnerability management: it can help translate technical findings into business context that is clearer, faster to act on, and easier for leadership to understand.</span></p><h2 style="direction: ltr;">Why CVSS alone does not reflect real-world business risk</h2><p style="direction: ltr;"><span style="font-size: undefined;">For years, the industry has relied on CVSS as a quick way to judge urgency, and while the framework does account for factors such as attack vector, attack complexity, and other attack requirements, the score is still calculated in isolation and often misses the conditions that shape real risk inside an organization. A CVSS 9.8 vulnerability affecting a legacy printer in a segmented branch office may look critical on paper, but it is unlikely to carry the same business impact as a 7.5 vulnerability affecting an internet-facing database that holds sensitive customer data.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">One of the long-standing weaknesses of static scoring is that it tells you how severe a flaw may be in theory, but not how much disruption it could cause in your own environment, how exposed the affected asset is, or how closely it is tied to a revenue-generating or business-critical process. That is where AI becomes more useful, because it can add the missing context that helps security teams judge not just how serious a vulnerability looks, but how much it matters in practice.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">Machine learning models can now process a much broader set of inputs, including attacker activity, exploit availability, internal network topology, and the business value attached to the asset or process involved. Rather than leaving teams with a static queue of scores, that creates a live view of risk shaped by reachability, exposure, and business consequence, making it easier to separate technical severity from actual organizational risk.</span></p><h2 style="direction: ltr;">How AI helps connect vulnerabilities to business impact</h2><p style="direction: ltr;"><span style="font-size: undefined;">One of the more practical ways AI can improve vulnerability management is by helping security teams connect technical findings to the parts of the business they actually affect. A vulnerability tied to an obscure IP address may not mean much on its own, but the picture changes quickly when that asset is identified as part of a regional payment system, a customer-facing portal, or a supply chain application the business depends on. That kind of asset attribution has traditionally taken time, context, and manual investigation. AI can help shorten that process by linking technical findings to business function much more quickly.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">Instead of relying only on severity scores or yesterday’s alerts, AI can weigh a broader set of signals, including exploit activity, attacker behavior, asset exposure, and internal topology, which gives security teams a more grounded way to judge where risk is most likely to become operationally significant. The benefit is not simply speed, but a clearer picture of which vulnerabilities are most likely to affect revenue, uptime, or business continuity if they are left unresolved.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">At the leadership level, this same approach can help turn a large volume of technical output into something more usable. Rather than forcing CISOs to manually translate thousands of low-level alerts into board-facing language, AI can support that reporting by summarizing likely business impact, highlighting where exposure is growing, and making it easier to explain how remediation work is reducing financial and operational risk.</span></p><h2 style="direction: ltr;">Two vulnerabilities, two very different business outcomes</h2><p style="direction: ltr;"><span style="font-size: undefined;">To see how this plays out in practice, it helps to compare two vulnerabilities that might appear similarly urgent in a standard scanner, but look very different once business context is added.</span></p><p style="direction: ltr;"><span style="font-size: undefined;"><strong>Vulnerability A: The ghost in the machine</strong></span></p><p style="direction: ltr;"><span style="font-size: undefined;">A scanner flags a CVSS 9.8 critical remote code execution flaw in an aging media server. On paper, that score suggests immediate attention. Once more context is added, the picture changes. The asset sits on a segmented guest Wi-Fi VLAN, has no path to the corporate core, and has not been linked to in-the-wild exploitation for more than two years. In practical terms, the business impact is low. The issue still needs to be addressed, but it is unlikely to justify urgent remediation ahead of higher-consequence exposures.</span></p><p style="direction: ltr;"><span style="font-size: undefined;"><strong>Vulnerability B: The quiet threat</strong></span></p><ul><li style="direction: ltr;"><p style="direction: ltr;"><span style="font-size: undefined;">A second finding carries a lower CVSS 7.2 high severity score, but affects a common web framework running on the organization’s primary customer portal. When AI correlates that vulnerability with asset and business context, the risk profile changes quickly. The portal is identified as a critical business process, estimated to support $250,000 in transactions per hour, while external signals point to growing exploit interest around the same framework. In that case, the business impact is far more serious. What looks like a lower-priority technical issue becomes a potential source of revenue disruption measured in millions per day.</span></p></li></ul><p style="direction: ltr;"><span style="font-size: undefined;">This is where AI-assisted prioritization becomes useful. It helps teams move beyond the assumption that the highest score always deserves the fastest response and instead focus on the vulnerabilities most likely to create operational or financial harm. In practice, that means spending less time working through a queue in score order and more time reducing the exposures that matter most to the business. </span></p><h2 style="direction: ltr;">How AI helps CISOs explain vulnerability risk in business terms</h2><p style="direction: ltr;"><span style="font-size: undefined;">When security leaders can move beyond reporting how many patches were deployed and begin showing how exposure is changing in financial or operational terms, the conversation becomes much more useful. A reduction in mean time to remediate may matter to a security team, but it carries more weight at the leadership level when it is tied to a lower likelihood of downtime, reduced regulatory exposure, or less risk to a revenue-generating service.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">When vulnerability data is tied to business context, it becomes easier to justify automation, tooling, or headcount based on their contribution to resilience, continuity, and measurable risk reduction, rather than on activity alone. At that level, the conversation is less about severity scores and more about what is exposed, what it could affect, and where action matters most.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">One of the more practical benefits of AI is that it can help security teams explain risk in a way leadership can act on. Instead of adding another layer of technical output, it can support clearer reporting on why one issue matters more than another, what is most likely to affect the business, and where action should come first.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">As attack surfaces expand and exploit timelines continue to shrink, the gap between technical findings and business understanding will only become harder to manage. Organizations that can connect those two views more effectively will be in a much stronger position to prioritize the right work, explain risk more clearly, and make vulnerability management a more meaningful part of business decision-making.</span></p><br/><br/><b>Source:</b> Rapid7 Blog &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 18h ago]]></description>
 </item>
 
 <item>
@@ -579,7 +586,7 @@
   <link>https://www.bleepingcomputer.com/news/security/chinese-hackers-breach-redcap-servers-steal-medical-research/</link>
   <pubDate>Mon, 15 Jun 2026 14:00:00 +0000</pubDate>
   <source>BleepingComputer</source>
-  <description><![CDATA[<b>Why this matters: Potential data exposure — check monitoring and incident response readiness.</b><br/>A China-linked espionage campaign targeted exposed REDCap servers to deploy the InfiniteRed malware and steal sensitive data from a medical institution in North America. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Potential data exposure — check monitoring and incident response readiness.</b><br/>A China-linked espionage campaign targeted exposed REDCap servers to deploy the InfiniteRed malware and steal sensitive data from a medical institution in North America. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 19h ago]]></description>
 </item>
 
 <item>
@@ -587,7 +594,7 @@
   <link>https://www.bleepingcomputer.com/news/security/infinite-campus-data-breach-affects-137-000-school-staff-accounts/</link>
   <pubDate>Mon, 15 Jun 2026 12:38:55 +0000</pubDate>
   <source>BleepingComputer</source>
-  <description><![CDATA[<b>Why this matters: Potential data exposure — check monitoring and incident response readiness.</b><br/>The ShinyHunters extortion gang stole personal information from more than 137,000 school staff accounts in a Salesforce data theft attack that targeted the widely used Infinite Campus K-12 student information system in March. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 15h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Potential data exposure — check monitoring and incident response readiness.</b><br/>The ShinyHunters extortion gang stole personal information from more than 137,000 school staff accounts in a Salesforce data theft attack that targeted the widely used Infinite Campus K-12 student information system in March. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 20h ago]]></description>
 </item>
 
 <item>
@@ -596,7 +603,7 @@
   <pubDate>Mon, 15 Jun 2026 11:33:20 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: Elevated ransomware risk — validate backups and endpoint defenses.</b><br/><p>Oleksii Oleksiyovych Lytvynenko admitted to working on the development of a loader for the Conti gang.</p>
-<p>The post <a href="https://www.securityweek.com/ukrainian-man-pleads-guilty-in-us-to-conti-ransomware-charges/">Ukrainian Man Pleads Guilty in US to Conti Ransomware Charges</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 16h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/ukrainian-man-pleads-guilty-in-us-to-conti-ransomware-charges/">Ukrainian Man Pleads Guilty in US to Conti Ransomware Charges</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 21h ago]]></description>
 </item>
 
 <item>
@@ -605,7 +612,7 @@
   <pubDate>Mon, 15 Jun 2026 11:17:21 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: Potential data exposure — check monitoring and incident response readiness.</b><br/><p>The pharmaceutical giant says the attackers gained access to personal data stored on the compromised systems. </p>
-<p>The post <a href="https://www.securityweek.com/ozempic-maker-novo-nordisk-says-hackers-breached-it-systems/">Ozempic Maker Novo Nordisk Says Hackers Breached IT Systems</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 16h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/ozempic-maker-novo-nordisk-says-hackers-breached-it-systems/">Ozempic Maker Novo Nordisk Says Hackers Breached IT Systems</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 22h ago]]></description>
 </item>
 
 <item>
@@ -614,7 +621,7 @@
   <pubDate>Mon, 15 Jun 2026 11:09:10 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: Potential data exposure — check monitoring and incident response readiness.</b><br/><p>French officials say roughly 73,000 government accounts were affected, while the threat actor claims to have stolen messages and user data from the sovereign Tchap platform.</p>
-<p>The post <a href="https://www.securityweek.com/french-government-messaging-platform-breached-by-mysterious-misere-hacker/">French Government Messaging Platform Breached by Mysterious ‘Misere’ Hacker</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 16h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/french-government-messaging-platform-breached-by-mysterious-misere-hacker/">French Government Messaging Platform Breached by Mysterious ‘Misere’ Hacker</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 22h ago]]></description>
 </item>
 
 <item>
@@ -623,7 +630,7 @@
   <pubDate>Mon, 15 Jun 2026 08:34:54 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: Potential data exposure — check monitoring and incident response readiness.</b><br/><p>Someone posted fake VRChat and Discord data breach reports on the system, prompting the Maine AG to take action.</p>
-<p>The post <a href="https://www.securityweek.com/maine-disables-data-breach-portal-due-to-fake-submissions/">Maine Disables Data Breach Portal Due to Fake Submissions </a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 19h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/maine-disables-data-breach-portal-due-to-fake-submissions/">Maine Disables Data Breach Portal Due to Fake Submissions </a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
@@ -633,7 +640,7 @@
   <source>The Hacker News</source>
   <description><![CDATA[<b>Why this matters: Auth bypass — review access controls and check for unauthorized access.</b><br/>Palo Alto Networks has revealed that it has observed "active exploitation" of a recently disclosed PAN-OS vulnerability by an unknown threat actor to obtain unauthorized access to GlobalProtect portals.
 
-The vulnerability in question is CVE-2026-0257 (CVSS score: 7.8), an authentication bypass flaw affecting the portal and gateway components of PAN-OS software that could be exploited by bad<br/><br/><b>Source:</b> The Hacker News &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 21h ago]]></description>
+The vulnerability in question is CVE-2026-0257 (CVSS score: 7.8), an authentication bypass flaw affecting the portal and gateway components of PAN-OS software that could be exploited by bad<br/><br/><b>Source:</b> The Hacker News &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
