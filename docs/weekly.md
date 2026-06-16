@@ -1,7 +1,7 @@
 # IT Weekly Intelligence Briefing
-**Period:** June 08 – June 15, 2026  
-**Generated:** 2026-06-15 23:01 UTC  
-**Items reviewed:** 121  
+**Period:** June 09 – June 16, 2026  
+**Generated:** 2026-06-16 03:48 UTC  
+**Items reviewed:** 134  
 
 ## ⚡ Top Actions This Week
 
@@ -55,41 +55,41 @@
 
 ## 🟠 Important — Review This Week
 
-- [SimpleHelp bug lets hackers create rogue remote support accounts](https://www.bleepingcomputer.com/news/security/simplehelp-bug-lets-hackers-create-rogue-remote-support-accounts/)  
-  **BleepingComputer** · Jun 15 · _General awareness item._  
+- [Chromium: CVE-2026-11692 Use after free in Read Anything](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-11693)  
+  **Microsoft Security Response Center (MSRC)** · Jun 16 · _General awareness item._  
 
-- [Cisco fixes SD-WAN vManage flaw exploited in zero-day attacks](https://www.bleepingcomputer.com/news/security/cisco-fixes-sd-wan-vmanage-flaw-exploited-in-zero-day-attacks/)  
-  **BleepingComputer** · Jun 15 · _General awareness item._  
+- [Chromium: CVE-2026-11691 Insufficient validation of untrusted input in New Tab Page](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-11692)  
+  **Microsoft Security Response Center (MSRC)** · Jun 16 · _General awareness item._  
 
-- [LiteLLM Vulnerability Chain Lets Low-Privilege Users Take Over AI Gateway Servers](https://thehackernews.com/2026/06/litellm-vulnerability-chain-lets-low.html)  
-  **The Hacker News** · Jun 15 · _General awareness item._  
+- [Chromium: CVE-2026-11690 Out of bounds read and write in Media](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-11691)  
+  **Microsoft Security Response Center (MSRC)** · Jun 16 · _General awareness item._  
 
-- [Chromium: CVE-2026-12019 Out of bounds write  Codecs](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-12019)  
-  **Microsoft Security Response Center (MSRC)** · Jun 15 · _General awareness item._  
+- [Chromium: CVE-2026-11689 Insufficient validation of untrusted input in Passwords](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-11690)  
+  **Microsoft Security Response Center (MSRC)** · Jun 16 · _General awareness item._  
 
-- [Chromium: CVE-2026-12018 Inappropriate implementation  Mojo](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-12018)  
-  **Microsoft Security Response Center (MSRC)** · Jun 15 · _General awareness item._  
+- [Chromium: CVE-2026-11688 Object lifecycle issue in SVG](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-11689)  
+  **Microsoft Security Response Center (MSRC)** · Jun 16 · _General awareness item._  
 
-- [Chromium: CVE-2026-12017 Insufficient validation of untrusted input  Extensions](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-12017)  
-  **Microsoft Security Response Center (MSRC)** · Jun 15 · _General awareness item._  
+- [Chromium: CVE-2026-11687 Use after free in Dawn](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-11688)  
+  **Microsoft Security Response Center (MSRC)** · Jun 16 · _General awareness item._  
 
-- [Chromium: CVE-2026-12016 Insufficient validation of untrusted input  DevTools](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-12016)  
-  **Microsoft Security Response Center (MSRC)** · Jun 15 · _General awareness item._  
+- [Chromium: CVE-2026-11686 Insufficient validation of untrusted input in Dawn](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-11687)  
+  **Microsoft Security Response Center (MSRC)** · Jun 16 · _General awareness item._  
 
-- [Chromium: CVE-2026-12015 Use after free  Autofill](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-12015)  
-  **Microsoft Security Response Center (MSRC)** · Jun 15 · _General awareness item._  
+- [Chromium: CVE-2026-11685 Insufficient data validation in MediaCapture](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-11686)  
+  **Microsoft Security Response Center (MSRC)** · Jun 16 · _General awareness item._  
 
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [ISC Stormcast For Tuesday, June 16th, 2026 https://isc.sans.edu/podcastdetail/9974, (Tue, Jun 16th)](https://isc.sans.edu/diary/rss/33078) — SANS Internet Storm Center
 - [DOJ seizes CFAKE, SOCFAKE deepfake nude sites under TAKE IT DOWN Act](https://www.bleepingcomputer.com/news/security/doj-seizes-cfake-socfake-deepfake-nude-sites-under-take-it-down-act/) — BleepingComputer
 - [Chinese Hackers Abused Google Workspace Rules to Steal Research and Defense Emails](https://thehackernews.com/2026/06/chinese-hackers-abused-google-workspace.html) — The Hacker News
 - [North Korean Hackers Are Turning Developer Tools Into Malware Delivery Channels](https://thehackernews.com/2026/06/north-korean-hackers-are-turning.html) — The Hacker News
 - [OptinMonster WordPress plugin hacked in CDN supply-chain attack](https://www.bleepingcomputer.com/news/security/optinmonster-wordpress-plugin-hacked-in-cdn-supply-chain-attack/) — BleepingComputer
 - [FBI: Fraudsters use couriers to steal money in crypto scams](https://www.bleepingcomputer.com/news/security/fbi-fraudsters-use-couriers-to-steal-money-in-crypto-scams/) — BleepingComputer
-- [One-Click Microsoft 365 Copilot Flaw Could Have Let Attackers Steal Emails, Files, and MFA Codes](https://thehackernews.com/2026/06/one-click-microsoft-365-copilot-flaw.html) — The Hacker News
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 12 critical · 77 important · 32 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 12 critical · 83 important · 39 FYI_
