@@ -1,7 +1,7 @@
 # IT Weekly Intelligence Briefing
 **Period:** June 09 – June 16, 2026  
-**Generated:** 2026-06-16 15:01 UTC  
-**Items reviewed:** 135  
+**Generated:** 2026-06-16 19:31 UTC  
+**Items reviewed:** 132  
 
 ## ⚡ Top Actions This Week
 
@@ -55,6 +55,18 @@
 
 ## 🟠 Important — Review This Week
 
+- [CVE-2026-40371 Microsoft Dynamics 365 (on-premises) Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-40371)  
+  **Microsoft Security Response Center (MSRC)** · Jun 16 · _General awareness item._  
+
+- [CVE-2026-45602 Windows Dynamic Host Configuration Protocol (DHCP) Tampering Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45602)  
+  **Microsoft Security Response Center (MSRC)** · Jun 16 · _General awareness item._  
+
+- [CVE-2026-50656 Microsoft Defender Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-50656)  
+  **Microsoft Security Response Center (MSRC)** · Jun 16 · _General awareness item._  
+
+- [CVE-2026-42915 Microsoft Windows VMSwitch Denial of Service Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-42915)  
+  **Microsoft Security Response Center (MSRC)** · Jun 16 · _General awareness item._  
+
 - [Survey: 94% of Incidents Involve Anonymized Infrastructure. Teams Are Still Reactive](https://thehackernews.com/2026/06/survey-94-of-incidents-involve.html)  
   **The Hacker News** · Jun 16 · _General awareness item._  
 
@@ -67,29 +79,17 @@
 - [CVE-2026-54411 Linux-PAM through 1.7.2 contains an observable timing discrepancy (CWE-208) in the pam_userdb module's plaintext-password comparison path in modules/pam_userdb/pam_userdb.c that allows a local or network-adjacent attacker able to repeatedly drive authentication through a calling service to recover the plaintext password of a target account by measuring response-timing differences. The comparison uses strncmp() (or strncasecmp() when PAM_ICASE_ARG is set) preceded by a length-equality check, so the time to reject a candidate depends on the index of the first differing byte and on whether the candidate's length matches the stored password, leaking the password length and individual prefix bytes. The vulnerable path is reached when the administrator configures pam_userdb with crypt=none, with an unrecognized crypt method, or without a crypt= argument, causing the module to store and compare credentials in plaintext.](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-54411)  
   **Microsoft Security Response Center (MSRC)** · Jun 16 · _General awareness item._  
 
-- [CISA Flags LiteSpeed cPanel Plugin Flaw Exploited for Root Privilege Escalation](https://thehackernews.com/2026/06/cisa-flags-litespeed-cpanel-plugin-flaw.html)  
-  **The Hacker News** · Jun 16 · _General awareness item._  
-
-- [Chromium: CVE-2026-11690 Out of bounds read and write in Media](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-11691)  
-  **Microsoft Security Response Center (MSRC)** · Jun 16 · _General awareness item._  
-
-- [Chromium: CVE-2026-11689 Insufficient validation of untrusted input in Passwords](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-11690)  
-  **Microsoft Security Response Center (MSRC)** · Jun 16 · _General awareness item._  
-
-- [Chromium: CVE-2026-11688 Object lifecycle issue in SVG](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-11689)  
-  **Microsoft Security Response Center (MSRC)** · Jun 16 · _General awareness item._  
-
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [Steam Workshop abused to spread malware via Wallpaper Engine app](https://www.bleepingcomputer.com/news/security/steam-workshop-abused-to-spread-malware-via-wallpaper-engine-app/) — BleepingComputer
+- [ClickFix Campaigns Expand Malware Delivery With New Loaders and Fake Update Lures](https://thehackernews.com/2026/06/clickfix-campaigns-expand-malware.html) — The Hacker News
 - [GhostTree Attack Abused Recursive Windows Junctions to Hide Malware](https://www.bleepingcomputer.com/news/security/ghosttree-attack-abused-recursive-windows-junctions-to-hide-malware/) — BleepingComputer
 - [FTC warns of record $3.5 billion losses to imposter scams in 2025](https://www.bleepingcomputer.com/news/security/ftc-warns-of-record-35-billion-losses-to-imposter-scams-in-2025/) — BleepingComputer
 - [New Rokarolla Android Malware Steals PINs, SMS Codes, and Crypto Wallet Funds](https://thehackernews.com/2026/06/new-rokarolla-android-malware-steals.html) — The Hacker News
 - [China-Linked SprySOCKS Backdoor Expands to Windows with Driver-Based Stealth](https://thehackernews.com/2026/06/china-linked-sprysocks-backdoor-expands.html) — The Hacker News
-- [Critical Fortinet FortiSandbox flaws now exploited in attacks](https://www.bleepingcomputer.com/news/security/critical-fortinet-fortisandbox-flaws-now-exploited-in-attacks/) — BleepingComputer
-- [Windows version of SprySOCKS Linux malware used to attack govt orgs](https://www.bleepingcomputer.com/news/security/windows-version-of-sprysocks-linux-malware-used-to-attack-govt-orgs/) — BleepingComputer
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 13 critical · 83 important · 39 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 13 critical · 80 important · 39 FYI_
