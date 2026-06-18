@@ -1,59 +1,62 @@
 # IT Weekly Intelligence Briefing
 **Period:** June 11 – June 18, 2026  
-**Generated:** 2026-06-18 12:23 UTC  
-**Items reviewed:** 127  
+**Generated:** 2026-06-18 16:28 UTC  
+**Items reviewed:** 130  
 
 ## ⚡ Top Actions This Week
 
 1. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _The Top 10 Attack Surface Exposures in 2026_  
-   Source: The Hacker News  
-
-2. **Apply emergency patch or mitigation now; check vendor advisory for workarounds.**  
-   _CISA orders feds to patch max severity Joomla plugin flaw by Friday_  
+   _Klue OAuth breach linked to 'Icarus' Salesforce data theft attacks_  
    Source: BleepingComputer  
 
-3. **Audit third-party software dependencies and review vendor access.**  
-   _144 Mastra npm Packages Compromised via Hijacked Contributor Account_  
+2. **Validate backups, confirm EDR coverage, and brief incident response team.**  
+   _INC Ransomware Emerges as Major RaaS Threat in 2026 with 830+ Victims Since 2023_  
+   Source: The Hacker News  
+
+3. **Validate backups, confirm EDR coverage, and brief incident response team.**  
+   _DragonForce Hackers Abuse Microsoft Teams Relays to Hide Backdoor.Turn C2 Traffic_  
    Source: The Hacker News  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
 
+### [Klue OAuth breach linked to 'Icarus' Salesforce data theft attacks](https://www.bleepingcomputer.com/news/security/klue-oauth-breach-linked-to-icarus-salesforce-data-theft-attacks/)
+**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jun 18  
+**Why it matters:** Potential credential or data exposure.  
+**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
+
+### [INC Ransomware Emerges as Major RaaS Threat in 2026 with 830+ Victims Since 2023](https://thehackernews.com/2026/06/inc-ransomware-claims-830-victims-since.html)
+**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Jun 18  
+**Why it matters:** Elevated ransomware risk across the sector.  
+**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
+
+### [DragonForce Hackers Abuse Microsoft Teams Relays to Hide Backdoor.Turn C2 Traffic](https://thehackernews.com/2026/06/dragonforce-hackers-abuse-microsoft.html)
+**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Jun 18  
+**Why it matters:** Elevated ransomware risk across the sector.  
+**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
+
+### [ShapedPlugin update flow hacked to infect WordPress sites](https://www.bleepingcomputer.com/news/security/shapedplugin-update-flow-hacked-to-infect-wordpress-sites/)
+**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jun 18  
+**Why it matters:** Third-party/software supply chain integrity risk.  
+**Recommended action:** Audit third-party software dependencies and review vendor access.  
+
 ### [The Top 10 Attack Surface Exposures in 2026](https://thehackernews.com/2026/06/the-top-10-attack-surface-exposures-in.html)
 **Source:** The Hacker News &nbsp;·&nbsp; **Date:** Jun 17  
 **Why it matters:** Potential credential or data exposure.  
 **Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
-### [CISA orders feds to patch max severity Joomla plugin flaw by Friday](https://www.bleepingcomputer.com/news/security/cisa-orders-feds-to-patch-max-severity-joomla-plugin-flaw-by-friday/)
-**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jun 17  
-**Why it matters:** General awareness item.  
-**Recommended action:** Apply emergency patch or mitigation now; check vendor advisory for workarounds.  
-
-### [144 Mastra npm Packages Compromised via Hijacked Contributor Account](https://thehackernews.com/2026/06/144-mastra-npm-packages-compromised-via.html)
+### [145 Mastra npm Packages Compromised via Hijacked Contributor Account](https://thehackernews.com/2026/06/144-mastra-npm-packages-compromised-via.html)
 **Source:** The Hacker News &nbsp;·&nbsp; **Date:** Jun 17  
 **Why it matters:** Third-party/software supply chain integrity risk.  
 **Recommended action:** Audit third-party software dependencies and review vendor access.  
 
-### [Kodak confirms data breach claimed by ShinyHunters extortion gang](https://www.bleepingcomputer.com/news/security/kodak-confirms-data-breach-claimed-by-shinyhunters-extortion-gang/)
-**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jun 17  
-**Why it matters:** Potential credential or data exposure.  
-**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
-
-### [CISA Warns of Actively Exploited Joomla JCE Flaw Allowing PHP Code Execution](https://thehackernews.com/2026/06/cisa-warns-of-actively-exploited-joomla.html)
-**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Jun 17  
-**Why it matters:** General awareness item.  
-**Recommended action:** Apply emergency patch or mitigation now; check vendor advisory for workarounds.  
-
-### [Cisco Releases Security Updates for Actively Exploited SD-WAN Manager Flaw](https://thehackernews.com/2026/06/cisco-releases-security-updates-for.html)
-**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Jun 16  
-**Why it matters:** General awareness item.  
-**Recommended action:** Apply emergency patch or mitigation now; check vendor advisory for workarounds.  
-
 ---
 
 ## 🟠 Important — Review This Week
+
+- [Apple fixes Beats Studio Buds flaw that let hackers spy on conversations](https://www.bleepingcomputer.com/news/security/apple-fixes-beats-studio-buds-flaw-that-let-hackers-spy-on-conversations/)  
+  **BleepingComputer** · Jun 18 · _General awareness item._  
 
 - [F5 issues out-of-band patches for critical NGINX vulnerabilities](https://www.bleepingcomputer.com/news/security/f5-issues-out-of-band-patches-for-critical-nginx-vulnerabilities/)  
   **BleepingComputer** · Jun 18 · _General awareness item._  
@@ -76,20 +79,17 @@
 - [CVE-2026-46292 pmdomain: core: Fix detach procedure for virtual devices in genpd](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-46292)  
   **Microsoft Security Response Center (MSRC)** · Jun 18 · _General awareness item._  
 
-- [CVE-2026-43308 btrfs: don't BUG() on unexpected delayed ref type in run_one_delayed_ref()](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-43308)  
-  **Microsoft Security Response Center (MSRC)** · Jun 18 · _General awareness item._  
-
 ---
 
 ## 🔵 FYI — General Awareness
 
-- [Telegram admits it couldn't police exam-leak channels, India tells court](https://www.bleepingcomputer.com/news/security/telegram-admits-it-couldnt-police-exam-leak-channels-india-tells-court/) — BleepingComputer
+- [USB worm spreads crypto-stealing malware via Windows shortcut files](https://www.bleepingcomputer.com/news/security/usb-worm-spreads-crypto-stealing-malware-via-windows-shortcut-files/) — BleepingComputer
+- [Orphaned AI Agents: How to Find Hidden Access Risks Inside Your Network](https://thehackernews.com/2026/06/orphaned-ai-agents-how-to-find-hidden.html) — The Hacker News
+- [ThreatsDay Bulletin: Claude Chat Abuse, NastyC2 npm Packages, Device-Code Phishing + 25 More Stories](https://thehackernews.com/2026/06/threatsday-bulletin-claude-chat-abuse.html) — The Hacker News
+- [Microsoft Details Windows Clipper Malware Campaign Using USB LNK Worm and Tor-Based C2](https://thehackernews.com/2026/06/microsoft-details-windows-clipper.html) — The Hacker News
 - [The Scripts on Your Checkout Page Are Now a PCI DSS Problem](https://thehackernews.com/2026/06/the-scripts-on-your-checkout-page-are.html) — The Hacker News
-- [ISC Stormcast For Thursday, June 18th, 2026 https://isc.sans.edu/podcastdetail/9978, (Thu, Jun 18th)](https://isc.sans.edu/diary/rss/33088) — SANS Internet Storm Center
-- [The Behavior of Coordinated SSH Brute Force Attacks over the last three months &#x5b;Guest Diary&#x5d;, (Wed, Jun 17th)](https://isc.sans.edu/diary/rss/33086) — SANS Internet Storm Center
-- [Leak confirms OpenAI is testing a ChatGPT for Science subscription](https://www.bleepingcomputer.com/news/artificial-intelligence/leak-confirms-openai-is-testing-a-chatgpt-for-science-subscription/) — BleepingComputer
-- [Google to use UK and EU user IP addresses for ad personalization](https://www.bleepingcomputer.com/news/security/google-to-use-uk-and-eu-user-ip-addresses-for-ad-personalization/) — BleepingComputer
+- [5 reasons Microsoft 365 backup isn’t enough for business data protection](https://www.bleepingcomputer.com/news/security/5-reasons-microsoft-365-backup-isnt-enough-for-business-data-protection/) — BleepingComputer
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 10 critical · 72 important · 45 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 11 critical · 71 important · 48 FYI_
