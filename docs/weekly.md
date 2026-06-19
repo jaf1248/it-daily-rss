@@ -1,25 +1,30 @@
 # IT Weekly Intelligence Briefing
 **Period:** June 12 – June 19, 2026  
-**Generated:** 2026-06-19 11:20 UTC  
-**Items reviewed:** 127  
+**Generated:** 2026-06-19 14:59 UTC  
+**Items reviewed:** 128  
 
 ## ⚡ Top Actions This Week
 
-1. **Apply emergency patch or mitigation now; check vendor advisory for workarounds.**  
+1. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
+   _From Assistive to Agentic: The AI Shift That's Redefining Threat Management_  
+   Source: The Hacker News  
+
+2. **Apply emergency patch or mitigation now; check vendor advisory for workarounds.**  
    _CISA: Splunk Enterprise flaw actively exploited, patch by Sunday_  
    Source: BleepingComputer  
 
-2. **Validate backups, confirm EDR coverage, and brief incident response team.**  
+3. **Validate backups, confirm EDR coverage, and brief incident response team.**  
    _Gentlemen ransomware uses multiple EDR killers to disable defenses_  
-   Source: BleepingComputer  
-
-3. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _Klue OAuth breach linked to 'Icarus' Salesforce data theft attacks_  
    Source: BleepingComputer  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [From Assistive to Agentic: The AI Shift That's Redefining Threat Management](https://thehackernews.com/2026/06/from-assistive-to-agentic-ai-shift.html)
+**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Jun 19  
+**Why it matters:** Potential credential or data exposure.  
+**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
 ### [CISA: Splunk Enterprise flaw actively exploited, patch by Sunday](https://www.bleepingcomputer.com/news/security/cisa-splunk-enterprise-flaw-actively-exploited-patch-by-sunday/)
 **Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jun 19  
@@ -46,14 +51,12 @@
 **Why it matters:** Elevated ransomware risk across the sector.  
 **Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
 
-### [ShapedPlugin update flow hacked to infect WordPress sites](https://www.bleepingcomputer.com/news/security/shapedplugin-update-flow-hacked-to-infect-wordpress-sites/)
-**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jun 18  
-**Why it matters:** Third-party/software supply chain integrity risk.  
-**Recommended action:** Audit third-party software dependencies and review vendor access.  
-
 ---
 
 ## 🟠 Important — Review This Week
+
+- [CVE-2026-42903 Windows Kerberos Denial of Service Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-42903)  
+  **Microsoft Security Response Center (MSRC)** · Jun 19 · _General awareness item._  
 
 - [Salesforce Disables Klue App Integration After OAuth Token Abuse Exposes Customer Data](https://thehackernews.com/2026/06/salesforce-disables-klue-app.html)  
   **The Hacker News** · Jun 19 · _General awareness item._  
@@ -76,20 +79,17 @@
 - [CVE-2026-12087 Socket versions before 2.041 for Perl have an out-of-bounds heap read](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-12087)  
   **Microsoft Security Response Center (MSRC)** · Jun 19 · _General awareness item._  
 
-- [CVE-2026-53689](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-53689)  
-  **Microsoft Security Response Center (MSRC)** · Jun 19 · _General awareness item._  
-
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [CISA Warns Fortinet Customers as FortiBleed Hits 86,644 FortiGate Devices](https://thehackernews.com/2026/06/cisa-warns-fortinet-customers-as.html) — The Hacker News
+- [Every AI Agent Is an Identity. Most Organizations Don't Treat Them That Way](https://www.bleepingcomputer.com/news/security/every-ai-agent-is-an-identity-most-organizations-dont-treat-them-that-way/) — BleepingComputer
+- [Webinar: How attackers bypass MFA and how defenders can respond](https://www.bleepingcomputer.com/news/security/webinar-how-attackers-bypass-mfa-and-how-defenders-can-respond/) — BleepingComputer
+- [Microsoft: June 2026 Windows updates break Recycle Bin prompts](https://www.bleepingcomputer.com/news/microsoft/microsoft-confirms-recycle-bin-bug-on-all-supported-windows-releases/) — BleepingComputer
+- [Forget Data Leakage: Shadow AI's Real Threat Is Access Control](https://thehackernews.com/2026/06/forget-data-leakage-shadow-ais-real.html) — The Hacker News
 - [NY man charged after harassing college student with AI-generated nudes](https://www.bleepingcomputer.com/news/security/new-york-man-faces-cyberstalking-charge-after-sharing-ai-generated-nudes-online/) — BleepingComputer
-- [eBanking Phishing Delivered Through IPv4-Mapped IPv6 Address, (Fri, Jun 19th)](https://isc.sans.edu/diary/rss/33090) — SANS Internet Storm Center
-- [CISA warns Fortinet users to secure devices after FortiBleed leak](https://www.bleepingcomputer.com/news/security/cisa-warns-fortinet-users-to-secure-devices-after-fortibleed-leak/) — BleepingComputer
-- [Nintendo confirms data stolen in WebMD subsidiary cyberattack](https://www.bleepingcomputer.com/news/security/nintendo-confirms-data-stolen-in-webmd-subsidiary-cyberattack/) — BleepingComputer
-- [‘Popa’ Botnet Linked to Publicly-Traded Israeli Firm](https://krebsonsecurity.com/2026/06/popa-botnet-linked-to-publicly-traded-israeli-firm/) — Krebs on Security
-- [USB worm spreads crypto-stealing malware via Windows shortcut files](https://www.bleepingcomputer.com/news/security/usb-worm-spreads-crypto-stealing-malware-via-windows-shortcut-files/) — BleepingComputer
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 10 critical · 73 important · 44 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 11 critical · 71 important · 46 FYI_
