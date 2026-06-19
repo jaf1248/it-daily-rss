@@ -3,7 +3,7 @@
 <channel>
   <title>Joe — Vendor Security Advisories</title>
   <description>Security advisories and PSIRTs from network and infrastructure vendors in use.</description>
-  <lastBuildDate>Thu, 18 Jun 2026 22:05:33 +0000</lastBuildDate>
+  <lastBuildDate>Fri, 19 Jun 2026 00:24:39 +0000</lastBuildDate>
   
 <item>
   <title>🟠 CISA Adds One Known Exploited Vulnerability to Catalog</title>
@@ -17,7 +17,33 @@
 <p>This type of vulnerability is a frequent attack vector for malicious cyber actors and poses significant risks to the federal enterprise.</p>
 <p><a href="https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk">Binding Operational Directive (BOD) 26-04: Prioritizing Security Updates Based on Risk</a> establishes vulnerability management requirements for Federal Civilian Executive Branch (FCEB) agencies, updating <a href="https://www.cisa.gov/news-events/directives/bod-22-01-reducing-significant-risk-known-exploited-vulnerabilities-revoked">BOD 22-01</a>. BOD 26-04 reinforces the importance of the KEV Catalog and requires federal agencies to prioritize rapid remediation of high-risk vulnerabilities, specifically those identified by Common Vulnerabilities and Exposures (CVEs) listed in CISA’s Known Exploited Vulnerabilities (KEV) Catalog on publicly exposed assets that grant total control of the asset post-exploitation, while deferring action for lower-risk vulnerabilities. BOD 26-04 further establishes basic expectations for when agencies must check whether threat actors compromised the system before the patch was applied.</p>
 <p>While BOD 26-04 applies only to FCEB agencies, CISA encourages all organizations to adopt risk-based vulnerability management and prioritize remediation of <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog">KEV Catalog vulnerabilities</a>. CISA will continue to add vulnerabilities to the catalog that meet the <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog/reducing-significant-risk-known-exploited-vulnerabilities">specified criteria</a>.</p>
-<p>Aware of an exploited vulnerability not currently listed in the KEV Catalog? Submit for potential addition: <a href="https://cisasurvey.gov1.qualtrics.com/jfe/form/SV_1Zwu52kgK2OYf3w" target="_blank">KEV Nomination Form</a>. Potential KEV additions must have a CVE ID, evidence of exploitation, and clear mitigation guidance.&nbsp;</p><br/><br/><b>Source:</b> CISA Alerts &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 10h ago]]></description>
+<p>Aware of an exploited vulnerability not currently listed in the KEV Catalog? Submit for potential addition: <a href="https://cisasurvey.gov1.qualtrics.com/jfe/form/SV_1Zwu52kgK2OYf3w" target="_blank">KEV Nomination Form</a>. Potential KEV additions must have a CVE ID, evidence of exploitation, and clear mitigation guidance.&nbsp;</p><br/><br/><b>Source:</b> CISA Alerts &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 12h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 CISA Urges Hardening Fortinet Devices After Reports of Credential Exposure</title>
+  <link>https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-urges-hardening-fortinet-devices-after-reports-credential-exposure</link>
+  <pubDate>Thu, 18 Jun 2026 12:00:00 +0000</pubDate>
+  <source>CISA Alerts</source>
+  <description><![CDATA[<b>Why this matters: Credential/phishing risk — reinforce MFA and user awareness training.</b><br/><p>CISA is aware of global reports that malicious cyber actors have targeted internet-accessible Fortinet devices across government and private sector organizations using compromised credentials. This activity, referred to as FortiBleed, involves the exposure of leaked credentials associated with approximately 74,000 Fortinet devices, including firewalls and virtual private network (VPN) gateways. &nbsp;</p>
+<p>To defend against this malicious cyber activity, CISA urges impacted Fortinet customers with FortiGate appliances and associated secure sockets layer (SSL) VPN gateways to immediately:</p>
+<ol>
+<li><strong>Terminate sessions and reset credentials.</strong> Terminate all active SSL VPN and administrative sessions. Reset all Fortinet VPN and administrative passwords, especially on internet-facing systems, and enforce strong password policies.</li>
+<li><strong>Ensure secure credential storage.</strong> Confirm your organization’s use of the Password-Based Key Derivation Function 2 (PBKDF2) algorithm to store administrator credentials and remove weaker legacy hashes per Fortinet’s guidance (see, <a href="https://community.fortinet.com/fortigate-3/technical-tip-enforcing-pbkdf2-as-hash-function-for-administrator-accounts-in-fortios-v7-2-11-and-later-220652" target="_blank">Fortinet's Technical Tip: Enforcing PBKDF2 as hash function for administrator accounts in FortiOS v7.2.11 and later</a>). &nbsp;</li>
+<li><strong>Review logs.</strong> Review firewall, VPN, authentication, and domain controller logs for lateral movement, unusual access, suspicious accounts, or unauthorized configuration changes.</li>
+<li><strong>Enable phishing-resistant multifactor authentication (MFA).</strong> <a href="https://www.cisa.gov/sites/default/files/publications/fact-sheet-implementing-phishing-resistant-mfa-508c.pdf">Require phishing-resistant MFA</a> on all remote access and administrative accounts and ensure it is enforced on all external gateways and administrative interfaces.</li>
+<li><strong>Reduce the attack surface and lock down management access.</strong> Ensure the administration of your firewall is inaccessible from the public internet; restrict Fortinet management interfaces to trusted internal networks; and remove or disable any unauthorized or unnecessary accounts.</li>
+</ol>
+<p>See the following resources to determine your organization’s potential impact and find additional guidance on the credentials compromised:</p>
+<ul>
+<li>Tech Times: <a href="https://www.techtimes.com/articles/318599/20260618/fortinet-fortigate-credential-leak-hits-73932-firewalls-half-internet-facing-fleet.htm" target="_blank">Fortinet FortiGate Credential Leak Hits 73,932 Firewalls: Half the Internet-Facing Fleet</a> &nbsp;</li>
+<li>SOCRadar: <a href="https://socradar.io/blog/fortibleed-fortinet-firewalls-compromised/" target="_blank">FortiBleed: The Compromise of 80,000+ Fortinet Firewalls</a></li>
+<li>Hudson Rock: <a href="https://www.hudsonrock.com/blog/fortibleed-75000-fortinet-firewalls-compromised-global-enterprises-exposed-claim-your-ethical-disclosure" target="_blank">FortiBleed: 75,000 Fortinet Firewalls Compromised: Global Enterprises Exposed – Claim Your Ethical Disclosure</a></li>
+<li>Arctic Wolf: <a href="https://arcticwolf.com/resources/blog/active-fortibleed-campaign-impacting-fortinet-devices-across-194-countries/" target="_blank">Active FortiBleed Campaign Impacting Fortinet Devices Across 194 Countries</a></li>
+<li>Fortinet: <a href="https://www.fortinet.com/blog/industry-trends/attacks-at-the-speed-of-ai" target="_blank">Attacks at the Speed of AI</a></li>
+</ul>
+<h2><strong>Disclaimer</strong></h2>
+<p>The information in this report is being provided “as is” for informational purposes only. CISA does not endorse any commercial entity, product, company, or service, including any entities, products, or services linked within this document. Any reference to specific commercial entities, products, processes, or services by service mark, trademark, manufacturer, or otherwise, does not constitute or imply endorsement, recommendation, or favoring by CISA.</p><br/><br/><b>Source:</b> CISA Alerts &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 12h ago]]></description>
 </item>
 
 <item>
