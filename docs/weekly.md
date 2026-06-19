@@ -1,25 +1,30 @@
 # IT Weekly Intelligence Briefing
 **Period:** June 12 – June 19, 2026  
-**Generated:** 2026-06-19 14:59 UTC  
-**Items reviewed:** 128  
+**Generated:** 2026-06-19 17:21 UTC  
+**Items reviewed:** 130  
 
 ## ⚡ Top Actions This Week
 
 1. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
+   _Texas govt data breach exposes over 3 million driver’s licenses_  
+   Source: BleepingComputer  
+
+2. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
    _From Assistive to Agentic: The AI Shift That's Redefining Threat Management_  
    Source: The Hacker News  
 
-2. **Apply emergency patch or mitigation now; check vendor advisory for workarounds.**  
+3. **Apply emergency patch or mitigation now; check vendor advisory for workarounds.**  
    _CISA: Splunk Enterprise flaw actively exploited, patch by Sunday_  
-   Source: BleepingComputer  
-
-3. **Validate backups, confirm EDR coverage, and brief incident response team.**  
-   _Gentlemen ransomware uses multiple EDR killers to disable defenses_  
    Source: BleepingComputer  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [Texas govt data breach exposes over 3 million driver’s licenses](https://www.bleepingcomputer.com/news/security/texas-govt-data-breach-exposes-over-3-million-drivers-licenses/)
+**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jun 19  
+**Why it matters:** Potential credential or data exposure.  
+**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
 ### [From Assistive to Agentic: The AI Shift That's Redefining Threat Management](https://thehackernews.com/2026/06/from-assistive-to-agentic-ai-shift.html)
 **Source:** The Hacker News &nbsp;·&nbsp; **Date:** Jun 19  
@@ -46,14 +51,18 @@
 **Why it matters:** Elevated ransomware risk across the sector.  
 **Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
 
-### [DragonForce Hackers Abuse Microsoft Teams Relays to Hide Backdoor.Turn C2 Traffic](https://thehackernews.com/2026/06/dragonforce-hackers-abuse-microsoft.html)
-**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Jun 18  
-**Why it matters:** Elevated ransomware risk across the sector.  
-**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
-
 ---
 
 ## 🟠 Important — Review This Week
+
+- [AutoJack Attack Lets One Web Page Hijack AI Agent for Host Code Execution](https://thehackernews.com/2026/06/autojack-attack-lets-one-web-page.html)  
+  **The Hacker News** · Jun 19 · _General awareness item._  
+
+- [CVE-2026-32177 .NET Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-32177)  
+  **Microsoft Security Response Center (MSRC)** · Jun 19 · _General awareness item._  
+
+- [CVE-2025-6965 Integer Truncation on SQLite](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-6965)  
+  **Microsoft Security Response Center (MSRC)** · Jun 19 · _General awareness item._  
 
 - [CVE-2026-42903 Windows Kerberos Denial of Service Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-42903)  
   **Microsoft Security Response Center (MSRC)** · Jun 19 · _General awareness item._  
@@ -70,26 +79,17 @@
 - [CVE-2026-8376 Perl versions through 5.43.10 have a heap buffer overflow when compiling regular expressions with a repeated fixed string on 32-bit builds](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-8376)  
   **Microsoft Security Response Center (MSRC)** · Jun 19 · _General awareness item._  
 
-- [CVE-2026-43966 HTTP Response Splitting via Non-VCHAR Bytes in cow_http_struct_hd:escape_string/2](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-43966)  
-  **Microsoft Security Response Center (MSRC)** · Jun 19 · _General awareness item._  
-
-- [CVE-2026-9669 bz2.BZ2Decompressor reuse after error can cause a stack buffer overflow](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-9669)  
-  **Microsoft Security Response Center (MSRC)** · Jun 19 · _General awareness item._  
-
-- [CVE-2026-12087 Socket versions before 2.041 for Perl have an out-of-bounds heap read](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-12087)  
-  **Microsoft Security Response Center (MSRC)** · Jun 19 · _General awareness item._  
-
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [Operation Endgame Disrupts SocGholish Servers, Cleans 14,971 WordPress Sites](https://thehackernews.com/2026/06/operation-endgame-disrupts-socgholish.html) — The Hacker News
 - [CISA Warns Fortinet Customers as FortiBleed Hits 86,644 FortiGate Devices](https://thehackernews.com/2026/06/cisa-warns-fortinet-customers-as.html) — The Hacker News
 - [Every AI Agent Is an Identity. Most Organizations Don't Treat Them That Way](https://www.bleepingcomputer.com/news/security/every-ai-agent-is-an-identity-most-organizations-dont-treat-them-that-way/) — BleepingComputer
 - [Webinar: How attackers bypass MFA and how defenders can respond](https://www.bleepingcomputer.com/news/security/webinar-how-attackers-bypass-mfa-and-how-defenders-can-respond/) — BleepingComputer
 - [Microsoft: June 2026 Windows updates break Recycle Bin prompts](https://www.bleepingcomputer.com/news/microsoft/microsoft-confirms-recycle-bin-bug-on-all-supported-windows-releases/) — BleepingComputer
 - [Forget Data Leakage: Shadow AI's Real Threat Is Access Control](https://thehackernews.com/2026/06/forget-data-leakage-shadow-ais-real.html) — The Hacker News
-- [NY man charged after harassing college student with AI-generated nudes](https://www.bleepingcomputer.com/news/security/new-york-man-faces-cyberstalking-charge-after-sharing-ai-generated-nudes-online/) — BleepingComputer
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 11 critical · 71 important · 46 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 12 critical · 71 important · 47 FYI_
