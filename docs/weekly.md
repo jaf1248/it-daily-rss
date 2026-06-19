@@ -1,25 +1,30 @@
 # IT Weekly Intelligence Briefing
 **Period:** June 12 – June 19, 2026  
-**Generated:** 2026-06-19 21:08 UTC  
-**Items reviewed:** 130  
+**Generated:** 2026-06-19 22:54 UTC  
+**Items reviewed:** 128  
 
 ## ⚡ Top Actions This Week
 
-1. **Validate backups, confirm EDR coverage, and brief incident response team.**  
+1. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
+   _Klue OAuth breach victim list grows as Icarus hackers claim attack_  
+   Source: BleepingComputer  
+
+2. **Validate backups, confirm EDR coverage, and brief incident response team.**  
    _The Gentlemen RaaS Uses GentleKiller EDR Framework Targeting 400 Security Processes_  
    Source: The Hacker News  
 
-2. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
+3. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
    _Texas govt data breach exposes over 3 million driver’s licenses_  
    Source: BleepingComputer  
-
-3. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _From Assistive to Agentic: The AI Shift That's Redefining Threat Management_  
-   Source: The Hacker News  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [Klue OAuth breach victim list grows as Icarus hackers claim attack](https://www.bleepingcomputer.com/news/security/klue-oauth-breach-victim-list-grows-as-icarus-hackers-claim-attack/)
+**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jun 19  
+**Why it matters:** Potential credential or data exposure.  
+**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
 ### [The Gentlemen RaaS Uses GentleKiller EDR Framework Targeting 400 Security Processes](https://thehackernews.com/2026/06/the-gentlemen-raas-uses-gentlekiller.html)
 **Source:** The Hacker News &nbsp;·&nbsp; **Date:** Jun 19  
@@ -46,37 +51,32 @@
 **Why it matters:** Elevated ransomware risk across the sector.  
 **Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
 
-### [Klue OAuth breach linked to 'Icarus' Salesforce data theft attacks](https://www.bleepingcomputer.com/news/security/klue-oauth-breach-linked-to-icarus-salesforce-data-theft-attacks/)
-**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jun 18  
-**Why it matters:** Potential credential or data exposure.  
-**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
-
 ---
 
 ## 🟠 Important — Review This Week
 
-- [CVE-2026-12466 Heap buffer overflow in WebRTC](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-12466)  
+- [Hackers exploit info disclosure bug in Gravity SMTP WordPress plugin](https://www.bleepingcomputer.com/news/security/hackers-exploit-info-disclosure-bug-in-gravity-smtp-wordpress-plugin/)  
+  **BleepingComputer** · Jun 19 · _General awareness item._  
+
+- [Unpatchable 'usbliter8' Exploit Breaks Apple A12 and A13 SecureROM Boot Chain](https://thehackernews.com/2026/06/unpatchable-usbliter8-exploit-breaks.html)  
+  **The Hacker News** · Jun 19 · _General awareness item._  
+
+- [AutoJack Attack Lets One Web Page Hijack AI Agent for Host Code Execution](https://thehackernews.com/2026/06/autojack-attack-lets-one-web-page.html)  
+  **The Hacker News** · Jun 19 · _General awareness item._  
+
+- [CVE-2026-45469 Microsoft Excel Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45469)  
   **Microsoft Security Response Center (MSRC)** · Jun 19 · _General awareness item._  
 
-- [CVE-2026-12461 Out of bounds read in WebRTC](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-12461)  
+- [CVE-2026-45475 Microsoft Office Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45475)  
   **Microsoft Security Response Center (MSRC)** · Jun 19 · _General awareness item._  
 
-- [CVE-2026-12449 Use after free in Chromoting](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-12449)  
+- [CVE-2026-45472 Microsoft Office Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45472)  
   **Microsoft Security Response Center (MSRC)** · Jun 19 · _General awareness item._  
 
-- [CVE-2026-12444 Out of bounds read in Chromoting](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-12444)  
+- [CVE-2026-45471 Microsoft Word Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45471)  
   **Microsoft Security Response Center (MSRC)** · Jun 19 · _General awareness item._  
 
-- [CVE-2026-12437 Use after free in WebShare](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-12437)  
-  **Microsoft Security Response Center (MSRC)** · Jun 19 · _General awareness item._  
-
-- [CVE-2026-12468 Inappropriate implementation in Updater](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-12468)  
-  **Microsoft Security Response Center (MSRC)** · Jun 19 · _General awareness item._  
-
-- [CVE-2026-12454 Race in Safe Browsing](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-12454)  
-  **Microsoft Security Response Center (MSRC)** · Jun 19 · _General awareness item._  
-
-- [CVE-2026-12467 Use after free in Extensions](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-12467)  
+- [CVE-2026-45474 Microsoft Office Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45474)  
   **Microsoft Security Response Center (MSRC)** · Jun 19 · _General awareness item._  
 
 ---
@@ -92,4 +92,4 @@
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 13 critical · 74 important · 43 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 13 critical · 72 important · 43 FYI_
