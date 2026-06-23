@@ -1,25 +1,30 @@
 # IT Weekly Intelligence Briefing
 **Period:** June 16 – June 23, 2026  
-**Generated:** 2026-06-23 11:59 UTC  
-**Items reviewed:** 126  
+**Generated:** 2026-06-23 15:12 UTC  
+**Items reviewed:** 127  
 
 ## ⚡ Top Actions This Week
 
 1. **Audit third-party software dependencies and review vendor access.**  
+   _LastPass confirms data breach in Klue supply chain attack_  
+   Source: BleepingComputer  
+
+2. **Audit third-party software dependencies and review vendor access.**  
    _ShapedPlugin WordPress Pro Plugins Backdoored in Supply Chain Attack_  
    Source: The Hacker News  
 
-2. **Validate backups, confirm EDR coverage, and brief incident response team.**  
-   _⚡ Weekly Recap: Browser Bugs, EDR Killers, TV Botnet, OpenBSD Flaw, Android Trojan, and More_  
-   Source: The Hacker News  
-
 3. **Validate backups, confirm EDR coverage, and brief incident response team.**  
-   _INTERPOL Warns Phishing, Ransomware, and AI Scams Are Rising Across Asia-Pacific_  
+   _⚡ Weekly Recap: Browser Bugs, EDR Killers, TV Botnet, OpenBSD Flaw, Android Trojan, and More_  
    Source: The Hacker News  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [LastPass confirms data breach in Klue supply chain attack](https://www.bleepingcomputer.com/news/security/lastpass-confirms-data-breach-in-klue-supply-chain-attack/)
+**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jun 23  
+**Why it matters:** Third-party/software supply chain integrity risk.  
+**Recommended action:** Audit third-party software dependencies and review vendor access.  
 
 ### [ShapedPlugin WordPress Pro Plugins Backdoored in Supply Chain Attack](https://thehackernews.com/2026/06/shapedplugin-wordpress-pro-plugins.html)
 **Source:** The Hacker News &nbsp;·&nbsp; **Date:** Jun 22  
@@ -46,14 +51,18 @@
 **Why it matters:** Third-party/software supply chain integrity risk.  
 **Recommended action:** Audit third-party software dependencies and review vendor access.  
 
-### [Klue OAuth breach victim list grows as Icarus hackers claim attack](https://www.bleepingcomputer.com/news/security/klue-oauth-breach-victim-list-grows-as-icarus-hackers-claim-attack/)
-**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jun 19  
-**Why it matters:** Potential credential or data exposure.  
-**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
-
 ---
 
 ## 🟠 Important — Review This Week
+
+- [The Exploit Doesn't Exist. You Can Still Prove It Works Against You](https://www.bleepingcomputer.com/news/security/the-exploit-doesnt-exist-you-can-still-prove-it-works-against-you/)  
+  **BleepingComputer** · Jun 23 · _General awareness item._  
+
+- [CVE-2026-33840 Win32k Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-33840)  
+  **Microsoft Security Response Center (MSRC)** · Jun 23 · _General awareness item._  
+
+- [CVE-2026-42915 Microsoft Windows VMSwitch Denial of Service Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-42915)  
+  **Microsoft Security Response Center (MSRC)** · Jun 23 · _General awareness item._  
 
 - [OpenAI Expands Daybreak With GPT-5.5-Cyber to Help Defenders Patch Security Flaws](https://thehackernews.com/2026/06/openai-expands-daybreak-with-gpt-55.html)  
   **The Hacker News** · Jun 23 · _General awareness item._  
@@ -70,26 +79,17 @@
 - [Hackers Exploit Gravity SMTP WordPress Plugin Bug to Expose API Keys](https://thehackernews.com/2026/06/hackers-exploit-gravity-smtp-wordpress.html)  
   **The Hacker News** · Jun 20 · _General awareness item._  
 
-- [CVE-2026-44967 opentelemetry-cpp: OTLP HTTP exporters read unbounded HTTP response](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-44967)  
-  **Microsoft Security Response Center (MSRC)** · Jun 20 · _General awareness item._  
-
-- [CVE-2026-46331 net/sched: fix pedit partial COW leading to page cache corruption](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-46331)  
-  **Microsoft Security Response Center (MSRC)** · Jun 20 · _General awareness item._  
-
-- [CVE-2026-34180 Heap Buffer Over-read in ASN.1 Content Parsing](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-34180)  
-  **Microsoft Security Response Center (MSRC)** · Jun 20 · _General awareness item._  
-
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [GitHub Updates actions/checkout to Block Common Pwn Request Attack Patterns](https://thehackernews.com/2026/06/github-updates-actionscheckout-to-block.html) — The Hacker News
+- [Webinar: Why email security teams are drowning in alerts](https://www.bleepingcomputer.com/news/security/webinar-why-email-security-teams-are-drowning-in-alerts/) — BleepingComputer
+- [Agentic AI: The Weapon That No Longer Needs a Warrior](https://thehackernews.com/2026/06/agentic-ai-weapon-that-no-longer-needs.html) — The Hacker News
 - [Malicious npm Packages Pose as PostCSS Tools to Deliver Windows RAT](https://thehackernews.com/2026/06/malicious-npm-packages-pose-as-postcss.html) — The Hacker News
 - [WhatsApp VBScript Campaign Uses Fake Documents to Install ManageEngine RMM Tool](https://thehackernews.com/2026/06/whatsapp-vbscript-campaign-uses-fake.html) — The Hacker News
 - [ISC Stormcast For Tuesday, June 23rd, 2026 https://isc.sans.edu/podcastdetail/9982, (Tue, Jun 23rd)](https://isc.sans.edu/diary/rss/33098) — SANS Internet Storm Center
-- [WhatsApp phishing attack uses fake business docs to hack PCs](https://www.bleepingcomputer.com/news/security/whatsapp-phishing-attack-uses-fake-business-docs-to-hack-pcs/) — BleepingComputer
-- [JaredFromSubway MEV bot hacked in $15 million crypto theft](https://www.bleepingcomputer.com/news/security/jaredfromsubway-mev-bot-hacked-in-15-million-crypto-theft/) — BleepingComputer
-- [FortiBleed campaign used custom FortiGate sniffer to steal credentials](https://www.bleepingcomputer.com/news/security/fortibleed-campaign-used-custom-fortigate-sniffer-to-steal-credentials/) — BleepingComputer
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 14 critical · 72 important · 40 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 14 critical · 73 important · 40 FYI_
