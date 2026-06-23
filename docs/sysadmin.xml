@@ -3,14 +3,95 @@
 <channel>
   <title>Joe SysAdmin and Operations</title>
   <description>Operational IT changes, Microsoft updates, outages, and infrastructure issues.</description>
-  <lastBuildDate>Mon, 22 Jun 2026 22:44:55 +0000</lastBuildDate>
+  <lastBuildDate>Tue, 23 Jun 2026 00:02:55 +0000</lastBuildDate>
   
+<item>
+  <title>🟠 Build a Sovereign Private Cloud with Azure Local</title>
+  <link>https://techcommunity.microsoft.com/t5/itops-talk-blog/build-a-sovereign-private-cloud-with-azure-local/ba-p/4529931</link>
+  <pubDate>Mon, 22 Jun 2026 23:37:32 +0000</pubDate>
+  <source>Microsoft Tech Community IT Ops</source>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><p>Hello Folks!</p>
+<p>Picture this. A regulator hands you a one-pager that says, in essence, “this data does not leave the building.” Or your link to Azure decides to take a nap during a critical batch run. Or you are standing up infrastructure in a remote site where connectivity is a coin flip on a good day. For a long time, our answer to that conversation was a stack of Azure Stack boxes plus a lot of wishful thinking. That story has changed, and it has changed quite a bit.</p>
+<p>At Microsoft Azure Infra Summit 2026, Thomas Maurer (Global Black Belt for Sovereign Cloud) walked us through what is now called the Microsoft Sovereign Private Cloud, with Azure Local as its foundation. In this post, I want to unpack the session for the ITPros in the room, the folks who have to actually run this stuff on Monday morning. Let us dig in.</p>
+<p>📺 <strong>Watch the session:</strong></p>
+<p>&nbsp;</p>
+<div class="lia-embeded-content" contenteditable="false">
+</div>
+<h2>Why IT Pros Should Care</h2>
+<p>Sovereignty is no longer a niche conversation. Thomas was very clear that there is no one-size-fits-all answer, and that is exactly why this matters to us as operators. The drivers landing on our desks now include:</p>
+<ul>
+<li>Regulatory requirements that demand data residency or full operator isolation.</li>
+<li>Sovereign AI workloads where the model and the data both need to stay in-country.</li>
+<li>Disconnected and air-gapped sites by design (think defense, manufacturing floors, retail backrooms, ships, mines).</li>
+<li>Business continuity, meaning a workable Plan B if the public cloud is unreachable for hours or days.</li>
+<li>Latency-sensitive workloads where the round trip to a region is just too slow.</li>
+</ul>
+<p>If you build or operate infrastructure that touches any of those bullets, Azure Local is now a first-class option, not a sidecar. And it gets you a cloud-consistent control plane on top of hardware you can put your hands on.</p>
+<h2>What is Azure Local and the Sovereign Private Cloud</h2>
+<p>Let us level-set on the stack, from the metal up.</p>
+<ul>
+<li><strong>Hardware.</strong> Validated and certified through the Azure Local solution catalog, delivered by the OEMs you already buy from. Form factors range from single-node edge boxes up to multi-rack deployments. There is a Premier tier with extra testing, packaged firmware and driver updates, and AI-ready GPU configurations done with NVIDIA.</li>
+<li><strong>Software-defined data center.</strong> Compute, storage, networking, and high availability. As of April 2026, supported SAN storage is GA alongside the existing hyperconverged storage spaces direct model. That gets you up to 64 nodes in disaggregated mode and 16 nodes in hyperconverged mode per instance.</li>
+<li><strong>Workload plane.</strong> Linux and Windows VMs, custom images, your own Kubernetes distribution, or AKS enabled by Arc with the same management experience you have in Azure today.</li>
+<li><strong>Arc-enabled control plane.</strong> This is where Azure Local stops being “another on-prem stack” and starts feeling like Azure. Defender, Azure Monitor, Azure Update Manager, Policy, RBAC, Resource Manager, all of it surfaces against your on-prem instance.</li>
+<li><strong>Disconnected operations.</strong> Microsoft packaged a subset of the control plane (portal, Resource Manager, key management services) into an appliance you deploy on-premises. Connect your Azure Local infrastructure to the local appliance instead of public Azure, and you have a fully air-gapped deployment with a familiar API surface.</li>
+</ul>
+<p>On top of that base, the Sovereign Private Cloud bundles workloads you can run locally: Foundry Local for AI inferencing, Microsoft 365 Local (Exchange Server, SharePoint Server, Skype for Business Server) for productivity fallback, Azure Virtual Desktop on Azure Local for VDI, and GitHub Enterprise Local (in private preview at the time of the session) for source and CI/CD.</p>
+<h2>How it works in production</h2>
+<p>In the demo, Thomas drove the whole show from the Azure Arc Center in the Azure portal. A few things stood out for me as someone who has spent too many late nights patching clusters.</p>
+<ul>
+<li><strong>One pane, many sites.</strong> The overview page rolls up every Azure Local instance you own. Thomas mentioned customers running thousands of these things, and the Azure Local Lens workbook in Azure Monitor is built to manage at that scale.</li>
+<li><strong>Resources feel like Azure resources.</strong> An instance, a node, a VM, an AKS cluster, they all live inside Azure Resource Manager. RBAC, activity logs, tags, ARM templates, everything you expect.</li>
+<li><strong>Update is a single button.</strong> The Solution Builder Extension packages OS, management software, drivers, and firmware into one validated update. You hit “update,” it orchestrates live migrations node by node, and it blocks the operation if something is not ready. No more cherry-picking driver bundles at 2 AM.</li>
+<li><strong>Security defaults are real.</strong> BitLocker on OS and data volumes, SMB signing, App Control on the hypervisor hosts, drift detection that flags configuration changes back to the portal.</li>
+<li><strong>Resiliency is layered.</strong> Storage spaces direct two-way or three-way mirroring, rack-aware clustering, live migration for maintenance, and Azure Site Recovery for site-to-cloud replication (currently preview). Site-to-site ASR between two Azure Local instances is in development. Veeam, Rubrik, and Commvault all integrate for backup.</li>
+</ul>
+<p>In short, the boring operational moments are the ones that benefit the most. Patching, monitoring, identity, alerting, they collapse into the tools you already use in Azure.</p>
+<h2>When to use it and real-world scenarios</h2>
+<p>This is not a “rip everything out of Azure” pitch. Thomas was very honest. Azure is still the right home for the vast majority of workloads. Azure Local earns its keep in a few specific places.</p>
+<ul>
+<li><strong>Regulated or sovereign workloads.</strong> Government, defense, financial services, healthcare where the law or the contract says the data stays put.</li>
+<li><strong>Disconnected or air-gapped sites.</strong> Field operations, classified networks, ships, mines, remote infrastructure where reliable connectivity is not in scope.</li>
+<li><strong>Business continuity for productivity.</strong> Microsoft 365 Local as a fallback for Exchange and SharePoint if the cloud service is unreachable. From the session Q&amp;A, M365 Local is GA, and it is the Exchange / SharePoint / Skype for Business trio. Entra ID and Intune are not in scope of the local bundle.</li>
+<li><strong>Edge and latency-bound workloads.</strong> Manufacturing line control, retail in-store inference, healthcare imaging, anywhere a 30-millisecond round trip is a problem.</li>
+<li><strong>Sovereign AI.</strong> Foundry Local on Azure Local lets you serve models on local GPUs without round-tripping to the cloud. Models stay local, data stays local, inference stays fast.</li>
+<li><strong>Bi-directional workload mobility.</strong> With Sovereign Private Landing Zones, you design once and keep workloads portable between Azure and Azure Local based on a service-compatible subset.</li>
+</ul>
+<h2>Getting Started</h2>
+<p>If you are picking this up cold, here is a sensible on-ramp:</p>
+<ul>
+<li>Start with the <a class="lia-external-url" href="https://learn.microsoft.com/azure/azure-sovereign-clouds/" rel="noopener" target="_blank">official docs on Sovereign Private Cloud and Azure Local</a>. Read them with your architect hat on, not just your operator hat. Design matters here.</li>
+<li>Browse the Azure Local solution catalog and filter by Premier solutions and by your target scenario (disconnected operations, M365 Local, AI workloads, GPU support). The hardware shape drives a lot of downstream decisions.</li>
+<li>Talk to your OEM about a validated node, and talk to your Microsoft account team or a sovereign partner. The partner ecosystem in this space is mature, and they will save you weeks.</li>
+<li>Stand up a small connected instance first to learn the Arc Center experience, the update flow, and Azure Monitor integration. Even a one-node or two-node lab is enough to internalize the model.</li>
+<li>For disconnected, size for the extra capacity the control plane appliance needs, plan your local identity (Active Directory with AD FS) and your local monitoring integration up front.</li>
+<li>If you live in Azure today and need workload portability, look at Sovereign Private Landing Zones so you do not paint yourself into a corner with services that have no on-prem equivalent.</li>
+</ul>
+<h2>Resources</h2>
+<ul>
+<li><a href="https://learn.microsoft.com/azure/azure-sovereign-clouds/private/overview/sovereign-private-cloud" rel="noopener" target="_blank">What is Sovereign Private Cloud? on Microsoft Learn</a></li>
+<li><a href="https://learn.microsoft.com/azure/azure-local/" rel="noopener" target="_blank">Azure Local documentation</a></li>
+<li><a href="https://learn.microsoft.com/azure/azure-local/manage/disconnected-operations-overview" rel="noopener" target="_blank">Disconnected operations for Azure Local</a></li>
+<li><a href="https://azure.microsoft.com/products/azure-arc" rel="noopener" target="_blank">Azure Arc product page</a></li>
+<li><a href="https://azure.microsoft.com/products/site-recovery" rel="noopener" target="_blank">Azure Site Recovery product page</a></li>
+<li><a href="https://learn.microsoft.com/azure/foundry-local/" rel="noopener" target="_blank">Foundry Local documentation on Microsoft Learn</a></li>
+<li><a href="https://github.com/microsoft/Foundry-Local" rel="noopener" target="_blank">Foundry Local on GitHub</a></li>
+<li><a href="https://github.com/Azure/sovereign-landing-zone" rel="noopener" target="_blank">Sovereign Landing Zones on GitHub</a></li>
+</ul>
+<h2>Watch the rest of the Summit</h2>
+<p>This was just one of the sessions at the Microsoft Azure Infra Summit 2026. If you want more peer-to-peer technical content from the Azure infrastructure community, grab a coffee and queue up the full playlist here: <a class="lia-external-url" href="https://aka.ms/MAIS/2026-Playlist" rel="noopener" target="_blank">https://aka.ms/MAIS/2026-Playlist</a></p>
+<p>There is plenty of good stuff covering Bicep, AKS networking, storage, IaC, and more.</p>
+<p>If you spin up an Azure Local instance after watching the session, or if you are already running one in anger, drop a comment and let me know how it goes. What works, what hurts, what you wish was better. That is how we all level up.</p>
+<p>Cheers!</p>
+<p>Pierre Roman</p><br/><br/><b>Source:</b> Microsoft Tech Community IT Ops &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</item>
+
 <item>
   <title>🔵 FortiBleed campaign used custom FortiGate sniffer to steal credentials</title>
   <link>https://www.bleepingcomputer.com/news/security/fortibleed-campaign-used-custom-fortigate-sniffer-to-steal-credentials/</link>
   <pubDate>Mon, 22 Jun 2026 20:01:02 +0000</pubDate>
   <source>BleepingComputer</source>
-  <description><![CDATA[<b>Why this matters: Credential/phishing risk — reinforce MFA and user awareness training.</b><br/>Security firm SOCRadar says the large-scale FortiBleed campaign targeting Fortinet FortiGate devices used custom sniffers to harvest authentication secrets from compromised firewalls and steal credentials. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Credential/phishing risk — reinforce MFA and user awareness training.</b><br/>Security firm SOCRadar says the large-scale FortiBleed campaign targeting Fortinet FortiGate devices used custom sniffers to harvest authentication secrets from compromised firewalls and steal credentials. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
 </item>
 
 <item>
@@ -18,7 +99,7 @@
   <link>https://adamtheautomator.com/automate-soc-guide-sentinel-playbook-generation/</link>
   <pubDate>Mon, 22 Jun 2026 18:00:00 +0000</pubDate>
   <source>Adam the Automator</source>
-  <description><![CDATA[<b>Why this matters: Operational impact possible — watch for changes that generate tickets.</b><br/>Generate Microsoft Sentinel Python playbooks with AI, Integration Profiles, real-alert testing, and safe SOC automation rollout steps.<br/><br/><b>Source:</b> Adam the Automator &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Operational impact possible — watch for changes that generate tickets.</b><br/>Generate Microsoft Sentinel Python playbooks with AI, Integration Profiles, real-alert testing, and safe SOC automation rollout steps.<br/><br/><b>Source:</b> Adam the Automator &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
@@ -26,7 +107,7 @@
   <link>https://www.bleepingcomputer.com/news/microsoft/microsoft-says-windows-11-26h2-is-coming-soon-details-upgrade-process/</link>
   <pubDate>Mon, 22 Jun 2026 17:41:31 +0000</pubDate>
   <source>BleepingComputer</source>
-  <description><![CDATA[<b>Why this matters: Operational impact possible — watch for changes that generate tickets.</b><br/>Microsoft has confirmed that Windows 11 version 26H2 will be the next feature update and that devices running Windows 11 24H2 and 25H2 will be able to upgrade using a small enablement package. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Operational impact possible — watch for changes that generate tickets.</b><br/>Microsoft has confirmed that Windows 11 version 26H2 will be the next feature update and that devices running Windows 11 24H2 and 25H2 will be able to upgrade using a small enablement package. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 </channel>
