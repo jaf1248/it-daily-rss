@@ -3,14 +3,14 @@
 <channel>
   <title>Joe SysAdmin and Operations</title>
   <description>Operational IT changes, Microsoft updates, outages, and infrastructure issues.</description>
-  <lastBuildDate>Wed, 24 Jun 2026 16:17:12 +0000</lastBuildDate>
+  <lastBuildDate>Wed, 24 Jun 2026 18:50:05 +0000</lastBuildDate>
   
 <item>
   <title>🔵 Securing the service desk: Why social engineering attacks keep succeeding</title>
   <link>https://www.bleepingcomputer.com/news/security/securing-the-service-desk-why-social-engineering-attacks-keep-succeeding/</link>
   <pubDate>Wed, 24 Jun 2026 14:02:12 +0000</pubDate>
   <source>BleepingComputer</source>
-  <description><![CDATA[<b>Why this matters: Could impact sign-ins/MFA/Conditional Access — watch for login issues.</b><br/>Service desks have become a favored target for attackers seeking password resets, MFA changes, and access to corporate accounts. Specops Software breaks down how service desk social engineering attacks work and how organizations can defend against them. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Could impact sign-ins/MFA/Conditional Access — watch for login issues.</b><br/>Service desks have become a favored target for attackers seeking password resets, MFA changes, and access to corporate accounts. Specops Software breaks down how service desk social engineering attacks work and how organizations can defend against them. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
 </item>
 
 <item>
@@ -18,7 +18,100 @@
   <link>https://adamtheautomator.com/taming-ai-tool-sprawl-powershell-guide-auditing/</link>
   <pubDate>Wed, 24 Jun 2026 14:00:00 +0000</pubDate>
   <source>Adam the Automator</source>
-  <description><![CDATA[<b>Why this matters: Could impact sign-ins/MFA/Conditional Access — watch for login issues.</b><br/>Detect and govern unauthorized AI tools with PowerShell, Microsoft Graph, Entra ID, and Defender for Cloud Apps.<br/><br/><b>Source:</b> Adam the Automator &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Could impact sign-ins/MFA/Conditional Access — watch for login issues.</b><br/>Detect and govern unauthorized AI tools with PowerShell, Microsoft Graph, Entra ID, and Defender for Cloud Apps.<br/><br/><b>Source:</b> Adam the Automator &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Deploy an Azure Landing Zone in About Twelve Minutes with the ALZ IaC Accelerator</title>
+  <link>https://techcommunity.microsoft.com/t5/itops-talk-blog/deploy-an-azure-landing-zone-in-about-twelve-minutes-with-the/ba-p/4529937</link>
+  <pubDate>Wed, 24 Jun 2026 07:00:00 +0000</pubDate>
+  <source>Microsoft Tech Community IT Ops</source>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><p>Hello Folks!</p>
+<p>Welcome back to my coverage of the Microsoft Azure Infra Summit 2026. This session is one I have been looking forward to, because if you have ever stood up an Azure Landing Zone (ALZ) by hand, you know it can eat weeks. Management groups, policy assignments, Hub-and-Spoke networking, log analytics, Defender for Cloud, identities, pipelines, governed branches. There is a lot of plumbing.</p>
+<p>In this session Jack Tracy (he leads the Azure Landing Zones team) and Jarrod Holgate (tech lead on Azure Landing Zones and Azure Verified Modules) walk through the ALZ Infrastructure as Code Accelerator. Then they actually run it, and a bootstrap that used to be a multi-week journey wraps up in about twelve minutes of typing and ticking boxes.</p>
+<p>📺 <strong>Watch the session:</strong></p>
+<p>&nbsp;</p>
+<div class="lia-embeded-content" contenteditable="false">
+</div>
+<h2>Why IT Pros Should Care</h2>
+<p>If you are the person who has to deliver a secure, governed Azure platform before your dev teams can land their first workload, this matters to you. Here is the short version of why:</p>
+<ul>
+<li>It bakes in the Cloud Adoption Framework “start right, stay right” pattern so you do not have to invent it.</li>
+<li>It supports both Bicep and Terraform, and it bootstraps GitHub or Azure DevOps for you (with a local file system option for GitLab, Bitbucket, or whatever else you run).</li>
+<li>It covers roughly 80% of common customer scenarios out of the box. You do not have to write modules from scratch.</li>
+<li>It is open source, every module is published, and you can fork or compose as you see fit.</li>
+<li>It is now built entirely on Azure Verified Modules (AVM), so what you deploy is aligned with the Well-Architected Framework by default.</li>
+</ul>
+<p>In short, if you have been hand-crafting management group hierarchies and policy assignments in the portal, stop. There is a better way, and the team that designs ALZ ships it as code you can actually read.</p>
+<h2>What is the ALZ IaC Accelerator</h2>
+<p>A quick recap, because it is worth getting the vocabulary right.</p>
+<p>The <strong>Azure Landing Zone</strong> lives inside the CAF Ready methodology. It is the shared platform (networking, identity, logging, policy, management groups) that supports the many application landing zones your workload teams consume. Jack uses a great analogy in the session: think of a metropolis. Before residents and businesses can move in, you need water, gas, electricity, and roads. The platform landing zone is the utilities layer. The application landing zones are the buildings.</p>
+<p>The <strong>ALZ IaC Accelerator</strong> is the tooling that deploys and manages that platform layer using declarative infrastructure as code. It is composed of:</p>
+<ul>
+<li>A set of IaC modules in Bicep and Terraform (all of them built on AVM).</li>
+<li>A bootstrap layer for GitHub or Azure DevOps (or local file system).</li>
+<li>The ALZ PowerShell module, published to the PowerShell Gallery, which orchestrates everything.</li>
+<li>Comprehensive docs covering prereqs, scenarios, and options.</li>
+</ul>
+<p>The accelerator is a Microsoft-supported, open source path to a production-grade landing zone. You should look at it before you decide to roll your own.</p>
+<h2>How it works</h2>
+<p>The accelerator runs in four phases. Jarrod walks through each of them in the demo.</p>
+<p><strong>Phase 0: Plan.</strong> You make decisions: Bicep or Terraform, GitHub or Azure DevOps, single or multi-region, Hub-and-Spoke or Virtual WAN, Azure Firewall or NVA, DDoS on or off, and so on.</p>
+<p><strong>Phase 1: Prereqs.</strong> Before the accelerator runs, you need two things in place: an identity to run the bootstrap, and the platform subscriptions. Traditionally this was four (connectivity, identity, management, security). There is now a new lighter option that needs only two subscriptions for smaller environments.</p>
+<p><strong>Phase 2: Bootstrap.</strong> This is where the magic happens. You feed it a bootstrap configuration file plus a platform landing zone configuration file, then run the Deploy-Accelerator command. The PowerShell module deploys identities, optional Terraform state storage with private networking, optional self-hosted container-instance runners, and then sets up your repositories, pipelines, environments, governed pipeline templates, and OIDC-based service connections using Workload Identity Federation. No manual steps after Phase 2.</p>
+<p><strong>Phase 3: Deploy.</strong> Run the CD pipeline. The platform landing zone deploys. Done.</p>
+<p>A few things worth highlighting about the bootstrap:</p>
+<ul>
+<li>The accelerator deploys <strong>two identities</strong>: one with read-only for plan / what-if, one with write for apply / deploy. Least privilege, out of the box.</li>
+<li>Pipelines are <strong>governed</strong>. The actual deployment pipeline lives in a separate template repository, so changes to it require an approval.</li>
+<li>A CI pipeline runs on pull requests automatically. You get the engineering hygiene without configuring it.</li>
+</ul>
+<h2>Real-world scenarios and when to use it</h2>
+<p>Jarrod calls these “scenarios” and “options”. They are the difference between picking a starting pattern (scenario) and tuning it (options).</p>
+<p><strong>Scenarios.</strong> There are 11 of them out of the box. Pick the one that matches your starting state:</p>
+<ul>
+<li>Single region, Hub-and-Spoke, Azure Firewall.</li>
+<li>Multi-region, Hub-and-Spoke, Azure Firewall.</li>
+<li>Single or multi-region with Virtual WAN.</li>
+<li>Single or multi-region with a third-party NVA.</li>
+<li>No-connectivity (governance only, no Hub networking) for organizations who are not ready for centralized networking yet.</li>
+<li>New scenarios 10 and 11, which are cost-optimized for small and medium businesses with around 10 workloads. Same modules, same orchestration, just a smaller, cheaper starting shape.</li>
+<li>Sovereign landing zone for customers with data sovereignty and confidential compute requirements.</li>
+</ul>
+<p><strong>Options.</strong> Once you pick a scenario, you can tune it. The 16 documented options are the ones the team sees customers ask about most often: customizing resource names, customizing management group names, turning the DDoS protection plan on or off, choosing the sovereign baseline, and more. Behind those, Terraform alone exposes hundreds of variables.</p>
+<p>Honest tradeoffs (because Pierre always tells you the rough edges):</p>
+<ul>
+<li><strong>OpenTofu is not supported today.</strong> Just Bicep and Terraform.</li>
+<li><strong>Personal Access Tokens</strong> are still required for Azure DevOps and self-hosted agents at the time of the session. The team has confirmed CLI / managed identity support is on the roadmap.</li>
+<li><strong>Brownfield is “it depends”.</strong> The accelerator is greenfield-friendly. Retrofitting an existing tenant is possible but is going to depend on your current state and your risk appetite.</li>
+<li><strong>You still own decisions.</strong> The Lady Justice slide in the session is a great reminder: balancing dev team freedom with central governance is your job. The accelerator gives you the controls; it does not pick your policy posture for you.</li>
+</ul>
+<h2>Getting Started</h2>
+<p>If you want to try this without waiting, here is the path Jarrod actually demoed:</p>
+<ul>
+<li>Install the ALZ PowerShell module from the PowerShell Gallery.</li>
+<li>Create your platform subscriptions (two minimum, four for the classic layout) and an identity for the bootstrap.</li>
+<li>Run Deploy-Accelerator with no parameters. It will prompt you interactively for everything: region, parent management group, subscriptions, naming convention, self-hosted agents yes or no, private networking yes or no, PAT, project name, and approvers.</li>
+<li>Review the two generated configuration files: the bootstrap config and the platform landing zone tfvars (or Bicep params).</li>
+<li>Confirm. The bootstrap runs Terraform behind the scenes and wires up Azure plus your repos.</li>
+<li>Run the CD pipeline. Approve at the apply stage. Your platform deploys.</li>
+</ul>
+<p>If you are not ready to drive Terraform directly, the <strong>Azure Migrate AI agent</strong> (in preview) wraps the exact same accelerator codebase behind a guided chat experience. You answer questions, it produces a zip with the same two config files plus a design document explaining the decisions it made. Then you hand that off to the same pipeline. The <strong>Azure MCP server</strong> has matching tooling for VS Code, so day-two changes like “turn off the DDoS protection plan” know to also uncomment the dependent policy assignments in the archetype files. That is the kind of context-aware editing that saves you from breaking your own deployment.</p>
+<h2>Resources</h2>
+<ul>
+<li><a href="https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/" target="_blank">Azure Landing Zone in the Cloud Adoption Framework</a></li>
+<li><a href="https://aka.ms/alz" target="_blank">ALZ Accelerator hub (entry point for docs, scenarios, options)</a></li>
+<li><a href="https://github.com/Azure/alz-terraform-accelerator" target="_blank">ALZ Terraform Accelerator on GitHub</a></li>
+<li><a href="https://github.com/Azure/ALZ-Bicep" target="_blank">ALZ-Bicep on GitHub</a></li>
+<li><a href="https://github.com/Azure/Azure-Landing-Zones-Library" target="_blank">Azure Landing Zones Library (policies and archetypes)</a></li>
+<li><a href="https://aka.ms/avm" target="_blank">Azure Verified Modules</a></li>
+<li><a href="https://aka.ms/alz/issues" target="_blank">Raise issues or feedback for the ALZ team</a></li>
+</ul>
+<h2>Watch the rest of the Summit</h2>
+<p>If you found this useful, the full Microsoft Azure Infra Summit 2026 playlist has a lot more: deployment stacks, Bicep beyond the basics, IaC CI/CD best practices, AVM with GitHub Copilot, and plenty of AKS and storage sessions. Grab the playlist here: <a href="https://www.youtube.com/playlist?list=PLjt5SKzX1iI8con7FJDB56G6hHqxGm7ki" target="_blank">Microsoft Azure Infra Summit 2026 on YouTube</a>.</p>
+<p>Hit the ALZ team in the comments on the session, or open an issue on the repo. The team is genuinely active there.</p>
+<p>Cheers!</p>
+<p>Pierre Roman</p><br/><br/><b>Source:</b> Microsoft Tech Community IT Ops &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 11h ago]]></description>
 </item>
 
 <item>
@@ -26,7 +119,7 @@
   <link>https://www.bleepingcomputer.com/news/microsoft/windows-11-kb5095093-update-rolls-out-new-point-in-time-restore-feature/</link>
   <pubDate>Tue, 23 Jun 2026 20:22:21 +0000</pubDate>
   <source>BleepingComputer</source>
-  <description><![CDATA[<b>Why this matters: Operational impact possible — watch for changes that generate tickets.</b><br/>​​Microsoft has released the KB5095093 preview cumulative update for Windows 11 24H2 and 25H2, which fixes numerous bugs and begins rolling out new features, including the new Point-in-Time restore feature. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 19h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Operational impact possible — watch for changes that generate tickets.</b><br/>​​Microsoft has released the KB5095093 preview cumulative update for Windows 11 24H2 and 25H2, which fixes numerous bugs and begins rolling out new features, including the new Point-in-Time restore feature. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 22h ago]]></description>
 </item>
 
 <item>
@@ -209,7 +302,7 @@
   <link>https://adamtheautomator.com/automate-soc-guide-sentinel-playbook-generation/</link>
   <pubDate>Mon, 22 Jun 2026 18:00:00 +0000</pubDate>
   <source>Adam the Automator</source>
-  <description><![CDATA[<b>Why this matters: Operational impact possible — watch for changes that generate tickets.</b><br/>Generate Microsoft Sentinel Python playbooks with AI, Integration Profiles, real-alert testing, and safe SOC automation rollout steps.<br/><br/><b>Source:</b> Adam the Automator &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
+  <description><![CDATA[<b>Why this matters: Operational impact possible — watch for changes that generate tickets.</b><br/>Generate Microsoft Sentinel Python playbooks with AI, Integration Profiles, real-alert testing, and safe SOC automation rollout steps.<br/><br/><b>Source:</b> Adam the Automator &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
 </item>
 
 </channel>
