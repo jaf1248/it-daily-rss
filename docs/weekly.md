@@ -1,25 +1,30 @@
 # IT Weekly Intelligence Briefing
 **Period:** June 17 – June 24, 2026  
-**Generated:** 2026-06-24 10:21 UTC  
+**Generated:** 2026-06-24 13:21 UTC  
 **Items reviewed:** 130  
 
 ## ⚡ Top Actions This Week
 
-1. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
+1. **Validate backups, confirm EDR coverage, and brief incident response team.**  
+   _Stealthy Mistic backdoor linked to ransomware access broker KongTuke_  
+   Source: BleepingComputer  
+
+2. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
    _Healthtech firm Xolis suffers data breach impacting 1.4 million people_  
    Source: BleepingComputer  
 
-2. **Audit third-party software dependencies and review vendor access.**  
+3. **Audit third-party software dependencies and review vendor access.**  
    _LastPass confirms data breach in Klue supply chain attack_  
    Source: BleepingComputer  
-
-3. **Audit third-party software dependencies and review vendor access.**  
-   _ShapedPlugin WordPress Pro Plugins Backdoored in Supply Chain Attack_  
-   Source: The Hacker News  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [Stealthy Mistic backdoor linked to ransomware access broker KongTuke](https://www.bleepingcomputer.com/news/security/stealthy-mistic-backdoor-linked-to-ransomware-access-broker-kongtuke/)
+**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jun 24  
+**Why it matters:** Elevated ransomware risk across the sector.  
+**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
 
 ### [Healthtech firm Xolis suffers data breach impacting 1.4 million people](https://www.bleepingcomputer.com/news/security/healthtech-firm-xolis-suffers-data-breach-impacting-14-million-people/)
 **Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jun 23  
@@ -46,14 +51,12 @@
 **Why it matters:** Elevated ransomware risk across the sector.  
 **Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
 
-### [The Gentlemen RaaS Uses GentleKiller EDR Framework Targeting 400 Security Processes](https://thehackernews.com/2026/06/the-gentlemen-raas-uses-gentlekiller.html)
-**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Jun 19  
-**Why it matters:** Elevated ransomware risk across the sector.  
-**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
-
 ---
 
 ## 🟠 Important — Review This Week
+
+- [Dawn of the Apex Agentic Adversary](https://thehackernews.com/2026/06/dawn-of-apex-agentic-adversary.html)  
+  **The Hacker News** · Jun 24 · _General awareness item._  
 
 - [CVE-2026-46285 mtd: docg3: fix use-after-free in docg3_release()](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-46285)  
   **Microsoft Security Response Center (MSRC)** · Jun 24 · _General awareness item._  
@@ -75,9 +78,6 @@
 
 - [CVE-2026-33840 Win32k Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-33840)  
   **Microsoft Security Response Center (MSRC)** · Jun 23 · _General awareness item._  
-
-- [OpenAI Expands Daybreak With GPT-5.5-Cyber to Help Defenders Patch Security Flaws](https://thehackernews.com/2026/06/openai-expands-daybreak-with-gpt-55.html)  
-  **The Hacker News** · Jun 23 · _General awareness item._  
 
 ---
 
