@@ -3,14 +3,14 @@
 <channel>
   <title>Joe SysAdmin and Operations</title>
   <description>Operational IT changes, Microsoft updates, outages, and infrastructure issues.</description>
-  <lastBuildDate>Wed, 24 Jun 2026 02:56:05 +0000</lastBuildDate>
+  <lastBuildDate>Wed, 24 Jun 2026 06:48:15 +0000</lastBuildDate>
   
 <item>
   <title>🔵 Windows 11 KB5095093 update rolls out new Point-in-Time restore feature</title>
   <link>https://www.bleepingcomputer.com/news/microsoft/windows-11-kb5095093-update-rolls-out-new-point-in-time-restore-feature/</link>
   <pubDate>Tue, 23 Jun 2026 20:22:21 +0000</pubDate>
   <source>BleepingComputer</source>
-  <description><![CDATA[<b>Why this matters: Operational impact possible — watch for changes that generate tickets.</b><br/>​​Microsoft has released the KB5095093 preview cumulative update for Windows 11 24H2 and 25H2, which fixes numerous bugs and begins rolling out new features, including the new Point-in-Time restore feature. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Operational impact possible — watch for changes that generate tickets.</b><br/>​​Microsoft has released the KB5095093 preview cumulative update for Windows 11 24H2 and 25H2, which fixes numerous bugs and begins rolling out new features, including the new Point-in-Time restore feature. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 10h ago]]></description>
 </item>
 
 <item>
@@ -18,7 +18,7 @@
   <link>https://adamtheautomator.com/unify-soc-integrating-defender-xdr-sentinel/</link>
   <pubDate>Tue, 23 Jun 2026 14:00:00 +0000</pubDate>
   <source>Adam the Automator</source>
-  <description><![CDATA[<b>Why this matters: Service impact possible — prepare comms and confirm vendor status.</b><br/>Integrate Defender XDR with Microsoft Sentinel for unified incidents, endpoint event streaming, cross-product detections, and SOAR.<br/><br/><b>Source:</b> Adam the Automator &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 12h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Service impact possible — prepare comms and confirm vendor status.</b><br/>Integrate Defender XDR with Microsoft Sentinel for unified incidents, endpoint event streaming, cross-product detections, and SOAR.<br/><br/><b>Source:</b> Adam the Automator &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 16h ago]]></description>
 </item>
 
 <item>
@@ -26,7 +26,85 @@
   <link>https://arstechnica.com/culture/2026/06/taika-waititi-brings-more-dramatic-tone-to-klara-and-the-sun-trailer/</link>
   <pubDate>Tue, 23 Jun 2026 13:55:14 +0000</pubDate>
   <source>Ars Technica</source>
-  <description><![CDATA[<b>Why this matters: Operational impact possible — watch for changes that generate tickets.</b><br/>Tonally, the trailer gives strong vibes akin to the director's 2016 feature <em>Hunt for the Wilderpeople</em>.<br/><br/><b>Source:</b> Ars Technica &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Operational impact possible — watch for changes that generate tickets.</b><br/>Tonally, the trailer gives strong vibes akin to the director's 2016 feature <em>Hunt for the Wilderpeople</em>.<br/><br/><b>Source:</b> Ars Technica &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 16h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 From Prompt to Provisioned: A Closer Look at the Azure Deployment Agent</title>
+  <link>https://techcommunity.microsoft.com/t5/itops-talk-blog/from-prompt-to-provisioned-a-closer-look-at-the-azure-deployment/ba-p/4529935</link>
+  <pubDate>Tue, 23 Jun 2026 07:00:00 +0000</pubDate>
+  <source>Microsoft Tech Community IT Ops</source>
+  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/><p>Hello Folks!</p>
+<p>If you sat through this session during the Microsoft Azure Infra Summit 2026, you already know that Anand Guruswami and Arun Rabindar from the Cloud Native Experiences team showed us something I have been waiting to see for a while. An AI agent that does not just spit out a Terraform file from a vague prompt, but actually thinks about your workload, talks to you about it, and then hands you something you can put in front of a pull request reviewer without holding your nose.</p>
+<p>This is the Azure Deployment Agent, and at the time of broadcast it was still in preview inside Azure Copilot, with the same brains shipping as an open source skill you can plug into GitHub Copilot, Claude Code, Cursor, or whatever your team uses. In this post I want to break down what they showed, why it matters for IT pros, and how you can get hands on with it.</p>
+<p>📺 <strong>Watch the session:</strong>&nbsp;</p>
+<p>&nbsp;</p>
+<div class="lia-embeded-content" contenteditable="false">
+</div>
+<h2>Why IT Pros Should Care</h2>
+<p>Let us be honest about the day to day. Most of the time we are not building a brand new workload from a blank canvas. We are stitching resources together one at a time, copying patterns from a previous project, hunting down the right SKU, checking quotas, then arguing with policy on the way out the door. Different admins do it different ways, and that inconsistency is where risk lives.</p>
+<p>Here is what the Deployment Agent changes for us:</p>
+<ul>
+<li>It moves the conversation up a level, from “which resource do I click” to “what am I actually trying to build.”</li>
+<li>It grounds the architecture in the Azure Well-Architected Framework, so the output is not a generic LLM guess, it has reasoning behind it.</li>
+<li>It separates the plan from the code, so you and your team get to review architecture before any Terraform or Bicep gets written.</li>
+<li>It plugs into the tools we already use. Azure portal for the guided path, GitHub Copilot and Claude Code for the power user path.</li>
+</ul>
+<p>In short, it's about taking the boring repetitive parts off our plate so we can focus on the parts that need human judgment.</p>
+<h2>What is the Azure Deployment Agent</h2>
+<p>The Deployment Agent is a capability inside the Agents (preview) experience in Azure Copilot. Think of it as a virtual cloud solution architect that lives in your Copilot chat. You describe the workload in natural language, and it walks you through a multi step process to land on a production ready deployment.</p>
+<p>A few things that stood out from Anand’s portion of the session:</p>
+<ul>
+<li>It supports multi turn conversation. You can clarify scale, security posture, resilience, SKU preferences, region constraints, and the agent will fold those into the plan.</li>
+<li>It produces a human readable infrastructure plan first, complete with trade offs and the reasoning for each resource choice, before it ever writes infrastructure as code.</li>
+<li>Today it generates Terraform inside the portal, with Bicep support landing in the portal experience shortly. In the GitHub Copilot flow you can already pick Bicep or Terraform.</li>
+<li>Once the plan is approved, you get a real artifact. You can open it in VS Code for the Web, or have Copilot open a pull request straight into your GitHub repo.</li>
+</ul>
+<p>The deployment itself still goes through Azure Resource Manager. That is important. Your tenant policies, RBAC, naming conventions, and existing guardrails all still apply. The agent is not bypassing your governance, it is generating code that flows through it.</p>
+<h2>How it Works</h2>
+<p>Arun did a great job pulling back the curtain on the internals. The agent follows a two step pattern that gives you control at every checkpoint.</p>
+<ul>
+<li><strong>Intent capture.</strong> The agent takes your prompt and clarifies the scope, the constraints, and what success looks like. No guessing, no jumping straight to YAML.</li>
+<li><strong>Plan generation.</strong> It produces a structured infrastructure plan with inputs, sub goals, a full resource list, configurations, SKUs, and a per resource reasoning section.</li>
+<li><strong>Validation in a loop.</strong> The plan runs through evaluators backed by the Well-Architected Framework pillars (reliability, security, cost, operational excellence, performance efficiency). If something fails, the agent regenerates and tries again until the plan is solid.</li>
+<li><strong>Human review.</strong> The plan is presented to you in plain language. You can iterate. You can say “prioritize West US 2,” or “swap that SKU,” and the agent will update the plan in place.</li>
+<li><strong>Code generation.</strong> Only after you approve the plan does the agent emit Terraform or Bicep. The generated code goes through syntactic validation as well, again in a loop, so it actually parses and is ready to apply.</li>
+</ul>
+<p>Under the hood in the GitHub Copilot and Claude Code path, the team has decomposed all of this into an open source skill (the Azure Enterprise Infrastructure Planner) plus the Azure Well-Architected Framework as an MCP tool. The base agent in your editor picks up the skill, runs the phases, calls the MCP tool to ground the output, and then writes the IaC. Same workflow, different host.</p>
+<h2>When to Use it / Real-World Scenarios</h2>
+<p>This is not just a toy for greenfield demos. A few places where I see this paying real dividends:</p>
+<ul>
+<li><strong>New workload bootstrapping.</strong> A team needs a web app, SQL backend, secrets in Key Vault, monitoring, and a sane region strategy. Instead of three days of clicking and copy pasting, you describe it and review the plan.</li>
+<li><strong>CSV ingestion to SQL automation.</strong> The Claude Code demo Arun ran was exactly this. CSV lands, gets processed, rows update in SQL. The agent picked sensible resources, justified each one, and produced Bicep ready to commit.</li>
+<li><strong>Standardizing across teams.</strong> Different admins ending up with different shapes for the same workload is the silent killer of operational consistency. A shared agent with a shared planner skill drags everyone toward the same Well-Architected baseline.</li>
+<li><strong>Skill leverage for smaller teams.</strong> Not every team has a deep Azure architect on staff. The agent encodes a lot of that experience and surfaces it as conversation.</li>
+<li><strong>Open source customization.</strong> Because the skill and MCP tooling are open, platform teams in regulated environments can fork it, add their policy context, their tagging rules, their naming conventions, and ship a tuned version internally.</li>
+</ul>
+<p>One honest tradeoff. Right now the agent is greenfield first. The team is actively working on brownfield scenarios, pulling insights from existing workloads and referencing existing resources. If you live entirely in a complex existing estate, expect the experience to keep getting better over the next couple of releases.</p>
+<h2>Getting Started</h2>
+<p>If you want to try it this week, here is the short list:</p>
+<ul>
+<li>Ask your Azure tenant administrator to enable Agents (preview) in Azure Copilot. The toggle lives in the Azure Copilot admin center, and without it you will not see agent mode in chat.</li>
+<li>In the Azure portal, open Copilot, expand to full screen, and switch on Agent mode at the bottom of the chat panel.</li>
+<li>Describe a workload in plain language. Be specific about region, scale expectations, and any compliance constraints you care about.</li>
+<li>Review the generated plan before approving. Look at the trade offs section, that is where the agent shows its work.</li>
+<li>For the editor path, install the open source Azure Skills plugin from the microsoft/azure-skills repo, point your IDE at the Azure MCP Server, and run the same workflow inside GitHub Copilot or Claude Code.</li>
+<li>Send feedback. The team is shipping fast and the roadmap (brownfield support, reference workloads, scoped agent permissions, richer architecture diagrams) is shaped by what you tell them.</li>
+</ul>
+<h2>Resources</h2>
+<ul>
+<li>Deployment agent capabilities in Agents (preview) in Azure Copilot: <a class="lia-external-url" href="https://learn.microsoft.com/en-us/azure/copilot/deployment-agent" target="_blank">https://learn.microsoft.com/en-us/azure/copilot/deployment-agent</a>&nbsp;</li>
+<li>microsoft/azure-skills, the open source skill plugin shown in the session: <a class="lia-external-url" href="https://github.com/microsoft/azure-skills" target="_blank">https://github.com/microsoft/azure-skills</a>&nbsp;</li>
+<li>Azure MCP Server on the GitHub MCP Registry: <a class="lia-external-url" href="https://github.com/mcp/com.microsoft/azure" target="_blank">https://github.com/mcp/com.microsoft/azure</a>&nbsp;</li>
+<li>Azure MCP Server tools for the Well-Architected Framework: <a class="lia-external-url" href="https://learn.microsoft.com/en-us/azure/developer/azure-mcp-server/tools/azure-well-architected-framework" target="_blank">https://learn.microsoft.com/en-us/azure/developer/azure-mcp-server/tools/azure-well-architected-framework</a>&nbsp;</li>
+<li>Azure Well-Architected Framework documentation: <a class="lia-external-url" href="https://learn.microsoft.com/en-us/azure/well-architected/" target="_blank">https://learn.microsoft.com/en-us/azure/well-architected/</a>&nbsp;</li>
+<li>Agents (preview) in Azure Copilot overview: <a class="lia-external-url" href="https://learn.microsoft.com/en-us/azure/copilot/agents-preview" target="_blank">https://learn.microsoft.com/en-us/azure/copilot/agents-preview</a>&nbsp;</li>
+</ul>
+<h2>Watch the rest of the Summit</h2>
+<p>If you enjoyed this session, the full Microsoft Azure Infra Summit 2026 playlist is up on YouTube. Sessions on Deployment Stacks, the SRE Agent, Azure Local, AKS networking, and a lot more are all in there. Bookmark this one and share it with your team: <a class="lia-external-url" href="https://aka.ms/MAIS/2026-Playlist" target="_blank">https://aka.ms/MAIS/2026-Playlist</a>&nbsp;</p>
+<p>Drop your questions, your war stories, and your wish list for the Deployment Agent in the comments. I read them, the product team reads them, and your scenarios are exactly what shapes the next preview drop. What would you build with it first?</p>
+<p>Cheers!</p>
+<p>Pierre Roman</p><br/><br/><b>Source:</b> Microsoft Tech Community IT Ops &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 23h ago]]></description>
 </item>
 
 <item>
