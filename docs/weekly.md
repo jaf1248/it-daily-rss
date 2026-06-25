@@ -1,25 +1,30 @@
 # IT Weekly Intelligence Briefing
 **Period:** June 18 – June 25, 2026  
-**Generated:** 2026-06-25 21:41 UTC  
+**Generated:** 2026-06-25 23:16 UTC  
 **Items reviewed:** 124  
 
 ## ⚡ Top Actions This Week
 
-1. **Validate backups, confirm EDR coverage, and brief incident response team.**  
+1. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
+   _Poland busts SIM-swapping gang tied to millions in crypto theft_  
+   Source: BleepingComputer  
+
+2. **Validate backups, confirm EDR coverage, and brief incident response team.**  
    _Malicious Edge extension abuses Native Messaging as bridge to malware_  
    Source: BleepingComputer  
 
-2. **Apply emergency patch or mitigation now; check vendor advisory for workarounds.**  
+3. **Apply emergency patch or mitigation now; check vendor advisory for workarounds.**  
    _CISA Warns Critical Lantronix EDS5000 Flaw Is Being Actively Exploited_  
-   Source: The Hacker News  
-
-3. **Validate backups, confirm EDR coverage, and brief incident response team.**  
-   _Amadey and StealC Malware Network Disrupted, 27M Stolen Credentials Recovered_  
    Source: The Hacker News  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [Poland busts SIM-swapping gang tied to millions in crypto theft](https://www.bleepingcomputer.com/news/security/poland-busts-sim-swapping-gang-tied-to-millions-in-crypto-theft/)
+**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jun 25  
+**Why it matters:** Potential credential or data exposure.  
+**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
 ### [Malicious Edge extension abuses Native Messaging as bridge to malware](https://www.bleepingcomputer.com/news/security/malicious-edge-extension-abuses-native-messaging-as-bridge-to-malware/)
 **Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jun 24  
@@ -37,11 +42,6 @@
 **Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
 
 ### [Amadey, StealC malware operations disrupted in Operation Endgame action](https://www.bleepingcomputer.com/news/security/amadey-stealc-malware-operations-disrupted-in-operation-endgame-action/)
-**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jun 24  
-**Why it matters:** Elevated ransomware risk across the sector.  
-**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
-
-### [Stealthy Mistic backdoor linked to ransomware access broker KongTuke](https://www.bleepingcomputer.com/news/security/stealthy-mistic-backdoor-linked-to-ransomware-access-broker-kongtuke/)
 **Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jun 24  
 **Why it matters:** Elevated ransomware risk across the sector.  
 **Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
@@ -83,12 +83,12 @@
 
 ## 🔵 FYI — General Awareness
 
+- [Anthropic is testing desktop-like Claude Cowork for mobile](https://www.bleepingcomputer.com/news/artificial-intelligence/anthropic-is-testing-desktop-like-claude-cowork-for-mobile/) — BleepingComputer
 - [Order-tracking app Shop abused to push callback phishing attacks](https://www.bleepingcomputer.com/news/security/order-tracking-app-shop-abused-to-push-callback-phishing-attacks/) — BleepingComputer
 - [New macOS malware embeds fake errors to confuse AI analysis tools](https://www.bleepingcomputer.com/news/security/new-macos-malware-embeds-fake-errors-to-confuse-ai-analysis-tools/) — BleepingComputer
 - [PirloTV sports piracy network disrupted as 44 domains seized](https://www.bleepingcomputer.com/news/security/pirlotv-sports-piracy-network-disrupted-as-44-domains-seized/) — BleepingComputer
 - [Bluekit phishing kit adopts browser-in-the-middle for login theft](https://www.bleepingcomputer.com/news/security/bluekit-phishing-kit-adopts-browser-in-the-middle-for-login-theft/) — BleepingComputer
 - [Chrome Ad Blocker with 10M+ Installs Found with Dormant Script Injection Capability](https://thehackernews.com/2026/06/chrome-ad-blocker-with-10m-installs.html) — The Hacker News
-- [The Four Elevations of Effective Fraud Prevention](https://www.bleepingcomputer.com/news/security/the-four-elevations-of-effective-fraud-prevention/) — BleepingComputer
 
 ---
 
