@@ -1,25 +1,30 @@
 # IT Weekly Intelligence Briefing
 **Period:** June 19 – June 26, 2026  
-**Generated:** 2026-06-26 18:50 UTC  
-**Items reviewed:** 93  
+**Generated:** 2026-06-26 20:45 UTC  
+**Items reviewed:** 109  
 
 ## ⚡ Top Actions This Week
 
-1. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
+1. **Apply emergency patch or mitigation now; check vendor advisory for workarounds.**  
+   _CISA sets urgent deadline to fix Cisco flaw exploited in attacks_  
+   Source: BleepingComputer  
+
+2. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
    _Polymarket customers lose $3 million in supply-chain attack_  
    Source: BleepingComputer  
 
-2. **Audit third-party software dependencies and review vendor access.**  
+3. **Audit third-party software dependencies and review vendor access.**  
    _Miasma Malware Targets npm Packages and GitHub Actions in Supply Chain Attack_  
    Source: The Hacker News  
-
-3. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _Poland busts SIM-swapping gang tied to millions in crypto theft_  
-   Source: BleepingComputer  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [CISA sets urgent deadline to fix Cisco flaw exploited in attacks](https://www.bleepingcomputer.com/news/security/cisa-sets-urgent-deadline-to-fix-cisco-flaw-exploited-in-attacks/)
+**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jun 26  
+**Why it matters:** General awareness item.  
+**Recommended action:** Apply emergency patch or mitigation now; check vendor advisory for workarounds.  
 
 ### [Polymarket customers lose $3 million in supply-chain attack](https://www.bleepingcomputer.com/news/security/polymarket-customers-lose-3-million-in-supply-chain-attack/)
 **Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jun 26  
@@ -46,50 +51,45 @@
 **Why it matters:** Elevated ransomware risk across the sector.  
 **Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
 
-### [ShapedPlugin WordPress Pro Plugins Backdoored in Supply Chain Attack](https://thehackernews.com/2026/06/shapedplugin-wordpress-pro-plugins.html)
-**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Jun 22  
-**Why it matters:** Third-party/software supply chain integrity risk.  
-**Recommended action:** Audit third-party software dependencies and review vendor access.  
-
 ---
 
 ## 🟠 Important — Review This Week
 
-- [New Linux pedit COW Exploit Enables Root Access by Poisoning Cached Binaries](https://thehackernews.com/2026/06/new-linux-pedit-cow-exploit-enables.html)  
-  **The Hacker News** · Jun 26 · _General awareness item._  
+- [Chromium: CVE-2026-13038 Use after free in Autofill](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-13038)  
+  **Microsoft Security Response Center (MSRC)** · Jun 27 · _General awareness item._  
 
-- [Amazon Q Developer Flaw Could Let Malicious Repos Run Code via MCP Configs](https://thehackernews.com/2026/06/amazon-q-developer-flaw-could-let.html)  
-  **The Hacker News** · Jun 26 · _General awareness item._  
+- [Chromium: CVE-2026-13036 Use after free in Blink](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-13036)  
+  **Microsoft Security Response Center (MSRC)** · Jun 27 · _General awareness item._  
 
-- [CISA Adds Exploited PTC Windchill RCE Flaw to KEV as Web Shell Attacks Continue](https://thehackernews.com/2026/06/cisa-adds-exploited-ptc-windchill-rce.html)  
-  **The Hacker News** · Jun 26 · _General awareness item._  
+- [Chromium: CVE-2026-13035 Use after free in Bluetooth](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-13035)  
+  **Microsoft Security Response Center (MSRC)** · Jun 27 · _General awareness item._  
 
-- [New DirtyClone Linux Kernel Flaw Lets Local Users Gain Root via Cloned Packets](https://thehackernews.com/2026/06/new-dirtyclone-linux-kernel-flaw-lets.html)  
-  **The Hacker News** · Jun 26 · _General awareness item._  
+- [Chromium: CVE-2026-13034 Inappropriate implementation in Passwords](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-13034)  
+  **Microsoft Security Response Center (MSRC)** · Jun 27 · _General awareness item._  
 
-- [CVE-2026-4367 Libxpm: libxpm: denial of service via out-of-bounds read in xpm file parsing](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-4367)  
-  **Microsoft Security Response Center (MSRC)** · Jun 26 · _General awareness item._  
+- [Chromium: CVE-2026-13033 Out of bounds read in Blink>InterestGroups](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-13033)  
+  **Microsoft Security Response Center (MSRC)** · Jun 27 · _General awareness item._  
 
-- [CVE-2026-46320 tap: free page on error paths in tap_get_user_xdp()](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-46320)  
-  **Microsoft Security Response Center (MSRC)** · Jun 26 · _General awareness item._  
+- [Chromium: CVE-2026-13031 Use after free in Blink](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-13031)  
+  **Microsoft Security Response Center (MSRC)** · Jun 27 · _General awareness item._  
 
-- [CVE-2026-46322 tun: free page on build_skb failure in tun_xdp_one()](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-46322)  
-  **Microsoft Security Response Center (MSRC)** · Jun 26 · _General awareness item._  
+- [Chromium: CVE-2026-13029 Use after free in Web Authentication](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-13029)  
+  **Microsoft Security Response Center (MSRC)** · Jun 27 · _General awareness item._  
 
-- [CVE-2026-46321 tun: free page on short-frame rejection in tun_xdp_one()](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-46321)  
-  **Microsoft Security Response Center (MSRC)** · Jun 26 · _General awareness item._  
+- [Chromium: CVE-2026-13027 Use after free in FileSystem](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-13027)  
+  **Microsoft Security Response Center (MSRC)** · Jun 27 · _General awareness item._  
 
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [FBI Warns Russian Intelligence Hackers Target Signal Backup Recovery Keys](https://thehackernews.com/2026/06/fbi-warns-russian-intelligence-hackers.html) — The Hacker News
+- [New SharkLoader Malware Deploys Cobalt Strike in StrikeShark Cyberattacks](https://thehackernews.com/2026/06/new-sharkloader-malware-deploys-cobalt.html) — The Hacker News
 - [Cybersecurity firms targeted by fraudulent OpenAI organization invites](https://www.bleepingcomputer.com/news/security/cybersecurity-firms-targeted-by-fraudulent-openai-organization-invites/) — BleepingComputer
 - [Chinese-Speaking APT Deploys New TinyRCT Backdoor in Southeast Asia Campaign](https://thehackernews.com/2026/06/chinese-speaking-apt-deploys-new.html) — The Hacker News
 - [Your First GRC Agent: A Red Teamer's Walkthrough](https://www.bleepingcomputer.com/news/security/your-first-grc-agent-a-red-teamers-walkthrough/) — BleepingComputer
 - [Guardian Agents: The Next Layer of Identity Governance](https://thehackernews.com/2026/06/guardian-agents-next-layer-of-identity.html) — The Hacker News
-- [Microsoft Warns of Photo ZIP Phishing Campaign Targeting Hotels with Node.js Implant](https://thehackernews.com/2026/06/microsoft-warns-of-photo-zip-phishing.html) — The Hacker News
-- [Russia Used Cellebrite on Jailed Activist's iPhone Months After Sales Cutoff](https://thehackernews.com/2026/06/russia-used-cellebrite-on-jailed.html) — The Hacker News
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 8 critical · 42 important · 43 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 9 critical · 55 important · 45 FYI_
