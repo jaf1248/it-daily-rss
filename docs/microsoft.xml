@@ -3,8 +3,71 @@
 <channel>
   <title>Joe — Microsoft / Identity / M365</title>
   <description>Microsoft 365, Entra, Exchange, Defender, Teams, and identity platform changes.</description>
-  <lastBuildDate>Sat, 27 Jun 2026 20:59:07 +0000</lastBuildDate>
+  <lastBuildDate>Sat, 27 Jun 2026 22:09:31 +0000</lastBuildDate>
   
+<item>
+  <title>🔵 The next frontier in endpoint security: Securing local AI agents with Microsoft Defender</title>
+  <link>https://techcommunity.microsoft.com/t5/microsoft-defender-xdr-blog/the-next-frontier-in-endpoint-security-securing-local-ai-agents/ba-p/4524651</link>
+  <pubDate>Fri, 26 Jun 2026 17:49:18 +0000</pubDate>
+  <source>Microsoft 365 Defender Blog</source>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><p>AI agents are now doing real work on the endpoint — reading files, running commands, browsing the web, and acting on behalf of the users they run under. That same power is also what makes them dangerous: agents act on whatever content they take in, and much of it comes from outside the user's control — a web page, a repository, a command's output. A single malicious instruction hidden in that content can turn an agent against the very environment it's trusted to work in. With access to source code, secrets, and the corporate resources, its identity can reach — from cloud infrastructure to SharePoint, email, and internal apps — a compromised agent becomes a path to everything that identity is trusted with.</p>
+<p>Yet most security teams can't see this activity at all. Local AI agents run as ordinary processes, with little of the visibility or context SOC teams need to understand — let alone investigate — what an agent actually did.</p>
+<p>That’s why today, we're extending Microsoft Defender to secure AI agents running locally on devices. Security teams now have the visibility, context, and control needed to manage this new frontier of endpoint risk without slowing down the developers driving innovation forward. This includes:</p>
+<ul>
+<li>Discover 20+ types of local AI agents running on managed Windows and macOS devices</li>
+<li>Block malicious AI agent activity on the device in real time</li>
+<li>Assess local agent exposure across identities and reachable resources</li>
+<li>Investigate local AI agent activity in Advanced Hunting</li>
+</ul>
+<p>In preview, Defender now discovers these agents across the endpoint — AI coding agents, AI assistants, local AI runtimes, agentic IDE extensions, and Model Context Protocol (MCP) servers — and adds runtime protection for popular coding agents, with coverage expanding over time. Just as important, it brings them into the same security platform teams already use for endpoints, identities, email, and cloud, so local agents are no longer running unseen alongside the tools security teams already protect, but part of one coordinated defense.</p>
+<p>&nbsp;</p>
+<div class="lia-video-container lia-media-is-center lia-media-size-large"></div>
+<h4><strong>Discover local AI agents on managed devices</strong></h4>
+<p>Security Operation Center (SOC) teams can now identify AI agents running locally as first-class assets, not just operating system (OS) processes. In the Defender portal, security teams can view a dedicated inventory of AI agents across their environment, spanning categories such as:</p>
+<ul>
+<li>Coding CLIs and terminal agents: GitHub Copilot CLI, Codex CLI, Claude Code CLI, Gemini CLI, Antigravity CLI, OpenCode</li>
+<li>Agentic IDEs and VS Code extensions: Cursor, Windsurf, Antigravity, Claude Code, Codex, Cline, Gemini, GitHub Copilot, Roo Code</li>
+<li>Desktop AI assistants: ChatGPT Desktop, Claude Desktop, Codex Desktop, Poe Desktop, Antigravity Desktop, GitHub Copilot App</li>
+<li>Local AI runtimes and autonomous platforms: OpenClaw, Nanobot, ZeroClaw, Ollama Desktop</li>
+</ul>
+<p>Each agent is surfaced as a security asset, with runtime context including user identity, device and process relationships, trust indicators, and integrity level. Security teams can also see configuration signals, such as “auto-approve” settings and connected services via MCP servers. Defender discovers more than 20 supported local AI agents across Windows and macOS, with coverage continuing to expand.</p>
+<img /><em>Figure 1: The AI Assets (preview) inventory and an agent detail record in the Microsoft Defender portal.</em>
+<h4><strong>Block malicious AI agent activity in real time</strong></h4>
+<p>Discovery is the starting point. Once SOC teams know which agents are present, they need confidence that malicious behavior will be stopped to reduce impact to their organization’s environment.</p>
+<p>For popular coding agents, Defender now provides runtime protection that helps block malicious behavior inline and in real time. This capability starts with Claude Code and GitHub Copilot CLI, with OpenClaw and OpenAI Codex coming soon. When Defender identifies that an agent activity is malicious, it can automatically block it. As with other threats, the user can be notified, and the activity is logged in the protection history.</p>
+<p>The SOC analyst receives a detailed alert with agent and session context for investigation, including details on the detected threat. At the same time, the user sees a notification on the device that the activity was blocked.</p>
+<img /><em>Figure 2: Runtime protection blocking malicious instructions in a post-tool response</em>
+<p>&nbsp;</p>
+<img /><em>Figure 3: The matching Windows Security notification, blocking the detected threat</em><img /><em>Figure 4: </em> <em>The corresponding security alert in the Defender portal, with the process tree and session context for investigation</em>
+<h4><strong>Assess local agent exposure</strong></h4>
+<p>Knowing an agent exists is only half the picture. The next step is mapping the potential blast radius: the resources the agent touches, the identities it can use, and the assets exposed to its next moves. That’s why every agent discovered is automatically mapped to the device it runs on, the identity associated with that device, the MCP servers it’s connected to, and the cloud resources the identity can reach. The exposure graph turns "this agent exists" into “this agent can do these things” by providing an understanding of the agent’s connectivity across your environment.</p>
+<p>As an example, in the map below, the SOC analyst can see that a ChatGPT Desktop agent is tied to a single AWS account, and from that identity its reach extends to S3 buckets, an AWS KMS key, EC2 instances, and an AWS Bedrock agent. The agent has no cloud permissions of its own, but it inherits the account's — so if it were compromised or misused, that reach becomes a path to encrypted data and key material. This view gives security teams a clear picture of the agent's blast radius, so they can decide how to contain it before it's abused.</p>
+<p>&nbsp;</p>
+<img /><em>Figure 5: Exposure map of a local AI agent, showing its identity and the resources that identity can reach.</em>
+<h4><strong>Investigate local AI agent activity in Advanced Hunting</strong></h4>
+<p>Beyond the inventory and exposure views, security teams often need to hunt across the environment — to ask which agents are behaving unusually, and what else they touch. Every AI agent discovery event, MCP server connection, and configuration signal is queryable in Advanced Hunting, alongside the endpoint, identity, email, and cloud security telemetry your team already uses every day.</p>
+<p>This capability unlocks two use cases that security teams have been asking for:</p>
+<ul>
+<li><strong>Correlate agent activity</strong> with process, file, network, identity, and cloud telemetry to see the full picture of what the agent did</li>
+</ul>
+<ul>
+<li><strong>Hunt for risky configurations – </strong>for example, agents running in auto-approve mode under an identity with privileged access to production, source code, or CI/CD systems</li>
+</ul>
+<p>Security teams can turn any of these queries into a custom detection rule — for instance, raising an alert whenever a newly discovered agent appears with a risky configuration on a device tied to a privileged identity.</p>
+<p>&nbsp;</p>
+<img /><em>Figure 6: A KQL query in Advanced Hunting tracing which critical resources a local AI agent can reach.</em>
+<h4><strong>Securing the next frontier of endpoint activity</strong></h4>
+<p>The risk that opened this post — an agent acting on a malicious instruction and reaching everything its identity can touch — is exactly what this protection is built to contain.</p>
+<p>By bringing local AI agents into the same platform teams already use for endpoints, identities, and cloud, Defender turns that blind spot into something security teams can see, investigate, and stop — without getting in the developer's way.</p>
+<p>Developers keep the AI tools accelerating their work. Defenders get the visibility and real-time protection to stay ahead of attackers as they turn to this new surface. That balance — speed for builders, control for defenders — is what securing the AI era actually requires.</p>
+<h4><strong>Learn more</strong></h4>
+<ul>
+<li><a href="https://aka.ms/Build2026/SecuringLocalAgents/Discovery" rel="noopener" target="_blank">Discover local AI agents with Microsoft Defender</a></li>
+<li><a href="https://aka.ms/Build2026/SecuringLocalAgents/RuntimeProtection" rel="noopener" target="_blank">Block malicious AI agent behavior with runtime protection</a></li>
+<li><a href="https://www.microsoft.com/en-us/microsoft-agent-365" rel="noopener" target="_blank">Manage and secure your agents with Microsoft Agent 365</a></li>
+</ul><br/><br/><b>Source:</b> Microsoft 365 Defender Blog &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
+</item>
+
 <item>
   <title>🔵 Photo ZIP campaign targeting hospitality industry delivers Node.js implant for persistent access</title>
   <link>https://www.microsoft.com/en-us/security/blog/2026/06/25/photo-zip-campaign-targeting-hospitality-industry-delivers-node-js-implant-persistent-access/</link>
