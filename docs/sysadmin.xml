@@ -3,14 +3,14 @@
 <channel>
   <title>Joe SysAdmin and Operations</title>
   <description>Operational IT changes, Microsoft updates, outages, and infrastructure issues.</description>
-  <lastBuildDate>Sat, 27 Jun 2026 10:04:24 +0000</lastBuildDate>
+  <lastBuildDate>Sat, 27 Jun 2026 12:07:22 +0000</lastBuildDate>
   
 <item>
   <title>🔵 NYT slams Microsoft for building copyright-infringing supercomputer for OpenAI</title>
   <link>https://arstechnica.com/tech-policy/2026/06/microsoft-built-supercomputer-to-help-openai-infringe-copyrights-nyt-alleged/</link>
   <pubDate>Fri, 26 Jun 2026 20:04:55 +0000</pubDate>
   <source>Ars Technica</source>
-  <description><![CDATA[<b>Why this matters: Operational impact possible — watch for changes that generate tickets.</b><br/>NYT shifts OpenAI/Microsoft copyright claims after SCOTUS ruling against Sony.<br/><br/><b>Source:</b> Ars Technica &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Operational impact possible — watch for changes that generate tickets.</b><br/>NYT shifts OpenAI/Microsoft copyright claims after SCOTUS ruling against Sony.<br/><br/><b>Source:</b> Ars Technica &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 16h ago]]></description>
 </item>
 
 <item>
@@ -18,7 +18,7 @@
   <link>https://arstechnica.com/gadgets/2026/06/netflix-now-requires-every-user-profile-to-be-tied-to-unique-email-address/</link>
   <pubDate>Fri, 26 Jun 2026 18:19:58 +0000</pubDate>
   <source>Ars Technica</source>
-  <description><![CDATA[<b>Why this matters: Operational impact possible — watch for changes that generate tickets.</b><br/>Update began June 15 and will no longer allow you to share your login info.<br/><br/><b>Source:</b> Ars Technica &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 15h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Operational impact possible — watch for changes that generate tickets.</b><br/>Update began June 15 and will no longer allow you to share your login info.<br/><br/><b>Source:</b> Ars Technica &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 17h ago]]></description>
 </item>
 
 <item>
@@ -26,103 +26,7 @@
   <link>https://arstechnica.com/science/2026/06/feedbacks-upon-feedbacks-rock-weathering-and-the-climate/</link>
   <pubDate>Fri, 26 Jun 2026 14:41:18 +0000</pubDate>
   <source>Ars Technica</source>
-  <description><![CDATA[<b>Why this matters: Operational impact possible — watch for changes that generate tickets.</b><br/>Rock weathering may release or draw down carbon dioxide—it depends on the rock.<br/><br/><b>Source:</b> Ars Technica &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 19h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Best practices for Infrastructure as Code CI/CD on Azure</title>
-  <link>https://techcommunity.microsoft.com/t5/itops-talk-blog/best-practices-for-infrastructure-as-code-ci-cd-on-azure/ba-p/4529941</link>
-  <pubDate>Fri, 26 Jun 2026 07:00:00 +0000</pubDate>
-  <source>Microsoft Tech Community IT Ops</source>
-  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/><p>Hello Folks!</p>
-<p>If your IaC repo has a dev folder, a test folder, and a prod folder that all started out identical and have since drifted in three different directions, this session is for you. At the Microsoft Azure Infrastructure Summit 2026, Jack Tracey and Jared Holgate (the team behind Azure Landing Zones and Azure Verified Modules) laid out, in plain language, how to ship Infrastructure as Code on Azure without leaking secrets, blowing up production, or duplicating thousands of lines of module code across folders. Here are the bits that matter most for IT Pros and platform engineers.</p>
-<p>📺 <strong>Watch the session:</strong>&nbsp;</p>
-<p>&nbsp;</p>
-<div class="lia-embeded-content" contenteditable="false">
-</div>
-<h2>Why IT Pros Should Care</h2>
-<p>You are the one paged at 2am when a pipeline rolls out a broken NSG rule. You are the one carrying the cert that the deploy service principal still uses. You are the one explaining to audit why the prod plan and the prod apply ran with the same Owner-scoped identity.</p>
-<p>So this session is squarely in your lane. It covers:</p>
-<ul>
-<li>Why hand-rolled modules are slowly becoming an anti-pattern on Azure.</li>
-<li>A repo layout that scales to dozens of environments without copy-paste.</li>
-<li>How to get rid of static client secrets and federated cert auth, for good.</li>
-<li>Where approvals actually need to live in GitHub vs.&nbsp;Azure DevOps so they cannot be bypassed.</li>
-<li>The three-layer Terraform state model that Microsoft uses inside Azure Landing Zones.</li>
-</ul>
-<p>In short, this is the practitioner version of “do IaC properly,” from the people who write the platform code Microsoft ships.</p>
-<h2>The IaC CI/CD problem</h2>
-<p>Jack opened with a slide that gets a knowing laugh from anyone who has been doing this for more than a year. You start with one repo, one Bicep file, one happy team. Eighteen months later, you have a landingzone-prod-v2-final-USE-THIS-ONE folder, a service principal whose secret expired two days ago, and a pipeline nobody dares touch.</p>
-<p>The drivers of that pain are consistent:</p>
-<ul>
-<li>Modules written from scratch, never tested the same way twice.</li>
-<li>Per-environment folders that diverge silently over time.</li>
-<li>Long-lived secrets and certificates sitting in pipeline variables.</li>
-<li>One identity doing both plan and apply, with Owner on the management group.</li>
-<li>No approvals, or approvals in the wrong place.</li>
-<li>No tests until the deploy fails in prod.</li>
-</ul>
-<p>The good news is none of these problems are new, and the patterns to fix them are well understood. The session walks through them in the order you would actually adopt them.</p>
-<h2>Patterns that work in production</h2>
-<h3>1. Don’t write modules. Consume Azure Verified Modules.</h3>
-<p>This is best practice number one, and Jack and Jared spent a full chapter on it for a reason. Azure Verified Modules (AVM) is the official Microsoft initiative that consolidates IaC modules for Azure into a single, supported, Well-Architected-aligned library, available in both Bicep and Terraform. The Bicep versions live in the Public Bicep Registry under the avm/ namespace. The Terraform versions live on the HashiCorp Terraform Registry under Azure/avm-*.</p>
-<p>What you get for free when you consume an AVM module:</p>
-<ul>
-<li>Defaults that line up with the Well-Architected Framework (RBAC over access policies, TLS 1.2, private endpoint support out of the box).</li>
-<li>Semantic versioning so you can pin and review the diff before upgrading.</li>
-<li>Deployment tests on every module, run by the AVM team.</li>
-<li>A real Microsoft support path, not a random GitHub issue.</li>
-</ul>
-<p>A great backchannel question came up about brownfield. Jared’s answer: AVM is just standard IaC, no special tooling. In Bicep, brownfield adoption is straightforward because there is no state. In Terraform, the new import blocks make it less painful than it used to be.</p>
-<h3>2. One folder, one source of truth</h3>
-<p>Repo layout is where most teams go wrong, and the fix is simple. You should have one set of module code, and per-environment differences should be expressed as data, not as duplicated code. In Bicep, that means a single main.bicep and one .bicepparam file per environment. In Terraform, the same main.tf with one .tfvars file per environment.</p>
-<p>If you find yourself copying a module folder to dev, test, and prod, stop. Within six months those three folders will not look the same, and at that point you no longer have IaC, you have three handwritten environments that happen to be checked into Git.</p>
-<h3>3. Kill static secrets. Use Workload Identity Federation.</h3>
-<p>This was the chat highlight. The question came in: “So in short, replace all service principals with credential secrets with user-assigned managed identity?” Jack and Jared both replied within seconds: yes, 10 points to you.</p>
-<p>Workload Identity Federation (OIDC) lets your GitHub Actions or Azure DevOps pipeline exchange a short-lived token from its own OIDC provider for a Microsoft Entra ID token. No client secrets, no certs to rotate, no Key Vault dance to retrieve them.</p>
-<p>A couple of things to know:</p>
-<ul>
-<li>Subject claim format differs by platform. GitHub uses repo:org/repo:environment:prod style claims; Azure DevOps uses sc://org/project/connection. Pick the right one or auth silently fails.</li>
-<li>Use a user-assigned managed identity as the target. It survives the pipeline being deleted and gives you one place to manage role assignments.</li>
-<li>The Azure Bicep Deploy GitHub Action and the official AzureRM / AzAPI Terraform providers all support OIDC natively.</li>
-</ul>
-<h3>4. Split plan from apply</h3>
-<p>Even with OIDC, a single Owner-scoped identity that does both terraform plan and terraform apply is a problem. Plan needs Reader (and a few read-data permissions). Apply needs Contributor or Owner depending on what you deploy. Split them into two identities, federated to two different stages of your pipeline, and you have a real least-privilege story to take to your security team.</p>
-<h2>Securing the pipeline</h2>
-<p>Auth is half the story. The other half is making sure only the right pipelines, with the right approvals, can use those identities at all.</p>
-<ul>
-<li><strong>Governed templates.</strong> Keep reusable pipeline templates in a separate, locked-down repo. Pin federated credentials or service connections to those templates via the job_workflow_ref claim on GitHub or required template checks on Azure DevOps. If someone forks the workflow, the OIDC exchange refuses to issue a token.</li>
-<li><strong>Approvals in the right place.</strong> On GitHub, use Environments and require reviewers on prod. On Azure DevOps, put the approval on the Service Connection, not the Environment. The Environment approval can be bypassed by a clever YAML author. The Service Connection approval cannot.</li>
-<li><strong>Shift left, hard.</strong> Pre-commit hooks for bicep format and terraform fmt, lint on every PR, GitHub Advanced Security for secret and code scanning, automated tests on PRs, and ephemeral test environments spun up per PR and torn down at the end. One attendee mentioned using Pester for end-to-end infra tests against a sandbox sub. That is exactly the pattern.</li>
-<li><strong>Three-layer state.</strong> For Terraform on Azure Landing Zones, the recommended split is: platform landing zone (one state), application landing zone / subscription vending (one state per landing zone), application workload (one state per workload). Never collapse all subs into one state file. You will regret it the first time someone runs apply at the wrong time.</li>
-</ul>
-<h2>Getting Started</h2>
-<p>You do not have to do all of this at once. Pick the highest-pain item first.</p>
-<ul>
-<li>Still using client secrets in pipelines? Fix that this sprint. Wire up OIDC and a user-assigned managed identity.</li>
-<li>Drifting per-environment folders? Consolidate to one module plus per-env param files.</li>
-<li>Writing your own storage account module for the fifth time? Try the matching AVM module from the registry.</li>
-<li>Put approvals on the Service Connection (ADO) or Environment (GitHub) for prod.</li>
-<li>Add linting and pre-commit hooks.</li>
-<li>Split plan and apply identities.</li>
-<li>Layer your Terraform state.</li>
-</ul>
-<p>It is a roadmap, not a weekend project. Every step pays back the moment you take it.</p>
-<h2>Resources</h2>
-<ul>
-<li><a href="https://azure.github.io/Azure-Verified-Modules/" target="_blank">Azure Verified Modules portal</a>. the official AVM home, with module indexes for Bicep and Terraform, specs, and FAQ.</li>
-<li><a href="https://github.com/Azure/Azure-Verified-Modules" target="_blank">Azure Verified Modules on GitHub</a>. the tracking repo and source of truth for module proposals.</li>
-<li><a href="https://learn.microsoft.com/azure/azure-resource-manager/bicep/" target="_blank">Bicep on Microsoft Learn</a>. official language docs, deployment guidance, and references for the public registry.</li>
-<li><a href="https://github.com/Azure/bicep-deploy" target="_blank">Azure Bicep Deploy GitHub Action</a>. the OIDC-friendly action for deploying Bicep from GitHub Actions.</li>
-<li><a href="https://learn.microsoft.com/azure/developer/github/" target="_blank">GitHub Actions for Azure on Microsoft Learn</a>. Workload Identity Federation setup for GitHub Actions targeting Azure.</li>
-<li><a href="https://docs.github.com/en/actions/how-tos/secure-your-work/security-harden-deployments/oidc-in-azure" target="_blank">Configuring OpenID Connect in Azure (GitHub Docs)</a>. the canonical OIDC subject claims and federated credential walkthrough for GitHub.</li>
-<li><a href="https://learn.microsoft.com/azure/devops/pipelines/" target="_blank">Azure Pipelines documentation</a>. service connections, approvals and checks, required templates, and YAML reference.</li>
-</ul>
-<h2>Watch the rest of the Summit</h2>
-<p>This session was one of many at the Microsoft Azure Infrastructure Summit 2026. If you want the keynotes, the Bicep deep dives, the AKS sessions, and the storage track, the full playlist is here:</p>
-<p><a href="https://www.youtube.com/playlist?list=PLjt5SKzX1iI8con7FJDB56G6hHqxGm7ki" target="_blank">Microsoft Azure Infra Summit 2026 playlist</a></p>
-<p>Cheers!</p>
-<p>Pierre Roman</p><br/><br/><b>Source:</b> Microsoft Tech Community IT Ops &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
+  <description><![CDATA[<b>Why this matters: Operational impact possible — watch for changes that generate tickets.</b><br/>Rock weathering may release or draw down carbon dioxide—it depends on the rock.<br/><br/><b>Source:</b> Ars Technica &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 21h ago]]></description>
 </item>
 
 <item>
