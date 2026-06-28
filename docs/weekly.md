@@ -1,7 +1,7 @@
 # IT Weekly Intelligence Briefing
 **Period:** June 21 – June 28, 2026  
-**Generated:** 2026-06-28 04:39 UTC  
-**Items reviewed:** 97  
+**Generated:** 2026-06-28 08:19 UTC  
+**Items reviewed:** 127  
 
 ## ⚡ Top Actions This Week
 
@@ -55,41 +55,41 @@
 
 ## 🟠 Important — Review This Week
 
-- [Chromium: CVE-2026-13038 Use after free in Autofill](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-13038)  
-  **Microsoft Security Response Center (MSRC)** · Jun 27 · _General awareness item._  
+- [CVE-2026-5119 Libsoup: libsoup: information disclosure via cleartext transmission of cookies during https tunnel establishment](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-5119)  
+  **Microsoft Security Response Center (MSRC)** · Jun 28 · _General awareness item._  
 
-- [Chromium: CVE-2026-13036 Use after free in Blink](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-13036)  
-  **Microsoft Security Response Center (MSRC)** · Jun 27 · _General awareness item._  
+- [CVE-2025-66038 OpenSC: `sc_compacttlv_find_tag` can return out-of-bounds pointers](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-66038)  
+  **Microsoft Security Response Center (MSRC)** · Jun 28 · _General awareness item._  
 
-- [Chromium: CVE-2026-13035 Use after free in Bluetooth](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-13035)  
-  **Microsoft Security Response Center (MSRC)** · Jun 27 · _General awareness item._  
+- [CVE-2025-49010 OpenSC: Stack-buffer-overflow WRITE in GET RESPONSE](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-49010)  
+  **Microsoft Security Response Center (MSRC)** · Jun 28 · _General awareness item._  
 
-- [Chromium: CVE-2026-13034 Inappropriate implementation in Passwords](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-13034)  
-  **Microsoft Security Response Center (MSRC)** · Jun 27 · _General awareness item._  
+- [CVE-2026-23371 sched/deadline: Fix missing ENQUEUE_REPLENISH during PI de-boosting](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-23371)  
+  **Microsoft Security Response Center (MSRC)** · Jun 28 · _General awareness item._  
 
-- [Chromium: CVE-2026-13033 Out of bounds read in Blink>InterestGroups](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-13033)  
-  **Microsoft Security Response Center (MSRC)** · Jun 27 · _General awareness item._  
+- [CVE-2026-23346 arm64: io: Extract user memory type in ioremap_prot()](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-23346)  
+  **Microsoft Security Response Center (MSRC)** · Jun 28 · _General awareness item._  
 
-- [Chromium: CVE-2026-13031 Use after free in Blink](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-13031)  
-  **Microsoft Security Response Center (MSRC)** · Jun 27 · _General awareness item._  
+- [CVE-2024-26944 btrfs: zoned: fix use-after-free in do_zone_finish()](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-26944)  
+  **Microsoft Security Response Center (MSRC)** · Jun 28 · _General awareness item._  
 
-- [Chromium: CVE-2026-13029 Use after free in Web Authentication](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-13029)  
-  **Microsoft Security Response Center (MSRC)** · Jun 27 · _General awareness item._  
+- [CVE-2026-23383 bpf, arm64: Force 8-byte alignment for JIT buffer to prevent atomic tearing](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-23383)  
+  **Microsoft Security Response Center (MSRC)** · Jun 28 · _General awareness item._  
 
-- [Chromium: CVE-2026-13027 Use after free in FileSystem](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-13027)  
-  **Microsoft Security Response Center (MSRC)** · Jun 27 · _General awareness item._  
+- [CVE-2026-23377 ice: change XDP RxQ frag_size from DMA write length to xdp.frame_sz](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-23377)  
+  **Microsoft Security Response Center (MSRC)** · Jun 28 · _General awareness item._  
 
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [YARA-X 1.18.0 and 1.19.0 Release, (Sun, Jun 28th)](https://isc.sans.edu/diary/rss/33106) — SANS Internet Storm Center
 - [Ukraine Says Russian Intelligence Used Fake Support Texts to Steal Messaging Credentials](https://thehackernews.com/2026/06/ukraine-says-russian-intelligence-used.html) — The Hacker News
 - [Clean GitHub repo tricks AI coding agents into running malware](https://www.bleepingcomputer.com/news/security/clean-github-repo-tricks-ai-coding-agents-into-running-malware/) — BleepingComputer
 - [OpenAI Previews GPT-5.6 Sol With Restricted Access and Stronger Cyber Safeguards](https://thehackernews.com/2026/06/openai-limits-gpt-56-rollout-as-sol.html) — The Hacker News
 - [FBI: Russian hackers now target Signal backup recovery keys](https://www.bleepingcomputer.com/news/security/fbi-russian-hackers-now-target-signal-backup-recovery-keys/) — BleepingComputer
 - [FBI Warns Russian Intelligence Hackers Target Signal Backup Recovery Keys](https://thehackernews.com/2026/06/fbi-warns-russian-intelligence-hackers.html) — The Hacker News
-- [New SharkLoader Malware Deploys Cobalt Strike in StrikeShark Cyberattacks](https://thehackernews.com/2026/06/new-sharkloader-malware-deploys-cobalt.html) — The Hacker News
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 9 critical · 41 important · 47 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 9 critical · 71 important · 47 FYI_

@@ -3,7 +3,7 @@
 <channel>
   <title>Joe SysAdmin and Operations</title>
   <description>Operational IT changes, Microsoft updates, outages, and infrastructure issues.</description>
-  <lastBuildDate>Sun, 28 Jun 2026 04:38:29 +0000</lastBuildDate>
+  <lastBuildDate>Sun, 28 Jun 2026 08:19:13 +0000</lastBuildDate>
   
 <item>
   <title>🔵 NYT slams Microsoft for building copyright-infringing supercomputer for OpenAI</title>
@@ -122,7 +122,7 @@
 <p>This session was one of many at the Microsoft Azure Infrastructure Summit 2026. If you want the keynotes, the Bicep deep dives, the AKS sessions, and the storage track, the full playlist is here:</p>
 <p><a href="https://www.youtube.com/playlist?list=PLjt5SKzX1iI8con7FJDB56G6hHqxGm7ki" target="_blank">Microsoft Azure Infra Summit 2026 playlist</a></p>
 <p>Cheers!</p>
-<p>Pierre Roman</p><br/><br/><b>Source:</b> Microsoft Tech Community IT Ops &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
+<p>Pierre Roman</p><br/><br/><b>Source:</b> Microsoft Tech Community IT Ops &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
 </item>
 
 <item>
@@ -142,108 +142,19 @@
 </item>
 
 <item>
+  <title>🟠 Microsoft quietly extends free Windows 10 ESU support to October 2027</title>
+  <link>https://www.bleepingcomputer.com/news/microsoft/microsoft-quietly-extends-free-windows-10-esu-support-to-october-2027/</link>
+  <pubDate>Thu, 25 Jun 2026 18:29:20 +0000</pubDate>
+  <source>BleepingComputer</source>
+  <description><![CDATA[<b>Why this matters: Operational impact possible — watch for changes that generate tickets.</b><br/>Microsoft has quietly extended its free Windows 10 Extended Security Updates (ESU) program for consumers by an additional year, allowing enrolled devices to continue receiving security updates until October 12, 2027. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
+</item>
+
+<item>
   <title>🔵 Anthropic says Alibaba must be punished for largest Claude cloning attack</title>
   <link>https://arstechnica.com/tech-policy/2026/06/anthropic-claims-alibaba-defied-trump-to-attack-claude-and-steal-capabilities/</link>
   <pubDate>Thu, 25 Jun 2026 18:01:48 +0000</pubDate>
   <source>Ars Technica</source>
   <description><![CDATA[<b>Why this matters: Could impact email access or mail flow — monitor delivery and client issues.</b><br/>Alibaba allegedly used 25,000 accounts to mine Claude over 28.8 million exchanges.<br/><br/><b>Source:</b> Ars Technica &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Building Secure, Well-Architected Azure Workloads with Azure Verified Modules and GitHub Copilot</title>
-  <link>https://techcommunity.microsoft.com/t5/itops-talk-blog/building-secure-well-architected-azure-workloads-with-azure/ba-p/4529938</link>
-  <pubDate>Thu, 25 Jun 2026 07:00:00 +0000</pubDate>
-  <source>Microsoft Tech Community IT Ops</source>
-  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/><p>Hello Folks!</p>
-<p>If you have been writing Bicep or Terraform for Azure over the last few years, you have probably lived this story. You pick a community module, it works great for six months, then the maintainer moves on, issues stop getting answered, and you are stuck owning code you never wrote. At the Microsoft Azure Infra Summit 2026, Jack Tracy and Jarrod Holgate (tech leads on the Azure Verified Modules project) walked us through how AVM solves that, and how pairing it with GitHub Copilot and Spec Kit changes the way IT pros build Azure workloads.</p>
-<p>📺 <strong>Watch the session:</strong></p>
-<p>&nbsp;</p>
-<div class="lia-embeded-content" contenteditable="false">
-</div>
-<h2>Why IT Pros Should Care</h2>
-<p>This is not a developer-only topic. If you are the person responsible for landing zones, platform engineering, or the IaC pipelines that other teams ship through, this hits you directly.</p>
-<ul>
-<li>You stop owning home-grown storage account and VNet modules that no two teams write the same way.</li>
-<li>You get secure-by-default resources without having to draft a 40-page internal coding standard.</li>
-<li>You can let application teams move fast without sacrificing the Well-Architected Framework guardrails you care about.</li>
-<li>You get a supported, Microsoft-backed module library with a clear lifecycle, instead of betting on an abandoned repo.</li>
-<li>You finally have a deterministic way to put AI to work on infrastructure code without it inventing things you do not want in production.</li>
-</ul>
-<p>If any of that sounds like a Tuesday for you, this session is worth 40 minutes.</p>
-<h2>What are Azure Verified Modules</h2>
-<p>Azure Verified Modules (AVM) is the official Microsoft infrastructure-as-code module library for both Bicep and Terraform. Jack put it plainly in the session: AVM is the one-time solution that is not going to go away, with ownership, a defined lifecycle, structure, and well-defined specifications.</p>
-<p>Here is what makes AVM different from the previous landscape of community repos:</p>
-<ul>
-<li>It is supported in multiple IaC languages today (Bicep and Terraform), with consistent specifications across both.</li>
-<li>Modules are aligned to the Azure Well-Architected Framework by default. Zone redundancy on, public IPs off, sensible TLS minimums, right out of the box. Everything is still flexible, you can override any of it via a parameter or variable.</li>
-<li>It is open source. People inside and outside Microsoft can contribute and maintain modules.</li>
-<li>It consolidates the older CARML and Terraform Verified Modules efforts under one roof, owned by Microsoft FTEs and backed by the AVM core team.</li>
-</ul>
-<p>AVM has three module classifications, and understanding them is half the battle:</p>
-<ul>
-<li><strong>Resource modules.</strong> A one-to-one mapping to a single resource type, like a storage account or a virtual network. Need ten of them, loop the module ten times.</li>
-<li><strong>Pattern modules.</strong> A collection of resources, usually built on top of resource modules, that delivers a bigger slice of an architecture. The Azure Landing Zone is roughly five pattern modules behind the scenes.</li>
-<li><strong>Utility modules.</strong> Helpers you probably never call directly, but that the library uses for things like region lookups, SKU availability, and naming standards.</li>
-</ul>
-<p>One thing that gets undersold: AVM is not just for you. The Azure Developer CLI templates use it. Azure Landing Zone and Sovereign Landing Zone are built on it. Internal Microsoft service teams use it. When you adopt AVM, you are using the same building blocks Microsoft uses.</p>
-<h2>Pairing AVM with GitHub Copilot</h2>
-<p>This is where the session gets interesting. AVM gives you the trusted Lego bricks. GitHub Copilot gives you a coding assistant. The problem, as Jack called out, is that AI is non-deterministic by default. It is great at solving ambiguous problems, but you cannot just point it at a blank repo and trust it to stamp out production infrastructure.</p>
-<p>That is the gap spec-driven development is designed to fill.</p>
-<p>Spec-driven development is a documentation-first approach. Instead of telling Copilot “write me a Terraform module for a hub-spoke network,” you write a structured specification up front that captures intent, quality bar, security requirements, and coding standards. The AI then uses that spec as the contract, generates code, validates against it, and loops until the output matches what you asked for.</p>
-<p>Jarrod walked through Spec Kit, the open source toolkit maintained by GitHub and Microsoft, which formalizes this into eight steps:</p>
-<ol>
-<li><strong>Constitution.</strong> The non-negotiables. “We must use AVM. We must comply with PCI. Optimize for cost.” This is your project DNA.</li>
-<li><strong>Specify.</strong> What you actually want to build, focused on user goals and outcomes, not implementation details.</li>
-<li><strong>Clarify.</strong> Copilot scans the spec, finds ambiguities, and asks you targeted questions (IP ranges, bastion SKUs, anything that is fuzzy).</li>
-<li><strong>Plan.</strong> A technical plan that maps the spec to your standards and constraints.</li>
-<li><strong>Checklist.</strong> A quality checklist the agent uses later to validate its own work.</li>
-<li><strong>Tasks.</strong> The plan broken down into small, reviewable steps.</li>
-<li><strong>Analyze.</strong> A consolidated report across the spec, plan, and tasks so you can sanity check the whole package.</li>
-<li><strong>Implement.</strong> Copilot finally writes the code, validating against everything above as it goes.</li>
-</ol>
-<p>The critical detail: at every one of those gates, you review. You are still the human in the loop. The AI is not flying solo, and you are not signing off on a thousand-line code dump.</p>
-<p>When you wire AVM into the constitution (“use AVM modules wherever possible”), Copilot stops trying to hand-roll raw resource declarations. It composes solutions out of trusted, tested, WAF-aligned modules. That is what makes the combination so powerful.</p>
-<p>Spec Kit is not the only option. Jack mentioned two others worth knowing about:</p>
-<ul>
-<li><strong>OpenSpec.</strong> Leaner than Spec Kit, brownfield-first, aimed at smaller experienced teams.</li>
-<li><strong>Squad.</strong> A completely different model built by a Microsoft team. No specs. Instead, a virtual team of agent personas (IaC specialist, UX, deployment, an orchestrator called Ralph) that collaborate to deliver work. Worth a look if your style is more agent-team than document-first.</li>
-</ul>
-<h2>Real-world value</h2>
-<p>So what does this actually buy you when Monday morning hits?</p>
-<ul>
-<li><strong>Speed without sacrificing the bar.</strong> Application teams stop writing storage account boilerplate. They focus on what the workload needs to do, and the AVM modules handle the resilient, compliant defaults.</li>
-<li><strong>Compliance becomes additive, not a rewrite.</strong> If you need to add HIPAA or NIST compliance later, you add another spec on top of your existing constitution and iterate. You do not throw out your modules.</li>
-<li><strong>Less ambiguity loop, fewer tokens burned.</strong> A good spec up front means fewer Copilot iterations. You get to a working answer faster, with less back and forth.</li>
-<li><strong>Trust in the AI output.</strong> Because AVM modules are tested, supported, and WAF-aligned, what Copilot stitches together is built on solid foundations. You can review the spec instead of every line of Terraform.</li>
-<li><strong>Your developers shift up the stack.</strong> They stop writing IaC primitives and start designing architectures and requirements. That is where the business value lives anyway.</li>
-</ul>
-<p>A note on tradeoffs. AVM modules are intentionally generic and flexible, so you sometimes get parameters you do not need, and the well-architected defaults can be opinionated for your scenario. The fix is simple, override the parameter. You are trading some control for a lot of consistency, and for most teams that trade is the right one.</p>
-<h2>Getting Started</h2>
-<p>If you want to try this for yourself, here is the path I would take:</p>
-<ol>
-<li>Go to <strong>aka.ms/AVM</strong> and bookmark it. Everything starts there.</li>
-<li>Browse the Bicep and Terraform module indexes. Find the resource you would normally hand-write and try the AVM version in a dev subscription.</li>
-<li>Read the AVM specifications so you understand the contract every module follows. It makes the parameter sets a lot less surprising.</li>
-<li>Install Spec Kit via the Specify CLI (the GitHub repo has the instructions) and try the AVM example under the experimental “AI-Assisted Solution Development” section on the AVM site.</li>
-<li>Run the eight-step Spec Kit flow against a small workload. Do not start with your production landing zone. Pick something contained, like a single app with a web tier, a database, and a Key Vault.</li>
-<li>Keep the human in the loop. Review every spec gate. That is where the quality comes from.</li>
-</ol>
-<h2>Resources</h2>
-<ul>
-<li><a href="https://azure.github.io/Azure-Verified-Modules/" target="_blank">Azure Verified Modules portal (aka.ms/AVM)</a></li>
-<li><a href="https://github.com/Azure/Azure-Verified-Modules" target="_blank">Azure Verified Modules on GitHub</a></li>
-<li><a href="https://learn.microsoft.com/community/content/azure-verified-modules" target="_blank">Azure Verified Modules on Microsoft Learn</a></li>
-<li><a href="https://github.com/github/spec-kit" target="_blank">GitHub Spec Kit</a></li>
-<li><a href="https://github.blog/ai-and-ml/generative-ai/spec-driven-development-with-ai-get-started-with-a-new-open-source-toolkit/" target="_blank">Spec-driven development with AI (GitHub Blog)</a></li>
-<li><a href="https://learn.microsoft.com/en-us/training/modules/spec-driven-development-github-spec-kit-enterprise-developers/" target="_blank">Implement spec-driven development with Spec Kit (Microsoft Learn)</a></li>
-<li><a href="https://github.com/features/copilot" target="_blank">GitHub Copilot</a></li>
-<li><a href="https://learn.microsoft.com/azure/well-architected/" target="_blank">Azure Well-Architected Framework</a></li>
-</ul>
-<h2>Watch the rest of the Summit</h2>
-<p>If you found this useful, there is a lot more where it came from. The Microsoft Azure Infra Summit 2026 playlist covers landing zones, deployment stacks, AKS networking, storage, and the AI side of platform operations. Block out an afternoon and binge it.</p>
-<p><a href="https://www.youtube.com/playlist?list=PLjt5SKzX1iI8con7FJDB56G6hHqxGm7ki" target="_blank">Microsoft Azure Infra Summit 2026 on YouTube</a></p>
-<p>Cheers!</p>
-<p>Pierre Roman</p><br/><br/><b>Source:</b> Microsoft Tech Community IT Ops &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
 </item>
 
 </channel>
