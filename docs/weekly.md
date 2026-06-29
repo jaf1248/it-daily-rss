@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
 **Period:** June 22 – June 29, 2026  
-**Generated:** 2026-06-29 05:29 UTC  
+**Generated:** 2026-06-29 10:52 UTC  
 **Items reviewed:** 128  
 
 ## ⚡ Top Actions This Week
@@ -55,41 +55,41 @@
 
 ## 🟠 Important — Review This Week
 
-- [CVE-2024-56702 bpf: Mark raw_tp arguments with PTR_MAYBE_NULL](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-56702)  
-  **Microsoft Security Response Center (MSRC)** · Jun 28 · _General awareness item._  
+- [CVE-2026-58058 Nmap - Integer Underflow in IPv6 Extension Header Parsing](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-58058)  
+  **Microsoft Security Response Center (MSRC)** · Jun 29 · _General awareness item._  
 
-- [CVE-2025-38636 rv: Use strings in da monitors tracepoints](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-38636)  
-  **Microsoft Security Response Center (MSRC)** · Jun 28 · _General awareness item._  
+- [CVE-2026-58055 nghttp2 nghttpx - HTTP Request/Response Smuggling via Upgrade Request with Content-Length](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-58055)  
+  **Microsoft Security Response Center (MSRC)** · Jun 29 · _General awareness item._  
 
-- [CVE-2024-56544 udmabuf: change folios array from kmalloc to kvmalloc](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-56544)  
-  **Microsoft Security Response Center (MSRC)** · Jun 28 · _General awareness item._  
+- [CVE-2026-58051 libssh2 - Free of Uninitialized Pointer in publickey List Cleanup](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-58051)  
+  **Microsoft Security Response Center (MSRC)** · Jun 29 · _General awareness item._  
 
-- [CVE-2025-38660 [ceph] parse_longname(): strrchr() expects NUL-terminated string](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-38660)  
-  **Microsoft Security Response Center (MSRC)** · Jun 28 · _General awareness item._  
+- [CVE-2026-58050 libssh2 - Integer Overflow in publickey Subsystem Attribute Allocation](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-58050)  
+  **Microsoft Security Response Center (MSRC)** · Jun 29 · _General awareness item._  
 
-- [CVE-2025-38591 bpf: Reject narrower access to pointer ctx fields](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-38591)  
-  **Microsoft Security Response Center (MSRC)** · Jun 28 · _General awareness item._  
+- [CVE-2026-52908 RDMA: During rereg_mr ensure that REREG_ACCESS is compatible](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-52908)  
+  **Microsoft Security Response Center (MSRC)** · Jun 29 · _General awareness item._  
 
-- [CVE-2024-53187 io_uring: check for overflows in io_pin_pages](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-53187)  
-  **Microsoft Security Response Center (MSRC)** · Jun 28 · _General awareness item._  
+- [CVE-2026-52909 ip6_vti: set netns_immutable on the fallback device.](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-52909)  
+  **Microsoft Security Response Center (MSRC)** · Jun 29 · _General awareness item._  
 
-- [CVE-2024-53201 drm/amd/display: Fix null check for pipe_ctx->plane_state in dcn20_program_pipe](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-53201)  
-  **Microsoft Security Response Center (MSRC)** · Jun 28 · _General awareness item._  
+- [CVE-2026-52910 bpf: Free reuseport cBPF prog after RCU grace period.](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-52910)  
+  **Microsoft Security Response Center (MSRC)** · Jun 29 · _General awareness item._  
 
-- [CVE-2023-52485 drm/amd/display: Wake DMCUB before sending a command](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-52485)  
-  **Microsoft Security Response Center (MSRC)** · Jun 28 · _General awareness item._  
+- [Public PoC Released for Critical libssh2 CVE-2026-55200 Client-Side SSH Flaw](https://thehackernews.com/2026/06/public-poc-released-for-critical.html)  
+  **The Hacker News** · Jun 29 · _General awareness item._  
 
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [Microsoft Removes 119 Edge Extensions That Hid Malware in Images and Fonts](https://thehackernews.com/2026/06/microsoft-removes-119-edge-extensions.html) — The Hacker News
+- [Hijacked npm and Go Packages Use VS Code Tasks to Deploy Python Infostealer](https://thehackernews.com/2026/06/hijacked-npm-and-go-packages-use-vs.html) — The Hacker News
 - [ISC Stormcast For Monday, June 29th, 2026 https://isc.sans.edu/podcastdetail/9986, (Mon, Jun 29th)](https://isc.sans.edu/diary/rss/33108) — SANS Internet Storm Center
 - [YARA-X 1.18.0 and 1.19.0 Release, (Sun, Jun 28th)](https://isc.sans.edu/diary/rss/33106) — SANS Internet Storm Center
 - [Ukraine Says Russian Intelligence Used Fake Support Texts to Steal Messaging Credentials](https://thehackernews.com/2026/06/ukraine-says-russian-intelligence-used.html) — The Hacker News
 - [Clean GitHub repo tricks AI coding agents into running malware](https://www.bleepingcomputer.com/news/security/clean-github-repo-tricks-ai-coding-agents-into-running-malware/) — BleepingComputer
-- [OpenAI Previews GPT-5.6 Sol With Restricted Access and Stronger Cyber Safeguards](https://thehackernews.com/2026/06/openai-limits-gpt-56-rollout-as-sol.html) — The Hacker News
-- [FBI: Russian hackers now target Signal backup recovery keys](https://www.bleepingcomputer.com/news/security/fbi-russian-hackers-now-target-signal-backup-recovery-keys/) — BleepingComputer
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 10 critical · 71 important · 47 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 9 critical · 72 important · 47 FYI_
