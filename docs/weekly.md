@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
 **Period:** June 22 – June 29, 2026  
-**Generated:** 2026-06-29 00:06 UTC  
+**Generated:** 2026-06-29 05:29 UTC  
 **Items reviewed:** 128  
 
 ## ⚡ Top Actions This Week
@@ -83,12 +83,12 @@
 
 ## 🔵 FYI — General Awareness
 
+- [ISC Stormcast For Monday, June 29th, 2026 https://isc.sans.edu/podcastdetail/9986, (Mon, Jun 29th)](https://isc.sans.edu/diary/rss/33108) — SANS Internet Storm Center
 - [YARA-X 1.18.0 and 1.19.0 Release, (Sun, Jun 28th)](https://isc.sans.edu/diary/rss/33106) — SANS Internet Storm Center
 - [Ukraine Says Russian Intelligence Used Fake Support Texts to Steal Messaging Credentials](https://thehackernews.com/2026/06/ukraine-says-russian-intelligence-used.html) — The Hacker News
 - [Clean GitHub repo tricks AI coding agents into running malware](https://www.bleepingcomputer.com/news/security/clean-github-repo-tricks-ai-coding-agents-into-running-malware/) — BleepingComputer
 - [OpenAI Previews GPT-5.6 Sol With Restricted Access and Stronger Cyber Safeguards](https://thehackernews.com/2026/06/openai-limits-gpt-56-rollout-as-sol.html) — The Hacker News
 - [FBI: Russian hackers now target Signal backup recovery keys](https://www.bleepingcomputer.com/news/security/fbi-russian-hackers-now-target-signal-backup-recovery-keys/) — BleepingComputer
-- [FBI Warns Russian Intelligence Hackers Target Signal Backup Recovery Keys](https://thehackernews.com/2026/06/fbi-warns-russian-intelligence-hackers.html) — The Hacker News
 
 ---
 
