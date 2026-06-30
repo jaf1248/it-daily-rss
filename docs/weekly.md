@@ -1,25 +1,30 @@
 # IT Weekly Intelligence Briefing
 **Period:** June 23 – June 30, 2026  
-**Generated:** 2026-06-30 05:01 UTC  
-**Items reviewed:** 126  
+**Generated:** 2026-06-30 08:36 UTC  
+**Items reviewed:** 127  
 
 ## ⚡ Top Actions This Week
 
-1. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
+1. **Apply emergency patch or mitigation now; check vendor advisory for workarounds.**  
+   _Oracle E-Business Suite Flaw CVE-2026-46817 Actively Exploited in the Wild_  
+   Source: The Hacker News  
+
+2. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
    _Nissan discloses employee data breach linked to Oracle zero-day attacks_  
    Source: BleepingComputer  
 
-2. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _NAIC says public data stolen in ShinyHunters' PeopleSoft breach_  
-   Source: BleepingComputer  
-
 3. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _Data breach exposes up to 14.2 million email logins at six ISPs_  
+   _NAIC says public data stolen in ShinyHunters' PeopleSoft breach_  
    Source: BleepingComputer  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [Oracle E-Business Suite Flaw CVE-2026-46817 Actively Exploited in the Wild](https://thehackernews.com/2026/06/oracle-e-business-suite-flaw-cve-2026.html)
+**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Jun 30  
+**Why it matters:** General awareness item.  
+**Recommended action:** Apply emergency patch or mitigation now; check vendor advisory for workarounds.  
 
 ### [Nissan discloses employee data breach linked to Oracle zero-day attacks](https://www.bleepingcomputer.com/news/security/nissan-discloses-employee-data-breach-linked-to-oracle-zero-day-attacks/)
 **Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jun 29  
@@ -46,38 +51,33 @@
 **Why it matters:** Potential credential or data exposure.  
 **Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
-### [Miasma Malware Targets npm Packages and GitHub Actions in Supply Chain Attack](https://thehackernews.com/2026/06/miasma-malware-targets-npm-packages-and.html)
-**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Jun 26  
-**Why it matters:** Third-party/software supply chain integrity risk.  
-**Recommended action:** Audit third-party software dependencies and review vendor access.  
-
 ---
 
 ## 🟠 Important — Review This Week
 
+- [CVE-2026-11979 Stack-Based Buffer Overflow in libxml2](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-11979)  
+  **Microsoft Security Response Center (MSRC)** · Jun 30 · _General awareness item._  
+
+- [CVE-2026-53325 agp/amd64: Fix broken error propagation in agp_amd64_probe()](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-53325)  
+  **Microsoft Security Response Center (MSRC)** · Jun 30 · _General awareness item._  
+
+- [CVE-2026-41992 Global Buffer Overflow in GNU gzip](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-41992)  
+  **Microsoft Security Response Center (MSRC)** · Jun 30 · _General awareness item._  
+
+- [CVE-2026-41991 Predictable Temporary File in GNU gzip](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-41991)  
+  **Microsoft Security Response Center (MSRC)** · Jun 30 · _General awareness item._  
+
+- [CVE-2026-54371 attr < 2.6.0 Symlink Traversal Privilege Escalation via getfattr/setfattr](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-54371)  
+  **Microsoft Security Response Center (MSRC)** · Jun 30 · _General awareness item._  
+
+- [CVE-2026-54369 acl < 2.4.0 Symlink Traversal Privilege Escalation via libacl Functions](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-54369)  
+  **Microsoft Security Response Center (MSRC)** · Jun 30 · _General awareness item._  
+
+- [Apple Patches 30+ iOS, macOS, Safari Flaws, Including AI-Discovered WebKit Bugs](https://thehackernews.com/2026/06/apple-patches-30-ios-macos-safari-flaws.html)  
+  **The Hacker News** · Jun 30 · _General awareness item._  
+
 - [Microsoft extends Windows Server 2022 hotpatching until October 2027](https://www.bleepingcomputer.com/news/microsoft/microsoft-extends-windows-server-2022-hotpatching-until-october-2027/)  
   **BleepingComputer** · Jun 29 · _General awareness item._  
-
-- [⚡ Weekly Recap: Linux Kernel Flaws, AI Malware Tricks, Turla Backdoor, Infostealers and More](https://thehackernews.com/2026/06/weekly-recap-linux-kernel-flaws-ai.html)  
-  **The Hacker News** · Jun 29 · _General awareness item._  
-
-- [Critical SimpleHelp flaw exploited to deploy new stealer malware](https://www.bleepingcomputer.com/news/security/hackers-exploit-critical-simplehelp-flaw-deploy-new-djinn-infostealer-taskweaver-malware/)  
-  **BleepingComputer** · Jun 29 · _General awareness item._  
-
-- [Hackers now exploit critical Oracle E-Business flaw in attacks](https://www.bleepingcomputer.com/news/security/new-oracle-e-business-suite-flaw-now-exploited-in-attacks/)  
-  **BleepingComputer** · Jun 29 · _General awareness item._  
-
-- [CVE-2026-58058 Nmap - Integer Underflow in IPv6 Extension Header Parsing](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-58058)  
-  **Microsoft Security Response Center (MSRC)** · Jun 29 · _General awareness item._  
-
-- [CVE-2026-58055 nghttp2 nghttpx - HTTP Request/Response Smuggling via Upgrade Request with Content-Length](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-58055)  
-  **Microsoft Security Response Center (MSRC)** · Jun 29 · _General awareness item._  
-
-- [CVE-2026-58051 libssh2 - Free of Uninitialized Pointer in publickey List Cleanup](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-58051)  
-  **Microsoft Security Response Center (MSRC)** · Jun 29 · _General awareness item._  
-
-- [CVE-2026-58050 libssh2 - Integer Overflow in publickey Subsystem Attribute Allocation](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-58050)  
-  **Microsoft Security Response Center (MSRC)** · Jun 29 · _General awareness item._  
 
 ---
 
@@ -92,4 +92,4 @@
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 8 critical · 73 important · 45 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 9 critical · 74 important · 44 FYI_
