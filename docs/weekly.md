@@ -1,25 +1,40 @@
 # IT Weekly Intelligence Briefing
 **Period:** June 23 – June 30, 2026  
-**Generated:** 2026-06-30 08:36 UTC  
-**Items reviewed:** 127  
+**Generated:** 2026-06-30 11:44 UTC  
+**Items reviewed:** 130  
 
 ## ⚡ Top Actions This Week
 
-1. **Apply emergency patch or mitigation now; check vendor advisory for workarounds.**  
-   _Oracle E-Business Suite Flaw CVE-2026-46817 Actively Exploited in the Wild_  
-   Source: The Hacker News  
-
-2. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _Nissan discloses employee data breach linked to Oracle zero-day attacks_  
+1. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
+   _Insurance giant Aflac discloses data breach after subsidiary hack_  
    Source: BleepingComputer  
 
-3. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _NAIC says public data stolen in ShinyHunters' PeopleSoft breach_  
+2. **Validate backups, confirm EDR coverage, and brief incident response team.**  
+   _Blackfield ransomware asks Nidec Corporation for $2 million ransom_  
+   Source: BleepingComputer  
+
+3. **Validate backups, confirm EDR coverage, and brief incident response team.**  
+   _CISA: Windows BlueHammer flaw now exploited by ransomware gangs_  
    Source: BleepingComputer  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [Insurance giant Aflac discloses data breach after subsidiary hack](https://www.bleepingcomputer.com/news/security/insurance-giant-aflac-discloses-data-breach-after-subsidiary-hack/)
+**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jun 30  
+**Why it matters:** Potential credential or data exposure.  
+**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
+
+### [Blackfield ransomware asks Nidec Corporation for $2 million ransom](https://www.bleepingcomputer.com/news/security/blackfield-ransomware-asks-nidec-corporation-for-2-million-ransom/)
+**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jun 30  
+**Why it matters:** Elevated ransomware risk across the sector.  
+**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
+
+### [CISA: Windows BlueHammer flaw now exploited by ransomware gangs](https://www.bleepingcomputer.com/news/security/cisa-windows-bluehammer-flaw-now-exploited-by-ransomware-gangs/)
+**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jun 30  
+**Why it matters:** Elevated ransomware risk across the sector.  
+**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
 
 ### [Oracle E-Business Suite Flaw CVE-2026-46817 Actively Exploited in the Wild](https://thehackernews.com/2026/06/oracle-e-business-suite-flaw-cve-2026.html)
 **Source:** The Hacker News &nbsp;·&nbsp; **Date:** Jun 30  
@@ -36,24 +51,12 @@
 **Why it matters:** Potential credential or data exposure.  
 **Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
-### [Data breach exposes up to 14.2 million email logins at six ISPs](https://www.bleepingcomputer.com/news/security/data-breach-exposes-up-to-142-million-email-logins-at-six-isps/)
-**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jun 28  
-**Why it matters:** Potential credential or data exposure.  
-**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
-
-### [CISA sets urgent deadline to fix Cisco flaw exploited in attacks](https://www.bleepingcomputer.com/news/security/cisa-sets-urgent-deadline-to-fix-cisco-flaw-exploited-in-attacks/)
-**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jun 26  
-**Why it matters:** General awareness item.  
-**Recommended action:** Apply emergency patch or mitigation now; check vendor advisory for workarounds.  
-
-### [Polymarket customers lose $3 million in supply-chain attack](https://www.bleepingcomputer.com/news/security/polymarket-customers-lose-3-million-in-supply-chain-attack/)
-**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jun 26  
-**Why it matters:** Potential credential or data exposure.  
-**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
-
 ---
 
 ## 🟠 Important — Review This Week
+
+- [Attackers Exploit SimpleHelp CVE-2026-48558 to Deploy TaskWeaver and Djinn Stealer](https://thehackernews.com/2026/06/attackers-exploit-simplehelp-cve-2026.html)  
+  **The Hacker News** · Jun 30 · _General awareness item._  
 
 - [CVE-2026-11979 Stack-Based Buffer Overflow in libxml2](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-11979)  
   **Microsoft Security Response Center (MSRC)** · Jun 30 · _General awareness item._  
@@ -73,23 +76,20 @@
 - [CVE-2026-54369 acl < 2.4.0 Symlink Traversal Privilege Escalation via libacl Functions](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-54369)  
   **Microsoft Security Response Center (MSRC)** · Jun 30 · _General awareness item._  
 
-- [Apple Patches 30+ iOS, macOS, Safari Flaws, Including AI-Discovered WebKit Bugs](https://thehackernews.com/2026/06/apple-patches-30-ios-macos-safari-flaws.html)  
+- [Progress Kemp LoadMaster Flaw Could Let Attackers Run Root Commands Pre-Auth](https://thehackernews.com/2026/06/progress-kemp-loadmaster-flaw-could-let.html)  
   **The Hacker News** · Jun 30 · _General awareness item._  
-
-- [Microsoft extends Windows Server 2022 hotpatching until October 2027](https://www.bleepingcomputer.com/news/microsoft/microsoft-extends-windows-server-2022-hotpatching-until-october-2027/)  
-  **BleepingComputer** · Jun 29 · _General awareness item._  
 
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [Microsoft adds smarter bot protection to Teams meetings](https://www.bleepingcomputer.com/news/microsoft/mircosoft-adds-smarter-bot-protection-to-teams-meetings/) — BleepingComputer
+- [Kali Linux 2026.2 released with 9 new tools, NetHunter updates](https://www.bleepingcomputer.com/news/linux/kali-linux-20262-released-with-9-new-tools-nethunter-updates/) — BleepingComputer
+- [June 2026 Apple Updates, (Tue, Jun 30th)](https://isc.sans.edu/diary/rss/33114) — SANS Internet Storm Center
+- [AirDrop and Quick Share Flaws Let Nearby Attackers Trigger Crashes and Bypass Checks](https://thehackernews.com/2026/06/airdrop-and-quick-share-flaws-let.html) — The Hacker News
+- [New BioShocking Attack Tricks AI Browsers Into Leaking User Credentials](https://thehackernews.com/2026/06/new-bioshocking-attack-tricks-ai.html) — The Hacker News
 - [ISC Stormcast For Tuesday, June 30th, 2026 https://isc.sans.edu/podcastdetail/9988, (Tue, Jun 30th)](https://isc.sans.edu/diary/rss/33112) — SANS Internet Storm Center
-- [Malicious Perplexity Chrome Extension Intercepted Searches and Address Bar Input](https://thehackernews.com/2026/06/malicious-perplexity-chrome-extension.html) — The Hacker News
-- [WhatsApp rolls out usernames to help users hide their phone number](https://www.bleepingcomputer.com/news/security/whatsapp-rolls-out-usernames-to-help-users-hide-their-phone-number/) — BleepingComputer
-- [WhatsApp is Finally Getting Usernames to Help Keep Phone Numbers Private](https://thehackernews.com/2026/06/whatsapp-is-finally-getting-usernames.html) — The Hacker News
-- [U.S. offers $10 million for hackers targeting WhatsApp, Signal users](https://www.bleepingcomputer.com/news/security/us-offers-10-million-for-hackers-targeting-whatsapp-signal-users/) — BleepingComputer
-- [Mustang Panda Uses Zoho WorkDrive as Command Channel in Indian Government Attacks](https://thehackernews.com/2026/06/mustang-panda-uses-zoho-workdrive-as.html) — The Hacker News
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 9 critical · 74 important · 44 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 9 critical · 76 important · 45 FYI_

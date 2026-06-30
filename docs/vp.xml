@@ -3,14 +3,1097 @@
 <channel>
   <title>Joe — VP of IT Briefing</title>
   <description>Leadership-focused IT risk, vendors, pricing, licensing, and industry context.</description>
-  <lastBuildDate>Tue, 30 Jun 2026 08:35:27 +0000</lastBuildDate>
+  <lastBuildDate>Tue, 30 Jun 2026 11:43:47 +0000</lastBuildDate>
   
 <item>
-  <title>🔵 Atlas shrugs: New UK asylum seeker IT system failed to help case workers learn from appeals</title>
-  <link>https://www.theregister.com/public-sector/2026/06/30/atlas-shrugs-new-uk-asylum-seeker-it-system-failed-to-help-case-workers-learn-from-appeals/5263557</link>
-  <pubDate>Tue, 30 Jun 2026 08:30:00 +0000</pubDate>
-  <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>After several delays in development, Atlas went live without functionality Home Office case manager needed, inspectors say<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+  <title>🟠 Malicious Chromium extension spoofs Perplexity AI to hijack browser searches</title>
+  <link>https://www.csoonline.com/article/4191060/malicious-chromium-extension-spoofs-perplexity-ai-to-hijack-browser-searches.html</link>
+  <pubDate>Tue, 30 Jun 2026 11:40:56 +0000</pubDate>
+  <source>CSO Online</source>
+  <description><![CDATA[<b>Why this matters: Credential/phishing risk — reinforce MFA and user awareness training.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<p>Google has removed a malicious browser extension masquerading as Perplexity AI after Microsoft researchers found it was intercepting users’ search traffic and routing queries through attacker-controlled servers before forwarding them to legitimate search engines.</p>
+
+
+
+<p>Microsoft Threat Intelligence said the extension masqueraded as the AI-powered answer engine to trick users into installing it. Based on its analysis, the company said the extension’s primary objective was to intercept search traffic and collect browsing data while maintaining a normal browsing experience, making the activity difficult for users to detect.</p>
+
+
+
+<p>“Microsoft Threat Intelligence has identified a malicious Chromium-based extension that spoofs the AI-powered answer engine Perplexity AI to trick unsuspecting users into installing it,” the company’s threat intelligence team said in a <a href="https://www.microsoft.com/en-us/security/blog/2026/06/29/chromium-extension-uses-airelated-branding-redirect-browser-search/" rel="noreferrer noopener" target="_blank">blog post</a>. “Based on our observation of the extension’s behavior, we assess its primary objective to be search traffic interception and data collection, which might enable downstream use cases such as profiling, targeted advertising, or other forms of misuse depending on operator intent.”</p>
+
+
+
+<p>Microsoft said it reported the extension to Google, which subsequently removed it.</p>
+
+
+
+<p>The incident reflects a broader trend identified by Microsoft’s researchers, who <a href="https://www.csoonline.com/article/4182881/security-shifts-to-the-human-layer-as-ai-scams-surge.html">earlier this month warned</a> that attackers were increasingly abusing the names and branding of popular AI platforms in phishing and malware campaigns.</p>
+
+
+
+<h2 class="wp-block-heading" id="extension-quietly-intercepted-browser-searches">Extension quietly intercepted browser searches</h2>
+
+
+
+<p>Unlike traditional browser hijackers that alter search results or flood users with advertisements, the extension operated less conspicuously.</p>
+
+
+
+<p>According to Microsoft, it abused Chromium’s Manifest V3 APIs to intercept searches entered through the browser’s address bar, forwarding those queries through intermediary infrastructure controlled by the attacker before redirecting users to legitimate search providers. Because victims ultimately received the expected search results, the activity could remain largely unnoticed, the blog post added.</p>
+
+
+
+<p>“The use of intermediary infrastructure allows the operator to observe search traffic while maintaining the expected browsing experience,” Microsoft Threat Intelligence said.</p>
+
+
+
+<p>The attack also relied on user trust rather than exploiting a browser vulnerability.</p>
+
+
+
+<p>“What makes this interesting is that the attack doesn’t really depend on exploiting a browser vulnerability. The user becomes the initial access vector,” said Vibhum Dubey, an independent cybersecurity researcher and red teamer.</p>
+
+
+
+<p>Employees routinely install browser-based productivity tools, password managers, and AI assistants, making AI-branded extensions appear legitimate, Dubey said. “Users also expect AI tools to request broad permissions to access websites and browser content, allowing malicious permission requests to blend in with legitimate functionality.”</p>
+
+
+
+<h2 class="wp-block-heading" id="why-ai-brands-make-good-bait">Why AI brands make good bait</h2>
+
+
+
+<p>For attackers, trusted AI brands are becoming increasingly attractive social engineering lures as enterprises accelerate adoption of generative AI tools.</p>
+
+
+
+<p>“Attackers are following user trust,” said Sushovan Mukhopadhyay, director analyst at Gartner. “As employees adopt AI tools quickly, trusted AI brands become high-value bait for social engineering.”</p>
+
+
+
+<p>Browser extensions can quietly become “a data collection layer inside the employee’s everyday workflow,” exposing sensitive search queries, browsing activity, and business context, he said.</p>
+
+
+
+<p>Mukhopadhyay said the larger issue is that enterprise AI adoption is moving faster than security governance, creating opportunities for attackers to exploit the gap between employee enthusiasm and organizational controls.</p>
+
+
+
+<h2 class="wp-block-heading" id="a-governance-blind-spot">A governance blind spot</h2>
+
+
+
+<p>Both experts said the harder enterprise problem is visibility.</p>
+
+
+
+<p>“Most organizations have a mature process for software inventory, but very few have the same level of visibility for browser extensions,” Dubey said. During security assessments, he has seen organizations maintain strict application allowlists while employees continued installing browser extensions with little or no oversight.</p>
+
+
+
+<p>Rather than looking only for known malicious extensions, security teams should monitor for risky behaviors such as changes to default search providers, requests for access to all websites, communications with domains unrelated to the claimed publisher, and extensions that seek additional permissions after installation, he said.</p>
+
+
+
+<p>Microsoft similarly recommended that organizations verify extension publishers, carefully review requested permissions, and monitor enterprise browsers for unauthorized or unapproved extensions.</p>
+
+
+
+<p>Mukhopadhyay said CISOs should begin treating browser extensions as governed enterprise software rather than personal productivity tools.</p>
+
+
+
+<p>“That means using allowlists, permission reviews, search-setting monitoring, and controls for unapproved AI tools,” he said. Citing Gartner data, he said by 2029, 30% of enterprises will use secure enterprise browser technologies to improve browser extension auditing, risk profiling, and policy enforcement. </p>
+
+
+
+<p>As browsers become the primary workspace for email, SaaS applications, and AI assistants, attackers are likely to continue targeting them, Dubey said. Organizations should therefore treat browser extensions “as third-party software suppliers” that are reviewed, approved, and continuously monitored like any other enterprise application.</p>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</item>
+
+<item>
+  <title>🟠 Exploitation of Recent Oracle E-Business Suite Vulnerability Begins</title>
+  <link>https://www.securityweek.com/exploitation-of-recent-oracle-e-business-suite-vulnerability-begins/</link>
+  <pubDate>Tue, 30 Jun 2026 11:29:48 +0000</pubDate>
+  <source>SecurityWeek</source>
+  <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><p>The critical-severity defect allows unauthenticated attackers to take over the E-Business Suite’s Payments product.</p>
+<p>The post <a href="https://www.securityweek.com/exploitation-of-recent-oracle-e-business-suite-vulnerability-begins/">Exploitation of Recent Oracle E-Business Suite Vulnerability Begins</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</item>
+
+<item>
+  <title>🟠 AI is exposing the real limits of enterprise cloud strategy</title>
+  <link>https://www.cio.com/article/4190722/ai-is-exposing-the-real-limits-of-enterprise-cloud-strategy.html</link>
+  <pubDate>Tue, 30 Jun 2026 11:00:00 +0000</pubDate>
+  <source>CIO.com</source>
+  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<p>Across the global corporations, I advise, in financial services, healthcare, retail and the public sector, the same crisis surfaces in leadership meetings. Executives approved a bold AI roadmap. Cloud spending climbed 40, 50, even 70 percent. And yet the AI workloads that made perfect sense in the boardroom presentation now stall, overshoot their budgets or collapse under production load before they reach real users.</p>
+
+
+
+<p>I am writing this just after the spring 2026 conference season, and the signal from <a href="https://cloud.google.com/blog/topics/google-cloud-next/google-cloud-next-2026-wrap-up" rel="nofollow">Google Cloud Next</a>, <a href="https://news.microsoft.com/build-2026/" rel="nofollow">Microsoft Build</a>, and a run of <a href="https://aws.amazon.com/events/summits/" rel="nofollow">AWS summits</a> only sharpens the point. Over the past several weeks the industry shipped, in production form, the infrastructure to run and govern AI at scale. What most enterprises still lack is the operating model to decide how to use it.</p>
+
+
+
+<p>The problem is not the AI models. The models work. The problem is that organizations built their AI ambitions on cloud strategies designed for a world that no longer exists: strategies built for SaaS applications, predictable traffic and linear cost curves. AI workloads break all three assumptions at once.</p>
+
+
+
+<h2 class="wp-block-heading" id="why-ai-breaks-traditional-cloud-assumptions">Why AI breaks traditional cloud assumptions</h2>
+
+
+
+<p>For a decade, cloud-first served enterprises well. It delivered elasticity, reduced capital expenditure and democratized access to compute, because enterprise workloads were predictable: web applications, ERP systems, databases and analytics pipelines that scaled smoothly and billed in ways finance could model on a spreadsheet. GenAI and agentic AI change every one of those assumptions at once.</p>
+
+
+
+<p>When organizations move AI into production, real inference, retrieval pipelines, vector search and real-time decisioning, the cloud equation breaks in at least five ways:</p>
+
+
+
+<ol class="wp-block-list">
+<li>Training clusters demand power densities far above standard compute.</li>
+
+
+
+<li>Inference needs millisecond latency that network geography can defeat.</li>
+
+
+
+<li>Vector databases generate cost spikes invisible in standard billing.</li>
+
+
+
+<li>Agentic workloads chain hundreds of tool calls with cascading dependencies.</li>
+
+
+
+<li>And data-sovereignty rules constrain where any of them can run.</li>
+</ol>
+
+
+
+<p>In short, what works at the platform level fails at the workload level.</p>
+
+
+
+<p>The costs are the first thing to surprise leaders, because they hide. <a href="https://www.cloudzero.com/blog/ai-cost-management/" rel="nofollow">CloudZero’s analysis</a> and the FinOps teams I work with put it plainly: AI spend surfaces as generic compute, storage and instance line items, rarely labeled “AI.” Three layers drive most of the waste:</p>
+
+
+
+<ol class="wp-block-list">
+<li>The most visible is LLM API cost, where stateless calls re-send the full conversation history on every request, so a deployment with a couple hundred users can burn many times the token budget in the business case.</li>
+
+
+
+<li>The biggest is idle GPU: teams’ provision for peak and then run at 10 to 20 percent utilization, and most miss their AI cost forecasts by more than a quarter.</li>
+
+
+
+<li>The most underestimated is the vector database and retrieval layer, where storage I/O, query volume and embedding refresh appear nowhere labeled AI until the bill arrives.</li>
+</ol>
+
+
+
+<h2 class="wp-block-heading" id="the-dimensions-leaders-underweight-resilience-and-control">The dimensions leaders underweight resilience and control</h2>
+
+
+
+<p>Cost and latency dominate the conversation. Two dimensions rarely get the same rigor until something breaks:</p>
+
+
+
+<ol class="wp-block-list">
+<li>Resilience, whether an AI-dependent system can survive failure, degrade gracefully and recover predictably.</li>
+
+
+
+<li>Control, who can observe, halt and audit it.</li>
+</ol>
+
+
+
+<p>AI introduces failure modes that traditional architecture never faced: GPU single points of failure under revenue-critical inference, agentic pipelines that fail mid-execution with no rollback, and models that degrade silently from drift or throttling.</p>
+
+
+
+<p>I see the pattern repeated across industries. Organizations design resilience for their traditional applications, then deploy AI on top without asking whether the same guarantees hold. In one global financial services firm I advise, a real-time credit-decisioning model running on a single cloud region took a 47-minute outage during a regional availability event. The halted loan approvals cost more than the system’s entire annual infrastructure budget, and the resilience rework that followed cost several times what designing it in from the start would have. The leaders who avoid this should ask four questions before go-live:</p>
+
+
+
+<ol class="wp-block-list">
+<li>What happens when the network fails?</li>
+
+
+
+<li>What happens when the model degrades?</li>
+
+
+
+<li>What happens when an agent executes only halfway?</li>
+
+
+
+<li>Who holds the authority to halt and audit?</li>
+</ol>
+
+
+
+<h2 class="wp-block-heading" id="what-the-cloud-providers-signaled-this-spring">What the cloud providers signaled this spring</h2>
+
+
+
+<p>The major providers are on track to spend <a href="https://www.statista.com/chart/35046/capital-expenditure-of-meta-alphabet-amazon-and-microsoft/" rel="nofollow">close to $700 billion on AI infrastructure in 2026</a>, roughly three and a half times the 2024 level. Their announcements are strategic signals, not just features. Last year they converged on one message: enterprises cannot run everything in public cloud, so all three built ways to bring their infrastructure into your data center and your sovereign environment. This year the signal advanced a step. They stopped talking about where workloads run and started shipping the layer that governs what agents are allowed to do: identity, containment, auditability and rollback.</p>
+
+
+
+<p>Microsoft introduced an “Agent Computer” model with execution containers and machine identity for agents. AWS built <a href="https://aws.amazon.com/blogs/aws/top-announcements-of-aws-reinvent-2025/" rel="nofollow">Amazon Bedrock AgentCore</a> around runtime, memory, identity and auditability. Google shipped an agent gateway and sovereign controls for cross-cloud traffic. As <a href="https://www.bain.com/insights/google_cloud_next_2026_the_agentic_enterprise_control_plane_comes_into_view/" rel="nofollow">Bain observed</a>, agentic AI is now an economics and operations problem, not just a capability problem. The through-line, captured by Microsoft’s own framing, is that AI alone will not change your business; the system running it will. <a href="https://www.mckinsey.com/industries/technology-media-and-telecommunications/our-insights/the-next-big-shifts-in-ai-workloads-and-hyperscaler-strategies" rel="nofollow">McKinsey’s read</a> is consistent: workloads are becoming more distributed, specialized and operationally demanding, which forces more deliberate infrastructure decisions.</p>
+
+
+<div class="extendedBlock-wrapper block-coreImage undefined"><figure class="wp-block-image size-large"><img alt="Hyperscaler convergence, Spring 2026." class="wp-image-4190723" height="557" src="https://b2b-contenthub.com/wp-content/uploads/2026/06/hyperscaler-convergence-spring-2026.png?w=1024" width="1024" /></figure><p class="imageCredit">Vipin Jain</p></div>
+
+
+
+<h2 class="wp-block-heading" id="from-platform-choice-to-placement-decision">From platform choice to placement decision</h2>
+
+
+
+<p>The failure I document most often is not a technology failure; it is a governance failure. Most enterprises lack a clear, repeatable way to decide what runs where, under what conditions and with what tradeoffs. Platform teams make that call informally, under deadline pressure and repeat it hundreds of times as new use cases launch. Workloads then accumulate in public cloud by default, not by design and 30 to 50 percent cost overruns follow, not because public cloud was the wrong choice but because no deliberate choice was ever made.</p>
+
+
+
+<p>In one global manufacturer I advise, a predictive-maintenance model went live on public cloud and performed exactly as validated in staging. But real-time inference on the factory floor ran at 80 to 120 milliseconds across the WAN, when the machine-control system needed under ten. Moving the model to edge nodes fixed the latency, but the company lost most of a quarter of the cost, rework and delayed benefits, and the line had run for weeks on stale recommendations: a control failure that could have caused a safety event. The fix was never more AI talent. It was a structured placement decision at the start, weighing six dimensions:</p>
+
+
+
+<ul class="wp-block-list">
+<li><strong>Latency: </strong>real-time (under 10 ms, edge or on-prem), interactive (50 to 500 ms, cloud) or batch.</li>
+
+
+
+<li><strong>Cost and TCO: </strong>token spend, GPU utilization, vector-database queries, egress and unit economics per workload.</li>
+
+
+
+<li><strong>Resilience: </strong>failover architecture, degraded-mode behavior, recovery SLA and rollback policy.</li>
+
+
+
+<li><strong>Control: </strong>observability, audit trails, governance authority and the ability to halt or reverse.</li>
+
+
+
+<li><strong>Data sensitivity: </strong>sovereignty requirements, privacy and compliance rules, and IP protection.</li>
+
+
+
+<li><strong>Integration: </strong>legacy system dependencies, pipeline complexity and data-residency constraints.</li>
+</ul>
+
+
+
+<p>Run consistently, those dimensions produce a placement pattern like this:</p>
+
+
+
+<figure class="wp-block-table"><div class="overflow-table-wrapper"><table class="has-fixed-layout"><thead><tr><td><strong>Workload</strong></td><td><strong>Latency</strong></td><td><strong>Cost predictability</strong></td><td><strong>Data sovereignty</strong></td><td><strong>Recommended path</strong></td></tr></thead><tbody><tr><td><strong>Customer-facing chatbot</strong></td><td>200-500 ms</td><td>Medium</td><td>Low risk</td><td>Public cloud, reserved instances</td></tr><tr><td><strong>Real-time fraud detection</strong></td><td>Under 10 ms</td><td>Medium</td><td>High</td><td>On-prem or sovereign private cloud</td></tr><tr><td><strong>Clinical decision support</strong></td><td>100-300 ms</td><td>Predictable</td><td>Critical</td><td>Sovereign cloud or dedicated VPC</td></tr><tr><td><strong>Demand forecasting (batch)</strong></td><td>Hours</td><td>High</td><td>Low risk</td><td>Spot instances or scheduled cloud</td></tr><tr><td><strong>Factory-floor vision AI</strong></td><td>Under 5 ms</td><td>Predictable</td><td>Medium</td><td>Edge node (Azure Local, AWS on-prem)</td></tr><tr><td><strong>Internal knowledge assistant</strong></td><td>1-3 sec</td><td>Variable tokens</td><td>High (IP risk)</td><td>Private cloud with on-prem retrieval</td></tr></tbody></table> </div></figure>
+
+
+
+<p>This is no longer optional. <a href="https://www.storagenewsletter.com/2026/03/11/enterprise-survey-finds-93-are-repatriating-ai-workloads-or-evaluating-a-move-away-from-public-cloud/" rel="nofollow">Cloudian’s 2026 enterprise AI infrastructure survey</a> found that 79 percent of enterprises have already moved AI workloads out of public cloud, and 93 percent are repatriating or actively evaluating it, driven by data sovereignty, cost overruns and real-time performance. Repatriation is now the norm, not the exception.</p>
+
+
+
+<p>The agentic layer makes discipline urgent. An agent chains 20 to 100 tool calls, each with its own latency, cost and failure mode, so the governance model that works for a chatbot does not work for an autonomous agent approving procurement or onboarding a customer. This spring the providers shipped production infrastructure for exactly this, yet <a href="https://www.deloitte.com/global/en/issues/generative-ai/state-of-ai-in-enterprise.html" rel="nofollow">Deloitte’s 2026 survey</a> of more than 3,000 leaders finds only about one in five companies has a mature governance model for autonomous agents. The platforms solved the mechanism. Most enterprises have not yet written the policy.</p>
+
+
+
+<h2 class="wp-block-heading" id="what-the-leaders-do-differently">What the leaders do differently</h2>
+
+
+
+<p>The organizations extracting compounding value from AI, not just running experiments, share one discipline: they treat workload placement as a repeatable process, and they build resilience and control in from the start rather than after the first production incident. In practice, they do five things:</p>
+
+
+
+<ol class="wp-block-list">
+<li>Classify every use case at intake across the six dimensions, before any infrastructure is provisioned.</li>
+
+
+
+<li>Separate AI budget lines for experiments, production inference and training, so cost is governable.</li>
+
+
+
+<li>Treat unit economics, cost per inference, per query and per agent run, as engineering KPIs, not month-end surprises.</li>
+
+
+
+<li>Define repatriation triggers in advance, typically 12 to 18 months of stable volume.</li>
+
+
+
+<li>Write an explicit resilience contract, and agentic observability and rollback rules, before scaling.</li>
+</ol>
+
+
+
+<p>The gap between strategy-ready and infrastructure-ready is the remediation backlog, and most enterprises stall moving from proof of concept to production for exactly this reason. <a href="https://www.deloitte.com/us/en/insights/topics/technology-management/tech-trends/2026/ai-infrastructure-compute-strategy.html" rel="nofollow">Deloitte’s tech-trends analysis</a> frames the same shift as the move to inference economics: the bottleneck is infrastructure governance, not model capability.</p>
+
+
+<div class="extendedBlock-wrapper block-coreImage undefined"><figure class="wp-block-image size-large"><img alt="AI infrastructure maturity: The governance gap." class="wp-image-4190724" height="555" src="https://b2b-contenthub.com/wp-content/uploads/2026/06/ai-governance.png?w=1024" width="1024" /></figure><p class="imageCredit">Vipin Jain</p></div>
+
+
+
+<p><strong>For CIOs, a 90-day agenda. </strong>Five actions separate the leaders from those managing infrastructure crises:</p>
+
+
+
+<ol class="wp-block-list">
+<li>Audit every AI workload in production across latency, cost, sovereignty, volume, resilience, control and integration.</li>
+
+
+
+<li>Separate AI infrastructure budget lines so each workload type is attributable and governable.</li>
+
+
+
+<li>Define unit economics by workload and review them as engineering KPIs.</li>
+
+
+
+<li>Set a quantitative repatriation evaluation trigger.</li>
+
+
+
+<li>Define observability, cost attribution and rollback policy before scaling agents.</li>
+</ol>
+
+
+
+<h2 class="wp-block-heading" id="the-strategic-reframe">The strategic reframe</h2>
+
+
+
+<p>The organizations making real progress on AI are not distinguished by the sophistication of their models or the size of their cloud contracts. One discipline sets them apart: a clear, repeatable way to decide what runs where, under what conditions, with what tradeoffs and what happens when something fails. That discipline is not an IT problem. It is a strategic capability that requires CIO ownership, CFO alignment and executive accountability.</p>
+
+
+
+<p>This spring the cloud providers handed enterprises the infrastructure to run and govern AI, and agents, at every tier of the architecture. The gap is no longer supply. It is the operating model to use deliberately. The companies building that model now build the operating foundation for AI at scale. Everyone else builds a remediation backlog. The infrastructure decisions you make in the next 12 months will decide which of those two you become.</p>
+
+
+
+<p><em>This article was made possible by our partnership with the IASA </em><a href="https://chiefarchitectforum.org/" rel="nofollow" target="_blank"><em>Chief Architect Forum</em></a><em>. The CAF’s purpose is to test, challenge and support the art and science of Business Technology Architecture and its evolution over time as well as grow the influence and leadership of chief architects both inside and outside the profession. The CAF is a leadership community of the </em><a href="https://iasaglobal.org/" rel="nofollow" target="_blank"><em>IASA</em></a><em>, the leading non-profit professional association for business technology architects.</em></p>
+
+
+
+<p><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><strong><a href="https://www.cio.com/expert-contributor-network/">Want to join?</a></strong></p>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Q&amp;A with Grindr CEO George Arison on turning Grindr into an &quot;AI-native company&quot;, &quot;impos[ing]&quot; AI on staff, facing &quot;opposition&quot;, using AI as a CEO, and more (Jordyn Holman/New York Times)</title>
+  <link>https://www.techmeme.com/260630/p12#a260630p12</link>
+  <pubDate>Tue, 30 Jun 2026 10:50:01 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><a href="https://www.nytimes.com/2026/06/30/business/grindr-ceo-george-arison-ai.html"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260630/i12.jpg" vspace="4" /></a>
+<p><a href="https://www.techmeme.com/260630/p12#a260630p12" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Jordyn Holman / <a href="https://www.nytimes.com/">New York Times</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://www.nytimes.com/2026/06/30/business/grindr-ceo-george-arison-ai.html">Q&amp;A with Grindr CEO George Arison on turning Grindr into an &ldquo;AI-native company&rdquo;, &ldquo;impos[ing]&rdquo; AI on staff, facing &ldquo;opposition&rdquo;, using AI as a CEO, and more</a></b></span>&nbsp; &mdash;&nbsp; George Arison, the gay dating app's chief executive, is aiming for all code to be eventually written &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 How Spain&#x27;s LaLiga uses nationwide IP blocking to combat illegal sports streams, impacting an estimated 550K+ domains, putting it in conflict with Cloudflare (Bloomberg)</title>
+  <link>https://www.techmeme.com/260630/p11#a260630p11</link>
+  <pubDate>Tue, 30 Jun 2026 10:25:54 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://www.bloomberg.com/news/features/2026-06-30/laliga-s-football-piracy-crackdown-is-breaking-the-internet"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260630/i11.jpg" vspace="4" /></a>
+<p><a href="https://www.techmeme.com/260630/p11#a260630p11" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="https://www.bloomberg.com/">Bloomberg</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/features/2026-06-30/laliga-s-football-piracy-crackdown-is-breaking-the-internet">How Spain's LaLiga uses nationwide IP blocking to combat illegal sports streams, impacting an estimated 550K+ domains, putting it in conflict with Cloudflare</a></b></span>&nbsp; &mdash;&nbsp; From small businesses to government agencies, legitimate websites are getting caught in the crossfire of LaLiga's fight against illegal sports streams</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Why &#x27;countdown mode&#x27; is the task manager feature I can&#x27;t live without</title>
+  <link>https://www.zdnet.com/article/ticktick-task-manager-feature-countdown-mode/</link>
+  <pubDate>Tue, 30 Jun 2026 10:16:29 +0000</pubDate>
+  <source>ZDNet</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>This setting meshes perfectly with how my brain works, and I don't miss deadlines anymore.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 As OpenAI and Anthropic prepare to go public, San Francisco tech workers making six figures say they cannot compete with the new AI elite and may have to leave (Emmy Martin/New York Times)</title>
+  <link>https://www.techmeme.com/260630/p10#a260630p10</link>
+  <pubDate>Tue, 30 Jun 2026 10:01:03 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: Vendor advisory — check installed firmware/software version and patch status.</b><br/><a href="https://www.nytimes.com/2026/06/29/technology/san-francisco-tech-salaries.html?unlocked_article_code=1.t1A.hZip.Vm7L5isc1PkL&amp;smid=nytcore-ios-share"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260630/i10.jpg" vspace="4" /></a>
+<p><a href="https://www.techmeme.com/260630/p10#a260630p10" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Emmy Martin / <a href="https://www.nytimes.com/">New York Times</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://www.nytimes.com/2026/06/29/technology/san-francisco-tech-salaries.html?unlocked_article_code=1.t1A.hZip.Vm7L5isc1PkL&amp;smid=nytcore-ios-share">As OpenAI and Anthropic prepare to go public, San Francisco tech workers making six figures say they cannot compete with the new AI elite and may have to leave</a></b></span>&nbsp; &mdash;&nbsp; As OpenAI and Anthropic prepare to go public, tech workers making six figures are grousing that they cannot compete with the new A.I. elite.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Beware of AI costs hidden in plain sight</title>
+  <link>https://www.cio.com/article/4189671/beware-ai-costs-hidden-in-plain-sight.html</link>
+  <pubDate>Tue, 30 Jun 2026 10:01:00 +0000</pubDate>
+  <source>CIO.com</source>
+  <description><![CDATA[<b>Why this matters: Could impact sign-ins/MFA/Conditional Access — watch for login issues.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<p>Rapid and widespread AI adoption has most CIOs blind to what AI is really costing their organizations.</p>
+
+
+
+<p>Nearly two-thirds of companies say employees have used AI without proper oversight, and almost half of large enterprises don’t have full insight into what AI tools employees are using, according to Protiviti’s <a href="https://www.protiviti.com/sites/default/files/2026-05/aipulse26-vol4-survey-booklet-0426-na-en-protiviti.pdf" rel="nofollow">2026 AI Pulse Survey</a>. Meanwhile, 77% of technology leaders say AI adoption is already outpacing their governance capabilities, per IBM’s <a href="https://www.ibm.com/thought-leadership/institute-business-value/en-us/report/2026-cxo" rel="nofollow">2026 Tech Leader Study</a>.</p>
+
+
+
+<p>“Combine the breakneck pace at which companies are looking to embrace AI with the low technical barrier to entry for using AI, and you’ve got an incredibly challenging space to keep tabs on,” says <a href="https://www.linkedin.com/in/andrew-retrum-9134012/" rel="nofollow">Andrew Retrum</a>, managing director and global technology risk and resilience practice lead at Protiviti.</p>
+
+
+
+<p>This isn’t shadow IT in the old sense, as financial exposure isn’t rogue employees signing up for ChatGPT. It’s the AI costs mounting in vendor renewals, usage-based consumption, and business unit budgets. A few CIOs have full visibility, but only because they built it into their architecture from day one. Others are still catching up. And some are finding that cost isn’t even the most important thing they can’t see.</p>
+
+
+
+<h2 class="wp-block-heading" id="where-the-money-hides">Where the money hides</h2>
+
+
+
+<p>AI costs are showing up in three places that most organizations aren’t watching closely enough.</p>
+
+
+
+<p>The first is vendor-embedded AI. Software providers are quietly adding AI features to existing tools, and the costs show up as renewal increases — not new line items. Some solutions are showing a 30% cost uplift as vendors embed AI functionality without upfront disclosure, according to <a href="https://www.gartner.com/en/documents/6983866" rel="nofollow">Gartner research from September 2025</a>.</p>
+
+
+
+<p>The second is usage-based pricing. “The bulk of GenAI cost isn’t in the build, it’s in the run: inference, API calls, fine-tuning, and usage-based consumption that scales fast and unpredictably,” Gartner notes.</p>
+
+
+
+<p><a href="https://www.linkedin.com/in/philleslie/" rel="nofollow">Phil Leslie</a>, chief technology and innovation officer at Cornerstone Research, has seen this firsthand. “With Gemini, monitoring cost is largely irrelevant; the fee is fixed,” he says. “With Claude Code, costs are usage-based, and as adoption grows, so does spend. We noticed costs rising and have been building our dashboards accordingly.”</p>
+
+
+
+<p>Getting a complete picture isn’t easy. “Getting a truly holistic view across Claude Code, Claude.ai, and our Office plugins is not trivial,” Leslie says.</p>
+
+
+
+<p>The third bucket is business unit–led adoption. Various functions are buying AI solutions via credit cards or departmental budgets, outside IT’s line of sight.</p>
+
+
+
+<h2 class="wp-block-heading" id="visibility-by-design">Visibility by design</h2>
+
+
+
+<p>At Cox Business, Head of AI <a href="https://www.linkedin.com/in/ericpace/" rel="nofollow">Eric Pace</a> says the company has achieved full visibility into AI spend. But it required intentional architecture and governance from the start.</p>
+
+
+
+<p>“We have 100% visibility into all AI spend, including SaaS-based modules through activations in BAU [business-as-usual] operations, new purchases and solutions, and all token consumption across the enterprise,” Pace says.</p>
+
+
+
+<p>The key was centralization paired with clear accountability. “We were really intentional about building a model in our organization where AI is not a handoff, with one team building and another team simply receiving it,” says Pace. “We chose to centralize the AI function early to align with company-wide objectives, while business teams provide the workflow context that makes adoption real.”</p>
+
+
+
+<p>Cox Business also built visibility into its architecture by default. “All AI traffic is routed through our AI gateway and runtime security solutions,” Pace says. “This includes all on-prem and cloud-based capabilities.”</p>
+
+
+
+<p>That architecture extends to network monitoring. “We can see all traffic ingress and egress on the network and can also see what is running on our company devices,” he adds. “When we identify traffic patterns outside of our desired path or standard, we work with our people to find their way into compliance.”</p>
+
+
+
+<p>Employees have access to the tools they need without creating ungoverned sprawl. “We have provided flexible ecosystem and capability sets that allow our people to operate with ‘freedom in a framework,’” says Pace. “And they generally find that they have access to everything they need.”</p>
+
+
+
+<h2 class="wp-block-heading"><strong>When cost takes a back seat</strong></h2>
+
+
+
+<p>Not every organization is racing to solve the cost visibility problem. For some, other concerns take priority.</p>
+
+
+
+<p>“Cost visibility is deliberately secondary right now,” says Leslie of Cornerstone Research. “The harder problem is the nature of our work.”</p>
+
+
+
+<p>Cornerstone operates in high-stakes litigation, where expert reports must be error-free. “Figuring out how to unlock the benefits without compromising that trust is the primary challenge,” Leslie says. “Cost matters. It is just not the binding constraint in this phase.”</p>
+
+
+
+<p>Leslie also points out a nuance that complicates cost optimization: The highest spenders are often the highest performers.</p>
+
+
+
+<p>“Something like 80% of our costs come from 10% of our users — and that 10% tends to be our most experienced people, using AI for legitimate, high-stakes reasons,” he says. “You cannot just set a uniform ceiling without risking exactly the use cases you want to encourage.”</p>
+
+
+
+<p>For now, Cornerstone uses caps that create friction when costs get high, paired with override mechanisms. “A high-cost user is often a signal of high-value work, not waste,” Leslie says.</p>
+
+
+
+<h2 class="wp-block-heading" id="scale-changes-the-game">Scale changes the game</h2>
+
+
+
+<p>The visibility challenge looks different depending on organization size. Leslie spent a decade at Amazon before joining Cornerstone and sees a clear contrast. “Amazon is not just bigger — it is more diverse,” he says. “At that scale, simple rules are often inefficient, but you reach for them anyway because managing complexity requires blunt instruments.”</p>
+
+
+
+<p>At Cornerstone, he can be more surgical. “The feedback loops are short enough that I can have a direct conversation with a practice lead and understand in a few minutes what a team is trying to accomplish,” Leslie says. “That means we can tailor cost management to the specific situation — confidently incurring higher costs where we know it makes sense, rather than guessing.”</p>
+
+
+
+<p>At Cox Business, scale required a different approach. “We centralized our capital investments and distributed enablement where teams are building enterprise applications outside of the center of excellence,” Pace says. Token consumption budgets are centralized but communicated constantly to larger consuming departments, and top consumers are interviewed frequently to understand value.</p>
+
+
+
+<h2 class="wp-block-heading" id="whats-working">What’s working</h2>
+
+
+
+<p>For organizations still building visibility, it’s helpful to begin with the basics. “Start with an inventory — you can’t defend what you can’t see,” says Protiviti’s Retrum. “Assign clear ownership across IT, security, legal, and the business. And treat it as an ongoing discipline, not a one-time effort.”</p>
+
+
+
+<p>Prioritization matters, too. “Don’t let perfect be the enemy of good,” Retrum advises. “Prioritize your highest-risk use cases first — where AI is touching sensitive data, customer-facing decisions, or regulated processes. Build your guardrails around those, then expand outward.”</p>
+
+
+
+<p>Gartner recommends tagging AI purchases in procurement, tracking AI spend separately in IT financial management systems, and negotiating AI-specific cost clauses into cloud and SaaS renewals before the next renewal cycle.</p>
+
+
+
+<p>At Cox Business, governance isn’t just about control — it’s about focus. “We have used ‘no’ liberally to keep our people focused on the things that will get us to value quicker,” Pace says.</p>
+
+
+
+<h2 class="wp-block-heading" id="beyond-the-budget">Beyond the budget</h2>
+
+
+
+<p>For some organizations, the bigger risk isn’t runaway costs: It’s what happens when AI goes wrong.</p>
+
+
+
+<p>“Shadow IT is not primarily a cost control issue — it is a reputational risk issue,” Leslie notes. “Depending on your firm and how AI is used, rogue use can cause real harm. That is the risk worth managing.”</p>
+
+
+
+<p>Cost visibility matters. But for some CIOs, it may not be the most important thing they’re missing.</p>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Live on the first floor while building the second</title>
+  <link>https://www.cio.com/article/4190714/live-on-the-first-floor-while-building-the-second.html</link>
+  <pubDate>Tue, 30 Jun 2026 10:00:00 +0000</pubDate>
+  <source>CIO.com</source>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<p>Every finance transformation conversation we have these days starts with AI. Clients arrive at the table with a list of agentic capabilities they want to deploy and an assumption that technology is the answer.</p>
+
+
+
+<p>That assumption is half right. AI is one of the most consequential forces reshaping finance in a generation, and the future-state operating models we are designing today look fundamentally different as a result. <a href="https://www.crosscountry-consulting.com/insights/blog/the-defining-leadership-moment-why-cfos-must-own-ai-strategy/" rel="nofollow">But AI alone is not a strategic finance roadmap</a>. The return comes from sequencing AI with the right process redesign, technology architecture and data foundation, with each piece compounding the next.</p>
+
+
+
+<p>For decades, CFOs treated transformation like a renovation, managing tasks room by room. They executed separate projects to update the close, replace an ERP and layer better reporting on the same operating model. AI changes that blueprint. For the first time, we can take the house down to the studs and rebuild around capabilities that did not exist three years ago. That is a different kind of project, and it requires a different kind of leader.</p>
+
+
+
+<p>AI has done something that previous waves of transformation never managed to do. It has brought the right stakeholders into the conversation and forced finance and IT to address the same problem simultaneously. That side effect alone is reshaping how the next phase of transformation gets built.</p>
+
+
+
+<p>This is the part of the conversation IT leaders need to understand.</p>
+
+
+
+<h2 class="wp-block-heading" id="what-the-ai-conversation-has-actually-done">What the AI conversation has actually done</h2>
+
+
+
+<p>For most of the last decade, finance transformation was launched in response to a single trigger. A cost-out program. A post-acquisition integration. An ERP that aged out. The CFO owned the initiative, the CIO got pulled in to handle the technology and the rest of the business found out when the new system went live.</p>
+
+
+
+<p>The AI moment has changed that pattern and forced a new conversation. When you are taking the house down to the studs rather than swapping out fixtures, the work cannot be done by Finance or IT alone. <a href="https://www.crosscountry-consulting.com/enterprise-digital-transformation-study/" rel="nofollow">Stakeholder alignment becomes a precondition for the rebuild</a>, not a nice-to-have. AI is the attraction that pulls everyone into the room.</p>
+
+
+
+<p>When a client walks in asking about agentic finance, the CFO, CIO and heads of accounting, FP&amp;A and controllership all show up for the same assessment. Leaders who have historically run parallel agendas now talk about the same problem at the same time. By the time we get to solution design, the cross-functional alignment that used to require months has already happened. Issues get raised early. The transformation moves faster because everyone agreed on the destination before we picked the route.</p>
+
+
+
+<p>Maybe we can thank AI for bringing people together who otherwise wouldn’t have been collaborating. That is the reason the next phase of finance transformation looks structurally different from the last.</p>
+
+
+
+<h2 class="wp-block-heading" id="the-roadmap-and-whats-missing">The roadmap and what’s missing</h2>
+
+
+
+<p>A strategic finance roadmap is not a project plan. It is more like an architect’s drawings, providing a multi-year design that connects business strategy to a future-state operating model, sequenced so each step compounds rather than starts over.</p>
+
+
+
+<p>Every roadmap has a North Star. That future-state vision almost always has an AI component. A multi-agent solution orchestrated on a platform. Continuous close. Predictive FP&amp;A. Real-time controls. Humans in the Loop. A streamlined org chart. That vision, eventually, becomes the destination.</p>
+
+
+
+<p>But the destination is not today. What matters today is that the work between the as-is and future-state is cumulative, not throwaway. The data foundation organized for one transformation becomes the foundation for the next. Process improvements made now will accelerate the AI capabilities deployed two years from now.</p>
+
+
+
+<p>You do not need an architect for a renovation. You hire a contractor, hand them a task list and inspect the results. You need an architect when you take the house down to the studs. The role most transformation programs are missing right now is not another builder. There are plenty of developers, system implementers and business integrators in any given program. What is missing is the architect.</p>
+
+
+
+<p>The architect designs how the parts come together before anyone starts building. That work runs side by side with the client, connecting the dots between the technology, the problems, the data and the functions inside Finance and IT. The architect’s job is to create the vision and the blueprint and to translate between groups that do not naturally speak the same language. Done well, the result is a structure that is fundamentally sound and built to expand as the client’s appetite grows. Done poorly or skipped, the result is a house that cannot accommodate what comes next.</p>
+
+
+
+<h2 class="wp-block-heading" id="live-on-the-1st-floor-while-you-build-the-2nd-and-3rd">Live on the 1st floor while you build the 2nd… and 3rd</h2>
+
+
+
+<p>The traditional transformation pitch promises ROI at the end. Wait three years and the numbers will look great. That pitch is structurally fragile, and every CIO who has watched a transformation <a href="https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/agile-in-enterprise-resource-planning-a-myth-no-more" rel="nofollow">budget get cut in year two knows why</a>.</p>
+
+
+
+<p>Stakeholder fatigue is real. Budget uncertainty is real. In private equity-backed companies, the three-to-five-year hold period is real. Any program that has not produced measurable value in the first phase loses political support before the second phase is built.</p>
+
+
+
+<p>The architectural alternative is to design the program so the first floor is occupied while the second and third floors are still being completed. The first process redesign produces value while the next is being scoped. The first technology deployment generates a return while the next is being implemented. The roadmap is not a march toward a distant payoff. It is a sequence of compounding wins.</p>
+
+
+
+<p>The materiality of the return matters more than the size. A small process improvement or quick win that delivers a meaningful percentage gain in week ten is worth more than a large transformation that promises a bigger gain in year three. Quick wins prove that the blueprint is working. That proof builds the confidence stakeholders need to fund the next phase and the one after that. Investors want immediate ROI. Boards want immediate ROI. The strategic finance roadmap should be designed to deliver it.</p>
+
+
+
+<h2 class="wp-block-heading" id="data-in-every-room">Data in every room</h2>
+
+
+
+<p>Picture data as the electricity and water in a building: every room needs it, and the pipes and wires that carry it are what make the structure livable. Consolidating, warehousing and improving data quality is how you run those lines. It strengthens every element of the roadmap, not just the AI.</p>
+
+
+
+<p>That has implications for how the stack gets selected. Most clients end up with an ecosystem rather than a single platform. ERP, EPM, close management, procurement, reporting and an emerging set of agentic capabilities, all integrated against a shared data foundation. The boundaries between those tools matter less than the data architecture that connects them.</p>
+
+
+
+<p>It also has implications for what the CIO needs to be doing right now, even on transformations not yet formally launched. The data work pays dividends regardless of which solutions eventually get built. Cybersecurity, controls and business continuity are not bolted on at the end. They are design constraints embedded in the architecture from day one. SOX compliance is easier to build in than to retrofit, as is every other control discipline that lands on the CIO’s desk.</p>
+
+
+
+<h2 class="wp-block-heading" id="the-roadmap-in-5-years">The roadmap in 5 years</h2>
+
+
+
+<p>The most concrete way to think about where this is going is to look at the org chart.</p>
+
+
+
+<p>The finance org chart five years from now is not going to look like the org chart today. Where there used to be five controllers, there may be one human controller and three E-controllers, with agents sitting alongside them on the chart. The remaining human roles will be split between onshore and offshore in ways that look unfamiliar from where we sit now. The balance and location of every component will shift.</p>
+
+
+
+<p>The strategic finance roadmap is the artifact that builds toward that end state, and the roadmap itself will evolve as the work progresses. Not a destination, but a continuous design exercise.</p>
+
+
+
+<p>AI is rebuilding finance from the studs up. The strategic finance roadmap is how we make sure the new house is structurally sound, produces returns from the first floor and reflects the vision and the priorities of the people who will live in it. That work belongs to the CFO and the CIO together, or it does not become livable.</p>
+
+
+
+<p><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><strong><a href="https://www.cio.com/expert-contributor-network/">Want to join?</a></strong></p>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 The AI selected to give the FIFA World Cup an edge</title>
+  <link>https://www.cio.com/article/4190097/the-ai-selected-to-give-the-fifa-world-cup-an-edge.html</link>
+  <pubDate>Tue, 30 Jun 2026 10:00:00 +0000</pubDate>
+  <source>CIO.com</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<p>The FIFA World Cup is arguably the greatest advertising opportunity ever conceived. The Super Bowl is one thing, which drew in about 125 million viewers earlier this year, but for context, at least <a href="https://inside.fifa.com/tournament-organisation/audience-reports/qatar-2022/total-media-engagement#:~:text=2.87%20billion%20viewers%20watched%20at,compared%20to%20Russia%202018%20(NB." rel="nofollow">2.8 billion</a> watched some portion of 2022’s World Cup competition in Qatar. And this year, that number is expected to rise to at least six billion.</p>
+
+
+
+<p>But these figures pale in comparison to the sheer amount of money poured into marketing campaigns by some of the world’s largest companies looking to promote everything from soda and athleisure, to cars and computers.</p>
+
+
+
+<p>Leading AI innovators are in that mix as well, but instead of showcasing just how powerful their LLMs are, two of the largest contributors to the FIFA World Cup’s ad spend, OpenAI and Google, have proven largely content with just reminding the public they exist. For the ChatGPT creator, that means paying Argentine striker Lionel Messi to ask the chatbot to virtually dye his hair the colors of his nation’s flag. Gemini, meanwhile, has confined itself to sponsoring the Argentinian team itself, and <a href="https://www.wired.com/story/artificial-intelligence-sneaks-into-the-world-cup-thanks-to-google-gemini/" rel="nofollow">tinkering with the model</a> to answer questions about matches as a fan might.</p>
+
+
+
+<p>Engagement at this level is understandable since Google, whose AI-infused Maps and Translate apps, already provide immeasurable added value to visiting fans navigating unfamiliar back roads and talking to waiters in non-native languages. Other companies, however, have more intricate game plans.</p>
+
+
+
+<h2 class="wp-block-heading" id="behind-the-scenes">Behind the scenes</h2>
+
+
+
+<p>Lenovo, for instance, has released Football AI Pro, an application designed to crunch millions of data points generated during matches into over 2,000 metrics to benefit every national team as they plan strategies for their upcoming matches. Using this data, the AI agents on the platform can then provide worded responses, graphic displays, and animated simulated scenarios. “Teams can even match action showing the tactical decision-making from previous matches,” says Art Hu, Lenovo’s global CIO.</p>
+
+
+
+<p>Discussions with FIFA about the project began in 2022, says Hu. By then, the company already had a robust track record in sports partnerships, having embarked on collaborations with Formula 1, Ducati, and the Carolina Hurricanes. In FIFA’s case, the idea for the product came from Lenovo as a software platform that could provide AI-powered statistical data analysis and insights for all 48 participating national teams. Most sports, says Hu, don’t even come close to providing that level of access to AI technology.</p>
+
+
+
+<p>Match officials are also benefiting. In addition, Lenovo has built AI-powered 3D constructions of over 1,200 players in the competition that referees can use to aid their decisions when their view of players, or that of the VAR camera, is obscured. “These player avatars provide greater context and understanding in moments that matter,” says Hu, “We’ve seen them effectively used during offside replays during the tournament.”</p>
+
+
+
+<p>As the group stages conclude and the tournament itself eventually ends, FIFA will release more data, says Hu, so at press time, he can’t speak about how Football AI Pro is precisely helping each team. However, he sees clear applications for the platform long after a winner is decided.</p>
+
+
+
+<p>“As Football AI Pro has been built in part using Lenovo’s AI Factory, much of the underlying infrastructure can be utilized again and applied to other solutions that require a bespoke, multi-agent AI engine,” he says.</p>
+
+
+
+<h2 class="wp-block-heading" id="crowd-control">Crowd control</h2>
+
+
+
+<p>Beyond the pitch and into the stands and beyond, AI is also providing a crucial safeguarding role. Approximately five million fans are predicted to descend on US, Mexican, and Canadian host cities to see their teams play — a heavy lift for local emergency services fielding calls from tourists who often default to their first language when adrenaline kicks in.</p>
+
+
+
+<p>That’s where RapidSOS hopes it can help. The firm provides the means for emergency services in the US, Canada, and Mexico to summon crucial contextual information about callers to their phones, such as precise location. The company also uses AI to surface vital information about the emergency from conversations that can be shared with relevant stakeholders. Considering the scale of the event itself, that means keeping not only first responders in the loop, but also FIFA, stadium operators, and any other major company whose premises serve as a touchpoint for fans. Crucially, in addition to transcribing and key-wording calls, RapidSOS software can translate up to 50 languages from phone audio, which is especially useful on busy match days.</p>
+
+
+
+<p>That same service also kicks into gear when the audio on the call is muffled or unclear, which is likely to occur if an emergency takes place inside a loud and crowded stadium. “We have a huge amount of synthetic data based on real calls that we pressure test on an ongoing basis,” says Zach LaValley, RapidSOS’s chief technology officer. “We might also prefer a set of models based on the languages we know the locality has strength in, so San Antonio might use a different translation or transcription model than Boston.”</p>
+
+
+
+<p>He stresses that RapidSOS’s system doesn’t supersede other services on offer to fans, but if it takes several minutes to find a person who can speak the right language, he says, there’s a rapid and functional alternative.</p>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 The AI Token Costs That Can Break Cybersecurity</title>
+  <link>https://www.securityweek.com/the-ai-token-costs-that-can-break-cybersecurity/</link>
+  <pubDate>Tue, 30 Jun 2026 10:00:00 +0000</pubDate>
+  <source>SecurityWeek</source>
+  <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><p>As cybersecurity platforms embrace agentic AI, organizations must balance detection performance against the escalating costs of token consumption, deployment architecture, and AI credits.</p>
+<p>The post <a href="https://www.securityweek.com/the-ai-token-costs-that-can-break-cybersecurity/">The AI Token Costs That Can Break Cybersecurity</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+</item>
+
+<item>
+  <title>🟠 How the Senate’s AI AGENT Act could reshape enterprise AI governance</title>
+  <link>https://www.cio.com/article/4191009/how-the-senates-ai-agent-act-could-reshape-enterprise-ai-governance.html</link>
+  <pubDate>Tue, 30 Jun 2026 09:57:17 +0000</pubDate>
+  <source>CIO.com</source>
+  <description><![CDATA[<b>Why this matters: Service impact possible — prepare comms and confirm vendor status.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<p>A proposed US Senate bill governing consumer AI agents could become an early test case for how organizations assess the security, accountability, and governance of autonomous software systems.</p>
+
+
+
+<p>The discussion <a href="http://chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https:/www.warner.senate.gov/wp-content/uploads/2026/06/AI-AGENT-Act-Discussion-Draft-1.pdf" rel="nofollow" target="_blank">draft</a>, released by Senator Mark Warner, is known as the Artificial Intelligence Access, Gatekeeper Exchange, and Nondiscriminatory Transfer Act of 2026, or AI AGENT Act.</p>
+
+
+
+<p>Under the proposal, providers of “custodial user agents” would have to register with the Federal Trade Commission before accessing interfaces maintained by large online platforms. The bill defines such agents as software authorized by a user to interact with platforms on the user’s behalf in a transparent, documented, limited, and revocable way.</p>
+
+
+
+<p>Large online platforms would be required to support access by approved third-party agents, although they could restrict access when registration requirements are not met, user consent has been revoked, or an agent is associated with repeated harmful activity.</p>
+
+
+
+<p>For enterprises, the proposal could mark an early regulatory test for <a href="https://www.computerworld.com/article/4165686/gartner-sees-untamed-growth-in-agentic-ai.html">agentic AI</a> by forcing companies to examine who controls these tools, how their actions are recorded, whether vendors can be trusted, and how much autonomy should be allowed inside corporate workflows.</p>
+
+
+
+<p>“As AI agents become more autonomous, enterprises will need clear accountability for decisions and actions taken on behalf of users,” said <a href="https://www.linkedin.com/in/tulikasheel/" rel="nofollow" target="_blank">Tulika Sheel</a>, senior VP at Kadence International. “This aligns with growing expectations around governance, auditability, and responsible AI adoption across organizations.”</p>
+
+
+
+<p>The requirement to link AI agents to an authorizing user is more consequential than certification or access revocation because it would change enterprise accountability models and shift how organizations <a href="https://www.computerworld.com/article/4025903/as-ai-agents-go-mainstream-companies-lean-into-confidential-computing-for-data-security.html" target="_blank">manage operational risk</a>, according to <a href="https://www.forrester.com/analyst-bio/biswajeet-mahapatra/BIO20046" rel="nofollow" target="_blank">Biswajeet Mahapatra</a>, principal analyst at Forrester.</p>
+
+
+
+<p>“Enterprises can absorb certification requirements through existing supplier review processes and manage permission revocation through the identity and access systems they already use,” Mahapatra said.  </p>
+
+
+
+<p>Linking an agent to the user authorizing it would create a continuous traceability requirement for the agent’s actions, he added.</p>
+
+
+
+<p>That could force CIOs and CISOs to rethink how they track agent activity and assign responsibility for automated decisions. It could also expand incident response planning to cover actions initiated by AI agents, creating new legal exposure and requiring closer coordination between security, compliance, and business teams.</p>
+
+
+
+<p>However, Sanchit Vir Gogia, chief analyst at Greyhound Research, said revocation may prove to be the most consequential issue because companies must be able to define what access is being withdrawn and across which systems.</p>
+
+
+
+<p>“A right to revoke means very little until the enterprise can answer what is being revoked, from whom, and across which systems,” Gogia said. “Absent that, revocation is a beautifully engineered red button wired to nothing, which is governance theatre with a dashboard attached.”</p>
+
+
+
+<h2 class="wp-block-heading" id="a-benchmark-for-procurement">A benchmark for procurement</h2>
+
+
+
+<p>Even though the bill targets consumer services, analysts said an FTC registration requirement could quickly become a de facto benchmark for enterprise procurement.</p>
+
+
+
+<p>“A vetted list reduces evaluation effort, accelerates vendor shortlisting, and provides defensible justification for procurement decisions,” Mahapatra said. “In practice, such a list would become a minimum entry requirement in sourcing workflows, with enterprises layering additional internal criteria such as security, data handling, and model governance before final selection.”</p>
+
+
+
+<p>Sheel said this framework could influence enterprise buying decisions even if it does not become a formal requirement. “Many organizations already look for independent certifications and regulatory assurance when selecting technology vendors, particularly for emerging technologies,” she said. “While it may not become a mandatory requirement, it could serve as an important trust signal during vendor evaluation.”</p>
+
+
+
+<h2 class="wp-block-heading" id="balancing-access-and-risk">Balancing access and risk</h2>
+
+
+
+<p>The bill could also create technical and legal tension for large platforms that would have to support third-party AI agents while retaining the ability to block risky access.</p>
+
+
+
+<p>“The biggest challenge will be balancing openness with security,” Sheel said. “Platforms will need clear and transparent policies to determine when access should be allowed or restricted, without creating uncertainty for developers or users. Finding that balance between interoperability and risk management will be essential to ensure both innovation and user protection.”</p>
+
+
+
+<p>Gogia said the bill’s platform-access requirement could also create disputes over whether platforms are blocking agents for legitimate security reasons or to protect their own market position.</p>
+
+
+
+<p>“The coming fight is whether security is a genuine shield for users or a convenient moat for incumbents,” Gogia said. “In agentic AI, both can be true in the same dispute, which is why this will be settled in court rather than in commentary.”</p>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Meituan open-sources LongCat-2.0, a 1.6T-parameter model that it says was trained on a 50K-chip cluster of domestic Chinese processors, without giving details (Reuters)</title>
+  <link>https://www.techmeme.com/260630/p9#a260630p9</link>
+  <pubDate>Tue, 30 Jun 2026 09:45:02 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.reuters.com/world/china/chinas-meituan-says-new-ai-model-trained-domestic-chips-2026-06-30/"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260630/i9.jpg" vspace="4" /></a>
+<p><a href="https://www.techmeme.com/260630/p9#a260630p9" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="http://www.reuters.com/">Reuters</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://www.reuters.com/world/china/chinas-meituan-says-new-ai-model-trained-domestic-chips-2026-06-30/">Meituan open-sources LongCat-2.0, a 1.6T-parameter model that it says was trained on a 50K-chip cluster of domestic Chinese processors, without giving details</a></b></span>&nbsp; &mdash;&nbsp; China's food delivery giant Meituan (3690.HK) said on Tuesday it had released and would open-source its next-generation LongCat &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Too many junk files on your Windows PC? This free tool can remove them in one click</title>
+  <link>https://www.zdnet.com/article/junk-files-windows-free-fluent-cleaner/</link>
+  <pubDate>Tue, 30 Jun 2026 09:10:16 +0000</pubDate>
+  <source>ZDNet</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>A utility called Fluent Cleaner will analyze your Windows environment to find and remove junk files, temp files, unused Registry entries, and other clutter - for free. Here's how to use it.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 AI and vibe coding fuel a surge in game releases; ATTN Economy says 181K mobile games launched in six months to May, up 118% on iOS and 73% on Android YoY (Orlando Crowcroft/Financial Times)</title>
+  <link>https://www.techmeme.com/260630/p8#a260630p8</link>
+  <pubDate>Tue, 30 Jun 2026 09:05:17 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://www.ft.com/content/4a4b3f61-e646-421f-bbf5-f5626994e9b7"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260630/i8.jpg" vspace="4" /></a>
+<p><a href="https://www.techmeme.com/260630/p8#a260630p8" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Orlando Crowcroft / <a href="https://www.ft.com/">Financial Times</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://www.ft.com/content/4a4b3f61-e646-421f-bbf5-f5626994e9b7">AI and vibe coding fuel a surge in game releases; ATTN Economy says 181K mobile games launched in six months to May, up 118% on iOS and 73% on Android YoY</a></b></span>&nbsp; &mdash;&nbsp; More instinctive technology is accelerating production amid concerns it risks losing gamers' trust</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Ford vuelve a contratar a 350 antiguos trabajadores decepcionada con la IA</title>
+  <link>https://www.cio.com/article/4190959/ford-vuelve-a-contratar-a-350-antiguos-trabajadores-decepcionada-con-la-ia.html</link>
+  <pubDate>Tue, 30 Jun 2026 09:00:48 +0000</pubDate>
+  <source>CIO.com</source>
+  <description><![CDATA[<b>Why this matters: Regulatory/compliance signal — assess applicability and remediation timeline.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<p>Ford ha vuelto a contratar aproximadamente a 350 ingenieros con experiencia después de que la inversión de la compañía en IA y sistemas automatizados de control de calidad no cumpliera las expectativas, tal y como ha informado Bloomberg. En resumen, la tecnología no detectó suficientes problemas.</p>
+
+
+
+<p>“Creímos erróneamente que podíamos crear un producto de alta calidad simplemente introduciendo inteligencia artificial e incorporando nuestros requisitos de diseño”, explicó a Bloomberg Charles Poon, responsable de desarrollo de hardware de Ford.</p>
+
+
+
+<p>Los inspectores de calidad contratados de nuevo, conocidos internamente como ingenieros de “barba gris” por su experiencia y años en la compañía, están ahora trabajando para identificar defectos antes de que los componentes lleguen a las fábricas.<br />Aun así, Ford no está abandonando por completo la IA; a los ingenieros con experiencia se les pedirá que ayuden a formar a empleados más jóvenes y a mejorar las herramientas de IA de la empresa.</p>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 I tried the &#x27;Plus Five&#x27; rule to fix my iPhone&#x27;s slow wireless charging - here&#x27;s what happened</title>
+  <link>https://www.zdnet.com/article/plus-five-wireless-charging-rule-iphone-android-faster-speeds/</link>
+  <pubDate>Tue, 30 Jun 2026 09:00:30 +0000</pubDate>
+  <source>ZDNet</source>
+  <description><![CDATA[<b>Why this matters: Could impact sign-ins/MFA/Conditional Access — watch for login issues.</b><br/>Wireless charging is a helpful feature, but you may not be getting the optimal speed with your accessories.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 AI agents are your new colleagues - how to get the best results</title>
+  <link>https://www.zdnet.com/article/how-to-create-great-results-with-your-agentic-work-colleagues-in-the-autonomous-business/</link>
+  <pubDate>Tue, 30 Jun 2026 09:00:14 +0000</pubDate>
+  <source>ZDNet</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>The future of work is likely to require a careful blend of human skills and AI agents. Here's how to work successfully with your agentic counterparts.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+</item>
+
+<item>
+  <title>🔴 The future of AI belongs to organizations that govern what they spend as well as what they build</title>
+  <link>https://www.cio.com/article/4190711/the-future-of-ai-belongs-to-organizations-that-govern-what-they-spend-as-well-as-what-they-build.html</link>
+  <pubDate>Tue, 30 Jun 2026 09:00:00 +0000</pubDate>
+  <source>CIO.com</source>
+  <description><![CDATA[<b>Why this matters: Potential data exposure — check monitoring and incident response readiness.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<p>Over the past two years, the enterprise conversation has been dominated by AI capabilities, productivity gains and adoption rates. I believe the next major conversation will be about something less exciting but far more consequential: AI economics. Not which models to use or which vendors to partner with, but whether organizations know what their AI is costing them, who is responsible for that spend and whether it is delivering the outcomes the business expected when it approved the investment.</p>
+
+
+
+<p>Unlike traditional software licensing, AI introduces a consumption-based model where every prompt, every agent action and every inference carries a cost. A single interaction may cost only pennies. But at enterprise scale, those pennies add up to millions of interactions per month, creating a category of technology spend that is genuinely difficult to forecast, attribute or explain. In some cases, the value is obvious and measurable. In others, the investment sits in a grey area where the technology is clearly being used, but nobody can say with confidence what it has returned.</p>
+
+
+
+<p><a href="https://www.bloomberg.com/news/articles/2026-06-02/uber-caps-usage-of-ai-tools-like-claude-code-to-cut-costs" rel="nofollow">Uber exhausted their entire 2026 AI coding budget within four months</a>. What struck me about that story was not the scale. It was the familiarity. I have worked on teams where AI was saving hours on document review and summarization every single week. The time savings were real, and everyone felt them. But the cost per interaction had never been logged, so the business case lived in people’s heads rather than in any report. The rideshare giant’s COO put it plainly: <a href="https://fortune.com/2026/05/26/uber-coo-ai-spending-tokens-claude-code/" rel="nofollow">“It’s very hard to draw a line” between rising AI costs and useful features for customers</a>. That gap between AI adoption and AI accountability is one most organizations are still navigating.</p>
+
+
+
+<h2 class="wp-block-heading" id="how-ai-costs-accumulate-in-the-background">How AI costs accumulate in the background</h2>
+
+
+
+<p>In my experience, some of the increase in AI costs organizations cannot explain comes down to a rise in the cost per interaction that nobody planned for. The model changes, the per-token price jumps and usage continue scaling as if nothing happened.</p>
+
+
+
+<p>A team builds a workflow on a capable, cost-efficient mid-tier model. It performs well. At some point, someone upgrades to a frontier reasoning model, either because the output felt noticeably better or simply because it was available. What nobody checks is that frontier models are dramatically more expensive per token, generate significantly more verbose responses and hit usage limits far faster. The model did not just get better. It got hungrier, and the budget absorbed that quietly.</p>
+
+
+
+<p>I have seen this play out even at the individual level. On a personal AI subscription, switching from a mid-tier to a frontier model can exhaust a monthly message limit in a fraction of the usual time, not because the user is doing anything differently, but because a more powerful model thinks longer, responds at greater length and consumes far more tokens per interaction. The behavior of the model changes the cost profile entirely, even when the task stays the same.</p>
+
+
+
+<p>Now multiply that across an engineering team, an operations group using an internal AI assistant and a customer-facing product, all running the upgraded model simultaneously. Nobody made a budget decision. Nobody ran a cost comparison. Someone changed a single line in a config file and the spend profile of the entire organization shifted overnight. In my experience, this is not an edge case. It is how AI cost surprises happen inside organizations today, quietly and without any paper trail.</p>
+
+
+
+<h2 class="wp-block-heading" id="smarter-architecture-is-smarter-economics">Smarter architecture is smarter economics</h2>
+
+
+
+<p>The organizations handling AI economics well are making architectural decisions up front that build cost intelligence directly into how their systems operate. One of the most effective approaches I have seen is model routing, sometimes referred to as the orchestrator-subagent pattern or tiered model architecture. Rather than routing every task through the most powerful and expensive model available, you assign a lightweight model to handle routine execution and only escalate to a frontier reasoning model when the task genuinely requires it.</p>
+
+
+
+<p>Think of it like any well-run team: a junior resource handles the day-to-day work and escalates to a senior manager only when the problem genuinely requires that level of judgment. You do not pull a senior manager into every task. You reserve that capacity for the decisions that need it. In practice, a team building an internal contract review tool might configure a lightweight model to handle the initial pass, extracting key clauses, flagging standard terms and formatting the output. When that model encounters an unusual clause requiring deeper reasoning, it escalates to a frontier model for expert-level analysis. Once resolved, execution returns to the lightweight model. The result is near-frontier quality on the hard cases at a fraction of the cost of running an advanced model across every document.</p>
+
+
+
+<p>What I value about this approach is the discipline it forces. It requires teams to think deliberately about which tasks need the most capable model and which do not. That thinking, applied consistently, is what separates organizations that govern AI spend from those that simply absorb it.</p>
+
+
+
+<h2 class="wp-block-heading" id="governing-ai-means-more-than-watching-the-spend">Governing AI means more than watching the spend</h2>
+
+
+
+<p>I have been in rooms where a team demos an AI agent and the energy is infectious. It reads documents, drafts responses, pulls data from internal systems and hands off to the next step in the workflow. Then the question comes up: what data does this agent have access to? In most of those rooms, the answer is silence. Teams think about capability before they think about boundaries, and that silence has consequences. Without clearly defined limits, an agent can inadvertently process personally identifiable information or protected health information never approved for AI use. Regulations like GDPR, HIPAA and CCPA do not make exceptions for unintentional exposure. Beyond data, there is also the risk of prompt injection: malicious directives embedded inside a document or email that hijack what the agent does next. The organization’s liability does not change because the breach was caused by an AI agent rather than a human.</p>
+
+
+
+<p>Access is one side of the problem. Output is the other, and in my experience, it is the one that catches organizations off guard more often. A model that hallucinates does not announce itself. It produces a confident, well-formatted answer that reads as authoritative until someone with the right knowledge examines it carefully. When that review step is missing, the output moves forward as fact. <a href="https://fingfx.thomsonreuters.com/gfx/legaldocs/znvnmqrwqpl/Alabama%2520Supreme%2520Court%2520-%2520AI.pdf" rel="nofollow">The Alabama Supreme Court sanctioned an attorney who had filed legal briefs containing inaccurate AI-generated citations, including references to cases that simply did not exist</a>. The attorney did not intend to mislead. The model was not asked to fabricate. But there was no human in the loop to catch what the model got wrong before it reached the court. That is the risk. Not that AI produces errors, but that those errors reach consequential places when no one is checking.</p>
+
+
+
+<p>Human-in-the-loop is not a technical feature. It is a governance decision: designing workflows so that a person with the right knowledge reviews outputs for accuracy and completeness before they influence real decisions. It is also the first thing cut when teams are under pressure to move fast. Organizations that build that review step in from the start treat it not as a check on the technology but as a check on the consequences of trusting it without one.</p>
+
+
+
+<p>Governance, cost architecture and responsible AI practice are not separate conversations. They are three dimensions of the same challenge, and the organizations that bring them together will be best positioned to scale AI with confidence. The shift from AI capability to AI economics will become one of the defining leadership conversations of the next decade. Getting governance right is not just about cost. It is about building AI that people inside and outside your organization can trust.</p>
+
+
+
+<p><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><strong><a href="https://www.cio.com/expert-contributor-network/">Want to join?</a></strong></p>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 The UK CMA proposes requiring Apple and Google to relax UK developer payment &quot;steering&quot; rules, and Apple to open NFC; Google says it &quot;already made the changes&quot; (Sam Tabahriti/Reuters)</title>
+  <link>https://www.techmeme.com/260630/p7#a260630p7</link>
+  <pubDate>Tue, 30 Jun 2026 08:45:02 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><a href="https://www.reuters.com/world/uk-regulator-proposes-easing-apple-google-app-store-payment-rules-2026-06-30/"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260630/i7.jpg" vspace="4" /></a>
+<p><a href="https://www.techmeme.com/260630/p7#a260630p7" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Sam Tabahriti / <a href="http://www.reuters.com/">Reuters</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://www.reuters.com/world/uk-regulator-proposes-easing-apple-google-app-store-payment-rules-2026-06-30/">The UK CMA proposes requiring Apple and Google to relax UK developer payment &ldquo;steering&rdquo; rules, and Apple to open NFC; Google says it &ldquo;already made the changes&rdquo;</a></b></span>&nbsp; &mdash;&nbsp; Britain's competition regulator on Tuesday proposed allowing app developers to steer users &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+</item>
+
+<item>
+  <title>🟠 Critical SimpleHelp Vulnerability Exploited for Malware Delivery</title>
+  <link>https://www.securityweek.com/critical-simplehelp-vulnerability-exploited-for-malware-delivery/</link>
+  <pubDate>Tue, 30 Jun 2026 08:43:10 +0000</pubDate>
+  <source>SecurityWeek</source>
+  <description><![CDATA[<b>Why this matters: Credential/phishing risk — reinforce MFA and user awareness training.</b><br/><p>The threat actor is focused on collecting credentials, SSH keys, cryptocurrency wallets, and development tooling.</p>
+<p>The post <a href="https://www.securityweek.com/critical-simplehelp-vulnerability-exploited-for-malware-delivery/">Critical SimpleHelp Vulnerability Exploited for Malware Delivery</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
 </item>
 
 <item>
@@ -122,7 +1205,7 @@
 
 
 <p>Una visión que refleja cómo la tecnología ha dejado de ser un área de soporte para convertirse en uno de los principales motores de crecimiento y transformación del grupo.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
 </item>
 
 <item>
@@ -275,7 +1358,7 @@
 
 
 <p>“Algunas empresas están avanzando hacia una tarificación basada en resultados. Cuando la gente empiece a darse cuenta del coste real de los <em>tokens</em>, entonces las empresas empezarán a centrarse en la eficiencia de los <em>tokens</em>”,  concluye el analista.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
 </item>
 
 <item>
@@ -285,7 +1368,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://www.ft.com/content/befb7f34-9357-492b-a40b-2132d3256bcc"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260630/i6.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260630/p6#a260630p6" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Stephanie Stacey / <a href="https://www.ft.com/">Financial Times</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.ft.com/content/befb7f34-9357-492b-a40b-2132d3256bcc">Hotels, tour operators, and travel agencies rush to launch proprietary online tools and loyalty schemes to fend off future competition from AI travel agents</a></b></span>&nbsp; &mdash;&nbsp; Chatbots could help to find, filter and book customers' destinations&nbsp; &mdash;&nbsp; Hotels, tour operators and travel agencies are rushing &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.ft.com/content/befb7f34-9357-492b-a40b-2132d3256bcc">Hotels, tour operators, and travel agencies rush to launch proprietary online tools and loyalty schemes to fend off future competition from AI travel agents</a></b></span>&nbsp; &mdash;&nbsp; Chatbots could help to find, filter and book customers' destinations&nbsp; &mdash;&nbsp; Hotels, tour operators and travel agencies are rushing &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
 </item>
 
 <item>
@@ -322,7 +1405,7 @@
 
 
 <p>스퀴즈비츠 김형준 대표는 “스퀴즈비츠의 AI 추론 최적화 기술이 리벨리온 NPU 생태계를 더욱 폭넓게 확장시킬 것“이라며, ”리벨리온과의 시너지를 바탕으로 하드웨어와 소프트웨어가 함께 최적화되는 풀스택 AI 인프라를 구현하고, 고객들이 리벨리온 NPU 기반에서 AI 서비스를 더욱 쉽고 경제적으로 운영할 수 있도록 지원하겠다“고 밝혔다.<br />jihyun.lee@foundryco.com</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -331,7 +1414,7 @@
   <pubDate>Tue, 30 Jun 2026 06:40:02 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><p>Quantifind will accelerate international expansion and extend its platform’s localized risk intelligence capabilities.</p>
-<p>The post <a href="https://www.securityweek.com/quantifind-raises-200-million-for-ai-native-risk-intelligence/">Quantifind Raises $200 Million for AI-Native Risk Intelligence</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/quantifind-raises-200-million-for-ai-native-risk-intelligence/">Quantifind Raises $200 Million for AI-Native Risk Intelligence</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -341,7 +1424,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://www.ft.com/content/3ccefa95-b35c-4720-878a-94f370d3cf69"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260630/i5.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260630/p5#a260630p5" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Peter Campbell / <a href="https://www.ft.com/">Financial Times</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.ft.com/content/3ccefa95-b35c-4720-878a-94f370d3cf69">AI may help transform air traffic control by processing vast amounts of data, spotting collision risks early, and easing staff shortages as air travel grows</a></b></span>&nbsp; &mdash;&nbsp; The technology has potential to assist controllers with an increasing flight load but many are wary</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.ft.com/content/3ccefa95-b35c-4720-878a-94f370d3cf69">AI may help transform air traffic control by processing vast amounts of data, spotting collision risks early, and easing staff shortages as air travel grows</a></b></span>&nbsp; &mdash;&nbsp; The technology has potential to assist controllers with an increasing flight load but many are wary</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -382,15 +1465,7 @@
 
 
 <p>정부는 3대 메가프로젝트를 ‘회복에서 대도약으로’ 전환하는 초격차 전략의 핵심으로 삼고, 관련 기업과의 소통을 통해 세부 내용을 구체화할 계획이라고 밝혔다.<br />dl-ciokorea@foundryco.com</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Microsoft builds a bouncer to keep bots out of Teams meetings</title>
-  <link>https://www.theregister.com/software/2026/06/30/microsoft-builds-a-bouncer-to-keep-bots-out-of-teams-meetings/5264199</link>
-  <pubDate>Tue, 30 Jun 2026 06:11:03 +0000</pubDate>
-  <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Allows ISVs to put their names on the door so desirable bots always get in<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -400,7 +1475,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://www.semafor.com/article/06/30/2026/us-investors-lead-30m-funding-for-gulf-ai-startup-1001"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260630/i4.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260630/p4#a260630p4" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Matthew Martin / <a href="https://www.semafor.com/">Semafor</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.semafor.com/article/06/30/2026/us-investors-lead-30m-funding-for-gulf-ai-startup-1001">Dubai- and London-based 1001, which uses AI to improve aviation, port, and energy infrastructure efficiency in the Gulf, raised $30M led by Lux Capital</a></b></span>&nbsp; &mdash;&nbsp; THE SCOOP&nbsp; &mdash;&nbsp; Dubai- and London-based startup 1001 has raised $30 million from investors including US venture firm Lux Capital &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.semafor.com/article/06/30/2026/us-investors-lead-30m-funding-for-gulf-ai-startup-1001">Dubai- and London-based 1001, which uses AI to improve aviation, port, and energy infrastructure efficiency in the Gulf, raised $30M led by Lux Capital</a></b></span>&nbsp; &mdash;&nbsp; THE SCOOP&nbsp; &mdash;&nbsp; Dubai- and London-based startup 1001 has raised $30 million from investors including US venture firm Lux Capital &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -511,7 +1586,7 @@
 
 
 <p>국방부는 양자내성암호 전략 문서에서 “프록시 기반 PQC 솔루션은 지양해야 하며, 대신 실제 네트워크 자체를 PQC 기반으로 업그레이드하는 데 집중해야 한다”고 밝혔다.<br />dl-ciokorea@foundryco.com</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -724,7 +1799,7 @@
 
 
 <p>기술은 앞으로도 계속 변화할 것이다. 그러나 그 기술을 얼마나 효과적으로 활용하는지는 결국 전략이 결정한다.<br />dl-ciokorea@foundryco.com</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -968,7 +2043,7 @@
 
 
 <p>이제 CIO에게 디지털 주권은 일부 규제 준수 차원의 이슈가 아니다. 기술을 어떻게 조달하고 구축하며 운영하고 거버넌스를 수립하고 보호할 것인지를 결정하는 핵심 설계 원칙으로 자리 잡고 있다.<br />dl-ciokorea@foundryco.com</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
@@ -978,7 +2053,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://asia.nikkei.com/business/technology/china-s-xiaomi-oppo-vivo-cut-2026-smartphone-targets-again-sources"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260630/i1.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260630/p1#a260630p1" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="https://asia.nikkei.com/">Nikkei Asia</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://asia.nikkei.com/business/technology/china-s-xiaomi-oppo-vivo-cut-2026-smartphone-targets-again-sources">Sources: Chinese smartphone makers like Xiaomi, Oppo, and Vivo told suppliers they will again cut 2026 shipment targets, with Xiaomi cutting 30% to ~95M units</a></b></span>&nbsp; &mdash;&nbsp; TAIPEI &mdash; Major Chinese smartphone makers including Xiaomi, Oppo and Vivo have told suppliers they will again cut shipment targets &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://asia.nikkei.com/business/technology/china-s-xiaomi-oppo-vivo-cut-2026-smartphone-targets-again-sources">Sources: Chinese smartphone makers like Xiaomi, Oppo, and Vivo told suppliers they will again cut 2026 shipment targets, with Xiaomi cutting 30% to ~95M units</a></b></span>&nbsp; &mdash;&nbsp; TAIPEI &mdash; Major Chinese smartphone makers including Xiaomi, Oppo and Vivo have told suppliers they will again cut shipment targets &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
 </item>
 
 <item>
@@ -988,15 +2063,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.semafor.com/article/06/29/2026/spacex-us-government-discuss-stock-donation-for-trump-accounts"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260629/i50.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260629/p50#a260629p50" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="https://www.semafor.com/">Semafor</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.semafor.com/article/06/29/2026/spacex-us-government-discuss-stock-donation-for-trump-accounts">Source: the Trump administration has talked with SpaceX about donating shares to Trump Accounts, which provide children with tax-advantaged savings accounts</a></b></span>&nbsp; &mdash;&nbsp; THE SCOOP&nbsp; &mdash;&nbsp; The Trump administration has spoken with SpaceX about donating stock to the children's savings accounts known &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 India’s central bank mandated use of .bank domains to enhance trust – but its registry leaked sensitive info</title>
-  <link>https://www.theregister.com/security/2026/06/30/indias-central-bank-mandated-use-of-bank-domains-to-enhance-trust-but-its-registry-leaked-sensitive-info/5264152</link>
-  <pubDate>Tue, 30 Jun 2026 02:24:46 +0000</pubDate>
-  <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Could impact sign-ins/MFA/Conditional Access — watch for login issues.</b><br/>Open API could reveal everything an attacker needs to impersonate bank officials<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.semafor.com/article/06/29/2026/spacex-us-government-discuss-stock-donation-for-trump-accounts">Source: the Trump administration has talked with SpaceX about donating shares to Trump Accounts, which provide children with tax-advantaged savings accounts</a></b></span>&nbsp; &mdash;&nbsp; THE SCOOP&nbsp; &mdash;&nbsp; The Trump administration has spoken with SpaceX about donating stock to the children's savings accounts known &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
 </item>
 
 <item>
@@ -1006,61 +2073,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://www.bloomberg.com/news/articles/2026-06-29/amazon-sued-by-australian-consumer-watchdog-over-prime-video-ads"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260629/i48.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260629/p48#a260629p48" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Peter Vercoe / <a href="https://www.bloomberg.com/">Bloomberg</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/articles/2026-06-29/amazon-sued-by-australian-consumer-watchdog-over-prime-video-ads">Australia's ACCC sues Amazon for allegedly introducing ads to Prime Video under unfair contract terms and forcing existing subscribers to pay more to avoid them</a></b></span>&nbsp; &mdash;&nbsp; Amazon.com Inc. has been sued by Australia's consumer watchdog for introducing advertising to its Prime Video streaming service &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Sources: AI video startup Higgsfield is in talks to raise $300M to $500M at a $5B pre-money valuation, more than 4x its valuation in a January 2026 round (The Information)</title>
-  <link>https://www.techmeme.com/260629/p46#a260629p46</link>
-  <pubDate>Tue, 30 Jun 2026 01:20:01 +0000</pubDate>
-  <source>Techmeme</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.theinformation.com/articles/ai-video-startup-talks-quadruple-valuation-5-billion"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260629/i46.jpg" vspace="4" /></a>
-<p><a href="https://www.techmeme.com/260629/p46#a260629p46" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="https://www.theinformation.com/">The Information</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.theinformation.com/articles/ai-video-startup-talks-quadruple-valuation-5-billion">Sources: AI video startup Higgsfield is in talks to raise $300M to $500M at a $5B pre-money valuation, more than 4x its valuation in a January 2026 round</a></b></span>&nbsp; &mdash;&nbsp; AI video startup Higgsfield AI is in talks with investors to raise $300 million to $500 million at a valuation of $5 billion before the investment &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 The UK FCA unveils the updated version of its crypto regulatory framework, after softening proposed rules that critics said risked holding the UK back (Financial Times)</title>
-  <link>https://www.techmeme.com/260629/p45#a260629p45</link>
-  <pubDate>Tue, 30 Jun 2026 01:00:48 +0000</pubDate>
-  <source>Techmeme</source>
-  <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><a href="https://www.ft.com/content/c2ace628-7bd9-4f3b-b835-970d6dd930bb"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260629/i45.jpg" vspace="4" /></a>
-<p><a href="https://www.techmeme.com/260629/p45#a260629p45" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="https://www.ft.com/">Financial Times</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.ft.com/content/c2ace628-7bd9-4f3b-b835-970d6dd930bb">The UK FCA unveils the updated version of its crypto regulatory framework, after softening proposed rules that critics said risked holding the UK back</a></b></span>&nbsp; &mdash;&nbsp; FCA eases capital and disclosure requirements after complaints that incoming digital assets regime was too onerous</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 AI coding startup 8090 raised a $135M Series A led by Salesforce Ventures; founder Chamath Palihapitiya announces that he will lead the company as CEO (Julie Bort/TechCrunch)</title>
-  <link>https://www.techmeme.com/260629/p44#a260629p44</link>
-  <pubDate>Tue, 30 Jun 2026 00:35:02 +0000</pubDate>
-  <source>Techmeme</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://techcrunch.com/2026/06/29/chamath-palihapitiya-raises-135m-series-a-for-his-ai-coding-startup-takes-ceo-role/"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260629/i44.jpg" vspace="4" /></a>
-<p><a href="https://www.techmeme.com/260629/p44#a260629p44" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Julie Bort / <a href="http://techcrunch.com/">TechCrunch</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://techcrunch.com/2026/06/29/chamath-palihapitiya-raises-135m-series-a-for-his-ai-coding-startup-takes-ceo-role/">AI coding startup 8090 raised a $135M Series A led by Salesforce Ventures; founder Chamath Palihapitiya announces that he will lead the company as CEO</a></b></span>&nbsp; &mdash;&nbsp; Chamath Palihapitiya, best known for his venture capital firm Social Capital and the All-In podcast, announced Monday that the AI coding startup he founded raised a sizable Series A.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 8h ago]]></description>
-</item>
-
-<item>
-  <title>🟠 Anonymous researcher drops 0-day &#x27;exploitarium&#x27; repo</title>
-  <link>https://www.theregister.com/security/2026/06/29/anonymous-researcher-drops-0-day-exploitarium-repo/5263961</link>
-  <pubDate>Mon, 29 Jun 2026 20:29:35 +0000</pubDate>
-  <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>At least two vulnerabilities are already under attack<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 12h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 How the AI bubble could pop and take down the global economy, according to the BIS</title>
-  <link>https://www.theregister.com/ai-and-ml/2026/06/29/how-the-ai-bubble-could-pop-and-take-down-the-global-economy-according-to-the-bis/5263793</link>
-  <pubDate>Mon, 29 Jun 2026 17:55:00 +0000</pubDate>
-  <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Could impact sign-ins/MFA/Conditional Access — watch for login issues.</b><br/>Central bank for central banks sees shades of dotcom mania in hyperscaler capex binge<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 14h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Microsoft to assist European Commission in defense of EU-US data-sharing agreement</title>
-  <link>https://www.theregister.com/networks/2026/06/29/microsoft-to-assist-european-commission-in-defense-of-eu-us-data-sharing-agreement/5263737</link>
-  <pubDate>Mon, 29 Jun 2026 14:29:00 +0000</pubDate>
-  <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Court says Redmond can file briefs, take part in hearings amid challenge to the current path Big Tech's data spice uses to legally flow<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 18h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/articles/2026-06-29/amazon-sued-by-australian-consumer-watchdog-over-prime-video-ads">Australia's ACCC sues Amazon for allegedly introducing ads to Prime Video under unfair contract terms and forcing existing subscribers to pay more to avoid them</a></b></span>&nbsp; &mdash;&nbsp; Amazon.com Inc. has been sued by Australia's consumer watchdog for introducing advertising to its Prime Video streaming service &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
 </item>
 
 <item>
@@ -1069,24 +2082,7 @@
   <pubDate>Mon, 29 Jun 2026 14:07:34 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><p>The startup’s platform can identify AI agents and provide visibility into their access, behavior, and risks.</p>
-<p>The post <a href="https://www.securityweek.com/straiker-raises-64-million-for-ai-security-platform/">Straiker Raises $64 Million for AI Security Platform</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 18h ago]]></description>
-</item>
-
-<item>
-  <title>🟠 Microsoft keeps Windows Server 2022 hotpatching alive into 2027</title>
-  <link>https://www.theregister.com/security/2026/06/29/microsoft-keeps-windows-server-2022-hotpatching-alive-into-2027/5263688</link>
-  <pubDate>Mon, 29 Jun 2026 13:00:00 +0000</pubDate>
-  <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>In the Azure Edition, of course<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 19h ago]]></description>
-</item>
-
-<item>
-  <title>🟠 ‘DirtyClone’ Linux Kernel Vulnerability Leads to Root Access</title>
-  <link>https://www.securityweek.com/dirtyclone-linux-kernel-vulnerability-leads-to-root-access/</link>
-  <pubDate>Mon, 29 Jun 2026 11:20:13 +0000</pubDate>
-  <source>SecurityWeek</source>
-  <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><p>A variant of DirtyFrag, the flaw allows unprivileged local users to manipulate the Linux page cache and gain root privileges.</p>
-<p>The post <a href="https://www.securityweek.com/dirtyclone-linux-kernel-vulnerability-leads-to-root-access/">&#8216;DirtyClone&#8217; Linux Kernel Vulnerability Leads to Root Access</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 21h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/straiker-raises-64-million-for-ai-security-platform/">Straiker Raises $64 Million for AI Security Platform</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 21h ago]]></description>
 </item>
 
 <item>
@@ -1191,7 +2187,7 @@
 
 
 <p></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 21h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
@@ -1400,7 +2396,7 @@
 
 
 <p>“Ultimately, developing senior talent is no longer a byproduct of hiring, it’s the result of deliberate infrastructure,” Eversoll says. “Organizations that invest in skills-based progression systems will not only sustain their pipeline, but accelerate it.”</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 22h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
@@ -1603,7 +2599,7 @@
 
 
 <p><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><strong><a href="https://www.cio.com/expert-contributor-network/">Want to join?</a></strong></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 22h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
@@ -1684,7 +2680,7 @@
 
 
 <p>This project, according to Dutuma, wasn’t just about fixing the old tech, but enabling cloud readiness and creating a leaner, modular application stack that can be used across other markets. Now, Absa doesn’t need to build a unique integration for a wallet in Botswana or for internet banking in Tanzania. There’s a common middleware layer across all regions, allowing countries to independently replace or upgrade core applications without affecting the broader regional footprint. In this way, Absa has essentially dissociated geography from technology to reduce complexity, improve interoperability, and ensure that different systems all speak the same language.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 22h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
@@ -1835,479 +2831,7 @@
 
 
 <p></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 23h ago]]></description>
-</item>
-
-<item>
-  <title>🔴 칼럼 | 미토스가 던진 질문, CISO들이 이사회에 꺼내야 할 진짜 답</title>
-  <link>https://www.cio.com/article/4190376/%ec%b9%bc%eb%9f%bc-%eb%af%b8%ed%86%a0%ec%8a%a4%ea%b0%80-%eb%8d%98%ec%a7%84-%ec%a7%88%eb%ac%b8-ciso%eb%93%a4%ec%9d%b4-%ec%9d%b4%ec%82%ac%ed%9a%8c%ec%97%90-%ea%ba%bc%eb%82%b4%ec%95%bc-%ed%95%a0.html</link>
-  <pubDate>Mon, 29 Jun 2026 07:31:41 +0000</pubDate>
-  <source>CIO.com</source>
-  <description><![CDATA[<b>Why this matters: Potential data exposure — check monitoring and incident response readiness.</b><br/><div id="remove_no_follow">
-		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
-					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
-						<div class="article-column__content">
-<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
-
-
-
-<p>새로운 AI 기술이 세간의 관심을 끌 때마다 이사회와 경영진 회의에서는 늘 비슷한 장면이 반복된다. 새로운 기술은 곧 공격자에게 강력한 무기가 될 혁신으로 소개되고, 논의는 빠르게 최악의 시나리오로 흘러간다. 이어 보안 책임자들은 어김없이 같은 질문을 받는다.</p>
-
-
-
-<p>‘이전에는 없던 새로운 위험에 갑자기 노출된 것인가?’</p>
-
-
-
-<p>필자의 대답은 대체로 ‘아니다’이다.</p>
-
-
-
-<p>대부분의 조직에서 더 큰 문제는 미토스 같은 최첨단 AI 모델이 하루아침에 새로운 위험 범주를 만들어낸다는 점이 아니다. 오히려 이러한 모델은 사이버 보안의 공격과 방어 모두에서 업무 속도를 높일 수 있다. 공격자는 더 빠르게 공격을 수행할 수 있고, 방어자는 오랫동안 방치돼 온 취약점을 더 신속하게 찾아 우선순위를 정하고 해결할 수 있다.</p>
-
-
-
-<p>그래서 필자는 미토스를 사이렌(siren)이 아니라 신호(signal)로 본다. 이는 사이버 공격과 방어의 경제성이 변화하고 있음을 알리는 신호일 뿐, 보안의 기본 원칙이 더 이상 중요하지 않다는 의미는 아니다. 오히려 그 반대다. 자산을 명확하게 파악하고, 체계적인 패치 관리와 강력한 ID 통제, 복원력 있는 운영 체계를 갖춘 조직일수록 앞으로 AI가 어떤 변화를 가져오더라도 훨씬 유연하게 대응할 수 있다.</p>
-
-
-
-<p>이러한 관점이 중요한 이유는 최근 발생한 침해 사고 역시 익숙한 실패 지점을 보여주기 때문이다. 버라이즌의 ‘<a href="https://www.verizon.com/business/resources/Tea/reports/2025-dbir-data-breach-investigations-report.pdf" rel="nofollow" target="_blank">2025 데이터 침해 조사 보고서(Data Breach Investigations Report</a>)’에 따르면 자격 증명 탈취와 취약점 악용은 여전히 조직이 침해되는 주요 원인으로 꼽히며, 특히 취약점 악용 사례는 계속 증가하고 있다. 다시 말해 기업 내부로 침투하는 경로는 대부분 보안팀이 이미 잘 알고 있는 취약점에서 시작된다.</p>
-
-
-
-<h2 class="wp-block-heading" id="%ec%a7%84%ec%a7%9c-%eb%ac%b8%ec%a0%9c%eb%8a%94-%ec%97%ac%ec%a0%84%ed%9e%88-%ea%b8%b0%eb%b3%b8">진짜 문제는 여전히 ‘기본’</h2>
-
-
-
-<p>필자의 경험상 많은 조직이 겪는 문제는 전략의 부재가 아니라 실행력 부족이다. 보안 리더는 기본 원칙을 알고 있고, 실무팀도 알고 있으며, 감사기관과 규제기관, 이사회 역시 이를 잘 알고 있다. 문제는 하이브리드 환경, 노후 시스템, 클라우드 플랫폼, 원격 근무 환경, 복잡한 서드파티 생태계 전반에서 이러한 기본 원칙을 일관되게 유지하는 일이다.</p>
-
-
-
-<p>이 때문에 AI가 보안 통제의 우선순위를 근본적으로 바꿀 것이라는 전망에는 신중한 입장이다. 대부분의 성공적인 침해 사고는 여전히 이미 알려진 취약점에서 시작된다. 단지 적절히 조치되지 않았거나, 우선순위가 잘못 설정됐거나, 애초에 존재조차 파악하지 못했던 취약점일 뿐이다. 인터넷에 노출된 미패치 시스템, 잘못 구성된 ID 관리 체계, 과도한 권한, 미흡한 네트워크 분리, 수년간 검토되지 않은 서비스 계정, 그리고 일시적 예외로 시작했지만 어느새 영구화된 핵심 업무 예외 등이 대표적이다.</p>
-
-
-
-<p>필자는 보안 프로그램이 최신 위협에 지나치게 집중하면서 추진력을 잃는 사례를 여러 차례 봤다. 기존 통제 공백은 그대로 둔 채 새로운 활용 사례에만 예산을 투입하고, 책임 체계와 운영 프로세스, 관리 체계를 바로잡기보다 새로운 보안 도구부터 도입한다. 또한 사이버 보안 성숙도를 운영 모델이 아닌 개별 프로젝트의 집합으로 바라본다. 이러한 접근은 최첨단 AI 이전에도 위험했으며, 이러한 모델이 공격자의 공격 속도를 더욱 앞당긴다면 그 위험은 한층 커질 것이다.</p>
-
-
-
-<p>대부분의 기업에서 미토스가 가져오는 변화가 있다면 그것은 기본 보안을 제대로 갖춰야 할 시급성을 높인다는 점이다. 대응 지연에 따른 비용은 커지고, 누적된 보안 부채의 대가는 더욱 무거워진다. 자산을 정확히 파악하고, 취약점 결과를 체계적으로 정리하며, 알고 있는 문제와 실제 해결된 문제 사이의 격차를 줄이는 데 어려움을 겪는 조직에는 더 큰 부담이 될 수 있다.</p>
-
-
-
-<p>이러한 변화는 업무의 우선순위를 정하는 방식도 바꿔야 한다. 많은 조직에서는 인프라 팀, 보안 운영팀, ID 관리팀, 클라우드팀, 애플리케이션팀이 각각 일부 영역만 담당하다 보니 취약점 백로그가 계속 쌓인다. 전체 위험을 통합적으로 바라보는 시각이 사라지는 것이다. 그래서 많은 조직이 바쁘게 움직이고 있음에도 실제 보안 수준은 크게 향상되지 않는다. 개별 문제는 해결하지만 공격자가 실제 악용하는 취약점의 조합은 꾸준히 줄이지 못하고 있다.</p>
-
-
-
-<p>결론은 단순하다. 경영진은 미토스가 완전히 새로운 위협 모델을 만들어낸다고 가정하기 전에 먼저 더 근본적인 질문을 던져야 한다.</p>
-
-
-
-<p>‘공격자가 한눈에 알아차릴 만큼 우리가 여전히 취약한 부분은 어디인가?’</p>
-
-
-
-<p>필자의 경험상 이 질문이 AI가 앞으로 무엇을 할지에 대한 추측성 논의보다 훨씬 솔직하고 생산적인 대화를 이끌어낸다.</p>
-
-
-
-<h2 class="wp-block-heading" id="ai%eb%a1%9c-%ea%b8%b0%eb%b3%b8-%eb%b3%b4%ec%95%88-%ea%b3%b5%eb%b0%b1-%eb%a9%94%ec%9b%8c%eb%9d%bc">AI로 기본 보안 공백 메워라</h2>
-
-
-
-<p>미토스를 바라보는 보다 생산적인 접근은 최첨단 AI가 지금 당장 방어 역량을 어디에서 높일 수 있는지를 고민하는 것이다. 이는 보안 분석가를 AI로 대체하거나 중요한 의사결정을 감독 없이 AI 모델에 맡기자는 의미가 아니다. 보안팀이 오래전부터 문제를 인식하고 있었지만 시간과 인력이 부족해 지속적으로 해결하지 못했던 과제를 AI로 해결하자는 뜻이다.</p>
-
-
-
-<p>대표적인 사례가 ID 관리다. 미국 국립표준기술연구소(NIST)는 <a href="https://www.nist.gov/identity-access-management" rel="nofollow" target="_blank">ID 및 접근 관리(IAM)</a>를 사이버 보안의 핵심 역량으로 규정하고 있다. 대부분의 CISO도 이에 동의할 것이다. 하지만 실제 ID 환경에는 중첩된 그룹, 상속된 권한, 장기간 방치된 계정, 일관성 없는 역할 정의, 업무상 필요가 사라졌는데도 그대로 유지되는 특권 권한 등 다양한 문제가 누적돼 있다. 이러한 문제는 보이지 않아서가 아니라 실시간으로 전체를 종합 분석하기 어렵기 때문에 해결이 쉽지 않다.</p>
-
-
-
-<p>바로 이 지점에서 AI가 가치를 발휘할 수 있다. 디렉터리, 클라우드 제어 영역(control plane), 티켓 시스템, 로그, 정책 저장소 등에 흩어진 관계를 연계 분석하고, 비정상적인 접근 권한 조합을 찾아내며, 공격 가능성이 높은 경로를 식별할 수 있다. 또한 단순히 경고(Alert) 개수를 기준으로 하는 것이 아니라 비즈니스 영향도를 고려해 해결 우선순위를 제시할 수 있다. AI의 장점은 경고를 더 많이 만들어내는 것이 아니라 상황을 더 빠르게 이해하도록 돕는 데 있다.</p>
-
-
-
-<p>같은 원리는 취약점 및 패치 관리에도 적용된다. 대부분의 기업은 이미 취약점 스캐너와 티켓 시스템, 대시보드를 갖추고 있다. 하지만 실제로 부족한 것은 취약점 악용 가능성, 노출 수준, 보완 통제, 자산 중요도를 종합적으로 고려해 어떤 취약점을 먼저 해결해야 하는지 일관되게 판단하는 체계다. 최첨단 AI는 방대한 취약점 목록을 실제 위험을 줄이는 핵심 조치 목록으로 압축하는 데 도움을 줄 수 있다.</p>
-
-
-
-<p>구성 관리와 탐지 엔지니어링에서도 활용 가능성은 크다. 보안팀은 여러 시스템에 흩어진 단편적인 데이터를 처리하느라 어려움을 겪고 있다. AI는 다양한 출처의 데이터를 표준화하고, 구성 변경 사항을 탐지하며, 서로 무관해 보이는 신호를 연결해 실제 운영 위험을 보다 현실적으로 보여줄 수 있다. 특히 인력이 부족한 조직에서는 이러한 기능의 가치가 더욱 크다. 스프레드시트 정리나 중복 경고 처리, 단절된 업무 프로세스를 연결하는 데 시간을 쓰기보다 실제 위험을 줄이는 데 더 많은 시간을 투입할 수 있기 때문이다.</p>
-
-
-
-<p>물론 그렇다고 숙련된 보안 전문가의 필요성이 사라지는 것은 아니다. AI는 전문가를 대체하는 것이 아니라 더 큰 생산성을 제공하는 도구다. 보안 분야는 노출되는 위험의 규모가 가용 인력보다 훨씬 빠르게 늘어나는 만큼 이러한 생산성 향상은 매우 중요하다.</p>
-
-
-
-<p>중요한 점은 AI 모델에 모든 권한을 맡기자는 것이 아니라는 것이다. AI는 분석 속도를 높이고, 우선순위 결정을 개선하며, 오랫동안 해결하지 못했던 보안 통제의 공백을 메우는 데 활용해야 한다. 다시 말해 가장 큰 기회는 미래형 보안을 보여주기 위한 ‘보안 쇼(Security Theater)’를 만드는 것이 아니라, 기업이 지속 가능한 속도로 보안의 기본 원칙을 실제 운영에 정착시키는 데 있다.</p>
-
-
-
-<h2 class="wp-block-heading" id="%ec%9d%b4%ec%82%ac%ed%9a%8c%eb%8a%94-%ea%b3%b5%ed%8f%ac%ea%b0%80-%ec%95%84%eb%8b%88%eb%9d%bc-%eb%b3%b5%ec%9b%90%eb%a0%a5%ec%9d%84-%eb%85%bc%ec%9d%98%ed%95%b4%ec%95%bc">이사회는 ‘공포’가 아니라 ‘복원력’을 논의해야</h2>
-
-
-
-<p>미토스가 가져와야 할 가장 중요한 변화는 기술적인 변화가 아닐 수도 있다. 오히려 CISO가 이사회와 CEO, 경영진과 대화하는 방식을 바꾸는 계기가 되어야 한다.</p>
-
-
-
-<p>새로운 기술이 등장할 때마다 보안 리더는 공포를 바탕으로 한 수동적인 논의에 끌려가는 경우가 많다. 새로운 공격 수단이 등장했으니 예산을 더 확보해야 하고, 새로운 플랫폼을 도입해야 하며, 긴급 예외를 추가로 승인해야 한다는 논리다. 물론 그런 경우도 있다. 하지만 대부분은 그렇지 않다. 오히려 새로운 기술을 기존 위험 관리 우선순위와 연결하고, 다양한 위협 시나리오에서 조직의 복원력을 높이는 투자라는 점을 강조하는 편이 훨씬 효과적인 대응이다.</p>
-
-
-
-<p>필자는 AI 기반 사이버 위험을 경영진과 논의할 때 항상 세 가지 원칙을 중심에 둔다.</p>
-
-
-
-<ol class="wp-block-list">
-<li>대부분의 사이버 피해는 여전히 예방 가능한 취약점에서 비롯된다. 반가운 사실은 아니지만 충분히 대응할 수 있는 문제다.</li>
-
-
-
-<li>ID 관리, 자산 거버넌스, 체계적인 패치 관리, 서드파티 관리, 사고 대응 역량을 강화하는 것은 특정 위협에만 대응하는 것이 아니라 장기적인 보안 경쟁력을 높이는 투자다.</li>
-
-
-
-<li>복잡한 환경을 가장 잘 관리하는 조직이 대개 가장 극적으로 반응하는 조직보다 더 뛰어난 성과를 낸다.</li>
-</ol>
-
-
-
-<p>이러한 관점은 이사회가 더 나은 질문을 던지도록 만든다. ‘미토스에 어떻게 대응하고 있는가?’를 묻기보다 ‘AI가 현재 우리의 어떤 취약점을 더 위험하게 만들거나 더 쉽게 악용하도록 만들 수 있는가?’를 물어야 한다. 특정 솔루션 도입 여부를 확인하기보다 보안 조직과 IT 운영 조직이 가장 위험도가 높은 취약점 개선 작업에 함께 집중하고 있는지를 살펴봐야 한다. 또한 단순히 얼마나 많은 일을 했는지가 아니라 보안 부채가 실제로 줄어들고 있는지를 평가해야 한다.</p>
-
-
-
-<p>CISO에게 이는 중요한 기회다. 미토스를 또 한 번의 공포를 정당화하는 명분으로 활용할 수도 있고, 위험 관리 논의의 수준을 한 단계 끌어올리는 계기로 삼을 수도 있다. 필자는 어느 쪽이 더 나은 선택인지는 분명하다고 생각한다. 지금의 관심을 계기로 보안의 기본 원칙을 더욱 강화하고, AI를 활용해 우선순위 결정을 개선하며, 수십 년 동안 공격자들이 악용해 온 만성적인 보안 통제 실패를 줄여야 한다.</p>
-
-
-
-<p>그래서 필자는 미토스를 과잉 대응을 요구하는 사이렌으로 보지 않는다. AI 시대를 가장 잘 준비한 기업은 보안 리더들이 오랫동안 강조해 온 원칙, 즉 복원력은 화려한 대응이나 일시적인 임기응변이 아니라 규율 있는 실행을 통해 구축된다는 사실을 실제 운영에 정착시킨 조직이라는 점을 보여주는 신호로 본다.<br />dl-ciokorea@foundryco.com</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
-</item>
-
-<item>
-  <title>🔵 AI 시대 CIO의 역할이 바뀐다…혁신과 위험 관리 사이 해법은</title>
-  <link>https://www.cio.com/article/4190349/ai-%ec%8b%9c%eb%8c%80-cio%ec%9d%98-%ec%97%ad%ed%95%a0%ec%9d%b4-%eb%b0%94%eb%80%90%eb%8b%a4%ed%98%81%ec%8b%a0%ea%b3%bc-%ec%9c%84%ed%97%98-%ea%b4%80%eb%a6%ac-%ec%82%ac%ec%9d%b4-%ed%95%b4.html</link>
-  <pubDate>Mon, 29 Jun 2026 07:06:45 +0000</pubDate>
-  <source>CIO.com</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><div id="remove_no_follow">
-		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
-					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
-						<div class="article-column__content">
-<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
-
-
-
-<p>CIO의 새로운 과제는 분명하다. 전사 차원의 AI 도입을 신속하게 추진하는 것이다.</p>
-
-
-
-<p>CIO.com의 ‘<a href="https://us.resources.cio.com/resources/state-of-the-cio/" rel="nofollow" target="_blank">2026 CIO 현황 보고서</a>(State of the CIO)’에 따르면, CEO들이 IT 임원에게 가장 우선적으로 요구하는 과제는 AI를 통해 실질적인 비즈니스 성과를 창출하는 것이다. AI 제품을 조사하고 평가하는 단계부터 도입과 활용에 이르기까지, CIO는 이제 조직의 AI 전략을 이끄는 핵심 역할을 맡고 있다.</p>
-
-
-
-<p>기업 경영진이 기대하는 것도 구체적인 성과다. 킨드릴(Kyndryl)의 ‘<a href="https://www.kyndryl.com/us/en/insights/readiness-report-2025" rel="nofollow" target="_blank">2025 레디니스 보고서</a>(2025 Readiness Report)’에 따르면, 고위 경영진의 약 3분의 2는 AI 투자의 투자수익률(ROI)을 입증해야 한다는 압박이 지난해보다 더 커졌다고 답했다.</p>
-
-
-
-<p>이 같은 압박은 이사회와 CEO는 물론 사업부, 경쟁사 등 다양한 곳에서 비롯된다고 손해보험 업계 고객 커뮤니케이션 플랫폼 기업 하이 말리(Hi Marley)의 최고 AI 책임자(CAIO) 겸 최고기술책임자(CTO)인 <a href="https://www.linkedin.com/in/tushman/" rel="nofollow" target="_blank">조너선 터시먼</a>(Jonathan Tushman)은 설명했다.</p>
-
-
-
-<p>터시먼은 “이 과제를 성공적으로 수행하려면 다양한 이해관계자와 복잡한 논의를 거쳐야 하며, 법무와 컴플라이언스 등 여러 검토 절차도 적절한 속도로 통과해야 한다”라고 말했다. 18개월 전 CAIO 역할을 맡은 이후 최근 6개월 동안 이러한 긴박감이 더욱 커졌다는 것이다. 업계 행사와 이사회, 기업 현장에서는 AI가 화두가 되고 있으며, 대화는 곧 경쟁에서 뒤처질 수 있다는 우려로 이어지고 있다고 그는 전했다.</p>
-
-
-
-<p>이 같은 분위기는 직원들에게도 그대로 확산되고 있다. 터시먼은 “엔지니어링 조직뿐 아니라 마케팅, 영업, 재무 등 다양한 부서의 직원들이 AI 도구를 적극적으로 사용하려 한다”라며 “AI에 익숙하지 않은 사람들조차 가능한 한 빨리 이러한 도구를 활용하고 싶어 한다”라고 말했다.</p>
-
-
-
-<p>CIO들이 AI를 조직 전반으로 확산하고 실질적인 성과를 입증해야 한다는 압박을 받는 가운데, 가장 큰 과제는 불필요한 마찰을 만들지 않으면서도 위험을 효과적으로 관리하는 일이다.</p>
-
-
-
-<p>구독형 비즈니스 소프트웨어 기업 주오라(Zuora)의 수석부사장 겸 CIO, 엔터프라이즈 AI 총괄인 <a href="https://www.linkedin.com/in/chakraj/" rel="nofollow" target="_blank">카르틱 차카라파니</a>는 “CIO는 AI를 지나치게 위험한 기술로만 바라봐서는 안 된다”라며 “보안과 거버넌스는 반드시 확보해야 하지만, IT 조직이 혁신의 속도를 늦추는 존재로 비쳐서는 안 된다. 충분한 안전장치를 갖춘 고속도로를 만들되 과속방지턱은 최소화해야 한다”라고 말했다.</p>
-
-
-
-<p>이어 그는 “AI는 기존 업무를 단순히 자동화하는 기술이 아니다”라며 “일하는 방식 자체를 새롭게 설계하는 과정”이라고 설명했다.</p>
-
-
-
-<h2 class="wp-block-heading" id="ai%ea%b0%80-%eb%a7%8c%eb%93%a0-%ec%83%88%eb%a1%9c%ec%9a%b4-%ec%9c%84%ed%97%98-%ea%b4%80%eb%a6%ac-%ea%b3%bc%ec%a0%9c">AI가 만든 새로운 위험 관리 과제</h2>
-
-
-
-<p>대부분의 IT 리더는 AI 시대에 요구되는 새로운 위험 관리 방식에 아직 익숙하지 않다. 앞서 언급한 킨드릴의 조사에 따르면, 외부 비즈니스 위험에 대해 조직이 충분히 대비돼 있다고 답한 응답자는 31%에 그쳤다.</p>
-
-
-
-<p>하이 말리(Hi Marley)의 터시먼은 AI가 가져오는 위험은 기존 기술과 본질적으로 다른 두 가지 특성을 지닌다고 설명했다.</p>
-
-
-
-<p>첫 번째는 AI가 비결정적(indeterminate)이라는 점이다. 대부분의 기존 기술은 입력과 조건이 같으면 동일한 결과를 내는 결정적(deterministic) 시스템인 반면, AI는 동일한 결과를 항상 보장하지 않는다.</p>
-
-
-
-<p>터시먼은 “AI 시스템이 특정 행동을 하거나 하지 않을 것이라고 완전히 증명할 수는 없다”라며 “기존처럼 통제 장치를 마련한 뒤 이를 검증하는 방식만으로는 충분하지 않다. 행동을 근본적으로 예측하기 어려운 기술에 맞는 새로운 거버넌스 체계가 필요하다”라고 설명했다.</p>
-
-
-
-<p>두 번째는 사용자들이 AI를 빠르게 활용하려는 강한 수요다.</p>
-
-
-
-<p>그는 “기존 기술은 IT 부서가 충분한 검토를 마친 뒤 도입해도 큰 문제가 없었다”라며 “하지만 AI는 강력한 도구를 신속하게 제공하지 않으면 사용자가 승인되지 않은 서비스를 스스로 찾아 사용하게 된다. 이른바 ‘섀도 AI(Shadow AI)’는 통제된 환경에서 AI를 제공하는 것보다 더 큰 위험을 초래할 수 있다”라고 말했다.</p>
-
-
-
-<p>이어 “AI는 도입 일정은 더욱 짧아지는 반면, 통제와 거버넌스는 오히려 더 어려워지는 특성을 갖고 있다”라고 덧붙였다.</p>
-
-
-
-<p>IT 컨설팅 기업 노베라(Novera)의 설립자 겸 매니징 파트너인 <a href="https://www.linkedin.com/in/tonyvizza/" rel="nofollow" target="_blank">토니 비자</a> 역시 무조건 빠르게 도입하려는 접근이 오히려 모두가 우려하는 문제를 초래할 수 있다고 지적했다.</p>
-
-
-
-<p>비자는 “적절한 거버넌스 없이 직원이 민감한 정보를 공개 AI 서비스에 입력하거나, AI가 생성한 내용을 검증 없이 그대로 복사해 고객에게 전달하는 일이 대표적인 사례”라고 말했다.</p>
-
-
-
-<p>그는 기업이 ‘AI를 도입하지 않으면 뒤처질 것(FOMO)’이라는 불안감 때문에 성급하게 AI를 도입해서는 안 된다고 조언했다. 먼저 AI를 어디에, 어떤 목적으로 활용할 것인지를 명확히 정의해야 하며, 모든 위험 관리 역시 이러한 질문에서 출발해야 한다는 것이다.</p>
-
-
-
-<p>비자는 “무엇을 해결하려는 것인가. 고객 서비스를 개선하려는 것인지, 데이터에서 더 깊은 인사이트를 얻으려는 것인지, 궁극적으로 달성하려는 목표가 무엇인지부터 분명히 해야 한다”라고 말했다.</p>
-
-
-
-<p>또한 AI 관련 의사결정은 예상되는 성과, 투자 규모, 조직 목표에 대한 중요도를 함께 고려한 위험 평가를 기반으로 이뤄져야 한다고 강조했다.</p>
-
-
-
-<p>그는 “조직이 감수할 수 있는 위험 수준을 정의하고, 위험 등록부(risk register)를 구축한 뒤, 각 위험에 대한 대응 방안을 마련해야 한다”라며 “예를 들어 공개 AI 모델을 사용할 경우에는 민감한 데이터를 입력하지 않도록 정책을 마련하거나, 적절한 라이선스를 구매해 보호 장치를 확보하고, 필요하다면 규제기관의 가이드라인을 확인한 뒤 활용해야 한다”라고 설명했다.</p>
-
-
-
-<p>비자는 AI 서비스 역시 제3자(Third Party) 위험 관리 대상으로 다뤄야 하며, 모든 책임을 AI 서비스 제공업체에 떠넘겨서는 안 된다고 강조했다.</p>
-
-
-
-<p>그는 “책임까지 외부에 위임할 수는 없다”라고 말했다.</p>
-
-
-
-<p>이를 위해서는 AI 공급업체와 체결한 계약 내용을 면밀히 검토하고, 데이터 유출이 발생할 경우 책임 소재가 누구에게 있는지, 문제가 생겼을 때 조직이 어떤 방식으로 대응하거나 법적 조치를 취할 수 있는지까지 사전에 확인해야 한다고 설명했다.</p>
-
-
-
-<p>비자는 “일부 기업은 이러한 절차를 위험 관리 체계에 포함하고 있지만, 어떤 기업은 이를 가볍게 여기거나 아예 이런 질문을 해야 한다는 사실조차 인식하지 못한다”라며 “결국 이런 차이가 시간이 지나면서 조직의 발목을 잡게 된다”라고 말했다.</p>
-
-
-
-<h2 class="wp-block-heading" id="%ec%a1%b0%ec%a7%81-%ec%84%a4%ea%b3%84%ea%b0%80-ai-%ec%84%b1%ea%b3%b5%ec%9d%84-%ec%a2%8c%ec%9a%b0%ed%95%9c%eb%8b%a4">조직 설계가 AI 성공을 좌우한다</h2>
-
-
-
-<p>하이 말리의 터시먼과 그의 팀은 AI 위험을 효과적으로 드러내고 관리하기 위해 조직 내에 ‘건전한 긴장 관계’를 의도적으로 만드는 구조를 설계했다. 대표적으로 제품 및 기술 조직의 ‘AI 도입 조직’과 컴플라이언스·법무 부서의 ‘AI 감독 조직’을 명확히 분리했다. 컴플라이언스 조직은 감사와 보안, 지속적인 감독을 담당하고, 법무 조직은 AI 활용 범위를 규정하는 문서를 관리한다.</p>
-
-
-
-<p>터시먼은 “핵심은 AI 도입을 추진하는 조직과 감독 조직이 서로 독립적으로 운영되는 것”이라고 설명했다.</p>
-
-
-
-<p>이어 “기업은 컴플라이언스 조직에 적극적으로 투자해야 한다. 뛰어난 판단력을 갖춘 인재를 확보하는 것이 중요하다”라며 “이들의 역할은 무조건 반대하는 것도, 모든 것을 형식적으로 승인하는 것도 아니다. 진정한 가치는 상황을 올바르게 판단하는 능력에 있다”라고 말했다.</p>
-
-
-
-<p>터시먼은 AI 혁신을 총괄하며 조직의 AI 도입을 이끄는 역할을 맡고 있지만, 동시에 위험과 컴플라이언스, 법률 측면에서 끊임없이 검증받는 구조 속에서 일하고 있다고 설명했다.</p>
-
-
-
-<p>그는 “우리 경영진은 의도적으로 서로 다른 의견이 충돌하도록 설계돼 있다”라며 “나는 CAIO 역할을 맡고 있고, 바로 옆에는 법무 책임자와 컴플라이언스 책임자가 있다. 의견이 충돌하면 각 선택의 장단점을 함께 검토한 뒤 경영진이 공동으로 의사결정을 내린다”라고 말했다.</p>
-
-
-
-<p>터시먼은 이러한 구조가 조직에 긍정적인 긴장감을 만들어낸다고 평가했다. 혁신을 추진하는 리더가 새로운 시도를 제안하면, 컴플라이언스와 위험 관리 책임자가 이를 견제하며 균형을 맞춘다는 것이다. 다만 합의에 이르지 못할 경우에는 최종 결정권을 CEO에게 넘긴다.</p>
-
-
-
-<p>그는 “의견이 팽팽하게 맞설 경우에는 조직 내 다른 임원이 최종 판단을 내리는 구조를 권장한다”라고 말했다.</p>
-
-
-
-<p>터시먼은 AI 도입 전략만큼이나 조직 구조를 어떻게 설계하느냐도 기업의 경쟁력을 좌우할 수 있다고 강조했다.</p>
-
-
-
-<p>그는 “초기에 올바른 조직 구조를 갖춘 기업이 장기적으로 훨씬 큰 경쟁 우위를 확보하게 될 것”이라고 말했다.</p>
-
-
-
-<h2 class="wp-block-heading" id="%ec%bb%a4%ec%a7%80%eb%8a%94-ai-%ec%88%98%ec%9a%94-%ec%9c%84%ed%97%98-%ea%b4%80%eb%a6%ac%ec%9d%98-%ec%83%88%eb%a1%9c%ec%9a%b4-%eb%b3%80%ec%88%98%eb%a1%9c">커지는 AI 수요, 위험 관리의 새로운 변수로</h2>
-
-
-
-<p>AI 열풍의 가장 큰 특징 가운데 하나는 이사회부터 일반 직원까지 누구나 AI 도구를 사용하고, 애플리케이션을 개발해 업무에 적용하고 싶어 한다는 점이다.</p>
-
-
-
-<p>터시먼은 “지금은 모두가 AI를 직접 사용해보고 싶어 하는 상황”이라고 말했다.</p>
-
-
-
-<p>하이 말리는 현재 AI 활용을 본격화하는 ‘활성화(Activation)’ 단계에 있다. 조직의 높은 수요를 충족시키면서도 안전장치를 함께 제공하는 데 초점을 맞추고 있다.</p>
-
-
-
-<p>터시먼은 “현재 가장 중요한 목표는 직원들이 AI 도구를 배우고 실제 업무에 활용하면서 AI 활용 역량을 갖추도록 하는 것”이라며 “성과를 측정하는 단계도 결국 오겠지만, 지금은 측정에 지나치게 많은 시간을 쓰는 것은 효율적이지 않다”라고 말했다.</p>
-
-
-
-<p>그는 다른 CIO들과 마찬가지로 AI 모델이 얼마나 빠르게 발전하는지를 주목하고 있다.</p>
-
-
-
-<p>터시먼은 “AI는 조직을 어떻게 구성할지, 어떤 인재를 채용할지, 기술을 직접 개발할지 아니면 구매할지 등 거의 모든 의사결정에 큰 영향을 미친다”라고 설명했다.</p>
-
-
-
-<p>구독형 비즈니스 소프트웨어 기업 주오라(Zuora)는 AI 도입을 시작한 지 약 3년이 됐다. 카르틱 차카라파니는 단순히 속도를 높이는 것이 목표가 아니라고 강조했다.</p>
-
-
-
-<p>그는 “기존 프로세스를 단순히 더 빠르게 만드는 것은 의미가 없다. 그렇게 하면 혼란만 더 커질 뿐”이라며 “프로세스를 더 빠르고, 더 똑똑하게 만들면서 업무 방식 자체를 재설계해야 한다”라고 말했다.</p>
-
-
-
-<p>토니 비자는 많은 CIO가 AI 도입 속도를 따라가기 위해 외부 전문가의 도움을 받을 필요가 있다고 진단했다.</p>
-
-
-
-<p>그는 “아니면 CIO 스스로 AI에 대한 역량을 키워야 한다. AI는 기존 IT와 작동 방식이 매우 다르기 때문”이라고 말했다.</p>
-
-
-
-<p>비자는 CIO들에게 세 가지를 조언했다. 첫째는 AI를 제대로 이해하거나 전문적인 조언을 받을 수 있는 전문가와 함께 의사결정을 내리는 것이다.</p>
-
-
-
-<p>그는 “AI가 실제로 어떻게 작동하는지 이해하거나, 이를 제대로 조언해 줄 전문가를 확보한 뒤 의사결정을 해야 한다”라고 말했다.</p>
-
-
-
-<p>둘째는 언제나 비즈니스 목적에 초점을 맞추는 것이다.</p>
-
-
-
-<p>비자는 “AI에는 많은 기회가 있지만, 가장 중요한 질문은 ‘AI를 도입해 무엇을 이루려는가’이다”라고 설명했다.</p>
-
-
-
-<p>셋째는 위험을 어떻게 관리할 것인지 미리 설계하는 것이다.</p>
-
-
-
-<p>그는 “위험 자체가 반드시 나쁜 것은 아니다. 포뮬러1(F1) 경주차는 위험하지만 뛰어난 제동 시스템을 갖추고 있기 때문에 더 빠르게 달릴 수 있다”라며 “AI도 마찬가지다. 적절한 위험 관리 체계를 갖추면 기업은 부작용 없이 더 빠르게 혁신할 수 있다”라고 말했다.</p>
-
-
-
-<p>차카라파니는 주오라가 지난 3년 가까운 AI 여정에서 실험 단계부터 시작해 현재는 전사 차원의 파일럿 프로젝트 12개를 실제 운영 환경으로 전환했다고 설명했다.</p>
-
-
-
-<p>그는 AI 프로젝트를 평가할 때 ▲투입 노력(Effort) ▲비즈니스 가치(Value) ▲신뢰도(Confidence)라는 세 가지 기준을 활용한다고 소개했다.</p>
-
-
-
-<p>차카라파니는 “투입 노력에는 보안 위험도 포함된다”라며 “보안 위험이 낮은지, 중간 수준인지, 높은지를 함께 평가한다”라고 말했다.</p>
-
-
-
-<p>주오라는 비교적 단순한 과제부터 AI를 적용하기 시작했다. 초기 실험은 기대만큼 성공적이지 않았지만, 이후 프로젝트를 위한 중요한 교훈을 얻었다.</p>
-
-
-
-<p>차카라파니는 “올바른 데이터, 적절한 콘텐츠와 맥락, 그리고 거버넌스가 갖춰져야 AI가 제대로 성과를 낸다는 사실을 배웠다”라고 말했다.</p>
-
-
-
-<p>이후 주오라는 IT 서비스 관리(ITSM) 영역으로 AI 활용 범위를 확대했다. 이 과정에서 내부 조직과 사용자로부터 피드백을 수집하고, 보안과 거버넌스 문제를 해결하며 지속적으로 개선 작업을 이어갔다.</p>
-
-
-
-<p>초기 AI 적용 분야는 마케팅과 영업, 제품 개발, 기술 조직이었다. 이를 통해 업무 처리량이 기존보다 10~25배 향상됐다. 성과는 매출 성장, 비용 절감, 고객 참여도 등 실제 비즈니스 지표를 기준으로 평가하고 있다.</p>
-
-
-
-<p>이 같은 과정을 거치면서 주오라는 전사적인 AI 확산을 뒷받침하는 기반 작업도 함께 추진했다.</p>
-
-
-
-<p>차카라파니는 “AI를 빠른 속도로, 그리고 대규모로 확산하려면 신뢰와 보안, 거버넌스가 먼저 갖춰져야 한다는 사실을 깨달았다”라고 말했다.</p>
-
-
-
-<p>주오라는 전사 플랫폼을 통해 챗GPT를 비롯한 승인된 AI 서비스와 산업 특화 AI 도구를 조직의 정형·비정형 데이터와 연계하고 있다. 여기에 컨텍스트 계층(Context Layer)과 각종 서비스를 더해 직원들이 자체 AI 애플리케이션을 개발할 수 있도록 지원한다.</p>
-
-
-
-<p>이 플랫폼은 기존 사내 로그인과 조직 정보를 그대로 활용하며, 역할 기반 접근 제어(RBAC)도 동일하게 적용한다.</p>
-
-
-
-<p>차카라파니는 “AI 애플리케이션을 개발할 때 반드시 검토해야 하는 10~12개의 항목을 정리해 표준 프레임워크를 구축했다”라며 “직원이 AI 애플리케이션을 만들고 싶으면 해야 할 일과 하지 말아야 할 일이 담긴 가이드가 마크다운 파일 형태로 자동 제공된다”라고 설명했다.</p>
-
-
-
-<p>주오라의 궁극적인 목표는 전사 거버넌스 플랫폼을 기반으로 IT와 인사(HR), 재무, 법무, 구매, 영업, 제품 조직 전반에서 최대 100배의 비즈니스 가치를 창출하는 것이다.</p>
-
-
-
-<p>이 과정에서 IT 조직은 오케스트레이터 역할을 맡는다. 직원들이 AI 도구와 AI 에이전트에 접근할 수 있는 플랫폼을 제공하는 동시에, 각 사업 부서와 협력해 업무 프로세스를 새롭게 설계하는 역할을 수행한다.</p>
-
-
-
-<h2 class="wp-block-heading" id="ai-%ec%84%b1%ec%88%99%eb%8f%84-%eb%aa%a8%eb%8d%b8">AI 성숙도 모델</h2>
-
-
-
-<p>차카라파니는 AI 환경이 안전할수록 실험과 도입이 활발해지고, 궁극적으로 더 큰 비즈니스 성과로 이어질 수 있다고 본다. 주오라는 현재 조직의 AI 성숙도를 세 단계에 걸쳐 발전시켜 왔다.</p>
-
-
-
-<p>1단계(Level 1)에서는 IT 조직이 AI 플랫폼과 서비스를 제공한다. 직원은 자신의 역할과 보안 권한에 따라 데이터에 접근하며, 개인용 AI 에이전트를 직접 만들 수 있다. 다만 최소한의 보안 및 컴플라이언스 기준을 충족하지 못하면 해당 프로젝트는 다음 단계로 진행할 수 없다.</p>
-
-
-
-<p>2단계(Level 2)에서는 직원이 개발한 AI 에이전트가 IT 거버넌스 검토를 거친다. 중복 여부와 기능 겹침, 모델 개선 가능성, 보안 점검, 수동 검토 등을 통과하면 전사적으로 공유된다.</p>
-
-
-
-<p>차카라파니는 “현재 이 과정은 잘 운영되고 있지만 자동화할 수 있는 도구가 시장에 아직 없기 때문에 상당 부분 수작업에 의존하고 있다”라고 말했다.</p>
-
-
-
-<p>3단계(Level 3)에서는 조직 전체 애플리케이션에 안전한 기반을 구축해 AI를 대규모로 확장할 수 있는 수준에 도달한다. 주오라는 지난 6~8개월 동안 엔드포인트와 애플리케이션 보안을 강화하고, 모바일 기기 관리(MDM)를 의무화했으며, 직원들이 프롬프트에 어떤 데이터를 입력하는지까지 포함하는 AI 사용 모니터링 체계를 도입했다. 또한 승인되지 않은 애플리케이션에 개인 계정이나 대량 이메일 계정으로 접근하지 못하도록 구글 인증도 차단했다.</p>
-
-
-
-<p>올해 초부터는 4단계(Level 4) 성숙도 달성을 위한 작업도 시작했다. 이 단계에서는 최소한의 사람 개입만으로 누구나 실제로 작동하는 AI 애플리케이션을 개발할 수 있는 환경을 목표로 한다. 다만 마지막 단계에서는 여전히 사람의 검토가 필요하기 때문에, 현실적으로는 전체 과정의 80~85% 정도를 ‘제로터치(Zero-touch)’ 방식으로 구현할 것으로 예상하고 있다.</p>
-
-
-
-<p>차카라파니는 “궁극적인 목표는 조직 구성원 누구나 사람의 개입 없이 AI 애플리케이션을 만들 수 있는 제로터치 서비스를 제공하는 것”이라며 “이를 구현하면 아이디어 구상부터 프로토타입 제작, 설계, 운영 환경 배포까지 2주 이내에 완료할 수 있게 될 것”이라고 말했다.<br />dl-ciokorea@foundryco.com</p>
 </div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Australia investigating five social media giants for not enforcing ban on kids</title>
-  <link>https://www.theregister.com/public-sector/2026/06/29/australia-investigating-five-social-media-giants-for-not-enforcing-ban-on-kids/5263439</link>
-  <pubDate>Mon, 29 Jun 2026 01:22:32 +0000</pubDate>
-  <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>PLUS: Qualcomm tweaks datacenter chips for China; Japan's Air Force stretches into space; WiseTechs' woes mutiply; and more!<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
@@ -2360,151 +2884,6 @@
 </item>
 
 <item>
-  <title>🔵 ‘Botsitting’: The AI time-savings killer only governance can stop</title>
-  <link>https://www.cio.com/article/4188575/botsitting-the-ai-time-savings-killer-only-governance-can-stop.html</link>
-  <pubDate>Fri, 26 Jun 2026 22:01:00 +0000</pubDate>
-  <source>CIO.com</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><div id="remove_no_follow">
-		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
-					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
-						<div class="article-column__content">
-<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
-
-
-
-<p>One of AI’s biggest selling points is all the high-value tasks employees will be free to accomplish with the time saved using AI. Reality, however, remains far from that.</p>
-
-
-
-<p>While IT workers and other employees do save several hours each week thanks to AI, more than half of that time is burned up babysitting the technology, a new study reveals.</p>
-
-
-
-<p>According to a <a href="https://www.glean.com/work-ai-institute/reports/work-ai-index-report?aliId=eyJpIjoiaHF2bUw0eWFlc1dmZzk3ayIsInQiOiIrcFdzMXlSd2NxWGl6czBUNjQ1OGhRPT0ifQ%253D%253D" rel="nofollow">survey from the Work AI Institute</a>, digital workers save an average of 11 hours a week through AI, but the net time savings is much less, because they spend 6.4 hours a week “botsitting.”</p>
-
-
-
-<p>Botsitting involves activities such as feeding AI tools missing context, checking AI outputs, <a href="https://www.cio.com/article/4126094/who-will-be-the-first-cio-fired-for-ai-agent-havoc.html">debugging AI mistakes</a>, rerunning prompts, and <a href="https://www.cio.com/article/4077448/ai-workslop-the-new-productivity-killer-only-training-can-stop.html">cleaning up the confident-but-wrong answers</a> they leave behind, as defined by the Work AI Institute, a research group founded by AI copilot and search provider Glean.</p>
-
-
-
-<p>The botsitting problem is real, several IT leaders agree, and it has serious implications for IT organizations. In many cases, organizations aren’t training their employees to effectively use AI, says <a href="https://www.linkedin.com/in/talcarmi/" rel="nofollow">Tal Carmi</a>, CIO at digital adoption platform provider WalkMe.</p>
-
-
-
-<p>WalkMe’s <a href="https://www.walkme.com/the-state-of-digital-adoption-2026/" rel="nofollow">2026 State of Digital Adoption report</a> found similar results, with employees losing nearly eight hours a week to botsitting, Carmi notes. At the same time, most employees use AI for shallow tasks like writing emails because they don’t trust it for more complex activities, WalkMe found.</p>
-
-
-
-<p>As a result, enterprises aren’t getting the full ROI of their AI purchases, Carmi says, a significant issue for CIOs and organizations in general.</p>
-
-
-
-<h2 class="wp-block-heading" id="hours-wasted">Hours wasted</h2>
-
-
-
-<p>Going into the survey, researchers at the Work AI Institute suspected botsitting was a problem for many organizations, but the results were eye-opening, according to <a href="https://www.rebeccahinds.com/" rel="nofollow">Rebecca Hinds</a>, founder of the organization.</p>
-
-
-
-<p>“The surprise was how prevalent it is,” she says. “The fact is that workers are spending roughly the same share of their AI time botsitting as they are using the technology to move work forward.”</p>
-
-
-
-<p>Moreover, while 87% of digital workers, and 97% of IT workers, said they use AI at their jobs, only 13% believe their use of the tools has led to significantly improved performance or outcomes.</p>
-
-
-
-<p>Part of the problem is a phenomenon Hinds calls “coordination neglect.” Employees often focus on their own productivity without considering the broader benefits to the organization, she says. As a result, their AI-assisted work sometimes conflicts with another employee’s work.</p>
-
-
-
-<p>“I can use the technology to, say, convert a single bullet point into a five-page report,” she says. “I can then ship that five-page report to a colleague, but the colleague sees that it’s so much content. They can use the same AI tool to then convert the five-page report back into a series of bullet points.”</p>
-
-
-
-<p>In some cases, employees do divert AI time savings to personal activities, but the most common use of the time saved, according to survey respondents, is to improve the quality of their work, Hinds says. Overall, however, organizations aren’t seeing a major quality improvement, she adds.</p>
-
-
-
-<p>Shipping AI-generated work that workers haven’t verified, don’t fully understand, or can’t confidently stand behind is a significant issue, according to the AI Work Institute report.</p>
-
-
-
-<p>And then there’s the “AI toggle tax” — when employees switch between multiple AI tools to do their jobs, which leads to additional unverified work. Moreover, as employees become overwhelmed with <a href="https://www.cio.com/article/4132287/taming-agent-sprawl-3-pillars-of-ai-orchestration.html?utm=hybrid_search">AI tool sprawl</a>, they <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6097646" rel="nofollow">cognitively offload</a> their work to AI.</p>
-
-
-
-<p>“They hand more of their thinking and judgment over to the machine,” the report says. “They start to cut corners. They stop checking outputs, verifying sources, and asking whether the AI’s recommendations make any sense.”</p>
-
-
-
-<h2 class="wp-block-heading" id="governance-problems-at-the-core">Governance problems at the core</h2>
-
-
-
-<p>Botsitting, and giving in to AI slop, are real but also symptoms of a larger governance problem, says <a href="https://www.linkedin.com/in/frankmeltke/" rel="nofollow">Frank Meltke</a>, CEO of digital transformation consulting firm contraco.</p>
-
-
-
-<p>“Workers are spending nearly a full day verifying AI output because nobody at deployment defined what verification was required, who owned it, or what good output looks like before it moves downstream,” he says. “That is a governance gap, not a tool problem.”</p>
-
-
-
-<p>Meltke also doubts there’s a net time-savings gain of four-plus hours per employee each week when their fellow workers sometimes must redo their AI-assisted outputs.</p>
-
-
-
-<p>More than two-thirds of digital workers surveyed admit to shipping AI-assisted outputs they have not verified, he notes. “That output lands on someone else downstream, usually without context to fix it,” he says. “The 4.6-hour net gain at the individual level gets absorbed invisibly at the team level as rework nobody budgeted for.”</p>
-
-
-
-<p>This phenomenon explains why time savings observed by individual employes does not show up in organizational performance, he adds. “The productivity gain was never real savings,” Meltke says. “It was a transfer of labor from the person who generated the output to the person who inherited it.”</p>
-
-
-
-<p>Not all botsitting is a bad thing, however, says <a href="https://www.clickboarding.com/about-us/adam-wachtel/" rel="nofollow">Adam Wachtel</a>, CTO at HR platform Click Boarding. Verifying outputs, iterating on prompts, and adding domain context for the AI tool to use are good engineering practices, when done right, he notes.</p>
-
-
-
-<p>“The issue is that organizations aren’t distinguishing between what’s worth doing versus a symptom of a poorly deployed tool,” he says.</p>
-
-
-
-<p>A big problem is a lack of context for AI tools, he suggests. “When AI tools don’t have access to accurate data and aren’t built in the right way to make their output usable, employees become the integration layer that re-explains a project to every tool and fixes what breaks,” Wachtel says.</p>
-
-
-
-<p>Meanwhile, the 6.4 hours spent botsitting aren’t evenly distributed and instead fall on employees already engaged in detailed work, such as senior engineers, he says.</p>
-
-
-
-<p>“You have others skipping that verification, thinking they’re saving 11 hours, and then may not be responsible for the mess that comes of it — often downstream when code breaks or a process stops working,” he adds.</p>
-
-
-
-<p>Individual productivity gains don’t automatically add up to organizational ones, Wachtel adds. For example, if an engineer builds code faster, someone else may have to verify it. One employee’s time savings creates work for someone else.</p>
-
-
-
-<p>Many organizations also struggle to measure quality of AI outputs, he adds. IT leaders should educate the full C-suite on the metrics that matter the most, <a href="https://www.cio.com/article/4178320/tokenmaxxing-when-ai-adoption-metrics-go-bad.html">rather than how many times an AI tool was used</a>, he recommends.</p>
-
-
-
-<p>“Organizations are touting efficiency gains, but I don’t see a lot of chatter around agents’ accuracy, continuous improvement, or cost takeout that are more impactful to align to,” he says. “A lot of AI was developed and launched for speed rather than for impact, and so the right people weren’t involved or trained.”</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3d ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Google wants AI regulation, but on its own terms</title>
-  <link>https://www.theregister.com/ai-and-ml/2026/06/26/google-wants-ai-regulation-but-on-its-own-terms/5263276</link>
-  <pubDate>Fri, 26 Jun 2026 19:50:06 +0000</pubDate>
-  <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Regulatory/compliance signal — assess applicability and remediation timeline.</b><br/>Surely, we can have rules that allow us to continue doing what we're doing<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3d ago]]></description>
-</item>
-
-<item>
   <title>🔵 Malware authors subvert AI detection systems</title>
   <link>https://www.csoonline.com/article/4190094/malware-authors-subvert-ai-detection-systems.html</link>
   <pubDate>Fri, 26 Jun 2026 16:27:02 +0000</pubDate>
@@ -2550,55 +2929,6 @@
 </item>
 
 <item>
-  <title>🔵 You can’t build sovereign infrastructure with Broadcom, says CISPE</title>
-  <link>https://www.cio.com/article/4190068/you-cant-build-sovereign-infrastructure-with-broadcom-says-cispe-2.html</link>
-  <pubDate>Fri, 26 Jun 2026 15:36:23 +0000</pubDate>
-  <source>CIO.com</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><div id="remove_no_follow">
-		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
-					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
-						<div class="article-column__content">
-<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
-
-
-
-<p>Broadcom’s claims that it can support European cloud service providers building competitive sovereign solutions are exaggerated, according to the Cloud Infrastructure Service Providers Europe (CISPE).</p>
-
-
-
-<p>The US company is promoting its <a href="https://blogs.vmware.com/cloud-foundation/2026/06/19/the-year-the-sovereign-cloud-debate-got-specific/#:~:text=The%20VMware%20portfolio%20sits%20at%20the%20infrastructure%20layer%20of%20the%20sovereign%20cloud%2C%20serving%20as%20the%20enabling%20technology%20stack%20that%20European%20providers%20use%20to%20build%20their%20own%20sovereign%20offerings.%20This%20architecture%20is%20uniquely%20valuable%20to%20European%20public%20sector%20customers." rel="nofollow" target="_blank">VMware Cloud Foundation (VCF) software</a> as the enabling technology for the European Union’s Sovereign Cloud, but Broadcom is not the solution to Europe’s technology sovereignty problems, according to CISPE secretary-general <a href="https://www.linkedin.com/in/fmingorance/" rel="nofollow" target="_blank">Francisco Mingorance</a>.</p>
-
-
-
-<p>“VCF is a proprietary product with limited interoperability and substitutability, controlled by a foreign vendor that has behaved like a bully towards customers and channel partners. If Europe needs an example of the dangers of over-reliance on dominant overseas players, Broadcom is it,” Mingorance said, according to a post on <a href="https://www.cispe.cloud/broadcom-is-not-sovereign/" rel="nofollow" target="_blank">CISPE’s website</a>.</p>
-
-
-
-<p>CISPE has cited several reasons why VCF doesn’t fit the bill, in particular highlighting its lack of portability. This means that it doesn’t qualify as resilient under <a href="https://sovereignty.cispe.cloud/" rel="nofollow" target="_blank">CISPE’s Sovereign and Resilient Cloud Framework</a>.</p>
-
-
-
-<p>Earlier this month, the EU unveiled proposals for its <a href="https://www.computerworld.com/article/4180801/eu-sets-out-plans-to-reduce-reliance-on-us-cloud-providers.html">Cloud and AI Development Act (CADA)</a> to strengthen Europe’s digital economy. CADA will encourage investment in European research, lay down conditions for European data centers, and provide a single EU-wide assessment framework for cloud and AI sovereignty.</p>
-
-
-
-<p>CISPE said that Broadcom is a long way short of fulfilling the conditions proposed for CADA. Broadcom would fail to meet anything but a Level 1 certification under the CADA sovereignty framework, CISPE said, adding that Broadcom’s terms and conditions offer limited maintenance commitments, no source-code escrow, no substitution plan and no Data Act certification, all likely to fall foul of CADA’s recommendations.</p>
-
-
-
-<p>This is not the first time that CISPE has had a run-in with Broadcom. In December last year, <a href="https://www.networkworld.com/article/4105842/cloud-providers-continue-to-push-eu-court-to-undo-broadcom-vmware-merger.html">the organization urged the EU central court to overturn the Broadcom/VMware merger</a>. And in March,<a href="https://www.networkworld.com/article/4147779/cloud-providers-seek-to-shape-european-sovereignty-legislation.html"> CISPE wrote an open letter</a> warning of US hyperscalers trying to “sovereignty wash” their services.</p>
-
-
-
-<p><em>This article first appeared on <a href="https://www.networkworld.com/article/4190063/you-cant-build-sovereign-infrastructure-with-broadcom-says-cispe.html">Network World</a>.</em></p>
-
-
-
-<p></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3d ago]]></description>
-</item>
-
-<item>
   <title>🔵 Cyberattacks pose a ‘threat to life’ in Australia</title>
   <link>https://www.csoonline.com/article/4190054/cyberattacks-pose-a-threat-to-life-in-australia.html</link>
   <pubDate>Fri, 26 Jun 2026 14:58:37 +0000</pubDate>
@@ -2633,30 +2963,6 @@
 
 <p>This meant that Australia is facing a persistent threat in the future, one that could have consequences for the way that the critical infrastructure is deployed and managed. “The biggest challenge is the cumulative one: in a degraded security environment defined by concurrent, cascading, compounding threats, when resources are limited, how and what do you prioritize?” he said.</p>
 </div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3d ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Oracle promises to open up MySQL governance, but the community wants guarantees</title>
-  <link>https://www.theregister.com/databases/2026/06/26/oracle-promises-to-open-up-mysql-governance-but-the-community-wants-guarantees/5263106</link>
-  <pubDate>Fri, 26 Jun 2026 14:42:00 +0000</pubDate>
-  <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Open source advocates remain concerned over lack of binding commitments<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3d ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Miasma campaign poisons 20-plus npm packages, hunts for developer secrets</title>
-  <link>https://www.theregister.com/security/2026/06/26/miasma-campaign-poisons-20-plus-npm-packages-hunts-for-developer-secrets/5262886</link>
-  <pubDate>Fri, 26 Jun 2026 12:18:00 +0000</pubDate>
-  <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Microsoft says latest attack targets Leo Platform and RStreams packages, harvesting creds and going after more maintainers<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3d ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Italy probes AI-fueled price hikes in Microsoft 365</title>
-  <link>https://www.theregister.com/saas/2026/06/26/italy-probes-ai-fueled-price-hikes-in-microsoft-365/5262986</link>
-  <pubDate>Fri, 26 Jun 2026 11:25:00 +0000</pubDate>
-  <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Regulator says subscribers may have been defaulted onto more expensive plans with Copilot features attached<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3d ago]]></description>
 </item>
 
 <item>
@@ -2795,7 +3101,7 @@
 
 
 <p></p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 3d ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 4d ago]]></description>
 </item>
 
 <item>
@@ -2916,7 +3222,7 @@
 
 
 <p>“The instinct behind this bill is sound, but the balance cannot be scored from a press release,” Gogia said. “The wording will decide everything.”</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3d ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4d ago]]></description>
 </item>
 
 <item>
@@ -3055,7 +3361,7 @@
 
 
 <p><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><strong><a href="https://www.csoonline.com/expert-contributor-network/">Want to join?</a></strong></p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 3d ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 4d ago]]></description>
 </item>
 
 <item>
@@ -3341,7 +3647,7 @@
 
 
 <p>“My goal is to provide a zero-touch service for anybody in the organization to create applications. If we do, they can go from a concept to an idea, prototype, design, and production — and they do it in less than two weeks,” he says.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 4d ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 5d ago]]></description>
 </item>
 
 <item>
@@ -3888,7 +4194,7 @@
 
 
 <p><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><strong><a href="https://www.csoonline.com/expert-contributor-network/">Want to join?</a></strong></p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4d ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 5d ago]]></description>
 </item>
 
 <item>
@@ -4175,7 +4481,7 @@
 
 
 <p>Neither Cisco nor Defused has publicly attributed the attacks to a specific threat actor, released indicators of compromise, or disclosed whether any organizations have been successfully compromised through exploitation of the flaw.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5d ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 6d ago]]></description>
 </item>
 
 <item>
@@ -4276,7 +4582,7 @@
 
 
 <p>At runtime, network calls should be restricted to approved domains and monitored for unusual activity, Prabhu added. That layer is critical because a skill that appears safe at installation can change behavior after it has already been trusted.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 5d ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 6d ago]]></description>
 </item>
 
 <item>
@@ -4449,7 +4755,7 @@
 
 
 <p><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><strong><a href="https://www.csoonline.com/expert-contributor-network/">Want to join?</a></strong></p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 5d ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 6d ago]]></description>
 </item>
 
 <item>
@@ -5295,111 +5601,6 @@
 
 <p>Microsoft did not immediately respond to a request for comment.</p>
 </div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 6d ago]]></description>
-</item>
-
-<item>
-  <title>🟠 OpenAI rolls out AI-led push to fix open-source software flaws</title>
-  <link>https://www.csoonline.com/article/4188321/openai-rolls-out-ai-led-push-to-fix-open-source-software-flaws.html</link>
-  <pubDate>Tue, 23 Jun 2026 10:32:40 +0000</pubDate>
-  <source>CSO Online</source>
-  <description><![CDATA[<b>Why this matters: Supply chain risk — audit third-party dependencies and vendor access.</b><br/><div id="remove_no_follow">
-		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
-					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
-						<div class="article-column__content">
-<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
-
-
-
-<p>OpenAI has launched a program with cybersecurity firm Trail of Bits to use AI to find and fix vulnerabilities in widely used open-source software, as enterprises face growing risks from flaws buried deep in their software supply chains.</p>
-
-
-
-<p>The initiative, called <a href="https://openai.com/index/patch-the-planet/" rel="noreferrer noopener" target="_blank">Patch the Planet</a>, uses AI-assisted vulnerability research alongside human review to help turn security findings into tested fixes that can be disclosed through existing project channels.</p>
-
-
-
-<p>Initial participants include Python, Go, cURL, Sigstore, NATS Server, aiohttp, freenginx, pyca/cryptography, and python.org. These projects support software development, networking, cryptography, and <a href="https://www.csoonline.com/article/4170694/cisas-ai-sbom-guidance-pushes-software-supply-chain-oversight-into-new-territory.html">supply chain</a> infrastructure used across a wide range of enterprise applications and services.</p>
-
-
-
-<p>OpenAI said each engagement will begin with consultation with maintainers to identify where security support is most needed. Researchers will then investigate potential vulnerabilities, validate meaningful issues, develop or refine patches, support testing, and coordinate disclosure through the project’s existing channels.</p>
-
-
-
-<p>Participating security researchers will use the company’s models and Codex Security to analyze code and help move fixes toward release. Trail of Bits engineers will review findings before they are sent to maintainers, a step meant to filter out false positives and duplicate reports before they add to the workload of open-source projects.</p>
-
-
-
-<p>The company is also working with HackerOne and Calif to support vulnerability triage, coordinated disclosure, and additional discovery work as the program expands.</p>
-
-
-
-<p>OpenAI said work under the program has already identified “hundreds of security issues and merged dozens of patches, with many more still undergoing coordinated disclosure.”</p>
-
-
-
-<p>The work has also produced tools for fuzzing, historical CVE analysis, and differential testing, along with systems to filter inaccurate findings before patches are generated, OpenAI added.</p>
-
-
-
-<p>The focus on open-source security follows incidents such as <a href="https://www.csoonline.com/article/1259949/lazarus-apt-attack-campaign-shows-log4shell-exploitation-remains-popular.html">Log4Shell</a> and the <a href="https://www.csoonline.com/article/2077692/dangerous-xz-utils-backdoor-was-the-result-of-years-long-supply-chain-compromise-effort.html">XZ Utils backdoor</a>, which showed how quickly a flaw in a shared component can move through enterprise software.</p>
-
-
-
-<p>Analysts said Patch the Planet changes the risk equation only if enterprises treat AI-assisted vulnerability research as an input to a broader software supply chain risk program, not as a substitute for one.</p>
-
-
-
-<p>“The key shift is speed: AI-assisted research can help find, validate, patch, test, and document issues faster, while human reviewers reduce false positives before maintainers are burdened,” said <a href="https://www.forrester.com/analyst-bio/biswajeet-mahapatra/BIO20046" rel="noreferrer noopener" target="_blank">Biswajeet Mahapatra</a>, principal analyst at Forrester. “But the dependency on scarce expertise does not go away; it moves to triage, exploitability judgment, patch safety, disclosure timing, and production rollout.”</p>
-
-
-
-<h2 class="wp-block-heading" id="guardrails-before-deployment">Guardrails before deployment</h2>
-
-
-
-<p>CISOs should put governance controls in place before using AI-assisted vulnerability research in enterprise security pipelines, to ensure unverified findings do not overwhelm engineering teams, said <a href="https://www.linkedin.com/in/devashri-datta-522b364b/" rel="noreferrer noopener" target="_blank">Devashri Datta</a>, an open-source cybersecurity architect.</p>
-
-
-
-<p>“CISOs should demand a Safety Relevance Layer in their risk modeling, a structured framework that requires every AI-generated finding to pass automated verification, including dynamic proof-of-concept validation and strong false-positive filtering, before it reaches a human analyst,” Datta said.</p>
-
-
-
-<p>Those controls should also cover disclosure, particularly when AI tools identify flaws in third-party open-source components that the enterprise does not control, Datta said. Organizations need predefined escalation paths, notification timelines, and role assignments that take effect once a confirmed issue is found in an external dependency.</p>
-
-
-
-<p>“Ad hoc disclosure in an AI-accelerated environment isn’t just a process gap; it’s a liability,” Datta said. “Trusting AI in the production pipeline requires verifiable auditability: organizations must be able to trace why the AI flagged a line of code, how it validated the exploit, and how it determined that the patch would not break downstream production systems.”</p>
-
-
-
-<h2 class="wp-block-heading" id="continuous-exposure-reduction">Continuous exposure reduction</h2>
-
-
-
-<p>AI-assisted vulnerability research could force enterprises to move away from periodic patching cycles and toward more continuous risk assessment, analysts said. If variant analysis and differential testing can be compressed from weeks to days, security teams may need faster ways to decide which findings matter most in their own environments.</p>
-
-
-
-<p>That shift also means enterprises can no longer rely only on generic CVSS scores to prioritize remediation, Datta said. Findings will need to be assessed against the affected system, its business role, runtime exposure and the likelihood that a flaw can be exploited.</p>
-
-
-
-<p>“We have to move toward context-aware, safety-critical prioritization,” Datta said. “Enterprise SBOM and VEX programs must evolve from passive compliance spreadsheets into live, machine-readable data feeds. For AI-assisted pipelines specifically, that means extending the VEX model to cover AI-introduced risk surfaces.”</p>
-
-
-
-<p>Mahapatra said vulnerability management programs will also need to become more closely tied to software ownership, supplier response, and business impact.</p>
-
-
-
-<p>“Security teams should move from periodic vulnerability handling to continuous exposure reduction,” Mahapatra said.</p>
-
-
-
-<p>That means SBOMs should be treated as live inventories tied to runtime exposure and supplier response, rather than static compliance documents. Patch decisions should also account for asset criticality, exploitability, compensating controls, and business impact.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 6d ago]]></description>
 </item>
 
 </channel>
