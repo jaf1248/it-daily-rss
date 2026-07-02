@@ -1,25 +1,35 @@
 # IT Weekly Intelligence Briefing
 **Period:** June 25 – July 02, 2026  
-**Generated:** 2026-07-02 06:42 UTC  
-**Items reviewed:** 133  
+**Generated:** 2026-07-02 10:09 UTC  
+**Items reviewed:** 132  
 
 ## ⚡ Top Actions This Week
 
-1. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _Medtronic notifies customers impacted by ShinyHunters data breach_  
-   Source: BleepingComputer  
+1. **Validate backups, confirm EDR coverage, and brief incident response team.**  
+   _AI Agent Exploits Langflow RCE to Automate Database Ransomware Attack_  
+   Source: The Hacker News  
 
 2. **Validate backups, confirm EDR coverage, and brief incident response team.**  
-   _FortiBleed credential-theft campaign linked to Lynx ransomware_  
-   Source: BleepingComputer  
+   _FortiBleed Credential Theft Linked to INC and Lynx Ransomware Operations_  
+   Source: The Hacker News  
 
 3. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _DHS confirms hackers breached HSIN info-sharing platform_  
+   _Medtronic notifies customers impacted by ShinyHunters data breach_  
    Source: BleepingComputer  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [AI Agent Exploits Langflow RCE to Automate Database Ransomware Attack](https://thehackernews.com/2026/07/ai-agent-exploits-langflow-rce-to.html)
+**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Jul 02  
+**Why it matters:** Elevated ransomware risk across the sector.  
+**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
+
+### [FortiBleed Credential Theft Linked to INC and Lynx Ransomware Operations](https://thehackernews.com/2026/07/fortibleed-credential-theft-linked-to.html)
+**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Jul 02  
+**Why it matters:** Elevated ransomware risk across the sector.  
+**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
 
 ### [Medtronic notifies customers impacted by ShinyHunters data breach](https://www.bleepingcomputer.com/news/security/medtronic-notifies-customers-impacted-by-shinyhunters-data-breach/)
 **Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jul 02  
@@ -41,14 +51,12 @@
 **Why it matters:** Elevated ransomware risk across the sector.  
 **Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
 
-### [Oracle E-Business Suite Flaw CVE-2026-46817 Actively Exploited in the Wild](https://thehackernews.com/2026/06/oracle-e-business-suite-flaw-cve-2026.html)
-**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Jun 30  
-**Why it matters:** General awareness item.  
-**Recommended action:** Apply emergency patch or mitigation now; check vendor advisory for workarounds.  
-
 ---
 
 ## 🟠 Important — Review This Week
+
+- [New ChocoPoC RAT Targets Vulnerability Researchers via Fake PoC Exploit Repos](https://thehackernews.com/2026/07/new-chocopoc-rat-targets-vulnerability.html)  
+  **The Hacker News** · Jul 02 · _General awareness item._  
 
 - [SharePoint RCE CVE-2026-45659 Added to CISA KEV After Active Exploitation](https://thehackernews.com/2026/07/sharepoint-rce-cve-2026-45659-added-to.html)  
   **The Hacker News** · Jul 02 · _General awareness item._  
@@ -71,20 +79,17 @@
 - [CVE-2026-41992 Global Buffer Overflow in GNU gzip](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-41992)  
   **Microsoft Security Response Center (MSRC)** · Jul 01 · _General awareness item._  
 
-- [CVE-2026-57062 CMS (Cryptographic Message Syntax) parsing in gpgsm in GnuPG through 2.5.20 mishandles the CMS format for AES-GCM because aes-ICVlen is supposed to be 12 bytes but 4 bytes is accepted. NOTE: this is related to CVE-2026-34182.](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-57062)  
-  **Microsoft Security Response Center (MSRC)** · Jul 01 · _General awareness item._  
-
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [Alleged Scattered Spider hacker extradited to the United States](https://www.bleepingcomputer.com/news/security/alleged-scattered-spider-hacker-extradited-to-the-united-states/) — BleepingComputer
 - [ISC Stormcast For Thursday, July 2nd, 2026 https://isc.sans.edu/podcastdetail/9992, (Thu, Jul 2nd)](https://isc.sans.edu/diary/rss/33120) — SANS Internet Storm Center
 - [Kubota says hackers had month-long access to network systems](https://www.bleepingcomputer.com/news/security/kubota-says-hackers-had-month-long-access-to-network-systems/) — BleepingComputer
 - [New ChocoPoC malware targets researchers via trojanized PoC exploits](https://www.bleepingcomputer.com/news/security/new-chocopoc-malware-targets-researchers-via-trojanized-poc-exploits/) — BleepingComputer
 - [19-Year-Old Scattered Spider Suspect Extradited to Face U.S. Hacking Charges](https://thehackernews.com/2026/07/19-year-old-scattered-spider-suspect.html) — The Hacker News
 - [SEO-Poisoned Software Sites Abuse ScreenConnect to Deploy AsyncRAT](https://thehackernews.com/2026/07/seo-poisoned-software-sites-abuse.html) — The Hacker News
-- [VEIL#DROP Malware Chain Uses Blogger Platform to Deliver PureLogs Stealer](https://thehackernews.com/2026/07/veildrop-malware-chain-uses-blogger.html) — The Hacker News
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 5 critical · 78 important · 50 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 7 critical · 77 important · 48 FYI_
