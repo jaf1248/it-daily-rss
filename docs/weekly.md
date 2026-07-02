@@ -1,25 +1,30 @@
 # IT Weekly Intelligence Briefing
 **Period:** June 25 – July 02, 2026  
-**Generated:** 2026-07-02 10:09 UTC  
+**Generated:** 2026-07-02 12:56 UTC  
 **Items reviewed:** 132  
 
 ## ⚡ Top Actions This Week
 
-1. **Validate backups, confirm EDR coverage, and brief incident response team.**  
+1. **Prioritize patching of affected systems; check for internet-exposed attack surface.**  
+   _CISA: Microsoft SharePoint RCE flaw now actively exploited_  
+   Source: BleepingComputer  
+
+2. **Validate backups, confirm EDR coverage, and brief incident response team.**  
    _AI Agent Exploits Langflow RCE to Automate Database Ransomware Attack_  
    Source: The Hacker News  
 
-2. **Validate backups, confirm EDR coverage, and brief incident response team.**  
+3. **Validate backups, confirm EDR coverage, and brief incident response team.**  
    _FortiBleed Credential Theft Linked to INC and Lynx Ransomware Operations_  
    Source: The Hacker News  
-
-3. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _Medtronic notifies customers impacted by ShinyHunters data breach_  
-   Source: BleepingComputer  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [CISA: Microsoft SharePoint RCE flaw now actively exploited](https://www.bleepingcomputer.com/news/security/cisa-microsoft-sharepoint-rce-flaw-now-actively-exploited/)
+**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jul 02  
+**Why it matters:** General awareness item.  
+**Recommended action:** Prioritize patching of affected systems; check for internet-exposed attack surface.  
 
 ### [AI Agent Exploits Langflow RCE to Automate Database Ransomware Attack](https://thehackernews.com/2026/07/ai-agent-exploits-langflow-rce-to.html)
 **Source:** The Hacker News &nbsp;·&nbsp; **Date:** Jul 02  
@@ -46,14 +51,12 @@
 **Why it matters:** Potential credential or data exposure.  
 **Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
-### [AI-Generated Browser Ransomware Abuses Chromium API on Windows, Linux, macOS, Android](https://thehackernews.com/2026/07/ai-generated-browser-ransomware-abuses.html)
-**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Jul 01  
-**Why it matters:** Elevated ransomware risk across the sector.  
-**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
-
 ---
 
 ## 🟠 Important — Review This Week
+
+- [Cisco finally confirms attackers exploiting Unified CM flaw](https://www.bleepingcomputer.com/news/security/cisco-finally-confirms-attackers-exploiting-unified-cm-flaw/)  
+  **BleepingComputer** · Jul 02 · _General awareness item._  
 
 - [New ChocoPoC RAT Targets Vulnerability Researchers via Fake PoC Exploit Repos](https://thehackernews.com/2026/07/new-chocopoc-rat-targets-vulnerability.html)  
   **The Hacker News** · Jul 02 · _General awareness item._  
@@ -76,20 +79,17 @@
 - [Progress Kemp LoadMaster Pre-Auth RCE Flaw Faces Active Exploitation Attempts](https://thehackernews.com/2026/07/latest-progress-kemp-loadmaster-pre.html)  
   **The Hacker News** · Jul 01 · _General awareness item._  
 
-- [CVE-2026-41992 Global Buffer Overflow in GNU gzip](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-41992)  
-  **Microsoft Security Response Center (MSRC)** · Jul 01 · _General awareness item._  
-
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [Microsoft fixes bug that removed Copilot buttons in Outlook](https://www.bleepingcomputer.com/news/microsoft/microsoft-fixes-bug-that-removed-copilot-button-in-outlook/) — BleepingComputer
+- [Identity Lifecycle Management Wasn't Built for AI Agents](https://thehackernews.com/2026/07/identity-lifecycle-management.html) — The Hacker News
+- [Opera rolls out Paste Protect feature to fight ClickFix attacks](https://www.bleepingcomputer.com/news/security/opera-rolls-out-paste-protect-feature-to-fight-clickfix-attacks/) — BleepingComputer
 - [Alleged Scattered Spider hacker extradited to the United States](https://www.bleepingcomputer.com/news/security/alleged-scattered-spider-hacker-extradited-to-the-united-states/) — BleepingComputer
 - [ISC Stormcast For Thursday, July 2nd, 2026 https://isc.sans.edu/podcastdetail/9992, (Thu, Jul 2nd)](https://isc.sans.edu/diary/rss/33120) — SANS Internet Storm Center
 - [Kubota says hackers had month-long access to network systems](https://www.bleepingcomputer.com/news/security/kubota-says-hackers-had-month-long-access-to-network-systems/) — BleepingComputer
-- [New ChocoPoC malware targets researchers via trojanized PoC exploits](https://www.bleepingcomputer.com/news/security/new-chocopoc-malware-targets-researchers-via-trojanized-poc-exploits/) — BleepingComputer
-- [19-Year-Old Scattered Spider Suspect Extradited to Face U.S. Hacking Charges](https://thehackernews.com/2026/07/19-year-old-scattered-spider-suspect.html) — The Hacker News
-- [SEO-Poisoned Software Sites Abuse ScreenConnect to Deploy AsyncRAT](https://thehackernews.com/2026/07/seo-poisoned-software-sites-abuse.html) — The Hacker News
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 7 critical · 77 important · 48 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 8 critical · 76 important · 48 FYI_
