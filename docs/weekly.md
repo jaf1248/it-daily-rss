@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
 **Period:** June 26 – July 03, 2026  
-**Generated:** 2026-07-03 06:29 UTC  
+**Generated:** 2026-07-03 09:55 UTC  
 **Items reviewed:** 134  
 
 ## ⚡ Top Actions This Week
@@ -55,40 +55,40 @@
 
 ## 🟠 Important — Review This Week
 
-- [CVE-2026-50521 Microsoft Edge (Chromium-based) Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-50521)  
-  **Microsoft Security Response Center (MSRC)** · Jul 02 · _General awareness item._  
+- [CVE-2026-57918 libnfs through 6.0.2 before 935b8db has an xid integer underflow in READ_IOVEC in rpc_read_from_socket in lib/socket.c during a connection to a crafted NFS server, when the expected pdu size exceeds the absolute pdu size from the xid/record-marker.](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-57918)  
+  **Microsoft Security Response Center (MSRC)** · Jul 03 · _General awareness item._  
 
-- [CVE-2026-57100 Microsoft Entra Provisioning Service Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-57100)  
-  **Microsoft Security Response Center (MSRC)** · Jul 02 · _Possible impact to authentication and sign-in flows._  
+- [CVE-2026-57231 Podman: Malformed Image can trick podman run into leaking host environment variables into the container](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-57231)  
+  **Microsoft Security Response Center (MSRC)** · Jul 03 · _General awareness item._  
 
-- [CVE-2026-45499 Azure OpenAI Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45499)  
-  **Microsoft Security Response Center (MSRC)** · Jul 02 · _General awareness item._  
+- [CVE-2026-13322 Kubevirt: virt-handler-rhel9: kubevirt: unbounded virtio-serial readline in virt-handler causes oom denial of service](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-13322)  
+  **Microsoft Security Response Center (MSRC)** · Jul 03 · _General awareness item._  
 
-- [CVE-2026-26145 Microsoft Azure Synapse Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-26145)  
-  **Microsoft Security Response Center (MSRC)** · Jul 02 · _General awareness item._  
+- [CVE-2026-48779 ws: Memory exhaustion DoS from tiny fragments and data chunks](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-48779)  
+  **Microsoft Security Response Center (MSRC)** · Jul 03 · _General awareness item._  
 
-- [CVE-2026-41106 Microsoft 365 Copilot Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-41106)  
-  **Microsoft Security Response Center (MSRC)** · Jul 02 · _General awareness item._  
+- [CVE-2026-41991 Predictable Temporary File in GNU gzip](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-41991)  
+  **Microsoft Security Response Center (MSRC)** · Jul 03 · _General awareness item._  
 
-- [CVE-2026-54998 Microsoft Exchange Online Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-54998)  
-  **Microsoft Security Response Center (MSRC)** · Jul 02 · _Potential email disruption for users._  
+- [CVE-2026-58055 nghttp2 nghttpx - HTTP Request/Response Smuggling via Upgrade Request with Content-Length](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-58055)  
+  **Microsoft Security Response Center (MSRC)** · Jul 03 · _General awareness item._  
 
-- [Cisco finally confirms attackers exploiting Unified CM flaw](https://www.bleepingcomputer.com/news/security/cisco-finally-confirms-attackers-exploiting-unified-cm-flaw/)  
-  **BleepingComputer** · Jul 02 · _General awareness item._  
+- [CVE-2026-58051 libssh2 - Free of Uninitialized Pointer in publickey List Cleanup](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-58051)  
+  **Microsoft Security Response Center (MSRC)** · Jul 03 · _General awareness item._  
 
-- [New ChocoPoC RAT Targets Vulnerability Researchers via Fake PoC Exploit Repos](https://thehackernews.com/2026/07/new-chocopoc-rat-targets-vulnerability.html)  
-  **The Hacker News** · Jul 02 · _General awareness item._  
+- [CVE-2026-58050 libssh2 - Integer Overflow in publickey Subsystem Attribute Allocation](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-58050)  
+  **Microsoft Security Response Center (MSRC)** · Jul 03 · _General awareness item._  
 
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [PamStealer Uses Fake Maccy Sites and PAM Checks to Steal Mac Login Passwords](https://thehackernews.com/2026/07/pamstealer-uses-fake-maccy-sites-and.html) — The Hacker News
 - [Claude Fable 5 isn’t permanently leaving subscriptions, Anthropic says](https://www.bleepingcomputer.com/news/artificial-intelligence/claude-fable-5-isnt-permanently-leaving-subscriptions-anthropic-says/) — BleepingComputer
 - [Claude Fable relaunch disappoints users with nerfed performance](https://www.bleepingcomputer.com/news/artificial-intelligence/claude-fable-relaunch-disappoints-users-with-nerfed-performance/) — BleepingComputer
 - [FBI Seizes NetNut Proxy Platform, Popa Botnet](https://krebsonsecurity.com/2026/07/fbi-seizes-netnut-proxy-platform-popa-botnet/) — Krebs on Security
 - [Google Disrupts NetNut Residential Proxy Network Spanning 2 Million Home Devices](https://thehackernews.com/2026/07/google-disrupts-netnut-residential.html) — The Hacker News
 - [Google loses final appeal to overturn €4.1 billion EU fine](https://www.bleepingcomputer.com/news/legal/google-loses-final-appeal-to-overturn-41-billion-eu-fine/) — BleepingComputer
-- [ConsentFix and ClickFix: How Microsoft 365 Accounts are Hijacked in 3 Seconds](https://www.bleepingcomputer.com/news/security/consentfix-and-clickfix-how-microsoft-365-accounts-are-hijacked-in-3-seconds/) — BleepingComputer
 
 ---
 
