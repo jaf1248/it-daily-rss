@@ -1,25 +1,30 @@
 # IT Weekly Intelligence Briefing
 **Period:** June 26 – July 03, 2026  
-**Generated:** 2026-07-03 17:23 UTC  
+**Generated:** 2026-07-03 19:17 UTC  
 **Items reviewed:** 134  
 
 ## ⚡ Top Actions This Week
 
 1. **Validate backups, confirm EDR coverage, and brief incident response team.**  
-   _Ransomware Groups Turn to Citrix Bleed 2, BYOVD, and Supply Chain Credentials_  
+   _New Avalon Malware Framework Packs CrownX Ransomware Capabilities_  
    Source: The Hacker News  
 
 2. **Validate backups, confirm EDR coverage, and brief incident response team.**  
-   _ThreatsDay: AI Compute Hijacking, Apple Email Flaw, BlueHammer Ransomware + 14 Stories_  
+   _Ransomware Groups Turn to Citrix Bleed 2, BYOVD, and Supply Chain Credentials_  
    Source: The Hacker News  
 
-3. **Prioritize patching of affected systems; check for internet-exposed attack surface.**  
-   _CISA: Microsoft SharePoint RCE flaw now actively exploited_  
-   Source: BleepingComputer  
+3. **Validate backups, confirm EDR coverage, and brief incident response team.**  
+   _ThreatsDay: AI Compute Hijacking, Apple Email Flaw, BlueHammer Ransomware + 14 Stories_  
+   Source: The Hacker News  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [New Avalon Malware Framework Packs CrownX Ransomware Capabilities](https://thehackernews.com/2026/07/new-avalon-malware-framework-packs.html)
+**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Jul 03  
+**Why it matters:** Elevated ransomware risk across the sector.  
+**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
 
 ### [Ransomware Groups Turn to Citrix Bleed 2, BYOVD, and Supply Chain Credentials](https://thehackernews.com/2026/07/ransomware-groups-turn-to-citrix-bleed.html)
 **Source:** The Hacker News &nbsp;·&nbsp; **Date:** Jul 02  
@@ -45,11 +50,6 @@
 **Source:** The Hacker News &nbsp;·&nbsp; **Date:** Jul 02  
 **Why it matters:** Elevated ransomware risk across the sector.  
 **Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
-
-### [Medtronic notifies customers impacted by ShinyHunters data breach](https://www.bleepingcomputer.com/news/security/medtronic-notifies-customers-impacted-by-shinyhunters-data-breach/)
-**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jul 02  
-**Why it matters:** Potential credential or data exposure.  
-**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
 ---
 
@@ -83,12 +83,12 @@
 
 ## 🔵 FYI — General Awareness
 
+- [NetNut proxy network disrupted, 2 million infected devices cut off](https://www.bleepingcomputer.com/news/security/netnut-proxy-network-disrupted-2-million-infected-devices-cut-off/) — BleepingComputer
 - [North Korea-Linked npm Packages Mimic Rollup Polyfills to Steal Developer Secrets](https://thehackernews.com/2026/07/north-korea-linked-npm-packages-mimic.html) — The Hacker News
 - [ARToken PhaaS exposes EvilTokens' Microsoft 365 phishing toolkit](https://www.bleepingcomputer.com/news/security/artoken-phaas-exposes-eviltokens-microsoft-365-phishing-toolkit/) — BleepingComputer
 - [Armored Likho Targets Government Agencies, Power Sector with BusySnake Stealer](https://thehackernews.com/2026/07/armored-likho-targets-government.html) — The Hacker News
 - [European Parliament Member Investigating Spyware Was Hacked With Pegasus](https://thehackernews.com/2026/07/european-parliament-member.html) — The Hacker News
 - [PamStealer Uses Fake Maccy Sites and PAM Checks to Steal Mac Login Passwords](https://thehackernews.com/2026/07/pamstealer-uses-fake-maccy-sites-and.html) — The Hacker News
-- [Claude Fable 5 isn’t permanently leaving subscriptions, Anthropic says](https://www.bleepingcomputer.com/news/artificial-intelligence/claude-fable-5-isnt-permanently-leaving-subscriptions-anthropic-says/) — BleepingComputer
 
 ---
 
