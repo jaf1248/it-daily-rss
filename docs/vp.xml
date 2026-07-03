@@ -3,15 +3,344 @@
 <channel>
   <title>Joe — VP of IT Briefing</title>
   <description>Leadership-focused IT risk, vendors, pricing, licensing, and industry context.</description>
-  <lastBuildDate>Fri, 03 Jul 2026 09:55:19 +0000</lastBuildDate>
+  <lastBuildDate>Fri, 03 Jul 2026 12:07:39 +0000</lastBuildDate>
   
+<item>
+  <title>🔴 New CitrixBleed-like NetScaler flaw sees exploit attempts in the wild</title>
+  <link>https://www.csoonline.com/article/4192741/new-citrixbleed-like-netscaler-flaw-sees-exploit-attempts-in-the-wild.html</link>
+  <pubDate>Fri, 03 Jul 2026 11:41:11 +0000</pubDate>
+  <source>CSO Online</source>
+  <description><![CDATA[<b>Why this matters: Credential/phishing risk — reinforce MFA and user awareness training.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<p>Citrix NetScaler appliances have been a constant target for attackers in recent years, most recently through an information leak vulnerability dubbed CitrixBleed 3, the latest in a series of NetScaler memory overreads going back to 2023. This week, Citrix patched yet another CitrixBleed-like vulnerability and there are signs of in-the-wild exploitation already.</p>
+
+
+
+<p>The new memory overread vulnerability, tracked as CVE-2026-8451, was found by researchers from security firm watchTowr who published <a href="https://labs.watchtowr.com/citrixbleed-to-infinity-and-beyond-citrix-netscaler-pre-auth-memory-overread-cve-2026-8451/" rel="noreferrer noopener" target="_blank">a detailed write-up</a> showing how unauthenticated malformed requests can result in protected process memory data being leaked back in responses.</p>
+
+
+
+<p>The original <a href="https://www.csoonline.com/article/657085/citrix-urges-immediate-patching-of-critically-vulnerable-product-lines.html">CitrixBleed (CVE-2023-4966),</a> <a href="https://www.csoonline.com/article/4019802/exploit-details-released-for-citrix-bleed-2-flaw-affecting-netscaler.html">CitrixBleed 2 (CVE-2025–5777)</a>, and <a href="https://www.csoonline.com/article/4150224/new-critical-citrix-netscaler-hole-of-similar-severity-to-citrixbleed2-says-expert.html">CitrixBleed 3 (CVE-2026-3055)</a> vulnerabilities were all rated critical because they could be used to leak session tokens and other credentials stored in memory. The new CVE-2026-8451 can only be used to leak much smaller amounts of data which do not appear to include session IDs. For this reason, <a href="https://community.citrix.com/techzone-blogs/110_security-updates/security-update-for-citrix-netscaler-and-netscaler-gateway-customers-r1570/" rel="noreferrer noopener" target="_blank">Citrix gave it a CVSS score of 8.8</a> (high severity).</p>
+
+
+
+<p>For exploitation to be possible, the NetScaler appliance needs to be configured as a SAML Identity Provider, but this was also the case for CitrixBleed 3, which was patched in March and was subsequently exploited in the wild.</p>
+
+
+
+<p>So, this requirement doesn’t mean attacks are unlikely or that this configuration is uncommon. In fact, less than 24 hours after the Citirix patch, security firm Lupovis <a href="https://www.lupovis.io/lupovis-insights/" rel="noreferrer noopener" target="_blank">reported seeing exploitation attempts hitting its honeypot sensors</a>.</p>
+
+
+
+<p>“Three separate sensors were targeted within a five-hour window,” the company said. “The actor received a 200 response on the third sensor and immediately delivered the exploit payload.”</p>
+
+
+
+<h2 class="wp-block-heading" id="smaller-leak-but-still-dangerous">Smaller leak but still dangerous</h2>
+
+
+
+<p>Even though watchTowr was only able to leak bytes of data using this flaw, compared to kilobytes with previous CitrixBleed issues, the exposed information could still be useful to attackers.</p>
+
+
+
+<p>While the proof-of-concept did not reveal credentials or tokens, it’s possible that repeated requests would eventually be able to leak something sensitive. At the very least, the leaks can expose process memory pointers that could allow attackers to more easily deliver payloads using memory write vulnerabilities such as buffer overflows.</p>
+
+
+
+<p>By overwriting data in a memory location that normally contains code the process executes, attackers could bypass anti-exploitation defenses like ASLR to take full control of the device.</p>
+
+
+
+<p>As part of this same patch cycle Citrix also addressed two high-severity memory overflow vulnerabilities, tracked as CVE-2026-8452 and CVE-2026-8655. Chaining exploits for different vulnerabilities is a common approach in modern attacks.</p>
+
+
+
+<p>The company also patched an unauthenticated arbitrary file read (CVE-2026-10816), another out-of-bounds memory overread (CVE-2026-10817) and a denial-of-service issue exploitable through HTTP/2 requests (CVE-2026-13474). The latter is actually a NetScaler-specific instance of the <a href="https://www.csoonline.com/article/4181313/http-2s-speed-abused-to-slow-webserver-performance-in-dos-attack.html">HTTP/2 Bomb vulnerability (CVE-2026-49975) patched recently in Apache Web Server</a>.</p>
+
+
+
+<h2 class="wp-block-heading" id="mitigation">Mitigation</h2>
+
+
+
+<p>Citrix advises customers to upgrade their NetScaler ADC and NetScaler Gateway appliances to versions 14.1-72.61, 14.1-72.61 FIPS, 13.1-63.18, 13.1-FIPS and 13.1-NDcPP 13.1.37.272. The HTTP/2 Bomb vulnerability also requires configuration changes in addition to the patches.</p>
+
+
+
+<p>These changes are described in <a href="https://support.citrix.com/support-home/kbsearch/article?articleNumber=CTX696604" rel="noreferrer noopener" target="_blank">the Citrix advisory</a> along with methods to determine if appliances meet the configuration pre-conditions for exploitation for the other flaws. WatchTowr also published <a href="https://github.com/watchtowrlabs/watchTowr-vs-Netscaler-CVE-2026-8451" rel="noreferrer noopener" target="_blank">a Python detection script for the CVE-2026-8451 vulnerability</a> that allows organizations to quickly test if their appliances are susceptible to the exploit.</p>
+
+
+
+<p></p>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Cisco tiene un asistente de IA interno… y sirve para todo</title>
+  <link>https://www.cio.com/article/4192714/cisco-tiene-un-asistente-de-ia-interno-y-sirve-para-todo.html</link>
+  <pubDate>Fri, 03 Jul 2026 11:05:49 +0000</pubDate>
+  <source>CIO.com</source>
+  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<p>Desde la irrupción de <a href="https://www.computerworld.es/article/4028094/por-que-chatgpt-esta-arrasando-a-microsoft-copilot.html">ChatGPT</a>, las empresas han intentado transformar el potencial de la IA generativa como asistente digital en mejoras de productividad para todas las áreas de la organización. Cisco es una de las compañías que se ha situado a la vanguardia de este esfuerzo.</p>
+
+
+
+<p>La idea original de crear un asistente interno surgió en Cisco cuando ChatGPT y otras herramientas de IA orientadas al consumidor aparecieron a finales de 2022 y principios de 2023, y la dirección de la compañía debatía si debía permitir a los empleados utilizarlas, explica Srini Namineni, director de Automatización de Cisco. “La gran pregunta era: ¿deberíamos bloquearlo?”, recuerda. “Los riesgos estaban claros cuando las personas podían introducir datos de la empresa y estos podían quedar expuestos a terceros. Tomamos una decisión deliberada: en lugar de bloquear estas herramientas, ofreceríamos una alternativa segura”.</p>
+
+
+
+<p>Ese proyecto inicial de asistente interno de IA, lanzado a finales de 2023, también se concibió para consolidar en una única plataforma lo que podría haberse convertido en un ecosistema fragmentado de herramientas de IA, al tiempo que permitía a los empleados conectarse a múltiples modelos.</p>
+
+
+
+<p>El asistente de IA, que originalmente integraba Azure OpenAI y Google Gemini, puede incorporar nuevos modelos en apenas un par de semanas desde que un empleado lo solicita, afirma Namineni. Desde entonces, ha evolucionado hasta convertirse en una herramienta multifuncional que combina capacidades de copiloto, asistente de programación, asistente de recursos humanos y apoyo para múltiples tareas, permitiendo a los empleados aplicar IA a una amplia variedad de actividades laborales.</p>
+
+
+
+<p>Según la compañía, este asistente, que le ha valido a Cisco un <a href="https://www.cio.com/article/220017/us-cio-100-winners-celebrating-it-innovation-and-leadership.html" target="_blank">Premio CIO 100 2026 a la innovación y el liderazgo en TI</a>, permite a sus ingenieros ahorrar una media de seis horas semanales y al resto de empleados unas cinco horas por semana.</p>
+
+
+
+<p>Aunque los objetivos principales del proyecto eran la seguridad y la flexibilidad, Cisco ha descubierto una tercera ventaja: con un coste mensual por usuario de unos 10 dólares, el asistente interno resulta más económico que varias soluciones de IA comerciales disponibles en el mercado, señala Namineni.</p>
+
+
+
+<h2 class="wp-block-heading" id="mitigar-los-riesgos-de-la-ia">Mitigar los riesgos de la IA</h2>
+
+
+
+<p>La herramienta, disponible para los empleados desde 2024, contaba con más de 96.000 usuarios en el primer trimestre de 2026 y una tasa de adopción del 90%. Según encuestas internas, el 79% de los empleados considera que el asistente les ahorra tiempo, el 72% afirma que aumenta su productividad y el 71% destaca que mejora la calidad de su trabajo.</p>
+
+
+
+<p>Por ejemplo, Cisco asegura que la herramienta ha acelerado el desarrollo de software al ayudar a los programadores a detectar pequeños errores y generar pruebas unitarias.</p>
+
+
+
+<p>Namineni y su equipo han impulsado la adopción del asistente mediante la incorporación continua de nuevas funciones, dotándolo de más capacidades que algunas soluciones comerciales.</p>
+
+
+
+<p>Los empleados pueden compartir entre sí instrucciones o prompts de IA a través de la plataforma y gestionar tareas de recursos humanos, como solicitar vacaciones, sin necesidad de acceder a otros servicios. El asistente también permite cargar conjuntos de datos propietarios en carpetas seguras de OneDrive para proyectos personalizados e incorpora capacidades de RAG (Retrieval Augmented Generation) como servicio, lo que facilita consultas seguras sobre documentos y metadatos internos de Cisco.</p>
+
+
+
+<p>El proyecto se basa en una arquitectura de microservicios que permite integrar rápidamente nuevas aplicaciones de IA. Cisco presenta el asistente como un compañero de trabajo digital y visualiza un futuro en el que cada empleado disponga de un equipo virtual de agentes de IA.</p>
+
+
+
+<h2 class="wp-block-heading" id="la-proxima-evolucion">La próxima evolución</h2>
+
+
+
+<p>Namineni prevé incorporar nuevas funcionalidades, entre ellas agentes personalizados que asistan de forma permanente a cada empleado.</p>
+
+
+
+<p>Estos agentes podrían conectarse al correo electrónico y a las cuentas de Webex Meetings de los usuarios y realizar acciones en su nombre, siempre con autorización. Por ejemplo, podrían clasificar automáticamente los correos electrónicos según su prioridad.</p>
+
+
+
+<p>También considera que estos asistentes asumirán más tareas de recursos humanos y finanzas, permitiendo que los empleados se concentren en actividades de mayor valor.</p>
+
+
+
+<p>Sin embargo, los usuarios mantendrán el control, subraya. “No estoy preparado para renunciar al 100% del control salvo en actividades de bajo valor, donde podría aceptar algún error, porque la IA se equivoca”, afirma Namineni. “Nuestro reto es cómo aprovechar esta capacidad, limitarla a los casos de uso donde pueda realizar la mayor cantidad de trabajo posible y, al mismo tiempo, mantener siempre a las personas supervisando el proceso”.</p>
+
+
+
+<p>Además del premio CIO 100, el proyecto ha recibido otros reconocimientos. Según Amy Loomis, vicepresidenta de soluciones para el puesto de trabajo de la consultora IDC, el asistente puede servir de modelo para otras grandes empresas que quieran fomentar un uso seguro de la IA entre sus empleados.</p>
+
+
+
+<h2 class="wp-block-heading" id="seguir-la-logica">Seguir la lógica</h2>
+
+
+
+<p>Loomis afirma que otras organizaciones pueden adoptar la lógica del enfoque, aunque no necesariamente replicar la misma infraestructura tecnológica de Cisco. La arquitectura utilizada —que incluye integración de múltiples modelos, orquestación híbrida <em>multicloud</em>, RAG como servicio y microservicios— responde a la escala y capacidad de ingeniería de Cisco.</p>
+
+
+
+<p>Sin embargo, las decisiones de fondo son acertadas, sostiene. Las compañías deberían proporcionar a sus empleados un entorno interno y gobernado para utilizar IA antes de que prolifere el uso de herramientas no autorizadas; evitar la fragmentación mediante una interfaz inteligente unificada; implantar controles de acceso que mantengan la responsabilidad humana sobre las acciones de la IA; y presentar la IA como una herramienta que amplía el alcance y la calidad del trabajo de los empleados.</p>
+
+
+
+<p>La innovación de Cisco reside en la forma en que todos los componentes trabajan conjuntamente como un sistema, explica Loomis. Elementos como los flujos RAG, el acceso a GPT-4o, la integración con OneDrive o las arquitecturas de microservicios están disponibles en otros entornos, pero Cisco ha logrado combinarlos en una única plataforma. “Lo menos habitual es reunir todo esto dentro de un entorno gobernado por la propia empresa, con controles explícitos sobre los datos, en lugar de enviar las consultas de los empleados a servicios externos de IA donde la información sensible puede acabar formando parte de conjuntos de entrenamiento públicos”, añade.</p>
+
+
+
+<p>Loomis destaca especialmente la función My Projects, que permite a los empleados cargar conjuntos de datos propietarios en carpetas seguras de OneDrive para realizar consultas y respuestas personalizadas.</p>
+
+
+
+<p>Según explica, este enfoque proporciona a los trabajadores las capacidades que necesitan y evita que recurran a herramientas externas no autorizadas. La analista también elogia la estrategia de Cisco de presentar la IA como una capa de ampliación de las capacidades humanas. “Dar a cada empleado acceso a un conjunto de herramientas de IA adaptadas a su puesto y contexto de trabajo es tanto una decisión de gestión del cambio como una decisión tecnológica”, relata. “Las organizaciones que presentan la IA de esta manera, como una herramienta que potencia lo que los empleados pueden hacer en lugar de sustituir la forma en que trabajan, suelen lograr una adopción más amplia porque reducen la resistencia que habitualmente ralentiza su despliegue”.</p>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Filing: GoDaddy challenges a New Delhi court ruling requiring domain sellers to stop offering privacy by default, saying it could expose website owners globally (Reuters)</title>
+  <link>https://www.techmeme.com/260703/p7#a260703p7</link>
+  <pubDate>Fri, 03 Jul 2026 10:51:01 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><a href="https://www.reuters.com/world/worlds-biggest-domain-seller-fears-indias-fake-site-crackdown-could-damage-2026-07-03/"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260703/i7.jpg" vspace="4" /></a>
+<p><a href="https://www.techmeme.com/260703/p7#a260703p7" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="http://www.reuters.com/">Reuters</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://www.reuters.com/world/worlds-biggest-domain-seller-fears-indias-fake-site-crackdown-could-damage-2026-07-03/">Filing: GoDaddy challenges a New Delhi court ruling requiring domain sellers to stop offering privacy by default, saying it could expose website owners globally</a></b></span>&nbsp; &mdash;&nbsp; The world's biggest internet domain seller, GoDaddy, has warned that India's crackdown on fake websites impersonating famous brands &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔴 India&#x27;s IT secretary said the country is investigating a data breach at Apple supplier Tata, which exposed files that included photos of iPhone 18 Pro models (Reuters)</title>
+  <link>https://www.techmeme.com/260703/p6#a260703p6</link>
+  <pubDate>Fri, 03 Jul 2026 10:10:01 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: Potential data exposure — check monitoring and incident response readiness.</b><br/><a href="https://www.reuters.com/world/india/india-investigating-tata-data-leak-that-exposed-apple-iphone-secrets-2026-07-03/"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260703/i6.jpg" vspace="4" /></a>
+<p><a href="https://www.techmeme.com/260703/p6#a260703p6" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="http://www.reuters.com/">Reuters</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://www.reuters.com/world/india/india-investigating-tata-data-leak-that-exposed-apple-iphone-secrets-2026-07-03/">India's IT secretary said the country is investigating a data breach at Apple supplier Tata, which exposed files that included photos of iPhone 18 Pro models</a></b></span>&nbsp; &mdash;&nbsp; India is investigating a data breach at Tata Electronics that exposed documents linked to Apple's (AAPL.O) unreleased iPhone 18 Pro &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Pitch document: Chris Larsen and Palmer Luckey invested an undisclosed amount in APEC, a derivatives exchange founded by the son of Senator Kirsten Gillibrand (Declan Harty/Politico)</title>
+  <link>https://www.techmeme.com/260703/p5#a260703p5</link>
+  <pubDate>Fri, 03 Jul 2026 10:06:02 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: Could impact email access or mail flow — monitor delivery and client issues.</b><br/><a href="https://www.politico.com/news/2026/07/02/gillibrand-son-crypto-fund-investors-00985811"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260703/i5.jpg" vspace="4" /></a>
+<p><a href="https://www.techmeme.com/260703/p5#a260703p5" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Declan Harty / <a href="http://www.politico.com/">Politico</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://www.politico.com/news/2026/07/02/gillibrand-son-crypto-fund-investors-00985811">Pitch document: Chris Larsen and Palmer Luckey invested an undisclosed amount in APEC, a derivatives exchange founded by the son of Senator Kirsten Gillibrand</a></b></span>&nbsp; &mdash;&nbsp; Democratic megadonor Chris Larsen has backed Sen. Kirsten Gillibrand's political campaigns several times over the years.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Cisco’s in-house AI assistant is a jack of all trades</title>
+  <link>https://www.cio.com/article/4189683/ciscos-in-house-ai-assistant-is-a-jack-of-all-trades.html</link>
+  <pubDate>Fri, 03 Jul 2026 10:01:00 +0000</pubDate>
+  <source>CIO.com</source>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<p>Since the advent of ChatGPT, enterprises have been intent on transforming generative AI’s potential as a digital assistant into productivity enhancements in every pocket of the organization. Networking giant Cisco is one company that has been at the leading edge of that pursuit.</p>
+
+
+
+<p>The original idea for an internal assistant started at Cisco as ChatGPT and other consumer-grade AI tools launched in late 2022 and early 2023, and Cisco’s leadership debated whether to allow employees to use them,  says <a href="https://www.linkedin.com/in/srini/" rel="nofollow">Srini Namineni</a>, chief automation officer at Cisco.</p>
+
+
+
+<p>“The big question was, Should we actually block it?” he says. “The risks were clear when people can put company data in there, and someone else may see this data. We made a deliberate choice saying, ‘Instead of blocking it, let us give them a secure alternative.’”</p>
+
+
+
+<p>That initial internal AI assistant project, launched in late 2023, was also conceived to consolidate what could have become a fragmented internal AI ecosystem into one platform, while <a href="https://www.cio.com/article/2081881/cisco-led-consortium-to-spread-ai-expertise-in-the-workforce.html?utm=hybrid_search">allowing employees</a> the flexibility to connect to multiple AI models.</p>
+
+
+
+<p>The AI assistant, which originally included Azure OpenAI and Google Gemini, can now integrate new models within a couple of weeks of an employee’s request, Namineni says. And it has since grown into a multifunction combination copilot, coding assistant, HR assistant, and jack of all trades that allows employees to add AI capabilities to a wide range of work activities.</p>
+
+
+
+<p>The AI assistant, which earned Cisco a <a href="https://www.cio.com/article/220017/us-cio-100-winners-celebrating-it-innovation-and-leadership.html">2026 CIO 100 Award</a> for IT innovation and leadership, saves company engineers an average of six hours per week and other employees an average of five hours, according to the company.</p>
+
+
+
+<p>While the main goals of the project were security and flexibility, Cisco has found a third benefit: With a monthly cost per user at about $10, the internal AI assistant operates below the subscription prices of several off-the-shelf AI assistants, Namineni says.</p>
+
+
+
+<h2 class="wp-block-heading" id="mitigating-ai-risk">Mitigating AI risk</h2>
+
+
+
+<p>The tool, available to employees since 2024, had more than 96,000 users as of the first quarter of 2026, with 90% employee adoption. It has received high marks from employees, with 79% of employees believing the internal assistant saves them time, 72% saying it increases productivity, and 71% noting that it improves the quality of their work, according to internal polling.For example, the tool has accelerated software development at Cisco by helping developers find tiny bugs and generate unit tests, the company says.</p>
+
+
+
+<p>Namineni and his team have helped ensure employee use of the tool by continually adding new features, giving the AI assistant more functionality than some off-the-shelf assistants have.</p>
+
+
+
+<p>Employees can share AI prompts with one another through the assistant, and they can handle HR tasks such as scheduling vacation days without logging into another service. The assistant also enables employees to upload proprietary datasets to secure OneDrive folders for customized projects and offers retrieval augmented generation (RAG) as a service for secure querying of internal Cisco documents and metadata.</p>
+
+
+
+<p>The Cisco project is built on a microservices architecture, allowing for quick onboarding of new AI applications, according to the company. Cisco has pitched the assistant as an AI teammate, envisioning a virtual staff of AI agents for every employee.</p>
+
+
+
+<h2 class="wp-block-heading" id="evolution-coming">Evolution coming</h2>
+
+
+
+<p>Namineni envisions several new features, including agents personalized to assist each employee on a constant basis. These personalized agents could connect to employees’ email and Webex Meetings account and take actions on their behalf, with permission. A personalized agent could sort emails based on priority, for example.</p>
+
+
+
+<p>He also sees the assistants taking on more HR and finance tasks, freeing up employees to perform higher-level work.</p>
+
+
+
+<p>Employees will have control, though, he notes. “I am not ready to let go of 100% control unless it’s a low-value activity where I’m OK with it making a mistake because it does make mistakes,” Namineni says. “Our challenge is, how do we take this power, contain it in the use cases where it can do as much work as it can, and still have human in the loop?”</p>
+
+
+
+<p>In addition to the CIO 100 Award, the Cisco project has earned other accolades as well. The AI assistant can be a model for other large enterprises that want to encourage employees to safely use AI, says <a href="https://my.idc.com/getdoc.jsp?containerId=PRF005268" rel="nofollow">Amy Loomis</a>, group vice president for workplace solutions at IT analyst firm IDC.</p>
+
+
+
+<h2 class="wp-block-heading" id="follow-the-logic">Follow the logic</h2>
+
+
+
+<p>Other companies can adopt the logic of the approach, although they may decide not to replicate Cisco’s specific technical stack, she says. The architecture, including dual model integration, hybrid multicloud orchestration, RAG as a service, and microservices, reflects Cisco’s scale and engineering capacity, she notes.</p>
+
+
+
+<p>The underlying set of decisions is sound, she adds. Companies should give employees a governed internal AI environment before shadow AI proliferates; address fragmented tools with a unified intelligent interface; build access controls that keep humans accountable for what AI tools do on their behalf; and frame AI to employees as something that raises the quality and reach of their work.</p>
+
+
+
+<p>Cisco’s innovation lies in how the individual components of the AI assistant work as a system, Loomis says. Several individual pieces, including RAG pipelines, GPT-4o access, OneDrive integration, microservices architecture, are available elsewhere, but Cisco has put them all together.</p>
+
+
+
+<p>“What is less common is combining them inside a governed, enterprise-owned environment with explicit data controls, rather than routing employee queries through external AI services where sensitive data can enter public training datasets,” she adds.</p>
+
+
+
+<p>Loomis points to the My Projects feature that allows employees to upload proprietary datasets to secured OneDrive folders for customized Q&amp;A. This approach gives employees the functionality they need when they otherwise would turn to unauthorized external tools, she says.</p>
+
+
+
+<p>Loomis also praised Cisco for framing AI as an amplification layer for human capabilities.</p>
+
+
+
+<p>“Giving every employee access to a set of AI tools calibrated to their role and work context is a change management choice as much as a technology one,” she says. “Organizations that position AI this way, as something that sharpens what employees can do rather than substituting for how they do it, tend to achieve broader adoption because they reduce the resistance that slows rollout.”</p>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+</item>
+
 <item>
   <title>🔵 Sources: Alibaba has banned employees from using Claude Code and asked them to remove all Claude models from their work computers, citing security concerns (The Information)</title>
   <link>https://www.techmeme.com/260703/p4#a260703p4</link>
   <pubDate>Fri, 03 Jul 2026 09:45:00 +0000</pubDate>
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><p><a href="https://www.techmeme.com/260703/p4#a260703p4" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="https://www.theinformation.com/">The Information</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.theinformation.com/briefings/alibaba-bans-employees-using-claude">Sources: Alibaba has banned employees from using Claude Code and asked them to remove all Claude models from their work computers, citing security concerns</a></b></span>&nbsp; &mdash;&nbsp; Alibaba Group has banned employees from using Anthropic's Claude Code, and asked them to remove all Claude models from their work computers &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.theinformation.com/briefings/alibaba-bans-employees-using-claude">Sources: Alibaba has banned employees from using Claude Code and asked them to remove all Claude models from their work computers, citing security concerns</a></b></span>&nbsp; &mdash;&nbsp; Alibaba Group has banned employees from using Anthropic's Claude Code, and asked them to remove all Claude models from their work computers &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
 </item>
 
 <item>
@@ -20,7 +349,7 @@
   <pubDate>Fri, 03 Jul 2026 09:30:00 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><p>Prosecutors say 19-year-old Peter Stokes was a member of Scattered Spider, the hacking group linked to more than 100 network intrusions and over $100 million in ransom payments.</p>
-<p>The post <a href="https://www.securityweek.com/alleged-scattered-spider-hacker-extradited-to-us/">Alleged Scattered Spider Hacker Extradited to US</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/alleged-scattered-spider-hacker-extradited-to-us/">Alleged Scattered Spider Hacker Extradited to US</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
 </item>
 
 <item>
@@ -97,7 +426,7 @@
 
 
 <p>SAP and other companies must do these things to stay competitive over the long run, he said, but, “In the short run, a lot of companies will have to scale back to move forward, which is of little consolation to those impacted.”</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
 </item>
 
 <item>
@@ -106,7 +435,7 @@
   <pubDate>Fri, 03 Jul 2026 07:57:53 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><p>The DuneSlide vulnerabilities enable zero-click prompt injection attacks that escape Cursor's sandbox and execute arbitrary code on the underlying operating system.</p>
-<p>The post <a href="https://www.securityweek.com/critical-cursor-ai-ide-flaws-could-lead-to-os-level-remote-code-execution/">Critical Cursor AI Code Editor Flaws Could Lead to OS-Level Remote Code Execution</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/critical-cursor-ai-ide-flaws-could-lead-to-os-level-remote-code-execution/">Critical Cursor AI Code Editor Flaws Could Lead to OS-Level Remote Code Execution</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
 </item>
 
 <item>
@@ -199,7 +528,7 @@
 
 
 <p>Aunque Gartner describe esta transición como una redefinición del concepto de ‘Saaspocalypse’, Brocklehurst subraya que el SaaS no desaparecerá. “Esto es menos un apocalipsis y más una metamorfosis. El SaaS no será destruido; simplemente emergerá bajo una forma diferente”.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
 </item>
 
 <item>
@@ -209,7 +538,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://www.theverge.com/tech/959848/bittorrent-story-25-years-piracy"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260703/i3.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260703/p3#a260703p3" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Janko Roettgers / <a href="https://www.theverge.com/">The Verge</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.theverge.com/tech/959848/bittorrent-story-25-years-piracy">A look back at BitTorrent, launched by Bram Cohen 25 years ago, and how media piracy fueled its growth while its architecture shielded it from legal liability</a></b></span>&nbsp; &mdash;&nbsp; Cath Virginia / The Verge &hellip; Twenty-five years ago today, a young, little-known programmer by the name of Bram Cohen fired off &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.theverge.com/tech/959848/bittorrent-story-25-years-piracy">A look back at BitTorrent, launched by Bram Cohen 25 years ago, and how media piracy fueled its growth while its architecture shielded it from legal liability</a></b></span>&nbsp; &mdash;&nbsp; Cath Virginia / The Verge &hellip; Twenty-five years ago today, a young, little-known programmer by the name of Bram Cohen fired off &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -254,7 +583,7 @@
 
 
 <p>LG전자 ES사업본부장 이재성 사장은 “전 세계로 확대하고 있는 HVAC 아카데미가 지역별 B2B 사업의 거점 역할을 하는 것은 물론, 현지 엔지니어의 역량과 기술 수준을 높여 비하드웨어(N-HW) 분야 매출 확대에도 기여할 것으로 기대한다”라고 밝혔다.<br />dl-ciokorea@foundryco.com</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -397,7 +726,7 @@
 
 
 <p>결국 프로덕트 엔지니어 모델은 단순히 새로운 직함 아래 여러 역할을 통합하는 개념이 아니다. 제품에 대한 판단과 의사결정을 엔지니어링 실행 과정에 자연스럽게 녹여내고, 오늘날 제품 개발이 요구하는 속도에 맞춰 스스로 사고하고 판단하며 실행할 수 있는 팀을 만드는 방향으로 조직이 진화하고 있음을 보여주는 변화라고 할 수 있다.<br />dl-ciokorea@foundryco.com</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -542,7 +871,7 @@
 
 
 <p>마르탱은 이러한 성과에 만족감을 나타내며 다른 디지털 리더들도 가능한 한 빨리 AI 에이전트를 시험해봐야 한다고 권했다. 그는 “가장 중요한 것은 AI를 이해하고 한발 앞서 나가는 것이다. 그것이 성공의 핵심이다. 변화의 속도는 앞으로도 계속 빨라질 것이기 때문이다”라고 설명했다.<br />dl-ciokorea@foundryco.com</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
@@ -552,7 +881,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.ft.com/content/ad033063-60f9-4c0c-8d8a-9193a83e6f60"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260703/i2.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260703/p2#a260703p2" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="https://www.ft.com/">Financial Times</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.ft.com/content/ad033063-60f9-4c0c-8d8a-9193a83e6f60">Sources: Anthropic moves to close loopholes that let Chinese firms like Ant use its models via workarounds including cloud providers and overseas subsidiaries</a></b></span>&nbsp; &mdash;&nbsp; Engineers are still finding ways to use AI models despite stringent restrictions.&nbsp; Anthropic is moving to shut loopholes &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.ft.com/content/ad033063-60f9-4c0c-8d8a-9193a83e6f60">Sources: Anthropic moves to close loopholes that let Chinese firms like Ant use its models via workarounds including cloud providers and overseas subsidiaries</a></b></span>&nbsp; &mdash;&nbsp; Engineers are still finding ways to use AI models despite stringent restrictions.&nbsp; Anthropic is moving to shut loopholes &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
@@ -562,7 +891,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><a href="https://www.bloomberg.com/news/articles/2026-07-02/blackstone-s-qts-abandons-massive-data-center-in-virginia"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260703/i1.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260703/p1#a260703p1" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Dawn Lim / <a href="https://www.bloomberg.com/">Bloomberg</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/articles/2026-07-02/blackstone-s-qts-abandons-massive-data-center-in-virginia">Blackstone's QTS abandons plans to build its portion of a 2,100-acre data center campus in Virginia, following years of local opposition and legal challenges</a></b></span>&nbsp; &mdash;&nbsp; Blackstone Inc.'s QTS is walking away from plans to build its portion of a 2,100-acre data center campus in Virginia &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/articles/2026-07-02/blackstone-s-qts-abandons-massive-data-center-in-virginia">Blackstone's QTS abandons plans to build its portion of a 2,100-acre data center campus in Virginia, following years of local opposition and legal challenges</a></b></span>&nbsp; &mdash;&nbsp; Blackstone Inc.'s QTS is walking away from plans to build its portion of a 2,100-acre data center campus in Virginia &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 8h ago]]></description>
 </item>
 
 <item>
@@ -572,7 +901,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://www.bloomberg.com/news/articles/2026-07-02/chip-industry-urges-us-to-avoid-moves-that-distort-memory-market"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260702/i41.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260702/p41#a260702p41" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Maggie Eastland / <a href="https://www.bloomberg.com/">Bloomberg</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/articles/2026-07-02/chip-industry-urges-us-to-avoid-moves-that-distort-memory-market">Letter: chip sector group SEMI, including Micron and Samsung, warns Scott Bessent US policies affecting prices or production capacity would worsen the shortage</a></b></span>&nbsp; &mdash;&nbsp; Government attempts to address the global memory chip shortage by influencing prices or production capacity would worsen &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/articles/2026-07-02/chip-industry-urges-us-to-avoid-moves-that-distort-memory-market">Letter: chip sector group SEMI, including Micron and Samsung, warns Scott Bessent US policies affecting prices or production capacity would worsen the shortage</a></b></span>&nbsp; &mdash;&nbsp; Government attempts to address the global memory chip shortage by influencing prices or production capacity would worsen &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
 </item>
 
 <item>
@@ -582,7 +911,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.businessinsider.com/meta-ai-model-catches-up-openai-gpt-5-says-2026-7"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260702/i40.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260702/p40#a260702p40" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="https://www.businessinsider.com/">Business Insider</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.businessinsider.com/meta-ai-model-catches-up-openai-gpt-5-says-2026-7">Sources: Alexandr Wang said Meta's model currently in training, codenamed Watermelon, matches GPT-5.5 and uses an &ldquo;order of magnitude more compute than Avocado&rdquo;</a></b></span>&nbsp; &mdash;&nbsp; Meta is making significant progress in the AI model race, its superintelligence chief Alexandr Wang told employees today.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 8h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.businessinsider.com/meta-ai-model-catches-up-openai-gpt-5-says-2026-7">Sources: Alexandr Wang said Meta's model currently in training, codenamed Watermelon, matches GPT-5.5 and uses an &ldquo;order of magnitude more compute than Avocado&rdquo;</a></b></span>&nbsp; &mdash;&nbsp; Meta is making significant progress in the AI model race, its superintelligence chief Alexandr Wang told employees today.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 10h ago]]></description>
 </item>
 
 <item>
@@ -592,7 +921,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.theinformation.com/articles/freshfields-anthropic-win-squeeze-lime-returns"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260702/i39.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260702/p39#a260702p39" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="https://www.theinformation.com/">The Information</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.theinformation.com/articles/freshfields-anthropic-win-squeeze-lime-returns">Sources: Anthropic's bankers have hired UK law firm Freshfields to advise on its IPO; it also advised on Google's acquisition of Wiz and ServiceNow's Armis deal</a></b></span>&nbsp; &mdash;&nbsp; A British law firm has scored a big win: a role in the Anthropic initial public offering, expected to raise tens of billions at a valuation of more than $1 trillion.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 8h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.theinformation.com/articles/freshfields-anthropic-win-squeeze-lime-returns">Sources: Anthropic's bankers have hired UK law firm Freshfields to advise on its IPO; it also advised on Google's acquisition of Wiz and ServiceNow's Armis deal</a></b></span>&nbsp; &mdash;&nbsp; A British law firm has scored a big win: a role in the Anthropic initial public offering, expected to raise tens of billions at a valuation of more than $1 trillion.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 10h ago]]></description>
 </item>
 
 <item>
@@ -749,7 +1078,7 @@
 
 
 <p>Another factor to consider: “FDEs are not suitable for organizations still working on basic AI strategy questions or that want to remain cloud neutral,” said Randall.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 8h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 11h ago]]></description>
 </item>
 
 <item>
@@ -759,7 +1088,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://www.ft.com/content/2e10851c-9f47-410d-b46e-2a617118b05a"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260702/i38.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260702/p38#a260702p38" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Stephanie Stacey / <a href="https://www.ft.com/">Financial Times</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.ft.com/content/2e10851c-9f47-410d-b46e-2a617118b05a">Spotify removed 500K+ streams of Malcolm Todd's Earrings after a 70% surge in 24 hours sent it to #1 on Spotify USA and coincided with suspicious Kalshi wagers</a></b></span>&nbsp; &mdash;&nbsp; Platform removes more than 500,000 streams of Malcolm Todd track &lsquo;Earrings&rsquo; on concern traders propelled it to number 1</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.ft.com/content/2e10851c-9f47-410d-b46e-2a617118b05a">Spotify removed 500K+ streams of Malcolm Todd's Earrings after a 70% surge in 24 hours sent it to #1 on Spotify USA and coincided with suspicious Kalshi wagers</a></b></span>&nbsp; &mdash;&nbsp; Platform removes more than 500,000 streams of Malcolm Todd track &lsquo;Earrings&rsquo; on concern traders propelled it to number 1</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 12h ago]]></description>
 </item>
 
 <item>
@@ -769,7 +1098,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: Vendor risk signal — evaluate roadmap and support stability.</b><br/><a href="https://techcrunch.com/2026/07/02/iqm-europes-first-public-quantum-company-admits-the-future-of-the-tech-is-uncertain/"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260702/i37.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260702/p37#a260702p37" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Anna Heim / <a href="http://techcrunch.com/">TechCrunch</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://techcrunch.com/2026/07/02/iqm-europes-first-public-quantum-company-admits-the-future-of-the-tech-is-uncertain/">Finnish quantum computing company IQM closed up 2% in its Nasdaq debut Thursday after going public via a SPAC merger at a ~$1.9B valuation</a></b></span>&nbsp; &mdash;&nbsp; IQM, a full-stack quantum company out of Finland, went public on the Nasdaq Thursday via a SPAC merger at a valuation of about $1.9 billion.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 10h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://techcrunch.com/2026/07/02/iqm-europes-first-public-quantum-company-admits-the-future-of-the-tech-is-uncertain/">Finnish quantum computing company IQM closed up 2% in its Nasdaq debut Thursday after going public via a SPAC merger at a ~$1.9B valuation</a></b></span>&nbsp; &mdash;&nbsp; IQM, a full-stack quantum company out of Finland, went public on the Nasdaq Thursday via a SPAC merger at a valuation of about $1.9 billion.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 12h ago]]></description>
 </item>
 
 <item>
@@ -938,7 +1267,7 @@
 
 
 <p>AIとクリエイターの対立は、技術の問題ではなく信頼の問題だ。アドビはその信頼を築くために、透明性・還元・説明責任という三本柱を掲げ、AI時代の創作環境を再設計しようとしている。<br />AIとクリエイティブが共存し、誰もが安心して創作できる未来へ── アドビの挑戦は、まだ始まったばかりだ。</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 10h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
 </item>
 
 <item>
@@ -948,7 +1277,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.bloomberg.com/news/articles/2026-07-02/crusoe-in-talks-to-raise-3-billion-in-round-that-may-triple-firm-s-value"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260702/i36.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260702/p36#a260702p36" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="https://www.bloomberg.com/">Bloomberg</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/articles/2026-07-02/crusoe-in-talks-to-raise-3-billion-in-round-that-may-triple-firm-s-value">Sources: Crusoe is in active talks to raise ~$3B in a funding round expected to value the company in the ~$30B range, up from a ~$10B valuation in October</a></b></span>&nbsp; &mdash;&nbsp; Crusoe, the data center upstart with contracts to supply AI computing power for the likes of Meta Platforms Inc. and Oracle Corp. &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 11h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/articles/2026-07-02/crusoe-in-talks-to-raise-3-billion-in-round-that-may-triple-firm-s-value">Sources: Crusoe is in active talks to raise ~$3B in a funding round expected to value the company in the ~$30B range, up from a ~$10B valuation in October</a></b></span>&nbsp; &mdash;&nbsp; Crusoe, the data center upstart with contracts to supply AI computing power for the likes of Meta Platforms Inc. and Oracle Corp. &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
 </item>
 
 <item>
@@ -958,7 +1287,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://www.reuters.com/business/zuckerberg-says-ai-agent-development-going-slower-than-expected-2026-07-02/"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260702/i35.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260702/p35#a260702p35" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Katie Paul / <a href="http://www.reuters.com/">Reuters</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.reuters.com/business/zuckerberg-says-ai-agent-development-going-slower-than-expected-2026-07-02/">At a town hall, Mark Zuckerberg said Meta's AI agent development has not accelerated as expected and its reorganization was not as &ldquo;clean&rdquo; as it could have been</a></b></span>&nbsp; &mdash;&nbsp; Meta (META.O) Chief Executive Mark Zuckerberg told an internal town hall on Thursday that AI agent development &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 12h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.reuters.com/business/zuckerberg-says-ai-agent-development-going-slower-than-expected-2026-07-02/">At a town hall, Mark Zuckerberg said Meta's AI agent development has not accelerated as expected and its reorganization was not as &ldquo;clean&rdquo; as it could have been</a></b></span>&nbsp; &mdash;&nbsp; Meta (META.O) Chief Executive Mark Zuckerberg told an internal town hall on Thursday that AI agent development &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 15h ago]]></description>
 </item>
 
 <item>
@@ -968,7 +1297,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.axios.com/pro/fintech-deals/2026/07/02/crypto-payments-mesh-funding-round"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260702/i34.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260702/p34#a260702p34" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Lucinda Shen / <a href="https://www.axios.com/">Axios</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.axios.com/pro/fintech-deals/2026/07/02/crypto-payments-mesh-funding-round">Source: crypto payments and settlement startup Mesh is raising funding led by Binance at a ~$2B valuation, six months after raising $75M at a $1B valuation</a></b></span>&nbsp; &mdash;&nbsp; Binance is set to lead Mesh's funding round that will value the crypto payments and settlement company at up to $2 billion, Axios Pro has learned.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.axios.com/pro/fintech-deals/2026/07/02/crypto-payments-mesh-funding-round">Source: crypto payments and settlement startup Mesh is raising funding led by Binance at a ~$2B valuation, six months after raising $75M at a $1B valuation</a></b></span>&nbsp; &mdash;&nbsp; Binance is set to lead Mesh's funding round that will value the crypto payments and settlement company at up to $2 billion, Axios Pro has learned.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 15h ago]]></description>
 </item>
 
 <item>
@@ -976,37 +1305,7 @@
   <link>https://www.zdnet.com/article/anthropic-fable-5-freelance-work-performance-record/</link>
   <pubDate>Thu, 02 Jul 2026 20:29:26 +0000</pubDate>
   <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>The newly reinstated Anthropic model topped charts for automating work. Here's what that means for the future.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Travel app Hopper agrees to a $35M FTC settlement over allegations the company misled users by imposing hidden fees and misrepresenting the total costs (Lauren Forristal/TechCrunch)</title>
-  <link>https://www.techmeme.com/260702/p33#a260702p33</link>
-  <pubDate>Thu, 02 Jul 2026 20:10:02 +0000</pubDate>
-  <source>Techmeme</source>
-  <description><![CDATA[<b>Why this matters: Regulatory/compliance signal — assess applicability and remediation timeline.</b><br/><a href="https://techcrunch.com/2026/07/02/travel-app-hopper-to-pay-35m-in-ftc-settlement-over-unfairly-charging-hidden-fees/"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260702/i33.jpg" vspace="4" /></a>
-<p><a href="https://www.techmeme.com/260702/p33#a260702p33" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Lauren Forristal / <a href="http://techcrunch.com/">TechCrunch</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://techcrunch.com/2026/07/02/travel-app-hopper-to-pay-35m-in-ftc-settlement-over-unfairly-charging-hidden-fees/">Travel app Hopper agrees to a $35M FTC settlement over allegations the company misled users by imposing hidden fees and misrepresenting the total costs</a></b></span>&nbsp; &mdash;&nbsp; Hopper, the travel app known for its AI-driven flight and hotel price predictions, has agreed to a $35 million settlement following &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Internal memo: Tesla plans to impose a $200-per-week limit for staff&#x27;s AI spending beginning July 6; the tally excludes beta versions of xAI products (Grace Kay/The Information)</title>
-  <link>https://www.techmeme.com/260702/p32#a260702p32</link>
-  <pubDate>Thu, 02 Jul 2026 19:35:42 +0000</pubDate>
-  <source>Techmeme</source>
-  <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><a href="https://www.theinformation.com/articles/tesla-caps-employee-ai-spend-200-per-week-adoption-push"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260702/i32.jpg" vspace="4" /></a>
-<p><a href="https://www.techmeme.com/260702/p32#a260702p32" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Grace Kay / <a href="https://www.theinformation.com/">The Information</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.theinformation.com/articles/tesla-caps-employee-ai-spend-200-per-week-adoption-push">Internal memo: Tesla plans to impose a $200-per-week limit for staff's AI spending beginning July 6; the tally excludes beta versions of xAI products</a></b></span>&nbsp; &mdash;&nbsp; Tesla told employees last month it would impose a $200 per week limit for staff's AI spending beginning July 6, according to an internal memo &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 14h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Sources: ElevenLabs held early talks with investors on a secondary share sale for staff that would value the startup at ~$22B; it was valued at $11B in February (Bloomberg)</title>
-  <link>https://www.techmeme.com/260702/p31#a260702p31</link>
-  <pubDate>Thu, 02 Jul 2026 19:15:01 +0000</pubDate>
-  <source>Techmeme</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.bloomberg.com/news/articles/2026-07-02/elevenlabs-in-talks-for-tender-offer-at-22-billion-valuation"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260702/i31.jpg" vspace="4" /></a>
-<p><a href="https://www.techmeme.com/260702/p31#a260702p31" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="https://www.bloomberg.com/">Bloomberg</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/articles/2026-07-02/elevenlabs-in-talks-for-tender-offer-at-22-billion-valuation">Sources: ElevenLabs held early talks with investors on a secondary share sale for staff that would value the startup at ~$22B; it was valued at $11B in February</a></b></span>&nbsp; &mdash;&nbsp; ElevenLabs has held early talks with investors to let employees sell shares in a secondary offering that would value &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 14h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>The newly reinstated Anthropic model topped charts for automating work. Here's what that means for the future.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 15h ago]]></description>
 </item>
 
 <item>
@@ -1014,7 +1313,7 @@
   <link>https://www.zdnet.com/article/plug-in-solar-poses-6-safety-risks-say-industry-groups-when-to-call-a-pro/</link>
   <pubDate>Thu, 02 Jul 2026 18:09:00 +0000</pubDate>
   <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Several industry groups have raised public safety concerns about consumer plug-in solar kits. If in doubt about your installation, here's what to do.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 15h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Several industry groups have raised public safety concerns about consumer plug-in solar kits. If in doubt about your installation, here's what to do.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 17h ago]]></description>
 </item>
 
 <item>
@@ -1022,7 +1321,7 @@
   <link>https://www.zdnet.com/article/july-4-tv-deals-2026/</link>
   <pubDate>Thu, 02 Jul 2026 17:55:00 +0000</pubDate>
   <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>This weekend marks America's 250th birthday, which means you'll save big on TV deals from top brands, all thoroughly vetted and tested by our experts.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 16h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>This weekend marks America's 250th birthday, which means you'll save big on TV deals from top brands, all thoroughly vetted and tested by our experts.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 18h ago]]></description>
 </item>
 
 <item>
@@ -1030,7 +1329,7 @@
   <link>https://www.zdnet.com/article/apple-messages-settings-i-change-on-every-iphone-why/</link>
   <pubDate>Thu, 02 Jul 2026 17:22:01 +0000</pubDate>
   <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Turn these iMessage settings on or off for a cleaner, modern, and more private texting experience.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 16h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Turn these iMessage settings on or off for a cleaner, modern, and more private texting experience.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 18h ago]]></description>
 </item>
 
 <item>
@@ -1038,7 +1337,7 @@
   <link>https://www.zdnet.com/article/lg-free-refrigerator-deal/</link>
   <pubDate>Thu, 02 Jul 2026 17:09:24 +0000</pubDate>
   <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>When you buy this refrigerator model on sale, LG will give you a free single-door refrigerator too - perfect for the garage or basement.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 16h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>When you buy this refrigerator model on sale, LG will give you a free single-door refrigerator too - perfect for the garage or basement.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 18h ago]]></description>
 </item>
 
 <item>
@@ -1046,7 +1345,7 @@
   <link>https://www.zdnet.com/article/july-4-laptop-deals-2026/</link>
   <pubDate>Thu, 02 Jul 2026 16:00:16 +0000</pubDate>
   <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/>The Fourth of July weekend brings tons of sales on top laptops we've reviewed, from Apple, Acer, Lenovo, and more.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 17h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/>The Fourth of July weekend brings tons of sales on top laptops we've reviewed, from Apple, Acer, Lenovo, and more.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 20h ago]]></description>
 </item>
 
 <item>
@@ -1054,7 +1353,7 @@
   <link>https://www.zdnet.com/article/best-july-4-deals-2026/</link>
   <pubDate>Thu, 02 Jul 2026 15:25:00 +0000</pubDate>
   <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Fourth of July weekend is almost here, and there are plenty of deals to celebrate.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 18h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Fourth of July weekend is almost here, and there are plenty of deals to celebrate.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 20h ago]]></description>
 </item>
 
 <item>
@@ -1063,7 +1362,7 @@
   <pubDate>Thu, 02 Jul 2026 15:04:22 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><p>Hackers are targeting NetScaler appliances using public PoC code to retrieve arbitrary memory content in the HTTP response.</p>
-<p>The post <a href="https://www.securityweek.com/new-citrixbleed-vulnerability-exploited-immediately-after-public-disclosure/">New CitrixBleed Vulnerability Exploited Immediately After Public Disclosure</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 18h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/new-citrixbleed-vulnerability-exploited-immediately-after-public-disclosure/">New CitrixBleed Vulnerability Exploited Immediately After Public Disclosure</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 21h ago]]></description>
 </item>
 
 <item>
@@ -1071,7 +1370,7 @@
   <link>https://www.zdnet.com/article/most-popular-products-zdnet-readers-bought-last-month-2026/</link>
   <pubDate>Thu, 02 Jul 2026 14:42:07 +0000</pubDate>
   <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>From gadgets to streaming, these are the top tech gadgets and useful items our readers actually purchased in June.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 19h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>From gadgets to streaming, these are the top tech gadgets and useful items our readers actually purchased in June.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 21h ago]]></description>
 </item>
 
 <item>
@@ -1079,7 +1378,7 @@
   <link>https://www.zdnet.com/article/eufy-omni-s2-review/</link>
   <pubDate>Thu, 02 Jul 2026 14:30:41 +0000</pubDate>
   <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: Could impact sign-ins/MFA/Conditional Access — watch for login issues.</b><br/>The Eufy Omni S2 improves on its predecessor with four times the suction power, and an odor-free mop roller.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 19h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Could impact sign-ins/MFA/Conditional Access — watch for login issues.</b><br/>The Eufy Omni S2 improves on its predecessor with four times the suction power, and an odor-free mop roller.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 21h ago]]></description>
 </item>
 
 <item>
@@ -1087,7 +1386,7 @@
   <link>https://www.zdnet.com/article/lg-c6-oled-review/</link>
   <pubDate>Thu, 02 Jul 2026 13:53:00 +0000</pubDate>
   <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>One of LG's flagship OLED TVs got a refresh with the C6, and continues to prove why OLED is worth the high asking price.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 20h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>One of LG's flagship OLED TVs got a refresh with the C6, and continues to prove why OLED is worth the high asking price.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 22h ago]]></description>
 </item>
 
 <item>
@@ -1095,7 +1394,7 @@
   <link>https://www.zdnet.com/article/hp-omnibook-ultra-2026-review/</link>
   <pubDate>Thu, 02 Jul 2026 13:43:00 +0000</pubDate>
   <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>HP's OmniBook Ultra 14 combines a sleek design and OLED display with the kind of performance professionals appreciate.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 20h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>HP's OmniBook Ultra 14 combines a sleek design and OLED display with the kind of performance professionals appreciate.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 22h ago]]></description>
 </item>
 
 <item>
@@ -1103,7 +1402,7 @@
   <link>https://www.zdnet.com/article/oura-ring-5-review/</link>
   <pubDate>Thu, 02 Jul 2026 13:35:00 +0000</pubDate>
   <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>But there's one feature that makes the Oura Ring 5 truly worth buying.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 20h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>But there's one feature that makes the Oura Ring 5 truly worth buying.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 22h ago]]></description>
 </item>
 
 <item>
@@ -1112,7 +1411,7 @@
   <pubDate>Thu, 02 Jul 2026 13:15:00 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><p>As AI-generated code becomes commonplace, CISOs need new audit strategies to measure developer practices, govern AI tool usage, and identify software risks before they reach production.</p>
-<p>The post <a href="https://www.securityweek.com/how-to-conduct-a-successful-audit-of-ai-driven-software-development/">How to Conduct a Successful Audit of AI-Driven Software Development</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 20h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/how-to-conduct-a-successful-audit-of-ai-driven-software-development/">How to Conduct a Successful Audit of AI-Driven Software Development</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 22h ago]]></description>
 </item>
 
 <item>
@@ -1120,15 +1419,7 @@
   <link>https://www.zdnet.com/article/expressvpn-password-manager-big-upgrade-secure-sharing-passkey-support-more/</link>
   <pubDate>Thu, 02 Jul 2026 13:01:01 +0000</pubDate>
   <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Available today, ExpressKeys now delivers more secure sharing, passkey support, and improved cross-device management.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 20h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 How I set OpenAI API usage limits to stop agent overspending and other AI billing nightmares</title>
-  <link>https://www.zdnet.com/article/how-to-set-openai-api-spend-usage-limits/</link>
-  <pubDate>Thu, 02 Jul 2026 12:51:00 +0000</pubDate>
-  <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>OpenAI API costs can spiral when agents run wild. Here's how to set spend limits, enable hard caps, and avoid surprise AI bills.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 21h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Available today, ExpressKeys now delivers more secure sharing, passkey support, and improved cross-device management.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 23h ago]]></description>
 </item>
 
 <item>
@@ -1136,7 +1427,7 @@
   <link>https://www.zdnet.com/article/microsoft-azure-linux-4-0-could-replace-windows-server-in-enterprise/</link>
   <pubDate>Thu, 02 Jul 2026 12:41:00 +0000</pubDate>
   <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Microsoft's Linux server distribution is now available as an ISO to install on your own server or virtual machine.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 21h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Microsoft's Linux server distribution is now available as an ISO to install on your own server or virtual machine.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 23h ago]]></description>
 </item>
 
 <item>
@@ -1257,7 +1548,7 @@
 
 
 <p>Although Gartner described the transition as a redefinition of the long-discussed “Saaspocalypse,” Brocklehurst said SaaS itself would evolve rather than disappear. “This is less an apocalypse and more of a metamorphosis,” he said. “SaaS will not be destroyed; it will emerge in a different form.”</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 21h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 23h ago]]></description>
 </item>
 
 <item>
@@ -1482,7 +1773,7 @@
 
 
 <p><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><strong><a href="https://www.cio.com/expert-contributor-network/">Want to join?</a></strong></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 22h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
@@ -1571,7 +1862,7 @@
 
 
 <p>A compromise of these platforms could influence <a href="https://www.csoonline.com/article/4165420/sap-npm-package-attack-highlights-risks-in-developer-tools-and-ci-cd-pipelines.html">software delivery at scale</a>, making them strategic assets that should be subject to stricter governance and privileged access controls similar to those applied to identity platforms and other critical management systems.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 22h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
@@ -1580,7 +1871,7 @@
   <pubDate>Thu, 02 Jul 2026 10:48:43 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: Vendor advisory — check installed firmware/software version and patch status.</b><br/><p>A PoC exploit has been available since public disclosure, and the first exploitation attempts were observed last week.</p>
-<p>The post <a href="https://www.securityweek.com/cisco-confirms-in-the-wild-exploitation-of-unified-cm-vulnerability/">Cisco Confirms In-the-Wild Exploitation of Unified CM Vulnerability</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 23h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/cisco-confirms-in-the-wild-exploitation-of-unified-cm-vulnerability/">Cisco Confirms In-the-Wild Exploitation of Unified CM Vulnerability</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
@@ -1841,7 +2132,7 @@
 
 <li><a href="https://www.cio.com/article/222595/what-is-cgeit-a-certification-for-seasoned-it-governance-professionals.html">What is CGEIT? A certification for seasoned IT governance professionals</a></li>
 </ul>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 23h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
@@ -1992,7 +2283,7 @@
 
 
 <p><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><strong><a href="https://www.cio.com/expert-contributor-network/">Want to join?</a></strong></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 23h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
@@ -2077,7 +2368,7 @@
 
 
 <p>“As roles change, organizations need to give employees a clearer picture of where opportunities are emerging and what skills will be most important,” says Krauss. “Many employees are already uncertain about how technology will affect their careers, and that uncertainty can make it harder to stay engaged. People are more likely to invest in their growth when they see a path forward. That visibility is becoming increasingly important.”</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 23h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
@@ -2539,235 +2830,6 @@
 </item>
 
 <item>
-  <title>🔵 AI 비용, 생각보다 깊이 숨어 있다…벤더 계약부터 사업부 예산까지</title>
-  <link>https://www.cio.com/article/4191997/ai-%eb%b9%84%ec%9a%a9-%ec%83%9d%ea%b0%81%eb%b3%b4%eb%8b%a4-%ea%b9%8a%ec%9d%b4-%ec%88%a8%ec%96%b4-%ec%9e%88%eb%8b%a4%eb%b2%a4%eb%8d%94-%ea%b3%84%ec%95%bd%eb%b6%80%ed%84%b0-%ec%82%ac%ec%97%85.html</link>
-  <pubDate>Thu, 02 Jul 2026 04:53:13 +0000</pubDate>
-  <source>CIO.com</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><div id="remove_no_follow">
-		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
-					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
-						<div class="article-column__content">
-<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
-
-
-
-<p>AI 도입이 빠르고 광범위하게 확산되면서, 많은 CIO는 조직이 AI에 실제로 얼마나 많은 비용을 지출하고 있는지 제대로 파악하지 못하고 있다.</p>
-
-
-
-<p>컨설팅 기업 프로티비티(Protiviti)의 <a href="https://www.protiviti.com/sites/default/files/2026-05/aipulse26-vol4-survey-booklet-0426-na-en-protiviti.pdf" rel="nofollow" target="_blank">‘2026 AI 펄스 서베이</a>(2026 AI Pulse Survey)’에 따르면, 기업의 약 3분의 2는 직원이 적절한 관리·감독 없이 AI를 사용한 적이 있다고 답했다. 또한 대기업의 절반 가까이는 직원들이 어떤 AI 도구를 사용하고 있는지 완전히 파악하지 못하는 것으로 나타났다. IBM의 ‘<a href="https://www.ibm.com/thought-leadership/institute-business-value/en-us/report/2026-cxo" rel="nofollow" target="_blank">2026 테크 리더 스터디</a>(2026 Tech Leader Study)’에서는 기술 리더의 77%가 AI 도입 속도가 이미 조직의 거버넌스 역량을 앞지르고 있다고 응답했다.</p>
-
-
-
-<p>프로티비티 글로벌 기술 리스크 및 복원력(Technology Risk &amp; Resilience) 부문 총괄인 앤드루 리트럼(Andrew Retrum)은 “기업들이 AI 도입을 서두르는 속도와 AI를 활용하기 위한 기술적 진입 장벽이 매우 낮다는 점이 맞물리면서, AI 활용 현황을 지속적으로 파악하기가 매우 어려운 환경이 됐다”라고 설명했다.</p>
-
-
-
-<p>이는 과거의 ‘섀도 IT’와는 성격이 다르다. 재무적 위험의 원인이 직원들이 무단으로 챗GPT를 구독하는 데 있는 것이 아니라, 벤더 계약 갱신, 사용량 기반 과금, 사업부 예산 곳곳에서 AI 비용이 누적되고 있기 때문이다. 일부 CIO는 초기부터 이러한 비용을 아키텍처에 반영해 전체 지출을 완전히 파악하고 있지만, 대부분은 이제야 이를 따라잡는 단계에 있다. 일부 기업은 비용보다 더 중요한 문제를 제대로 들여다보지 못하고 있다는 사실을 뒤늦게 깨닫고 있다.</p>
-
-
-
-<h2 class="wp-block-heading" id="%eb%8f%88%ec%9d%80-%ec%96%b4%eb%94%94%ec%97%90-%ec%88%a8%ec%96%b4-%ec%9e%88%eb%82%98">돈은 어디에 숨어 있나</h2>
-
-
-
-<p>AI 비용은 대부분의 조직이 충분히 주목하지 않는 세 곳에서 발생하고 있다.</p>
-
-
-
-<p>첫 번째는 벤더 제품에 내장된 AI 기능이다. 소프트웨어 공급업체들은 기존 제품에 AI 기능을 조용히 추가하고 있으며, 그 비용은 새로운 항목으로 청구되는 대신 계약 갱신 시 인상된 비용에 반영된다. 가트너가<a href="https://www.gartner.com/en/documents/6983866" rel="nofollow" target="_blank"> 2025년 9월 발표한 조사에 따르면</a>, 일부 솔루션은 벤더가 사전 고지 없이 AI 기능을 추가하면서 계약 갱신 비용이 최대 30%까지 증가한 것으로 나타났다.</p>
-
-
-
-<p>두 번째는 사용량 기반 과금이다. 가트너는 “생성형 AI 비용의 대부분은 구축(Build)이 아니라 운영(Run) 단계에서 발생한다”라며 “추론(Inference), API 호출, 파인튜닝(Fine-tuning), 사용량 기반 과금은 규모가 커질수록 비용이 빠르고 예측하기 어려운 방식으로 증가한다”라고 분석했다.</p>
-
-
-
-<p>컨설팅 기업 코너스톤 리서치(Cornerstone Research)의 최고기술혁신책임자(CTIO) <a href="https://www.linkedin.com/in/philleslie/" rel="nofollow" target="_blank">필 레슬리</a>(Phil Leslie)는 이를 직접 경험했다고 말했다.</p>
-
-
-
-<p>레슬리는 “제미나이는 이용료가 정액제이기 때문에 비용을 모니터링하는 것이 큰 의미가 없다”라며 “반면 클로드 코드는 사용량 기반 과금 방식이어서 도입이 확대될수록 지출도 함께 늘어난다. 비용이 증가하는 것을 확인한 뒤 이에 맞춰 대시보드를 구축해 관리하고 있다”라고 설명했다.</p>
-
-
-
-<p>하지만 전체 비용을 한눈에 파악하는 일은 쉽지 않다.</p>
-
-
-
-<p>레슬리는 “클로드 코드, 기본 클로드 서비스, MS 오피스에서 쓰이는 클로드 플러그인 전반에 걸친 비용을 통합적으로 파악하는 것은 결코 간단한 일이 아니다”라고 말했다.</p>
-
-
-
-<p>세 번째는 사업부 주도의 AI 도입이다. 각 부서가 법인카드나 자체 예산을 활용해 AI 솔루션을 구매하면서 IT 부서의 관리 범위를 벗어나는 사례가 늘고 있다.</p>
-
-
-
-<h2 class="wp-block-heading" id="%ec%b2%98%ec%9d%8c%eb%b6%80%ed%84%b0-%ea%b0%80%ec%8b%9c%ec%84%b1%ec%9d%84-%ea%b3%a0%eb%a0%a4%ed%95%9c-%ec%84%a4%ea%b3%84">처음부터 가시성을 고려한 설계</h2>
-
-
-
-<p>통신 솔루션 기업 콕스 비즈니스(Cox Business)의 AI 총괄 <a href="https://www.linkedin.com/in/ericpace/" rel="nofollow" target="_blank">에릭 페이스</a>(Eric Pace)는 자사가 AI 지출을 100% 파악하고 있다고 밝혔다. 다만 이를 위해서는 처음부터 아키텍처와 거버넌스를 의도적으로 설계하는 과정이 필요했다.</p>
-
-
-
-<p>페이스는 “일상 운영(BAU, Business as Usual) 과정에서 활성화되는 SaaS 기반 AI 모듈, 신규 AI 솔루션 구매, 전사 토큰 사용량까지 모든 AI 지출을 100% 파악하고 있다”라고 설명했다.</p>
-
-
-
-<p>핵심은 중앙집중화와 명확한 책임 체계였다.</p>
-
-
-
-<p>페이스는 “AI를 한 조직이 개발하고 다른 조직이 단순히 넘겨받는 방식이 아니라, 처음부터 조직 전체가 함께 책임지는 운영 모델을 구축하는 데 집중했다”라며 “AI 기능을 조기에 중앙집중화해 전사 목표와 일치시키는 한편, 각 사업부는 실제 업무 맥락을 제공해 AI 활용이 실질적인 성과로 이어지도록 했다”라고 말했다.</p>
-
-
-
-<p>콕스 비즈니스는 아키텍처 자체에도 기본적으로 가시성을 내장했다.</p>
-
-
-
-<p>페이스는 “모든 AI 트래픽은 AI 게이트웨이와 런타임 보안 솔루션을 거친다”라며 “온프레미스와 클라우드 기반 환경 모두 동일하게 적용된다”라고 설명했다.</p>
-
-
-
-<p>이 같은 아키텍처는 네트워크 모니터링까지 확장된다.</p>
-
-
-
-<p>페이스는 “네트워크를 통해 들어오고 나가는 모든 트래픽을 확인할 수 있으며, 회사 기기에서 어떤 서비스가 실행되고 있는지도 파악할 수 있다”라며 “표준 경로를 벗어난 트래픽 패턴이 발견되면 직원들과 협력해 규정을 준수할 수 있도록 지원한다”라고 말했다.</p>
-
-
-
-<p>동시에 직원들이 필요한 AI 도구를 자유롭게 사용할 수 있는 환경도 마련했다.</p>
-
-
-
-<p>페이스는 “‘틀 안의 자유(Freedom in a Framework)’라는 원칙 아래 다양한 AI 생태계와 기능을 제공하고 있다”라며 “대부분의 직원은 업무에 필요한 모든 AI 도구를 이용할 수 있다고 느낀다”라고 밝혔다.</p>
-
-
-
-<h2 class="wp-block-heading" id="%eb%b9%84%ec%9a%a9%eb%b3%b4%eb%8b%a4-%eb%8d%94-%ec%a4%91%ec%9a%94%ed%95%9c-%eb%ac%b8%ec%a0%9c">비용보다 더 중요한 문제</h2>
-
-
-
-<p>모든 조직이 AI 비용 가시성 확보를 최우선 과제로 삼는 것은 아니다. 일부 기업은 다른 문제를 더 중요하게 보고 있다.</p>
-
-
-
-<p>코너스톤 리서치의 레슬리는 “현재는 의도적으로 비용 가시성을 우선순위에서 뒤로 미뤄두고 있다”라며 “더 어려운 문제는 우리 업무의 특성 자체”라고 말했다.</p>
-
-
-
-<p>코너스톤 리서치는 고도의 정확성이 요구되는 소송 지원 업무를 수행하는 기업으로, 전문가 보고서에는 오류가 허용되지 않는다.</p>
-
-
-
-<p>레슬리는 “신뢰를 훼손하지 않으면서 AI의 이점을 어떻게 활용할 것인지가 가장 큰 과제”라며 “비용도 중요하지만, 지금 단계에서는 가장 큰 제약 요인은 아니다”라고 설명했다.</p>
-
-
-
-<p>레슬리는 비용 최적화를 어렵게 만드는 또 다른 요인도 지적했다. AI 비용을 가장 많이 사용하는 사람이 오히려 가장 높은 성과를 내는 경우가 많다는 것이다.</p>
-
-
-
-<p>그는 “전체 AI 비용의 약 80%가 사용자 10%에게서 발생하며, 이들은 대부분 중요한 업무를 수행하는 가장 숙련된 인력”이라며 “모든 사용자에게 동일한 비용 상한선을 적용하면 오히려 장려해야 할 핵심 활용 사례를 제한할 위험이 있다”라고 말했다.</p>
-
-
-
-<p>현재 코너스톤은 일정 수준 이상의 비용이 발생하면 추가 승인 절차를 거치도록 하되, 필요한 경우 예외를 허용하는 방식을 운영하고 있다.</p>
-
-
-
-<p>레슬리는 “AI 비용이 많이 발생하는 사용자는 낭비를 의미하는 것이 아니라 높은 가치를 창출하는 업무를 수행하고 있다는 신호인 경우가 많다”라고 말했다.</p>
-
-
-
-<h2 class="wp-block-heading" id="%ec%a1%b0%ec%a7%81-%ea%b7%9c%eb%aa%a8%ea%b0%80-%eb%8b%ac%eb%9d%bc%ec%a7%80%eb%a9%b4-%ec%a0%91%ea%b7%bc%eb%b2%95%eb%8f%84-%eb%8b%ac%eb%9d%bc%ec%a7%84%eb%8b%a4">조직 규모가 달라지면 접근법도 달라진다</h2>
-
-
-
-<p>AI 비용 가시성 확보 방식은 조직 규모에 따라서도 달라진다.</p>
-
-
-
-<p>아마존에서 10년간 근무한 뒤 코너스톤으로 자리를 옮긴 레슬리는 두 기업의 차이를 이렇게 설명했다.</p>
-
-
-
-<p>레슬리는 “아마존은 단순히 규모가 큰 것이 아니라 사업 영역도 훨씬 다양하다”라며 “그 정도 규모에서는 단순한 규칙이 비효율적이라는 것을 알면서도, 복잡성을 관리하기 위해서는 획일적인 기준을 적용할 수밖에 없는 경우가 많다”라고 말했다.</p>
-
-
-
-<p>반면 코너스톤에서는 보다 세밀한 관리가 가능하다.</p>
-
-
-
-<p>그는 “피드백 주기가 충분히 짧기 때문에 각 조직 책임자와 직접 대화해 몇 분 만에 팀의 목표를 파악할 수 있다”라며 “덕분에 어떤 경우에는 비용을 더 투입하는 것이 합리적인지 확신을 갖고 판단할 수 있으며, 상황에 맞는 맞춤형 비용 관리가 가능하다”라고 설명했다.</p>
-
-
-
-<p>콕스 비즈니스는 규모가 커지면서 또 다른 접근 방식을 선택했다.</p>
-
-
-
-<p>페이스는 “AI 우수성 센터(CoE) 밖에서 엔터프라이즈 애플리케이션을 개발하는 조직에는 실행 역량을 분산시키는 대신, 자본 투자는 중앙에서 관리하는 체계를 구축했다”라고 말했다.</p>
-
-
-
-<p>또한 토큰 사용 예산은 중앙에서 관리하되, AI 사용량이 많은 부서와는 지속적으로 관련 정보를 공유하고 있으며, 주요 사용 부서와 정기적으로 논의해 실제 비즈니스 가치를 평가하고 있다고 설명했다.</p>
-
-
-
-<h2 class="wp-block-heading" id="ai-%eb%b9%84%ec%9a%a9-%ea%b4%80%eb%a6%ac-%eb%ac%b4%ec%97%87%ec%9d%b4-%ed%9a%a8%ea%b3%bc%ec%a0%81%ec%9d%b8%ea%b0%80">AI 비용 관리, 무엇이 효과적인가</h2>
-
-
-
-<p>아직 AI 비용 가시성을 구축하는 단계에 있는 조직이라면 기본부터 시작하는 것이 중요하다.</p>
-
-
-
-<p>프로티비티의 리트럼은 “우선 AI 자산 목록을 만드는 것부터 시작해야 한다. 보이지 않는 것은 관리할 수도 없다”라며 “IT, 보안, 법무, 사업부에 명확한 책임을 부여하고, 이를 일회성 프로젝트가 아닌 지속적인 관리 체계로 운영해야 한다”라고 조언했다.</p>
-
-
-
-<p>우선순위를 정하는 것도 중요하다.</p>
-
-
-
-<p>리트럼은 “완벽함을 추구하다가 실행을 미루지 말아야 한다”라며 “민감한 데이터를 다루거나 고객 대상 의사결정, 규제 대상 업무와 관련된 AI 활용 사례처럼 위험도가 높은 영역부터 우선 관리해야 한다. 이러한 영역에 적절한 통제 장치를 마련한 뒤 점진적으로 범위를 확대하는 것이 바람직하다”라고 설명했다.</p>
-
-
-
-<p>가트너는 조달 단계에서 AI 구매 항목을 별도로 구분해 관리하고, IT 재무관리 시스템에서도 AI 지출을 독립적으로 추적할 것을 권고했다. 또한 다음 클라우드 및 SaaS 계약 갱신 전에 AI 관련 비용 조항을 계약에 포함하도록 협상할 필요가 있다고 제안했다.</p>
-
-
-
-<p>콕스 비즈니스는 거버넌스를 단순한 통제 수단이 아니라 우선순위를 명확히 하는 도구로 활용하고 있다.</p>
-
-
-
-<p>페이스는 “더 빠르게 비즈니스 가치를 창출할 수 있는 일에 조직의 역량을 집중하기 위해 필요할 때는 과감하게 ‘아니오’라고 말해왔다”라고 밝혔다.</p>
-
-
-
-<h2 class="wp-block-heading" id="%ec%98%88%ec%82%b0%eb%b3%b4%eb%8b%a4-%eb%8d%94-%ed%81%b0-%ec%9c%84%ed%97%98">예산보다 더 큰 위험</h2>
-
-
-
-<p>일부 조직에서는 AI 비용이 통제 불가능한 수준으로 증가하는 것보다 AI를 잘못 사용하는 것이 더 큰 위험일 수 있다.</p>
-
-
-
-<p>레슬리는 “섀도 IT의 핵심은 비용 통제가 아니라 평판 리스크”라며 “기업의 특성과 AI 활용 방식에 따라 무분별한 AI 사용은 실제로 심각한 피해를 초래할 수 있다. 바로 그 위험을 관리하는 것이 더 중요하다”라고 말했다.</p>
-
-
-
-<p>AI 비용에 대한 가시성을 확보하는 것은 분명 중요하다. 그러나 일부 CIO에게는 지금 보이지 않는 더 중요한 문제가 따로 있을 수도 있다.<br />dl-ciokorea@foundryco.com</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
-</item>
-
-<item>
   <title>🟠 Sandbox bypass flaws in Cursor IDE highlight prompt injection as an RCE vector</title>
   <link>https://www.csoonline.com/article/4191923/sandbox-bypass-flaws-in-cursor-ide-highlight-prompt-injection-as-an-rce-vector.html</link>
   <pubDate>Thu, 02 Jul 2026 01:31:35 +0000</pubDate>
@@ -3079,7 +3141,7 @@
 
 
 <p>As browsers become the primary workspace for email, SaaS applications, and AI assistants, attackers are likely to continue targeting them, Dubey said. Organizations should therefore treat browser extensions “as third-party software suppliers” that are reviewed, approved, and continuously monitored like any other enterprise application.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3d ago]]></description>
 </item>
 
 <item>
@@ -3211,145 +3273,6 @@
 
 <p>This meant that Australia is facing a persistent threat in the future, one that could have consequences for the way that the critical infrastructure is deployed and managed. “The biggest challenge is the cumulative one: in a degraded security environment defined by concurrent, cascading, compounding threats, when resources are limited, how and what do you prioritize?” he said.</p>
 </div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 6d ago]]></description>
-</item>
-
-<item>
-  <title>🔴 What CISOs need to tell the board about zero trust in OT: A 90-day communication and action plan</title>
-  <link>https://www.csoonline.com/article/4189605/what-cisos-need-to-tell-the-board-about-zero-trust-in-ot-a-90-day-communication-and-action-plan.html</link>
-  <pubDate>Fri, 26 Jun 2026 10:00:00 +0000</pubDate>
-  <source>CSO Online</source>
-  <description><![CDATA[<b>Why this matters: Elevated ransomware risk — validate backups and endpoint defenses.</b><br/><div id="remove_no_follow">
-		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
-					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
-						<div class="article-column__content">
-<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
-
-
-
-<p>I work as a principal specialist at a pipeline operator where Operational Technology (OT) is the backbone of the business. I do not report to the board or act as a CISO, but the issues that get raised to those levels affect my job every single day.</p>
-
-
-
-<p>Since the <a href="https://www.energy.gov/ceser/colonial-pipeline-cyber-incident">Colonial pipeline ransomware incident in 2021</a>, it has become apparent that our industry has started posing different tones of “Are we zero trust yet?” I frequently witness its intense significance through auditing requests, TSA security directives and conversations around some control project’s goals.</p>
-
-
-
-<p>One experience the zero trust role has changed is that it often feels misaligned with OT heavy environments. The NIST’s <a href="https://tsapps.nist.gov/publication/get_pdf.cfm?pub_id=930420">Zero Trust Architecture (SP 800‑207) model</a> works for all, but is originally written as though for an IT network, not terminals, compressor stations and control rooms where equipment must run 24/7, perhaps more aged than the technology present within the organization. CISA’s guidance on <a href="https://www.ic3.gov/CSA/2026/260429.pdf" rel="noreferrer noopener" target="_blank">adapting zero trust principles to operational technology</a> helps close that gap, but applying it means satisfying the OT teams and company leadership at the same time.</p>
-
-
-
-<h2 class="wp-block-heading" id="the-zero-trust-question-i-hear-behind-the-scenes">The zero trust question I hear behind the scenes</h2>
-
-
-
-<p>I am pretty sure we all know it comes as a jolt of reality after something really major has happened, rather than a bullet point on a slide deck. You have pipeline. The whole distribution stops for six days. In Washington, DC, US congressional hearings are underway, and legislation is coming. <a href="https://www.tsa.gov/sites/default/files/tsa_sd_pipeline-2021-02-july-21_2022.pdf">TSA Directive 2021-02C</a> requires pipeline operators to attest to several things, like network segmentation and zero-trust architectures.</p>
-
-
-
-<p><a href="https://www.nerc.com/globalassets/standards/reliability-standards/cip/cip-013-2.pdf">NERC CIP-013</a> exists on a similar tack, more around supply chain security. In our case, the decision on how to select and manage a vendor partner and control their remote access is driven by regulatory compliance and governance frameworks. So, you have all those things that happen externally and force change. They say, “Are you zero trust? Yes or no?” We always get “yes.” They know it is not “yes, ” and the vendors know it is not “yes,” and nothing gets done about it until something happens.</p>
-
-
-
-<h2 class="wp-block-heading" id="how-i-reframe-zero-trust-for-ot-in-my-work">How I reframe zero trust for OT in my work</h2>
-
-
-
-<p>My influence comes from how I frame problems and options in the conversations I am invited into. Zero trust is a good example.</p>
-
-
-
-<p>NIST’s SP 800‑207 describes zero trust as a model where access decisions are to be based on strong identity, policy and context rather than network. CISA’s OT guidance narrows it, advising operators on the appearance of devices, identity management and what overlaps with IT instead of the overall replacement. <a href="https://www.csoonline.com/article/4143100/why-zero-trust-breaks-down-in-iot-and-ot-environments.html" target="_blank">Why zero trust breaks down in IoT and OT environments</a>” highlights that when facing the complications of IoT and OT environments, one needs to be proactive.</p>
-
-
-
-<p>During these conversations, I try to focus on three major points when talking about IoT.</p>
-
-
-
-<ol class="wp-block-list">
-<li>Refer to zero trust as its functioning principle. In my experience, teams respond better when I say “Every user and system has to prove who they are and why they need access” than when I talk about abstract architectures. That language matches what NIST and CISA emphasize without overwhelming people with jargon.</li>
-
-
-
-<li>Focus on where IT and OT converge, like jump hosts, historian connections, remote access paths and shared identity stores that span both worlds. Those are the choke points where zero trust style controls like stronger authentication, least privilege and detailed logging can give us quick wins without disrupting operations that depend on predictable behavior.</li>
-
-
-
-<li>Tie everything that we need to do to the existing requirements. The conversation moves from “why are we changing this?” to “how do we do this well?” which aligns with TSA Security Directive Pipeline‑2021‑02C, a CISA alert or a NERC CIP‑013 requirement.</li>
-</ol>
-
-
-
-<h2 class="wp-block-heading" id="a-90-day-plan-ot-leaders-can-execute">A 90-day plan OT leaders can execute</h2>
-
-
-
-<p>While someone operates a gas pipeline, they cannot play around with zero trust. Questions such as: “What can we accomplish before the TSA checks up next quarter?” Or “How can we show the internal audit team we are making progress this month?” comes often. We have established a list of actions we take over in a ninety-day plan, because we find it aligns more with our industrial settings while also being transferable to other OT settings.</p>
-
-
-
-<h3 class="wp-block-heading" id="days-1-30-map-assets-and-identities-at-the-it-ot-boundary">Days 1–30: Map assets and identities at the IT/OT boundary</h3>
-
-
-
-<p>The first 30 days are for increased visibility. I focus on a relatively simple question: “Who and what can currently reach OT, intentionally or accidentally?”</p>
-
-
-
-<p>CISA’s guidance on zero trust for OT, alongside other warnings, advocates for identifying and managing assets and communications where IT and OT interfaces exist, in addition to informal remote access routes. Also, TSA requires pipeline operators to regularly update and manage plans detailing which networks, systems and access points they will assess as per their established requirements across both IT and OT.</p>
-
-
-
-<p>In my position, it comes down to three actions. First, I work with OT engineers, network staff and asset inventory systems to determine which OT assets threaten operations, safety or compliance if compromised, rather than inventorying every device. Second, I map the users and links that reach into OT, such as internal staff granted advanced privileges, remote vendor support, VPNs and cloud platforms that interact with production data. Third, I categorize these identities and connections based on risk, impact and exposure, not by their roles.</p>
-
-
-
-<p>By the close of the first 30 days, the intention is to present leadership with an easily comprehensible overview: outlining the critical OT assets, delineating the entry points from both internal IT systems and external sources and identifying the associated identities. Having established this common understanding makes subsequent zero trust discussions less vague.</p>
-
-
-
-<h3 class="wp-block-heading" id="days-31-60-contain-vendor-remote-access-and-create-early-wins">Days 31–60: Contain vendor remote access and create early wins</h3>
-
-
-
-<p>Look for quick wins in the next month, in a high-impact but non-disruptive area. Vendor or third-party remote access often fulfills it, and CISA has warned about it and continues to do so.</p>
-
-
-
-<p>Their guidance emphasizes best practices, including using MFA, segmented user privileges and monitoring third-party activity independently. The NERC CIP-013 requires utilities to consider cybersecurity threats and risk management that protect their supply chains and suppliers that connect to critical systems. The TSA’s pipeline directives expect close monitoring and controls of remote access. In my case, early wins look like telling a vendor: OK, instead of an unsecured, remote access method, use an audited brokered remote access solution. MFA for any and all remote OT sessions. Close old vendor RDP connections that are not in service. You are simply saying that times change and since these methods were put in place a few years back, they have evolved; it is reasonable for you to evolve.</p>
-
-
-
-<h3 class="wp-block-heading" id="days-61-90-build-a-simple-maturity-scorecard-and-narrative">Days 61–90: Build a simple maturity scorecard and narrative</h3>
-
-
-
-<p>The third month is about visibility and repeatable progress. We now will have more clarity on assets and identities traversing the IT/OT boundary and have choked down the most dangerous of remote access paths. Now we will take time to track where we have been over time.</p>
-
-
-
-<p>I will consult with leaders within security and OT teams to identify the right-sized set of metrics relevant to the specific context of the organization. While the specific terminology may vary, many will align with common language found in TSA, NERC, CISA and other industry documents. Consider the broad themes of “govern, protect and detect &amp; respond”.</p>
-
-
-
-<p>We can then identify solid “now” and “better next quarter” capabilities within each of these themes. “Govern” could incorporate specific OT policies on identity and access management that pull in zero trust directives alongside existing authoritative frameworks. “Protect” might track what fraction of your high-impact OT assets have been put behind better segmentation practices, coupled with the percent of your remote access pathways to OT identified as high-risk that have both MFA and a brokered connection. “Detect &amp; respond” could see tested playbooks in place assuming a remote connection compromise that directly injects malware into an OT system, which aligns with how recent incidents have unfolded throughout North American utilities.</p>
-
-
-
-<p>The output is not a scorecard to pass around but will be a meaningful, honest conversation for our leaders. You will know how to accurately frame how your organization applies zero trust in the OT world today, show what you achieved over the past three months and honestly describe where there is more work ahead.</p>
-
-
-
-<p>I am not the only one trying to make zero trust ideas actually fit OT, and I pay attention to the CISOs who voice the same frustrations with IoT and OT environments. We are solving the same problem from different seats. What I have found is that a workable 90-day plan, updated monthly, beats any pledge to “Let us achieve zero trust together”</p>
-
-
-
-<p><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><strong><a href="https://www.csoonline.com/expert-contributor-network/">Want to join?</a></strong></p>
-
-
-
-<p></p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 6d ago]]></description>
 </item>
 
 </channel>
