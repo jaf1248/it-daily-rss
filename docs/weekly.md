@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
 **Period:** June 27 – July 04, 2026  
-**Generated:** 2026-07-04 04:33 UTC  
+**Generated:** 2026-07-04 07:44 UTC  
 **Items reviewed:** 134  
 
 ## ⚡ Top Actions This Week
@@ -55,6 +55,9 @@
 
 ## 🟠 Important — Review This Week
 
+- [CVE-2026-53223 net: guard timestamp cmsgs to real error queue skbs](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-53223)  
+  **Microsoft Security Response Center (MSRC)** · Jul 04 · _General awareness item._  
+
 - [Unpatched Flaws Disclosed in Filesystem Bundled Into Millions of Embedded Devices](https://thehackernews.com/2026/07/unpatched-flaws-disclosed-in-filesystem.html)  
   **The Hacker News** · Jul 03 · _General awareness item._  
 
@@ -74,9 +77,6 @@
   **Microsoft Security Response Center (MSRC)** · Jul 03 · _General awareness item._  
 
 - [Chromium: CVE-2026-13790 Side-channel information leakage in Scroll](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-13790)  
-  **Microsoft Security Response Center (MSRC)** · Jul 03 · _General awareness item._  
-
-- [Chromium: CVE-2026-13787 Use after free in Chromoting](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-13787)  
   **Microsoft Security Response Center (MSRC)** · Jul 03 · _General awareness item._  
 
 ---
