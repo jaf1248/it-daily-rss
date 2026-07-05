@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
 **Period:** June 28 – July 05, 2026  
-**Generated:** 2026-07-05 12:14 UTC  
+**Generated:** 2026-07-05 14:40 UTC  
 **Items reviewed:** 133  
 
 ## ⚡ Top Actions This Week
@@ -83,12 +83,12 @@
 
 ## 🔵 FYI — General Awareness
 
+- [Flipper Zero firmware development continues with community help](https://www.bleepingcomputer.com/news/security/flipper-zero-firmware-development-continues-with-community-help/) — BleepingComputer
 - [North Korean Hackers Publish 108 Malicious Packages and Extensions in PolinRider Campaign](https://thehackernews.com/2026/07/north-korean-hackers-publish-108.html) — The Hacker News
 - [NetNut proxy network disrupted, 2 million infected devices cut off](https://www.bleepingcomputer.com/news/security/netnut-proxy-network-disrupted-2-million-infected-devices-cut-off/) — BleepingComputer
 - [North Korea-Linked npm Packages Mimic Rollup Polyfills to Steal Developer Secrets](https://thehackernews.com/2026/07/north-korea-linked-npm-packages-mimic.html) — The Hacker News
 - [ARToken PhaaS exposes EvilTokens' Microsoft 365 phishing toolkit](https://www.bleepingcomputer.com/news/security/artoken-phaas-exposes-eviltokens-microsoft-365-phishing-toolkit/) — BleepingComputer
 - [Armored Likho Targets Government Agencies, Power Sector with BusySnake Stealer](https://thehackernews.com/2026/07/armored-likho-targets-government.html) — The Hacker News
-- [European Parliament Member Investigating Spyware Was Hacked With Pegasus](https://thehackernews.com/2026/07/european-parliament-member.html) — The Hacker News
 
 ---
 
