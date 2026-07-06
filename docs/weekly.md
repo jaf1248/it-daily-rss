@@ -1,25 +1,30 @@
 # IT Weekly Intelligence Briefing
 **Period:** June 29 – July 06, 2026  
-**Generated:** 2026-07-06 12:16 UTC  
-**Items reviewed:** 132  
+**Generated:** 2026-07-06 14:23 UTC  
+**Items reviewed:** 133  
 
 ## ⚡ Top Actions This Week
 
 1. **Validate backups, confirm EDR coverage, and brief incident response team.**  
+   _⚡ Weekly Recap: Proxy Botnets, Browser Ransomware, AI Agent Tricks, Fake PoC Malware and More_  
+   Source: The Hacker News  
+
+2. **Validate backups, confirm EDR coverage, and brief incident response team.**  
    _JadePuffer ransomware used AI agent to automate entire attack_  
    Source: BleepingComputer  
 
-2. **Validate backups, confirm EDR coverage, and brief incident response team.**  
-   _U.S. Government Entity Paid Kairos $1 Million in Data-Theft Extortion Case_  
-   Source: The Hacker News  
-
 3. **Validate backups, confirm EDR coverage, and brief incident response team.**  
-   _New Avalon Malware Framework Packs CrownX Ransomware Capabilities_  
+   _U.S. Government Entity Paid Kairos $1 Million in Data-Theft Extortion Case_  
    Source: The Hacker News  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [⚡ Weekly Recap: Proxy Botnets, Browser Ransomware, AI Agent Tricks, Fake PoC Malware and More](https://thehackernews.com/2026/07/monday-recap-proxy-botnets-browser.html)
+**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Jul 06  
+**Why it matters:** Elevated ransomware risk across the sector.  
+**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
 
 ### [JadePuffer ransomware used AI agent to automate entire attack](https://www.bleepingcomputer.com/news/security/jadepuffer-ransomware-used-ai-agent-to-automate-entire-attack/)
 **Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jul 04  
@@ -46,14 +51,12 @@
 **Why it matters:** Elevated ransomware risk across the sector.  
 **Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
 
-### [CISA: Microsoft SharePoint RCE flaw now actively exploited](https://www.bleepingcomputer.com/news/security/cisa-microsoft-sharepoint-rce-flaw-now-actively-exploited/)
-**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jul 02  
-**Why it matters:** General awareness item.  
-**Recommended action:** Prioritize patching of affected systems; check for internet-exposed attack surface.  
-
 ---
 
 ## 🟠 Important — Review This Week
+
+- [Max severity Adobe ColdFusion flaw now exploited in attacks](https://www.bleepingcomputer.com/news/security/max-severity-adobe-coldfusion-flaw-now-exploited-in-attacks/)  
+  **BleepingComputer** · Jul 06 · _General awareness item._  
 
 - [Opera GX Flaw Let Malicious Sites Auto-Install Mods to Steal Data From Visited Pages](https://thehackernews.com/2026/07/opera-gx-flaw-let-malicious-sites-auto.html)  
   **The Hacker News** · Jul 06 · _General awareness item._  
@@ -76,20 +79,17 @@
 - [Chromium: CVE-2026-14125 Uninitialized Use in ANGLE](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-14125)  
   **Microsoft Security Response Center (MSRC)** · Jul 03 · _General awareness item._  
 
-- [Chromium: CVE-2026-13793 Insufficient policy enforcement in SVG](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-13793)  
-  **Microsoft Security Response Center (MSRC)** · Jul 03 · _General awareness item._  
-
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [Software Is Now Written at the Speed of Thought. Security Isn't.](https://www.bleepingcomputer.com/news/security/software-is-now-written-at-the-speed-of-thought-security-isnt/) — BleepingComputer
+- [RCS and DNS: The NAPTR Record, (Mon, Jul 6th)](https://isc.sans.edu/diary/rss/33124) — SANS Internet Storm Center
 - [ISC Stormcast For Monday, July 6th, 2026 https://isc.sans.edu/podcastdetail/9994, (Mon, Jul 6th)](https://isc.sans.edu/diary/rss/33122) — SANS Internet Storm Center
+- [How to Evaluate an AI SOC Platform in 2026: 6 Capabilities That Separate Leaders from Bolt-On AI solutions](https://thehackernews.com/2026/07/how-to-evaluate-ai-soc-platform-in-2026.html) — The Hacker News
+- [Suspected China-Nexus Hackers Use Fake Indian Tax Filing Utility to Deploy DcRAT](https://thehackernews.com/2026/07/suspected-china-nexus-hackers-use-fake.html) — The Hacker News
 - [New TrojPix Attack Leaks Data From Air-Gapped Systems via Video Cable Emissions](https://thehackernews.com/2026/07/new-trojpix-attack-leaks-data-from-air.html) — The Hacker News
-- [New Java-Based QuimaRAT MaaS Built to Run on Windows, Linux, and macOS](https://thehackernews.com/2026/07/new-java-based-quimarat-maas-built-to.html) — The Hacker News
-- [SkillCloak Lets Malicious AI Agent Skills Evade Static Scanners with Self-Extracting Packing](https://thehackernews.com/2026/07/new-skillcloak-technique-lets-malicious.html) — The Hacker News
-- [Flipper Zero firmware development continues with community help](https://www.bleepingcomputer.com/news/security/flipper-zero-firmware-development-continues-with-community-help/) — BleepingComputer
-- [North Korean Hackers Publish 108 Malicious Packages and Extensions in PolinRider Campaign](https://thehackernews.com/2026/07/north-korean-hackers-publish-108.html) — The Hacker News
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 12 critical · 76 important · 44 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 10 critical · 76 important · 47 FYI_
