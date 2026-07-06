@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
 **Period:** June 29 – July 06, 2026  
-**Generated:** 2026-07-06 17:41 UTC  
+**Generated:** 2026-07-06 19:52 UTC  
 **Items reviewed:** 133  
 
 ## ⚡ Top Actions This Week
@@ -55,6 +55,9 @@
 
 ## 🟠 Important — Review This Week
 
+- [16-Year-Old Linux KVM Flaw Lets Guest VMs Escape to Host on Intel and AMD x86 Systems](https://thehackernews.com/2026/07/16-year-old-linux-kvm-flaw-lets-guest.html)  
+  **The Hacker News** · Jul 06 · _General awareness item._  
+
 - [Threat Actors Probe Gitea Docker Flaw CVE-2026-20896 13 Days After Disclosure](https://thehackernews.com/2026/07/threat-actors-probe-gitea-docker-flaw.html)  
   **The Hacker News** · Jul 06 · _General awareness item._  
 
@@ -76,19 +79,16 @@
 - [Chromium: CVE-2026-13797 Insufficient validation of untrusted input in Chromecast](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-13797)  
   **Microsoft Security Response Center (MSRC)** · Jul 03 · _General awareness item._  
 
-- [Chromium: CVE-2026-13794 Insufficient validation of untrusted input in WebAppInstalls](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-13794)  
-  **Microsoft Security Response Center (MSRC)** · Jul 03 · _General awareness item._  
-
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [Iran-Linked Hackers Use New Cavern C2 Framework to Target Israeli Organizations](https://thehackernews.com/2026/07/iran-linked-hackers-use-new-cavern-c2.html) — The Hacker News
+- [Vietnam arrests suspects behind HiAnime anime piracy service](https://www.bleepingcomputer.com/news/security/vietnam-arrests-suspects-behind-hianime-anime-piracy-service/) — BleepingComputer
 - [Software Is Now Written at the Speed of Thought. Security Isn't.](https://www.bleepingcomputer.com/news/security/software-is-now-written-at-the-speed-of-thought-security-isnt/) — BleepingComputer
 - [RCS and DNS: The NAPTR Record, (Mon, Jul 6th)](https://isc.sans.edu/diary/rss/33124) — SANS Internet Storm Center
 - [ISC Stormcast For Monday, July 6th, 2026 https://isc.sans.edu/podcastdetail/9994, (Mon, Jul 6th)](https://isc.sans.edu/diary/rss/33122) — SANS Internet Storm Center
 - [How to Evaluate an AI SOC Platform in 2026: 6 Capabilities That Separate Leaders from Bolt-On AI solutions](https://thehackernews.com/2026/07/how-to-evaluate-ai-soc-platform-in-2026.html) — The Hacker News
-- [Suspected China-Nexus Hackers Use Fake Indian Tax Filing Utility to Deploy DcRAT](https://thehackernews.com/2026/07/suspected-china-nexus-hackers-use-fake.html) — The Hacker News
-- [New TrojPix Attack Leaks Data From Air-Gapped Systems via Video Cable Emissions](https://thehackernews.com/2026/07/new-trojpix-attack-leaks-data-from-air.html) — The Hacker News
 
 ---
 
