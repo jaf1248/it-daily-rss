@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
 **Period:** June 30 – July 07, 2026  
-**Generated:** 2026-07-07 10:23 UTC  
+**Generated:** 2026-07-07 13:17 UTC  
 **Items reviewed:** 132  
 
 ## ⚡ Top Actions This Week
@@ -55,6 +55,9 @@
 
 ## 🟠 Important — Review This Week
 
+- [New Januscape Linux flaw allows VM escape on Intel, AMD devices](https://www.bleepingcomputer.com/news/linux/new-januscape-linux-kernel-flaw-allows-vm-escape-on-intel-amd-devices/)  
+  **BleepingComputer** · Jul 07 · _General awareness item._  
+
 - [Suspected China-Aligned Hackers Exploit Roundcube Flaws Against Universities](https://thehackernews.com/2026/07/suspected-china-aligned-hackers-exploit.html)  
   **The Hacker News** · Jul 07 · _General awareness item._  
 
@@ -76,19 +79,16 @@
 - [CVE-2026-8924 trailing dot domain super cookie](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-8924)  
   **Microsoft Security Response Center (MSRC)** · Jul 07 · _General awareness item._  
 
-- [CVE-2026-8932 incomplete mTLS config matching in conn reuse](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-8932)  
-  **Microsoft Security Response Center (MSRC)** · Jul 07 · _General awareness item._  
-
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [Webinar tomorrow: Why modern email attacks require a new approach to defense](https://www.bleepingcomputer.com/news/security/webinar-tomorrow-why-modern-email-attacks-require-a-new-approach-to-defense/) — BleepingComputer
+- [What Changes When Your Software Supply Chain Includes AI Writing Your Code?](https://thehackernews.com/2026/07/what-changes-when-your-software-supply.html) — The Hacker News
 - [Microsoft to enable Windows settings backup by default for orgs](https://www.bleepingcomputer.com/news/microsoft/microsoft-to-enable-windows-backup-for-organizations-by-default/) — BleepingComputer
 - [Microsoft testing new Cloud Rebuild Windows 11 recovery feature](https://www.bleepingcomputer.com/news/microsoft/microsoft-testing-new-cloud-rebuild-windows-11-recovery-feature/) — BleepingComputer
 - [ISC Stormcast For Tuesday, July 7th, 2026 https://isc.sans.edu/podcastdetail/9996, (Tue, Jul 7th)](https://isc.sans.edu/diary/rss/33126) — SANS Internet Storm Center
 - [Phishing poses as big-brand job interview to steal Google accounts](https://www.bleepingcomputer.com/news/security/phishing-poses-as-big-brand-job-interview-to-steal-google-accounts/) — BleepingComputer
-- [Fake IT support calls on Microsoft Teams push EtherRAT malware](https://www.bleepingcomputer.com/news/security/fake-it-support-calls-on-microsoft-teams-push-etherrat-malware/) — BleepingComputer
-- [Iran-Linked Hackers Use New Cavern C2 Framework to Target Israeli Organizations](https://thehackernews.com/2026/07/iran-linked-hackers-use-new-cavern-c2.html) — The Hacker News
 
 ---
 
