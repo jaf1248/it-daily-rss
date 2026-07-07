@@ -1,7 +1,7 @@
 # IT Weekly Intelligence Briefing
 **Period:** June 30 – July 07, 2026  
-**Generated:** 2026-07-07 06:44 UTC  
-**Items reviewed:** 133  
+**Generated:** 2026-07-07 10:23 UTC  
+**Items reviewed:** 132  
 
 ## ⚡ Top Actions This Week
 
@@ -55,41 +55,41 @@
 
 ## 🟠 Important — Review This Week
 
-- [BeyondTrust Patches Critical Auth Bypass Flaws in Remote Support and PRA](https://thehackernews.com/2026/07/beyondtrust-patches-critical-auth.html)  
+- [Suspected China-Aligned Hackers Exploit Roundcube Flaws Against Universities](https://thehackernews.com/2026/07/suspected-china-aligned-hackers-exploit.html)  
   **The Hacker News** · Jul 07 · _General awareness item._  
 
-- [16-Year-Old Linux KVM Flaw Lets Guest VMs Escape to Host on Intel and AMD x86 Systems](https://thehackernews.com/2026/07/16-year-old-linux-kvm-flaw-lets-guest.html)  
-  **The Hacker News** · Jul 06 · _General awareness item._  
+- [CVE-2026-9080 UAF after pause in socket callback](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-9080)  
+  **Microsoft Security Response Center (MSRC)** · Jul 07 · _General awareness item._  
 
-- [Threat Actors Probe Gitea Docker Flaw CVE-2026-20896 13 Days After Disclosure](https://thehackernews.com/2026/07/threat-actors-probe-gitea-docker-flaw.html)  
-  **The Hacker News** · Jul 06 · _General awareness item._  
+- [CVE-2026-8926 password leak with netrc and user in URL](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-8926)  
+  **Microsoft Security Response Center (MSRC)** · Jul 07 · _General awareness item._  
 
-- [Max severity Adobe ColdFusion flaw now exploited in attacks](https://www.bleepingcomputer.com/news/security/max-severity-adobe-coldfusion-flaw-now-exploited-in-attacks/)  
-  **BleepingComputer** · Jul 06 · _General awareness item._  
+- [CVE-2026-10536 HTTP/2 stream-dependency tree UAF](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-10536)  
+  **Microsoft Security Response Center (MSRC)** · Jul 07 · _General awareness item._  
 
-- [Opera GX Flaw Let Malicious Sites Auto-Install Mods to Steal Data From Visited Pages](https://thehackernews.com/2026/07/opera-gx-flaw-let-malicious-sites-auto.html)  
-  **The Hacker News** · Jul 06 · _General awareness item._  
+- [CVE-2026-8286 wrong STARTTLS connection reuse](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-8286)  
+  **Microsoft Security Response Center (MSRC)** · Jul 07 · _General awareness item._  
 
-- [CVE-2026-53223 net: guard timestamp cmsgs to real error queue skbs](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-53223)  
-  **Microsoft Security Response Center (MSRC)** · Jul 04 · _General awareness item._  
+- [CVE-2026-8458 wrong reuse for different services](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-8458)  
+  **Microsoft Security Response Center (MSRC)** · Jul 07 · _General awareness item._  
 
-- [Unpatched Flaws Disclosed in Filesystem Bundled Into Millions of Embedded Devices](https://thehackernews.com/2026/07/unpatched-flaws-disclosed-in-filesystem.html)  
-  **The Hacker News** · Jul 03 · _General awareness item._  
+- [CVE-2026-8924 trailing dot domain super cookie](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-8924)  
+  **Microsoft Security Response Center (MSRC)** · Jul 07 · _General awareness item._  
 
-- [New "Bad Epoll" Linux Kernel Flaw Lets Unprivileged Users Gain Root, Hits Android](https://thehackernews.com/2026/07/new-bad-epoll-linux-kernel-flaw-lets.html)  
-  **The Hacker News** · Jul 03 · _General awareness item._  
+- [CVE-2026-8932 incomplete mTLS config matching in conn reuse](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-8932)  
+  **Microsoft Security Response Center (MSRC)** · Jul 07 · _General awareness item._  
 
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [Microsoft to enable Windows settings backup by default for orgs](https://www.bleepingcomputer.com/news/microsoft/microsoft-to-enable-windows-backup-for-organizations-by-default/) — BleepingComputer
+- [Microsoft testing new Cloud Rebuild Windows 11 recovery feature](https://www.bleepingcomputer.com/news/microsoft/microsoft-testing-new-cloud-rebuild-windows-11-recovery-feature/) — BleepingComputer
 - [ISC Stormcast For Tuesday, July 7th, 2026 https://isc.sans.edu/podcastdetail/9996, (Tue, Jul 7th)](https://isc.sans.edu/diary/rss/33126) — SANS Internet Storm Center
 - [Phishing poses as big-brand job interview to steal Google accounts](https://www.bleepingcomputer.com/news/security/phishing-poses-as-big-brand-job-interview-to-steal-google-accounts/) — BleepingComputer
 - [Fake IT support calls on Microsoft Teams push EtherRAT malware](https://www.bleepingcomputer.com/news/security/fake-it-support-calls-on-microsoft-teams-push-etherrat-malware/) — BleepingComputer
 - [Iran-Linked Hackers Use New Cavern C2 Framework to Target Israeli Organizations](https://thehackernews.com/2026/07/iran-linked-hackers-use-new-cavern-c2.html) — The Hacker News
-- [Vietnam arrests suspects behind HiAnime anime piracy service](https://www.bleepingcomputer.com/news/security/vietnam-arrests-suspects-behind-hianime-anime-piracy-service/) — BleepingComputer
-- [Software Is Now Written at the Speed of Thought. Security Isn't.](https://www.bleepingcomputer.com/news/security/software-is-now-written-at-the-speed-of-thought-security-isnt/) — BleepingComputer
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 9 critical · 78 important · 46 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 9 critical · 80 important · 43 FYI_
