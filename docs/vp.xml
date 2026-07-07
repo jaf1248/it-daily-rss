@@ -3,8 +3,907 @@
 <channel>
   <title>Joe — VP of IT Briefing</title>
   <description>Leadership-focused IT risk, vendors, pricing, licensing, and industry context.</description>
-  <lastBuildDate>Tue, 07 Jul 2026 20:54:01 +0000</lastBuildDate>
+  <lastBuildDate>Tue, 07 Jul 2026 22:09:22 +0000</lastBuildDate>
   
+<item>
+  <title>🔵 Anthropic plans to lease a 16-story building in Lower Manhattan and double its NYC workforce to 1,000 people this year, as AI companies expand in the city (New York Times)</title>
+  <link>https://www.techmeme.com/260707/p36#a260707p36</link>
+  <pubDate>Tue, 07 Jul 2026 22:00:01 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.nytimes.com/2026/07/07/nyregion/anthropic-ai-boom-nyc.html"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260707/i36.jpg" vspace="4" /></a>
+<p><a href="https://www.techmeme.com/260707/p36#a260707p36" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="https://www.nytimes.com/">New York Times</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://www.nytimes.com/2026/07/07/nyregion/anthropic-ai-boom-nyc.html">Anthropic plans to lease a 16-story building in Lower Manhattan and double its NYC workforce to 1,000 people this year, as AI companies expand in the city</a></b></span>&nbsp; &mdash;&nbsp; Anthropic, the artificial intelligence company, plans to lease a 16-story building in Hudson Square and to double its work force in New York City to 1,000 people this year.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔴 16-year-old KVM flaw allows attackers to escape VMs and take over Linux servers</title>
+  <link>https://www.csoonline.com/article/4194085/16-year-old-kvm-flaw-allows-attackers-to-escape-vms-and-take-over-linux-servers.html</link>
+  <pubDate>Tue, 07 Jul 2026 21:53:48 +0000</pubDate>
+  <source>CSO Online</source>
+  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<p>A critical vulnerability in the Kernel-based Virtual Machine (KVM) module of the Linux kernel allows attackers with root access in a guest VM to execute arbitrary code on the host system. This violates the most important security boundary that cloud providers and enterprises rely on to isolate sensitive processes on servers.</p>
+
+
+
+<p>The vulnerability, tracked as <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-53359">CVE-2026-53359</a>, stems from a use-after-free memory bug in the shadow MMU emulation of KVM on x86 CPU architecture. According to <a href="https://x.com/v4bel">Hyunwoo Kim</a>, the researcher who discovered it, the flaw has been present in the Linux kernel code for the past 16 years and is the first KVM guest-to-host escape vulnerability that works on both Intel and AMD CPUs.</p>
+
+
+
+<p>Hyunwoo dubbed the flaw <a href="https://github.com/V4bel/Januscape">Januscape</a> and reported it through Google’s kvmCTF, a vulnerability reward program that pays up to $250,000 for a full VM escape demonstrated in KVM, which Google uses in Google Cloud as well as Android infrastructure.</p>
+
+
+
+<p>“With guest-side actions alone, an attacker can compromise the host that runs their VM,” the research wrote in an advisory on GitHub. “For example, an attacker who has rented just a single instance on a public cloud could panic the host kernel to take down every other tenant VM on the same physical machine (DoS), or run code with root privilege on the host to take over the host and all the guests on it (RCE).”</p>
+
+
+
+<p>On some Linux distributions, <a href="https://access.redhat.com/security/cve/cve-2026-53359">including Red Hat Enterprise Linux (RHEL)</a>, the vulnerability can also be exploited for local privilege escalation inside the guest VM because the <code>/dev/kvm</code> device is world-writable (<code>0666</code>).</p>
+
+
+
+<p>The Januscape flaw <a href="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=81ccda30b4e8">was patched by the Linux kernel maintainers on June 16</a>, but users should check for updates from their respective distribution maintainers. Because Linux has a large ecosystem of variants and support channels, it could take a while for the patches to trickle down to all existing flavors.</p>
+
+
+
+<h2 class="wp-block-heading" id="vm-escape-proof-of-concept">VM escape proof of concept</h2>
+
+
+
+<p>Hyunwoo released a proof-of-concept that demonstrates the kernel panic and denial-of-service condition, but he has held back on releasing the full VM escape exploit for now. Even though he said in his <a href="https://github.com/V4bel/Januscape/blob/main/assets/write-up.md">detailed write-up</a> that achieving a full escape is difficult because the primitive is tricky, it doesn’t mean other researchers or malicious attackers wouldn’t be able to develop a working exploit.</p>
+
+
+
+<p>Januscape only works on servers with Intel and AMD CPUs, but Hyunwoo also disclosed a different KVM guest-to-host escape vulnerability dubbed <a href="https://github.com/V4bel/ITScape">ITScape</a> (CVE-2026-46316) last month that works on ARM64 architecture. The researcher, who uses the moniker V4bel online, is also the person who developed the <a href="https://www.csoonline.com/article/4169399/new-dirty-frag-exploit-targets-linux-kernel-for-root-access.html">Dirty Frag Linux privilege escalation exploit</a> earlier this year by combining the Dirty Pipe (CVE-2022-0847) and Copy Fail (CVE-2026-31431) kernel page-cache corruption techniques.</p>
+
+
+
+<p>VM escape exploits are among the most dangerous attacks to enterprise environments, which often use virtualization to isolate legacy applications and services that are no longer supported by their developers or whose compromise could pose a big risk to the entire infrastructure.</p>
+
+
+
+<p><a href="https://www.csoonline.com/article/3837874/vmware-esxi-gets-critical-patches-for-in-the-wild-virtual-machine-escape-attack.html">Attackers have exploited VM escape vulnerabilities in the wild before</a>, particularly targeting the VMware ESXi hypervisor, and there are even APT groups that specialize in targeting virtualized environments.</p>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 OpenAI Chief Futurist Joshua Achiam is leaving the company later this month after nearly nine years (Maxwell Zeff/Wired)</title>
+  <link>https://www.techmeme.com/260707/p35#a260707p35</link>
+  <pubDate>Tue, 07 Jul 2026 21:40:00 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://www.wired.com/story/openai-chief-futurist-joshua-achiam-is-leaving-the-company/"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260707/i35.jpg" vspace="4" /></a>
+<p><a href="https://www.techmeme.com/260707/p35#a260707p35" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Maxwell Zeff / <a href="http://www.wired.com/">Wired</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://www.wired.com/story/openai-chief-futurist-joshua-achiam-is-leaving-the-company/">OpenAI Chief Futurist Joshua Achiam is leaving the company later this month after nearly nine years</a></b></span>&nbsp; &mdash;&nbsp; Joshua Achiam spent nearly nine years at OpenAI researching AI safety and made a memorable appearance in the Musk v. Altman trial.&nbsp; &mdash;&nbsp; OpenAI's chief futurist Joshua Achiam notified colleagues &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Introducing Nitro Automate: Intelligent document automation for enterprise AI workflows</title>
+  <link>https://www.cio.com/article/4194055/introducing-nitro-automate-intelligent-document-automation-for-enterprise-ai-workflows.html</link>
+  <pubDate>Tue, 07 Jul 2026 21:38:14 +0000</pubDate>
+  <source>CIO.com</source>
+  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<p>From contracts and invoices to onboarding forms and compliance records, document-heavy processes consume significant time and resources across enterprise organizations.</p>
+
+
+
+<p>While <a href="https://www.gonitro.com/nitro-ai?utm_source=foundry&amp;utm_medium=referral&amp;utm_campaign=Introducing+Nitro+Automate%3A+Intelligent+Document+Automation+for+Enterprise+AI+Workflows" rel="sponsored">AI</a> has introduced new opportunities for automation, many organizations still struggle with one fundamental challenge: A lot of important business information is trapped inside PDFs, forms, and other documents.</p>
+
+
+
+<p><a href="https://www.gonitro.com/automate?utm_source=foundry&amp;utm_medium=referral&amp;utm_campaign=Introducing+Nitro+Automate%3A+Intelligent+Document+Automation+for+Enterprise+AI+Workflows" rel="sponsored"><strong>Nitro Automate</strong></a><strong> solves this problem.</strong></p>
+
+
+
+<p>Designed for enterprise-level document volume, Nitro Automate is an intelligent document automation platform that combines document processing, workflow automation, and AI-powered integrations to help teams eliminate manual document tasks and automate business processes. It’s fast to deploy, built to work anywhere your team handles PDFs, and can start delivering value almost immediately.</p>
+
+
+
+<h2 class="wp-block-heading">Nitro Automate is intelligent document automation for today’s enterprises</h2>
+
+
+
+<p>Nitro Automate extends Nitro’s document productivity solutions—<a href="https://www.gonitro.com/pdf?utm_source=foundry&amp;utm_medium=referral&amp;utm_campaign=Introducing+Nitro+Automate%3A+Intelligent+Document+Automation+for+Enterprise+AI+Workflows">Nitro PDF,</a> <a href="https://www.gonitro.com/sign?utm_source=foundry&amp;utm_medium=referral&amp;utm_campaign=Introducing+Nitro+Automate%3A+Intelligent+Document+Automation+for+Enterprise+AI+Workflows" rel="sponsored">Nitro Sign</a>, <a href="https://www.gonitro.com/smart-redact?utm_source=foundry&amp;utm_medium=referral&amp;utm_campaign=Introducing+Nitro+Automate%3A+Intelligent+Document+Automation+for+Enterprise+AI+Workflows" rel="sponsored">Nitro Smart Redact</a>—going beyond document creation, editing, and signing to address the challenge of managing document operations across the AI agents, workflows, and systems your teams rely on.</p>
+
+
+
+<p>Instead of depending on employees to move documents between systems, extract data manually, or manage repetitive workflows, Nitro Automate lets you automate tasks throughout the document lifecycle, including:</p>
+
+
+
+<ul class="wp-block-list">
+<li>Process, convert, reshape, transform, convert, compress, and secure PDFs</li>
+
+
+
+<li>Document generation and assembly</li>
+
+
+
+<li><a href="https://www.gonitro.com/resources/goodbye-copy-pasting-how-nitro-automates-table-and-form-data-extraction?utm_source=foundry&amp;utm_medium=referral&amp;utm_campaign=Introducing+Nitro+Automate%3A+Intelligent+Document+Automation+for+Enterprise+AI+Workflows" rel="sponsored">Data extraction from forms</a> and documents</li>
+
+
+
+<li>Workflow automation and orchestration</li>
+
+
+
+<li>eSignature workflow automation</li>
+
+
+
+<li>Document security and redaction</li>
+
+
+
+<li><a href="https://www.gonitro.com/integrations?utm_source=foundry&amp;utm_medium=referral&amp;utm_campaign=Introducing+Nitro+Automate%3A+Intelligent+Document+Automation+for+Enterprise+AI+Workflows" rel="sponsored">Integration</a> with enterprise applications</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading">Key capabilities of Nitro Automate</h2>
+
+
+
+<p>Nitro Automate works at two levels.</p>
+
+
+
+<p>At the team and department level, it combines document automation, AI-powered data extraction, and workflow orchestration to eliminate manual document work entirely for high-volume processes.</p>
+
+
+
+<p>At the individual level, it accelerates essential document tasks that still require human judgment, such as reviewing, approving, or routing documents.</p>
+
+
+
+<p>Across both levels, enterprise integrations make document data accessible to every stakeholder, whether they’re automating a process or working through it directly.</p>
+
+
+
+<p><strong>Here are four ways Nitro Automate transforms document-intensive workflows.</strong></p>
+
+
+
+<h3 class="wp-block-heading"><a></a>Eliminate many manual PDF tasks</h3>
+
+
+
+<p>Despite significant investments in digitalization, many core business workflows, like employee onboarding, contract review, and invoice processing, still depend on employees manually performing routine document tasks before work can move forward. These tasks include:</p>
+
+
+
+<ul class="wp-block-list">
+<li>Converting files to the right format</li>
+
+
+
+<li>Splitting or merging PDFs</li>
+
+
+
+<li>Extracting specific content</li>
+
+
+
+<li>Applying security settings</li>
+
+
+
+<li>Preparing final document packages</li>
+</ul>
+
+
+
+<p>Individually, each task takes only a few minutes. But repeated across hundreds or thousands of documents, they add up to hours of low-value manual work embedded inside otherwise automated workflows. Nitro Automate removes these manual document steps from core business workflows entirely, so employees are no longer a required step between one process stage and the next.</p>
+
+
+
+<p>These activities may seem insignificant when viewed individually, but when thousands of documents are at play, they can create substantial operational overhead. Nitro Automate helps automate these processes through reusable workflows that can run behind the scenes to support business operations.</p>
+
+
+
+<p>That means that your teams can focus on higher-value work while improving process consistency and reducing the risk of errors.</p>
+
+
+
+<h3 class="wp-block-heading">Automate eSignature workflows beyond the signature</h3>
+
+
+
+<p>In many organizations, obtaining an electronic signature is only one step in a larger workflow.</p>
+
+
+
+<p>For example, a contract may require document generation, internal approvals, signature collection, storage, reporting, and follow-up actions. Similar workflows exist across industries, such as HR, procurement, legal, finance, and customer operations.</p>
+
+
+
+<p>Nitro Automate helps organizations automate these processes by integrating document preparation, routing, approvals, and Nitro Sign workflows into a single automated experience.</p>
+
+
+
+<p>Instead of managing signatures manually across disconnected tools, teams can create workflows that automatically move documents through each stage of the lifecycle, resulting in faster turnaround times, improved visibility, and fewer bottlenecks.</p>
+
+
+
+<h3 class="wp-block-heading"><a></a>Unlock data trapped in documents</h3>
+
+
+
+<p>One of Nitro Automate’s most valuable capabilities is how it transforms unstructured document content into actionable business data.</p>
+
+
+
+<p>Critical information is often stored inside contracts, invoices, applications, forms, and other documents. Accessing that information traditionally requires manual review and extraction. Nitro Automate uses AI to identify, capture, and structure document data so it can be used by downstream systems and workflows to accelerate processes, such as:</p>
+
+
+
+<ul class="wp-block-list">
+<li>Invoice and accounts payable automation</li>
+
+
+
+<li>Employee onboarding</li>
+
+
+
+<li>Contract management</li>
+
+
+
+<li>Customer intake</li>
+
+
+
+<li>Compliance reporting</li>
+
+
+
+<li>Claims and case management</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">Build document workflows that work in the AI era</h3>
+
+
+
+<p>As enterprises move beyond AI copilots that assist with individual tasks and begin deploying AI agents that can execute multi-step workflows autonomously, document automation is becoming an increasingly important part of AI strategy.</p>
+
+
+
+<p>Many AI systems can analyze information and generate recommendations, but they often require specialized tools to execute document-related tasks. Nitro Automate addresses this challenge by providing flexible integration options that support both human- and AI-driven workflows.</p>
+
+
+
+<p>For example, business teams can build their own automations using low-code and no-code tools, while developers can easily integrate Nitro Automate into existing applications and workflows using APIs.</p>
+
+
+
+<p>Nitro Automate is also compatible with the <a href="https://modelcontextprotocol.io/docs/getting-started/intro">Model Context Protocol (MCP)</a>, an emerging open source standard that allows AI agents to securely access external tools and services. Through MCP, <a href="https://www.gonitro.com/automate/mcp?utm_source=foundry&amp;utm_medium=referral&amp;utm_campaign=Introducing+Nitro+Automate%3A+Intelligent+Document+Automation+for+Enterprise+AI+Workflows" rel="sponsored">AI agents can use </a><a href="https://www.gonitro.com/automate/mcp?utm_source=foundry&amp;utm_medium=referral&amp;utm_campaign=Introducing+Nitro+Automate%3A+Intelligent+Document+Automation+for+Enterprise+AI+Workflows" rel="sponsored">Nitro’s document automation </a>solution to interact with documents inside business workflows, making Nitro Automate a document execution layer for enterprise AI initiatives.</p>
+
+
+
+<h2 class="wp-block-heading">Nitro Automate: A new approach to enterprise document operations</h2>
+
+
+
+<p>If your organization is investing in automation and AI, it’s important to recognize that document-intensive processes are one of the largest opportunities for operational improvement.</p>
+
+
+
+<p>Nitro Automate bridges the gap between documents, workflows, enterprise systems, and AI agents by bringing together document processing, eSignature automation, data extraction, and workflow orchestration.</p>
+
+
+
+<p>Ready to discover how Nitro Automate helps create intelligent workflows that can scale alongside the next generation of enterprise AI?</p>
+
+
+
+<p><a href="https://www.gonitro.com/contact-sales/nitro-automate?utm_source=foundry&amp;utm_medium=referral&amp;utm_campaign=Introducing+Nitro+Automate%3A+Intelligent+Document+Automation+for+Enterprise+AI+Workflows">Speak with a Nitro Automation Expert</a></p>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 5 ways an eSign API eliminates bottlenecks in your document workflows</title>
+  <link>https://www.cio.com/article/4194046/5-ways-an-esign-api-eliminates-bottlenecks-in-your-document-workflows.html</link>
+  <pubDate>Tue, 07 Jul 2026 21:32:12 +0000</pubDate>
+  <source>CIO.com</source>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<p>You implemented a standalone<a href="https://www.gonitro.com/sign?utm_source=foundry&amp;utm_medium=referral&amp;utm_campaign=5+Ways+an+eSign+API+Eliminates+Bottlenecks+in+Your+Document+Workflows" rel="sponsored"> </a><a href="https://www.gonitro.com/sign?utm_source=foundry&amp;utm_medium=referral&amp;utm_campaign=5+Ways+an+eSign+API+Eliminates+Bottlenecks+in+Your+Document+Workflows" rel="sponsored">eSign solution</a>, so why does the rest of your contract workflow still look like this?<strong></strong></p>
+
+
+
+<ul class="wp-block-list">
+<li>Your CRM generates the contract, but to get it signed, your sales rep has to leave the CRM and open a separate eSignature application.</li>
+
+
+
+<li>Once the signature comes back, someone has to manually update the deal status in Salesforce, upload the signed agreement to SharePoint, and notify Finance that the contract is ready for invoicing.</li>
+
+
+
+<li>Each of these handoffs depends on someone remembering to do it, and on no one doing it twice or missing a step.</li>
+</ul>
+
+
+
+<p>The bottleneck isn’t getting the signature. It’s that signing lives in its own disconnected application, separate from the CRM, the document repository, and the finance system, which all need to know the contract is done.</p>
+
+
+
+<p>eSignature solutions are supposed to speed up workflows, but if you just add eSign capabilities to manual processes, you’re sacrificing efficiency and ROI. Using an <a href="https://developers.gonitro.com?utm_source=foundry&amp;utm_medium=referral&amp;utm_campaign=5+Ways+an+eSign+API+Eliminates+Bottlenecks+in+Your+Document+Workflows" rel="sponsored">eSign API</a> lets you eliminate the handoffs that are fragmenting workflows and creating bottlenecks by embedding signing capabilities directly into the systems teams are already using.</p>
+
+
+
+<h2 class="wp-block-heading">5 ways an eSign API eliminates bottlenecks in document workflows</h2>
+
+
+
+<p><strong>An eSign API</strong> lets business systems automatically generate, send, track, and store signature requests, without requiring employees to leave the applications where the work already happens. Rather than bolting on a separate signing tool, the API embeds eSign capability directly into the CRMs, ERPs, document management systems, and custom applications teams already rely on.. By integrating signing capabilities at the system level, an eSign API eliminates five common bottlenecks that standalone eSign solutions leave unresolved.</p>
+
+
+
+<h3 class="wp-block-heading"><a></a>Bottleneck #1: Disconnected systems create manual handoffs</h3>
+
+
+
+<p>CRMs, ERPs, etc., initiate agreements — but standalone eSign tools create a separate step, involving manually moving documents from one system or application to another via downloads, uploads, and email attachments, which is time-consuming and error-prone.</p>
+
+
+
+<p>An eSign API-driven signing solution makes it possible to create signature requests, automate signed document retrieval, and check status inside an application through a REST API.</p>
+
+
+
+<p><strong>What this means for your eSigning process:</strong></p>
+
+
+
+<ul class="wp-block-list">
+<li>Fewer manual steps</li>
+
+
+
+<li>Lower error rates</li>
+
+
+
+<li>Faster cycle times</li>
+
+
+
+<li>Consistent process enforcement across teams</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">Bottleneck #2: Relying on email notifications and manual status tracking</h3>
+
+
+
+<p>When teams rely on email notifications and spreadsheets to track signatures, it’s easy for time-sensitive documents to slip through the cracks.</p>
+
+
+
+<p>An eSign API lets you programmatically track status, so systems can monitor envelopes, trigger alerts, and update records automatically.</p>
+
+
+
+<p><strong>What this means for your eSigning process:</strong></p>
+
+
+
+<ul class="wp-block-list">
+<li>Real-time workflow visibility</li>
+
+
+
+<li>Automated reminders</li>
+
+
+
+<li>Better SLA tracking</li>
+
+
+
+<li>Fewer support tickets asking, “Where is this document?”</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading"><a></a>Bottleneck #3: Siloing signed documents in separate applications</h3>
+
+
+
+<p>When contracts, onboarding forms, procurement approvals, and HR documents live in different applications, teams lose visibility and accessibility, putting data integrity and productivity at risk.</p>
+
+
+
+<p>Using an eSign API to embed eSigning directly into CRMs, ERPs, HR platforms, and custom applications, rather than forcing users into a separate signing portal, creates a <strong>system of record</strong> that keeps the entire organization on the same page.</p>
+
+
+
+<p><strong>What this means for your eSigning process:</strong></p>
+
+
+
+<ul class="wp-block-list">
+<li>Better user experience</li>
+
+
+
+<li>Reduced context switching</li>
+
+
+
+<li>Easier governance and auditing</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">Bottleneck #4: Manual processes break as document volume grows</h3>
+
+
+
+<p>Processes that work “well enough” for dozens of signatures often break when teams are processing thousands of documents per month.</p>
+
+
+
+<p>An eSign API that supports automated, enterprise-scale signing, paired with <a href="https://www.gonitro.com/pricing?utm_source=foundry&amp;utm_medium=referral&amp;utm_campaign=5+Ways+an+eSign+API+Eliminates+Bottlenecks+in+Your+Document+Workflows">predictable, usage-based pricing</a>, lets teams scale to thousands of signature transactions without adding administrative headcount to manage them.</p>
+
+
+
+<p><strong>What this means for your eSigning process:</strong></p>
+
+
+
+<ul class="wp-block-list">
+<li>Automated high-volume processing</li>
+
+
+
+<li>Consistent throughput</li>
+
+
+
+<li>Reduced administrative overhead</li>
+
+
+
+<li>More predictable operating costs</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">Bottleneck #5: Governance is applied inconsistently across manual workflows</h3>
+
+
+
+<p>The right eSign API doesn’t just make the signing tool compliant; it makes <a href="https://www.gonitro.com/security-compliance/compliance?utm_source=foundry&amp;utm_medium=referral&amp;utm_campaign=5+Ways+an+eSign+API+Eliminates+Bottlenecks+in+Your+Document+Workflows">compliance</a> part of every workflow that touches it.</p>
+
+
+
+<p>Because the API is built on infrastructure that complies with eIDAS, UETA, the ESIGN Act, SOC 2, and ISO 27001, every signature request generated through it inherits the same standards, regardless of which application, team, or process initiated it. That consistency is the real compliance benefit: instead of relying on each team to follow the right steps manually, the API enforces the same compliant process every time.</p>
+
+
+
+<p><strong>What this means for your eSigning process:</strong></p>
+
+
+
+<ul class="wp-block-list">
+<li><a href="https://www.gonitro.com/security-compliance/legal?utm_source=foundry&amp;utm_medium=referral&amp;utm_campaign=5+Ways+an+eSign+API+Eliminates+Bottlenecks+in+Your+Document+Workflows" rel="sponsored">Legally binding signatures</a></li>
+
+
+
+<li>Stronger auditability</li>
+
+
+
+<li>Consistent retention workflows</li>
+
+
+
+<li>Reduced compliance risk</li>
+
+
+
+<li>Easier reporting and evidence collection</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading">What to look for in an eSign API</h2>
+
+
+
+<ul class="wp-block-list">
+<li>Clear, comprehensive documentation</li>
+
+
+
+<li>Reliable webhooks for real-time status updates</li>
+
+
+
+<li>Strong security and compliance certifications</li>
+
+
+
+<li>Flexible embedding options across applications</li>
+
+
+
+<li>Scalable, predictable pricing</li>
+
+
+
+<li>Responsive implementation support</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading"><a></a>How the Nitro eSign API can help</h2>
+
+
+
+<p>For organizations that have outgrown their standalone signing tools, the Nitro Sign API offers a cost-effective, developer-friendly way to automate high-volume workflows, embed eSigning, ensure compliance at scale, and create measurable visibility across enterprise workflows.</p>
+
+
+
+<p><strong>Why choose the Nitro Sign API:</strong></p>
+
+
+
+<ul class="wp-block-list">
+<li><strong>Embed signing into existing systems: </strong>Generate and send signature requests directly from your CRM, ERP, customer portal, or custom application, so signing happens inside the tools your teams already use.</li>
+
+
+
+<li><strong>Automate high-volume workflows: </strong>Generate, send, and track thousands of signature requests automatically, without manual follow-up or status checks.</li>
+
+
+
+<li><strong>Scale predictably:</strong> Usage-based pricing with no hidden fees or overage penalties keeps costs predictable as transaction volume grows.</li>
+
+
+
+<li><strong>Support governance: </strong>Built on infrastructure that meets SOC 2 Type II, HIPAA, ISO 27001, and GDPR standards, with global legal validity under eIDAS, UETA, and the ESIGN Act, so compliance and auditability scale with the workflow.</li>
+</ul>
+
+
+
+<p>Discover the benefits of using the Nitro eSign API to embed <a href="https://www.gonitro.com/resources/introducing-nitro-sign-standard-and-plus-simple-secure-esigning-for-every-business?utm_source=foundry&amp;utm_medium=referral&amp;utm_campaign=5+Ways+an+eSign+API+Eliminates+Bottlenecks+in+Your+Document+Workflows" rel="sponsored">Nitro Sign</a> functionality directly into your business applications, internal systems, and custom workflows.</p>
+
+
+
+<p><a href="https://developers.gonitro.com/?utm_source=foundry&amp;utm_medium=referral&amp;utm_campaign=5+Ways+an+eSign+API+Eliminates+Bottlenecks+in+Your+Document+Workflows" rel="sponsored"><strong>Learn how the Nitro Sign API can help your team eliminate manual document work and scale signing across every workflow.</strong></a></p>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Chinese AI models are attracting US companies with lower prices</title>
+  <link>https://www.cio.com/article/4194040/chinese-ai-models-are-gaining-ground-in-the-u-s-attracting-companies-with-lower-prices.html</link>
+  <pubDate>Tue, 07 Jul 2026 21:31:13 +0000</pubDate>
+  <source>CIO.com</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<p>US companies are increasingly opting for Chinese AI models from firms such as Deepseek and Z.ai, <a href="https://www.cnbc.com/2026/07/07/chinese-ai-models-costs-us-openai-anthropic.html" rel="nofollow">CNBC</a> reports. A key reason is that they offer performance comparable to that of leading US models but at a significantly lower cost.</p>
+
+
+
+<p>According to the development platform Openrouter, Chinese models have accounted for over 30% of the AI tokens used by US companies each week since February. In some weeks, the share has been as high as 46%, compared to an average of 11% over the previous 12 months.</p>
+
+
+
+<p>Companies are reportedly increasingly choosing open AI models for tasks that do not require the highest performance. According to Openrouter, Chinese models can be between 60% and 90% cheaper than comparable alternatives from OpenAI and Anthropic.</p>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</item>
+
+<item>
+  <title>🟠 The 2026 guide to eSignatures: Evaluating security, cost, and ROI</title>
+  <link>https://www.cio.com/article/4194035/the-2026-guide-to-esignatures-evaluating-security-cost-and-roi.html</link>
+  <pubDate>Tue, 07 Jul 2026 21:27:52 +0000</pubDate>
+  <source>CIO.com</source>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<p>Choosing the right eSign solution is less about picking the tool with the most bells and whistles and more about confirming that the features support your company’s requirements for <a href="https://www.gonitro.com/resources/security-compliance?utm_source=foundry&amp;utm_medium=referral&amp;utm_campaign=The+2026+Guide+to+eSignatures%3A+Evaluating+Security%2C+Cost%2C+and+ROI" rel="sponsored">security and compliance</a>, workflow automation, cost-effectiveness, and operational efficiency.</p>
+
+
+
+<p><a href="https://www.gonitro.com/best-esign-software?utm_source=foundry&amp;utm_medium=referral&amp;utm_campaign=The+2026+Guide+to+eSignatures%3A+Evaluating+Security%2C+Cost%2C+and+ROI" rel="sponsored">The best eSign solutions</a> let teams securely collect legally binding electronic signatures while <a href="https://www.gonitro.com/integrations?utm_source=foundry&amp;utm_medium=referral&amp;utm_campaign=The+2026+Guide+to+eSignatures%3A+Evaluating+Security%2C+Cost%2C+and+ROI" rel="sponsored">integrating signing workflows</a> with business systems, compliance controls, and document lifecycle processes — evaluated across four factors: security and compliance, workflow integration, total cost of ownership, and measurable business ROI.</p>
+
+
+
+<p>When evaluating eSignature solutions, look beyond signing functionality and consider these four factors:</p>
+
+
+
+<ul class="wp-block-list">
+<li>Security and compliance</li>
+
+
+
+<li>Workflow integration</li>
+
+
+
+<li>Total cost of ownership</li>
+
+
+
+<li>Measurable business ROI</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading">Security and compliance are the foundation of eSignatures</h2>
+
+
+
+<p>Yes, you want eSigning to be convenient, but it’s arguably even more important that your eSignature solution provides the security, auditability, and legal validity required to support critical business transactions.</p>
+
+
+
+<p><strong>Look for solutions that offer:</strong></p>
+
+
+
+<ul class="wp-block-list">
+<li>Comprehensive <a href="https://www.gonitro.com/resources/esignature-audit-trials?utm_source=foundry&amp;utm_medium=referral&amp;utm_campaign=The+2026+Guide+to+eSignatures%3A+Evaluating+Security%2C+Cost%2C+and+ROI">audit trails</a></li>
+
+
+
+<li>Strong authentication controls</li>
+
+
+
+<li>Encryption in transit and at rest</li>
+
+
+
+<li>Support for established legal frameworks (e.g., the ESIGN Act, UETA, eIDAS)</li>
+</ul>
+
+
+
+<p>Independent certifications, including <a href="https://www.gonitro.com/security-compliance?utm_source=foundry&amp;utm_medium=referral&amp;utm_campaign=The+2026+Guide+to+eSignatures%3A+Evaluating+Security%2C+Cost%2C+and+ROI" rel="sponsored">SOC 2 Type II</a> and ISO 27001, provide additional assurance that an eSign vendor follows recognized security and information management practices.</p>
+
+
+
+<h2 class="wp-block-heading">The signature is only one step in the document lifecycle</h2>
+
+
+
+<p><strong>During the digital signing process, documents typically move through multiple workflows:</strong></p>
+
+
+
+<p>During the digital signing process, documents typically move through multiple stages: creation, review, approval, signature collection, storage, reporting, and retention.</p>
+
+
+
+<p>Consider a typical sales contract: it might originate in a CRM, require review and approval from finance, get routed for signature, then need to be stored in a repository, reported on for compliance, and retained per policy. If each of these steps happens in a separate, disconnected tool, the signature may be digital, but the workflow is still manual.</p>
+
+
+
+<p>When one or more of these steps rely on email attachments, manual routing, or moving files across disconnected applications, delays and inefficiencies quickly snowball.</p>
+
+
+
+<p>An eSignature platform that supports <a href="https://www.gonitro.com/automate?utm_source=foundry&amp;utm_medium=referral&amp;utm_campaign=The+2026+Guide+to+eSignatures%3A+Evaluating+Security%2C+Cost%2C+and+ROI">document workflow automation</a> can help you avoid this by connecting approval workflows, document routing, signature collection, and archival processes into a low-friction experience.</p>
+
+
+
+<h2 class="wp-block-heading">Evaluating the true cost of ownership of an eSignature solution</h2>
+
+
+
+<p>When you’re evaluating the cost of eSignature solutions, <a href="https://www.gonitro.com/pricing?utm_source=foundry&amp;utm_medium=referral&amp;utm_campaign=The+2026+Guide+to+eSignatures%3A+Evaluating+Security%2C+Cost%2C+and+ROI">subscription pricing</a> only tells part of the story. The solution with a lower upfront cost may require additional integrations, administrative effort, training, or support resources that increase long-term expenditure.</p>
+
+
+
+<p><strong>When calculating total cost of ownership, be sure to consider:</strong></p>
+
+
+
+<ul class="wp-block-list">
+<li>Licensing and transaction costs</li>
+
+
+
+<li>Implementation and integration requirements</li>
+
+
+
+<li>Administrative overhead</li>
+
+
+
+<li>User adoption and training</li>
+
+
+
+<li>Compliance and audit support</li>
+
+
+
+<li>Scalability as your business needs evolve</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading">How to measure eSignature ROI</h2>
+
+
+
+<p>Traditionally, the value proposition for eSignature software was that it reduced paper, printing, and shipping costs. Today, the value is firmly centered on operational outcomes, including:</p>
+
+
+
+<ul class="wp-block-list">
+<li>Contract turnaround times</li>
+
+
+
+<li>Employee onboarding speed</li>
+
+
+
+<li>Approval cycle duration</li>
+
+
+
+<li>Manual labor reduction</li>
+
+
+
+<li>Error elimination</li>
+
+
+
+<li>Compliance risk mitigation</li>
+
+
+
+<li>Customer and employee experience improvements</li>
+</ul>
+
+
+
+<p>For example, reducing contract processing from days to hours can have a greater business impact than eliminating printing costs. Similarly, automated approval workflows can take over repetitive administrative tasks, freeing up employees to work on higher-value initiatives.</p>
+
+
+
+<h2 class="wp-block-heading"><a></a>What to look for in an eSignature solution</h2>
+
+
+
+<p>As eSignature technology matures, the evaluation criteria have expanded beyond ease of signing. Today, organizations need solutions that can support compliance requirements, integrate with existing business systems, automate document workflows, and scale alongside broader digital transformation initiatives.</p>
+
+
+
+<p><strong>When comparing eSignature solutions, don’t just look at signing capabilities. Assess how well each eSign solution supports the entire document lifecycle through:</strong></p>
+
+
+
+<ul class="wp-block-list">
+<li>Strong security and compliance controls</li>
+
+
+
+<li>Support for ESIGN, UETA, and eIDAS requirements</li>
+
+
+
+<li>Workflow automation capabilities</li>
+
+
+
+<li>Integration with existing business systems</li>
+
+
+
+<li>API accessibility for future automation initiatives</li>
+
+
+
+<li>Comprehensive audit trails and reporting</li>
+
+
+
+<li>Predictable, scalable pricing</li>
+</ul>
+
+
+
+<p>In 2026, the best eSignature solution isn’t the one with the most features. It’s the one that connects signing to the rest of the document lifecycle while keeping security, cost, and ROI measurable.<a href="https://www.gonitro.com/sign?utm_source=foundry&amp;utm_medium=referral&amp;utm_campaign=The+2026+Guide+to+eSignatures%3A+Evaluating+Security%2C+Cost%2C+and+ROI" rel="sponsored"> </a><a href="https://www.gonitro.com/sign?utm_source=foundry&amp;utm_medium=referral&amp;utm_campaign=The+2026+Guide+to+eSignatures%3A+Evaluating+Security%2C+Cost%2C+and+ROI" rel="sponsored">Nitro Sign</a> is built around that principle: it goes beyond electronic signatures to support secure, compliant, connected document workflows that integrate with the systems teams already use, so governance improves, operations accelerate, and the solution scales with long-term business goals.</p>
+
+
+
+<p><strong>Discover why Nitro Sign has been recognized by IDC as a global leader in electronic signature software solutions.</strong></p>
+
+
+
+<p><a href="https://www.gonitro.com/contact-sales?utm_source=foundry&amp;utm_medium=referral&amp;utm_campaign=The+2026+Guide+to+eSignatures%3A+Evaluating+Security%2C+Cost%2C+and+ROI" rel="sponsored">Speak with an eSign Expert</a></p>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Watch out for fake support calls in Microsoft Teams</title>
+  <link>https://www.csoonline.com/article/4194026/watch-out-for-fake-support-calls-in-microsoft-teams.html</link>
+  <pubDate>Tue, 07 Jul 2026 21:20:43 +0000</pubDate>
+  <source>CSO Online</source>
+  <description><![CDATA[<b>Why this matters: Vendor advisory — check installed firmware/software version and patch status.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<p>Palo Alto Networks’ security division, Unit 42, is <a href="https://github.com/PaloAltoNetworks/Unit42-timely-threat-intel/blob/main/2026-06-28-Fake-IT-support-abuses-Teams-to-deliver-EtherRAT.txt">warning of yet another campaign targeting Microsoft Teams users</a>.<br /></p>
+
+
+
+<p>The new campaign begins with Teams users receiving an email asking if they would like to participate in a survey. If they open the attached PDF file, they will shortly thereafter receive a voice call purporting to be from Microsoft Support.<br /></p>
+
+
+
+<p>The fake support representative then attempts to gain permission to install a remote access tool, and in the process, Ether RAT — a Trojan that gives the scammers full access to the affected computer — is also installed.<br /></p>
+
+
+
+<p>After that, it’s a simple matter to steal sensitive data and files from users, reports <a href="https://www.bleepingcomputer.com/news/security/fake-it-support-calls-on-microsoft-teams-push-etherrat-malware/">Bleeping Computer</a>.<br /></p>
+
+
+
+<p>In other words, there’s every reason to be on guard against both email surveys and support calls.</p>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Memo: SpaceXAI and Cursor plan to launch their first jointly developed AI model as soon as Wednesday, after pushing back the launch to improve model efficiency (Grace Kay/The Information)</title>
+  <link>https://www.techmeme.com/260707/p34#a260707p34</link>
+  <pubDate>Tue, 07 Jul 2026 21:05:27 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><p><a href="https://www.techmeme.com/260707/p34#a260707p34" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Grace Kay / <a href="https://www.theinformation.com/">The Information</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://www.theinformation.com/briefings/exclusive-spacexai-plans-launch-new-model-cursor-soon-wednesday">Memo: SpaceXAI and Cursor plan to launch their first jointly developed AI model as soon as Wednesday, after pushing back the launch to improve model efficiency</a></b></span>&nbsp; &mdash;&nbsp; SpaceXAI and Cursor plan to launch their first jointly developed AI model as soon as Wednesday, according to a memo sent to staff.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+</item>
+
 <item>
   <title>🔵 Meta launches Muse Image in Meta AI, Instagram, and WhatsApp, and previews Muse Video, the first media generation models from its Superintelligence Labs (Meta)</title>
   <link>https://www.techmeme.com/260707/p33#a260707p33</link>
@@ -12,7 +911,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://ai.meta.com/blog/introducing-muse-image-muse-video-msl/"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260707/i33.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260707/p33#a260707p33" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="https://www.meta.com/">Meta</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://ai.meta.com/blog/introducing-muse-image-muse-video-msl/">Meta launches Muse Image in Meta AI, Instagram, and WhatsApp, and previews Muse Video, the first media generation models from its Superintelligence Labs</a></b></span>&nbsp; &mdash;&nbsp; We're excited to launch Muse Image and preview Muse Video, the first media generation models developed by Meta Superintelligence Labs.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://ai.meta.com/blog/introducing-muse-image-muse-video-msl/">Meta launches Muse Image in Meta AI, Instagram, and WhatsApp, and previews Muse Video, the first media generation models from its Superintelligence Labs</a></b></span>&nbsp; &mdash;&nbsp; We're excited to launch Muse Image and preview Muse Video, the first media generation models developed by Meta Superintelligence Labs.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
 </item>
 
 <item>
@@ -20,7 +919,7 @@
   <link>https://www.zdnet.com/article/ive-finally-found-an-android-tv-remote-that-is-easy-to-use/</link>
   <pubDate>Tue, 07 Jul 2026 20:00:38 +0000</pubDate>
   <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>When a remote that ships with a TV is just horribly designed, you can always turn to your phone to make your life easier.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>When a remote that ships with a TV is just horribly designed, you can always turn to your phone to make your life easier.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
 </item>
 
 <item>
@@ -30,7 +929,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.coindesk.com/business/2026/07/07/crypto-exchange-kraken-is-trying-to-become-a-bank-in-europe"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260707/i32.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260707/p32#a260707p32" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Ian Allison / <a href="http://www.coindesk.com/">CoinDesk</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.coindesk.com/business/2026/07/07/crypto-exchange-kraken-is-trying-to-become-a-bank-in-europe">Source: Kraken is pursuing a full banking license in Europe, with a focus on Lithuania as the jurisdiction to secure it</a></b></span>&nbsp; &mdash;&nbsp; Kraken, the cryptocurrency exchange planning to go public in the U.S., is pursuing a full banking license in Europe, with a focus on Lithuania as the jurisdiction to secure it &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.coindesk.com/business/2026/07/07/crypto-exchange-kraken-is-trying-to-become-a-bank-in-europe">Source: Kraken is pursuing a full banking license in Europe, with a focus on Lithuania as the jurisdiction to secure it</a></b></span>&nbsp; &mdash;&nbsp; Kraken, the cryptocurrency exchange planning to go public in the U.S., is pursuing a full banking license in Europe, with a focus on Lithuania as the jurisdiction to secure it &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
 </item>
 
 <item>
@@ -38,7 +937,7 @@
   <link>https://www.zdnet.com/article/windows-11-bug-500gb-storage/</link>
   <pubDate>Tue, 07 Jul 2026 18:55:29 +0000</pubDate>
   <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>A glitch in Windows 11 causes a specific system file to keep growing in size, though a patch is available. Here's what you need to know about it.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>A glitch in Windows 11 causes a specific system file to keep growing in size, though a patch is available. Here's what you need to know about it.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
 </item>
 
 <item>
@@ -48,7 +947,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://9to5mac.com/2026/07/07/anthropic-expanding-claude-cowork-to-mobile-and-web-details-here/"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260707/i31.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260707/p31#a260707p31" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Zac Hall / <a href="https://9to5mac.com/">9to5Mac</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://9to5mac.com/2026/07/07/anthropic-expanding-claude-cowork-to-mobile-and-web-details-here/">Anthropic extends Claude Fable 5 access to all paid plans through July 12; access to the model was set to shift to token-based usage on July 7</a></b></span>&nbsp; &mdash;&nbsp; Anthropic announced today that it is expanding Claude Cowork capabilities from the desktop app to the web and mobile.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://9to5mac.com/2026/07/07/anthropic-expanding-claude-cowork-to-mobile-and-web-details-here/">Anthropic extends Claude Fable 5 access to all paid plans through July 12; access to the model was set to shift to token-based usage on July 7</a></b></span>&nbsp; &mdash;&nbsp; Anthropic announced today that it is expanding Claude Cowork capabilities from the desktop app to the web and mobile.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
 </item>
 
 <item>
@@ -56,17 +955,17 @@
   <link>https://www.zdnet.com/article/how-to-use-chatgpt-finance-to-manage-money-investments-debts/</link>
   <pubDate>Tue, 07 Jul 2026 18:27:43 +0000</pubDate>
   <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>With ChatGPT Finances, I can see all my money, investments, and debts in one place - and I can ask AI what it all means.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>With ChatGPT Finances, I can see all my money, investments, and debts in one place - and I can ask AI what it all means.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
 </item>
 
 <item>
-  <title>🔵 Meta rolls out Muse Image, the first image generation model from its Superintelligence Labs, in Meta AI; it will also power new tools in Instagram and WhatsApp (Meta Newsroom)</title>
+  <title>🔵 Introducing Muse Image: Image Generation Built for Your World (Meta Newsroom)</title>
   <link>https://www.techmeme.com/260707/p30#a260707p30</link>
   <pubDate>Tue, 07 Jul 2026 18:17:30 +0000</pubDate>
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://about.fb.com/news/2026/07/introducing-muse-image-meta-ai/"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260707/i30.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260707/p30#a260707p30" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="https://about.fb.com/">Meta Newsroom</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://about.fb.com/news/2026/07/introducing-muse-image-meta-ai/">Meta rolls out Muse Image, the first image generation model from its Superintelligence Labs, in Meta AI; it will also power new tools in Instagram and WhatsApp</a></b></span>&nbsp; &mdash;&nbsp; Today, Meta is rolling out Muse Image, the company's first image generation model from Meta Superintelligence Labs, now available in Meta AI.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://about.fb.com/news/2026/07/introducing-muse-image-meta-ai/">Introducing Muse Image: Image Generation Built for Your World</a></b></span>&nbsp; &mdash;&nbsp; Today, Meta is rolling out Muse Image, the company's first image generation model from Meta Superintelligence Labs, now available in Meta AI.&nbsp; Muse Spark made Meta AI a smarter assistant; now, Muse Image acts as the creative partner &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
 </item>
 
 <item>
@@ -74,7 +973,7 @@
   <link>https://www.zdnet.com/article/cloud-rebuild-restore-windows-11-from-scratch-even-if-it-cant-boot-up/</link>
   <pubDate>Tue, 07 Jul 2026 17:43:00 +0000</pubDate>
   <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Now in preview mode, the new Cloud rebuild option will restore Windows to a clean state if some glitch prevents it from even loading.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Now in preview mode, the new Cloud rebuild option will restore Windows to a clean state if some glitch prevents it from even loading.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
 </item>
 
 <item>
@@ -82,7 +981,7 @@
   <link>https://www.zdnet.com/article/home-assistant-os-open-source-smart-home-on-spare-pc/</link>
   <pubDate>Tue, 07 Jul 2026 17:10:38 +0000</pubDate>
   <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Home Assistant OS can serve as a user-friendly control hub for your smart devices. Here's how to get started.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Home Assistant OS can serve as a user-friendly control hub for your smart devices. Here's how to get started.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
 </item>
 
 <item>
@@ -92,7 +991,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://9to5google.com/2026/07/07/made-by-google-2026-invite/"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260707/i29.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260707/p29#a260707p29" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Abner Li / <a href="https://9to5google.com/">9to5Google</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://9to5google.com/2026/07/07/made-by-google-2026-invite/">Google announces a Pixel event on August 12 in NYC, where it is expected to launch Pixel 11 series of phones and Pixel Watch 5</a></b></span>&nbsp; &mdash;&nbsp; Made by Google 2026 is officially taking place on Wednesday, August 12.&nbsp; This is a week earlier compared to last year, with Google once again opting for an earlier Pixel hardware unveil.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://9to5google.com/2026/07/07/made-by-google-2026-invite/">Google announces a Pixel event on August 12 in NYC, where it is expected to launch Pixel 11 series of phones and Pixel Watch 5</a></b></span>&nbsp; &mdash;&nbsp; Made by Google 2026 is officially taking place on Wednesday, August 12.&nbsp; This is a week earlier compared to last year, with Google once again opting for an earlier Pixel hardware unveil.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -100,7 +999,7 @@
   <link>https://www.zdnet.com/article/best-robot-vacuum/</link>
   <pubDate>Tue, 07 Jul 2026 17:01:00 +0000</pubDate>
   <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>I tested the best robot vacuums from brands like Ecovacs, Roborock, Mova, and more in lab and home settings - here are the top ones.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>I tested the best robot vacuums from brands like Ecovacs, Roborock, Mova, and more in lab and home settings - here are the top ones.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -257,7 +1156,7 @@
 
 
 <p><strong>Subscribe to the </strong><a href="https://qvac.tether.io/newsletter/" rel="sponsored" target="_blank"><strong>QVAC newsletter</strong></a><strong> to learn more about Tether’s breakthroughs in AI</strong></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -265,7 +1164,7 @@
   <link>https://www.zdnet.com/article/linux-mint-vs-refreshos-best-distro-for-new-users/</link>
   <pubDate>Tue, 07 Jul 2026 16:30:39 +0000</pubDate>
   <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>These two user-friendly distributions take different routes to the 'best Linux' crown. The winner comes down to this.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>These two user-friendly distributions take different routes to the 'best Linux' crown. The winner comes down to this.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -275,7 +1174,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.bloomberg.com/news/articles/2026-07-07/microsoft-replaces-openai-anthropic-with-own-ai-in-some-apps?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc4MzQ0MjM2NSwiZXhwIjoxNzg0MDQ3MTY1LCJhcnRpY2xlSWQiOiJUSEkzR1FLSkg2VjcwMCIsImJjb25uZWN0SWQiOiJEQ0FGMjNFM0YyMkE0Qzk5OTM0RUMyRDEwNkM0ODc0NyJ9.o3G1Rc0_tcYioF4Awm8U44FDwiFRIsbSW630u65OvbQ"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260707/i28.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260707/p28#a260707p28" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Brody Ford / <a href="https://www.bloomberg.com/">Bloomberg</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/articles/2026-07-07/microsoft-replaces-openai-anthropic-with-own-ai-in-some-apps?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc4MzQ0MjM2NSwiZXhwIjoxNzg0MDQ3MTY1LCJhcnRpY2xlSWQiOiJUSEkzR1FLSkg2VjcwMCIsImJjb25uZWN0SWQiOiJEQ0FGMjNFM0YyMkE0Qzk5OTM0RUMyRDEwNkM0ODc0NyJ9.o3G1Rc0_tcYioF4Awm8U44FDwiFRIsbSW630u65OvbQ">Sources: Microsoft, looking to reduce AI costs, is starting to replace models from OpenAI and Anthropic with its MAI models in products like Excel and Outlook</a></b></span>&nbsp; &mdash;&nbsp; Microsoft Corp., looking to reduce AI costs, is starting to replace OpenAI and Anthropic with its own models in software products like Excel and Outlook.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/articles/2026-07-07/microsoft-replaces-openai-anthropic-with-own-ai-in-some-apps?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc4MzQ0MjM2NSwiZXhwIjoxNzg0MDQ3MTY1LCJhcnRpY2xlSWQiOiJUSEkzR1FLSkg2VjcwMCIsImJjb25uZWN0SWQiOiJEQ0FGMjNFM0YyMkE0Qzk5OTM0RUMyRDEwNkM0ODc0NyJ9.o3G1Rc0_tcYioF4Awm8U44FDwiFRIsbSW630u65OvbQ">Sources: Microsoft, looking to reduce AI costs, is starting to replace models from OpenAI and Anthropic with its MAI models in products like Excel and Outlook</a></b></span>&nbsp; &mdash;&nbsp; Microsoft Corp., looking to reduce AI costs, is starting to replace OpenAI and Anthropic with its own models in software products like Excel and Outlook.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -285,59 +1184,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: Budget/licensing impact — verify renewal terms and forecast cost changes.</b><br/><a href="https://variety.com/2026/tv/news/netflix-variety-how-well-do-they-know-video-licensing-1236803102/"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260707/i27.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260707/p27#a260707p27" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> William Earl / <a href="http://www.variety.com/">Variety</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://variety.com/2026/tv/news/netflix-variety-how-well-do-they-know-video-licensing-1236803102/">Netflix signs deals with Penske Media, Cond&eacute; Nast, Hearst, People, and other publishers to carry a range of programming from 2 to 20+ minutes, starting August 3</a></b></span>&nbsp; &mdash;&nbsp; Netflix is further expanding the mix of content available on its platform through licensing partnerships with a range of top publishers &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 This free Android app makes sharing files so easy - available for Windows, Mac, and iOS too</title>
-  <link>https://www.zdnet.com/article/free-android-app-makes-sharing-files-easy-for-windows-mac-ios-too/</link>
-  <pubDate>Tue, 07 Jul 2026 16:21:07 +0000</pubDate>
-  <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>If you're looking for an effortless way of transferring files from Android to your other devices, look no further than Blip.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Sennheiser Momentum 5 vs. Bose QuietComfort Ultra 2: I compared the two and found a winner</title>
-  <link>https://www.zdnet.com/article/sennheiser-momentum-5-vs-bose-quietcomfort-ultra-2/</link>
-  <pubDate>Tue, 07 Jul 2026 16:20:00 +0000</pubDate>
-  <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Sennheiser's and Bose's flagship headphones are both solid choices, and the best pair boils down to your personal preferences.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Anthropic expands Claude Cowork to web and mobile in beta for Max plan subscribers, and says 90%+ of Cowork usage is unrelated to software development (David Gewirtz/ZDNET)</title>
-  <link>https://www.techmeme.com/260707/p26#a260707p26</link>
-  <pubDate>Tue, 07 Jul 2026 16:10:02 +0000</pubDate>
-  <source>Techmeme</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://www.zdnet.com/article/anthropic-claude-cowork-comes-to-phone-web-cloud/"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260707/i26.jpg" vspace="4" /></a>
-<p><a href="https://www.techmeme.com/260707/p26#a260707p26" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> David Gewirtz / <a href="https://www.zdnet.com/">ZDNET</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.zdnet.com/article/anthropic-claude-cowork-comes-to-phone-web-cloud/">Anthropic expands Claude Cowork to web and mobile in beta for Max plan subscribers, and says 90%+ of Cowork usage is unrelated to software development</a></b></span>&nbsp; &mdash;&nbsp; ZDNET's key takeaways&nbsp; &mdash; Claude Cowork is becoming a cloud-based AI helper.&nbsp; &mdash; Desktop still offers the fullest Cowork experience.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Tangos, which uses AI to conduct financial crime investigations at scale, raised a $20M seed led by Red Dot (Mike Wheatley/SiliconANGLE)</title>
-  <link>https://www.techmeme.com/260707/p25#a260707p25</link>
-  <pubDate>Tue, 07 Jul 2026 16:05:20 +0000</pubDate>
-  <source>Techmeme</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://siliconangle.com/2026/07/07/tangos-grabs-20m-funding-take-bad-guys-automating-financial-crime-investigations/"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260707/i25.jpg" vspace="4" /></a>
-<p><a href="https://www.techmeme.com/260707/p25#a260707p25" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Mike Wheatley / <a href="http://siliconangle.com/">SiliconANGLE</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://siliconangle.com/2026/07/07/tangos-grabs-20m-funding-take-bad-guys-automating-financial-crime-investigations/">Tangos, which uses AI to conduct financial crime investigations at scale, raised a $20M seed led by Red Dot</a></b></span>&nbsp; &mdash;&nbsp; Tangos AI Inc., a startup that uses artificial intelligence to conduct financial crime investigations at unprecedented scale, said today it has closed on $20 million in seed funding.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 What&#x27;s new with iPhone 18 Pro Max? Guess correctly for a chance to win an Apple Watch</title>
-  <link>https://www.zdnet.com/article/big-guessing-game-apple-edition-round-2/</link>
-  <pubDate>Tue, 07 Jul 2026 16:01:48 +0000</pubDate>
-  <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Each prediction you get right gives an entry into the grand prize drawing.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Anthropic&#x27;s Claude Cowork heads to the cloud as data shows 90% of sessions aren&#x27;t for coding</title>
-  <link>https://www.zdnet.com/article/anthropic-claude-cowork-comes-to-phone-web-cloud/</link>
-  <pubDate>Tue, 07 Jul 2026 16:00:03 +0000</pubDate>
-  <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Claude Cowork is moving to web and mobile, and new data shows it's being used far beyond coding and software development. Can it safely replace OpenClaw for me? Stay tuned.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://variety.com/2026/tv/news/netflix-variety-how-well-do-they-know-video-licensing-1236803102/">Netflix signs deals with Penske Media, Cond&eacute; Nast, Hearst, People, and other publishers to carry a range of programming from 2 to 20+ minutes, starting August 3</a></b></span>&nbsp; &mdash;&nbsp; Netflix is further expanding the mix of content available on its platform through licensing partnerships with a range of top publishers &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -345,7 +1192,7 @@
   <link>https://www.zdnet.com/article/jadepuffer-fully-agentic-ransomware-attack-researchers-nightmares/</link>
   <pubDate>Tue, 07 Jul 2026 15:49:02 +0000</pubDate>
   <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: Elevated ransomware risk — validate backups and endpoint defenses.</b><br/>JadePuffer could be the first reported case of a ransomware attack driven by AI from start to finish. How can businesses respond?<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Elevated ransomware risk — validate backups and endpoint defenses.</b><br/>JadePuffer could be the first reported case of a ransomware attack driven by AI from start to finish. How can businesses respond?<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
@@ -526,7 +1373,7 @@
 
 <p>Respecto a la evolución futura del rol del CIO en general, el ejecutivo es plenamente consciente de la transformación que esta función ha tenido en los últimos años, ahora “más pegado al negocio”. “En la actualidad, se ha amplificado más el rol del CIO, que ya no está ligado a la continuidad, la resiliencia o la seguridad, sino es un rol de agente del cambio, impulsor de la adopción de nuevas tecnologías, formador, visionario de nuevos modelos de negocio… En definitiva, un rol, paradójicamente en esta era de la IA, cada vez más humano”.</p>
 </div></div></div>
-</div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
+</div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
@@ -659,17 +1506,7 @@
 
 
 <p><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><a href="https://www.cio.com/expert-contributor-network/"><strong>Want to join?</strong></a></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Apple supplier Luxshare raised ~$3.1B in its Hong Kong IPO, selling 383.5M shares at ~$8 each, the top of its marketed range, and will start trading on Thursday (Bloomberg)</title>
-  <link>https://www.techmeme.com/260707/p20#a260707p20</link>
-  <pubDate>Tue, 07 Jul 2026 13:45:01 +0000</pubDate>
-  <source>Techmeme</source>
-  <description><![CDATA[<b>Why this matters: Budget/licensing impact — verify renewal terms and forecast cost changes.</b><br/><a href="https://www.bloomberg.com/news/articles/2026-07-07/apple-supplier-luxshare-prices-3-1-billion-hk-listing-at-top"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260707/i20.jpg" vspace="4" /></a>
-<p><a href="https://www.techmeme.com/260707/p20#a260707p20" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="https://www.bloomberg.com/">Bloomberg</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/articles/2026-07-07/apple-supplier-luxshare-prices-3-1-billion-hk-listing-at-top">Apple supplier Luxshare raised ~$3.1B in its Hong Kong IPO, selling 383.5M shares at ~$8 each, the top of its marketed range, and will start trading on Thursday</a></b></span>&nbsp; &mdash;&nbsp; Apple Inc. supplier Luxshare Precision Industry Co. raised HK$24.3 billion ($3.1 billion) after pricing shares for its Hong Kong listing at the maximum amount it had set.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 8h ago]]></description>
 </item>
 
 <item>
@@ -677,7 +1514,7 @@
   <link>https://www.zdnet.com/article/android-security-setting-spots-bad-networks-and-fake-cell-towers/</link>
   <pubDate>Tue, 07 Jul 2026 13:33:00 +0000</pubDate>
   <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Connecting to the wrong network can put your data at risk. Android can warn you, but you'll have to allow it first.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Connecting to the wrong network can put your data at risk. Android can warn you, but you'll have to allow it first.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 8h ago]]></description>
 </item>
 
 <item>
@@ -686,7 +1523,7 @@
   <pubDate>Tue, 07 Jul 2026 13:13:02 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><p>The audits are reportedly being spearheaded by CISA’s Attack Surface Evaluation team, a specialized unit tasked with conducting digital defense assessments and simulated hacking exercises.</p>
-<p>The post <a href="https://www.securityweek.com/cisa-reportedly-using-anthropics-mythos-to-scan-government-software-for-flaws/">CISA Reportedly Using Anthropic’s Mythos to Scan Government Software for Flaws</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/cisa-reportedly-using-anthropics-mythos-to-scan-government-software-for-flaws/">CISA Reportedly Using Anthropic’s Mythos to Scan Government Software for Flaws</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 8h ago]]></description>
 </item>
 
 <item>
@@ -857,7 +1694,7 @@
 
 
 <p><strong>Press@PhoenixMGMTConsulting.com</strong></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 8h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
 </item>
 
 <item>
@@ -866,7 +1703,7 @@
   <pubDate>Tue, 07 Jul 2026 12:21:56 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/><p>Researchers say the Iran-linked threat actor used an adaptable modular malware framework and compromised IT service providers to reach high-value targets in Israel.</p>
-<p>The post <a href="https://www.securityweek.com/iran-linked-hackers-using-modular-cc-framework-in-cyberattacks/">Iran-Linked Hackers Using Modular C&amp;C Framework in Cyberattacks</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 8h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/iran-linked-hackers-using-modular-cc-framework-in-cyberattacks/">Iran-Linked Hackers Using Modular C&amp;C Framework in Cyberattacks</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
 </item>
 
 <item>
@@ -947,7 +1784,7 @@
 
 
 <p><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><strong><a href="https://www.cio.com/expert-contributor-network/">Want to join?</a></strong></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 11h ago]]></description>
 </item>
 
 <item>
@@ -1064,7 +1901,7 @@
 
 
 <p>“The engineers already obsessed with this on nights and weekends, who are shipping personal projects and experimenting with new models, those people just need permission, resources, and a real problem to solve,” he says. “The best AI teams I’ve seen weren’t built by recruiting, but by creating the conditions for the right people to step forward.”</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 10h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 12h ago]]></description>
 </item>
 
 <item>
@@ -1177,7 +2014,7 @@
 
 
 <p>The priority, she said, is to reduce the paths available to attackers and prove, through regular resilience exercises, that the organization can contain an intrusion before it becomes a wider outage.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 11h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 12h ago]]></description>
 </item>
 
 <item>
@@ -1296,7 +2133,7 @@
 
 
 <p><em><a href="https://joseenrique.es/" rel="nofollow">José Enrique Ibarra</a> is Interim CIO and AI Project Manager, with three decades of experience leading IT in regulated sectors—banking, insurance, energy, and public administration. His focus is on governing digital transformation and AI adoption under the AI </em><em>​​Regulation, DORA, NIS2, GDPR, ISO 27001, and the Spanish National Security Framework (ENS), ensuring it withstands the scrutiny of auditors and regulators. He leads AI Forge, his applied AI initiative. He resides in Almería.</em></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 11h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 12h ago]]></description>
 </item>
 
 <item>
@@ -1413,7 +2250,7 @@
 
 
 <p><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><strong><a href="https://www.cio.com/expert-contributor-network/">Want to join?</a></strong></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 11h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
 </item>
 
 <item>
@@ -1510,7 +2347,7 @@
 
 
 <p><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><strong><a href="https://www.cio.com/expert-contributor-network/">Want to join?</a></strong></p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 11h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
 </item>
 
 <item>
@@ -1587,7 +2424,7 @@
 
 
 <p>CMS의 <a href="https://cms.law/de/deu/personen/anna-lena-fuellsack" rel="nofollow" target="_blank">안나 레나 퓔작</a> 변호사는 “GDPR 집행은 이제 초기 단계를 벗어나 유럽 전역의 법률 체계에서 일상적인 요소로 자리 잡았다”라며 “앞으로도 GDPR은 기업 전략에서 핵심적으로 고려해야 할 중요한 과제가 될 것”이라고 평가했다.<br />dl-ciokorea@foundryco.com</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 14h ago]]></description>
 </item>
 
 <item>
@@ -1632,7 +2469,7 @@
 
 
 <p>버지스 사무총장은 “핵심 과제는 위협이 누적된다는 점이다. 동시다발적이고 연쇄적이며 복합적인 위협으로 보안 환경이 악화되는 상황에서 자원이 제한돼 있다면 무엇을, 어떤 순서로 우선 대응할 것인지 결정하는 것이 가장 어려운 문제”라고 말했다.<br />dl-ciokorea@foundryco.com</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 14h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 15h ago]]></description>
 </item>
 
 <item>
@@ -1781,7 +2618,7 @@
 
 
 <p>También se esfuerza por comprender cualquier rasgo cultural o personal que pueda influir en su respuesta a los distintos enfoques de liderazgo, y por identificar cómo sacar lo mejor de cada persona y defender lo que mejor les funciona. Al igual que los colegios adaptan las clases a los alumnos en función de si aprenden de forma visual, auditiva o práctica, “eso es lo que tenemos que aplicar ahora en el liderazgo”, afirma.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 14h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 15h ago]]></description>
 </item>
 
 <item>
@@ -1910,7 +2747,7 @@
 
 
 <p>랜들은 “따라서 MS는 실제 AI를 운영 환경에 적용하려는 의지가 분명하고, 충분한 예산과 활용 가능한 데이터를 갖췄으며, 경영진의 명확한 지원을 확보한 고객에게 최고의 기술 인력을 우선 배치할 가능성이 높다”라고 전망했다.<br />dl-ciokorea@foundryco.com</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 14h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 16h ago]]></description>
 </item>
 
 <item>
@@ -2093,7 +2930,7 @@
 
 
 <p><strong>jessicalee@insignary.com</strong></p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 16h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 18h ago]]></description>
 </item>
 
 <item>
@@ -2222,7 +3059,7 @@
 
 
 <p></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 18h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 20h ago]]></description>
 </item>
 
 <item>
@@ -2327,7 +3164,7 @@
 
 
 <p></p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 19h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 20h ago]]></description>
 </item>
 
 <item>
@@ -3020,127 +3857,6 @@
 </item>
 
 <item>
-  <title>🟠 AI doesn’t eliminate inefficiency. It amplifies it</title>
-  <link>https://www.cio.com/article/4192406/ai-doesnt-eliminate-inefficiency-it-amplifies-it.html</link>
-  <pubDate>Mon, 06 Jul 2026 10:00:00 +0000</pubDate>
-  <source>CIO.com</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><div id="remove_no_follow">
-		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
-					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
-						<div class="article-column__content">
-<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
-
-
-
-<p>Over the past two years, I have spent a significant amount of time discussing artificial intelligence with technology leaders, business executives and teams across my own organization. Most conversations begin with questions about the use cases, tools, governance and return on investment. Leaders want to know which technologies are creating the most value, where to invest next and how quickly they should scale adoption.</p>
-
-
-
-<p>Those are important questions, but I have noticed another pattern emerging as organizations move beyond experimentation and begin embedding AI into everyday work. In many cases, the technology itself is not the primary obstacle to success. Instead, AI is exposing organizational challenges that have existed for years. Processes that were already inefficient become more visible. Ambiguous decision-making structures become harder to ignore. Accountability gaps that once slowed projects quietly now become more apparent as work accelerates.</p>
-
-
-
-<p>This has led me to a simple conclusion: AI does not eliminate inefficiency. It amplifies it.</p>
-
-
-
-<p>That observation should not be interpreted as a criticism of AI. In fact, it highlights just how powerful the technology can be. AI accelerates workflows, shortens analysis cycles, improves access to information and increases employee productivity. However, because it accelerates the way work gets done, it also magnifies the strengths and weaknesses of the operating environment in which it is deployed. Organizations with strong processes and clear accountability often realize value quickly. Organizations with operational complexity frequently discover that technology alone cannot overcome management challenges.</p>
-
-
-
-<h2 class="wp-block-heading">AI accelerates existing operating models</h2>
-
-
-
-<p>Many organizations approach AI as a technology initiative. They evaluate platforms, launch pilots and identify tasks that can be automated. While those activities are important, they can also create a false impression that AI itself is the primary driver of transformation.</p>
-
-
-
-<p>In my experience, the greatest value comes not from the technology alone but from the willingness to rethink how work gets done. AI can automate tasks, but it cannot redesign a broken workflow. If a process contains unnecessary approvals, duplicate activities, conflicting priorities or poorly defined handoffs, those issues remain regardless of how sophisticated the technology becomes.</p>
-
-
-
-<p>This idea is consistent with a broader lesson I explore in my latest book, <a href="https://www.nicholascolisto.com/digital-inside-out"><em>Digital Inside Out</em></a>: digital transformation succeeds when organizations focus first on how work gets done, how decisions are made and how accountability is established. Technology can accelerate performance, but it rarely compensates for weaknesses in the underlying operating model. In many cases, new technologies simply make those weaknesses more visible.</p>
-
-
-
-<p>Researchers at the<a href="https://mitsloan.mit.edu/ideas-made-to-matter/how-ai-reshaping-workflows-and-redefining-jobs?utm_source=chatgpt.com" rel="nofollow"> </a><a href="https://mitsloan.mit.edu/ideas-made-to-matter/how-ai-reshaping-workflows-and-redefining-jobs?utm_source=chatgpt.com" rel="nofollow">MIT Sloan School of Management</a> have reached a similar conclusion. Their work suggests that organizations generate the greatest value from AI when they redesign workflows rather than simply automate individual tasks. In other words, the most significant gains come from rethinking how work flows through the organization rather than accelerating isolated activities.</p>
-
-
-
-<p>I have seen this pattern repeatedly throughout my career. Enterprise systems did not fix poor business processes. Collaboration platforms did not automatically improve communication. Analytics tools did not create accountability. Each technology delivered substantial benefits, but only when accompanied by process redesign, governance improvements and leadership commitment. AI follows the same pattern.</p>
-
-
-
-<p>Organizations that simply layer AI on top of existing complexity often find themselves completing inefficient work faster. Employees may generate reports in minutes instead of hours, produce presentations more quickly and analyze larger volumes of information. Yet the underlying process may still contain the same bottlenecks that limited performance before AI was introduced. The technology increases speed, but it does not automatically improve effectiveness.</p>
-
-
-
-<h2 class="wp-block-heading">Why decision-making becomes the new bottleneck</h2>
-
-
-
-<p>One of the most interesting effects of AI is how it changes the nature of organizational constraints. Historically, many companies struggled because information was difficult to access. Data was fragmented across systems, reporting cycles were slow and analysis required significant manual effort. Leaders frequently spent considerable time gathering information before they could make decisions.</p>
-
-
-
-<p>AI is rapidly reducing those barriers. Teams can now summarize large volumes of information, identify patterns, generate recommendations and produce insights in a fraction of the time previously required. Access to information is becoming less of a competitive differentiator because the effort required to generate it continues to decline.</p>
-
-
-
-<p>As this happens, another challenge becomes more visible. Many organizations discover that their greatest constraint is no longer information. It is decision-making.</p>
-
-
-
-<p>When ownership is unclear, faster insights do not necessarily produce faster outcomes. Teams may have access to excellent recommendations yet still struggle to determine who is responsible for acting on them. Multiple stakeholders may believe they have authority over a decision. Escalations become more common. Consensus-driven cultures can become overwhelmed by the volume of information being generated.</p>
-
-
-
-<p>Some of the most difficult conversations I have encountered in AI initiatives have had little to do with models, prompts or technical architecture. Instead, they involve governance, ownership, accountability and decision rights. These challenges existed before AI, but the technology makes them more visible because it removes many of the delays previously associated with gathering and analyzing information.</p>
-
-
-
-<p>This trend is likely to become even more pronounced as organizations adopt AI agents capable of executing tasks and workflows. While technology can automate actions, accountability remains a leadership responsibility. Leaders must still determine who owns outcomes, who approves actions and who is responsible when decisions create unintended consequences.</p>
-
-
-
-<h2 class="wp-block-heading"><a></a>What leaders should fix before scaling AI</h2>
-
-
-
-<p>Deloitte’s annual<a href="https://www.deloitte.com/us/en/what-we-do/capabilities/applied-artificial-intelligence/content/state-of-ai-in-the-enterprise.html?utm_source=chatgpt.com" rel="nofollow"> </a><a href="https://www.deloitte.com/us/en/what-we-do/capabilities/applied-artificial-intelligence/content/state-of-ai-in-the-enterprise.html?utm_source=chatgpt.com" rel="nofollow">State of AI in the Enterprise research</a> highlights the challenges organizations face when attempting to scale AI beyond pilots and isolated use cases. This finding reinforces a lesson many leaders are learning firsthand: realizing value from AI requires organizational change, process redesign and strong leadership, not just new technology</p>
-
-
-
-<p>For CIOs and business leaders, one of the most important priorities should be simplifying processes before automating them. AI can reduce manual effort, but it rarely eliminates complexity that has been embedded into a process over many years. Organizations often achieve greater value by removing unnecessary steps before introducing automation.  As Jon McNeill writes in his book, The Algorithm, <em>“No need to waste time speeding up the old process. Instead, design, simplify, optimize and begin to work your new process. Then speed it up.”</em></p>
-
-
-
-<p>Leaders should also establish clear decision rights before scaling AI-enabled workflows. As information becomes easier to generate, organizations need clarity regarding who is accountable for making decisions and driving action. Without that clarity, AI can create more recommendations than the organization is capable of acting upon.</p>
-
-
-
-<p>Another important consideration is measurement. Many organizations continue to evaluate AI success through adoption rates, license utilization or employee engagement metrics. While these measures provide useful signals, they do not necessarily reflect business value. Leaders should focus on outcomes such as productivity improvements, revenue growth, cost reduction, customer experience enhancements and risk mitigation.</p>
-
-
-
-<p>Most importantly, leaders should recognize that AI adoption is fundamentally a leadership challenge. Technology can accelerate work, but leaders determine how work is organized, governed, measured and improved. Organizations that treat AI solely as a technology initiative often struggle to move beyond experimentation. Organizations that use AI as an opportunity to improve processes, clarify accountability and modernize operating models are more likely to achieve sustainable results.</p>
-
-
-
-<p>As AI adoption continues to accelerate, I believe the organizations that realize the greatest value will not necessarily be those with the largest investments or the most advanced models. They will be the organizations willing to address the management and operational issues that AI brings into focus. In many cases, AI is not creating new problems. It is revealing existing ones with greater speed and clarity.</p>
-
-
-
-<p>That may be one of the most valuable contributions AI can make. By exposing inefficiencies that organizations have learned to tolerate, it creates an opportunity for leaders to address them directly. The companies that seize that opportunity will be better positioned not only to benefit from AI, but also to improve the way their organizations operate long after the current wave of innovation has passed.</p>
-
-
-
-<p><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><strong><a href="https://www.cio.com/expert-contributor-network/">Want to join?</a></strong></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
-</item>
-
-<item>
   <title>🔵 Playing to win at the AI casino</title>
   <link>https://www.cio.com/article/4184020/playing-to-win-at-the-ai-casino.html</link>
   <pubDate>Mon, 06 Jul 2026 10:00:00 +0000</pubDate>
@@ -3230,171 +3946,6 @@
 
 
 <p>Know when to press on emerging momentum and walk away from bets that don’t compound value. Most of all, <a href="https://www.cio.com/article/4172478/why-relationships-are-the-hidden-infrastructure-of-ai-transformation.html">recognize that AI leadership</a> is about demonstrating you can read the table, understand the odds, and move with conviction before the rest of the market catches up, not just proving you can keep the lights on while experimenting at the edges.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
-</item>
-
-<item>
-  <title>🔵 벤더 종속 vs 빠른 구축…MS·AWS FDE 도입 전 따져볼 것들</title>
-  <link>https://www.cio.com/article/4193102/%eb%b2%a4%eb%8d%94-%ec%a2%85%ec%86%8d-vs-%eb%b9%a0%eb%a5%b8-%ea%b5%ac%ec%b6%95ms%c2%b7aws-fde-%eb%8f%84%ec%9e%85-%ec%a0%84-%eb%94%b0%ec%a0%b8%eb%b3%bc-%ea%b2%83%eb%93%a4.html</link>
-  <pubDate>Mon, 06 Jul 2026 09:20:12 +0000</pubDate>
-  <source>CIO.com</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><div id="remove_no_follow">
-		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
-					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
-						<div class="article-column__content">
-<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
-
-
-
-<p>시스템 통합(Systems Integrator, SI)은 수십 년 동안 IT 프로젝트의 핵심 파트너 역할을 맡아왔다. 컨설팅 서비스를 제공하는 것은 물론, 기업이 다양한 기술을 구축하고 도입할 수 있도록 지원해 왔다.</p>
-
-
-
-<p>그러나 기업들이 에이전틱 AI 도입에 본격적으로 나서면서 주요 LLM 공급업체들도 이 시장에 직접 뛰어들고 있다. 대표적인 사례가 FDE(Forward Deployed Engineer) 서비스다. AI 전문가를 고객 조직에 직접 배치해 AI 서비스를 설계하고 맞춤화하며 구축까지 지원하는 방식이다.</p>
-
-
-
-<p>실제로 마이크로소프트(MS)는 7월 2일 25억 달러(약 3조 8,000억 원)를 투자한 ‘마이크로소프트 프론티어 컴퍼니(Microsoft Frontier Company)’를 <a href="https://blogs.microsoft.com/blog/2026/07/02/microsoft-frontier-company-ai-engineering-that-amplifies-and-protects-your-intelligence/" rel="nofollow" target="_blank">출범했다</a>. MS는 이 서비스가 기존 FDE를 뛰어넘는 새로운 모델이라고 설명했다. 아마존웹서비스(AWS)도 10억 달러(약 1조 5,000억 원)를 투자해 새로운 AWS FDE 플랫폼을 선보였다.</p>
-
-
-
-<p>두 프로젝트 모두 수천 명의 MS와 AWS 엔지니어를 고객 환경에 직접 투입한다. AI 도구 구축을 지원하는 것은 물론, 향후 고객이 자체적으로 AI 프로젝트를 수행할 수 있도록 필요한 역량도 함께 전수하는 것이 목표다. 앤트로픽을 비롯한 다른 주요 AI 모델 기업들도 자체 FDE 서비스를 앞세워 시장에 뛰어들고 있다.</p>
-
-
-
-<p>인포테크 리서치 그룹(Info-Tech Research Group)의 리서치 디렉터 <a href="https://www.infotech.com/profiles/thomas-randall" rel="nofollow" target="_blank">토머스 랜들</a>은 AI 투자와 투자 대비 수익률(ROI) 간 격차가 점점 커지고 있으며, 기업들은 AI 도입이 실제 비즈니스 성과로 이어진다는 점을 입증해야 하는 압박을 받고 있다고 분석했다.</p>
-
-
-
-<p>랜들은 “MS와 AWS 같은 공급업체의 FDE는 제품에 대한 깊은 이해를 바탕으로 고객의 학습 기간을 단축하고, 재사용 가능한 업무 프로세스를 구축하며, 이후 조직 내부로 이전할 수 있는 역량을 확보하도록 지원하는 데 중요한 역할을 하게 될 것”이라고 말했다.</p>
-
-
-
-<h2 class="wp-block-heading" id="%ed%94%84%eb%a1%a0%ed%8b%b0%ec%96%b4-%ed%8a%b8%eb%9e%9c%ec%8a%a4%ed%8f%ac%eb%a9%94%ec%9d%b4%ec%85%98">프론티어 트랜스포메이션</h2>
-
-
-
-<p>MS 상업 비즈니스 부문 최고경영자(CEO) <a href="https://news.microsoft.com/source/exec/judson-althoff/" rel="nofollow" target="_blank">저드슨 알트호프</a>는 <a href="https://www.microsoft.com/en-us/frontier-company" rel="nofollow" target="_blank">블로그를 통해 </a>마이크로소프트 프론티어 컴퍼니(Microsoft Frontier Company)가 6,000명의 전문가를 고객 조직에 투입해 고객의 비즈니스 목표에 맞는 AI 시스템을 공동 설계하고, 공동 혁신하며, 구축과 지속적인 고도화까지 지원한다고 밝혔다.</p>
-
-
-
-<p>새 서비스는 MS가 ‘프론티어 트랜스포메이션(Frontier Transformation)’이라고 부르는 개념을 중심으로 한다. 기업이 자체 데이터와 내부 전문성, 업무 프로세스, 의사결정 체계를 기반으로 지능형 플랫폼을 구축할 수 있도록 지원하는 것이 핵심이다.</p>
-
-
-
-<p>또한 핀옵스 원칙을 기반으로 AI 스택 전반에서 AI 서비스를 관찰하고, 거버넌스를 적용하며, 관리하고, 보호할 수 있도록 지원한다. 알트호프는 이를 통해 AI의 지능이 시간이 지날수록 지속적으로 축적되고 고도화된다고 설명했다.</p>
-
-
-
-<p>알트호프는 마이크로소프트 프론티어 컴퍼니를 “다양한 모델을 지원하는 개방형 이기종 플랫폼”이라고 소개했다. 고객은 챗GPT, 클로드, MS 코파일럿은 물론 오픈소스 모델이나 산업 특화 모델 등 원하는 모델을 자유롭게 선택할 수 있다.</p>
-
-
-
-<p>알트호프는 “기업이 특정 기술 공급업체에 종속되어서는 안 되는 것처럼 특정 AI 모델에도 종속되어서는 안 된다”라고 밝혔다. 또한 고객의 데이터와 지식재산(IP)은 보호되며, MS의 AI 모델 학습에는 사용되지 않는다고 설명했다.</p>
-
-
-
-<p>MS는 액센추어, 캡제미니, EY, KPMG, PwC 등 글로벌 SI 및 FDE 파트너와 협력해 플랫폼을 확대할 계획이다. 런던증권거래소그룹(LSEG), 미국 농업·식품 협동조합 랜드올레이크스(Land O’Lakes), 유니레버, 노보 노디스크 등 초기 고객들은 이미 측정 가능한 성과를 거두고 있다고 알트호프는 전했다.</p>
-
-
-
-<p>예를 들어 LSEG 워크스페이스에 탑재된 AI는 정형·비정형 금융 데이터를 기반으로 금융 전문가가 복잡한 질문을 던지고 신속하게 답을 얻을 수 있도록 지원한다. 알트호프는 고객 피드백과 실시간 사용자 테스트를 반복적으로 반영해 기반 시스템을 지속적으로 개선하고 있으며, 이를 통해 개발 주기를 단축하고 모델의 성능과 적용 범위를 꾸준히 확대하고 있다고 설명했다.</p>
-
-
-
-<p>알트호프는 “지속적인 개선이 이뤄지는 AI 시스템을 구축하려면 산업에 대한 깊은 이해를 갖춘 엔터프라이즈 AI 엔지니어링 역량이 필요하다”라며 이것이 FDE의 핵심 가치라고 말했다.</p>
-
-
-
-<h2 class="wp-block-heading" id="%ea%b5%ac%ec%b6%95-%ea%b8%b0%ea%b0%84-%eb%8c%80%ed%8f%ad-%eb%8b%a8%ec%b6%95%ed%95%98%eb%8a%94-aws-fde">구축 기간 대폭 단축하는 AWS FDE</h2>
-
-
-
-<p>AWS 프런티어 AI 엔지니어링 및 서비스 담당 부사장 <a href="https://www.linkedin.com/in/francesscavasquez" rel="nofollow" target="_blank">프란체스카 바스케스</a>는 <a href="http://aboutamazon.com/news/aws/aws-1-billion-forward-deployed-ai-engineers" rel="nofollow" target="_blank">블로그를 </a><a href="https://www.linkedin.com/in/francesscavasquez" rel="nofollow" target="_blank">통해</a> AWS FDE가 숙련된 엔지니어를 고객의 비즈니스, 엔지니어링, 보안 조직에 직접 배치해 고객의 데이터와 업무 프로세스, 거버넌스 체계에 최적화된 AI 에이전트를 구축하고 배포하도록 지원한다고 밝혔다.</p>
-
-
-
-<p>바스케스는 “기존 컨설팅은 시스템을 평가하고 권고안을 제시하며 각각의 구축 프로젝트를 독립적으로 수행하는 데 초점을 맞췄지만, AWS FDE는 장기적인 운영을 염두에 두고 AI를 구축한다”라고 설명했다.</p>
-
-
-
-<p>이어 고객은 AI 구축에 필요한 역량과 업무 방식, 개발 패턴을 익히면서 단순한 관찰자에서 공동 개발자를 거쳐 AI를 독자적으로 운영하는 조직으로 성장하게 된다고 밝혔다.</p>
-
-
-
-<p>바스케스는 AWS FDE가 에이전틱 AI를 중심으로 설계됐으며, 구축 기간을 기존 수개월에서 수일 수준으로 단축하는 것을 목표로 한다고 설명했다. 또한 프로젝트를 통해 축적된 비즈니스 인텔리전스는 이후 AI 프로젝트에도 지속적으로 활용될 수 있다고 말했다.</p>
-
-
-
-<p>AWS AI 서비스를 직접 개발하는 엔지니어를 포함한 FDE 인력은 프로젝트를 검증하고 기술 지침을 제공한다. AWS는 플랫폼 확대를 위해 파트너를 대상으로 교육과 도구, 각종 지원도 강화하고 있다고 밝혔다.</p>
-
-
-
-<p>또한 고객은 런북(Runbook)과 아키텍처 문서를 제공받으며, 시맨틱 계층을 통해 다양한 데이터 소스를 연결해 AI 에이전트가 추론할 수 있는 지식 그래프를 구축할 수 있다고 바스케스는 설명했다.</p>
-
-
-
-<p>바스케스는 도메인 전문성이 고객의 코드와 AI 에이전트, 시스템에 축적되기 때문에 담당자가 바뀌더라도 조직의 핵심 지식이 유지된다고 설명했다. 또한 하드웨어 기반 격리와 종단 간 암호화 등 보안 기능도 함께 제공된다고 밝혔다.</p>
-
-
-
-<p>바스케스는 AWS FDE가 단순히 AI를 시험적으로 도입하는 조직을 위한 서비스가 아니라 “실험 단계를 넘어 실제 비즈니스 프로세스에 AI를 운영하려는 기업을 위해 설계된 플랫폼”이라고 설명했다.</p>
-
-
-
-<h2 class="wp-block-heading" id="si%ec%9d%98-%ec%97%ad%ed%95%a0%ec%9d%80-%ec%97%ac%ec%a0%84%ed%9e%88-%ec%9c%a0%ed%9a%a8">SI의 역할은 여전히 유효</h2>
-
-
-
-<p>독립 기술 컨설턴트 <a href="https://ca.linkedin.com/in/carmi" rel="nofollow" target="_blank">카미 레비</a>는 SI가 수십 년 동안 높은 수익성을 바탕으로 고객과 긴밀한 관계를 구축해 온 만큼, 하이퍼스케일러가 이 시장의 일부를 직접 확보하려는 것은 “매우 자연스러운 전략”이라고 평가했다.</p>
-
-
-
-<p>레비는 “MS와 아마존은 고객 락인(lock-in)을 강화하는 동시에 고객의 운영과 의사결정 과정에 더욱 깊이 관여할 수 있는 기회를 적극적으로 확대하려 하고 있다”라고 분석했다.</p>
-
-
-
-<p>랜들은 인포테크 리서치 그룹의 자체 조사 결과 기업의 77%가 아직 전사 차원의 AI 전략을 수립하지 못한 것으로 나타났다고 소개했다. FDE는 고객의 실제 AI 시스템과 참조 아키텍처, 런북(Runbook), 각종 운영 산출물에 집중해 이러한 공백을 메우는 역할을 할 것이라고 설명했다.</p>
-
-
-
-<p>반면 SI는 FDE와는 다른 가치를 제공한다고 랜들은 말했다. SI의 강점은 시스템 전반에 걸친 통합 역량과 변화 관리, 대규모 프로젝트 확장에 있으며, “SI가 제공하는 산출물은 보다 전략적이고 적용 범위도 훨씬 넓다”라고 설명했다.</p>
-
-
-
-<p>물론 두 영역이 일부 겹치는 부분도 있다. 랜들은 MS가 앞으로도 글로벌 SI 파트너와 긴밀히 협력할 것으로 내다봤다. 또한 AI 투자 부담과 구현의 복잡성이 커지면서 하이퍼스케일러도 고객을 보다 밀착 지원하는 프리미엄 서비스를 제공해야 하는 압박을 받고 있다고 분석했다.</p>
-
-
-
-<h2 class="wp-block-heading" id="%ea%b8%b0%ec%97%85%ec%9d%b4-%ea%b3%a0%eb%a0%a4%ed%95%b4%ec%95%bc-%ed%95%a0-%ec%82%ac%ed%95%ad">기업이 고려해야 할 사항</h2>
-
-
-
-<p>레비는 특정 AI 스택을 이미 선택한 기업이라면 단일 공급업체 전략을 수용할 수 있다는 전제 아래 이러한 플랫폼이 충분히 매력적인 선택지가 될 수 있다고 평가했다.</p>
-
-
-
-<p>그는 “MS와 아마존이 가격과 서비스 측면에서 SI와 경쟁력을 확보한다면 충분히 매력적인 대안이 될 수 있다”라고 말했다. 다만 특정 공급업체의 서비스를 이용하면 선택의 폭이 줄어들 수 있으며, 이는 장기적으로 기업의 선택지를 제한하는 요인이 될 수 있다고 지적했다.</p>
-
-
-
-<p>이어 이러한 플랫폼이 고객과 공급업체 가운데 누구에게 더 큰 가치를 제공하는지, 기존 대안보다 더 높은 효과를 제공하는지는 아직 검증되지 않았으며 결국 시장이 판단하게 될 것이라고 전망했다.</p>
-
-
-
-<p>레비는 IT 의사결정자들에게 MS와 아마존의 에이전틱 AI 구축 역량을 SI와 비교하는 것은 물론, 이들 서비스가 실제로 고객의 이익을 최우선으로 설계된 것인지도 함께 검토해야 한다고 조언했다.</p>
-
-
-
-<p>랜들 역시 기업은 무엇을 목표로 하는지 먼저 명확히 해야 한다고 강조했다. FDE는 특정 플랫폼에서 AI를 빠르고 정확하게 구축하는 데 강점을 갖고 있는 반면, SI는 이를 기업 전체의 복잡한 IT 환경으로 확장하고 통합하는 역할을 수행한다는 설명이다.</p>
-
-
-
-<p>그는 AI 파일럿 단계를 넘어 신속하고 효과적으로 서비스를 구축하려는 기업에는 FDE가 적합하며, 이를 조직 전반의 복잡한 업무 프로세스로 확산해야 하는 단계에서는 SI의 역할이 더욱 중요해진다고 말했다.</p>
-
-
-
-<p>랜들은 또 다른 고려 사항으로 “기본적인 AI 전략을 아직 수립하는 단계에 있거나 특정 클라우드에 종속되지 않는 전략을 유지하려는 기업에는 FDE가 적합하지 않다”라고 조언했다.<br />dl-ciokorea@foundryco.com</p>
 </div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
