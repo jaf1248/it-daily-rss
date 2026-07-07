@@ -1,7 +1,7 @@
 # IT Weekly Intelligence Briefing
 **Period:** June 30 – July 07, 2026  
-**Generated:** 2026-07-07 16:28 UTC  
-**Items reviewed:** 132  
+**Generated:** 2026-07-07 19:00 UTC  
+**Items reviewed:** 133  
 
 ## ⚡ Top Actions This Week
 
@@ -10,11 +10,11 @@
    Source: The Hacker News  
 
 2. **Validate backups, confirm EDR coverage, and brief incident response team.**  
-   _JadePuffer ransomware used AI agent to automate entire attack_  
-   Source: BleepingComputer  
+   _U.S. Government Entity Paid Kairos $1 Million in Data-Theft Extortion Case_  
+   Source: The Hacker News  
 
 3. **Validate backups, confirm EDR coverage, and brief incident response team.**  
-   _U.S. Government Entity Paid Kairos $1 Million in Data-Theft Extortion Case_  
+   _New Avalon Malware Framework Packs CrownX Ransomware Capabilities_  
    Source: The Hacker News  
 
 ---
@@ -23,11 +23,6 @@
 
 ### [⚡ Weekly Recap: Proxy Botnets, Browser Ransomware, AI Agent Tricks, Fake PoC Malware and More](https://thehackernews.com/2026/07/monday-recap-proxy-botnets-browser.html)
 **Source:** The Hacker News &nbsp;·&nbsp; **Date:** Jul 06  
-**Why it matters:** Elevated ransomware risk across the sector.  
-**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
-
-### [JadePuffer ransomware used AI agent to automate entire attack](https://www.bleepingcomputer.com/news/security/jadepuffer-ransomware-used-ai-agent-to-automate-entire-attack/)
-**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jul 04  
 **Why it matters:** Elevated ransomware risk across the sector.  
 **Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
 
@@ -51,9 +46,17 @@
 **Why it matters:** Elevated ransomware risk across the sector.  
 **Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
 
+### [AI Agent Exploits Langflow RCE to Automate Database Ransomware Attack](https://thehackernews.com/2026/07/ai-agent-exploits-langflow-rce-to.html)
+**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Jul 02  
+**Why it matters:** Elevated ransomware risk across the sector.  
+**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
+
 ---
 
 ## 🟠 Important — Review This Week
+
+- [Chinese hackers develop LONGLEASH malware to expand ORB network](https://www.bleepingcomputer.com/news/security/chinese-hackers-develop-longleash-malware-to-expand-orb-network/)  
+  **BleepingComputer** · Jul 07 · _General awareness item._  
 
 - [CVE-2026-45638 Windows Ancillary Function Driver for WinSock Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45638)  
   **Microsoft Security Response Center (MSRC)** · Jul 07 · _General awareness item._  
@@ -76,20 +79,17 @@
 - [CVE-2026-10536 HTTP/2 stream-dependency tree UAF](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-10536)  
   **Microsoft Security Response Center (MSRC)** · Jul 07 · _General awareness item._  
 
-- [CVE-2026-8286 wrong STARTTLS connection reuse](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-8286)  
-  **Microsoft Security Response Center (MSRC)** · Jul 07 · _General awareness item._  
-
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [More Odd DNS Records: NIMLOC, (Tue, Jul 7th)](https://isc.sans.edu/diary/rss/33128) — SANS Internet Storm Center
+- [Hidden backdoor in Tenda router firmware grants admin access](https://www.bleepingcomputer.com/news/security/hidden-backdoor-in-tenda-router-firmware-grants-admin-access/) — BleepingComputer
+- [RedWing MaaS Packages Android Bank Fraud as a Telegram Rental Service](https://thehackernews.com/2026/07/redwing-maas-packages-android-bank.html) — The Hacker News
+- [Rogue Agent Flaw Could Have Let Attackers Hijack Google Dialogflow CX Chatbots](https://thehackernews.com/2026/07/rogue-agent-flaw-could-have-let.html) — The Hacker News
 - [Spain arrests suspected member of pro-Russian hacktivist groups](https://www.bleepingcomputer.com/news/security/spain-arrests-suspected-member-of-pro-russian-hacktivist-groups/) — BleepingComputer
 - [DEBULL Tooling Abuses Microsoft Device-Code Flow to Target M365 Accounts](https://thehackernews.com/2026/07/debull-tooling-abuses-microsoft-device.html) — The Hacker News
-- [Public GitHub Issue Could Trick GitHub Agentic Workflows Into Leaking Private Repo Data](https://thehackernews.com/2026/07/public-github-issue-could-trick-github.html) — The Hacker News
-- [The GitHub Actions Attack Pattern Your CI Security Scanners Miss](https://www.bleepingcomputer.com/news/security/the-github-actions-attack-pattern-your-ci-security-scanners-miss/) — BleepingComputer
-- [Court Filing Reveals Windows Device ID Helped FBI Trace Alleged Scattered Spider Hacker](https://thehackernews.com/2026/07/court-filing-reveals-windows-device-id.html) — The Hacker News
-- [Webinar tomorrow: Why modern email attacks require a new approach to defense](https://www.bleepingcomputer.com/news/security/webinar-tomorrow-why-modern-email-attacks-require-a-new-approach-to-defense/) — BleepingComputer
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 9 critical · 79 important · 44 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 8 critical · 80 important · 45 FYI_
