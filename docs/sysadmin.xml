@@ -3,14 +3,85 @@
 <channel>
   <title>Joe SysAdmin and Operations</title>
   <description>Operational IT changes, Microsoft updates, outages, and infrastructure issues.</description>
-  <lastBuildDate>Wed, 08 Jul 2026 05:48:01 +0000</lastBuildDate>
+  <lastBuildDate>Wed, 08 Jul 2026 08:22:39 +0000</lastBuildDate>
   
+<item>
+  <title>🔴 Lock Down AKS End to End with Application Gateway for Containers and Managed Cilium L7</title>
+  <link>https://techcommunity.microsoft.com/t5/itops-talk-blog/lock-down-aks-end-to-end-with-application-gateway-for-containers/ba-p/4534205</link>
+  <pubDate>Wed, 08 Jul 2026 07:00:00 +0000</pubDate>
+  <source>Microsoft Tech Community IT Ops</source>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><p>Hello Folks!</p>
+<p>If your AKS cluster looks like most production clusters I have walked through, one of two things is true. Either nobody writes any network policies and every pod can talk to every other pod, so one compromised container blows up the entire blast radius. Or somebody wrote a few coarse rules along the lines of “namespace A talks to namespace B over port 80”, which sounds secure right up until an attacker realizes that port 80 is exactly where they were planning to live anyway. Real attacks happen at Layer 7, dressed up like ordinary HTTP traffic, and L3 / L4 plumbing cannot tell the difference.</p>
+<p>That is the gap session MAIS09 from the Microsoft Azure Infrastructure Summit 2026 closes. Vyshnavi Namani and Darshil Shah from the Azure Networking product team walked through how two AKS-managed add-ons, Application Gateway for Containers (AGC) and Cilium L7 via Advanced Container Networking Services (ACNS), can lock down the entire path from the public internet to a single pod. No NGINX. No external WAF appliance. No third-party CNI to babysit.</p>
+<p>📺 <strong>Watch the session:</strong></p>
+<p>&nbsp;</p>
+<div class="lia-embeded-content" contenteditable="false">
+</div>
+<h2>Why IT Pros Should Care</h2>
+<p>Let me cut to the chase. If you operate AKS clusters today, this session matters because:</p>
+<ul>
+<li>You probably still have an ingress controller and an external WAF stitched together with annotations and prayers. AGC plus ACNS collapses that stack into first-party add-ons that AKS owns end to end.</li>
+<li>Both Application Gateway for Containers and Advanced Container Networking Services are generally available. This is not a preview demo, this is production.</li>
+<li>Security is finally readable. Every rule is a YAML object. Code review, audit, GitOps. No more “what does this NGINX config map even do anymore” archaeology.</li>
+<li>It actually works on a real attack pattern. The demo shows WAF killing a SQL-injection-style GET that Cilium would have happily forwarded, because the method (GET) was on the allow list.</li>
+</ul>
+<p>If you have ever had to explain to an auditor why a single compromised pod could pivot across your whole cluster, this is your exit ramp.</p>
+<h2>The AKS Security Gap This Closes</h2>
+<p>Most clusters are protected by a load balancer at the edge and basically nothing inside. The cluster door looks like a vault, but the hallways are wide open. Cilium calls this the lateral movement problem, and it is exactly how Kubernetes attacks unfold in the wild. Compromise a pod, then phone home, then pivot.</p>
+<p>What MAIS09 demonstrates is something different. AGC is the L7 front door (the metal detector at the lobby). ACNS Cilium L7 is the lock on every pod’s office door. Both speak HTTP. Both enforce identity. Both are managed by AKS itself.</p>
+<p>The legacy alternative, Application Gateway Ingress Controller (AGIC), bolted a full Application Gateway onto your cluster through a translator. Two services, two lifecycles, two finger-pointing teams when something broke. AGC is the successor, built from scratch for Kubernetes, speaking the Gateway API natively, enabled with a single AKS flag. AKS provisions the controller, wires the identity, delegates the subnet, and owns the upgrades. You own the policies.</p>
+<h2>AGC + Managed Cilium, End to End</h2>
+<p>Here is the mental model from the session. Picture four concentric layers of defense between the public internet and a pod.</p>
+<ol>
+<li><strong>AGC front end.</strong> One Azure resource, one public DNS name, and (thanks to the Kubernetes Gateway API) multiple hostnames behind the same IP. The demo runs Contoso, Fabrikam, and Adventure Works on a single AGC public IP using three HTTPRoute objects. One infrastructure, three websites. Real cost savings, real ownership clarity (platform owns the Gateway, app teams own the HTTPRoutes).</li>
+<li><strong>Azure WAF on AGC.</strong> This is the content inspector. It runs the OWASP Core Rule Set (DRS 2.1 in the demo) against every incoming request, looks for SQL injection, cross-site scripting, path traversal, and the rest of the OWASP Top 10, and returns a 403 before the packet ever touches your pod. Microsoft maintains the rule set, you bind it to AGC via a SecurityPolicy.</li>
+<li><strong>ACNS Cilium L7 ingress on every pod.</strong> This is where identity-based policy lives. Rules key off pod labels, not IPs, because IPs change every time the cluster autoscaler does its job. The demo uses an allow-agc-l7-get-only CiliumNetworkPolicy that lets the AGC backend reach the tenant pods, but only with GET or GET /products. Anything else, POST, PUT, DELETE, gets a Cilium-synthesized 403 before NGINX ever sees the request.</li>
+<li><strong>ACNS east-west and egress policy.</strong> Two more policies do the heavy lifting inside. client-may-call-contoso-get-only lets the client pod reach Contoso with GET, and only Contoso. A default-deny baseline blocks everything else (pod-to-pod and pod-to-internet) with a single carve-out for kube-dns on port 53.</li>
+</ol>
+<p>The magic is that the same Cilium engine handles north-south, east-west, and egress with one consistent identity model. eBPF in the Linux kernel does the enforcement on the same node as the pod, so the decision happens before the packet leaves the host. No sidecars, no iptables sprawl, no daemonset you need to upgrade by hand.</p>
+<h2>Real-world Scenarios</h2>
+<p>The demo walks through six tests and the results map directly onto things you are probably trying to solve right now:</p>
+<ul>
+<li><strong>Multi-site hosting on one IP.</strong> Three hostnames, one AGC, three 200 OKs from three different backend pods. If you are paying for three load balancers today, you can stop.</li>
+<li><strong>WAF blocks a malicious GET that ACNS would have let through.</strong> This is the punch line of why you need both layers. The method (GET) is on the Cilium allow list, but the payload is a SQLi pattern. WAF returns 403 at the edge. Defense in depth, working as advertised.</li>
+<li><strong>Method enforcement at the pod door.</strong> GET returns 200, POST/PUT/DELETE return 403, GET /admin returns 403, GET /products returns 200. Cilium is doing actual HTTP inspection, not just dropping packets.</li>
+<li><strong>East-west enforcement with readable verdicts.</strong> Client to Contoso GET is 200. Same client, same destination, POST is 403 (L7 deny, TCP completed). Client to Fabrikam is 000 (L4 drop, no TCP handshake). Reading the difference between 403 and 000 is now a debuggable signal, not a mystery.</li>
+<li><strong>Default-deny egress kills phone-home.</strong> A pod tries to reach bing.com. DNS resolves (the carve-out works), TCP SYN goes nowhere, wget gives up with exit code 1. If that pod was compromised and trying to exfiltrate data, this is where the attack chain dies.</li>
+<li><strong>Selective allow still works.</strong> Same pod, same tools, but a DNS lookup against kube-dns inside the cluster returns instantly. We did not unplug the network. We locked it down with a purpose.</li>
+</ul>
+<p>Honest tradeoffs to call out. The session does not pretend everything is free. AGC introduces a billed subnet association and a managed identity you do not manage in BYO mode. Cilium L7 needs the Cilium data plane (ACNS Container Network Security features are Cilium-only). The Envoy proxy that handles L7 inspection has a cost only when you actually enforce L7, which is a fair deal in my book.</p>
+<h2>Getting Started</h2>
+<p>If you want to try this on a cluster of your own, three flags do most of the work on az aks create:</p>
+<ul>
+<li>--network-dataplane cilium (turns on the eBPF data plane)</li>
+<li>--enable-acns (enables Advanced Container Networking Services, including Hubble observability and Cilium L7 policy)</li>
+<li>--enable-app-routing or the ALB add-on flag (provisions the AGC controller as an AKS-managed add-on)</li>
+</ul>
+<p>From there you write four YAML objects: a default-deny CiliumNetworkPolicy, an allow-DNS carve-out, an AGC ingress allow with method and path constraints, and your east-west allow rules. The session repo includes the full set so you can clone and follow along.</p>
+<p>One bonus worth knowing about. ACNS ships Hubble out of the box, with pre-built Azure Managed Grafana dashboards. Flow logs, service maps, policy hit counts. Even on pods that are not yet under L7 enforcement, you get observability for free. When something breaks at 2 a.m., you have an audit trail instead of a tcpdump.</p>
+<h2>Resources</h2>
+<ul>
+<li><a href="https://learn.microsoft.com/en-us/azure/application-gateway/for-containers/" target="_blank">Azure Application Gateway for Containers documentation</a></li>
+<li><a href="https://learn.microsoft.com/en-us/azure/aks/how-to-apply-l7-policies" target="_blank">Set up Layer 7 policies with Advanced Container Networking Services</a></li>
+<li><a href="https://learn.microsoft.com/azure/aks/concepts-security" target="_blank">AKS security concepts</a></li>
+<li><a href="https://learn.microsoft.com/azure/aks/operator-best-practices-cluster-security" target="_blank">Cluster security best practices for AKS</a></li>
+<li><a href="https://learn.microsoft.com/en-us/azure/aks/container-network-observability-how-to" target="_blank">Container Network Observability for AKS (Hubble, Prometheus, Grafana)</a></li>
+<li><a href="https://azure-samples.github.io/aks-labs/docs/networking/acns-lab/" target="_blank">Advanced Container Networking Services hands-on lab</a></li>
+<li><a href="https://techcommunity.microsoft.com/blog/azurenetworkingblog/use-cases-of-advanced-network-observability-for-your-azure-kubernetes-service-cl/4188281" target="_blank">Use cases of Advanced Network Observability for AKS (Azure Networking Blog)</a></li>
+</ul>
+<h2>Watch the Rest of the Summit</h2>
+<p>If MAIS09 hit the spot, there are dozens more sessions in the same playlist covering AKS networking at scale, Azure Local, AVM, the new Deployment Agent, and a lot more. Grab a coffee and binge.</p>
+<p><a href="https://www.youtube.com/playlist?list=PLjt5SKzX1iI8con7FJDB56G6hHqxGm7ki" target="_blank">Microsoft Azure Infrastructure Summit 2026 playlist</a></p>
+<p>Cheers!</p>
+<p>Pierre Roman</p><br/><br/><b>Source:</b> Microsoft Tech Community IT Ops &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+</item>
+
 <item>
   <title>🔵 Bethesda, id Software reportedly hit hard by Microsoft layoffs</title>
   <link>https://arstechnica.com/gaming/2026/07/bethesda-id-software-reportedly-hit-hard-by-microsoft-layoffs/</link>
   <pubDate>Tue, 07 Jul 2026 19:52:59 +0000</pubDate>
   <source>Ars Technica</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>As much as 50 percent of some teams affected by reductions, and more could be coming.<br/><br/><b>Source:</b> Ars Technica &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>As much as 50 percent of some teams affected by reductions, and more could be coming.<br/><br/><b>Source:</b> Ars Technica &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 12h ago]]></description>
 </item>
 
 <item>
@@ -18,7 +89,7 @@
   <link>https://www.bleepingcomputer.com/news/security/hidden-backdoor-in-tenda-router-firmware-grants-admin-access/</link>
   <pubDate>Tue, 07 Jul 2026 17:27:22 +0000</pubDate>
   <source>BleepingComputer</source>
-  <description><![CDATA[<b>Why this matters: Could impact sign-ins/MFA/Conditional Access — watch for login issues.</b><br/>A hidden authentication backdoor has been found in multiple Tenda router firmware versions, potentially allowing an attacker to gain administrative access to the device's web management panel. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 12h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Could impact sign-ins/MFA/Conditional Access — watch for login issues.</b><br/>A hidden authentication backdoor has been found in multiple Tenda router firmware versions, potentially allowing an attacker to gain administrative access to the device's web management panel. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 14h ago]]></description>
 </item>
 
 <item>
@@ -26,7 +97,7 @@
   <link>https://adamtheautomator.com/deploy-paws-microsoft-entra-pim/</link>
   <pubDate>Tue, 07 Jul 2026 14:00:00 +0000</pubDate>
   <source>Adam the Automator</source>
-  <description><![CDATA[<b>Why this matters: Could impact sign-ins/MFA/Conditional Access — watch for login issues.</b><br/>Harden privileged access by pairing Microsoft Entra PIM with PAWs, Intune compliance, and Conditional Access so admin roles activate only from trusted devices.<br/><br/><b>Source:</b> Adam the Automator &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 15h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Could impact sign-ins/MFA/Conditional Access — watch for login issues.</b><br/>Harden privileged access by pairing Microsoft Entra PIM with PAWs, Intune compliance, and Conditional Access so admin roles activate only from trusted devices.<br/><br/><b>Source:</b> Adam the Automator &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 18h ago]]></description>
 </item>
 
 <item>
@@ -34,7 +105,7 @@
   <link>https://www.bleepingcomputer.com/news/microsoft/microsoft-to-enable-windows-backup-for-organizations-by-default/</link>
   <pubDate>Tue, 07 Jul 2026 09:41:19 +0000</pubDate>
   <source>BleepingComputer</source>
-  <description><![CDATA[<b>Why this matters: Could impact sign-ins/MFA/Conditional Access — watch for login issues.</b><br/>Microsoft says the Windows settings backup and restore tool will be enabled by default on Microsoft Entra-joined or Microsoft Entra hybrid-joined enterprise systems after upgrading to Windows 11 26H2. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 20h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Could impact sign-ins/MFA/Conditional Access — watch for login issues.</b><br/>Microsoft says the Windows settings backup and restore tool will be enabled by default on Microsoft Entra-joined or Microsoft Entra hybrid-joined enterprise systems after upgrading to Windows 11 26H2. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 22h ago]]></description>
 </item>
 
 <item>
@@ -42,7 +113,7 @@
   <link>https://www.bleepingcomputer.com/news/microsoft/microsoft-testing-new-cloud-rebuild-windows-11-recovery-feature/</link>
   <pubDate>Tue, 07 Jul 2026 07:37:38 +0000</pubDate>
   <source>BleepingComputer</source>
-  <description><![CDATA[<b>Why this matters: Operational impact possible — watch for changes that generate tickets.</b><br/>Microsoft has begun testing the Cloud Rebuild recovery feature in the latest Windows 11 Insider Preview builds released for users in the Experimental channel. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 22h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Operational impact possible — watch for changes that generate tickets.</b><br/>Microsoft has begun testing the Cloud Rebuild recovery feature in the latest Windows 11 Insider Preview builds released for users in the Experimental channel. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
@@ -139,7 +210,7 @@
 <h2>Watch the rest of the Summit</h2>
 <p>Catch every session from the Microsoft Azure Infra Summit 2026 on the official playlist: <a href="https://www.youtube.com/playlist?list=PLjt5SKzX1iI8con7FJDB56G6hHqxGm7ki" rel="noopener" target="_blank">https://www.youtube.com/playlist?list=PLjt5SKzX1iI8con7FJDB56G6hHqxGm7ki</a>. There is a companion session on <a class="lia-external-url" href="https://youtube.com/live/ulLX_MNRNLA" rel="noopener" target="_blank">AKS Security with AGC and Managed Cilium</a> that pairs really well with this one.</p>
 <p>Cheers!</p>
-<p>Pierre Roman</p><br/><br/><b>Source:</b> Microsoft Tech Community IT Ops &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 22h ago]]></description>
+<p>Pierre Roman</p><br/><br/><b>Source:</b> Microsoft Tech Community IT Ops &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
