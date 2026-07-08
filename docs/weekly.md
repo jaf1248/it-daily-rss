@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
-**Period:** June 30 – July 07, 2026  
-**Generated:** 2026-07-07 23:56 UTC  
+**Period:** July 01 – July 08, 2026  
+**Generated:** 2026-07-08 02:26 UTC  
 **Items reviewed:** 133  
 
 ## ⚡ Top Actions This Week
@@ -83,12 +83,12 @@
 
 ## 🔵 FYI — General Awareness
 
+- [ISC Stormcast For Wednesday, July 8th, 2026 https://isc.sans.edu/podcastdetail/9998, (Wed, Jul 8th)](https://isc.sans.edu/diary/rss/33136) — SANS Internet Storm Center
 - [More Odd DNS Records: NIMLOC, (Tue, Jul 7th)](https://isc.sans.edu/diary/rss/33128) — SANS Internet Storm Center
 - [Hidden backdoor in Tenda router firmware grants admin access](https://www.bleepingcomputer.com/news/security/hidden-backdoor-in-tenda-router-firmware-grants-admin-access/) — BleepingComputer
 - [RedWing MaaS Packages Android Bank Fraud as a Telegram Rental Service](https://thehackernews.com/2026/07/redwing-maas-packages-android-bank.html) — The Hacker News
 - [Rogue Agent Flaw Could Have Let Attackers Hijack Google Dialogflow CX Chatbots](https://thehackernews.com/2026/07/rogue-agent-flaw-could-have-let.html) — The Hacker News
 - [Spain arrests suspected member of pro-Russian hacktivist groups](https://www.bleepingcomputer.com/news/security/spain-arrests-suspected-member-of-pro-russian-hacktivist-groups/) — BleepingComputer
-- [DEBULL Tooling Abuses Microsoft Device-Code Flow to Target M365 Accounts](https://thehackernews.com/2026/07/debull-tooling-abuses-microsoft-device.html) — The Hacker News
 
 ---
 
