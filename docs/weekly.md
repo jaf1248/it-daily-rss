@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
 **Period:** July 01 – July 08, 2026  
-**Generated:** 2026-07-08 13:57 UTC  
+**Generated:** 2026-07-08 16:02 UTC  
 **Items reviewed:** 134  
 
 ## ⚡ Top Actions This Week
@@ -55,6 +55,9 @@
 
 ## 🟠 Important — Review This Week
 
+- [Ubiquiti Patches Critical UniFi Flaws Across Connect, Talk, Access, Protect, and OS](https://thehackernews.com/2026/07/ubiquiti-patches-critical-unifi-flaws.html)  
+  **The Hacker News** · Jul 08 · _General awareness item._  
+
 - [Felons, Fraudsters Flog Offensive Cybersecurity Startup](https://krebsonsecurity.com/2026/07/felons-fraudsters-flog-offensive-cybersecurity-startup/)  
   **Krebs on Security** · Jul 08 · _General awareness item._  
 
@@ -76,19 +79,16 @@
 - [New Januscape Linux flaw allows VM escape on Intel, AMD devices](https://www.bleepingcomputer.com/news/linux/new-januscape-linux-kernel-flaw-allows-vm-escape-on-intel-amd-devices/)  
   **BleepingComputer** · Jul 07 · _General awareness item._  
 
-- [Suspected China-Aligned Hackers Exploit Roundcube Flaws Against Universities](https://thehackernews.com/2026/07/suspected-china-aligned-hackers-exploit.html)  
-  **The Hacker News** · Jul 07 · _General awareness item._  
-
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [3 Ways AI Powers Service Desk Attacks and How to Prevent Them](https://www.bleepingcomputer.com/news/security/3-ways-ai-powers-service-desk-attacks-and-how-to-prevent-them/) — BleepingComputer
+- [New Ghost Phishing Wave Is Breaking Traditional Email Security](https://thehackernews.com/2026/07/new-ghost-phishing-wave-is-breaking.html) — The Hacker News
+- [SCMBANKER Malware Uses ClickFix Lures to Target Mexican Banking Users](https://thehackernews.com/2026/07/scmbanker-malware-uses-clickfix-lures.html) — The Hacker News
 - [DuckDuckGo browser now blocks YouTube video ads](https://www.bleepingcomputer.com/news/software/duckduckgo-browser-now-blocks-youtube-video-ads/) — BleepingComputer
 - [GitHub 'Verified' Commits Can Be Rewritten Into New Hashes Without Breaking Signatures](https://thehackernews.com/2026/07/github-verified-commits-can-be.html) — The Hacker News
 - [The Verification Step Is the New ATO Battleground in 2026](https://thehackernews.com/2026/07/the-verification-step-is-new-ato.html) — The Hacker News
-- [GitHub Copilot Refuses Harmful Requests in Chat, Then Writes Them in Code](https://thehackernews.com/2026/07/github-copilot-refuses-harmful-requests.html) — The Hacker News
-- [China-Linked UAT-7810 Expands ORB Network With New LONGLEASH Malware](https://thehackernews.com/2026/07/china-linked-uat-7810-expands-orb.html) — The Hacker News
-- [My Stack Simulator, (Wed, Jul 8th)](https://isc.sans.edu/diary/rss/33138) — SANS Internet Storm Center
 
 ---
 
