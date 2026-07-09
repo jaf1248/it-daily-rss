@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
-**Period:** July 01 – July 08, 2026  
-**Generated:** 2026-07-08 22:03 UTC  
+**Period:** July 02 – July 09, 2026  
+**Generated:** 2026-07-09 00:07 UTC  
 **Items reviewed:** 133  
 
 ## ⚡ Top Actions This Week
@@ -58,10 +58,13 @@
 - [Ubiquiti Patches Critical UniFi Flaws Across Connect, Talk, Access, Protect, and OS](https://thehackernews.com/2026/07/ubiquiti-patches-critical-unifi-flaws.html)  
   **The Hacker News** · Jul 08 · _General awareness item._  
 
-- [CVE-2026-58525 Microsoft Edge (Chromium-based) Security Feature Bypass Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-58525)  
+- [CVE-2026-42980 NT OS Kernel Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-42980)  
   **Microsoft Security Response Center (MSRC)** · Jul 08 · _General awareness item._  
 
-- [CVE-2026-42980 NT OS Kernel Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-42980)  
+- [CVE-2026-50656 Microsoft Defender Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-50656)  
+  **Microsoft Security Response Center (MSRC)** · Jul 08 · _General awareness item._  
+
+- [CVE-2026-58525 Microsoft Edge (Chromium-based) Security Feature Bypass Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-58525)  
   **Microsoft Security Response Center (MSRC)** · Jul 08 · _General awareness item._  
 
 - [Felons, Fraudsters Flog Offensive Cybersecurity Startup](https://krebsonsecurity.com/2026/07/felons-fraudsters-flog-offensive-cybersecurity-startup/)  
@@ -75,9 +78,6 @@
 
 - [Chinese hackers develop LONGLEASH malware to expand ORB network](https://www.bleepingcomputer.com/news/security/chinese-hackers-develop-longleash-malware-to-expand-orb-network/)  
   **BleepingComputer** · Jul 07 · _General awareness item._  
-
-- [CVE-2026-45638 Windows Ancillary Function Driver for WinSock Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45638)  
-  **Microsoft Security Response Center (MSRC)** · Jul 07 · _General awareness item._  
 
 ---
 
