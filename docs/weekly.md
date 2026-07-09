@@ -1,25 +1,30 @@
 # IT Weekly Intelligence Briefing
 **Period:** July 02 – July 09, 2026  
-**Generated:** 2026-07-09 04:51 UTC  
-**Items reviewed:** 134  
+**Generated:** 2026-07-09 08:35 UTC  
+**Items reviewed:** 135  
 
 ## ⚡ Top Actions This Week
 
 1. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _Mount Royal University confirms breach as hackers claim attack_  
+   _AssuranceAmerica data breach exposes records of 6.9 million drivers_  
    Source: BleepingComputer  
 
 2. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _Telco giant KDDI says data breach affects over 12 million people_  
+   _Mount Royal University confirms breach as hackers claim attack_  
    Source: BleepingComputer  
 
-3. **Apply emergency patch or mitigation now; check vendor advisory for workarounds.**  
-   _CISA orders feds to prioritize patching Langflow auth bypass flaw_  
+3. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
+   _Telco giant KDDI says data breach affects over 12 million people_  
    Source: BleepingComputer  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [AssuranceAmerica data breach exposes records of 6.9 million drivers](https://www.bleepingcomputer.com/news/security/assuranceamerica-data-breach-exposes-records-of-69-million-drivers/)
+**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jul 09  
+**Why it matters:** Potential credential or data exposure.  
+**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
 ### [Mount Royal University confirms breach as hackers claim attack](https://www.bleepingcomputer.com/news/security/mount-royal-university-confirms-breach-as-hackers-claim-attack/)
 **Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jul 08  
@@ -46,50 +51,45 @@
 **Why it matters:** General awareness item.  
 **Recommended action:** Apply emergency patch or mitigation now; check vendor advisory for workarounds.  
 
-### [Accenture confirms breach after hacker offers stolen data for sale](https://www.bleepingcomputer.com/news/security/accenture-confirms-breach-after-hacker-offers-stolen-data-for-sale/)
-**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jul 07  
-**Why it matters:** Potential credential or data exposure.  
-**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
-
 ---
 
 ## 🟠 Important — Review This Week
 
-- [Ubiquiti Patches Critical UniFi Flaws Across Connect, Talk, Access, Protect, and OS](https://thehackernews.com/2026/07/ubiquiti-patches-critical-unifi-flaws.html)  
-  **The Hacker News** · Jul 08 · _General awareness item._  
+- [CVE-2026-54891 Plaintext APPLICATION_DATA injected during TLS handshake delivered to client application post-handshake in ssl](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-54891)  
+  **Microsoft Security Response Center (MSRC)** · Jul 09 · _General awareness item._  
 
-- [CVE-2026-42980 NT OS Kernel Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-42980)  
-  **Microsoft Security Response Center (MSRC)** · Jul 08 · _General awareness item._  
+- [CVE-2026-55952 TLS 1.3 server denial of service via malformed ClientHello pre-shared key extension](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-55952)  
+  **Microsoft Security Response Center (MSRC)** · Jul 09 · _General awareness item._  
 
-- [CVE-2026-50656 Microsoft Defender Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-50656)  
-  **Microsoft Security Response Center (MSRC)** · Jul 08 · _General awareness item._  
+- [CVE-2026-53359 KVM: x86: Fix shadow paging use-after-free due to unexpected role](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-53359)  
+  **Microsoft Security Response Center (MSRC)** · Jul 09 · _General awareness item._  
 
-- [CVE-2026-58525 Microsoft Edge (Chromium-based) Security Feature Bypass Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-58525)  
-  **Microsoft Security Response Center (MSRC)** · Jul 08 · _General awareness item._  
+- [CVE-2026-14355 ext/openssl: Memory corruption in openssl_encrypt with AES-WRAP-PAD](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-14355)  
+  **Microsoft Security Response Center (MSRC)** · Jul 09 · _General awareness item._  
 
-- [Felons, Fraudsters Flog Offensive Cybersecurity Startup](https://krebsonsecurity.com/2026/07/felons-fraudsters-flog-offensive-cybersecurity-startup/)  
-  **Krebs on Security** · Jul 08 · _General awareness item._  
+- [CVE-2026-8286 wrong STARTTLS connection reuse](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-8286)  
+  **Microsoft Security Response Center (MSRC)** · Jul 09 · _General awareness item._  
 
-- [Ubiquiti warns of new max severity  UniFi OS vulnerability](https://www.bleepingcomputer.com/news/security/ubiquiti-warns-of-new-max-severity-unifi-os-vulnerability/)  
-  **BleepingComputer** · Jul 08 · _General awareness item._  
+- [CVE-2026-8925 SASL double-free](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-8925)  
+  **Microsoft Security Response Center (MSRC)** · Jul 09 · _General awareness item._  
 
-- [15-Year-Old GhostLock Flaw Enables Root and Container Escape on Most Linux Distros](https://thehackernews.com/2026/07/15-year-old-ghostlock-flaw-enables-root.html)  
-  **The Hacker News** · Jul 08 · _General awareness item._  
+- [CVE-2026-8926 password leak with netrc and user in URL](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-8926)  
+  **Microsoft Security Response Center (MSRC)** · Jul 09 · _General awareness item._  
 
-- [Chinese hackers develop LONGLEASH malware to expand ORB network](https://www.bleepingcomputer.com/news/security/chinese-hackers-develop-longleash-malware-to-expand-orb-network/)  
-  **BleepingComputer** · Jul 07 · _General awareness item._  
+- [CVE-2026-8927 env-set cross-proxy Digest auth state leak](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-8927)  
+  **Microsoft Security Response Center (MSRC)** · Jul 09 · _General awareness item._  
 
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [Meta's New AI Image Tool Lets Others Use Your Public Instagram Photos in AI Images](https://thehackernews.com/2026/07/metas-new-ai-image-tool-lets-others-use.html) — The Hacker News
+- [Top AI Agents Built to Catch Malicious Code Can Be Tricked Into Running It](https://thehackernews.com/2026/07/friendly-fire-ai-agents-built-to-catch.html) — The Hacker News
+- [GhostApproval Symlink Flaws Could Let Malicious Repos Run Code in AI Coding Agents](https://thehackernews.com/2026/07/ghostapproval-symlink-flaws-could-let.html) — The Hacker News
+- [Fake 7-Zip Installers Turn Devices Into Residential Proxy Nodes](https://thehackernews.com/2026/07/fake-7-zip-installers-turn-devices-into.html) — The Hacker News
 - [ISC Stormcast For Thursday, July 9th, 2026 https://isc.sans.edu/podcastdetail/10000, (Thu, Jul 9th)](https://isc.sans.edu/diary/rss/33140) — SANS Internet Storm Center
 - [&#x5f;HELP&#x5f;ME&#x5f;ESCAPE&#x5f;FROM&#x5f;BELARUS&#x5f;PLEASE&#x5f; &#x5b;Guest Diary&#x5d;, (Tue, Jul 7th)](https://isc.sans.edu/diary/rss/33130) — SANS Internet Storm Center
-- [Fake Paysafe, Skrill SDKs on NPM and PyPi steal credentials](https://www.bleepingcomputer.com/news/security/fake-paysafe-skrill-sdks-on-npm-and-pypi-steal-credentials/) — BleepingComputer
-- [Hackers exploit Roundcube flaw to spy on academic researchers](https://www.bleepingcomputer.com/news/security/hackers-exploit-roundcube-flaw-to-spy-on-academic-researchers/) — BleepingComputer
-- [AI Coding Agents Found Triggering Endpoint Security Rules Built to Catch Attackers](https://thehackernews.com/2026/07/ai-coding-agents-found-triggering.html) — The Hacker News
-- [Entra passkey enrollment vishing targets Microsoft 365 users](https://www.bleepingcomputer.com/news/security/entra-passkey-enrollment-vishing-targets-microsoft-365-users/) — BleepingComputer
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 13 critical · 76 important · 45 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 13 critical · 75 important · 47 FYI_
