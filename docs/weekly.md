@@ -1,25 +1,30 @@
 # IT Weekly Intelligence Briefing
 **Period:** July 02 – July 09, 2026  
-**Generated:** 2026-07-09 08:35 UTC  
+**Generated:** 2026-07-09 11:55 UTC  
 **Items reviewed:** 135  
 
 ## ⚡ Top Actions This Week
 
-1. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
+1. **Validate backups, confirm EDR coverage, and brief incident response team.**  
+   _GodDamn Ransomware Uses PoisonX Driver to Disable Endpoint Defenses_  
+   Source: The Hacker News  
+
+2. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
    _AssuranceAmerica data breach exposes records of 6.9 million drivers_  
    Source: BleepingComputer  
 
-2. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _Mount Royal University confirms breach as hackers claim attack_  
-   Source: BleepingComputer  
-
 3. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _Telco giant KDDI says data breach affects over 12 million people_  
+   _Mount Royal University confirms breach as hackers claim attack_  
    Source: BleepingComputer  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [GodDamn Ransomware Uses PoisonX Driver to Disable Endpoint Defenses](https://thehackernews.com/2026/07/goddamn-ransomware-uses-poisonx-driver.html)
+**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Jul 09  
+**Why it matters:** Elevated ransomware risk across the sector.  
+**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
 
 ### [AssuranceAmerica data breach exposes records of 6.9 million drivers](https://www.bleepingcomputer.com/news/security/assuranceamerica-data-breach-exposes-records-of-69-million-drivers/)
 **Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jul 09  
@@ -43,11 +48,6 @@
 
 ### [CISA orders feds to patch max severity ColdFusion flaw by Friday](https://www.bleepingcomputer.com/news/security/cisa-orders-feds-to-patch-max-severity-coldfusion-flaw-by-friday/)
 **Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jul 08  
-**Why it matters:** General awareness item.  
-**Recommended action:** Apply emergency patch or mitigation now; check vendor advisory for workarounds.  
-
-### [CISA Adds 4 Actively Exploited Adobe, Joomla, and Langflow Flaws to KEV](https://thehackernews.com/2026/07/cisa-adds-4-actively-exploited-adobe.html)
-**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Jul 08  
 **Why it matters:** General awareness item.  
 **Recommended action:** Apply emergency patch or mitigation now; check vendor advisory for workarounds.  
 
@@ -83,12 +83,12 @@
 
 ## 🔵 FYI — General Awareness
 
+- [Microsoft to retire the OWA Light client in Exchange Server](https://www.bleepingcomputer.com/news/microsoft/microsoft-announces-owa-light-retirement-in-exchange-server/) — BleepingComputer
+- [Summer of Clearinghouses](https://thehackernews.com/2026/07/summer-of-clearinghouses.html) — The Hacker News
+- [Police arrests 5,800 suspects in global anti-fraud crackdown](https://www.bleepingcomputer.com/news/security/police-arrests-5-800-suspects-in-global-anti-fraud-crackdown/) — BleepingComputer
 - [Meta's New AI Image Tool Lets Others Use Your Public Instagram Photos in AI Images](https://thehackernews.com/2026/07/metas-new-ai-image-tool-lets-others-use.html) — The Hacker News
 - [Top AI Agents Built to Catch Malicious Code Can Be Tricked Into Running It](https://thehackernews.com/2026/07/friendly-fire-ai-agents-built-to-catch.html) — The Hacker News
 - [GhostApproval Symlink Flaws Could Let Malicious Repos Run Code in AI Coding Agents](https://thehackernews.com/2026/07/ghostapproval-symlink-flaws-could-let.html) — The Hacker News
-- [Fake 7-Zip Installers Turn Devices Into Residential Proxy Nodes](https://thehackernews.com/2026/07/fake-7-zip-installers-turn-devices-into.html) — The Hacker News
-- [ISC Stormcast For Thursday, July 9th, 2026 https://isc.sans.edu/podcastdetail/10000, (Thu, Jul 9th)](https://isc.sans.edu/diary/rss/33140) — SANS Internet Storm Center
-- [&#x5f;HELP&#x5f;ME&#x5f;ESCAPE&#x5f;FROM&#x5f;BELARUS&#x5f;PLEASE&#x5f; &#x5b;Guest Diary&#x5d;, (Tue, Jul 7th)](https://isc.sans.edu/diary/rss/33130) — SANS Internet Storm Center
 
 ---
 
