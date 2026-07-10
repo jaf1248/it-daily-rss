@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
 **Period:** July 03 – July 10, 2026  
-**Generated:** 2026-07-10 20:21 UTC  
+**Generated:** 2026-07-10 21:59 UTC  
 **Items reviewed:** 136  
 
 ## ⚡ Top Actions This Week
@@ -83,12 +83,12 @@
 
 ## 🔵 FYI — General Awareness
 
+- [New U-Boot flaws could enable stealthy firmware attacks](https://www.bleepingcomputer.com/news/security/new-u-boot-flaws-could-enable-stealthy-firmware-attacks/) — BleepingComputer
 - [URGENT - Progress Tells ShareFile Customers to Shut Down Storage Zone Controllers Over Security Threat](https://thehackernews.com/2026/07/urgent-progress-tells-sharefile.html) — The Hacker News
 - [Injective Labs GitHub Compromise Pushes Wallet-Key-Stealing npm Packages](https://thehackernews.com/2026/07/injective-labs-github-compromise-pushes.html) — The Hacker News
 - [Progress urges ShareFile admins to shut down servers over “credible” threat](https://www.bleepingcomputer.com/news/security/progress-urges-sharefile-customers-to-shut-down-servers-over-credible-threat/) — BleepingComputer
 - [Six New U-Boot Flaws Could Let Malicious Images Crash Devices or Run Code at Boot](https://thehackernews.com/2026/07/six-new-u-boot-flaws-could-let.html) — The Hacker News
 - [My Stack Simulator, (Wed, Jul 8th)](https://isc.sans.edu/diary/rss/33138) — SANS Internet Storm Center
-- [Money launderer accused of stealing seized crypto while in prison](https://www.bleepingcomputer.com/news/security/money-launderer-accused-of-stealing-seized-crypto-while-in-prison/) — BleepingComputer
 
 ---
 
