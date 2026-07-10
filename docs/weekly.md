@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
 **Period:** July 03 – July 10, 2026  
-**Generated:** 2026-07-10 13:10 UTC  
+**Generated:** 2026-07-10 16:23 UTC  
 **Items reviewed:** 136  
 
 ## ⚡ Top Actions This Week
@@ -46,14 +46,23 @@
 **Why it matters:** Potential credential or data exposure.  
 **Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
-### [Mount Royal University confirms breach as hackers claim attack](https://www.bleepingcomputer.com/news/security/mount-royal-university-confirms-breach-as-hackers-claim-attack/)
-**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jul 08  
-**Why it matters:** Potential credential or data exposure.  
-**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
+### [CISA Adds 4 Actively Exploited Adobe, Joomla, and Langflow Flaws to KEV](https://thehackernews.com/2026/07/cisa-adds-4-actively-exploited-adobe.html)
+**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Jul 08  
+**Why it matters:** General awareness item.  
+**Recommended action:** Apply emergency patch or mitigation now; check vendor advisory for workarounds.  
 
 ---
 
 ## 🟠 Important — Review This Week
+
+- [Hackers exploit critical auth bypass in Gitea Docker image](https://www.bleepingcomputer.com/news/security/hackers-exploit-critical-auth-bypass-in-gitea-docker-image/)  
+  **BleepingComputer** · Jul 10 · _General awareness item._  
+
+- [Laser Attack Resets Tangem Wallet Passwords on Cards That Can't Be Patched](https://thehackernews.com/2026/07/laser-attack-resets-tangem-wallet.html)  
+  **The Hacker News** · Jul 10 · _General awareness item._  
+
+- [Researcher Details WhatsApp-to-Host Attack Chain Using Three OpenClaw Flaws](https://thehackernews.com/2026/07/researcher-details-whatsapp-to-host.html)  
+  **The Hacker News** · Jul 10 · _General awareness item._  
 
 - [Unpatched XRING Flaw in XQUIC Lets Remote Clients Crash HTTP/3 Servers](https://thehackernews.com/2026/07/unpatched-xring-flaw-in-xquic-lets.html)  
   **The Hacker News** · Jul 10 · _General awareness item._  
@@ -61,7 +70,7 @@
 - [Zimbra urges customers to patch critical web client XSS flaw](https://www.bleepingcomputer.com/news/security/zimbra-urges-customers-to-patch-critical-web-client-xss-flaw/)  
   **BleepingComputer** · Jul 10 · _General awareness item._  
 
-- [Attackers Exploit 'Ill Bloom' Vulnerability to Drain $3.1 Million From Cryptocurrency Wallets](https://thehackernews.com/2026/07/attackers-exploit-ill-bloom.html)  
+- [Attackers Exploit 'Ill Bloom' Vulnerability to Drain Over $5 Million From Cryptocurrency Wallets](https://thehackernews.com/2026/07/attackers-exploit-ill-bloom.html)  
   **The Hacker News** · Jul 10 · _General awareness item._  
 
 - [CVE-2026-56288 NULL Pointer Dereference in GNU patch](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-56288)  
@@ -70,26 +79,17 @@
 - [CVE-2026-56289 Loop with Unreachable Exit Condition in GNU patch](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-56289)  
   **Microsoft Security Response Center (MSRC)** · Jul 10 · _General awareness item._  
 
-- [CVE-2026-59818 etcd: gRPC client listener does not enforce `--client-crl-file` certificate revocation](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-59818)  
-  **Microsoft Security Response Center (MSRC)** · Jul 10 · _General awareness item._  
-
-- [Microsoft expects more Windows security updates from AI-discovered flaws](https://www.bleepingcomputer.com/news/microsoft/microsoft-expects-more-windows-security-updates-from-ai-discovered-flaws/)  
-  **BleepingComputer** · Jul 09 · _General awareness item._  
-
-- [CVE-2026-54891 Plaintext APPLICATION_DATA injected during TLS handshake delivered to client application post-handshake in ssl](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-54891)  
-  **Microsoft Security Response Center (MSRC)** · Jul 09 · _General awareness item._  
-
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [My Stack Simulator, (Wed, Jul 8th)](https://isc.sans.edu/diary/rss/33138) — SANS Internet Storm Center
+- [Money launderer accused of stealing seized crypto while in prison](https://www.bleepingcomputer.com/news/security/money-launderer-accused-of-stealing-seized-crypto-while-in-prison/) — BleepingComputer
+- [The Replicant in Your Directory: AI Agents and the Identity Security Gap](https://www.bleepingcomputer.com/news/security/the-replicant-in-your-directory-ai-agents-and-the-identity-security-gap/) — BleepingComputer
+- [New MODBEACON RAT Uses gRPC Streaming for Encrypted C2 Traffic](https://thehackernews.com/2026/07/new-modbeacon-rat-uses-grpc-streaming.html) — The Hacker News
 - [From 17,000 to 1.1 Million Assets: How Lumen Technologies Rebuilt Exposure Management at Scale](https://thehackernews.com/2026/07/from-17000-to-11-million-assets-how.html) — The Hacker News
 - [Exposed Hacker Server Reveals WP-SHELLSTORM Backdooring Thousands of WordPress Sites](https://thehackernews.com/2026/07/exposed-hacker-server-reveals-wp.html) — The Hacker News
-- [Study of 281 Free Android VPN Apps Finds Traffic Leaks, Unencrypted Data, and Tracking](https://thehackernews.com/2026/07/study-of-281-free-android-vpn-apps.html) — The Hacker News
-- [Hackers Use Fake Microsoft Entra Passkey Enrollment to Gain Microsoft 365 Access](https://thehackernews.com/2026/07/hackers-use-fake-microsoft-entra.html) — The Hacker News
-- ["Comment stuffing" in an HTML phishing attachment as a mechanism for evading AI-based detection&#x3f;, (Fri, Jul 10th)](https://isc.sans.edu/diary/rss/33144) — SANS Internet Storm Center
-- [ISC Stormcast For Friday, July 10th, 2026 https://isc.sans.edu/podcastdetail/10002, (Fri, Jul 10th)](https://isc.sans.edu/diary/rss/33142) — SANS Internet Storm Center
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 8 critical · 76 important · 52 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 7 critical · 78 important · 51 FYI_
