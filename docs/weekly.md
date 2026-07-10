@@ -1,25 +1,35 @@
 # IT Weekly Intelligence Briefing
 **Period:** July 03 – July 10, 2026  
-**Generated:** 2026-07-10 16:23 UTC  
+**Generated:** 2026-07-10 18:21 UTC  
 **Items reviewed:** 136  
 
 ## ⚡ Top Actions This Week
 
 1. **Validate backups, confirm EDR coverage, and brief incident response team.**  
-   _Former ransomware negotiator gets 4 years for BlackCat attacks_  
+   _Ryuk ransomware member pleads guilty in the US, faces 15 years in prison_  
    Source: BleepingComputer  
 
-2. **Validate backups, confirm EDR coverage, and brief incident response team.**  
-   _Ransomware Negotiator Gets 70 Months in Prison for Aiding BlackCat Attacks_  
-   Source: The Hacker News  
+2. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
+   _Police suspects Dutch hackers were involved in Odido breach_  
+   Source: BleepingComputer  
 
 3. **Validate backups, confirm EDR coverage, and brief incident response team.**  
-   _New GigaWiper Windows Backdoor Bundles Disk Wiping, Fake Ransomware, and Spyware_  
-   Source: The Hacker News  
+   _Former ransomware negotiator gets 4 years for BlackCat attacks_  
+   Source: BleepingComputer  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [Ryuk ransomware member pleads guilty in the US, faces 15 years in prison](https://www.bleepingcomputer.com/news/security/ryuk-ransomware-member-pleads-guilty-in-the-us-faces-15-years-in-prison/)
+**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jul 10  
+**Why it matters:** Elevated ransomware risk across the sector.  
+**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
+
+### [Police suspects Dutch hackers were involved in Odido breach](https://www.bleepingcomputer.com/news/security/police-suspects-dutch-hackers-were-involved-in-odido-breach/)
+**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jul 10  
+**Why it matters:** Potential credential or data exposure.  
+**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
 ### [Former ransomware negotiator gets 4 years for BlackCat attacks](https://www.bleepingcomputer.com/news/security/us-ransomware-negotiator-gets-4-years-in-prison-for-blackcat-attacks/)
 **Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jul 10  
@@ -40,16 +50,6 @@
 **Source:** The Hacker News &nbsp;·&nbsp; **Date:** Jul 09  
 **Why it matters:** Elevated ransomware risk across the sector.  
 **Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
-
-### [AssuranceAmerica data breach exposes records of 6.9 million drivers](https://www.bleepingcomputer.com/news/security/assuranceamerica-data-breach-exposes-records-of-69-million-drivers/)
-**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jul 09  
-**Why it matters:** Potential credential or data exposure.  
-**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
-
-### [CISA Adds 4 Actively Exploited Adobe, Joomla, and Langflow Flaws to KEV](https://thehackernews.com/2026/07/cisa-adds-4-actively-exploited-adobe.html)
-**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Jul 08  
-**Why it matters:** General awareness item.  
-**Recommended action:** Apply emergency patch or mitigation now; check vendor advisory for workarounds.  
 
 ---
 
@@ -83,13 +83,13 @@
 
 ## 🔵 FYI — General Awareness
 
+- [Injective Labs GitHub Compromise Pushes Wallet-Key-Stealing npm Packages](https://thehackernews.com/2026/07/injective-labs-github-compromise-pushes.html) — The Hacker News
+- [Progress urges ShareFile admins to shut down servers over “credible” threat](https://www.bleepingcomputer.com/news/security/progress-urges-sharefile-customers-to-shut-down-servers-over-credible-threat/) — BleepingComputer
+- [Six New U-Boot Flaws Could Let Malicious Images Crash Devices or Run Code at Boot](https://thehackernews.com/2026/07/six-new-u-boot-flaws-could-let.html) — The Hacker News
 - [My Stack Simulator, (Wed, Jul 8th)](https://isc.sans.edu/diary/rss/33138) — SANS Internet Storm Center
 - [Money launderer accused of stealing seized crypto while in prison](https://www.bleepingcomputer.com/news/security/money-launderer-accused-of-stealing-seized-crypto-while-in-prison/) — BleepingComputer
 - [The Replicant in Your Directory: AI Agents and the Identity Security Gap](https://www.bleepingcomputer.com/news/security/the-replicant-in-your-directory-ai-agents-and-the-identity-security-gap/) — BleepingComputer
-- [New MODBEACON RAT Uses gRPC Streaming for Encrypted C2 Traffic](https://thehackernews.com/2026/07/new-modbeacon-rat-uses-grpc-streaming.html) — The Hacker News
-- [From 17,000 to 1.1 Million Assets: How Lumen Technologies Rebuilt Exposure Management at Scale](https://thehackernews.com/2026/07/from-17000-to-11-million-assets-how.html) — The Hacker News
-- [Exposed Hacker Server Reveals WP-SHELLSTORM Backdooring Thousands of WordPress Sites](https://thehackernews.com/2026/07/exposed-hacker-server-reveals-wp.html) — The Hacker News
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 7 critical · 78 important · 51 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 8 critical · 77 important · 51 FYI_
