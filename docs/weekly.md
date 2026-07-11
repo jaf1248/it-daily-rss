@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
 **Period:** July 04 – July 11, 2026  
-**Generated:** 2026-07-11 20:06 UTC  
+**Generated:** 2026-07-11 21:45 UTC  
 **Items reviewed:** 136  
 
 ## ⚡ Top Actions This Week
@@ -55,28 +55,28 @@
 
 ## 🟠 Important — Review This Week
 
-- [CVE-2026-54908 Pion DTLS: Denial of service via panic while parsing a crafted ECDHE_PSK ServerKeyExchange message](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-54908)  
-  **Microsoft Security Response Center (MSRC)** · Jul 11 · _Potential email disruption for users._  
-
-- [CVE-2026-54886 SSH SFTP server denial of service via extended channel data infinite loop](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-54886)  
+- [Chromium: CVE-2026-14428 Insufficient validation of untrusted input in Dawn](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-14428)  
   **Microsoft Security Response Center (MSRC)** · Jul 11 · _General awareness item._  
 
-- [CVE-2026-45570 go-git: Improper single-quote escaping in go-git SSH transport](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45570)  
+- [Chromium: CVE-2026-13826 Inappropriate implementation in Autofill](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-13826)  
   **Microsoft Security Response Center (MSRC)** · Jul 11 · _General awareness item._  
 
-- [CVE-2026-45571 go-git: Crafted repositories may modify main and submodule .git directories](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45571)  
+- [Chromium: CVE-2026-13825 Uninitialized Use in Dawn](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-13825)  
   **Microsoft Security Response Center (MSRC)** · Jul 11 · _General awareness item._  
 
-- [CVE-2024-7598 Network restriction bypass via race condition during namespace termination](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-7598)  
+- [Chromium: CVE-2026-13822 Inappropriate implementation in Extensions](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-13822)  
   **Microsoft Security Response Center (MSRC)** · Jul 11 · _General awareness item._  
 
-- [CVE-2026-56000 xorg-x11-server / xwayland GLX contextTags Use-After-Free in CommonMakeCurrent()](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-56000)  
+- [Chromium: CVE-2026-13816 Insufficient validation of untrusted input in File Input](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-13816)  
   **Microsoft Security Response Center (MSRC)** · Jul 11 · _General awareness item._  
 
-- [CVE-2026-58253 NATS Server: Route API Auth Bypass](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-58253)  
+- [Chromium: CVE-2026-13788 Use after free in Fullscreen](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-13788)  
   **Microsoft Security Response Center (MSRC)** · Jul 11 · _General awareness item._  
 
-- [CVE-2026-58209 NATS Server: MQTT retained and QoS replay bypass subscribe deny filters](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-58209)  
+- [Chromium: CVE-2026-13843 Insufficient validation of untrusted input in Chrome for iOS](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-13843)  
+  **Microsoft Security Response Center (MSRC)** · Jul 11 · _General awareness item._  
+
+- [Chromium: CVE-2026-13842 Incorrect security UI in Chrome for iOS](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-13842)  
   **Microsoft Security Response Center (MSRC)** · Jul 11 · _General awareness item._  
 
 ---
