@@ -3,177 +3,14 @@
 <channel>
   <title>Joe SysAdmin and Operations</title>
   <description>Operational IT changes, Microsoft updates, outages, and infrastructure issues.</description>
-  <lastBuildDate>Sat, 11 Jul 2026 05:37:20 +0000</lastBuildDate>
+  <lastBuildDate>Sat, 11 Jul 2026 07:50:05 +0000</lastBuildDate>
   
-<item>
-  <title>🟠 Welcome Back to AZ Update</title>
-  <link>https://techcommunity.microsoft.com/t5/itops-talk-blog/welcome-back-to-az-update/ba-p/4535872</link>
-  <pubDate>Fri, 10 Jul 2026 20:20:19 +0000</pubDate>
-  <source>Microsoft Tech Community IT Ops</source>
-  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/><p>Hello Folks!<br /><br /><strong>Welcome Back to AZ Update</strong></p>
-<p>A few years ago, Antony Bartolo and I launched a simple idea called <strong>AZ Update</strong>.</p>
-<p>The goal was to provide a place where IT professionals could quickly understand what was changing in Azure, why it mattered, and what they should pay attention to next. The show became a weekly conversation focused on Azure news, infrastructure, operations, security, and the real-world impact of Microsoft's latest cloud updates.</p>
-<p>Today, Azure is moving faster than ever.</p>
-<p>Every week brings new services, platform capabilities, operational improvements, AI innovations, and architectural guidance. Keeping up is a full-time job. Most of us don't have time to read every blog post, release note, announcement, and documentation update.</p>
-<p>That's why I'm bringing <strong>AZ Update</strong> back.</p>
-<p>This time, as a <strong>weekly LinkedIn newsletter </strong>and this blog.&nbsp; To be completely transparent I am using an AI Agent to parse the update list for any in the last 7 days, filter for Infra/Ops content and research product docs and help with the draft. I do review content and write the post myself.</p>
-<p>Each edition will cut through the noise and focus on what matters most for cloud architects, platform engineers, infrastructure teams, SREs, security professionals, and IT operators. I'll share the Azure announcements worth your attention, explain why they're important, highlight practical implications, and point you to the resources that can help you go deeper.</p>
-<p>Just a concise weekly briefing from one ITPro to another.</p>
-<p>If your day-to-day involves building, operating, securing, or modernizing infrastructure in Azure, Azure Arc, AKS, hybrid environments, or the growing world of AI-powered operations, this newsletter is for you.</p>
-<p>Welcome to the next chapter of <strong>AZ Update</strong>.</p>
-<p>&nbsp;</p>
-<h2>Here is week 1!</h2>
-<p>This week’s Azure infrastructure updates bring practical operational gains for security, platform reliability, disaster recovery, and identity-driven access control. Here is a detailed ITPro breakdown with implementation guidance you can use in production planning.</p>
-<ul>
-<li>Update #1 - Generally Available: Network Security Perimeter support for Azure Event Hubs</li>
-<li>Update #2 - Generally Available: Confidential Computing support for Azure Event Hubs Dedicated</li>
-<li>Update #3 - Generally Available: Support 5x churn in Azure Site Recovery</li>
-<li>Update #4 - Generally Available: Microsoft Entra ID-based access for Azure Blob Storage SFTP</li>
-</ul>
-<h3>Update #1 - Generally Available: Network Security Perimeter support for Azure Event Hubs</h3>
-<h2>Why ITPros should care</h2>
-<p>Network Security Perimeter for Event Hubs changes how ITPros enforce connectivity boundaries around mission-critical event pipelines. Instead of depending only on isolated firewall rules per namespace, you can apply perimeter-aware controls that are easier to govern consistently across multiple services.</p>
-<p>From an operations perspective, this is a service-level hardening improvement. It helps reduce accidental exposure and supports better audit conversations when security teams ask for clear evidence of allowed and denied paths.</p>
-<h2>Operational value</h2>
-<p>The operational value is stronger day-two control. You can standardise network access policy patterns for producer and consumer applications, reduce policy drift, and simplify incident investigations when unexpected traffic appears.</p>
-<p>For production rollout, validate all dependencies first: private endpoints, DNS resolution, trusted service exceptions, managed identities, and cross-subscription network paths.</p>
-<h2>Real-world example with step-by-step guidance</h2>
-<ol>
-<li>Inventory current producer and consumer traffic flows, including private endpoints, DNS zones, and any trusted service allowances.</li>
-<li>Deploy a pilot Event Hubs namespace with perimeter controls in non-production and mirror realistic ingestion and consumption traffic.</li>
-<li>Apply least-privilege inbound and outbound perimeter rules, then execute end-to-end send/receive tests with representative message volume.</li>
-<li>Review diagnostic logs for denies, refine exceptions only where business-justified, and capture evidence for change management.</li>
-<li>Promote to production in stages with a rollback plan that restores previous network policy if message flow health degrades.</li>
-</ol>
-<h2>Technical details including code examples</h2>
-<p>Use the following sequence when validating that perimeter onboarding did not break data plane operations. The first command confirms your active Azure context, the second verifies endpoint reachability, and the third validates Event Hub metadata retrieval.</p>
-<p>Run this safely in a test window before production enforcement. If connectivity and control-plane checks pass in test, repeat with production namespace read-only checks before enabling stricter policies.</p>
-az account show --output table
-
-Test-NetConnection &lt;namespace&gt;.servicebus.windows.net -Port 5671
-
-az eventhubs eventhub show --resource-group &lt;rg&gt; --namespace-name &lt;namespace&gt; --name &lt;eventhub&gt; --output table
-<p>Expected outcome: TCP probe to port 5671 succeeds, and Event Hub metadata query returns without auth or network timeout errors. If probe fails, check DNS, NSGs, route tables, private endpoint linkage, and perimeter rule assignment scope.</p>
-<h2>Comprehensive Resources</h2>
-<ul>
-<li><a href="https://azure.microsoft.com/updates?id=567203" target="_blank">Azure update: Network Security Perimeter support for Azure Event Hubs</a></li>
-<li><a href="https://learn.microsoft.com/azure/private-link/network-security-perimeter-concepts" target="_blank">Network Security Perimeter concepts</a></li>
-<li><a href="https://learn.microsoft.com/azure/event-hubs/" target="_blank">Azure Event Hubs documentation</a></li>
-<li><a href="https://learn.microsoft.com/azure/event-hubs/network-security" target="_blank">Event Hubs networking and security</a></li>
-</ul>
-<ul>
-<li>&nbsp;</li>
-</ul>
-<h3>Update #2 - Generally Available: Confidential Computing support for Azure Event Hubs Dedicated</h3>
-<h2>Why ITPros should care</h2>
-<p>Confidential Computing support for Event Hubs Dedicated matters when ITPros operate regulated or high-sensitivity event streams. It extends protection expectations beyond encryption at rest and in transit, into stronger assurances during processing.</p>
-<p>Compared with older architectures, this reduces the need for some compensating controls and helps security and operations teams align on platform-native protections for streaming workloads.</p>
-<h2>Operational value</h2>
-<p>Operationally, this strengthens trust boundaries for event ingestion platforms that feed analytics, SIEM, and business-critical automation. It also improves evidence posture for compliance reviews where data handling controls must be demonstrated end to end.</p>
-<p>Before rollout, validate throughput impact, partition behaviour, client compatibility, and observability baselines so confidentiality controls do not create unexpected SLO regressions.</p>
-<h2>Real-world example with step-by-step guidance</h2>
-<ol>
-<li>Classify Event Hubs namespaces by sensitivity and select the first dedicated environment where enhanced confidentiality requirements apply.</li>
-<li>Enable and validate in non-production with representative producer and consumer load, including peak and burst patterns.</li>
-<li>Measure latency, throughput, and throttling trends before and after enablement to confirm workload behaviour remains acceptable.</li>
-<li>Capture attestation and configuration evidence required by internal security governance or external auditors.</li>
-<li>Roll out in waves by workload criticality, with rollback criteria tied to message latency, error rates, and throttling thresholds.</li>
-</ol>
-<h2>Technical details including code examples</h2>
-<p>This validation example confirms namespace details and metrics health so you can compare baseline vs post-change behaviour. The metrics query focuses on ingestion, egress, and throttling signals that commonly surface operational risk first.</p>
-<p>Run with a least-privileged operations identity that can read namespace configuration and metrics. Avoid making unrelated changes while collecting baseline evidence.</p>
-az eventhubs namespace show --resource-group &lt;rg&gt; --name &lt;namespace&gt; --output jsonc
-
-az monitor metrics list --resource /subscriptions/&lt;sub&gt;/resourceGroups/&lt;rg&gt;/providers/Microsoft.EventHub/namespaces/&lt;namespace&gt; --metric IncomingMessages OutgoingMessages ThrottledRequests --interval PT5M
-
-az account show --query user.name -o tsv
-<p>Expected outcome: namespace query succeeds, metrics return consistently, and no abnormal throttling spike appears after control changes. If results diverge, review dedicated capacity planning, partition strategy, RBAC scope, and workload profile fidelity.</p>
-<h2>Comprehensive Resources</h2>
-<ul>
-<li><a href="https://azure.microsoft.com/updates?id=567212" target="_blank">Azure update: Confidential Computing support for Azure Event Hubs Dedicated</a></li>
-<li><a href="https://learn.microsoft.com/azure/event-hubs/event-hubs-dedicated-overview" target="_blank">Event Hubs Dedicated overview</a></li>
-<li><a href="https://learn.microsoft.com/azure/confidential-computing/overview" target="_blank">Azure Confidential Computing overview</a></li>
-<li><a href="https://learn.microsoft.com/azure/event-hubs/monitor-event-hubs" target="_blank">Monitor Azure Event Hubs</a></li>
-</ul>
-<ul>
-<li>&nbsp;</li>
-</ul>
-<h3>Update #3 - Generally Available: Support 5x churn in Azure Site Recovery</h3>
-<h2>Why ITPros should care</h2>
-<p>Higher churn support in Azure Site Recovery is directly relevant for ITPros protecting write-intensive systems. It expands what can be replicated reliably, reducing DR exceptions for fast-changing workloads.</p>
-<p>Compared with the previous operational envelope, this gives more room for modern transactional applications while still requiring disciplined capacity and replication health management.</p>
-<h2>Operational value</h2>
-<p>Operational value is improved DR coverage and better alignment between production write behaviour and recovery plans. Teams can protect more workloads without bespoke workaround architecture.</p>
-<p>For production rollout, validate process server sizing, bandwidth headroom, cache storage performance, and sustained replication lag during peak change windows.</p>
-<h2>Real-world example with step-by-step guidance</h2>
-<ol>
-<li>Baseline current churn and replication lag for candidate workloads to identify which systems benefit most from the increased support.</li>
-<li>Enable replication in a pilot for one high-churn workload and observe initial seeding and steady-state health.</li>
-<li>Run test failover and reprotect to verify recovery objectives and operational runbook completeness.</li>
-<li>Tune bandwidth and cache settings if lag increases during peak write intervals or backup overlap windows.</li>
-<li>Onboard additional workloads incrementally and use replication health gates before each expansion wave.</li>
-</ol>
-<h2>Technical details including code examples</h2>
-<p>These commands are relevant for validating actual recovery readiness instead of configuration-only status. They expose protected item health and support controlled failover rehearsal.</p>
-<p>Use a non-production network for test failover and document outputs so operations and business continuity stakeholders share the same readiness evidence.</p>
-az site-recovery fabric list --resource-group &lt;rg&gt; --vault-name &lt;vault&gt; -o table
-
-az site-recovery protected-item list --resource-group &lt;rg&gt; --vault-name &lt;vault&gt; --fabric-name &lt;fabric&gt; --protection-container &lt;container&gt; -o table
-
-az site-recovery recovery-plan test-failover --resource-group &lt;rg&gt; --vault-name &lt;vault&gt; --name &lt;recoveryPlan&gt; --network-id &lt;testNetworkId&gt;
-<p>Expected outcome: protected items remain healthy, lag remains within target, and test failover completes without consistency errors. If failures occur, inspect connectivity, process server capacity, cache throughput, and policy mappings.</p>
-<h2>Comprehensive Resources</h2>
-<ul>
-<li><a href="https://azure.microsoft.com/updates?id=566966" target="_blank">Azure update: Support 5x churn in Azure Site Recovery</a></li>
-<li><a href="https://learn.microsoft.com/azure/site-recovery/" target="_blank">Azure Site Recovery documentation</a></li>
-<li><a href="https://learn.microsoft.com/azure/site-recovery/site-recovery-monitor-and-troubleshoot" target="_blank">Monitor and troubleshoot Site Recovery</a></li>
-<li><a href="https://learn.microsoft.com/azure/site-recovery/site-recovery-plan-capacity" target="_blank">Site Recovery capacity planning</a></li>
-</ul>
-<ul>
-<li>&nbsp;</li>
-</ul>
-<h3>Update #4 - Generally Available: Microsoft Entra ID-based access for Azure Blob Storage SFTP</h3>
-<h2>Why ITPros should care</h2>
-<p>This launch modernises SFTP access for Azure Blob Storage by bringing identity control closer to Microsoft Entra. ITPros gain stronger governance options than local-account-only models for many enterprise scenarios.</p>
-<p>Operationally, the key change is identity lifecycle alignment: provisioning, review, and revocation can be managed with central identity processes instead of fragmented local credentials.</p>
-<h2>Operational value</h2>
-<p>The value is reduced credential sprawl, better auditability, and clearer access accountability across teams and external partners exchanging files over SFTP.</p>
-<p>Before production, validate client compatibility, RBAC scope, network restrictions, access review cadence, and emergency break-glass procedures.</p>
-<h2>Real-world example with step-by-step guidance</h2>
-<ol>
-<li>Confirm SFTP is enabled on the storage account and validate networking model (public endpoint restrictions or private access path) matches policy.</li>
-<li>Assign Entra-based permissions with least privilege and validate scope at storage account and container boundaries.</li>
-<li>Test SFTP authentication and file operations using approved clients while collecting diagnostic logs for audit evidence.</li>
-<li>Validate joiner-mover-leaver scenarios by changing membership and role assignments, then confirming access updates propagate correctly.</li>
-<li>Roll out in stages by partner or workload segment with clear support ownership and incident response runbooks.</li>
-</ol>
-<h2>Technical details including code examples</h2>
-<p>This sequence verifies account capability and role assignment posture before user acceptance testing. It is useful for catching scope mistakes that often cause authentication-success/data-access-failure patterns.</p>
-<p>Run safely by using a dedicated test identity and non-production storage account first; then repeat read-only validation in production before broad enablement.</p>
-az storage account show --name &lt;storageAccount&gt; --resource-group &lt;rg&gt; --query "{name:name,isSftpEnabled:isSftpEnabled,allowBlobPublicAccess:allowBlobPublicAccess}" -o jsonc
-
-az role assignment list --assignee &lt;principalObjectId&gt; --scope /subscriptions/&lt;sub&gt;/resourceGroups/&lt;rg&gt;/providers/Microsoft.Storage/storageAccounts/&lt;storageAccount&gt; -o table
-
-az account show --query user.name -o tsv
-<p>Expected outcome: SFTP capability is enabled, expected role assignments are present, and test identity can perform allowed operations only. If sign-in works but file actions fail, inspect RBAC propagation delay, ACL/permission scope, and storage network restrictions.</p>
-<h2>Comprehensive Resources</h2>
-<ul>
-<li><a href="https://azure.microsoft.com/updates?id=567085" target="_blank">Azure update: Microsoft Entra ID-based access for Azure Blob Storage SFTP</a></li>
-<li><a href="https://learn.microsoft.com/azure/storage/blobs/secure-file-transfer-protocol-support" target="_blank">SFTP support for Azure Blob Storage</a></li>
-<li><a href="https://learn.microsoft.com/azure/storage/blobs/authorize-access-azure-active-directory" target="_blank">Authorize blob data with Microsoft Entra ID</a></li>
-<li><a href="https://learn.microsoft.com/security/benchmark/azure/baselines/storage-security-baseline" target="_blank">Azure Storage security baseline</a></li>
-</ul>
-<p>If you are planning adoption, start with one workload per update area, collect operational evidence, and standardise the validated pattern in your runbooks and IaC modules. That approach keeps change safe while accelerating delivery.</p>
-<p>Cheers!</p>
-<p>Pierre</p><br/><br/><b>Source:</b> Microsoft Tech Community IT Ops &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
-</item>
-
 <item>
   <title>🔵 Firmware update bricks Hue Bridge Pro devices; Philips gives free replacements</title>
   <link>https://arstechnica.com/gadgets/2026/07/firmware-update-bricks-hue-bridge-pro-devices-philips-gives-free-replacements/</link>
   <pubDate>Fri, 10 Jul 2026 16:36:09 +0000</pubDate>
   <source>Ars Technica</source>
-  <description><![CDATA[<b>Why this matters: Operational impact possible — watch for changes that generate tickets.</b><br/>Affected users will have to configure their lights and settings all over again.<br/><br/><b>Source:</b> Ars Technica &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Operational impact possible — watch for changes that generate tickets.</b><br/>Affected users will have to configure their lights and settings all over again.<br/><br/><b>Source:</b> Ars Technica &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 15h ago]]></description>
 </item>
 
 <item>
@@ -181,7 +18,7 @@ az account show --query user.name -o tsv
   <link>https://www.bleepingcomputer.com/news/security/zimbra-urges-customers-to-patch-critical-web-client-xss-flaw/</link>
   <pubDate>Fri, 10 Jul 2026 11:47:38 +0000</pubDate>
   <source>BleepingComputer</source>
-  <description><![CDATA[<b>Why this matters: Operational impact possible — watch for changes that generate tickets.</b><br/>The Zimbra security team urged customers to patch a critical vulnerability affecting the Classic Web Client used to access the Zimbra Collaboration suite. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 17h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Operational impact possible — watch for changes that generate tickets.</b><br/>The Zimbra security team urged customers to patch a critical vulnerability affecting the Classic Web Client used to access the Zimbra Collaboration suite. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 20h ago]]></description>
 </item>
 
 <item>
@@ -286,7 +123,7 @@ az account show --query user.name -o tsv
 <p>This session was one of many at the Microsoft Azure Infrastructure Summit 2026. If you want the keynotes, the IaC deep dives, the AKS sessions, and the rest of the infra track, the full playlist is here:</p>
 <p><a href="https://www.youtube.com/playlist?list=PLjt5SKzX1iI8con7FJDB56G6hHqxGm7ki" target="_blank">Microsoft Azure Infra Summit 2026 playlist</a></p>
 <p>Cheers!</p>
-<p>Pierre Roman</p><br/><br/><b>Source:</b> Microsoft Tech Community IT Ops &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 22h ago]]></description>
+<p>Pierre Roman</p><br/><br/><b>Source:</b> Microsoft Tech Community IT Ops &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
@@ -416,7 +253,7 @@ az account show --query user.name -o tsv
 <p>If this session helped, there are plenty more where it came from. The full Microsoft Azure Infrastructure Summit 2026 playlist covers everything from Azure Local and Azure Files to AKS networking, SRE agents, and the keynote with Jeremy Winter. Worth a binge if you run Azure infrastructure for a living.</p>
 <p><a href="https://www.youtube.com/playlist?list=PLjt5SKzX1iI8con7FJDB56G6hHqxGm7ki" target="_blank">Microsoft Azure Infrastructure Summit 2026 playlist</a></p>
 <p>Cheers!</p>
-<p>Pierre Roman</p><br/><br/><b>Source:</b> Microsoft Tech Community IT Ops &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
+<p>Pierre Roman</p><br/><br/><b>Source:</b> Microsoft Tech Community IT Ops &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
 </item>
 
 <item>
@@ -425,77 +262,6 @@ az account show --query user.name -o tsv
   <pubDate>Wed, 08 Jul 2026 14:00:00 +0000</pubDate>
   <source>Adam the Automator</source>
   <description><![CDATA[<b>Why this matters: Operational impact possible — watch for changes that generate tickets.</b><br/>Move EWS mailbox automation to Microsoft Graph with a practical inventory, permissions, PowerShell SDK, and cutover validation checklist.<br/><br/><b>Source:</b> Adam the Automator &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
-</item>
-
-<item>
-  <title>🔴 Lock Down AKS End to End with Application Gateway for Containers and Managed Cilium L7</title>
-  <link>https://techcommunity.microsoft.com/t5/itops-talk-blog/lock-down-aks-end-to-end-with-application-gateway-for-containers/ba-p/4534205</link>
-  <pubDate>Wed, 08 Jul 2026 07:00:00 +0000</pubDate>
-  <source>Microsoft Tech Community IT Ops</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><p>Hello Folks!</p>
-<p>If your AKS cluster looks like most production clusters I have walked through, one of two things is true. Either nobody writes any network policies and every pod can talk to every other pod, so one compromised container blows up the entire blast radius. Or somebody wrote a few coarse rules along the lines of “namespace A talks to namespace B over port 80”, which sounds secure right up until an attacker realizes that port 80 is exactly where they were planning to live anyway. Real attacks happen at Layer 7, dressed up like ordinary HTTP traffic, and L3 / L4 plumbing cannot tell the difference.</p>
-<p>That is the gap session MAIS09 from the Microsoft Azure Infrastructure Summit 2026 closes. Vyshnavi Namani and Darshil Shah from the Azure Networking product team walked through how two AKS-managed add-ons, Application Gateway for Containers (AGC) and Cilium L7 via Advanced Container Networking Services (ACNS), can lock down the entire path from the public internet to a single pod. No NGINX. No external WAF appliance. No third-party CNI to babysit.</p>
-<p>📺 <strong>Watch the session:</strong></p>
-<p>&nbsp;</p>
-<div class="lia-embeded-content" contenteditable="false">
-</div>
-<h2>Why IT Pros Should Care</h2>
-<p>Let me cut to the chase. If you operate AKS clusters today, this session matters because:</p>
-<ul>
-<li>You probably still have an ingress controller and an external WAF stitched together with annotations and prayers. AGC plus ACNS collapses that stack into first-party add-ons that AKS owns end to end.</li>
-<li>Both Application Gateway for Containers and Advanced Container Networking Services are generally available. This is not a preview demo, this is production.</li>
-<li>Security is finally readable. Every rule is a YAML object. Code review, audit, GitOps. No more “what does this NGINX config map even do anymore” archaeology.</li>
-<li>It actually works on a real attack pattern. The demo shows WAF killing a SQL-injection-style GET that Cilium would have happily forwarded, because the method (GET) was on the allow list.</li>
-</ul>
-<p>If you have ever had to explain to an auditor why a single compromised pod could pivot across your whole cluster, this is your exit ramp.</p>
-<h2>The AKS Security Gap This Closes</h2>
-<p>Most clusters are protected by a load balancer at the edge and basically nothing inside. The cluster door looks like a vault, but the hallways are wide open. Cilium calls this the lateral movement problem, and it is exactly how Kubernetes attacks unfold in the wild. Compromise a pod, then phone home, then pivot.</p>
-<p>What MAIS09 demonstrates is something different. AGC is the L7 front door (the metal detector at the lobby). ACNS Cilium L7 is the lock on every pod’s office door. Both speak HTTP. Both enforce identity. Both are managed by AKS itself.</p>
-<p>The legacy alternative, Application Gateway Ingress Controller (AGIC), bolted a full Application Gateway onto your cluster through a translator. Two services, two lifecycles, two finger-pointing teams when something broke. AGC is the successor, built from scratch for Kubernetes, speaking the Gateway API natively, enabled with a single AKS flag. AKS provisions the controller, wires the identity, delegates the subnet, and owns the upgrades. You own the policies.</p>
-<h2>AGC + Managed Cilium, End to End</h2>
-<p>Here is the mental model from the session. Picture four concentric layers of defense between the public internet and a pod.</p>
-<ol>
-<li><strong>AGC front end.</strong> One Azure resource, one public DNS name, and (thanks to the Kubernetes Gateway API) multiple hostnames behind the same IP. The demo runs Contoso, Fabrikam, and Adventure Works on a single AGC public IP using three HTTPRoute objects. One infrastructure, three websites. Real cost savings, real ownership clarity (platform owns the Gateway, app teams own the HTTPRoutes).</li>
-<li><strong>Azure WAF on AGC.</strong> This is the content inspector. It runs the OWASP Core Rule Set (DRS 2.1 in the demo) against every incoming request, looks for SQL injection, cross-site scripting, path traversal, and the rest of the OWASP Top 10, and returns a 403 before the packet ever touches your pod. Microsoft maintains the rule set, you bind it to AGC via a SecurityPolicy.</li>
-<li><strong>ACNS Cilium L7 ingress on every pod.</strong> This is where identity-based policy lives. Rules key off pod labels, not IPs, because IPs change every time the cluster autoscaler does its job. The demo uses an allow-agc-l7-get-only CiliumNetworkPolicy that lets the AGC backend reach the tenant pods, but only with GET or GET /products. Anything else, POST, PUT, DELETE, gets a Cilium-synthesized 403 before NGINX ever sees the request.</li>
-<li><strong>ACNS east-west and egress policy.</strong> Two more policies do the heavy lifting inside. client-may-call-contoso-get-only lets the client pod reach Contoso with GET, and only Contoso. A default-deny baseline blocks everything else (pod-to-pod and pod-to-internet) with a single carve-out for kube-dns on port 53.</li>
-</ol>
-<p>The magic is that the same Cilium engine handles north-south, east-west, and egress with one consistent identity model. eBPF in the Linux kernel does the enforcement on the same node as the pod, so the decision happens before the packet leaves the host. No sidecars, no iptables sprawl, no daemonset you need to upgrade by hand.</p>
-<h2>Real-world Scenarios</h2>
-<p>The demo walks through six tests and the results map directly onto things you are probably trying to solve right now:</p>
-<ul>
-<li><strong>Multi-site hosting on one IP.</strong> Three hostnames, one AGC, three 200 OKs from three different backend pods. If you are paying for three load balancers today, you can stop.</li>
-<li><strong>WAF blocks a malicious GET that ACNS would have let through.</strong> This is the punch line of why you need both layers. The method (GET) is on the Cilium allow list, but the payload is a SQLi pattern. WAF returns 403 at the edge. Defense in depth, working as advertised.</li>
-<li><strong>Method enforcement at the pod door.</strong> GET returns 200, POST/PUT/DELETE return 403, GET /admin returns 403, GET /products returns 200. Cilium is doing actual HTTP inspection, not just dropping packets.</li>
-<li><strong>East-west enforcement with readable verdicts.</strong> Client to Contoso GET is 200. Same client, same destination, POST is 403 (L7 deny, TCP completed). Client to Fabrikam is 000 (L4 drop, no TCP handshake). Reading the difference between 403 and 000 is now a debuggable signal, not a mystery.</li>
-<li><strong>Default-deny egress kills phone-home.</strong> A pod tries to reach bing.com. DNS resolves (the carve-out works), TCP SYN goes nowhere, wget gives up with exit code 1. If that pod was compromised and trying to exfiltrate data, this is where the attack chain dies.</li>
-<li><strong>Selective allow still works.</strong> Same pod, same tools, but a DNS lookup against kube-dns inside the cluster returns instantly. We did not unplug the network. We locked it down with a purpose.</li>
-</ul>
-<p>Honest tradeoffs to call out. The session does not pretend everything is free. AGC introduces a billed subnet association and a managed identity you do not manage in BYO mode. Cilium L7 needs the Cilium data plane (ACNS Container Network Security features are Cilium-only). The Envoy proxy that handles L7 inspection has a cost only when you actually enforce L7, which is a fair deal in my book.</p>
-<h2>Getting Started</h2>
-<p>If you want to try this on a cluster of your own, three flags do most of the work on az aks create:</p>
-<ul>
-<li>--network-dataplane cilium (turns on the eBPF data plane)</li>
-<li>--enable-acns (enables Advanced Container Networking Services, including Hubble observability and Cilium L7 policy)</li>
-<li>--enable-app-routing or the ALB add-on flag (provisions the AGC controller as an AKS-managed add-on)</li>
-</ul>
-<p>From there you write four YAML objects: a default-deny CiliumNetworkPolicy, an allow-DNS carve-out, an AGC ingress allow with method and path constraints, and your east-west allow rules. The session repo includes the full set so you can clone and follow along.</p>
-<p>One bonus worth knowing about. ACNS ships Hubble out of the box, with pre-built Azure Managed Grafana dashboards. Flow logs, service maps, policy hit counts. Even on pods that are not yet under L7 enforcement, you get observability for free. When something breaks at 2 a.m., you have an audit trail instead of a tcpdump.</p>
-<h2>Resources</h2>
-<ul>
-<li><a href="https://learn.microsoft.com/en-us/azure/application-gateway/for-containers/" target="_blank">Azure Application Gateway for Containers documentation</a></li>
-<li><a href="https://learn.microsoft.com/en-us/azure/aks/how-to-apply-l7-policies" target="_blank">Set up Layer 7 policies with Advanced Container Networking Services</a></li>
-<li><a href="https://learn.microsoft.com/azure/aks/concepts-security" target="_blank">AKS security concepts</a></li>
-<li><a href="https://learn.microsoft.com/azure/aks/operator-best-practices-cluster-security" target="_blank">Cluster security best practices for AKS</a></li>
-<li><a href="https://learn.microsoft.com/en-us/azure/aks/container-network-observability-how-to" target="_blank">Container Network Observability for AKS (Hubble, Prometheus, Grafana)</a></li>
-<li><a href="https://azure-samples.github.io/aks-labs/docs/networking/acns-lab/" target="_blank">Advanced Container Networking Services hands-on lab</a></li>
-<li><a href="https://techcommunity.microsoft.com/blog/azurenetworkingblog/use-cases-of-advanced-network-observability-for-your-azure-kubernetes-service-cl/4188281" target="_blank">Use cases of Advanced Network Observability for AKS (Azure Networking Blog)</a></li>
-</ul>
-<h2>Watch the Rest of the Summit</h2>
-<p>If MAIS09 hit the spot, there are dozens more sessions in the same playlist covering AKS networking at scale, Azure Local, AVM, the new Deployment Agent, and a lot more. Grab a coffee and binge.</p>
-<p><a href="https://www.youtube.com/playlist?list=PLjt5SKzX1iI8con7FJDB56G6hHqxGm7ki" target="_blank">Microsoft Azure Infrastructure Summit 2026 playlist</a></p>
-<p>Cheers!</p>
-<p>Pierre Roman</p><br/><br/><b>Source:</b> Microsoft Tech Community IT Ops &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
 </item>
 
 </channel>
