@@ -3,7 +3,7 @@
 <channel>
   <title>Joe SysAdmin and Operations</title>
   <description>Operational IT changes, Microsoft updates, outages, and infrastructure issues.</description>
-  <lastBuildDate>Sun, 12 Jul 2026 05:54:36 +0000</lastBuildDate>
+  <lastBuildDate>Sun, 12 Jul 2026 08:11:45 +0000</lastBuildDate>
   
 <item>
   <title>🟠 Welcome Back to AZ Update</title>
@@ -177,14 +177,6 @@ az account show --query user.name -o tsv
 </item>
 
 <item>
-  <title>🟠 Zimbra urges customers to patch critical web client XSS flaw</title>
-  <link>https://www.bleepingcomputer.com/news/security/zimbra-urges-customers-to-patch-critical-web-client-xss-flaw/</link>
-  <pubDate>Fri, 10 Jul 2026 11:47:38 +0000</pubDate>
-  <source>BleepingComputer</source>
-  <description><![CDATA[<b>Why this matters: Operational impact possible — watch for changes that generate tickets.</b><br/>The Zimbra security team urged customers to patch a critical vulnerability affecting the Classic Web Client used to access the Zimbra Collaboration suite. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
-</item>
-
-<item>
   <title>🔵 Stop Hand-Building VMs at 2 AM: Automated Image Pipelines with Azure Image Builder and Compute Gallery</title>
   <link>https://techcommunity.microsoft.com/t5/itops-talk-blog/stop-hand-building-vms-at-2-am-automated-image-pipelines-with/ba-p/4534213</link>
   <pubDate>Fri, 10 Jul 2026 07:00:00 +0000</pubDate>
@@ -286,7 +278,7 @@ az account show --query user.name -o tsv
 <p>This session was one of many at the Microsoft Azure Infrastructure Summit 2026. If you want the keynotes, the IaC deep dives, the AKS sessions, and the rest of the infra track, the full playlist is here:</p>
 <p><a href="https://www.youtube.com/playlist?list=PLjt5SKzX1iI8con7FJDB56G6hHqxGm7ki" target="_blank">Microsoft Azure Infra Summit 2026 playlist</a></p>
 <p>Cheers!</p>
-<p>Pierre Roman</p><br/><br/><b>Source:</b> Microsoft Tech Community IT Ops &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
+<p>Pierre Roman</p><br/><br/><b>Source:</b> Microsoft Tech Community IT Ops &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
 </item>
 
 <item>
@@ -295,112 +287,6 @@ az account show --query user.name -o tsv
   <pubDate>Thu, 09 Jul 2026 17:08:29 +0000</pubDate>
   <source>BleepingComputer</source>
   <description><![CDATA[<b>Why this matters: Credential/phishing risk — reinforce MFA and user awareness training.</b><br/>A new data-extortion group called Helix is using identity-focused tactics such as voice phishing (vishing), device code phishing, and multi-factor authentication (MFA) abuse to steal data from SharePoint environments. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
-</item>
-
-<item>
-  <title>🟠 Microsoft expects more Windows security updates from AI-discovered flaws</title>
-  <link>https://www.bleepingcomputer.com/news/microsoft/microsoft-expects-more-windows-security-updates-from-ai-discovered-flaws/</link>
-  <pubDate>Thu, 09 Jul 2026 17:00:00 +0000</pubDate>
-  <source>BleepingComputer</source>
-  <description><![CDATA[<b>Why this matters: Operational impact possible — watch for changes that generate tickets.</b><br/>Microsoft says Windows users should expect to see an increase in security updates as the company increasingly relies on artificial intelligence to discover vulnerabilities in its codebase. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Deployment Stacks: Treating Your Azure Deployments Like Real Resources</title>
-  <link>https://techcommunity.microsoft.com/t5/itops-talk-blog/deployment-stacks-treating-your-azure-deployments-like-real/ba-p/4534212</link>
-  <pubDate>Thu, 09 Jul 2026 07:00:00 +0000</pubDate>
-  <source>Microsoft Tech Community IT Ops</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><p>Hello Folks!</p>
-<p>If you have ever come back from vacation to find a “mystery” storage account no one remembers creating, or watched a junior admin nuke a production resource because they clicked the wrong tile in the portal, this session is for you. Sydney Smith from the Azure Deployments team walked through Deployment Stacks at the Microsoft Azure Infrastructure Summit 2026, and the message is simple: classic Azure deployments are just history records, and history records cannot protect anything.</p>
-<p>Deployment Stacks change that. A stack is a real Azure resource. It has a resource ID. It supports RBAC. It tracks what it owns. It can refuse to let people break it. That is a real upgrade to how we run Infrastructure as Code in Azure, and IT pros should be paying attention.</p>
-<p>📺 <strong>Watch the session:</strong></p>
-<p>&nbsp;</p>
-<div class="lia-embeded-content" contenteditable="false">
-</div>
-<h2>Why IT Pros Should Care</h2>
-<p>Let me cut through the noise. Here is why this matters to anyone running Azure infrastructure:</p>
-<ul>
-<li><strong>Orphaned resources cost real money.</strong> Classic deployments do not track ownership. Remove a resource from your template, and the live resource sits in Azure forever, billing you and adding security risk.</li>
-<li><strong>Deployment history is fragile.</strong> Anyone can groom it away. You lose the audit trail.</li>
-<li><strong>There is no native change protection.</strong> Without stacks, the only thing standing between your production VNet and a midnight portal click is RBAC discipline. That is not enough.</li>
-<li><strong>Drift is invisible.</strong> You cannot detect what you cannot define as the source of truth.</li>
-<li><strong>No unified view.</strong> Resources scattered across resource groups or subscriptions are hard to manage as one unit.</li>
-</ul>
-<p>Stacks give you a single lifecycle aware unit, with built in guardrails, that you can govern with RBAC and policy like any other Azure resource. That is the kind of plumbing IT operations has been asking for.</p>
-<h2>What are Deployment Stacks</h2>
-<p>A deployment stack is a native Azure resource that manages a group of resources as one lifecycle aware unit. It is the modern evolution of Azure deployments. Where a classic deployment is a record of what happened, a stack is a living thing that knows what it owns.</p>
-<p>Key facts to anchor on:</p>
-<ul>
-<li>A stack is of type Microsoft.Resources/deploymentStacks. It is a first class Azure resource.</li>
-<li>A stack can span multiple resource groups and even multiple subscriptions.</li>
-<li>You feed it a Bicep or ARM JSON template, the same files you already have. No rewrite required.</li>
-<li>It produces a snapshot of the resources it manages, and uses that snapshot for lifecycle decisions.</li>
-</ul>
-<p>Two feature sets do the heavy lifting:</p>
-<ol>
-<li><strong>Resource lifecycle management.</strong> Creates, updates, and deletes across scopes are managed as one operation.</li>
-<li><strong>Resource change protection.</strong> Stacks can apply deny assignments on the resources they manage, blocking changes that did not come through the stack itself.</li>
-</ol>
-<p>That second point is the one that changes how you think about safety in production.</p>
-<h2>How Deployment Stacks change your workflow</h2>
-<p>Honestly, the syntax change is tiny. If you know az deployment group create, you already know az stack group create. Same template, same parameter files, same scope. You just swap deployment for stack and add a couple of new parameters.</p>
-<p>What changes in the day to day:</p>
-<ul>
-<li><strong>Your template becomes the source of truth.</strong> Remove a resource from Bicep, and the next stack run can clean it up automatically. No more manual hunt and delete.</li>
-<li><strong>You get a portal view.</strong> The stack resource shows you what it manages, what is detached, and what the deny settings look like.</li>
-<li><strong>You can clean up everything in one step.</strong> Deleting a stack with the right unmanage setting tears down all its resources and the empty resource groups, without you mapping out dependency order.</li>
-<li><strong>Pipelines get cleaner.</strong> The bicep-deploy GitHub Action and the equivalent Azure DevOps task speak stacks natively. Create, validate, what-if, delete. Same shared package on the backend, so features hit GitHub and ADO at roughly the same time.</li>
-</ul>
-<p>The honest tradeoff: stacks are powerful enough to delete things at scale. That is the whole point. So you need to think harder about which mode you pick.</p>
-<h2>Deny settings and lifecycle control</h2>
-<p>Two parameters carry most of the weight, and you need to understand both before you push a stack into production.</p>
-<p><strong>action-on-unmanage</strong> controls what happens when a resource leaves the template:</p>
-<ul>
-<li>detachAll: resources stay in Azure, the stack stops tracking them. This is the default and the safest. No delete operation. Good when you are still learning stacks.</li>
-<li>deleteResources: resources are deleted, the resource group stays.</li>
-<li>deleteAll: full cleanup. Resources go, empty resource groups go. This is what you pair with strict deny settings if you want the template to be the only source of truth.</li>
-</ul>
-<p><strong>deny-settings-mode</strong> controls who can change what:</p>
-<ul>
-<li>none: no protection. Anyone with RBAC can do anything. Use this only when you really mean it.</li>
-<li>denyDelete: blocks delete operations. Updates are still allowed.</li>
-<li>denyWriteAndDelete: the strict one. No changes outside the stack. This plus deleteAll makes your template the absolute source of truth.</li>
-</ul>
-<p>A handy escape hatch: excludedActions lets you punch specific resource types or operations through the deny wall. For example, you can deny delete across the board but allow deleting your managed identities or storage accounts. Use this sparingly. Every exception is a future ticket.</p>
-<p>A few honest tradeoffs to keep in mind:</p>
-<ul>
-<li><strong>denyWriteAndDelete</strong><strong> is strict on purpose.</strong> Portal admins will get permission errors. That is the feature, not a bug. Train your team.</li>
-<li><strong>deleteAll</strong><strong> is permanent.</strong> Pair it with what-if before every change so you do not nuke something by accident.</li>
-<li><strong>Resources should not be managed by two stacks.</strong> The deny assignments from each stack will fight each other and block updates. If two apps share a SQL database, pull it in as an existing resource rather than dual managing it.</li>
-<li><strong>Stacks are not just for Bicep.</strong> They consume ARM JSON templates today. Terraform users do not get the same first party stack experience, so if you live in Terraform world, stacks are not your tool.</li>
-</ul>
-<h2>Getting Started</h2>
-<p>You do not need a giant rollout plan. Pick something small and learn the parameters in a safe environment.</p>
-<p>A practical path:</p>
-<ol>
-<li><strong>Pick a non production Bicep template you already trust.</strong> Anything that creates a small set of resources in one resource group works.</li>
-<li><strong>Deploy it as a stack with safe defaults.</strong> Use actionOnUnmanage=detachAll and denySettingsMode=denyDelete. You get protection without risking accidental deletes.</li>
-<li><strong>Try removing a resource from the template and redeploy.</strong> Watch how the resource shows up as detached in the portal. Get comfortable with what that looks like.</li>
-<li><strong>Graduate to deletes.</strong> When you trust the workflow, switch to deleteResources or deleteAll in a dev environment. Always run what-if first.</li>
-<li><strong>Adopt Stacks What-If.</strong> The newer Stacks What-If commandlet triangulates the stack snapshot, the live resource state, and the desired state from your template. The result is a far less noisy diff than classic what-if, and the RBAC model only needs read access on the what-if resource for follow up gets. Big win for production review workflows.</li>
-<li><strong>Wire it into your pipeline.</strong> The bicep-deploy GitHub Action and the Azure DevOps task both support type: deploymentStack with create, validate, and delete operations. Start with a create pipeline, then add a what-if pipeline for PR validation, then a cleanup pipeline that uses delete to tear down ephemeral environments.</li>
-</ol>
-<p>If you hit an out of sync error between your stack and Azure, the bypass-stack-out-of-sync-error parameter lets the pipeline reconverge automatically instead of forcing a manual cleanup. Read the docs before you flip it on, but it saves real time when state drifts.</p>
-<h2>Resources</h2>
-<ul>
-<li><a href="https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/deployment-stacks" target="_blank">Create and deploy Azure deployment stacks in Bicep</a></li>
-<li><a href="https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/" target="_blank">Bicep documentation on Microsoft Learn</a></li>
-<li><a href="https://learn.microsoft.com/en-us/azure/azure-resource-manager/templates/deploy-what-if" target="_blank">What-If for ARM and Bicep deployments</a></li>
-<li><a href="https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/deploy-github-actions" target="_blank">Deploy Bicep files by using GitHub Actions</a></li>
-<li><a href="https://github.com/Azure/bicep" target="_blank">Azure Bicep on GitHub</a></li>
-<li><a href="https://github.com/Azure/bicep-deploy" target="_blank">Bicep Deploy GitHub Action and ADO task</a></li>
-<li><a href="https://aka.ms/arm-news" target="_blank">Bicep and ARM community news and monthly call signup</a></li>
-</ul>
-<h2>Watch the rest of the Summit</h2>
-<p>If this session helped, there are plenty more where it came from. The full Microsoft Azure Infrastructure Summit 2026 playlist covers everything from Azure Local and Azure Files to AKS networking, SRE agents, and the keynote with Jeremy Winter. Worth a binge if you run Azure infrastructure for a living.</p>
-<p><a href="https://www.youtube.com/playlist?list=PLjt5SKzX1iI8con7FJDB56G6hHqxGm7ki" target="_blank">Microsoft Azure Infrastructure Summit 2026 playlist</a></p>
-<p>Cheers!</p>
-<p>Pierre Roman</p><br/><br/><b>Source:</b> Microsoft Tech Community IT Ops &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
 </item>
 
 </channel>
