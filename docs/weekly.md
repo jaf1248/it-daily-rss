@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
 **Period:** July 05 – July 12, 2026  
-**Generated:** 2026-07-12 18:02 UTC  
+**Generated:** 2026-07-12 20:05 UTC  
 **Items reviewed:** 136  
 
 ## ⚡ Top Actions This Week
@@ -55,6 +55,9 @@
 
 ## 🟠 Important — Review This Week
 
+- [CVE-2026-45489 Microsoft Edge (Chromium-based) Spoofing Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45489)  
+  **Microsoft Security Response Center (MSRC)** · Jul 12 · _General awareness item._  
+
 - [CVE-2026-59874 node-tar: Negative tar entry size causes infinite loop in archive replace](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-59874)  
   **Microsoft Security Response Center (MSRC)** · Jul 12 · _General awareness item._  
 
@@ -70,9 +73,6 @@
 - [Chromium: CVE-2026-14428 Insufficient validation of untrusted input in Dawn](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-14428)  
   **Microsoft Security Response Center (MSRC)** · Jul 11 · _General awareness item._  
 
-- [Chromium: CVE-2026-13825 Uninitialized Use in Dawn](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-13825)  
-  **Microsoft Security Response Center (MSRC)** · Jul 11 · _General awareness item._  
-
 - [Chromium: CVE-2026-13822 Inappropriate implementation in Extensions](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-13822)  
   **Microsoft Security Response Center (MSRC)** · Jul 11 · _General awareness item._  
 
@@ -83,12 +83,12 @@
 
 ## 🔵 FYI — General Awareness
 
+- [Claude Fable 5 stays free for paid users until July 19 as Anthropic buys more time](https://www.bleepingcomputer.com/news/artificial-intelligence/claude-fable-5-stays-free-for-paid-users-until-july-19-as-anthropic-buys-more-time/) — BleepingComputer
 - [RedHook Android malware now uses Wireless ADB for shell access](https://www.bleepingcomputer.com/news/security/redhook-android-malware-now-uses-wireless-adb-for-shell-access/) — BleepingComputer
 - [Compromised jscrambler 8.14.0 npm Release Drops Rust Infostealer During Install](https://thehackernews.com/2026/07/compromised-jscrambler-8140-npm-release.html) — The Hacker News
 - [Hackers Weaponize Balochistan Police Portal in Multi-Group Espionage Campaigns](https://thehackernews.com/2026/07/hackers-weaponize-balochistan-police.html) — The Hacker News
 - [Australia warns of global campaign targeting vulnerable CMS platforms](https://www.bleepingcomputer.com/news/security/australia-warns-of-global-campaign-targeting-vulnerable-cms-platforms/) — BleepingComputer
 - [Wireshark 4.6.7 Released, (Sat, Jul 11th)](https://isc.sans.edu/diary/rss/33146) — SANS Internet Storm Center
-- ['Ghostcommit' hides prompt injection in images to fool AI agents, steal secrets](https://www.bleepingcomputer.com/news/security/ghostcommit-hides-prompt-injection-in-images-to-fool-ai-agents-steal-secrets/) — BleepingComputer
 
 ---
 
