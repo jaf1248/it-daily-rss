@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
 **Period:** July 06 – July 13, 2026  
-**Generated:** 2026-07-13 06:14 UTC  
+**Generated:** 2026-07-13 10:22 UTC  
 **Items reviewed:** 136  
 
 ## ⚡ Top Actions This Week
@@ -55,6 +55,18 @@
 
 ## 🟠 Important — Review This Week
 
+- [CVE-2025-38096 wifi: iwlwifi: don't warn when if there is a FW error](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-38096)  
+  **Microsoft Security Response Center (MSRC)** · Jul 13 · _General awareness item._  
+
+- [CVE-2025-71072 shmem: fix recovery on rename failures](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-71072)  
+  **Microsoft Security Response Center (MSRC)** · Jul 13 · _General awareness item._  
+
+- [CVE-2022-4543 A flaw named "EntryBleed" was found in the Linux Kernel Page Table Isolation (KPTI). This issue could allow a local attacker to leak KASLR base via prefetch side-channels based on TLB timing for Intel systems.](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-4543)  
+  **Microsoft Security Response Center (MSRC)** · Jul 13 · _General awareness item._  
+
+- [iCagenda and Balbooa Forms Joomla Flaws Reportedly Exploited as Zero-Days](https://thehackernews.com/2026/07/icagenda-and-balbooa-forms-joomla-flaws.html)  
+  **The Hacker News** · Jul 13 · _General awareness item._  
+
 - [CVE-2026-45489 Microsoft Edge (Chromium-based) Spoofing Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45489)  
   **Microsoft Security Response Center (MSRC)** · Jul 12 · _General awareness item._  
 
@@ -67,28 +79,16 @@
 - [CVE-2026-59871 node-tar: Process crash via PAX numeric path type confusion](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-59871)  
   **Microsoft Security Response Center (MSRC)** · Jul 12 · _General awareness item._  
 
-- [CVE-2026-15308 Incremental HTMLParser feed() allows CPU-exhaustion DoS via repeated unterminated markup declarations](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-15308)  
-  **Microsoft Security Response Center (MSRC)** · Jul 12 · _General awareness item._  
-
-- [Chromium: CVE-2026-14428 Insufficient validation of untrusted input in Dawn](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-14428)  
-  **Microsoft Security Response Center (MSRC)** · Jul 11 · _General awareness item._  
-
-- [Chromium: CVE-2026-13822 Inappropriate implementation in Extensions](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-13822)  
-  **Microsoft Security Response Center (MSRC)** · Jul 11 · _General awareness item._  
-
-- [Chromium: CVE-2026-13816 Insufficient validation of untrusted input in File Input](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-13816)  
-  **Microsoft Security Response Center (MSRC)** · Jul 11 · _General awareness item._  
-
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [US and allies warn of Russian critical infrastructure attacks](https://www.bleepingcomputer.com/news/security/us-and-allies-share-defense-tips-against-russian-hackers-targeting-critical-infrastructure/) — BleepingComputer
+- [Misconfigured Server Reveals Three Evilginx Phishing Operations Targeting Microsoft 365](https://thehackernews.com/2026/07/misconfigured-server-reveals-three.html) — The Hacker News
 - [Someone Is Scanning for Your MCP Servers and AI Assistant Credentials, (Mon, Jul 13th)](https://isc.sans.edu/diary/rss/33150) — SANS Internet Storm Center
 - [ISC Stormcast For Monday, July 13th, 2026 https://isc.sans.edu/podcastdetail/10004, (Mon, Jul 13th)](https://isc.sans.edu/diary/rss/33148) — SANS Internet Storm Center
 - [OpenAI temporarily relaxes GPT-5.6 Sol usage limits](https://www.bleepingcomputer.com/news/artificial-intelligence/openai-temporarily-relaxes-gpt-56-sol-usage-limits/) — BleepingComputer
 - [Claude Fable 5 stays free for paid users until July 19 as Anthropic buys more time](https://www.bleepingcomputer.com/news/artificial-intelligence/claude-fable-5-stays-free-for-paid-users-until-july-19-as-anthropic-buys-more-time/) — BleepingComputer
-- [RedHook Android malware now uses Wireless ADB for shell access](https://www.bleepingcomputer.com/news/security/redhook-android-malware-now-uses-wireless-adb-for-shell-access/) — BleepingComputer
-- [Compromised jscrambler 8.14.0 npm Release Drops Rust Infostealer During Install](https://thehackernews.com/2026/07/compromised-jscrambler-8140-npm-release.html) — The Hacker News
 
 ---
 

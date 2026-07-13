@@ -3,7 +3,7 @@
 <channel>
   <title>Joe SysAdmin and Operations</title>
   <description>Operational IT changes, Microsoft updates, outages, and infrastructure issues.</description>
-  <lastBuildDate>Mon, 13 Jul 2026 06:13:19 +0000</lastBuildDate>
+  <lastBuildDate>Mon, 13 Jul 2026 10:22:09 +0000</lastBuildDate>
   
 <item>
   <title>🟠 Welcome Back to AZ Update</title>
@@ -182,111 +182,6 @@ az account show --query user.name -o tsv
   <pubDate>Fri, 10 Jul 2026 11:47:38 +0000</pubDate>
   <source>BleepingComputer</source>
   <description><![CDATA[<b>Why this matters: Operational impact possible — watch for changes that generate tickets.</b><br/>The Zimbra security team urged customers to patch a critical vulnerability affecting the Classic Web Client used to access the Zimbra Collaboration suite. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Stop Hand-Building VMs at 2 AM: Automated Image Pipelines with Azure Image Builder and Compute Gallery</title>
-  <link>https://techcommunity.microsoft.com/t5/itops-talk-blog/stop-hand-building-vms-at-2-am-automated-image-pipelines-with/ba-p/4534213</link>
-  <pubDate>Fri, 10 Jul 2026 07:00:00 +0000</pubDate>
-  <source>Microsoft Tech Community IT Ops</source>
-  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/><p>Hello Folks!</p>
-<p>If you have ever stood up a marketplace Ubuntu VM, SSH’d in, layered on your monitoring agent, security tooling, a couple of CA certs, and a hardening script, then captured the result and called it your “golden image,” I have bad news. That image was already drifting from the next one your coworker built before you finished naming the snapshot. At the Microsoft Azure Infra Summit 2026, Sandeep Raichura (PM for Azure Compute Gallery) and Kofi Forsen (PM for Azure VM Image Builder) rebuilt the whole workflow the right way. Source, customize, validate, distribute, deploy. No clicks. No tribal knowledge. No 2 AM heroics.</p>
-<p>📺 <strong>Watch the session:</strong></p>
-<p>&nbsp;</p>
-<div class="lia-embeded-content" contenteditable="false">
-</div>
-<h2>Why IT Pros Should Care</h2>
-<p>You carry the pager when a bad image rolls into ten regions. You explain why three teams have three different Ubuntu 22.04 baselines with three different agents. You find out at 2 AM that someone deleted “the old image” and the old image was the one production VMSS was still pulling.</p>
-<p>This session is in your lane. It covers:</p>
-<ul>
-<li>Why hand-rolled images stop working the moment a second team needs one.</li>
-<li>How Azure VM Image Builder (AIB) turns image creation into declarative pipeline code.</li>
-<li>How Azure Compute Gallery handles versioning, replication, sharing, and accidental-deletion protection.</li>
-<li>How automatic image creation triggers chain a marketplace update through your golden image, into every downstream image, with zero manual steps.</li>
-<li>How VM Scale Sets close the loop with rolling upgrades and automatic OS upgrade.</li>
-</ul>
-<p>In short, this is the practitioner version of “do VM image management properly,” from the PMs who own both services.</p>
-<h2>What is Azure Image Builder and Azure Compute Gallery</h2>
-<p>The two services do different jobs and you really do need both.</p>
-<p><strong>Azure VM Image Builder</strong> is the build engine. You hand it a JSON template that declares:</p>
-<ul>
-<li>A source (marketplace image, managed image, VHD, or existing gallery version).</li>
-<li>Customizers (shell, PowerShell, Windows updates, file copies, restart steps).</li>
-<li>One or more distribute targets (usually a Compute Gallery image definition).</li>
-</ul>
-<p>AIB spins up a temporary build VM, runs your customizers in order, validates, generalizes, captures, and publishes. Every build runs the exact same way. No SSH, no RDP, no “I forgot to install the monitoring agent this time.”</p>
-<p><strong>Azure Compute Gallery</strong> is the management layer for the resulting artifacts. Formerly Shared Image Gallery, it has three levels:</p>
-<ul>
-<li><strong>Gallery.</strong> The top-level container. Sharing policy lives here: RBAC, Direct Shared Gallery, or Community Gallery.</li>
-<li><strong>Image definition.</strong> The metadata. OS type, generation, security type, publisher / offer / SKU. The SKU of an image family.</li>
-<li><strong>Image version.</strong> The actual replicated artifact. Controls regions, replica counts, storage type (ZRS by default), end-of-life date, and the safety flags.</li>
-</ul>
-<p>AIB writes the artifact. Compute Gallery stores, versions, replicates, and shares it.</p>
-<h2>Building an automated image pipeline</h2>
-<p>The session walked through the five steps a real pipeline needs, with no manual intervention in the critical path:</p>
-<ol>
-<li><strong>Source.</strong> A marketplace image or any other base.</li>
-<li><strong>Customize.</strong> Scripts that install agents, harden, configure, and validate. Stored in a storage account so AIB can pull them with the right managed identity.</li>
-<li><strong>Validate.</strong> Built-in validation hooks plus your own smoke tests baked into the customizer. Fail fast. Do not silently continue.</li>
-<li><strong>Distribute.</strong> Push the captured image to a Compute Gallery image definition. Pick your regions and replica counts here.</li>
-<li><strong>Version.</strong> Compute Gallery handles semantic versioning, replication, and safety flags.</li>
-</ol>
-<p>The trick that makes this a real pipeline is the two-template pattern Kofi demoed:</p>
-<ul>
-<li>A <strong>source template</strong> builds the org-wide golden image from the marketplace base. Its source reference is set to latest for the marketplace SKU (for example, Canonical Ubuntu 22.04 latest).</li>
-<li>A <strong>distro template</strong> layers user-group-specific tooling on top of the golden image. Its source reference is the golden image gallery version, also set to latest.</li>
-</ul>
-<p>Both templates get an <strong>automatic image creation trigger</strong> attached. Triggers only fire when the template references latest. From that point on:</p>
-<ul>
-<li>Canonical publishes a new Ubuntu 22.04. The source template’s trigger fires, AIB rebuilds your golden image, and a new version lands in the source gallery.</li>
-<li>That new golden image version fires the distro template’s trigger. AIB rebuilds every downstream distro image automatically.</li>
-<li>VM Scale Sets configured for automatic OS upgrade pick up the new image version and roll it out in batches, pausing if the Application Health probe goes red.</li>
-</ul>
-<p>You set it up once. After that you only come back when you want to change something on purpose.</p>
-<h2>Safety by design in Compute Gallery</h2>
-<p>A bad image at the top of this chain takes out thousands of VMs at the bottom. Sandeep was clear: safety is not optional, it is built in. The four features worth turning on every time:</p>
-<ul>
-<li><strong>ZRS storage by default.</strong> Image versions stored on zone-redundant storage so a zonal failure does not take the image down.</li>
-<li><strong>Exclude from latest.</strong> Stage an image into a region without making it the default for new deployments. Flip the flag when you are ready to roll. You can set this globally on the version or per region.</li>
-<li><strong>Block deletion before end-of-life.</strong> The image cannot be deleted until its end-of-life date. This is the flag that stops the 2 AM accidental delete.</li>
-<li><strong>Soft delete.</strong> If everything else fails, soft delete gives you a recovery window to restore an image version that should not have been removed.</li>
-</ul>
-<p>Combine those four with a sane end-of-life date on every version and your blast radius drops dramatically.</p>
-<h2>Real-world scenarios</h2>
-<p>A few patterns that came up in the session and the Q&amp;A:</p>
-<ul>
-<li><strong>Multi-region fleets.</strong> Define your target regions in the AIB template. AIB hands the artifact to Compute Gallery and Compute Gallery does the replication. Your scale sets in every region pull a local replica, not a cross-region copy.</li>
-<li><strong>Open-source publisher.</strong> Use a Community Gallery so anyone in Azure can deploy your image. You provide a contact URL and email at the gallery level so consumers know where to file issues.</li>
-<li><strong>Partner sharing.</strong> Use Direct Shared Gallery to grant specific subscriptions or tenants access without making the image public.</li>
-<li><strong>VM Scale Sets with rolling upgrade.</strong> Reference the image definition (not a specific version) when you create the scale set. The scale set tracks latest. Pair it with a rolling upgrade policy and the Application Health extension. AIB publishes, Compute Gallery replicates, the scale set rolls, and the rollout pauses itself if the Application Health probe goes red.</li>
-</ul>
-<h2>Getting Started</h2>
-<p>Pick the highest-pain item and start there. You do not have to do this all at once.</p>
-<ul>
-<li>Stand up a Compute Gallery in one region. Create one image definition with proper publisher / offer / SKU metadata. Turn on soft delete at the gallery.</li>
-<li>Wrap an existing build script in an AIB image template. Use a marketplace image as the source. Distribute to your new gallery.</li>
-<li>Add excludeFromLatest, endOfLifeDate, and the block-deletion flags to your image version. Default to ZRS storage.</li>
-<li>Register the Microsoft.VirtualMachineImages and the triggers feature. Attach an automatic image creation trigger to the template. Set the source reference to latest.</li>
-<li>Build a second template that takes your golden image as its source. Attach a trigger to that one too.</li>
-<li>Create a VM Scale Set that references the image definition and enable automatic OS upgrade with rolling upgrades and the Application Health extension.</li>
-</ul>
-<p>That is the loop. Source updates flow through automatically. Bad images do not delete each other. Fleets roll forward in batches.</p>
-<h2>Resources</h2>
-<ul>
-<li><a href="https://learn.microsoft.com/azure/virtual-machines/image-builder-overview" target="_blank">Azure VM Image Builder overview</a>. The service concepts, supported OS, regions, and capabilities.</li>
-<li><a href="https://learn.microsoft.com/azure/virtual-machines/azure-compute-gallery" target="_blank">Azure Compute Gallery overview</a>. Gallery, definition, version, replication, and sharing.</li>
-<li><a href="https://learn.microsoft.com/azure/virtual-machines/image-builder-best-practices" target="_blank">Azure VM Image Builder best practices</a>. Identity, networking, customizers, and operational guidance from the product team.</li>
-<li><a href="https://learn.microsoft.com/azure/virtual-machines/image-builder-triggers-how-to" target="_blank">Automatic Image Creation with Image Builder triggers</a>. Step-by-step to wire up source-image triggers.</li>
-<li><a href="https://learn.microsoft.com/azure/virtual-machines/image-version" target="_blank">Create an image definition and image version</a>. Portal, CLI, PowerShell, and REST flows for publishing artifacts.</li>
-<li><a href="https://learn.microsoft.com/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-automatic-upgrade" target="_blank">Automatic OS image upgrades for VM Scale Sets</a>. The closing leg of the pipeline.</li>
-<li><a href="https://learn.microsoft.com/azure/virtual-machines/share-gallery-community" target="_blank">Share images using Community Gallery</a>. Public, non-commercial sharing for open-source publishers.</li>
-<li><a href="https://github.com/Azure/azvmimagebuilder" target="_blank">Azure Image Builder samples on GitHub</a>. Reference templates, customization scripts, and end-to-end examples.</li>
-</ul>
-<h2>Watch the rest of the Summit</h2>
-<p>This session was one of many at the Microsoft Azure Infrastructure Summit 2026. If you want the keynotes, the IaC deep dives, the AKS sessions, and the rest of the infra track, the full playlist is here:</p>
-<p><a href="https://www.youtube.com/playlist?list=PLjt5SKzX1iI8con7FJDB56G6hHqxGm7ki" target="_blank">Microsoft Azure Infra Summit 2026 playlist</a></p>
-<p>Cheers!</p>
-<p>Pierre Roman</p><br/><br/><b>Source:</b> Microsoft Tech Community IT Ops &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
 </item>
 
 </channel>
