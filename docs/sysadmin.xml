@@ -3,14 +3,14 @@
 <channel>
   <title>Joe SysAdmin and Operations</title>
   <description>Operational IT changes, Microsoft updates, outages, and infrastructure issues.</description>
-  <lastBuildDate>Mon, 13 Jul 2026 20:11:46 +0000</lastBuildDate>
+  <lastBuildDate>Mon, 13 Jul 2026 21:53:29 +0000</lastBuildDate>
   
 <item>
   <title>🔵 Now, defenders are embracing the prompt injection, too</title>
   <link>https://arstechnica.com/security/2026/07/now-defenders-are-embracing-the-prompt-injection-too/</link>
   <pubDate>Mon, 13 Jul 2026 15:06:34 +0000</pubDate>
   <source>Ars Technica</source>
-  <description><![CDATA[<b>Why this matters: Endpoint detection changes — review high-severity detections and alert noise.</b><br/>"Context bombing" tricks hacking agents into shutting down before they can do harm.<br/><br/><b>Source:</b> Ars Technica &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Endpoint detection changes — review high-severity detections and alert noise.</b><br/>"Context bombing" tricks hacking agents into shutting down before they can do harm.<br/><br/><b>Source:</b> Ars Technica &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
@@ -107,170 +107,7 @@
 <p>This session is one stop on a big tour. The full Microsoft Azure Infrastructure Summit 2026 playlist covers everything from sovereign cloud and AKS networking to backup, storage, and AI-assisted operations. If your job touches Azure, there is something in here for you.</p>
 <p>Head over to the full playlist and binge what is useful: <a href="https://www.youtube.com/playlist?list=PLjt5SKzX1iI8con7FJDB56G6hHqxGm7ki" target="_blank">https://www.youtube.com/playlist?list=PLjt5SKzX1iI8con7FJDB56G6hHqxGm7ki</a></p>
 <p>Cheers!</p>
-<p>Pierre Roman</p><br/><br/><b>Source:</b> Microsoft Tech Community IT Ops &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
-</item>
-
-<item>
-  <title>🟠 Welcome Back to AZ Update</title>
-  <link>https://techcommunity.microsoft.com/t5/itops-talk-blog/welcome-back-to-az-update/ba-p/4535872</link>
-  <pubDate>Fri, 10 Jul 2026 20:20:19 +0000</pubDate>
-  <source>Microsoft Tech Community IT Ops</source>
-  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/><p>Hello Folks!<br /><br /><strong>Welcome Back to AZ Update</strong></p>
-<p>A few years ago, Antony Bartolo and I launched a simple idea called <strong>AZ Update</strong>.</p>
-<p>The goal was to provide a place where IT professionals could quickly understand what was changing in Azure, why it mattered, and what they should pay attention to next. The show became a weekly conversation focused on Azure news, infrastructure, operations, security, and the real-world impact of Microsoft's latest cloud updates.</p>
-<p>Today, Azure is moving faster than ever.</p>
-<p>Every week brings new services, platform capabilities, operational improvements, AI innovations, and architectural guidance. Keeping up is a full-time job. Most of us don't have time to read every blog post, release note, announcement, and documentation update.</p>
-<p>That's why I'm bringing <strong>AZ Update</strong> back.</p>
-<p>This time, as a <strong>weekly LinkedIn newsletter </strong>and this blog.&nbsp; To be completely transparent I am using an AI Agent to parse the update list for any in the last 7 days, filter for Infra/Ops content and research product docs and help with the draft. I do review content and write the post myself.</p>
-<p>Each edition will cut through the noise and focus on what matters most for cloud architects, platform engineers, infrastructure teams, SREs, security professionals, and IT operators. I'll share the Azure announcements worth your attention, explain why they're important, highlight practical implications, and point you to the resources that can help you go deeper.</p>
-<p>Just a concise weekly briefing from one ITPro to another.</p>
-<p>If your day-to-day involves building, operating, securing, or modernizing infrastructure in Azure, Azure Arc, AKS, hybrid environments, or the growing world of AI-powered operations, this newsletter is for you.</p>
-<p>Welcome to the next chapter of <strong>AZ Update</strong>.</p>
-<p>&nbsp;</p>
-<h2>Here is week 1!</h2>
-<p>This week’s Azure infrastructure updates bring practical operational gains for security, platform reliability, disaster recovery, and identity-driven access control. Here is a detailed ITPro breakdown with implementation guidance you can use in production planning.</p>
-<ul>
-<li>Update #1 - Generally Available: Network Security Perimeter support for Azure Event Hubs</li>
-<li>Update #2 - Generally Available: Confidential Computing support for Azure Event Hubs Dedicated</li>
-<li>Update #3 - Generally Available: Support 5x churn in Azure Site Recovery</li>
-<li>Update #4 - Generally Available: Microsoft Entra ID-based access for Azure Blob Storage SFTP</li>
-</ul>
-<h3>Update #1 - Generally Available: Network Security Perimeter support for Azure Event Hubs</h3>
-<h2>Why ITPros should care</h2>
-<p>Network Security Perimeter for Event Hubs changes how ITPros enforce connectivity boundaries around mission-critical event pipelines. Instead of depending only on isolated firewall rules per namespace, you can apply perimeter-aware controls that are easier to govern consistently across multiple services.</p>
-<p>From an operations perspective, this is a service-level hardening improvement. It helps reduce accidental exposure and supports better audit conversations when security teams ask for clear evidence of allowed and denied paths.</p>
-<h2>Operational value</h2>
-<p>The operational value is stronger day-two control. You can standardise network access policy patterns for producer and consumer applications, reduce policy drift, and simplify incident investigations when unexpected traffic appears.</p>
-<p>For production rollout, validate all dependencies first: private endpoints, DNS resolution, trusted service exceptions, managed identities, and cross-subscription network paths.</p>
-<h2>Real-world example with step-by-step guidance</h2>
-<ol>
-<li>Inventory current producer and consumer traffic flows, including private endpoints, DNS zones, and any trusted service allowances.</li>
-<li>Deploy a pilot Event Hubs namespace with perimeter controls in non-production and mirror realistic ingestion and consumption traffic.</li>
-<li>Apply least-privilege inbound and outbound perimeter rules, then execute end-to-end send/receive tests with representative message volume.</li>
-<li>Review diagnostic logs for denies, refine exceptions only where business-justified, and capture evidence for change management.</li>
-<li>Promote to production in stages with a rollback plan that restores previous network policy if message flow health degrades.</li>
-</ol>
-<h2>Technical details including code examples</h2>
-<p>Use the following sequence when validating that perimeter onboarding did not break data plane operations. The first command confirms your active Azure context, the second verifies endpoint reachability, and the third validates Event Hub metadata retrieval.</p>
-<p>Run this safely in a test window before production enforcement. If connectivity and control-plane checks pass in test, repeat with production namespace read-only checks before enabling stricter policies.</p>
-az account show --output table
-
-Test-NetConnection &lt;namespace&gt;.servicebus.windows.net -Port 5671
-
-az eventhubs eventhub show --resource-group &lt;rg&gt; --namespace-name &lt;namespace&gt; --name &lt;eventhub&gt; --output table
-<p>Expected outcome: TCP probe to port 5671 succeeds, and Event Hub metadata query returns without auth or network timeout errors. If probe fails, check DNS, NSGs, route tables, private endpoint linkage, and perimeter rule assignment scope.</p>
-<h2>Comprehensive Resources</h2>
-<ul>
-<li><a href="https://azure.microsoft.com/updates?id=567203" target="_blank">Azure update: Network Security Perimeter support for Azure Event Hubs</a></li>
-<li><a href="https://learn.microsoft.com/azure/private-link/network-security-perimeter-concepts" target="_blank">Network Security Perimeter concepts</a></li>
-<li><a href="https://learn.microsoft.com/azure/event-hubs/" target="_blank">Azure Event Hubs documentation</a></li>
-<li><a href="https://learn.microsoft.com/azure/event-hubs/network-security" target="_blank">Event Hubs networking and security</a></li>
-</ul>
-<ul>
-<li>&nbsp;</li>
-</ul>
-<h3>Update #2 - Generally Available: Confidential Computing support for Azure Event Hubs Dedicated</h3>
-<h2>Why ITPros should care</h2>
-<p>Confidential Computing support for Event Hubs Dedicated matters when ITPros operate regulated or high-sensitivity event streams. It extends protection expectations beyond encryption at rest and in transit, into stronger assurances during processing.</p>
-<p>Compared with older architectures, this reduces the need for some compensating controls and helps security and operations teams align on platform-native protections for streaming workloads.</p>
-<h2>Operational value</h2>
-<p>Operationally, this strengthens trust boundaries for event ingestion platforms that feed analytics, SIEM, and business-critical automation. It also improves evidence posture for compliance reviews where data handling controls must be demonstrated end to end.</p>
-<p>Before rollout, validate throughput impact, partition behaviour, client compatibility, and observability baselines so confidentiality controls do not create unexpected SLO regressions.</p>
-<h2>Real-world example with step-by-step guidance</h2>
-<ol>
-<li>Classify Event Hubs namespaces by sensitivity and select the first dedicated environment where enhanced confidentiality requirements apply.</li>
-<li>Enable and validate in non-production with representative producer and consumer load, including peak and burst patterns.</li>
-<li>Measure latency, throughput, and throttling trends before and after enablement to confirm workload behaviour remains acceptable.</li>
-<li>Capture attestation and configuration evidence required by internal security governance or external auditors.</li>
-<li>Roll out in waves by workload criticality, with rollback criteria tied to message latency, error rates, and throttling thresholds.</li>
-</ol>
-<h2>Technical details including code examples</h2>
-<p>This validation example confirms namespace details and metrics health so you can compare baseline vs post-change behaviour. The metrics query focuses on ingestion, egress, and throttling signals that commonly surface operational risk first.</p>
-<p>Run with a least-privileged operations identity that can read namespace configuration and metrics. Avoid making unrelated changes while collecting baseline evidence.</p>
-az eventhubs namespace show --resource-group &lt;rg&gt; --name &lt;namespace&gt; --output jsonc
-
-az monitor metrics list --resource /subscriptions/&lt;sub&gt;/resourceGroups/&lt;rg&gt;/providers/Microsoft.EventHub/namespaces/&lt;namespace&gt; --metric IncomingMessages OutgoingMessages ThrottledRequests --interval PT5M
-
-az account show --query user.name -o tsv
-<p>Expected outcome: namespace query succeeds, metrics return consistently, and no abnormal throttling spike appears after control changes. If results diverge, review dedicated capacity planning, partition strategy, RBAC scope, and workload profile fidelity.</p>
-<h2>Comprehensive Resources</h2>
-<ul>
-<li><a href="https://azure.microsoft.com/updates?id=567212" target="_blank">Azure update: Confidential Computing support for Azure Event Hubs Dedicated</a></li>
-<li><a href="https://learn.microsoft.com/azure/event-hubs/event-hubs-dedicated-overview" target="_blank">Event Hubs Dedicated overview</a></li>
-<li><a href="https://learn.microsoft.com/azure/confidential-computing/overview" target="_blank">Azure Confidential Computing overview</a></li>
-<li><a href="https://learn.microsoft.com/azure/event-hubs/monitor-event-hubs" target="_blank">Monitor Azure Event Hubs</a></li>
-</ul>
-<ul>
-<li>&nbsp;</li>
-</ul>
-<h3>Update #3 - Generally Available: Support 5x churn in Azure Site Recovery</h3>
-<h2>Why ITPros should care</h2>
-<p>Higher churn support in Azure Site Recovery is directly relevant for ITPros protecting write-intensive systems. It expands what can be replicated reliably, reducing DR exceptions for fast-changing workloads.</p>
-<p>Compared with the previous operational envelope, this gives more room for modern transactional applications while still requiring disciplined capacity and replication health management.</p>
-<h2>Operational value</h2>
-<p>Operational value is improved DR coverage and better alignment between production write behaviour and recovery plans. Teams can protect more workloads without bespoke workaround architecture.</p>
-<p>For production rollout, validate process server sizing, bandwidth headroom, cache storage performance, and sustained replication lag during peak change windows.</p>
-<h2>Real-world example with step-by-step guidance</h2>
-<ol>
-<li>Baseline current churn and replication lag for candidate workloads to identify which systems benefit most from the increased support.</li>
-<li>Enable replication in a pilot for one high-churn workload and observe initial seeding and steady-state health.</li>
-<li>Run test failover and reprotect to verify recovery objectives and operational runbook completeness.</li>
-<li>Tune bandwidth and cache settings if lag increases during peak write intervals or backup overlap windows.</li>
-<li>Onboard additional workloads incrementally and use replication health gates before each expansion wave.</li>
-</ol>
-<h2>Technical details including code examples</h2>
-<p>These commands are relevant for validating actual recovery readiness instead of configuration-only status. They expose protected item health and support controlled failover rehearsal.</p>
-<p>Use a non-production network for test failover and document outputs so operations and business continuity stakeholders share the same readiness evidence.</p>
-az site-recovery fabric list --resource-group &lt;rg&gt; --vault-name &lt;vault&gt; -o table
-
-az site-recovery protected-item list --resource-group &lt;rg&gt; --vault-name &lt;vault&gt; --fabric-name &lt;fabric&gt; --protection-container &lt;container&gt; -o table
-
-az site-recovery recovery-plan test-failover --resource-group &lt;rg&gt; --vault-name &lt;vault&gt; --name &lt;recoveryPlan&gt; --network-id &lt;testNetworkId&gt;
-<p>Expected outcome: protected items remain healthy, lag remains within target, and test failover completes without consistency errors. If failures occur, inspect connectivity, process server capacity, cache throughput, and policy mappings.</p>
-<h2>Comprehensive Resources</h2>
-<ul>
-<li><a href="https://azure.microsoft.com/updates?id=566966" target="_blank">Azure update: Support 5x churn in Azure Site Recovery</a></li>
-<li><a href="https://learn.microsoft.com/azure/site-recovery/" target="_blank">Azure Site Recovery documentation</a></li>
-<li><a href="https://learn.microsoft.com/azure/site-recovery/site-recovery-monitor-and-troubleshoot" target="_blank">Monitor and troubleshoot Site Recovery</a></li>
-<li><a href="https://learn.microsoft.com/azure/site-recovery/site-recovery-plan-capacity" target="_blank">Site Recovery capacity planning</a></li>
-</ul>
-<ul>
-<li>&nbsp;</li>
-</ul>
-<h3>Update #4 - Generally Available: Microsoft Entra ID-based access for Azure Blob Storage SFTP</h3>
-<h2>Why ITPros should care</h2>
-<p>This launch modernises SFTP access for Azure Blob Storage by bringing identity control closer to Microsoft Entra. ITPros gain stronger governance options than local-account-only models for many enterprise scenarios.</p>
-<p>Operationally, the key change is identity lifecycle alignment: provisioning, review, and revocation can be managed with central identity processes instead of fragmented local credentials.</p>
-<h2>Operational value</h2>
-<p>The value is reduced credential sprawl, better auditability, and clearer access accountability across teams and external partners exchanging files over SFTP.</p>
-<p>Before production, validate client compatibility, RBAC scope, network restrictions, access review cadence, and emergency break-glass procedures.</p>
-<h2>Real-world example with step-by-step guidance</h2>
-<ol>
-<li>Confirm SFTP is enabled on the storage account and validate networking model (public endpoint restrictions or private access path) matches policy.</li>
-<li>Assign Entra-based permissions with least privilege and validate scope at storage account and container boundaries.</li>
-<li>Test SFTP authentication and file operations using approved clients while collecting diagnostic logs for audit evidence.</li>
-<li>Validate joiner-mover-leaver scenarios by changing membership and role assignments, then confirming access updates propagate correctly.</li>
-<li>Roll out in stages by partner or workload segment with clear support ownership and incident response runbooks.</li>
-</ol>
-<h2>Technical details including code examples</h2>
-<p>This sequence verifies account capability and role assignment posture before user acceptance testing. It is useful for catching scope mistakes that often cause authentication-success/data-access-failure patterns.</p>
-<p>Run safely by using a dedicated test identity and non-production storage account first; then repeat read-only validation in production before broad enablement.</p>
-az storage account show --name &lt;storageAccount&gt; --resource-group &lt;rg&gt; --query "{name:name,isSftpEnabled:isSftpEnabled,allowBlobPublicAccess:allowBlobPublicAccess}" -o jsonc
-
-az role assignment list --assignee &lt;principalObjectId&gt; --scope /subscriptions/&lt;sub&gt;/resourceGroups/&lt;rg&gt;/providers/Microsoft.Storage/storageAccounts/&lt;storageAccount&gt; -o table
-
-az account show --query user.name -o tsv
-<p>Expected outcome: SFTP capability is enabled, expected role assignments are present, and test identity can perform allowed operations only. If sign-in works but file actions fail, inspect RBAC propagation delay, ACL/permission scope, and storage network restrictions.</p>
-<h2>Comprehensive Resources</h2>
-<ul>
-<li><a href="https://azure.microsoft.com/updates?id=567085" target="_blank">Azure update: Microsoft Entra ID-based access for Azure Blob Storage SFTP</a></li>
-<li><a href="https://learn.microsoft.com/azure/storage/blobs/secure-file-transfer-protocol-support" target="_blank">SFTP support for Azure Blob Storage</a></li>
-<li><a href="https://learn.microsoft.com/azure/storage/blobs/authorize-access-azure-active-directory" target="_blank">Authorize blob data with Microsoft Entra ID</a></li>
-<li><a href="https://learn.microsoft.com/security/benchmark/azure/baselines/storage-security-baseline" target="_blank">Azure Storage security baseline</a></li>
-</ul>
-<p>If you are planning adoption, start with one workload per update area, collect operational evidence, and standardise the validated pattern in your runbooks and IaC modules. That approach keeps change safe while accelerating delivery.</p>
-<p>Cheers!</p>
-<p>Pierre</p><br/><br/><b>Source:</b> Microsoft Tech Community IT Ops &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
+<p>Pierre Roman</p><br/><br/><b>Source:</b> Microsoft Tech Community IT Ops &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 14h ago]]></description>
 </item>
 
 </channel>
