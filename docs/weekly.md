@@ -1,25 +1,45 @@
 # IT Weekly Intelligence Briefing
 **Period:** July 06 – July 13, 2026  
-**Generated:** 2026-07-13 13:21 UTC  
-**Items reviewed:** 136  
+**Generated:** 2026-07-13 16:30 UTC  
+**Items reviewed:** 137  
 
 ## ⚡ Top Actions This Week
 
-1. **Validate backups, confirm EDR coverage, and brief incident response team.**  
-   _Ryuk ransomware member pleads guilty in the US, faces 15 years in prison_  
+1. **Prioritize patching of affected systems; check for internet-exposed attack surface.**  
+   _CISA warns of actively exploited RCE flaws in Joomla extensions_  
    Source: BleepingComputer  
 
-2. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _Police suspects Dutch hackers were involved in Odido breach_  
-   Source: BleepingComputer  
-
-3. **Validate backups, confirm EDR coverage, and brief incident response team.**  
-   _Ransomware Negotiator Gets 70 Months in Prison for Aiding BlackCat Attacks_  
+2. **Validate backups, confirm EDR coverage, and brief incident response team.**  
+   _⚡ Weekly Recap: ShareFile Threat, Citrix Bleed 2 Ransomware, AI Coding Attacks, and More_  
    Source: The Hacker News  
+
+3. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
+   _Lidl discloses online shop breach after service provider hack_  
+   Source: BleepingComputer  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [CISA warns of actively exploited RCE flaws in Joomla extensions](https://www.bleepingcomputer.com/news/security/cisa-warns-of-actively-exploited-rce-flaws-in-joomla-extensions/)
+**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jul 13  
+**Why it matters:** General awareness item.  
+**Recommended action:** Prioritize patching of affected systems; check for internet-exposed attack surface.  
+
+### [⚡ Weekly Recap: ShareFile Threat, Citrix Bleed 2 Ransomware, AI Coding Attacks, and More](https://thehackernews.com/2026/07/weekly-recap-sharefile-threat-citrix.html)
+**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Jul 13  
+**Why it matters:** Elevated ransomware risk across the sector.  
+**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
+
+### [Lidl discloses online shop breach after service provider hack](https://www.bleepingcomputer.com/news/security/lidl-discloses-online-shop-breach-after-service-provider-hack/)
+**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jul 13  
+**Why it matters:** Potential credential or data exposure.  
+**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
+
+### [Breach at the Beach: Play the Ultimate Entra ID CTF](https://www.bleepingcomputer.com/news/security/breach-at-the-beach-play-the-ultimate-entra-id-ctf/)
+**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jul 13  
+**Why it matters:** Potential credential or data exposure.  
+**Recommended action:** Elevate monitoring posture; brief security team on threat actor TTPs.  
 
 ### [Ryuk ransomware member pleads guilty in the US, faces 15 years in prison](https://www.bleepingcomputer.com/news/security/ryuk-ransomware-member-pleads-guilty-in-the-us-faces-15-years-in-prison/)
 **Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jul 10  
@@ -30,26 +50,6 @@
 **Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jul 10  
 **Why it matters:** Potential credential or data exposure.  
 **Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
-
-### [Ransomware Negotiator Gets 70 Months in Prison for Aiding BlackCat Attacks](https://thehackernews.com/2026/07/ransomware-negotiator-gets-70-months-in.html)
-**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Jul 10  
-**Why it matters:** Elevated ransomware risk across the sector.  
-**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
-
-### [New GigaWiper Windows Backdoor Bundles Disk Wiping, Fake Ransomware, and Spyware](https://thehackernews.com/2026/07/new-gigawiper-windows-backdoor-bundles.html)
-**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Jul 09  
-**Why it matters:** Elevated ransomware risk across the sector.  
-**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
-
-### [GodDamn Ransomware Uses PoisonX Driver to Disable Endpoint Defenses](https://thehackernews.com/2026/07/goddamn-ransomware-uses-poisonx-driver.html)
-**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Jul 09  
-**Why it matters:** Elevated ransomware risk across the sector.  
-**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
-
-### [CISA Adds 4 Actively Exploited Adobe, Joomla, and Langflow Flaws to KEV](https://thehackernews.com/2026/07/cisa-adds-4-actively-exploited-adobe.html)
-**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Jul 08  
-**Why it matters:** General awareness item.  
-**Recommended action:** Apply emergency patch or mitigation now; check vendor advisory for workarounds.  
 
 ---
 
@@ -83,13 +83,13 @@
 
 ## 🔵 FYI — General Awareness
 
+- [Lessons Learned from CISA’s Recent GitHub Leak](https://krebsonsecurity.com/2026/07/lessons-learned-from-cisas-recent-github-leak/) — Krebs on Security
+- [New MemGhost Attack Plants Persistent False Memories in AI Agents Through One Email](https://thehackernews.com/2026/07/new-memghost-attack-plants-persistent.html) — The Hacker News
+- [UK charges suspects linked to Russian Coms call spoofing platform](https://www.bleepingcomputer.com/news/security/uk-charges-suspects-linked-to-russian-coms-call-spoofing-platform/) — BleepingComputer
+- [Forg365 PhaaS Targets Microsoft 365 with Device Code and AitM Session Theft](https://thehackernews.com/2026/07/forg365-phaas-targets-microsoft-365.html) — The Hacker News
 - [Meta Files Patent for AI That Can Listen All Day and Track How You're Feeling](https://thehackernews.com/2026/07/meta-files-patent-for-ai-that-can.html) — The Hacker News
 - [Thinking Fast and Slow in the SOC: The Case for Combining Autonomous AI with Analyst Copilots](https://thehackernews.com/2026/07/thinking-fast-and-slow-in-soc-case-for.html) — The Hacker News
-- [EU sanctions Russian GRU military hackers over cyberattacks](https://www.bleepingcomputer.com/news/security/eu-and-uk-hit-russia-with-first-joint-cyber-sanctions-package/) — BleepingComputer
-- [Attacker Uses Suspected AI-Generated PowerShell Script to Map Active Directory](https://thehackernews.com/2026/07/attacker-uses-suspected-ai-generated.html) — The Hacker News
-- [US and allies warn of Russian critical infrastructure attacks](https://www.bleepingcomputer.com/news/security/us-and-allies-share-defense-tips-against-russian-hackers-targeting-critical-infrastructure/) — BleepingComputer
-- [Misconfigured Server Reveals Three Evilginx Phishing Operations Targeting Microsoft 365](https://thehackernews.com/2026/07/misconfigured-server-reveals-three.html) — The Hacker News
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 6 critical · 73 important · 57 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 10 critical · 70 important · 57 FYI_
