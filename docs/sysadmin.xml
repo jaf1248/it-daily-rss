@@ -3,14 +3,111 @@
 <channel>
   <title>Joe SysAdmin and Operations</title>
   <description>Operational IT changes, Microsoft updates, outages, and infrastructure issues.</description>
-  <lastBuildDate>Mon, 13 Jul 2026 22:53:18 +0000</lastBuildDate>
+  <lastBuildDate>Mon, 13 Jul 2026 23:52:03 +0000</lastBuildDate>
   
 <item>
   <title>🔵 Now, defenders are embracing the prompt injection, too</title>
   <link>https://arstechnica.com/security/2026/07/now-defenders-are-embracing-the-prompt-injection-too/</link>
   <pubDate>Mon, 13 Jul 2026 15:06:34 +0000</pubDate>
   <source>Ars Technica</source>
-  <description><![CDATA[<b>Why this matters: Endpoint detection changes — review high-severity detections and alert noise.</b><br/>"Context bombing" tricks hacking agents into shutting down before they can do harm.<br/><br/><b>Source:</b> Ars Technica &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Endpoint detection changes — review high-severity detections and alert noise.</b><br/>"Context bombing" tricks hacking agents into shutting down before they can do harm.<br/><br/><b>Source:</b> Ars Technica &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 8h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Build and Optimize a Data Lakehouse for Unified Data Intelligence</title>
+  <link>https://techcommunity.microsoft.com/t5/itops-talk-blog/build-and-optimize-a-data-lakehouse-for-unified-data/ba-p/4534535</link>
+  <pubDate>Mon, 13 Jul 2026 07:00:00 +0000</pubDate>
+  <source>Microsoft Tech Community IT Ops</source>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><p>Hello Folks!</p>
+<p>Welcome back to the ITOpsTalk Blog and the Microsoft Azure Infrastructure Summit 2026 series. In this session James Baker and Sai Runtham, both from the Azure Data Lake Storage product team, take us through what a modern Lakehouse actually is, how to design one on Azure, and then they roll up their sleeves and build one end to end. If you have been hearing “Lakehouse” thrown around in architecture reviews and were not 100% sure what it changes for you as an IT Pro, this one is for you.</p>
+<p>📺 <strong>Watch the session:</strong></p>
+<p>&nbsp;</p>
+<div class="lia-embeded-content" contenteditable="false">
+</div>
+<h2>Why IT Pros Should Care</h2>
+<p>You might be thinking, “I run infrastructure, not analytics.” Fair point. But here is the thing. The lakehouse is increasingly the platform your business will run BI dashboards, AI agents, and decision support systems on, and you are the one who has to keep the data safe, governed, and reachable.</p>
+<p>Here is what is in it for you:</p>
+<ul>
+<li>It is a platform conversation. James spends a big chunk of the session on horizontal platform capabilities (storage, catalog, identity, secrets, network, policy) versus vertical pipeline concerns. That is squarely an IT Pro problem.</li>
+<li>Data is the asset. Workspaces, query engines, and dashboards are transient. The data lives forever, and protecting it is on your plate.</li>
+<li>Governance is what stops your data lake from rotting into a data swamp.</li>
+<li>Scale is a virtuous cycle. More data drives more insight, which drives more data. Your platform cannot become the ceiling.</li>
+<li>AI agents are the new consumers. They do not just read dashboards, they query gold tables directly. Your network, identity, and access controls have to keep up.</li>
+</ul>
+<h2>What is a data lakehouse</h2>
+<p>A data lakehouse is exactly what it sounds like. You take the cheap, flexible, schema-light scale of a data lake, and you fuse it with the low-latency query performance, update semantics, and governance of a data warehouse. One copy of the data. One place to govern it. No more forking from the lake into a warehouse just to make BI tools happy.</p>
+<p>Quick contrast:</p>
+<ul>
+<li><strong>Data lake.</strong> Big, cheap, flexible. No schema enforced on write. Historically prone to becoming a swamp.</li>
+<li><strong>Data warehouse.</strong> Low-latency queries, updates, strong governance, structured. Hits a scale ceiling and costs more.</li>
+<li><strong>Data lakehouse.</strong> Lake-scale storage, with a high-performance query layer and warehouse-grade governance sitting over the top. No data fork.</li>
+</ul>
+<p>The big shift is that the data does not move. Your BI dashboards, your AI agents, your serverless SQL queries, they all hit the same governed tables in the lake. That keeps lineage clean and your security model sane.</p>
+<h2>Building it on Azure</h2>
+<p>James and Sai are clear that the architecture is less a fixed diagram and more a list of platform capabilities you compose. Here is the shape of it on Azure.</p>
+<p><strong>Storage layer (the asset).</strong></p>
+<ul>
+<li>Azure Data Lake Storage Gen2 (ADLS) with hierarchical namespace turned on. That is non-negotiable for analytics workloads. It gives you atomic directory operations, POSIX-style ACLs, and the performance Delta Lake relies on.</li>
+<li>OneLake in Microsoft Fabric if you want a tenant-wide logical lake that is built on ADLS Gen2 and stores everything in open Delta Parquet by default.</li>
+</ul>
+<p><strong>Table format and pipelines.</strong></p>
+<ul>
+<li>Open table formats: Delta Lake (and Apache Iceberg as it converges) give you ACID transactions, time travel, schema evolution, and streaming on cheap object storage.</li>
+<li>Azure Databricks Lakeflow Declarative Pipelines with Autoloader for incremental ingestion of both batch and streaming sources straight into Delta tables. Autoloader handles new file discovery, schema inference, and evolution for you.</li>
+<li>The medallion architecture for stamping out repeatable pipelines:</li>
+</ul>
+<p>o&nbsp;&nbsp; <strong>Bronze.</strong> Raw, append-only landing zone. Source of truth.</p>
+<p>o&nbsp;&nbsp; <strong>Silver.</strong> Cleansed, deduplicated, conformed, enriched.</p>
+<p>o&nbsp;&nbsp; <strong>Gold.</strong> Business-ready, aggregated, performance-optimized for consumption.</p>
+<p><strong>Governance and identity.</strong></p>
+<ul>
+<li>Unity Catalog as the single source of truth for catalog, lineage, and fine-grained access control across bronze, silver, and gold.</li>
+<li>Entra ID for identity. Managed identities for compute. Key Vault for secrets.</li>
+<li>Network protection around the perimeter. The data is the crown jewel, so private endpoints, firewalls, and VNet-attached compute are baseline.</li>
+</ul>
+<p><strong>Consumption layer.</strong></p>
+<ul>
+<li>Power BI Direct Query against a serverless SQL warehouse on the gold tables. No data copies, governance flows through.</li>
+<li>AI agents like Databricks Genie pointed at gold tables. Natural-language questions, live lineage, no data movement.</li>
+</ul>
+<p><strong>The demo that ties it together.</strong> Sai walked through a real pipeline: NYC TLC taxi trips enriched with NOAA weather and ESPN/MLB sports events, ingested by Autoloader into bronze, transformed through silver, aggregated into gold. A parallel streaming pipeline handled synthetic live events for a real-time demand view. Power BI dashboards hit gold via Direct Query. And Genie answered questions like “which zones are most sensitive to sport events” by mapping demand around Madison Square Garden, with the query and the chart generated for you. All against the same lakehouse, no data movement, full lineage.</p>
+<h2>Optimizing for cost and performance</h2>
+<p>This is where a lot of lakehouses go sideways. A few things from the session and from the official guidance worth pinning to your wall:</p>
+<ul>
+<li><strong>Get hierarchical namespace right.</strong> It is the difference between atomic directory operations and “copy then delete,” which is slow and expensive at scale.</li>
+<li><strong>Use storage tiers and lifecycle policies.</strong> Hot for working data, Cool or Cold for older partitions, Archive for compliance retention. Lifecycle rules on ADLS do this automatically.</li>
+<li><strong>Partition and file-size matter.</strong> Lots of tiny files kill query performance. Use OPTIMIZE, Z-Order, or liquid clustering on Delta tables, and partition on the columns your queries actually filter on.</li>
+<li><strong>Lean on vectorized reads.</strong> ADLS plus Delta plus modern query engines push a lot of work down to columnar Parquet, which keeps your compute bill in check.</li>
+<li><strong>Use serverless SQL warehouses where it fits.</strong> Direct Query against a serverless endpoint scales compute to demand and lets you keep dashboards fresh without import refreshes.</li>
+<li><strong>Observe data, not just systems.</strong> “Is Databricks up” is necessary but not sufficient. Watch data freshness, row counts, pipeline blockages, and SLAs on the data itself.</li>
+<li><strong>Govern everything.</strong> A well-governed lakehouse drives trust, which drives use, which drives value. Skipping governance early always costs more later.</li>
+</ul>
+<h2>Getting Started</h2>
+<p>If you want to put hands on a keyboard this week:</p>
+<ul>
+<li>Spin up an Azure Storage account with hierarchical namespace enabled. That is your ADLS Gen2 foundation.</li>
+<li>Stand up an Azure Databricks workspace, enable Unity Catalog, and point it at your ADLS account.</li>
+<li>Create a Lakeflow Declarative Pipeline. Use Autoloader to ingest a sample dataset (the NYC taxi data is a classic starting point) into a bronze Delta table.</li>
+<li>Add silver and gold notebooks or pipelines that clean and aggregate the data.</li>
+<li>Connect Power BI to a serverless SQL warehouse on your gold tables with Direct Query.</li>
+<li>If you are a Fabric tenant, mirror or shortcut data into OneLake and try the same pattern there, no infra to manage.</li>
+<li>Read the Hitchhiker’s Guide to ADLS before you scale up. It will save you future you a lot of grief.</li>
+</ul>
+<h2>Resources</h2>
+<ul>
+<li><a href="https://learn.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-introduction" target="_blank">Introduction to Azure Data Lake Storage</a></li>
+<li><a href="https://aka.ms/adls/hitchhikersguide" target="_blank">The Hitchhiker’s Guide to the Data Lake</a></li>
+<li><a href="https://learn.microsoft.com/en-us/fabric/onelake/" target="_blank">Microsoft OneLake documentation</a></li>
+<li><a href="https://learn.microsoft.com/en-us/azure/databricks/" target="_blank">Azure Databricks documentation</a></li>
+<li><a href="https://learn.microsoft.com/en-us/azure/databricks/delta/" target="_blank">Delta Lake on Azure Databricks</a></li>
+<li><a href="https://learn.microsoft.com/en-us/azure/databricks/lakehouse-architecture/deployment-guide/delta-lake" target="_blank">Design Delta Lake architecture and medallion patterns</a></li>
+<li><a href="https://learn.microsoft.com/en-us/fabric/onelake/" target="_blank">Implement medallion lakehouse architecture in Microsoft Fabric</a></li>
+</ul>
+<h2>Watch the rest of the Summit</h2>
+<p>This session is one stop on a big tour. The full Microsoft Azure Infrastructure Summit 2026 playlist covers everything from sovereign cloud and AKS networking to backup, storage, and AI-assisted operations. If your job touches Azure, there is something in here for you.</p>
+<p>Head over to the full playlist and binge what is useful: <a href="https://www.youtube.com/playlist?list=PLjt5SKzX1iI8con7FJDB56G6hHqxGm7ki" target="_blank">https://www.youtube.com/playlist?list=PLjt5SKzX1iI8con7FJDB56G6hHqxGm7ki</a></p>
+<p>Cheers!</p>
+<p>Pierre Roman</p><br/><br/><b>Source:</b> Microsoft Tech Community IT Ops &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 16h ago]]></description>
 </item>
 
 </channel>
