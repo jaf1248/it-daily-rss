@@ -3,8 +3,192 @@
 <channel>
   <title>Joe — VP of IT Briefing</title>
   <description>Leadership-focused IT risk, vendors, pricing, licensing, and industry context.</description>
-  <lastBuildDate>Mon, 13 Jul 2026 23:52:22 +0000</lastBuildDate>
+  <lastBuildDate>Tue, 14 Jul 2026 02:10:15 +0000</lastBuildDate>
   
+<item>
+  <title>🟠 Governments to enterprises: Improve your router security hygiene</title>
+  <link>https://www.csoonline.com/article/4196447/governments-to-enterprises-improve-your-router-security-hygiene.html</link>
+  <pubDate>Tue, 14 Jul 2026 01:49:53 +0000</pubDate>
+  <source>CSO Online</source>
+  <description><![CDATA[<b>Why this matters: Credential/phishing risk — reinforce MFA and user awareness training.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<p class="wp-block-paragraph">Global security agencies say enterprises must clean up their act as Russian government-sponsored attackers exploit weaknesses in routers.</p>
+
+
+
+<p class="wp-block-paragraph">According to a new multinational <a href="https://www.ic3.gov/CSA/2026/260713.pdf" rel="noreferrer noopener" target="_blank">cybersecurity advisory</a>, cyberattackers continue to exploit inadequately-protected and/or poorly-configured network devices via age-old tactics. Threat actors scan for weakened devices, typically routers, allowing them to “opportunistically” compromise critical infrastructure networks, according to the bulletin from 19 federal agencies across North America, the UK, Europe, and Australia.</p>
+
+
+
+<p class="wp-block-paragraph">They then transfer configuration files to servers they control. These files, containing plaintext or weakly-encoded information like credentials, or details about the organization’s network, hold most of the potential value, noted <a href="https://www.infotech.com/profiles/seva-ioussoufovitch" rel="noreferrer noopener" target="_blank">Seva Ioussoufovitch</a>, a senior research analyst at Info-Tech Research Group.</p>
+
+
+
+<p class="wp-block-paragraph">“It might sound simple, but this tactic has been exploited for well over a decade, and is clearly still effective,” he said.</p>
+
+
+
+<h2 class="wp-block-heading" id="how-snmp-attacks-work">How SNMP attacks work</h2>
+
+
+
+<p class="wp-block-paragraph">To begin their attack, state-sponsored cybercriminals send requests via the standard Simple Network Management Protocol (SNMP) framework that supports device-network information exchange, which allows them to scan for weak, insecure devices still using older SNMPv1 or SNMPv2 protocols that accept common or default “community strings” for authentication. These strings are typically shared passwords, with predictable, public defaults that might have been left untouched by admins. Additionally, many of these devices may remain in their basic router configurations.</p>
+
+
+
+<p class="wp-block-paragraph">Using spoofed IP addresses, threat actors instruct SNMP agents running on these devices to copy their configurations to a file (typically “config.bkp” or “output.txt”), then transfer that file to virtual private servers (VPSs) that they control. In addition, cybercriminals are exploiting <a href="https://www.csoonline.com/article/4168484/your-refresh-plan-has-a-cve-blind-spot.html" target="_blank">common vulnerabilities and exposures</a> (CVEs) in Cisco devices, as well as in the Cisco’s Smart Install (SMI) tool.</p>
+
+
+
+<p class="wp-block-paragraph">Actors have exploited, at the very least, <a href="https://nvd.nist.gov/vuln/detail/cve-2018-0171" rel="noreferrer noopener" target="_blank">CVE-2018-0171</a> (published in 2018) and <a href="https://nvd.nist.gov/vuln/detail/cve-2008-4128" rel="noreferrer noopener" target="_blank">CVE-2008-4128</a> (published in 2008), according to the bulletin. Both of these targeted <a href="https://www.csoonline.com/article/4043721/russian-hackers-exploit-old-cisco-flaw-to-target-global-enterprise-networks.html" target="_blank">Cisco routers</a>, giving remote, unauthenticated attackers the ability to execute arbitrary code, take unauthorized actions, or cause a denial of service (DoS).</p>
+
+
+
+<p class="wp-block-paragraph">Notable groups using this method are known to the security community as “Berserk Bear,” “Crouching Yeti,” “Dragonfly,” “Energetic Bear,” “Ghost Blizzard,” and “Static Tundra.” According to the bulletin, the industries most vulnerable to Russian state-sponsored cyber actors include communications, energy, financial services, defense industrial bases, healthcare and public health facilities, and government services and facilities.</p>
+
+
+
+<h2 class="wp-block-heading" id="a-set-and-forget-approach-even-in-2026">A set-and-forget approach, even in 2026</h2>
+
+
+
+<p class="wp-block-paragraph">The problem with router hygiene is that devices are susceptible to a “confluence of typical enterprise shortcomings” when it comes to operationalizing security, noted Info-Tech’s Ioussoufovitch.</p>
+
+
+
+<p class="wp-block-paragraph">“Many organizations still take a set-it-and-forget-it approach to routers, and don’t track them like they would an endpoint,” he said.</p>
+
+
+
+<p class="wp-block-paragraph">Compounding this risk is the fact that routers are typically critical to business continuity, which increases the necessity of keeping their security up-to-date. To make things worse, in some cases, it might also be unclear who’s in charge of device security. “Security points to the network team and they’re pointing right back at security,” Ioussoufovitch noted.</p>
+
+
+
+<p class="wp-block-paragraph">As well, many organizations continue to rely on legacy hardware that may be unsupported, but that the business is unwilling to replace.</p>
+
+
+
+<p class="wp-block-paragraph">Ultimately, Ioussoufovitch said, “network security just doesn’t seem to be receiving the same amount of attention as the usual areas of focus (like endpoints).”</p>
+
+
+
+<h2 class="wp-block-heading" id="recommendation-move-away-from-older-protocols-and-devices-immediately">Recommendation: Move away from older protocols and devices immediately</h2>
+
+
+
+<p class="wp-block-paragraph">Specifically, the agencies urged security teams and network admins to upgrade to SNMPv3, enforce secure passwords, disable Cisco Smart Install, and block SNMP and common file transfer methods “at the firewall.”</p>
+
+
+
+<p class="wp-block-paragraph">Enterprises should immediately disable SNMPv1 and SNMPv2, which are “legacy protocols and should no longer be needed on current devices.” In instances where they are still deemed necessary, shift from default settings to grant read-only access (no read-write access).</p>
+
+
+
+<p class="wp-block-paragraph">SNMPv3 should be employed with <em>authPriv</em> configured to the “most modern encryption standard,” the bulletin advised. SNMPv3 adds strong authentication and data encryption unavailable in previous versions, and has more securely encoded parameters to authenticate and encrypt data.</p>
+
+
+
+<p class="wp-block-paragraph">“Moving to SNMPv3, which offers stronger authentication and encryption, is a clear, actionable step security teams need to prioritize now,” Ioussoufovitch agreed.</p>
+
+
+
+<p class="wp-block-paragraph">The government agencies urged enterprises to use strong, unique passwords for local accounts on network devices, and to monitor for unusual credentials that do not match standard naming conventions, or misconfiguration in logs or intrusion detection systems (IDS). Networks should support multi-factor authentication (MFA), and admins should enforce allow lists for management protocols like SNMP.</p>
+
+
+
+<p class="wp-block-paragraph">Additionally, enterprises should update network device software, retire end-of-life devices, and disable Cisco Smart Install on all machines once initial configuration is complete, as this introduces serious <a href="https://www.csoonline.com/article/4195710/jurassic-park-cybersecurity-and-the-dangerous-myth-of-control.html" target="_blank">security issues</a> when it inadvertently remains enabled, the agencies said.</p>
+
+
+
+<h2 class="wp-block-heading" id="network-security-must-improve-across-the-board">Network security must improve across the board</h2>
+
+
+
+<p class="wp-block-paragraph">The advisory is a signal that enterprises may be underinvesting in network security, noted Ioussoufovitch. Admins and security leaders should be asking these questions:</p>
+
+
+
+<ul class="wp-block-list">
+<li>Do they have decent network detection and response capabilities in place?</li>
+
+
+
+<li>Are they applying analytics and anomaly detection to network traffic patterns?</li>
+
+
+
+<li>Have they incorporated micro-segmentation across the enterprise environment to limit risks posed by any individual router?</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">“Getting at least some of these proactive measures in place, while taking a more disciplined approach to the tracking and replacement of EOL devices, can help security and network teams finally start making some headway against these types of threats,” said Ioussoufovitch.</p>
+
+
+
+<p class="wp-block-paragraph"><a href="https://www.linkedin.com/in/dbshipley/" rel="noreferrer noopener" target="_blank">David Shipley</a> of Beauceron Security agreed that enterprise networking equipment security must be improved, but said that’s more on the vendors than the critical infrastructure providers. Vendors should be shipping products that are secure by default; customers shouldn’t have to be going back and turning these features on.</p>
+
+
+
+<p class="wp-block-paragraph">He added that it would be great to see Salt Typhoon-proof levels of device security and authentication. “Right now, it’s been trivial for them to pwn networking gear,” he said.</p>
+
+
+
+<p class="wp-block-paragraph">While the guidance is important and will help, Shipley said, “building better and shipping secure by default would do even more.”</p>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</item>
+
+<item>
+  <title>🟠 US authorities warn of Russian attacks on critical infrastructure</title>
+  <link>https://www.csoonline.com/article/4196451/us-authorities-warn-of-russian-attacks-on-critical-infrastructure.html</link>
+  <pubDate>Tue, 14 Jul 2026 00:49:46 +0000</pubDate>
+  <source>CSO Online</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<p class="wp-block-paragraph">The US authorities NSA, FBI, and CISA <a href="https://www.ic3.gov/CSA/2026/260713.pdf">warn that Russian hackers</a> have recently carried out a number of attacks on critical infrastructure in North America and Europe.</p>
+
+
+
+<p class="wp-block-paragraph">Hackers are reportedly breaking into networks using vulnerable and misconfigured routers, making it extra important to install the latest security patches.</p>
+
+
+
+<p class="wp-block-paragraph">The most vulnerable are infrastructure related to energy, communications, healthcare, industry, the economy, and defense. Authorities in Australia, the UK, Canada, New Zealand, Estonia, Finland, France, and Italy support the warning, reports <a href="https://www.bleepingcomputer.com/news/security/us-and-allies-share-defense-tips-against-russian-hackers-targeting-critical-infrastructure/">Bleeping Computer</a>.</p>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Singapore-based and Alibaba-backed video generation startup PixVerse says it closed a Series C extension to raise $439M total for the round, valuing it at $2B+ (Ivan Mehta/TechCrunch)</title>
+  <link>https://www.techmeme.com/260713/p35#a260713p35</link>
+  <pubDate>Tue, 14 Jul 2026 00:45:01 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://techcrunch.com/2026/07/13/video-generation-startup-pixverse-raises-439m-valuation-soars-past-2b/"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260713/i35.jpg" vspace="4" /></a>
+<p><a href="https://www.techmeme.com/260713/p35#a260713p35" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Ivan Mehta / <a href="http://techcrunch.com/">TechCrunch</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://techcrunch.com/2026/07/13/video-generation-startup-pixverse-raises-439m-valuation-soars-past-2b/">Singapore-based and Alibaba-backed video generation startup PixVerse says it closed a Series C extension to raise $439M total for the round, valuing it at $2B+</a></b></span>&nbsp; &mdash;&nbsp; Singapore-based video-generation startup PixVerse said today that it has closed its Series C extension, with a total of $439 million raised in the round.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Anthropic research based on ~310K anonymized Claude conversations shows how Claude&#x27;s expressed values and behaviors vary across models and languages (Jason Nelson/Decrypt)</title>
+  <link>https://www.techmeme.com/260713/p34#a260713p34</link>
+  <pubDate>Tue, 14 Jul 2026 00:10:39 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://decrypt.co/373422/anthropic-claude-personality-changes-model-language"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260713/i34.jpg" vspace="4" /></a>
+<p><a href="https://www.techmeme.com/260713/p34#a260713p34" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Jason Nelson / <a href="https://decrypt.co/">Decrypt</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://decrypt.co/373422/anthropic-claude-personality-changes-model-language">Anthropic research based on ~310K anonymized Claude conversations shows how Claude's expressed values and behaviors vary across models and languages</a></b></span>&nbsp; &mdash;&nbsp; Claude doesn't behave the same way in every conversation.&nbsp; According to new research published Monday, AI giant Anthropic found &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+</item>
+
 <item>
   <title>🔵 Sources: Nous Research, the startup behind Hermes, an open-source agent and OpenClaw rival, is raising $75M+ at a $1.5B valuation led by Robot Ventures (TechCrunch)</title>
   <link>https://www.techmeme.com/260713/p33#a260713p33</link>
@@ -12,7 +196,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://techcrunch.com/2026/07/13/hermes-agent-maker-nous-research-in-talks-for-new-funding-at-1-5b-valuation/"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260713/i33.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260713/p33#a260713p33" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="http://techcrunch.com/">TechCrunch</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://techcrunch.com/2026/07/13/hermes-agent-maker-nous-research-in-talks-for-new-funding-at-1-5b-valuation/">Sources: Nous Research, the startup behind Hermes, an open-source agent and OpenClaw rival, is raising $75M+ at a $1.5B valuation led by Robot Ventures</a></b></span>&nbsp; &mdash;&nbsp; Nous Research, the startup behind the open-source Hermes agent, is finalizing a new round of funding led by Robot Ventures &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://techcrunch.com/2026/07/13/hermes-agent-maker-nous-research-in-talks-for-new-funding-at-1-5b-valuation/">Sources: Nous Research, the startup behind Hermes, an open-source agent and OpenClaw rival, is raising $75M+ at a $1.5B valuation led by Robot Ventures</a></b></span>&nbsp; &mdash;&nbsp; Nous Research, the startup behind the open-source Hermes agent, is finalizing a new round of funding led by Robot Ventures &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
 </item>
 
 <item>
@@ -22,15 +206,43 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.washingtonpost.com/wp-intelligence/ai-tech-brief/2026/07/13/ai-tech-brief-exclusive-an-open-source-framework/"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260713/i32.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260713/p32#a260713p32" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Benjamin Guggenheim / <a href="https://www.washingtonpost.com/">Washington Post</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.washingtonpost.com/wp-intelligence/ai-tech-brief/2026/07/13/ai-tech-brief-exclusive-an-open-source-framework/">Sources: Trump admin and industry groups have discussed streamlining releases of US open models of equal or lesser capability than leading Chinese open models</a></b></span>&nbsp; &mdash;&nbsp; Plus, data centers could end up consuming less energy than we expect.&nbsp; &mdash;&nbsp; Not a subscriber?&nbsp; Sign up here to get this newsletter in your inbox.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.washingtonpost.com/wp-intelligence/ai-tech-brief/2026/07/13/ai-tech-brief-exclusive-an-open-source-framework/">Sources: Trump admin and industry groups have discussed streamlining releases of US open models of equal or lesser capability than leading Chinese open models</a></b></span>&nbsp; &mdash;&nbsp; Plus, data centers could end up consuming less energy than we expect.&nbsp; &mdash; Exclusive: The Trump administration and the AI industry &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
 </item>
 
 <item>
-  <title>🔵 Excel competition goes extreme, makes spreadsheet geeks compete from the street</title>
-  <link>https://www.theregister.com/offbeat/2026/07/13/excel-competition-goes-extreme-makes-spreadsheet-geeks-compete-from-the-street/5270709</link>
-  <pubDate>Mon, 13 Jul 2026 20:18:09 +0000</pubDate>
-  <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Defending world champ Diarmuid Early wins again despite being forced to solve puzzles outdoors<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+  <title>🔵 Apple releases the first public betas of iOS 27, iPadOS 27, macOS 27 Golden Gate, watchOS 27, and tvOS 27, marking the public debut of the new Siri AI (Will Shanklin/Engadget)</title>
+  <link>https://www.techmeme.com/260713/p31#a260713p31</link>
+  <pubDate>Mon, 13 Jul 2026 22:55:35 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://www.engadget.com/2214198/public-betas-for-ios-27-macos-27-and-more-apple-platforms-are-now-available/"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260713/i31.jpg" vspace="4" /></a>
+<p><a href="https://www.techmeme.com/260713/p31#a260713p31" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Will Shanklin / <a href="https://www.engadget.com/">Engadget</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://www.engadget.com/2214198/public-betas-for-ios-27-macos-27-and-more-apple-platforms-are-now-available/">Apple releases the first public betas of iOS 27, iPadOS 27, macOS 27 Golden Gate, watchOS 27, and tvOS 27, marking the public debut of the new Siri AI</a></b></span>&nbsp; &mdash;&nbsp; Try the new Siri AI and system-wide performance improvements.&nbsp; &mdash;&nbsp; Adventurous early adopters, your moment has arrived &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 I tested COSMIC&#x27;s new Frosted Glass effect, and it&#x27;s way better than MacOS&#x27; Liquid Glass</title>
+  <link>https://www.zdnet.com/article/cosmic-desktop-frosted-glass-linux-liquid-glass/</link>
+  <pubDate>Mon, 13 Jul 2026 20:59:08 +0000</pubDate>
+  <source>ZDNet</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>This simply gorgeous Linux desktop just stole the UI crown from Apple's Liquid Glass.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Microsoft announces a Windows 11 search overhaul that prioritizes local results, removes promotional web content, and more, rolling out to Windows Insiders (Zac Bowden/Windows Central)</title>
+  <link>https://www.techmeme.com/260713/p30#a260713p30</link>
+  <pubDate>Mon, 13 Jul 2026 19:15:03 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: Could impact sign-ins/MFA/Conditional Access — watch for login issues.</b><br/><a href="https://www.windowscentral.com/microsoft/windows-11/microsoft-announces-major-windows-11-search-overhaul-that-prioritizes-clearer-local-results-and-removes-ads"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260713/i30.jpg" vspace="4" /></a>
+<p><a href="https://www.techmeme.com/260713/p30#a260713p30" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Zac Bowden / <a href="https://www.windowscentral.com/">Windows Central</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://www.windowscentral.com/microsoft/windows-11/microsoft-announces-major-windows-11-search-overhaul-that-prioritizes-clearer-local-results-and-removes-ads">Microsoft announces a Windows 11 search overhaul that prioritizes local results, removes promotional web content, and more, rolling out to Windows Insiders</a></b></span>&nbsp; &mdash;&nbsp; Windows 11's search user experience is getting a big update, with Microsoft moving to prioritize local results, remove promotional content, and much more.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Is that QR code a trap? How to spot quishing scams before it&#x27;s too late</title>
+  <link>https://www.zdnet.com/article/how-to-spot-quishing-qr-code-scams/</link>
+  <pubDate>Mon, 13 Jul 2026 18:01:43 +0000</pubDate>
+  <source>ZDNet</source>
+  <description><![CDATA[<b>Why this matters: Credential/phishing risk — reinforce MFA and user awareness training.</b><br/>A QR code phishing scheme can take many forms. Here's how to recognize them and avoid becoming a victim.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 8h ago]]></description>
 </item>
 
 <item>
@@ -40,7 +252,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: Potential data exposure — check monitoring and incident response readiness.</b><br/><a href="https://www.nextgov.com/cybersecurity/2026/07/dhs-network-intrusion-was-twice-ruled-false-positive-breach-confirmed/414724/"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260713/i28.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260713/p28#a260713p28" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> David DiMolfetta / <a href="https://www.nextgov.com/">Nextgov/FCW</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.nextgov.com/cybersecurity/2026/07/dhs-network-intrusion-was-twice-ruled-false-positive-breach-confirmed/414724/">Doc: DHS analysts twice dismissed signs of intruders inside the DHS' network, first detected in May, as harmless activity before confirming a breach in June</a></b></span>&nbsp; &mdash;&nbsp; Department of Homeland Security personnel twice dismissed signs of cyber intruders inside the agency's Homeland Security Information Network &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.nextgov.com/cybersecurity/2026/07/dhs-network-intrusion-was-twice-ruled-false-positive-breach-confirmed/414724/">Doc: DHS analysts twice dismissed signs of intruders inside the DHS' network, first detected in May, as harmless activity before confirming a breach in June</a></b></span>&nbsp; &mdash;&nbsp; Department of Homeland Security personnel twice dismissed signs of cyber intruders inside the agency's Homeland Security Information Network &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
 </item>
 
 <item>
@@ -50,7 +262,17 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: Vendor risk signal — evaluate roadmap and support stability.</b><br/><a href="https://variety.com/2026/film/news/paramount-warner-bros-merger-states-lawsuit-1236806824/"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260713/i27.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260713/p27#a260713p27" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Gene Maddaus / <a href="http://www.variety.com/">Variety</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://variety.com/2026/film/news/paramount-warner-bros-merger-states-lawsuit-1236806824/">A coalition of 12 states led by California files an antitrust lawsuit to block Paramount's WBD merger, alleging it lessens competition in three markets</a></b></span>&nbsp; &mdash;&nbsp; A coalition of 12 states filed an antitrust lawsuit on Monday to block the merger of Paramount Skydance and Warner Bros. &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://variety.com/2026/film/news/paramount-warner-bros-merger-states-lawsuit-1236806824/">A coalition of 12 states led by California files an antitrust lawsuit to block Paramount's WBD merger, alleging it lessens competition in three markets</a></b></span>&nbsp; &mdash;&nbsp; A coalition of 12 states filed an antitrust lawsuit on Monday to block the merger of Paramount Skydance and Warner Bros. &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 10h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 London-based Valarian, which allows companies to use US cloud providers for AI workloads but retain control of their data, raised a $50M Series A led by NEA (Lily Mae Lazarus/Fortune)</title>
+  <link>https://www.techmeme.com/260713/p26#a260713p26</link>
+  <pubDate>Mon, 13 Jul 2026 15:55:24 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://fortune.com/2026/07/13/ai-sovereignty-cloud-valarian-50-million-nea-palantir-europe-microsoft-aws-google-defense/"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260713/i26.jpg" vspace="4" /></a>
+<p><a href="https://www.techmeme.com/260713/p26#a260713p26" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Lily Mae Lazarus / <a href="http://www.fortune.com/">Fortune</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://fortune.com/2026/07/13/ai-sovereignty-cloud-valarian-50-million-nea-palantir-europe-microsoft-aws-google-defense/">London-based Valarian, which allows companies to use US cloud providers for AI workloads but retain control of their data, raised a $50M Series A led by NEA</a></b></span>&nbsp; &mdash;&nbsp; Max Buchan started advocating for infrastructure sovereignty when, as he puts it, &ldquo;globalization and Davos were still cool.&rdquo;</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 10h ago]]></description>
 </item>
 
 <item>
@@ -60,7 +282,17 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.geekwire.com/2026/augmodo-raises-21m-to-push-its-spatial-ai-beyond-just-retail-toward-the-broader-physical-workforce/"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260713/i25.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260713/p25#a260713p25" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Kurt Schlosser / <a href="https://www.geekwire.com/">GeekWire</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.geekwire.com/2026/augmodo-raises-21m-to-push-its-spatial-ai-beyond-just-retail-toward-the-broader-physical-workforce/">Seattle-based Augmodo, whose AI-powered &ldquo;Smartbadges&rdquo; worn by employees track shelf inventory, raised $21M led by TQ Ventures at a $350M valuation</a></b></span>&nbsp; &mdash;&nbsp; Augmodo, the Seattle startup that straps AI-powered cameras onto retail workers to track store shelves, has raised $21 million &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 8h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.geekwire.com/2026/augmodo-raises-21m-to-push-its-spatial-ai-beyond-just-retail-toward-the-broader-physical-workforce/">Seattle-based Augmodo, whose AI-powered &ldquo;Smartbadges&rdquo; worn by employees track shelf inventory, raised $21M led by TQ Ventures at a $350M valuation</a></b></span>&nbsp; &mdash;&nbsp; Augmodo, the Seattle startup that straps AI-powered cameras onto retail workers to track store shelves, has raised $21 million &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 10h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Gauntlet, which helps institutions and crypto companies allocate their digital assets, raised a $125M Series C from Japanese financial conglomerate SBI Holdings (Ben Weiss/Fortune)</title>
+  <link>https://www.techmeme.com/260713/p24#a260713p24</link>
+  <pubDate>Mon, 13 Jul 2026 15:15:01 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://fortune.com/2026/07/09/gauntlet-defi-vault-risk-curation-tarun-chitra-sbi-holdings-fundraise/"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260713/i24.jpg" vspace="4" /></a>
+<p><a href="https://www.techmeme.com/260713/p24#a260713p24" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Ben Weiss / <a href="http://www.fortune.com/">Fortune</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://fortune.com/2026/07/09/gauntlet-defi-vault-risk-curation-tarun-chitra-sbi-holdings-fundraise/">Gauntlet, which helps institutions and crypto companies allocate their digital assets, raised a $125M Series C from Japanese financial conglomerate SBI Holdings</a></b></span>&nbsp; &mdash;&nbsp; A startup founded during the early days of DeFi is now backed by a financial giant.&nbsp; Gauntlet, which helps institutions &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 10h ago]]></description>
 </item>
 
 <item>
@@ -68,7 +300,7 @@
   <link>https://www.zdnet.com/article/alienware-15-review/</link>
   <pubDate>Mon, 13 Jul 2026 14:37:00 +0000</pubDate>
   <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/>The Alienware 15 sets out to balance affordability and performance, but whether it succeeds depends on personal preferences.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/>The Alienware 15 sets out to balance affordability and performance, but whether it succeeds depends on personal preferences.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 11h ago]]></description>
 </item>
 
 <item>
@@ -78,25 +310,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.bloomberg.com/news/articles/2026-07-13/anthropic-openai-warnings-prompt-distillation-debate-in-dc"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260713/i21.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260713/p21#a260713p21" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Maggie Eastland / <a href="https://www.bloomberg.com/">Bloomberg</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/articles/2026-07-13/anthropic-openai-warnings-prompt-distillation-debate-in-dc">Sources: US officials estimate unauthorized distillation costs US AI labs up to $6B/year; US AI labs told the White House it could become an existential threat</a></b></span>&nbsp; &mdash;&nbsp; Anthropic and OpenAI's warnings about &ldquo;adversarial distillation&rdquo; are reinvigorating one of the oldest debates in Silicon Valley.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 10h ago]]></description>
-</item>
-
-<item>
-  <title>🟠 Microsoft emails Windows 10 holdouts: Fine, keep your old PC another year</title>
-  <link>https://www.theregister.com/os-platforms/2026/07/13/microsoft-emails-windows-10-holdouts-fine-keep-your-old-pc-another-year/5270336</link>
-  <pubDate>Mon, 13 Jul 2026 13:02:00 +0000</pubDate>
-  <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Consumer security updates now run to October 2027, and Redmond doesn't mention Windows 11 once<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 10h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Source: OpenAI still believes it is on track to unveil its first device in 2026 and release it in 2027; Apple&#x27;s lawsuit may complicate hiring and supply chains (Mark Gurman/Bloomberg)</title>
-  <link>https://www.techmeme.com/260713/p20#a260713p20</link>
-  <pubDate>Mon, 13 Jul 2026 12:55:03 +0000</pubDate>
-  <source>Techmeme</source>
-  <description><![CDATA[<b>Why this matters: Supply chain risk — audit third-party dependencies and vendor access.</b><br/><a href="https://www.bloomberg.com/news/articles/2026-07-13/how-apple-s-lawsuit-threatens-to-disrupt-openai-s-bid-to-rival-the-iphone?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc4Mzk0NjE5MywiZXhwIjoxNzg0NTUwOTkzLCJhcnRpY2xlSWQiOiJUSTE2U1lLSkg2VjUwMCIsImJjb25uZWN0SWQiOiJDNEVEQ0FFMUZBMDU0MEJFQTI0QTlGMjExQzFFOTA4MCJ9.fNQ1FpHOxKa7NVvdeMc03rbciA2oUUUr44IGDEY3ZTA"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260713/i20.jpg" vspace="4" /></a>
-<p><a href="https://www.techmeme.com/260713/p20#a260713p20" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Mark Gurman / <a href="https://www.bloomberg.com/">Bloomberg</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/articles/2026-07-13/how-apple-s-lawsuit-threatens-to-disrupt-openai-s-bid-to-rival-the-iphone?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc4Mzk0NjE5MywiZXhwIjoxNzg0NTUwOTkzLCJhcnRpY2xlSWQiOiJUSTE2U1lLSkg2VjUwMCIsImJjb25uZWN0SWQiOiJDNEVEQ0FFMUZBMDU0MEJFQTI0QTlGMjExQzFFOTA4MCJ9.fNQ1FpHOxKa7NVvdeMc03rbciA2oUUUr44IGDEY3ZTA">Source: OpenAI still believes it is on track to unveil its first device in 2026 and release it in 2027; Apple's lawsuit may complicate hiring and supply chains</a></b></span>&nbsp; &mdash;&nbsp; Apple Inc.'s lawsuit accusing OpenAI of systematically stealing its intellectual property threatens to disrupt &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 10h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/articles/2026-07-13/anthropic-openai-warnings-prompt-distillation-debate-in-dc">Sources: US officials estimate unauthorized distillation costs US AI labs up to $6B/year; US AI labs told the White House it could become an existential threat</a></b></span>&nbsp; &mdash;&nbsp; Anthropic and OpenAI's warnings about &ldquo;adversarial distillation&rdquo; are reinvigorating one of the oldest debates in Silicon Valley.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
 </item>
 
 <item>
@@ -177,7 +391,7 @@
 
 
 <p class="wp-block-paragraph">Miggo said the vulnerabilities are the first CVEs discovered by its autonomous security research platform, VulnHunter, before being validated by its security team and disclosed to RabbitMQ maintainers, who reportedly confirmed the issues and released patches.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 11h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 14h ago]]></description>
 </item>
 
 <item>
@@ -186,7 +400,7 @@
   <pubDate>Mon, 13 Jul 2026 12:00:00 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><p>Unauthenticated attackers could obtain the broker's confidential OAuth client secret, allowing them to take control of the broker.</p>
-<p>The post <a href="https://www.securityweek.com/rabbitmq-vulnerability-threatens-enterprise-systems/">RabbitMQ Vulnerability Threatens Enterprise Systems</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 11h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/rabbitmq-vulnerability-threatens-enterprise-systems/">RabbitMQ Vulnerability Threatens Enterprise Systems</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 14h ago]]></description>
 </item>
 
 <item>
@@ -195,7 +409,7 @@
   <pubDate>Mon, 13 Jul 2026 10:03:47 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><p>The flaw results in malicious code embedded in crafted emails being executed when the emails are opened.</p>
-<p>The post <a href="https://www.securityweek.com/zimbra-patches-critical-code-execution-vulnerability/">Zimbra Patches Critical Code Execution Vulnerability</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/zimbra-patches-critical-code-execution-vulnerability/">Zimbra Patches Critical Code Execution Vulnerability</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 16h ago]]></description>
 </item>
 
 <item>
@@ -428,7 +642,7 @@
 
 
 <p class="wp-block-paragraph"></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 16h ago]]></description>
 </item>
 
 <item>
@@ -751,7 +965,7 @@
 
 
 <p class="wp-block-paragraph"><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><a href="https://www.csoonline.com/expert-contributor-network/"><strong>Want to join?</strong></a></p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 16h ago]]></description>
 </item>
 
 <item>
@@ -892,7 +1106,7 @@
 
 
 <p class="wp-block-paragraph"><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><a href="https://www.cio.com/expert-contributor-network/"><strong>Want to join?</strong></a></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 16h ago]]></description>
 </item>
 
 <item>
@@ -1049,7 +1263,7 @@
 
 
 <p class="wp-block-paragraph"><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><a href="https://www.cio.com/expert-contributor-network/"><strong>Want to join?</strong></a></p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 14h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 17h ago]]></description>
 </item>
 
 <item>
@@ -1170,7 +1384,7 @@
 
 
 <p class="wp-block-paragraph"><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><a href="https://www.cio.com/expert-contributor-network/"><strong>Want to join?</strong></a></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 14h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 17h ago]]></description>
 </item>
 
 <item>
@@ -1211,15 +1425,7 @@
 
 
 <p class="wp-block-paragraph">This indicates that there is merit to the concerns around <a href="https://www.cio.com/article/4189865/how-ai-automation-is-reshaping-the-it-leadership-pipeline.html">how AI automation is reshaping the IT leadership pipeline</a>. IT leaders will need to <a href="https://www.cio.com/article/4188578/how-to-keep-your-it-talent-pipeline-from-collapsing.html">remain mindful of how AI impacts hiring</a> — and avoid leaving entry-level workers in the dust as hiring rebounds.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 14h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Microsoft is losing the battle to protect license lucre. It better get used to the feeling</title>
-  <link>https://www.theregister.com/columnists/2026/07/13/microsoft-is-losing-the-battle-to-protect-license-lucre-it-better-get-used-to-the-feeling/5269709</link>
-  <pubDate>Mon, 13 Jul 2026 08:30:00 +0000</pubDate>
-  <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Budget/licensing impact — verify renewal terms and forecast cost changes.</b><br/>Time for the Clone Wars remake<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 15h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 17h ago]]></description>
 </item>
 
 <item>
@@ -1394,7 +1600,7 @@
 
 
 <hr class="wp-block-separator has-alpha-channel-opacity" />
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 15h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 18h ago]]></description>
 </item>
 
 <item>
@@ -1521,7 +1727,7 @@
 
 
 <p class="wp-block-paragraph"></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 15h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 18h ago]]></description>
 </item>
 
 <item>
@@ -1837,7 +2043,7 @@
 
 
 <p class="wp-block-paragraph"><a id="_msocom_1"></a></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 15h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 18h ago]]></description>
 </item>
 
 <item>
@@ -2048,7 +2254,7 @@
 
 
 <hr class="wp-block-separator has-alpha-channel-opacity" />
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 15h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 18h ago]]></description>
 </item>
 
 <item>
@@ -2229,7 +2435,7 @@
 
 
 <hr class="wp-block-separator has-alpha-channel-opacity" />
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 15h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 18h ago]]></description>
 </item>
 
 <item>
@@ -2390,7 +2596,7 @@
 
 
 <hr class="wp-block-separator has-alpha-channel-opacity" />
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 15h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 18h ago]]></description>
 </item>
 
 <item>
@@ -2659,7 +2865,15 @@
 
 
 <p class="wp-block-paragraph">The real question is whether AI becomes another technology that rewards the organizations already best positioned to use it — or the first major security advance in years that helps those below the poverty line finally catch up.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 16h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 19h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 The best email hosting for small businesses in 2026: Expert tested</title>
+  <link>https://www.zdnet.com/article/best-email-hosting-for-small-businesses/</link>
+  <pubDate>Sun, 12 Jul 2026 09:00:44 +0000</pubDate>
+  <source>ZDNet</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>I tested Google Workspace, Proton Mail, Microsoft 365, Fastmail, and Spike to find the best email hosting for freelancers and remote teams in 2026.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
@@ -2781,35 +2995,11 @@
 </item>
 
 <item>
-  <title>🔴 Destructive Windows backdoor stuffs multiple wipers and ransomware code into a single package</title>
-  <link>https://www.theregister.com/security/2026/07/10/destructive-windows-backdoor-stuffs-multiple-wipers-and-ransomware-code-into-a-single-package/5270053</link>
-  <pubDate>Fri, 10 Jul 2026 17:35:00 +0000</pubDate>
-  <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Elevated ransomware risk — validate backups and endpoint defenses.</b><br/>Microsoft says GigaWiper combines at least 3 malware families into one modular tool<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 3d ago]]></description>
-</item>
-
-<item>
-  <title>🔵 LisaFPGA brings Apple&#x27;s magnificent misfire back in programmable logic</title>
-  <link>https://www.theregister.com/personal-tech/2026/07/10/lisafpga-brings-apples-magnificent-misfire-back-in-programmable-logic/5269951</link>
-  <pubDate>Fri, 10 Jul 2026 17:12:00 +0000</pubDate>
-  <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Open source recreation costs a fraction of the original and may even work with Twiggy drives<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3d ago]]></description>
-</item>
-
-<item>
   <title>🔵 I ditched Google Drive for my own self-hosted storage - and I wish I&#x27;d done it sooner</title>
   <link>https://www.zdnet.com/article/i-ditched-google-drive-for-self-hosted-storage-nextcloud/</link>
   <pubDate>Fri, 10 Jul 2026 16:39:00 +0000</pubDate>
   <source>ZDNet</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Nextcloud is a free and open-source storage option that offers several advantages. Here's how it works.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3d ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Orbital datacenter gold rush needs an environmental review, FCC told</title>
-  <link>https://www.theregister.com/on-prem/2026/07/10/orbital-datacenter-gold-rush-needs-an-environmental-review-fcc-told/5269863</link>
-  <pubDate>Fri, 10 Jul 2026 16:02:00 +0000</pubDate>
-  <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Budget/licensing impact — verify renewal terms and forecast cost changes.</b><br/>Green groups want licenses frozen before a million satellites litter the exosphere<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3d ago]]></description>
 </item>
 
 <item>
@@ -2871,27 +3061,48 @@
 </item>
 
 <item>
-  <title>🔵 AI-driven datacenter builds drive Microsoft&#x27;s emissions up a quarter in one year</title>
-  <link>https://www.theregister.com/on-prem/2026/07/10/ai-driven-datacenter-builds-drive-microsofts-emissions-up-a-quarter-in-one-year/5269924</link>
-  <pubDate>Fri, 10 Jul 2026 14:01:00 +0000</pubDate>
-  <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Firm faces quandary of wanting to help the environment, but also wanting to force AI on everyone<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3d ago]]></description>
-</item>
+  <title>🔵 CrowdStrike identifies five new prompt injection threats to AI</title>
+  <link>https://www.csoonline.com/article/4195670/crowdstrike-identifies-five-new-prompt-injection-threats-to-ai.html</link>
+  <pubDate>Fri, 10 Jul 2026 14:31:44 +0000</pubDate>
+  <source>CSO Online</source>
+  <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
 
-<item>
-  <title>🔵 Capita hears demand for pension scheme cleanup &#x27;loud and clear&#x27; – but won&#x27;t say yes</title>
-  <link>https://www.theregister.com/public-sector/2026/07/10/capita-hears-demand-for-pension-scheme-cleanup-loud-and-clear-but-wont-say-yes/5269852</link>
-  <pubDate>Fri, 10 Jul 2026 12:41:12 +0000</pubDate>
-  <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Outsourcer wants a commercial chinwag before agreeing to cover UK government's recovery costs<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3d ago]]></description>
-</item>
 
-<item>
-  <title>🔴 Fashion mart Miinto unzips breach details, warns shoppers to watch for phisherfolk</title>
-  <link>https://www.theregister.com/security/2026/07/10/miinto-fesses-up-to-breach-says-customers-open-to-phishing/5269891</link>
-  <pubDate>Fri, 10 Jul 2026 12:10:41 +0000</pubDate>
-  <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Credential/phishing risk — reinforce MFA and user awareness training.</b><br/>Copenhagen company ‘sorry’ after 'perpetrator' pops order management system<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 3d ago]]></description>
+
+<p class="wp-block-paragraph">Security company CrowdStrike has identified five new prompt injection techniques that could leave enterprises at risk. Prompt injections attacks exploit the growing use of AI within organizations . They work by tricking LLMs into accepting <a href="https://www.infoworld.com/article/4193403/ai-agents-fall-for-indirect-prompt-injection-traps-2.html">instructions that a human operator would recognize as dubious</a>.</p>
+
+
+
+<p class="wp-block-paragraph">The five new types of attack that CrowdStrike has <a href="https://www.crowdstrike.com/en-us/blog/crowdstrike-uncovers-new-prompt-injection-techniques/" rel="noreferrer noopener" target="_blank">added to its prompt injection taxonomy</a> are:</p>
+
+
+
+<p class="wp-block-paragraph"><strong>Trigger-Activated Rule Addition </strong>in which an attacker adds a new rule that looks innocuous at first, but can be triggered later to cause strange behavior within the model.</p>
+
+
+
+<p class="wp-block-paragraph"><strong>Cognitive Token Suppression</strong>,a way to circumvent built-in safety measures by shifting the model’s linguistic choices away from established refusal patterns.</p>
+
+
+
+<p class="wp-block-paragraph"><strong>Algorithmic Payload Decomposition</strong>,or delivering a message in multiple stages each of which appears innocent but that, when combined, can be assembled into a single command that is more threatening.</p>
+
+
+
+<p class="wp-block-paragraph"><strong>Special Token Injection</strong>, an attack that can be compared to the embedding of counterfeit “control switches” within normal instructions. Attackers look to introduce confusion that tricks the model into elevating untrusted user content to the status of a high-priority system directive.</p>
+
+
+
+<p class="wp-block-paragraph"><strong>Unwitting User Context-Data Injection</strong>, an exploit that draws on the boundary between trusted data and executable instructions, tricking the user into introducing malicious instructions as part of the context data for the LLM.  The prompt may be harmless: The malicious instruction is hidden inside the surrounding context data. It works when a user uploads a document, forwards an email or adds content that is later processed by AI.</p>
+
+
+
+<p class="wp-block-paragraph">Security teams can guard against such attacks in several ways, CrowdStrike said, including threat modeling every place that model context can originate, expanding testing, and extending detection engineering to include composite attacks.</p>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3d ago]]></description>
 </item>
 
 <item>
@@ -3238,6 +3449,14 @@
 
 <p class="wp-block-paragraph"><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><a href="https://www.cio.com/expert-contributor-network/"><strong>Want to join?</strong></a></p>
 </div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3d ago]]></description>
+</item>
+
+<item>
+  <title>🔵 The best VPS hosting services for 2026: Expert tested and reviewed</title>
+  <link>https://www.zdnet.com/article/best-vps-hosting-service/</link>
+  <pubDate>Fri, 10 Jul 2026 10:01:05 +0000</pubDate>
+  <source>ZDNet</source>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>If you need more power than shared hosting services can provide, the top VPS hosting providers can give you the dedicated resources and scalability needed to push your project to the next level.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3d ago]]></description>
 </item>
 
 <item>
@@ -4383,14 +4602,6 @@
 
 <p class="wp-block-paragraph"><em><a href="https://www.computerworld.es/profile/victor-manuel-fernandez/">Víctor Manuel Fernández</a> attending Engage 2026 as a guest of Check Point Software.</em></p>
 </div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 3d ago]]></description>
-</item>
-
-<item>
-  <title>🟠 Microsoft warns customers AI will mean busier Patch Tuesdays</title>
-  <link>https://www.theregister.com/security/2026/07/10/microsoft-warns-customers-ai-will-mean-busier-patch-tuesdays/5269618</link>
-  <pubDate>Fri, 10 Jul 2026 01:56:29 +0000</pubDate>
-  <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>More patches mean more reasons to buy Redmond’s auto-patching tools<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3d ago]]></description>
 </item>
 
 <item>
@@ -5615,336 +5826,6 @@
 
 
 <p class="wp-block-paragraph">The disclosure also provided a detailed set of IOCs, including file hashes, malicious domains, C2 infrastructure, and host artifacts associated with both RAT families.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5d ago]]></description>
-</item>
-
-<item>
-  <title>🔴 My threat feed told me it was ‘Chalubo.’ The binary disagreed</title>
-  <link>https://www.csoonline.com/article/4193946/my-threat-feed-told-me-it-was-chalubo-the-binary-disagreed.html</link>
-  <pubDate>Wed, 08 Jul 2026 09:00:00 +0000</pubDate>
-  <source>CSO Online</source>
-  <description><![CDATA[<b>Why this matters: Elevated ransomware risk — validate backups and endpoint defenses.</b><br/><div id="remove_no_follow">
-		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
-					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
-						<div class="article-column__content">
-<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
-
-
-
-<p class="wp-block-paragraph">I’ve spent two years doing incident response and threat intel, and the one habit I’d keep if I had to give up every other is also the most boring. I don’t act on a piece of intelligence until I’ve checked it against the thing it claims to describe. It’s slow. It’s tedious. Almost nobody does it, because checking costs the exact time the feed was supposed to save. So, we read the report, nod and move on. That works fine most weeks. The weeks it doesn’t are the ones I remember, and the one I keep coming back to started with a feed that sounded completely sure of itself and had it backwards.</p>
-
-
-
-<h2 class="wp-block-heading" id="a-cluster-the-feed-got-wrong">A cluster the feed got wrong</h2>
-
-
-
-<p class="wp-block-paragraph">I was mapping infrastructure behind a loader operation, sweeping a single service port through a commercial platform. It handed back a cluster of hosts; all tagged the same thing: Chalubo RAT. The tag didn’t stop me. The metadata did. Every host in the cluster carried one first-seen date, down to the day.</p>
-
-
-
-<p class="wp-block-paragraph">Real infrastructure never looks that clean. Operators stand hosts up a few at a time, over weeks, whenever they get to it. A whole cluster sharing one first-seen date almost always means you’re looking at the day the feed’s pipeline ingested the batch, not the day anyone actually saw those hosts live. So now I had two things I didn’t trust: The family name and the too-perfect date. Easiest way to settle it was to close the feed and go look at the malware.</p>
-
-
-
-<p class="wp-block-paragraph"><a href="https://news.sophos.com/en-us/2018/10/22/chalubo-botnet/">Chalubo</a> is a Linux botnet. It brute-forces SSH and throws DDoS traffic. What I had in front of me was a Windows shellcode loader, a DonutLoader variant, the kind of thing that sits at the front of a ransomware intrusion. Different platform, different job. Calling one the other isn’t a near miss. It’s a category error.</p>
-
-
-
-<p class="wp-block-paragraph">So, I detonated it in an isolated lab, captured the traffic, mapped the C2 and pulled the config. It spoke a protocol of its own: Payload delivery on one custom channel, a steganographic beacon on a second, across a ten-host cluster, with a config format that had nothing to do with Chalubo. The reason for the bad tag turned out to be dull. The feed’s rule for that port keyed on the port plus a loose pattern, my loader tripped it and the label propagated across the whole batch with the ingest date stapled on.</p>
-
-
-
-<p class="wp-block-paragraph">This isn’t a knock on the vendor. Fingerprinting malware families across the entire internet is genuinely hard. The damage starts one step later, with whatever the reader does with that tag. Believe it, and you spend the week hardening against a Linux DDoS botnet while a Windows ransomware precursor sits quietly on your network. Wrong threat. Wrong priorities. The feed didn’t just come up empty. It pointed the response in the wrong direction, with total confidence and a familiar logo on it. Nothing about the tag looked wrong. The file was the only thing that said otherwise.</p>
-
-
-
-<h2 class="wp-block-heading" id="the-same-gap-in-a-federal-advisory">The same gap, in a federal advisory</h2>
-
-
-
-<p class="wp-block-paragraph">For a while I filed this as a commercial-feed problem, the tax you pay for buying intel from a vendor cutting corners at scale. Then the same shape turned up in one of the best sources any of us get for free.</p>
-
-
-
-<p class="wp-block-paragraph">Earlier this year I spent some time inside the joint FBI and CISA <a href="https://www.cisa.gov/news-events/cybersecurity-advisories/aa25-050a">advisory</a> on Ghost, or Cring depending on who’s naming it, a ransomware crew that’s hit organizations in seventy-plus countries. Like everyone, I opened the PDF first. Its indicator table is literally headed “MD5 File Hashes”: 14 samples, each pinned to an MD5 and nothing else. MD5’s been broken for years. It’s the whole reason detection moved to SHA-256, and an MD5-only indicator doesn’t drop cleanly into half the tooling defenders actually run.</p>
-
-
-
-<p class="wp-block-paragraph">Then I opened the other copy of the same advisory. It doesn’t only ship as a PDF. There’s a machine-readable STIX bundle too, the format built to feed straight into a TIP or a SIEM. Same advisory, same code, different file. Six of those fourteen samples carried SHA-256 in the STIX, with SHA-1 and fuzzy hashes next to them, none of it in the PDF table. The stronger indicators were in the official release the entire time, sitting in the file almost nobody opens. Read the PDF like most people do, and you walk away with weaker detections than whoever opened the STIX, and nothing tells you there’s a difference.</p>
-
-
-
-<p class="wp-block-paragraph">That same bundle cut the other way too, and this is the part worth slowing down on. Down in its relationships sat a threat-actor object naming APT41, Winnti, Wicked Panda, wired to several of the Ghost indicators. The advisory’s text never says APT41. It goes out of its way to call the attribution “variable over time.” Pull on the thread and it falls apart: No vendor has ever tied Ghost to APT41, and the object looks like automated enrichment, not a human analyst’s call. The STIX isn’t lying to you. The problem is subtler. Feed it into your TIP and you’ve quietly inherited a nation-state attribution nobody actually made. One file was missing good data. The other was carrying data nobody vetted. You only catch either by looking.</p>
-
-
-
-<p class="wp-block-paragraph">And it’s not a one-country quirk. A while later I reversed a Go backdoor, GAMYBEAR, the one UAC-0241 pointed at Ukrainian schools and state bodies, documented in a CERT-UA <a href="https://cert.gov.ua/article/6286219">advisory</a>. Good report. It nailed the behavior. But the actual loader gave up more than fifteen binary-level corrections to what the advisory had: A persistence mechanism attributed to the wrong component, a broken TLS implementation and a handful of indicators that only held once I checked them against the real sample instead of the writeup. That’s the kind of detail that keeps a detection alive after the operator renames the file. Commercial vendor. Federal agency. Foreign CERT. Three sources, all accurate, all carrying something other than the full truth in the copy most people read.</p>
-
-
-
-<h2 class="wp-block-heading" id="what-i-do-differently-now">What I do differently now</h2>
-
-
-
-<p class="wp-block-paragraph">The lesson wasn’t trust intelligence more or trust it less. It’s narrower than that. An indicator is a claim, and a claim gets checked before you stake a defense on it, most of all when it’s the advisory covering your own organization, because that’s the one whose blind spots quietly become yours. It’s cheap enough to make routine. If I were standing up a detection program next week, three things would be in from day one.</p>
-
-
-
-<p class="wp-block-paragraph">Treat any automated family label as a guess until something specific backs it. A row of identical first-seen dates is a fact about a pipeline, not a record of an attack. When an advisory ships in more than one format, open the machine-readable copy and don’t stop at the PDF, because the structured file tends to hold both the stronger indicators and the unvetted ones, and you want to see both. And for anything that actually matters, run a live sample through your own stack before you call it covered. The gap between an indicator and a detection that fires is exactly where attackers like to live.</p>
-
-
-
-<p class="wp-block-paragraph">I still reach for all three kinds of source every week, and I’ll defend every one of them. They were never the problem. The checking was always the cheap part. Assuming I could skip it was the expensive one. A report is where the work starts. Not where it stops.</p>
-
-
-
-<p class="wp-block-paragraph">The full teardowns behind these three cases are published on GitHub: The <a href="https://github.com/yankywilson/donutcluster-AS138995">DonutLoader protocol analysis</a>, the <a href="https://github.com/yankywilson/ghost-cring-defender-toolkit">Ghost detection content</a> and the <a href="https://github.com/yankywilson/gamybear">GAMYBEAR reversing notes and rule</a>, each in its own repository.</p>
-
-
-
-<p class="wp-block-paragraph"><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><a href="https://www.cio.com/expert-contributor-network/"><strong>Want to join?</strong></a></p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 5d ago]]></description>
-</item>
-
-<item>
-  <title>🟠 13 in-demand IT security certifications for higher pay</title>
-  <link>https://www.csoonline.com/article/4194130/13-in-demand-it-security-certifications-for-higher-pay.html</link>
-  <pubDate>Wed, 08 Jul 2026 07:00:00 +0000</pubDate>
-  <source>CSO Online</source>
-  <description><![CDATA[<b>Why this matters: Supply chain risk — audit third-party dependencies and vendor access.</b><br/><div id="remove_no_follow">
-		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
-					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
-						<div class="article-column__content">
-<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
-
-
-
-<p class="wp-block-paragraph">With change a constant, cybersecurity professionals looking to improve their careers can benefit from the latest insights into employers’ needs. Data from Foote Partners on the skills and certification most in demand today may provide helpful signposts.</p>
-
-
-
-<p class="wp-block-paragraph">Analyzing more than <a href="https://footepartners.com/pages/report-skills-certs">660 certifications</a> as part of its 2Q 2026 “IT Skills Demand and Pay Trends Report,” Foote Partners calculated the most valuable IT security certifications to pursue right now based on two dimensions. The first, the <a href="https://www.cio.com/article/350363/pay-for-in-demand-it-skills-rises-fastest-in-14-years.html">average pay premium</a>, measures the difference in pay between IT pros with a particular credential and those without it. The second, market value increase, measures the increase in pay gains over the past six months.</p>
-
-
-
-<p class="wp-block-paragraph">Together, average pay premium and market value increase can give cybersecurity pros a starting point in deciding which certification to pursue for more pay. Apart from considering their overall professional goals, security professionals should consider each certification’s training and exam costs, whether vendor-specific or vendor-neutral, and the lateral or vertical role opportunities it may open.</p>
-
-
-
-<p class="wp-block-paragraph">Here are the top 13 certifications paying higher premiums today in descending order.</p>
-
-
-
-<h2 class="wp-block-heading" id="giac-security-expert-gse">GIAC Security Expert (GSE)</h2>
-
-
-
-<p class="wp-block-paragraph">The <a href="https://www.giac.org/get-certified/giac-portfolio-certifications">GIAC Security Expert</a> (GSE) portfolio certification is for security leaders wishing to prove their status as a top information security practitioner by showing they have offensive and defensive skills and hands-on practical skills. Available for more than 15 years, the GSE is considered one of the broadest and deepest cybersecurity certifications. To earn the certification, candidates must complete any six <a href="https://www.giac.org/get-started/practitioner">practitioner</a> certifications and any four <a href="https://www.giac.org/get-started/applied-knowledge">applied knowledge</a> certifications.</p>
-
-
-
-<p class="wp-block-paragraph">GIAC allows candidates to customize the certification to fit their expertise and career. Candidates can also build their certification over any amount of time as along as the required certifications within the portfolio remain active. Practitioner certification exams are 2-5 hours in length, depending on the specific certification attempt, and applied knowledge certification exams are 4 hours in length.</p>
-
-
-
-<p class="wp-block-paragraph"><strong>Training fees:</strong> Some training is offered in affiliation with SANS Institute and costs $8,780.</p>
-
-
-
-<p class="wp-block-paragraph"><strong>Exam Fees:</strong> Because you need 10 certifications to achieve the GSE <a href="https://www.giac.org/pricing">prices vary significantly</a>. If you already hold a GIAC Certified Forensic Analyst (GCFA), the cost of one of the required certifications drops from $1,299 to $499. Most required certifications are priced at either $999 or $1,299 per attempt, though they can cost up to $11,190.</p>
-
-
-
-<h2 class="wp-block-heading" id="giac-security-professional-gsp">GIAC Security Professional (GSP)</h2>
-
-
-
-<p class="wp-block-paragraph">The <a href="https://www.giac.org/get-certified/giac-portfolio-certifications">GIAC Security Professional (GSP)</a> is designed to demonstrate the holder’s depth and breadth of information security knowledge. Launched approximately two years, this newer certification is the halfway point to the GSE. Customization of the certification is allowed, and to achieve it a candidate must complete any three <a href="https://www.giac.org/get-started/practitioner">practitioner</a> certifications and any two <a href="https://www.giac.org/get-started/applied-knowledge">applied knowledge</a> certifications. Candidates can also build their certification over any amount of time as along as the required certifications within the portfolio remain active. Practitioner Certification exams are 2-5 hours in length, depending on the specific certification attempt, and Applied Knowledge Certification exams are 4 hours in length.</p>
-
-
-
-<p class="wp-block-paragraph"><strong>Training fees:</strong> Some training is offered in affiliation with SANS Institute and costs $8,780.</p>
-
-
-
-<p class="wp-block-paragraph"><strong>Exam Fees:</strong> Because you need five certifications to achieve the GSP <a href="https://www.giac.org/pricing">prices vary significantly</a>. If you already hold a GIAC Security Essentials (GSEC), the cost of one of the required certifications drops from $1,299 to $499. Most certifications required are priced at either $999 or $1,299 per attempt, though certification can cost up to $5,595.</p>
-
-
-
-<h2 class="wp-block-heading" id="microsoft-certified-azure-cybersecurity-architect-expert">Microsoft Certified Azure Cybersecurity Architect Expert</h2>
-
-
-
-<p class="wp-block-paragraph">Those who earn the <a href="https://learn.microsoft.com/en-us/credentials/certifications/cybersecurity-architect-expert/">Microsoft Certified: Cybersecurity Architect Expert</a> credential are able to translate a cybersecurity strategy into capabilities that protect the assets, business, and operations of an organization. Through the certification process, candidates learn to design, guide the implementation of, and maintain security solutions that follow zero-trust principles and best practices. You’ll also be able to design solutions for governance, risk, and compliance (GRC), security operations, and security posture management.​</p>
-
-
-
-<p class="wp-block-paragraph">As a prerequisite, candidate must have earned one of the following: <a href="https://learn.microsoft.com/en-us/credentials/certifications/azure-security-engineer/">Microsoft Certified: Azure Security Engineer Associate</a>, <a href="https://learn.microsoft.com/en-us/credentials/certifications/identity-and-access-administrator/">Microsoft Certified: Identity and Access Administrator Associate</a>, <a href="https://learn.microsoft.com/en-us/credentials/certifications/security-operations-analyst/">Microsoft Certified: Security Operations Analyst Associate</a> certification.</p>
-
-
-
-<p class="wp-block-paragraph"><strong>Training fees: </strong>Self-paced training is available from the course’s page and free of charge. There is also an option to find an instructor-led training with pricing starting at $1,300.</p>
-
-
-
-<p class="wp-block-paragraph"><strong>Exam Fees:</strong> The exam costs $165 and Microsoft offers free practice assessments.</p>
-
-
-
-<h2 class="wp-block-heading" id="certificate-of-cloud-security-knowledge-ccsk">Certificate of Cloud Security Knowledge (CCSK)</h2>
-
-
-
-<p class="wp-block-paragraph">As a certificate and not a certification — an important distinction — the Cloud Security Alliance (CSA) positions its <a href="https://cloudsecurityalliance.org/education/ccsk">Certificate of Cloud Security Knowledge</a> as the foundation for future credentials and upskilling in the sector. From this perspective, the CCSK is helpful for cybersecurity analysts, compliance managers, security engineers, architects, and administrators. This vendor-neutral certificate has been recently updated and covers topics in zero trust, DevSecOps, cloud telemetry and security analytics, artificial intelligence, and more. CCSK offers a variety of training modalities, including an exam prep kit, instructor-led classes offered virtually and in person, and an online self-paced option. Candidates must score at least 80% on the exam, randomly pulling 60 multiple-choice questions from a test bank.</p>
-
-
-
-<p class="wp-block-paragraph"><strong>Training fees:</strong> Prices vary based on modality. A self-paced course<a href="https://cloudsecurityalliance.org/education/ccsk#preparing-for-the-ccsk"> and exam bundle costs $795</a>, and online, instructor-led training begins at<a href="https://cloudsecuritypass.com/training/"> </a><a href="https://cloudsecuritypass.com/training/">$995</a>.</p>
-
-
-
-<p class="wp-block-paragraph"><strong>Exam fees:</strong> The exam costs $445, though discounts are<a href="https://cloudsecurityalliance.org/membership"> available for corporate members</a>, and<a href="https://cloudsecurityalliance.org/education/ccsk/free-for-veterans"> </a><a href="https://cloudsecurityalliance.org/education/ccsk/free-for-veterans">US military veterans can take it for free</a>.</p>
-
-
-
-<h2 class="wp-block-heading" id="certified-in-risk-and-information-systems-control-crisc">Certified in Risk and Information Systems Control (CRISC)</h2>
-
-
-
-<p class="wp-block-paragraph">Administered by ISACA, the<a href="https://www.isaca.org/credentialing/crisc"> </a><a href="https://www.csoonline.com/article/571249/crisc-certification-your-ticket-to-the-c-suite.html">Certified in Risk and Information Systems Control</a> certification provides candidates with training across four domains: corporate IT governance, risk assessment, risk response and reporting, and technology and security. CRISC is ideal for candidates who want to enhance and optimize business resilience and risk management across their organization. The exam consists of 150 questions across the four domains. Since ISACA began offering CRISC in 2010, more than 23,000 people have obtained the certification. ISACA claims 52% of certificate holders experienced on-the-job improvement, and CRISC is the “4th top-paying certification worldwide.” To qualify for CRISC, candidates must adhere to a code of professional ethics and have <a href="https://support.isaca.org/s/article/What-are-the-requirements-to-become-CRISC-certified">three years of work experience</a> in risk assessment and risk response and reporting. On passing the exam, candidates must submit 20 CPE credits annually and<a href="https://www.isaca.org/-/media/files/isacadp/project/isaca/certification/crisc/crisc-cpe/crisc-cpe-policy.pdf"> </a><a href="https://www.isaca.org/-/media/files/isacadp/project/isaca/certification/crisc/crisc-cpe/crisc-cpe-policy.pdf">120 continuing professional education (CPE) hours</a> every three years to maintain their CRISC.</p>
-
-
-
-<p class="wp-block-paragraph"><strong>Training fees:</strong> ISACA offers three resources: an<a href="https://store.isaca.org/s/store#/store/browse/detail/a2S4w000004Km4PEAS"> </a><a href="https://store.isaca.org/s/store#/store/browse/detail/a2SVQ000001VR1l2AG">online review course</a>, $895; a review manual in<a href="https://store.isaca.org/s/store#/store/browse/detail/a2S4w000004Tx3aEAC"> </a><a href="https://store.isaca.org/s/store#/store/browse/detail/a2SVQ000001FWgY2AW">print</a> or<a href="https://store.isaca.org/s/store#/store/browse/detail/a2S4w000004Tx60EAC"> </a><a href="https://store.isaca.org/s/store#/store/browse/detail/a2SVQ000001FoOv2AK">digital</a>, $139; and an<a href="https://store.isaca.org/s/store#/store/browse/detail/a2S4w000004Ko5TEAS"> </a><a href="https://store.isaca.org/s/store#/store/browse/detail/a2SVQ000001IPKL2A4">annual subscription to a 833-question test bank</a>, $399. Discounts are available for ISACA members.</p>
-
-
-
-<p class="wp-block-paragraph"><strong>Exam fees: </strong>$575, ISACA members; $760 for non-members; plus $50 application fee.</p>
-
-
-
-<h2 class="wp-block-heading" id="certified-information-systems-auditor-cisa">Certified Information Systems Auditor (CISA)</h2>
-
-
-
-<p class="wp-block-paragraph">The Information Systems Audit and Control Association (ISACA)’s CISA is geared toward IT auditors who wish to upskill or earn a pay boost. According to ISACA, 70% of CISA holders report on-the-job improvement, and another 22% receive a raise. The course covers five domains: information systems auditing, implementation, and operations; protection of information assets; and IT governance. The<a href="https://www.isaca.org/-/media/files/isacadp/project/isaca/certification/exam-candidate-guides/2024/exam-candidate-guide-2024.pdf"> </a>four-hour exam consists of 150 multiple-choice questions, and candidates must earn 450 on ISACA’s scaled scoring system, with 800 representing a perfect score. To<a href="https://www.isaca.org/credentialing/cisa/maintain-cisa-certification"> </a><a href="https://www.isaca.org/credentialing/cisa/maintain-cisa-certification">maintain their CISA</a>, certification holders must take 20 CPE credits annually and 120 over three years through conferences, volunteering, on-demand learning, and other methods as well as paying maintenance fee. To qualify, you must have five years of experience in IT or IS audit, control, assurance, or security. You can apply for an experience waiver for up to three years.</p>
-
-
-
-<p class="wp-block-paragraph"><strong>Training fees:</strong> ISACA offers four resources: an<a href="https://store.isaca.org/s/store#/store/browse/detail/a2SVQ000000Fqvx2AC"> </a><a href="https://store.isaca.org/s/store#/store/browse/detail/a2SVQ000000Fqvx2AC">online review course</a> for $895, an<a href="https://store.isaca.org/s/store#/store/browse/detail/a2S4w000008KxGWEA0"> </a><a href="https://store.isaca.org/s/store#/store/browse/detail/a2S4w000008KxGWEA0">annual subscription to a question bank</a> for $399, and a print or digital<a href="https://store.isaca.org/s/store#/store/browse/detail/a2S4w000004W2rOEAS"> </a><a href="https://store.isaca.org/s/store#/store/browse/detail/a2S4w000004W2rOEAS">review manual</a> for $139. Discounts are available for ISACA members. </p>
-
-
-
-<p class="wp-block-paragraph"><strong>Exam fees:</strong> $575, members; $760, non-members; plus $50 application fee.</p>
-
-
-
-<h2 class="wp-block-heading" id="certified-information-systems-security-professional-cissp">Certified Information Systems Security Professional (CISSP)</h2>
-
-
-
-<p class="wp-block-paragraph"><a href="https://www.csoonline.com/article/570239/cissp-certification-requirements-training-and-cost.html">CISSP</a> is a generalist cert from ISC2 aimed at security pros who have already established a strong track record. Advanced-level analysts interested in getting CISSP certified will need to know all the ins and outs of security and risk management, asset security, operations, security assessment and testing, and more. The CISSP certification requires five years of full-time experience in at least two of its <a href="https://www.isc2.org/certifications/cissp#The%20CISSP%20Exam">eight domains</a>. The exam is <a href="https://www.isc2.org/Certifications/CISSP/CISSP-CAT">adaptive</a>, ranging from 100 to 150 questions, including multiple-choice and advanced items of varying formats. Candidates need to score 700 points out of 1,000 to pass the exam.</p>
-
-
-
-<p class="wp-block-paragraph"><strong>Training fees:</strong><a href="https://www.isc2.org/training/online-self-paced/cissp-online-self-paced"> </a>Online self-paced training <a href="https://www.isc2.org/training#CISSP">fees start</a> at $595 and can cost up to $1,993;<a href="https://www.isc2.org/training/online-instructor-led/cissp-online-instructor-led"> </a>online instructor-led bootcamp costs $2,880.</p>
-
-
-
-<p class="wp-block-paragraph"><strong>Exam fee:</strong><a href="https://www.isc2.org/register-for-exam/isc2-exam-pricing"> </a><a href="https://www.isc2.org/register-for-exam/isc2-exam-pricing">$749</a></p>
-
-
-
-<h2 class="wp-block-heading" id="certified-secure-software-lifecycle-professional-csslp">Certified Secure Software Lifecycle Professional (CSSLP)</h2>
-
-
-
-<p class="wp-block-paragraph">This ISC2 certification helps cyber pros build their career by training them to better incorporate security practices throughout software development phases. The <a href="https://www.isc2.org/certifications/csslp">CSSLP</a> exam evaluates experience across eight domains: secure software concepts; secure software; lifecycle management; secure software requirements; secure software architecture and design; secure software implementation; secure software testing; secure software deployment, operations, maintenance; secure software supply chain. Those wishing to acquire the CSSLP must have four years of paid work experience as a software development lifecycle professional in one or more of the eight domains.</p>
-
-
-
-<p class="wp-block-paragraph"><strong>Training fees:</strong><a href="https://www.isc2.org/training/online-self-paced/cissp-online-self-paced"> </a>Online self-paced training <a href="https://www.isc2.org/training#CSSLP">fees start</a> at $550 and can cost up to $1,718; online instructor-led bootcamp costs $2,650.</p>
-
-
-
-<p class="wp-block-paragraph"><strong>Exam fee:</strong> <a href="https://www.isc2.org/register-for-exam/isc2-exam-pricing">$599</a></p>
-
-
-
-<h2 class="wp-block-heading" id="check-point-certified-security-master-ccsm">Check Point Certified Security Master (CCSM)</h2>
-
-
-
-<p class="wp-block-paragraph">To become a <a href="https://www.checkpoint.com/services/training/certification-program/">Check Point Certified Security Master (CCSM) </a>security professionals must have an active Certified Security Expert (CCSE) and mast have completed two subsequent Check Point Specialist accreditations. CCSM validates advanced expertise in configuring, deploying, and troubleshooting Check Point solutions. Check Point certifications are valid for 24 months.</p>
-
-
-
-<p class="wp-block-paragraph"><strong>Training fees:</strong><a href="https://www.isc2.org/training/online-self-paced/cissp-online-self-paced"></a> <a href="https://securityservices.checkpoint.com/categories/trainingprograms">Training for CCSE</a> is $3,500</p>
-
-
-
-<p class="wp-block-paragraph"><strong>Exam fee:</strong> The fee for CCSE is $300</p>
-
-
-
-<h2 class="wp-block-heading" id="giac-experienced-cybersecurity-specialist-gx-cs">GIAC Experienced Cybersecurity Specialist (GX-CS)</h2>
-
-
-
-<p class="wp-block-paragraph">The <a href="https://www.giac.org/certifications/experienced-cyber-security-gxcs">Experienced Cybersecurity Specialist (GX-CS)</a> sits within the applied knowledge certifications with GIAC. The certification is for practitioners to show their qualifications for advanced, hands-on IT systems roles across cybersecurity. Its intent is to demonstrate the candidate can navigate evolving real-world threats. The certification covers five areas: network security analysis and tools; evaluation of Windows and Linux OS security; advanced security tools and techniques; common attacks and defenses; and implementing overall cybersecurity and information security. The GX-CS is for <a href="https://www.giac.org/certifications/security-essentials-gsec">GSEC</a> holders who acquired additional experience — the GSEC exam costs $999, and SANS Institute offers <a href="https://www.sans.org/cyber-security-courses/security-essentials">training</a> for GSEC.</p>
-
-
-
-<p class="wp-block-paragraph"><strong>Training fees:</strong><a href="https://www.isc2.org/training/online-self-paced/cissp-online-self-paced"></a> There are a few related affiliate training programs provided by SANS, each costing approximately $9,000.</p>
-
-
-
-<p class="wp-block-paragraph"><strong>Exam fee: </strong>$499 for those with an active GSEC; otherwise <a href="https://www.giac.org/pricing">$1,299</a>.</p>
-
-
-
-<h2 class="wp-block-heading" id="offsec-certified-professional-oscp">OffSec Certified Professional (OSCP+)</h2>
-
-
-
-<p class="wp-block-paragraph">To earn the<a href="https://www.offsec.com/courses/pen-200/"> </a><a href="https://www.offsec.com/courses/pen-200/">OffSec Certified Professional</a> certification, candidates must complete the affiliated course, PEN-200: Penetration Testing with Kali Linux, and pass the subsequent exam. The course covers 20 plus modules, including information gathering, vulnerability scanning, encryption and cryptography, Active Directory and AWS exploitation, and more. Certificate holders will have shown mastery of penetration testing methodologies ideal for new roles, such as an ethical hacker, incident responder, or threat hunter. The OSCP+ exam is entirely hands-on, and test-takers must compromise systems within a lab environment.</p>
-
-
-
-<p class="wp-block-paragraph">OffSec does not enforce any prerequisites but recommends candidates be familiar with TCP/IP networking, scripting in Bash and Python, and Linux and Windows, which they can learn through its<a href="https://www.offsec.com/learning/paths/network-penetration-testing-essentials/"> </a><a href="https://www.offsec.com/learning/paths/network-penetration-testing-essentials/">Network Penetration Testing Essentials Learning Path</a>.</p>
-
-
-
-<p class="wp-block-paragraph"><strong>Training and exam fees:</strong> OffSec bundles the course and exam for $1,749 and as a yearly subscription that includes access to one 200 or 300-level course, the associated labs, and two exam attempts for $2,749 annually.</p>
-
-
-
-<h2 class="wp-block-heading" id="offsec-experienced-penetration-tester-osep">OffSec Experienced Penetration Tester (OSEP)</h2>
-
-
-
-<p class="wp-block-paragraph">The<a href="https://www.offsec.com/courses/pen-300/"> </a><a href="https://www.offsec.com/courses/pen-300/">OffSec Experienced Penetration Tester</a> is ideal for penetration testers and ethical hackers who need more advanced techniques to sharpen offensive skills against modern enterprise defenses. Across more than 20 modules, the certification introduces these professionals to advanced offensive techniques, EDR and AV evasion, advanced Windows offensive security and more. During the two-day proctored exam, professionals must connect to a lab environment via a VPN and compromise multiple machines within a network through several possible attack paths. To pass, professionals must achieve the objective stated within the control panel or score at<a href="https://help.offsec.com/hc/en-us/articles/360049781352-OSEP-Exam-FAQ"> </a><a href="https://help.offsec.com/hc/en-us/articles/360049781352-OSEP-Exam-FAQ">least 100 points</a> — 10 points are awarded for every flag found in a local.txt or proof.txt file. Professionals who earn their OSEP can also obtain their<a href="https://www.offsec.com/certificates/osce3/"> </a><a href="https://www.offsec.com/certificates/osce3/">OSCE³ Certification</a> to demonstrate their mastery of offensive security. They would also need to pass the exams for WEB-300: Advanced Web Attacks and Exploitation and EXP-301: Windows User Mode Exploit Development, after which the OSCE³ is automatically awarded.</p>
-
-
-
-<p class="wp-block-paragraph">While there are no formal prerequisites for OSEP, OffSec recommends candidates take the<a href="https://www.offsec.com/courses/pen-200/"> </a><a href="https://www.offsec.com/courses/pen-200/">PEN-200: Penetration Testing</a> with Kali Linux or have a strong foundation in operating systems, networking, and scripting. </p>
-
-
-
-<p class="wp-block-paragraph"><strong>Training and exam fees:</strong> OffSec bundles the course and exam for $1,749, and as a yearly subscription that includes access to one 200 or 300-level course, the associated labs, and two exam attempts for $2,749 annually.</p>
-
-
-
-<h2 class="wp-block-heading" id="offsec-exploitation-expert-osee">OffSec Exploitation Expert (OSEE)</h2>
-
-
-
-<p class="wp-block-paragraph">OffSec’s <a href="https://www.offsec.com/courses/exp-401/">Offensive Security Exploitation Expert</a> is a vendor-specific certification, focusing on advanced Windows exploitation, with OffSec deeming it its most challenging certification. As a penetration testing course, the material dives deep into topics such as advanced heap manipulations and disarming WDEG mitigations. Certificate holders can identify problematic code in Windows operating systems and develop exploits. For the practical exam, candidates must complete a comprehensive penetration test of software and create an exploit within a lab environment — all within 72 hours. To qualify, you must have experience debugging, developing Windows exploits, and using the following technologies: WinDBG, x86_64, IDA Pro, and basic C/C++ programming. OffSec recommends completing its<a href="https://www.offsec.com/courses-and-certifications/"> </a><a href="https://www.offsec.com/courses-and-certifications/">300-level certifications</a> before OSEE.</p>
-
-
-
-<p class="wp-block-paragraph"><strong>Training and exam fees:</strong> OffSec offers only instructor-led, in-person training. Enterprises should <a href="https://www.offsec.com/organizations/live-training/">inquire for more information</a>.</p>
 </div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5d ago]]></description>
 </item>
 
