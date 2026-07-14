@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
 **Period:** July 07 – July 14, 2026  
-**Generated:** 2026-07-14 05:27 UTC  
+**Generated:** 2026-07-14 07:58 UTC  
 **Items reviewed:** 137  
 
 ## ⚡ Top Actions This Week
@@ -55,40 +55,40 @@
 
 ## 🟠 Important — Review This Week
 
+- [CVE-2026-14461 Out-of-bound read in mtr](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-14461)  
+  **Microsoft Security Response Center (MSRC)** · Jul 14 · _General awareness item._  
+
+- [CVE-2026-12480 Arbitrary HDF5 File Read via Virtual Dataset Bypass in keras-team/keras](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-12480)  
+  **Microsoft Security Response Center (MSRC)** · Jul 14 · _General awareness item._  
+
+- [CVE-2026-40467 Use after free in gawk](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-40467)  
+  **Microsoft Security Response Center (MSRC)** · Jul 14 · _General awareness item._  
+
+- [CVE-2026-40468 Heap buffer overflow in gawk](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-40468)  
+  **Microsoft Security Response Center (MSRC)** · Jul 14 · _General awareness item._  
+
+- [CVE-2026-40469 Heap buffer overflow in gawk](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-40469)  
+  **Microsoft Security Response Center (MSRC)** · Jul 14 · _General awareness item._  
+
+- [CVE-2026-40553 Stack-based buffer overflow in gawk](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-40553)  
+  **Microsoft Security Response Center (MSRC)** · Jul 14 · _General awareness item._  
+
 - [CVE-2025-38096 wifi: iwlwifi: don't warn when if there is a FW error](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-38096)  
   **Microsoft Security Response Center (MSRC)** · Jul 13 · _General awareness item._  
 
 - [CVE-2025-71072 shmem: fix recovery on rename failures](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-71072)  
   **Microsoft Security Response Center (MSRC)** · Jul 13 · _General awareness item._  
 
-- [CVE-2022-4543 A flaw named "EntryBleed" was found in the Linux Kernel Page Table Isolation (KPTI). This issue could allow a local attacker to leak KASLR base via prefetch side-channels based on TLB timing for Intel systems.](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-4543)  
-  **Microsoft Security Response Center (MSRC)** · Jul 13 · _General awareness item._  
-
-- [iCagenda and Balbooa Forms Joomla Flaws Reportedly Exploited as Zero-Days](https://thehackernews.com/2026/07/icagenda-and-balbooa-forms-joomla-flaws.html)  
-  **The Hacker News** · Jul 13 · _General awareness item._  
-
-- [CVE-2026-45489 Microsoft Edge (Chromium-based) Spoofing Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45489)  
-  **Microsoft Security Response Center (MSRC)** · Jul 12 · _General awareness item._  
-
-- [CVE-2026-59874 node-tar: Negative tar entry size causes infinite loop in archive replace](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-59874)  
-  **Microsoft Security Response Center (MSRC)** · Jul 12 · _General awareness item._  
-
-- [CVE-2026-59873 node-tar: Decompression/parse DoS via unlimited input](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-59873)  
-  **Microsoft Security Response Center (MSRC)** · Jul 12 · _General awareness item._  
-
-- [CVE-2026-59871 node-tar: Process crash via PAX numeric path type confusion](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-59871)  
-  **Microsoft Security Response Center (MSRC)** · Jul 12 · _General awareness item._  
-
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [Microsoft Maps Year-Long ShinyHunters-Linked Salesforce Data Theft Across Three Paths](https://thehackernews.com/2026/07/microsoft-maps-year-long-shinyhunters.html) — The Hacker News
 - [ISC Stormcast For Tuesday, July 14th, 2026 https://isc.sans.edu/podcastdetail/10006, (Tue, Jul 14th)](https://isc.sans.edu/diary/rss/33152) — SANS Internet Storm Center
 - [Japan's largest taxi operator shuts systems after cyberattack](https://www.bleepingcomputer.com/news/security/japans-largest-taxi-operator-shuts-systems-after-cyberattack/) — BleepingComputer
 - [Hackers backdoor Jscrambler npm package with infostealer malware](https://www.bleepingcomputer.com/news/security/hackers-backdoor-jscrambler-npm-package-with-infostealer-malware/) — BleepingComputer
 - [New CrashStealer malware poses as Apple crash reporting tool](https://www.bleepingcomputer.com/news/security/new-crashstealer-malware-poses-as-apple-crash-reporting-tool/) — BleepingComputer
 - [CrashStealer macOS Malware Uses Notarized Dropper to Pass Gatekeeper Checks](https://thehackernews.com/2026/07/crashstealer-macos-malware-uses.html) — The Hacker News
-- [Google and Microsoft Pull ModHeader With 1.6 Million Installs After Dormant Collector Found](https://thehackernews.com/2026/07/google-and-microsoft-pull-modheader.html) — The Hacker News
 
 ---
 
