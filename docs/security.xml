@@ -3,14 +3,31 @@
 <channel>
   <title>Joe — Security Intelligence</title>
   <description>Cybersecurity threats, vulnerabilities, breaches, and Microsoft security updates.</description>
-  <lastBuildDate>Tue, 14 Jul 2026 12:08:18 +0000</lastBuildDate>
+  <lastBuildDate>Tue, 14 Jul 2026 14:46:21 +0000</lastBuildDate>
   
+<item>
+  <title>🟠 7 Severe Vulnerabilities Patched in VMware Avi Load Balancer</title>
+  <link>https://www.securityweek.com/7-severe-vulnerabilities-patched-in-vmware-avi-load-balancer/</link>
+  <pubDate>Tue, 14 Jul 2026 13:55:41 +0000</pubDate>
+  <source>SecurityWeek</source>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><p>The flaws can be exploited for authentication bypass, remote code execution, privilege escalation, and directory traversal.</p>
+<p>The post <a href="https://www.securityweek.com/7-severe-vulnerabilities-patched-in-vmware-avi-load-balancer/">7 Severe Vulnerabilities Patched in VMware Avi Load Balancer</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</item>
+
+<item>
+  <title>🟠 CVE-2026-55040: Microsoft SharePoint JWT Token Authentication Bypass (FIXED)</title>
+  <link>https://www.rapid7.com/blog/post/ve-cve-2026-55040-microsoft-sharepoint-jwt-token-authentication-bypass-fixed</link>
+  <pubDate>Tue, 14 Jul 2026 13:00:00 +0000</pubDate>
+  <source>Rapid7 Blog</source>
+  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/><h2 style="direction: ltr;">Overview</h2><p style="direction: ltr;"><span style="font-size: undefined;">Rapid7 Labs conducted a zero-day research project against Microsoft SharePoint, resulting in the discovery of two new vulnerabilities that, when chained together, achieve unauthenticated remote code execution (RCE) against a vulnerable SharePoint server. Today, both Rapid7 and Microsoft are disclosing the first vulnerability in this chain, the authentication bypass vulnerability CVE-2026-55040. The RCE component of the exploit chain is expected to be patched by Microsoft in the next update cycle for August 2026. The exploit chain was developed as an entry for the recent </span><a href="https://www.zerodayinitiative.com/blog/2026/5/15/pwn2own-berlin-2026-day-two-results" target="_blank"><span style="font-size: undefined;">Pwn2Own Berlin</span></a><span style="font-size: undefined;"> hacking competition – part of Rapid7 Labs' continued effort to </span><a href="/blog/post/ve-rapid7-labs-at-pwn2own-vuln-intel" target="_self"><span style="font-size: undefined;">raise the bar</span></a><span style="font-size: undefined;"> in Vulnerability Intelligence and our commitment to the preemptive protection of our customers through original vulnerability research.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">A remote unauthenticated attacker can leverage CVE-2026-55040 to bypass authentication on a vulnerable SharePoint server and perform operations as a SharePoint site user or administrator. The vulnerability is due to several issues in the JWT token validation pipeline.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">CVE-2026-55040 has a CVSSv3.1 score of </span><a href="https://www.first.org/cvss/calculator/3.1#CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N" target="_blank"><span style="font-size: undefined;">5.3 (Medium)</span></a><span style="font-size: undefined;">, and a Common Weakness Enumeration (CWE) of </span><a href="https://cwe.mitre.org/data/definitions/1390.html" target="_blank"><span style="font-size: undefined;">CWE-1390: Weak Authentication</span></a><span style="font-size: undefined;">.</span></p><h2 style="direction: ltr;">Product description</h2><p style="direction: ltr;"><span style="font-size: undefined;">Microsoft </span><a href="https://www.microsoft.com/en-ie/microsoft-365/sharepoint/collaboration" target="_blank"><span style="font-size: undefined;">SharePoint</span></a><span style="font-size: undefined;"> is a ubiquitous, web-based collaboration and document management platform deeply integrated into the Microsoft 365 ecosystem. Serving as the central hub for corporate intranets, internal file sharing, and workflow automation, it is trusted by enterprises worldwide to store and manage vast repositories of sensitive business data. Because SharePoint acts as a critical bridge between internal users, active directories, and cloud infrastructure, vulnerabilities within its architecture present a high-risk attack surface.</span></p><h2 style="direction: ltr;">Impact</h2><p style="direction: ltr;"><span style="font-size: undefined;">By leveraging CVE-2026-55040, a remote unauthenticated attacker can assume the identity of any SharePoint site user; the prerequisite is the attacker must know in advance the user they wish to identify as. This can be achieved in a number of ways, including via a user’s Active Directory (AD) Security ID (SID), or via a user’s AD User Principal Name (UPN). A UPN is the primary logon name for a user in either Windows AD or Microsoft Entra ID, and is formatted similar to that of an email address, e.g. </span><span style="font-size: undefined;"><span>administrator@domain.local</span></span><span style="font-size: undefined;">.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">In the example screenshot below, with identifying information redacted, a Rapid7 Labs proof-of-concept script discovers potential SharePoint users via SID enumeration and then leverages CVE-2026-55040 to bypass authentication on the target SharePoint site to assume the identity of that user — ultimately identifying the SharePoint site administrator user account.</span></p><p><span style="font-size: undefined;"></span></p><figure style="margin: 0;"><div style="display: inline-block;"><img alt="Rapid7-Labs-PoC-CVE-2026-55040.png" class="embedded-asset" src="https://images.contentstack.io/v3/assets/blte4f029e766e6b253/bltd61e853d8fb01e47/6a5541d6d0cfb04dede7bd58/Rapid7-Labs-PoC-CVE-2026-55040.png" style="width: auto;" type="asset" /><figcaption style="text-align: center;">Figure 1: The Rapid7 Labs PoC for CVE-2026-55040.</figcaption></div></figure><p>⠀</p><p style="direction: ltr;"><span style="font-size: undefined;">An attacker who successfully exploits CVE-2026-55040 can perform operations against the target SharePoint site as the user they identify as. Furthermore, this authentication bypass can be chained to additional vulnerabilities within the authenticated attack surface of the target site.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">Rapid7 Labs has chained the authentication bypass CVE-2026-55040 with a separate RCE vulnerability for unauthenticated RCE. Patching CVE-2026-55040 will successfully break this exploit chain. The RCE component has been disclosed to Microsoft and is expected to be patched in the scheduled August patch cycle. The chaining of vulnerabilities highlights that even though the authentication bypass has been assigned a medium severity CVSS score by Microsoft, the impact of successfully chaining a medium severity authentication bypass to an RCE component is significant. This also underscores the importance of patching vulnerabilities such as authentication bypasses, which can break complex and high impact exploit chains.</span></p><h2 style="direction: ltr;">Leveraging AI</h2><p style="direction: ltr;"><span style="font-size: undefined;">To develop our SharePoint exploit chain, Rapid7 Labs undertook a research project divided into two main sprints, the first in January and the second in March, 2026. While both sprints did encompass more traditional vulnerability research such as manual code review and reverse engineering, a significant amount of the work was undertaken through an agent. Over 24 active days of agentic work, we leveraged 96 sessions, issued 256 prompts, and generated approximately 80,000 agentic tool calls.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">The initial January sprint was unsuccessful, resulting in no findings that could be leveraged for an exploit chain. We used this sprint to experiment with several different publicly available models, along with different workflows to navigate and reason across a massive and complex codebase. However, our second sprint in March was successful and yielded, through a heavily prompted agent, a two-vulnerability exploit chain that achieved unauthenticated RCE.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">The improvement in quality between January and March in terms of agentic work, along with our improved workflows, was noticeable. This highlights the speed at which this field is evolving, how publicly available models are improving, and how as research teams develop their workflows, the results begin to compound.</span></p><h2 style="direction: ltr;">Credit</h2><p style="direction: ltr;"><span style="font-size: undefined;">This vulnerability was discovered by Stephen Fewer, Senior Principal Security Researcher at Rapid7 and is being disclosed in accordance with </span><a href="/security/disclosure" target="_self"><span style="font-size: undefined;">Rapid7's vulnerability disclosure policy</span></a><span style="font-size: undefined;">.</span></p><h2 style="direction: ltr;">Vendor statement</h2><p style="direction: ltr;"><span style="font-size: undefined;">The following statement has been provided by Microsoft:</span></p><p style="direction: ltr;"><span style="font-size: undefined;"><em>“We would like to thank Rapid7 for responsibly reporting this issue through coordinated vulnerability disclosure.”</em></span></p><h2 style="direction: ltr;">Technical analysis</h2><p style="direction: ltr;"><span style="font-size: undefined;">Rapid7 will be publishing full technical details for CVE-2026-55040 within 30 days of this disclosure.</span></p><h2 style="direction: ltr;">Remediation</h2><p style="direction: ltr;"><span style="font-size: undefined;">Customers are advised to apply the latest available </span><a href="https://learn.microsoft.com/en-us/officeupdates/sharepoint-updates" target="_blank"><span style="font-size: undefined;">updates</span></a><span style="font-size: undefined;"> for the impacted product to ensure they are protected.</span></p><h2 style="direction: ltr;">Rapid7 customers</h2><p>Exposure Command, InsightVM and Nexpose customers will be able to assess their exposure to CVE-2026-55040 with Authenticated vulnerability checks available in the July 14 content release</p><h2 style="direction: ltr;">Disclosure timeline</h2><ul><li style="direction: ltr;"><p style="direction: ltr;"><span style="font-size: undefined;"><strong>May 18, 2026:</strong></span><span style="font-size: undefined;"> Rapid7 discloses an unauthenticated RCE exploit chain to Microsoft. Microsoft acknowledges receipt of the disclosure the same day.</span></p></li><li style="direction: ltr;"><p style="direction: ltr;"><span style="font-size: undefined;"><strong>May 20, 2026:</strong></span><span style="font-size: undefined;"> Microsoft confirms the findings and indicates that the exploit chain will be patched across two scheduled update cycles - the authentication bypass component in July, and the RCE component in August.</span></p></li><li style="direction: ltr;"><p style="direction: ltr;"><span style="font-size: undefined;"><strong>May 21, 2026:</strong></span><span style="font-size: undefined;"> Rapid7 acknowledges the disclosure schedule and requests supporting information. Microsoft requests a 30 day stay on disclosure of technical details and publication of PoC.</span></p></li><li style="direction: ltr;"><p style="direction: ltr;"><span style="font-size: undefined;"><strong>May 29, 2026:</strong></span><span style="font-size: undefined;"> Rapid7 agrees to a 30 day stay on technical details with a proviso to publish earlier should either exploitation in-the-wild or third-party publication of details occur within the 30 days. Microsoft confirms the disclosure plan the same day.</span></p></li><li style="direction: ltr;"><p style="direction: ltr;"><span style="font-size: undefined;"><strong>June 30, 2026:</strong></span><span style="font-size: undefined;"> Rapid7 requests supporting information for the upcoming disclosure.</span></p></li><li style="direction: ltr;"><p style="direction: ltr;"><span style="font-size: undefined;"><strong>June 30, 2026:</strong></span><span style="font-size: undefined;"> Microsoft provides supporting information to Rapid7.</span></p></li><li style="direction: ltr;"><p style="direction: ltr;"><span style="font-size: undefined;"><strong>July 14, 2026:</strong></span><span style="font-size: undefined;"> This disclosure for CVE-2026-55040.</span></p></li></ul><br/><br/><b>Source:</b> Rapid7 Blog &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+</item>
+
 <item>
   <title>🔴 US sanctions VPN, malware providers for enabling ransomware attacks</title>
   <link>https://www.bleepingcomputer.com/news/security/us-sanctions-vpn-malware-providers-linked-to-ransomware-gangs/</link>
   <pubDate>Tue, 14 Jul 2026 09:40:13 +0000</pubDate>
   <source>BleepingComputer</source>
-  <description><![CDATA[<b>Why this matters: Elevated ransomware risk — validate backups and endpoint defenses.</b><br/>The U.S. Treasury Department's Office of Foreign Assets Control (OFAC) sanctioned two individuals and one entity for enabling ransomware attacks against U.S. organizations. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Elevated ransomware risk — validate backups and endpoint defenses.</b><br/>The U.S. Treasury Department's Office of Foreign Assets Control (OFAC) sanctioned two individuals and one entity for enabling ransomware attacks against U.S. organizations. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -18,7 +35,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-14461</link>
   <pubDate>Tue, 14 Jul 2026 08:39:17 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
@@ -26,7 +43,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-12480</link>
   <pubDate>Tue, 14 Jul 2026 08:38:59 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
@@ -36,7 +53,7 @@
   <source>The Hacker News</source>
   <description><![CDATA[<b>Why this matters: Elevated ransomware risk — validate backups and endpoint defenses.</b><br/>The U.S. Treasury Department's Office of Foreign Assets Control (OFAC) has designated two individuals and a VPN service provider for enabling ransomware actors' and other cybercriminals' malicious activities, including ransomware attacks against Americans.
 
-The VPN, named First VPN Service (1VPNS), has been accused of offering its tools to ransomware groups, along with its 45-year-old Ukrainian<br/><br/><b>Source:</b> The Hacker News &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+The VPN, named First VPN Service (1VPNS), has been accused of offering its tools to ransomware groups, along with its 45-year-old Ukrainian<br/><br/><b>Source:</b> The Hacker News &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
@@ -44,7 +61,7 @@ The VPN, named First VPN Service (1VPNS), has been accused of offering its tools
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-40467</link>
   <pubDate>Tue, 14 Jul 2026 08:01:41 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
@@ -52,7 +69,7 @@ The VPN, named First VPN Service (1VPNS), has been accused of offering its tools
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-40468</link>
   <pubDate>Tue, 14 Jul 2026 08:01:35 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
@@ -60,7 +77,7 @@ The VPN, named First VPN Service (1VPNS), has been accused of offering its tools
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-40469</link>
   <pubDate>Tue, 14 Jul 2026 08:01:29 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
@@ -68,7 +85,7 @@ The VPN, named First VPN Service (1VPNS), has been accused of offering its tools
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-40553</link>
   <pubDate>Tue, 14 Jul 2026 08:01:22 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
@@ -76,7 +93,7 @@ The VPN, named First VPN Service (1VPNS), has been accused of offering its tools
   <link>https://www.bleepingcomputer.com/news/security/cisa-warns-of-actively-exploited-rce-flaws-in-joomla-extensions/</link>
   <pubDate>Mon, 13 Jul 2026 15:20:16 +0000</pubDate>
   <source>BleepingComputer</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>The U.S. Cybersecurity and Infrastructure Security Agency (CISA) is warning that attackers are exploiting vulnerabilities in the iCagenda and Balbooa Forms extensions for Joomla to achieve remote code execution through arbitrary file uploads. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 20h ago]]></description>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>The U.S. Cybersecurity and Infrastructure Security Agency (CISA) is warning that attackers are exploiting vulnerabilities in the iCagenda and Balbooa Forms extensions for Joomla to achieve remote code execution through arbitrary file uploads. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 23h ago]]></description>
 </item>
 
 <item>
@@ -86,7 +103,7 @@ The VPN, named First VPN Service (1VPNS), has been accused of offering its tools
   <source>The Hacker News</source>
   <description><![CDATA[<b>Why this matters: Elevated ransomware risk — validate backups and endpoint defenses.</b><br/>Somewhere right now, a security tool is quietly finding bugs faster than any human can fix them. That's supposed to be the good news. The catch is that the attackers have the same tools, pointed the other way, and they don't file tickets.
 
-That's the shape of this week. Trusted code turns on the people who installed it. Old bugs from last year are still landing because the fix sat in a queue too<br/><br/><b>Source:</b> The Hacker News &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 21h ago]]></description>
+That's the shape of this week. Trusted code turns on the people who installed it. Old bugs from last year are still landing because the fix sat in a queue too<br/><br/><b>Source:</b> The Hacker News &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 23h ago]]></description>
 </item>
 
 <item>
@@ -94,7 +111,7 @@ That's the shape of this week. Trusted code turns on the people who installed it
   <link>https://www.bleepingcomputer.com/news/security/lidl-discloses-online-shop-breach-after-service-provider-hack/</link>
   <pubDate>Mon, 13 Jul 2026 14:19:43 +0000</pubDate>
   <source>BleepingComputer</source>
-  <description><![CDATA[<b>Why this matters: Potential data exposure — check monitoring and incident response readiness.</b><br/>German discount supermarket chain Lidl notified customers in Germany, Belgium, and the Netherlands that attackers stole their personal information in a breach at a service provider. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 21h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Potential data exposure — check monitoring and incident response readiness.</b><br/>German discount supermarket chain Lidl notified customers in Germany, Belgium, and the Netherlands that attackers stole their personal information in a breach at a service provider. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
@@ -102,7 +119,7 @@ That's the shape of this week. Trusted code turns on the people who installed it
   <link>https://www.bleepingcomputer.com/news/security/breach-at-the-beach-play-the-ultimate-entra-id-ctf/</link>
   <pubDate>Mon, 13 Jul 2026 14:01:11 +0000</pubDate>
   <source>BleepingComputer</source>
-  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/>Learn how attackers abuse Entra ID through a free hands-on Capture the Flag. Varonis created the Breach at the Beach CTF to teach defenders how to investigate Entra ID attack techniques using realistic scenarios. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 22h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/>Learn how attackers abuse Entra ID through a free hands-on Capture the Flag. Varonis created the Breach at the Beach CTF to teach defenders how to investigate Entra ID attack techniques using realistic scenarios. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
@@ -147,7 +164,7 @@ The vulnerabilities, both rated 10.0 on the CVSS scoring system, are below -
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45489</link>
   <pubDate>Sun, 12 Jul 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>CWE added. Informational change only.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>CWE added. Informational change only.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
 </item>
 
 <item>
@@ -634,22 +651,6 @@ The vulnerabilities, both rated 10.0 on the CVSS scoring system, are below -
   <title>🟠 Chromium: CVE-2026-14406 Out of bounds read in V8</title>
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-14406</link>
   <pubDate>Sat, 11 Jul 2026 22:37:51 +0000</pubDate>
-  <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
-</item>
-
-<item>
-  <title>🟠 Chromium: CVE-2026-14405 Uninitialized Use in V8</title>
-  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-14405</link>
-  <pubDate>Sat, 11 Jul 2026 22:37:50 +0000</pubDate>
-  <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
-</item>
-
-<item>
-  <title>🟠 Chromium: CVE-2026-14404 Inappropriate implementation in PDFium</title>
-  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-14404</link>
-  <pubDate>Sat, 11 Jul 2026 22:37:48 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
   <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2025) for more information.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
 </item>
