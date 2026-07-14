@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
 **Period:** July 07 – July 14, 2026  
-**Generated:** 2026-07-14 16:12 UTC  
+**Generated:** 2026-07-14 18:00 UTC  
 **Items reviewed:** 137  
 
 ## ⚡ Top Actions This Week
@@ -58,37 +58,37 @@
 - [Progress confirms ShareFile zero-day flaw behind Storage Zone shutdown](https://www.bleepingcomputer.com/news/security/progress-confirms-sharefile-zero-day-flaw-behind-storage-zone-shutdown/)  
   **BleepingComputer** · Jul 14 · _General awareness item._  
 
-- [SAP warns of critical flaws in NetWeaver and Commerce Cloud](https://www.bleepingcomputer.com/news/security/sap-warns-of-critical-flaws-in-netweaver-and-commerce-cloud/)  
-  **BleepingComputer** · Jul 14 · _General awareness item._  
-
-- [CVE-2026-14461 Out-of-bound read in mtr](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-14461)  
+- [CVE-2026-48561 Microsoft Copilot Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-48561)  
   **Microsoft Security Response Center (MSRC)** · Jul 14 · _General awareness item._  
 
-- [CVE-2026-12480 Arbitrary HDF5 File Read via Virtual Dataset Bypass in keras-team/keras](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-12480)  
+- [CVE-2026-42982 Windows Secure Kernel Mode Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-42982)  
   **Microsoft Security Response Center (MSRC)** · Jul 14 · _General awareness item._  
 
-- [CVE-2026-40467 Use after free in gawk](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-40467)  
+- [CVE-2026-47296 Microsoft SQL Server Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-47296)  
   **Microsoft Security Response Center (MSRC)** · Jul 14 · _General awareness item._  
 
-- [CVE-2026-40468 Heap buffer overflow in gawk](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-40468)  
+- [CVE-2026-34349 Windows Media Information Disclosure Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-34349)  
   **Microsoft Security Response Center (MSRC)** · Jul 14 · _General awareness item._  
 
-- [CVE-2026-40469 Heap buffer overflow in gawk](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-40469)  
+- [CVE-2026-34346 Windows Ancillary Function Driver for WinSock Information Disclosure Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-34346)  
   **Microsoft Security Response Center (MSRC)** · Jul 14 · _General awareness item._  
 
-- [CVE-2026-40553 Stack-based buffer overflow in gawk](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-40553)  
+- [CVE-2026-42900 Microsoft Windows App Store Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-42900)  
+  **Microsoft Security Response Center (MSRC)** · Jul 14 · _General awareness item._  
+
+- [CVE-2026-42975 Windows Bluetooth Port Driver Remote Code Execution](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-42975)  
   **Microsoft Security Response Center (MSRC)** · Jul 14 · _General awareness item._  
 
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [Windows 11 KB5101650 & KB5099414 cumulative updates released](https://www.bleepingcomputer.com/news/microsoft/windows-11-kb5101650-and-kb5099414-cumulative-updates-released/) — BleepingComputer
+- [LabubaRAT Masquerades as NVIDIA Software to Control Windows Hosts](https://thehackernews.com/2026/07/labubarat-masquerades-as-nvidia.html) — The Hacker News
 - [LastPass, Bitwarden users targeted with fake security alerts](https://www.bleepingcomputer.com/news/security/lastpass-bitwarden-users-targeted-with-fake-security-alerts/) — BleepingComputer
 - [You Don't Have to Run an Exploit to Know If You're Vulnerable](https://www.bleepingcomputer.com/news/security/you-dont-have-to-run-an-exploit-to-know-if-youre-vulnerable/) — BleepingComputer
 - [RabbitMQ Flaws Could Leak OAuth Secrets and Expose Cross-Tenant Queue Metadata](https://thehackernews.com/2026/07/rabbitmq-flaws-could-leak-oauth-secrets.html) — The Hacker News
 - [Microsoft Entra ID gets passkeys default authentication starting September](https://www.bleepingcomputer.com/news/microsoft/microsoft-entra-id-gets-passkeys-default-authentication-starting-september/) — BleepingComputer
-- [New phishing kits target Microsoft 365 accounts, evade MFA](https://www.bleepingcomputer.com/news/security/new-phishing-kits-target-microsoft-365-accounts-evade-mfa/) — BleepingComputer
-- [11 Old Microsoft-Signed Linux UEFI Shims Could Let Attackers Bypass Secure Boot](https://thehackernews.com/2026/07/11-old-microsoft-signed-linux-uefi.html) — The Hacker News
 
 ---
 
