@@ -3,15 +3,69 @@
 <channel>
   <title>Joe — Microsoft / Identity / M365</title>
   <description>Microsoft 365, Entra, Exchange, Defender, Teams, and identity platform changes.</description>
-  <lastBuildDate>Tue, 14 Jul 2026 17:59:03 +0000</lastBuildDate>
+  <lastBuildDate>Tue, 14 Jul 2026 19:35:32 +0000</lastBuildDate>
   
+<item>
+  <title>🟠 Microsoft Defender now integrates with Dragos, Forescout, &amp; Armis for OT Security</title>
+  <link>https://techcommunity.microsoft.com/t5/microsoft-defender-xdr-blog/microsoft-defender-now-integrates-with-dragos-forescout-armis/ba-p/4534936</link>
+  <pubDate>Tue, 14 Jul 2026 13:46:58 +0000</pubDate>
+  <source>Microsoft 365 Defender Blog</source>
+  <description><![CDATA[<b>Why this matters: Service impact possible — prepare comms and confirm vendor status.</b><br/><p>Co-author(s): Amit Cohen and Hadar Shindler<br /><br />Operational technology (OT) environments are unlike anything else in cybersecurity. The systems that run our factories, power grids, water treatment plants, pipelines, and transportation networks weren’t built with modern threats in mind — and they can’t simply be patched, rebooted, or scanned the way IT systems can. A misstep doesn’t just create an alert backlog; it can stop a production line, disrupt critical services, or put physical safety at risk.</p>
+<p>To support customers in bringing their OT security solutions into their Security Operation (SOC) platform, we’re excited to announce an expansion of the Microsoft ecosystem with new OT security integrations from Dragos, Forescout, and Armis from ServiceNow. This gives customers greater flexibility to use the OT security solutions that best fit their environments.</p>
+<h3><strong>Expanding OT coverage in Defender with new partner integrations</strong></h3>
+<p>We’ve built new connectors for Dragos, Forescout and Armis that are now ready for customers to start using.</p>
+<h4>Dragos</h4>
+<h6><em>"Strong OT defense starts with knowing what is running in your operational environment, the vulnerabilities those assets carry, the threats targeting your systems, and the data to determine root cause. That kind of intelligence comes from years of operating inside OT environments and tracking the groups behind those threats. As OT threats continue to grow and AI accelerates how quickly adversaries can approach the OT boundary, integrating Dragos into Microsoft Defender strengthens how organizations see, understand, and defend their OT environments."<br /><br /></em><em>-Robert M. Lee, CEO and Co-Founder, Dragos, Inc.</em></h6>
+<h4>Forescout</h4>
+<h6><em>"Our integration with Microsoft Defender represents a significant step forward in helping organizations defend their most critical operations against today's rapidly evolving cyber threats. By combining Forescout's industry-leading visibility and protection for IoT, OT, and network-connected assets with Microsoft's leadership in endpoint, identity, cloud, and security operations, we're delivering a more unified approach to cyber defense. Together, we're enabling healthcare providers, government agencies, critical infrastructure operators, and enterprises comprehensive visibility across IT and OT environments while empowering security teams to detect, investigate, and respond to threats faster and with greater confidence."<br /><br /></em><em>-Robert McNutt, Chief Strategy Officer, Forescout</em></h6>
+<h4>Armis</h4>
+<p>“<em>Fragmented security is no longer an option as threats to critical infrastructure evolve at machine speed. By deepening our integration with Microsoft, we are unifying visibility and context in complex OT and IoT environments. Integrating Armis Centrix™ with Microsoft Defender equips security teams with real-time, actionable insights to identify and mitigate risks across their entire operational footprint.”<br /><br /></em><em>-Nadir Izrael, Group Vice President, Armis from ServiceNow<br /></em></p>
+<h3><strong>Bringing OT and IT Security Together</strong></h3>
+<p>With these new integrations, signals, asset inventory and vulnerabilities from Dragos, Forescout, and Armis from ServiceNow flow directly into Microsoft Defender — giving security operations teams a single, unified view across IT, OT, and IoT.</p>
+<p><strong>What this means for customers:</strong></p>
+<ul>
+<li><strong>Unified visibility across IT and OT. </strong>OT assets and vulnerabilities surface alongside IT signals in Defender, so the SOC can see and reason about them in one place.</li>
+<li><strong>Cross-domain correlation. </strong>Identity, endpoint, cloud, and OT signals are correlated automatically.</li>
+<li><strong>Streamlined investigation and response. </strong>Analysts can pivot from an OT detection to related IT activity (and back) without switching tools or losing context.</li>
+<li><strong>Specialized depth, unified breadth. </strong>Customers keep the deep OT expertise of their chosen partner platform and gain the enterprise-wide coverage of Defender.</li>
+</ul>
+<p>Let’s take a look at some of new the user experience updates that showcase these integrations.</p>
+<p>&nbsp;</p>
+<img />
+<p class="lia-align-center"><em>Figure 1. Discovered devices by OT partner in device inventory</em></p>
+<p>&nbsp;</p>
+<p>The Device Inventory now will show OT devices discovered through a new partner integration (see Figure 1). Industrial assets like substation relays and switches from vendors are automatically surfaced with rich context, criticality, vendor, model, firmware, and discovery source alongside built-in recommendations to classify critical assets and protect unmanaged OT devices. The result: unified visibility across IT and OT from a single view, so security teams can find, prioritize, and protect previously unseen devices faster.</p>
+<p>&nbsp;</p>
+<img />
+<p class="lia-align-center"><em>Figure 2. Vulnerabilities and exposure across OT devices</em></p>
+<p><br />The Vulnerabilities view now includes a dedicated OT Partner CVEs tab, surfacing thousands of vulnerabilities on operational technology devices discovered through partner integrations. Every CVE is enriched with severity, CVSS score, age, active threats, and exposed device count, and the list is sorted by exposure so the most widespread, highest-impact risks rise to the top. Most importantly, security teams can now see OT vulnerabilities alongside IT in a single, prioritized view, making it faster to focus remediation where it matters most.</p>
+<p>&nbsp;</p>
+<img />
+<p class="lia-align-center"><em>Figure 3. Discovered devices exposed by OT integration</em></p>
+<p>&nbsp;</p>
+<p>Selecting a CVE opens a detail panel with a dedicated&nbsp;<strong>Exposed devices discovered by OT partner</strong> tab, listing every affected device along with its OS platform and last seen date. For CVE-2024-7264, that means a clear view of all 75 exposed devices in one place, from OT controllers to sales workstations. The benefit is that security teams can move from a single vulnerability straight to the exact devices at risk, making it easy to scope impact and drive targeted remediation without leaving the view.</p>
+<p>&nbsp;</p>
+<img />
+<p class="lia-align-center"><em>Figure 4. Discovered vulnerabilities by OT integration</em></p>
+<p><br />Drilling into a specific device, like the <strong>Substation-North-HMI2</strong>&nbsp;shown here, reveals a dedicated&nbsp;<strong>Discovered vulnerabilities by OT partner</strong> tab alongside the standard device views such as incidents, timeline, and security recommendations. It lists every vulnerability found on that device by the OT partner, complete with severity, CVSS score, publication and detection dates, and active threats. The benefit is a complete, device-level picture of OT risk right where analysts investigate, so they can see exactly what a single asset is exposed to and prioritize remediation without switching tools or context.</p>
+<h3><strong>Built for customer choice and flexibility</strong></h3>
+<p>We’re excited to expand our integration ecosystem, giving customers the flexibility to work with the OT solutions they already trust. These integrations help bring specialized OT context into broader security workflows, enabling SOC teams, risk managers, and security leaders to collaborate more effectively while using the tools that best fit their environment.</p>
+<h1>Get started</h1>
+<p>The Dragos, Forescout, and Armis integrations are available in public preview starting today. Customers can enable them through the Defender portal and begin ingesting OT signals from their partner platform of choice.</p>
+<ul>
+<li><a class="lia-external-url" href="https://learn.microsoft.com/en-us/security-exposure-management/ot-data-connectors" rel="noopener" target="_blank"> Integrate the Dragos OT data connector in Microsoft Security Exposure Management - Microsoft Security Exposure Management | Microsoft Learn</a></li>
+<li><a class="lia-external-url" href="https://learn.microsoft.com/en-us/security-exposure-management/ot-data-connectors" rel="noopener" target="_blank"> Integrate the Forescout OT data connector in Microsoft Security Exposure Management - Microsoft Security Exposure Management | Microsoft Learn</a></li>
+<li><a class="lia-external-url" href="https://learn.microsoft.com/en-us/security-exposure-management/armis-data-connector" rel="noopener" target="_blank">Integrate the Armis OT data connector in Microsoft Security Exposure Management - Microsoft Security Exposure Management | Microsoft Learn</a></li>
+</ul><br/><br/><b>Source:</b> Microsoft 365 Defender Blog &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
+</item>
+
 <item>
   <title>🔵 Defending SaaS-based applications against ShinyHunters OAuth abuse</title>
   <link>https://www.microsoft.com/en-us/security/blog/2026/07/13/defending-saas-based-applications-against-shinyhunters-oauth-abuse/</link>
   <pubDate>Mon, 13 Jul 2026 22:02:41 +0000</pubDate>
   <source>Microsoft Security Blog</source>
   <description><![CDATA[<b>Why this matters: Credential/phishing risk — reinforce MFA and user awareness training.</b><br/><p>Microsoft Threat Intelligence identified threat actor activity with overlapping tradecraft commonly associated with ShinyHunters, including voice phishing (vishing), supply-chain compromise, and misconfigured guest access targeting SaaS-based applications.</p>
-<p>The post <a href="https://www.microsoft.com/en-us/security/blog/2026/07/13/defending-saas-based-applications-against-shinyhunters-oauth-abuse/">Defending SaaS-based applications against ShinyHunters OAuth abuse</a> appeared first on <a href="https://www.microsoft.com/en-us/security/blog">Microsoft Security Blog</a>.</p><br/><br/><b>Source:</b> Microsoft Security Blog &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 19h ago]]></description>
+<p>The post <a href="https://www.microsoft.com/en-us/security/blog/2026/07/13/defending-saas-based-applications-against-shinyhunters-oauth-abuse/">Defending SaaS-based applications against ShinyHunters OAuth abuse</a> appeared first on <a href="https://www.microsoft.com/en-us/security/blog">Microsoft Security Blog</a>.</p><br/><br/><b>Source:</b> Microsoft Security Blog &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 21h ago]]></description>
 </item>
 
 <item>
