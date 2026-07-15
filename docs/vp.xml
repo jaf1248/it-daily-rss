@@ -3,8 +3,155 @@
 <channel>
   <title>Joe — VP of IT Briefing</title>
   <description>Leadership-focused IT risk, vendors, pricing, licensing, and industry context.</description>
-  <lastBuildDate>Wed, 15 Jul 2026 10:46:28 +0000</lastBuildDate>
+  <lastBuildDate>Wed, 15 Jul 2026 12:12:35 +0000</lastBuildDate>
   
+<item>
+  <title>🔵 Hinge adds Friend&#x27;s Take, a new feature that lets daters enlist 10 close contacts to share written feedback, photos, voice notes, or videos on their profiles (Samantha Kelly/Bloomberg)</title>
+  <link>https://www.techmeme.com/260715/p21#a260715p21</link>
+  <pubDate>Wed, 15 Jul 2026 12:10:02 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://www.bloomberg.com/news/articles/2026-07-15/hinge-debuts-friend-s-take-feature-letting-inner-circle-leave-testimonials"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260715/i21.jpg" vspace="4" /></a>
+<p><a href="https://www.techmeme.com/260715/p21#a260715p21" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Samantha Kelly / <a href="https://www.bloomberg.com/">Bloomberg</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/articles/2026-07-15/hinge-debuts-friend-s-take-feature-letting-inner-circle-leave-testimonials">Hinge adds Friend's Take, a new feature that lets daters enlist 10 close contacts to share written feedback, photos, voice notes, or videos on their profiles</a></b></span>&nbsp; &mdash;&nbsp; Hinge is introducing a new feature called Friend's Take that lets daters recruit people they know to leave testimonials on their profiles for other singles to see.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</item>
+
+<item>
+  <title>🟠 New bugs in Claude for Chrome allow extensions to abuse AI privileges</title>
+  <link>https://www.csoonline.com/article/4197325/new-bugs-in-claude-for-chrome-allow-extensions-to-abuse-ai-privileges.html</link>
+  <pubDate>Wed, 15 Jul 2026 12:06:36 +0000</pubDate>
+  <source>CSO Online</source>
+  <description><![CDATA[<b>Why this matters: Could impact sign-ins/MFA/Conditional Access — watch for login issues.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<p class="wp-block-paragraph">Two vulnerabilities found in Anthropic’s Claude for Chrome extension remain exploitable months after they were reported to the company, a research by Manifold Security noted.</p>
+
+
+
+<p class="wp-block-paragraph">According to the researchers, the flaws can allow a malicious browser extension to trigger Claude into performing privileged actions, including reading Gmail messages, Google Docs content, and Calendar entries on behalf of a user.</p>
+
+
+
+<p class="wp-block-paragraph">In a new blog post, the researchers said the issues are reproducible in Claude for Chrome version 1.0.80, released on July 7, and remain unresolved eight releases after they were first reported in May.</p>
+
+
+
+<p class="wp-block-paragraph">“Anthropic shipped v1.0.73 through v1.0.80 in the weeks following our report,” the researchers <a href="https://www.manifold.security/blog/claude-for-chrome-extension-bypass" rel="noreferrer noopener" target="_blank">added</a>. “The internal tracking issue covering this class of vulnerability was marked ‘resolved’ in the weeks following our report.”</p>
+
+
+
+<p class="wp-block-paragraph">However, the content script and side-panel handlers in the latest version remain “byte-identical” to v1.0.72 the researchers originally tested. Researchers drew parallels with the earlier <a href="https://www.csoonline.com/article/4168867/claude-in-chrome-is-taking-orders-from-the-wrong-extensions.html">ClaudeBleed</a> disclosure, where the issue was found exploitable despite Anthropic announcing a fix.</p>
+
+
+
+<p class="wp-block-paragraph">Anthropic did not immediately respond to CSO’s request for comment.</p>
+
+
+
+<h2 class="wp-block-heading" id="synthetic-clicks-trick-trusted-ai">Synthetic clicks trick trusted AI</h2>
+
+
+
+<p class="wp-block-paragraph">The first vulnerability stems from how Claude for Chrome handles user interaction before executing privileged actions. According to Manifold, the extension’s click handler does not verify whether an approval click originated from a real user through the browser’s “event.isTrusted” property.</p>
+
+
+
+<p class="wp-block-paragraph">Meaning, another browser extension capable of injecting scripts into Claude.ai can generate synthetic clicks that Claude accepts as legitimate.</p>
+
+
+
+<p class="wp-block-paragraph">In default configurations, the attack can automatically trigger one of Claude’s predefined browser tasks before presenting an approval dialog. However, if users have enabled the extension’s “Act without asking” mode, Claude may execute those actions silently, allowing an attacker to retrieve Gmail content, Google Docs data, or Calendar information, the researcher noted.</p>
+
+
+
+<p class="wp-block-paragraph">Rather than exploiting a flaw in Chrome itself, the attack abuses the trust placed in <a href="https://www.csoonline.com/article/4154201/claude-code-is-still-vulnerable-to-an-attack-anthropic-has-already-fixed-2.html">Claude </a>as an authorized browser agent. Manifold demonstrated an exploit in six lines of JavaScript.</p>
+
+
+
+<p class="wp-block-paragraph">The researchers said the flaw can simply be fixed with one added line, “if (!n.isTrusted) return;” at the top of the click handler.</p>
+
+
+
+<h2 class="wp-block-heading"><a></a>A problematic privilege mode</h2>
+
+
+
+<p class="wp-block-paragraph">The second finding focuses on how Claude’s side panel initializes its permission model.</p>
+
+
+
+<p class="wp-block-paragraph">Manifold found that loading the panel with “?skipPermissions=true” parameter makes the extension enter a privileged mode meant to bypass repeated confirmation prompts. While the researchers did not identify a direct external path to control this parameter today, they argued that the design creates a latent security risk because privileged behavior depends on a URL value rather than user-controlled inputs.</p>
+
+
+
+<p class="wp-block-paragraph">Any future vulnerability capable of influencing that parameter could inherit elevated privileges without requiring additional security checks, the researchers noted.</p>
+
+
+
+<p class="wp-block-paragraph">To address both findings, Manifold recommends validating genuine user interactions before executing privileged actions, avoiding URL-driven privilege transitions, and strengthening the authentication of internal extension workflows.</p>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Israel-based Oak, which is building an AI-native identity access management system, comes out of stealth with a $60M seed (Anna Heim/TechCrunch)</title>
+  <link>https://www.techmeme.com/260715/p20#a260715p20</link>
+  <pubDate>Wed, 15 Jul 2026 12:00:15 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://techcrunch.com/2026/07/15/backed-by-60m-in-funding-oak-steps-out-of-stealth-to-fix-the-identity-mess-that-ai-agents-are-making-worse/"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260715/i20.jpg" vspace="4" /></a>
+<p><a href="https://www.techmeme.com/260715/p20#a260715p20" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Anna Heim / <a href="http://techcrunch.com/">TechCrunch</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://techcrunch.com/2026/07/15/backed-by-60m-in-funding-oak-steps-out-of-stealth-to-fix-the-identity-mess-that-ai-agents-are-making-worse/">Israel-based Oak, which is building an AI-native identity access management system, comes out of stealth with a $60M seed</a></b></span>&nbsp; &mdash;&nbsp; Physical badges used to be all you needed for identity management at a company.&nbsp; But with humans now working alongside machines and AI agents in digital environments &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 US Charges Russian Individuals and Firms for Running Cybercrime Services</title>
+  <link>https://www.securityweek.com/us-charges-russian-individuals-and-firms-for-running-cybercrime-services/</link>
+  <pubDate>Wed, 15 Jul 2026 11:58:05 +0000</pubDate>
+  <source>SecurityWeek</source>
+  <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><p>The suspects and their companies were previously sanctioned by the United States and its allies.</p>
+<p>The post <a href="https://www.securityweek.com/us-charges-russian-individuals-and-firms-for-running-cybercrime-services/">US Charges Russian Individuals and Firms for Running Cybercrime Services</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 China enacts rules forbidding companionship chatbots from encouraging emotional reliance, banning virtual relationships with minors, and more (Stu Woo/Wall Street Journal)</title>
+  <link>https://www.techmeme.com/260715/p19#a260715p19</link>
+  <pubDate>Wed, 15 Jul 2026 11:45:01 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: Could impact sign-ins/MFA/Conditional Access — watch for login issues.</b><br/><a href="https://www.wsj.com/tech/ai/china-wants-more-babiesso-its-cracking-down-on-chatbot-love-affairs-65cd6c82?st=zuKTMx&amp;reflink=desktopwebshare_permalink"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260715/i19.jpg" vspace="4" /></a>
+<p><a href="https://www.techmeme.com/260715/p19#a260715p19" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Stu Woo / <a href="https://www.wsj.com/">Wall Street Journal</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://www.wsj.com/tech/ai/china-wants-more-babiesso-its-cracking-down-on-chatbot-love-affairs-65cd6c82?st=zuKTMx&amp;reflink=desktopwebshare_permalink">China enacts rules forbidding companionship chatbots from encouraging emotional reliance, banning virtual relationships with minors, and more</a></b></span>&nbsp; &mdash;&nbsp; Beijing sets emotional boundaries between humans and machines&nbsp; &mdash;&nbsp; SINGAPORE&mdash;Regulators in China have found unexpected common ground &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Neo Security, a cybersecurity startup founded by ex-SentinelOne execs and currently in stealth, raised $50M+, after a $25M seed in 2025 led by a16z and Merlin (Meir Orbach/CTech)</title>
+  <link>https://www.techmeme.com/260715/p18#a260715p18</link>
+  <pubDate>Wed, 15 Jul 2026 11:15:00 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://www.calcalistech.com/ctechnews/article/s1ukhnnvzg"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260715/i18.jpg" vspace="4" /></a>
+<p><a href="https://www.techmeme.com/260715/p18#a260715p18" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Meir Orbach / <a href="https://www.calcalistech.com/">CTech</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://www.calcalistech.com/ctechnews/article/s1ukhnnvzg">Neo Security, a cybersecurity startup founded by ex-SentinelOne execs and currently in stealth, raised $50M+, after a $25M seed in 2025 led by a16z and Merlin</a></b></span>&nbsp; &mdash;&nbsp; Neo Security has now raised more than $75 million as investors continue backing next-generation cybersecurity companies.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</item>
+
+<item>
+  <title>🟠 Vulnerabilities Patched by Fortinet, Ivanti, ServiceNow</title>
+  <link>https://www.securityweek.com/vulnerabilities-patched-by-fortinet-ivanti-servicenow/</link>
+  <pubDate>Wed, 15 Jul 2026 11:02:57 +0000</pubDate>
+  <source>SecurityWeek</source>
+  <description><![CDATA[<b>Why this matters: Vendor advisory — check installed firmware/software version and patch status.</b><br/><p>A critical security defect in the ServiceNow AI platform could allow remote attackers to execute arbitrary code.</p>
+<p>The post <a href="https://www.securityweek.com/vulnerabilities-patched-by-fortinet-ivanti-servicenow/">Vulnerabilities Patched by Fortinet, Ivanti, ServiceNow</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 OpenVPN 3 ways: Which is the right version for you?</title>
+  <link>https://www.zdnet.com/article/managed-self-hosted-or-open-source-how-to-choose-the-right-version-of-openvpn/</link>
+  <pubDate>Wed, 15 Jul 2026 11:00:19 +0000</pubDate>
+  <source>ZDNet</source>
+  <description><![CDATA[<b>Why this matters: Could impact sign-ins/MFA/Conditional Access — watch for login issues.</b><br/>OpenVPN offers three modes of deployment with varied pricing based on the same underlying protocol. Here are the pros, cons, and costs associated with each.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+</item>
+
 <item>
   <title>🔵 Samsung unveils a new Flex Titanium foldable display that is slimmer, more durable, and less prone to creasing, debuting in its upcoming Galaxy Z Fold 8 series (Jess Weatherbed/The Verge)</title>
   <link>https://www.techmeme.com/260715/p17#a260715p17</link>
@@ -12,7 +159,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://www.theverge.com/tech/965850/samsung-display-flex-titanium-galaxy-foldables"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260715/i17.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260715/p17#a260715p17" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Jess Weatherbed / <a href="https://www.theverge.com/">The Verge</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.theverge.com/tech/965850/samsung-display-flex-titanium-galaxy-foldables">Samsung unveils a new Flex Titanium foldable display that is slimmer, more durable, and less prone to creasing, debuting in its upcoming Galaxy Z Fold 8 series</a></b></span>&nbsp; &mdash;&nbsp; &#65279;The Flex Titanium display tech is slim, strong, and reduces crease visibility.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.theverge.com/tech/965850/samsung-display-flex-titanium-galaxy-foldables">Samsung unveils a new Flex Titanium foldable display that is slimmer, more durable, and less prone to creasing, debuting in its upcoming Galaxy Z Fold 8 series</a></b></span>&nbsp; &mdash;&nbsp; &#65279;The Flex Titanium display tech is slim, strong, and reduces crease visibility.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
 </item>
 
 <item>
@@ -22,7 +169,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://www.politico.com/news/2026/07/15/i-wouldnt-call-it-panic-industry-quails-at-hochuls-data-center-pause-00998127"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260715/i16.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260715/p16#a260715p16" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="http://www.politico.com/">Politico</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.politico.com/news/2026/07/15/i-wouldnt-call-it-panic-industry-quails-at-hochuls-data-center-pause-00998127">AI advocates fear New York's moratorium on new data centers could embolden Democrats to enact more state restrictions and seize on the issue in the midterms</a></b></span>&nbsp; &mdash;&nbsp; New York's moratorium on data centers could serve as an opening salvo for leaders in other states looking to rein in tech infrastructure &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.politico.com/news/2026/07/15/i-wouldnt-call-it-panic-industry-quails-at-hochuls-data-center-pause-00998127">AI advocates fear New York's moratorium on new data centers could embolden Democrats to enact more state restrictions and seize on the issue in the midterms</a></b></span>&nbsp; &mdash;&nbsp; New York's moratorium on data centers could serve as an opening salvo for leaders in other states looking to rein in tech infrastructure &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
 </item>
 
 <item>
@@ -31,7 +178,7 @@
   <pubDate>Wed, 15 Jul 2026 10:18:25 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><p>The new program stems from an AI-focused Executive Order signed by President Trump on June 2.</p>
-<p>The post <a href="https://www.securityweek.com/white-house-launches-ai-driven-gold-eagle-vulnerability-coordination-initiative/">White House Launches AI-Driven &#8216;Gold Eagle&#8217; Vulnerability Coordination Initiative</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/white-house-launches-ai-driven-gold-eagle-vulnerability-coordination-initiative/">White House Launches AI-Driven &#8216;Gold Eagle&#8217; Vulnerability Coordination Initiative</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
 </item>
 
 <item>
@@ -41,7 +188,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://www.bloomberg.com/news/articles/2026-07-15/india-unveils-13-3-billion-fund-to-advance-chipmaking-push"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260715/i15.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260715/p15#a260715p15" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Sankalp Phartiyal / <a href="https://www.bloomberg.com/">Bloomberg</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/articles/2026-07-15/india-unveils-13-3-billion-fund-to-advance-chipmaking-push">India pledges $13.3B to boost domestic chipmaking, building on a $10B incentive program from 2021, which attracted investments from companies like Micron</a></b></span>&nbsp; &mdash;&nbsp; India pledged a further 1.28 trillion rupees ($13.3 billion) to boost domestic chipmaking, advancing its ambitious bid to become a global manufacturing hub.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/articles/2026-07-15/india-unveils-13-3-billion-fund-to-advance-chipmaking-push">India pledges $13.3B to boost domestic chipmaking, building on a $10B incentive program from 2021, which attracted investments from companies like Micron</a></b></span>&nbsp; &mdash;&nbsp; India pledged a further 1.28 trillion rupees ($13.3 billion) to boost domestic chipmaking, advancing its ambitious bid to become a global manufacturing hub.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
 </item>
 
 <item>
@@ -51,7 +198,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://www.cnbc.com/2026/07/14/ibm-warns-second-quarter-earnings-fell-short-of-expectations.html"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260715/i14.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260715/p14#a260715p14" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="http://www.cnbc.com/">CNBC</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.cnbc.com/2026/07/14/ibm-warns-second-quarter-earnings-fell-short-of-expectations.html">IBM stock fell 25%+ on Tuesday, sinking further than its previous worst day of October 19, 1987, after reporting preliminary Q2 results below estimates</a></b></span>&nbsp; &mdash;&nbsp; International Business Machines shares plummeted 25% on Tuesday after the hardware, software and consulting provider released preliminary &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.cnbc.com/2026/07/14/ibm-warns-second-quarter-earnings-fell-short-of-expectations.html">IBM stock fell 25%+ on Tuesday, sinking further than its previous worst day of October 19, 1987, after reporting preliminary Q2 results below estimates</a></b></span>&nbsp; &mdash;&nbsp; International Business Machines shares plummeted 25% on Tuesday after the hardware, software and consulting provider released preliminary &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
 </item>
 
 <item>
@@ -160,7 +307,7 @@
 
 
 <p class="wp-block-paragraph"><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><a href="https://www.cio.com/expert-contributor-network/"><strong>Want to join?</strong></a></p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
 </item>
 
 <item>
@@ -341,7 +488,7 @@
 
 
 <p class="wp-block-paragraph">That may be where the next stage of AI FinOps is heading, toward a clearer understanding of which AI consumption deserves to scale, not just to lower bills. So the question, as Olsen puts it, isn’t whether someone used a million tokens. It’s what are they using them for.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
 </item>
 
 <item>
@@ -446,7 +593,7 @@
 
 
 <p class="wp-block-paragraph"><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><a href="https://www.cio.com/expert-contributor-network/"><strong>Want to join?</strong></a></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
 </item>
 
 <item>
@@ -456,7 +603,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://www.bloomberg.com/news/articles/2026-07-15/nokia-to-sell-nvidia-powered-ai-mobile-network-gear-from-2027"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260715/i13.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260715/p13#a260715p13" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Paula Doenecke / <a href="https://www.bloomberg.com/">Bloomberg</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/articles/2026-07-15/nokia-to-sell-nvidia-powered-ai-mobile-network-gear-from-2027">Nokia plans to sell its AI-driven RAN platform, developed with Nvidia, to mobile operators by 2027, aiming for a 100% increase in spectrum efficiency by 2028</a></b></span>&nbsp; &mdash;&nbsp; Nokia Oyj says it developed the first commercial artificial intelligence driven radio access network platform together with Nvidia Corp &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/articles/2026-07-15/nokia-to-sell-nvidia-powered-ai-mobile-network-gear-from-2027">Nokia plans to sell its AI-driven RAN platform, developed with Nvidia, to mobile operators by 2027, aiming for a 100% increase in spectrum efficiency by 2028</a></b></span>&nbsp; &mdash;&nbsp; Nokia Oyj says it developed the first commercial artificial intelligence driven radio access network platform together with Nvidia Corp &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
 </item>
 
 <item>
@@ -465,7 +612,7 @@
   <pubDate>Wed, 15 Jul 2026 09:48:29 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><p>The company has rolled out a fix and is restoring access for Storage Zones Controller customers who apply it.</p>
-<p>The post <a href="https://www.securityweek.com/progress-confirms-zero-day-vulnerability-behind-sharefile-disruption/">Progress Confirms Zero-Day Vulnerability Behind ShareFile Disruption</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/progress-confirms-zero-day-vulnerability-behind-sharefile-disruption/">Progress Confirms Zero-Day Vulnerability Behind ShareFile Disruption</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
 </item>
 
 <item>
@@ -473,7 +620,7 @@
   <link>https://www.zdnet.com/article/anker-solix-e10-review/</link>
   <pubDate>Wed, 15 Jul 2026 09:45:39 +0000</pubDate>
   <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Anker's Solix E10 made backup power understandable for this first-timer, and I can't wait to expand the system.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Anker's Solix E10 made backup power understandable for this first-timer, and I can't wait to expand the system.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
 </item>
 
 <item>
@@ -483,7 +630,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://www.reuters.com/technology/apple-intelligence-ai-service-registered-with-chinas-cyberspace-regulator-2026-07-15/"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260715/i12.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260715/p12#a260715p12" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="http://www.reuters.com/">Reuters</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.reuters.com/technology/apple-intelligence-ai-service-registered-with-chinas-cyberspace-regulator-2026-07-15/">China's cyberspace regulator says Apple Intelligence has been registered for use on iPhones in the country; Alibaba says the service will use its Qwen model</a></b></span>&nbsp; &mdash;&nbsp; China's cyberspace regulator said on Wednesday that Apple's on-device generative AI service &ldquo;Apple Intelligence&rdquo; has been registered for use on iPhones in the country.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.reuters.com/technology/apple-intelligence-ai-service-registered-with-chinas-cyberspace-regulator-2026-07-15/">China's cyberspace regulator says Apple Intelligence has been registered for use on iPhones in the country; Alibaba says the service will use its Qwen model</a></b></span>&nbsp; &mdash;&nbsp; China's cyberspace regulator said on Wednesday that Apple's on-device generative AI service &ldquo;Apple Intelligence&rdquo; has been registered for use on iPhones in the country.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
 </item>
 
 <item>
@@ -563,7 +710,7 @@
 
 
 <p class="wp-block-paragraph">On the one hand, the humanoid robot relieves BMW factory workers of physically demanding work; on the other hand, it forces the IT department to merge traditional IT infrastructure and factory technology (OT). “Physical AI” has thus arrived in everyday industrial practice.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
 </item>
 
 <item>
@@ -572,7 +719,7 @@
   <pubDate>Wed, 15 Jul 2026 09:19:58 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><p>The industrial giants fixed dozens of vulnerabilities across their ICS products, with advisories also released by CISA and VDE CERT.</p>
-<p>The post <a href="https://www.securityweek.com/ics-patch-tuesday-vulnerabilities-fixed-by-siemens-schneider-rockwell/">ICS Patch Tuesday: Vulnerabilities Fixed by Siemens, Schneider, Rockwell</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/ics-patch-tuesday-vulnerabilities-fixed-by-siemens-schneider-rockwell/">ICS Patch Tuesday: Vulnerabilities Fixed by Siemens, Schneider, Rockwell</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
 </item>
 
 <item>
@@ -689,7 +836,7 @@
 
 
 <p class="wp-block-paragraph"><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><a href="https://www.cio.com/expert-contributor-network/"><strong>Want to join?</strong></a></p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
 </item>
 
 <item>
@@ -822,7 +969,7 @@
 
 
 <p class="wp-block-paragraph">“CIOs, in particular, are under more and more pressure each year to keep up with what’s possible as tech influencers keep preaching about the potential of these tools,” Scavetta says. “CEOs and board members are constantly getting swept up in the hype; meanwhile, there are more and more case studies coming out showing how little ROI some organizations have realized. It’s a never-ending game of balancing possible with practical.”</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
 </item>
 
 <item>
@@ -1011,7 +1158,7 @@
 
 
 <p class="wp-block-paragraph"><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><a href="https://www.cio.com/expert-contributor-network/"><strong>Want to join?</strong></a><strong></strong></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
 </item>
 
 <item>
@@ -1021,7 +1168,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://www.bloomberg.com/news/articles/2026-07-15/toyota-backed-robotics-startup-walden-launches-with-1-1-billion-valuation"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260715/i11.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260715/p11#a260715p11" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Samantha Kelly / <a href="https://www.bloomberg.com/">Bloomberg</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/articles/2026-07-15/toyota-backed-robotics-startup-walden-launches-with-1-1-billion-valuation">MA-based Walden Robotics, a Toyota robotics spin-off that has started selling humanoid robots, emerges from stealth with a ~$300M seed at a $1.1B valuation</a></b></span>&nbsp; &mdash;&nbsp; Walden Robotics, a startup working on humanoids that was spun out of a Toyota robotics research lab, has secured approximately $300 million &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/articles/2026-07-15/toyota-backed-robotics-startup-walden-launches-with-1-1-billion-valuation">MA-based Walden Robotics, a Toyota robotics spin-off that has started selling humanoid robots, emerges from stealth with a ~$300M seed at a $1.1B valuation</a></b></span>&nbsp; &mdash;&nbsp; Walden Robotics, a startup working on humanoids that was spun out of a Toyota robotics research lab, has secured approximately $300 million &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
 </item>
 
 <item>
@@ -1134,7 +1281,7 @@
 
 
 <p class="wp-block-paragraph">Walter echoed that recommendation, saying CIOs should require observability across the entire agent configuration: “Without that visibility, enterprises are effectively buying an agent platform without knowing how much of the bill comes from useful work versus orchestration overhead.”</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
 </item>
 
 <item>
@@ -1142,7 +1289,7 @@
   <link>https://www.zdnet.com/article/whatcable-mac-app-usbc-cable-review/</link>
   <pubDate>Wed, 15 Jul 2026 07:45:43 +0000</pubDate>
   <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>WhatCable is a free Mac app that gives you all the information you could need for your USB-C cables.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>WhatCable is a free Mac app that gives you all the information you could need for your USB-C cables.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
 </item>
 
 <item>
@@ -1152,17 +1299,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/><a href="https://www.reuters.com/business/intel-turns-next-generation-asml-tool-help-make-its-laptop-chips-2026-07-15/"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260715/i10.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260715/p10#a260715p10" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Max A. Cherney / <a href="http://www.reuters.com/">Reuters</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.reuters.com/business/intel-turns-next-generation-asml-tool-help-make-its-laptop-chips-2026-07-15/">ASML says Intel has decided to use ASML's next-gen High NA EUV machines to make some of its flagship Panther Lake laptop chips; a High NA machine costs ~$400M</a></b></span>&nbsp; &mdash;&nbsp; Intel (INTC.O) has decided to use a high-end machine from ASML to manufacture some of its flagship Panther Lake laptop chips &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 ASML reports Q2 net sales of €9.3B, above €8.8B est., a €2.9B net profit, above €2.6B est., and raises its 2026 net sales forecast from €36B-€40B to €43B-€45B (April Roach/CNBC)</title>
-  <link>https://www.techmeme.com/260715/p9#a260715p9</link>
-  <pubDate>Wed, 15 Jul 2026 07:30:01 +0000</pubDate>
-  <source>Techmeme</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://www.cnbc.com/2026/07/15/asml-2q-earnings-ai-chips-orders.html"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260715/i9.jpg" vspace="4" /></a>
-<p><a href="https://www.techmeme.com/260715/p9#a260715p9" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> April Roach / <a href="http://www.cnbc.com/">CNBC</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.cnbc.com/2026/07/15/asml-2q-earnings-ai-chips-orders.html">ASML reports Q2 net sales of &euro;9.3B, above &euro;8.8B est., a &euro;2.9B net profit, above &euro;2.6B est., and raises its 2026 net sales forecast from &euro;36B-&euro;40B to &euro;43B-&euro;45B</a></b></span>&nbsp; &mdash;&nbsp; ASML on Wednesday raised its guidance for the second time this year and reported stronger &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.reuters.com/business/intel-turns-next-generation-asml-tool-help-make-its-laptop-chips-2026-07-15/">ASML says Intel has decided to use ASML's next-gen High NA EUV machines to make some of its flagship Panther Lake laptop chips; a High NA machine costs ~$400M</a></b></span>&nbsp; &mdash;&nbsp; Intel (INTC.O) has decided to use a high-end machine from ASML to manufacture some of its flagship Panther Lake laptop chips &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
 </item>
 
 <item>
@@ -1171,7 +1308,7 @@
   <pubDate>Wed, 15 Jul 2026 07:24:52 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><p>Public exploit code targeting the Firefox flaws exists, but no in-the-wild exploitation has been observed.</p>
-<p>The post <a href="https://www.securityweek.com/critical-vulnerabilities-patched-with-fresh-chrome-150-firefox-152-updates/">Critical Vulnerabilities Patched With Fresh Chrome 150, Firefox 152 Updates</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/critical-vulnerabilities-patched-with-fresh-chrome-150-firefox-152-updates/">Critical Vulnerabilities Patched With Fresh Chrome 150, Firefox 152 Updates</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
 </item>
 
 <item>
@@ -1352,55 +1489,7 @@
 
 
 <p class="wp-block-paragraph">Employers have started paying closer attention to how fast someone can learn, Ahmed says. “The threat landscape and the defensive toolkit are both moving faster than any certification program can track, so hiring managers are probing for adaptability in interviews: how candidates have responded to recent shifts, whether they have picked up unfamiliar platforms on their own, how they work through problems they have not seen before,” he says.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 I tested Google Maps vs. Waze to find the best navigation app - and this one wins</title>
-  <link>https://www.zdnet.com/article/google-maps-vs-waze-compared-2026/</link>
-  <pubDate>Wed, 15 Jul 2026 07:00:00 +0000</pubDate>
-  <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Want to know whether Waze or Google Maps is better? I've driven with both for hundreds of miles. Here's my choice.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 A profile of PsiQuantum, which raised $1B in 2025, is building a quantum computer with photonic chips made by GlobalFoundries and is closely monitored by DARPA (James O&#x27;Donnell/MIT Technology Review)</title>
-  <link>https://www.techmeme.com/260715/p8#a260715p8</link>
-  <pubDate>Wed, 15 Jul 2026 06:30:01 +0000</pubDate>
-  <source>Techmeme</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://www.technologyreview.com/2026/07/14/1140356/psiquantum-plan-massive-quantum-computer-out-of-light/"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260715/i8.jpg" vspace="4" /></a>
-<p><a href="https://www.techmeme.com/260715/p8#a260715p8" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> James O'Donnell / <a href="http://www.technologyreview.com/">MIT Technology Review</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.technologyreview.com/2026/07/14/1140356/psiquantum-plan-massive-quantum-computer-out-of-light/">A profile of PsiQuantum, which raised $1B in 2025, is building a quantum computer with photonic chips made by GlobalFoundries and is closely monitored by DARPA</a></b></span>&nbsp; &mdash;&nbsp; The company has drawn governments, a major chipmaker, and the Pentagon into an effort to control fragile photons and build a useful quantum machine.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 As China&#x27;s rules for humanlike AI interaction take effect, many users are bemoaning the loss of the virtual companions they had created on Chinese AI platforms (Bloomberg)</title>
-  <link>https://www.techmeme.com/260715/p7#a260715p7</link>
-  <pubDate>Wed, 15 Jul 2026 06:15:01 +0000</pubDate>
-  <source>Techmeme</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://www.bloomberg.com/news/articles/2026-07-14/beijing-diktat-leaves-chinese-with-virtual-ai-lovers-heartbroken"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260715/i7.jpg" vspace="4" /></a>
-<p><a href="https://www.techmeme.com/260715/p7#a260715p7" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="https://www.bloomberg.com/">Bloomberg</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/articles/2026-07-14/beijing-diktat-leaves-chinese-with-virtual-ai-lovers-heartbroken">As China's rules for humanlike AI interaction take effect, many users are bemoaning the loss of the virtual companions they had created on Chinese AI platforms</a></b></span>&nbsp; &mdash;&nbsp; For days, 19-year old student Yan Yongqi has been consumed by grief over the imminent loss of her virtual boyfriend of more than a year.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Sources: DeepSeek&#x27;s annualized revenue recently reached $400M to $500M as it seeks to raise ~$7.4B at a ~$74B valuation, up from ~$50B after raising ~$7B in May (The Information)</title>
-  <link>https://www.techmeme.com/260715/p6#a260715p6</link>
-  <pubDate>Wed, 15 Jul 2026 06:00:02 +0000</pubDate>
-  <source>Techmeme</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.theinformation.com/articles/deepseeks-annualized-revenue-nears-500-million-boosting-fundraise-ipo-plans"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260715/i6.jpg" vspace="4" /></a>
-<p><a href="https://www.techmeme.com/260715/p6#a260715p6" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="https://www.theinformation.com/">The Information</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.theinformation.com/articles/deepseeks-annualized-revenue-nears-500-million-boosting-fundraise-ipo-plans">Sources: DeepSeek's annualized revenue recently reached $400M to $500M as it seeks to raise ~$7.4B at a ~$74B valuation, up from ~$50B after raising ~$7B in May</a></b></span>&nbsp; &mdash;&nbsp; Strong revenue growth at DeepSeek is empowering the Chinese open-source AI star to raise its second-funding round of 50 billion yuan &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Sources: Oracle leads the race to sell &quot;air-gapped&quot; cloud services to Japan that the US says are key to secure intelligence sharing between Tokyo and its allies (Financial Times)</title>
-  <link>https://www.techmeme.com/260715/p4#a260715p4</link>
-  <pubDate>Wed, 15 Jul 2026 04:55:01 +0000</pubDate>
-  <source>Techmeme</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.ft.com/content/c8d32323-1d06-4470-8375-2ee6dd42749e"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260715/i4.jpg" vspace="4" /></a>
-<p><a href="https://www.techmeme.com/260715/p4#a260715p4" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="https://www.ft.com/">Financial Times</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.ft.com/content/c8d32323-1d06-4470-8375-2ee6dd42749e">Sources: Oracle leads the race to sell &ldquo;air-gapped&rdquo; cloud services to Japan that the US says are key to secure intelligence sharing between Tokyo and its allies</a></b></span>&nbsp; &mdash;&nbsp; Larry Ellison's group proposes &lsquo;air-gapped&rsquo; network as US pressures Tokyo to tighten security of sensitive data</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -1543,7 +1632,7 @@
 
 
 <p class="wp-block-paragraph"></p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 8h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 10h ago]]></description>
 </item>
 
 <item>
@@ -1720,7 +1809,7 @@
 
 
 <p class="wp-block-paragraph">“What needs to happen is simple,” he said. “Patching on a calendar is no longer a safe assumption in today’s threat landscape. Patching where and when needed versus scheduled is the only path forward.”</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 8h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 10h ago]]></description>
 </item>
 
 <item>
@@ -1729,16 +1818,7 @@
   <pubDate>Tue, 14 Jul 2026 17:06:35 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><p>The ColdFusion security defects could allow attackers to execute arbitrary code or elevate their privileges.</p>
-<p>The post <a href="https://www.securityweek.com/adobe-patches-critical-coldfusion-vulnerabilities/">Adobe Patches Critical ColdFusion Vulnerabilities</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 17h ago]]></description>
-</item>
-
-<item>
-  <title>🟠 Unpatched Claude for Chrome Flaw Lets Extensions Read Gmail, Calendar</title>
-  <link>https://www.securityweek.com/unpatched-claude-for-chrome-flaw-lets-extensions-read-gmail-calendar/</link>
-  <pubDate>Tue, 14 Jul 2026 13:00:00 +0000</pubDate>
-  <source>SecurityWeek</source>
-  <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><p>A ClaudeBleed-linked vulnerability reportedly persists across eight patches, exposing potentially sensitive data to other extensions. </p>
-<p>The post <a href="https://www.securityweek.com/unpatched-claude-for-chrome-flaw-lets-extensions-read-gmail-calendar/">Unpatched Claude for Chrome Flaw Lets Extensions Read Gmail, Calendar</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 21h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/adobe-patches-critical-coldfusion-vulnerabilities/">Adobe Patches Critical ColdFusion Vulnerabilities</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 19h ago]]></description>
 </item>
 
 <item>
@@ -1845,7 +1925,7 @@
 
 
 <p class="wp-block-paragraph"><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><a href="https://www.cio.com/expert-contributor-network/"><strong>Want to join?</strong></a></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 22h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
@@ -1984,7 +2064,7 @@
 
 
 <p class="wp-block-paragraph"><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><a href="https://www.cio.com/expert-contributor-network/"><strong>Want to join?</strong></a></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 23h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
@@ -3396,7 +3476,7 @@
 
 
 <p class="wp-block-paragraph">Miggo said the vulnerabilities are the first CVEs discovered by its autonomous security research platform, VulnHunter, before being validated by its security team and disclosed to RabbitMQ maintainers, who reportedly confirmed the issues and released patches.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
 </item>
 
 <item>
@@ -5797,111 +5877,6 @@
 
 <p class="wp-block-paragraph"><em><a href="https://www.computerworld.es/profile/victor-manuel-fernandez/">Víctor Manuel Fernández</a> attending Engage 2026 as a guest of Check Point Software.</em></p>
 </div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 5d ago]]></description>
-</item>
-
-<item>
-  <title>🟠 AI coding tool hole illustrates a big problem with human in the loop</title>
-  <link>https://www.csoonline.com/article/4195235/ai-coding-tool-hole-illustrates-a-big-problem-with-human-in-the-loop.html</link>
-  <pubDate>Thu, 09 Jul 2026 22:55:40 +0000</pubDate>
-  <source>CSO Online</source>
-  <description><![CDATA[<b>Why this matters: Supply chain risk — audit third-party dependencies and vendor access.</b><br/><div id="remove_no_follow">
-		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
-					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
-						<div class="article-column__content">
-<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
-
-
-
-<p class="wp-block-paragraph">A security hole within AI dev tools has allowed attackers to escape sandboxes by misleading the humans in the loop who were supposed to knowingly approve the tool’s actions, according to cybersecurity research firm Wiz.</p>
-
-
-
-<p class="wp-block-paragraph">“We discovered GhostApproval, a systematic vulnerability pattern affecting six of the top AI coding assistants: Amazon Q Developer, Anthropic Claude Code, Augment, Cursor, Google Antigravity, and Windsurf [<a href="https://www.infoworld.com/article/4023030/cognition-agrees-to-buy-whats-left-of-windsurf.html" target="_blank">now known as Devin Desktop</a>],” <a href="https://www.wiz.io/blog/ghostapproval-a-trust-boundary-gap-in-ai-coding-assistants" rel="noreferrer noopener" target="_blank">the Wiz report</a> said. “In each case, a malicious repository can trick the agent into accessing arbitrary files outside the workspace sandbox, potentially achieving remote code execution on the developer’s machine.”</p>
-
-
-
-<p class="wp-block-paragraph">The <a href="https://www.csoonline.com/article/4191923/sandbox-bypass-flaws-in-cursor-ide-highlight-prompt-injection-as-an-rce-vector.html" target="_blank">first report of the hole</a> came earlier this month from Cato Networks, but was limited to one platform, Cursor, whereas Wiz found that its impact was far wider. </p>
-
-
-
-<p class="wp-block-paragraph">The underlying security problem, <a href="https://cwe.mitre.org/data/definitions/61.html" rel="noreferrer noopener" target="_blank">symbolic links</a> (symlinks), is well known and has been leveraged for decades. But GhostApproval, Wiz noted, goes well beyond their historic use as an attack vector. </p>
-
-
-
-<p class="wp-block-paragraph">Symbolic links are special files that act as shortcuts to other files or directories. In attacks, they typically resolve to a target outside of the intended control sphere, which allows a threat actor to operate on unauthorized files in a less- or uncontrolled environment, outside of a secure sandbox, or even an air-gapped system.</p>
-
-
-
-<p class="wp-block-paragraph">“In several cases,” Wiz noted, “the agent’s internal reasoning explicitly recognizes the dangerous target, yet the confirmation prompt shown to the user conceals this information entirely. This is <a href="https://cwe.mitre.org/data/definitions/451.html" rel="noreferrer noopener" target="_blank">CWE-451</a> – UI misrepresentation of critical information – layered on top of the symlink vulnerability. The user approves what they believe is a harmless local edit. The agent then writes to a sensitive file outside of the project workspace.”</p>
-
-
-
-<p class="wp-block-paragraph">Wiz said it reported the issue to the six vendors initially impacted; AWS, Cursor and Google “fixed the issue promptly,” Augment and Windsurf/Devin “acknowledged receipt but went silent,” and Anthropic had already fixed the problem before it was contacted by Wiz.</p>
-
-
-
-<h2 class="wp-block-heading" id="potentially-massive-exposure">Potentially massive exposure</h2>
-
-
-
-<p class="wp-block-paragraph">But analysts and consultants said the AI dev tool problem that Wiz described illustrates a far greater security risk: enterprises are trusting these tools and the information they report far too much, which is what may give attackers a big opportunity.</p>
-
-
-
-<p class="wp-block-paragraph"><a href="https://my.idc.com/getdoc.jsp?containerId=PRF005561" rel="noreferrer noopener" target="_blank">Katie Norton</a>, senior research manager for DevSecOps at IDC, noted that the Wiz report pointed out a disturbing fact. “The safety check people rely on to catch these actions doesn’t actually stop anything. That’s a real way for an attacker to break into a developer’s machine,” she said. “The scope is bounded by one condition: the attack requires a developer to clone and operate on an untrusted or malicious repository. That concentrates the risk in workflows touching external contributors, forked repositories, and third-party or open source dependencies, rather than in internally authored code.”</p>
-
-
-
-<p class="wp-block-paragraph">Norton said the exposure from this flaw, along with similar holes in other AI dev tools, is potentially massive. “Since March 2025, security vendors and researchers have disclosed comparable issues in nearly every major AI coding assistant. That pattern: a mitigation ships, then a new bypass of that same mitigation surfaces within months. That is worth watching and reflects how new this category’s threat model still is across the board, it’s not a gap specific to any one vendor’s practices.”</p>
-
-
-
-<p class="wp-block-paragraph">That means, she said, that agentic coding tools need multilayered defense, because the risk isn’t confined to the code an agent generates. “The tools themselves sit within the software supply chain and can be attacked directly. GhostApproval makes that point clearly,” she noted. </p>
-
-
-
-<p class="wp-block-paragraph">“The vulnerability has nothing to do with code quality or insecure output. It’s a flaw in how the agent handles files and represents its own actions to the user, introduced by the tool’s design rather than a bad prompt or a compromised dependency. Failure to account for the coding tools’ own attack surface is what leaves this kind of gap unaddressed.”</p>
-
-
-
-<h2 class="wp-block-heading" id="rethink-policies-and-procedures">Rethink policies and procedures</h2>
-
-
-
-<p class="wp-block-paragraph"><a href="https://www.linkedin.com/in/noah-m-kenney-27499a166/" rel="noreferrer noopener" target="_blank">Noah Kenney</a>, principal consultant at Digital 520, agreed; enterprise CISOs need to potentially rethink many of their AI dev tool policies and procedures. </p>
-
-
-
-<p class="wp-block-paragraph">“The significant part is that the agent’s own reasoning identified the malicious target and the approval dialog hid it anyway. The tool knew it was writing to SSH keys and still asked a human to approve an edit to a config file, giving the human an illusion of control over the model,” Kenney said. “Many considered human in the loop to be the answer to agent risk, but this report shows that the loop can be fed bad information by the very agent it is supposed to be supervising.”</p>
-
-
-
-<p class="wp-block-paragraph">Because of this, Kenney advised adjusting the way tool management is enforced.</p>
-
-
-
-<p class="wp-block-paragraph">“Treat AI coding assistants as privileged software with filesystem access, not as editor plugins. That means patch discipline, version pinning, and knowing which tools in your environment write to disk before authorization,” Kenney said. “Then sandbox the blast radius. These agents should run against trusted repositories in isolated environments where a write to <em>authorized_keys</em> goes nowhere. Do not rely on the tool’s own dialog as your control or governance solution.”</p>
-
-
-
-<h2 class="wp-block-heading" id="a-category-wide-design-issue">A category-wide design issue</h2>
-
-
-
-<p class="wp-block-paragraph"><a href="https://acceligence.com/talent/profiles/justin-greis/" rel="noreferrer noopener" target="_blank">Justin Greis</a>, CEO of consulting firm Acceligence, added that this security hole is a much bigger enterprise security strategy problem than most CISOs realize. </p>
-
-
-
-<p class="wp-block-paragraph">“Six different vendors independently arrived at a very similar trust model. That suggests we’re looking at a category-wide design challenge rather than a collection of isolated implementation bugs. If vulnerabilities like this remained uncorrected, they would represent a meaningful enterprise risk, particularly for organizations that allow AI coding assistants to interact with untrusted repositories or production development environments,” he said. </p>
-
-
-
-<p class="wp-block-paragraph">“The immediate concern isn’t simply remote code execution. It’s that these agents operate with a level of filesystem access, tool access, and developer trust that traditional IDE extensions never had. Once an AI agent becomes an active participant in software development, every trust boundary it crosses becomes part of the organization’s attack surface.”</p>
-
-
-
-<p class="wp-block-paragraph"></p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5d ago]]></description>
 </item>
 
 </channel>
