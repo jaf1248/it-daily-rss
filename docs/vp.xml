@@ -3,8 +3,387 @@
 <channel>
   <title>Joe — VP of IT Briefing</title>
   <description>Leadership-focused IT risk, vendors, pricing, licensing, and industry context.</description>
-  <lastBuildDate>Wed, 15 Jul 2026 05:27:43 +0000</lastBuildDate>
+  <lastBuildDate>Wed, 15 Jul 2026 08:03:36 +0000</lastBuildDate>
   
+<item>
+  <title>🔵 The hidden AI cost driver: Harness design can make or break enterprise agent economics</title>
+  <link>https://www.cio.com/article/4197193/the-hidden-ai-cost-driver-harness-design-can-make-or-break-enterprise-agent-economics.html</link>
+  <pubDate>Wed, 15 Jul 2026 08:01:19 +0000</pubDate>
+  <source>CIO.com</source>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<p class="wp-block-paragraph">A largely overlooked layer of the AI stack is emerging as a major driver of enterprise costs. New testing by AI consultancy Systima found that agent harnesses, the software that coordinates models, tools and workflows, can generate significant token overhead through their configuration alone, potentially inflating the cost of AI deployments as organizations scale agents from experimental pilots to production environments.</p>
+
+
+
+<p class="wp-block-paragraph">The firm, which ran a series of tests by juxtaposing two harnesses on the same tasks, namely Anthropic’s Claude Code and open-source OpenCode using the same Claude Sonnet 4.5 model underneath, found both exhibiting sharply different token overhead because of the differences in their configuration.</p>
+
+
+
+<p class="wp-block-paragraph">These differences included system prompts, tool definitions, agent coordination mechanisms and other orchestration components, resulting in markedly different baseline input token overhead before users even entered a prompt, the consultancy firm wrote in a <a href="https://systima.ai/blog/claude-code-vs-opencode-token-overhead" rel="noreferrer noopener" target="_blank">blog post</a>.</p>
+
+
+
+<p class="wp-block-paragraph">Separately, the firm also found that other configuration choices while setting up the harnesses such as repository instruction files, <a href="https://www.infoworld.com/article/4029634/what-is-model-context-protocol-how-mcp-bridges-ai-and-external-services.html" target="_blank">Model Context Protocol</a> (MCP) servers, prompt framework templates and subagents can each add substantial token overhead.</p>
+
+
+
+<p class="wp-block-paragraph">The consultancy’s conclusions are also supported by emerging academic research examining how orchestration of the harnesses themselves, rather than optimizing models or changing them, can help enterprises reshape the economics around AI agents.</p>
+
+
+
+<p class="wp-block-paragraph">In a <a href="https://arxiv.org/pdf/2607.06906" rel="noreferrer noopener" target="_blank">paper</a>, titled The Harness Effect: How Orchestration Design Sets the Token Economics of Enterprise Agentic AI, researchers showed that changing the harness while keeping models and tasks the same can reduce token consumption by 38%, cost per task by 41%, and execution time by 44% while maintaining comparable quality.</p>
+
+
+
+<h2 class="wp-block-heading" id="why-enterprises-overlook-harness-costs">Why enterprises overlook harness costs</h2>
+
+
+
+<p class="wp-block-paragraph">Analysts say that enterprises can gain greater control over AI agent operating costs by paying closer attention to how their harnesses are configured and orchestrated, instead of just relying on model pricing as a yardstick.</p>
+
+
+
+<p class="wp-block-paragraph">“The evaluation shows that the model is only one part of agent economics. The harness, tool schemas, instructions, MCP connections, and subagents matter as well. Enterprises therefore need to measure the entire agent configuration, not assume model pricing tells them what an agent will cost,” said <a href="https://www.linkedin.com/in/slwalter" rel="noreferrer noopener" target="_blank">Stephanie Walter</a>, practice lead of the AI stack at HyperFRAME Research.</p>
+
+
+
+<p class="wp-block-paragraph">Currently, most enterprises pick agent tooling based on model quality, benchmarks, developer experience, and headline pricing per seat or per million tokens, with almost no one measuring what the harness sends per request, how stable the cache prefix is, or what subagent fan out costs at scale, echoed <a href="https://www.linkedin.com/in/advaitpatel93/" rel="noreferrer noopener" target="_blank">Advait Patel</a>, site reliability engineer at Broadcom.</p>
+
+
+
+<p class="wp-block-paragraph">“Ask the average CIO whether their coding agent rewrites its cache mid-session, and you will get a blank stare,” Patel added.</p>
+
+
+
+<p class="wp-block-paragraph">However, Ashish Chaturvedi, executive research leader at HFS Research, pointed out that lack of visibility is less a failure of enterprise leaders than a consequence of how AI agent ecosystem components are sold, stacked, and managed presently.</p>
+
+
+
+<p class="wp-block-paragraph">“Most organizations have no visibility, mainly due to the absence of any metric from the vendor’s end that lets CIOs measure the entire agent or at least the harness configuration. None of this shows up in the developer’s experience. The agent just works, and the tokens burn silently in the background,” Chaturvedi said.</p>
+
+
+
+<p class="wp-block-paragraph">The problem is further compounded, according to Chaturvedi, due to the manner in which AI agent configuration is distributed across enterprise teams.</p>
+
+
+
+<p class="wp-block-paragraph">“The harness is chosen by one team, the instruction file written by another, and the MCP servers attached by a third, so no single person sees the cumulative weight,” Chaturvedi noted.</p>
+
+
+
+<p class="wp-block-paragraph">Even when, in some cases, enterprises do have visibility and ownership, Patel argued, the industry, in general, still lack the operational maturity and discipline to systematically optimize AI agent costs.</p>
+
+
+
+<p class="wp-block-paragraph">“FinOps for agents is where cloud FinOps was in 2013. Nobody has hired the equivalent of a cost optimization team focused on prompt engineering, harness configuration, and cache stability,” Patel said.</p>
+
+
+
+<p class="wp-block-paragraph">Separately, <a href="https://www.linkedin.com/in/abhisekhsatapathy/" rel="noreferrer noopener" target="_blank">Abhishek Satapathy</a>, principal analyst at Avasant, pointed out that the invisibility issue stems from how enterprises evaluate AI agents before deploying them into production: “Most proof-of-concepts involve a limited number of users, relatively short-lived sessions, and controlled agentic interactions, where the accuracy of model output is the primary evaluation criterion.”</p>
+
+
+
+<p class="wp-block-paragraph">The analysts’ comments also echo the conclusions of another research <a href="https://arxiv.org/pdf/2601.14470" rel="noreferrer noopener" target="_blank">paper</a>,  in which researchers argued that token consumption in agentic software engineering systems remains poorly understood because existing metrics provide limited visibility into where tokens are spent across orchestration components.</p>
+
+
+
+<h2 class="wp-block-heading" id="how-cios-can-improve-visibility-into-ai-agent-costs">How CIOs can improve visibility into AI agent costs</h2>
+
+
+
+<p class="wp-block-paragraph">Closing that visibility gap, though, according to Satapathy, is increasingly becoming a priority for enterprises, as AI agents move from pilots to production and operating costs become harder to predict.</p>
+
+
+
+<p class="wp-block-paragraph">“Across our advisory engagements, we are seeing growing demand for AI observability frameworks that combine runtime tracing, workload-level cost attribution, and execution analytics. This enables organizations to establish engineering baselines, benchmark workload efficiency, forecast AI operating costs, and continuously optimize agent performance as deployments mature,” Satapathy said.</p>
+
+
+
+<p class="wp-block-paragraph">However, until vendors provide more comprehensive visibility into harness-level token consumption, analysts said enterprises should begin treating harness configuration as an operational governance issue rather than merely a developer preference.</p>
+
+
+
+<p class="wp-block-paragraph">“The single most valuable move is to get visibility into what the harness actually sends. Enterprises should treat configuration as a governed cost decision, deliberately match harnesses to workloads, and closely monitor cache behavior and subagent fan-out, since those were among the biggest cost multipliers identified in the evaluation,” Chaturvedi said.</p>
+
+
+
+<p class="wp-block-paragraph">Walter echoed that recommendation, saying CIOs should require observability across the entire agent configuration: “Without that visibility, enterprises are effectively buying an agent platform without knowing how much of the bill comes from useful work versus orchestration overhead.”</p>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 I tested my USB-C cables with this free Mac app - some weren&#x27;t what they claimed</title>
+  <link>https://www.zdnet.com/article/whatcable-mac-app-usbc-cable-review/</link>
+  <pubDate>Wed, 15 Jul 2026 07:45:43 +0000</pubDate>
+  <source>ZDNet</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>WhatCable is a free Mac app that gives you all the information you could need for your USB-C cables.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 ASML says Intel has decided to use ASML&#x27;s next-gen High NA EUV machines to make some of its flagship Panther Lake laptop chips; a High NA machine costs ~$400M (Max A. Cherney/Reuters)</title>
+  <link>https://www.techmeme.com/260715/p10#a260715p10</link>
+  <pubDate>Wed, 15 Jul 2026 07:35:01 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/><a href="https://www.reuters.com/business/intel-turns-next-generation-asml-tool-help-make-its-laptop-chips-2026-07-15/"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260715/i10.jpg" vspace="4" /></a>
+<p><a href="https://www.techmeme.com/260715/p10#a260715p10" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Max A. Cherney / <a href="http://www.reuters.com/">Reuters</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://www.reuters.com/business/intel-turns-next-generation-asml-tool-help-make-its-laptop-chips-2026-07-15/">ASML says Intel has decided to use ASML's next-gen High NA EUV machines to make some of its flagship Panther Lake laptop chips; a High NA machine costs ~$400M</a></b></span>&nbsp; &mdash;&nbsp; Intel (INTC.O) has decided to use a high-end machine from ASML to manufacture some of its flagship Panther Lake laptop chips &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 ASML reports Q2 net sales of €9.3B, above €8.8B est., a €2.9B net profit, above €2.6B est., and raises its 2026 net sales forecast from €36B-€40B to €43B-€45B (April Roach/CNBC)</title>
+  <link>https://www.techmeme.com/260715/p9#a260715p9</link>
+  <pubDate>Wed, 15 Jul 2026 07:30:01 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://www.cnbc.com/2026/07/15/asml-2q-earnings-ai-chips-orders.html"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260715/i9.jpg" vspace="4" /></a>
+<p><a href="https://www.techmeme.com/260715/p9#a260715p9" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> April Roach / <a href="http://www.cnbc.com/">CNBC</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://www.cnbc.com/2026/07/15/asml-2q-earnings-ai-chips-orders.html">ASML reports Q2 net sales of &euro;9.3B, above &euro;8.8B est., a &euro;2.9B net profit, above &euro;2.6B est., and raises its 2026 net sales forecast from &euro;36B-&euro;40B to &euro;43B-&euro;45B</a></b></span>&nbsp; &mdash;&nbsp; ASML on Wednesday raised its guidance for the second time this year and reported stronger &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</item>
+
+<item>
+  <title>🟠 Critical Vulnerabilities Patched With Fresh Chrome 150, Firefox 152 Updates</title>
+  <link>https://www.securityweek.com/critical-vulnerabilities-patched-with-fresh-chrome-150-firefox-152-updates/</link>
+  <pubDate>Wed, 15 Jul 2026 07:24:52 +0000</pubDate>
+  <source>SecurityWeek</source>
+  <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><p>Public exploit code targeting the Firefox flaws exists, but no in-the-wild exploitation has been observed.</p>
+<p>The post <a href="https://www.securityweek.com/critical-vulnerabilities-patched-with-fresh-chrome-150-firefox-152-updates/">Critical Vulnerabilities Patched With Fresh Chrome 150, Firefox 152 Updates</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</item>
+
+<item>
+  <title>🟠 7 skills and traits of elite security engineers</title>
+  <link>https://www.csoonline.com/article/4196428/7-skills-and-traits-of-elite-security-engineers.html</link>
+  <pubDate>Wed, 15 Jul 2026 07:00:00 +0000</pubDate>
+  <source>CSO Online</source>
+  <description><![CDATA[<b>Why this matters: Supply chain risk — audit third-party dependencies and vendor access.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<p class="wp-block-paragraph">Security engineers play a pivotal role in enterprise cybersecurity, because they are the professionals who design, build, and deploy security systems to protect an organization’s data, applications, systems, networks, and other IT components against a variety of cyber threats.</p>
+
+
+
+<p class="wp-block-paragraph">Finding not just qualified security engineers, but the best and brightest available, needs to be a priority for CISOs and others overseeing security at their organizations. That’s especially true with the rapid rise of AI and the threats that brings to the enterprise.</p>
+
+
+
+<p class="wp-block-paragraph">Here are some of the key skills and traits of elite security engineers to look for when hiring — or to acquire in order to uplevel your cybersecurity career.</p>
+
+
+
+<h2 class="wp-block-heading" id="acumen-with-ai-powered-tools">Acumen with AI-powered tools</h2>
+
+
+
+<p class="wp-block-paragraph">These days, AI-related skills are in demand regardless of domain, and this certainly applies to security engineers. There’s a wealth of solutions leveraging AI in the market, tools that engineers can add to their defense arsenal.</p>
+
+
+
+<p class="wp-block-paragraph">“AI is transforming security engineering from reactive alerting to predictive threat detection,” says Praveen Margabandhu, digital engineering anchor at financial services firm Navy Federal Credit Union. “AI-driven anomaly detection now identifies behavioral patterns that indicate fraud or compromise before traditional threshold-based systems would fire. This shifts the security engineer’s role from incident responder to threat model designer.”</p>
+
+
+
+<p class="wp-block-paragraph">AI-powered tools have taken over a large portion of the detection and triage work that used to be the core of a security engineer’s day, says Maruf Ahmed, cofounder and CEO of global tech staffing firm Dexian. “Vulnerability scanning runs on its own now,” he says. “Threat flagging that used to require a team pulling through logs for hours happens in minutes.”</p>
+
+
+
+<p class="wp-block-paragraph">This has freed up capacity on most security teams and changed what the day-to-day work looks like, Ahmed says. “With detection increasingly automated, the engineer’s value sits more in interpreting what gets flagged and deciding what to do about it,” he says.</p>
+
+
+
+<h2 class="wp-block-heading" id="keen-understanding-of-emerging-and-established-ai-threats">Keen understanding of emerging and established AI threats</h2>
+
+
+
+<p class="wp-block-paragraph">Engineers must also have a thorough understanding of the risks AI presents, including <strong><a href="https://www.csoonline.com/article/4154222/6-ways-attackers-abuse-ai-services-to-hack-your-business.html">AI-enhanced cyberattacks</a> using</strong><strong> </strong>large language models (LLMs) to automate and scale <a href="https://www.csoonline.com/article/3819176/top-5-ways-attackers-use-generative-ai-to-exploit-your-systems.html">highly personalized social engineering attacks</a>, craft sophisticated malware, and generate deepfakes.</p>
+
+
+
+<p class="wp-block-paragraph">Other <a href="https://www.csoonline.com/article/4110008/top-cyber-threats-to-your-ai-systems-and-infrastructure.html">AI threats they need to be aware of</a> include prompt injections, data and model poisoning, disclosure of sensitive information, model theft, supply chain compromises, and excessive agency.</p>
+
+
+
+<p class="wp-block-paragraph">“The same generative tools that help security teams work faster are available to adversaries, and it shows,” Ahmed says. “Phishing campaigns read better and land more precisely than they did a year ago. Social engineering is harder to catch when the language is polished and tailored to the target, and security engineers are now defending against threats built with the same class of technology they use on the defensive side.”</p>
+
+
+
+<p class="wp-block-paragraph">That has raised the bar for what reliable detection looks like, Ahmed says. “The objective shift I hear most from clients is about trust in their own systems,” he says. “Two years ago, the priority was visibility — making sure you could see across your environment. Most organizations have that now. The harder problem is knowing whether what those tools are telling you holds up under scrutiny and having people on the team who can stand behind those findings in front of a regulator or a board.”</p>
+
+
+
+<h2 class="wp-block-heading" id="appreciation-of-performance-and-business-goals">Appreciation of performance and business goals</h2>
+
+
+
+<p class="wp-block-paragraph">The best security engineers understand how performance and security intersect, says Margabandhu, who leads performance engineering across Navy Federal Credit Union’s digital banking infrastructure, including real-time fraud detection, identity and access management, and cybersecurity infrastructure resilience.</p>
+
+
+
+<p class="wp-block-paragraph">“A fraud detection system that is secure but too slow to catch transactions in real-time is not secure at all,” Margabandhu says. “Elite engineers optimize for both simultaneously.”</p>
+
+
+
+<p class="wp-block-paragraph">Engineers must be able to put things in business context, Ahmed says. “An engineer who can work across domains, validate AI outputs, and learn new tools fast is valuable. But that value compounds when the person also understands what the organization is trying to protect and why,” he says.</p>
+
+
+
+<p class="wp-block-paragraph">Security engineers who understand the business make better risk decisions, write more effective policies, and generate less friction with the teams around them, Ahmed says. “That is the profile employers are hiring toward right now, and it is where the talent shortage is most pronounced,” he says.</p>
+
+
+
+<h2 class="wp-block-heading" id="systems-mindset">Systems mindset</h2>
+
+
+
+<p class="wp-block-paragraph">“One of the biggest misconceptions in cybersecurity hiring is that elite security engineers are defined purely by technical certifications or tool familiarity,” says Juan Mathews Rebello Santos, an independent cybersecurity researcher and ethical hacker.</p>
+
+
+
+<p class="wp-block-paragraph">“Technical skill absolutely matters, but the strongest engineers I’ve worked with consistently share a combination of analytical thinking, operational adaptability, communication ability, and deep systems understanding,” Santos says.</p>
+
+
+
+<p class="wp-block-paragraph">Elite security engineers understand how infrastructure, cloud services, identity systems, applications, APIs, networks, users, and business operations connect, Santos says.</p>
+
+
+
+<p class="wp-block-paragraph">“Modern attacks rarely target a single isolated component anymore,” he says. “Threat actors chain together weaknesses across environments. Engineers who can understand those relationships holistically are significantly more effective at both prevention and incident response.”</p>
+
+
+
+<h2 class="wp-block-heading" id="cross-disciplinary-fluency-and-broad-stack-know-how">Cross-disciplinary fluency and broad stack know-how</h2>
+
+
+
+<p class="wp-block-paragraph">Being an elite software engineer today means having a range of technology experience and knowledge. “Organizations want engineers who can work across more of the stack than they used to,” Ahmed says. “A role that might have asked for deep specialization in one area now expects someone who can move between cloud infrastructure, application security, and compliance without needing a handoff at every boundary.”</p>
+
+
+
+<p class="wp-block-paragraph">The attack surface has continued to get wider, and the job descriptions for security engineers has followed suit. “That cross-domain fluency matters because security incidents rarely stay contained in one layer,” Ahmed says. “The engineer who can follow a problem from the network through the application to the data governance framework resolves it faster, with fewer people involved.”</p>
+
+
+
+<p class="wp-block-paragraph">The strongest security engineers bridge infrastructure, application, and business domains, Margabandhu says. “They can speak to a CISO, a developer, and a cloud architect in the same conversation,” he says. “An engineer who can explain what an authentication problem means for fraud exposure moves faster in a room full of executives than one who can only describe it in infrastructure terms. I’ve watched technically brilliant people lose that race repeatedly.”<br /><br /></p>
+
+
+
+<p class="wp-block-paragraph">Having the ability to communicate technical risk clearly to non-technical leadership can mean the difference between success and failure of attacks.</p>
+
+
+
+<p class="wp-block-paragraph">“Many security failures today are not caused by lack of tooling, but by misalignment between technical teams and business decision-makers,” Santos says. “Elite engineers can explain operational risk, prioritization, and security tradeoffs in language executives understand.”</p>
+
+
+
+<h2 class="wp-block-heading" id="deep-understanding-of-third-party-risk-and-non-human-threats">Deep understanding of third-party risk and non-human threats</h2>
+
+
+
+<p class="wp-block-paragraph">Threats can come from anywhere, including supply chains and non-human combatants. Third-party cybersecurity risks are on the rise. The 2026 Global CISO Leadership Report by executive search firm Hitch Partners, based on a survey of more than 625 information security executives across the US and Canada, says 43% put third-party risks as the No. 1 priority.</p>
+
+
+
+<p class="wp-block-paragraph">“Most teams are still better at securing what they own than securing what they depend on,” Margabandhu says. “The mental shift from perimeter thinking to dependency thinking is real and not everyone has made it. The engineers who treat <a href="https://www.csoonline.com/article/4148315/apis-are-the-new-perimeter-heres-how-cisos-are-securing-them.html">every API call</a>, every credentialed vendor, every third-party model as part of their attack surface approach design differently.”</p>
+
+
+
+<p class="wp-block-paragraph">Another growing source of potential threats are not human. <a href="https://www.csoonline.com/article/2132294/what-are-non-human-identities-and-why-do-they-matter.html">Machine identities</a> now outnumber human identities by ratios exceeding 100 to 1 in most enterprise environments, with some sectors closer to 500 to 1, according to the ManageEngine Identity Security Outlook 2026 report.</p>
+
+
+
+<p class="wp-block-paragraph">This includes service accounts, API keys, automation tokens, and AI agents, any one of which can present data governance and security risks.</p>
+
+
+
+<p class="wp-block-paragraph">Many organizations are still managing machine identities through manual processes that weren’t designed for scale, Margabandhu says. “Engineers who understand non-human identity governance are rare and increasingly important. This is not a future problem.”<br /><br /></p>
+
+
+
+<h2 class="wp-block-heading" id="willingness-to-keep-learning">Willingness to keep learning</h2>
+
+
+
+<p class="wp-block-paragraph">Security engineers need to have a desire to never stopped learning.</p>
+
+
+
+<p class="wp-block-paragraph">“That sounds obvious until you work with people who’ve been doing this for 15 years and are still operating from the same threat models they built in 2012,” Margabandhu says. “Security changes fast enough that standing still is the same as going backwards.”</p>
+
+
+
+<p class="wp-block-paragraph">The security engineers who keep up aren’t reading one report a year. “They’re genuinely curious about what attackers are doing right now, this month, and they adjust how they think accordingly,” Margabandhu says. “That quality is harder to hire for than most technical skills, because it’s not on a resume.”<br /><br /></p>
+
+
+
+<p class="wp-block-paragraph">With AI presenting new and more sophisticated threats, keeping up with the latest developments is perhaps more important than ever. “Strong engineers are naturally investigative,” Santos says. “They actively study attack techniques, test assumptions, reverse engineer failures, and continuously adapt their understanding of risk.”</p>
+
+
+
+<p class="wp-block-paragraph">The best security engineers are often the people who remain intellectually uncomfortable because they know the landscape is always evolving, Santos says.</p>
+
+
+
+<p class="wp-block-paragraph">Employers have started paying closer attention to how fast someone can learn, Ahmed says. “The threat landscape and the defensive toolkit are both moving faster than any certification program can track, so hiring managers are probing for adaptability in interviews: how candidates have responded to recent shifts, whether they have picked up unfamiliar platforms on their own, how they work through problems they have not seen before,” he says.</p>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 I tested Google Maps vs. Waze to find the best navigation app - and this one wins</title>
+  <link>https://www.zdnet.com/article/google-maps-vs-waze-compared-2026/</link>
+  <pubDate>Wed, 15 Jul 2026 07:00:00 +0000</pubDate>
+  <source>ZDNet</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Want to know whether Waze or Google Maps is better? I've driven with both for hundreds of miles. Here's my choice.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 A profile of PsiQuantum, which raised $1B in 2025, is building a quantum computer with photonic chips made by GlobalFoundries and is closely monitored by DARPA (James O&#x27;Donnell/MIT Technology Review)</title>
+  <link>https://www.techmeme.com/260715/p8#a260715p8</link>
+  <pubDate>Wed, 15 Jul 2026 06:30:01 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://www.technologyreview.com/2026/07/14/1140356/psiquantum-plan-massive-quantum-computer-out-of-light/"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260715/i8.jpg" vspace="4" /></a>
+<p><a href="https://www.techmeme.com/260715/p8#a260715p8" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> James O'Donnell / <a href="http://www.technologyreview.com/">MIT Technology Review</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://www.technologyreview.com/2026/07/14/1140356/psiquantum-plan-massive-quantum-computer-out-of-light/">A profile of PsiQuantum, which raised $1B in 2025, is building a quantum computer with photonic chips made by GlobalFoundries and is closely monitored by DARPA</a></b></span>&nbsp; &mdash;&nbsp; The company has drawn governments, a major chipmaker, and the Pentagon into an effort to control fragile photons and build a useful quantum machine.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 As China&#x27;s rules for humanlike AI interaction take effect, many users are bemoaning the loss of the virtual companions they had created on Chinese AI platforms (Bloomberg)</title>
+  <link>https://www.techmeme.com/260715/p7#a260715p7</link>
+  <pubDate>Wed, 15 Jul 2026 06:15:01 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://www.bloomberg.com/news/articles/2026-07-14/beijing-diktat-leaves-chinese-with-virtual-ai-lovers-heartbroken"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260715/i7.jpg" vspace="4" /></a>
+<p><a href="https://www.techmeme.com/260715/p7#a260715p7" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="https://www.bloomberg.com/">Bloomberg</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/articles/2026-07-14/beijing-diktat-leaves-chinese-with-virtual-ai-lovers-heartbroken">As China's rules for humanlike AI interaction take effect, many users are bemoaning the loss of the virtual companions they had created on Chinese AI platforms</a></b></span>&nbsp; &mdash;&nbsp; For days, 19-year old student Yan Yongqi has been consumed by grief over the imminent loss of her virtual boyfriend of more than a year.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Sources: DeepSeek&#x27;s annualized revenue recently reached $400M to $500M as it seeks to raise ~$7.4B at a ~$74B valuation, up from ~$50B after raising ~$7B in May (The Information)</title>
+  <link>https://www.techmeme.com/260715/p6#a260715p6</link>
+  <pubDate>Wed, 15 Jul 2026 06:00:02 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.theinformation.com/articles/deepseeks-annualized-revenue-nears-500-million-boosting-fundraise-ipo-plans"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260715/i6.jpg" vspace="4" /></a>
+<p><a href="https://www.techmeme.com/260715/p6#a260715p6" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="https://www.theinformation.com/">The Information</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://www.theinformation.com/articles/deepseeks-annualized-revenue-nears-500-million-boosting-fundraise-ipo-plans">Sources: DeepSeek's annualized revenue recently reached $400M to $500M as it seeks to raise ~$7.4B at a ~$74B valuation, up from ~$50B after raising ~$7B in May</a></b></span>&nbsp; &mdash;&nbsp; Strong revenue growth at DeepSeek is empowering the Chinese open-source AI star to raise its second-funding round of 50 billion yuan &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Court filing: Google says it is ready to add third-party app stores in Google Play in the US on July 22, as Google and Epic withdraw their joint motion (Sean Hollister/The Verge)</title>
+  <link>https://www.techmeme.com/260715/p5#a260715p5</link>
+  <pubDate>Wed, 15 Jul 2026 05:55:02 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://www.theverge.com/policy/965792/google-epic-withdraw-injunction-third-party-app-stores-coming-google-play"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260715/i5.jpg" vspace="4" /></a>
+<p><a href="https://www.techmeme.com/260715/p5#a260715p5" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Sean Hollister / <a href="https://www.theverge.com/">The Verge</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://www.theverge.com/policy/965792/google-epic-withdraw-injunction-third-party-app-stores-coming-google-play">Court filing: Google says it is ready to add third-party app stores in Google Play in the US on July 22, as Google and Epic withdraw their joint motion</a></b></span>&nbsp; &mdash;&nbsp; Get ready for rival app stores inside of Google Play. &hellip; Epic Games and Google have just jointly withdrawn their attempt &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+</item>
+
 <item>
   <title>🔵 Sources: Oracle leads the race to sell &quot;air-gapped&quot; cloud services to Japan that the US says are key to secure intelligence sharing between Tokyo and its allies (Financial Times)</title>
   <link>https://www.techmeme.com/260715/p4#a260715p4</link>
@@ -12,7 +391,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.ft.com/content/c8d32323-1d06-4470-8375-2ee6dd42749e"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260715/i4.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260715/p4#a260715p4" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="https://www.ft.com/">Financial Times</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.ft.com/content/c8d32323-1d06-4470-8375-2ee6dd42749e">Sources: Oracle leads the race to sell &ldquo;air-gapped&rdquo; cloud services to Japan that the US says are key to secure intelligence sharing between Tokyo and its allies</a></b></span>&nbsp; &mdash;&nbsp; Larry Ellison's group proposes &lsquo;air-gapped&rsquo; network as US pressures Tokyo to tighten security of sensitive data</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.ft.com/content/c8d32323-1d06-4470-8375-2ee6dd42749e">Sources: Oracle leads the race to sell &ldquo;air-gapped&rdquo; cloud services to Japan that the US says are key to secure intelligence sharing between Tokyo and its allies</a></b></span>&nbsp; &mdash;&nbsp; Larry Ellison's group proposes &lsquo;air-gapped&rsquo; network as US pressures Tokyo to tighten security of sensitive data</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
 </item>
 
 <item>
@@ -22,7 +401,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://www.wsj.com/world/middle-east/uae-ai-chips-iran-war-26c10d77?st=aqms3m&amp;reflink=desktopwebshare_permalink"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260715/i3.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260715/p3#a260715p3" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="https://www.wsj.com/">Wall Street Journal</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.wsj.com/world/middle-east/uae-ai-chips-iran-war-26c10d77?st=aqms3m&amp;reflink=desktopwebshare_permalink">The UAE gained broader US AI chip access after aiding the US in the Iran war, letting G42 buy freely for at least nine months; G42 plans to become a US company</a></b></span>&nbsp; &mdash;&nbsp; Gulf state's main AI firm can freely buy the chips and has a plan to become a U.S. company&nbsp; &mdash;&nbsp; The United Arab Emirates &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.wsj.com/world/middle-east/uae-ai-chips-iran-war-26c10d77?st=aqms3m&amp;reflink=desktopwebshare_permalink">The UAE gained broader US AI chip access after aiding the US in the Iran war, letting G42 buy freely for at least nine months; G42 plans to become a US company</a></b></span>&nbsp; &mdash;&nbsp; Gulf state's main AI firm can freely buy the chips and has a plan to become a U.S. company&nbsp; &mdash;&nbsp; The United Arab Emirates &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
 </item>
 
 <item>
@@ -32,7 +411,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.nytimes.com/2026/07/15/business/dealbook/neko-health-ek-funding.html?unlocked_article_code=1.x1A.7d69.epx5apQsdAIL&amp;smid=url-share"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260715/i2.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260715/p2#a260715p2" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Bernhard Warner / <a href="https://www.nytimes.com/">New York Times</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.nytimes.com/2026/07/15/business/dealbook/neko-health-ek-funding.html?unlocked_article_code=1.x1A.7d69.epx5apQsdAIL&amp;smid=url-share">Daniel Ek's Neko Health, which offers AI-based full-body scans, raised $700M co-led by Lightspeed and O.G. Venture Partners, sources say at a ~$7B valuation</a></b></span>&nbsp; &mdash;&nbsp; The health tech start-up co-founded by Spotify's Daniel Ek is worth billions more after a new $700 million funding round.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.nytimes.com/2026/07/15/business/dealbook/neko-health-ek-funding.html?unlocked_article_code=1.x1A.7d69.epx5apQsdAIL&amp;smid=url-share">Daniel Ek's Neko Health, which offers AI-based full-body scans, raised $700M co-led by Lightspeed and O.G. Venture Partners, sources say at a ~$7B valuation</a></b></span>&nbsp; &mdash;&nbsp; The health tech start-up co-founded by Spotify's Daniel Ek is worth billions more after a new $700 million funding round.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
 </item>
 
 <item>
@@ -42,7 +421,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: Regulatory/compliance signal — assess applicability and remediation timeline.</b><br/><a href="https://www.axios.com/pro/fintech-deals/2026/07/14/hadrius-22m-series-a-crv"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260715/i1.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260715/p1#a260715p1" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Ryan Lawler / <a href="https://www.axios.com/">Axios</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.axios.com/pro/fintech-deals/2026/07/14/hadrius-22m-series-a-crv">NYC-based Hadrius, which provides AI-native compliance tools for financial services, raised a $22M Series A led by CRV with participation from Y Combinator</a></b></span>&nbsp; &mdash;&nbsp; Hadrius, which makes compliance software for financial firms, raised a $22 million Series A, CEO Thomas Stewart tells Axios exclusively.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.axios.com/pro/fintech-deals/2026/07/14/hadrius-22m-series-a-crv">NYC-based Hadrius, which provides AI-native compliance tools for financial services, raised a $22M Series A led by CRV with participation from Y Combinator</a></b></span>&nbsp; &mdash;&nbsp; Hadrius, which makes compliance software for financial firms, raised a $22 million Series A, CEO Thomas Stewart tells Axios exclusively.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
 </item>
 
 <item>
@@ -52,7 +431,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.reuters.com/business/finance/stripe-advent-offer-buy-paypal-more-than-53-billion-sources-say-2026-07-15/"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260714/i59.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260714/p59#a260714p59" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Milana Vinn / <a href="http://www.reuters.com/">Reuters</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.reuters.com/business/finance/stripe-advent-offer-buy-paypal-more-than-53-billion-sources-say-2026-07-15/">Sources: Stripe and PE firm Advent International have jointly offered $60.50/share to acquire PayPal, a 28% premium to Tuesday's close, valuing it at $53B+</a></b></span>&nbsp; &mdash;&nbsp; Payments company Stripe and private equity firm Advent International have made a joint offer to acquire PayPal Holdings Inc (PYPL.O) &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.reuters.com/business/finance/stripe-advent-offer-buy-paypal-more-than-53-billion-sources-say-2026-07-15/">Sources: Stripe and PE firm Advent International have jointly offered $60.50/share to acquire PayPal, a 28% premium to Tuesday's close, valuing it at $53B+</a></b></span>&nbsp; &mdash;&nbsp; Payments company Stripe and private equity firm Advent International have made a joint offer to acquire PayPal Holdings Inc (PYPL.O) &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
 </item>
 
 <item>
@@ -62,7 +441,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://techcrunch.com/2026/07/14/openai-researcher-miles-wang-in-talks-to-launch-ai-drug-discovery-startup-valued-at-2b/"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260714/i58.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260714/p58#a260714p58" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Marina Temkin / <a href="http://techcrunch.com/">TechCrunch</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://techcrunch.com/2026/07/14/openai-researcher-miles-wang-in-talks-to-launch-ai-drug-discovery-startup-valued-at-2b/">Sources: OpenAI researcher Miles Wang is leaving the company to launch an AI drug discovery startup, and is in talks to raise $200M at a $2B valuation</a></b></span>&nbsp; &mdash;&nbsp; Miles Wang, an OpenAI researcher whose work includes using AI to accelerate scientific and biological discovery, is leaving the ChatGPT maker &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://techcrunch.com/2026/07/14/openai-researcher-miles-wang-in-talks-to-launch-ai-drug-discovery-startup-valued-at-2b/">Sources: OpenAI researcher Miles Wang is leaving the company to launch an AI drug discovery startup, and is in talks to raise $200M at a $2B valuation</a></b></span>&nbsp; &mdash;&nbsp; Miles Wang, an OpenAI researcher whose work includes using AI to accelerate scientific and biological discovery, is leaving the ChatGPT maker &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
 </item>
 
 <item>
@@ -72,7 +451,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: Vendor risk signal — evaluate roadmap and support stability.</b><br/><a href="https://www.wsj.com/tech/ai/meta-workers-accuse-it-of-using-ai-to-conduct-discriminatory-layoffs-bbb59963?st=J9dL9h&amp;reflink=desktopwebshare_permalink"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260714/i57.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260714/p57#a260714p57" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="https://www.wsj.com/">Wall Street Journal</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.wsj.com/tech/ai/meta-workers-accuse-it-of-using-ai-to-conduct-discriminatory-layoffs-bbb59963?st=J9dL9h&amp;reflink=desktopwebshare_permalink">Meta is sued by 26 current and former employees, who allege its use of AI in May layoffs unfairly targeted workers with disabilities or on protected leave</a></b></span>&nbsp; &mdash;&nbsp; Lawsuit alleges social-media company relied on AI that disproportionately targeted workers with disabilities or who were on medical or parental leave</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.wsj.com/tech/ai/meta-workers-accuse-it-of-using-ai-to-conduct-discriminatory-layoffs-bbb59963?st=J9dL9h&amp;reflink=desktopwebshare_permalink">Meta is sued by 26 current and former employees, who allege its use of AI in May layoffs unfairly targeted workers with disabilities or on protected leave</a></b></span>&nbsp; &mdash;&nbsp; Lawsuit alleges social-media company relied on AI that disproportionately targeted workers with disabilities or who were on medical or parental leave</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
 </item>
 
 <item>
@@ -82,7 +461,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.politico.com/news/2026/07/14/gop-governors-utilities-join-trump-data-center-pledge-00998098"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260714/i56.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260714/p56#a260714p56" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="http://www.politico.com/">Politico</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.politico.com/news/2026/07/14/gop-governors-utilities-join-trump-data-center-pledge-00998098">Sources: multiple GOP governors and large utilities are expected to join Trump's pledge for data center developers to cover their energy use and infrastructure</a></b></span>&nbsp; &mdash;&nbsp; President Donald Trump is expanding his data center pledge to include some Republican governors and several large utilities &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.politico.com/news/2026/07/14/gop-governors-utilities-join-trump-data-center-pledge-00998098">Sources: multiple GOP governors and large utilities are expected to join Trump's pledge for data center developers to cover their energy use and infrastructure</a></b></span>&nbsp; &mdash;&nbsp; President Donald Trump is expanding his data center pledge to include some Republican governors and several large utilities &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -225,7 +604,7 @@
 
 
 <p class="wp-block-paragraph"></p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -402,7 +781,7 @@
 
 
 <p class="wp-block-paragraph">“What needs to happen is simple,” he said. “Patching on a calendar is no longer a safe assumption in today’s threat landscape. Patching where and when needed versus scheduled is the only path forward.”</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
@@ -412,83 +791,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://www.nytimes.com/2026/07/14/business/energy-environment/pjm-electricity-prices-data-centers.html?unlocked_article_code=1.x1A.veya.E08V0yrXCYHw&amp;smid=url-share"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260714/i55.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260714/p55#a260714p55" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Ivan Penn / <a href="https://www.nytimes.com/">New York Times</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.nytimes.com/2026/07/14/business/energy-environment/pjm-electricity-prices-data-centers.html?unlocked_article_code=1.x1A.veya.E08V0yrXCYHw&amp;smid=url-share">Monitoring Analytics: PJM's recent electricity auction is expected to add $6.3B to customers' bills in 13 states and DC through 2029 due to data center demands</a></b></span>&nbsp; &mdash;&nbsp; A power auction conducted by a giant grid operator is expected to add $6.3 billion in additional charges to consumers and businesses &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 InstaLILY, which develops AI agents to automate sales, operations, and service workflows, raised a $60M Series B led by Energize Capital (Mike Wheatley/SiliconANGLE)</title>
-  <link>https://www.techmeme.com/260714/p54#a260714p54</link>
-  <pubDate>Wed, 15 Jul 2026 01:10:01 +0000</pubDate>
-  <source>Techmeme</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://siliconangle.com/2026/07/14/instalily-developer-ai-teammates-can-automate-complex-business-specific-work-raises-60m/"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260714/i54.jpg" vspace="4" /></a>
-<p><a href="https://www.techmeme.com/260714/p54#a260714p54" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Mike Wheatley / <a href="http://siliconangle.com/">SiliconANGLE</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://siliconangle.com/2026/07/14/instalily-developer-ai-teammates-can-automate-complex-business-specific-work-raises-60m/">InstaLILY, which develops AI agents to automate sales, operations, and service workflows, raised a $60M Series B led by Energize Capital</a></b></span>&nbsp; &mdash;&nbsp; Enterprise automation startup InstaLILY Inc. said today it has closed on a hefty $60 million Series B round of funding that brings its total amount raised to date to almost $100 million.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Why I&#x27;m using wired Android Auto when all the cool kids are switching to wireless</title>
-  <link>https://www.zdnet.com/article/why-im-using-wired-android-auto-when-all-the-cool-kids-are-switching-to-wireless/</link>
-  <pubDate>Wed, 15 Jul 2026 01:00:43 +0000</pubDate>
-  <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Sometimes, you have to dial back the tech to make ends meet.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Sources: CoreWeave is exploring the use of financial derivatives as a potential hedge against a future drop in memory and storage chip prices (Max A. Cherney/Reuters)</title>
-  <link>https://www.techmeme.com/260714/p53#a260714p53</link>
-  <pubDate>Wed, 15 Jul 2026 00:10:01 +0000</pubDate>
-  <source>Techmeme</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.reuters.com/world/ai-cloud-company-coreweave-explores-wall-street-playbook-hedge-memory-chip-price-2026-07-14/"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260714/i53.jpg" vspace="4" /></a>
-<p><a href="https://www.techmeme.com/260714/p53#a260714p53" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Max A. Cherney / <a href="http://www.reuters.com/">Reuters</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.reuters.com/world/ai-cloud-company-coreweave-explores-wall-street-playbook-hedge-memory-chip-price-2026-07-14/">Sources: CoreWeave is exploring the use of financial derivatives as a potential hedge against a future drop in memory and storage chip prices</a></b></span>&nbsp; &mdash;&nbsp; AI cloud computing company CoreWeave (CRWV.O) is exploring the use of financial derivatives as a potential hedge against a future drop in memory &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Study: social networks drove 5.7M+ visits to nudify sites between December 2025 and March 2026, with YouTube accounting for 1.82M and X for 1.3M visits (Ej Dickson/Wired)</title>
-  <link>https://www.techmeme.com/260714/p52#a260714p52</link>
-  <pubDate>Tue, 14 Jul 2026 23:35:04 +0000</pubDate>
-  <source>Techmeme</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://www.wired.com/story/youtube-and-x-have-become-gateways-to-nudify-apps/"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260714/i52.jpg" vspace="4" /></a>
-<p><a href="https://www.techmeme.com/260714/p52#a260714p52" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Ej Dickson / <a href="http://www.wired.com/">Wired</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.wired.com/story/youtube-and-x-have-become-gateways-to-nudify-apps/">Study: social networks drove 5.7M+ visits to nudify sites between December 2025 and March 2026, with YouTube accounting for 1.82M and X for 1.3M visits</a></b></span>&nbsp; &mdash;&nbsp; A new study found that social media platforms are referring people to sites where they can create nonconsensual, sexually explicit deepfakes for as little as $1 an image.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 OpenAI says Apple&#x27;s claim that OpenAI never responded to its concerns is false; emails: an Apple lawyer mixed up two OpenAI staffers in Apple&#x27;s initial outreach (David Ingram/NBC News)</title>
-  <link>https://www.techmeme.com/260714/p51#a260714p51</link>
-  <pubDate>Tue, 14 Jul 2026 22:40:01 +0000</pubDate>
-  <source>Techmeme</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://www.nbcnews.com/tech/apple/apple-openai-lawsuit-suit-trade-product-hardware-email-sam-altman-rcna587376"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260714/i51.jpg" vspace="4" /></a>
-<p><a href="https://www.techmeme.com/260714/p51#a260714p51" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> David Ingram / <a href="http://www.nbcnews.com/">NBC News</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.nbcnews.com/tech/apple/apple-openai-lawsuit-suit-trade-product-hardware-email-sam-altman-rcna587376">OpenAI says Apple's claim that OpenAI never responded to its concerns is false; emails: an Apple lawyer mixed up two OpenAI staffers in Apple's initial outreach</a></b></span>&nbsp; &mdash;&nbsp; A lawyer for Apple apologized for mixing up two OpenAI employees with the names Wang and Chang.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
-</item>
-
-<item>
-  <title>🟠 The Trump administration launches the &quot;Gold Eagle&quot; federal clearinghouse for sharing AI cyber threat information between the government and private sector (Derek B. Johnson/CyberScoop)</title>
-  <link>https://www.techmeme.com/260714/p50#a260714p50</link>
-  <pubDate>Tue, 14 Jul 2026 22:30:01 +0000</pubDate>
-  <source>Techmeme</source>
-  <description><![CDATA[<b>Why this matters: Regulatory/compliance signal — assess applicability and remediation timeline.</b><br/><a href="https://cyberscoop.com/trump-gold-eagle-ai-cyber-clearinghouse/"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260714/i50.jpg" vspace="4" /></a>
-<p><a href="https://www.techmeme.com/260714/p50#a260714p50" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Derek B. Johnson / <a href="https://cyberscoop.com/">CyberScoop</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://cyberscoop.com/trump-gold-eagle-ai-cyber-clearinghouse/">The Trump administration launches the &ldquo;Gold Eagle&rdquo; federal clearinghouse for sharing AI cyber threat information between the government and private sector</a></b></span>&nbsp; &mdash;&nbsp; The White House said the clearinghouse has already started to receive intelligence on vulnerabilities and prioritize patches.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Cybersecurity stocks rallied on Tuesday after IBM CEO Arvind Krishna flagged cyber fears as a top priority for customers; CrowdStrike jumped 12%, Okta rose 11% (Samantha Subin/CNBC)</title>
-  <link>https://www.techmeme.com/260714/p49#a260714p49</link>
-  <pubDate>Tue, 14 Jul 2026 22:20:01 +0000</pubDate>
-  <source>Techmeme</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://www.cnbc.com/2026/07/14/cybersecurity-stocks-ai-spending-mythos.html"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260714/i49.jpg" vspace="4" /></a>
-<p><a href="https://www.techmeme.com/260714/p49#a260714p49" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Samantha Subin / <a href="http://www.cnbc.com/">CNBC</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.cnbc.com/2026/07/14/cybersecurity-stocks-ai-spending-mythos.html">Cybersecurity stocks rallied on Tuesday after IBM CEO Arvind Krishna flagged cyber fears as a top priority for customers; CrowdStrike jumped 12%, Okta rose 11%</a></b></span>&nbsp; &mdash;&nbsp; Cybersecurity stocks jumped on Tuesday after IBM CEO Arvind Krishna flagged cyber fears as a top priority for customers in the company's preliminary second-quarter results.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 I&#x27;ve used the iOS 27 beta for a month: 7 ways the new Siri is dramatically better</title>
-  <link>https://www.zdnet.com/article/public-beta-ios-27-siri-ai-hands-on-testing/</link>
-  <pubDate>Tue, 14 Jul 2026 20:15:17 +0000</pubDate>
-  <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Siri AI is the star of iOS 27, and now most iPhone users can try it with the first public beta of the OS.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.nytimes.com/2026/07/14/business/energy-environment/pjm-electricity-prices-data-centers.html?unlocked_article_code=1.x1A.veya.E08V0yrXCYHw&amp;smid=url-share">Monitoring Analytics: PJM's recent electricity auction is expected to add $6.3B to customers' bills in 13 states and DC through 2029 due to data center demands</a></b></span>&nbsp; &mdash;&nbsp; A power auction conducted by a giant grid operator is expected to add $6.3 billion in additional charges to consumers and businesses &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
@@ -497,7 +800,7 @@
   <pubDate>Tue, 14 Jul 2026 17:06:35 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><p>The ColdFusion security defects could allow attackers to execute arbitrary code or elevate their privileges.</p>
-<p>The post <a href="https://www.securityweek.com/adobe-patches-critical-coldfusion-vulnerabilities/">Adobe Patches Critical ColdFusion Vulnerabilities</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 12h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/adobe-patches-critical-coldfusion-vulnerabilities/">Adobe Patches Critical ColdFusion Vulnerabilities</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 14h ago]]></description>
 </item>
 
 <item>
@@ -506,7 +809,7 @@
   <pubDate>Tue, 14 Jul 2026 13:00:00 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><p>A ClaudeBleed-linked vulnerability reportedly persists across eight patches, exposing potentially sensitive data to other extensions. </p>
-<p>The post <a href="https://www.securityweek.com/unpatched-claude-for-chrome-flaw-lets-extensions-read-gmail-calendar/">Unpatched Claude for Chrome Flaw Lets Extensions Read Gmail, Calendar</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 16h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/unpatched-claude-for-chrome-flaw-lets-extensions-read-gmail-calendar/">Unpatched Claude for Chrome Flaw Lets Extensions Read Gmail, Calendar</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 19h ago]]></description>
 </item>
 
 <item>
@@ -613,7 +916,7 @@
 
 
 <p class="wp-block-paragraph"><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><a href="https://www.cio.com/expert-contributor-network/"><strong>Want to join?</strong></a></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 17h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 20h ago]]></description>
 </item>
 
 <item>
@@ -622,7 +925,7 @@
   <pubDate>Tue, 14 Jul 2026 11:17:56 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><p>The flaws could allow attackers to access and modify data, and cause system unavailability and request-response desynchronization.</p>
-<p>The post <a href="https://www.securityweek.com/sap-patches-critical-vulnerabilities-in-netweaver-approuter-commerce-cloud/">SAP Patches Critical Vulnerabilities in NetWeaver, Approuter, Commerce Cloud</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 18h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/sap-patches-critical-vulnerabilities-in-netweaver-approuter-commerce-cloud/">SAP Patches Critical Vulnerabilities in NetWeaver, Approuter, Commerce Cloud</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 20h ago]]></description>
 </item>
 
 <item>
@@ -761,7 +1064,7 @@
 
 
 <p class="wp-block-paragraph"><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><a href="https://www.cio.com/expert-contributor-network/"><strong>Want to join?</strong></a></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 18h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 21h ago]]></description>
 </item>
 
 <item>
@@ -770,7 +1073,7 @@
   <pubDate>Tue, 14 Jul 2026 10:51:01 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/><p>Multiple state-sponsored APTs are compromising poorly secured devices across critical infrastructure sector networks.</p>
-<p>The post <a href="https://www.securityweek.com/us-allies-warn-of-russian-cyberattacks-targeting-critical-infrastructure-routers/">US, Allies Warn of Russian Cyberattacks Targeting Critical Infrastructure Routers</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 18h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/us-allies-warn-of-russian-cyberattacks-targeting-critical-infrastructure-routers/">US, Allies Warn of Russian Cyberattacks Targeting Critical Infrastructure Routers</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 21h ago]]></description>
 </item>
 
 <item>
@@ -1013,7 +1316,7 @@
 
 
 <p class="wp-block-paragraph"><em>Sacolick travelled to conferences mentioned in this article as a guest of Adobe, Appian, Atlassian, Domo, Nutanix, SAP, and Snowflake. In addition, he was hired by Quickbase to speak at its conference.</em></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 19h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 22h ago]]></description>
 </item>
 
 <item>
@@ -1118,7 +1421,7 @@
 
 
 <p class="wp-block-paragraph"><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><a href="https://www.cio.com/expert-contributor-network/"><strong>Want to join?</strong></a></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 19h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 22h ago]]></description>
 </item>
 
 <item>
@@ -1223,7 +1526,7 @@
 
 
 <p class="wp-block-paragraph">ZeroBEC found that some devices registered during its investigation had names beginning with “Forg365,” giving defenders a possible indicator of compromise.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 19h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 22h ago]]></description>
 </item>
 
 <item>
@@ -1336,16 +1639,7 @@
 
 
 <p class="wp-block-paragraph">“I always tell people that the code remembers what the organization forgot, because with people going and changing, people don’t remember what we wrote in the code, but the code remembers,” he adds. “The amazing tool that was missing before is we didn’t have an interpreter who understood what the code remembered. Now with AI, you have the interpreter.”</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 19h ago]]></description>
-</item>
-
-<item>
-  <title>🔴 Multiple Jscrambler Packages Impacted by Supply Chain Attack</title>
-  <link>https://www.securityweek.com/multiple-jscrambler-packages-impacted-by-supply-chain-attack/</link>
-  <pubDate>Tue, 14 Jul 2026 09:04:39 +0000</pubDate>
-  <source>SecurityWeek</source>
-  <description><![CDATA[<b>Why this matters: Supply chain risk — audit third-party dependencies and vendor access.</b><br/><p>A threat actor poisoned several Jscrambler NPM package versions to drop a cross-platform credential stealer.</p>
-<p>The post <a href="https://www.securityweek.com/multiple-jscrambler-packages-impacted-by-supply-chain-attack/">Multiple Jscrambler Packages Impacted by Supply Chain Attack</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 20h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 22h ago]]></description>
 </item>
 
 <item>
@@ -1458,7 +1752,7 @@
 
 
 <p class="wp-block-paragraph"><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><a href="https://www.cio.com/expert-contributor-network/"><strong>Want to join?</strong></a></p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 20h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 23h ago]]></description>
 </item>
 
 <item>
@@ -1862,7 +2156,7 @@
 
 
 <p class="wp-block-paragraph"><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><a href="https://www.cio.com/expert-contributor-network/"><strong>Want to join?</strong></a></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 20h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 23h ago]]></description>
 </item>
 
 <item>
@@ -1971,7 +2265,7 @@
 
 
 <p class="wp-block-paragraph">“The skill floor for running a ransomware operation dropped to the cost of running an agent,” Dray Agha, senior manager of tactical response at security firm Huntress, tells CSO. “Very mediocre cyber criminals can now ‘level up’ their impact from AI. That should worry defenders more than any single new technique, as it means more attackers, more often, against more of the long tail of unpatched, exposed infrastructure.”</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 22h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
@@ -4217,7 +4511,7 @@
 
 
 <hr class="wp-block-separator has-alpha-channel-opacity" />
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
 </item>
 
 <item>
@@ -4378,7 +4672,7 @@
 
 
 <hr class="wp-block-separator has-alpha-channel-opacity" />
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
 </item>
 
 <item>
@@ -4647,7 +4941,7 @@
 
 
 <p class="wp-block-paragraph">The real question is whether AI becomes another technology that rewards the organizations already best positioned to use it — or the first major security advance in years that helps those below the poverty line finally catch up.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
 </item>
 
 <item>
@@ -5102,113 +5396,6 @@
 </item>
 
 <item>
-  <title>🔵 Accelerating financial closes with help from AI agents: A pragmatic guide</title>
-  <link>https://www.cio.com/article/4195155/accelerating-financial-closes-with-help-from-ai-agents-a-pragmatic-guide.html</link>
-  <pubDate>Fri, 10 Jul 2026 11:00:00 +0000</pubDate>
-  <source>CIO.com</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><div id="remove_no_follow">
-		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
-					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
-						<div class="article-column__content">
-<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
-
-
-
-<p class="wp-block-paragraph">Historically, financial closes required were tedious, manual-intensive processes, which makes them excellent candidates for agentification. AI agents can handle much of the “dirty work” associated with integrating financial data from various sources, reconciling transactions and so on. That said, there are limits on how far <a href="https://www.ibm.com/think/topics/ai-agents">AI agents</a> can go in streamlining and accelerating the closing process. It’s unrealistic for businesses to remove humans from the picture entirely.</p>
-
-
-
-<p class="wp-block-paragraph">With this caveat in mind, here’s a look at practical approaches to driving more efficient financial closings with help from AI agents. To ground the conversation, I’ll focus on what the process might look like within environments based on SAP, although many of these lessons apply to any organization and tech stack.</p>
-
-
-
-<h2 class="wp-block-heading"><a></a>How AI agents can accelerate financial closes</h2>
-
-
-
-<p class="wp-block-paragraph">Although ERP systems like SAP house most or all of an organization’s financial data within a central system, closing out the books still tends to be a highly complex process, hampered by challenges like the following:</p>
-
-
-
-<ul class="wp-block-list">
-<li>Master Data reconciliation</li>
-
-
-
-<li>Working through huge volumes of journaling</li>
-
-
-
-<li>Identifying and resolving transaction reconciliation errors</li>
-
-
-
-<li>Ensuring compliance with governance and regulatory requirements</li>
-</ul>
-
-
-
-<p class="wp-block-paragraph">These are all areas where AI agents can help, even if <a href="https://www.sap.com/products/financial-management/advanced-financial-closing.html">SAP’s Advanced Financial Closin</a>g is used. For example, instead of requiring humans to assess each irregular transaction manually, businesses can employ agents to review the situation and suggest a resolution. Agents also excel at tasks like integrating multiple data sources, then identifying and addressing redundancies or inconsistencies across them.</p>
-
-
-
-<p class="wp-block-paragraph">Similarly, agents can continuously monitor financial workflows throughout the close cycle, flagging anomalies and potential bottlenecks before they delay reporting deadlines. They can automatically collect supporting documentation, validate data against predefined business rules and route exceptions to the appropriate stakeholders for review.</p>
-
-
-
-<p class="wp-block-paragraph">By reducing the amount of repetitive manual work required during closing, AI agents help finance teams focus on higher-value analysis and decision-making. This can lead to faster close times, improved accuracy and greater confidence in the integrity of financial reporting.</p>
-
-
-
-<h2 class="wp-block-heading"><a></a>The limitations of agents for closing the books</h2>
-
-
-
-<p class="wp-block-paragraph">That said, agents can’t handle every aspect of the closing process entirely on their own. Two key limitations apply. The first is that, as with any <a href="https://en.wikipedia.org/wiki/Large_language_model">LLM-powered technology</a>, agents are at risk of making inaccurate decisions or inferences. Businesses can’t blindly trust agents to interpret financial data accurately all of the time. A second factor is that, due to strict regulatory requirements, it’s essential in most cases for humans to sign off on financial accounts. Telling regulators or auditors that you know your books are accurate because an AI agent told you so is not a recipe for compliance success.</p>
-
-
-
-<p class="wp-block-paragraph">Because of these limitations, a healthy perspective on AI agents in financial closing contexts is to think of them as a way to improve visibility, agility and efficiency, not as a replacement for people. Agents can make recommendations, but humans need to be the ones who review, validate and sign off on any actions before they are final.</p>
-
-
-
-<h2 class="wp-block-heading"><a></a>Integrating AI agents into the closing process in SAP</h2>
-
-
-
-<p class="wp-block-paragraph">How can organizations actually take advantage of AI agents to help with closing?</p>
-
-
-
-<p class="wp-block-paragraph">The answer is complicated because every business’s books and closing process are different. This means that, despite the growing inventory of AI agents now available on platforms like SAP, it’s unrealistic to expect to “drag and drop” agents into existing closing workflows and have them do what they need.</p>
-
-
-
-<p class="wp-block-paragraph">Instead, many businesses will find that they need to build custom agentic solutions. Often, they’ll benefit from implementing multiple agents targeted at different tasks, e.g., accounts receivable, accounts payable and foreign currency exchanges, along with an <a href="https://learn.microsoft.com/en-us/azure/architecture/ai-ml/guide/ai-agent-design-patterns">orchestrator agent</a> that oversees them all. Each agent will need to be tailored for the organization’s data sources, governance and compliance obligations, etc.</p>
-
-
-
-<p class="wp-block-paragraph">In addition, organizations must carefully define how agents interact with financial systems and employees. While some activities can be automated end-to-end, others require human review and approval to satisfy internal controls and regulatory requirements. Establishing clear workflows, escalation paths and audit trails is essential to ensure that agent-driven processes remain transparent and trustworthy. Organizations also need to invest in testing and validation to confirm that agents produce accurate results and can handle exceptions without introducing new risks into the close process.</p>
-
-
-
-<p class="wp-block-paragraph">The fact that SAP itself is a complex platform, with native agentic capabilities fully supported only in the latest versions, further complicates the agentification of the closing process. Enterprises need to assess the agentic support level available within the SAP version they use, then determine the extent to which they can leverage SAP’s own agents versus working with third-party agents.</p>
-
-
-
-<p class="wp-block-paragraph">Another key consideration is data quality. AI agents can only perform effectively when they have access to complete, accurate and timely financial information. Organizations may need to improve <a href="https://cloud.google.com/learn/what-is-data-governance">data governance</a> practices and address integration challenges before agents can deliver meaningful value. The extent to which they can do this easily depends, in large part, on how healthy their underlying SAP data governance practices are.</p>
-
-
-
-<p class="wp-block-paragraph">All of the above means that taking advantage of agents to accelerate closes and other financial workflows within SAP is no mean feat. It requires deep technical expertise in both agentic technology and the complex SAP software portfolio. But the investment is worth it for organizations seeking to reduce the uncertainty and slowness traditionally associated with closing the books. Over time, well-designed agentic workflows can help finance teams spend less time on manual reconciliation and exception handling while enabling faster, more predictable financial close cycles.</p>
-
-
-
-<p class="wp-block-paragraph"><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><a href="https://www.cio.com/expert-contributor-network/"><strong>Want to join?</strong></a></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4d ago]]></description>
-</item>
-
-<item>
   <title>🔴 The business case for burning down security debt: A practical approach for CISOs</title>
   <link>https://www.csoonline.com/article/4195135/the-business-case-for-burning-down-security-debt-a-practical-approach-for-cisos.html</link>
   <pubDate>Fri, 10 Jul 2026 09:00:00 +0000</pubDate>
@@ -5608,7 +5795,7 @@
 
 
 <p class="wp-block-paragraph"><em><a href="https://www.computerworld.es/profile/victor-manuel-fernandez/">Víctor Manuel Fernández</a> attending Engage 2026 as a guest of Check Point Software.</em></p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 4d ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 5d ago]]></description>
 </item>
 
 <item>
@@ -5912,173 +6099,6 @@
 
 <p class="wp-block-paragraph">“Nobody will demand Cyber Shield-compatible products, because there is no operating standard to buy against,” he said. “What changes first is the criteria vocabulary. Serious buyers no longer ask whether a tool has agentic AI. They ask what it is permitted to change.”</p>
 </div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 5d ago]]></description>
-</item>
-
-<item>
-  <title>🟠 Agentic AI identity: A 6-stage maturity model for non-human identities</title>
-  <link>https://www.csoonline.com/article/4194548/agentic-ai-identity-a-6-stage-maturity-model-for-non-human-identities.html</link>
-  <pubDate>Thu, 09 Jul 2026 10:00:00 +0000</pubDate>
-  <source>CSO Online</source>
-  <description><![CDATA[<b>Why this matters: Supply chain risk — audit third-party dependencies and vendor access.</b><br/><div id="remove_no_follow">
-		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
-					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
-						<div class="article-column__content">
-<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
-
-
-
-<p class="wp-block-paragraph">In a client engagement last year, an LLM-based deployment agent with standing access to a production Kubernetes cluster triggered a four-hour outage through a malformed configuration push. In the IAM, the agent appeared as a service account with a long-lived API key, no MFA, no scoped revocation path. When the incident review team asked which human had authorized the agent’s last action, no one in the room could answer. I have watched a version of that question go unanswered in three engagements over the past year, in three different sectors, with three different vendor stacks.</p>
-
-
-
-<p class="wp-block-paragraph">Every CISO deck right now contains a slide about agentic AI. Far fewer contain a slide about who, in identity terms, these agents actually are. That gap is the more dangerous one. The first slide is a strategy question. The second is a control question — and it is the one your auditors, your incident responders and your board will eventually ask. <a href="https://www.gartner.com/en/newsroom/press-releases/2026-02-05-gartner-identifies-the-top-cybersecurity-trends-for-2026">Gartner’s Top Cybersecurity Trends 2026</a>, published by Director Analyst Alex Michaels, names both halves of that gap — agentic AI oversight (Trend 1) and IAM adaptation to AI agents (Trend 4) — as the forces redefining cyber risk this year.</p>
-
-
-
-<p class="wp-block-paragraph">This piece sets out a six-stage maturity model for non-human and agent-based identities (NHIs), the six minimum requirements that have to be met before any production deployment is defensible and the single most consequential reporting decision in the access-and-identity dimension: refusing the arithmetic mean across human and non-human identity governance.</p>
-
-
-
-<h2 class="wp-block-heading" id="why-agent-based-systems-break-the-existing-identity-model">Why agent-based systems break the existing identity model</h2>
-
-
-
-<p class="wp-block-paragraph">A conventional service account performs a narrow, predictable task: it fetches a backup, runs a scheduled report, signs a build artifact. Its scope is fixed at design time. The controls around it — rotation, vaulting, audit — are well-understood.</p>
-
-
-
-<p class="wp-block-paragraph">An agent-based system does not work this way. It receives an intent, decomposes it into steps, calls whichever tools or APIs it judges appropriate and produces an outcome that was not specified action-by-action in advance. KuppingerCole’s 2026 Leadership Compass on Non-Human Identity Management notes that NHIs now outnumber human users in many enterprise environments, in some cases by a factor of 25 to 50. The same compass, authored under Principal Analyst Martin Kuppinger, observes that the tooling built around joiner-mover-leaver lifecycles was never designed to discover, attribute or govern these identities at that scale.</p>
-
-
-
-<p class="wp-block-paragraph">The <a href="https://genai.owasp.org/">OWASP GenAI Security Project</a> has catalogued the resulting attack surface in two iterations — the Agentic AI Threats &amp; Mitigations taxonomy in February 2025 and the more operational OWASP Top 10 for Agentic Applications later that year, categories ASI01 through ASI10. The notable finding is that three of the four highest-rated risks are identity questions: tool misuse and exploitation (ASI02), identity and privilege abuse including delegated and inherited trust (ASI03) and rogue agents that act outside their intended behavior (ASI10). A fourth, agentic supply chain vulnerabilities (ASI04), is identity adjacent.</p>
-
-
-
-<p class="wp-block-paragraph">CISA’s first joint Five Eyes advisory on the topic — <a href="https://www.cisa.gov/resources-tools/resources/careful-adoption-agentic-ai-services">Careful Adoption of Agentic AI Services</a>, published 1 May 2026 with NSA, the Australian Signals Directorate’s ACSC, the Canadian Centre for Cyber Security, NCSC-NZ and NCSC-UK — converges on the same conclusion. Privilege risk is named the foundational concern. The Center for Internet Security followed with its own report on prompt injection as the top compounding risk in April 2026, and NIST’s AI Agent Standards Initiative, launched February 2026, is now drafting the formal standards that will sit alongside this guidance.</p>
-
-
-
-<p class="wp-block-paragraph">In other words, the dominant risk class introduced by agentic AI is not novel cryptography or some new exploit primitive. It is the unbounded scope of an identity that the existing IAM model was never asked to govern.</p>
-
-
-
-<h2 class="wp-block-heading" id="six-minimum-requirements-before-any-agent-goes-to-production">Six minimum requirements before any agent goes to production</h2>
-
-
-
-<p class="wp-block-paragraph">Before any maturity discussion is useful, there is a floor. The following six requirements mark the line below which an agent-based system is not responsibly deployable in an enterprise environment. They are derived from incidents and audit findings I have collected across pharma, energy, finance and manufacturing engagements, and they are technically feasible on modern IAM and PAM platforms — though rarely on the IAM stacks most enterprises actually have today.</p>
-
-
-
-<ul class="wp-block-list">
-<li>Each agent receives a uniquely attributable non-human identity. Shared service accounts across multiple agents, or shared between an agent and a human administrator, are not acceptable.</li>
-
-
-
-<li>Permissions are granted under an on-behalf-of model. The agent acts on the authority of a named human principal, inheriting that principal’s permissions, scoped to a defined purpose. It never acts from its own standing authority.</li>
-
-
-
-<li>No long-lived credentials. No API key valid for more than an hour. No embedded secrets in code. Short-lived, context-bound credentials only, revocable on anomaly.</li>
-
-
-
-<li>Complete audit trail through SIEM integration. Every agent action is logged with timestamp, executing identity, instructing human principal, input context and outcome.</li>
-
-
-
-<li>Continuous re-authentication. For long-running agents, identity is re-validated risk-based at regular intervals — not just at session start.</li>
-
-
-
-<li>Real-time revocation. The capability to disconnect an agent from systems within seconds is not optional. It is the only control that actually contains an agent-based incident in flight.</li>
-</ul>
-
-
-
-<p class="wp-block-paragraph">An organization that cannot meet all six does not have an agent governance problem. It has a deployment readiness problem. The model below assumes these are in place by Stage 3; anything earlier is the discovery phase.</p>
-
-
-
-<h2 class="wp-block-heading" id="the-six-stage-nhi-maturity-model">The six-stage NHI maturity model</h2>
-
-
-
-<p class="wp-block-paragraph">Most enterprise maturity scales measure the access-and-identity dimension against the yardstick of human identity: is there central IAM, is MFA enforced for privileged access, does the joiner-mover-leaver lifecycle work? These remain the right questions, but they stop short. An organization that scores Stage 4 on human identity governance and Stage 1 on agent governance does not have a mature identity practice. It has a well-lit half and a blind half.</p>
-
-
-
-<p class="wp-block-paragraph">The following six-stage scale is cumulative — each stage assumes everything below it. The threshold of responsibility sits at Stage 3. In my view, production deployment of agent-based systems below Stage 3 is not defensible to a board, a regulator or an incident review.</p>
-
-
-
-<figure class="wp-block-table"><div class="overflow-table-wrapper"><table class="has-fixed-layout"><thead><tr><td><strong>Stage</strong></td><td><strong>Label</strong></td><td><strong>Criterion for non-human / agent-based identities</strong></td><td><strong>Audit survivability</strong></td></tr></thead><tbody><tr><td><strong>0</strong></td><td><strong>Unrecognized</strong></td><td>Non-human identities exist but are not in the inventory. Shared service accounts, long-lived keys, no audit trail.</td><td>No — agent activity is invisible to forensics.</td></tr><tr><td><strong>1</strong></td><td><strong>Visible</strong></td><td>Identities are inventoried and assigned to an asset class, but not yet under independent governance.</td><td>No — no per-agent accountability.</td></tr><tr><td><strong>2</strong></td><td><strong>Unique</strong></td><td>Each identity is uniquely attributable (no shared accounts); initial lifecycle rules exist but are applied inconsistently.</td><td>Partial — who acted is answerable; on whose authority is not.</td></tr><tr><td><strong>3</strong></td><td><strong>Controlled</strong></td><td>The six minimum requirements are fully met: on-behalf-of model, short-lived credentials, SIEM audit trail, real-time revocation.</td><td>Yes — minimum defensible posture.</td></tr><tr><td><strong>4</strong></td><td><strong>Bounded and monitored</strong></td><td>The agent’s action is bounded; every action is reviewable and — where the process allows — reversible. Agent activity metrics are evaluated, not just collected.</td><td>Yes — containment is provable.</td></tr><tr><td><strong>5</strong></td><td><strong>Self-regulating</strong></td><td>Anomalies in agent behavior are detected automatically and trigger risk-based pause or revocation. Each agent has a named accountable owner.</td><td>Yes — state of the art.</td></tr></tbody></table> </div></figure>
-
-
-
-<p class="wp-block-paragraph">Stages 4 and 5 deserve unpacking because they are where the model departs from access control and begins to govern behavior. Bounded means the agent’s mandate has explicit limits it cannot act outside of. Reviewable means every action is logged with intent, execution and result. Reversible means an action can be rolled back before it produces irreversible effect — a hard constraint in any environment where actions touch physical processes, financial transactions or external commitments. Self-regulating means the system detects anomalies in agent behavior and intervenes before a human reasonably could.</p>
-
-
-
-<h2 class="wp-block-heading" id="the-human-in-the-loop-is-not-automatically-governance">The ‘human in the loop’ is not automatically governance</h2>
-
-
-
-<p class="wp-block-paragraph">One misconception consistently overrates organizations’ agent governance. The presence of a human in the decision loop is widely treated as sufficient oversight. It is not. If a human is asked to approve hundreds or thousands of agent actions without the time to inspect each one, what exists is not control but an approval automation with a human signature on it. Human review does not scale to the action volume of an autonomous system.</p>
-
-
-
-<p class="wp-block-paragraph">A mature governance posture acknowledges this. It moves control from per-action approval to structural constraint: bound what the agent can do at all, monitor its behavior for anomaly and ensure that oversight is loyal to the principal, not to the executing system. An organization that rests its agent governance entirely on human per-action approvals does not reach Stage 4 of the model, regardless of how thoroughly those approvals are documented. Stage 4 requires structural bounding, not scaling handwork.</p>
-
-
-
-<h2 class="wp-block-heading" id="owasp-as-an-audit-ready-evidence-base">OWASP as an audit-ready evidence base</h2>
-
-
-
-<p class="wp-block-paragraph">Maturity assessment risks drifting into subjective self-rating. The OWASP categories cited above can be operationalized into audit questions that anchor each stage in checkable evidence:</p>
-
-
-
-<figure class="wp-block-table"><div class="overflow-table-wrapper"><table class="has-fixed-layout"><thead><tr><td><strong>OWASP attack surface (Top 10 for agentic applications)</strong></td><td><strong>Audit question for maturity assessment</strong></td><td><strong>Met from stage</strong></td></tr></thead><tbody><tr><td>ASI03 — Identity and privilege abuse</td><td>Does each agent have a unique identity, with no shared accounts?</td><td><strong>2</strong></td></tr><tr><td>ASI02 — Tool misuse and exploitation</td><td>Are the interfaces an agent is permitted to use explicitly bounded?</td><td><strong>4</strong></td></tr><tr><td>ASI01 — Goal hijack</td><td>Is each agent’s mandate clearly bounded and protected against manipulation?</td><td><strong>4</strong></td></tr><tr><td>ASI04 — Agentic supply chain vulnerability</td><td>Is the agent’s software composition documented via SBOM?</td><td><strong>4</strong></td></tr><tr><td>ASI10 — Rogue agent</td><td>Are anomalies in agent behavior detected and routed to pause or revoke?</td><td><strong>5</strong></td></tr></tbody></table> </div></figure>
-
-
-
-<p class="wp-block-paragraph">The column on the right matters. A common rating error is to grade an organization high because it has handled the easy requirements — unique identities, basic logging — without addressing the demanding ones. Tying the upper stages to the difficult criteria prevents that inflation.</p>
-
-
-
-<h2 class="wp-block-heading" id="report-human-and-non-human-identity-separately">Report human and non-human identity separately</h2>
-
-
-
-<p class="wp-block-paragraph">The single most consequential reporting decision is to refuse the arithmetic mean. The access-and-identity dimension on a maturity radar should not collapse a Stage 4 human-identity practice and a Stage 1 agent-identity practice into a reassuring middle number. Both ratings belong on the same axis, but they belong reported separately.</p>
-
-
-
-<p class="wp-block-paragraph">A representative finding from current engagements: human identity governance at Stage 4 — central IAM, MFA, lifecycle managed — and agent governance at Stage 1, with agents recently inventoried but still authenticating via long-lived API keys against shared service accounts, without their own audit trail. The combined average would read Stage 2 to 3 and look acceptable. The separate reporting reveals that the unmanaged half is precisely the identity class with the largest and least predictable scope of action. That visibility is what triggers the prioritized roadmap action; an aggregated score buries it.</p>
-
-
-
-<h2 class="wp-block-heading" id="the-named-accountable-owner-test">The named-accountable-owner test</h2>
-
-
-
-<p class="wp-block-paragraph">If I run only one diagnostic in a new engagement, this is the one. For every production agent-based system in the environment, ask: who, by name, is accountable if this agent causes harm? An agent without a named accountable owner is the non-human counterpart of the workstation everyone uses, and no one owns. Stage 5 of the model formally requires a named accountable owner per deployed agent. The reason is operational, not bureaucratic: the question ‘who is responsible for this system?’ must be answered before the incident, not during it.</p>
-
-
-
-<p class="wp-block-paragraph">In practice, that accountability binds best to the role that already carries the operational risk of the affected process — typically the asset owner in the business function. Anchoring it there prevents agent-based systems from drifting into the organizational gray zone between IT, security and the business, which is exactly where unattributed action originates.</p>
-
-
-
-<p class="wp-block-paragraph">The maturity model in this article is a starting structure. The honest first step in adopting it is not to score well. It is to score truthfully, report human and non-human identity governance separately and treat the gap between them as the first item on the security roadmap for the agentic-AI period — before the next agent goes to production.</p>
-
-
-
-<p class="wp-block-paragraph"><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><strong><a href="https://www.csoonline.com/expert-contributor-network/">Want to join?</a></strong></p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5d ago]]></description>
 </item>
 
 </channel>

@@ -1,25 +1,30 @@
 # IT Weekly Intelligence Briefing
 **Period:** July 08 – July 15, 2026  
-**Generated:** 2026-07-15 05:28 UTC  
+**Generated:** 2026-07-15 08:04 UTC  
 **Items reviewed:** 138  
 
 ## ⚡ Top Actions This Week
 
 1. **Validate backups, confirm EDR coverage, and brief incident response team.**  
-   _US sanctions VPN, malware providers for enabling ransomware attacks_  
+   _US charges alleged operators of Russian bulletproof hosting service_  
    Source: BleepingComputer  
 
 2. **Validate backups, confirm EDR coverage, and brief incident response team.**  
-   _U.S. Sanctions First VPN Service and Malware Cryptor Seller Over Ransomware Support_  
-   Source: The Hacker News  
+   _US sanctions VPN, malware providers for enabling ransomware attacks_  
+   Source: BleepingComputer  
 
 3. **Validate backups, confirm EDR coverage, and brief incident response team.**  
-   _⚡ Weekly Recap: ShareFile Threat, Citrix Bleed 2 Ransomware, AI Coding Attacks, and More_  
+   _U.S. Sanctions First VPN Service and Malware Cryptor Seller Over Ransomware Support_  
    Source: The Hacker News  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [US charges alleged operators of Russian bulletproof hosting service](https://www.bleepingcomputer.com/news/security/us-charges-alleged-russian-bulletproof-hosting-service-operators/)
+**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jul 15  
+**Why it matters:** Elevated ransomware risk across the sector.  
+**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
 
 ### [US sanctions VPN, malware providers for enabling ransomware attacks](https://www.bleepingcomputer.com/news/security/us-sanctions-vpn-malware-providers-linked-to-ransomware-gangs/)
 **Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jul 14  
@@ -46,38 +51,33 @@
 **Why it matters:** Elevated ransomware risk across the sector.  
 **Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
 
-### [GodDamn Ransomware Uses PoisonX Driver to Disable Endpoint Defenses](https://thehackernews.com/2026/07/goddamn-ransomware-uses-poisonx-driver.html)
-**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Jul 09  
-**Why it matters:** Elevated ransomware risk across the sector.  
-**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
-
 ---
 
 ## 🟠 Important — Review This Week
 
-- [SonicWall warns of SMA1000 flaws exploited in zero-day attacks, patch now](https://www.bleepingcomputer.com/news/security/sonicwall-warns-of-sma1000-flaws-exploited-in-zero-day-attacks-patch-now/)  
-  **BleepingComputer** · Jul 14 · _General awareness item._  
+- [CVE-2026-58253 NATS Server: Route API Auth Bypass](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-58253)  
+  **Microsoft Security Response Center (MSRC)** · Jul 15 · _General awareness item._  
 
-- [Microsoft Patches Record 622 Flaws, Including Two Zero-Days Under Active Attack](https://thehackernews.com/2026/07/microsoft-patches-record-622-flaws.html)  
-  **The Hacker News** · Jul 14 · _General awareness item._  
+- [CVE-2026-58209 NATS Server: MQTT retained and QoS replay bypass subscribe deny filters](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-58209)  
+  **Microsoft Security Response Center (MSRC)** · Jul 15 · _General awareness item._  
 
-- [Microsoft Patches a Record 570 Security Flaws](https://krebsonsecurity.com/2026/07/microsoft-patches-a-record-570-security-flaws/)  
-  **Krebs on Security** · Jul 14 · _General awareness item._  
+- [CVE-2026-58252 NATS Server: Subscribe Authz Bypass via Wildcard-Overlap](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-58252)  
+  **Microsoft Security Response Center (MSRC)** · Jul 15 · _General awareness item._  
 
-- [Microsoft Patch Tuesday July 2026 - The AI Acopolypse is Here , (Tue, Jul 14th)](https://isc.sans.edu/diary/rss/33154)  
-  **SANS Internet Storm Center** · Jul 14 · _General awareness item._  
+- [CVE-2026-58250 NATS Server: Pre-auth server crash via double INFO in leafnode handshake](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-58250)  
+  **Microsoft Security Response Center (MSRC)** · Jul 15 · _General awareness item._  
 
-- [Microsoft releases Windows 10 KB5099539 extended security update](https://www.bleepingcomputer.com/news/microsoft/microsoft-releases-windows-10-kb5099539-extended-security-update/)  
-  **BleepingComputer** · Jul 14 · _General awareness item._  
+- [CVE-2026-58208 NATS Server: MQTT-over-WebSocket Path Can Crash WebSocket-Only JetStream Servers Before MQTT Is Enabled](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-58208)  
+  **Microsoft Security Response Center (MSRC)** · Jul 15 · _General awareness item._  
 
-- [SAP Patches CVSS 9.9 NetWeaver ABAP Flaw That Could Expose or Modify Data](https://thehackernews.com/2026/07/sap-patches-cvss-99-netweaver-abap-flaw.html)  
-  **The Hacker News** · Jul 14 · _General awareness item._  
+- [CVE-2026-58251 NATS Server: Queue Subscribe Authz Bypass](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-58251)  
+  **Microsoft Security Response Center (MSRC)** · Jul 15 · _General awareness item._  
 
-- [Microsoft July 2026 Patch Tuesday fixes massive 570 flaws, 3 zero-days](https://www.bleepingcomputer.com/news/microsoft/microsoft-july-2026-patch-tuesday-fixes-massive-570-flaws-3-zero-days/)  
-  **BleepingComputer** · Jul 14 · _General awareness item._  
+- [CVE-2026-58207 NATS Server: Remote crash via integer overflow in Connz pagination](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-58207)  
+  **Microsoft Security Response Center (MSRC)** · Jul 15 · _General awareness item._  
 
-- [Progress confirms ShareFile zero-day flaw behind Storage Zone shutdown](https://www.bleepingcomputer.com/news/security/progress-confirms-sharefile-zero-day-flaw-behind-storage-zone-shutdown/)  
-  **BleepingComputer** · Jul 14 · _General awareness item._  
+- [CVE-2026-56288 NULL Pointer Dereference in GNU patch](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-56288)  
+  **Microsoft Security Response Center (MSRC)** · Jul 15 · _General awareness item._  
 
 ---
 
@@ -92,4 +92,4 @@
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 6 critical · 77 important · 55 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 7 critical · 78 important · 53 FYI_
