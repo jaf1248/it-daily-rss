@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
-**Period:** July 07 – July 14, 2026  
-**Generated:** 2026-07-14 23:03 UTC  
+**Period:** July 08 – July 15, 2026  
+**Generated:** 2026-07-15 02:08 UTC  
 **Items reviewed:** 138  
 
 ## ⚡ Top Actions This Week
@@ -83,12 +83,12 @@
 
 ## 🔵 FYI — General Awareness
 
+- [ISC Stormcast For Wednesday, July 15th, 2026 https://isc.sans.edu/podcastdetail/10008, (Wed, Jul 15th)](https://isc.sans.edu/diary/rss/33158) — SANS Internet Storm Center
+- [Recent DShield SIEM Update, (Tue, Jul 14th)](https://isc.sans.edu/diary/rss/33156) — SANS Internet Storm Center
 - [Spanish Police take down €140 million cyber fraud ring, arrest four](https://www.bleepingcomputer.com/news/security/spanish-police-take-down-140-million-cyber-fraud-ring-arrest-four/) — BleepingComputer
 - [Nearly 300 GitHub repos pose as legit software to push malware](https://www.bleepingcomputer.com/news/security/nearly-300-github-repos-pose-as-legit-software-to-push-malware/) — BleepingComputer
 - [Windows 11 KB5101650 & KB5099414 cumulative updates released](https://www.bleepingcomputer.com/news/microsoft/windows-11-kb5101650-and-kb5099414-cumulative-updates-released/) — BleepingComputer
 - [Researchers Say Claude for Chrome Flaw Lets Rogue Extensions Trigger Gmail Reads](https://thehackernews.com/2026/07/claude-for-chrome-flaw-lets-other.html) — The Hacker News
-- [LabubaRAT Masquerades as NVIDIA Software to Control Windows Hosts](https://thehackernews.com/2026/07/labubarat-masquerades-as-nvidia.html) — The Hacker News
-- [LastPass, Bitwarden users targeted with fake security alerts](https://www.bleepingcomputer.com/news/security/lastpass-bitwarden-users-targeted-with-fake-security-alerts/) — BleepingComputer
 
 ---
 
