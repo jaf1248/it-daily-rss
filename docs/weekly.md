@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
 **Period:** July 08 – July 15, 2026  
-**Generated:** 2026-07-15 14:47 UTC  
+**Generated:** 2026-07-15 16:19 UTC  
 **Items reviewed:** 137  
 
 ## ⚡ Top Actions This Week
@@ -83,12 +83,12 @@
 
 ## 🔵 FYI — General Awareness
 
+- [​    ​AsyncAPI npm packages infected with credential-stealing malware](https://www.bleepingcomputer.com/news/security/-asyncapi-npm-packages-infected-with-credential-stealing-malware/) — BleepingComputer
 - [SASE Has An AI Blind Spot. Inspecting Packets Is No Longer Enough.](https://thehackernews.com/2026/07/sase-has-ai-blind-spot-inspecting.html) — The Hacker News
 - [New Webinar: Closing the Approval Gap in AI-Era Ad Tech](https://thehackernews.com/2026/07/new-webinar-closing-approval-gap-in-ai.html) — The Hacker News
 - [Cursor Flaw Lets Malicious Cloned Repositories Trigger Windows Code Execution](https://thehackernews.com/2026/07/cursor-flaw-lets-malicious-cloned.html) — The Hacker News
 - [Compromised AsyncAPI npm Packages Deliver Multi-Stage Botnet Malware](https://thehackernews.com/2026/07/compromised-asyncapi-npm-packages.html) — The Hacker News
 - [ISC Stormcast For Wednesday, July 15th, 2026 https://isc.sans.edu/podcastdetail/10008, (Wed, Jul 15th)](https://isc.sans.edu/diary/rss/33158) — SANS Internet Storm Center
-- [Recent DShield SIEM Update, (Tue, Jul 14th)](https://isc.sans.edu/diary/rss/33156) — SANS Internet Storm Center
 
 ---
 
