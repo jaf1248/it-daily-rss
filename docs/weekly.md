@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
 **Period:** July 08 – July 15, 2026  
-**Generated:** 2026-07-15 21:57 UTC  
+**Generated:** 2026-07-15 22:59 UTC  
 **Items reviewed:** 137  
 
 ## ⚡ Top Actions This Week
@@ -64,13 +64,13 @@
 - [CVE-2026-58644 Microsoft SharePoint Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-58644)  
   **Microsoft Security Response Center (MSRC)** · Jul 15 · _General awareness item._  
 
-- [CVE-2026-56182 Windows NTFS Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-56182)  
+- [CVE-2026-50341 Windows NTFS Information Disclosure Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-50341)  
   **Microsoft Security Response Center (MSRC)** · Jul 15 · _General awareness item._  
 
 - [CVE-2026-50375 DirectX Graphics Kernel Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-50375)  
   **Microsoft Security Response Center (MSRC)** · Jul 15 · _General awareness item._  
 
-- [CVE-2026-50341 Windows NTFS Information Disclosure Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-50341)  
+- [CVE-2026-56182 Windows NTFS Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-56182)  
   **Microsoft Security Response Center (MSRC)** · Jul 15 · _General awareness item._  
 
 - [CVE-2026-45637 Microsoft DWM Core Library Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45637)  
