@@ -3,89 +3,14 @@
 <channel>
   <title>Joe SysAdmin and Operations</title>
   <description>Operational IT changes, Microsoft updates, outages, and infrastructure issues.</description>
-  <lastBuildDate>Thu, 16 Jul 2026 13:43:20 +0000</lastBuildDate>
+  <lastBuildDate>Thu, 16 Jul 2026 15:36:51 +0000</lastBuildDate>
   
 <item>
   <title>🔵 Windows 11 24H2 Home and Pro reach end of support in 90 days</title>
   <link>https://www.bleepingcomputer.com/news/microsoft/windows-11-24h2-home-and-pro-reach-end-of-support-in-90-days/</link>
   <pubDate>Thu, 16 Jul 2026 11:59:24 +0000</pubDate>
   <source>BleepingComputer</source>
-  <description><![CDATA[<b>Why this matters: Operational impact possible — watch for changes that generate tickets.</b><br/>Microsoft announced on Wednesday that systems running Windows 10 Enterprise LTSB 2016 and Home and Pro editions of Windows 11 24H2 will stop receiving updates in three months. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 When Compute Sits and Waits: Fixing the Hidden Storage Bottleneck in EDA and HPC with Azure NetApp Files</title>
-  <link>https://techcommunity.microsoft.com/t5/itops-talk-blog/when-compute-sits-and-waits-fixing-the-hidden-storage-bottleneck/ba-p/4534550</link>
-  <pubDate>Thu, 16 Jul 2026 07:00:00 +0000</pubDate>
-  <source>Microsoft Tech Community IT Ops</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><p>Hello Folks!</p>
-<p>If you have ever stared at an HPC pipeline and wondered why the queue depth keeps climbing while every CPU graph looks lazy, this session from the Microsoft Azure Infrastructure Summit 2026 is going to feel very familiar. Ron Hogue from the Azure Storage team and Ranga Sankar from NetApp spend twenty-seven minutes diagnosing the problem that nobody wants to admit out loud, that the bottleneck is not compute, not the scheduler, and not licenses. It is storage. And then they walk through exactly how Azure NetApp Files (ANF) solves it.</p>
-<p>📺 <strong>Watch the session:</strong></p>
-<p>&nbsp;</p>
-<div class="lia-embeded-content" contenteditable="false">
-</div>
-<h2>Why IT Pros Should Care</h2>
-<p>If you support a semiconductor, simulation, rendering, or scientific computing team, you have lived this story. Engineers ask for more cores. You buy them. Wall-clock times barely move. Managers then ask for more tool licenses, because surely that must be the constraint. Spoiler, it usually is not.</p>
-<p>Here is why this matters to anyone running shared infrastructure on Azure:</p>
-<ul>
-<li>EDA and HPC pipelines hammer storage with millions of tiny reads and writes, metadata operations like file creation, rename, and unlink, all happening concurrently across thousands of processes.</li>
-<li>That pattern breaks generic cloud file storage that was tuned for large sequential I/O.</li>
-<li>ANF brings the same NetApp ONTAP data services that EDA teams have used on-premises for decades, delivered as a native Azure service.</li>
-<li>You can move design environments to Azure without re-architecting tools, schedulers, or scratch path conventions.</li>
-<li>The economics changed in the last twelve months with the Flexible service level and Cool Access, so the old “ANF is too expensive for scratch” argument deserves a fresh look.</li>
-</ul>
-<p>In short, if your job involves keeping expensive engineers and expensive licenses busy, the storage layer deserves your attention.</p>
-<h2>What Azure NetApp Files Brings to EDA and HPC, the technical overview</h2>
-<p>ANF is a first-party Azure service running NetApp ONTAP on bare-metal infrastructure inside Azure datacenters. It speaks NFS v3, NFS v4.1, and SMB, with dual-protocol options, and it preserves the file semantics that EDA tools assume. Things like POSIX permissions, fast metadata operations, snapshots, and consistent low latency.</p>
-<p>Ron and Ranga framed the session in eight layers (Problem, Foundation, Accelerator, Scale, AI Ready, Guardrails, Optimize, Proof). Three pieces did most of the heavy lifting.</p>
-<p><strong>Foundation, Migration Assistant with SnapMirror.</strong> This is how you get the data into Azure without rewriting your inventory. SnapMirror replicates from on-premises ONTAP or Cloud Volumes ONTAP into ANF while preserving metadata, permissions, snapshots, and directory structure, with continuous synchronization and minimal downtime. For EDA flows where a missing ACL can invalidate an entire run, that fidelity is not optional.</p>
-<p><strong>Accelerator, Cache Volumes.</strong> Built on NetApp FlexCache, these volumes front your authoritative dataset (whether it lives in on-prem ONTAP or in Cloud Volumes ONTAP) and pull hot reads close to your Azure compute. Tool libraries, PDKs, shared reference data, all served at sub-millisecond latency without copying petabytes around. There is still one source of truth, which keeps your data governance story clean.</p>
-<p><strong>Scale, Large Volumes with Breakthrough mode.</strong> A single ANF large volume in Breakthrough mode scales to 2 PiB and delivers throughput in the tens of GiB per second by fanning I/O across six storage endpoints. That lets you collapse sharded namespaces (the classic /proj1, /proj2, /proj3 split that nobody loves) into fewer high-throughput volumes that behave predictably under contention.</p>
-<h2>How it works, under the hood</h2>
-<p>Cache Volumes are the FlexCache pattern most ONTAP customers already know. You peer a cluster, point a cache at an origin, and the cache propagates data on demand. Ron demoed this live: cluster peering with on-prem ONTAP, a cache volume created in ANF, and reads served from cache while the authoritative copy stayed home.</p>
-<p>Large Volumes in Breakthrough mode are where the architecture gets interesting. Instead of a single mount point pinned to a single storage endpoint, Breakthrough mode exposes six storage endpoints for one logical volume. Clients can mount, balance I/O, and aggregate throughput across all six. Microsoft published Linux scale-out benchmarks showing a single 50 TiB large volume in Breakthrough mode sustaining roughly 50,000 MiB/s of sequential reads and approaching 1.8 million 8 KiB random read IOPS using twelve VMs (see the Microsoft Learn link in Resources).</p>
-<p>For shared environments, ANF added user and group quotas with real-time consumption reporting and hard limits. Ranga demoed quota rules that stopped a runaway simulation generating millions of scratch files from starving the rest of the team. If you have ever had to send the “who filled the scratch volume” email at 2am, this feature alone might justify the trip.</p>
-<p>On the cost side, the Flexible service level decouples capacity from throughput. You buy a capacity pool, you pick throughput independently, with 128 MiB/s of baseline throughput included and a ceiling of up to 640 MiB/s per provisioned TiB (which is roughly five times the Ultra service level). Cool Access transparently tiers cold blocks to Azure Blob behind the same file mount point.</p>
-<p>In short, you stop paying for throughput you do not need on archival volumes, and you stop overprovisioning capacity to chase throughput on small scratch volumes.</p>
-<h2>Real-world value, use cases, ROI, scenarios</h2>
-<p>The Proof section closed with SPEC Storage 2020 EDA Blended results that are worth reading carefully:</p>
-<ul>
-<li>A single large volume in Breakthrough mode sustained 2,880 EDA jobsets at about 0.51 ms overall response time.</li>
-<li>Six volumes scaled linearly to 17,280 jobsets at about 0.60 ms.</li>
-<li>FIO measurements approached 2 million IOPS.</li>
-</ul>
-<p>The honest tradeoff: those numbers come from a benchmark, not your environment, and the SPEC tables show latency climbing at the highest load points. So treat the result as evidence that the platform behaves predictably under EDA-style concurrency, not as a guarantee for every workflow. That predictability is the part that matters. EDA leads do not lose sleep over peak throughput, they lose sleep over latency that drifts when concurrency rises.</p>
-<p>Practical scenarios where this lands:</p>
-<ul>
-<li>Burst regression and verification runs to Azure during tape-out crunches, with Cache Volumes keeping your on-prem golden tree authoritative.</li>
-<li>Full migration of EDA environments to Azure for teams whose datacenters are out of capacity or out of lease.</li>
-<li>HPC simulation workloads (CFD, weather, seismic, life sciences) that share the same metadata-heavy I/O profile.</li>
-<li>AI-adjacent pipelines that need to read design data with file semantics and surface the same bytes as objects to Fabric, OneLake, or Databricks via the dual file and object access pattern Ron mentioned in the AI Ready section.</li>
-</ul>
-<h2>Getting Started, concrete first steps</h2>
-<p>You do not need a multi-quarter project to get a useful pilot moving.</p>
-<ol>
-<li>Register the Azure NetApp Files resource provider in your target subscription and request quota in the regions you care about.</li>
-<li>Stand up a small capacity pool, start with the Flexible service level so you can dial throughput independently.</li>
-<li>Create a test volume, mount it from a representative VM (HBv4 or Ev5 family are good starting points for HPC and EDA respectively).</li>
-<li>Run your real workload, not just FIO. Use a representative regression batch or simulation job and watch the metadata patterns in the ANF metrics blade.</li>
-<li>If you have on-premises ONTAP, peer a Cache Volume against it to test FlexCache behavior with your actual datasets before committing to a full migration.</li>
-<li>Layer in user and group quotas before you open the volume to a wider team. Trust me on this one.</li>
-</ol>
-<h2>Resources</h2>
-<ul>
-<li><a href="https://learn.microsoft.com/azure/azure-netapp-files/" rel="noopener" target="_blank">Azure NetApp Files documentation</a></li>
-<li><a href="https://learn.microsoft.com/en-us/azure/azure-netapp-files/azure-netapp-files-service-levels" rel="noopener" target="_blank">Service levels for Azure NetApp Files, including the Flexible tier</a></li>
-<li><a href="https://learn.microsoft.com/en-us/azure/azure-netapp-files/performance-large-volume-breakthrough-mode-linux" rel="noopener" target="_blank">Azure NetApp Files large volume breakthrough mode performance benchmarks for Linux</a></li>
-<li><a href="https://learn.microsoft.com/en-us/azure/azure-netapp-files/solutions-benefits-azure-netapp-files-electronic-design-automation" rel="noopener" target="_blank">Benefits of using Azure NetApp Files for Electronic Design Automation (EDA)</a></li>
-<li><a href="https://learn.microsoft.com/azure/azure-netapp-files/cache-volumes" rel="noopener" target="_blank">Azure NetApp Files cache volumes</a></li>
-<li><a href="https://learn.microsoft.com/azure/azure-netapp-files/manage-quotas-user-group" rel="noopener" target="_blank">Manage user and group quotas on Azure NetApp Files volumes</a></li>
-<li><a href="https://learn.microsoft.com/azure/azure-netapp-files/manage-cool-access" rel="noopener" target="_blank">Manage Azure NetApp Files cool access</a></li>
-</ul>
-<h2>Keep Learning at the Summit</h2>
-<p>Catch the full <a class="lia-external-url" href="https://www.youtube.com/playlist?list=PLjt5SKzX1iI8con7FJDB56G6hHqxGm7ki" rel="noopener" target="_blank">Microsoft Azure Infra Summit 2026 session playlist</a> here.</p>
-<p>Cheers!</p>
-<p>Pierre Roman</p><br/><br/><b>Source:</b> Microsoft Tech Community IT Ops &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Operational impact possible — watch for changes that generate tickets.</b><br/>Microsoft announced on Wednesday that systems running Windows 10 Enterprise LTSB 2016 and Home and Pro editions of Windows 11 24H2 will stop receiving updates in three months. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
 </item>
 
 <item>
@@ -93,7 +18,7 @@
   <link>https://arstechnica.com/security/2026/07/windows-0-day-drops-the-same-day-microsoft-releases-record-number-of-patches/</link>
   <pubDate>Wed, 15 Jul 2026 19:59:48 +0000</pubDate>
   <source>Ars Technica</source>
-  <description><![CDATA[<b>Why this matters: Operational impact possible — watch for changes that generate tickets.</b><br/>HiveLegacy is a "powerful primitive" that's likely capable of other nefarious actions.<br/><br/><b>Source:</b> Ars Technica &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 17h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Operational impact possible — watch for changes that generate tickets.</b><br/>HiveLegacy is a "powerful primitive" that's likely capable of other nefarious actions.<br/><br/><b>Source:</b> Ars Technica &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 19h ago]]></description>
 </item>
 
 <item>
