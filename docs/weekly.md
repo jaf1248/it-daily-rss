@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
 **Period:** July 10 – July 17, 2026  
-**Generated:** 2026-07-17 08:05 UTC  
+**Generated:** 2026-07-17 10:44 UTC  
 **Items reviewed:** 136  
 
 ## ⚡ Top Actions This Week
@@ -55,6 +55,9 @@
 
 ## 🟠 Important — Review This Week
 
+- [Windows Server 2022 reach end of mainstream support in 90 days](https://www.bleepingcomputer.com/news/microsoft/windows-server-2022-reach-end-of-mainstream-support-in-90-days/)  
+  **BleepingComputer** · Jul 17 · _General awareness item._  
+
 - [CVE-2026-59886 pyasn1: Uncontrolled resource consumption when converting decoded REAL values](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-59886)  
   **Microsoft Security Response Center (MSRC)** · Jul 17 · _General awareness item._  
 
@@ -76,19 +79,16 @@
 - [CVE-2026-15043 DBI::SQL::Nano versions from 1.42 before 1.651 for Perl have inverted <= and >= SQL operators on text](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-15043)  
   **Microsoft Security Response Center (MSRC)** · Jul 17 · _General awareness item._  
 
-- [CVE-2026-57433 Storable versions before 3.41 for Perl have a signed integer overflow when deserializing a crafted SX_HOOK record](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-57433)  
-  **Microsoft Security Response Center (MSRC)** · Jul 17 · _General awareness item._  
-
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [ACR Stealer Uses ClickFix Lures to Steal Browser Tokens and Microsoft 365 Files](https://thehackernews.com/2026/07/acr-stealer-uses-clickfix-lures-to.html) — The Hacker News
+- [New GoSerpent Malware Targets Southeast Asian Governments and Diplomats for Espionage](https://thehackernews.com/2026/07/new-goserpent-malware-targets-southeast.html) — The Hacker News
+- [US charges two over laundering $43 million from investment fraud](https://www.bleepingcomputer.com/news/security/us-charges-two-over-laundering-43-million-from-investment-fraud/) — BleepingComputer
 - [ISC Stormcast For Friday, July 17th, 2026 https://isc.sans.edu/podcastdetail/10012, (Fri, Jul 17th)](https://isc.sans.edu/diary/rss/33162) — SANS Internet Storm Center
 - [New ClickLock macOS malware traps users into revealing login password](https://www.bleepingcomputer.com/news/security/new-clicklock-macos-malware-traps-users-into-revealing-login-password/) — BleepingComputer
 - [Claude Chrome extension flaw lets malicious extensions trigger AI actions](https://www.bleepingcomputer.com/news/security/claude-chrome-extension-flaw-lets-malicious-extensions-trigger-ai-actions/) — BleepingComputer
-- [New OkoBot framework deploys 20 payloads to steal data, crypto](https://www.bleepingcomputer.com/news/security/new-okobot-framework-deploys-20-payloads-to-steal-data-crypto/) — BleepingComputer
-- [Two Scattered Spider Hackers Get 5.5 Years Each for £29 Million TfL Hack](https://thehackernews.com/2026/07/two-scattered-spider-hackers-get-55.html) — The Hacker News
-- [AI Agents Broke the Security Playbook. Here's What Replaces It.](https://www.bleepingcomputer.com/news/security/ai-agents-broke-the-security-playbook-heres-what-replaces-it/) — BleepingComputer
 
 ---
 
