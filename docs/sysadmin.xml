@@ -3,8 +3,139 @@
 <channel>
   <title>Joe SysAdmin and Operations</title>
   <description>Operational IT changes, Microsoft updates, outages, and infrastructure issues.</description>
-  <lastBuildDate>Fri, 17 Jul 2026 20:03:30 +0000</lastBuildDate>
+  <lastBuildDate>Fri, 17 Jul 2026 21:50:23 +0000</lastBuildDate>
   
+<item>
+  <title>🟠 Network Security Perimeter for Azure Event Hubs: Hardening Your Data Streams</title>
+  <link>https://techcommunity.microsoft.com/t5/itops-talk-blog/network-security-perimeter-for-azure-event-hubs-hardening-your/ba-p/4538352</link>
+  <pubDate>Fri, 17 Jul 2026 20:26:45 +0000</pubDate>
+  <source>Microsoft Tech Community IT Ops</source>
+  <description><![CDATA[<b>Why this matters: Service impact possible — prepare comms and confirm vendor status.</b><br/><h3>What is Network Security Perimeter for Azure Event Hubs?</h3>
+<p>Azure Event Hubs now supports Network Security Perimeter (NSP), a logical network isolation boundary that lets you define a security perimeter around your PaaS resources and control public network access through perimeter-based access rules.</p>
+<p>In practical terms, this means you can now group Event Hubs resources within a perimeter, apply consistent network access policies across them, and prevent unauthorized inbound traffic at the PaaS boundary level. It's not a firewall replacement, it's a compliance and segmentation tool that works alongside your existing NSGs and private endpoints.</p>
+<p>Before NSP, managing network access to Event Hubs involved:</p>
+<ul>
+<li>Private endpoints (which route traffic over private networks)</li>
+<li>IP firewall rules (which block public access from specific CIDR blocks)</li>
+<li>Virtual Network Service Endpoints (which restrict traffic to VNets)</li>
+</ul>
+<p>Network Security Perimeter adds a declarative, organization-wide layer: you define which resources belong inside the perimeter, and then manage access rules once, and those policies apply consistently across all perimeter members. Changes to the perimeter automatically cascade to all enrolled resources.</p>
+<h3>Why ITPros Should Care</h3>
+<p>If you're managing Event Hubs in a regulated industry like healthcare, finance, or government, you know the pressure. Compliance auditors want proof that data pipelines are segmented, isolated, and protected from lateral movement. Network Security Perimeter directly addresses that.</p>
+<h3>Operational Value</h3>
+<p>Network Security Perimeter delivers three immediate operational wins:</p>
+<ol>
+<li>Single Source of Truth for Access Rules. Instead of managing firewall rules on each Event Hubs namespace independently, you manage rules once at the perimeter level. Reduce configuration drift, reduce the attack surface, reduce human error.</li>
+<li>Compliance and Audit Readiness. Demonstrate network isolation to auditors with a clear diagram: "All Event Hubs in the perimeter are protected by these rules." That narrative matters for SOC 2, FedRAMP, HIPAA, and PCI-DSS compliance. You can export perimeter configurations and attach them to compliance documentation.</li>
+<li>Simplified Onboarding. When a new Event Hubs namespace joins the organization, add it to the perimeter and it inherits all access rules automatically. No manual rule-by-rule configuration. No weeks of back-and-forth with security teams.</li>
+</ol>
+<p>Secondary benefits include:</p>
+<ul>
+<li>Reduced blast radius during incidents, if an application is compromised, perimeter rules limit what it can access.</li>
+<li>Simplified network topology diagrams for architecture reviews.</li>
+<li>Faster mean time to remediation (MTTR) when security issues arise.</li>
+</ul>
+<h3>Real-World Example: Securing a Multi-Tenant Event Hub Deployment</h3>
+<p>Let's walk through a practical scenario. You're an ITPro at a financial services firm. You have three Event Hubs namespaces:</p>
+<ul>
+<li>hubs-prod-transactions (production trading data)</li>
+<li>hubs-prod-compliance (regulatory event streams)</li>
+<li>hubs-staging-dev (development and testing)</li>
+</ul>
+<p>Your security policy mandates:</p>
+<ul>
+<li>Production namespaces should only accept traffic from specific applications (IP-restricted).</li>
+<li>Staging can accept traffic from developer VNets but not from the internet.</li>
+<li>All outbound access to external services must be logged and monitored.</li>
+</ul>
+<h3>Step 1: Define Your Perimeter</h3>
+<p>First, create a Network Security Perimeter in the Azure Portal or via Azure CLI:</p>
+az network perimeter create --resource-group rg-security --name nsp-financialservices --location eastus
+<p>This creates the perimeter container. Think of it as a logical security zone.</p>
+<h3>Step 2: Enroll Event Hubs Resources</h3>
+<p>Add your Event Hubs namespaces to the perimeter:</p>
+az network perimeter access-rule create --resource-group rg-security --perimeter-name nsp-financialservices --name allow-prod-apps --direction Inbound --access Allow --protocols Tcp --source-address-prefix 10.0.0.0/8 --destination-port-range 5671-5672
+
+<p>Enroll the Event Hubs namespace:</p>
+az network perimeter resource create --resource-group rg-security --perimeter-name nsp-financialservices --resource-name hubs-prod-transactions --resource-type "Microsoft.EventHub/namespaces"
+<p>You've now enrolled your production Event Hubs namespace. It inherits the "allow-prod-apps" rule, only traffic from your internal VNET (10.0.0.0/8) is permitted.</p>
+<h3>Step 3: Define Access Rules</h3>
+$ns = "hubs-prod-transactions" $hub = "transactions-hub" $key = (az eventhubs namespace authorization-rule keys list --resource-group rg-prod --namespace-name $ns --name RootManageSharedAccessKey --query primaryConnectionString --output tsv)
+<p>Create rules that reflect your security policy. Allow internal compliance applications:</p>
+az network perimeter access-rule create --resource-group rg-security --perimeter-name nsp-financialservices --name allow-compliance-writers --direction Inbound --access Allow --protocols Tcp --source-address-prefix 10.50.0.0/16 --destination-port-range 5671-5672
+<p>Deny all other public traffic:</p>
+az network perimeter access-rule create --resource-group rg-security --perimeter-name nsp-financialservices --name deny-internet --direction Inbound --access Deny --protocols "*" --source-address-prefix "*" --destination-port-range "*"
+<p>Now your Event Hubs accept traffic only from specific internal subnets. Everything else is rejected at the PaaS boundary.</p>
+<h3>Step 4: Validate Connectivity</h3>
+<p>Test that legitimate applications can still reach Event Hubs:</p>
+$ns = "hubs-prod-transactions" $hub = "transactions-hub" $key = (az eventhubs namespace authorization-rule keys list --resource-group rg-prod --namespace-name $ns --name RootManageSharedAccessKey --query primaryConnectionString --output tsv)
+<p>Check logs in Azure Monitor:</p>
+az monitor log-analytics query --workspace $(az monitor log-analytics workspace list --query "[0].id" -o tsv) --analytics-query "AzureDiagnostics | where ResourceProvider=='MICROSOFT.EVENTHUB' | summarize by NetworkSecurityPerimeter_s"
+<p>If you see accepted connections logged with your perimeter name, you're good. If you see denied connections from unexpected IPs, you've caught a security issue before it impacts production.</p>
+<h3>Step 5: Monitor and Alert</h3>
+<p>Set up alerts for denied traffic:</p>
+az monitor metrics alert create --name "NSP-Denied-Connections" --resource-group rg-security --scopes /subscriptions/{subId}/resourceGroups/rg-security/providers/Microsoft.Network/networkSecurityPerimeters/nsp-financialservices --condition "avg ConnectionRejectedCount &gt; 5" --window-size 5m --evaluation-frequency 1m --action email-admin@company.com
+<p>Now you'll be notified if someone attempts to access Event Hubs from an unauthorized source. Your security posture just went from reactive to proactive.</p>
+<h3>Technical Details: How NSP Works Under the Hood</h3>
+<h3>Perimeter Architecture</h3>
+<p>Network Security Perimeter operates at the Azure platform level, not in your VNets. Here's the flow:</p>
+<ul>
+<li>Connection arrives at Event Hubs public IP.</li>
+<li>Azure evaluates the source IP/protocol against NSP rules.</li>
+<li>If allowed, connection is routed to the namespace.</li>
+<li>If denied, connection is dropped and logged.</li>
+</ul>
+<p>This happens before TLS handshake, reducing CPU overhead and improving response times. Denied connections generate zero namespace load.</p>
+<h3>Rule Evaluation Order</h3>
+<p>NSP rules are evaluated in this order:</p>
+<ol>
+<li>Explicit Allow rules (matched first wins)</li>
+<li>Explicit Deny rules</li>
+<li>Implicit Deny (default action)</li>
+</ol>
+<p>Best practice: Create your Allow rules first (be specific about what you permit), then add Deny rules for anything not explicitly allowed. This ensures you don't accidentally block legitimate traffic.</p>
+<h3>Integration with Existing Security Tools</h3>
+<p>NSP works alongside (not instead of):</p>
+<ul>
+<li>Private Endpoints: NSP adds a policy layer; private endpoints route traffic over Azure backbone. Use both.</li>
+<li>IP Firewall: NSP provides namespace-level access control; IP firewall is still available for per-namespace rules.</li>
+<li>VNet Service Endpoints: NSP complements VNet endpoints by adding perimeter-wide policies.</li>
+<li>Managed Identity + RBAC: NSP is transport-layer security; identity-based access control remains separate.</li>
+</ul>
+<h3>Performance Considerations</h3>
+<p>NSP introduces minimal latency (&lt;1ms typically). Azure evaluates rules in parallel and caches common decisions. For high-throughput Event Hubs:</p>
+<ul>
+<li>Keep rules simple and specific (avoid wildcard ranges if possible).</li>
+<li>Use CIDR blocks instead of individual IPs where applicable.</li>
+<li>Monitor connection acceptance rates in Azure Monitor.</li>
+</ul>
+<h3>Comprehensive Resources</h3>
+<p>Official Microsoft Documentation:</p>
+<ul>
+<li><a href="https://learn.microsoft.com/azure/virtual-network/network-security-perimeter/network-security-perimeter-overview" target="_blank">Network Security Perimeter Overview</a></li>
+<li><a href="https://learn.microsoft.com/azure/event-hubs/network-security" target="_blank">Event Hubs Network Security</a></li>
+<li><a href="https://learn.microsoft.com/azure/event-hubs/configure-network-security-perimeter" target="_blank">Configuring NSP for Event Hubs</a></li>
+<li><a href="https://learn.microsoft.com/cli/azure/network/perimeter" target="_blank">Azure CLI: az network perimeter</a></li>
+<li><a href="https://learn.microsoft.com/azure/event-hubs/authorize-access-azure-active-directory" target="_blank">Azure RBAC for Event Hubs</a></li>
+<li><a href="https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-protocol-guide" target="_blank">Azure Event Hubs Protocol Guide</a></li>
+</ul>
+<h3>Closing: Perimeter Security for Modern Data Streams</h3>
+<p>Network Security Perimeter for Event Hubs is a quiet but powerful addition to Azure's security toolkit. You get the ability to enforce organization-wide network policies without having to reconfigure every namespace individually. You can demonstrate perimeter-based isolation to auditors. You can catch lateral-movement attacks before they happen.</p>
+<p>For ITPros managing event-driven architectures, message processors, IoT data streams, financial transactions, this capability directly improves your security posture and reduces operational overhead.</p>
+<p>I encourage you to:</p>
+<ol>
+<li>Audit your current Event Hubs deployments. How many namespaces? How many security policies are you managing today?</li>
+<li>Design your perimeter boundaries. Group namespaces by security zone (prod, staging, dev) or by business unit.</li>
+<li>Start with one perimeter in a dev environment. Define rules. Validate connectivity. Then expand to staging and production.</li>
+<li>Document your perimeter architecture and rules. Include it in your security runbook and architecture reviews.</li>
+<li>Set up monitoring and alerting. Denied connections are a leading indicator of either misconfiguration or attack attempts.</li>
+</ol>
+<p>The networking challenges in cloud are complex. Network Security Perimeter gives you a declarative, policy-driven way to solve them at scale. Take advantage of it, and let me know how it changes your security workflows.</p>
+<p>Keep your networks hardened, and your data flowing safe.</p>
+<p>Cheers!</p>
+<p>Pierre Roman</p><br/><br/><b>Source:</b> Microsoft Tech Community IT Ops &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+</item>
+
 <item>
   <title>🟠 Az Update - Week 2 of the return editions</title>
   <link>https://techcommunity.microsoft.com/t5/itops-talk-blog/az-update-week-2-of-the-return-editions/ba-p/4538337</link>
@@ -126,7 +257,7 @@ az connectedmachine machine extension list --resource-group &lt;rg&gt; --machine
 </ol>
 <p>For any new capability this week, if they map to your operational roadmap, run a controlled pilot, measure the impact, and then scale with confidence. That is how you move the needle on modernisation while managing risk.</p>
 <p>Cheers!</p>
-<p>Pierre Roman</p><br/><br/><b>Source:</b> Microsoft Tech Community IT Ops &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+<p>Pierre Roman</p><br/><br/><b>Source:</b> Microsoft Tech Community IT Ops &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
 </item>
 
 <item>
@@ -134,7 +265,7 @@ az connectedmachine machine extension list --resource-group &lt;rg&gt; --machine
   <link>https://www.bleepingcomputer.com/news/security/new-windows-legacyhive-zero-day-exploit-grants-hackers-admin-access/</link>
   <pubDate>Fri, 17 Jul 2026 11:05:30 +0000</pubDate>
   <source>BleepingComputer</source>
-  <description><![CDATA[<b>Why this matters: Operational impact possible — watch for changes that generate tickets.</b><br/>A security researcher using the "Nightmare Eclipse" handle has released a Windows zero-day exploit dubbed LegacyHive that allows attackers to escalate privileges on up-to-date Windows systems. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 8h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Operational impact possible — watch for changes that generate tickets.</b><br/>A security researcher using the "Nightmare Eclipse" handle has released a Windows zero-day exploit dubbed LegacyHive that allows attackers to escalate privileges on up-to-date Windows systems. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 10h ago]]></description>
 </item>
 
 <item>
@@ -142,7 +273,7 @@ az connectedmachine machine extension list --resource-group &lt;rg&gt; --machine
   <link>https://www.bleepingcomputer.com/news/microsoft/windows-server-2022-reach-end-of-mainstream-support-in-90-days/</link>
   <pubDate>Fri, 17 Jul 2026 09:10:15 +0000</pubDate>
   <source>BleepingComputer</source>
-  <description><![CDATA[<b>Why this matters: Operational impact possible — watch for changes that generate tickets.</b><br/>Microsoft announced that Windows Server 2022 will reach the mainstream end date in October 2026, but will switch to extended support and continue receiving security updates for five more years. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 10h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Operational impact possible — watch for changes that generate tickets.</b><br/>Microsoft announced that Windows Server 2022 will reach the mainstream end date in October 2026, but will switch to extended support and continue receiving security updates for five more years. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 12h ago]]></description>
 </item>
 
 <item>
@@ -217,15 +348,7 @@ az connectedmachine machine extension list --resource-group &lt;rg&gt; --machine
 <h2>Keep Learning at the Summit</h2>
 <p>Catch the full <a class="lia-external-url" href="https://www.youtube.com/playlist?list=PLjt5SKzX1iI8con7FJDB56G6hHqxGm7ki" target="_blank">Microsoft Azure Infra Summit 2026 session playlist here</a></p>
 <p>Cheers!</p>
-<p>Pierre Roman</p><br/><br/><b>Source:</b> Microsoft Tech Community IT Ops &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 12h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Windows 11 24H2 Home and Pro reach end of support in 90 days</title>
-  <link>https://www.bleepingcomputer.com/news/microsoft/windows-11-24h2-home-and-pro-reach-end-of-support-in-90-days/</link>
-  <pubDate>Thu, 16 Jul 2026 11:59:24 +0000</pubDate>
-  <source>BleepingComputer</source>
-  <description><![CDATA[<b>Why this matters: Operational impact possible — watch for changes that generate tickets.</b><br/>Microsoft announced on Wednesday that systems running Windows 10 Enterprise LTSB 2016 and Home and Pro editions of Windows 11 24H2 will stop receiving updates in three months. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
+<p>Pierre Roman</p><br/><br/><b>Source:</b> Microsoft Tech Community IT Ops &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 14h ago]]></description>
 </item>
 
 <item>
