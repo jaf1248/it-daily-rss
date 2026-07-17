@@ -1,25 +1,30 @@
 # IT Weekly Intelligence Briefing
 **Period:** July 10 – July 17, 2026  
-**Generated:** 2026-07-17 05:40 UTC  
+**Generated:** 2026-07-17 08:05 UTC  
 **Items reviewed:** 136  
 
 ## ⚡ Top Actions This Week
 
-1. **Validate backups, confirm EDR coverage, and brief incident response team.**  
-   _Coca-Cola says Fairlife ransomware attack halts US dairy production_  
+1. **Apply emergency patch or mitigation now; check vendor advisory for workarounds.**  
+   _CISA urges immediate action on actively exploited Fortinet flaws_  
    Source: BleepingComputer  
 
 2. **Validate backups, confirm EDR coverage, and brief incident response team.**  
+   _Coca-Cola says Fairlife ransomware attack halts US dairy production_  
+   Source: BleepingComputer  
+
+3. **Validate backups, confirm EDR coverage, and brief incident response team.**  
    _ThreatsDay: Game Cheat Spyware, 24-Hour Ransomware, Chrome Sync Stalking + 12 More Stories_  
    Source: The Hacker News  
-
-3. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _23andMe to pay $18 million in new genetics data breach settlement_  
-   Source: BleepingComputer  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [CISA urges immediate action on actively exploited Fortinet flaws](https://www.bleepingcomputer.com/news/security/cisa-warns-feds-to-patch-exploited-fortinet-fortisandbox-flaws-by-sunday/)
+**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jul 17  
+**Why it matters:** General awareness item.  
+**Recommended action:** Apply emergency patch or mitigation now; check vendor advisory for workarounds.  
 
 ### [Coca-Cola says Fairlife ransomware attack halts US dairy production](https://www.bleepingcomputer.com/news/security/coca-cola-says-fairlife-ransomware-attack-halts-us-dairy-production/)
 **Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jul 16  
@@ -46,38 +51,33 @@
 **Why it matters:** Elevated ransomware risk across the sector.  
 **Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
 
-### [U.S. Sanctions First VPN Service and Malware Cryptor Seller Over Ransomware Support](https://thehackernews.com/2026/07/us-sanctions-first-vpn-service-and.html)
-**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Jul 14  
-**Why it matters:** Elevated ransomware risk across the sector.  
-**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
-
 ---
 
 ## 🟠 Important — Review This Week
 
-- [CVE-2026-59117 Windows Terminal Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-59117)  
-  **Microsoft Security Response Center (MSRC)** · Jul 16 · _General awareness item._  
+- [CVE-2026-59886 pyasn1: Uncontrolled resource consumption when converting decoded REAL values](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-59886)  
+  **Microsoft Security Response Center (MSRC)** · Jul 17 · _General awareness item._  
 
-- [CVE-2026-50652 Azure Active Directory Denial of Service Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-50652)  
-  **Microsoft Security Response Center (MSRC)** · Jul 16 · _General awareness item._  
+- [CVE-2026-59884 pyasn1 BER/CER/DER decoder denial of service via unbounded long-form tag IDs](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-59884)  
+  **Microsoft Security Response Center (MSRC)** · Jul 17 · _General awareness item._  
 
-- [CVE-2026-50653 Azure Active Directory Denial of Service Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-50653)  
-  **Microsoft Security Response Center (MSRC)** · Jul 16 · _General awareness item._  
+- [CVE-2026-59885 pyasn1: Quadratic complexity in OBJECT IDENTIFIER and RELATIVE-OID processing allows denial of service](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-59885)  
+  **Microsoft Security Response Center (MSRC)** · Jul 17 · _General awareness item._  
 
-- [CVE-2026-58643 Windows Admin Center Spoofing Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-58643)  
-  **Microsoft Security Response Center (MSRC)** · Jul 16 · _General awareness item._  
+- [CVE-2026-60081 DBI::ProfileData versions before 1.651 for Perl do not limit the path index](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-60081)  
+  **Microsoft Security Response Center (MSRC)** · Jul 17 · _General awareness item._  
 
-- [CVE-2026-58598 Windows Backup Service Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-58598)  
-  **Microsoft Security Response Center (MSRC)** · Jul 16 · _General awareness item._  
+- [CVE-2026-15392 DBD::File versions before 1.651 for Perl do not ensure the table file is not a symlink to an untrusted location](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-15392)  
+  **Microsoft Security Response Center (MSRC)** · Jul 17 · _General awareness item._  
 
-- [CVE-2026-50304 Windows Active Directory Federation Services Denial of Service Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-50304)  
-  **Microsoft Security Response Center (MSRC)** · Jul 16 · _General awareness item._  
+- [CVE-2026-60082 DBI versions before 1.651 for Perl do not enforce statement handle consistency with the row](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-60082)  
+  **Microsoft Security Response Center (MSRC)** · Jul 17 · _General awareness item._  
 
-- [CVE-2026-50368 Windows Active Directory Federation Services Denial of Service Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-50368)  
-  **Microsoft Security Response Center (MSRC)** · Jul 16 · _General awareness item._  
+- [CVE-2026-15043 DBI::SQL::Nano versions from 1.42 before 1.651 for Perl have inverted <= and >= SQL operators on text](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-15043)  
+  **Microsoft Security Response Center (MSRC)** · Jul 17 · _General awareness item._  
 
-- [CVE-2026-50324 Windows Active Directory Federation Services Denial of Service Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-50324)  
-  **Microsoft Security Response Center (MSRC)** · Jul 16 · _General awareness item._  
+- [CVE-2026-57433 Storable versions before 3.41 for Perl have a signed integer overflow when deserializing a crafted SX_HOOK record](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-57433)  
+  **Microsoft Security Response Center (MSRC)** · Jul 17 · _General awareness item._  
 
 ---
 
@@ -92,4 +92,4 @@
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 7 critical · 72 important · 57 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 8 critical · 73 important · 55 FYI_
