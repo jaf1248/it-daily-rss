@@ -1,12 +1,12 @@
 # IT Weekly Intelligence Briefing
 **Period:** July 10 – July 17, 2026  
-**Generated:** 2026-07-17 22:46 UTC  
+**Generated:** 2026-07-17 23:50 UTC  
 **Items reviewed:** 135  
 
 ## ⚡ Top Actions This Week
 
 1. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _Abbott Laboratories probes two cyber incidents amid extortion claims_  
+   _Abbott probes two cyber incidents amid extortion claims_  
    Source: BleepingComputer  
 
 2. **Audit third-party software dependencies and review vendor access.**  
@@ -21,7 +21,7 @@
 
 ## 🔴 Critical — Immediate Awareness
 
-### [Abbott Laboratories probes two cyber incidents amid extortion claims](https://www.bleepingcomputer.com/news/security/abbott-laboratories-probes-two-cyber-incidents-amid-extortion-claims/)
+### [Abbott probes two cyber incidents amid extortion claims](https://www.bleepingcomputer.com/news/security/abbott-laboratories-probes-two-cyber-incidents-amid-extortion-claims/)
 **Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jul 17  
 **Why it matters:** Potential credential or data exposure.  
 **Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
