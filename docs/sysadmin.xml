@@ -3,14 +3,269 @@
 <channel>
   <title>Joe SysAdmin and Operations</title>
   <description>Operational IT changes, Microsoft updates, outages, and infrastructure issues.</description>
-  <lastBuildDate>Sat, 18 Jul 2026 20:05:41 +0000</lastBuildDate>
+  <lastBuildDate>Sat, 18 Jul 2026 21:47:11 +0000</lastBuildDate>
   
 <item>
   <title>🔵 Microsoft warns of surge in ACR Stealer attacks on customers</title>
   <link>https://www.bleepingcomputer.com/news/security/microsoft-warns-of-surge-in-acr-stealer-attacks-on-customers/</link>
   <pubDate>Sat, 18 Jul 2026 14:17:19 +0000</pubDate>
   <source>BleepingComputer</source>
-  <description><![CDATA[<b>Why this matters: Could impact sign-ins/MFA/Conditional Access — watch for login issues.</b><br/>Microsoft has observed a surge in attacks using the ACR Stealer malware to steal browser-stored passwords, authentication tokens, and sensitive documents from its enterprise customers. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Could impact sign-ins/MFA/Conditional Access — watch for login issues.</b><br/>Microsoft has observed a surge in attacks using the ACR Stealer malware to steal browser-stored passwords, authentication tokens, and sensitive documents from its enterprise customers. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
+</item>
+
+<item>
+  <title>🟠 Network Security Perimeter for Azure Event Hubs: Hardening Your Data Streams</title>
+  <link>https://techcommunity.microsoft.com/t5/itops-talk-blog/network-security-perimeter-for-azure-event-hubs-hardening-your/ba-p/4538352</link>
+  <pubDate>Fri, 17 Jul 2026 20:26:45 +0000</pubDate>
+  <source>Microsoft Tech Community IT Ops</source>
+  <description><![CDATA[<b>Why this matters: Service impact possible — prepare comms and confirm vendor status.</b><br/><h3>What is Network Security Perimeter for Azure Event Hubs?</h3>
+<p>Azure Event Hubs now supports Network Security Perimeter (NSP), a logical network isolation boundary that lets you define a security perimeter around your PaaS resources and control public network access through perimeter-based access rules.</p>
+<p>In practical terms, this means you can now group Event Hubs resources within a perimeter, apply consistent network access policies across them, and prevent unauthorized inbound traffic at the PaaS boundary level. It's not a firewall replacement, it's a compliance and segmentation tool that works alongside your existing NSGs and private endpoints.</p>
+<p>Before NSP, managing network access to Event Hubs involved:</p>
+<ul>
+<li>Private endpoints (which route traffic over private networks)</li>
+<li>IP firewall rules (which block public access from specific CIDR blocks)</li>
+<li>Virtual Network Service Endpoints (which restrict traffic to VNets)</li>
+</ul>
+<p>Network Security Perimeter adds a declarative, organization-wide layer: you define which resources belong inside the perimeter, and then manage access rules once, and those policies apply consistently across all perimeter members. Changes to the perimeter automatically cascade to all enrolled resources.</p>
+<h3>Why ITPros Should Care</h3>
+<p>If you're managing Event Hubs in a regulated industry like healthcare, finance, or government, you know the pressure. Compliance auditors want proof that data pipelines are segmented, isolated, and protected from lateral movement. Network Security Perimeter directly addresses that.</p>
+<h3>Operational Value</h3>
+<p>Network Security Perimeter delivers three immediate operational wins:</p>
+<ol>
+<li>Single Source of Truth for Access Rules. Instead of managing firewall rules on each Event Hubs namespace independently, you manage rules once at the perimeter level. Reduce configuration drift, reduce the attack surface, reduce human error.</li>
+<li>Compliance and Audit Readiness. Demonstrate network isolation to auditors with a clear diagram: "All Event Hubs in the perimeter are protected by these rules." That narrative matters for SOC 2, FedRAMP, HIPAA, and PCI-DSS compliance. You can export perimeter configurations and attach them to compliance documentation.</li>
+<li>Simplified Onboarding. When a new Event Hubs namespace joins the organization, add it to the perimeter and it inherits all access rules automatically. No manual rule-by-rule configuration. No weeks of back-and-forth with security teams.</li>
+</ol>
+<p>Secondary benefits include:</p>
+<ul>
+<li>Reduced blast radius during incidents, if an application is compromised, perimeter rules limit what it can access.</li>
+<li>Simplified network topology diagrams for architecture reviews.</li>
+<li>Faster mean time to remediation (MTTR) when security issues arise.</li>
+</ul>
+<h3>Real-World Example: Securing a Multi-Tenant Event Hub Deployment</h3>
+<p>Let's walk through a practical scenario. You're an ITPro at a financial services firm. You have three Event Hubs namespaces:</p>
+<ul>
+<li>hubs-prod-transactions (production trading data)</li>
+<li>hubs-prod-compliance (regulatory event streams)</li>
+<li>hubs-staging-dev (development and testing)</li>
+</ul>
+<p>Your security policy mandates:</p>
+<ul>
+<li>Production namespaces should only accept traffic from specific applications (IP-restricted).</li>
+<li>Staging can accept traffic from developer VNets but not from the internet.</li>
+<li>All outbound access to external services must be logged and monitored.</li>
+</ul>
+<h3>Step 1: Define Your Perimeter</h3>
+<p>First, create a Network Security Perimeter in the Azure Portal or via Azure CLI:</p>
+az network perimeter create --resource-group rg-security --name nsp-financialservices --location eastus
+<p>This creates the perimeter container. Think of it as a logical security zone.</p>
+<h3>Step 2: Enroll Event Hubs Resources</h3>
+<p>Add your Event Hubs namespaces to the perimeter:</p>
+az network perimeter access-rule create --resource-group rg-security --perimeter-name nsp-financialservices --name allow-prod-apps --direction Inbound --access Allow --protocols Tcp --source-address-prefix 10.0.0.0/8 --destination-port-range 5671-5672
+
+<p>Enroll the Event Hubs namespace:</p>
+az network perimeter resource create --resource-group rg-security --perimeter-name nsp-financialservices --resource-name hubs-prod-transactions --resource-type "Microsoft.EventHub/namespaces"
+<p>You've now enrolled your production Event Hubs namespace. It inherits the "allow-prod-apps" rule, only traffic from your internal VNET (10.0.0.0/8) is permitted.</p>
+<h3>Step 3: Define Access Rules</h3>
+$ns = "hubs-prod-transactions" $hub = "transactions-hub" $key = (az eventhubs namespace authorization-rule keys list --resource-group rg-prod --namespace-name $ns --name RootManageSharedAccessKey --query primaryConnectionString --output tsv)
+<p>Create rules that reflect your security policy. Allow internal compliance applications:</p>
+az network perimeter access-rule create --resource-group rg-security --perimeter-name nsp-financialservices --name allow-compliance-writers --direction Inbound --access Allow --protocols Tcp --source-address-prefix 10.50.0.0/16 --destination-port-range 5671-5672
+<p>Deny all other public traffic:</p>
+az network perimeter access-rule create --resource-group rg-security --perimeter-name nsp-financialservices --name deny-internet --direction Inbound --access Deny --protocols "*" --source-address-prefix "*" --destination-port-range "*"
+<p>Now your Event Hubs accept traffic only from specific internal subnets. Everything else is rejected at the PaaS boundary.</p>
+<h3>Step 4: Validate Connectivity</h3>
+<p>Test that legitimate applications can still reach Event Hubs:</p>
+$ns = "hubs-prod-transactions" $hub = "transactions-hub" $key = (az eventhubs namespace authorization-rule keys list --resource-group rg-prod --namespace-name $ns --name RootManageSharedAccessKey --query primaryConnectionString --output tsv)
+<p>Check logs in Azure Monitor:</p>
+az monitor log-analytics query --workspace $(az monitor log-analytics workspace list --query "[0].id" -o tsv) --analytics-query "AzureDiagnostics | where ResourceProvider=='MICROSOFT.EVENTHUB' | summarize by NetworkSecurityPerimeter_s"
+<p>If you see accepted connections logged with your perimeter name, you're good. If you see denied connections from unexpected IPs, you've caught a security issue before it impacts production.</p>
+<h3>Step 5: Monitor and Alert</h3>
+<p>Set up alerts for denied traffic:</p>
+az monitor metrics alert create --name "NSP-Denied-Connections" --resource-group rg-security --scopes /subscriptions/{subId}/resourceGroups/rg-security/providers/Microsoft.Network/networkSecurityPerimeters/nsp-financialservices --condition "avg ConnectionRejectedCount &gt; 5" --window-size 5m --evaluation-frequency 1m --action email-admin@company.com
+<p>Now you'll be notified if someone attempts to access Event Hubs from an unauthorized source. Your security posture just went from reactive to proactive.</p>
+<h3>Technical Details: How NSP Works Under the Hood</h3>
+<h3>Perimeter Architecture</h3>
+<p>Network Security Perimeter operates at the Azure platform level, not in your VNets. Here's the flow:</p>
+<ul>
+<li>Connection arrives at Event Hubs public IP.</li>
+<li>Azure evaluates the source IP/protocol against NSP rules.</li>
+<li>If allowed, connection is routed to the namespace.</li>
+<li>If denied, connection is dropped and logged.</li>
+</ul>
+<p>This happens before TLS handshake, reducing CPU overhead and improving response times. Denied connections generate zero namespace load.</p>
+<h3>Rule Evaluation Order</h3>
+<p>NSP rules are evaluated in this order:</p>
+<ol>
+<li>Explicit Allow rules (matched first wins)</li>
+<li>Explicit Deny rules</li>
+<li>Implicit Deny (default action)</li>
+</ol>
+<p>Best practice: Create your Allow rules first (be specific about what you permit), then add Deny rules for anything not explicitly allowed. This ensures you don't accidentally block legitimate traffic.</p>
+<h3>Integration with Existing Security Tools</h3>
+<p>NSP works alongside (not instead of):</p>
+<ul>
+<li>Private Endpoints: NSP adds a policy layer; private endpoints route traffic over Azure backbone. Use both.</li>
+<li>IP Firewall: NSP provides namespace-level access control; IP firewall is still available for per-namespace rules.</li>
+<li>VNet Service Endpoints: NSP complements VNet endpoints by adding perimeter-wide policies.</li>
+<li>Managed Identity + RBAC: NSP is transport-layer security; identity-based access control remains separate.</li>
+</ul>
+<h3>Performance Considerations</h3>
+<p>NSP introduces minimal latency (&lt;1ms typically). Azure evaluates rules in parallel and caches common decisions. For high-throughput Event Hubs:</p>
+<ul>
+<li>Keep rules simple and specific (avoid wildcard ranges if possible).</li>
+<li>Use CIDR blocks instead of individual IPs where applicable.</li>
+<li>Monitor connection acceptance rates in Azure Monitor.</li>
+</ul>
+<h3>Comprehensive Resources</h3>
+<p>Official Microsoft Documentation:</p>
+<ul>
+<li><a href="https://learn.microsoft.com/azure/virtual-network/network-security-perimeter/network-security-perimeter-overview" target="_blank">Network Security Perimeter Overview</a></li>
+<li><a href="https://learn.microsoft.com/azure/event-hubs/network-security" target="_blank">Event Hubs Network Security</a></li>
+<li><a href="https://learn.microsoft.com/azure/event-hubs/configure-network-security-perimeter" target="_blank">Configuring NSP for Event Hubs</a></li>
+<li><a href="https://learn.microsoft.com/cli/azure/network/perimeter" target="_blank">Azure CLI: az network perimeter</a></li>
+<li><a href="https://learn.microsoft.com/azure/event-hubs/authorize-access-azure-active-directory" target="_blank">Azure RBAC for Event Hubs</a></li>
+<li><a href="https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-protocol-guide" target="_blank">Azure Event Hubs Protocol Guide</a></li>
+</ul>
+<h3>Closing: Perimeter Security for Modern Data Streams</h3>
+<p>Network Security Perimeter for Event Hubs is a quiet but powerful addition to Azure's security toolkit. You get the ability to enforce organization-wide network policies without having to reconfigure every namespace individually. You can demonstrate perimeter-based isolation to auditors. You can catch lateral-movement attacks before they happen.</p>
+<p>For ITPros managing event-driven architectures, message processors, IoT data streams, financial transactions, this capability directly improves your security posture and reduces operational overhead.</p>
+<p>I encourage you to:</p>
+<ol>
+<li>Audit your current Event Hubs deployments. How many namespaces? How many security policies are you managing today?</li>
+<li>Design your perimeter boundaries. Group namespaces by security zone (prod, staging, dev) or by business unit.</li>
+<li>Start with one perimeter in a dev environment. Define rules. Validate connectivity. Then expand to staging and production.</li>
+<li>Document your perimeter architecture and rules. Include it in your security runbook and architecture reviews.</li>
+<li>Set up monitoring and alerting. Denied connections are a leading indicator of either misconfiguration or attack attempts.</li>
+</ol>
+<p>The networking challenges in cloud are complex. Network Security Perimeter gives you a declarative, policy-driven way to solve them at scale. Take advantage of it, and let me know how it changes your security workflows.</p>
+<p>Keep your networks hardened, and your data flowing safe.</p>
+<p>Cheers!</p>
+<p>Pierre Roman</p><br/><br/><b>Source:</b> Microsoft Tech Community IT Ops &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
+</item>
+
+<item>
+  <title>🟠 Az Update - Week 2 of the return editions</title>
+  <link>https://techcommunity.microsoft.com/t5/itops-talk-blog/az-update-week-2-of-the-return-editions/ba-p/4538337</link>
+  <pubDate>Fri, 17 Jul 2026 18:37:42 +0000</pubDate>
+  <source>Microsoft Tech Community IT Ops</source>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><p>Hello Folks!</p>
+<p>This week's updates all focus on something we hear from IT pros and platform engineers all the time:</p>
+<p>How do we make our environments more secure, more manageable, and easier to modernize without adding more complexity?</p>
+<p>Whether you're running PostgreSQL workloads in Azure, securing Kubernetes storage, or planning your next wave of SQL Server migrations, this week's announcements bring practical improvements that can help reduce operational overhead while strengthening your overall platform strategy.</p>
+<p>We'll look at three newly available capabilities:</p>
+<ol>
+<li>Update #1 - Generally Available: Microsoft Defender security assessments for Azure Database for PostgreSQL Flexible Server</li>
+<li>Update #2 - Generally Available: Encryption in Transit for Azure Files NFS Shares in Azure Kubernetes Service (AKS)</li>
+<li>Update #3 - Generally Available: Expanding Azure Arc SQL Migration with SQL Server on Azure Virtual Machines</li>
+</ol>
+<p>As always, I'm approaching these updates from an infrastructure and operations perspective. I'll cover why each capability matters, what to watch out for before production deployment, and some practical steps you can take to start evaluating them in your own environment.</p>
+<p>Let's dig in.</p>
+<h2>Update #1 - Generally Available: Microsoft Defender security assessments for Azure Database for PostgreSQL Flexible Server</h2>
+<h3>Why ITPros should care</h3>
+<p>This release brings automated security posture assessment directly into managed PostgreSQL environments. For ITPros, this matters because database security is often treated separately from infrastructure security tooling, creating blind spots and silos.</p>
+<p>What changed is that Defender now runs native vulnerability scanning and compliance checks against PostgreSQL configurations, patches, and the ways a database could be exposed to security risks or attack opportunities. Instead of relying on external scanners or manual audits, you get platform-native assessments integrated with your existing Defender workflows.</p>
+<p>The operational impact is significant: you can now enforce security baselines at the database layer with the same consistency you apply to VMs and network resources, reducing the gap between infrastructure and data security accountability.</p>
+<h3>Operational value</h3>
+<p>Operationally, this improves your security baseline enforcement and reduces the need for separate database security assessment tools. It also strengthens how well you can demonstrate and prove that security controls are in place and working for compliance reviews where regulators expect consistent, documented security controls.</p>
+<p>Before production rollout, validate that Defender cost models fit your budget, that assessment frequency aligns with your change windows, and that remediation guidance maps to your patch and maintenance processes.</p>
+<p>Prerequisites include enabling Microsoft Defender for Cloud, registering the PostgreSQL Flexible Server provider, and ensuring network connectivity so assessments can reach the database endpoint.</p>
+<h3>Real-world example with step-by-step guidance</h3>
+<ol>
+<li>Enable Microsoft Defender for Cloud if not already active, and ensure PostgreSQL Flexible Server subscription coverage.</li>
+<li>Register the target PostgreSQL Flexible Server instances and confirm Defender has network visibility to the database endpoints.</li>
+<li>Run a baseline assessment and review initial findings to understand current security posture and common remediation patterns.</li>
+<li>Prioritise findings by severity and business impact, then schedule patches and configuration changes in maintenance windows.</li>
+<li>Monitor ongoing assessments and track remediation progress through Defender dashboards, validating that fixes reduce exposure scores.</li>
+</ol>
+<h3>Technical details including code examples</h3>
+<p>This example validates that Defender is actively assessing your PostgreSQL estate. The sequence checks Defender status, confirms PostgreSQL registration, and retrieves current assessment scores.</p>
+<p>Run these queries in a pilot subscription first to understand data structure and expected output before scaling to production databases.</p>
+az account set --subscription &lt;subscriptionId&gt; az security sql-vulnerability-assessment baseline show --resource-group &lt;rg&gt; --server-name &lt;postgresServer&gt; --database-name &lt;databaseName&gt;
+
+az security pricing show --subscription &lt;subscriptionId&gt; --query "[?name=='VirtualMachines' || name=='SqlServers' || name=='StorageAccounts'].[name,pricingTier]" -o table
+
+az provider show --namespace Microsoft.DBforPostgreSQL --query "registrationState" -o tsv
+<p>Expected behaviour: Defender status shows active, PostgreSQL instances are registered with the provider, and pricing tier reflects your coverage level. If assessments do not run, check network rules, managed identity permissions, and Defender plan activation. If baseline data is missing, trigger a manual scan and wait for completion.</p>
+<h3>Comprehensive Resources</h3>
+<ol>
+<li><a href="https://azure.microsoft.com/updates?id=567527" target="_blank">Azure update: Microsoft Defender security assessments for Azure Database for PostgreSQL Flexible Server</a></li>
+<li><a href="https://learn.microsoft.com/azure/defender-for-cloud/defender-for-cloud-introduction" target="_blank">Microsoft Defender for Cloud overview</a></li>
+<li><a href="https://learn.microsoft.com/azure/postgresql/flexible-server/concepts-security" target="_blank">Azure Database for PostgreSQL security</a></li>
+<li><a href="https://learn.microsoft.com/azure/defender-for-cloud/defender-for-sql-on-machines" target="_blank">SQL vulnerability assessments in Defender for Cloud</a></li>
+<li><a href="https://learn.microsoft.com/azure/defender-for-cloud/enable-defender-for-cloud" target="_blank">Enable Defender for Cloud</a></li>
+</ol>
+<h2>Update #2 - Generally Available: Encryption in Transit for Azure Files NFS Shares in Azure Kubernetes Service (AKS)</h2>
+<h3>Why ITPros should care</h3>
+<p>This release closes a significant gap in data protection for Kubernetes workloads consuming NFS shares from Azure Files. Previously, NFS traffic between AKS nodes and Azure Files was unencrypted, creating compliance and security risks for sensitive workloads.</p>
+<p>What changed is that you can now enforce encryption for NFS communication at the Azure Files layer, not just at the application layer. This is important because traditional NFS lacks built-in encryption, and relying on network isolation alone is increasingly insufficient.</p>
+<p>For ITPros managing regulated workloads (healthcare, finance, PII-sensitive data), this removes a control gap. Encryption in transit now becomes a platform-native feature instead of a workaround, reducing architecture complexity and improving auditability.</p>
+<h3>Operational value</h3>
+<p>The operational value is stronger compliance posture and reduced attack surface for data in motion between containers and storage. It also simplifies the security story when auditors ask about data protection controls.</p>
+<p>Before enabling in production, validate that NFS-over-TLS introduces acceptable latency overhead for your workload patterns, test failover and reconnection behaviour under encryption, and confirm that monitoring and logging still work correctly.</p>
+<p>Prerequisites include running AKS with Azure CNI or Kubenet networking, having Azure Files with NFS 4.1 enabled, and ensuring the NFS client libraries on container images support TLS.</p>
+<h3>Real-world example with step-by-step guidance</h3>
+<ol>
+<li>Create an Azure Files NFS share with encryption in transit enabled and confirm TLS version alignment with your security standards.</li>
+<li>Deploy a test AKS workload that mounts the NFS share and validate that pods mount successfully with encrypted traffic.</li>
+<li>Run performance baselines (throughput, latency, CPU overhead) before and after enabling encryption to document operational expectations.</li>
+<li>Monitor pod logs and Azure Files metrics during the test to confirm no silent failures or unexpected throttling occurs.</li>
+<li>Roll out to production workloads in stages, with clear rollback criteria tied to application latency and error rates.</li>
+</ol>
+<h3>Technical details including code examples</h3>
+<p>This example validates that your AKS cluster can successfully mount NFS shares with encryption enabled. The sequence checks cluster networking, confirms NFS connectivity, and tests mount success.</p>
+<p>Run these commands in a non-production cluster first to validate environment readiness before touching production storage.</p>
+az aks show --resource-group &lt;rg&gt; --name &lt;clusterName&gt; --query "networkProfile.{networkPlugin:networkPlugin,networkPolicy:networkPolicy,podCidr:podCidr}" -o jsonc
+
+az storage account show --resource-group &lt;rg&gt; --name &lt;storageAccount&gt; --query "{name:name,kind:kind,accessTier:accessTier}" -o jsonc
+
+kubectl get pvc -A --all-namespaces -o wide kubectl describe pv &lt;pvName&gt; | grep -i nfs
+<p>Expected behaviour: cluster networking is properly configured, storage account kind supports NFS, and PVC/PV resources show NFS mount points. If mounts fail, check network security group rules, storage account firewall allowances, and subnet delegation. If latency increases, monitor resource utilisation and adjust workload placement if needed.</p>
+<h3>Comprehensive Resources</h3>
+<ol>
+<li><a href="https://azure.microsoft.com/updates?id=567787" target="_blank">Azure update: Encryption in Transit for Azure Files NFS Shares in Azure Kubernetes Service (AKS)</a></li>
+<li><a href="https://learn.microsoft.com/azure/storage/files/files-nfs-protocol" target="_blank">Azure Files NFS support</a></li>
+<li><a href="https://learn.microsoft.com/azure/aks/azure-files-volume" target="_blank">Mount Azure Files with NFS in AKS</a></li>
+<li><a href="https://learn.microsoft.com/azure/storage/common/storage-security-guide" target="_blank">Azure storage security</a></li>
+<li><a href="https://learn.microsoft.com/azure/aks/concepts-network" target="_blank">AKS networking concepts</a></li>
+</ol>
+<h2>Update #3 - Generally Available: Expanding Azure Arc SQL Migration with SQL Server on Azure Virtual Machines</h2>
+<h3>Why ITPros should care</h3>
+<p>This capability brings SQL Server migration into the Azure Arc operational footprint, creating a unified migration and inventory experience. For ITPros, this matters because SQL Server modernisation is often fragmented across multiple tools and teams.</p>
+<p>What changed is that you can now discover, assess, and execute SQL migrations through Arc-native workflows, using the same permissions and governance model you already have for infrastructure and hybrid resources.</p>
+<p>The operational gain is consistency: discovery data feeds migration planning, assessments surface blockers early, and rollout can be controlled through the same change and approvals processes you use for other infrastructure migrations.</p>
+<h3>Operational value</h3>
+<p>Operationally, this reduces tooling sprawl and improves coordination between infrastructure and database teams. Arc becomes your single control plane for tracking migration progress, managing runbooks, and collecting audit evidence.</p>
+<p>Before production use, validate that your SQL Server inventory is complete, that migration blockers are understood and addressed, and that your maintenance windows can accommodate expected cutover timings.</p>
+<p>Prerequisites include Azure Arc agent deployment on source VMs, Azure Database Migration Service readiness, and network connectivity to target Azure SQL resources.</p>
+<h3>Real-world example with step-by-step guidance</h3>
+<ol>
+<li>Deploy Azure Arc agents to SQL Server VMs and confirm all instances report healthy status with complete inventory data.</li>
+<li>Run Arc-integrated SQL Server assessments to identify compatibility issues, dependencies, and recommended migration targets.</li>
+<li>Pilot migration for a non-critical workload to establish runbook patterns, measure cutover time, and validate post-migration validation procedures.</li>
+<li>Execute validation tests: connectivity, login success, database consistency checks, job execution, and application integration tests.</li>
+<li>Scale migration in waves using documented runbooks, with gates for monitoring data health and application performance after each cutover.</li>
+</ol>
+<h3>Technical details including code examples</h3>
+<p>This example validates Arc agent health and SQL Server discovery completeness. The sequence ensures your Arc infrastructure is ready for migration workflows.</p>
+<p>Run these commands as part of your pre-migration checklist to catch configuration gaps before committing to migration timelines.</p>
+az account show --output table az connectedmachine list --resource-group &lt;rg&gt; --query "[].{name:name,status:status,osName:osName}" -o table
+
+az resource list --resource-type Microsoft.AzureArcData/sqlServerInstances --query "[].{name:name,resourceGroup:resourceGroup,location:location}" -o table
+
+az connectedmachine machine extension list --resource-group &lt;rg&gt; --machine-name &lt;vmName&gt; --query "[].{name:name,provisioningState:provisioningState}" -o table
+<p>Expected behaviour: Arc agents report healthy status, SQL Server instances are fully discovered with accurate inventory, and required extensions are provisioned successfully. If discovery is incomplete, check Arc agent connectivity, extension deployment, and SQL service running status on source VMs. If migration pre-checks fail, verify SQL Server version compatibility and review Defender logs for blocking issues.</p>
+<h3>Comprehensive Resources</h3>
+<ol>
+<li><a href="https://azure.microsoft.com/updates?id=567362" target="_blank">Azure update: Expanding Azure Arc SQL Migration with SQL Server on Azure Virtual Machines</a></li>
+<li><a href="https://learn.microsoft.com/sql/sql-server/azure-arc/overview" target="_blank">Azure Arc SQL Server Overview</a></li>
+<li><a href="https://learn.microsoft.com/azure/azure-arc/servers/overview" target="_blank">Azure Arc-enabled servers</a></li>
+<li><a href="https://learn.microsoft.com/azure/azure-sql/virtual-machines/windows/sql-server-on-azure-vm-iaas-what-is-overview" target="_blank">SQL Server on Azure Virtual Machines</a></li>
+<li><a href="https://learn.microsoft.com/azure/dms/dms-overview" target="_blank">Azure Database Migration Service</a></li>
+</ol>
+<p>For any new capability this week, if they map to your operational roadmap, run a controlled pilot, measure the impact, and then scale with confidence. That is how you move the needle on modernisation while managing risk.</p>
+<p>Cheers!</p>
+<p>Pierre Roman</p><br/><br/><b>Source:</b> Microsoft Tech Community IT Ops &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
