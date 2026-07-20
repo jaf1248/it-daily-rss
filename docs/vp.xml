@@ -3,16 +3,111 @@
 <channel>
   <title>Joe — VP of IT Briefing</title>
   <description>Leadership-focused IT risk, vendors, pricing, licensing, and industry context.</description>
-  <lastBuildDate>Mon, 20 Jul 2026 11:13:37 +0000</lastBuildDate>
+  <lastBuildDate>Mon, 20 Jul 2026 12:17:28 +0000</lastBuildDate>
   
 <item>
-  <title>🔵 An interview with Expedia CEO Ariane Gorin, who calls AI &quot;a growth opportunity&quot;, as she prepares the online travel company to face potential disruption from AI (Stephanie Stacey/Financial Times)</title>
-  <link>https://www.techmeme.com/260720/p15#a260720p15</link>
-  <pubDate>Mon, 20 Jul 2026 11:10:01 +0000</pubDate>
+  <title>🟠 New ACR Stealer campaigns use WebDAV, MSHTA to evade detection</title>
+  <link>https://www.csoonline.com/article/4198788/new-acr-stealer-campaigns-use-webdav-mshta-to-evade-detection.html</link>
+  <pubDate>Mon, 20 Jul 2026 12:00:24 +0000</pubDate>
+  <source>CSO Online</source>
+  <description><![CDATA[<b>Why this matters: Credential/phishing risk — reinforce MFA and user awareness training.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<p class="wp-block-paragraph">Microsoft has issued a warning about a recent surge in ACR Stealer activity that uses ClickFix-style social engineering to steal credentials, browser data, and sensitive business documents.</p>
+
+
+
+<p class="wp-block-paragraph">In a new report, Microsoft researchers detailed two separate campaigns observed between late April and mid-June 2026 that use different execution techniques for the same theft.</p>
+
+
+
+<p class="wp-block-paragraph">The campaign was seen tricking users into executing malicious commands to resolve a fake issue. Once the malware is executed, it extracts browser-stored credentials, session tokens, and documents, which can potentially allow attackers to access cloud services, impersonate users, and conduct follow-on intrusions across enterprise environments.</p>
+
+
+
+<p class="wp-block-paragraph"><a href="https://www.linkedin.com/in/nicholas-tausek-6ab41611/" rel="noreferrer noopener" target="_blank">Nick Tausek</a>, lead security automation architect at Swimlane, thinks attackers could be using two distinct chains to trick defense tuned on individual indicators.  “By changing the delivery and execution patterns, attackers can evade defenses tuned to one known chain and make related incidents appear disconnected,“ he said. “Security teams may split the activity across separate investigations, delaying recognition of the shared malware and objective.”</p>
+
+
+
+<p class="wp-block-paragraph">ACR Stealer is an information-stealing malware family Microsoft believes is offered through a malware-as-a-service (<a href="https://www.csoonline.com/article/4148601/chrome-abe-bypass-discovered-new-voidstealer-malware-steals-passwords-and-cookies.html">MaaS</a>) model, with possible links to the Amatera Stealer.</p>
+
+
+
+<h2 class="wp-block-heading" id="webdav-and-mshta-based-chains">WebDAV and MSHTA-based chains</h2>
+
+
+
+<p class="wp-block-paragraph">Although both campaigns begin with ClickFix lures, Microsoft’s analysis shows they diverge after initial execution. One attack chain uses <a href="https://www.csoonline.com/article/530692/data-protection-webdav-is-bad-says-security-researcher.html">WebDAV</a>-hosted DLLs, PowerShell, Python loaders, scheduled-task persistence, and even blockchain-based infrastructure called the “EtherHiding” technique, to complicate detection and command and control (C2) discovery.</p>
+
+
+
+<p class="wp-block-paragraph">The second chain uses <a href="https://www.csoonline.com/article/4173096/internet-explorer-may-be-dead-but-its-ghost-still-runs-malware.html">MSHTA</a>, heavily obfuscated PowerShell, stenography, and predominantly fileless, in-memory execution to minimize forensic trails.</p>
+
+
+
+<p class="wp-block-paragraph">“The most troubling part of ACR Stealer is the flexibility surrounding the theft. One chain invests in persistence and layered infrastructure, while the other favors memory execution and fewer forensic traces,” Tausek said. “Those approaches look different to defenders, yet both turn a simple ClickFix lure into stolen credentials, tokens, and business documents.”</p>
+
+
+
+<p class="wp-block-paragraph">Microsoft researchers said protections against these campaigns have now been added to Defender. “Microsoft Defender for Endpoint can help surface both campaigns through behavioral coverage for living-off-the-land execution, suspicious WebDAV and MSHTA activity, obfuscated PowerShell, scheduled-task persistence, in-memory payload execution, and browser credential theft,” they <a href="https://www.microsoft.com/en-us/security/blog/2026/07/16/acr-stealer-two-observed-intrusion-chains-amid-increased-threat-activity/" rel="noreferrer noopener" target="_blank">said</a>.</p>
+
+
+
+<h2 class="wp-block-heading" id="mitigations-include-clickfix-targeted-detections">Mitigations include ClickFix-targeted detections</h2>
+
+
+
+<p class="wp-block-paragraph">The report highlighted that neither of the campaigns exploits any software vulnerability, depending solely on ClickFix-based social engineering.</p>
+
+
+
+<p class="wp-block-paragraph">Microsoft warned its Defender customers that ClickFix attacks <a href="https://www.csoonline.com/article/4016208/sixfold-surge-of-clickfix-attacks-threatens-corporate-defenses.html">are on the rise</a> and shared XDR queries to identify suspicious commands executed through ClickFix-based activity observed while delivering the ACR Stealer.</p>
+
+
+
+<p class="wp-block-paragraph">Microsoft also recommended, as general defense, monitoring for suspicious PowerShell activity, MSHTA execution, WebDAV connections, and attempts to access browser credential stores, while also enabling Microsoft Defender SmartScreen and Attack Surface Reduction (ASR) rules to block common malware delivery techniques.</p>
+
+
+
+<p class="wp-block-paragraph">“The campaigns do not need to directly aid one another to be effective. Together, they create ambiguity and stretch limited SOC resources,” Tausek explained. Security teams need enough visibility to correlate endpoint, identity, and network activity as one evolving intrusion, he added.</p>
+
+
+
+<p class="wp-block-paragraph">Microsoft also shared a list of C2 addresses and payload hosting domains for defenders to add to their detection.</p>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔴 How &quot;synthetic insider&quot; attacks raise the stakes for corporate cyber defense; a Verizon analysis of 22K incidents finds 12% were carried out by internal actors (Hannah Murphy/Financial Times)</title>
+  <link>https://www.techmeme.com/260720/p18#a260720p18</link>
+  <pubDate>Mon, 20 Jul 2026 11:55:01 +0000</pubDate>
   <source>Techmeme</source>
-  <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><a href="https://www.ft.com/content/5abfc75f-f00b-465e-ab73-9c93f10412df"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260720/i15.jpg" vspace="4" /></a>
-<p><a href="https://www.techmeme.com/260720/p15#a260720p15" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Stephanie Stacey / <a href="https://www.ft.com/">Financial Times</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.ft.com/content/5abfc75f-f00b-465e-ab73-9c93f10412df">An interview with Expedia CEO Ariane Gorin, who calls AI &ldquo;a growth opportunity&rdquo;, as she prepares the online travel company to face potential disruption from AI</a></b></span>&nbsp; &mdash;&nbsp; Ariane Gorin faces battle with tech start-ups as she repositions world's second-largest travel booking company</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Potential data exposure — check monitoring and incident response readiness.</b><br/><a href="https://www.ft.com/content/67fe2b44-2041-4ee1-b606-5def4d717407"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260720/i18.jpg" vspace="4" /></a>
+<p><a href="https://www.techmeme.com/260720/p18#a260720p18" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Hannah Murphy / <a href="https://www.ft.com/">Financial Times</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://www.ft.com/content/67fe2b44-2041-4ee1-b606-5def4d717407">How &ldquo;synthetic insider&rdquo; attacks raise the stakes for corporate cyber defense; a Verizon analysis of 22K incidents finds 12% were carried out by internal actors</a></b></span>&nbsp; &mdash;&nbsp; Use of AI deepfake employees to infiltrate companies highlights wider risk of internal security breaches</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Sources: parts of the Trump administration are reigniting efforts to implement de facto bans on foreign open-source models, as Chinese AI models gain momentum (Maria Curi/Axios)</title>
+  <link>https://www.techmeme.com/260720/p17#a260720p17</link>
+  <pubDate>Mon, 20 Jul 2026 11:35:00 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.axios.com/2026/07/20/ai-us-china-open-source-kimi"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260720/i17.jpg" vspace="4" /></a>
+<p><a href="https://www.techmeme.com/260720/p17#a260720p17" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Maria Curi / <a href="https://www.axios.com/">Axios</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://www.axios.com/2026/07/20/ai-us-china-open-source-kimi">Sources: parts of the Trump administration are reigniting efforts to implement de facto bans on foreign open-source models, as Chinese AI models gain momentum</a></b></span>&nbsp; &mdash;&nbsp; The Trump administration is showing signs it could ban cutting-edge Chinese AI models &mdash; a momentous move that could lock in dominance by OpenAI and Anthropic.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</item>
+
+<item>
+  <title>🟠 Microsoft rushes out Windows fix for Dell&#x27;s hot and bothered PCs</title>
+  <link>https://www.theregister.com/os-platforms/2026/07/20/microsoft-rushes-out-windows-fix-for-dells-hot-and-bothered-pcs/5274810</link>
+  <pubDate>Mon, 20 Jul 2026 11:15:00 +0000</pubDate>
+  <source>The Register</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>With a wave of the wand, affected models will go to the Patch Tuesday ball after all<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
 </item>
 
 <item>
@@ -109,26 +204,7 @@
 
 
 <p class="wp-block-paragraph"><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><a href="https://www.cio.com/expert-contributor-network/"><strong>Want to join?</strong></a></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 How PayPal CEO Enrique Lores, appointed earlier in 2026 to revive the payments pioneer, may handle Stripe and Advent&#x27;s takeover offer, based on his HP tenure (Wall Street Journal)</title>
-  <link>https://www.techmeme.com/260720/p14#a260720p14</link>
-  <pubDate>Mon, 20 Jul 2026 10:35:01 +0000</pubDate>
-  <source>Techmeme</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://www.wsj.com/tech/paypal-sale-ceo-enrique-lores-4df4166e?st=ebX7aG&amp;reflink=desktopwebshare_permalink"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260720/i14.jpg" vspace="4" /></a>
-<p><a href="https://www.techmeme.com/260720/p14#a260720p14" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="https://www.wsj.com/">Wall Street Journal</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.wsj.com/tech/paypal-sale-ceo-enrique-lores-4df4166e?st=ebX7aG&amp;reflink=desktopwebshare_permalink">How PayPal CEO Enrique Lores, appointed earlier in 2026 to revive the payments pioneer, may handle Stripe and Advent's takeover offer, based on his HP tenure</a></b></span>&nbsp; &mdash;&nbsp; Enrique Lores took the top job at the payments company earlier this year after decades at HP&nbsp; &mdash;&nbsp; Digital-payments pioneer PayPal is in a yearslong rut.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Watch on Demand: Cloud &amp; Data Security Summit</title>
-  <link>https://www.securityweek.com/virtual-event-today-cloud-data-security-summit/</link>
-  <pubDate>Mon, 20 Jul 2026 10:31:25 +0000</pubDate>
-  <source>SecurityWeek</source>
-  <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><p>Attendees will be able to interact with leading solution providers and other end users facing similar challenges in securing a variety of cloud deployments.</p>
-<p>The post <a href="https://www.securityweek.com/virtual-event-today-cloud-data-security-summit/">Watch on Demand: Cloud &amp; Data Security Summit</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
 </item>
 
 <item>
@@ -137,7 +213,7 @@
   <pubDate>Mon, 20 Jul 2026 10:25:07 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><p>The agentic security tool identifies potentially exploitable code flaws, traces attack paths, and recommends targeted remediations.</p>
-<p>The post <a href="https://www.securityweek.com/capital-one-open-sources-ai-powered-vulnhunter-security-tool/">Capital One Open Sources AI-Powered ‘VulnHunter’ Security Tool</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/capital-one-open-sources-ai-powered-vulnhunter-security-tool/">Capital One Open Sources AI-Powered ‘VulnHunter’ Security Tool</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
 </item>
 
 <item>
@@ -147,7 +223,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.ft.com/content/13c385e7-600f-471a-858e-6f1970802a10"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260720/i13.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260720/p13#a260720p13" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Barbara Moens / <a href="https://www.ft.com/">Financial Times</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.ft.com/content/13c385e7-600f-471a-858e-6f1970802a10">The EU fines Alibaba's online marketplace AliExpress &euro;550M for failing to do enough to prevent the sale of illegal products, the largest DSA fine to date</a></b></span>&nbsp; &mdash;&nbsp; Record penalty under bloc's Digital Services Act comes amid broader crackdown on Chinese ecommerce platforms</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.ft.com/content/13c385e7-600f-471a-858e-6f1970802a10">The EU fines Alibaba's online marketplace AliExpress &euro;550M for failing to do enough to prevent the sale of illegal products, the largest DSA fine to date</a></b></span>&nbsp; &mdash;&nbsp; Record penalty under bloc's Digital Services Act comes amid broader crackdown on Chinese ecommerce platforms</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
 </item>
 
 <item>
@@ -360,15 +436,7 @@
 
 
 <p class="wp-block-paragraph">“You don’t want someone to feel the results may be wrong if you’re using AI to assess a person and their future depends on it,” he notes. “You want to remove any doubts [in such AI use cases], and the strategy should ensure that. The strategy should include all the work needed to have that trust.”</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Sign up for T-Mobile Fiber 2 Gig and get $100 back, plus a month included</title>
-  <link>https://www.zdnet.com/article/t-mobile-fiber-2-gig-deal/</link>
-  <pubDate>Mon, 20 Jul 2026 10:00:37 +0000</pubDate>
-  <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>T-Mobile Fiber's latest offer covers your first month and pays you $100 back on the 2 Gig plan. Here's all you need to know.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
 </item>
 
 <item>
@@ -487,7 +555,7 @@
 
 
 <p class="wp-block-paragraph"><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><a href="https://www.cio.com/expert-contributor-network/"><strong>Want to join?</strong></a></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
 </item>
 
 <item>
@@ -496,16 +564,7 @@
   <pubDate>Mon, 20 Jul 2026 09:50:01 +0000</pubDate>
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><p><a href="https://www.techmeme.com/260720/p12#a260720p12" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Juro Osawa / <a href="https://www.theinformation.com/">The Information</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.theinformation.com/briefings/moonshot-ai-seeks-investor-approval-begin-ipo-process">Sources: Chinese startup Moonshot AI is seeking formal approval from investors to start a Hong Kong IPO process, which could happen in as soon as six months</a></b></span>&nbsp; &mdash;&nbsp; Chinese startup Moonshot AI, whose powerful new open-source model is upending Silicon Valley, is seeking formal approval from investors &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Hugging Face Hacked in Autonomous AI Attack</title>
-  <link>https://www.securityweek.com/hugging-face-hacked-in-autonomous-ai-attack/</link>
-  <pubDate>Mon, 20 Jul 2026 09:36:15 +0000</pubDate>
-  <source>SecurityWeek</source>
-  <description><![CDATA[<b>Why this matters: Credential/phishing risk — reinforce MFA and user awareness training.</b><br/><p>Targeting production infrastructure, the attack compromised internal datasets and service credentials.</p>
-<p>The post <a href="https://www.securityweek.com/hugging-face-hacked-in-autonomous-ai-attack/">Hugging Face Hacked in Autonomous AI Attack</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.theinformation.com/briefings/moonshot-ai-seeks-investor-approval-begin-ipo-process">Sources: Chinese startup Moonshot AI is seeking formal approval from investors to start a Hong Kong IPO process, which could happen in as soon as six months</a></b></span>&nbsp; &mdash;&nbsp; Chinese startup Moonshot AI, whose powerful new open-source model is upending Silicon Valley, is seeking formal approval from investors &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
 </item>
 
 <item>
@@ -658,7 +717,7 @@
 
 
 <p class="wp-block-paragraph">That may be the heart of smart centralization. It rejects the false permanence of operating model decisions, and recognizes that autonomy and scale are both valuable, but in different places, at different times, for different reasons.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
 </item>
 
 <item>
@@ -795,7 +854,7 @@
 
 
 <p class="wp-block-paragraph"><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><a href="https://www.cio.com/expert-contributor-network/"><strong>Want to join?</strong></a></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
 </item>
 
 <item>
@@ -805,7 +864,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://www.wsj.com/politics/israels-50-million-experiment-to-change-u-s-public-opinion-253b3b70?st=rBnwMu"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260720/i11.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260720/p11#a260720p11" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="https://www.wsj.com/">Wall Street Journal</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.wsj.com/politics/israels-50-million-experiment-to-change-u-s-public-opinion-253b3b70?st=rBnwMu">A look at Israel's influence campaign in the US that's included millions of AI-driven texts and a $45M+ contract with ex-Trump campaign strategist Brad Parscale</a></b></span>&nbsp; &mdash;&nbsp; The Israeli government is trying to shore up its U.S. reputation with help from influencers, Trump insiders and millions of AI-driven texts</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.wsj.com/politics/israels-50-million-experiment-to-change-u-s-public-opinion-253b3b70?st=rBnwMu">A look at Israel's influence campaign in the US that's included millions of AI-driven texts and a $45M+ contract with ex-Trump campaign strategist Brad Parscale</a></b></span>&nbsp; &mdash;&nbsp; The Israeli government is trying to shore up its U.S. reputation with help from influencers, Trump insiders and millions of AI-driven texts</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
 </item>
 
 <item>
@@ -814,16 +873,7 @@
   <pubDate>Mon, 20 Jul 2026 08:12:19 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><p>The fresh security update resolves six critical and high-severity use-after-free vulnerabilities.</p>
-<p>The post <a href="https://www.securityweek.com/chrome-150-update-patches-severe-memory-safety-bugs/">Chrome 150 Update Patches Severe Memory Safety Bugs</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Trial lawyers, with big liability litigation earnings, are among the most active lobbyists against autonomous vehicles, even as data shows clear safety benefits (Alex Tabarrok/Marginal Revolution)</title>
-  <link>https://www.techmeme.com/260720/p10#a260720p10</link>
-  <pubDate>Mon, 20 Jul 2026 08:10:03 +0000</pubDate>
-  <source>Techmeme</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><p><a href="https://www.techmeme.com/260720/p10#a260720p10" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Alex Tabarrok / <a href="https://marginalrevolution.com/">Marginal Revolution</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://marginalrevolution.com/marginalrevolution/2026/07/trial-lawyers-lobby-against-autonomous-vehicles.html">Trial lawyers, with big liability litigation earnings, are among the most active lobbyists against autonomous vehicles, even as data shows clear safety benefits</a></b></span>&nbsp; &mdash;&nbsp; Roughly 37,000-40,000 Americans die in auto accidents every year.&nbsp; We now have large-scale, real-world evidence &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/chrome-150-update-patches-severe-memory-safety-bugs/">Chrome 150 Update Patches Severe Memory Safety Bugs</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
 </item>
 
 <item>
@@ -1108,7 +1158,7 @@
 
 
 <p class="wp-block-paragraph">For security leaders, that future is arriving in the form of AI-generated vulnerabilities, AI-assisted investigations, and AI-enabled adversaries. The question is no longer whether security operations centers will change. It is whether organizations can adapt quickly enough to keep pace.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -1333,7 +1383,7 @@
 
 <li><a href="https://www.csoonline.com/article/4189600/mythos-is-a-signal-not-a-siren-what-frontier-ai-should-change-for-cisos.html">Mythos is a signal, not a siren: What frontier AI should change for CISOs</a></li>
 </ul>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -1342,7 +1392,7 @@
   <pubDate>Mon, 20 Jul 2026 05:15:41 +0000</pubDate>
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><p><a href="https://www.techmeme.com/260720/p5#a260720p5" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Manuel Baigorri / <a href="https://www.bloomberg.com/">Bloomberg</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/articles/2026-07-20/blackstone-agrees-to-invest-in-korean-robotics-supplier-futronic">Blackstone agrees to invest an undisclosed sum in South Korea-based Futronic, which makes actuators used in industrial robots, sources say at a ~$675M valuation</a></b></span>&nbsp; &mdash;&nbsp; Blackstone Inc. has agreed to invest in Futronic, a South Korean supplier of high-precision actuators used in industrial robotics and the automotive sector.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/articles/2026-07-20/blackstone-agrees-to-invest-in-korean-robotics-supplier-futronic">Blackstone agrees to invest an undisclosed sum in South Korea-based Futronic, which makes actuators used in industrial robots, sources say at a ~$675M valuation</a></b></span>&nbsp; &mdash;&nbsp; Blackstone Inc. has agreed to invest in Futronic, a South Korean supplier of high-precision actuators used in industrial robotics and the automotive sector.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
 </item>
 
 <item>
@@ -1352,17 +1402,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.nytimes.com/2026/07/19/technology/polymarket-kalshi-rivalry-coplan-mansour.html"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260720/i4.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260720/p4#a260720p4" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="https://www.nytimes.com/">New York Times</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.nytimes.com/2026/07/19/technology/polymarket-kalshi-rivalry-coplan-mansour.html">Sources detail Kalshi's and Polymarket's efforts to undermine each other, including lobbying regulators, trying to derail deals, and waging influence campaigns</a></b></span>&nbsp; &mdash;&nbsp; Early one morning in November 2024, Shayne Coplan, the founder of Polymarket, awoke to an unexpected visit.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Draft: the Trump admin plans to use the UN General Assembly to push a global &quot;freedom of expression&quot; declaration that EU lawmakers call an attack on tech rules (Eliza Gkritsi/Politico)</title>
-  <link>https://www.techmeme.com/260720/p2#a260720p2</link>
-  <pubDate>Mon, 20 Jul 2026 04:20:01 +0000</pubDate>
-  <source>Techmeme</source>
-  <description><![CDATA[<b>Why this matters: Regulatory/compliance signal — assess applicability and remediation timeline.</b><br/><a href="https://www.politico.eu/article/trump-administration-will-push-un-free-speech-declaration-that-takes-aim-at-european-tech-regulation/"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260720/i2.jpg" vspace="4" /></a>
-<p><a href="https://www.techmeme.com/260720/p2#a260720p2" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Eliza Gkritsi / <a href="http://www.politico.com/">Politico</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.politico.eu/article/trump-administration-will-push-un-free-speech-declaration-that-takes-aim-at-european-tech-regulation/">Draft: the Trump admin plans to use the UN General Assembly to push a global &ldquo;freedom of expression&rdquo; declaration that EU lawmakers call an attack on tech rules</a></b></span>&nbsp; &mdash;&nbsp; BRUSSELS &mdash; The Trump administration will use the upcoming U.N. General Assembly to push a global &ldquo;freedom of expression&rdquo; &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.nytimes.com/2026/07/19/technology/polymarket-kalshi-rivalry-coplan-mansour.html">Sources detail Kalshi's and Polymarket's efforts to undermine each other, including lobbying regulators, trying to derail deals, and waging influence campaigns</a></b></span>&nbsp; &mdash;&nbsp; Early one morning in November 2024, Shayne Coplan, the founder of Polymarket, awoke to an unexpected visit.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
 </item>
 
 <item>
@@ -1485,7 +1525,7 @@
 
 
 <p class="wp-block-paragraph"><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><a href="https://www.cio.com/expert-contributor-network/"><strong>Want to join?</strong></a></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 11h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 12h ago]]></description>
 </item>
 
 <item>
@@ -1497,11 +1537,11 @@
 </item>
 
 <item>
-  <title>🔵 Moonshot&#x27;s open-source Kimi K3 model beats Anthropic&#x27;s Fable 5 on this benchmark</title>
-  <link>https://www.zdnet.com/article/ai-model-release-tracker/</link>
-  <pubDate>Fri, 17 Jul 2026 17:35:00 +0000</pubDate>
-  <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Our AI Model Release Tracker keeps new models in context with their peers, so you know which are worth your time.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
+  <title>🟠 Java was a three-day hotfix away from dying horribly on stage</title>
+  <link>https://www.theregister.com/devops/2026/07/18/java-was-a-three-day-hotfix-away-from-dying-horribly-on-stage/5274590</link>
+  <pubDate>Sat, 18 Jul 2026 13:30:00 +0000</pubDate>
+  <source>The Register</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Tim Lindholm, Java's original JVM maintainer, shares with El Reg some of the grungy build details the doc glosses over<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
@@ -1555,43 +1595,6 @@
   <pubDate>Fri, 17 Jul 2026 16:36:19 +0000</pubDate>
   <source>ZDNet</source>
   <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/>Dell's XPS 16 screams 'Premium laptop' thanks to its sleek design, OLED screen, and powerful hardware.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Google must open Android to rival AI agents, EU orders</title>
-  <link>https://www.csoonline.com/article/4198425/google-must-open-android-to-rival-ai-agents-eu-orders-2.html</link>
-  <pubDate>Fri, 17 Jul 2026 14:38:41 +0000</pubDate>
-  <source>CSO Online</source>
-  <description><![CDATA[<b>Why this matters: Could impact sign-ins/MFA/Conditional Access — watch for login issues.</b><br/><div id="remove_no_follow">
-		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
-					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
-						<div class="article-column__content">
-<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
-
-
-
-<p class="wp-block-paragraph">The European Union is stepping up its actions against US tech giants under the Digital Markets Act, which is intended to ensure fair competition between digital platforms. On Thursday, the European Commission issued <a href="https://digital-strategy.ec.europa.eu/en/news/commission-provides-guidance-google-ai-interoperability-android-and-sharing-google-search-data" rel="noreferrer noopener" target="_blank">two rulings to limit Google’s dominance</a>.</p>
-
-
-
-<p class="wp-block-paragraph">The Commission ordered Google to open up the Android operating system to AI assistants other than its own Gemini, ensuring that they had the same access to applications and operating system services. A second ruling ordered Google to <a href="https://www.computerworld.com/article/4159968/google-should-share-search-data-to-break-its-monopoly-european-commission-suggests.html">share search data</a> that only it is big enough to collect with other search engines.</p>
-
-
-
-<p class="wp-block-paragraph">Google has hit back at the measures, warning that they could create security issues for users. “Today’s decisions risk undermining vital privacy and security guardrails for millions of Europeans. We have repeatedly offered solutions to safeguard users while satisfying the DMA’s goals, but these rulings discount extensive evidence of user harm,” said Kent Walker, Google’s President of Global Affairs, <a href="https://blog.google/company-news/inside-google/around-the-globe/google-europe/the-dma-should-not-undercut-security-privacy-for-europeans/" rel="noreferrer noopener" target="_blank">in a company blog post</a>.</p>
-
-
-
-<p class="wp-block-paragraph">The EU move doesn’t just cause problems for Google but for CISOs as well, warned Roman Stanek, CEO of Good Data AI. “Enterprise security has always leaned on a simple assumption, that apps are boxes, and the OS decides what crosses the box. But once multiple agents get equal system-level reach, access to screen context, cross-app actions, background execution, that assumption breaks.</p>
-
-
-
-<p class="wp-block-paragraph">“CISOs need to stop treating ‘AI assistant’ as a single, well-understood permission and start treating it as a category risk, one they have to govern like they govern app stores and MDM policies today. That requires device policies that name which agents can hold system-level permissions, not just which apps are installed. It means DLP and conditional access rules that account for an agent reading and acting on data, not just an app requesting it.,” he said.</p>
-
-
-
-<p class="wp-block-paragraph"><em>This article first appeared on Computerworld.</em></p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
 </item>
 
 <item>
@@ -1773,15 +1776,6 @@
 </item>
 
 <item>
-  <title>🔵 Podcast: Broken Governance, Agentic AI, and the MindStone Agent Exclusive</title>
-  <link>https://www.securityweek.com/podcast-broken-governance-agentic-ai-and-the-mindstone-agent-exclusive/</link>
-  <pubDate>Fri, 17 Jul 2026 12:11:22 +0000</pubDate>
-  <source>SecurityWeek</source>
-  <description><![CDATA[<b>Why this matters: Regulatory/compliance signal — assess applicability and remediation timeline.</b><br/><p>(Video) Artificial intelligence is transforming cybersecurity, but are governance, compliance, and security practices evolving fast enough to keep up?</p>
-<p>The post <a href="https://www.securityweek.com/podcast-broken-governance-agentic-ai-and-the-mindstone-agent-exclusive/">Podcast: Broken Governance, Agentic AI, and the MindStone Agent Exclusive</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
-</item>
-
-<item>
   <title>🟠 The last human relationship in cybersecurity</title>
   <link>https://www.cio.com/article/4197971/the-last-human-relationship-in-cybersecurity.html</link>
   <pubDate>Fri, 17 Jul 2026 12:00:00 +0000</pubDate>
@@ -1933,16 +1927,15 @@
 
 
 <p class="wp-block-paragraph"><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><a href="https://www.cio.com/expert-contributor-network/"><strong>Want to join?</strong></a></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3d ago]]></description>
 </item>
 
 <item>
-  <title>🔵 Industry Reactions to Pentagon Suspending CMMC Phase 2: Feedback Friday</title>
-  <link>https://www.securityweek.com/industry-reactions-to-pentagon-suspending-cmmc-phase-2-feedback-friday/</link>
-  <pubDate>Fri, 17 Jul 2026 11:08:04 +0000</pubDate>
-  <source>SecurityWeek</source>
-  <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><p>Industry professionals broadly agree that the suspension pauses third-party CMMC audits but not the underlying legal obligation to protect CUI.</p>
-<p>The post <a href="https://www.securityweek.com/industry-reactions-to-pentagon-suspending-cmmc-phase-2-feedback-friday/">Industry Reactions to Pentagon Suspending CMMC Phase 2: Feedback Friday</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3d ago]]></description>
+  <title>🟠 Attackers target critical FortiSandbox flaws as CISA issues patch order</title>
+  <link>https://www.theregister.com/security/2026/07/17/attackers-target-critical-fortisandbox-flaws-as-cisa-issues-patch-order/5274287</link>
+  <pubDate>Fri, 17 Jul 2026 11:58:10 +0000</pubDate>
+  <source>The Register</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Command injection vulns land on exploited list after researchers spot abuse attempts<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3d ago]]></description>
 </item>
 
 <item>
@@ -2031,177 +2024,6 @@
 
 
 <p class="wp-block-paragraph"><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><a href="https://www.cio.com/expert-contributor-network/"><strong>Want to join?</strong></a></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3d ago]]></description>
-</item>
-
-<item>
-  <title>🔵 AI makes its case against the ‘business-savvy CIO’</title>
-  <link>https://www.cio.com/article/4195254/ai-makes-its-case-against-the-business-savvy-cio.html</link>
-  <pubDate>Fri, 17 Jul 2026 10:01:00 +0000</pubDate>
-  <source>CIO.com</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><div id="remove_no_follow">
-		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
-					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
-						<div class="article-column__content">
-<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
-
-
-
-<p class="wp-block-paragraph">Once upon a time, there were actual arguments as to whether CIOs should be business people, not technology people. With any luck, these arguments were stomped out back here: “<a href="https://www.cio.com/article/222250/the-case-against-the-business-savvy-cio.html">The case against the ‘business-savvy CIO’</a>” — which drove the arguments for this false dichotomy into the ground back in 2018.</p>
-
-
-
-<p class="wp-block-paragraph">Some complications have arisen in the near decade since, so I’m afraid we need to revisit the subject — especially as the most recent of this has made the drumbeat for business-savvy CIOs that much louder.</p>
-
-
-
-<p class="wp-block-paragraph">One source of this need was the case of the dreaded Digital adjectival abuse, also known as “Digital as a Noun.”</p>
-
-
-
-<p class="wp-block-paragraph"><a href="https://www.cio.com/article/230425/what-is-digital-transformation-a-necessary-disruption.html">Digital</a> was a big deal back in the pre-COVID era. It matters here because for Digital to work, business leaders needed to be technologists, not just business people.</p>
-
-
-
-<p class="wp-block-paragraph">As business leaders became better technologists, CIOs needed to keep up on the business potential for the various Digital technologies their business leader friends were suddenly asking for.</p>
-
-
-
-<p class="wp-block-paragraph">Another source of confusion was COVID itself, and the discovery it led to on the part of those business executives not already convinced that the entire business ran on IT, and that any area that still relied on manual processes should be presumed incompetent. Rather than insisting on a full-blown ROI to justify automating a function, those relying on manual methods were (or should have been) asked to justify this choice.</p>
-
-
-
-<h2 class="wp-block-heading" id="ai-changes-the-equation">AI changes the equation</h2>
-
-
-
-<p class="wp-block-paragraph">But as tendentious or tectonic as those shifts might have seemed at the time, AI is raising the now-what-do-I-do? equation to new heights.</p>
-
-
-
-<p class="wp-block-paragraph">That’s because CIOs are now being given a new set of alternatives:</p>
-
-
-
-<ul class="wp-block-list">
-<li>Whether they want to be business people after all;</li>
-
-
-
-<li>Whether they should become or remain classical business/technologists;</li>
-
-
-
-<li>Or, should they set their sights on becoming AI business/technologists.</li>
-</ul>
-
-
-
-<p class="wp-block-paragraph">You might have noticed an emerging trend in IT: The proliferation of articles about AI whose content even many tech-savvy CIOs can’t make heads or tails of.</p>
-
-
-
-<p class="wp-block-paragraph">And no, the problem isn’t that their texts include a bunch of unfamiliar <a href="https://www.cio.com/article/191262/most-misused-buzzwords-in-information-technology.html">buzzwords</a>.</p>
-
-
-
-<p class="wp-block-paragraph">Much of the offending content is rooted in unfamiliar concepts, not vocabulary changes.</p>
-
-
-
-<p class="wp-block-paragraph">Or, even more frustrating, the puzzlement sometimes lies in familiar buzzwords whose meaning has changed and become obscure.</p>
-
-
-
-<p class="wp-block-paragraph">So never mind whether CIOs should be business people or technologists. A more challenging question is whether CIOs should be business people, classically tech-savvy people, or AI/tech-savvy people.</p>
-
-
-
-<p class="wp-block-paragraph">Or some combination of those alternatives.</p>
-
-
-
-<p class="wp-block-paragraph">But wait, there’s a whole other level we need to dig through. That’s because this collection of confusing questions isn’t the starting point. It’s because, as CIO, the questions that matter aren’t about how the CIO engages with the rest of the company as an executive.</p>
-
-
-
-<p class="wp-block-paragraph">It’s how the CIO engages as the company’s highest-level <a href="https://www.cio.com/article/276798/what-is-a-business-analyst-a-key-role-for-business-it-efficiencywhat-is-a-business-analyst-a-key-role-for-business-it-efficiency.html">business analyst</a>.</p>
-
-
-
-<h2 class="wp-block-heading" id="the-cios-changing-roles-and-directives">The CIO’s changing roles and directives</h2>
-
-
-
-<p class="wp-block-paragraph">With classical IT organizational architectures, a CIO could make sense of all of IT’s slices, dices, and levels, how the pieces fit together to make the business more effective, and how adding and rearranging the pieces could help make the business more effective and competitive.</p>
-
-
-
-<p class="wp-block-paragraph">In the good ol’ days, that is, CIOs could succeed wearing their business analyst haberdashery without having to give up their executive function.</p>
-
-
-
-<p class="wp-block-paragraph">Read the average opinion piece on how AI affects the CIO’s role and you’ll get the same tired back-office-to-front-office recommendations we waded through when Digital was king. But AI isn’t what’s driving that shift, if it even is a shift.</p>
-
-
-
-<p class="wp-block-paragraph">No, here’s what I think the average CIO is in for:</p>
-
-
-
-<ul class="wp-block-list">
-<li><strong>Elevating the business analyst:</strong> CIOs need to be smart about AI, but aren’t in a position to make themselves business-analyst-smart about AI. So it’s up to the CIO to give IT’s best business analysts assignments that will make them AI- smart, and to schedule regular debriefings to help the CIO become smart enough.</li>
-
-
-
-<li><strong>Become architect-level smart about AI:</strong> CIOs should build a <a href="https://www.cio.com/article/4185912/why-agentic-architecture-is-still-so-puzzling.html">capability-level view of AI</a>, collaborating with the whole IT department to gain a realistic understanding of what high-level business capabilities AI does and could bring to the business party.</li>
-
-
-
-<li><strong>Adopt the CSO hat on the company’s behalf: </strong>No, notchief security officer. Chief skepticism officer: What the company needs the CIO to become is someone able to see through the hype and blather that sets implementation traps and leads to seductive but unachievable transformation programs.</li>
-</ul>
-
-
-
-<h2 class="wp-block-heading" id="why-this-matters-more-than-you-might-think">Why this matters more than you might think</h2>
-
-
-
-<p class="wp-block-paragraph">Once upon a time, one of the hallmarks of well-built IT was simplicity. IT professionals designed and engineered systems they and their colleagues could understand because the systems were designed to be graspable.</p>
-
-
-
-<p class="wp-block-paragraph">Among the many changes AI is bringing to the fore is that AIs don’t need the same level of simplicity, and we can anticipate that AIs won’t be instructed to make their designs human-graspable either.</p>
-
-
-
-<p class="wp-block-paragraph">We already have too many applications in the IT portfolio that are the only repositories of business logic the company has — the developers and business analysts who supported this business logic retired long ago.</p>
-
-
-
-<p class="wp-block-paragraph">That was the case when simplicity was a design goal.</p>
-
-
-
-<p class="wp-block-paragraph">Just imagine the scenario when AIs build systems for which simplicity isn’t a target they’re aiming for at all.</p>
-
-
-
-<p class="wp-block-paragraph"><strong>See also:</strong></p>
-
-
-
-<ul class="wp-block-list">
-<li><a href="https://www.cio.com/article/4184692/ai-is-reducing-leadership-to-simply-managing-work.html">AI is reducing leadership to simply managing work</a></li>
-
-
-
-<li><a href="https://www.cio.com/article/4168673/can-an-ai-be-a-competent-leader-lets-find-out.html">Can an AI be a competent leader? Let’s find out</a></li>
-
-
-
-<li><a href="https://www.cio.com/article/4131846/ai-is-about-to-get-really-weird-cios-better-be-prepared.html">AI is about to get really weird. CIOs better be prepared.</a></li>
-</ul>
 </div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3d ago]]></description>
 </item>
 
@@ -2450,6 +2272,14 @@
 
 <p class="wp-block-paragraph">In my experience, the organizations that succeed are the ones that stopped accepting green scorecards at face value and demanded something more meaningful.</p>
 </div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3d ago]]></description>
+</item>
+
+<item>
+  <title>🔴 Ransomware curdles production at Coca-Cola&#x27;s Fairlife dairy biz</title>
+  <link>https://www.theregister.com/cyber-crime/2026/07/17/ransomware-curdles-production-at-coca-colas-fairlife-dairy-biz/5274157</link>
+  <pubDate>Fri, 17 Jul 2026 10:00:00 +0000</pubDate>
+  <source>The Register</source>
+  <description><![CDATA[<b>Why this matters: Elevated ransomware risk — validate backups and endpoint defenses.</b><br/>No use crying over spilled milk when US plants can't bottle it in the first place<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 3d ago]]></description>
 </item>
 
 <item>
@@ -4282,6 +4112,22 @@
 </item>
 
 <item>
+  <title>🟠 NTP server that traveled back in time caused massive Aussie mobile outage</title>
+  <link>https://www.theregister.com/networks/2026/07/17/ntp-server-that-traveled-back-in-time-caused-massive-aussie-mobile-outage/5274059</link>
+  <pubDate>Fri, 17 Jul 2026 04:48:45 +0000</pubDate>
+  <source>The Register</source>
+  <description><![CDATA[<b>Why this matters: Service impact possible — prepare comms and confirm vendor status.</b><br/>Telstra skipped a patch, didn’t record changes, had no idea it was an accident waiting to happen<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3d ago]]></description>
+</item>
+
+<item>
+  <title>🔵 South Korea making its own security-centric AI model</title>
+  <link>https://www.theregister.com/ai-and-ml/2026/07/17/south-korea-making-its-own-security-centric-ai-model/5274034</link>
+  <pubDate>Fri, 17 Jul 2026 01:56:40 +0000</pubDate>
+  <source>The Register</source>
+  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/>Adapting existing local LLM project for security and sovereignty purposes and hopes to one day match Mythos<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3d ago]]></description>
+</item>
+
+<item>
   <title>🟠 New York State just hit pause on the AI data center boom</title>
   <link>https://www.cio.com/article/4198071/new-york-state-just-hit-pause-on-the-ai-data-center-boom-2.html</link>
   <pubDate>Fri, 17 Jul 2026 01:25:15 +0000</pubDate>
@@ -4536,6 +4382,14 @@
 </item>
 
 <item>
+  <title>🔵 Microsoft open-sources Comic Chat, its cartoon IRC curiosity</title>
+  <link>https://www.theregister.com/offbeat/2026/07/16/microsoft-open-sources-comic-chat-its-cartoon-irc-curiosity/5274382</link>
+  <pubDate>Thu, 16 Jul 2026 14:15:00 +0000</pubDate>
+  <source>The Register</source>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Step back three decades to 'a period when software teams were willing to color outside the lines'<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3d ago]]></description>
+</item>
+
+<item>
   <title>🔴 CISA urges immediate SharePoint hardening as exploits mount</title>
   <link>https://www.csoonline.com/article/4197775/cisa-urges-immediate-sharepoint-hardening-as-exploits-mount.html</link>
   <pubDate>Thu, 16 Jul 2026 12:06:13 +0000</pubDate>
@@ -4609,7 +4463,23 @@
 
 
 <p class="wp-block-paragraph">Boehm argued that limiting network reachability through segmentation should sit alongside patch management and threat hunting as a core defensive strategy. Reachability, he said, is a control that organizations own, not patch timing. CISA has given Federal Civilian Executive Branch (FCEB) agencies three days to remediate CVE-2026-56164 under Binding Operational Directive (<a href="https://www.csoonline.com/article/4183750/cisa-tells-agencies-to-patch-smarter-not-harder-foreshadowing-broader-industry-practice.html">BOD)</a> 22-01.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 3d ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 4d ago]]></description>
+</item>
+
+<item>
+  <title>🟠 Windows 10 refuses to die, and the security bill is coming due</title>
+  <link>https://www.theregister.com/os-platforms/2026/07/16/windows-10-refuses-to-die-and-the-security-bill-is-coming-due/5271987</link>
+  <pubDate>Thu, 16 Jul 2026 11:25:20 +0000</pubDate>
+  <source>The Register</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>One in six machines still run the old OS as migration stalls and patch deadlines creep closer<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4d ago]]></description>
+</item>
+
+<item>
+  <title>🟠 AWS CloudFront outage serves errors instead of websites</title>
+  <link>https://www.theregister.com/off-prem/2026/07/16/aws-cloudfront-outage-serves-errors-instead-of-websites/5272421</link>
+  <pubDate>Thu, 16 Jul 2026 10:54:42 +0000</pubDate>
+  <source>The Register</source>
+  <description><![CDATA[<b>Why this matters: Service impact possible — prepare comms and confirm vendor status.</b><br/>Storm sends winds whipping beyond cloud giant, knocking out services including Hugging Face and the UK's National Lottery<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4d ago]]></description>
 </item>
 
 <item>
@@ -5709,6 +5579,14 @@
 </item>
 
 <item>
+  <title>🟠 How to teach an old Intel Mac new tricks with OpenCore Legacy Patcher</title>
+  <link>https://www.theregister.com/software/2026/07/16/how-to-teach-an-old-intel-mac-new-tricks-with-opencore-legacy-patcher/5271880</link>
+  <pubDate>Thu, 16 Jul 2026 08:30:00 +0000</pubDate>
+  <source>The Register</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Why to do it, and what to watch out for<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4d ago]]></description>
+</item>
+
+<item>
   <title>🟠 Flaw surge fuels need for CISOs to rethink vulnerability management</title>
   <link>https://www.csoonline.com/article/4196435/flaw-surge-fuels-need-for-cisos-to-rethink-vulnerability-management.html</link>
   <pubDate>Thu, 16 Jul 2026 07:00:00 +0000</pubDate>
@@ -6246,7 +6124,7 @@
 
 
 <p class="wp-block-paragraph">To address both findings, Manifold recommends validating genuine user interactions before executing privileged actions, avoiding URL-driven privilege transitions, and strengthening the authentication of internal extension workflows.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4d ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5d ago]]></description>
 </item>
 
 <item>
@@ -6356,123 +6234,6 @@
 
 <p class="wp-block-paragraph"><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><a href="https://www.cio.com/expert-contributor-network/"><strong>Want to join?</strong></a></p>
 </div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5d ago]]></description>
-</item>
-
-<item>
-  <title>🔴 Cybersecurity needs more prevention and less reliance on cure</title>
-  <link>https://www.csoonline.com/article/4196818/cybersecurity-needs-more-prevention-and-less-reliance-on-cure.html</link>
-  <pubDate>Wed, 15 Jul 2026 09:00:00 +0000</pubDate>
-  <source>CSO Online</source>
-  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/><div id="remove_no_follow">
-		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
-					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
-						<div class="article-column__content">
-<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
-
-
-
-<p class="wp-block-paragraph">Ask any medical doctor, and they’ll tell you that prevention is better than cure. It’s more cost-effective and it has better outcomes.</p>
-
-
-
-<p class="wp-block-paragraph">The same is true in cybersecurity. But we believe that our industry has veered too far away from this simple concept. We observe that most new tools are detection-focused, and we are calling for cyber innovators and venture capital to re-emphasize and invest resources into blocking rather than just discovering problems.</p>
-
-
-
-<p class="wp-block-paragraph">The reasons that cybersecurity relies on detection are understandable, and they are based on the history of networked systems. Early systems were fragile. Recovery was slow and downtime was costly. So, the first security controls were designed to restrict unauthorized access. They blocked execution and prevented exploitation, because if an attack succeed – such as a computer virus running successfully – the consequences might have been irreversible.</p>
-
-
-
-<p class="wp-block-paragraph">When the internet exploded in the 1990s, prevention solutions multiplied. Vendors developed firewalls and antivirus platforms to stop threats before they started.</p>
-
-
-
-<p class="wp-block-paragraph">But attackers adapted, of course, and networks grew more complex. Perimeter controls were no longer good enough on their own. The cyber industry responded with intrusion detection systems and later with <a href="https://www.csoonline.com/article/3829750/4-key-trends-reshaping-the-siem-market.html?utm=hybrid_search">Security Information and Event Management</a>. Detection got a boost from large-scale log aggregation and analytics.</p>
-
-
-
-<p class="wp-block-paragraph">This was a great complement to prevention. But it was never meant to replace it.</p>
-
-
-
-<h2 class="wp-block-heading" id="detection-didnt-reduce-risk">Detection didn’t reduce risk</h2>
-
-
-
-<p class="wp-block-paragraph">Security today focuses on visibility, alerting and response. Executives use metrics like mean-time-to-detect and mean-time-to-respond, and compromise is often assumed to be inevitable. But as detection improves, this has not caused a proportional decline in compromise rates.</p>
-
-
-
-<p class="wp-block-paragraph">IBM’s <a href="https://www.ibm.com/think/insights/data-matters/cost-of-a-data-breach">Cost of a Data Breach Report</a> consistently shows that faster identification and containment reduce financial impact. But the average global cost of a breach is still millions of dollars – because detection does not prevent the initial compromise.</p>
-
-
-
-<p class="wp-block-paragraph">The initial problem continues to come from the usual places: known vulnerabilities, stolen credentials or misconfigurations. In other words, detection reduces impact in the short term, but it does not reduce structural risk.</p>
-
-
-
-<h2 class="wp-block-heading" id="the-limits-of-a-detection-first-model">The limits of a detection-first model</h2>
-
-
-
-<p class="wp-block-paragraph">When we gather for industry forums like the RSAC Conference, the topics include automation, AI-driven response and operational resilience. These are certainly important, but they have limits. Detection produces false positives and noise. The volume of alerts begins to outpace human capacity to sift through it for the genuine issues. Alert fatigue is real, and talent shortages continue.</p>
-
-
-
-<p class="wp-block-paragraph">We observe that the ratio of detection tools versus prevention tools is getting bigger. RSAC Conference runs <a href="https://www.rsaconference.com/rsac-programs/innovation/innovation-sandbox">the largest startup competition</a> in cybersecurity. Over the past three years more than 500 new cybersecurity companies have entered the competition, and we estimate that more than 70 percent of these companies are shipping detection tools, not prevention tools.</p>
-
-
-
-<p class="wp-block-paragraph">Detection activates only after a failure has occurred, and unfortunately modern adversaries now operate at machine speed. Vulnerabilities are attacked through automation, and artificial intelligence generates phishing campaigns at a massive scale.</p>
-
-
-
-<p class="wp-block-paragraph">As AI lowers barriers to entry and speeds up capabilities, the attack surface will expand even more. Advances in some of the frontier AI models, such as Anthropic’ s Mythos and OpenAI’s GPT-5.5, may unearth previously unknown zero-day risks while chaining together various low-risk vulnerabilities.</p>
-
-
-
-<p class="wp-block-paragraph">If that’s not enough, quantum computing raises concerns about <a href="https://www.csoonline.com/article/4180902/reap-now-decipher-later-thats-the-approach-to-cybersecurity-in-the-quantum-age.html">cryptographic resilience</a>. Relying primarily on faster alerting is not the best response to all these threats that will simply multiply faster.</p>
-
-
-
-<h2 class="wp-block-heading" id="prevention-changes-the-economics">Prevention changes the economics</h2>
-
-
-
-<p class="wp-block-paragraph">On the other hand, prevention changes defensive economics. To shrink the problem space, a professional can do these things: enable phish-resistant multifactor authentication (MFA), block malicious execution, segment networks and proactively manage vulnerabilities.</p>
-
-
-
-<p class="wp-block-paragraph">As exposure decreases, alert volume declines. Detection becomes more effective because noise is reduced.</p>
-
-
-
-<p class="wp-block-paragraph">Research shows that organizations have fewer high-impact breaches when they have mature identity governance, proactive patching and zero trust principles. Preventative maturity correlates with reduced incident severity and lower long-term costs. It doesn’t require perfection to be valuable.</p>
-
-
-
-<p class="wp-block-paragraph">We think that security leaders, therefore, should reconsider how to define success. Reducing dwell time – the time an attacker is inside your systems – is important. Reducing entry points is fundamental. But when budgets favor post-compromise visibility over preventive architecture and governance, cybersecurity is not fulfilling its original mandate.</p>
-
-
-
-<p class="wp-block-paragraph">AI will only amplify the imbalance, as capabilities that once required years of training can now be deployed quickly. Offensive toolkits are readily available.</p>
-
-
-
-<h2 class="wp-block-heading" id="achieving-a-better-balance">Achieving a better balance</h2>
-
-
-
-<p class="wp-block-paragraph">We believe that scalable prevention architectures and capabilities present a better path forward than expanding analyst headcount.</p>
-
-
-
-<p class="wp-block-paragraph">Cyber threats will accelerate and detection will remain essential. But our profession shouldn’t be defined by how efficiently we observe compromise. It should be defined by how effectively we reduce the likelihood of compromise in the first place.</p>
-
-
-
-<p class="wp-block-paragraph"><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><a href="https://www.cio.com/expert-contributor-network/"><strong>Want to join?</strong></a></p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 5d ago]]></description>
 </item>
 
 </channel>
