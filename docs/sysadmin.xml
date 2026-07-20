@@ -3,14 +3,30 @@
 <channel>
   <title>Joe SysAdmin and Operations</title>
   <description>Operational IT changes, Microsoft updates, outages, and infrastructure issues.</description>
-  <lastBuildDate>Mon, 20 Jul 2026 06:14:29 +0000</lastBuildDate>
+  <lastBuildDate>Mon, 20 Jul 2026 09:57:07 +0000</lastBuildDate>
   
 <item>
   <title>🔵 Hackers abuse ViPNet software to target Russian govt agencies</title>
   <link>https://www.bleepingcomputer.com/news/security/hackers-abuse-vipnet-software-to-target-russian-govt-agencies/</link>
   <pubDate>Sun, 19 Jul 2026 14:23:46 +0000</pubDate>
   <source>BleepingComputer</source>
-  <description><![CDATA[<b>Why this matters: Operational impact possible — watch for changes that generate tickets.</b><br/>An advanced threat actor is abusing the update mechanism for the ViPNet private networking product suite to target Russian organizations, including government agencies. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 15h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Operational impact possible — watch for changes that generate tickets.</b><br/>An advanced threat actor is abusing the update mechanism for the ViPNet private networking product suite to target Russian organizations, including government agencies. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 19h ago]]></description>
+</item>
+
+<item>
+  <title>🟠 Update now: 7-Zip fixes RCE flaw exploitable with malicious archives</title>
+  <link>https://www.bleepingcomputer.com/news/security/update-now-7-zip-fixes-rce-flaw-exploitable-with-malicious-archives/</link>
+  <pubDate>Sat, 18 Jul 2026 19:32:02 +0000</pubDate>
+  <source>BleepingComputer</source>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>7-Zip version 26.02 was released on June 25 to fix a remote code execution vulnerability that could allow attackers to execute malicious code by convincing users to open specially crafted compressed files. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
+</item>
+
+<item>
+  <title>🟠 WordPress Core &quot;wp2shell&quot; RCE flaws get public exploits, patch now</title>
+  <link>https://www.bleepingcomputer.com/news/security/wordpress-core-wp2shell-rce-flaws-get-public-exploits-patch-now/</link>
+  <pubDate>Sat, 18 Jul 2026 17:22:47 +0000</pubDate>
+  <source>BleepingComputer</source>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Public exploits have been released for the critical "wp2shell" remote code execution vulnerabilities affecting WordPress Core, making it imperative that administrators patch their sites immediately. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
@@ -277,78 +293,11 @@ az connectedmachine machine extension list --resource-group &lt;rg&gt; --machine
 </item>
 
 <item>
-  <title>🔵 Azure Elastic SAN: Pooled, Cloud-Native Block Storage That Actually Acts Like a SAN</title>
-  <link>https://techcommunity.microsoft.com/t5/itops-talk-blog/azure-elastic-san-pooled-cloud-native-block-storage-that/ba-p/4534554</link>
-  <pubDate>Fri, 17 Jul 2026 07:15:00 +0000</pubDate>
-  <source>Microsoft Tech Community IT Ops</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><p>Hello Folks!</p>
-<p>If you have ever lived through a Friday night SAN expansion, racking new shelves and praying the zoning held together, the idea of getting that same shared block storage model in Azure (without owning a single fibre channel cable) sounds almost too good to be true. In his session at the Microsoft Azure Infra Summit 2026, Kiran Cherukuwada, Principal PM in Azure Storage, walked us through exactly how Azure Elastic SAN does that, and where it fits next to the other block storage options on Azure.</p>
-<p>📺 <strong>Watch the session:</strong></p>
-<p>&nbsp;</p>
-<div class="lia-embeded-content" contenteditable="false">
-</div>
-<h2>Why IT Pros Should Care</h2>
-<p>Most of us were taught a simple rule. One workload, one disk, size it for peak, move on. That rule has been kind to managed disks, but it gets expensive fast when you have dozens or hundreds of workloads that all peak at different times. Elastic SAN flips the model. You provision a pool of capacity and performance once, then carve volumes out of it for many workloads.</p>
-<p>Here is why that matters for IT pros:</p>
-<ul>
-<li>You stop over-provisioning each workload to its own peak; the SAN absorbs the bursts.</li>
-<li>You get a SAN-style resource hierarchy (SAN, volume groups, volumes) that looks and behaves like the on-prem model you already know.</li>
-<li>iSCSI connectivity means a wide compute footprint, including Azure Virtual Machines, Azure Kubernetes Service, Azure Container Instances, Azure VMware Solution, and Nutanix Cloud Clusters.</li>
-<li>You can drive storage throughput over VM network bandwidth, which often lets you keep a smaller (and cheaper) VM SKU.</li>
-</ul>
-<p>In short, if you have many IO-intensive workloads sharing one region, Elastic SAN is the lever that turns “buy peak for every workload” into “buy combined peak for the group.”</p>
-<h2>What Azure Elastic SAN Is, Technical Overview</h2>
-<p>Azure Elastic SAN is the industry’s first fully managed SAN storage service in the cloud. It brings the on-prem SAN consumption model to Azure as a single managed pool of block storage, shared across many workloads, accessed over the industry-standard iSCSI protocol.</p>
-<p>Inside the service you get three resources, matching the on-prem mental model:</p>
-<ol>
-<li><strong>The Elastic SAN itself.</strong> Top-level resource. This is where you provision overall capacity and performance, and where billing happens.</li>
-<li><strong>Volume groups.</strong> Where you set network rules (service or private endpoints) and security policies. Any policy you apply here is inherited by every volume in the group, so a volume group is effectively your workload boundary.</li>
-<li><strong>Volumes.</strong> The LUNs that you mount on compute. They show up as raw block devices on a VM, as iSCSI targets to a Kubernetes node, or as VMware data stores on AVS.</li>
-</ol>
-<p>A single SAN can scale to a petabyte of capacity, 2 million IOPS, and 80 GB/s of throughput. It is locally redundant by default, with a zone-redundant option, and shared volume support is there for clustered solutions like SQL Server Failover Cluster Instances and Azure VMware Solution. Network isolation is delivered via service endpoints and private endpoints, and data is encrypted at rest. Incremental snapshots are supported for fast point-in-time restore, and snapshots can be exported to managed disk snapshots when you need a hardened copy for backup or DR purposes.</p>
-<p>Where does it land in the block storage portfolio? Kiran framed it simply. Premium SSD v2 is the best price/performance for <strong>dedicated</strong> per-workload performance. Ultra Disk is for the mission-critical, every-microsecond-matters workloads. Elastic SAN is the best price/performance option <strong>at scale</strong>, when you have many workloads that can share a storage pool.</p>
-<h2>How It Works, Under the Hood</h2>
-<p>The economics live in the provisioning model. You buy two types of units:</p>
-<ul>
-<li><strong>Base unit.</strong> Each base unit gives you 1 TiB of capacity plus 5,000 IOPS and 200 MB/s. Roughly 8 cents per GiB per month in East US.</li>
-<li><strong>Capacity-only unit.</strong> Each capacity-only unit gives you 1 TiB of capacity but no extra performance. About 25 percent cheaper, around 6 cents per GiB per month in East US.</li>
-</ul>
-<p>The pattern Kiran showed is “size for performance first, then top up capacity.” A 250 TiB SAN delivering 1 million IOPS and 40 GB/s came out to roughly 200 base units plus 50 capacity-only units, landing around 20 grand per month for the whole pool.</p>
-<p>The magic ingredient is <strong>dynamic performance sharing.</strong> With traditional disks you provision each workload to its own peak. With Elastic SAN, you provision the <strong>combined</strong> peak. So a SQL Server needing 60,000 IOPS, an AVS cluster needing 40,000, and an Oracle workload needing 100,000 IOPS look like 200,000 IOPS of dedicated disk. But if they never peak simultaneously, you can land a 150,000 IOPS SAN and let each workload hit its peak on demand. That is real money back.</p>
-<p>The second lever is <strong>throughput over network bandwidth.</strong> Because Elastic SAN connects over iSCSI, storage I/O flows through the VM’s network pipe, not the VM’s disk throughput cap. Most VMs have far more network bandwidth than disk bandwidth, so you can drive higher storage throughput from a smaller VM SKU. That smaller SKU is cheaper to run, and (this is the quiet win) it can also cut per-core database licensing costs. As one attendee asked in the live Q&amp;A, “Why is it possible to go beyond the VM disk throughput limit with SAN?” The answer: iSCSI traffic uses VM network bandwidth like any other VM-to-VM traffic, so the disk throttle does not apply.</p>
-<p>One honest tradeoff: that same network bandwidth is also used by your app-tier-to-database traffic. So if you are planning to push storage hard, size the VM with both flows in mind.</p>
-<h2>Real-World Value</h2>
-<p>Where does this actually pay off?</p>
-<ul>
-<li><strong>Mixed enterprise workloads on Azure VMs.</strong> SQL Server, Oracle, custom OLTP, sharing one SAN. Kiran’s demo ran SQL TPCC, an AVS cluster benchmark, and an Oracle OLTP load simultaneously off a single 30-base-unit SAN, and the metrics blade showed exactly how each volume group consumed performance.</li>
-<li><strong>Extending Azure VMware Solution storage.</strong> Instead of buying expensive vSAN nodes just to grow storage, you connect AVS to an Elastic SAN datastore. Gen2 AVS private clouds skip the ExpressRoute gateway requirement and let you use a single private endpoint on the volume group.</li>
-<li><strong>Container Storage.</strong> Azure Container Storage v2 with Elastic SAN backing is generally available. The fast attach and detach behavior means that even if a node or cluster goes down, the data sits on the SAN and persists.</li>
-<li><strong>Lift and shift from on-prem SAN.</strong> Kiran shared one migration example: a workload with 100-plus vCPUs running off a mid-tier all-flash SAN array landed on Elastic SAN with roughly 64 percent TCO savings and performance that exceeded the original array.</li>
-</ul>
-<p>In short, this is a “many workloads, one pool” story. If you have one heavy workload, premium SSD v2 may be a better fit.</p>
-<h2>Getting Started</h2>
-<p>Here is a practical order of operations:</p>
-<ol>
-<li><strong>Size the SAN.</strong> Add up the combined peak IOPS and throughput for the workloads you plan to consolidate, then pick base units to cover performance and capacity-only units to top up storage.</li>
-<li><strong>Lock down the network.</strong> Access is closed by default. Choose service endpoints or private endpoints per volume group, and open them only to the right subnets.</li>
-<li><strong>Place compute in the same zone.</strong> For best latency, deploy your VMs (or AVS cluster) in the same region and availability zone as the SAN.</li>
-<li><strong>Tune the client.</strong> Use Gen 5 (D, E, or M series) VMs with Accelerated Networking on, configure the iSCSI initiator, set up native MPIO on Windows or Linux, and use the Connect scripts from the portal which default to 32 sessions per volume.</li>
-<li><strong>Watch the metrics.</strong> The SAN’s Metrics tab shows transactions, ingress, and egress at the SAN, volume group, and individual volume level. Drop the granularity to one minute when you are troubleshooting.</li>
-<li><strong>Plan snapshots.</strong> Use Elastic SAN volume snapshots for fast dev/test restores. Export to managed disk snapshots when you need hardened backup or cross-region DR.</li>
-</ol>
-<p>If you are coming from on-prem, the partnership with Cirrus Data (free in the Azure Marketplace) is the recommended path to migrate storage at the block level.</p>
-<h2>Resources</h2>
-<ul>
-<li><a class="lia-external-url" href="https://learn.microsoft.com/azure/storage/elastic-san/" target="_blank">Azure Elastic SAN documentation hub</a></li>
-<li><a class="lia-external-url" href="https://learn.microsoft.com/azure/storage/elastic-san/elastic-san-introduction" target="_blank">What is Azure Elastic SAN (introduction)</a></li>
-<li><a class="lia-external-url" href="https://learn.microsoft.com/azure/storage/elastic-san/elastic-san-planning" target="_blank">Plan for an Azure Elastic SAN deployment</a></li>
-<li><a class="lia-external-url" href="https://learn.microsoft.com/azure/storage/elastic-san/elastic-san-best-practices" target="_blank">Azure Elastic SAN configuration best practices</a></li>
-<li><a class="lia-external-url" href="https://learn.microsoft.com/azure/storage/elastic-san/elastic-san-snapshots" target="_blank">Snapshot Azure Elastic SAN volumes</a></li>
-</ul>
-<h2>Keep Learning at the Summit</h2>
-<p>Catch the full <a class="lia-external-url" href="https://www.youtube.com/playlist?list=PLjt5SKzX1iI8con7FJDB56G6hHqxGm7ki" target="_blank">Microsoft Azure Infra Summit 2026 session playlist here</a></p>
-<p>Cheers!</p>
-<p>Pierre Roman</p><br/><br/><b>Source:</b> Microsoft Tech Community IT Ops &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
+  <title>🟠 New Windows LegacyHive zero-day gives hackers admin privileges</title>
+  <link>https://www.bleepingcomputer.com/news/security/new-windows-legacyhive-zero-day-exploit-grants-hackers-admin-access/</link>
+  <pubDate>Fri, 17 Jul 2026 11:05:30 +0000</pubDate>
+  <source>BleepingComputer</source>
+  <description><![CDATA[<b>Why this matters: Operational impact possible — watch for changes that generate tickets.</b><br/>A security researcher using the "Nightmare Eclipse" handle has released a Windows zero-day exploit dubbed LegacyHive that allows attackers to escalate privileges on up-to-date Windows systems. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
 </item>
 
 </channel>
