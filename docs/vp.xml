@@ -3,8 +3,226 @@
 <channel>
   <title>Joe — VP of IT Briefing</title>
   <description>Leadership-focused IT risk, vendors, pricing, licensing, and industry context.</description>
-  <lastBuildDate>Mon, 20 Jul 2026 19:48:20 +0000</lastBuildDate>
+  <lastBuildDate>Mon, 20 Jul 2026 21:09:06 +0000</lastBuildDate>
   
+<item>
+  <title>🔴 ServiceNow’s sandbox escape RCE hole now exploited in the wild</title>
+  <link>https://www.cio.com/article/4199009/servicenows-sandbox-escape-rce-hole-now-exploited-in-the-wild-2.html</link>
+  <pubDate>Mon, 20 Jul 2026 20:32:52 +0000</pubDate>
+  <source>CIO.com</source>
+  <description><![CDATA[<b>Why this matters: Service impact possible — prepare comms and confirm vendor status.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<p class="wp-block-paragraph">A sandbox security hole that could lead to remote code execution (RCE), patched last week by ServiceNow, is being actively exploited in the wild, according to <a href="https://x.com/defusedcyber/status/2078418391321219448" rel="noreferrer noopener" target="_blank">a report from threat intel firm Defused</a>. </p>
+
+
+
+<p class="wp-block-paragraph">The report, posted on X, said the firm is “observing in-the-wild exploitation of the ServiceNow pre-auth sandbox-escape RCE (CVE-2026-6875).”</p>
+
+
+
+<p class="wp-block-paragraph">Defused CEO <a href="https://www.linkedin.com/in/simokohonen" rel="noreferrer noopener" target="_blank">Simo Kohonen</a> noted in an interview that it appeared that the attacker has changed its tactics from those documented in an earlier proof of concept (PoC) from researchers at Searchlight Cyber, in response to ServiceNow patches and defenses. The company had implemented five different mitigations in its code base, which “neutered” the initial attack methodology, he said, adding that, overall, his team is seeing more attack method tweaks than it used to see. </p>
+
+
+
+<p class="wp-block-paragraph">“We are seeing a lot of [attack] variations, much more so than a year ago, for the same vulnerability,” Kohonen said. Attackers “now have more tools to build their own stuff.”</p>
+
+
+
+<p class="wp-block-paragraph">However, he admitted that his team has thus far only observed this exploit an in the wild exploitation “once, by one actor.” </p>
+
+
+
+<p class="wp-block-paragraph">In response to the report, ServiceNow issued a statement saying that it has not yet directly seen any such exploitations. </p>
+
+
+
+<p class="wp-block-paragraph">“ServiceNow is aware of a cybersecurity company’s recent publication regarding exploitation activity associated with a previously disclosed security vulnerability, identified as <a href="https://support.servicenow.com/kb/kb/kb/kb?id=kb_article_view&amp;sysparm_article=KB3137947" rel="noreferrer noopener" target="_blank">CVE-2026-6875</a>. Based on our investigation to date, we have not observed evidence that this activity is related to instances that ServiceNow hosts,” the emailed statement said. “We have provided updates and patches designed to address this issue, and we encourage our self-hosted and ServiceNow-hosted customers to apply the relevant patches if they have not already done so.”</p>
+
+
+
+<h2 class="wp-block-heading" id="a-repeatable-failure-point">A ‘repeatable failure point’</h2>
+
+
+
+<p class="wp-block-paragraph">Analysts and consultants said the bigger concern with this hole is that it focuses on the lack of protections in the sandbox, which many security and IT teams have relied on for years. </p>
+
+
+
+<p class="wp-block-paragraph">“The vulnerability lets an attacker bypass ServiceNow’s scripting sandbox entirely, and researchers are now seeing exploitation using a different technique than the one originally published, which means signature-based defenses built on the first proof of concept are unlikely to catch every variant,” said <a href="https://my.idc.com/getdoc.jsp?containerId=PRF004767" rel="noreferrer noopener" target="_blank">Frank Dickson</a>, group VP for security at IDC. </p>
+
+
+
+<p class="wp-block-paragraph">“A compromise that starts in the cloud tenant can end up inside the corporate network, turning a SaaS incident into an on-premises one,” he pointed out. “And because ServiceNow frequently houses HR records, CMDB asset data, and the ticketing system itself, an attacker sitting inside it may have visibility into how the incident response team is tracking the incident.”</p>
+
+
+
+<p class="wp-block-paragraph">Dickson added that this incident is further proof that both IT and security teams need to reevaluate their patching methodologies. </p>
+
+
+
+<p class="wp-block-paragraph">“Enterprises outsource patching for platforms like ServiceNow to the vendor, but keep the risk that comes from what those platforms touch: HR records, CMDB inventories, and now on-premises systems through MID Server integration. Control sits with the vendor, liability sits with the enterprise, and that mismatch argues for treating core SaaS platforms as part of the internal attack surface, not externalized vendor risk,” he said, noting that as vendors embed more AI-driven scripting into their platforms, the sandbox boundary becomes “a repeatable failure point.” </p>
+
+
+
+<p class="wp-block-paragraph">Because of this, he advised, “CISOs should start asking every AI-enabled SaaS vendor how that boundary is architected and tested, before the next version of this story breaks elsewhere.”</p>
+
+
+
+<p class="wp-block-paragraph"><a href="https://www.linkedin.com/in/noah-m-kenney-27499a166/" rel="noreferrer noopener" target="_blank">Noah Kenney</a>, principal consultant at Digital 520, said the sandbox escape is the more disturbing element of the issue. </p>
+
+
+
+<p class="wp-block-paragraph">“The significance is not that ServiceNow had a critical bug, so much as the fact that the bug is a sandbox escape in the AI Platform, which means the containment layer specifically built to run untrusted AI-driven code safely is the thing that failed,” he said. “CISOs have been told repeatedly that the sandbox is what makes enterprise AI safe to deploy, but we’re now seeing the sandbox breaking and that should reframe how CISOs think about every feature sitting behind a similar wall.”</p>
+
+
+
+<h2 class="wp-block-heading" id="addition-of-ai-increases-blast-radius">Addition of AI increases blast radius</h2>
+
+
+
+<p class="wp-block-paragraph">This is yet another example where AI is fundamentally changing just about every IT and security rule, he pointed out.</p>
+
+
+
+<p class="wp-block-paragraph">“Enterprises are bolting AI onto their most privileged systems of record faster than anyone is updating the threat models for those systems, and the AI layer is becoming the softest part of the hardest targets,” Kenney said. “The real question for a CISO is how many of your critical platforms shipped an AI feature in the past year, and whether a single person in your organization can tell you what that did to the pre-auth attack surface. Most cannot, and that is the actual exposure.”</p>
+
+
+
+<p class="wp-block-paragraph"><a href="https://www.linkedin.com/in/akm76/" rel="noreferrer noopener" target="_blank">Aman Mahapatra</a>, chief strategy officer for Tribeca Softtech, a New York City-based technology consulting firm, agreed.</p>
+
+
+
+<p class="wp-block-paragraph">“A vulnerability that gives an attacker a foothold in the ServiceNow instance is now also a vulnerability that gives them access to whatever AI agents are running inside that instance, along with any capability tokens, service accounts, or delegated permissions those agents hold,” Mahapatra said. “The blast radius of a ServiceNow compromise in 2026 is meaningfully larger than the same compromise would have been in 2023, and most enterprise security programs have not caught up to that shift.”</p>
+
+
+
+<p class="wp-block-paragraph">Defused’s Kohonen said that he did not disagree with the sandbox concerns, but he stressed that enterprise CISOs have long ago abandoned the belief that sandboxes are secure. </p>
+
+
+
+<p class="wp-block-paragraph">“Nothing is foolproof, and having a sandbox is better than not having one,” he said. “But the belief that a sandbox removes all of the risk is incredibly dumb,” especially in the reality of today’s threat landscape, which contains “an endless conveyor belt of exploits.”</p>
+
+
+
+<p class="wp-block-paragraph"><em>This article originally appeared on <a href="https://www.csoonline.com/article/4198993/servicenows-sandbox-escape-rce-hole-now-exploited-in-the-wild.html" target="_blank">CSOonline</a>.</em></p>
+
+
+
+<p class="wp-block-paragraph"></p>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔴 ServiceNow’s sandbox escape RCE hole now exploited in the wild</title>
+  <link>https://www.csoonline.com/article/4198993/servicenows-sandbox-escape-rce-hole-now-exploited-in-the-wild.html</link>
+  <pubDate>Mon, 20 Jul 2026 20:24:54 +0000</pubDate>
+  <source>CSO Online</source>
+  <description><![CDATA[<b>Why this matters: Service impact possible — prepare comms and confirm vendor status.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<p class="wp-block-paragraph">A sandbox security hole that could lead to remote code execution (RCE), patched last week by ServiceNow, is being actively exploited in the wild, according to <a href="https://x.com/defusedcyber/status/2078418391321219448" rel="noreferrer noopener" target="_blank">a report from threat intel firm Defused</a>. </p>
+
+
+
+<p class="wp-block-paragraph">The report, posted on X, said the firm is “observing in-the-wild exploitation of the ServiceNow pre-auth sandbox-escape RCE (CVE-2026-6875).”</p>
+
+
+
+<p class="wp-block-paragraph">Defused CEO <a href="https://www.linkedin.com/in/simokohonen" rel="noreferrer noopener" target="_blank">Simo Kohonen</a>, in an interview with CSO Online, noted that it appeared that the attacker has changed its tactics from those documented in an earlier proof of concept (PoC) from researchers at Searchlight Cyber, in response to ServiceNow patches and defenses. The company had implemented five different mitigations in its code base, which “neutered” the initial attack methodology, he said, adding that, overall, his team is seeing more attack method tweaks than it used to see. </p>
+
+
+
+<p class="wp-block-paragraph">“We are seeing a lot of [attack] variations, much more so than a year ago, for the same vulnerability,” Kohonen said. Attackers “now have more tools to build their own stuff.”</p>
+
+
+
+<p class="wp-block-paragraph">However, he admitted that his team has thus far only observed this exploit an in the wild exploitation “once, by one actor.” </p>
+
+
+
+<p class="wp-block-paragraph">In response to the report, ServiceNow issued a statement saying that it has not yet directly seen any such exploitations. </p>
+
+
+
+<p class="wp-block-paragraph">“ServiceNow is aware of a cybersecurity company’s recent publication regarding exploitation activity associated with a previously disclosed security vulnerability, identified as <a href="https://support.servicenow.com/kb/kb/kb/kb?id=kb_article_view&amp;sysparm_article=KB3137947" rel="noreferrer noopener" target="_blank">CVE-2026-6875</a>. Based on our investigation to date, we have not observed evidence that this activity is related to instances that ServiceNow hosts,” the emailed statement said. “We have provided updates and patches designed to address this issue, and we encourage our self-hosted and ServiceNow-hosted customers to apply the relevant patches if they have not already done so.”</p>
+
+
+
+<h2 class="wp-block-heading" id="a-repeatable-failure-point">A ‘repeatable failure point’</h2>
+
+
+
+<p class="wp-block-paragraph">Analysts and consultants said the bigger concern with this hole is that it focuses on the lack of protections in the sandbox, which many security and IT teams have relied on for years. </p>
+
+
+
+<p class="wp-block-paragraph">“The vulnerability lets an attacker bypass ServiceNow’s scripting sandbox entirely, and researchers are now seeing exploitation using a different technique than the one originally published, which means signature-based defenses built on the first proof of concept are unlikely to catch every variant,” said <a href="https://my.idc.com/getdoc.jsp?containerId=PRF004767" rel="noreferrer noopener" target="_blank">Frank Dickson</a>, group VP for security at IDC. </p>
+
+
+
+<p class="wp-block-paragraph">“A compromise that starts in the cloud tenant can end up inside the corporate network, turning a SaaS incident into an on-premises one,” he pointed out. “And because ServiceNow frequently houses HR records, CMDB asset data, and the ticketing system itself, an attacker sitting inside it may have visibility into how the incident response team is tracking the incident.”</p>
+
+
+
+<p class="wp-block-paragraph">Dickson added that this incident is further proof that both IT and security teams need to reevaluate their patching methodologies. </p>
+
+
+
+<p class="wp-block-paragraph">“Enterprises outsource patching for platforms like ServiceNow to the vendor, but keep the risk that comes from what those platforms touch: HR records, CMDB inventories, and now on-premises systems through MID Server integration. Control sits with the vendor, liability sits with the enterprise, and that mismatch argues for treating core SaaS platforms as part of the internal attack surface, not externalized vendor risk,” he said, noting that as vendors embed more AI-driven scripting into their platforms, the sandbox boundary becomes “a repeatable failure point.” </p>
+
+
+
+<p class="wp-block-paragraph">Because of this, he advised, “CISOs should start asking every AI-enabled SaaS vendor how that boundary is architected and tested, before the next version of this story breaks elsewhere.”</p>
+
+
+
+<p class="wp-block-paragraph"><a href="https://www.linkedin.com/in/noah-m-kenney-27499a166/" rel="noreferrer noopener" target="_blank">Noah Kenney</a>, principal consultant at Digital 520, said the sandbox escape is the more disturbing element of the issue. </p>
+
+
+
+<p class="wp-block-paragraph">“The significance is not that ServiceNow had a critical bug, so much as the fact that the bug is a sandbox escape in the AI Platform, which means the containment layer specifically built to run untrusted AI-driven code safely is the thing that failed,” he said. “CISOs have been told repeatedly that the sandbox is what makes enterprise AI safe to deploy, but we’re now seeing the sandbox breaking and that should reframe how CISOs think about every feature sitting behind a similar wall.”</p>
+
+
+
+<h2 class="wp-block-heading" id="addition-of-ai-increases-blast-radius">Addition of AI increases blast radius</h2>
+
+
+
+<p class="wp-block-paragraph">This is yet another example where AI is fundamentally changing just about every IT and security rule, he pointed out.</p>
+
+
+
+<p class="wp-block-paragraph">“Enterprises are bolting AI onto their most privileged systems of record faster than anyone is updating the threat models for those systems, and the AI layer is becoming the softest part of the hardest targets,” Kenney said. “The real question for a CISO is how many of your critical platforms shipped an AI feature in the past year, and whether a single person in your organization can tell you what that did to the pre-auth attack surface. Most cannot, and that is the actual exposure.”</p>
+
+
+
+<p class="wp-block-paragraph"><a href="https://www.linkedin.com/in/akm76/" rel="noreferrer noopener" target="_blank">Aman Mahapatra</a>, chief strategy officer for Tribeca Softtech, a New York City-based technology consulting firm, agreed.</p>
+
+
+
+<p class="wp-block-paragraph">“A vulnerability that gives an attacker a foothold in the ServiceNow instance is now also a vulnerability that gives them access to whatever AI agents are running inside that instance, along with any capability tokens, service accounts, or delegated permissions those agents hold,” Mahapatra said. “The blast radius of a ServiceNow compromise in 2026 is meaningfully larger than the same compromise would have been in 2023, and most enterprise security programs have not caught up to that shift.”</p>
+
+
+
+<p class="wp-block-paragraph">Defused’s Kohonen said that he did not disagree with the sandbox concerns, but he stressed that enterprise CISOs have long ago abandoned the belief that sandboxes are secure. </p>
+
+
+
+<p class="wp-block-paragraph">“Nothing is foolproof, and having a sandbox is better than not having one,” he said. “But the belief that a sandbox removes all of the risk is incredibly dumb,” especially in the reality of today’s threat landscape, which contains “an endless conveyor belt of exploits.”</p>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</item>
+
 <item>
   <title>🟠 Cybersecurity companies say hackers are exploiting vulnerable WordPress versions to take over websites; WordPress patched two critical security flaws last week (Lorenzo Franceschi-Bicchierai/TechCrunch)</title>
   <link>https://www.techmeme.com/260720/p31#a260720p31</link>
@@ -12,7 +230,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://techcrunch.com/2026/07/20/hackers-are-exploiting-recently-patched-wordpress-bugs-putting-millions-of-websites-at-risk/"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260720/i31.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260720/p31#a260720p31" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Lorenzo Franceschi-Bicchierai / <a href="http://techcrunch.com/">TechCrunch</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://techcrunch.com/2026/07/20/hackers-are-exploiting-recently-patched-wordpress-bugs-putting-millions-of-websites-at-risk/">Cybersecurity companies say hackers are exploiting vulnerable WordPress versions to take over websites; WordPress patched two critical security flaws last week</a></b></span>&nbsp; &mdash;&nbsp; Hackers are breaking into websites that run vulnerable versions of the popular blogging software WordPress, according to several cybersecurity firms.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://techcrunch.com/2026/07/20/hackers-are-exploiting-recently-patched-wordpress-bugs-putting-millions-of-websites-at-risk/">Cybersecurity companies say hackers are exploiting vulnerable WordPress versions to take over websites; WordPress patched two critical security flaws last week</a></b></span>&nbsp; &mdash;&nbsp; Hackers are breaking into websites that run vulnerable versions of the popular blogging software WordPress, according to several cybersecurity firms.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
 </item>
 
 <item>
@@ -22,7 +240,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.bloomberg.com/news/articles/2026-07-20/z-ai-completes-giant-data-center-with-chinese-chips-to-train-ai"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260720/i30.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260720/p30#a260720p30" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="https://www.bloomberg.com/">Bloomberg</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/articles/2026-07-20/z-ai-completes-giant-data-center-with-chinese-chips-to-train-ai">Source: Z.ai completed construction of a 1 GW data center housing only Chinese chips; Z.ai has built or operates several computing clusters each with 10K+ chips</a></b></span>&nbsp; &mdash;&nbsp; Z.AI has completed construction of a giant data center that houses only Chinese-made chips, a big step in Beijing's efforts &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/articles/2026-07-20/z-ai-completes-giant-data-center-with-chinese-chips-to-train-ai">Source: Z.ai completed construction of a 1 GW data center housing only Chinese chips; Z.ai has built or operates several computing clusters each with 10K+ chips</a></b></span>&nbsp; &mdash;&nbsp; Z.AI has completed construction of a giant data center that houses only Chinese-made chips, a big step in Beijing's efforts &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
 </item>
 
 <item>
@@ -30,7 +248,7 @@
   <link>https://www.zdnet.com/article/hugging-face-breach-blamed-on-ai-agent/</link>
   <pubDate>Mon, 20 Jul 2026 16:53:00 +0000</pubDate>
   <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: Potential data exposure — check monitoring and incident response readiness.</b><br/>An agentic AI infiltrated the production infrastructure of an AI project. Then an AI detected it. Is this the future of cyberattacks, and how will they be defended against?<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Potential data exposure — check monitoring and incident response readiness.</b><br/>An agentic AI infiltrated the production infrastructure of an AI project. Then an AI detected it. Is this the future of cyberattacks, and how will they be defended against?<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
 </item>
 
 <item>
@@ -40,7 +258,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><a href="https://www.axios.com/pro/enterprise-software-deals/2026/07/20/cybersecurity-empirical-security-ai-25-million"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260720/i29.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260720/p29#a260720p29" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Chris Metinko / <a href="https://www.axios.com/">Axios</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.axios.com/pro/enterprise-software-deals/2026/07/20/cybersecurity-empirical-security-ai-25-million">Chicago-based Empirical Security, which uses AI to help companies predict threats by monitoring exploited vulnerabilities, raised a $25M Series A</a></b></span>&nbsp; &mdash;&nbsp; Exposure management startup Empirical Security raised $25 million in Series A funding led by Brightmind Partners, CEO Ed Bellis tells Axios Pro.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.axios.com/pro/enterprise-software-deals/2026/07/20/cybersecurity-empirical-security-ai-25-million">Chicago-based Empirical Security, which uses AI to help companies predict threats by monitoring exploited vulnerabilities, raised a $25M Series A</a></b></span>&nbsp; &mdash;&nbsp; Exposure management startup Empirical Security raised $25 million in Series A funding led by Brightmind Partners, CEO Ed Bellis tells Axios Pro.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
 </item>
 
 <item>
@@ -50,7 +268,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.calcalistech.com/ctechnews/article/hkvfmqsvme"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260720/i25.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260720/p25#a260720p25" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Golan Hazani / <a href="https://www.calcalistech.com/">CTech</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.calcalistech.com/ctechnews/article/hkvfmqsvme">Source: Tencent is in talks to acquire Israeli game developer SuperPlay in a deal valuing SuperPlay at $1B-$1.5B; Playtika acquired SuperPlay in 2024 for $690M</a></b></span>&nbsp; &mdash;&nbsp; Exclusive: The transaction would transfer a fast-growing gaming studio, and a ballooning earnout commitment, to the Chinese technology giant.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.calcalistech.com/ctechnews/article/hkvfmqsvme">Source: Tencent is in talks to acquire Israeli game developer SuperPlay in a deal valuing SuperPlay at $1B-$1.5B; Playtika acquired SuperPlay in 2024 for $690M</a></b></span>&nbsp; &mdash;&nbsp; Exclusive: The transaction would transfer a fast-growing gaming studio, and a ballooning earnout commitment, to the Chinese technology giant.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -355,7 +573,7 @@
 
 
 <p class="wp-block-paragraph">To learn more, visit us <a href="https://www.tatacommunications.com/sports?utm_source=blog&amp;utm_medium=cio&amp;utm_campaign=mes%20fifa%20campaign">here</a>.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
@@ -498,7 +716,7 @@
 
 
 <p class="wp-block-paragraph"><em>OneTrust helps build risk and compliance programs aligned with the complexity and the speed of your business. </em><a href="https://www.onetrust.com/forms/talk-to-a-risk-expert/"><em>Learn more about our integrated risk solutions.</em></a><em></em></p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
@@ -611,7 +829,7 @@
 
 
 <p class="wp-block-paragraph"><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><a href="https://www.cio.com/expert-contributor-network/"><strong>Want to join?</strong></a></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 8h ago]]></description>
 </item>
 
 <item>
@@ -620,7 +838,7 @@
   <pubDate>Mon, 20 Jul 2026 12:32:40 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><p>Attackers could send waves of malicious payloads to trigger buffer pre-allocations that are not freed, exhausting server memory.</p>
-<p>The post <a href="https://www.securityweek.com/openssl-silently-fixes-hollowbyte-dos-vulnerability/">OpenSSL Silently Fixes &#8216;HollowByte&#8217; DoS Vulnerability</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/openssl-silently-fixes-hollowbyte-dos-vulnerability/">OpenSSL Silently Fixes &#8216;HollowByte&#8217; DoS Vulnerability</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 8h ago]]></description>
 </item>
 
 <item>
@@ -673,7 +891,7 @@
 
 
 <p class="wp-block-paragraph">Organizations were also advised to inventory all WordPress deployments, including staging and forgotten campaign sites, and review whether unauthorized access to the REST API is necessary for their environment.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 8h ago]]></description>
 </item>
 
 <item>
@@ -750,7 +968,7 @@
 
 
 <p class="wp-block-paragraph">Microsoft also shared a list of C2 addresses and payload hosting domains for defenders to add to their detection.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
 </item>
 
 <item>
@@ -758,7 +976,7 @@
   <link>https://www.theregister.com/os-platforms/2026/07/20/microsoft-rushes-out-windows-fix-for-dells-hot-and-bothered-pcs/5274810</link>
   <pubDate>Mon, 20 Jul 2026 11:15:00 +0000</pubDate>
   <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>With a wave of the wand, affected models will go to the Patch Tuesday ball after all<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 8h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>With a wave of the wand, affected models will go to the Patch Tuesday ball after all<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
 </item>
 
 <item>
@@ -855,7 +1073,7 @@
 
 
 <p class="wp-block-paragraph"><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><a href="https://www.cio.com/expert-contributor-network/"><strong>Want to join?</strong></a></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 8h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 10h ago]]></description>
 </item>
 
 <item>
@@ -864,7 +1082,7 @@
   <pubDate>Mon, 20 Jul 2026 10:25:07 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><p>The agentic security tool identifies potentially exploitable code flaws, traces attack paths, and recommends targeted remediations.</p>
-<p>The post <a href="https://www.securityweek.com/capital-one-open-sources-ai-powered-vulnhunter-security-tool/">Capital One Open Sources AI-Powered ‘VulnHunter’ Security Tool</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/capital-one-open-sources-ai-powered-vulnhunter-security-tool/">Capital One Open Sources AI-Powered ‘VulnHunter’ Security Tool</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 10h ago]]></description>
 </item>
 
 <item>
@@ -1077,7 +1295,7 @@
 
 
 <p class="wp-block-paragraph">“You don’t want someone to feel the results may be wrong if you’re using AI to assess a person and their future depends on it,” he notes. “You want to remove any doubts [in such AI use cases], and the strategy should ensure that. The strategy should include all the work needed to have that trust.”</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 11h ago]]></description>
 </item>
 
 <item>
@@ -1196,7 +1414,7 @@
 
 
 <p class="wp-block-paragraph"><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><a href="https://www.cio.com/expert-contributor-network/"><strong>Want to join?</strong></a></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 11h ago]]></description>
 </item>
 
 <item>
@@ -1349,7 +1567,7 @@
 
 
 <p class="wp-block-paragraph">That may be the heart of smart centralization. It rejects the false permanence of operating model decisions, and recognizes that autonomy and scale are both valuable, but in different places, at different times, for different reasons.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 10h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 11h ago]]></description>
 </item>
 
 <item>
@@ -1486,7 +1704,7 @@
 
 
 <p class="wp-block-paragraph"><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><a href="https://www.cio.com/expert-contributor-network/"><strong>Want to join?</strong></a></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 10h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 12h ago]]></description>
 </item>
 
 <item>
@@ -1494,7 +1712,7 @@
   <link>https://www.theregister.com/public-sector/2026/07/20/auditors-tell-uk-government-to-do-the-math-before-banking-on-45b-ai-savings/5274194</link>
   <pubDate>Mon, 20 Jul 2026 08:30:00 +0000</pubDate>
   <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Departments haven't worked out how the technology will reshape staffing, roles, and skills across the public sector<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 11h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Departments haven't worked out how the technology will reshape staffing, roles, and skills across the public sector<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 12h ago]]></description>
 </item>
 
 <item>
@@ -1503,7 +1721,7 @@
   <pubDate>Mon, 20 Jul 2026 08:12:19 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><p>The fresh security update resolves six critical and high-severity use-after-free vulnerabilities.</p>
-<p>The post <a href="https://www.securityweek.com/chrome-150-update-patches-severe-memory-safety-bugs/">Chrome 150 Update Patches Severe Memory Safety Bugs</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 11h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/chrome-150-update-patches-severe-memory-safety-bugs/">Chrome 150 Update Patches Severe Memory Safety Bugs</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 12h ago]]></description>
 </item>
 
 <item>
@@ -1788,7 +2006,7 @@
 
 
 <p class="wp-block-paragraph">For security leaders, that future is arriving in the form of AI-generated vulnerabilities, AI-assisted investigations, and AI-enabled adversaries. The question is no longer whether security operations centers will change. It is whether organizations can adapt quickly enough to keep pace.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 12h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 14h ago]]></description>
 </item>
 
 <item>
@@ -2013,7 +2231,7 @@
 
 <li><a href="https://www.csoonline.com/article/4189600/mythos-is-a-signal-not-a-siren-what-frontier-ai-should-change-for-cisos.html">Mythos is a signal, not a siren: What frontier AI should change for CISOs</a></li>
 </ul>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 14h ago]]></description>
 </item>
 
 <item>
@@ -2136,7 +2354,15 @@
 
 
 <p class="wp-block-paragraph"><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><a href="https://www.cio.com/expert-contributor-network/"><strong>Want to join?</strong></a></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 19h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 21h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Connecting AI agents to outside services explodes the risk radius</title>
+  <link>https://www.theregister.com/ai-and-ml/2026/07/19/connecting-ai-agents-to-outside-services-explodes-the-risk-radius/5274640</link>
+  <pubDate>Sun, 19 Jul 2026 16:05:00 +0000</pubDate>
+  <source>The Register</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Connect all the things and watch what happens<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
@@ -5180,14 +5406,6 @@
 </item>
 
 <item>
-  <title>🔵 Microsoft open-sources Comic Chat, its cartoon IRC curiosity</title>
-  <link>https://www.theregister.com/offbeat/2026/07/16/microsoft-open-sources-comic-chat-its-cartoon-irc-curiosity/5274382</link>
-  <pubDate>Thu, 16 Jul 2026 14:15:00 +0000</pubDate>
-  <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Step back three decades to 'a period when software teams were willing to color outside the lines'<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4d ago]]></description>
-</item>
-
-<item>
   <title>🔴 CISA urges immediate SharePoint hardening as exploits mount</title>
   <link>https://www.csoonline.com/article/4197775/cisa-urges-immediate-sharepoint-hardening-as-exploits-mount.html</link>
   <pubDate>Thu, 16 Jul 2026 12:06:13 +0000</pubDate>
@@ -5363,423 +5581,6 @@
 
 <p class="wp-block-paragraph">“Closing a ticket is one thing,” he said. “Proving the attack path is broken, and the fix holds against real-world adversary behavior is another.”</p>
 </div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4d ago]]></description>
-</item>
-
-<item>
-  <title>🟠 19 AgentOps tools for monitoring AI activity, issues, and costs</title>
-  <link>https://www.cio.com/article/4195251/19-agentops-tools-for-monitoring-ai-activity-issues-and-costs.html</link>
-  <pubDate>Thu, 16 Jul 2026 10:01:00 +0000</pubDate>
-  <source>CIO.com</source>
-  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/><div id="remove_no_follow">
-		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
-					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
-						<div class="article-column__content">
-<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
-
-
-
-<p class="wp-block-paragraph">With AI increasingly tucked into every cranny of the enterprise, someone has had to step up and provide the tools necessary to discover, track, and monitor all the agents and LLMs and keep them humming along in their various workflows. Thankfully, the DevOps world answered the call, building the tools to support our new overlords in an emerging subdiscipline interchangeably called “<a href="https://www.cio.com/article/196239/what-is-aiops-injecting-intelligence-into-it-operations.html">AIOps</a>,” “AgentOps,” and sometimes “agent observability.”</p>
-
-
-
-<p class="wp-block-paragraph">Many of the challenges involved in AgentOps are similar to those tackled by traditional DevOps tools and processes. After all, at their foundation, LLMs are just software running on hardware somewhere. Typical issues involving RAM and disk space are just as important in the agent world, maybe more so because AI operations are even more greedy about consuming storage than regular software is.</p>
-
-
-
-<p class="wp-block-paragraph">Many of the companies supporting agent observability are big names in DevOps circles, having adapted their stacks to address the idiosyncrasies of modern LLMs. IT teams maintaining enterprise agents can treat the LLMs as just one node in a big graph filled with services that are constantly swapping packets and triggering software jobs. Latency and resource constraints must be managed because end-users don’t care whether it’s an LLM, a database, or a plain-old Python script that’s failing, bringing their work to a grinding halt.</p>
-
-
-
-<p class="wp-block-paragraph">But new AI-specific challenges are opening the door to newcomers that are building tools with the peculiarities of LLMs in mind — for example, keeping deeper logs filled with records of prompts. LLMs are also often very non-deterministic by design, making it trickier to pinpoint failure modes. And then there’s the fact that an agent will give a perfectly intelligent answer one minute and hallucinate the next.</p>
-
-
-
-<p class="wp-block-paragraph">Relying on many of the same approaches that DevOps tools do, AgentOps tools watch for misbehavior and flag anything out of the ordinary for deeper analysis. This may be as simple as fixing slow responses, but it can also include AI hallucinations and other issues born of LLMs’ non-determanism.</p>
-
-
-
-<p class="wp-block-paragraph">Teams trying to choose which agent observability tools is best for their use case should look at the size and nature of their agentic systems and projects. Are they adding AI agent features to an existing product or application, or are they building agentic systems from scratch? Are they more focused on maintaining a stable LLM operation or iterating on new approaches? Is AI the center of attention or just an add-on that’s meant to improve an existing stack?<br /><br />The AgentOps and agent observability options listed below share many of the same features but differ in their focus and their attention to the challenges organizations will encounter when incorporating agents into their stacks. Each tool offers a worthwhile place to start understanding how to care for the growing presence of AI in the production world.</p>
-
-
-
-<h2 class="wp-block-heading" id="agentops-ai">AgentOps.ai</h2>
-
-
-
-<p class="wp-block-paragraph">When teams of agents work together, tracking the conversations are essential for understanding and debugging what’s happening. The SDK from <a href="http://agentops.ai">AgentOps.ai records</a> events so that the creators can replay past behavior to track details such as token counts, spending, latency, and more. Available as a service and on-premises.</p>
-
-
-
-<p class="wp-block-paragraph"><em>Pricing:</em> <a href="https://www.agentops.ai/#pricing">Starts at $40 per month </a>plus usage costs at $0.20 per 1M tokens</p>
-
-
-
-<p class="wp-block-paragraph"><em>Standout feature:</em> Replay analytics with “time-travel debugging”</p>
-
-
-
-<p class="wp-block-paragraph"><em>Best suited for:</em> Complex agent debugging</p>
-
-
-
-<h2 class="wp-block-heading" id="arize-phoenix">Arize Phoenix</h2>
-
-
-
-<p class="wp-block-paragraph">Debugging prompts and LLM responses requires a nuanced understanding of just what’s happening, in part because of the non-determinism that often enters the process. <a href="https://arize.com/phoenix/">Phoenix</a> from Arize supports this process with robust tracing and the ability to score the results for more precise iteration. Their system can track the results and tool calls from a variety of major platforms (Anthropic, AWS, OpenAI, etc.) that are initiated by the major frameworks (LangChain, LlamaIndex, DSPy, etc.). The result is insight into what data is triggering what chain of responses.</p>
-
-
-
-<p class="wp-block-paragraph"><em>Pricing:</em> Small free tier; <a href="https://arize.com/pricing/">Pro plan</a> starts at $50 per month plus costs tied to events</p>
-
-
-
-<p class="wp-block-paragraph"><em>Standout feature:</em> LLM-as-a-Judge metrics for tracking quality</p>
-
-
-
-<p class="wp-block-paragraph"><em>Best suited for:</em> Teams focusing on iterating for accuracy and quality</p>
-
-
-
-<h2 class="wp-block-heading" id="bigpanda">BigPanda</h2>
-
-
-
-<p class="wp-block-paragraph"><a href="https://www.bigpanda.io/">BigPanda</a> has always offered solutions for tracking performance of complex systems. Now the company is drilling deeper into the challenge of detecting and ending the problems that come from models that go awry. BigPanda’s main system relies on historical data and machine learning algorithms to flag issues. Its own agent layer connects the problematic nodes and errant models while dispatching alerts to the right team members.</p>
-
-
-
-<p class="wp-block-paragraph"><em>Pricing:</em> “Value-based” table on <a href="https://www.bigpanda.io/pricing/">request</a></p>
-
-
-
-<p class="wp-block-paragraph"><em>Standout feature:</em> Automated triage for faster response</p>
-
-
-
-<p class="wp-block-paragraph"><em>Best suited for:</em> Large teams seeking to reduce alert fatigue from large customer base</p>
-
-
-
-<h2 class="wp-block-heading" id="braintrust">Braintrust</h2>
-
-
-
-<p class="wp-block-paragraph">Setting up an effective improvement cycle for an AI agent requires a strong feedback loop from production data to the agent’s next generation. <a href="https://www.braintrust.dev/">Braintrust</a> watches the production workload and creates test vectors that expose how an agent may be drifting, regressing, or departing from its path. The tool automates much of the testing and scoring feedback loop so problematic patterns can be discovered and addressed. A core part of the offering is a specialized data store that can track large and sometimes deeply nested collections of tests and their results. Their approach may be summarized by one of their tag lines: “trace everything.”</p>
-
-
-
-<p class="wp-block-paragraph"><em>Pricing:</em> Free starter tier; <a href="https://www.braintrust.dev/pricing">Pro plan</a> starts at $249 with some usage-based costs covered</p>
-
-
-
-<p class="wp-block-paragraph"><em>Standout feature:</em> Highly scalable trace ingestion</p>
-
-
-
-<p class="wp-block-paragraph"><em>Best for:</em> Teams developing strong guardrails through continuous testing</p>
-
-
-
-<h2 class="wp-block-heading" id="chronicle-labs">Chronicle Labs</h2>
-
-
-
-<p class="wp-block-paragraph">When it’s time to release a new version of an agent into the wild, the <a href="https://chronicle-labs.com/">platform from Chronicle Labs </a>specializes in staging it and testing it with a collection of use tests and regression cases. The tools are also helpful during development cycles. “Backtest your agent against reality,” their sales material promises, with a set of tools that mines the production telemetry for solid test vectors that stress every part of the agent with prompts and challenges that the agent will encounter after leaving the safety of the lab.</p>
-
-
-
-<p class="wp-block-paragraph"><em>Pricing:</em> On <a href="https://chronicle-labs.com/book-call">request</a></p>
-
-
-
-<p class="wp-block-paragraph"><em>Standout feature:</em> Back-testing options for complex testing regimes</p>
-
-
-
-<p class="wp-block-paragraph"><em>Best for:</em> Teams chasing strong models with good fidelity to reality</p>
-
-
-
-<h2 class="wp-block-heading" id="comet-opik">Comet Opik</h2>
-
-
-
-<p class="wp-block-paragraph">Building a dashboard for tracking every in-flow and out-flow to agents is one way to be ready to watch for and solve problems. <a href="https://www.comet.com/site/products/opik/">Opik from Comet </a>is just such a tool. The DevOps teams can track each call and add its own automated routines to examine the results, score them based on 30-plus metrics, and if desired, send it off to another LLM to evaluate the results. Agents that are constantly failing stand out. DevOps teams can also ask questions like, “Who is using this model and racking up all of the bills?” The same goes for MCP skills and other cogs in the machine.</p>
-
-
-
-<p class="wp-block-paragraph"><em>Pricing:</em> Free tiers for open source and small projects; <a href="https://www.comet.com/site/pricing/">Pro plan</a> starts at $19 per month with usage limits</p>
-
-
-
-<p class="wp-block-paragraph"><em>Standout feature:</em> Auto-scoring with 30-plus metrics for evaluating traces</p>
-
-
-
-<p class="wp-block-paragraph"><em>Best for:</em> Teams focusing on RAG and agentic workflows</p>
-
-
-
-<h2 class="wp-block-heading" id="datadog">Datadog</h2>
-
-
-
-<p class="wp-block-paragraph">DevOps teams that rely on <a href="https://www.datadoghq.com/">Datadog</a> to track logs across collections of services can also use it to track LLM operations, which are, of course, just another source and sink for data. It will track performance such as time to first token and offer insight into what might be causing an issue, such as lack of memory. Results then get plugged into the same cost-tracking mechanism so the bean counters can predict when the budget will run out. After all, the CFO likely doesn’t care whether the bill comes from an LLM or an old-school S3 storage bucket. Datadog integrates AI into their tools by treating these models as just another source of data.</p>
-
-
-
-<p class="wp-block-paragraph"><em>Pricing:</em> Small free tier with <a href="https://www.datadoghq.com/pricing/">multiple paid tiers</a> for various levels of enterprise monitoring</p>
-
-
-
-<p class="wp-block-paragraph"><em>Standout feature:</em> Large installed base with broad focus on more than LLMs</p>
-
-
-
-<p class="wp-block-paragraph"><em>Best for:</em> Large enterprise teams working with established infrastructure</p>
-
-
-
-<h2 class="wp-block-heading" id="dynatrace">Dynatrace</h2>
-
-
-
-<p class="wp-block-paragraph">For more than 20 years, <a href="https://www.dynatrace.com/">Dynatrace</a> has been delivering tools that track dataflows across the full stack. Now that AIs are finding roles in many of the nodes in this complex graph, they’re expanding to track how various AI agents can interact. They want to build one platform that helps track the root cause and, often now, deploy solutions autonomously. They want to focus on being ready to support complex networks of agents that detect problems in either performance or security and then work within defined guardrails to fix them. Determining the right role for their own AI-powered agents is a key part of the product.</p>
-
-
-
-<p class="wp-block-paragraph"><em>Pricing:</em> <a href="https://www.dynatrace.com/pricing/">Plans</a> start at $7 per month with larger plans designed for full enterprise monitoring</p>
-
-
-
-<p class="wp-block-paragraph"><em>Standout feature:</em> High level of autonomous monitoring designed for large installations</p>
-
-
-
-<p class="wp-block-paragraph"><em>Best for: </em>Complex, hybrid environments mixing LLMs with traditional services</p>
-
-
-
-<h2 class="wp-block-heading" id="galileo">Galileo</h2>
-
-
-
-<p class="wp-block-paragraph">Placing some AI systems into production is often a harrowing experience because the actual performance is impossible to predict, even with the most rigorous tests. <a href="https://galileo.ai/">Galileo</a> offers guardrails that track performance and watch for any behavior that deviates from the ground truth. Their “LLM-as-judge” systems are distilled into compact models that can be run locally for lower costs and faster performance.</p>
-
-
-
-<p class="wp-block-paragraph"><em>Pricing:</em> Small free tier; Pro plans start at $50 per month with usage-based limits and costs</p>
-
-
-
-<p class="wp-block-paragraph"><em>Standout feature: </em>Real-time guardrails for deployed agents</p>
-
-
-
-<p class="wp-block-paragraph"><em>Best for:</em> Security-conscious installations that need to defend against hallucination and data leakage</p>
-
-
-
-<h2 class="wp-block-heading" id="grafana-labs">Grafana Labs</h2>
-
-
-
-<p class="wp-block-paragraph">Long the go-to source for<a href="https://grafana.com/oss/"> open source </a>telemetry, <a href="https://grafana.com/products/cloud/ai-assistant/?pg=hp&amp;plcmt=txt-img-alternating">Grafana Labs</a> now tracks performance of AI models in constellations of services. Grafana tracks the evolution of answers across the agentic network to recognize how small changes or hallucinations can spin out of control. It bills its system as “actually useful AI” and has even trademarked it. Its cloud assistant can configure and reconfigure the Grafana dash to offer the right level of observability. Its system includes AI-level analysis that can flag models that are responding quickly but offering bad answers because of problems such as model drift or context degradation.</p>
-
-
-
-<p class="wp-block-paragraph"><em>Pricing:</em> Basic free tier; <a href="https://grafana.com/pricing/">Pro plan</a> begins at $19 per month, includes better retention and some usage-based fees </p>
-
-
-
-<p class="wp-block-paragraph"><em>Standout feature: </em>Full-stack tool with fully integrated LLM tools</p>
-
-
-
-<p class="wp-block-paragraph"><em>Best for:</em> Large, enterprise-scale system adding AI</p>
-
-
-
-<h2 class="wp-block-heading" id="helicone">Helicone</h2>
-
-
-
-<p class="wp-block-paragraph">Sometimes shoehorning in another tool into the chain can be tricky. <a href="https://www.helicone.ai/">Helicone</a> is designed as a smart network proxy that will route all model requests while keeping solid debugging records from the data as it goes by. The data it captures can be turned into nice charts that make it easy to spot latency issues or model failures. Naturally, tracking AI spend is also a feature in much demand as bills continue to climb.</p>
-
-
-
-<p class="wp-block-paragraph"><em>Pricing:</em> Small free tier; <a href="https://www.helicone.ai/pricing">Pro plan</a> starts at $79 per month, includes features such as team collaboration and improved querying</p>
-
-
-
-<p class="wp-block-paragraph"><em>Standout feature:</em> Proxy-based integration</p>
-
-
-
-<p class="wp-block-paragraph"><em>Best for:</em> Development teams who want to add better monitoring features quickly</p>
-
-
-
-<h2 class="wp-block-heading" id="laminar">Laminar</h2>
-
-
-
-<p class="wp-block-paragraph">Tracking agents in development and production means building strong storehouses of data enumerating what happened. <a href="https://laminar.sh/">Laminar</a> works closely with OpenTelemetry to follow agents operating in production so that flaws and failure modes can be understood from log files stored efficiently with their own compression scheme. Developers can search through traces with an SQL-ish language and Laminar’s transcript view illuminates what happened. When necessary, the traces can enable developers to scroll back in time and replay the same inputs for debugging. The goal is to offer deep insights with high-level visibility of how well the agents are meeting business objectives.</p>
-
-
-
-<p class="wp-block-paragraph"><em>Pricing:</em> Small free tier; “Hobby” tier that adds more features at $30; <a href="https://laminar.sh/pricing">Pro level</a> starts at $150 per month</p>
-
-
-
-<p class="wp-block-paragraph"><em>Standout feature:</em> Open-source license makes self-hosting a viable option</p>
-
-
-
-<p class="wp-block-paragraph"><em>Best for:</em> Teams fully able to leverage open-source responsibilities</p>
-
-
-
-<h2 class="wp-block-heading" id="langchain-langsmith">LangChain LangSmith</h2>
-
-
-
-<p class="wp-block-paragraph">Real-time data from agents is essential for managing any mutli-agent system in production. LangSmith from <a href="https://www.langchain.com/">LangChain</a> traces costs, tools, and progress toward solutions for a wide collection of agents using SDKs for Python, TypeScript, Go, and Java. The OpenTelemetry-based solution watches for anomalies, issuing warnings and alerts through dashboards and communication channels such as PagerDuty. Deeper analysis can reveal issues such as topic clustering or odd patterns of failure. Coordination with agent deployment platforms such as LangGraph and deepagents ensures greater focus on successful resolution of assignments.</p>
-
-
-
-<p class="wp-block-paragraph"><em>Pricing:</em> Free for solo developers; <a href="https://www.langchain.com/pricing">Pro teams</a> start at $39 per person per month </p>
-
-
-
-<p class="wp-block-paragraph"><em>Standout feature:</em> Systematic approach to regression testing of prompts</p>
-
-
-
-<p class="wp-block-paragraph"><em>Best for:</em> Teams relying on LangChain and LangGraph frameworks for supporting complex agentic behavior</p>
-
-
-
-<h2 class="wp-block-heading" id="lunary">Lunary</h2>
-
-
-
-<p class="wp-block-paragraph">Watching the user experience is essential for building AI applications such as chatbots and assistants. <a href="https://lunary.ai/">Lunary</a> offers a proxy that traces all interactions and then builds analytical dashboards for measuring metrics such as user satisfaction or model costs. One common usage is finding frequent topics and looking at the responses to ensure they deliver. When prompts aren’t perfect, Lunary lets teams iterate on the prompt text until the right answers are coming out. Its proxy structure and common API format enables Lunary to promise to work with “any LLM, any framework.”</p>
-
-
-
-<p class="wp-block-paragraph"><em>Pricing:</em> Free tier; <a href="https://lunary.ai/pricing">Pro plan</a> starts at $20 per month</p>
-
-
-
-<p class="wp-block-paragraph"><em>Standout feature:</em> Deep integration with humans for reviewing and optimizing results</p>
-
-
-
-<p class="wp-block-paragraph"><em>Best for:</em> Startups focused on rapid prompt innovation</p>
-
-
-
-<h2 class="wp-block-heading" id="newrelic">NewRelic</h2>
-
-
-
-<p class="wp-block-paragraph">The platform that began tracking performance of some web applications is now powerful enough to track the flows of data through complex agentic ecologies. <a href="https://newrelic.com/platform/ai-observability">NewRelic’s</a> AI-driven monitoring watches for golden signals that can indicate misbehavior or worse throughout the entire lifecycle. It tracks every detail of the interactions through protocols such as MCP and then makes this available to the AI engineers responsible for performance. The dashboard provides the insights necessary to watch for toxic behavior, overt bias, drift, and overblown hallucinations. Predicting and maybe even controlling the cost is also a growing role as tokenomics becomes as important as response time.</p>
-
-
-
-<p class="wp-block-paragraph"><em>Pricing:</em> Free tier; Pro plan fees available through website</p>
-
-
-
-<p class="wp-block-paragraph"><em>Standout feature: </em>Full-stack support with hundreds of integrations with other tools</p>
-
-
-
-<p class="wp-block-paragraph"><em>Best for:</em> Established enterprise teams mixing in AI</p>
-
-
-
-<h2 class="wp-block-heading" id="nova-ai-ops">Nova AI Ops</h2>
-
-
-
-<p class="wp-block-paragraph">The goal of <a href="https://novaaiops.com/">Nova AI Ops </a>is to deliver a team of agents that watch over a cloud and make it, at least partially, self-healing. Each agent uses a mixture of predictive AI and machine learning to watch cloud telemetry reports for anomalies. Then they calculate the “blast radius” and decide whether this is a problem that can be fixed automatically “while you sleep” or saved for the human supervisors. These tools are aimed not just on LLM operations but on the stack as a whole.</p>
-
-
-
-<p class="wp-block-paragraph"><em>Pricing:</em> Small free tier; <a href="https://novaaiops.com/pricing">Standard pricing </a> begins at $40 per user per month with usage billing</p>
-
-
-
-<p class="wp-block-paragraph"><em>Standout feature:</em> Focus on software reliability engineering helps teams deliver stable stacks</p>
-
-
-
-<p class="wp-block-paragraph"><em>Best for:</em> Teams that want to integrate LLMs into incident response and stability management</p>
-
-
-
-<h2 class="wp-block-heading" id="splunk">Splunk</h2>
-
-
-
-<p class="wp-block-paragraph">The platform that began delivering smart logging is now fully AI capable, offering solutions that can watch over agents with much the same way that it continues to track microservices. <a href="https://www.splunk.com/en_us/solutions/splunk-artificial-intelligence.html">Splunk</a> now includes a fairly large amount of predictive AI for learning from the information in the logs and then turning this learning into fast solutions. This AI assistant can track deployed AI models connected by protocols such as MCP and watch over behavior while delivering the ability for users to drill down and explore what’s working and what’s failing. Their AI Canvas is meant to offer a central hub where the AI scientists can track both the local behavior of the models as well as their role in a larger data ecosystem.</p>
-
-
-
-<p class="wp-block-paragraph"><em>Pricing:</em> <a href="https://www.splunk.com/en_us/resources/splunk-pricing-options.html">Activity-based pricing</a> tracks usage of LLM backends and storage</p>
-
-
-
-<p class="wp-block-paragraph"><em>Standout feature:</em> Ready to scale to large enterprise stacks</p>
-
-
-
-<p class="wp-block-paragraph"><em>Best for:</em> Teams with legacy systems that are folding in agentic options</p>
-
-
-
-<h2 class="wp-block-heading" id="superpenguin">SuperPenguin</h2>
-
-
-
-<p class="wp-block-paragraph">One of the most important parts of an AI service is the bill. <a href="https://superpenguin.ai/#features">SuperPenguin</a> is a product designed to track consumption and make predictions so that the CFO won’t be surprised. The goal is to provide solid estimates about the total cost of each product by allocating costs to customers, features, and teams. If there’s a sudden shift, a “spike detector” will raise an alarm so that dev teams can ensure that the AI spend is worth it.</p>
-
-
-
-<p class="wp-block-paragraph"><em>Pricing:</em> Small free tier for experimentation; Growth tier for teams, starting at $30 per month; <a href="https://superpenguin.ai/#pricing">Pro tier </a>offers deeper options starting at $200 per month</p>
-
-
-
-<p class="wp-block-paragraph"><em>Standout feature: </em>Strong accounting with invoice reconciliation and PR-level usage tracking</p>
-
-
-
-<p class="wp-block-paragraph"><em>Best for:</em> Teams that need precise cost accounting</p>
-
-
-
-<h2 class="wp-block-heading" id="vellum">Vellum</h2>
-
-
-
-<p class="wp-block-paragraph">Prompt engineers spend time fussing over the details of tweaking, improving, and enhancing the words that guide the LLM. <a href="https://www.vellum.ai/">Vellum</a> started as a company that would provide the pipeline so that you could manage and improve the prompts that ran again and again. Now the system is growing more powerful, offering a higher level of automation that lets you meta-manage the prompt chain. They’ve also begun marketing it as a form of personal assistant with pre-built connections to many of the major services such as Gmail. Its <a href="https://github.com/vellum-ai/llm-cost-optimizer">llm-cost-optimizer </a>can juggle multiple options while finding a cheaper way to execute a prompt, a process the company suggests can save 60% or more.</p>
-
-
-
-<p class="wp-block-paragraph"><em>Pricing:</em> Open-source free tier; Pro plan starts at $35 per month</p>
-
-
-
-<p class="wp-block-paragraph"><em>Standout feature:</em> Focus on multi-model pipelines for true agentic solutions</p>
-
-
-
-<p class="wp-block-paragraph"><em>Best for:</em> Product teams with complex prompt engineering workflows</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4d ago]]></description>
 </item>
 
 <item>
@@ -6311,7 +6112,7 @@
 
 
 <p class="wp-block-paragraph">The embedded malware executables for different platforms are written in Rust and, according to <a href="https://socket.dev/blog/jscrambler-supply-chain-attack">Socket.dev’s analysis</a>, were “a broad, developer-focused credential and secret harvester” that targeted browser-extension crypto wallets, API keys from AI coding assistants and MCP servers, cloud credentials for AWS, Azure and GCP, authentication tokens for messaging applications (such as Discord, Slack, and Telegram), password stores from browsers, Steam, and KDE.<br /><br /><br /></p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 4d ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 5d ago]]></description>
 </item>
 
 <item>
@@ -6400,123 +6201,6 @@
 
 
 <p class="wp-block-paragraph">Instead, they recommended resolving the real backing file rather than trusting process paths, revalidating file identity whenever a file is reopened for hashing or scanning, and enumerating active bind-link mappings to detect silo-scoped abuse.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5d ago]]></description>
-</item>
-
-<item>
-  <title>🟠 White House launches AI-driven vulnerability clearinghouse to speed cyber remediation</title>
-  <link>https://www.csoonline.com/article/4197348/white-house-launches-ai-driven-vulnerability-clearinghouse-to-speed-cyber-remediation.html</link>
-  <pubDate>Wed, 15 Jul 2026 12:43:59 +0000</pubDate>
-  <source>CSO Online</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><div id="remove_no_follow">
-		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
-					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
-						<div class="article-column__content">
-<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
-
-
-
-<p class="wp-block-paragraph">The White House is expanding the use of AI beyond cyber threat detection into vulnerability management, launching a new program that aims to help government agencies and critical infrastructure operators identify, prioritize, and remediate software vulnerabilities faster.</p>
-
-
-
-<p class="wp-block-paragraph">Called Gold Eagle, the initiative will act as a centralized clearinghouse for cybersecurity vulnerabilities, coordinating vulnerability reporting, verification, and remediation across federal agencies, open-source software communities, and operators of critical infrastructure, the <a href="https://www.whitehouse.gov/releases/2026/07/white-house-launches-gold-eagle-initiative-for-unprecedented-cybersecurity-vulnerability-coordination/" rel="noreferrer noopener" target="_blank">White House said in a statement</a>.</p>
-
-
-
-<p class="wp-block-paragraph">“This new model will leverage frontier AI capabilities to continue advancing faster than adversaries, reduce duplicative scanning efforts, and deliver prioritized and actionable threat and remediation information to defenders across the Federal government and the private sector,” the statement added.</p>
-
-
-
-<p class="wp-block-paragraph">The initiative stems from President Donald Trump’s <a href="https://www.csoonline.com/article/4180205/trump-revives-parts-of-canceled-ai-order-with-cybersecurity-focused-directive.html?utm=hybrid_search">June 2 executive order</a> on advanced AI innovation and security, which directed federal agencies to expand the use of frontier AI to strengthen cybersecurity while working more closely with the private sector.</p>
-
-
-
-<p class="wp-block-paragraph">The administration said the program has already begun receiving vulnerability reports from multiple industries and coordinating validation and remediation efforts.</p>
-
-
-
-<p class="wp-block-paragraph">For enterprise security leaders, the announcement signals a government effort to move beyond traditional vulnerability disclosure toward coordinated vulnerability response.</p>
-
-
-
-<h2 class="wp-block-heading" id="a-move-toward-coordinated-vulnerability-response">A move toward coordinated vulnerability response</h2>
-
-
-
-<p class="wp-block-paragraph">Prabhjyot Kaur, senior analyst at Everest Group, said Gold Eagle should be viewed as “a significant evolution” of existing vulnerability disclosure and government-industry coordination mechanisms rather than a replacement for them.</p>
-
-
-
-<p class="wp-block-paragraph">“Its potential significance lies in creating a more operational clearinghouse that can consolidate vulnerability findings, reduce duplicative scanning, validate exposure across sectors, and coordinate remediation with critical infrastructure operators and open-source software communities,” Kaur said.</p>
-
-
-
-<p class="wp-block-paragraph">The more meaningful shift, she said, is from largely distributed vulnerability disclosure processes toward centralized prioritization and coordinated action. Whether the initiative changes enterprise vulnerability management, however, will depend on execution, including industry participation, information-sharing protocols, and whether it can shorten the time between vulnerability discovery, validation, and remediation.</p>
-
-
-
-<p class="wp-block-paragraph">The White House said Gold Eagle has already begun receiving and prioritizing vulnerability reports from multiple industries, coordinating scanning verification, and supporting remediation efforts using existing federal authorities and resources.</p>
-
-
-
-<h2 class="wp-block-heading" id="ai-can-accelerate-prioritization-not-replace-judgment">AI can accelerate prioritization, not replace judgment</h2>
-
-
-
-<p class="wp-block-paragraph">The administration said the initiative is designed to help government and industry reduce duplicative vulnerability scanning and accelerate remediation by using AI to prioritize findings.</p>
-
-
-
-<p class="wp-block-paragraph">Treasury Secretary Scott Bessent said the program reflects closer collaboration between the government and the private sector to protect financial institutions and other critical infrastructure.</p>
-
-
-
-<p class="wp-block-paragraph">“Treasury, along with our partner agencies, will continue to harness frontier AI capabilities to stay ahead of our adversaries and defend the American people from emerging threats,” Bessent said in the statement.</p>
-
-
-
-<p class="wp-block-paragraph">Kaur said AI is likely to deliver the greatest value in vulnerability triage and prioritization.</p>
-
-
-
-<p class="wp-block-paragraph">“It can correlate findings from multiple scanners, remove duplicate alerts, link vulnerabilities to known exploitation activity, assess internet exposure, and combine technical severity with asset criticality and potential business impact,” she said.</p>
-
-
-
-<p class="wp-block-paragraph">However, she cautioned that AI-generated prioritization is only as reliable as the underlying asset inventories, vulnerability data, and threat intelligence.</p>
-
-
-
-<p class="wp-block-paragraph">“AI should therefore support, rather than replace, human validation, compensating-control analysis, and enterprise-specific risk decisions,” she said.</p>
-
-
-
-<p class="wp-block-paragraph">Apeksha Kaushik, senior principal analyst at Gartner, said the initiative reflects a broader shift toward measuring cybersecurity performance by reducing actual risk exposure rather than simply increasing patch counts.</p>
-
-
-
-<p class="wp-block-paragraph">By helping unify and accelerate vulnerability coordination between government and industry, the initiative could address long-standing challenges around fragmented reporting and inconsistent disclosure practices, enabling enterprises to respond more quickly and efficiently to vulnerabilities, she said.</p>
-
-
-
-<h2 class="wp-block-heading" id="execution-will-determine-enterprise-impact">Execution will determine enterprise impact</h2>
-
-
-
-<p class="wp-block-paragraph">The announcement outlines Gold Eagle’s objectives but provides few operational details about how organizations will participate, how AI will validate or prioritize vulnerabilities, or how the initiative will work alongside existing coordinated vulnerability disclosure and vulnerability management programs.</p>
-
-
-
-<p class="wp-block-paragraph">Kaur said CISOs should view the initiative as an additional source of vulnerability intelligence rather than a replacement for enterprise risk management.</p>
-
-
-
-<p class="wp-block-paragraph">“The biggest takeaway is that vulnerability response is moving toward faster, more intelligence-led, and more coordinated prioritization across government and industry,” she said.</p>
-
-
-
-<p class="wp-block-paragraph">Even if government coordination improves the quality and timeliness of vulnerability intelligence, enterprises will continue to own remediation decisions, Kaur added. “Government coordination may improve the quality and timeliness of intelligence, but enterprise context must continue to determine the final remediation priority.”</p>
 </div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5d ago]]></description>
 </item>
 
