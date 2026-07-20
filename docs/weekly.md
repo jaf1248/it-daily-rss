@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
-**Period:** July 12 – July 19, 2026  
-**Generated:** 2026-07-19 23:55 UTC  
+**Period:** July 13 – July 20, 2026  
+**Generated:** 2026-07-20 02:42 UTC  
 **Items reviewed:** 136  
 
 ## ⚡ Top Actions This Week
@@ -83,12 +83,12 @@
 
 ## 🔵 FYI — General Awareness
 
+- [ISC Stormcast For Monday, July 20th, 2026 https://isc.sans.edu/podcastdetail/10014, (Mon, Jul 20th)](https://isc.sans.edu/diary/rss/33166) — SANS Internet Storm Center
 - [Scans for Hikvision Intelligent Security API, (Sun, Jul 19th)](https://isc.sans.edu/diary/rss/33164) — SANS Internet Storm Center
 - [Hackers abuse ViPNet software to target Russian govt agencies](https://www.bleepingcomputer.com/news/security/hackers-abuse-vipnet-software-to-target-russian-govt-agencies/) — BleepingComputer
 - [UAC-0145 Uses ClickFix CAPTCHAs to Infect Ukrainian Devices wih Malware](https://thehackernews.com/2026/07/uac-0145-uses-clickfix-captchas-to.html) — The Hacker News
 - [Microsoft warns of surge in ACR Stealer attacks on customers](https://www.bleepingcomputer.com/news/security/microsoft-warns-of-surge-in-acr-stealer-attacks-on-customers/) — BleepingComputer
 - [The Future of Age Verification: Your Face Never Leaves Your Device](https://www.bleepingcomputer.com/news/security/the-future-of-age-verification-your-face-never-leaves-your-device/) — BleepingComputer
-- [New NadMesh Botnet Hunts Exposed AI Services for Cloud Keys and Kubernetes Tokens](https://thehackernews.com/2026/07/new-nadmesh-botnet-hunts-exposed-ai.html) — The Hacker News
 
 ---
 
