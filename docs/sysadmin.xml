@@ -3,14 +3,14 @@
 <channel>
   <title>Joe SysAdmin and Operations</title>
   <description>Operational IT changes, Microsoft updates, outages, and infrastructure issues.</description>
-  <lastBuildDate>Mon, 20 Jul 2026 17:58:15 +0000</lastBuildDate>
+  <lastBuildDate>Mon, 20 Jul 2026 19:47:59 +0000</lastBuildDate>
   
 <item>
   <title>🔴 New HollowGraph malware uses Microsoft Graph for stealthy C2 comms</title>
   <link>https://www.bleepingcomputer.com/news/security/new-hollowgraph-malware-uses-microsoft-graph-for-stealthy-c2-comms/</link>
   <pubDate>Mon, 20 Jul 2026 17:43:01 +0000</pubDate>
   <source>BleepingComputer</source>
-  <description><![CDATA[<b>Why this matters: Potential data exposure — check monitoring and incident response readiness.</b><br/>A malicious component dubbed HollowGraph uses the calendar feature in compromised Microsoft 365 mailboxes as a command-and-control channel to receive attacker commands and exfiltrate stolen data. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Potential data exposure — check monitoring and incident response readiness.</b><br/>A malicious component dubbed HollowGraph uses the calendar feature in compromised Microsoft 365 mailboxes as a command-and-control channel to receive attacker commands and exfiltrate stolen data. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
 </item>
 
 <item>
@@ -18,7 +18,7 @@
   <link>https://www.bleepingcomputer.com/news/microsoft/microsoft-working-to-fix-wsus-server-sync-delays-and-timeouts/</link>
   <pubDate>Mon, 20 Jul 2026 10:47:28 +0000</pubDate>
   <source>BleepingComputer</source>
-  <description><![CDATA[<b>Why this matters: Operational impact possible — watch for changes that generate tickets.</b><br/>Microsoft is working to fix a known issue affecting Windows Server Update Services (WSUS) servers, which has caused synchronization problems for more than a week. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Operational impact possible — watch for changes that generate tickets.</b><br/>Microsoft is working to fix a known issue affecting Windows Server Update Services (WSUS) servers, which has caused synchronization problems for more than a week. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
 </item>
 
 <item>
@@ -26,7 +26,82 @@
   <link>https://www.bleepingcomputer.com/news/microsoft/microsoft-fixes-windows-bug-causing-some-dell-pcs-to-shut-down/</link>
   <pubDate>Mon, 20 Jul 2026 10:06:17 +0000</pubDate>
   <source>BleepingComputer</source>
-  <description><![CDATA[<b>Why this matters: Operational impact possible — watch for changes that generate tickets.</b><br/>Microsoft has released emergency updates to fix a known issue causing some Dell PCs to shut down after installing the July 2026 Windows 11 security updates. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Operational impact possible — watch for changes that generate tickets.</b><br/>Microsoft has released emergency updates to fix a known issue causing some Dell PCs to shut down after installing the July 2026 Windows 11 security updates. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Premium SSD v2 and Instant Access Snapshots: A Better, Faster, Cheaper Disk for Your Azure VMs</title>
+  <link>https://techcommunity.microsoft.com/t5/itops-talk-blog/premium-ssd-v2-and-instant-access-snapshots-a-better-faster/ba-p/4534571</link>
+  <pubDate>Mon, 20 Jul 2026 07:00:00 +0000</pubDate>
+  <source>Microsoft Tech Community IT Ops</source>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><p>Hello Folks!</p>
+<p>If you have been running Premium SSD v1 because that is just what you have always done, this session from the Microsoft Azure Infra Summit 2026 is going to be a wake up call. Raymond Lui and Adam Li from the Azure Disk Storage team walked us through Premium SSD v2 (PV2 for short) and the new Instant Access Snapshots, and the punchline is simple. PV2 is faster, it is cheaper, and the operational story around it just keeps getting better.</p>
+<p>📺 <strong>Watch the session:</strong></p>
+<p>&nbsp;</p>
+<div class="lia-embeded-content" contenteditable="false">
+</div>
+<h2>Why IT Pros Should Care</h2>
+<p>If you are an infrastructure person, a SQL DBA, an SAP Basis admin, or anyone who has ever had to right-size a VM around its storage tier, this matters to you. In short, Premium SSD v2 changes the rules around how you provision block storage in Azure. Here is what stood out from the session:</p>
+<ul>
+<li>4x more IOPS and 2x more throughput compared to Premium SSD v1, on a matched configuration that costs 42% less.</li>
+<li>Sub-millisecond average latency, with a top configuration of 800,000 IOPS and 20 GB/s of throughput on a single VM.</li>
+<li>Capacity, IOPS, and throughput are decoupled. You dial each one independently, in 1 GB increments, instead of buying a tiered SKU.</li>
+<li>3,000 baseline IOPS and 125 MB/s throughput included on every disk, with no extra cost.</li>
+<li>Live Resize. You can grow disk size, IOPS, or throughput on a running VM with no restart required.</li>
+<li>Instant Access Snapshots make restores feel actually instant, with up to 10x faster hydration and 90% lower read latency during hydration.</li>
+</ul>
+<p>That is a lot of wins on one slide. Let’s break it down.</p>
+<h2>What Premium SSD v2 Is, Technical Overview</h2>
+<p>Premium SSD v2 is Azure’s purpose-built block storage for I/O-intensive enterprise workloads. Microsoft Learn describes it as designed for workloads that need sub-millisecond disk latency, high IOPS, and high throughput at a low cost. The target list is broad: SQL Server, Oracle, MariaDB, SAP, Cassandra, MongoDB, big data and analytics, gaming, and stateful containers running on AKS.</p>
+<p>The architectural shift that Raymond highlighted is independent scaling. With Premium SSD v1, you bought a fixed SKU. If you wanted more IOPS, you had to buy more capacity, even if you did not need it. With PV2, capacity, IOPS, and throughput are three separate dials. You provision capacity in 1 GB increments, then you set IOPS and throughput to match what your workload actually needs. If you over-provisioned, you tune it down. If you under-provisioned, you tune it up, and the VM keeps running.</p>
+<p>Raymond highlighted three primary use cases in the session:</p>
+<ol>
+<li><strong>SAP workloads</strong>, including SAP application VMs, SAP HANA databases, and non-HANA databases like Oracle, DB2, and SQL Server in SAP environments.</li>
+<li><strong>SQL Server</strong>. According to a GigaOM benchmark cited in the session, SQL Server on PV2 delivered 51% more transactions per second and 39% lower cost per transaction compared to AWS EC2, with a 9% lower 3-year TCO.</li>
+<li><strong>Big data and analytics replacing local SSD</strong>. This one is a bit of a surprise. On D-series VMs, PV2 delivered over 1,400 MB/s of throughput compared to 720 MB/s from local SSD. That means you can run Spark or Databricks workloads on cheaper VM SKUs (without local storage) and still get more performance than you had before.</li>
+</ol>
+<p>Premium SSD v2 supports a 4k physical sector size by default, with 512E available for legacy applications. There are a few honest tradeoffs to know about. PV2 disks cannot be used as an OS disk, and they cannot be used with Azure Compute Gallery. PV2 also does not support host caching. For regions with availability zones, PV2 disks can only be attached to zonal VMs, so plan your VM placement accordingly.</p>
+<h2>How It Works, Under the Hood</h2>
+<p>Raymond covered the architecture briefly, and it is worth understanding. PV2 uses direct VM-to-storage-node communication, with 3-replica durability behind the scenes. That direct path is part of how it gets sub-millisecond latency consistently.</p>
+<p>For Instant Access Snapshots, Adam walked through the architectural difference between the classic incremental snapshot path and the new Instant Access path. With classic incremental snapshots for PV2 and Ultra Disk, the snapshot is created, then the data has to copy in the background to Standard HDD before the snapshot is usable for restore. That copy could take a while on a large disk, and restored disks would then hydrate slowly, which dragged down read latency until hydration finished.</p>
+<p>With Instant Access, the snapshot is usable the moment it exists. The data stays in the same high-performance storage as the source disk for a configurable duration (60 to 300 minutes, controlled by the InstantAccessDurationMins parameter). At the same time, Azure copies the snapshot data to Standard ZRS in the background for long-term retention. When the Instant Access window expires, the snapshot transitions to a regular incremental snapshot, sitting on cheap durable storage. You get the speed and the long-term durability without running two separate workflows.</p>
+<p>In short, your VM can boot and run at near-full performance while the data hydrates in the background. There are some limits to keep in mind. Instant Access counts toward the existing limit of three in-progress snapshots per disk, and you can create up to 15 disks concurrently from all instant access snapshots of a single disk.</p>
+<h2>Real-World Value (Use Cases, ROI, Scenarios)</h2>
+<p>Adam closed his portion of the session with a BCDR demo. He cloned 12 disks of an M-series production database into a recovery VM, attached them, and was immediately running roughly 500,000 IOPS at single-digit-millisecond latency. No waiting for hydration. No degraded performance window. That is a meaningful improvement to your Recovery Time Objective (RTO).</p>
+<p>A few scenarios where this combination really pays off:</p>
+<ul>
+<li><strong>Pre-deployment safety nets.</strong> Take an instant access snapshot before a big upgrade. If something goes sideways, roll back in seconds instead of hours.</li>
+<li><strong>Rapid scale-out for stateful apps.</strong> Spin up multiple disk copies of a primary instance in seconds. You can even place them across availability zones in the same region.</li>
+<li><strong>Dev/test environment refresh.</strong> Clone production into dev or test on demand, with full performance from the first I/O. No more “we’ll refresh dev next quarter” because the restore takes too long.</li>
+<li><strong>SAP HANA always-on operations.</strong> Live Resize means you can scale IOPS or throughput up on a running database during a load spike, without a maintenance window.</li>
+<li><strong>Right-sizing to cut spend.</strong> If you have been paying for VM SKUs purely to get local SSD throughput, PV2 may let you drop to a smaller, cheaper VM and still hit higher numbers.</li>
+</ul>
+<p>One nuance came up in the live Q&amp;A. Jens asked a great question about profiling: how do you know when PV2 is the right choice versus Standard SSD? Raymond’s guidance was direct. If the workload needs high IOPS or high throughput, PV2 is generally the right call. The VM SKU also needs to support “Premium Disk” capability for PV2 to attach, so check that compatibility first.</p>
+<h2>Getting Started</h2>
+<p>Concrete first steps so you can start kicking the tires:</p>
+<ol>
+<li><strong>Confirm region and zone support.</strong> Use az vm list-skus --resource-type disks --query "[?name=='PremiumV2_LRS']" to see which regions and availability zones are supported in your subscription.</li>
+<li><strong>Pick a Premium-capable VM in a supported zone.</strong> Remember, PV2 is zonal in AZ regions. Decide on the zone before you create the VM.</li>
+<li><strong>Provision a disk.</strong> Start with default performance (3,000 IOPS, 125 MB/s) and a small capacity. You are paying for the dials you turn up; defaults are reasonable for most starting points.</li>
+<li><strong>Plan your v1 to v2 migration.</strong> Raymond demoed two paths. Option A: detach the disk from a running VM and convert it (the VM keeps running on its other disks). Option B: stop and deallocate the VM, then convert in place. Both preserve data, and you can raise IOPS and throughput as part of the conversion.</li>
+<li><strong>Try Instant Access Snapshots.</strong> Add --instant-access-duration-in-minutes (or the equivalent ARM/PowerShell parameter) to your existing snapshot command. That is all the change you need to enable it.</li>
+<li><strong>For AKS users</strong>, define a storage class with skuName: PremiumV2_LRS and let dynamic provisioning take it from there.</li>
+</ol>
+<h2>Resources</h2>
+<ul>
+<li><a href="https://learn.microsoft.com/en-us/azure/virtual-machines/disks-types" target="_blank">Select a disk type for Azure IaaS VMs (managed disks)</a></li>
+<li><a href="https://learn.microsoft.com/en-us/azure/virtual-machines/disks-deploy-premium-v2" target="_blank">Deploy a Premium SSD v2 managed disk</a></li>
+<li><a href="https://learn.microsoft.com/en-us/azure/virtual-machines/disks-convert-types" target="_blank">Convert managed disks storage between different disk types</a></li>
+<li><a href="https://learn.microsoft.com/en-us/azure/virtual-machines/disks-instant-access-snapshots" target="_blank">Instant access snapshots for Azure managed disks</a></li>
+<li><a href="https://learn.microsoft.com/en-us/azure/virtual-machines/use-premium-ssd-v2-with-availability-set" target="_blank">Use Premium SSD v2 with VMs in an availability set</a></li>
+<li><a href="https://learn.microsoft.com/en-us/azure/aks/use-premium-v2-disks" target="_blank">Use Azure Premium SSD v2 disks on Azure Kubernetes Service</a></li>
+<li><a href="https://learn.microsoft.com/azure/virtual-machines/managed-disks-overview" target="_blank">Azure managed disks overview</a></li>
+<li><a href="https://learn.microsoft.com/azure/virtual-machines/workloads/sap/hana-vm-premium-ssd-v2" target="_blank">SAP HANA Azure virtual machine Premium SSD v2 storage configurations</a></li>
+</ul>
+<h2>Keep Learning at the Summit</h2>
+<p>Catch the full <a class="lia-external-url" href="https://www.youtube.com/playlist?list=PLjt5SKzX1iI8con7FJDB56G6hHqxGm7ki" target="_blank">Microsoft Azure Infra Summit 2026 session playlist here</a></p>
+<p>Cheers!</p>
+<p>Pierre Roman</p><br/><br/><b>Source:</b> Microsoft Tech Community IT Ops &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 12h ago]]></description>
 </item>
 
 <item>
@@ -42,7 +117,7 @@
   <link>https://www.bleepingcomputer.com/news/security/update-now-7-zip-fixes-rce-flaw-exploitable-with-malicious-archives/</link>
   <pubDate>Sat, 18 Jul 2026 19:32:02 +0000</pubDate>
   <source>BleepingComputer</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>7-Zip version 26.02 was released on June 25 to fix a remote code execution vulnerability that could allow attackers to execute malicious code by convincing users to open specially crafted compressed files. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>7-Zip version 26.02 was released on June 25 to fix a remote code execution vulnerability that could allow attackers to execute malicious code by convincing users to open specially crafted compressed files. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
 </item>
 
 <item>
@@ -188,130 +263,6 @@ az monitor metrics alert create --name "NSP-Denied-Connections" --resource-group
 </ol>
 <p>The networking challenges in cloud are complex. Network Security Perimeter gives you a declarative, policy-driven way to solve them at scale. Take advantage of it, and let me know how it changes your security workflows.</p>
 <p>Keep your networks hardened, and your data flowing safe.</p>
-<p>Cheers!</p>
-<p>Pierre Roman</p><br/><br/><b>Source:</b> Microsoft Tech Community IT Ops &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
-</item>
-
-<item>
-  <title>🟠 Az Update - Week 2 of the return editions</title>
-  <link>https://techcommunity.microsoft.com/t5/itops-talk-blog/az-update-week-2-of-the-return-editions/ba-p/4538337</link>
-  <pubDate>Fri, 17 Jul 2026 18:37:42 +0000</pubDate>
-  <source>Microsoft Tech Community IT Ops</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><p>Hello Folks!</p>
-<p>This week's updates all focus on something we hear from IT pros and platform engineers all the time:</p>
-<p>How do we make our environments more secure, more manageable, and easier to modernize without adding more complexity?</p>
-<p>Whether you're running PostgreSQL workloads in Azure, securing Kubernetes storage, or planning your next wave of SQL Server migrations, this week's announcements bring practical improvements that can help reduce operational overhead while strengthening your overall platform strategy.</p>
-<p>We'll look at three newly available capabilities:</p>
-<ol>
-<li>Update #1 - Generally Available: Microsoft Defender security assessments for Azure Database for PostgreSQL Flexible Server</li>
-<li>Update #2 - Generally Available: Encryption in Transit for Azure Files NFS Shares in Azure Kubernetes Service (AKS)</li>
-<li>Update #3 - Generally Available: Expanding Azure Arc SQL Migration with SQL Server on Azure Virtual Machines</li>
-</ol>
-<p>As always, I'm approaching these updates from an infrastructure and operations perspective. I'll cover why each capability matters, what to watch out for before production deployment, and some practical steps you can take to start evaluating them in your own environment.</p>
-<p>Let's dig in.</p>
-<h2>Update #1 - Generally Available: Microsoft Defender security assessments for Azure Database for PostgreSQL Flexible Server</h2>
-<h3>Why ITPros should care</h3>
-<p>This release brings automated security posture assessment directly into managed PostgreSQL environments. For ITPros, this matters because database security is often treated separately from infrastructure security tooling, creating blind spots and silos.</p>
-<p>What changed is that Defender now runs native vulnerability scanning and compliance checks against PostgreSQL configurations, patches, and the ways a database could be exposed to security risks or attack opportunities. Instead of relying on external scanners or manual audits, you get platform-native assessments integrated with your existing Defender workflows.</p>
-<p>The operational impact is significant: you can now enforce security baselines at the database layer with the same consistency you apply to VMs and network resources, reducing the gap between infrastructure and data security accountability.</p>
-<h3>Operational value</h3>
-<p>Operationally, this improves your security baseline enforcement and reduces the need for separate database security assessment tools. It also strengthens how well you can demonstrate and prove that security controls are in place and working for compliance reviews where regulators expect consistent, documented security controls.</p>
-<p>Before production rollout, validate that Defender cost models fit your budget, that assessment frequency aligns with your change windows, and that remediation guidance maps to your patch and maintenance processes.</p>
-<p>Prerequisites include enabling Microsoft Defender for Cloud, registering the PostgreSQL Flexible Server provider, and ensuring network connectivity so assessments can reach the database endpoint.</p>
-<h3>Real-world example with step-by-step guidance</h3>
-<ol>
-<li>Enable Microsoft Defender for Cloud if not already active, and ensure PostgreSQL Flexible Server subscription coverage.</li>
-<li>Register the target PostgreSQL Flexible Server instances and confirm Defender has network visibility to the database endpoints.</li>
-<li>Run a baseline assessment and review initial findings to understand current security posture and common remediation patterns.</li>
-<li>Prioritise findings by severity and business impact, then schedule patches and configuration changes in maintenance windows.</li>
-<li>Monitor ongoing assessments and track remediation progress through Defender dashboards, validating that fixes reduce exposure scores.</li>
-</ol>
-<h3>Technical details including code examples</h3>
-<p>This example validates that Defender is actively assessing your PostgreSQL estate. The sequence checks Defender status, confirms PostgreSQL registration, and retrieves current assessment scores.</p>
-<p>Run these queries in a pilot subscription first to understand data structure and expected output before scaling to production databases.</p>
-az account set --subscription &lt;subscriptionId&gt; az security sql-vulnerability-assessment baseline show --resource-group &lt;rg&gt; --server-name &lt;postgresServer&gt; --database-name &lt;databaseName&gt;
-
-az security pricing show --subscription &lt;subscriptionId&gt; --query "[?name=='VirtualMachines' || name=='SqlServers' || name=='StorageAccounts'].[name,pricingTier]" -o table
-
-az provider show --namespace Microsoft.DBforPostgreSQL --query "registrationState" -o tsv
-<p>Expected behaviour: Defender status shows active, PostgreSQL instances are registered with the provider, and pricing tier reflects your coverage level. If assessments do not run, check network rules, managed identity permissions, and Defender plan activation. If baseline data is missing, trigger a manual scan and wait for completion.</p>
-<h3>Comprehensive Resources</h3>
-<ol>
-<li><a href="https://azure.microsoft.com/updates?id=567527" target="_blank">Azure update: Microsoft Defender security assessments for Azure Database for PostgreSQL Flexible Server</a></li>
-<li><a href="https://learn.microsoft.com/azure/defender-for-cloud/defender-for-cloud-introduction" target="_blank">Microsoft Defender for Cloud overview</a></li>
-<li><a href="https://learn.microsoft.com/azure/postgresql/flexible-server/concepts-security" target="_blank">Azure Database for PostgreSQL security</a></li>
-<li><a href="https://learn.microsoft.com/azure/defender-for-cloud/defender-for-sql-on-machines" target="_blank">SQL vulnerability assessments in Defender for Cloud</a></li>
-<li><a href="https://learn.microsoft.com/azure/defender-for-cloud/enable-defender-for-cloud" target="_blank">Enable Defender for Cloud</a></li>
-</ol>
-<h2>Update #2 - Generally Available: Encryption in Transit for Azure Files NFS Shares in Azure Kubernetes Service (AKS)</h2>
-<h3>Why ITPros should care</h3>
-<p>This release closes a significant gap in data protection for Kubernetes workloads consuming NFS shares from Azure Files. Previously, NFS traffic between AKS nodes and Azure Files was unencrypted, creating compliance and security risks for sensitive workloads.</p>
-<p>What changed is that you can now enforce encryption for NFS communication at the Azure Files layer, not just at the application layer. This is important because traditional NFS lacks built-in encryption, and relying on network isolation alone is increasingly insufficient.</p>
-<p>For ITPros managing regulated workloads (healthcare, finance, PII-sensitive data), this removes a control gap. Encryption in transit now becomes a platform-native feature instead of a workaround, reducing architecture complexity and improving auditability.</p>
-<h3>Operational value</h3>
-<p>The operational value is stronger compliance posture and reduced attack surface for data in motion between containers and storage. It also simplifies the security story when auditors ask about data protection controls.</p>
-<p>Before enabling in production, validate that NFS-over-TLS introduces acceptable latency overhead for your workload patterns, test failover and reconnection behaviour under encryption, and confirm that monitoring and logging still work correctly.</p>
-<p>Prerequisites include running AKS with Azure CNI or Kubenet networking, having Azure Files with NFS 4.1 enabled, and ensuring the NFS client libraries on container images support TLS.</p>
-<h3>Real-world example with step-by-step guidance</h3>
-<ol>
-<li>Create an Azure Files NFS share with encryption in transit enabled and confirm TLS version alignment with your security standards.</li>
-<li>Deploy a test AKS workload that mounts the NFS share and validate that pods mount successfully with encrypted traffic.</li>
-<li>Run performance baselines (throughput, latency, CPU overhead) before and after enabling encryption to document operational expectations.</li>
-<li>Monitor pod logs and Azure Files metrics during the test to confirm no silent failures or unexpected throttling occurs.</li>
-<li>Roll out to production workloads in stages, with clear rollback criteria tied to application latency and error rates.</li>
-</ol>
-<h3>Technical details including code examples</h3>
-<p>This example validates that your AKS cluster can successfully mount NFS shares with encryption enabled. The sequence checks cluster networking, confirms NFS connectivity, and tests mount success.</p>
-<p>Run these commands in a non-production cluster first to validate environment readiness before touching production storage.</p>
-az aks show --resource-group &lt;rg&gt; --name &lt;clusterName&gt; --query "networkProfile.{networkPlugin:networkPlugin,networkPolicy:networkPolicy,podCidr:podCidr}" -o jsonc
-
-az storage account show --resource-group &lt;rg&gt; --name &lt;storageAccount&gt; --query "{name:name,kind:kind,accessTier:accessTier}" -o jsonc
-
-kubectl get pvc -A --all-namespaces -o wide kubectl describe pv &lt;pvName&gt; | grep -i nfs
-<p>Expected behaviour: cluster networking is properly configured, storage account kind supports NFS, and PVC/PV resources show NFS mount points. If mounts fail, check network security group rules, storage account firewall allowances, and subnet delegation. If latency increases, monitor resource utilisation and adjust workload placement if needed.</p>
-<h3>Comprehensive Resources</h3>
-<ol>
-<li><a href="https://azure.microsoft.com/updates?id=567787" target="_blank">Azure update: Encryption in Transit for Azure Files NFS Shares in Azure Kubernetes Service (AKS)</a></li>
-<li><a href="https://learn.microsoft.com/azure/storage/files/files-nfs-protocol" target="_blank">Azure Files NFS support</a></li>
-<li><a href="https://learn.microsoft.com/azure/aks/azure-files-volume" target="_blank">Mount Azure Files with NFS in AKS</a></li>
-<li><a href="https://learn.microsoft.com/azure/storage/common/storage-security-guide" target="_blank">Azure storage security</a></li>
-<li><a href="https://learn.microsoft.com/azure/aks/concepts-network" target="_blank">AKS networking concepts</a></li>
-</ol>
-<h2>Update #3 - Generally Available: Expanding Azure Arc SQL Migration with SQL Server on Azure Virtual Machines</h2>
-<h3>Why ITPros should care</h3>
-<p>This capability brings SQL Server migration into the Azure Arc operational footprint, creating a unified migration and inventory experience. For ITPros, this matters because SQL Server modernisation is often fragmented across multiple tools and teams.</p>
-<p>What changed is that you can now discover, assess, and execute SQL migrations through Arc-native workflows, using the same permissions and governance model you already have for infrastructure and hybrid resources.</p>
-<p>The operational gain is consistency: discovery data feeds migration planning, assessments surface blockers early, and rollout can be controlled through the same change and approvals processes you use for other infrastructure migrations.</p>
-<h3>Operational value</h3>
-<p>Operationally, this reduces tooling sprawl and improves coordination between infrastructure and database teams. Arc becomes your single control plane for tracking migration progress, managing runbooks, and collecting audit evidence.</p>
-<p>Before production use, validate that your SQL Server inventory is complete, that migration blockers are understood and addressed, and that your maintenance windows can accommodate expected cutover timings.</p>
-<p>Prerequisites include Azure Arc agent deployment on source VMs, Azure Database Migration Service readiness, and network connectivity to target Azure SQL resources.</p>
-<h3>Real-world example with step-by-step guidance</h3>
-<ol>
-<li>Deploy Azure Arc agents to SQL Server VMs and confirm all instances report healthy status with complete inventory data.</li>
-<li>Run Arc-integrated SQL Server assessments to identify compatibility issues, dependencies, and recommended migration targets.</li>
-<li>Pilot migration for a non-critical workload to establish runbook patterns, measure cutover time, and validate post-migration validation procedures.</li>
-<li>Execute validation tests: connectivity, login success, database consistency checks, job execution, and application integration tests.</li>
-<li>Scale migration in waves using documented runbooks, with gates for monitoring data health and application performance after each cutover.</li>
-</ol>
-<h3>Technical details including code examples</h3>
-<p>This example validates Arc agent health and SQL Server discovery completeness. The sequence ensures your Arc infrastructure is ready for migration workflows.</p>
-<p>Run these commands as part of your pre-migration checklist to catch configuration gaps before committing to migration timelines.</p>
-az account show --output table az connectedmachine list --resource-group &lt;rg&gt; --query "[].{name:name,status:status,osName:osName}" -o table
-
-az resource list --resource-type Microsoft.AzureArcData/sqlServerInstances --query "[].{name:name,resourceGroup:resourceGroup,location:location}" -o table
-
-az connectedmachine machine extension list --resource-group &lt;rg&gt; --machine-name &lt;vmName&gt; --query "[].{name:name,provisioningState:provisioningState}" -o table
-<p>Expected behaviour: Arc agents report healthy status, SQL Server instances are fully discovered with accurate inventory, and required extensions are provisioned successfully. If discovery is incomplete, check Arc agent connectivity, extension deployment, and SQL service running status on source VMs. If migration pre-checks fail, verify SQL Server version compatibility and review Defender logs for blocking issues.</p>
-<h3>Comprehensive Resources</h3>
-<ol>
-<li><a href="https://azure.microsoft.com/updates?id=567362" target="_blank">Azure update: Expanding Azure Arc SQL Migration with SQL Server on Azure Virtual Machines</a></li>
-<li><a href="https://learn.microsoft.com/sql/sql-server/azure-arc/overview" target="_blank">Azure Arc SQL Server Overview</a></li>
-<li><a href="https://learn.microsoft.com/azure/azure-arc/servers/overview" target="_blank">Azure Arc-enabled servers</a></li>
-<li><a href="https://learn.microsoft.com/azure/azure-sql/virtual-machines/windows/sql-server-on-azure-vm-iaas-what-is-overview" target="_blank">SQL Server on Azure Virtual Machines</a></li>
-<li><a href="https://learn.microsoft.com/azure/dms/dms-overview" target="_blank">Azure Database Migration Service</a></li>
-</ol>
-<p>For any new capability this week, if they map to your operational roadmap, run a controlled pilot, measure the impact, and then scale with confidence. That is how you move the needle on modernisation while managing risk.</p>
 <p>Cheers!</p>
 <p>Pierre Roman</p><br/><br/><b>Source:</b> Microsoft Tech Community IT Ops &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
 </item>
