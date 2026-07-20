@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
 **Period:** July 13 – July 20, 2026  
-**Generated:** 2026-07-20 22:57 UTC  
+**Generated:** 2026-07-20 23:56 UTC  
 **Items reviewed:** 135  
 
 ## ⚡ Top Actions This Week
@@ -64,20 +64,20 @@
 - [WordPress Exploitation Underway (CVE-2026-63030), (Mon, Jul 20th)](https://isc.sans.edu/diary/rss/33168)  
   **SANS Internet Storm Center** · Jul 20 · _General awareness item._  
 
-- [CVE-2026-50650 .NET Framework Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-50650)  
+- [CVE-2026-47302 .NET Denial of Service Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-47302)  
   **Microsoft Security Response Center (MSRC)** · Jul 20 · _General awareness item._  
 
-- [CVE-2024-35248 Microsoft Dynamics 365 Business Central Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-35248)  
-  **Microsoft Security Response Center (MSRC)** · Jul 20 · _Possible impact to authentication and sign-in flows._  
+- [CVE-2026-50652 Azure Active Directory Denial of Service Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-50652)  
+  **Microsoft Security Response Center (MSRC)** · Jul 20 · _General awareness item._  
 
-- [⚡ Weekly Recap: WordPress RCE, SonicWall 0-Days, AI Service Attacks, SharePoint 0-Day and More](https://thehackernews.com/2026/07/weekly-recap-wordpress-rce-sonicwall-0.html)  
-  **The Hacker News** · Jul 20 · _General awareness item._  
+- [CVE-2026-50653 Azure Active Directory Denial of Service Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-50653)  
+  **Microsoft Security Response Center (MSRC)** · Jul 20 · _General awareness item._  
 
-- [Mythos Didn't Break Your Security Program. Your Exposure Window Could.](https://thehackernews.com/2026/07/mythos-didnt-break-your-security.html)  
-  **The Hacker News** · Jul 20 · _General awareness item._  
+- [CVE-2026-47304 .NET Security Feature Bypass Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-47304)  
+  **Microsoft Security Response Center (MSRC)** · Jul 20 · _General awareness item._  
 
-- [Windows KB5121767 OOB update fixes shutdowns on some Dell PCs](https://www.bleepingcomputer.com/news/microsoft/microsoft-fixes-windows-bug-causing-some-dell-pcs-to-shut-down/)  
-  **BleepingComputer** · Jul 20 · _General awareness item._  
+- [CVE-2026-50304 Windows Active Directory Federation Services Denial of Service Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-50304)  
+  **Microsoft Security Response Center (MSRC)** · Jul 20 · _General awareness item._  
 
 ---
 
