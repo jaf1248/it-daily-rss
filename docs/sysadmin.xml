@@ -3,14 +3,14 @@
 <channel>
   <title>Joe SysAdmin and Operations</title>
   <description>Operational IT changes, Microsoft updates, outages, and infrastructure issues.</description>
-  <lastBuildDate>Tue, 21 Jul 2026 15:40:46 +0000</lastBuildDate>
+  <lastBuildDate>Tue, 21 Jul 2026 17:14:12 +0000</lastBuildDate>
   
 <item>
   <title>🟠 Microsoft shares manual fix for WSUS sync delays and timeouts</title>
   <link>https://www.bleepingcomputer.com/news/microsoft/microsoft-shares-manual-fix-for-wsus-sync-delays-and-timeouts/</link>
   <pubDate>Tue, 21 Jul 2026 09:05:50 +0000</pubDate>
   <source>BleepingComputer</source>
-  <description><![CDATA[<b>Why this matters: Regulatory/compliance signal — assess applicability and remediation timeline.</b><br/>Microsoft has shared manual mitigations to help IT administrators fix Windows Server Update Services (WSUS) servers affected by a known issue that causes Windows Update scans to fail or time out. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Regulatory/compliance signal — assess applicability and remediation timeline.</b><br/>Microsoft has shared manual mitigations to help IT administrators fix Windows Server Update Services (WSUS) servers affected by a known issue that causes Windows Update scans to fail or time out. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 8h ago]]></description>
 </item>
 
 <item>
@@ -18,7 +18,86 @@
   <link>https://www.bleepingcomputer.com/news/security/windows-legacyhive-zero-day-flaw-gets-free-unofficial-patches/</link>
   <pubDate>Tue, 21 Jul 2026 08:06:26 +0000</pubDate>
   <source>BleepingComputer</source>
-  <description><![CDATA[<b>Why this matters: Operational impact possible — watch for changes that generate tickets.</b><br/>Free unofficial patches are available for a recently disclosed Windows zero-day flaw that allows attackers to escalate privileges on up-to-date Windows systems. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Operational impact possible — watch for changes that generate tickets.</b><br/>Free unofficial patches are available for a recently disclosed Windows zero-day flaw that allows attackers to escalate privileges on up-to-date Windows systems. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Feeding the GPUs: File Storage for AI and Cloud-Native Workloads on Azure</title>
+  <link>https://techcommunity.microsoft.com/t5/itops-talk-blog/feeding-the-gpus-file-storage-for-ai-and-cloud-native-workloads/ba-p/4534572</link>
+  <pubDate>Tue, 21 Jul 2026 07:00:00 +0000</pubDate>
+  <source>Microsoft Tech Community IT Ops</source>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><p>Hello Folks!</p>
+<p>If you are running AI workloads on Azure, you have probably learned the hard way that the wrong storage choice can leave a rack of very expensive GPUs sitting idle, waiting for data. In this session during the Microsoft Azure Infra Summit 2026, Wolfgang de Salvador and Reena Shah from the Azure Storage team walked through how Azure Managed Lustre and Azure Files map to the distinct stages of the AI pipeline, and why picking the right file system per stage is one of the highest leverage decisions you will make.</p>
+<p>📺 <strong>Watch the session:</strong></p>
+<p>&nbsp;</p>
+<div class="lia-embeded-content" contenteditable="false">
+</div>
+<h2>Why IT Pros Should Care</h2>
+<p>You probably did not get into IT to babysit checkpoint writes or debug Hugging Face egress bills at 2 a.m. But that is exactly the kind of work that lands on your plate when storage is not matched to the workload. Here is why MAIS28 matters for the IT pros, platform engineers, and Azure architects in the room:</p>
+<ul>
+<li>GPU time is the most expensive compute you will ever buy. Slow data loading and slow checkpoints turn that into burned cash.</li>
+<li>AI workloads are not one workload. Data prep, training, fine-tuning, and inferencing each have a different storage profile.</li>
+<li>Cloud-native AI on AKS and Azure Container Apps lives or dies on the ReadWriteMany experience. If model loading is slow or shared model caches do not exist, every cold start re-downloads hundreds of gigabytes.</li>
+<li>Storage choices ripple into security and compliance. Encryption in transit, redundancy, and snapshots are not optional in 2026.</li>
+</ul>
+<p>In short, this session is for anyone who has to answer the question, “What persistent volume should we use for this AI workload?” and wants a defensible answer.</p>
+<h2>What Azure Brings to the Table, Technical Overview</h2>
+<p>Wolfgang opened with the storage profile of every stage of an AI workflow. Data preparation needs hundreds of petabytes at the best TCO (think Azure Blob Storage as the durable core). Training and fine-tuning need extreme throughput so GPUs stay fed during data loading and so checkpoint writes complete fast. Inferencing needs fast model loads, low-latency KV cache, and grounded data for RAG. One filesystem does not fit all of those at once, and trying to make it fit is where teams overspend.</p>
+<p>Azure’s answer is a tiered, file-based portfolio that lines up with those stages:</p>
+<ul>
+<li><strong>Azure Managed Lustre (AMLFS)</strong> is a fully managed, accelerator-tier filesystem. It scales to 25 PB of capacity and up to 512 GB/s of throughput, integrates with Azure Blob Storage as the durable core, and exposes a standard Lustre client plus a CSI driver for AKS.</li>
+<li><strong>Azure Files</strong> is the natural ReadWriteMany choice for cloud-native AI on AKS and Azure Container Apps. It tops out at 256 TB of capacity and 10.4 GB/s of throughput, offers LRS and ZRS redundancy with snapshots and soft delete, and ships with a 99.99% SLA.</li>
+<li><strong>Azure Blob Storage</strong> sits underneath both of these as the cheap, durable core for data prep and long-term retention.</li>
+</ul>
+<p>The mental model the speakers used is “accelerator and core”. Blob is the core, durable and economical. AMLFS is the accelerator for training. Azure Files is the accelerator for inferencing and shared state. Pick the right pair for the stage you are running.</p>
+<h2>How It Works, Under the Hood</h2>
+<p>For training, Wolfgang showed the demo most folks came to see: a 32 x H100 ND H100 v5 AKS cluster deployed from the Azure AI Infrastructure repository, running a 30B-parameter GPT-3 training job backed by AMLFS. Two things matter here.</p>
+<p>First, AMLFS absorbs checkpoint write bursts. When 32 H100s flush state at the same time, you need a filesystem that can take the punch without stalling. AMLFS does, which keeps GPU utilization drops short and contained.</p>
+<p>Second, the AMLFS Lustre CSI driver for AKS supports both static and dynamic provisioning with availability-zone placement, and there are five SKU tiers from MLFS20 (cheapest by capacity) to MLFS500 (cheapest by bandwidth). That means you can pick a cost-performance point that matches your training budget instead of buying the top SKU and hoping for the best.</p>
+<p>For inferencing, Reena’s half of the session was just as practical. Five reasons Azure Files fits AKS ReadWriteMany workloads:</p>
+<ul>
+<li>Standard Kubernetes RWM volume over NFS or SMB.</li>
+<li>256 TB capacity ceiling and up to 10.4 GB/s of throughput per share.</li>
+<li>LRS or ZRS redundancy with snapshots and soft delete for protection.</li>
+<li>99.99% SLA so it shows up in your availability math.</li>
+<li>Native support across AKS and Azure Container Apps, including serverless GPU.</li>
+</ul>
+<p>The headline feature is <strong>Azure Files Provisioned v2</strong>. In the old model, IOPS and throughput were a function of how much capacity you provisioned, which is wrong for AI shapes that need small capacity but very high IOPS and bandwidth. Provisioned v2 splits capacity, IOPS, and throughput into three independent knobs you can dial without downtime or remount. That alone changes the economics for a lot of inferencing patterns.</p>
+<p>The other big inferencing feature is <strong>NFS v4.1 encryption in transit</strong>, delivered with the az-nfs utility and stunnel. You get AES-GCM TLS protection on the wire, with no Kerberos and no Active Directory needed, and the application has no idea it is happening. Reena’s live demo showed an AKS pod with an encrypted NFS mount, transparent to the workload.</p>
+<p>And then the pattern that ties it together: the <strong>shared model cache</strong>. Download the model once into Azure Files, mount it across every replica via ReadWriteMany. No per-pod cold start, no re-download from Hugging Face, no egress bill. The demo used GPT-OSS 120B with VLLM on 32 x H100, and the pattern scales down to small fine-tuned models running on serverless GPU in Azure Container Apps.</p>
+<h2>Real-World Value</h2>
+<p>The session closed with the Viton case study. Viton is a Paris-based fashion AI startup. Their image-generation platform runs on Azure Container Apps serverless GPU, with Azure Service Bus for job routing and Azure Files NFS as the shared model store. Workers pull jobs, mount the shared model cache, generate the image, and scale to zero when the queue drains. The economics only work because they are not paying to re-download the model on every cold start, and because they only pay for GPU when there is work to do.</p>
+<p>The same pattern shows up across customer scenarios:</p>
+<ul>
+<li><strong>Training a foundation model on AKS</strong> with AMLFS as the scratch tier and Blob as the durable archive.</li>
+<li><strong>Fine-tuning</strong> smaller models where AMLFS checkpoints absorb the write bursts and the final artifact lands back in Blob.</li>
+<li><strong>Inferencing with VLLM</strong> on AKS where Azure Files holds the model weights once and every replica reads from the same RWM mount.</li>
+<li><strong>Serverless inferencing</strong> on Azure Container Apps with the same shared model cache pattern, but with scale-to-zero economics.</li>
+</ul>
+<p>Honest tradeoff: Lustre is not the right filesystem for a 10-pod web app, and Azure Files is not the right filesystem for a 32-GPU training run. The whole point of the tiering is that you pick the right one per stage. Do not try to make one filesystem do all four jobs.</p>
+<h2>Getting Started</h2>
+<p>If you want to put this into practice this week:</p>
+<ol>
+<li>Go to the <a href="https://github.com/Azure/azurehpc-ai" target="_blank">Azure AI Infrastructure repository</a> on GitHub. Wolfgang’s demo cluster came straight out of it, and you can spin up an AI-ready AKS cluster with GPU and InfiniBand operators in your own dev/test subscription.</li>
+<li>Install the <a href="https://learn.microsoft.com/en-us/azure/azure-managed-lustre/use-csi-driver-kubernetes" target="_blank">Azure Managed Lustre CSI driver</a> on AKS if you are running training or fine-tuning. Start with a smaller MLFS SKU and size up.</li>
+<li>Turn on <a href="https://learn.microsoft.com/en-us/azure/storage/files/understanding-billing" target="_blank">Azure Files Provisioned v2</a> on a new share, then dial capacity, IOPS, and throughput independently to match your inferencing shape.</li>
+<li>Enable <a href="https://learn.microsoft.com/en-us/azure/storage/files/encryption-in-transit-for-nfs-shares" target="_blank">NFS v4.1 encryption in transit</a> with az-nfs and stunnel before you put any sensitive workload on the wire.</li>
+<li>Try the shared model cache pattern. Pick one VLLM deployment, point it at an Azure Files RWM mount, and measure cold start time before and after.</li>
+</ol>
+<h2>Resources</h2>
+<ul>
+<li><a href="https://learn.microsoft.com/azure/azure-managed-lustre/" target="_blank">Azure Managed Lustre documentation</a></li>
+<li><a href="https://learn.microsoft.com/en-us/azure/azure-managed-lustre/use-csi-driver-kubernetes" target="_blank">Use the Azure Managed Lustre CSI driver with Azure Kubernetes Service</a></li>
+<li><a href="https://learn.microsoft.com/azure/storage/files/" target="_blank">Azure Files documentation</a></li>
+<li><a href="https://learn.microsoft.com/en-us/azure/storage/files/understanding-billing" target="_blank">Understand Azure Files billing (Provisioned v2)</a></li>
+<li><a href="https://learn.microsoft.com/en-us/azure/storage/files/encryption-in-transit-for-nfs-shares" target="_blank">Encryption in transit for NFS Azure file shares</a></li>
+<li><a href="https://learn.microsoft.com/azure/container-apps/gpu-serverless-overview" target="_blank">Azure Container Apps serverless GPUs</a></li>
+<li><a href="https://github.com/Azure/azurehpc-ai" target="_blank">Azure AI Infrastructure repository on GitHub</a></li>
+</ul>
+<h2>Keep Learning at the Summit</h2>
+<p>Catch the full <a class="lia-external-url" href="https://www.youtube.com/playlist?list=PLjt5SKzX1iI8con7FJDB56G6hHqxGm7ki" target="_blank">Microsoft Azure Infra Summit 2026 session playlist here</a></p>
+<p>Cheers!</p>
+<p>Pierre Roman</p><br/><br/><b>Source:</b> Microsoft Tech Community IT Ops &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 10h ago]]></description>
 </item>
 
 <item>
@@ -26,7 +105,7 @@
   <link>https://www.bleepingcomputer.com/news/security/cursor-codex-gemini-cli-antigravity-hit-by-sandbox-escapes/</link>
   <pubDate>Mon, 20 Jul 2026 21:14:42 +0000</pubDate>
   <source>BleepingComputer</source>
-  <description><![CDATA[<b>Why this matters: Operational impact possible — watch for changes that generate tickets.</b><br/>Researchers escaped the sandboxes in Cursor, Codex, Gemini CLI and Antigravity by having the AI agent write files that trusted host tools later run. Multiple CVEs, patches, and Google downgrading two Antigravity findings. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 18h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Operational impact possible — watch for changes that generate tickets.</b><br/>Researchers escaped the sandboxes in Cursor, Codex, Gemini CLI and Antigravity by having the AI agent write files that trusted host tools later run. Multiple CVEs, patches, and Google downgrading two Antigravity findings. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 19h ago]]></description>
 </item>
 
 <item>
@@ -34,7 +113,7 @@
   <link>https://www.bleepingcomputer.com/news/security/new-hollowgraph-malware-uses-microsoft-graph-for-stealthy-c2-comms/</link>
   <pubDate>Mon, 20 Jul 2026 17:43:01 +0000</pubDate>
   <source>BleepingComputer</source>
-  <description><![CDATA[<b>Why this matters: Potential data exposure — check monitoring and incident response readiness.</b><br/>A malicious component dubbed HollowGraph uses the calendar feature in compromised Microsoft 365 mailboxes as a command-and-control channel to receive attacker commands and exfiltrate stolen data. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 21h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Potential data exposure — check monitoring and incident response readiness.</b><br/>A malicious component dubbed HollowGraph uses the calendar feature in compromised Microsoft 365 mailboxes as a command-and-control channel to receive attacker commands and exfiltrate stolen data. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 23h ago]]></description>
 </item>
 
 <item>
@@ -43,14 +122,6 @@
   <pubDate>Mon, 20 Jul 2026 10:47:28 +0000</pubDate>
   <source>BleepingComputer</source>
   <description><![CDATA[<b>Why this matters: Operational impact possible — watch for changes that generate tickets.</b><br/>Microsoft is working to fix a known issue affecting Windows Server Update Services (WSUS) servers, which has caused synchronization problems for more than a week. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
-</item>
-
-<item>
-  <title>🟠 Windows KB5121767 OOB update fixes shutdowns on some Dell PCs</title>
-  <link>https://www.bleepingcomputer.com/news/microsoft/microsoft-fixes-windows-bug-causing-some-dell-pcs-to-shut-down/</link>
-  <pubDate>Mon, 20 Jul 2026 10:06:17 +0000</pubDate>
-  <source>BleepingComputer</source>
-  <description><![CDATA[<b>Why this matters: Operational impact possible — watch for changes that generate tickets.</b><br/>Microsoft has released emergency updates to fix a known issue causing some Dell PCs to shut down after installing the July 2026 Windows 11 security updates. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
