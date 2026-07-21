@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
 **Period:** July 14 – July 21, 2026  
-**Generated:** 2026-07-21 21:05 UTC  
+**Generated:** 2026-07-21 22:53 UTC  
 **Items reviewed:** 134  
 
 ## ⚡ Top Actions This Week
@@ -83,12 +83,12 @@
 
 ## 🔵 FYI — General Awareness
 
+- [FakeGit campaign uses 7,600 GitHub repos to push SmartLoader malware](https://www.bleepingcomputer.com/news/security/fakegit-campaign-uses-7-600-github-repos-to-push-smartloader-malware/) — BleepingComputer
 - [Apple Fixes Hide My Email Bug That Exposed Real Addresses in Mail Logs](https://thehackernews.com/2026/07/apple-fixes-hide-my-email-bug-that.html) — The Hacker News
 - [Closing the Identity Gaps in Critical Infrastructure Security](https://www.bleepingcomputer.com/news/security/closing-the-identity-gaps-in-critical-infrastructure-security/) — BleepingComputer
 - [Captive Portal Detection, (Tue, Jul 21st)](https://isc.sans.edu/diary/rss/33172) — SANS Internet Storm Center
 - [Open-Source Android AI Agents Could Let Invisible Screen Text Run Code on Host PCs](https://thehackernews.com/2026/07/open-source-android-ai-agents-could-let.html) — The Hacker News
 - [New Bit2Watt Attack Could Let Cloud Tenants Disrupt Power Grids Without an Exploit](https://thehackernews.com/2026/07/new-bit2watt-attack-could-let-cloud.html) — The Hacker News
-- [US seizes over 1,000 websites in FIFA World Cup piracy crackdown](https://www.bleepingcomputer.com/news/security/us-seizes-over-1-000-fifa-world-cup-illegal-streaming-domains/) — BleepingComputer
 
 ---
 
