@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
-**Period:** July 13 – July 20, 2026  
-**Generated:** 2026-07-20 23:56 UTC  
+**Period:** July 14 – July 21, 2026  
+**Generated:** 2026-07-21 02:32 UTC  
 **Items reviewed:** 135  
 
 ## ⚡ Top Actions This Week
@@ -83,12 +83,12 @@
 
 ## 🔵 FYI — General Awareness
 
+- [ISC Stormcast For Tuesday, July 21st, 2026 https://isc.sans.edu/podcastdetail/10016, (Tue, Jul 21st)](https://isc.sans.edu/diary/rss/33170) — SANS Internet Storm Center
 - [Hackers steal $23.7 million in crypto from Ostium in off-chain attack](https://www.bleepingcomputer.com/news/security/hackers-steal-237-million-in-crypto-from-ostium-in-off-chain-attack/) — BleepingComputer
 - [FakeGit Campaign Uses 7,600 GitHub Repositories to Spread SmartLoader Malware](https://thehackernews.com/2026/07/fakegit-campaign-uses-7600-github.html) — The Hacker News
 - [New HollowGraph malware uses Microsoft Graph for stealthy C2 comms](https://www.bleepingcomputer.com/news/security/new-hollowgraph-malware-uses-microsoft-graph-for-stealthy-c2-comms/) — BleepingComputer
 - [Exposed Server Reveals AI-Assisted Phishing Toolkit Behind WebDAV Malware Campaign](https://thehackernews.com/2026/07/exposed-server-reveals-ai-assisted.html) — The Hacker News
 - [HollowGraph Malware Hides C2 and Stolen Files in Microsoft 365 Events Dated 2050](https://thehackernews.com/2026/07/hollowgraph-malware-hides-c2-and-stolen.html) — The Hacker News
-- [An AI SOC Evaluation Guide for Security Leaders](https://www.bleepingcomputer.com/news/security/an-ai-soc-evaluation-guide-for-security-leaders/) — BleepingComputer
 
 ---
 
