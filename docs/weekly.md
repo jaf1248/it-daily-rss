@@ -1,25 +1,30 @@
 # IT Weekly Intelligence Briefing
 **Period:** July 14 – July 21, 2026  
-**Generated:** 2026-07-21 05:48 UTC  
+**Generated:** 2026-07-21 08:23 UTC  
 **Items reviewed:** 135  
 
 ## ⚡ Top Actions This Week
 
-1. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
+1. **Validate backups, confirm EDR coverage, and brief incident response team.**  
+   _New ENCFORGE Ransomware Targets AI Model Files in Langflow RCE Attack_  
+   Source: The Hacker News  
+
+2. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
    _Estée Lauder discloses data breach via Oracle E-Business flaw_  
    Source: BleepingComputer  
 
-2. **Validate backups, confirm EDR coverage, and brief incident response team.**  
+3. **Validate backups, confirm EDR coverage, and brief incident response team.**  
    _JadePuffer agentic attacks now target AI model data with ransomware_  
-   Source: BleepingComputer  
-
-3. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _Hugging Face warns an autonomous AI agent hacked its network_  
    Source: BleepingComputer  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [New ENCFORGE Ransomware Targets AI Model Files in Langflow RCE Attack](https://thehackernews.com/2026/07/new-encforge-ransomware-targets-ai.html)
+**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Jul 21  
+**Why it matters:** Elevated ransomware risk across the sector.  
+**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
 
 ### [Estée Lauder discloses data breach via Oracle E-Business flaw](https://www.bleepingcomputer.com/news/security/est-e-lauder-discloses-data-breach-via-oracle-e-business-flaw/)
 **Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jul 20  
@@ -46,38 +51,33 @@
 **Why it matters:** Third-party/software supply chain integrity risk.  
 **Recommended action:** Audit third-party software dependencies and review vendor access.  
 
-### [Seven Malicious Vite npm Packages Use Blockchain C2 to Deliver a RAT](https://thehackernews.com/2026/07/seven-malicious-vite-npm-packages-use.html)
-**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Jul 17  
-**Why it matters:** Third-party/software supply chain integrity risk.  
-**Recommended action:** Audit third-party software dependencies and review vendor access.  
-
 ---
 
 ## 🟠 Important — Review This Week
 
-- [SonicWall SMA1000 flaws exploited as zero-days to push custom malware](https://www.bleepingcomputer.com/news/security/sonicwall-sma1000-flaws-exploited-as-zero-days-to-push-custom-malware/)  
-  **BleepingComputer** · Jul 20 · _General awareness item._  
+- [CVE-2026-63831 mac802154: llsec: add skb_cow_data() before in-place crypto](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-63831)  
+  **Microsoft Security Response Center (MSRC)** · Jul 21 · _General awareness item._  
 
-- [Cursor, Codex, Gemini CLI, Antigravity hit by sandbox escapes](https://www.bleepingcomputer.com/news/security/cursor-codex-gemini-cli-antigravity-hit-by-sandbox-escapes/)  
-  **BleepingComputer** · Jul 20 · _General awareness item._  
+- [CVE-2026-63796 ocfs2: reject oversized group bitmap descriptors](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-63796)  
+  **Microsoft Security Response Center (MSRC)** · Jul 21 · _General awareness item._  
 
-- [WordPress Exploitation Underway (CVE-2026-63030), (Mon, Jul 20th)](https://isc.sans.edu/diary/rss/33168)  
-  **SANS Internet Storm Center** · Jul 20 · _General awareness item._  
+- [CVE-2026-63800 pNFS: Fix use-after-free in pnfs_update_layout()](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-63800)  
+  **Microsoft Security Response Center (MSRC)** · Jul 21 · _General awareness item._  
 
-- [CVE-2026-47302 .NET Denial of Service Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-47302)  
-  **Microsoft Security Response Center (MSRC)** · Jul 20 · _General awareness item._  
+- [CVE-2026-63824 KEYS: fix overflow in keyctl_pkey_params_get_2()](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-63824)  
+  **Microsoft Security Response Center (MSRC)** · Jul 21 · _General awareness item._  
 
-- [CVE-2026-50652 Azure Active Directory Denial of Service Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-50652)  
-  **Microsoft Security Response Center (MSRC)** · Jul 20 · _General awareness item._  
+- [CVE-2026-3842 Qemu-kvm: hyperv/syndbg: missing mapped-length guard after cpu_physical_memory_map causes host oob write](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-3842)  
+  **Microsoft Security Response Center (MSRC)** · Jul 21 · _General awareness item._  
 
-- [CVE-2026-50653 Azure Active Directory Denial of Service Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-50653)  
-  **Microsoft Security Response Center (MSRC)** · Jul 20 · _General awareness item._  
+- [CVE-2026-38755 A heap overflow in the evalcommand() function (shell/ash.c) of Busybox v1.38.0 allows attackers to cause a Denial of Service (DoS) via supplying a crafted input.](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-38755)  
+  **Microsoft Security Response Center (MSRC)** · Jul 21 · _General awareness item._  
 
-- [CVE-2026-47304 .NET Security Feature Bypass Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-47304)  
-  **Microsoft Security Response Center (MSRC)** · Jul 20 · _General awareness item._  
+- [CVE-2026-38754 A heap overflow in the ifsbreakup() function (shell/ash.c) of Busybox v1.38.0 allows attackers to cause a Denial of Service (DoS) via supplying a crafted input.](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-38754)  
+  **Microsoft Security Response Center (MSRC)** · Jul 21 · _General awareness item._  
 
-- [CVE-2026-50304 Windows Active Directory Federation Services Denial of Service Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-50304)  
-  **Microsoft Security Response Center (MSRC)** · Jul 20 · _General awareness item._  
+- [CVE-2026-62299 CoreDNS: rewrite-plugin EDNS0 response-revert nil-pointer panic (remote DoS) when a downstream plugin returns a response with no OPT record](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-62299)  
+  **Microsoft Security Response Center (MSRC)** · Jul 21 · _General awareness item._  
 
 ---
 
@@ -92,4 +92,4 @@
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 9 critical · 85 important · 41 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 10 critical · 87 important · 38 FYI_
