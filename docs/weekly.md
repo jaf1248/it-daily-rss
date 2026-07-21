@@ -1,25 +1,30 @@
 # IT Weekly Intelligence Briefing
 **Period:** July 14 – July 21, 2026  
-**Generated:** 2026-07-21 13:42 UTC  
-**Items reviewed:** 135  
+**Generated:** 2026-07-21 15:41 UTC  
+**Items reviewed:** 136  
 
 ## ⚡ Top Actions This Week
 
 1. **Validate backups, confirm EDR coverage, and brief incident response team.**  
+   _Qilin Ransomware Attackers Exploit PAN-OS Authentication Bypass for Initial Access_  
+   Source: The Hacker News  
+
+2. **Validate backups, confirm EDR coverage, and brief incident response team.**  
    _Critical Palo Alto VPN bug now exploited by Qilin ransomware gang_  
    Source: BleepingComputer  
 
-2. **Validate backups, confirm EDR coverage, and brief incident response team.**  
+3. **Validate backups, confirm EDR coverage, and brief incident response team.**  
    _New ENCFORGE Ransomware Targets AI Model Files in Langflow RCE Attack_  
    Source: The Hacker News  
-
-3. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _Estée Lauder discloses data breach via Oracle E-Business flaw_  
-   Source: BleepingComputer  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [Qilin Ransomware Attackers Exploit PAN-OS Authentication Bypass for Initial Access](https://thehackernews.com/2026/07/qilin-ransomware-attackers-exploit-pan.html)
+**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Jul 21  
+**Why it matters:** Elevated ransomware risk across the sector.  
+**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
 
 ### [Critical Palo Alto VPN bug now exploited by Qilin ransomware gang](https://www.bleepingcomputer.com/news/security/critical-globalprotect-vpn-bug-now-exploited-in-ransomware-attacks/)
 **Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jul 21  
@@ -46,14 +51,21 @@
 **Why it matters:** Potential credential or data exposure.  
 **Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
-### [World's Largest AI Model Repository Hugging Face Breached by Autonomous AI Agent](https://thehackernews.com/2026/07/worlds-largest-ai-model-repository.html)
-**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Jul 20  
-**Why it matters:** Potential credential or data exposure.  
-**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
-
 ---
 
 ## 🟠 Important — Review This Week
+
+- [Critical SharePoint RCE CVE-2026-50522 Under Active Exploitation After Public PoC](https://thehackernews.com/2026/07/critical-sharepoint-rce-cve-2026-50522.html)  
+  **The Hacker News** · Jul 21 · _General awareness item._  
+
+- [CVE-2026-58640 Windows NTFS Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-58640)  
+  **Microsoft Security Response Center (MSRC)** · Jul 21 · _General awareness item._  
+
+- [CVE-2026-50462 Windows Ancillary Function Driver for WinSock Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-50462)  
+  **Microsoft Security Response Center (MSRC)** · Jul 21 · _General awareness item._  
+
+- [Zimbra Patches Critical SNMP Command Injection and Four XSS Vulnerabilities](https://thehackernews.com/2026/07/zimbra-patches-critical-snmp-command.html)  
+  **The Hacker News** · Jul 21 · _General awareness item._  
 
 - [N-day is Becoming N-Hour. Patching Faster Won't Save You.](https://thehackernews.com/2026/07/n-day-is-becoming-n-hour-patching.html)  
   **The Hacker News** · Jul 21 · _General awareness item._  
@@ -67,29 +79,17 @@
 - [CVE-2026-63796 ocfs2: reject oversized group bitmap descriptors](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-63796)  
   **Microsoft Security Response Center (MSRC)** · Jul 21 · _General awareness item._  
 
-- [CVE-2026-63800 pNFS: Fix use-after-free in pnfs_update_layout()](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-63800)  
-  **Microsoft Security Response Center (MSRC)** · Jul 21 · _General awareness item._  
-
-- [CVE-2026-63824 KEYS: fix overflow in keyctl_pkey_params_get_2()](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-63824)  
-  **Microsoft Security Response Center (MSRC)** · Jul 21 · _General awareness item._  
-
-- [CVE-2026-3842 Qemu-kvm: hyperv/syndbg: missing mapped-length guard after cpu_physical_memory_map causes host oob write](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-3842)  
-  **Microsoft Security Response Center (MSRC)** · Jul 21 · _General awareness item._  
-
-- [CVE-2026-38755 A heap overflow in the evalcommand() function (shell/ash.c) of Busybox v1.38.0 allows attackers to cause a Denial of Service (DoS) via supplying a crafted input.](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-38755)  
-  **Microsoft Security Response Center (MSRC)** · Jul 21 · _General awareness item._  
-
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [Closing the Identity Gaps in Critical Infrastructure Security](https://www.bleepingcomputer.com/news/security/closing-the-identity-gaps-in-critical-infrastructure-security/) — BleepingComputer
+- [Captive Portal Detection, (Tue, Jul 21st)](https://isc.sans.edu/diary/rss/33172) — SANS Internet Storm Center
 - [Open-Source Android AI Agents Could Let Invisible Screen Text Run Code on Host PCs](https://thehackernews.com/2026/07/open-source-android-ai-agents-could-let.html) — The Hacker News
 - [New Bit2Watt Attack Could Let Cloud Tenants Disrupt Power Grids Without an Exploit](https://thehackernews.com/2026/07/new-bit2watt-attack-could-let-cloud.html) — The Hacker News
 - [US seizes over 1,000 websites in FIFA World Cup piracy crackdown](https://www.bleepingcomputer.com/news/security/us-seizes-over-1-000-fifa-world-cup-illegal-streaming-domains/) — BleepingComputer
 - [Microsoft shares manual fix for WSUS sync delays and timeouts](https://www.bleepingcomputer.com/news/microsoft/microsoft-shares-manual-fix-for-wsus-sync-delays-and-timeouts/) — BleepingComputer
-- [ISC Stormcast For Tuesday, July 21st, 2026 https://isc.sans.edu/podcastdetail/10016, (Tue, Jul 21st)](https://isc.sans.edu/diary/rss/33170) — SANS Internet Storm Center
-- [Hackers steal $23.7 million in crypto from Ostium in off-chain attack](https://www.bleepingcomputer.com/news/security/hackers-steal-237-million-in-crypto-from-ostium-in-off-chain-attack/) — BleepingComputer
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 11 critical · 84 important · 40 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 12 critical · 84 important · 40 FYI_
