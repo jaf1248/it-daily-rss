@@ -3,14 +3,104 @@
 <channel>
   <title>Joe — VP of IT Briefing</title>
   <description>Leadership-focused IT risk, vendors, pricing, licensing, and industry context.</description>
-  <lastBuildDate>Wed, 22 Jul 2026 15:38:25 +0000</lastBuildDate>
+  <lastBuildDate>Wed, 22 Jul 2026 17:14:24 +0000</lastBuildDate>
   
+<item>
+  <title>🔵 Arcee, which develops open-weight models in the US, partners with the Department of Energy to build Genesis-Science-1, an open model for scientific research (Catherine Perloff/The Information)</title>
+  <link>https://www.techmeme.com/260722/p37#a260722p37</link>
+  <pubDate>Wed, 22 Jul 2026 17:10:01 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><p><a href="https://www.techmeme.com/260722/p37#a260722p37" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Catherine Perloff / <a href="https://www.theinformation.com/">The Information</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://www.theinformation.com/briefings/department-energy-partners-american-open-weight-model-provider-arcee">Arcee, which develops open-weight models in the US, partners with the Department of Energy to build Genesis-Science-1, an open model for scientific research</a></b></span>&nbsp; &mdash;&nbsp; Arcee, an American open-weigh AI provider, announced a partnership with the Department of Energy, in which the DOE will use Arcee's AI models to advance scientific research.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</item>
+
+<item>
+  <title>🟠 Cisco’s new AI model tells code reviewers where to look for vulnerabilities</title>
+  <link>https://www.csoonline.com/article/4200151/ciscos-new-ai-model-tells-code-reviewers-where-to-look-for-vulnerabilities-2.html</link>
+  <pubDate>Wed, 22 Jul 2026 16:47:24 +0000</pubDate>
+  <source>CSO Online</source>
+  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<p class="wp-block-paragraph">Cisco has revealed a family of open-weight AI models called Antares that, it said, can help security teams isolate potentially vulnerable parts of a software repository before deeper investigation begins.</p>
+
+
+
+<p class="wp-block-paragraph">Rather than detecting a specific CVE or generating a patch, these models search a codebase using only a Common Weakness Enumeration (CWE) description and return the files most likely to contain that class of vulnerability.</p>
+
+
+
+<p class="wp-block-paragraph">“Its purpose is to reduce a large codebase to a focused set of files that a security professional or a downstream security workflow should investigate,” Cisco’s AI researcher <a href="https://www.linkedin.com/in/supriti-vijay/" rel="noreferrer noopener" target="_blank">Supriti Vijay</a> said via email. “The goal is not to replace a security engineer’s judgement or send them on a wild-goose chase, but to reduce fatigue and workload by helping them triage an issue earlier and focus their investigation on the most relevant parts of the codebase.”</p>
+
+
+
+<p class="wp-block-paragraph">The Antares family consists of models with 350 million, 1 billion, and 3 billion parameters trained specifically for repository-scale vulnerability localization.</p>
+
+
+
+<p class="wp-block-paragraph">The company said its largest model approaches the performance of GPT-5.5 on its internal vulnerability localization (Vloc) benchmark while remaining small enough for low-cost local deployment.</p>
+
+
+
+<h2 class="wp-block-heading" id="a-search-assistant-not-a-vulnerability-detector">A search assistant, not a vulnerability detector</h2>
+
+
+
+<p class="wp-block-paragraph">Cisco is careful to define what Antares is, and what it is not.</p>
+
+
+
+<p class="wp-block-paragraph">“Antares outputs a ranked list of source files likely to contain a relevant vulnerability, along with the terminal exploration trace that led to that result,” Cisco Foundation AI Chief Scientist <a href="https://www.linkedin.com/in/amin-karbasi-5025335/" rel="noreferrer noopener" target="_blank">Amin Karbasi</a> wrote in a blog post, adding that the models are not meant to replace the broader application security toolchain: Human analysts or downstream security tools will still be needed to confirm exploitability, <a href="https://www.infoworld.com/article/4200083/gitlab-previews-auto-remediation-of-vulnerable-dependencies.html">identify vulnerable lines of code</a>, assess severity and generate fixes.</p>
+
+
+
+<p class="wp-block-paragraph">Antares differs from conventional static analysis platforms such as Semgrep or CodeQL, which primarily rely on predefined rules or queries. Cisco instead describes Antares as an evidence-driven exploration agent that adapts its search as it traverses the repository.</p>
+
+
+
+<p class="wp-block-paragraph">Cisco’s argument is that large repositories often contain thousands of files, making manual reviews exhaustive and unrealistic. By reducing the search space to a manageable shortlist, the company hopes to reduce investigation fatigue without replacing human judgement.</p>
+
+
+
+<h2 class="wp-block-heading" id="claims-of-specialization-over-scale">Claims of specialization over scale</h2>
+
+
+
+<p class="wp-block-paragraph">Cisco is also making a statement about how cybersecurity models should evolve.</p>
+
+
+
+<p class="wp-block-paragraph">Instead of pursuing larger foundational models, Cisco argued that specialized, task-trained models can outperform much larger open-weight alternatives for vulnerability localization. In its evaluation Antares-3B, the largest model intended for single-GPU deployments, produced results comparable to GPT-5.5 while outperforming several substantially larger open models by Google, OpenAI and Meta.</p>
+
+
+
+<p class="wp-block-paragraph">The family also includes Antares-350M for resource-constrained environments and Antares-1B for laptops and workstations, which Cisco has made available as open-weight models on Hugging Face.</p>
+
+
+
+<p class="wp-block-paragraph">The command line interface (CLI) on the models supports targeted CWE investigations, repository-wide scans, SARIF output and local inference, which Cisco said enables organizations to keep proprietary code inside their own trust boundary.</p>
+
+
+
+<p class="wp-block-paragraph">However, because Antares identifies candidate files rather than confirmed vulnerabilities, organizations will still need to understand how often such repository-wide searches should be run, how much they improve existing triage workflows, and whether the reduction in investigation effort ultimately translates into measurable security or cost benefits.</p>
+
+
+
+<p class="wp-block-paragraph"><em>This article first appeared on <a href="https://www.infoworld.com/article/4200143/ciscos-new-ai-model-tells-code-reviewers-where-to-look-for-vulnerabilities.html">InfoWorld</a>.</em></p>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</item>
+
 <item>
   <title>🔵 &#x27;AI is an enormous tailwind for software companies&#x27;: 5 tips for adapting to the new &#x27;SaS&#x27; model</title>
   <link>https://www.zdnet.com/article/so-long-saas-hello-services-as-software/</link>
   <pubDate>Wed, 22 Jul 2026 15:18:20 +0000</pubDate>
   <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/>Here's what people are getting wrong about the so-called SaaS apocalypse.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/>Here's what people are getting wrong about the so-called SaaS apocalypse.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
 </item>
 
 <item>
@@ -19,26 +109,26 @@
   <pubDate>Wed, 22 Jul 2026 14:58:53 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: Vendor advisory — check installed firmware/software version and patch status.</b><br/><p>Acquisition follows January's Chronosphere deal, deepening Palo Alto Networks' push beyond core security into observability.</p>
-<p>The post <a href="https://www.securityweek.com/palo-alto-networks-to-acquire-observability-platform-provider-embrace/">Palo Alto Networks to Acquire Observability Platform Provider Embrace</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/palo-alto-networks-to-acquire-observability-platform-provider-embrace/">Palo Alto Networks to Acquire Observability Platform Provider Embrace</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
 </item>
 
 <item>
-  <title>🔵 Filing: Monday.com plans to cut 20% of its workforce, or ~600 employees, in H2 2026 to &quot;support a leaner, more focused operational model&quot;; MNDY falls 2% (Martin Peers/The Information)</title>
+  <title>🔵 Filing: Monday.com plans to cut 20% of its workforce, or ~600 employees, in H2 2026 to &quot;support a leaner, more focused operational model&quot; as it invests in AI (Martin Peers/The Information)</title>
   <link>https://www.techmeme.com/260722/p30#a260722p30</link>
   <pubDate>Wed, 22 Jul 2026 14:50:01 +0000</pubDate>
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><p><a href="https://www.techmeme.com/260722/p30#a260722p30" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Martin Peers / <a href="https://www.theinformation.com/">The Information</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.theinformation.com/briefings/monday-com-cut-20-workforce">Filing: Monday.com plans to cut 20% of its workforce, or ~600 employees, in H2 2026 to &ldquo;support a leaner, more focused operational model&rdquo;; MNDY falls 2%</a></b></span>&nbsp; &mdash;&nbsp; Enterprise software firm Monday.com said Wednesday it plans to cut 20% of its workforce in the second half of ths year to &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.theinformation.com/briefings/monday-com-cut-20-workforce">Filing: Monday.com plans to cut 20% of its workforce, or ~600 employees, in H2 2026 to &ldquo;support a leaner, more focused operational model&rdquo; as it invests in AI</a></b></span>&nbsp; &mdash;&nbsp; Enterprise software firm Monday.com said Wednesday it plans to cut 20% of its workforce in the second half of ths year to &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
 </item>
 
 <item>
-  <title>🔵 Sources: Apple is set to debut new versions of every Mac it sells, including long-awaited iMac updates and a revamped MacBook Pro and Neo, across fall and 2027 (Mark Gurman/Bloomberg)</title>
+  <title>🔵 Sources: Apple is set to debut new versions of every Mac, including long-awaited iMac updates, a revamped MacBook Pro, and a new Neo, across the fall and 2027 (Mark Gurman/Bloomberg)</title>
   <link>https://www.techmeme.com/260722/p29#a260722p29</link>
   <pubDate>Wed, 22 Jul 2026 14:40:02 +0000</pubDate>
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/><a href="https://www.bloomberg.com/news/articles/2026-07-22/apple-to-launch-new-macbook-air-imac-macbook-pro-neo-mac-mini-mac-studio?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc4NDczMDkwMCwiZXhwIjoxNzg1MzM1NzAwLCJhcnRpY2xlSWQiOiJUSTlQWkFLSkg2VjQwMCIsImJjb25uZWN0SWQiOiJDNEVEQ0FFMUZBMDU0MEJFQTI0QTlGMjExQzFFOTA4MCJ9.pX-drPTkq3IbI8NIUh3uoYV-AIKippcEC4cIH_kIdM0"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260722/i29.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260722/p29#a260722p29" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Mark Gurman / <a href="https://www.bloomberg.com/">Bloomberg</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/articles/2026-07-22/apple-to-launch-new-macbook-air-imac-macbook-pro-neo-mac-mini-mac-studio?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc4NDczMDkwMCwiZXhwIjoxNzg1MzM1NzAwLCJhcnRpY2xlSWQiOiJUSTlQWkFLSkg2VjQwMCIsImJjb25uZWN0SWQiOiJDNEVEQ0FFMUZBMDU0MEJFQTI0QTlGMjExQzFFOTA4MCJ9.pX-drPTkq3IbI8NIUh3uoYV-AIKippcEC4cIH_kIdM0">Sources: Apple is set to debut new versions of every Mac it sells, including long-awaited iMac updates and a revamped MacBook Pro and Neo, across fall and 2027</a></b></span>&nbsp; &mdash;&nbsp; Apple Inc. is readying an overhaul of its Mac line, seeking to capitalize on demand for powerful laptops and desktops fueled by the artificial intelligence boom.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/articles/2026-07-22/apple-to-launch-new-macbook-air-imac-macbook-pro-neo-mac-mini-mac-studio?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc4NDczMDkwMCwiZXhwIjoxNzg1MzM1NzAwLCJhcnRpY2xlSWQiOiJUSTlQWkFLSkg2VjQwMCIsImJjb25uZWN0SWQiOiJDNEVEQ0FFMUZBMDU0MEJFQTI0QTlGMjExQzFFOTA4MCJ9.pX-drPTkq3IbI8NIUh3uoYV-AIKippcEC4cIH_kIdM0">Sources: Apple is set to debut new versions of every Mac, including long-awaited iMac updates, a revamped MacBook Pro, and a new Neo, across the fall and 2027</a></b></span>&nbsp; &mdash;&nbsp; Apple Inc. is readying an overhaul of its Mac line, seeking to capitalize on demand for powerful laptops and desktops fueled by the artificial intelligence boom.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
 </item>
 
 <item>
@@ -47,7 +137,7 @@
   <pubDate>Wed, 22 Jul 2026 14:00:00 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: Could impact sign-ins/MFA/Conditional Access — watch for login issues.</b><br/><p>Identity confidence changes throughout every interaction and should be reassessed continuously as new risk signals emerge.</p>
-<p>The post <a href="https://www.securityweek.com/when-identity-verification-fails-lessons-from-a-real-world-sim-swap-and-near-account-takeover/">When Identity Verification Fails: Lessons from a Real-World SIM Swap and Near Account Takeover</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/when-identity-verification-fails-lessons-from-a-real-world-sim-swap-and-near-account-takeover/">When Identity Verification Fails: Lessons from a Real-World SIM Swap and Near Account Takeover</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
 </item>
 
 <item>
@@ -152,17 +242,7 @@
 
 
 <p class="wp-block-paragraph">OpenAI said it is still investigating the incident with Hugging Face, and is imposing stricter configurations on its research environment while the vulnerabilities are being addressed, even if that means slowing down its research. It is also strengthening containment and monitoring around future evaluations.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Source: OpenAI raised its projected cloud spending to ~$750B through 2030, up from its ~$600B projection earlier in 2026, reflecting its new cloud compute deals (Anissa Gardizy/Wall Street Journal)</title>
-  <link>https://www.techmeme.com/260722/p20#a260722p20</link>
-  <pubDate>Wed, 22 Jul 2026 13:21:09 +0000</pubDate>
-  <source>Techmeme</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.wsj.com/tech/openais-planned-cloud-spending-hits-750-billion-as-computing-efforts-ramp-up-6ac3f58a?st=VGaF4f&amp;reflink=desktopwebshare_permalink"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260722/i20.jpg" vspace="4" /></a>
-<p><a href="https://www.techmeme.com/260722/p20#a260722p20" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Anissa Gardizy / <a href="https://www.wsj.com/">Wall Street Journal</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.wsj.com/tech/openais-planned-cloud-spending-hits-750-billion-as-computing-efforts-ramp-up-6ac3f58a?st=VGaF4f&amp;reflink=desktopwebshare_permalink">Source: OpenAI raised its projected cloud spending to ~$750B through 2030, up from its ~$600B projection earlier in 2026, reflecting its new cloud compute deals</a></b></span>&nbsp; &mdash;&nbsp; The AI giant has committed $20 billion to a new data-center project in Georgia and hired an architect of Elon Musk's computing build-out</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
 </item>
 
 <item>
@@ -282,7 +362,7 @@
 
 
 <p class="wp-block-paragraph"><strong>igal.zeifman@cycognito.com</strong></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
 </item>
 
 <item>
@@ -291,7 +371,7 @@
   <pubDate>Wed, 22 Jul 2026 13:00:00 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><p>Analysis found 434 exploitable flaws in AI-generated apps, with denial-of-service, authorization and secrets exposure risks among the most common issues.</p>
-<p>The post <a href="https://www.securityweek.com/vibe-coded-apps-riddled-with-exploitable-security-flaws/">Vibe-Coded Apps Riddled With Exploitable Security Flaws</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/vibe-coded-apps-riddled-with-exploitable-security-flaws/">Vibe-Coded Apps Riddled With Exploitable Security Flaws</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
 </item>
 
 <item>
@@ -426,7 +506,7 @@
 
 
 <p class="wp-block-paragraph"><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><a href="https://www.cio.com/expert-contributor-network/"><strong>Want to join?</strong></a></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -434,7 +514,7 @@
   <link>https://www.theregister.com/security/2026/07/22/over-a-third-of-ransomware-victims-re-extorted-after-paying/5276218</link>
   <pubDate>Wed, 22 Jul 2026 11:49:12 +0000</pubDate>
   <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Elevated ransomware risk — validate backups and endpoint defenses.</b><br/>Some never saw their files again either, infosec biz Proofpoint finds<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Elevated ransomware risk — validate backups and endpoint defenses.</b><br/>Some never saw their files again either, infosec biz Proofpoint finds<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -555,7 +635,7 @@
 
 
 <p class="wp-block-paragraph"><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><a href="https://www.cio.com/expert-contributor-network/"><strong>Want to join?</strong></a></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
@@ -718,7 +798,84 @@
 
 
 <p class="wp-block-paragraph"><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><a href="https://www.cio.com/expert-contributor-network/"><strong>Want to join?</strong></a></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 The engineering bottleneck has changed. Is your org prepared?</title>
+  <link>https://www.cio.com/article/4200128/the-engineering-bottleneck-has-changed-is-your-org-prepared.html</link>
+  <pubDate>Wed, 22 Jul 2026 10:00:00 +0000</pubDate>
+  <source>CIO.com</source>
+  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<p class="wp-block-paragraph">AI agents can turn a clear description into working software, the engineer’s judgement is what makes the difference: deciding what to build, catching the tradeoff the agent didn’t know to weigh, and owning the call on whether the result is right.</p>
+
+
+
+<p class="wp-block-paragraph">That judgement has always been the hard part of engineering. It just used to be bundled into the act of writing code, where a skilled engineer did it while typing. As agents take on more of the typing, that judgement separates out and becomes the clear center of the role. Leaders who adapt early will get their metrics, their talent pipelines, and their delivery models working with this shift rather than against it.</p>
+
+
+
+<h3 class="wp-block-heading" id="judgement-is-defining-constraining-and-deciding">Judgement is defining, constraining, and deciding</h3>
+
+
+
+<p class="wp-block-paragraph">Judgement is all about defining the problem precisely enough that an agent builds the right thing. It’s setting the constraints the agent won’t infer on its own. It’s spotting the tradeoff buried three layers down that only shows up if you understand the system. And it’s looking at a finished implementation and knowing whether it’s genuinely good enough to ship.</p>
+
+
+
+<p class="wp-block-paragraph">This is the harder part of the job and the real driver of quality. It was easy to underrate when it lived inside day-to-day coding. Now it’s what separates a strong team from an average one.</p>
+
+
+
+<h3 class="wp-block-heading" id="the-shift-changes-where-time-growth-and-metrics-go">The shift changes where time, growth, and metrics go</h3>
+
+
+
+<p class="wp-block-paragraph">If the high-value activity is intent, review, and judgement rather than raw output, a few assumptions are worth revisiting.</p>
+
+
+
+<p class="wp-block-paragraph"><strong>Where engineers spend their time.</strong> Less of the day goes to producing boilerplate and mechanical implementation, and more goes to the reasoning that used to get squeezed to the edges: framing the problem and owning the judgement calls that determine quality.</p>
+
+
+
+<p class="wp-block-paragraph"><strong>How teams grow their people.</strong> Defining problems well, spotting risk, and critically evaluating work you didn’t write yourself have always been senior skills. When agents handle more of the mechanical work, those skills become learnable earlier. That puts the emphasis on leaders to teach the reasoning: why a choice gets made and how to weigh the tradeoffs that come with it.</p>
+
+
+
+<p class="wp-block-paragraph"><strong>What you measure.</strong> Lines shipped, tickets closed, and velocity charts all measured throughput of the old scarce resource. They say very little about the new one. The teams that adapt will start measuring the quality of intent going in and the reliability of judgement coming out, because that’s where the results now live.</p>
+
+
+
+<h3 class="wp-block-heading" id="reinvest-the-time-you-get-back">Reinvest the time you get back</h3>
+
+
+
+<p class="wp-block-paragraph">The tempting response is to treat the freed-up capacity as pure speed: same work, same tooling, just faster. That captures the easy win and misses the real one. If engineers spend their reclaimed time reviewing a rising volume of agent output with no better context than before, review quietly becomes the new constraint, and you’ve moved the problem rather than solved it.</p>
+
+
+
+<p class="wp-block-paragraph">The organizations that get ahead will invest the reclaimed capacity into the judgement layer: creating stronger specs and acceptance criteria before work starts, building review practices that test agent output against intent, and capturing the reasoning behind decisions where the next person can find it, so it doesn’t have to be reconstructed every time. That’s how the shift becomes an advantage for your team.</p>
+
+
+
+<h3 class="wp-block-heading" id="the-through-line-for-leaders">The through-line for leaders</h3>
+
+
+
+<p class="wp-block-paragraph">The engineering job is moving up a level, from executing the work to directing and validating it. That’s a more strategic role, and it rewards clarity of thought over speed of output. Leaders who see the shift early can help their engineers grow into the work that’s now most valuable.</p>
+
+
+
+<p class="wp-block-paragraph">See how leading engineering organizations are operationalizing this shift at <a href="https://www.atlassian.com/software/jira/dev?utm_source=foundry&amp;utm_medium=paid-social&amp;utm_campaign=P:jira%7CO:ppm%7CV:foundry%7CG:us%7CL:en%7CF:aware%7CT:prospecting%7CI:imc-jira-ai-sdlc%7CA:display%7CD:alld&amp;utm_content=P:jira%7CO:ppm%7CV:foundry%7CG:us%7CL:en%7CF:aware%7CT:prospecting%7CI:imc-jira-ai-sdlc%7CA:display%7CD:alld%7CU:cio-2" rel="noreferrer noopener" target="_blank">jira.dev.</a></p>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
 </item>
 
 <item>
@@ -727,7 +884,7 @@
   <pubDate>Wed, 22 Jul 2026 10:00:00 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/><p>Using AI, the startup provides adaptive prevention through environment mapping, risk analysis, and automated policy enforcement.</p>
-<p>The post <a href="https://www.securityweek.com/endpoint-security-firm-glow-launches-with-180m-in-funding-at-1-2b-valuation/">Endpoint Security Firm Glow Launches With $180M in Funding at $1.2B Valuation</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/endpoint-security-firm-glow-launches-with-180m-in-funding-at-1-2b-valuation/">Endpoint Security Firm Glow Launches With $180M in Funding at $1.2B Valuation</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
 </item>
 
 <item>
@@ -912,7 +1069,7 @@
 
 
 <p class="wp-block-paragraph"><a href="https://www.deloitte.com/us/en/what-we-do/capabilities/applied-artificial-intelligence/content/state-of-ai-in-the-enterprise.html">Another Deloitte survey</a> showed that the clearest results from AI were in productivity, with 66% of organizations reporting gains, and cost efficiency, with 40% saying AI reduces costs. “However, revenue impact is still emerging,” says Widener. “Only one in five companies says AI is driving top-line growth today.” But optimism prevails, with 74% expecting it to do so in the future.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
 </item>
 
 <item>
@@ -1013,7 +1170,7 @@
 
 
 <p class="wp-block-paragraph"></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
 </item>
 
 <item>
@@ -1021,7 +1178,7 @@
   <link>https://www.theregister.com/software/2026/07/22/redmonds-reaper-cometh-october-2026-set-to-bury-a-graveyard-of-microsoft-products/5275627</link>
   <pubDate>Wed, 22 Jul 2026 10:00:00 +0000</pubDate>
   <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Could impact sign-ins/MFA/Conditional Access — watch for login issues.</b><br/>Office LTSC 2021, Windows Server 2022, Publisher, and Entra ID risk policies all facing the chop within weeks of each other<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Could impact sign-ins/MFA/Conditional Access — watch for login issues.</b><br/>Office LTSC 2021, Windows Server 2022, Publisher, and Entra ID risk policies all facing the chop within weeks of each other<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
 </item>
 
 <item>
@@ -1030,7 +1187,7 @@
   <pubDate>Wed, 22 Jul 2026 09:33:12 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><p>Many of the vulnerabilities fixed with the July 2026 Critical Patch Update were likely discovered by AI.</p>
-<p>The post <a href="https://www.securityweek.com/oracle-patches-over-1400-vulnerabilities-with-quarterly-security-updates/">Oracle Patches Over 1,400 Vulnerabilities With Quarterly Security Updates</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/oracle-patches-over-1400-vulnerabilities-with-quarterly-security-updates/">Oracle Patches Over 1,400 Vulnerabilities With Quarterly Security Updates</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
 </item>
 
 <item>
@@ -1179,7 +1336,7 @@
 
 
 <p class="wp-block-paragraph"><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><a href="https://www.cio.com/expert-contributor-network/"><strong>Want to join?</strong></a></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 8h ago]]></description>
 </item>
 
 <item>
@@ -1408,7 +1565,7 @@
 
 
 <p class="wp-block-paragraph"><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><a href="https://www.cio.com/expert-contributor-network/"><strong>Want to join?</strong></a></p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 8h ago]]></description>
 </item>
 
 <item>
@@ -1478,7 +1635,7 @@
 
 
 
-<p class="wp-block-paragraph">According to Max Romanenko, chief engineering officer at relational database platform EDB, cost per query tells you almost nothing in an agentic world where autonomous systems are spinning up databases, pipelines, and queries around the clock. “The metric that matters is intelligence per watt, how much useful AI you get for every unit of energy you spend,” he says. “It isn’t just an environmental number, it’s also a performance indicator.”</p>
+<p class="wp-block-paragraph">According to Max Romanenko, chief engineering officer at sovereign data and AI company EDB, cost per query tells you almost nothing in an agentic world where autonomous systems are spinning up databases, pipelines, and queries around the clock. “The metric that matters is intelligence per watt, how much useful AI you get for every unit of energy you spend,” he says. “It isn’t just an environmental number, it’s also a performance indicator.”</p>
 
 
 
@@ -1543,7 +1700,7 @@
 
 
 <p class="wp-block-paragraph">For CIOs looking to maximize the business value of every AI application in their portfolio, these new considerations, including new metrics, tools and approaches from the infrastructure layer all the way up to the application layer, should be an essential part of the equation.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 8h ago]]></description>
 </item>
 
 <item>
@@ -1551,7 +1708,7 @@
   <link>https://www.theregister.com/security/2026/07/22/council-worker-spared-prison-after-four-day-data-snooping-spree/5276054</link>
   <pubDate>Wed, 22 Jul 2026 08:29:08 +0000</pubDate>
   <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Potential data exposure — check monitoring and incident response readiness.</b><br/>Herefordshire employee handed suspended sentence for breach of Computer Misuse Act<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Potential data exposure — check monitoring and incident response readiness.</b><br/>Herefordshire employee handed suspended sentence for breach of Computer Misuse Act<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 8h ago]]></description>
 </item>
 
 <item>
@@ -1696,7 +1853,7 @@
 
 
 <p class="wp-block-paragraph">Finally, persistence and a willingness to endure discomfort for something that matters more than the pain itself are critical to surviving in this relationship. The role of a cybersecurity leader is often thankless. If you’re doing your job well, no one really notices.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 8h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 10h ago]]></description>
 </item>
 
 <item>
@@ -2127,7 +2284,7 @@
 
 
 <p class="wp-block-paragraph"></p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 10h ago]]></description>
 </item>
 
 <item>
@@ -2252,7 +2409,7 @@
 
 
 <p class="wp-block-paragraph">Bottom line: Both companies can maximize their unique roadmaps through the partnership, he said. “As the rules of the AI economy continue to evolve, expect more eyebrow-raising deals like this to be signed.”</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 15h ago]]></description>
 </item>
 
 <item>
@@ -2260,7 +2417,7 @@
   <link>https://www.theregister.com/ai-and-ml/2026/07/22/openai-admits-it-was-the-source-of-the-agent-swarm-that-attacked-hugging-face/5275939</link>
   <pubDate>Wed, 22 Jul 2026 01:30:45 +0000</pubDate>
   <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Sandboxed experiment found itself a zero day, escaped onto the open internet and validated scary predictions about rogue agents<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 14h ago]]></description>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Sandboxed experiment found itself a zero day, escaped onto the open internet and validated scary predictions about rogue agents<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 15h ago]]></description>
 </item>
 
 <item>
@@ -2377,7 +2534,7 @@
 
 
 <p class="wp-block-paragraph">Goryunov’s bottom line: “For internal, high-volume, well-harnessed workloads, [the Chinese models] have moved from ‘watch list’ to ‘rational choice.’”</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 20h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 22h ago]]></description>
 </item>
 
 <item>
@@ -2486,7 +2643,7 @@
 
 
 <p class="wp-block-paragraph"><strong>bethany@moburst.com</strong></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 22h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 23h ago]]></description>
 </item>
 
 <item>
@@ -2494,7 +2651,7 @@
   <link>https://www.theregister.com/security/2026/07/21/german-authorities-lead-takedown-of-kratos-phishing-platform/5275666</link>
   <pubDate>Tue, 21 Jul 2026 16:17:54 +0000</pubDate>
   <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Credential/phishing risk — reinforce MFA and user awareness training.</b><br/>Alleged developer arrested in Indonesia after more than 200 servers slain<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 23h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Credential/phishing risk — reinforce MFA and user awareness training.</b><br/>Alleged developer arrested in Indonesia after more than 200 servers slain<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
@@ -2589,7 +2746,7 @@
 
 
 <p class="wp-block-paragraph"><em>This article first appeared on <a href="https://www.computerwoche.de/article/4198852/dsag-warnt-vor-bildungsschulden-bei-sap-entwicklern.html">Computerwoche</a>.</em></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 23h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
@@ -3526,401 +3683,6 @@
   <pubDate>Tue, 21 Jul 2026 09:15:00 +0000</pubDate>
   <source>The Register</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>SEK 5M gift supplied 72 percent of Örebropartiet's annual income, but company insists it was strictly personal<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
-</item>
-
-<item>
-  <title>🔵 What is RPA? A revolution in business process automation</title>
-  <link>https://www.cio.com/article/227908/what-is-rpa-robotic-process-automation-explained.html</link>
-  <pubDate>Tue, 21 Jul 2026 09:00:00 +0000</pubDate>
-  <source>CIO.com</source>
-  <description><![CDATA[<b>Why this matters: Supply chain risk — audit third-party dependencies and vendor access.</b><br/><div id="remove_no_follow">
-		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
-					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
-						<div class="article-column__content">
-<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
-
-
-
-<h2 class="wp-block-heading" id="what-is-robotic-process-automation">What is robotic process automation?</h2>
-
-
-
-<p class="wp-block-paragraph">Governed by business logic and structured inputs, robotic process automation (RPA) employs software “bots” to automate repetitive tasks within business process workflows. RPA tools enable companies to configure these bots to capture and interpret applications for processing a transaction, manipulating data, triggering responses, and communicating with other digital systems. RPA scenarios range from generating an automatic response to an email, to deploying thousands of bots, each programmed to automate jobs in an <a href="https://www.cio.com/article/272362/what-is-erp-key-features-of-top-enterprise-resource-planning-systems.html">ERP system</a>.</p>
-
-
-
-<p class="wp-block-paragraph">Many CIOs have turned to RPA to streamline enterprise operations and reduce costs. With RPA, businesses can automate mundane rules-based business processes, enabling business users to devote more time to serving customers or other higher-value work. Others see RPA as a stopgap en route to <a href="https://www.cio.com/article/193255/intelligent-automation-the-future-of-rpa.html">intelligent automation (IA)</a>, which, rather than take prescriptive actions, leverages machine learning (ML) and AI to make intelligent judgments about future outputs.</p>
-
-
-
-<h2 class="wp-block-heading" id="what-are-the-benefits-of-rpa">What are the benefits of RPA?</h2>
-
-
-
-<p class="wp-block-paragraph">Implemented successfully, RPA enables organizations to reduce staffing costs and human error. Intelligent automation specialist Kofax says the principle is simple: Let human employees work on what humans excel at while using robots to handle tasks that get in the way.</p>
-
-
-
-<p class="wp-block-paragraph">Bots are typically low-cost and easy to implement, requiring no custom software or deep systems integration. Such characteristics are crucial as organizations pursue growth without adding significant expenditures or friction among workers.</p>
-
-
-
-<p class="wp-block-paragraph">When properly configured, software robots can increase a team’s capacity for work by up to 50%, according to Kofax. For example, simple, repetitive tasks such as copying and pasting information between business systems can be massively accelerated when completed using robots. Automating such tasks can also improve accuracy by eliminating opportunities for human error, such as transposing numbers during data entry.</p>
-
-
-
-<p class="wp-block-paragraph">Enterprises can also supercharge their automation efforts by injecting RPA with cognitive technologies such as ML, speech recognition, and <a href="https://www.cio.com/article/228501/natural-language-processing-nlp-explained.html">natural language processing,</a> automating higher-order tasks that in the past required the perceptual and judgment capabilities of humans.</p>
-
-
-
-<p class="wp-block-paragraph">Such RPA implementations, in which upward of 15 to 20 steps may be automated, are part of IA.</p>
-
-
-
-<h2 class="wp-block-heading" id="rpa-vs-intelligent-automation">RPA vs. intelligent automation</h2>
-
-
-
-<p class="wp-block-paragraph">Intelligent automation builds on RPA to create self-improving software automation that enables RPA bots to tackle more complex tasks and use cases with minimal human intervention. To do so, intelligent automation leverages AI technologies, including machine learning (ML), natural language processing (NLP), gen AI, and optical character recognition (OCR).</p>
-
-
-
-<h2 class="wp-block-heading" id="rpa-vs-agentic-ai">RPA vs. agentic AI</h2>
-
-
-
-<p class="wp-block-paragraph">Agentic AI goes beyond traditional RPA. Whereas RPA bots follow explicit instructions using pre-defined scripts, <a href="https://www.cio.com/article/3496519/agentic-ai-decisive-operational-ai-arrives-in-business.html">AI agents can make autonomous decisions</a>.</p>
-
-
-
-<p class="wp-block-paragraph"><a href="https://community.ibm.com/community/user/blogs/ahmed-alsareti/2025/11/04/rpa-vs-agentic-ai-transforming-enterprise-automati">According to IBM</a>, RPA excels in structured environments with defined, predictable workflows. It is especially good for automating manual, repetitive processes such as high-volume data entry and migration, invoice and purchase order processing, standard report generation, and customer onboarding. When these processes encounter an error or exception, they require manual intervention.</p>
-
-
-
-<p class="wp-block-paragraph">Rather than following a script, AI agents have an objective (e.g., optimize supply chain logistics for the next quarter) and can act autonomously to achieve that objective. <a href="https://www.cio.com/article/3603856/agentic-ai-promising-use-cases-for-business.html">Use cases suited to agentic AI</a> include intelligent customer service (e.g., drafting personalized responses), dynamic workflow management (e.g., prioritizing critical tasks based on real-time data), and autonomous research and data synthesis (e.g., answering a complex query by searching multiple data sources, synthesizing the information, identifying patterns, and drafted a structured recommendation).</p>
-
-
-
-<h2 class="wp-block-heading" id="real-world-rpa-examples">Real-world RPA examples</h2>
-
-
-
-<p class="wp-block-paragraph">Organizations across all industries are leveraging RPA to streamline operations and reduce costs. Here are four examples:</p>
-
-
-
-<h3 class="wp-block-heading" id="close-brothers-augments-rpa-with-document-understanding">Close Brothers augments RPA with document understanding</h3>
-
-
-
-<p class="wp-block-paragraph">UK-based merchant banking group Close Brothers has been on an RPA journey for more than six years, mostly focused on automating rules-based, structured processes. Now it’s working close with AI-powered RPA platform vendor UiPath to leverage UiPath Document Understanding in the company’s wholesale finance operation.</p>
-
-
-
-<p class="wp-block-paragraph">By integrating Document Understanding with RPA, Close Brothers is <a href="https://www.cio.com/article/3503920/close-brothers-unlocks-rpa-with-document-understanding.html">automating the reconciliation of documents submitted by customers</a>, and enabling automation of the end-to-end payouts process.</p>
-
-
-
-<h3 class="wp-block-heading" id="us-marine-corps-retools-its-fighting-force-with-rpa">US Marine Corps retools its fighting force with RPA</h3>
-
-
-
-<p class="wp-block-paragraph">The US Marine Corps (USMC) is <a href="https://www.cio.com/article/2149701/marine-corps-enlists-rpa-5g-and-ar-vr-to-retool-fighting-force.html">leveraging RPA as part of a massive digital transformation</a> of the Marine Depot Maintenance Command (MDMC), which is responsible for maintaining, repairing, and calibrating Marine Corps equipment.</p>
-
-
-
-<p class="wp-block-paragraph">As part of the effort, the MDMC is using RPA and Microsoft Power Apps to make daily operations more efficient and reduce manual labor.</p>
-
-
-
-<h3 class="wp-block-heading" id="us-med-equip-streamlines-hospital-bed-rentals">US Med-Equip streamlines hospital bed rentals</h3>
-
-
-
-<p class="wp-block-paragraph">Houston-based US Med-Equip, which rents, sells, and services a range of movable medical equipment, has developed a <a href="https://www.cio.com/article/2152425/us-med-equip-eases-hospital-pain-point-with-ai-rpa.html">one-click solution to order hospital beds</a>. The solution involved retraining an existing ML model from accounts payable, and adding Microsoft code and RPA. With 93 locations nationwide, US Med-Equip can now deliver rental beds for patients more efficiently. The solution combines RPA and ML with robotic faxing called eFax, Microsoft Power Automate RPA, a Power AI OCR tool, and a retrained Microsoft Azure-based ML model to process the documents involved.</p>
-
-
-
-<h3 class="wp-block-heading" id="siemens-mobility-automates-more-than-700-processes">Siemens Mobility automates more than 700 processes</h3>
-
-
-
-<p class="wp-block-paragraph">Since 2017, Munich-based Siemens Mobility has <a href="https://www.cio.com/article/2097016/siemens-mobility-scales-rpa-by-empowering-employees.html">automated more than 700 processes</a> and transformed its business along the way. Most of the work has focused on automating processes involving different software applications, with an emphasis on SAP integration.</p>
-
-
-
-<p class="wp-block-paragraph">RPA is now a full corporate unit at Siemens Mobility under the CFO. It has adopted a strategy with three primary approaches: the initiative approach (under which the RPA unit provides other business units with a framework, tools, and training to apply automation to their processes), a citizen developer approach (which focuses on supporting individuals in automating their personal processes), and a robotics-as-a-process approach (for developing and managing solutions to automate large, cross-departmental processes dealing with things like financial data, information security, and data protection).</p>
-
-
-
-<h2 class="wp-block-heading" id="what-are-the-top-rpa-tools">What are the top RPA tools?</h2>
-
-
-
-<p class="wp-block-paragraph">The RPA market consists of a mix of new, purpose-built tools and older tools that have added new features to support automation, some of which were originally <a href="https://www.cio.com/article/230560/what-is-business-process-management-bpm-the-key-to-enterprise-agility.html">business process management</a> (BPM) tools. Some vendors position their tools as “workflow automation” or “work process management.” Overall, research firm IDC forecasts the market for standalone automation will grow to $77.5 billion by 2028, with AI-powered automation growing to $19.9 billion.</p>
-
-
-
-<p class="wp-block-paragraph">“Business automation platforms are at a pivotal juncture,” says Maureen Fleming, program VP of Worldwide Intelligent Process Automation research at IDC. “As AI and automation converge to support agentic automation, market leadership is not just about streamlining work, it’s about reimagining it. The future belongs to those successful in reimagining what their customers can build and deliver with agentic workflows, rather than focusing on incremental improvements that produce only incremental benefits.”</p>
-
-
-
-<p class="wp-block-paragraph">Top RPA tools vendors, <a href="https://www.gartner.com/reviews/market/robotic-process-automation">according to Gartner</a>, include:</p>
-
-
-
-<ul class="wp-block-list">
-<li>Appian RPA</li>
-
-
-
-<li>Automation Anywhere Agentic Process Automation System</li>
-
-
-
-<li>AutomationEdge</li>
-
-
-
-<li>IBM Robotic Process Automation</li>
-
-
-
-<li>Microsoft Power Automate</li>
-
-
-
-<li>Rocketbot</li>
-
-
-
-<li>SAP Build Process Automation</li>
-
-
-
-<li>SS&amp;C Blue Prism Intelligent Automation Platform</li>
-
-
-
-<li>TruBot</li>
-
-
-
-<li>UiPath Platform</li>
-</ul>
-
-
-
-<p class="wp-block-paragraph">For a closer look at these vendors’ RPA offerings, see <a href="https://www.cio.com/article/188788/how-to-choose-rpa-software-for-your-business.html">RPA buyer’s guide: Top 24 robotic process automation tools available today</a> and <a href="https://www.cio.com/article/4080581/20-ai-workflow-tools-for-adding-intelligence-to-business-processes.html">20 AI workflow tools for adding intelligence to business processes</a>.</p>
-
-
-
-<h2 class="wp-block-heading" id="what-are-the-criteria-for-choosing-rpa-tools">What are the criteria for choosing RPA tools?</h2>
-
-
-
-<p class="wp-block-paragraph">There are 10 key factors to consider when choosing RPA tools:</p>
-
-
-
-<ol class="wp-block-list" start="1">
-<li>Ease of bot setup</li>
-
-
-
-<li>Low-code capabilities</li>
-
-
-
-<li>Attended vs. unattended</li>
-
-
-
-<li>ML capabilities</li>
-
-
-
-<li>Exception handling and human review</li>
-
-
-
-<li>Integration with enterprise applications</li>
-
-
-
-<li>Orchestration and administration</li>
-
-
-
-<li>Cloud bots</li>
-
-
-
-<li>Process and task discovery and mining</li>
-
-
-
-<li>Scalability</li>
-</ol>
-
-
-
-<p class="wp-block-paragraph">For a more in-depth look at these selection criteria, see <a href="https://www.cio.com/article/188788/how-to-choose-rpa-software-for-your-business.html">RPA buyer’s guide: Top 24 robotic process automation tools available today</a>.</p>
-
-
-
-<h3 class="wp-block-heading" id="what-are-the-top-rpa-certifications">What are the top RPA certifications?</h3>
-
-
-
-<p class="wp-block-paragraph">As organizations increasingly adopt RPA, they also need individuals with expertise in RPA tools and implementations. Certifications can validate knowledge and proficiency in RPA tools and platforms, and many of the most popular RPA certifications are offered by vendors including:</p>
-
-
-
-<ul class="wp-block-list">
-<li>Appian Certified Lead Developer</li>
-
-
-
-<li>Automation Anywhere Certified Advanced Automation Developer</li>
-
-
-
-<li>Blue Prism Developer Certification (BPDC)</li>
-
-
-
-<li>Microsoft Certified: Power Platform Fundamentals</li>
-
-
-
-<li>UiPath Certified Professional (UCP)</li>
-</ul>
-
-
-
-<h3 class="wp-block-heading" id="8-tips-for-effective-rpa">8 tips for effective RPA</h3>
-
-
-
-<p class="wp-block-paragraph">Implementing RPA can be challenging, given both the potential complexity of legacy business processes and the level of change management that can be required for RPA to succeed. The following tips can help your organization on its way.</p>
-
-
-
-<h3 class="wp-block-heading" id="1-set-and-manage-expectations">1. Set and manage expectations</h3>
-
-
-
-<p class="wp-block-paragraph">Quick wins are possible with RPA, but propelling RPA to run at scale is a different animal. Many RPA hiccups stem from poor expectations management. Bold claims about RPA from vendors and implementation consultants haven’t helped. That’s why it’s crucial for CIOs to go in with a cautiously optimistic mindset.</p>
-
-
-
-<h3 class="wp-block-heading" id="2-consider-business-impact">2. Consider business impact</h3>
-
-
-
-<p class="wp-block-paragraph">RPA is often touted as a mechanism to bolster ROI or reduce costs, but it can also be used to improve customer experience. For example, enterprises such as airlines employ thousands of customer service agents, yet customers are still waiting in queues to have their calls fielded. A chatbot could help alleviate some of that wait.</p>
-
-
-
-<h3 class="wp-block-heading" id="3-involve-it-early-and-often">3. Involve IT early and often</h3>
-
-
-
-<p class="wp-block-paragraph">COOs were some of the earliest adopters of RPA. In many cases, they bought RPA and hit a wall during implementation, prompting them to ask for IT’s help (and forgiveness). Now <a href="https://www.cio.com/article/215796/what-is-citizen-development-the-cios-solution-to-shadow-it.html">citizen developers</a> without technical expertise are using cloud software to implement RPA in their business units, and often the CIO has to step in and block them. Business leaders must involve IT from the outset to ensure they get the resources they require.</p>
-
-
-
-<h3 class="wp-block-heading" id="4-poor-design-change-management-can-wreak-havoc">4. Poor design, change management can wreak havoc</h3>
-
-
-
-<p class="wp-block-paragraph">Many implementations fail because design and change are poorly managed. In the rush to get something deployed, some companies overlook communication exchanges between the various bots, which can break a business process. Some CIOs will neglect to negotiate the changes new operations will have on an organization’s business processes. CIOs must plan for this well in advance to avoid business disruption.</p>
-
-
-
-<h3 class="wp-block-heading" id="5-project-governance-is-paramount">5. Project governance is paramount</h3>
-
-
-
-<p class="wp-block-paragraph">CIOs must constantly check for chokepoints where their RPA solution can bog down, or, at least, install a monitoring and alert system to watch for hiccups impacting performance.</p>
-
-
-
-<h3 class="wp-block-heading" id="6-build-an-rpa-center-of-excellence">6. Build an RPA center of excellence</h3>
-
-
-
-<p class="wp-block-paragraph">The most successful RPA implementations include a center of excellence staffed by people responsible for making efficiency programs a success within the organization. Not every enterprise, however, has the budget for this. The RPA center of excellence develops business cases, calculating potential cost optimization and ROI, and measures progress against those goals.</p>
-
-
-
-<h3 class="wp-block-heading" id="7-dont-forget-the-impact-on-people">7. Don’t forget the impact on people</h3>
-
-
-
-<p class="wp-block-paragraph">Wooed by shiny new solutions, some organizations are so focused on implementation that they neglect to loop in HR, which can create some nightmare scenarios for employees who find their daily processes and workflows disrupted.</p>
-
-
-
-<h3 class="wp-block-heading" id="8-incorporate-rpa-into-your-whole-development-lifecycle">8. Incorporate RPA into your whole development lifecycle</h3>
-
-
-
-<p class="wp-block-paragraph">CIOs must automate the entire development lifecycle or they may kill their bots during a big launch.</p>
-
-
-
-<h2 class="wp-block-heading" id="ai-automation-and-the-talent-pipeline">AI automation and the talent pipeline</h2>
-
-
-
-<p class="wp-block-paragraph">AI automation is allowing companies to increasingly automate entry-level and routine work, which is <a href="https://www.cio.com/article/4189865/how-ai-automation-is-reshaping-the-it-leadership-pipeline.html">reshaping the IT leadership pipeline</a>. According to a <a href="https://www.sap.com/documents/2026/05/ccd1609f-507f-0010-bca6-c68f7e60039b.html">recent report from SAP</a>, the early-talent job market has experienced a 10% drop since 2021, with entry-level software engineer, customer support, and data analyst job openings dropping 35% from 2024 to 2025.</p>
-
-
-
-<p class="wp-block-paragraph">Organizations that reduce their entry-level hiring without rethinking how early-career talent develops risk creating a gap in their <a href="https://www.cio.com/article/4189865/how-ai-automation-is-reshaping-the-it-leadership-pipeline.html">future leadership pipeline</a>. Investing in early <a href="https://www.cio.com/article/251060/employee-retention-10-strategies-for-retaining-top-talent.html?utm=hybrid_search">talent development programs</a> may prove an important element of AI transformation.</p>
-
-
-
-<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper youtube-video">
-
-</div></figure>
-
-
-
-<p class="wp-block-paragraph"><strong>More on robotic process automation:</strong></p>
-
-
-
-<ul class="wp-block-list">
-<li><a href="https://www.cio.com/article/188788/how-to-choose-rpa-software-for-your-business.html">How to choose RPA software: 10 key factors to consider</a></li>
-
-
-
-<li><a href="https://www.cio.com/article/219904/top-rpa-robotic-process-automation-tools.html">Top 16 RPA tools today</a></li>
-
-
-
-<li><a href="https://www.cio.com/article/228818/rpa-is-poised-for-a-big-business-break-out.html">RPA is poised for a big business break-out</a></li>
-
-
-
-<li><a href="https://www.cio.com/article/222000/8-keys-to-a-successful-rpa-implementation.html">8 keys to a successful RPA implementation</a></li>
-
-
-
-<li><a href="https://www.cio.com/article/222419/5-reasons-rpa-deployments-fail.html">5 reasons RPA deployments fail</a></li>
-
-
-
-<li><a href="https://www.cio.com/article/230702/why-rpa-implementations-fail.html">Why RPA implementations fail</a></li>
-
-
-
-<li><a href="https://www.cio.com/article/222057/15-top-rpa-certifications.html">7 RPA training and certification courses</a></li>
-</ul>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
@@ -5571,83 +5333,6 @@
 
 <p class="wp-block-paragraph"><em>This article originally appeared on <a href="https://www.computerworld.com/article/4197949/zoom-patches-account-takeover-hole.html" target="_blank">Computerworld</a>.</em></p>
 </div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5d ago]]></description>
-</item>
-
-<item>
-  <title>🔴 CISA urges immediate SharePoint hardening as exploits mount</title>
-  <link>https://www.csoonline.com/article/4197775/cisa-urges-immediate-sharepoint-hardening-as-exploits-mount.html</link>
-  <pubDate>Thu, 16 Jul 2026 12:06:13 +0000</pubDate>
-  <source>CSO Online</source>
-  <description><![CDATA[<b>Why this matters: Service impact possible — prepare comms and confirm vendor status.</b><br/><div id="remove_no_follow">
-		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
-					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
-						<div class="article-column__content">
-<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
-
-
-
-<p class="wp-block-paragraph">The US Cybersecurity and Infrastructure Security Agency (CISA) has urged organizations to immediately secure Microsoft SharePoint deployments after warning that three vulnerabilities affecting the on-premises collaboration platform are being actively exploited.</p>
-
-
-
-<p class="wp-block-paragraph">A recent <a href="https://www.cisa.gov/news-events/alerts/2026/07/14/cisa-urges-sharepoint-hardening-after-new-exploitations" rel="noreferrer noopener" target="_blank">advisory</a> from the federal cybersecurity watchdog asked administrators to patch vulnerable servers, review Microsoft’s mitigation guidance, and assume that internet-facing SharePoint instances remain attractive targets for attackers seeking an initial foothold into enterprise environments.</p>
-
-
-
-<p class="wp-block-paragraph">While applying patches remains the immediate priority, security experts caution that organizations should view the advisory as more than another <a href="https://www.csoonline.com/article/4196940/patch-tuesday-roundup-microsoft-fixes-a-monthly-record-569-holes-sap-patches-a-critical-memory-corruption-bug.html">Patch Tuesday</a> exercise.</p>
-
-
-
-<p class="wp-block-paragraph">“This is what separates an IT incident from a business crisis,” said <a href="https://www.linkedin.com/in/chrisboehmii/" rel="noreferrer noopener" target="_blank">Chris Boehm</a>, field CTO at Zero Networks. “One compromised SharePoint box is a ticket. That same box, with a clear path to your domain controllers, backups, and file shares, is how you end up with an encrypted infrastructure and a disclosure event. Segmentation stops the first from becoming the second.”</p>
-
-
-
-<p class="wp-block-paragraph">CISA’s advisory highlights <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-32201" rel="noreferrer noopener" target="_blank">CVE-2026-332201</a>, <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-45659" rel="noreferrer noopener" target="_blank">CVE-2026-45659</a>, and the newly added <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-56164" rel="noreferrer noopener" target="_blank">CVE-2026-56164</a>, all of which have now been confirmed as exploited in the wild and added to the agency’s Known Exploited Vulnerabilities (<a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog" rel="noreferrer noopener" target="_blank">KEV</a>) catalog.</p>
-
-
-
-<h2 class="wp-block-heading"><a></a>Exploitation tells a different severity story</h2>
-
-
-
-<p class="wp-block-paragraph">The latest addition to CISA’s KEV catalog is CVE-2026-56164, an elevation-of-privilege vulnerability affecting Microsoft SharePoint Server. Although assigned a CVSS score of 5.3, the flaw can be exploited remotely without authentication, making it significantly more dangerous in practice than its severity rating alone suggests.</p>
-
-
-
-<p class="wp-block-paragraph">Microsoft has released security updates for supported SharePoint versions and recommended enabling the Antimalware Scan Interface (AMSI) integration to help detect malicious requests associated with exploitation attempts.</p>
-
-
-
-<p class="wp-block-paragraph">CISA also advised organizations to follow Microsoft’s incident response <a href="https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-56164" rel="noreferrer noopener" target="_blank">guidance</a>, hunt for indicators of compromise, and rotate SharePoint machine keys where appropriate, acknowledging that patching alone may not fully remove attacker persistence from already compromised servers.</p>
-
-
-
-<h2 class="wp-block-heading"><a></a>Older vulnerabilities remain active entry points</h2>
-
-
-
-<p class="wp-block-paragraph">Alongside the newly disclosed flaw, CISA reiterated the urgency of addressing CVE-2026-45659, an insecure deserialization vulnerability allowing RCE that Microsoft had marked as “exploitation less likely” in its <a href="https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45659" rel="noreferrer noopener" target="_blank">advisory</a> in May. Another old bug CISA flagged is CVE-2026-32201, an improper input validation flaw that allows spoofing over a network.</p>
-
-
-
-<p class="wp-block-paragraph">Both of these flaws are being actively exploited in the wild.</p>
-
-
-
-<p class="wp-block-paragraph">CISA called out organizations failing to catch up with SharePoint updates, adding that attackers are increasingly targeting N-days rather than relying exclusively on newly discovered zero-days.</p>
-
-
-
-<p class="wp-block-paragraph">On concerns of patching speed, Boehm noted resilience is becoming an architectural challenge as much as an operational one.</p>
-
-
-
-<p class="wp-block-paragraph">“Stop measuring this in patch speed,” he said. “That’s a race you eventually lose. Some of these landed as zero-days with no fix on day one, and the window between disclosure and exploitation keeps shrinking. So the board-level question isn’t whether a server gets compromised. Assume one will. It’s how much of the business a single-owned system can take down with it.”</p>
-
-
-
-<p class="wp-block-paragraph">Boehm argued that limiting network reachability through segmentation should sit alongside patch management and threat hunting as a core defensive strategy. Reachability, he said, is a control that organizations own, not patch timing. CISA has given Federal Civilian Executive Branch (FCEB) agencies three days to remediate CVE-2026-56164 under Binding Operational Directive (<a href="https://www.csoonline.com/article/4183750/cisa-tells-agencies-to-patch-smarter-not-harder-foreshadowing-broader-industry-practice.html">BOD)</a> 22-01.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 6d ago]]></description>
 </item>
 
 </channel>
