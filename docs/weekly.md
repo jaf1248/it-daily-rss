@@ -1,25 +1,30 @@
 # IT Weekly Intelligence Briefing
 **Period:** July 15 – July 22, 2026  
-**Generated:** 2026-07-22 05:47 UTC  
+**Generated:** 2026-07-22 08:23 UTC  
 **Items reviewed:** 134  
 
 ## ⚡ Top Actions This Week
 
-1. **Validate backups, confirm EDR coverage, and brief incident response team.**  
-   _Anubis ransomware claims Coca-Cola Fairlife attack, threatens data leak_  
+1. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
+   _Chick-fil-A discloses data breach after credential stuffing attacks_  
    Source: BleepingComputer  
 
 2. **Validate backups, confirm EDR coverage, and brief incident response team.**  
-   _Qilin Ransomware Attackers Exploit PAN-OS Authentication Bypass for Initial Access_  
-   Source: The Hacker News  
+   _Anubis ransomware claims Coca-Cola Fairlife attack, threatens data leak_  
+   Source: BleepingComputer  
 
 3. **Validate backups, confirm EDR coverage, and brief incident response team.**  
-   _Critical Palo Alto VPN bug now exploited by Qilin ransomware gang_  
-   Source: BleepingComputer  
+   _Qilin Ransomware Attackers Exploit PAN-OS Authentication Bypass for Initial Access_  
+   Source: The Hacker News  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [Chick-fil-A discloses data breach after credential stuffing attacks](https://www.bleepingcomputer.com/news/security/chick-fil-a-discloses-data-breach-after-credential-stuffing-attacks/)
+**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jul 22  
+**Why it matters:** Potential credential or data exposure.  
+**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
 ### [Anubis ransomware claims Coca-Cola Fairlife attack, threatens data leak](https://www.bleepingcomputer.com/news/security/anubis-ransomware-claims-coca-cola-fairlife-attack-threatens-data-leak/)
 **Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jul 21  
@@ -46,50 +51,45 @@
 **Why it matters:** Potential credential or data exposure.  
 **Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
-### [World's Largest AI Model Repository Hugging Face Breached by Autonomous AI Agent](https://thehackernews.com/2026/07/worlds-largest-ai-model-repository.html)
-**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Jul 20  
-**Why it matters:** Potential credential or data exposure.  
-**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
-
 ---
 
 ## 🟠 Important — Review This Week
 
-- [Critical SharePoint RCE flaw exploited to steal machine keys](https://www.bleepingcomputer.com/news/security/critical-sharepoint-rce-flaw-exploited-to-steal-machine-keys/)  
-  **BleepingComputer** · Jul 21 · _General awareness item._  
+- [CVE-2026-56434 NGINX ngx_http_ssi_module vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-56434)  
+  **Microsoft Security Response Center (MSRC)** · Jul 22 · _General awareness item._  
 
-- [Critical wp2shell WordPress flaws exploited to install webshells](https://www.bleepingcomputer.com/news/security/critical-wp2shell-wordpress-flaws-exploited-to-install-webshells/)  
-  **BleepingComputer** · Jul 21 · _General awareness item._  
+- [CVE-2026-42533 NGINX Map directive and Regex matching vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-42533)  
+  **Microsoft Security Response Center (MSRC)** · Jul 22 · _General awareness item._  
 
-- [AWS Kiro Flaw Let a Poisoned Web Page Rewrite Its Config and Run Code](https://thehackernews.com/2026/07/aws-kiro-flaw-let-poisoned-web-page.html)  
-  **The Hacker News** · Jul 21 · _General awareness item._  
+- [CVE-2026-59886 pyasn1: Uncontrolled resource consumption when converting decoded REAL values](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-59886)  
+  **Microsoft Security Response Center (MSRC)** · Jul 22 · _General awareness item._  
 
-- [Google Launches Gemini 3.5 Flash Cyber AI to Find and Fix Software Vulnerabilities](https://thehackernews.com/2026/07/google-launches-gemini-35-flash-cyber.html)  
-  **The Hacker News** · Jul 21 · _General awareness item._  
+- [CVE-2026-59884 pyasn1 BER/CER/DER decoder denial of service via unbounded long-form tag IDs](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-59884)  
+  **Microsoft Security Response Center (MSRC)** · Jul 22 · _General awareness item._  
 
-- [Critical SharePoint RCE CVE-2026-50522 Under Active Exploitation After Public PoC](https://thehackernews.com/2026/07/critical-sharepoint-rce-cve-2026-50522.html)  
-  **The Hacker News** · Jul 21 · _General awareness item._  
+- [CVE-2026-59885 pyasn1: Quadratic complexity in OBJECT IDENTIFIER and RELATIVE-OID processing allows denial of service](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-59885)  
+  **Microsoft Security Response Center (MSRC)** · Jul 22 · _General awareness item._  
 
-- [CVE-2026-58640 Windows NTFS Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-58640)  
-  **Microsoft Security Response Center (MSRC)** · Jul 21 · _General awareness item._  
+- [CVE-2026-57215 RabbitMQ: Direct-reply-to binding persistence can lead to unauthorized reply-channel injection and persistent phantom](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-57215)  
+  **Microsoft Security Response Center (MSRC)** · Jul 22 · _General awareness item._  
 
-- [CVE-2026-50462 Windows Ancillary Function Driver for WinSock Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-50462)  
-  **Microsoft Security Response Center (MSRC)** · Jul 21 · _General awareness item._  
+- [CVE-2026-57211 RabbitMQ: UNC SSRF affecting the management UI on Windows](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-57211)  
+  **Microsoft Security Response Center (MSRC)** · Jul 22 · _General awareness item._  
 
-- [Zimbra Patches Critical SNMP Command Injection and Four XSS Vulnerabilities](https://thehackernews.com/2026/07/zimbra-patches-critical-snmp-command.html)  
-  **The Hacker News** · Jul 21 · _General awareness item._  
+- [CVE-2026-57216 RabbitMQ: AMQP 1.0, AMQP 0-9-1, Stream Protocol loopback enforcement can lead to remote guest sessions due to listener-address loopback checks](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-57216)  
+  **Microsoft Security Response Center (MSRC)** · Jul 22 · _General awareness item._  
 
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [Police Dismantle Kratos Phishing Kit Built to Steal Microsoft 365 Sessions and Bypass MFA](https://thehackernews.com/2026/07/police-dismantle-kratos-phishing-kit.html) — The Hacker News
+- [Trojanized Newtonsoft.Json Fork Hides Game-Rigging Code in a Working Library](https://thehackernews.com/2026/07/trojanized-newtonsoftjson-fork-hides.html) — The Hacker News
 - [OpenAI says its AI models hacked Hugging Face during testing](https://www.bleepingcomputer.com/news/security/openai-says-its-ai-models-hacked-hugging-face-during-testing/) — BleepingComputer
+- [Microsoft Azure DevOps MCP Flaw Lets Hidden PR Comments Hijack AI Review Agents](https://thehackernews.com/2026/07/microsoft-azure-devops-mcp-flaw-lets.html) — The Hacker News
 - [ISC Stormcast For Wednesday, July 22nd, 2026 https://isc.sans.edu/podcastdetail/10018, (Wed, Jul 22nd)](https://isc.sans.edu/diary/rss/33174) — SANS Internet Storm Center
 - [LG to Ban Residential Proxies from Smart TV Apps](https://krebsonsecurity.com/2026/07/lg-to-ban-residential-proxies-from-smart-tv-apps/) — Krebs on Security
-- [Police dismantle Kratos phishing platform, arrest developer](https://www.bleepingcomputer.com/news/security/police-dismantle-kratos-phishing-platform-arrest-developer/) — BleepingComputer
-- [FakeGit campaign uses 7,600 GitHub repos to push SmartLoader malware](https://www.bleepingcomputer.com/news/security/fakegit-campaign-uses-7-600-github-repos-to-push-smartloader-malware/) — BleepingComputer
-- [Apple Fixes Hide My Email Bug That Exposed Real Addresses in Mail Logs](https://thehackernews.com/2026/07/apple-fixes-hide-my-email-bug-that.html) — The Hacker News
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 11 critical · 84 important · 39 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 12 critical · 81 important · 41 FYI_
