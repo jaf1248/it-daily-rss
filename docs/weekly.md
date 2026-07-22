@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
-**Period:** July 14 – July 21, 2026  
-**Generated:** 2026-07-21 23:54 UTC  
+**Period:** July 15 – July 22, 2026  
+**Generated:** 2026-07-22 02:24 UTC  
 **Items reviewed:** 134  
 
 ## ⚡ Top Actions This Week
@@ -83,12 +83,12 @@
 
 ## 🔵 FYI — General Awareness
 
+- [ISC Stormcast For Wednesday, July 22nd, 2026 https://isc.sans.edu/podcastdetail/10018, (Wed, Jul 22nd)](https://isc.sans.edu/diary/rss/33174) — SANS Internet Storm Center
+- [LG to Ban Residential Proxies from Smart TV Apps](https://krebsonsecurity.com/2026/07/lg-to-ban-residential-proxies-from-smart-tv-apps/) — Krebs on Security
 - [Police dismantle Kratos phishing platform, arrest developer](https://www.bleepingcomputer.com/news/security/police-dismantle-kratos-phishing-platform-arrest-developer/) — BleepingComputer
 - [FakeGit campaign uses 7,600 GitHub repos to push SmartLoader malware](https://www.bleepingcomputer.com/news/security/fakegit-campaign-uses-7-600-github-repos-to-push-smartloader-malware/) — BleepingComputer
 - [Apple Fixes Hide My Email Bug That Exposed Real Addresses in Mail Logs](https://thehackernews.com/2026/07/apple-fixes-hide-my-email-bug-that.html) — The Hacker News
 - [Closing the Identity Gaps in Critical Infrastructure Security](https://www.bleepingcomputer.com/news/security/closing-the-identity-gaps-in-critical-infrastructure-security/) — BleepingComputer
-- [Captive Portal Detection, (Tue, Jul 21st)](https://isc.sans.edu/diary/rss/33172) — SANS Internet Storm Center
-- [Open-Source Android AI Agents Could Let Invisible Screen Text Run Code on Host PCs](https://thehackernews.com/2026/07/open-source-android-ai-agents-could-let.html) — The Hacker News
 
 ---
 
