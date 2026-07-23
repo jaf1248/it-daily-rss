@@ -1,25 +1,30 @@
 # IT Weekly Intelligence Briefing
 **Period:** July 16 – July 23, 2026  
-**Generated:** 2026-07-23 12:23 UTC  
-**Items reviewed:** 135  
+**Generated:** 2026-07-23 15:07 UTC  
+**Items reviewed:** 136  
 
 ## ⚡ Top Actions This Week
 
 1. **Validate backups, confirm EDR coverage, and brief incident response team.**  
+   _Chaos Ransomware Uses msaRAT to Route C2 Traffic Through Headless Chrome and Edge_  
+   Source: The Hacker News  
+
+2. **Validate backups, confirm EDR coverage, and brief incident response team.**  
    _New msaRAT malware uses Chrome, Edge browsers to route C2 traffic_  
    Source: BleepingComputer  
 
-2. **Apply emergency patch or mitigation now; check vendor advisory for workarounds.**  
+3. **Apply emergency patch or mitigation now; check vendor advisory for workarounds.**  
    _Check Point warns of SmartConsole zero-day exploited in attacks_  
-   Source: BleepingComputer  
-
-3. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _South Korea discloses data breach impacting diplomats worldwide_  
    Source: BleepingComputer  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [Chaos Ransomware Uses msaRAT to Route C2 Traffic Through Headless Chrome and Edge](https://thehackernews.com/2026/07/chaos-ransomware-uses-msarat-to-route.html)
+**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Jul 23  
+**Why it matters:** Elevated ransomware risk across the sector.  
+**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
 
 ### [New msaRAT malware uses Chrome, Edge browsers to route C2 traffic](https://www.bleepingcomputer.com/news/security/new-msarat-malware-uses-chrome-edge-browsers-to-route-c2-traffic/)
 **Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jul 23  
@@ -46,14 +51,15 @@
 **Why it matters:** Elevated ransomware risk across the sector.  
 **Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
 
-### [CISA orders urgent action on actively exploited Langflow RCE flaw](https://www.bleepingcomputer.com/news/security/cisa-orders-feds-to-patch-actively-exploited-langflow-rce-flaw/)
-**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jul 22  
-**Why it matters:** General awareness item.  
-**Recommended action:** Prioritize patching of affected systems; check for internet-exposed attack surface.  
-
 ---
 
 ## 🟠 Important — Review This Week
+
+- [When the "Autonomous Attacker" Is Your Own AI Model, (Thu, Jul 23rd)](https://isc.sans.edu/diary/rss/33180)  
+  **SANS Internet Storm Center** · Jul 23 · _General awareness item._  
+
+- [Claude Cowork Flaw Could Let AI Agent Escape Its VM and Access Mac Files](https://thehackernews.com/2026/07/claude-cowork-flaw-could-let-ai-agent.html)  
+  **The Hacker News** · Jul 23 · _General awareness item._  
 
 - [New RefluXFS Linux flaw lets attackers gain root privileges](https://www.bleepingcomputer.com/news/linux/new-refluxfs-linux-flaw-lets-attackers-gain-root-privileges/)  
   **BleepingComputer** · Jul 23 · _General awareness item._  
@@ -73,23 +79,17 @@
 - [CVE-2026-16277 Rpcbind: rpcbind: stack buffer overflow in rpcinfo rpcbaddrlist()](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-16277)  
   **Microsoft Security Response Center (MSRC)** · Jul 23 · _General awareness item._  
 
-- [CVE-2026-12080 Qemu-kvm: qemu-guest-agent: local privilege escalation via symlink attack in guest-ssh-add-authorized-keys](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-12080)  
-  **Microsoft Security Response Center (MSRC)** · Jul 23 · _General awareness item._  
-
-- [CVE-2026-15788 WCOW cache mount source selector resolves NTFS junctions outside of cache root](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-15788)  
-  **Microsoft Security Response Center (MSRC)** · Jul 23 · _General awareness item._  
-
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [FedRAMP Rev5 Is Ending: What the 20x Transition Really Requires](https://www.bleepingcomputer.com/news/security/fedramp-rev5-is-ending-what-the-20x-transition-really-requires/) — BleepingComputer
+- [EU fines Google $1 billion for search, app store antitrust violations](https://www.bleepingcomputer.com/news/google/eu-fines-google-1-billion-for-digital-markets-act-breaches-in-search-and-play-store/) — BleepingComputer
+- [China-Nexus JadeProx Uses New TriBack Loader in Government and Healthcare Attacks](https://thehackernews.com/2026/07/china-nexus-jadeprox-uses-new-triback.html) — The Hacker News
 - [How Synthetic Identity Fraud is Coming for Machine Identities](https://thehackernews.com/2026/07/how-synthetic-identity-fraud-is-coming.html) — The Hacker News
 - [Attackers Weaponize GitHub Actions Runners to Target cPanel and WHM Servers](https://thehackernews.com/2026/07/attackers-weaponize-github-actions.html) — The Hacker News
 - [Google Adds Selfie Video Recovery for Users Locked Out of Their Accounts](https://thehackernews.com/2026/07/google-adds-selfie-video-recovery-for.html) — The Hacker News
-- [Microsoft working to fix Exchange Online mailbox quarantine issue](https://www.bleepingcomputer.com/news/microsoft/microsoft-working-to-fix-exchange-online-mailbox-quarantine-issue/) — BleepingComputer
-- [ISC Stormcast For Thursday, July 23rd, 2026 https://isc.sans.edu/podcastdetail/10020, (Thu, Jul 23rd)](https://isc.sans.edu/diary/rss/33178) — SANS Internet Storm Center
-- [Upbound says hack caused $13 million in fraudulent Acima leases](https://www.bleepingcomputer.com/news/security/upbound-says-hack-caused-13-million-in-fraudulent-acima-leases/) — BleepingComputer
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 14 critical · 84 important · 37 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 13 critical · 86 important · 37 FYI_
