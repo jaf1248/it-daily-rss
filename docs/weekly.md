@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
 **Period:** July 16 – July 23, 2026  
-**Generated:** 2026-07-23 22:10 UTC  
+**Generated:** 2026-07-23 23:58 UTC  
 **Items reviewed:** 136  
 
 ## ⚡ Top Actions This Week
@@ -61,22 +61,22 @@
 - [Microsoft 365 outage affects Teams, SharePoint and other services](https://www.bleepingcomputer.com/news/microsoft/microsoft-365-outage-affects-teams-sharepoint-and-other-services/)  
   **BleepingComputer** · Jul 23 · _Service continuity risk to users._  
 
-- [When the "Autonomous Attacker" Is Your Own AI Model, (Thu, Jul 23rd)](https://isc.sans.edu/diary/rss/33180)  
-  **SANS Internet Storm Center** · Jul 23 · _General awareness item._  
-
-- [Claude Cowork Flaw Could Let AI Agent Escape Its VM and Access Mac Files](https://thehackernews.com/2026/07/claude-cowork-flaw-could-let-ai-agent.html)  
-  **The Hacker News** · Jul 23 · _General awareness item._  
-
-- [New RefluXFS Linux flaw lets attackers gain root privileges](https://www.bleepingcomputer.com/news/linux/new-refluxfs-linux-flaw-lets-attackers-gain-root-privileges/)  
-  **BleepingComputer** · Jul 23 · _General awareness item._  
-
-- [CVE-2026-54171 Excon: redact additional sensitive/risky headers when following redirects](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-54171)  
+- [CVE-2026-56167 Azure AI Search Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-56167)  
   **Microsoft Security Response Center (MSRC)** · Jul 23 · _General awareness item._  
 
-- [CVE-2026-44508 Rejected reason: ** REJECT ** DO NOT USE THIS CANDIDATE NUMBER. ConsultIDs: CVE-2026-43618. Reason: This candidate is a duplicate of CVE-2026-43618. Notes: All CVE users should reference CVE-2026-43618 instead of this candidate.](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-44508)  
+- [CVE-2026-56163 Microsoft Azure Kubernetes Service Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-56163)  
   **Microsoft Security Response Center (MSRC)** · Jul 23 · _General awareness item._  
 
-- [CVE-2026-44510 Rejected reason: ** REJECT ** DO NOT USE THIS CANDIDATE NUMBER. ConsultIDs: CVE-2026-43620. Reason: This candidate is a duplicate of CVE-2026-43620. Notes: All CVE users should reference CVE-2026-43620 instead of this candidate.](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-44510)  
+- [CVE-2026-56165 Microsoft Account Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-56165)  
+  **Microsoft Security Response Center (MSRC)** · Jul 23 · _General awareness item._  
+
+- [CVE-2026-54120 Microsoft Surface Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-54120)  
+  **Microsoft Security Response Center (MSRC)** · Jul 23 · _General awareness item._  
+
+- [CVE-2026-56160 Azure Red Hat OpenShift (ARO) Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-56160)  
+  **Microsoft Security Response Center (MSRC)** · Jul 23 · _General awareness item._  
+
+- [CVE-2026-35425 Azure API Management (APIM) Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-35425)  
   **Microsoft Security Response Center (MSRC)** · Jul 23 · _General awareness item._  
 
 ---
