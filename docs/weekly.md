@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
 **Period:** July 16 – July 23, 2026  
-**Generated:** 2026-07-23 00:06 UTC  
+**Generated:** 2026-07-23 04:13 UTC  
 **Items reviewed:** 135  
 
 ## ⚡ Top Actions This Week
@@ -83,12 +83,12 @@
 
 ## 🔵 FYI — General Awareness
 
+- [ISC Stormcast For Thursday, July 23rd, 2026 https://isc.sans.edu/podcastdetail/10020, (Thu, Jul 23rd)](https://isc.sans.edu/diary/rss/33178) — SANS Internet Storm Center
 - [Upbound says hack caused $13 million in fraudulent Acima leases](https://www.bleepingcomputer.com/news/security/upbound-says-hack-caused-13-million-in-fraudulent-acima-leases/) — BleepingComputer
 - [GitHub Cuts Public Bug Bounty Payouts, Moves Top Rewards to VIP Tier](https://thehackernews.com/2026/07/github-cuts-public-bug-bounty-payouts.html) — The Hacker News
 - [Rondo Meets Geoserver, (Wed, Jul 22nd)](https://isc.sans.edu/diary/rss/33176) — SANS Internet Storm Center
 - [Adobe Chrome extension flaw let sites access private WhatsApp chats](https://www.bleepingcomputer.com/news/security/adobe-chrome-extension-flaw-let-sites-access-private-whatsapp-chats/) — BleepingComputer
 - [The Fastest Path to AI Adoption Runs Through Security](https://thehackernews.com/2026/07/the-fastest-path-to-ai-adoption-runs.html) — The Hacker News
-- [Why Modern SOCs Need Multi-Layered Detections](https://thehackernews.com/2026/07/why-modern-socs-need-multi-layered.html) — The Hacker News
 
 ---
 
