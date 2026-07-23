@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
 **Period:** July 16 – July 23, 2026  
-**Generated:** 2026-07-23 04:13 UTC  
+**Generated:** 2026-07-23 07:31 UTC  
 **Items reviewed:** 135  
 
 ## ⚡ Top Actions This Week
@@ -55,29 +55,29 @@
 
 ## 🟠 Important — Review This Week
 
-- [Ubuntu snap-confine Flaw Could Give Local Users Root on Default Desktop Installs](https://thehackernews.com/2026/07/ubuntu-snap-confine-flaw-could-give.html)  
-  **The Hacker News** · Jul 22 · _General awareness item._  
+- [CVE-2026-54171 Excon: redact additional sensitive/risky headers when following redirects](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-54171)  
+  **Microsoft Security Response Center (MSRC)** · Jul 23 · _General awareness item._  
 
-- [Adobe Acrobat Extension Flaw Let Malicious Sites Read WhatsApp Web Data](https://thehackernews.com/2026/07/adobe-acrobat-extension-flaw-let.html)  
-  **The Hacker News** · Jul 22 · _General awareness item._  
+- [CVE-2026-44508 Rejected reason: ** REJECT ** DO NOT USE THIS CANDIDATE NUMBER. ConsultIDs: CVE-2026-43618. Reason: This candidate is a duplicate of CVE-2026-43618. Notes: All CVE users should reference CVE-2026-43618 instead of this candidate.](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-44508)  
+  **Microsoft Security Response Center (MSRC)** · Jul 23 · _General awareness item._  
 
-- [New InfraTrust report reveals infrastructure flaws admins should patch first](https://www.bleepingcomputer.com/news/security/new-infratrust-report-reveals-infrastructure-flaws-admins-should-patch-first/)  
-  **BleepingComputer** · Jul 22 · _General awareness item._  
+- [CVE-2026-44510 Rejected reason: ** REJECT ** DO NOT USE THIS CANDIDATE NUMBER. ConsultIDs: CVE-2026-43620. Reason: This candidate is a duplicate of CVE-2026-43620. Notes: All CVE users should reference CVE-2026-43620 instead of this candidate.](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-44510)  
+  **Microsoft Security Response Center (MSRC)** · Jul 23 · _General awareness item._  
 
-- [CVE-2026-50407 Windows Resilient File System (ReFS) Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-50407)  
-  **Microsoft Security Response Center (MSRC)** · Jul 22 · _General awareness item._  
+- [CVE-2026-44509 Rejected reason: ** REJECT ** DO NOT USE THIS CANDIDATE NUMBER. ConsultIDs: CVE-2026-43619. Reason: This candidate is a duplicate of CVE-2026-43619. Notes: All CVE users should reference CVE-2026-43619 instead of this candidate.](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-44509)  
+  **Microsoft Security Response Center (MSRC)** · Jul 23 · _General awareness item._  
 
-- [CVE-2026-50377 Windows Kernel Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-50377)  
-  **Microsoft Security Response Center (MSRC)** · Jul 22 · _General awareness item._  
+- [CVE-2026-16277 Rpcbind: rpcbind: stack buffer overflow in rpcinfo rpcbaddrlist()](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-16277)  
+  **Microsoft Security Response Center (MSRC)** · Jul 23 · _General awareness item._  
 
-- [CVE-2026-50466 Microsoft Brokering File System Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-50466)  
-  **Microsoft Security Response Center (MSRC)** · Jul 22 · _General awareness item._  
+- [CVE-2026-12080 Qemu-kvm: qemu-guest-agent: local privilege escalation via symlink attack in guest-ssh-add-authorized-keys](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-12080)  
+  **Microsoft Security Response Center (MSRC)** · Jul 23 · _General awareness item._  
 
-- [CVE-2026-50441 Windows Resilient File System (ReFS) Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-50441)  
-  **Microsoft Security Response Center (MSRC)** · Jul 22 · _General awareness item._  
+- [CVE-2026-15788 WCOW cache mount source selector resolves NTFS junctions outside of cache root](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-15788)  
+  **Microsoft Security Response Center (MSRC)** · Jul 23 · _General awareness item._  
 
-- [CVE-2026-50458 Microsoft Brokering File System Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-50458)  
-  **Microsoft Security Response Center (MSRC)** · Jul 22 · _General awareness item._  
+- [CVE-2026-26081 HAProxy Community Edition 3.0 through 3.3 before 3.3.3 lacks a length check for the NEW_TOKEN format. HAProxy Enterprise and ALOHA are also affected.](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-26081)  
+  **Microsoft Security Response Center (MSRC)** · Jul 23 · _General awareness item._  
 
 ---
 
