@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
 **Period:** July 16 – July 23, 2026  
-**Generated:** 2026-07-23 10:19 UTC  
+**Generated:** 2026-07-23 12:23 UTC  
 **Items reviewed:** 135  
 
 ## ⚡ Top Actions This Week
@@ -55,6 +55,9 @@
 
 ## 🟠 Important — Review This Week
 
+- [New RefluXFS Linux flaw lets attackers gain root privileges](https://www.bleepingcomputer.com/news/linux/new-refluxfs-linux-flaw-lets-attackers-gain-root-privileges/)  
+  **BleepingComputer** · Jul 23 · _General awareness item._  
+
 - [CVE-2026-54171 Excon: redact additional sensitive/risky headers when following redirects](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-54171)  
   **Microsoft Security Response Center (MSRC)** · Jul 23 · _General awareness item._  
 
@@ -76,19 +79,16 @@
 - [CVE-2026-15788 WCOW cache mount source selector resolves NTFS junctions outside of cache root](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-15788)  
   **Microsoft Security Response Center (MSRC)** · Jul 23 · _General awareness item._  
 
-- [CVE-2026-26081 HAProxy Community Edition 3.0 through 3.3 before 3.3.3 lacks a length check for the NEW_TOKEN format. HAProxy Enterprise and ALOHA are also affected.](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-26081)  
-  **Microsoft Security Response Center (MSRC)** · Jul 23 · _General awareness item._  
-
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [How Synthetic Identity Fraud is Coming for Machine Identities](https://thehackernews.com/2026/07/how-synthetic-identity-fraud-is-coming.html) — The Hacker News
+- [Attackers Weaponize GitHub Actions Runners to Target cPanel and WHM Servers](https://thehackernews.com/2026/07/attackers-weaponize-github-actions.html) — The Hacker News
+- [Google Adds Selfie Video Recovery for Users Locked Out of Their Accounts](https://thehackernews.com/2026/07/google-adds-selfie-video-recovery-for.html) — The Hacker News
 - [Microsoft working to fix Exchange Online mailbox quarantine issue](https://www.bleepingcomputer.com/news/microsoft/microsoft-working-to-fix-exchange-online-mailbox-quarantine-issue/) — BleepingComputer
 - [ISC Stormcast For Thursday, July 23rd, 2026 https://isc.sans.edu/podcastdetail/10020, (Thu, Jul 23rd)](https://isc.sans.edu/diary/rss/33178) — SANS Internet Storm Center
 - [Upbound says hack caused $13 million in fraudulent Acima leases](https://www.bleepingcomputer.com/news/security/upbound-says-hack-caused-13-million-in-fraudulent-acima-leases/) — BleepingComputer
-- [GitHub Cuts Public Bug Bounty Payouts, Moves Top Rewards to VIP Tier](https://thehackernews.com/2026/07/github-cuts-public-bug-bounty-payouts.html) — The Hacker News
-- [Rondo Meets Geoserver, (Wed, Jul 22nd)](https://isc.sans.edu/diary/rss/33176) — SANS Internet Storm Center
-- [Adobe Chrome extension flaw let sites access private WhatsApp chats](https://www.bleepingcomputer.com/news/security/adobe-chrome-extension-flaw-let-sites-access-private-whatsapp-chats/) — BleepingComputer
 
 ---
 

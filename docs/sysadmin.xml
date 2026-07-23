@@ -3,81 +3,14 @@
 <channel>
   <title>Joe SysAdmin and Operations</title>
   <description>Operational IT changes, Microsoft updates, outages, and infrastructure issues.</description>
-  <lastBuildDate>Thu, 23 Jul 2026 10:18:55 +0000</lastBuildDate>
+  <lastBuildDate>Thu, 23 Jul 2026 12:22:08 +0000</lastBuildDate>
   
 <item>
   <title>🔵 Microsoft working to fix Exchange Online mailbox quarantine issue</title>
   <link>https://www.bleepingcomputer.com/news/microsoft/microsoft-working-to-fix-exchange-online-mailbox-quarantine-issue/</link>
   <pubDate>Thu, 23 Jul 2026 09:20:10 +0000</pubDate>
   <source>BleepingComputer</source>
-  <description><![CDATA[<b>Why this matters: Could impact email access or mail flow — monitor delivery and client issues.</b><br/>Microsoft is working to resolve an ongoing Exchange Online issue that has been mistakenly quarantining customers' mailboxes since Sunday. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Azure Files, Reimagined: Top-Level Shares with Per-Share Networking, Billing, and Scale</title>
-  <link>https://techcommunity.microsoft.com/t5/itops-talk-blog/azure-files-reimagined-top-level-shares-with-per-share/ba-p/4535079</link>
-  <pubDate>Thu, 23 Jul 2026 07:00:00 +0000</pubDate>
-  <source>Microsoft Tech Community IT Ops</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><p>Hello Folks!</p>
-<p>If you have ever wrestled with Azure Files inside a storage account, juggling shared RBAC, shared networking, and shared IOPS across a pile of shares that really should not live together, this session is going to address all that. During Microsoft Azure Infra Summit 2026, Vincent Du and Will Gries (both Product Managers on the Azure Files team) walked us through the new Microsoft.FileShares resource provider, a management model that promotes the file share itself to a top-level Azure resource.</p>
-<p>📺 <strong>Watch the session:</strong></p>
-<p>&nbsp;</p>
-<div class="lia-embeded-content" contenteditable="false">
-</div>
-<h2>Why IT Pros Should Care</h2>
-<p>For years, file shares lived inside a storage account, and that storage account dictated a lot of decisions for you. If one team needed a private endpoint and another needed a service endpoint, you either compromised or you created another storage account. If one share got hot and consumed all the IOPS, the other shares felt it too. Vincent and Will are on the team that built the new model to remove that compromise.</p>
-<p>Here is what changes for you as an IT pro:</p>
-<ul>
-<li>Each file share is its own Azure resource with its own RBAC, networking, billing, IOPS, and throughput.</li>
-<li>Per-share cost shows up directly in Azure Cost Management’s per-resource view, no more Excel guesswork.</li>
-<li>Encryption in transit is on by default for NFS shares, at no extra cost.</li>
-<li>Provisioning is dramatically faster. In their head-to-head demo, 200 shares finished in about 50 seconds on the new model versus about 720 seconds with the classic flow.</li>
-<li>A new MCP server lets you create and manage shares from GitHub Copilot in VS Code with natural language.</li>
-</ul>
-<p>In short, the new model trades the storage-account-as-gatekeeper pattern for something that feels a lot more like the rest of Azure (think VMs and disks, where the resource you care about is the resource you actually manage).</p>
-<h2>What Microsoft.FileShares Does, a Technical Overview</h2>
-<p>The new Microsoft.FileShares resource provider lets you deploy a file share without first standing up a storage account. When you go into the Azure portal, search for “File share,” and click create, you fill out a single create blade with the things that actually matter for that share: name, region, redundancy (LRS or ZRS), provisioned capacity, IOPS and throughput, networking, and tags. Microsoft Learn confirms the provisioned capacity range is 32 GiB to 262,144 GiB, and only LRS and ZRS redundancy are available at launch (see the Create a file share doc linked below).</p>
-<p>At GA, the new experience supports NFS 4.1 on the SSD media tier. SMB support, HDD support, customer-managed key encryption at rest, soft delete, and the AKS CSI driver integration are all on the roadmap and called out as the most-requested follow-ups. If you need those features today, the classic file share inside a storage account is still there for you.</p>
-<p>In the portal, Vincent showed off a small but meaningful detail: the icon color changed from blue (classic) to purple (new). It is a small thing, but when you are scanning a resource group, that visual cue saves you a click.</p>
-<h2>How It Works Under the Hood</h2>
-<p>The new model is built on the provisioned v2 billing structure. Microsoft Learn describes provisioned v2 as a billing model where you independently provision storage, IOPS, and throughput, and you pay for what you provision regardless of how much you actually use. This is a real shift from the older provisioned v1 model, where IOPS and throughput were a function of how much storage you provisioned.</p>
-<p>Will walked through the math. In his example, provisioning 14 TiB of storage on v1 gave 17,000 IOPS, about 1.5 GB/s throughput, and a bill of roughly $2,297. Moving to v2 with the exact same numbers was already noticeably cheaper. Then, because v2 lets you tune storage, IOPS, and throughput separately, he provisioned the exact storage he needed with slightly less IOPS and throughput, dropping the bill to roughly a third. For database-hot workloads you can dial IOPS up; for hot archive scenarios you can dial them down to the minimum. That kind of flexibility is genuinely useful.</p>
-<p>Encryption in transit deserves its own callout. The new shares default to encrypted NFS mounts using the AZNFS mount helper. Microsoft Learn explains that AZNFS wraps the NFS connection in a Stunnel-based TLS tunnel using AES-GCM, so you get TLS protection without needing Kerberos or external authentication. The helper installs cleanly on Ubuntu, RHEL, SUSE, Rocky, Oracle Linux, Alma Linux, and Azure Linux. If a workload genuinely cannot use the encrypted mount, you can uncheck the box and fall back to a traditional NFS mount.</p>
-<p>Networking is per share. You can attach a service endpoint or a private endpoint to each individual share, which means you can put a strict private-endpoint-only share next to a service-endpoint share for dev/test, all in the same resource group, without compromise.</p>
-<p>On the request side, classic shares throttle with a fixed window (you can burst, then you are locked out for the rest of the window). The new model uses a token-bucket algorithm (the same one Azure Resource Manager itself uses), which means you get a sustained refill rate. The team also gave you a separate delete bucket, so a big cleanup operation does not starve writes. That detail matters more than it sounds: batch cleanups against the classic model regularly crowd out new share creation.</p>
-<h2>Real-World Value</h2>
-<p>Where does this actually pay off? A few honest scenarios:</p>
-<ul>
-<li><strong>Mission-critical and regulated workloads.</strong> A healthcare org with workloads at different sensitivity levels can put strict private-endpoint-only shares next to less sensitive service-endpoint shares without the storage-account ceiling.</li>
-<li><strong>Chargeback and showback.</strong> With per-share resources, finance can pull a cost report that lines up to the team or project that owns each share. No more saying “we cannot itemize, the storage account is shared.”</li>
-<li><strong>High-density tenants.</strong> The classic model effectively caps you at 34 file shares on an SSD provisioned v2 storage account (because of IOPS minimums) and 50 absolute. The new model goes up to 10,000 shares per subscription per region. That is a different game.</li>
-<li><strong>Tuned database and analytics shares.</strong> Provisioned v2 lets you right-size IOPS to the workload. As Will showed, that can drop the bill to roughly a third for the right shape of workload.</li>
-<li><strong>Faster deployment automation.</strong> A 14x improvement on a 200-share deployment is not a micro-optimization. If you spin up environments for CI, training, or per-customer tenants, that adds up quickly.</li>
-</ul>
-<p>The honest tradeoff: today, the new model is NFS-only on SSD. If you need SMB, HDD, customer-managed keys for NFS, or AKS CSI driver support, stay on the classic model for now. The team was upfront about that, and the GA-and-then-iterate roadmap is clear.</p>
-<h2>Getting Started</h2>
-<p>Here is the concrete path:</p>
-<ol>
-<li>Register the Microsoft.FileShares and Microsoft.Storage resource providers on your subscription (Subscriptions, Resource providers, Register).</li>
-<li>From the Azure portal, search for “File share” in the marketplace and click Create. Pick LRS or ZRS, set the capacity between 32 GiB and 262 TiB, and either accept the recommended IOPS/throughput or set them manually.</li>
-<li>On the Advanced tab, leave “Require encryption in transit” enabled (it is on by default) and pick a custom mount name if you want one distinct from the resource name.</li>
-<li>On the Networking tab, attach a service endpoint or a private endpoint, per share.</li>
-<li>Mount it on your Linux VM with the AZNFS mount helper. The portal generates the exact command for your distribution.</li>
-<li>If you live in IaC land, the Microsoft.FileShares ARM and Bicep types are available, and Terraform support is coming.</li>
-<li>If you live in AI-assisted dev land, install the Azure MCP server and ask Copilot in VS Code to create a share for you, pointing at an existing VNet.</li>
-</ol>
-<h2>Resources</h2>
-<ul>
-<li><a class="lia-external-url" href="https://learn.microsoft.com/azure/storage/files/create-file-share" target="_blank">Create an Azure file share with Microsoft.FileShares</a></li>
-<li><a class="lia-external-url" href="https://learn.microsoft.com/azure/storage/files/understanding-billing" target="_blank">Understand Azure Files billing (provisioned v1 and v2)</a></li>
-<li><a class="lia-external-url" href="https://learn.microsoft.com/azure/storage/files/encryption-in-transit-for-nfs-shares" target="_blank">Encryption in Transit for NFS Azure file shares</a></li>
-<li><a class="lia-external-url" href="https://learn.microsoft.com/azure/storage/files/files-nfs-protocol" target="_blank">NFS file shares in Azure Files (protocol overview)</a></li>
-<li><a class="lia-external-url" href="https://learn.microsoft.com/azure/storage/files/" target="_blank">Azure Files documentation home</a></li>
-</ul>
-<h2>Keep Learning at the Summit</h2>
-<p>Catch the full <a class="lia-external-url" href="https://www.youtube.com/playlist?list=PLjt5SKzX1iI8con7FJDB56G6hHqxGm7ki" target="_blank">Microsoft Azure Infra Summit 2026 session playlist</a> here.</p>
-<p>Cheers!</p>
-<p>Pierre Roman</p><br/><br/><b>Source:</b> Microsoft Tech Community IT Ops &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Could impact email access or mail flow — monitor delivery and client issues.</b><br/>Microsoft is working to resolve an ongoing Exchange Online issue that has been mistakenly quarantining customers' mailboxes since Sunday. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
 </item>
 
 <item>
@@ -85,7 +18,7 @@
   <link>https://arstechnica.com/gaming/2026/07/microsoft-brings-original-xbox-backward-compatibility-to-windows-pcs/</link>
   <pubDate>Wed, 22 Jul 2026 20:36:19 +0000</pubDate>
   <source>Ars Technica</source>
-  <description><![CDATA[<b>Why this matters: Operational impact possible — watch for changes that generate tickets.</b><br/>First four compatible titles can be run with an 11-year-old graphics card.<br/><br/><b>Source:</b> Ars Technica &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Operational impact possible — watch for changes that generate tickets.</b><br/>First four compatible titles can be run with an 11-year-old graphics card.<br/><br/><b>Source:</b> Ars Technica &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 15h ago]]></description>
 </item>
 
 <item>
@@ -230,7 +163,7 @@
 <p><strong>Documentation:</strong> <a href="https://learn.microsoft.com/azure/architecture/security/ransomware-resilient-backup-architecture/" rel="noopener noreferrer" target="_blank">Design a ransomware-resilient backup architecture</a> | <a href="https://learn.microsoft.com/azure/backup/azure-backup-data-protection-best-practices" rel="noopener noreferrer" target="_blank">Azure Backup security best practices</a> | <a href="https://learn.microsoft.com/azure/backup/backup-azure-system-state" rel="noopener noreferrer" target="_blank">Back up Windows Server system state</a></p>
 <p>---</p>
 <p>This isn't everything you can do, but it's a start. What other techniques do you use to harden your Windows Server deployments?&nbsp;</p>
-<p>&nbsp;</p><br/><br/><b>Source:</b> Microsoft Tech Community IT Ops &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
+<p>&nbsp;</p><br/><br/><b>Source:</b> Microsoft Tech Community IT Ops &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 15h ago]]></description>
 </item>
 
 <item>
@@ -238,7 +171,7 @@
   <link>https://arstechnica.com/science/2026/07/what-happens-when-you-try-to-chop-a-photon-in-half/</link>
   <pubDate>Wed, 22 Jul 2026 14:17:08 +0000</pubDate>
   <source>Ars Technica</source>
-  <description><![CDATA[<b>Why this matters: Operational impact possible — watch for changes that generate tickets.</b><br/>A mirror that moves mid-photon could release a shower of new photons.<br/><br/><b>Source:</b> Ars Technica &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 20h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Operational impact possible — watch for changes that generate tickets.</b><br/>A mirror that moves mid-photon could release a shower of new photons.<br/><br/><b>Source:</b> Ars Technica &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 22h ago]]></description>
 </item>
 
 <item>
@@ -246,7 +179,7 @@
   <link>https://www.bleepingcomputer.com/news/security/new-infratrust-report-reveals-infrastructure-flaws-admins-should-patch-first/</link>
   <pubDate>Wed, 22 Jul 2026 14:15:00 +0000</pubDate>
   <source>BleepingComputer</source>
-  <description><![CDATA[<b>Why this matters: Operational impact possible — watch for changes that generate tickets.</b><br/>Eclypsium has launched InfraTrust, a new infrastructure cybersecurity knowledge base and monthly InfraTrust Pulse report designed to help organizations prioritize vulnerabilities affecting infrastructure, firmware, networking, and edge devices. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 20h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Operational impact possible — watch for changes that generate tickets.</b><br/>Eclypsium has launched InfraTrust, a new infrastructure cybersecurity knowledge base and monthly InfraTrust Pulse report designed to help organizations prioritize vulnerabilities affecting infrastructure, firmware, networking, and edge devices. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 22h ago]]></description>
 </item>
 
 <item>
@@ -254,7 +187,7 @@
   <link>https://www.bleepingcomputer.com/news/security/adobe-chrome-extension-flaw-let-sites-access-private-whatsapp-chats/</link>
   <pubDate>Wed, 22 Jul 2026 13:22:20 +0000</pubDate>
   <source>BleepingComputer</source>
-  <description><![CDATA[<b>Why this matters: Could impact sign-ins/MFA/Conditional Access — watch for login issues.</b><br/>The Adobe Acrobat extension for Chrome could be used to access conversations and data rendered in WhatsApp Web without any form of authentication. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 20h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Could impact sign-ins/MFA/Conditional Access — watch for login issues.</b><br/>The Adobe Acrobat extension for Chrome could be used to access conversations and data rendered in WhatsApp Web without any form of authentication. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 22h ago]]></description>
 </item>
 
 <item>
@@ -262,7 +195,7 @@
   <link>https://www.bleepingcomputer.com/news/microsoft/microsoft-exchange-2016-and-2019-esu-program-ends-in-october/</link>
   <pubDate>Wed, 22 Jul 2026 10:44:52 +0000</pubDate>
   <source>BleepingComputer</source>
-  <description><![CDATA[<b>Why this matters: Could impact email access or mail flow — monitor delivery and client issues.</b><br/>Microsoft has reminded customers that it will stop shipping security updates for Exchange 2016 and 2019 through the Extended Security Update (ESU) program in October. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 23h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Could impact email access or mail flow — monitor delivery and client issues.</b><br/>Microsoft has reminded customers that it will stop shipping security updates for Exchange 2016 and 2019 through the Extended Security Update (ESU) program in October. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
@@ -347,14 +280,6 @@
   <pubDate>Wed, 22 Jul 2026 05:19:20 +0000</pubDate>
   <source>BleepingComputer</source>
   <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/>OpenAI says its AI models, including GPT‑5.6 Sol and a pre-release model, hacked into the Hugging Face artificial intelligence repository while being tested in a sandboxed testing environment. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Police dismantle Kratos phishing platform, arrest developer</title>
-  <link>https://www.bleepingcomputer.com/news/security/police-dismantle-kratos-phishing-platform-arrest-developer/</link>
-  <pubDate>Tue, 21 Jul 2026 23:07:33 +0000</pubDate>
-  <source>BleepingComputer</source>
-  <description><![CDATA[<b>Why this matters: Credential/phishing risk — reinforce MFA and user awareness training.</b><br/>Authorities in Germany and the U.S. dismantled the central infrastructure of Kratos, a phishing-as-a-service (PhaaS) platform with global reach, and its developer was arrested in Indonesia. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>

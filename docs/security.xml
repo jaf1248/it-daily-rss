@@ -3,14 +3,31 @@
 <channel>
   <title>Joe — Security Intelligence</title>
   <description>Cybersecurity threats, vulnerabilities, breaches, and Microsoft security updates.</description>
-  <lastBuildDate>Thu, 23 Jul 2026 10:18:51 +0000</lastBuildDate>
+  <lastBuildDate>Thu, 23 Jul 2026 12:22:05 +0000</lastBuildDate>
   
+<item>
+  <title>🔴 CVE-2026-16232: Critical Check Point SmartConsole Authentication Bypass Exploited in the Wild</title>
+  <link>https://www.rapid7.com/blog/post/etr-cve-2026-16232-critical-check-point-smartconsole-authentication-bypass-exploited-in-the-wild</link>
+  <pubDate>Thu, 23 Jul 2026 11:57:30 +0000</pubDate>
+  <source>Rapid7 Blog</source>
+  <description><![CDATA[<b>Why this matters: Auth bypass — review access controls and check for unauthorized access.</b><br/><h2 style="direction: ltr;">Overview</h2><p style="direction: ltr;"><span style="font-size: undefined;">On July 22, 2026, Check Point </span><a href="https://blog.checkpoint.com/security/security-advisory-action-required-active-exploitation-of-check-point-smartconsole-authentication-bypass-cve-2026-16232/"><span style="font-size: undefined;">published a security advisory</span></a><span style="font-size: undefined;"> for multiple vulnerabilities affecting Security Management, Multi-Domain Management, and firewall products. The most urgent of these is </span><a href="https://www.rapid7.com/db/vulnerabilities/cve-2026-16232/"><span style="font-size: undefined;">CVE-2026-16232</span></a><span style="font-size: undefined;">, an authentication bypass in the SmartConsole login process classified as improper authentication (</span><a href="https://cwe.mitre.org/data/definitions/287.html"><span style="font-size: undefined;">CWE-287</span></a><span style="font-size: undefined;">). CVE-2026-16232 has been assigned a critical CVSS score of 9.1. The vulnerability allows an unauthenticated remote attacker to obtain an application login token and authenticate to the management server with full administrative privileges, enabling modification of security policies and configurations.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">Check Point has confirmed that CVE-2026-16232 is being actively exploited in the wild, affecting what the vendor describes as a small number of customers. Remote exploitation requires network access to the Management Server IP address in environments that do not restrict Trusted Clients. On the same day as the advisory, CVE-2026-16232 was </span><a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-16232"><span style="font-size: undefined;">added</span></a><span style="font-size: undefined;"> to the U.S. Cybersecurity and Infrastructure Security Agency's (CISA) list of known exploited vulnerabilities (KEV), with a remediation due date of July 25, 2026, giving organizations only three days to respond.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">The advisory addresses three vulnerabilities in total:</span></p><table><colgroup><col style="width: 21.451612903225804%;" /><col style="width: 15.96774193548387%;" /><col style="width: 24.35483870967742%;" /><col style="width: 20.48387096774194%;" /><col style="width: 17.741935483870968%;" /></colgroup><thead><tr><th><p style="direction: ltr;"><span style="font-size: undefined;"><strong>CVE</strong></span></p></th><th><p style="direction: ltr;"><span style="font-size: undefined;"><strong>CVSS</strong></span></p></th><th><p style="direction: ltr;"><span style="font-size: undefined;"><strong>Description</strong></span></p></th><th><p style="direction: ltr;"><span style="font-size: undefined;"><strong>Affected Products</strong></span></p></th><th><p style="direction: ltr;"><span style="font-size: undefined;"><strong>Exploitation Status</strong></span></p></th></tr></thead><tbody><tr><td><p style="direction: ltr;"><span style="font-size: undefined;">CVE-2026-16232</span></p></td><td><p style="direction: ltr;"><span style="font-size: undefined;">Vendor: 9.3 (Critical)</span><br /><span style="font-size: undefined;">CISA: 9.1 (Critical)</span></p></td><td><p style="direction: ltr;"><span style="font-size: undefined;">Authentication bypass via SmartConsole application token</span></p></td><td><p style="direction: ltr;"><span style="font-size: undefined;">Security Management, Multi-Domain Management</span></p></td><td><p style="direction: ltr;"><span style="font-size: undefined;">Exploited in the wild</span></p></td></tr><tr><td><p style="direction: ltr;"><span style="font-size: undefined;">CVE-2026-62144</span></p></td><td><p style="direction: ltr;"><span style="font-size: undefined;">Vendor: 9.3 (Critical)</span><br /><span style="font-size: undefined;">CISA: 9.1 (Critical)</span></p></td><td><p style="direction: ltr;"><span style="font-size: undefined;">Management authentication bypass and privilege escalation</span></p></td><td><p style="direction: ltr;"><span style="font-size: undefined;">Security Management, Multi-Domain Management</span></p></td><td><p style="direction: ltr;"><span style="font-size: undefined;">No known exploitation</span></p></td></tr><tr><td><p style="direction: ltr;"><span style="font-size: undefined;">CVE-2026-62145</span></p></td><td><p style="direction: ltr;"><span style="font-size: undefined;">7.5 (High)</span></p></td><td><p style="direction: ltr;"><span style="font-size: undefined;">Local privilege escalation in GaiaOS WebUI</span></p></td><td><p style="direction: ltr;"><span style="font-size: undefined;">Firewall, Multi-Domain Management, Multi-Domain Log Server</span></p></td><td><p style="direction: ltr;"><span style="font-size: undefined;">No known exploitation</span></p></td></tr></tbody></table><p></p><p style="direction: ltr;"><span style="font-size: undefined;">Compromise of a Security Management Server is particularly consequential because it sits at the top of the trust hierarchy. An attacker with administrative access can modify security policies across managed gateways, alter administrator permissions, manipulate VPN configurations, and potentially disable or tamper with logging and monitoring. According to Check Point's </span><a href="https://blog.checkpoint.com/security/security-advisory-action-required-active-exploitation-of-check-point-smartconsole-authentication-bypass-cve-2026-16232/"><span style="font-size: undefined;">advisory</span></a><span style="font-size: undefined;">, the vulnerabilities were discovered during a routine internal review, with subsequent analysis revealing that CVE-2026-16232 had been exploited prior to the availability of a patch.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">Check Point network security products have been targeted by multiple in-the-wild vulnerabilities over the past two years. In June 2026, </span><a href="https://www.rapid7.com/db/vulnerabilities/cve-2026-50751/"><span style="font-size: undefined;">CVE-2026-50751</span></a><span style="font-size: undefined;">, a critical authentication bypass in Check Point Remote Access VPN, was exploited in the wild and added to the CISA KEV. In May 2024, </span><a href="https://www.rapid7.com/blog/post/2024/05/30/etr-cve-2024-24919-check-point-security-gateway-information-disclosure/"><span style="font-size: undefined;">CVE-2024-24919</span></a><span style="font-size: undefined;">, a high-severity information disclosure vulnerability in Check Point Quantum Security Gateways, was also exploited in the wild. Organizations running affected Check Point management products should apply the available hotfixes on an emergency basis.</span></p><h2 style="direction: ltr;">Mitigation guidance</h2><p style="direction: ltr;"><span style="font-size: undefined;">Check Point released Jumbo Hotfixes on July 22, 2026, to remediate CVE-2026-16232, CVE-2026-62144, and CVE-2026-62145. Organizations running affected versions of Security Management or Multi-Domain Management should install the latest Jumbo Hotfix on an emergency basis, without waiting for a regular patch cycle to occur.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">The following versions are affected by CVE-2026-16232:</span></p><ul><li style="direction: ltr;"><p style="direction: ltr;"><span style="color: rgb(24, 128, 56); font-size: undefined;">R82.10</span><span style="font-size: undefined;">: fixed in Jumbo Hotfix Take 36 and later</span></p></li><li style="direction: ltr;"><p style="direction: ltr;"><span style="color: rgb(24, 128, 56); font-size: undefined;">R82</span><span style="font-size: undefined;">: fixed in Jumbo Hotfix Take 118 and later</span></p></li><li style="direction: ltr;"><p style="direction: ltr;"><span style="color: rgb(24, 128, 56); font-size: undefined;">R81.20</span><span style="font-size: undefined;">: fixed in Jumbo Hotfix Take 158 and later</span></p></li><li style="direction: ltr;"><p style="direction: ltr;"><span style="color: rgb(24, 128, 56); font-size: undefined;">R81.10</span><span style="font-size: undefined;">, </span><span style="color: rgb(24, 128, 56); font-size: undefined;">R81</span><span style="font-size: undefined;">, </span><span style="color: rgb(24, 128, 56); font-size: undefined;">R80.30</span><span style="font-size: undefined;">, </span><span style="color: rgb(24, 128, 56); font-size: undefined;">R80.20</span><span style="font-size: undefined;">, </span><span style="color: rgb(24, 128, 56); font-size: undefined;">R80.10</span><span style="font-size: undefined;">, </span><span style="color: rgb(24, 128, 56); font-size: undefined;">R80</span><span style="font-size: undefined;">, and </span><span style="color: rgb(24, 128, 56); font-size: undefined;">R77.30</span><span style="font-size: undefined;">: no fix specified</span></p></li></ul><p></p><p style="direction: ltr;"><span style="font-size: undefined;">CVE-2026-62144 and CVE-2026-62145 affect the same release families (</span><span style="color: rgb(24, 128, 56); font-size: undefined;">R81.10</span><span style="font-size: undefined;">, </span><span style="color: rgb(24, 128, 56); font-size: undefined;">R81.20</span><span style="font-size: undefined;">, </span><span style="color: rgb(24, 128, 56); font-size: undefined;">R82</span><span style="font-size: undefined;">, </span><span style="color: rgb(24, 128, 56); font-size: undefined;">R82.10</span><span style="font-size: undefined;">) per the vendor advisory, with older versions also impacted.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">Smart-1 Cloud customers are already protected according to Check Point. For on-premises deployments where the hotfix cannot be applied immediately, Check Point recommends the following steps to reduce exposure:</span></p><ul><li style="direction: ltr;"><p style="direction: ltr;"><span style="font-size: undefined;">Restrict Trusted Clients (GUI clients) to trusted IP addresses or subnets</span></p></li><li style="direction: ltr;"><p style="direction: ltr;"><span style="font-size: undefined;">Protect Management access with a firewall and restrict access to trusted IP addresses</span></p></li><li style="direction: ltr;"><p style="direction: ltr;"><span style="font-size: undefined;">Verify that implied rules for control connections are enabled</span></p></li></ul><p style="direction: ltr;"><span style="font-size: undefined;">These mitigations reduce the attack surface, but they do not address the underlying vulnerability. Installing the Jumbo Hotfix remains the priority.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">Rapid7 strongly recommends investigating for signs of compromise even after applying the hotfix, particularly in environments where the Management Server has been accessible from the internet. Organizations should review administrator, SmartConsole, API, and application token activity, and search logs for the published indicators of compromise listed below.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">For the latest mitigation guidance, please refer to the vendor </span><a href="https://support.checkpoint.com/results/sk/sk185169"><span style="font-size: undefined;">advisory</span></a><span style="font-size: undefined;">.</span></p><h2 style="direction: ltr;">Rapid7 customers</h2><h3 style="direction: ltr;"><span style="color: rgb(67, 67, 67);">Exposure Command, InsightVM, and Nexpose</span></h3><p style="direction: ltr;"><span style="font-size: undefined;">Exposure Command, InsightVM, and Nexpose customers can assess exposure to CVE-2026-16232, CVE-2026-62144, CVE-2026-62145 with authenticated vulnerability checks expected to be available in the 24 July content release.</span></p><h2 style="direction: ltr;">Indicators of compromise</h2><p style="direction: ltr;"><span style="font-size: undefined;">Check Point has published the following IP addresses associated with observed exploitation of CVE-2026-16232:</span></p><ul><li style="direction: ltr;"><p style="direction: ltr;"><span style="font-size: undefined;">151.241.99[.]207</span></p></li><li style="direction: ltr;"><p style="direction: ltr;"><span style="font-size: undefined;">151.241.99[.]233</span></p></li><li style="direction: ltr;"><p style="direction: ltr;"><span style="font-size: undefined;">158.62.198[.]182</span></p></li><li style="direction: ltr;"><p style="direction: ltr;"><span style="font-size: undefined;">192.142.10[.]99</span></p></li><li style="direction: ltr;"><p style="direction: ltr;"><span style="font-size: undefined;">139.28.37[.]250</span></p></li><li style="direction: ltr;"><p style="direction: ltr;"><span style="font-size: undefined;">194.213.18[.]137</span></p></li></ul><p></p><p style="direction: ltr;"><span style="font-size: undefined;">Per the vendor, the presence of these indicators should prompt investigation, but the absence of these addresses does not confirm that an environment was unaffected.</span></p><h2 style="direction: ltr;">Updates</h2><ul><li style="direction: ltr;"><p style="direction: ltr;"><span style="font-size: undefined;"><strong>July 23, 2026</strong></span><span style="font-size: undefined;">: Initial publication.</span></p></li></ul><br/><br/><b>Source:</b> Rapid7 Blog &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔴 Upbound Group Says Data Breach Led to $13 Million in Fraudulent Contract Losses</title>
+  <link>https://www.securityweek.com/upbound-group-says-data-breach-led-to-13-million-in-fraudulent-contract-losses/</link>
+  <pubDate>Thu, 23 Jul 2026 10:49:10 +0000</pubDate>
+  <source>SecurityWeek</source>
+  <description><![CDATA[<b>Why this matters: Potential data exposure — check monitoring and incident response readiness.</b><br/><p>Hackers recently obtained non-sensitive customer information and other documents from the company.</p>
+<p>The post <a href="https://www.securityweek.com/upbound-group-says-data-breach-led-to-13-million-in-fraudulent-contract-losses/">Upbound Group Says Data Breach Led to $13 Million in Fraudulent Contract Losses</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+</item>
+
 <item>
   <title>🔴 New msaRAT malware uses Chrome, Edge browsers to route C2 traffic</title>
   <link>https://www.bleepingcomputer.com/news/security/new-msarat-malware-uses-chrome-edge-browsers-to-route-c2-traffic/</link>
   <pubDate>Thu, 23 Jul 2026 10:00:00 +0000</pubDate>
   <source>BleepingComputer</source>
-  <description><![CDATA[<b>Why this matters: Elevated ransomware risk — validate backups and endpoint defenses.</b><br/>The Chaos ransomware gang is using a new backdoor dubbed msaRAT that hides command-and-control (C2) communication by routing it through the Chrome or Edge browsers. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Elevated ransomware risk — validate backups and endpoint defenses.</b><br/>The Chaos ransomware gang is using a new backdoor dubbed msaRAT that hides command-and-control (C2) communication by routing it through the Chrome or Edge browsers. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
 </item>
 
 <item>
@@ -19,7 +36,7 @@
   <pubDate>Thu, 23 Jul 2026 09:06:04 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><p>The vulnerability tracked as CVE-2026-16232 has been exploited against customers with certain configurations.</p>
-<p>The post <a href="https://www.securityweek.com/new-check-point-zero-day-vulnerability-exploited-in-the-wild/">New Check Point Zero-Day Vulnerability Exploited in the Wild</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/new-check-point-zero-day-vulnerability-exploited-in-the-wild/">New Check Point Zero-Day Vulnerability Exploited in the Wild</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
 </item>
 
 <item>
@@ -27,7 +44,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-54171</link>
   <pubDate>Thu, 23 Jul 2026 08:44:10 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
 </item>
 
 <item>
@@ -35,7 +52,7 @@
   <link>https://www.bleepingcomputer.com/news/security/check-point-patches-smartconsole-zero-day-exploited-in-attacks/</link>
   <pubDate>Thu, 23 Jul 2026 08:13:07 +0000</pubDate>
   <source>BleepingComputer</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Israeli cybersecurity firm Check Point Software has addressed an actively exploited zero-day flaw in the company's SmartConsole graphical user interface (GUI) admin panel. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Israeli cybersecurity firm Check Point Software has addressed an actively exploited zero-day flaw in the company's SmartConsole graphical user interface (GUI) admin panel. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
 </item>
 
 <item>
@@ -43,7 +60,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-44508</link>
   <pubDate>Thu, 23 Jul 2026 08:06:35 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
 </item>
 
 <item>
@@ -51,7 +68,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-44510</link>
   <pubDate>Thu, 23 Jul 2026 08:06:29 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
 </item>
 
 <item>
@@ -59,7 +76,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-44509</link>
   <pubDate>Thu, 23 Jul 2026 08:06:22 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
 </item>
 
 <item>
@@ -67,7 +84,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-16277</link>
   <pubDate>Thu, 23 Jul 2026 08:06:15 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Regulatory/compliance signal — assess applicability and remediation timeline.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Regulatory/compliance signal — assess applicability and remediation timeline.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
 </item>
 
 <item>
@@ -75,7 +92,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-12080</link>
   <pubDate>Thu, 23 Jul 2026 08:06:06 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Privilege escalation risk — review local admin exposure and endpoint controls.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Privilege escalation risk — review local admin exposure and endpoint controls.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
 </item>
 
 <item>
@@ -83,7 +100,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-15788</link>
   <pubDate>Thu, 23 Jul 2026 08:06:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
 </item>
 
 <item>
@@ -91,7 +108,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-26081</link>
   <pubDate>Thu, 23 Jul 2026 08:05:54 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
 </item>
 
 <item>
@@ -99,7 +116,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-26080</link>
   <pubDate>Thu, 23 Jul 2026 08:05:48 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
 </item>
 
 <item>
@@ -107,7 +124,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-15588</link>
   <pubDate>Thu, 23 Jul 2026 08:05:41 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Could impact sign-ins/MFA/Conditional Access — watch for login issues.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Could impact sign-ins/MFA/Conditional Access — watch for login issues.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
 </item>
 
 <item>
@@ -115,7 +132,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-63308</link>
   <pubDate>Thu, 23 Jul 2026 08:05:35 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
 </item>
 
 <item>
@@ -123,7 +140,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-50243</link>
   <pubDate>Thu, 23 Jul 2026 08:05:28 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
 </item>
 
 <item>
@@ -131,7 +148,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-41637</link>
   <pubDate>Thu, 23 Jul 2026 08:05:22 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
 </item>
 
 <item>
@@ -139,7 +156,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-50252</link>
   <pubDate>Thu, 23 Jul 2026 08:05:16 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
 </item>
 
 <item>
@@ -147,7 +164,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-50251</link>
   <pubDate>Thu, 23 Jul 2026 08:05:09 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
 </item>
 
 <item>
@@ -155,7 +172,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-55991</link>
   <pubDate>Thu, 23 Jul 2026 08:05:03 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
 </item>
 
 <item>
@@ -163,7 +180,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-55990</link>
   <pubDate>Thu, 23 Jul 2026 08:04:57 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
 </item>
 
 <item>
@@ -171,7 +188,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-50046</link>
   <pubDate>Thu, 23 Jul 2026 08:04:51 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
 </item>
 
 <item>
@@ -179,7 +196,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-14586</link>
   <pubDate>Thu, 23 Jul 2026 08:04:45 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
 </item>
 
 <item>
@@ -187,7 +204,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-42955</link>
   <pubDate>Thu, 23 Jul 2026 08:04:39 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Budget/licensing impact — verify renewal terms and forecast cost changes.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Budget/licensing impact — verify renewal terms and forecast cost changes.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
 </item>
 
 <item>
@@ -195,7 +212,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-46582</link>
   <pubDate>Thu, 23 Jul 2026 08:04:32 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
 </item>
 
 <item>
@@ -203,7 +220,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-54478</link>
   <pubDate>Thu, 23 Jul 2026 08:04:26 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
 </item>
 
 <item>
@@ -211,7 +228,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-56444</link>
   <pubDate>Thu, 23 Jul 2026 08:04:19 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
 </item>
 
 <item>
@@ -219,7 +236,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-32665</link>
   <pubDate>Thu, 23 Jul 2026 08:04:13 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
 </item>
 
 <item>
@@ -227,7 +244,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-40691</link>
   <pubDate>Thu, 23 Jul 2026 08:04:07 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
 </item>
 
 <item>
@@ -235,7 +252,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-55717</link>
   <pubDate>Thu, 23 Jul 2026 08:04:01 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
 </item>
 
 <item>
@@ -243,7 +260,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-44621</link>
   <pubDate>Thu, 23 Jul 2026 08:03:55 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
 </item>
 
 <item>
@@ -251,7 +268,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-56416</link>
   <pubDate>Thu, 23 Jul 2026 08:03:48 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
 </item>
 
 <item>
@@ -259,7 +276,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-52863</link>
   <pubDate>Thu, 23 Jul 2026 08:03:42 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
 </item>
 
 <item>
@@ -267,7 +284,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-55708</link>
   <pubDate>Thu, 23 Jul 2026 08:03:36 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
 </item>
 
 <item>
@@ -275,7 +292,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-44690</link>
   <pubDate>Thu, 23 Jul 2026 08:03:30 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
 </item>
 
 <item>
@@ -283,7 +300,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-50248</link>
   <pubDate>Thu, 23 Jul 2026 08:03:24 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
 </item>
 
 <item>
@@ -291,7 +308,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-50045</link>
   <pubDate>Thu, 23 Jul 2026 08:03:17 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
 </item>
 
 <item>
@@ -299,7 +316,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-44687</link>
   <pubDate>Thu, 23 Jul 2026 08:03:11 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
 </item>
 
 <item>
@@ -307,7 +324,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-55973</link>
   <pubDate>Thu, 23 Jul 2026 08:03:05 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
 </item>
 
 <item>
@@ -315,7 +332,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-53910</link>
   <pubDate>Thu, 23 Jul 2026 08:02:58 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
 </item>
 
 <item>
@@ -323,7 +340,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-62994</link>
   <pubDate>Thu, 23 Jul 2026 08:02:50 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
 </item>
 
 <item>
@@ -331,7 +348,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-63136</link>
   <pubDate>Thu, 23 Jul 2026 08:02:44 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
 </item>
 
 <item>
@@ -339,7 +356,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-63263</link>
   <pubDate>Thu, 23 Jul 2026 08:02:38 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
 </item>
 
 <item>
@@ -347,7 +364,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-63140</link>
   <pubDate>Thu, 23 Jul 2026 08:02:31 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
 </item>
 
 <item>
@@ -355,7 +372,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-56145</link>
   <pubDate>Thu, 23 Jul 2026 08:02:25 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
 </item>
 
 <item>
@@ -363,7 +380,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-38752</link>
   <pubDate>Thu, 23 Jul 2026 08:02:18 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
 </item>
 
 <item>
@@ -371,7 +388,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-38753</link>
   <pubDate>Thu, 23 Jul 2026 08:02:11 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
 </item>
 
 <item>
@@ -379,7 +396,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-50012</link>
   <pubDate>Thu, 23 Jul 2026 08:02:03 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
 </item>
 
 <item>
@@ -387,7 +404,7 @@
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-47729</link>
   <pubDate>Thu, 23 Jul 2026 08:01:56 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
 </item>
 
 <item>
@@ -397,7 +414,7 @@
   <source>The Hacker News</source>
   <description><![CDATA[<b>Why this matters: Auth bypass — review access controls and check for unauthorized access.</b><br/>Check Point has released security updates to address multiple vulnerabilities impacting Security Management and Multi-Domain Management (MDSM) products, including a critical flaw that has come under active exploitation in the wild.
 
-The security flaw, tracked as CVE-2026-16232 (CVSS score: 9.3), is an authentication bypass affecting the Check Point SmartConsole login process that allows an<br/><br/><b>Source:</b> The Hacker News &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+The security flaw, tracked as CVE-2026-16232 (CVSS score: 9.3), is an authentication bypass affecting the Check Point SmartConsole login process that allows an<br/><br/><b>Source:</b> The Hacker News &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -405,7 +422,7 @@ The security flaw, tracked as CVE-2026-16232 (CVSS score: 9.3), is an authentica
   <link>https://www.bleepingcomputer.com/news/security/south-korea-discloses-data-breach-impacting-diplomats-worldwide/</link>
   <pubDate>Wed, 22 Jul 2026 20:06:54 +0000</pubDate>
   <source>BleepingComputer</source>
-  <description><![CDATA[<b>Why this matters: Potential data exposure — check monitoring and incident response readiness.</b><br/>South Korea disclosed that hackers breached the National Diplomatic Academy's online education system for ten months and stole personal information belonging to current and former employees of the Ministry of Foreign Affairs (MFA), including overseas diplomats. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 14h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Potential data exposure — check monitoring and incident response readiness.</b><br/>South Korea disclosed that hackers breached the National Diplomatic Academy's online education system for ten months and stole personal information belonging to current and former employees of the Ministry of Foreign Affairs (MFA), including overseas diplomats. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 16h ago]]></description>
 </item>
 
 <item>
@@ -413,7 +430,7 @@ The security flaw, tracked as CVE-2026-16232 (CVSS score: 9.3), is an authentica
   <link>https://www.bleepingcomputer.com/news/security/swiss-rail-giant-stadler-rejects-123m-ransom-demand-after-cyberattack/</link>
   <pubDate>Wed, 22 Jul 2026 16:59:17 +0000</pubDate>
   <source>BleepingComputer</source>
-  <description><![CDATA[<b>Why this matters: Elevated ransomware risk — validate backups and endpoint defenses.</b><br/>Swiss rail vehicle manufacturer Stadler Rail says the Everest ransomware gang demanded about $12.3 million after breaching a data exchange platform shared with one of its suppliers. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 17h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Elevated ransomware risk — validate backups and endpoint defenses.</b><br/>Swiss rail vehicle manufacturer Stadler Rail says the Everest ransomware gang demanded about $12.3 million after breaching a data exchange platform shared with one of its suppliers. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 19h ago]]></description>
 </item>
 
 <item>
@@ -421,7 +438,7 @@ The security flaw, tracked as CVE-2026-16232 (CVSS score: 9.3), is an authentica
   <link>https://www.bleepingcomputer.com/news/security/how-enterprise-genai-can-amplify-ransomware-risk-and-how-to-contain-it/</link>
   <pubDate>Wed, 22 Jul 2026 15:30:00 +0000</pubDate>
   <source>BleepingComputer</source>
-  <description><![CDATA[<b>Why this matters: Elevated ransomware risk — validate backups and endpoint defenses.</b><br/>Enterprise AI can accelerate ransomware attacks when AI assistants and agents inherit excessive permissions or compromised identities. Acronis explains how identity controls, governance, and least-privilege access help reduce AI-enabled ransomware risk while supporting secure AI adoption. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 18h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Elevated ransomware risk — validate backups and endpoint defenses.</b><br/>Enterprise AI can accelerate ransomware attacks when AI assistants and agents inherit excessive permissions or compromised identities. Acronis explains how identity controls, governance, and least-privilege access help reduce AI-enabled ransomware risk while supporting secure AI adoption. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 20h ago]]></description>
 </item>
 
 <item>
@@ -430,7 +447,7 @@ The security flaw, tracked as CVE-2026-16232 (CVSS score: 9.3), is an authentica
   <pubDate>Wed, 22 Jul 2026 15:02:11 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: Potential data exposure — check monitoring and incident response readiness.</b><br/><p>Hackers leaked names, email addresses, phone numbers, passwords, and financial information stolen from the two platforms. </p>
-<p>The post <a href="https://www.securityweek.com/suno-paidwork-data-breaches-affect-tens-of-millions-of-accounts/">Suno, Paidwork Data Breaches Affect Tens of Millions of Accounts</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 19h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/suno-paidwork-data-breaches-affect-tens-of-millions-of-accounts/">Suno, Paidwork Data Breaches Affect Tens of Millions of Accounts</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 21h ago]]></description>
 </item>
 
 <item>
@@ -440,7 +457,7 @@ The security flaw, tracked as CVE-2026-16232 (CVSS score: 9.3), is an authentica
   <source>The Hacker News</source>
   <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Cybersecurity researchers have disclosed details of a now-patched vulnerability chain in the Adobe Acrobat Chrome extension that has over 314 million users, which, if exploited, could facilitate a silent hijack of a user's WhatsApp data.
 
-The shortcoming has been codenamed HermeticReader by Guardio Labs. It's officially tracked as CVE-2026-48294 (CVSS score: 7.4), with the vulnerability<br/><br/><b>Source:</b> The Hacker News &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 19h ago]]></description>
+The shortcoming has been codenamed HermeticReader by Guardio Labs. It's officially tracked as CVE-2026-48294 (CVSS score: 7.4), with the vulnerability<br/><br/><b>Source:</b> The Hacker News &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 21h ago]]></description>
 </item>
 
 <item>
@@ -448,7 +465,7 @@ The shortcoming has been codenamed HermeticReader by Guardio Labs. It's official
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-50407</link>
   <pubDate>Wed, 22 Jul 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Updated an acknowledgement. This is an informational change only.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 20h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Updated an acknowledgement. This is an informational change only.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 22h ago]]></description>
 </item>
 
 <item>
@@ -456,15 +473,7 @@ The shortcoming has been codenamed HermeticReader by Guardio Labs. It's official
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-50377</link>
   <pubDate>Wed, 22 Jul 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Updated an acknowledgement. This is an informational change only.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 20h ago]]></description>
-</item>
-
-<item>
-  <title>🟠 CVE-2026-50466 Microsoft Brokering File System Elevation of Privilege Vulnerability</title>
-  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-50466</link>
-  <pubDate>Wed, 22 Jul 2026 14:00:00 +0000</pubDate>
-  <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Updated an acknowledgement. This is an informational change only.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 20h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Updated an acknowledgement. This is an informational change only.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 22h ago]]></description>
 </item>
 
 <item>
@@ -472,7 +481,7 @@ The shortcoming has been codenamed HermeticReader by Guardio Labs. It's official
   <link>https://www.rapid7.com/blog/post/pt-new-products-services-q2-2026-mdr</link>
   <pubDate>Wed, 22 Jul 2026 13:28:02 +0000</pubDate>
   <source>Rapid7 Blog</source>
-  <description><![CDATA[<b>Why this matters: Elevated ransomware risk — validate backups and endpoint defenses.</b><br/><p style="direction: ltr;"><span style="font-size: undefined;">If Q1 set the pace for Rapid7's tools, Q2 accelerated it. This quarter brought a steady stream of product enhancements, platform investments, and customer-driven innovation across Rapid7’s portfolio. Each release was designed with a clear goal in mind: helping security teams reduce complexity while increasing speed, context, and confidence in their day-to-day operations. Here’s a closer look at what launched in Q2.</span></p><h2>Detection and response</h2><h3><span style="font-size: undefined;">Streamline investigations with bidirectional and enriched Microsoft Defender alerts</span></h3><p style="direction: ltr;"><span style="font-size: undefined;">Bidirectional synchronization and enriched alert context for Microsoft Defender is now generally available for SIEM and </span><a href="/services/managed-detection-and-response-mdr/" target="_self"><span style="font-size: undefined;">MDR</span></a><span style="font-size: undefined;"> customers, enabling security teams to automatically synchronize alert status between Rapid7's </span><a href="/products/siem" target="_self"><span style="font-size: undefined;">SIEM</span></a><span style="font-size: undefined;"> and the Microsoft Defender console. With added process tree and user identity context, analysts can investigate threats more efficiently while reducing manual effort.</span></p><h3><span style="font-size: undefined;">Confidently scale detection engineering with Detection as Code</span></h3><p style="direction: ltr;"><a href="/blog/post/dr-scaling-engineering-detection-as-code" target="_self"><span style="font-size: undefined;">Detection as Code</span></a><span style="font-size: undefined;"> enables security teams to build, test, version, and deploy detections using Terraform and modern engineering workflows. Built-in validation, guardrails, and version control help teams deliver higher-quality alerts, maintain more consistent coverage, and scale detection engineering more effectively.</span></p><p></p><figure style="margin: 0;"><div style="display: inline-block;"><img alt="rapid7-detection-as-code-methodology.png" class="embedded-asset" height="713" src="https://images.contentstack.io/v3/assets/blte4f029e766e6b253/blt5b87b1b66cb42fb0/6a60c7d908c174e1555adb14/image2.png" style="width: 1553px; height: 713px;" type="asset" width="1553" /><figcaption style="text-align: center;">Figure 1: Rapid7's Detection as Code methodology.</figcaption></div></figure><p></p><h3><span style="font-size: undefined;">Strengthen ransomware resilience with Ransomware Prevention for Incident Command</span></h3><p style="direction: ltr;"><span style="font-size: undefined;">Ransomware Prevention for </span><a href="/products/siem" target="_self"><span style="font-size: undefined;">Incident Command</span></a><span style="font-size: undefined;"> adds an intent-based layer of protection designed to stop ransomware encryption and endpoint damage before they disrupt operations. Built into the Insight Agent, this capability strengthens ransomware resilience while working alongside existing endpoint security investments, without adding operational complexity.</span></p><h2 style="direction: ltr;">Compliance</h2><h3>New solutions webpages</h3><p style="direction: ltr;"><span style="font-size: undefined;">Across the globe, cybersecurity regulation is shifting away from static compliance checklists and toward ongoing risk management that blends proactive defense with effective detection and response. Rapid7’s </span><a href="/platform" target="_self"><span style="font-size: undefined;">platform</span></a><span style="font-size: undefined;">, which brings exposure management and CTEM together with detection, response, and MDR, is well positioned to help organizations operationalize compliance across mandates such as NIS2, NIST CSF 2.0, DORA, HIPAA, HITRUST, and GovRAMP. To support that effort, Rapid7 has launched an updated library of dedicated compliance solution pages that map platform capabilities to the requirements that matter most across industries and regions. The first set of pages is live now, with more to follow in the coming weeks.</span></p><ul><li style="direction: ltr;"><p style="direction: ltr;"><a href="/solutions/compliance/nist-csf-2" target="_self"><span style="font-size: undefined;">NIST CSF 2.0</span></a></p></li><li style="direction: ltr;"><p style="direction: ltr;"><a href="/solutions/compliance/hipaa" target="_self"><span style="font-size: undefined;">HIPAA</span></a></p></li><li style="direction: ltr;"><p style="direction: ltr;"><a href="/solutions/compliance/hitrust" target="_self"><span style="font-size: undefined;">HITRUST</span></a></p></li><li style="direction: ltr;"><p style="direction: ltr;"><a href="/solutions/compliance/nis2" target="_self"><span style="font-size: undefined;">NIS2</span></a></p></li><li style="direction: ltr;"><p style="direction: ltr;"><a href="www.rapid7.com/solutions/compliance/govramp" target="_self"><span style="font-size: undefined;">GovRAMP</span></a></p></li></ul><p></p><figure style="margin: 0;"><div style="display: inline-block;"><img alt="rapid7-govramp-compliance.png" class="embedded-asset" src="https://images.contentstack.io/v3/assets/blte4f029e766e6b253/blta8db9b364598a181/6a60c98604258068dc0bf302/rapid7-govramp-compliance.png" style="width: auto;" type="asset" /><figcaption style="text-align: center;">Figure 2: Rapid7's new GovRAMP compliance solutions page.</figcaption></div></figure><h2 style="direction: ltr;">Exposure management</h2><h3><span style="font-size: undefined;">Turn prioritized exposures into remediation progress</span></h3><p style="direction: ltr;"><span style="font-size: undefined;">We improved Remediation Hub to help teams turn prioritized exposures into more actionable remediation progress. Updates to the Top Remediations Report add asset-level context, including operating system, IP address, cloud provider, tags, endpoint protection, and patch management details, so teams can better understand what needs to be fixed and who needs to act.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">With clearer patch and endpoint coverage signals, reboot status, customizable filters, exportable reports, and scheduled email delivery, teams can spend less time assembling manual updates and more time tracking the remediation work that reduces risk. Read the full </span><a href="/blog/post/em-path-from-prioritized-exposures-to-remediation-progress" target="_self"><span style="font-size: undefined;">blog</span></a><span style="font-size: undefined;"> to learn more about how Exposure Command helps teams move from prioritized exposures to remediation progress.</span></p><h3><span style="font-size: undefined;">AI pre-triage for AppSec findings</span></h3><p style="direction: ltr;"><span style="font-size: undefined;">Rapid7 is also making application security testing faster and more focused with AI vulnerability pre-triaging for InsightAppSec. Available now for </span><a href="/products/insightappsec" target="_self"><span style="font-size: undefined;">AppSec</span></a><span style="font-size: undefined;"> customers in supported regions, the capability uses AI to automatically remove false positives during the scan process, helping teams spend less time manually reviewing findings and more time remediating actual risk.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">Initial coverage started with BlindSQL, and the latest engine release adds AI validation for BlindNoSQL findings, including content-based and timing-based detections. The result is a cleaner, more confident view of application risk, so security teams can focus on high-impact vulnerabilities and accelerate remediation with less manual effort.</span></p><h2>Attack surface management</h2><h3><span style="font-size: undefined;">Open-source MCP Server and Agent Skill</span></h3><p style="direction: ltr;"><span style="font-size: undefined;">We are delighted to announce the introduction of a free, open-source MCP Server and Agent Skill for Bulk Export. Bulk export is a highly efficient way to access all your Rapid7 vulnerability and exposure data to AI assistants and custom AI workflows. Built as an open-source bridge, it helps customers bring their Rapid7 data into the tools and experiences that work best for their teams. Check out our </span><a href="/blog/post/em-bulk-export-ai-ready-security-workflows-open-source-mcp-server-agent-skill" target="_self"><span style="font-size: undefined;">blog</span></a><span style="font-size: undefined;"> for more detail.</span></p><p></p><figure style="margin: 0;"><div style="display: inline-block;"><img alt="rapid7-ai-agent-skill.png" class="embedded-asset" src="https://images.contentstack.io/v3/assets/blte4f029e766e6b253/blt83035d9c7fcbfdf4/6a60ca130133d41740e07649/rapid7-ai-agent-skill.png" style="width: auto;" type="asset" /><figcaption style="text-align: center;">Figure 3: Agent Skill for Bulk Export.</figcaption></div></figure><h3><span style="font-size: undefined;">Turn exposure filters into live dashboards</span></h3><p style="direction: ltr;"><a href="/products/command/attack-surface-management-asm/" target="_self"><span style="font-size: undefined;">Surface Command</span></a><span style="font-size: undefined;"> also made exposure reporting easier with filter-based dashboard widgets. Teams can now turn saved asset and identity filters into live dashboards without writing Cypher queries, making it faster to track high-risk internet-facing assets, identity-driven exposure hotspots, unmanaged cloud infrastructure, and business-unit risk.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">For continuous threat exposure management programs, this helps teams move from one-off reporting to repeatable, always-on views of exposure risk and remediation progress. Read this </span><a href="/blog/post/em-operationalizing-ctem-building-surface-command-dashboards" target="_self"><span style="font-size: undefined;">blog</span></a><span style="font-size: undefined;"> to learn more. </span></p><h2>Platform and Labs</h2><h3><span style="color: rgb(67, 67, 67);">Rapid7 Command Platform</span></h3><h4><span style="font-size: undefined;">Cyber GRC</span></h4><p style="direction: ltr;"><span style="font-size: undefined;">Rapid7 introduced </span><a href="/about/press-releases/rapid7-launches-cyber-governance-risk-and-compliance-grc-early-access-program-to-unify-security-data-risk-context-and-compliance-workflows" target="_self"><span style="font-size: undefined;">Cyber GRC</span></a><span style="font-size: undefined;"> to select customers in Q2, giving teams an early look at a new way to connect security, risk, compliance, and third-party risk management in one program. Available to both Exposure Management and Detection and Response customers, Cyber GRC brings governance and compliance workflows closer to the security data teams already use every day.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">Cyber GRC will be broadly available in late July. It helps organizations move toward continuous compliance by mapping controls to real environment telemetry, automating evidence collection, and prioritizing risk with live attack surface context. That means teams can spend less time chasing audit artifacts, screenshots, and vendor risk details, and more time understanding which controls, assets, third parties, and risks need attention now.</span></p><h3><span style="color: rgb(67, 67, 67);">Rapid7 Labs</span></h3><h4><span style="font-size: undefined;">Rapid7 Quarterly Threat Landscape Report</span></h4><p style="direction: ltr;"><span style="font-size: undefined;">The Rapid7 Quarterly Threat Landscape Report examines the key trends shaping today's threat landscape, drawing on MDR incident response, vulnerability intelligence, ransomware monitoring, and dark web telemetry. Q1 2026 data highlights the growing dominance of vulnerability exploitation as an initial access vector, the rise of zero-click vulnerabilities, evolving ransomware operations, and the accelerating pace at which attackers operationalize newly disclosed vulnerabilities. Read the </span><a href="/research/report/threat-landscape-report-2026-q1" target="_self"><span style="font-size: undefined;">report</span></a><span style="font-size: undefined;"> to explore all key findings and takeaways.</span></p><p></p><figure style="margin: 0;"><div style="display: inline-block;"><img alt="rapid7-quarterly-threat-report.png" class="embedded-asset" src="https://images.contentstack.io/v3/assets/blte4f029e766e6b253/blt9eaa551742740d0a/6a60ca8f4dd0a37fcaca1cc5/rapid7-quarterly-threat-report.png" style="width: auto;" type="asset" /><figcaption style="text-align: center;">Figure 4: Rapid7's quarterly threat report.</figcaption></div></figure><h3><span style="font-size: undefined;">The latest threat research</span></h3><p style="direction: ltr;"><span style="font-size: undefined;">Rapid7 researchers explored emerging trends shaping the threat landscape, including the growing commercialization of </span><a href="/blog/post/tr-criminal-ai-underground-market-operationalizing-cybercrime-2026" target="_self"><span style="font-size: undefined;">criminal AI-as-a-Service</span></a><span style="font-size: undefined;"> and the evolving tradecraft of advanced threat actors. From the underground adoption of AI tools for fraud and social engineering to an </span><a href="/blog/post/tr-malware-tracking-dropping-elephant-tradecraft-china-themed-loader-chain" target="_self"><span style="font-size: undefined;">in-depth analysis of the Dropping Elephant malware campaign</span></a><span style="font-size: undefined;">, these reports provide actionable intelligence on how attackers are adapting their techniques and what defenders can do to stay ahead.</span></p><h4><span style="font-size: undefined;">Emergent Threat Response</span></h4><p style="direction: ltr;"><span style="font-size: undefined;">This quarter's Emergent Threat Response (ETR) coverage highlights a sustained wave of high-impact vulnerabilities affecting widely deployed enterprise technologies, including </span><a href="/blog/post/etr-active-exploitation-of-oracle-peoplesoft-zero-day-cve-2026-35273" target="_self"><span style="font-size: undefined;">Oracle PeopleSoft</span></a><span style="font-size: undefined;">, </span><a href="/blog/post/etr-cve-2026-0265-authentication-bypass-in-palo-alto-networks-pan-os" target="_self"><span style="font-size: undefined;">Palo Alto Networks PAN-OS</span></a><span style="font-size: undefined;">, </span><a href="/blog/post/etr-critical-check-point-vpn-zero-day-exploited-in-the-wild-cve-2026-50751" target="_self"><span style="font-size: undefined;">Check Point VPN</span></a><span style="font-size: undefined;">, </span><a href="/blog/post/etr-cve-2026-10520-cve-2026-10523-multiple-critical-vulnerabilities-affecting-ivanti-sentry" target="_self"><span style="font-size: undefined;">Ivanti Sentry</span></a><span style="font-size: undefined;">, </span><a href="/blog/post/etr-cve-2026-41940-cpanel-whm-authentication-bypass" target="_self"><span style="font-size: undefined;">cPanel/WHM</span></a><span style="font-size: undefined;">, and </span><a href="/blog/post/etr-cve-2026-33032-nginx-ui-missing-mcp-authentication" target="_self"><span style="font-size: undefined;">Nginx UI</span></a><span style="font-size: undefined;">. For each of these CVEs, Rapid7 tracked active exploitation and rapidly evolving attacker activity to provide timely guidance to help defenders assess risk and respond quickly. See all the details, and our latest ETR coverage, </span><a href="/blog/tag/emergent-threat-response" target="_self"><span style="font-size: undefined;">here</span></a><span style="font-size: undefined;">.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">From strengthening detection and response to advancing exposure management, expanding governance capabilities, and delivering actionable threat intelligence, Q2 demonstrated Rapid7’s continued focus on helping security teams do more with less complexity. Every enhancement this quarter was designed to reduce manual effort, surface the context that matters, and help organizations make faster, more confident security decisions. We’re carrying that momentum into the rest of the year, so stay tuned to our blog and releases as we continue building the security operations platform that helps defenders stay ahead of what’s next.</span></p><br/><br/><b>Source:</b> Rapid7 Blog &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 20h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Elevated ransomware risk — validate backups and endpoint defenses.</b><br/><p style="direction: ltr;"><span style="font-size: undefined;">If Q1 set the pace for Rapid7's tools, Q2 accelerated it. This quarter brought a steady stream of product enhancements, platform investments, and customer-driven innovation across Rapid7’s portfolio. Each release was designed with a clear goal in mind: helping security teams reduce complexity while increasing speed, context, and confidence in their day-to-day operations. Here’s a closer look at what launched in Q2.</span></p><h2>Detection and response</h2><h3><span style="font-size: undefined;">Streamline investigations with bidirectional and enriched Microsoft Defender alerts</span></h3><p style="direction: ltr;"><span style="font-size: undefined;">Bidirectional synchronization and enriched alert context for Microsoft Defender is now generally available for SIEM and </span><a href="/services/managed-detection-and-response-mdr/" target="_self"><span style="font-size: undefined;">MDR</span></a><span style="font-size: undefined;"> customers, enabling security teams to automatically synchronize alert status between Rapid7's </span><a href="/products/siem" target="_self"><span style="font-size: undefined;">SIEM</span></a><span style="font-size: undefined;"> and the Microsoft Defender console. With added process tree and user identity context, analysts can investigate threats more efficiently while reducing manual effort.</span></p><h3><span style="font-size: undefined;">Confidently scale detection engineering with Detection as Code</span></h3><p style="direction: ltr;"><a href="/blog/post/dr-scaling-engineering-detection-as-code" target="_self"><span style="font-size: undefined;">Detection as Code</span></a><span style="font-size: undefined;"> enables security teams to build, test, version, and deploy detections using Terraform and modern engineering workflows. Built-in validation, guardrails, and version control help teams deliver higher-quality alerts, maintain more consistent coverage, and scale detection engineering more effectively.</span></p><p></p><figure style="margin: 0;"><div style="display: inline-block;"><img alt="rapid7-detection-as-code-methodology.png" class="embedded-asset" height="713" src="https://images.contentstack.io/v3/assets/blte4f029e766e6b253/blt5b87b1b66cb42fb0/6a60c7d908c174e1555adb14/image2.png" style="width: 1553px; height: 713px;" type="asset" width="1553" /><figcaption style="text-align: center;">Figure 1: Rapid7's Detection as Code methodology.</figcaption></div></figure><p></p><h3><span style="font-size: undefined;">Strengthen ransomware resilience with Ransomware Prevention for Incident Command</span></h3><p style="direction: ltr;"><span style="font-size: undefined;">Ransomware Prevention for </span><a href="/products/siem" target="_self"><span style="font-size: undefined;">Incident Command</span></a><span style="font-size: undefined;"> adds an intent-based layer of protection designed to stop ransomware encryption and endpoint damage before they disrupt operations. Built into the Insight Agent, this capability strengthens ransomware resilience while working alongside existing endpoint security investments, without adding operational complexity.</span></p><h2 style="direction: ltr;">Compliance</h2><h3>New solutions webpages</h3><p style="direction: ltr;"><span style="font-size: undefined;">Across the globe, cybersecurity regulation is shifting away from static compliance checklists and toward ongoing risk management that blends proactive defense with effective detection and response. Rapid7’s </span><a href="/platform" target="_self"><span style="font-size: undefined;">platform</span></a><span style="font-size: undefined;">, which brings exposure management and CTEM together with detection, response, and MDR, is well positioned to help organizations operationalize compliance across mandates such as NIS2, NIST CSF 2.0, DORA, HIPAA, HITRUST, and GovRAMP. To support that effort, Rapid7 has launched an updated library of dedicated compliance solution pages that map platform capabilities to the requirements that matter most across industries and regions. The first set of pages is live now, with more to follow in the coming weeks.</span></p><ul><li style="direction: ltr;"><p style="direction: ltr;"><a href="/solutions/compliance/nist-csf-2" target="_self"><span style="font-size: undefined;">NIST CSF 2.0</span></a></p></li><li style="direction: ltr;"><p style="direction: ltr;"><a href="/solutions/compliance/hipaa" target="_self"><span style="font-size: undefined;">HIPAA</span></a></p></li><li style="direction: ltr;"><p style="direction: ltr;"><a href="/solutions/compliance/hitrust" target="_self"><span style="font-size: undefined;">HITRUST</span></a></p></li><li style="direction: ltr;"><p style="direction: ltr;"><a href="/solutions/compliance/nis2" target="_self"><span style="font-size: undefined;">NIS2</span></a></p></li><li style="direction: ltr;"><p style="direction: ltr;"><a href="www.rapid7.com/solutions/compliance/govramp" target="_self"><span style="font-size: undefined;">GovRAMP</span></a></p></li></ul><p></p><figure style="margin: 0;"><div style="display: inline-block;"><img alt="rapid7-govramp-compliance.png" class="embedded-asset" src="https://images.contentstack.io/v3/assets/blte4f029e766e6b253/blta8db9b364598a181/6a60c98604258068dc0bf302/rapid7-govramp-compliance.png" style="width: auto;" type="asset" /><figcaption style="text-align: center;">Figure 2: Rapid7's new GovRAMP compliance solutions page.</figcaption></div></figure><h2 style="direction: ltr;">Exposure management</h2><h3><span style="font-size: undefined;">Turn prioritized exposures into remediation progress</span></h3><p style="direction: ltr;"><span style="font-size: undefined;">We improved Remediation Hub to help teams turn prioritized exposures into more actionable remediation progress. Updates to the Top Remediations Report add asset-level context, including operating system, IP address, cloud provider, tags, endpoint protection, and patch management details, so teams can better understand what needs to be fixed and who needs to act.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">With clearer patch and endpoint coverage signals, reboot status, customizable filters, exportable reports, and scheduled email delivery, teams can spend less time assembling manual updates and more time tracking the remediation work that reduces risk. Read the full </span><a href="/blog/post/em-path-from-prioritized-exposures-to-remediation-progress" target="_self"><span style="font-size: undefined;">blog</span></a><span style="font-size: undefined;"> to learn more about how Exposure Command helps teams move from prioritized exposures to remediation progress.</span></p><h3><span style="font-size: undefined;">AI pre-triage for AppSec findings</span></h3><p style="direction: ltr;"><span style="font-size: undefined;">Rapid7 is also making application security testing faster and more focused with AI vulnerability pre-triaging for InsightAppSec. Available now for </span><a href="/products/insightappsec" target="_self"><span style="font-size: undefined;">AppSec</span></a><span style="font-size: undefined;"> customers in supported regions, the capability uses AI to automatically remove false positives during the scan process, helping teams spend less time manually reviewing findings and more time remediating actual risk.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">Initial coverage started with BlindSQL, and the latest engine release adds AI validation for BlindNoSQL findings, including content-based and timing-based detections. The result is a cleaner, more confident view of application risk, so security teams can focus on high-impact vulnerabilities and accelerate remediation with less manual effort.</span></p><h2>Attack surface management</h2><h3><span style="font-size: undefined;">Open-source MCP Server and Agent Skill</span></h3><p style="direction: ltr;"><span style="font-size: undefined;">We are delighted to announce the introduction of a free, open-source MCP Server and Agent Skill for Bulk Export. Bulk export is a highly efficient way to access all your Rapid7 vulnerability and exposure data to AI assistants and custom AI workflows. Built as an open-source bridge, it helps customers bring their Rapid7 data into the tools and experiences that work best for their teams. Check out our </span><a href="/blog/post/em-bulk-export-ai-ready-security-workflows-open-source-mcp-server-agent-skill" target="_self"><span style="font-size: undefined;">blog</span></a><span style="font-size: undefined;"> for more detail.</span></p><p></p><figure style="margin: 0;"><div style="display: inline-block;"><img alt="rapid7-ai-agent-skill.png" class="embedded-asset" src="https://images.contentstack.io/v3/assets/blte4f029e766e6b253/blt83035d9c7fcbfdf4/6a60ca130133d41740e07649/rapid7-ai-agent-skill.png" style="width: auto;" type="asset" /><figcaption style="text-align: center;">Figure 3: Agent Skill for Bulk Export.</figcaption></div></figure><h3><span style="font-size: undefined;">Turn exposure filters into live dashboards</span></h3><p style="direction: ltr;"><a href="/products/command/attack-surface-management-asm/" target="_self"><span style="font-size: undefined;">Surface Command</span></a><span style="font-size: undefined;"> also made exposure reporting easier with filter-based dashboard widgets. Teams can now turn saved asset and identity filters into live dashboards without writing Cypher queries, making it faster to track high-risk internet-facing assets, identity-driven exposure hotspots, unmanaged cloud infrastructure, and business-unit risk.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">For continuous threat exposure management programs, this helps teams move from one-off reporting to repeatable, always-on views of exposure risk and remediation progress. Read this </span><a href="/blog/post/em-operationalizing-ctem-building-surface-command-dashboards" target="_self"><span style="font-size: undefined;">blog</span></a><span style="font-size: undefined;"> to learn more. </span></p><h2>Platform and Labs</h2><h3><span style="color: rgb(67, 67, 67);">Rapid7 Command Platform</span></h3><h4><span style="font-size: undefined;">Cyber GRC</span></h4><p style="direction: ltr;"><span style="font-size: undefined;">Rapid7 introduced </span><a href="/about/press-releases/rapid7-launches-cyber-governance-risk-and-compliance-grc-early-access-program-to-unify-security-data-risk-context-and-compliance-workflows" target="_self"><span style="font-size: undefined;">Cyber GRC</span></a><span style="font-size: undefined;"> to select customers in Q2, giving teams an early look at a new way to connect security, risk, compliance, and third-party risk management in one program. Available to both Exposure Management and Detection and Response customers, Cyber GRC brings governance and compliance workflows closer to the security data teams already use every day.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">Cyber GRC will be broadly available in late July. It helps organizations move toward continuous compliance by mapping controls to real environment telemetry, automating evidence collection, and prioritizing risk with live attack surface context. That means teams can spend less time chasing audit artifacts, screenshots, and vendor risk details, and more time understanding which controls, assets, third parties, and risks need attention now.</span></p><h3><span style="color: rgb(67, 67, 67);">Rapid7 Labs</span></h3><h4><span style="font-size: undefined;">Rapid7 Quarterly Threat Landscape Report</span></h4><p style="direction: ltr;"><span style="font-size: undefined;">The Rapid7 Quarterly Threat Landscape Report examines the key trends shaping today's threat landscape, drawing on MDR incident response, vulnerability intelligence, ransomware monitoring, and dark web telemetry. Q1 2026 data highlights the growing dominance of vulnerability exploitation as an initial access vector, the rise of zero-click vulnerabilities, evolving ransomware operations, and the accelerating pace at which attackers operationalize newly disclosed vulnerabilities. Read the </span><a href="/research/report/threat-landscape-report-2026-q1" target="_self"><span style="font-size: undefined;">report</span></a><span style="font-size: undefined;"> to explore all key findings and takeaways.</span></p><p></p><figure style="margin: 0;"><div style="display: inline-block;"><img alt="rapid7-quarterly-threat-report.png" class="embedded-asset" src="https://images.contentstack.io/v3/assets/blte4f029e766e6b253/blt9eaa551742740d0a/6a60ca8f4dd0a37fcaca1cc5/rapid7-quarterly-threat-report.png" style="width: auto;" type="asset" /><figcaption style="text-align: center;">Figure 4: Rapid7's quarterly threat report.</figcaption></div></figure><h3><span style="font-size: undefined;">The latest threat research</span></h3><p style="direction: ltr;"><span style="font-size: undefined;">Rapid7 researchers explored emerging trends shaping the threat landscape, including the growing commercialization of </span><a href="/blog/post/tr-criminal-ai-underground-market-operationalizing-cybercrime-2026" target="_self"><span style="font-size: undefined;">criminal AI-as-a-Service</span></a><span style="font-size: undefined;"> and the evolving tradecraft of advanced threat actors. From the underground adoption of AI tools for fraud and social engineering to an </span><a href="/blog/post/tr-malware-tracking-dropping-elephant-tradecraft-china-themed-loader-chain" target="_self"><span style="font-size: undefined;">in-depth analysis of the Dropping Elephant malware campaign</span></a><span style="font-size: undefined;">, these reports provide actionable intelligence on how attackers are adapting their techniques and what defenders can do to stay ahead.</span></p><h4><span style="font-size: undefined;">Emergent Threat Response</span></h4><p style="direction: ltr;"><span style="font-size: undefined;">This quarter's Emergent Threat Response (ETR) coverage highlights a sustained wave of high-impact vulnerabilities affecting widely deployed enterprise technologies, including </span><a href="/blog/post/etr-active-exploitation-of-oracle-peoplesoft-zero-day-cve-2026-35273" target="_self"><span style="font-size: undefined;">Oracle PeopleSoft</span></a><span style="font-size: undefined;">, </span><a href="/blog/post/etr-cve-2026-0265-authentication-bypass-in-palo-alto-networks-pan-os" target="_self"><span style="font-size: undefined;">Palo Alto Networks PAN-OS</span></a><span style="font-size: undefined;">, </span><a href="/blog/post/etr-critical-check-point-vpn-zero-day-exploited-in-the-wild-cve-2026-50751" target="_self"><span style="font-size: undefined;">Check Point VPN</span></a><span style="font-size: undefined;">, </span><a href="/blog/post/etr-cve-2026-10520-cve-2026-10523-multiple-critical-vulnerabilities-affecting-ivanti-sentry" target="_self"><span style="font-size: undefined;">Ivanti Sentry</span></a><span style="font-size: undefined;">, </span><a href="/blog/post/etr-cve-2026-41940-cpanel-whm-authentication-bypass" target="_self"><span style="font-size: undefined;">cPanel/WHM</span></a><span style="font-size: undefined;">, and </span><a href="/blog/post/etr-cve-2026-33032-nginx-ui-missing-mcp-authentication" target="_self"><span style="font-size: undefined;">Nginx UI</span></a><span style="font-size: undefined;">. For each of these CVEs, Rapid7 tracked active exploitation and rapidly evolving attacker activity to provide timely guidance to help defenders assess risk and respond quickly. See all the details, and our latest ETR coverage, </span><a href="/blog/tag/emergent-threat-response" target="_self"><span style="font-size: undefined;">here</span></a><span style="font-size: undefined;">.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">From strengthening detection and response to advancing exposure management, expanding governance capabilities, and delivering actionable threat intelligence, Q2 demonstrated Rapid7’s continued focus on helping security teams do more with less complexity. Every enhancement this quarter was designed to reduce manual effort, surface the context that matters, and help organizations make faster, more confident security decisions. We’re carrying that momentum into the rest of the year, so stay tuned to our blog and releases as we continue building the security operations platform that helps defenders stay ahead of what’s next.</span></p><br/><br/><b>Source:</b> Rapid7 Blog &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 22h ago]]></description>
 </item>
 
 <item>
@@ -484,7 +493,7 @@ The shortcoming has been codenamed HermeticReader by Guardio Labs. It's official
 
 The vulnerability in question is CVE-2026-29059 (CVSS score: 7.5), a case of unauthenticated path traversal impacting Windmill's "get_log_file" endpoint ("/api/w/{workspace}/jobs_u/get_log_file/{filename}").
 
-"The filename parameter is concatenated into<br/><br/><b>Source:</b> The Hacker News &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 21h ago]]></description>
+"The filename parameter is concatenated into<br/><br/><b>Source:</b> The Hacker News &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 23h ago]]></description>
 </item>
 
 <item>
@@ -492,16 +501,7 @@ The vulnerability in question is CVE-2026-29059 (CVSS score: 7.5), a case of una
   <link>https://www.bleepingcomputer.com/news/security/cisa-orders-feds-to-patch-actively-exploited-langflow-rce-flaw/</link>
   <pubDate>Wed, 22 Jul 2026 11:43:28 +0000</pubDate>
   <source>BleepingComputer</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>The Cybersecurity and Infrastructure Security Agency (CISA) on Tuesday ordered U.S. government agencies to prioritize patching an actively exploited vulnerability in the Langflow visual framework for building AI agents. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 22h ago]]></description>
-</item>
-
-<item>
-  <title>🟠 Fourth SharePoint Vulnerability Exploited in Past Month’s Wave of Attacks</title>
-  <link>https://www.securityweek.com/fourth-sharepoint-vulnerability-exploited-in-past-months-wave-of-attacks/</link>
-  <pubDate>Wed, 22 Jul 2026 11:29:16 +0000</pubDate>
-  <source>SecurityWeek</source>
-  <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><p>CVE-2026-50522 is being exploited by threat actors to steal machine keys and retain long-term access.</p>
-<p>The post <a href="https://www.securityweek.com/fourth-sharepoint-vulnerability-exploited-in-past-months-wave-of-attacks/">Fourth SharePoint Vulnerability Exploited in Past Month&#8217;s Wave of Attacks</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 22h ago]]></description>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>The Cybersecurity and Infrastructure Security Agency (CISA) on Tuesday ordered U.S. government agencies to prioritize patching an actively exploited vulnerability in the Langflow visual framework for building AI agents. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
