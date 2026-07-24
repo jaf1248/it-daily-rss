@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
-**Period:** July 16 – July 23, 2026  
-**Generated:** 2026-07-23 23:58 UTC  
+**Period:** July 17 – July 24, 2026  
+**Generated:** 2026-07-24 02:47 UTC  
 **Items reviewed:** 136  
 
 ## ⚡ Top Actions This Week
@@ -83,12 +83,12 @@
 
 ## 🔵 FYI — General Awareness
 
+- [ISC Stormcast For Friday, July 24th, 2026 https://isc.sans.edu/podcastdetail/10022, (Fri, Jul 24th)](https://isc.sans.edu/diary/rss/33182) — SANS Internet Storm Center
 - [New Dolphin X malware uses AI to rank high-value targets](https://www.bleepingcomputer.com/news/security/new-dolphin-x-malware-uses-ai-to-rank-high-value-targets/) — BleepingComputer
 - [Fake Claude app promoted by Bing ads pushes SectopRAT malware](https://www.bleepingcomputer.com/news/security/fake-claude-app-promoted-by-bing-ads-pushes-sectoprat-malware/) — BleepingComputer
 - [Hackers abuse Notepad++ plugins to stealthily install malware](https://www.bleepingcomputer.com/news/security/hackers-abuse-notepad-plus-plus-plugins-to-stealthily-install-malware/) — BleepingComputer
 - [ThreatsDay: Android Spyware, PLC Attacks, AI Image Prompt Injection + 12 More Stories](https://thehackernews.com/2026/07/threatsday-android-spyware-plc-attacks.html) — The Hacker News
 - [FedRAMP Rev5 Is Ending: What the 20x Transition Really Requires](https://www.bleepingcomputer.com/news/security/fedramp-rev5-is-ending-what-the-20x-transition-really-requires/) — BleepingComputer
-- [EU fines Google $1 billion for search, app store antitrust violations](https://www.bleepingcomputer.com/news/google/eu-fines-google-1-billion-for-digital-markets-act-breaches-in-search-and-play-store/) — BleepingComputer
 
 ---
 
