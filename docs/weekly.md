@@ -1,25 +1,30 @@
 # IT Weekly Intelligence Briefing
 **Period:** July 17 – July 24, 2026  
-**Generated:** 2026-07-24 05:48 UTC  
+**Generated:** 2026-07-24 08:22 UTC  
 **Items reviewed:** 136  
 
 ## ⚡ Top Actions This Week
 
-1. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
+1. **Validate backups, confirm EDR coverage, and brief incident response team.**  
+   _Clop ransomware targets Windchill, FlexPLM in data theft attacks_  
+   Source: BleepingComputer  
+
+2. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
    _Australian energy provider Origin says data breach exposes client data_  
    Source: BleepingComputer  
 
-2. **Reinforce MFA enforcement and run targeted phishing awareness reminder.**  
+3. **Reinforce MFA enforcement and run targeted phishing awareness reminder.**  
    _Russian hackers exploit Zimbra zero-click flaw for email theft_  
    Source: BleepingComputer  
-
-3. **Validate backups, confirm EDR coverage, and brief incident response team.**  
-   _Chaos Ransomware Uses msaRAT to Route C2 Traffic Through Headless Chrome and Edge_  
-   Source: The Hacker News  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [Clop ransomware targets Windchill, FlexPLM in data theft attacks](https://www.bleepingcomputer.com/news/security/clop-ransomware-targets-windchill-flexplm-in-data-theft-attacks/)
+**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jul 24  
+**Why it matters:** Elevated ransomware risk across the sector.  
+**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
 
 ### [Australian energy provider Origin says data breach exposes client data](https://www.bleepingcomputer.com/news/security/australian-energy-provider-origin-says-data-breach-exposes-client-data/)
 **Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jul 23  
@@ -46,14 +51,18 @@
 **Why it matters:** General awareness item.  
 **Recommended action:** Apply emergency patch or mitigation now; check vendor advisory for workarounds.  
 
-### [South Korea discloses data breach impacting diplomats worldwide](https://www.bleepingcomputer.com/news/security/south-korea-discloses-data-breach-impacting-diplomats-worldwide/)
-**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jul 22  
-**Why it matters:** Potential credential or data exposure.  
-**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
-
 ---
 
 ## 🟠 Important — Review This Week
+
+- [CVE-2026-64600 xfs: resample the data fork mapping after cycling ILOCK](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-64600)  
+  **Microsoft Security Response Center (MSRC)** · Jul 24 · _General awareness item._  
+
+- [CVE-2026-59677 Process Kill Attack Vector in killall() in seunshare](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-59677)  
+  **Microsoft Security Response Center (MSRC)** · Jul 24 · _General awareness item._  
+
+- [CVE-2026-59676 Local File Deletion Attack Vector in rm_rf() in seunshare](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-59676)  
+  **Microsoft Security Response Center (MSRC)** · Jul 24 · _General awareness item._  
 
 - [Russian Espionage Group Exploited Zimbra Zero-Day to Steal Mail and 2FA Codes](https://thehackernews.com/2026/07/russian-espionage-group-exploited.html)  
   **The Hacker News** · Jul 23 · _General awareness item._  
@@ -70,26 +79,17 @@
 - [CVE-2026-56165 Microsoft Account Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-56165)  
   **Microsoft Security Response Center (MSRC)** · Jul 23 · _General awareness item._  
 
-- [CVE-2026-54120 Microsoft Surface Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-54120)  
-  **Microsoft Security Response Center (MSRC)** · Jul 23 · _General awareness item._  
-
-- [CVE-2026-56160 Azure Red Hat OpenShift (ARO) Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-56160)  
-  **Microsoft Security Response Center (MSRC)** · Jul 23 · _General awareness item._  
-
-- [CVE-2026-35425 Azure API Management (APIM) Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-35425)  
-  **Microsoft Security Response Center (MSRC)** · Jul 23 · _General awareness item._  
-
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [Fake Notepad++ Plugin Delivers MATCHBOIL.V2 in UAC-0099 Attacks](https://thehackernews.com/2026/07/fake-notepad-plugin-delivers.html) — The Hacker News
 - [ISC Stormcast For Friday, July 24th, 2026 https://isc.sans.edu/podcastdetail/10022, (Fri, Jul 24th)](https://isc.sans.edu/diary/rss/33182) — SANS Internet Storm Center
 - [New Dolphin X malware uses AI to rank high-value targets](https://www.bleepingcomputer.com/news/security/new-dolphin-x-malware-uses-ai-to-rank-high-value-targets/) — BleepingComputer
 - [Fake Claude app promoted by Bing ads pushes SectopRAT malware](https://www.bleepingcomputer.com/news/security/fake-claude-app-promoted-by-bing-ads-pushes-sectoprat-malware/) — BleepingComputer
 - [Hackers abuse Notepad++ plugins to stealthily install malware](https://www.bleepingcomputer.com/news/security/hackers-abuse-notepad-plus-plus-plugins-to-stealthily-install-malware/) — BleepingComputer
 - [ThreatsDay: Android Spyware, PLC Attacks, AI Image Prompt Injection + 12 More Stories](https://thehackernews.com/2026/07/threatsday-android-spyware-plc-attacks.html) — The Hacker News
-- [FedRAMP Rev5 Is Ending: What the 20x Transition Really Requires](https://www.bleepingcomputer.com/news/security/fedramp-rev5-is-ending-what-the-20x-transition-really-requires/) — BleepingComputer
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 13 critical · 86 important · 37 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 12 critical · 86 important · 38 FYI_
