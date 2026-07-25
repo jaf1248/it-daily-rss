@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
-**Period:** July 17 – July 24, 2026  
-**Generated:** 2026-07-24 22:11 UTC  
+**Period:** July 18 – July 25, 2026  
+**Generated:** 2026-07-25 00:01 UTC  
 **Items reviewed:** 135  
 
 ## ⚡ Top Actions This Week
@@ -61,6 +61,9 @@
 - [CVE-2026-62835 Azure Portal Information Disclosure Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-62835)  
   **Microsoft Security Response Center (MSRC)** · Jul 24 · _General awareness item._  
 
+- [CVE-2026-48561 Microsoft Edge Copilot Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-48561)  
+  **Microsoft Security Response Center (MSRC)** · Jul 24 · _General awareness item._  
+
 - [ChatGPT AgentForger Flaw Could Deploy Rogue Workspace Agents via a Phishing Link](https://thehackernews.com/2026/07/chatgpt-agentforger-flaw-could-deploy.html)  
   **The Hacker News** · Jul 24 · _General awareness item._  
 
@@ -75,9 +78,6 @@
 
 - [CVE-2026-59676 Local File Deletion Attack Vector in rm_rf() in seunshare](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-59676)  
   **Microsoft Security Response Center (MSRC)** · Jul 24 · _General awareness item._  
-
-- [NodeBB Patches Eight AI-Found Flaws Exposing Admin Access and Private Chats](https://thehackernews.com/2026/07/nodebb-patches-eight-ai-found-flaws.html)  
-  **The Hacker News** · Jul 24 · _General awareness item._  
 
 ---
 
