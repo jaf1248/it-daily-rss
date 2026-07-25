@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
 **Period:** July 18 – July 25, 2026  
-**Generated:** 2026-07-25 00:01 UTC  
+**Generated:** 2026-07-25 03:31 UTC  
 **Items reviewed:** 135  
 
 ## ⚡ Top Actions This Week
@@ -55,6 +55,18 @@
 
 ## 🟠 Important — Review This Week
 
+- [Chromium: CVE-2026-16807 Out of bounds write in Codecs](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-16807)  
+  **Microsoft Security Response Center (MSRC)** · Jul 25 · _General awareness item._  
+
+- [Chromium: CVE-2026-16806 Use after free in WebMCP](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-16806)  
+  **Microsoft Security Response Center (MSRC)** · Jul 25 · _General awareness item._  
+
+- [Chromium: CVE-2026-16805 Use after free in Blink](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-16805)  
+  **Microsoft Security Response Center (MSRC)** · Jul 25 · _General awareness item._  
+
+- [Chromium: CVE-2026-16804 Use after free in Input](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-16804)  
+  **Microsoft Security Response Center (MSRC)** · Jul 25 · _General awareness item._  
+
 - [Microsoft blames massive Microsoft 365 outage on maintenance bug](https://www.bleepingcomputer.com/news/microsoft/microsoft-blames-massive-microsoft-365-outage-on-maintenance-bug/)  
   **BleepingComputer** · Jul 24 · _Service continuity risk to users._  
 
@@ -66,18 +78,6 @@
 
 - [ChatGPT AgentForger Flaw Could Deploy Rogue Workspace Agents via a Phishing Link](https://thehackernews.com/2026/07/chatgpt-agentforger-flaw-could-deploy.html)  
   **The Hacker News** · Jul 24 · _General awareness item._  
-
-- [Bing Images Flaws Let Crafted SVGs Run Commands as SYSTEM on Microsoft's Servers](https://thehackernews.com/2026/07/bing-images-flaws-let-crafted-svgs-run.html)  
-  **The Hacker News** · Jul 24 · _General awareness item._  
-
-- [CVE-2026-64600 xfs: resample the data fork mapping after cycling ILOCK](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-64600)  
-  **Microsoft Security Response Center (MSRC)** · Jul 24 · _General awareness item._  
-
-- [CVE-2026-59677 Process Kill Attack Vector in killall() in seunshare](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-59677)  
-  **Microsoft Security Response Center (MSRC)** · Jul 24 · _General awareness item._  
-
-- [CVE-2026-59676 Local File Deletion Attack Vector in rm_rf() in seunshare](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-59676)  
-  **Microsoft Security Response Center (MSRC)** · Jul 24 · _General awareness item._  
 
 ---
 
