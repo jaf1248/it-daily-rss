@@ -1,12 +1,12 @@
 # IT Weekly Intelligence Briefing
 **Period:** July 19 – July 26, 2026  
-**Generated:** 2026-07-26 19:23 UTC  
+**Generated:** 2026-07-26 20:57 UTC  
 **Items reviewed:** 135  
 
 ## ⚡ Top Actions This Week
 
 1. **Audit third-party software dependencies and review vendor access.**  
-   _GitHub, PyPI add time-absed defenses against supply chain attacks_  
+   _GitHub, PyPI add time-based defenses against supply chain attacks_  
    Source: BleepingComputer  
 
 2. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
@@ -21,7 +21,7 @@
 
 ## 🔴 Critical — Immediate Awareness
 
-### [GitHub, PyPI add time-absed defenses against supply chain attacks](https://www.bleepingcomputer.com/news/security/github-pypi-add-time-absed-defenses-against-supply-chain-attacks/)
+### [GitHub, PyPI add time-based defenses against supply chain attacks](https://www.bleepingcomputer.com/news/security/github-pypi-add-time-absed-defenses-against-supply-chain-attacks/)
 **Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jul 26  
 **Why it matters:** Third-party/software supply chain integrity risk.  
 **Recommended action:** Audit third-party software dependencies and review vendor access.  
