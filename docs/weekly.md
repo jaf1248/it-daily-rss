@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
 **Period:** July 20 – July 27, 2026  
-**Generated:** 2026-07-27 19:23 UTC  
+**Generated:** 2026-07-27 21:07 UTC  
 **Items reviewed:** 134  
 
 ## ⚡ Top Actions This Week
@@ -55,6 +55,9 @@
 
 ## 🟠 Important — Review This Week
 
+- [New Certighost PoC exploit lets attackers hijack Windows domains](https://www.bleepingcomputer.com/news/security/new-certighost-poc-exploit-lets-attackers-hijack-windows-domains/)  
+  **BleepingComputer** · Jul 27 · _General awareness item._  
+
 - [Public Exploit Released for Patched vBulletin Pre-Auth Code Execution Flaw](https://thehackernews.com/2026/07/public-exploit-released-for-patched.html)  
   **The Hacker News** · Jul 27 · _General awareness item._  
 
@@ -76,19 +79,16 @@
 - [CVE-2026-64530 net/sched: cls_api: Handle TC_ACT_CONSUMED in tcf_qevent_handle](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-64530)  
   **Microsoft Security Response Center (MSRC)** · Jul 27 · _General awareness item._  
 
-- [CVE-2024-14040 net: nexthop: Increase weight to u16](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-14040)  
-  **Microsoft Security Response Center (MSRC)** · Jul 27 · _General awareness item._  
-
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [NVIDIA Forms 37-Member Open Secure AI Alliance and Open-Sources NOOA Framework](https://thehackernews.com/2026/07/nvidia-forms-37-member-open-secure-ai.html) — The Hacker News
 - [Apple sued over fake App Store crypto wallet app stealing $1.8M in Bitcoin](https://www.bleepingcomputer.com/news/apple/apple-sued-over-fake-app-store-crypto-wallet-app-stealing-18m-in-bitcoin/) — BleepingComputer
 - [Dysphoria IoT Botnet Adds Blockchain C2 and Victim Relays After JackSkid Disruption](https://thehackernews.com/2026/07/dysphoria-iot-botnet-adds-blockchain-c2.html) — The Hacker News
 - [⚡ Weekly Recap: Rogue AI Agents, Check Point Exploit, Slopsquatting, ClickFix Lures and More](https://thehackernews.com/2026/07/weekly-recap-rogue-ai-agents-check.html) — The Hacker News
 - [Shadow AI agents are multiplying. Here's how to find and secure them.](https://www.bleepingcomputer.com/news/security/shadow-ai-agents-are-multiplying-heres-how-to-find-and-secure-them/) — BleepingComputer
 - [Operation BlueDash Deploys Level RMM and ScreenConnect via Fake Teams Update](https://thehackernews.com/2026/07/operation-bluedash-deploys-level-rmm.html) — The Hacker News
-- [Cruciferra Crypter Uses BYOVD and Process Ghosting to Hide Windows Malware](https://thehackernews.com/2026/07/cruciferra-crypter-uses-byovd-and.html) — The Hacker News
 
 ---
 
