@@ -1,25 +1,35 @@
 # IT Weekly Intelligence Briefing
 **Period:** July 20 – July 27, 2026  
-**Generated:** 2026-07-27 12:19 UTC  
+**Generated:** 2026-07-27 15:40 UTC  
 **Items reviewed:** 134  
 
 ## ⚡ Top Actions This Week
 
-1. **Audit third-party software dependencies and review vendor access.**  
-   _GitHub, PyPI add time-based defenses against supply chain attacks_  
+1. **Validate backups, confirm EDR coverage, and brief incident response team.**  
+   _Coca-Cola confirms data theft in Fairlife ransomware attack_  
    Source: BleepingComputer  
 
 2. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _ShinyHunters data leaks fuel $2,000 sextortion email scam_  
+   _Ernst & Young data breach claimed by ShinyHunters extortion gang_  
    Source: BleepingComputer  
 
-3. **Validate backups, confirm EDR coverage, and brief incident response team.**  
-   _Cl0p Affiliates Target Internet-Exposed PTC Windchill and FlexPLM with Unauthenticated RCE_  
-   Source: The Hacker News  
+3. **Audit third-party software dependencies and review vendor access.**  
+   _GitHub, PyPI add time-based defenses against supply chain attacks_  
+   Source: BleepingComputer  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [Coca-Cola confirms data theft in Fairlife ransomware attack](https://www.bleepingcomputer.com/news/security/coca-cola-confirms-data-theft-in-fairlife-ransomware-attack/)
+**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jul 27  
+**Why it matters:** Elevated ransomware risk across the sector.  
+**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
+
+### [Ernst & Young data breach claimed by ShinyHunters extortion gang](https://www.bleepingcomputer.com/news/security/ernst-and-young-data-breach-claimed-by-shinyhunters-extortion-gang/)
+**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jul 27  
+**Why it matters:** Potential credential or data exposure.  
+**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
 ### [GitHub, PyPI add time-based defenses against supply chain attacks](https://www.bleepingcomputer.com/news/security/github-pypi-add-time-absed-defenses-against-supply-chain-attacks/)
 **Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jul 26  
@@ -41,19 +51,15 @@
 **Why it matters:** Elevated ransomware risk across the sector.  
 **Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
 
-### [OnTrac notifies customers of data breach after network hack](https://www.bleepingcomputer.com/news/security/ontrac-notifies-customers-of-data-breach-after-network-hack/)
-**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jul 24  
-**Why it matters:** Potential credential or data exposure.  
-**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
-
-### [Hermes AI agent used to automate attack on Thai Finance Ministry](https://www.bleepingcomputer.com/news/security/hermes-ai-agent-used-to-automate-attack-on-thai-finance-ministry/)
-**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jul 24  
-**Why it matters:** Potential credential or data exposure.  
-**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
-
 ---
 
 ## 🟠 Important — Review This Week
+
+- [CVE-2026-50333 Windows Spaceport.sys Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-50333)  
+  **Microsoft Security Response Center (MSRC)** · Jul 27 · _General awareness item._  
+
+- [n8n Sandbox Escape Lets Workflow Editors Run OS Commands as the n8n Process](https://thehackernews.com/2026/07/n8n-sandbox-escape-lets-workflow.html)  
+  **The Hacker News** · Jul 27 · _General awareness item._  
 
 - [CVE-2026-16461 Rpcbind: rpcbind: stack buffer overflow in rpcinfo rpcbdump() short-mode version-list formatting](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-16461)  
   **Microsoft Security Response Center (MSRC)** · Jul 27 · _General awareness item._  
@@ -73,22 +79,16 @@
 - [Scans for ESAFENET CDG 3 Document Management System Weak Logins, (Sun, Jul 26th)](https://isc.sans.edu/diary/rss/33184)  
   **SANS Internet Storm Center** · Jul 26 · _General awareness item._  
 
-- [Fastjson 1.x RCE Vulnerability Targeted in Attacks With No Patched Available](https://thehackernews.com/2026/07/fastjson-1x-rce-vulnerability-targeted.html)  
-  **The Hacker News** · Jul 25 · _General awareness item._  
-
-- [Researcher Publishes GitLab RCE PoC Letting Authenticated Users Run Commands as Git](https://thehackernews.com/2026/07/researcher-publishes-gitlab-rce-poc.html)  
-  **The Hacker News** · Jul 25 · _General awareness item._  
-
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [⚡ Weekly Recap: Rogue AI Agents, Check Point Exploit, Slopsquatting, ClickFix Lures and More](https://thehackernews.com/2026/07/weekly-recap-rogue-ai-agents-check.html) — The Hacker News
+- [Shadow AI agents are multiplying. Here's how to find and secure them.](https://www.bleepingcomputer.com/news/security/shadow-ai-agents-are-multiplying-heres-how-to-find-and-secure-them/) — BleepingComputer
+- [Operation BlueDash Deploys Level RMM and ScreenConnect via Fake Teams Update](https://thehackernews.com/2026/07/operation-bluedash-deploys-level-rmm.html) — The Hacker News
 - [Cruciferra Crypter Uses BYOVD and Process Ghosting to Hide Windows Malware](https://thehackernews.com/2026/07/cruciferra-crypter-uses-byovd-and.html) — The Hacker News
 - [Java Spring Boot "heapdump" scans, (Mon, Jul 27th)](https://isc.sans.edu/diary/rss/33188) — SANS Internet Storm Center
 - [TELESHIM Abuses Telegram for C2 in Attacks Against Middle East Governments](https://thehackernews.com/2026/07/teleshim-abuses-telegram-for-c2-in.html) — The Hacker News
-- [GitHub Adds 3-Day Dependabot Cooldown to Limit Poisoned Package Adoption](https://thehackernews.com/2026/07/github-adds-3-day-dependabot-cooldown.html) — The Hacker News
-- [ISC Stormcast For Monday, July 27th, 2026 https://isc.sans.edu/podcastdetail/10024, (Mon, Jul 27th)](https://isc.sans.edu/diary/rss/33186) — SANS Internet Storm Center
-- [Steam forum ClickFix attacks infect gamers with XMRig cryptominers](https://www.bleepingcomputer.com/news/security/steam-forum-clickfix-attacks-infect-gamers-with-xmrig-cryptominers/) — BleepingComputer
 
 ---
 
