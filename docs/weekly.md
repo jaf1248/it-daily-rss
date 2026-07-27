@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
 **Period:** July 20 – July 27, 2026  
-**Generated:** 2026-07-27 15:40 UTC  
+**Generated:** 2026-07-27 17:40 UTC  
 **Items reviewed:** 134  
 
 ## ⚡ Top Actions This Week
@@ -55,6 +55,9 @@
 
 ## 🟠 Important — Review This Week
 
+- [Public Exploit Released for Patched vBulletin Pre-Auth Code Execution Flaw](https://thehackernews.com/2026/07/public-exploit-released-for-patched.html)  
+  **The Hacker News** · Jul 27 · _General awareness item._  
+
 - [CVE-2026-50333 Windows Spaceport.sys Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-50333)  
   **Microsoft Security Response Center (MSRC)** · Jul 27 · _General awareness item._  
 
@@ -76,19 +79,16 @@
 - [CVE-2024-14040 net: nexthop: Increase weight to u16](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-14040)  
   **Microsoft Security Response Center (MSRC)** · Jul 27 · _General awareness item._  
 
-- [Scans for ESAFENET CDG 3 Document Management System Weak Logins, (Sun, Jul 26th)](https://isc.sans.edu/diary/rss/33184)  
-  **SANS Internet Storm Center** · Jul 26 · _General awareness item._  
-
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [Apple sued over fake App Store crypto wallet app stealing $1.8M in Bitcoin](https://www.bleepingcomputer.com/news/apple/apple-sued-over-fake-app-store-crypto-wallet-app-stealing-18m-in-bitcoin/) — BleepingComputer
 - [⚡ Weekly Recap: Rogue AI Agents, Check Point Exploit, Slopsquatting, ClickFix Lures and More](https://thehackernews.com/2026/07/weekly-recap-rogue-ai-agents-check.html) — The Hacker News
 - [Shadow AI agents are multiplying. Here's how to find and secure them.](https://www.bleepingcomputer.com/news/security/shadow-ai-agents-are-multiplying-heres-how-to-find-and-secure-them/) — BleepingComputer
 - [Operation BlueDash Deploys Level RMM and ScreenConnect via Fake Teams Update](https://thehackernews.com/2026/07/operation-bluedash-deploys-level-rmm.html) — The Hacker News
 - [Cruciferra Crypter Uses BYOVD and Process Ghosting to Hide Windows Malware](https://thehackernews.com/2026/07/cruciferra-crypter-uses-byovd-and.html) — The Hacker News
 - [Java Spring Boot "heapdump" scans, (Mon, Jul 27th)](https://isc.sans.edu/diary/rss/33188) — SANS Internet Storm Center
-- [TELESHIM Abuses Telegram for C2 in Attacks Against Middle East Governments](https://thehackernews.com/2026/07/teleshim-abuses-telegram-for-c2-in.html) — The Hacker News
 
 ---
 
