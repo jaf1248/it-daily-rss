@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
 **Period:** July 21 – July 28, 2026  
-**Generated:** 2026-07-28 09:35 UTC  
+**Generated:** 2026-07-28 11:56 UTC  
 **Items reviewed:** 134  
 
 ## ⚡ Top Actions This Week
@@ -61,7 +61,7 @@
 - [Researcher Says AI Helped Develop Linux Traffic-Control Race Into Root Exploit](https://thehackernews.com/2026/07/researcher-says-ai-helped-develop-linux.html)  
   **The Hacker News** · Jul 28 · _General awareness item._  
 
-- [Microsoft Says New Cybersecurity AI Model Helps MDASH Hit 95.95% at Half the Cost](https://thehackernews.com/2026/07/microsoft-says-new-cybersecurity-ai.html)  
+- [Microsoft Says New Cybersecurity AI Model Helps MDASH Score 95.95% at Half the Cost](https://thehackernews.com/2026/07/microsoft-says-new-cybersecurity-ai.html)  
   **The Hacker News** · Jul 28 · _General awareness item._  
 
 - [Attackers Exploit Arista VeloCloud Orchestrator Command Injection Flaw](https://thehackernews.com/2026/07/attackers-exploit-arista-velocloud.html)  
