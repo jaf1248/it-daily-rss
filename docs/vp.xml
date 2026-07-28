@@ -3,8 +3,824 @@
 <channel>
   <title>Joe — VP of IT Briefing</title>
   <description>Leadership-focused IT risk, vendors, pricing, licensing, and industry context.</description>
-  <lastBuildDate>Tue, 28 Jul 2026 06:30:46 +0000</lastBuildDate>
+  <lastBuildDate>Tue, 28 Jul 2026 09:34:31 +0000</lastBuildDate>
   
+<item>
+  <title>🔵 The data scientist is dead — long live the data science conductor</title>
+  <link>https://www.cio.com/article/4196942/the-data-scientist-is-dead.html</link>
+  <pubDate>Tue, 28 Jul 2026 09:30:00 +0000</pubDate>
+  <source>CIO.com</source>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<p class="wp-block-paragraph">A friend of mine once played at the Laeiszhalle in Hamburg. The hall was sold out, the gentlemen looked elegant in their double-breasted suits, and the ladies wore heirlooms around their necks. From my seat, I had a good view of my friend, who sat near the front of the orchestra and played the violin virtuously. He looked strained, pizzicato; the conductor raised his baton, vibrato.</p>
+
+
+
+<p class="wp-block-paragraph">After the performance, I met him as he was putting away his instrument. I told him how much I had enjoyed the piece, praised his skillful playing, and asked him how he felt about his performance. I was surprised when he said he had made a few mistakes. To my questioning look, he simply replied, “Luckily, our conductor quickly brought me back on track — he’s keeping an eye on all of us.”</p>
+
+
+
+<p class="wp-block-paragraph">As a layperson when it came to music, I hadn’t really understood the conductor’s role until then. After all, he has more than 40 musicians in front of him, all of whom are more skilled at their instruments than he is himself. Now it became clear to me: Without the conductor, the piece wouldn’t harmonize nearly as well. Because no matter how technically accomplished individual musicians may be, you need someone who has the big picture in mind. Someone who doesn’t just know how a single instrument should sound, but how everything should work together.</p>
+
+
+
+<p class="wp-block-paragraph">Another realization: An orchestra and a data science team have significantly more in common than it might seem.</p>
+
+
+
+<h2 class="wp-block-heading" id="the-conductors-day">The conductor’s day</h2>
+
+
+
+<p class="wp-block-paragraph">Nowadays everyone in <a href="https://www.cio.com/article/221871/what-is-data-science-a-method-for-turning-data-into-value.html">data science</a> uses large language models (LLMs) to write faster and better code. In the pre-GPT era, it usually took me one to two weeks to develop a prototype that could be presentable to stakeholders. Now it takes me less than two days. The productivity gains are enormous. But that’s just a superficial change. Anyone who looks more closely will see a much more fundamental shift.</p>
+
+
+
+<p class="wp-block-paragraph">The InnoGames data science team, to which I belong, consists of seven people. About a year ago, we decided to outsource the majority of our programming work to Claude Code. This set in motion something that, sooner or later, would affect everyone.</p>
+
+
+
+<p class="wp-block-paragraph"><a href="https://www.cio.com/article/230532/what-is-a-data-scientist-a-key-data-analytics-role-and-a-lucrative-career.html">Data scientists</a> have now become conductors. Previously, we had seen ourselves more as musicians: We knew exactly how to play our instruments. We knew our code and data pipelines inside and out — and we knew which techniques to use for which use cases.</p>
+
+
+
+<p class="wp-block-paragraph">Today we’re taking a step back to get a better view of the bigger picture. We’re coordinating AI agents that build parts of the whole for us. In doing so, we need to ensure that this big picture looks the way it should: Architecture and design patterns are increasingly coming into focus.</p>
+
+
+
+<p class="wp-block-paragraph">While reflecting on our new self-image, I asked myself if I had ever written anything as simple as a decision tree entirely in pure <a href="https://www.infoworld.com/blogs/the-python-report/">Python</a>. The answer was no. However, this isn’t unfamiliar to our role: Data scientists have always imported code written by others to use in their own code.</p>
+
+
+
+<h2 class="wp-block-heading" id="the-agentic-paralysis">The agentic paralysis</h2>
+
+
+
+<p class="wp-block-paragraph">The new path our team took simply elevated the underlying idea to the next level. Almost a year after switching to fully agentic, my role as scientist is becoming more like what I originally imagined. What’s truly at the heart of a data scientist’s work is iteration: We build models, check the results, weigh the options, consider what we can adjust (or whether we should try a different approach), and then start the next iteration. We continue until we’re satisfied with the result. By delegating programming tasks, we can iterate faster and more frequently. It also makes it easier to discard a potentially hopeless approach and start completely from scratch.</p>
+
+
+
+<p class="wp-block-paragraph">Given such a shift in the role of the data scientist, a revised job description isn’t enough. This transformation also entails a change in working methods. At the heart of this new way of working, for us, was the idea of ​​viewing Claude Code more as infrastructure — or even a team member — rather than as a program that’s opened in the morning and closed again in the evening.</p>
+
+
+
+<p class="wp-block-paragraph">AI agents need context — the implicit knowledge we’ve accumulated over years — and coding guidelines. They need smaller tasks that they can execute perfectly and that, in the grand scheme of things, form the bigger picture. Much of our work now takes place in the concept phase — and when it comes to architecture. That is, before any code is even written. It’s crucial to understand that it’s not just about writing better prompts. The essential thing is to build an environment where the agents function as an integral part.</p>
+
+
+
+<p class="wp-block-paragraph">After embarking on our new path, we very quickly noticed something that felt counterintuitive: We were slowing down — the productivity gains were gone. From today’s perspective, this apparent paradox is easily explained: We had to train the agents. They lacked context, which is why the generated code was flawed — and we had to look very closely at everything.</p>
+
+
+
+<p class="wp-block-paragraph">But with time and better context, the agents improved steadily. After about three months, we reached the same productivity level as before the change and were becoming increasingly confident in our new roles. We were also fortunate: Our boss gave us the time we needed. It wasn’t expected that the change would immediately make us more productive. And that was a good thing.</p>
+
+
+
+<h2 class="wp-block-heading" id="counteracting-ai-temptations">Counteracting AI temptations</h2>
+
+
+
+<p class="wp-block-paragraph">Has everything improved almost a year after the switchover? No. New problems keep arising, requiring fresh solutions. While newer LLMs and more context do improve the agents, this can quickly lead to a situation where the agents’ coding suggestions are accepted too readily. This not only harms your own programming skills: One can easily imagine the problems that will arise when only the AI ​​agents understand the code.</p>
+
+
+
+<p class="wp-block-paragraph">Those starting out in the field of data science are finding it particularly difficult: Firstly, because junior roles are now less in demand. Secondly, because newcomers lack the necessary in-depth understanding, and it’s incredibly tempting to simply hand over any bugs to Claude Code. Claude will fix those bugs, but without the data scientist gaining valuable learning experience.</p>
+
+
+
+<p class="wp-block-paragraph">Even experienced team members aren’t immune to this. That’s why we at InnoGames are trying to counteract these temptations with creative ideas. For example, we’ve introduced a monthly “No AI” day and joint pair programming sessions. Whether this is sufficient, or whether other methods will prove more effective, remains to be seen.</p>
+
+
+
+<p class="wp-block-paragraph">When I recently told my musician friend about my journey to becoming a conductor, he chuckled and revealed that conductors are often the butt of jokes behind their backs. And who knows, maybe the AI ​​agents are even talking <a href="https://www.computerwoche.de/article/4142865/undercover-als-ki-agent-bei-moltbook-ein-erfahrungsbericht.html" target="_blank">about me</a> among themselves? If so, I’d love to hear something like this: “Luckily, our conductor quickly brought me back under control; he’s got us all under control.”</p>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Get Spotify&#x27;s student discount plus Hulu for just $6 a month - here&#x27;s how</title>
+  <link>https://www.zdnet.com/article/how-to-get-a-spotify-premium-student-discount/</link>
+  <pubDate>Tue, 28 Jul 2026 09:00:35 +0000</pubDate>
+  <source>ZDNet</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>If you're a college student, Spotify has an exclusive bundle that can save you cash on music and streaming. Here's how to get it.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔴 Why your AI safety certificates are worthless at runtime</title>
+  <link>https://www.csoonline.com/article/4201919/why-your-ai-safety-certificates-are-worthless-at-runtime.html</link>
+  <pubDate>Tue, 28 Jul 2026 09:00:00 +0000</pubDate>
+  <source>CSO Online</source>
+  <description><![CDATA[<b>Why this matters: Supply chain risk — audit third-party dependencies and vendor access.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<p class="wp-block-paragraph">Every week, another enterprise technology vendor issues a glossy press release announcing their new autonomous AI agent architecture, complete with a SOC 2 Type II report, an ISO 42001 certification, and an ironclad safety guarantee. On paper, the enterprise security battle looks won. In production, the trap is just snapping shut.</p>
+
+
+
+<p class="wp-block-paragraph">The core mistake modern enterprise leaders are making is treating AI safety as a design-time product certification rather than a live runtime execution problem. A model blueprint can be perfectly secure and rigorously aligned in a developer’s sandboxed testing lab. Yet, the moment that model is wrapped into an autonomous agent, granted internal API access, and tasked with reading and writing corporate data, its security profile changes at machine velocity. Point-of-entry compliance certificates do not protect a business from an active operational runtime.</p>
+
+
+
+<h2 class="wp-block-heading" id="the-product-safety-illusion">The product safety illusion</h2>
+
+
+
+<p class="wp-block-paragraph">We still think about security as a static asset that can be packaged and delivered by a vendor; a perspective that heavily influences current regulatory logic and implicitly assumes that enterprise cybersecurity obligations can be safely delegated down the supply chain to AI model developers.</p>
+
+
+
+<p class="wp-block-paragraph">This is a dangerous operational blind spot. The governance challenge with autonomous systems lives in their unpredictable runtime behaviour, not in their fixed code. Traditional software can be vetted, compiled, and expected to behave identically every time it runs. Agentic systems, by contrast, alter their actions based on shifting context, real-time data inputs, and dynamic third-party plug-ins.</p>
+
+
+
+<p class="wp-block-paragraph">The structural blind spot of point-of-time certification is formally recognized as LLM06 in the <a href="https://url.usb.m.mimecastprotect.com/s/C6aNCA8LmLh70v8GsGfGfGu8Y8?domain=genai.owasp.org/" rel="noreferrer noopener" target="_blank">OWASP Top 10 for LLM Applications</a>. In their framework, risks like Excessive Agency and Insecure Output Handling are classified as systemic vulnerabilities born entirely out of deployment architecture, not model code. When an institution transforms a passive model into an active agent, its operational state space explodes exponentially through three distinct runtime phenomena:</p>
+
+
+
+<ul class="wp-block-list">
+<li><strong>Dynamic tool chaining: </strong>The agent is no longer simply generating text; it is actively selecting which internal APIs, database queries, and script environments to execute based on its semantic interpretation of a live request.</li>
+
+
+
+<li><strong>State-dependent cascades: </strong>The output of an agent’s initial tool call permanently modifies the active application state, creating an altered environment for its next decision loop that can never be fully simulated in a design-time red-teaming lab.</li>
+
+
+
+<li><strong>Multi-agent feedback loops: </strong>As multiple specialized corporate agents begin to pass tasks, variables, and context summaries back and forth, they form an unpredictable, non-linear ecosystem with micro-deviations that rapidly compound into systemic failures.</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">To address this fluid perimeter, the National Institute of Standards and Technology (NIST) Center for AI Standards and Innovation launched its <a href="https://url.usb.m.mimecastprotect.com/s/xq0xCB1MnMHEqgyzs6hNf2wQWY?domain=nist.gov" rel="noreferrer noopener" target="_blank">AI Agent Standards Initiative</a>. The framework signals an immediate shift for enterprise defines: Monitoring that stops at static uptime or point-in-time evaluation is fundamentally obsolete. True risk management requires continuous, post-deployment monitoring across functional, operational, and structural layers.</p>
+
+
+
+<h2 class="wp-block-heading" id="the-danger-of-trusted-systems">The danger of trusted systems</h2>
+
+
+
+<p class="wp-block-paragraph">The time between initial network intrusion and full operational impact has collapsed to minutes. Recent breach investigations detailed in the <a href="https://url.usb.m.mimecastprotect.com/s/-XPDCDwO0OhgpRyDuAiRfjY7bI?domain=crowdstrike.com/" rel="noreferrer noopener" target="_blank">CrowdStrike 2026 Global Threat Report</a> show that average breakout times for automated tools have dropped to under 30 minutes, with the fastest exploits measured in seconds. Despite this acceleration, most enterprise cyber defenses still run on a sluggish human timeline.</p>
+
+
+
+<figure class="wp-block-table"><div class="overflow-table-wrapper"><table class="has-fixed-layout"><tbody><tr><td><strong>Security operations phase</strong></td><td><strong>Operational execution timeline</strong></td></tr><tr><td>Automated agent intrusion &amp; exfiltration</td><td>Sub-30 Minutes (Often measured in seconds)</td></tr><tr><td>Legacy human threat triage</td><td>1 to 4 Hours</td></tr><tr><td>Infrastructure vulnerability remediation</td><td>2 to 5 Days</td></tr><tr><td>Enterprise patch management cycle</td><td>2 to 6 Weeks</td></tr></tbody></table> </div></figure>
+
+
+
+<p class="wp-block-paragraph">The current enterprise containment gap is severe. Empirical data from the <a href="https://url.usb.m.mimecastprotect.com/s/0x2wCEKgPgsRyQYktPsyf7ZXyh?domain=kiteworks.com/" rel="noreferrer noopener" target="_blank">Kiteworks 2026 Cyber Security Risk Management Forecast</a> highlights a stark disconnect between current infrastructure capabilities and the new reality of agentic deployment:</p>
+
+
+
+<ul class="wp-block-list">
+<li>63 percent of organizations report an inability to enforce purpose limitations on active AI agents.</li>
+
+
+
+<li>60 percent of IT leaders state they cannot quickly terminate or trigger an immediate kill-switch on a misbehaving agent.</li>
+
+
+
+<li>55 percent of corporate networks cannot isolate autonomous AI systems from broader network access, allowing lateral privilege creep to go entirely unmonitored.</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">When you deploy autonomous agents to handle enterprise identity provisioning or access management, they interact directly with these boundary data streams. A safety certificate cannot protect your business when these compromised session tokens are written into internal system logs, which the agent then ingests during an automated diagnostic or provisioning routine.</p>
+
+
+
+<h2 class="wp-block-heading" id="the-dissolution-of-the-data-as-code-boundary">The dissolution of the “data as code” boundary</h2>
+
+
+
+<p class="wp-block-paragraph">The technical mechanism driving this risk is the total collapse of the traditional Data as Code boundary. In standard enterprise software, application logic (code) is strictly insulated from the records it processes (data). When a user types a command into a web form, a parameterized database query handles it safely because the system treats the input strictly as passive text, never as executable instructions.</p>
+
+
+
+<p class="wp-block-paragraph">Agentic architectures dissolve this boundary. Because these systems process unstructured information semantically, any data the agent reads (be it a customer support email, a vendor invoice, or a network log) can be interpreted by the underlying model as a direct command. To the model’s core engine, all language is processed as a single, flattened token stream where instructions and data are indistinguishable.</p>
+
+
+
+<p class="wp-block-paragraph">This exposure is compounded by the widespread adoption of the Model Context Protocol (MCP). As detailed in a National Security Agency (NSA) design consideration report, MCP connects models directly to local file systems and enterprise developer tools. Because MCP servers rely on raw tool descriptions loaded directly into the model’s operational context window, attackers can use tool poisoning and session hijacking to steer internal agents without ever interacting with the primary user interface.</p>
+
+
+
+<p class="wp-block-paragraph">This is not a theoretical threat. Security research has identified sophisticated actors leveraging Indirect Prompt Code Injection to systematically bypass frontier model safety protocols by embedding high-density, semantic lures inside passive data files. The model does not recognize that it is being attacked; it simply absorbs the malicious instruction as valid contextual data and executes it downstream.</p>
+
+
+
+<h2 class="wp-block-heading" id="the-global-reality-disparate-architecture-and-legal-regimes">The global reality: Disparate architecture and legal regimes</h2>
+
+
+
+<p class="wp-block-paragraph">A global enterprise cannot secure this runtime environment by relying on centralized, regional security paradigms. The operational and regulatory environments governing autonomous agents are fragmenting along highly distinct geographic and technical borders:</p>
+
+
+
+<ul class="wp-block-list">
+<li><strong>Mainland China: </strong>The Cyberspace Administration of China (CAC) enforces strict generative AI algorithm registries and absolute, real-time data provenance requirements. For global firms, this means an agent’s runtime environment must handle highly specific, state-mandated logging hooks and regional content boundaries that can introduce distinct structural latencies into the execution loop.</li>
+
+
+
+<li><strong>Singapore: </strong>Through the Infocomm Media Development Authority (IMDA), Singapore’s approach emphasizes operational lineage and bounded autonomy. Their Model AI Governance Framework mandates explicit system transparency, requiring organizations to map the entire toolchain and verify the logical path an agent takes before it alters any production record.</li>
+
+
+
+<li><strong>Australia &amp; the Five Eyes Network: </strong>The Australian Cyber Security Centre (ACSC), along with its international partners, explicitly mandates moving away from reactive point-security toward a Modern Defensible Architecture, where agents are treated as entirely distinct, isolated identity segments designed to withstand and contain the inevitable compromise of underlying models.</li>
+
+
+
+<li><strong>Latin America: </strong>Driven by a rapid acceleration of localized, open-source model infrastructure to bypass mega-vendor lock-in, technology leaders in this region face a significantly higher engineering burden. Without automated vendor-pushed safety updates, the responsibility for securing the runtime falls entirely on the enterprise’s internal API gateway architecture.</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading" id="the-practical-pivot-govern-the-process-not-the-asset">The practical pivot: Govern the process, not the asset</h2>
+
+
+
+<p class="wp-block-paragraph">To protect the enterprise without choking innovation, technology leadership must shift from static software asset management to continuous process governance.</p>
+
+
+
+<h3 class="wp-block-heading" id="1-enforce-non-human-identity-controls">1. Enforce non-human identity controls</h3>
+
+
+
+<p class="wp-block-paragraph">AI agents must not inherit the broad, unmonitored privileges of legacy service accounts. They should be treated as untrusted, non-human identities subject to real-time access governance, continuous session logging, and strict behavioural rate-limiting at the API gateway layer.</p>
+
+
+
+<p class="wp-block-paragraph">As Phil Calvin, chief product officer at identity security firm Delinea, noted in an industry briefing on the rise of autonomous machine accounts:</p>
+
+
+
+<p class="wp-block-paragraph">“At its most basic, an AI agent is just an account, and you need to understand the account sprawl and permissions.”</p>
+
+
+
+<p class="wp-block-paragraph">Agents are frequently granted overly broad access to prevent automated workflows from stalling due to permission errors. To mitigate this, enterprises must deploy automated machine identity kill-switches. This means enforcing short-lived, ephemeral session tokens that automatically expire every 15 minutes.</p>
+
+
+
+<p class="wp-block-paragraph"><strong>A technical solution:</strong> Implement an automated OAuth 2.1 or RFC 8693 Token Exchange proxy directly between your orchestration layer and internal systems. Instead of hardcoding keys, the agent must present an ephemeral assertion token that the proxy validates and dynamically downgrades to a single-use, read-only scope, ensuring a compromised prompt cannot execute state-changing actions.</p>
+
+
+
+<h3 class="wp-block-heading" id="2-establish-process-firewalls">2. Establish process firewalls</h3>
+
+
+
+<p class="wp-block-paragraph">Dynamic systems cannot be regulated with static rules. The workflow itself must be secured. If a manual business process is fragmented or broken, automating it simply scales the risk at machine speed. Humans inherently act as circuit breakers for logical absurdities; autonomous agents lack this baseline intuition, executing flawed or manipulated workflows to completion without hesitation. The underlying human workflow must be mapped, deduplicated, and restricted to deterministic outcome paths before any automation occurs.</p>
+
+
+
+<p class="wp-block-paragraph">To bridge the gap, implement short-lived, least-privilege JSON gateways. Agents must be completely banned from directly executing code, writing commands, or querying database layers. Instead, the agent’s output must be restricted to a strictly structured, non-executable JSON payload. This payload is parsed by a deterministic software gateway that validates not just the schema structure, but enforces strict, hard-coded business-logic boundaries on the parameters themselves, such as maximum transaction limits and strict whitelists for destination fields.</p>
+
+
+
+<p class="wp-block-paragraph"><strong>A technical solution:</strong> Deploy a deterministic state-machine validator directly inside your API gateway. This architectural layer treats the agent’s proposed JSON payload as an unverified schema input, forcing it through strict regex validation, data-type matching, and predefined boundary constraints before allowing any downstream execution.</p>
+
+
+
+<h3 class="wp-block-heading" id="3-implement-session-sanitation">3. Implement session sanitation</h3>
+
+
+
+<p class="wp-block-paragraph">To counter the risk of context drift and slow-rolling manipulation, implement strict runtime memory sanitation protocols.</p>
+
+
+
+<p class="wp-block-paragraph">This requires continuous cryptographic verification of all data inputs entering the agent’s context window. By running data payloads through localized, lightweight semantic input firewalls, organizations can detect and strip out structural obfuscation, hidden text, and tool-poisoning commands before the data is ingested by the core model. Furthermore, all active tools and MCP connectors must be digitally signed and version-pinned to prevent rogue local server compromises.</p>
+
+
+
+<p class="wp-block-paragraph"><strong>A technical solution:</strong> Enforce sliding-window contextual resets and run all incoming multi-source data through stateless, single-turn inference pipelines. By stripping conversational histories down to the bare minimum token requirements and enforcing hard context resets between discrete operational steps, you break the dependency loops that semantic prompt injections rely on to hijack agent memory.</p>
+
+
+
+<h2 class="wp-block-heading" id="the-bottom-line-for-tech-leadership">The bottom line for tech leadership</h2>
+
+
+
+<p class="wp-block-paragraph">Relying on model weights and vendor certificates to protect an enterprise is the modern equivalent of locking the front door while leaving the back wall completely unbuilt. Frontier models are remarkable engines, but when they become autonomous agents, they are highly dynamic and unpredictable actors within a network.</p>
+
+
+
+<p class="wp-block-paragraph">The true security perimeter is no longer a static line drawn around a software asset. It is the real-time, fluid boundary of the process itself. To win the runtime security battle, technology leaders must stop treating AI as an untouchable black box and start managing it for what it truly is: an untrusted, hyper-fast identity that requires rigorous isolation, deterministic firewalls, and absolute accountability.</p>
+
+
+
+<p class="wp-block-paragraph">The enterprise safety battle will not be won by the vendor that prints the prettiest compliance certificate. It will be won by the CIO who builds the most defensible runtime architecture.</p>
+
+
+
+<p class="wp-block-paragraph"><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><a href="https://www.cio.com/expert-contributor-network/"><strong>Want to join?</strong></a></p>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 AI and the workforce have the same blind spots</title>
+  <link>https://www.cio.com/article/4201924/ai-and-the-workforce-have-the-same-blind-spots.html</link>
+  <pubDate>Tue, 28 Jul 2026 09:00:00 +0000</pubDate>
+  <source>CIO.com</source>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<p class="wp-block-paragraph">Every AI rollout comes with the same internal pitch: We’ll move faster, and we’ll stay accurate, because humans will review the output. It’s a two-part promise. Most organizations have spent the last two years measuring the efficiency of this, but not many have seriously tested the second part.</p>
+
+
+
+<p class="wp-block-paragraph">New research suggests we should be questioning whether humans are holding up their side of the bargain.</p>
+
+
+
+<h2 class="wp-block-heading" id="two-bets-one-plan">Two bets, one plan</h2>
+
+
+
+<p class="wp-block-paragraph">The logic is intuitive enough. AI handles execution with speed, consistency and at scale. Humans handle judgment, context, skepticism and error detection. Together, you get faster output and a built-in check on work quality. It’s become a standard part of every AI governance plan.</p>
+
+
+
+<p class="wp-block-paragraph">What it assumes is that the human reviewer can actually do the job the plan assigned them.</p>
+
+
+
+<p class="wp-block-paragraph">Cangrade mapped <a href="https://www.cangrade.com/research/gen-z-ai-readiness-2026/">71,747 Gen Z and Millennial skills assessments</a> against the five soft skills that appear most consistently in AI-era job postings, drawn from an analysis <a href="https://www.cangrade.com/research/ai-era-soft-skills/">of 200 AI-related roles</a> across industries, seniority levels and functions. The five skills AI-augmented roles required for success were remarkably consistent: Communication, strategic thinking, critical thinking, attention to detail and creative problem-solving.</p>
+
+
+
+<p class="wp-block-paragraph">How well the younger workforce measures up against those skills is where the plan starts to show cracks.</p>
+
+
+
+<h2 class="wp-block-heading" id="what-the-data-shows">What the data shows</h2>
+
+
+
+<p class="wp-block-paragraph">Not everything in the findings is a concern. Gen Z and Millennials scored 14% above average in Communication, ranking 8th out of 40 measured competencies. That’s a genuine strength and a well-timed one. As AI handles more content generation and information retrieval, human communication shifts toward higher-value work like aligning stakeholders, translating AI outputs into decisions and managing the coordination that AI augmentation actually increases. The incoming workforce is well-positioned for that shift.</p>
+
+
+
+<p class="wp-block-paragraph">Strategic thinking landed just under average, 1% below baseline, ranking 24th out of 40. For most roles, that’s sufficient. But there are two scenarios where it isn’t. For senior positions where setting direction is the primary responsibility, it warrants direct assessment rather than assumption. Secondly, as analytical tasks are increasingly outsourced to AI, the human role in strategy shifts from information gathering to high-level decision-making. While AI excels at identifying patterns and processing data at scale, it can’t weigh competing priorities, set a clear direction, or grasp contextual meaning. As that analytical work is outsourced to AI, an “average” level of <a href="https://hbr.org/2023/11/how-to-become-a-better-strategic-thinker">strategic thinking is the minimum</a>.</p>
+
+
+
+<p class="wp-block-paragraph">The skills that matter most for work quality and accuracy are further down the list.</p>
+
+
+
+<h2 class="wp-block-heading" id="where-the-plan-falls-short">Where the plan falls short</h2>
+
+
+
+<p class="wp-block-paragraph">Critical thinking ranked 37th out of 40 competencies, 18% below average. Attention to detail ranked 36th, 17% below average. Creative problem-solving ranked 29th, 10% below average.</p>
+
+
+
+<p class="wp-block-paragraph">Those competencies are exactly what <a href="https://www.ibm.com/think/topics/human-in-the-loop">ensuring work quality</a> depends on. Critical thinking questions a confident-sounding answer before accepting it. Attention to detail finds the error in AI output before it moves on. Creative problem-solving reframes questions or proposes novel solutions that fall outside the pattern-recognition capabilities of the AI’s training data. If the people reviewing AI output are weak in all three, the review part of the plan isn’t working.</p>
+
+
+
+<p class="wp-block-paragraph">And the pattern is persistent. The critical thinking gap has held across two years of data and an 113% increase in sample size. It’s time to examine the plan more closely.</p>
+
+
+
+<h2 class="wp-block-heading" id="the-speed-is-real-the-quality-isnt-guaranteed">The speed is real. The quality isn’t guaranteed</h2>
+
+
+
+<p class="wp-block-paragraph">The efficiency AI brings to organizations is irrefutable. Output volumes go up. Turnaround times come down. Those numbers show up in dashboards and are easy to point to at a board meeting.</p>
+
+
+
+<p class="wp-block-paragraph">But the work quality piece is harder to measure. In most organizations, it isn’t measured at all. The assumption is that the human review step makes AI-augmented output as accurate as, or more accurate than, what the team produced before. But that assumption only works if reviewers actually catch errors.</p>
+
+
+
+<p class="wp-block-paragraph">Large language models don’t flag their own mistakes. They produce a plausible answer with the same confidence whether it’s correct or not. The human reviewer is the error-detection mechanism. When that mechanism is weakest in exactly the competencies error detection requires–<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10607682/">critical thinking,</a> attention to detail and creative problem-solving–the partnership breaks down. Reviewers become more likely to default to the AI’s suggestions because generating a genuinely better alternative requires the very capabilities that are in short supply. The result is a partnership that appears complementary but fails in practice.</p>
+
+
+
+<p class="wp-block-paragraph">Because AI accelerates every workflow, any wrong or incomplete answer that passes through a weak review cycle moves further and faster than ever before.  As automated systems get embedded in more processes, the volume of output needing verification explodes. And so does the pressure to approve quickly rather than scrutinize closely. The speed is visible on the dashboard. The work quality gap is invisible until something goes wrong: A factual error that ships, a strategic decision fueled by unverified data, a hiring recommendation that was never properly scrutinized. By the time the exposure surfaces, it’s already cost something.</p>
+
+
+
+<h2 class="wp-block-heading" id="where-this-matters-most">Where this matters most</h2>
+
+
+
+<p class="wp-block-paragraph">Not every AI-augmented role has the same stakes. The gap in critical thinking and attention to detail matters more in some contexts than others, and it’s worth being precise about where.</p>
+
+
+
+<p class="wp-block-paragraph">Think about it in terms of two variables: How consequential a missed error is in a given role, and whether the team in that role has actually been assessed for the competencies required to catch one.</p>
+
+
+
+<p class="wp-block-paragraph">Where consequences are high, and assessment hasn’t happened, that’s where your organization is the most exposed. Output review, quality assurance, analysis that feeds decisions, AI-assisted hiring – these are the types of roles where errors that get through have real downstream impact.</p>
+
+
+
+<p class="wp-block-paragraph">Where consequences are lower, average critical thinking is adequate. Not every workflow requires a rigorous review of every AI output. A missed error in an internal brainstorm is different than a missed error in a client deliverable. The risk is proportional to what a missed error actually costs.</p>
+
+
+
+<p class="wp-block-paragraph">To minimize your exposure, map AI-augmented roles by consequence, then <a href="https://www.cangrade.com/blog/talent-acquisition/a-complete-guide-to-assessments/">assess the teams</a> in the highest-consequence positions directly, before assuming those capabilities exist because the headcount does.</p>
+
+
+
+<h2 class="wp-block-heading" id="building-the-quality-the-plan-assumed">Building the quality the plan assumed</h2>
+
+
+
+<p class="wp-block-paragraph">Treating human review as a skill that has to be deliberately built is what makes the second half of this AI governance step work.</p>
+
+
+
+<p class="wp-block-paragraph">Start with measuring the right competencies before assigning oversight responsibility. Resumes and <a href="https://www.mcgill.ca/psychology/files/psychology/structuredinterviews.pdf">unstructured interviews don’t reliably surface</a> critical thinking or attention to detail. The variation in these competencies across candidates is significant, and it’s only visible through direct assessment.</p>
+
+
+
+<p class="wp-block-paragraph">Extend it to team design. A team that pairs strong critical thinkers with strong communicators covers more of the human-AI collaboration requirements than a group of generalists who are adequate across the board and strong at nothing in particular. The gap at the individual level becomes less consequential when teams are built to account for it.</p>
+
+
+
+<p class="wp-block-paragraph">Align roles to actual skill profiles rather than assumed ones. Competency requirements vary across AI-augmented roles. In high-stakes roles, critical thinking and attention to detail are paramount. In roles where AI handles the data and humans are responsible for interpreting it, creative problem-solving matters most. Match the oversight responsibility to the actual, measured abilities of your workforce, not assumptions.</p>
+
+
+
+<p class="wp-block-paragraph">And separate the two metrics that keep getting conflated. Track speed and work quality as distinct outcomes. If the only <a href="https://hbr.org/2026/07/performance-management-needs-new-metrics-in-the-ai-era">number coming out of AI deployment is throughput,</a> there’s no way to know whether the second bet is paying off, or quietly failing.</p>
+
+
+
+<p class="wp-block-paragraph">The organizations that get this right won’t be the ones that moved fastest. They’ll be the ones that verified what they assumed.</p>
+
+
+
+<p class="wp-block-paragraph"><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><a href="https://www.cio.com/expert-contributor-network/"><strong>Want to join?</strong></a></p>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 IT jobs report: Demand for AI fluency rises</title>
+  <link>https://www.cio.com/article/4201347/information-technology-jobs-report.html</link>
+  <pubDate>Tue, 28 Jul 2026 09:00:00 +0000</pubDate>
+  <source>CIO.com</source>
+  <description><![CDATA[<b>Why this matters: Could impact email access or mail flow — monitor delivery and client issues.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<p class="wp-block-paragraph">AI skills continue to drive IT job postings, with 75% of US technology openings requiring AI fluency in June, up 178% year-over-year, according to the <a href="https://www.dice.com/hiring/recruitment/reports/dice-tech-job-report">Dice July 2026 Jobs Report</a>.</p>
+
+
+
+<p class="wp-block-paragraph">Roles in the <a href="https://www.cio.com/article/4195780/it-hiring-sees-a-boost-as-software-development-jobs-slowly-bounce-back.html">software industry continue to rise</a>, ranking second behind consulting as the industry seeking the most IT help right now. Aerospace/defense, finance/banking, and manufacturing round out the top five.</p>
+
+
+
+<p class="wp-block-paragraph">Most sought after in the market right now are software engineers, data engineers, systems engineers, electrical engineers, business analysts, data scientists, network engineers, systems administrators, data analysts, and AI engineers, according to Dice.</p>
+
+
+
+<p class="wp-block-paragraph">While these roles remain in high demand, the biggest shift can be seen in the skills that hiring managers are seeking — a list now <a href="https://www.cio.com/article/4134254/state-of-it-jobs-ai-sparks-rapidly-changing-market-for-skills.html">dominated by AI or AI-adjacent skills</a> as companies rush to adopt enterprise AI tools and services.</p>
+
+
+
+<h3 class="wp-block-heading" id="the-skills-that-matter-most">The skills that matter most</h3>
+
+
+
+<p class="wp-block-paragraph">Demand for enterprise integration skills grew 638% from June 2025 to 2026, the biggest rise year over year, according to Dice, noting that this aligns with other indicators that “connecting agentic systems to existing infrastructure is growing faster than the agentic systems themselves.”</p>
+
+
+
+<p class="wp-block-paragraph">Following in terms of highest growth in demand over the past year are skills involving:</p>
+
+
+
+<ul class="wp-block-list">
+<li>Agentic AI (587%)</li>
+
+
+
+<li>AI agents (503%)</li>
+
+
+
+<li>Responsible AI (495%)</li>
+
+
+
+<li>AI infrastructure (366%)</li>
+
+
+
+<li>Vector databases (353%)</li>
+
+
+
+<li>Event-driven programming (310%)</li>
+
+
+
+<li>Product family engineering (287%)</li>
+
+
+
+<li>Prompt engineering (253%)</li>
+
+
+
+<li>Observability (251%)</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">Month over month, the list of fastest growing skills in Dice’s July jobs report includes:</p>
+
+
+
+<ul class="wp-block-list">
+<li>Electronic engineering (69%)</li>
+
+
+
+<li>API system integration (58%)</li>
+
+
+
+<li>LDAP (55%)</li>
+
+
+
+<li>Digital forensics (54%)</li>
+
+
+
+<li>Data exchange (53%)</li>
+
+
+
+<li>Enterprise integration (50%)</li>
+
+
+
+<li>Threat detection (48%)</li>
+
+
+
+<li>NIST Cybersecurity Framework (47%)</li>
+
+
+
+<li>SAML (45%)</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">Again, the rise in demand for API, data exchange, and integration skills highlights the recent push to “connect AI systems to enterprise data and workflows,” according to Dice.</p>
+
+
+
+<h3 class="wp-block-heading" id="hot-hiring-markets">Hot hiring markets</h3>
+
+
+
+<p class="wp-block-paragraph">Some metro areas are seeing faster increases in tech job postings, with a focus around the New York, Washington, Dallas, Chicago, and San Francisco metro areas. These areas have seen greater growth than the rest of the country, making these metro areas the best to live in if you’re a job seeker with AI fluency skills:</p>
+
+
+
+<figure class="wp-block-table"><div class="overflow-table-wrapper"><table class="has-fixed-layout"><tbody><tr><td><strong>Metro area</strong></td><td><strong>IT job postings (June)</strong></td></tr><tr><td>New York-Newark-Jersey City, NY-NJ </td><td>20,858</td></tr><tr><td>Washington-Arlington-Alexandria, DC-VA-MD-WV</td><td>19,906</td></tr><tr><td>Dallas-Fort Worth-Arlington, TX</td><td>11,932</td></tr><tr><td>Chicago-Naperville-Elgin, IL-IN</td><td>9,346</td></tr><tr><td>San Francisco-Oakland-Fremont, CA</td><td>8,699</td></tr></tbody></table> </div></figure>
+
+
+
+<p class="wp-block-paragraph"><em>Credit: Dice July 2026 Jobs Report </em></p>
+
+
+
+<p class="wp-block-paragraph">New Jersey (64%), Maryland (47%), and Illinois (41%) are the states that have seen the highest year-over-year increase in hiring.</p>
+
+
+
+<h3 class="wp-block-heading" id="roles-in-demand">Roles in demand</h3>
+
+
+
+<p class="wp-block-paragraph">Companies are looking for enterprise systems and consulting managers, including Appian developers, Oracle Cloud financial consultants, ServiceNow managers, principal consultants, and technology consultants. Additionally, they are seeking out IT software engineers, C++ software developers, configuration analysts, support engineers, network infrastructure engineers, AI analysts, and cyber threat intelligence analysts.</p>
+
+
+
+<h3 class="wp-block-heading" id="outlook">Outlook</h3>
+
+
+
+<p class="wp-block-paragraph">Businesses inside and outside the tech industry will continue to seek tech workers to help realize AI visions, requiring a wide range of AI fluency and skills. It seems this trend will continue for the foreseeable future, as the job market slowly recovers from <a href="https://www.cio.com/article/2100525/state-of-it-jobs-mixed-signals-changes-ahead.html">several tumultuous years</a>.</p>
+
+
+
+<h3 class="wp-block-heading" id="in-depth">In depth:</h3>
+
+
+
+<ul class="wp-block-list">
+<li><a href="https://www.cio.com/article/4183254/ai-experience-is-the-hottest-it-hiring-need-what-if-you-dont-have-much.html">AI experience is the hottest IT hiring need. What if you don’t have much?</a></li>
+
+
+
+<li><a href="https://www.cio.com/article/4134254/state-of-it-jobs-ai-sparks-rapidly-changing-market-for-skills.html">State of IT jobs: AI sparks rapidly changing market for skills</a></li>
+
+
+
+<li><a href="https://www.cio.com/article/4066676/what-an-it-career-will-look-like-in-5-years-and-how-to-thrive-through-the-changes.html">What an IT career will look like in 5 years — and how to thrive through the changes</a></li>
+
+
+
+<li><a href="https://www.cio.com/article/230935/hiring-the-most-in-demand-tech-jobs-for-2021.html">The 10 most in-demand tech jobs for 2026 — and how to hire for them</a></li>
+</ul>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Google Adopts New Threat Actor Naming System</title>
+  <link>https://www.securityweek.com/google-adopts-new-threat-actor-naming-system/</link>
+  <pubDate>Tue, 28 Jul 2026 08:42:52 +0000</pubDate>
+  <source>SecurityWeek</source>
+  <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><p>The new two-word naming convention uses a memorable term utilized in public reporting and a cluster-categorization word.</p>
+<p>The post <a href="https://www.securityweek.com/google-adopts-new-threat-actor-naming-system/">Google Adopts New Threat Actor Naming System</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 I wore the two best Amazfit smartwatches for a month - Is the flagship worth $230 more?</title>
+  <link>https://www.zdnet.com/article/amazfit-cheetah-2-ultra-vs-amazfit-balance-3/</link>
+  <pubDate>Tue, 28 Jul 2026 08:30:42 +0000</pubDate>
+  <source>ZDNet</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Is the Amazfit Cheetah 2 Ultra worth the extra cost versus the Amazfit Balance 3? Here's what I found after living with both for a month.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Apple overtakes Nvidia to become the world&#x27;s most valuable publicly traded company, two years after it lost the crown, closing at a $4.9T market cap on Monday (Kalley Huang/New York Times)</title>
+  <link>https://www.techmeme.com/260728/p4#a260728p4</link>
+  <pubDate>Tue, 28 Jul 2026 08:25:00 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: Could impact sign-ins/MFA/Conditional Access — watch for login issues.</b><br/><a href="https://www.nytimes.com/2026/07/27/technology/apple-valuation.html"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260728/i4.jpg" vspace="4" /></a>
+<p><a href="https://www.techmeme.com/260728/p4#a260728p4" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Kalley Huang / <a href="https://www.nytimes.com/">New York Times</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://www.nytimes.com/2026/07/27/technology/apple-valuation.html">Apple overtakes Nvidia to become the world's most valuable publicly traded company, two years after it lost the crown, closing at a $4.9T market cap on Monday</a></b></span>&nbsp; &mdash;&nbsp; The company slipped by the chipmaker Nvidia, amid growing concern about costs associated with the artificial intelligence boom.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔴 Hugging Face breach shows why incident response needs a multi-model AI strategy</title>
+  <link>https://www.csoonline.com/article/4201361/hugging-face-breach-shows-why-incident-response-needs-a-multi-model-ai-strategy.html</link>
+  <pubDate>Tue, 28 Jul 2026 08:00:00 +0000</pubDate>
+  <source>CSO Online</source>
+  <description><![CDATA[<b>Why this matters: Credential/phishing risk — reinforce MFA and user awareness training.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<p class="wp-block-paragraph">The recent breach of Hugging Face’s platform was the latest in <a href="https://www.csoonline.com/article/4196409/ai-powered-breaches-provide-wake-up-call-for-incident-response.html">a string of AI-assisted intrusions to come to light in recent weeks</a>, showing that attackers can now use LLMs to automate entire attack chains. But it also exposed a limitation for defenders trying to use AI to respond at similar machine speed: Increasingly conservative safety controls on frontier models can block attempts to analyze malicious payloads and other intrusion artifacts that are needed to investigate incidents.</p>
+
+
+
+<p class="wp-block-paragraph">The incident was caused by <a href="https://www.csoonline.com/article/4200043/openai-model-escape-puts-enterprise-ai-defenses-on-notice.html">an internal OpenAI test of advanced model cyber capabilities that went wrong</a>. GPT-5.6 Sol and a more capable pre-release model, operating with reduced cyber refusals and without the production classifiers normally used to block high-risk activity, found and exploited zero-day vulnerabilities to escape their sandboxed environment, gain unrestricted access to the internet, and breach Hugging Face’s infrastructure in search for answers to their cybersecurity challenge.</p>
+
+
+
+<p class="wp-block-paragraph">Hugging Face, which operates the world’s largest platform for hosting AI models and machine learning artifacts, detected the intrusion through an LLM-powered anomaly-detection pipeline of its own. However, when its security team attempted to use frontier AI models to analyze the intrusion logs with more than 17,000 recorded events, they got blocked.</p>
+
+
+
+<p class="wp-block-paragraph">“When we started the log analysis, we first used frontier models behind commercial APIs,” the company said in its <a href="https://huggingface.co/blog/security-incident-july-2026">incident report</a>. “This did not work: the analysis requires submitting large volumes of real attack commands, exploit payloads, and C2 artifacts, and these requests were blocked by the providers’ safety guardrails, which cannot distinguish an incident responder from an attacker. We ran the forensic analysis instead on GLM 5.2, an open-weight model, on our own infrastructure. This had a second benefit: no attacker data, and none of the credentials it referenced, left our environment.”</p>
+
+
+
+<p class="wp-block-paragraph">This raises a significant issue that security practitioners have observed in recent times: Frontier models are becoming less useful for defensive cybersecurity work. AI labs choose or are forced to restrict their models’ increasingly powerful cyber capabilities from being abused, but the safety controls they put in place are largely identity-agnostic and can’t differentiate between attackers and defenders.</p>
+
+
+
+<p class="wp-block-paragraph">The community has found and documented various so-called jailbreaking techniques to bypass these filters, but using such methods violates providers’ terms of service and acceptable use policies. And while hackers don’t care about their throw-away accounts getting banned, security analysts on enterprise subscriptions do.</p>
+
+
+
+<p class="wp-block-paragraph">“Machine-speed exploitation requires machine-speed response, and that response can’t run on models that refuse to examine the evidence,” Jacob Krell, senior director of secure AI solutions and cybersecurity at Suzu Labs, tells CSO.</p>
+
+
+
+<p class="wp-block-paragraph">“Defenders increasingly need AI capabilities comparable to the attackers they’re facing,” says Sonali Shah, CEO of offensive security testing firm Cobalt. “We’re now entering an era where the quality of your defensive AI may directly determine how quickly you understand, contain, and remediate an attack. Perhaps the more significant lesson is that incident response can’t depend entirely on cloud-hosted AI services whose safety guardrails may prevent effective forensic analysis during a crisis.”</p>
+
+
+
+<h2 class="wp-block-heading" id="attackers-have-more-options">Attackers have more options</h2>
+
+
+
+<p class="wp-block-paragraph">Attackers don’t have much trouble abusing frontier models in attacks. Anthropic, OpenAI, and Google have all reported adversarial AI activity on their services in the past, and while they all worked on stronger guardrails, attackers continue to find bypass techniques.</p>
+
+
+
+<p class="wp-block-paragraph">This week, researchers from Cato Networks reported the case of <a href="https://www.catonetworks.com/blog/cato-ctrl-how-one-threat-actor-turned-frontier-ai-into-an-offensive-platform/">a threat actor named Trim who is promoting an AI-powered web vulnerability scanner</a> called the “AI Pentest Checker” on Russian cybercrime forums. Trim claims that the tool is powered by Claude Opus 4.8 and uses jailbreaking techniques he developed based on a leaked system prompt for Anthropic’s latest and most capable Fable 5 model. The threat actor has a history on the forum for sharing jailbreaking techniques for AI models.</p>
+
+
+
+<p class="wp-block-paragraph">But attackers don’t even need the latest frontier models to fully automate powerful attacks. Even Trim noted in the past that open-weight models such as Kimi, GLM, and MiniMax were fallback options. And this was back in March before the Chinese labs released their latest versions such as GLM 5.2 or Kimi K3 which have further closed the capability gap with the frontier models, and even outperform them in some tasks.</p>
+
+
+
+<p class="wp-block-paragraph">Most open-weight models have built-in content safety guardrails as well, even if generally weaker than frontier ones, but these can be removed using techniques such as fine-tuning primarily because their weights are openly available. Researchers from managed detection and response vendor ThreatDown <a href="https://www.threatdown.com/dl-cybercrime-in-age-of-ai-2026/">identified over 6,600 AI models hosted on Hugging Face and advertised as guardrail-free</a> with labels such as abliterated, uncensored, decensored, heretic, and unfiltered. These models were downloaded more than 22 million times over a 30-day period.</p>
+
+
+
+<p class="wp-block-paragraph">Last month, researchers from the University of Toronto published a study where <a href="https://www.csoonline.com/article/4181924/ai-worm-prototype-shows-attackers-dont-need-mythos-to-take-over-your-network.html">they managed to create an AI-powered self-replicating worm</a> capable of autonomously finding and exploiting weaknesses in dozens of simulated systems. The researchers leveraged a small and free AI model that could run on hijacked GPUs and made up for the lack in built-in reasoning capabilities by building a custom attack harness complete with a database-based memory system to keep the attack workflows on track.</p>
+
+
+
+<p class="wp-block-paragraph">“Organizations should assume attackers will increasingly operate at machine speed, which means security testing, exposure management, and remediation also have to operate at machine speed,” Cobalt’s Shah tells CSO.</p>
+
+
+
+<h2 class="wp-block-heading" id="frontier-models-are-increasingly-restricted">Frontier models are increasingly restricted</h2>
+
+
+
+<p class="wp-block-paragraph">With the release of their latest generation of models, the leading frontier labs were criticized by users for aggressive safety filters that led to <a href="https://www.csoonline.com/article/4183094/anthropic-releases-mythos-class-fable-5-model-with-safeguards-for-cyber-risks.html">frequent incidents of over-refusal</a> — models refusing to process harmless prompts or routing them to lesser capable models. Some of these conservative settings were self-imposed while others might have been driven by government pressure.</p>
+
+
+
+<p class="wp-block-paragraph">Anthropic only provided access to its <a href="https://www.csoonline.com/article/4198019/claude-mythos-faq-capabilities-access-competitors-implications.html">Claude Mythos</a> model to a restricted number of organizations for cybersecurity testing purposes under <a href="https://www.csoonline.com/article/4155342/what-anthropic-glasswing-reveals-about-the-future-of-vulnerability-discovery.html">Project Glasswing</a>. Then when it released a Mythos-class model publicly under the name <a href="https://www.csoonline.com/article/4183094/anthropic-releases-mythos-class-fable-5-model-with-safeguards-for-cyber-risks.html">Fable 5</a>, users reported that routine incident response, detection, and basic forensic workflows were getting routed automatically from Fable 5 to Claude Opus 4.8.</p>
+
+
+
+<p class="wp-block-paragraph">On June 12, the US government issued an export control directive that required Anthropic to suspend Fable 5 and Mythos 5 access to foreign nationals due to concerns about cyber misuse and safety risks. The restrictions were lifted on June 30.</p>
+
+
+
+<p class="wp-block-paragraph">OpenAI had to delay its general availability release for the GPT-5.6 family of models at the US government’s request as well, initially making it available for preview to a small group of trusted partners. The company also noted that the model’s safeguards block around 10 times more potentially harmful actions than previous models and that this might cause some friction, especially for cybersecurity users.</p>
+
+
+
+<p class="wp-block-paragraph">Security experts don’t agree that these aggressive approaches of restricting cybersecurity tasks will be successful at stopping attacks and believe they do more harm than good.</p>
+
+
+
+<p class="wp-block-paragraph">While safety is a priority with AI in general, the cybersecurity limitations on models as they are done now, and the export controls specifically, are misguided, says Gadi Evron, CEO of AI security firm Knostic. “They don’t stop the bad guys, they do slow down defenders and in fact, deny knowledge of cybersecurity when it is needed most.”</p>
+
+
+
+<p class="wp-block-paragraph">“Determined attackers will continue using unrestricted or open-weight models, or find ways around guardrails, while defenders operating within policy lose access to advanced capabilities during incident response,” Etay Maor, vice president of threat intelligence at Cato Networks, tells CSO. “The more you gate frontier models, the more you push security teams toward capable open-weight alternatives they can actually use.”</p>
+
+
+
+<h2 class="wp-block-heading" id="organizations-need-multi-model-strategies">Organizations need multi-model strategies</h2>
+
+
+
+<p class="wp-block-paragraph">Security experts believe that even if they use an API-based frontier model for most of their tasks, organizations should adopt a strategy where they always have access to one or multiple fallback models, like Hugging Face did.</p>
+
+
+
+<p class="wp-block-paragraph">“Different models have different strengths, availability, and risk profiles, so using multiple models provides resilience if one becomes unavailable, overly restricted, or compromised,” Maor says. “If organizations choose to use open-weight models, they should do so within a well-governed architecture that includes strong access controls, monitoring, and containment, rather than assuming any single model is the right long-term answer.”</p>
+
+
+
+<p class="wp-block-paragraph">There are benefits to using open-weight models. For one, incident response often involves large amounts of signal data and log events that might contain credentials and other sensitive information about the environment. This was also the case in the Hugging Face incident and the company noted that because they used GLM 5.2 hosted on their own infrastructure no attacker data or the credentials it referenced left its environment.</p>
+
+
+
+<p class="wp-block-paragraph">That said, Hugging Face is an AI infrastructure company with the compute power readily available to host such large models. The big open-weight models need large amounts of VRAM to run and not many organizations have datacenters with enterprise-grade GPU clusters. In that case they will need to rely on <a href="https://www.networkworld.com/article/4011187/neoclouds-roll-in-challenge-hyperscalers-for-ai-workloads.html">neoclouds</a> or services such as Amazon Bedrock or Microsoft’s Azure AI Foundry, after analyzing the jurisdiction, data retention, and privacy policies of these services, because simply using these open-weight models through their official APIs would mean sharing data with the Chinese labs that created them.</p>
+
+
+
+<p class="wp-block-paragraph">A multi-model architecture also needs strong identity controls, monitoring, target scoping, restricted tool permissions, network containment, evidence-handling rules, and human approval for important actions. The objective is resilience when a model is too restrictive for a particular task, not providing AI agents with autonomous access to every system in the environment.</p>
+
+
+
+<p class="wp-block-paragraph">“Organizations should have vetted AI models they can operate inside their own trust boundary before an incident happens,” Shah says. “That said, better models alone aren’t enough. AI for cybersecurity is still maturing, and organizations shouldn’t blindly trust autonomous systems.”</p>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+</item>
+
 <item>
   <title>🔴 A profile of Justin Sun, who made his fortune in the early phases of crypto, advised for Trump family&#x27;s WLF, then sued WLF alleging fraud and breach of contract (Jen Wieczner/New York Magazine)</title>
   <link>https://www.techmeme.com/260728/p3#a260728p3</link>
@@ -12,7 +828,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: Potential data exposure — check monitoring and incident response readiness.</b><br/><a href="https://nymag.com/intelligencer/article/justin-sun-world-liberty-lawsuit-trump-crypto-herro.html"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260728/i3.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260728/p3#a260728p3" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Jen Wieczner / <a href="http://www.nymag.com/">New York Magazine</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://nymag.com/intelligencer/article/justin-sun-world-liberty-lawsuit-trump-crypto-herro.html">A profile of Justin Sun, who made his fortune in the early phases of crypto, advised for Trump family's WLF, then sued WLF alleging fraud and breach of contract</a></b></span>&nbsp; &mdash;&nbsp; Justin Sun was already one of the richest people in the world, having made his fortune in the no-rules early phase of the crypto industry &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://nymag.com/intelligencer/article/justin-sun-world-liberty-lawsuit-trump-crypto-herro.html">A profile of Justin Sun, who made his fortune in the early phases of crypto, advised for Trump family's WLF, then sued WLF alleging fraud and breach of contract</a></b></span>&nbsp; &mdash;&nbsp; Justin Sun was already one of the richest people in the world, having made his fortune in the no-rules early phase of the crypto industry &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
 </item>
 
 <item>
@@ -22,7 +838,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: Budget/licensing impact — verify renewal terms and forecast cost changes.</b><br/><a href="https://techcrunch.com/2026/07/27/cursor-makes-its-biggest-india-push-yet-ahead-of-spacex-acquisition-with-localized-pricing/"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260728/i2.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260728/p2#a260728p2" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Jagmeet Singh / <a href="http://techcrunch.com/">TechCrunch</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://techcrunch.com/2026/07/27/cursor-makes-its-biggest-india-push-yet-ahead-of-spacex-acquisition-with-localized-pricing/">Cursor introduces Cursor Start, a ~$7 monthly subscription exclusive to India, its third-largest market, priced below its standard $20 Pro monthly subscription</a></b></span>&nbsp; &mdash;&nbsp; Weeks before its expected acquisition by SpaceX closes, AI coding startup Cursor is making its biggest push into India yet &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://techcrunch.com/2026/07/27/cursor-makes-its-biggest-india-push-yet-ahead-of-spacex-acquisition-with-localized-pricing/">Cursor introduces Cursor Start, a ~$7 monthly subscription exclusive to India, its third-largest market, priced below its standard $20 Pro monthly subscription</a></b></span>&nbsp; &mdash;&nbsp; Weeks before its expected acquisition by SpaceX closes, AI coding startup Cursor is making its biggest push into India yet &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
 </item>
 
 <item>
@@ -32,7 +848,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: Budget/licensing impact — verify renewal terms and forecast cost changes.</b><br/><a href="https://restofworld.org/2026/china-ai-microdramas-face-licensing/"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260728/i1.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260728/p1#a260728p1" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="https://restofworld.org/">Rest of World</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://restofworld.org/2026/china-ai-microdramas-face-licensing/">How Chinese platforms like ActID and New Claw are paying people to license their likeness for AI-generated dramas and ads, often using vague licensing terms</a></b></span>&nbsp; &mdash;&nbsp; New platforms are paying people to license their likeness for AI-generated dramas and ads, creating a new marketplace for biometric identity.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://restofworld.org/2026/china-ai-microdramas-face-licensing/">How Chinese platforms like ActID and New Claw are paying people to license their likeness for AI-generated dramas and ads, often using vague licensing terms</a></b></span>&nbsp; &mdash;&nbsp; New platforms are paying people to license their likeness for AI-generated dramas and ads, creating a new marketplace for biometric identity.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -183,7 +999,7 @@
 
 
 <p class="wp-block-paragraph"></p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
 </item>
 
 <item>
@@ -272,7 +1088,17 @@
 
 
 <p class="wp-block-paragraph">“At Microsoft, we have a security team, and they actually evaluate all the models that you can find out there, and we look at which ones are going to get us the best results,” Hayete Gallot, executive vice president for security at Microsoft, said. “The reason we do that is, number one, is we want the best quality. Number two is we want to make sure that this is affordable. Security is a 24/7 operation, so you need to make sure that this is scaling. And last but not least, the reason why we’re multi-model is that not every model is available everywhere. So we need that diversity of model to make sure that every customer can defend itself. We cannot be in a world of haves and have-nots.”</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 South Korea&#x27;s KOSPI drops 11%+, weighed down by chip stocks amid concerns over China&#x27;s AI progress and the AI spending boom; Samsung falls 11%+ and SK Hynix 12% (Bloomberg)</title>
+  <link>https://www.techmeme.com/260727/p37#a260727p37</link>
+  <pubDate>Tue, 28 Jul 2026 02:05:01 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://www.bloomberg.com/news/articles/2026-07-28/korean-stocks-sink-as-chipmakers-plung-on-deepening-ai-fatigue"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260727/i37.jpg" vspace="4" /></a>
+<p><a href="https://www.techmeme.com/260727/p37#a260727p37" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="https://www.bloomberg.com/">Bloomberg</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/articles/2026-07-28/korean-stocks-sink-as-chipmakers-plung-on-deepening-ai-fatigue">South Korea's KOSPI drops 11%+, weighed down by chip stocks amid concerns over China's AI progress and the AI spending boom; Samsung falls 11%+ and SK Hynix 12%</a></b></span>&nbsp; &mdash;&nbsp; A selloff in semiconductor stocks deepened Tuesday, as signs of China's progress in advanced chipmaking weighed on global rivals &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
 </item>
 
 <item>
@@ -409,7 +1235,7 @@
 
 
 <p class="wp-block-paragraph">He added, “organizations need to hold the line against making personal recordings in the workplace and maintain not only their compliance standards, but their workplace culture. This restriction cannot go as far as an outright ban; look at how<a href="https://www.epspros.com/news-resources/news/2026/case-to-watch-whether-employers-must-consider-ai-as-a-reasonable-accommodation.html" rel="noreferrer noopener" target="_blank"> Walt Disney World got caught up in a lawsuit</a> after telling an employee she could not use Meta glasses. Still, this exception can be made narrow, and it should be made clear that other employees must be alerted when they are being recorded.”</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
 </item>
 
 <item>
@@ -419,7 +1245,17 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/><a href="https://arstechnica.com/ai/2026/07/chatgpt-stops-cloning-famous-writers-voices-but-may-capture-a-similar-feeling/"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260727/i36.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260727/p36#a260727p36" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Kyle Orland / <a href="https://arstechnica.com/">Ars Technica</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://arstechnica.com/ai/2026/07/chatgpt-stops-cloning-famous-writers-voices-but-may-capture-a-similar-feeling/">ChatGPT appears to block direct requests to copy an author's style, instead offering to capture the overall &ldquo;feeling&rdquo;, amid its legal battles with book authors</a></b></span>&nbsp; &mdash;&nbsp; OpenAI's ChatGPT is now refusing requests to generate text that directly mimics the style of famous authors.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://arstechnica.com/ai/2026/07/chatgpt-stops-cloning-famous-writers-voices-but-may-capture-a-similar-feeling/">ChatGPT appears to block direct requests to copy an author's style, instead offering to capture the overall &ldquo;feeling&rdquo;, amid its legal battles with book authors</a></b></span>&nbsp; &mdash;&nbsp; OpenAI's ChatGPT is now refusing requests to generate text that directly mimics the style of famous authors.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Several digital-asset treasury firms have pivoted to AI amid a slump in crypto prices, but their poor stock performance suggests the strategy is not working (Monique Mulima/Bloomberg)</title>
+  <link>https://www.techmeme.com/260727/p35#a260727p35</link>
+  <pubDate>Tue, 28 Jul 2026 00:30:01 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://www.bloomberg.com/news/articles/2026-07-27/crypto-to-data-centers-treasury-model-bust-has-firms-chasing-ai"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260727/i35.jpg" vspace="4" /></a>
+<p><a href="https://www.techmeme.com/260727/p35#a260727p35" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Monique Mulima / <a href="https://www.bloomberg.com/">Bloomberg</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/articles/2026-07-27/crypto-to-data-centers-treasury-model-bust-has-firms-chasing-ai">Several digital-asset treasury firms have pivoted to AI amid a slump in crypto prices, but their poor stock performance suggests the strategy is not working</a></b></span>&nbsp; &mdash;&nbsp; The implosion of the once-hot market for cryptocurrency treasury stocks is prompting a number of firms to pivot to artificial intelligence in an attempt to win back investors.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
 </item>
 
 <item>
@@ -429,7 +1265,37 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://9to5mac.com/2026/07/27/ios-26-6-fixes-over-75-security-issues-with-your-iphone-update-now/"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260727/i34.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260727/p34#a260727p34" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Zac Hall / <a href="https://9to5mac.com/">9to5Mac</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://9to5mac.com/2026/07/27/ios-26-6-fixes-over-75-security-issues-with-your-iphone-update-now/">Apple releases updates for iOS, macOS, iPadOS, watchOS, tvOS, and visionOS with a huge number of security fixes; macOS Tahoe 26.6 alone addresses 155 CVEs</a></b></span>&nbsp; &mdash;&nbsp; Following the release of iOS 26.6, iPadOS 26.6, and related software updates, Apple has detailed a huge number of security fixes included in today's new OS versions.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://9to5mac.com/2026/07/27/ios-26-6-fixes-over-75-security-issues-with-your-iphone-update-now/">Apple releases updates for iOS, macOS, iPadOS, watchOS, tvOS, and visionOS with a huge number of security fixes; macOS Tahoe 26.6 alone addresses 155 CVEs</a></b></span>&nbsp; &mdash;&nbsp; Following the release of iOS 26.6, iPadOS 26.6, and related software updates, Apple has detailed a huge number of security fixes included in today's new OS versions.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Claude chats appeared in Google and Bing results, despite Anthropic&#x27;s robots.txt saying not to crawl them, likely because the pages lacked a &quot;noindex&quot; tag (Maddy Varner/Wired)</title>
+  <link>https://www.techmeme.com/260727/p33#a260727p33</link>
+  <pubDate>Mon, 27 Jul 2026 22:35:01 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><a href="https://www.wired.com/story/private-claude-chats-exposed-in-google-and-bing-search-results/"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260727/i33.jpg" vspace="4" /></a>
+<p><a href="https://www.techmeme.com/260727/p33#a260727p33" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Maddy Varner / <a href="http://www.wired.com/">Wired</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://www.wired.com/story/private-claude-chats-exposed-in-google-and-bing-search-results/">Claude chats appeared in Google and Bing results, despite Anthropic's robots.txt saying not to crawl them, likely because the pages lacked a &ldquo;noindex&rdquo; tag</a></b></span>&nbsp; &mdash;&nbsp; The screwup shows how tricky it can be to stop web crawlers from making ostensibly private conversations with AI chatbots entirely too public.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 10h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Dario Amodei says Anthropic has &quot;never&quot; backed an open-weights model ban, lists reasons top chips shouldn&#x27;t be sold to China, and calls for global model testing (Anthropic)</title>
+  <link>https://www.techmeme.com/260727/p32#a260727p32</link>
+  <pubDate>Mon, 27 Jul 2026 22:25:00 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><a href="https://www.anthropic.com/news/position-open-weights-models"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260727/i32.jpg" vspace="4" /></a>
+<p><a href="https://www.techmeme.com/260727/p32#a260727p32" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="https://www.anthropic.com/">Anthropic</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://www.anthropic.com/news/position-open-weights-models">Dario Amodei says Anthropic has &ldquo;never&rdquo; backed an open-weights model ban, lists reasons top chips shouldn't be sold to China, and calls for global model testing</a></b></span>&nbsp; &mdash;&nbsp; Over the last few days there has been a lot of discussion about open-weights models, especially those from China.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 11h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Cadence reports Q2 revenue up 24.2% YoY to $1.58B and raises its annual revenue forecast to between $6.26B and $6.34B vs. $6.21B est.; CDNS up 4%+ after hours (Reuters)</title>
+  <link>https://www.techmeme.com/260727/p31#a260727p31</link>
+  <pubDate>Mon, 27 Jul 2026 21:55:01 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://www.reuters.com/business/retail-consumer/cadence-raises-annual-forecasts-demand-booms-ai-chip-design-2026-07-27/"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260727/i31.jpg" vspace="4" /></a>
+<p><a href="https://www.techmeme.com/260727/p31#a260727p31" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="http://www.reuters.com/">Reuters</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://www.reuters.com/business/retail-consumer/cadence-raises-annual-forecasts-demand-booms-ai-chip-design-2026-07-27/">Cadence reports Q2 revenue up 24.2% YoY to $1.58B and raises its annual revenue forecast to between $6.26B and $6.34B vs. $6.21B est.; CDNS up 4%+ after hours</a></b></span>&nbsp; &mdash;&nbsp; Cadence Design Systems (CDNS.O) raised its annual revenue and profit forecasts on Monday, banking on robust demand for its AI-powered chip and system design software.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 11h ago]]></description>
 </item>
 
 <item>
@@ -437,17 +1303,7 @@
   <link>https://www.zdnet.com/article/hp-omnibook-ultra-14-2026-review/</link>
   <pubDate>Mon, 27 Jul 2026 17:54:00 +0000</pubDate>
   <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/>HP's OmniBook Ultra 14 combines a sleek design and OLED display with the kind of performance professionals appreciate.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 12h ago]]></description>
-</item>
-
-<item>
-  <title>🟠 Xbox says it is working to resolve a &quot;major outage&quot; affecting its Account &amp; Profile, Store &amp; Subscriptions, and Apps &amp; Mobile services (Chris Scullion/Video Games Chronicle)</title>
-  <link>https://www.techmeme.com/260727/p26#a260727p26</link>
-  <pubDate>Mon, 27 Jul 2026 17:40:01 +0000</pubDate>
-  <source>Techmeme</source>
-  <description><![CDATA[<b>Why this matters: Service impact possible — prepare comms and confirm vendor status.</b><br/><a href="https://www.videogameschronicle.com/news/xbox-says-its-aware-of-major-outages-when-signing-in-and-launching-games-and-is-working-to-mitigate-the-issue/"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260727/i26.jpg" vspace="4" /></a>
-<p><a href="https://www.techmeme.com/260727/p26#a260727p26" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Chris Scullion / <a href="https://www.videogameschronicle.com/">Video Games Chronicle</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.videogameschronicle.com/news/xbox-says-its-aware-of-major-outages-when-signing-in-and-launching-games-and-is-working-to-mitigate-the-issue/">Xbox says it is working to resolve a &ldquo;major outage&rdquo; affecting its Account &amp; Profile, Store &amp; Subscriptions, and Apps &amp; Mobile services</a></b></span>&nbsp; &mdash;&nbsp; PLAYERS ARE REPORTING HAVING ISSUES WHEN TRYING TO SIGN IN OR SEE THEIR LIBRARY&nbsp; &mdash;&nbsp; Xbox has acknowledged that it's currently suffering &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 12h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/>HP's OmniBook Ultra 14 combines a sleek design and OLED display with the kind of performance professionals appreciate.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 15h ago]]></description>
 </item>
 
 <item>
@@ -455,7 +1311,7 @@
   <link>https://www.zdnet.com/article/is-open-source-the-answer-to-rogue-ai-security-incidents-nvidia-thinks-so/</link>
   <pubDate>Mon, 27 Jul 2026 15:52:15 +0000</pubDate>
   <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: Service impact possible — prepare comms and confirm vendor status.</b><br/>As AI cybersecurity incidents ramp up, companies are racing to find a fix.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 14h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Service impact possible — prepare comms and confirm vendor status.</b><br/>As AI cybersecurity incidents ramp up, companies are racing to find a fix.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 17h ago]]></description>
 </item>
 
 <item>
@@ -463,7 +1319,7 @@
   <link>https://www.zdnet.com/article/framework-laptop-13-pro-review/</link>
   <pubDate>Mon, 27 Jul 2026 15:00:00 +0000</pubDate>
   <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/>Framework compiled user feedback to create the new Laptop 13 Pro, a sleek device with a haptic touchpad and excellent battery life.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 15h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/>Framework compiled user feedback to create the new Laptop 13 Pro, a sleek device with a haptic touchpad and excellent battery life.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 18h ago]]></description>
 </item>
 
 <item>
@@ -471,7 +1327,7 @@
   <link>https://www.zdnet.com/article/best-laptop-docking-station/</link>
   <pubDate>Mon, 27 Jul 2026 14:49:24 +0000</pubDate>
   <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/>Organize your workspace with our top picks for the best laptop docking stations available now.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 15h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/>Organize your workspace with our top picks for the best laptop docking stations available now.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 18h ago]]></description>
 </item>
 
 <item>
@@ -480,7 +1336,7 @@
   <pubDate>Mon, 27 Jul 2026 14:26:00 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: Supply chain risk — audit third-party dependencies and vendor access.</b><br/><p>Dependabot gets a three-day cooldown window before opening pull requests, and PyPI rejects file uploads to releases older than 14 days.</p>
-<p>The post <a href="https://www.securityweek.com/new-github-pypi-policies-boost-supply-chain-security/">New GitHub, PyPI Policies Boost Supply Chain Security</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 16h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/new-github-pypi-policies-boost-supply-chain-security/">New GitHub, PyPI Policies Boost Supply Chain Security</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 19h ago]]></description>
 </item>
 
 <item>
@@ -588,7 +1444,7 @@
 
 
 <p class="wp-block-paragraph"></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 17h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 20h ago]]></description>
 </item>
 
 <item>
@@ -597,7 +1453,7 @@
   <pubDate>Mon, 27 Jul 2026 12:25:43 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: Endpoint detection changes — review high-severity detections and alert noise.</b><br/><p>The Nvidia-led coalition aims to give defenders more open tools for testing, auditing and protecting AI models and agents.</p>
-<p>The post <a href="https://www.securityweek.com/nvidia-and-tech-giants-launch-ai-security-alliance/">Nvidia and Tech Giants Launch AI Security Alliance</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 18h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/nvidia-and-tech-giants-launch-ai-security-alliance/">Nvidia and Tech Giants Launch AI Security Alliance</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 21h ago]]></description>
 </item>
 
 <item>
@@ -698,15 +1554,7 @@
 
 
 <p class="wp-block-paragraph">Microsoft did not immediately respond to CSO’s request for a comment.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 18h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Microsoft seeks Supreme Court lifeline in pre-owned license battle</title>
-  <link>https://www.theregister.com/software/2026/07/27/microsoft-seeks-supreme-court-lifeline-in-pre-owned-license-battle/5278823</link>
-  <pubDate>Mon, 27 Jul 2026 11:30:35 +0000</pubDate>
-  <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Budget/licensing impact — verify renewal terms and forecast cost changes.</b><br/>£270M ValueLicensing case remains mostly paused while Redmond pursues permission to appeal<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 19h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 21h ago]]></description>
 </item>
 
 <item>
@@ -755,7 +1603,7 @@
 
 
 <p class="wp-block-paragraph">OpenAI did not immediately respond to questions about whether it would join the Open Secure AI Alliance.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 19h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 22h ago]]></description>
 </item>
 
 <item>
@@ -984,7 +1832,7 @@
 
 
 <p class="wp-block-paragraph">“The tradeoff is favoring the innovation side for now. That might tip toward the other side next year, though,” he says, predicting that 2027 will be “the year of AI cost optimization.”</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 20h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 23h ago]]></description>
 </item>
 
 <item>
@@ -1139,7 +1987,7 @@
 
 
 <p class="wp-block-paragraph"><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><a href="https://www.cio.com/expert-contributor-network/"><strong>Want to join?</strong></a></p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 20h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 23h ago]]></description>
 </item>
 
 <item>
@@ -1352,7 +2200,7 @@
 
 
 <p class="wp-block-paragraph"></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 20h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 23h ago]]></description>
 </item>
 
 <item>
@@ -1433,15 +2281,7 @@
 
 
 <p class="wp-block-paragraph">At a recent AI conference in New York, Brian Craig, senior director of architecture at Liberty IT, part of insurance firm Liberty Mutual, said you can’t lock in right now to one vendor or even one framework. “You need to keep being able to have the flexibility with that backbone to be able to hook into different models and vendors, depending not so much on who’s the flavor of the day, but on what you can feel confident about for the next six months,” he said. After all, a more fluid and uncertain world keeps emerging.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 20h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Digital sovereignty is real in Europe. The UK? Not so much</title>
-  <link>https://www.theregister.com/columnists/2026/07/27/digital-sovereignty-is-real-in-europe-the-uk-not-so-much/5276852</link>
-  <pubDate>Mon, 27 Jul 2026 10:00:00 +0000</pubDate>
-  <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Trump's unpredictability is pushing governments and businesses toward open source while Britain remains glued to US tech<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 20h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 23h ago]]></description>
 </item>
 
 <item>
@@ -1582,7 +2422,7 @@
 
 
 <p class="wp-block-paragraph"><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><a href="https://www.cio.com/expert-contributor-network/"><strong>Want to join?</strong></a></p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 21h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
@@ -1837,7 +2677,7 @@
 
 
 <p class="wp-block-paragraph"><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><a href="https://www.cio.com/expert-contributor-network/"><strong>Want to join?</strong></a></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 21h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
@@ -2022,31 +2862,23 @@
 
 
 <p class="wp-block-paragraph">“I haven’t run into a single company that has a resiliency officer. The CIO has some responsibility, the CISO has some responsibility, and the COO — who really is a chief and really is an officer — has responsibility,” he says. “I see it more as a partnership than a single role.”</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 23h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
-  <title>🔵 Trump expands voluntary pledge to keep datacenter costs off household power bills</title>
-  <link>https://www.theregister.com/on-prem/2026/07/26/trump-expands-voluntary-pledge-to-keep-datacenter-costs-off-household-power-bills/5278346</link>
-  <pubDate>Sun, 26 Jul 2026 10:10:00 +0000</pubDate>
-  <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Pinkie promise gains 200-plus new participants and precisely zero enforcement<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
+  <title>🔵 Samsung&#x27;s new Ultra foldable is impressive, but I&#x27;d pay close attention to this model</title>
+  <link>https://www.zdnet.com/article/samsung-galaxy-z-fold-8-ultra-hands-on/</link>
+  <pubDate>Sat, 25 Jul 2026 12:15:45 +0000</pubDate>
+  <source>ZDNet</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>The Galaxy Z Fold 8 Ultra is sure to impress power users, but Samsung took a risk with the Galaxy Z Fold 8, and it could pay off.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
 </item>
 
 <item>
-  <title>🔵 How AI drove Shopify back to clean code</title>
-  <link>https://www.theregister.com/devops/2026/07/25/how-ai-drove-shopify-back-to-clean-code/5277901</link>
-  <pubDate>Sat, 25 Jul 2026 13:06:00 +0000</pubDate>
-  <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Turns out, agents just want the same things as humans: easily-readable code, explicit contracts, and helpful feedback<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Anti-AI open source has an enemy in common, but almost nothing else</title>
-  <link>https://www.theregister.com/ai-and-ml/2026/07/25/anti-ai-open-source-has-an-enemy-in-common-but-almost-nothing-else/5278275</link>
-  <pubDate>Sat, 25 Jul 2026 10:17:00 +0000</pubDate>
-  <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Building bot-free alternatives may require lefties, libertarians, and culture warriors to share code<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
+  <title>🔵 Everything announced at Galaxy Unpacked 2026: Can Samsung compete with the rumored foldable iPhone?</title>
+  <link>https://www.zdnet.com/article/everything-announced-samsung-unpacked-2026/</link>
+  <pubDate>Sat, 25 Jul 2026 08:30:43 +0000</pubDate>
+  <source>ZDNet</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Samsung took a risk with its latest-gen foldables and smartwatches at Unpacked. We were on the ground in London - here's our analysis.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3d ago]]></description>
 </item>
 
 <item>
@@ -2206,22 +3038,6 @@
 </item>
 
 <item>
-  <title>🔵 Dev accidentally commits Copilot binary to FreeBSD ports repo</title>
-  <link>https://www.theregister.com/os-platforms/2026/07/24/dev-accidentally-commits-copilot-binary-to-freebsd-ports-repo/5278458</link>
-  <pubDate>Fri, 24 Jul 2026 17:03:35 +0000</pubDate>
-  <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/>Git is aptly named: it isn’t easy – but there are alternatives<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3d ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Claude Opus 5 arrives with near Fable performance at half the price</title>
-  <link>https://www.zdnet.com/article/claude-opus-5-near-fable-performance-at-half-the-price/</link>
-  <pubDate>Fri, 24 Jul 2026 17:00:00 +0000</pubDate>
-  <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: Budget/licensing impact — verify renewal terms and forecast cost changes.</b><br/>Anthropic's latest Claude upgrade targets developers and enterprises with stronger coding, better reasoning efficiency, prompt-cache-friendly tool changes, and near-Fable performance at Opus pricing.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3d ago]]></description>
-</item>
-
-<item>
   <title>🔵 Model Context Protocol is going stateless to make scaling simpler</title>
   <link>https://www.cio.com/article/4201258/model-context-protocol-is-going-stateless-to-make-scaling-simpler-2.html</link>
   <pubDate>Fri, 24 Jul 2026 15:33:12 +0000</pubDate>
@@ -2336,22 +3152,6 @@
 
 <p class="wp-block-paragraph"><em>This article first appeared on <a href="https://www.infoworld.com/article/4201254/model-context-protocol-is-going-stateless-to-make-scaling-simpler.html">InfoWorld</a>.</em></p>
 </div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3d ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Flock cameras go up in flames as cops hunt suspected firebugs</title>
-  <link>https://www.theregister.com/offbeat/2026/07/24/flock-cameras-go-up-in-flames-as-cops-hunt-suspected-firebugs/5278357</link>
-  <pubDate>Fri, 24 Jul 2026 14:48:37 +0000</pubDate>
-  <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Budget/licensing impact — verify renewal terms and forecast cost changes.</b><br/>Two license plate readers torched in Georgia amid backlash against the surveillance network<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3d ago]]></description>
-</item>
-
-<item>
-  <title>🔵 SpaceX to try its luck again with Starship Flight 13 after engines and weather say no</title>
-  <link>https://www.theregister.com/science/2026/07/24/spacex-to-try-its-luck-again-with-starship-flight-13-after-engines-and-weather-say-no/5278239</link>
-  <pubDate>Fri, 24 Jul 2026 13:00:00 +0000</pubDate>
-  <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/>Replacement Raptors head for liftoff without a static fire test<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3d ago]]></description>
 </item>
 
 <item>
@@ -2625,14 +3425,6 @@
 
 <p class="wp-block-paragraph"><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><a href="https://www.cio.com/expert-contributor-network/"><strong>Want to join?</strong></a></p>
 </div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3d ago]]></description>
-</item>
-
-<item>
-  <title>🔵 EU telcos ask: Huawei going to afford to replace Chinese equipment?</title>
-  <link>https://www.theregister.com/networks/2026/07/24/eu-telcos-ask-huawei-going-to-afford-to-replace-chinese-equipment/5278122</link>
-  <pubDate>Fri, 24 Jul 2026 10:45:00 +0000</pubDate>
-  <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Proposed cybersecurity legislation may force a cull of high-risk network technology, costing tens of billions<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3d ago]]></description>
 </item>
 
 <item>
@@ -3501,7 +4293,7 @@
 
 
 <p class="wp-block-paragraph"><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><a href="https://www.cio.com/expert-contributor-network/"><strong>Want to join?</strong></a></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3d ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4d ago]]></description>
 </item>
 
 <item>
@@ -3634,7 +4426,7 @@
 
 
 <p class="wp-block-paragraph">“Threat intelligence and evidence of active exploitation should help determine which vulnerabilities demand immediate action,” Recorded Future’s Leslie said.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 3d ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 4d ago]]></description>
 </item>
 
 <item>
@@ -4145,589 +4937,6 @@
 </item>
 
 <item>
-  <title>🔵 How to navigate the AI talent wars</title>
-  <link>https://www.cio.com/article/4199540/how-to-navigate-the-ai-talent-wars.html</link>
-  <pubDate>Thu, 23 Jul 2026 13:00:00 +0000</pubDate>
-  <source>CIO.com</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><div id="remove_no_follow">
-		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
-					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
-						<div class="article-column__content">
-<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
-
-
-
-<p class="wp-block-paragraph"></p>
-
-
-
-<p class="wp-block-paragraph"><a href="https://finance.yahoo.com/markets/stocks/articles/cloudflare-net-q1-earnings-revenues-230528107.html">Cloudflare recently beat Q1 2026 earnings</a>. Revenue up 34% year over year. EPS ahead of consensus. Full-year guidance raised. Then, in the same breath, they announced 1,100 layoffs, 20% of the company. CEO Matthew Prince’s explanation: “The way we work at Cloudflare has fundamentally changed.”</p>
-
-
-
-<p class="wp-block-paragraph"><a href="https://finance.yahoo.com/markets/stocks/articles/block-q1-earnings-beat-strong-144200216.html">Block did the same thing</a>. Beat guidance, raised outlook, cut 4,000+ jobs. Both framed it as architecting for the AI era.</p>
-
-
-
-<p class="wp-block-paragraph">This is not a contradiction. This is the new math boards are running. And if you’re a CIO who hasn’t started running it yourself, <a href="mailto:https://www.cio.com/article/4077996/cios-be-ready-for-agentic-ai-or-be-out-of-a-job.html">you’re behind</a>.</p>
-
-
-
-<h2 class="wp-block-heading" id="the-benchmark-has-moved">The benchmark has moved</h2>
-
-
-
-<p class="wp-block-paragraph">AI-native companies have quietly reset what “efficient” means for a technology organization. Midjourney generates over $500M in revenue with roughly 160 employees, over $3M per head. Anthropic hit a $14B annualized run rate in early 2026 with fewer than 3,000 employees. Across the top AI-native startups, <a href="mailto:https://www.forbes.com/sites/paulbaier/2026/03/31/ai-native-firms-lead-in-revenue-per-employee/">the average revenue per employee is $3.48M</a>, nearly twelve times the traditional SaaS benchmark of $300K.</p>
-
-
-
-<p class="wp-block-paragraph"><a href="mailto:https://www.saastr.com/what-to-do-if-your-business-decelerates/">Boards aren’t comparing you to your 2019 self anymore</a>. They’re comparing you to Anthropic.</p>
-
-
-
-<p class="wp-block-paragraph">This is the pressure Cloudflare and Block are responding to. They’re not cutting people because the business is struggling. They’re cutting because investors have internalized a new denominator. Headcount is no longer a proxy for capacity; it’s a liability on the efficiency ratio.</p>
-
-
-
-<p class="wp-block-paragraph">For CIOs, this creates a hiring problem that looks nothing like the cloud or mobile talent gaps of the past decade. Those gaps were about volume: hire 100 cloud engineers, absorb the cost, build the capability… This one is about density; you’re not looking for 100 people. You’re looking for 10 who can deliver what 100 couldn’t, and justify $1M or more in value per seat.</p>
-
-
-
-<p class="wp-block-paragraph">Finding bodies to fill seats has never been easier. Finding people who operate at that level of leverage is a different problem entirely.</p>
-
-
-
-<h2 class="wp-block-heading" id="acqui-hires-are-a-shortcut-with-a-hidden-cost">‘Acqui-hires’ are a shortcut with a hidden cost</h2>
-
-
-
-<p class="wp-block-paragraph">Companies have figured out that recruiting AI-native talent one by one is too slow and that it’s faster to buy a team. Google’s acquisition of the Windsurf founders, Meta bringing in the Scale AI team, Accenture’s string of AI-focused acquisitions: <a href="mailto:https://tomtunguz.com/ai-acqui-hire-wave/">these are acqui-hires</a> dressed up as M&amp;A. The premium on experienced AI talent is high enough, and the urgency real enough, that organizations are skipping traditional hiring loops entirely and buying their way in.</p>
-
-
-
-<p class="wp-block-paragraph">I’ve been on the other side of this. My company, MadKudu, was acquired by HG Insights specifically to bring AI-native capability into an established enterprise business. HG needed change agents who had already figured out how to build and ship in this new era, not just people who’d read about it. That’s the thesis behind most of these deals.</p>
-
-
-
-<p class="wp-block-paragraph">But there’s a cost that doesn’t show up in the acquisition price.</p>
-
-
-
-<p class="wp-block-paragraph">AI-native teams are fast because they operate with a different set of defaults: full access to tools, minimal governance layers, the ability to experiment and ship without a six-week approval cycle. That operating model is not a perk; it’s the fundamental mechanism. It’s why a team of 10 can do what an enterprise team of 100 can’t.</p>
-
-
-
-<p class="wp-block-paragraph">When you acqui-hire that team and then slot them into your existing approval processes, you’ve bought the people and killed the engine. The change agents you paid for become change-frustrated. The attrition that follows is expensive and predictable.</p>
-
-
-
-<p class="wp-block-paragraph">The harder realization: acquiring an AI-native team means accepting how they work. That requires deliberately carving out space for them to operate differently, not just tolerating it but institutionalizing it. The acquisition is an organizational change program, not just a hiring event.</p>
-
-
-
-<h2 class="wp-block-heading" id="the-cios-real-problem">The CIO’s real problem</h2>
-
-
-
-<p class="wp-block-paragraph">The governance stack most enterprise organizations run was designed for a headcount world. Every tool vetting cycle, every vendor review, every security approval was calibrated assuming you were managing a large team where consistency and control were the primary objectives.</p>
-
-
-
-<p class="wp-block-paragraph">That calculus breaks when your goal is talent density. The same approval processes that protect against data leaks are now the reason your best people can’t do their best work. When it takes six weeks to approve a tool that your competitor’s team is already shipping with, you’ve traded velocity for the perception of safety.</p>
-
-
-
-<p class="wp-block-paragraph">The practical fix is structured experimentation: clear guardrails, defined boundaries, but explicit permission to try tools before deciding whether to roll them out broadly. Gating everything prevents you from ever discovering what 10x productivity looks like.</p>
-
-
-
-<p class="wp-block-paragraph">The skills inventory question is also more nuanced than it sounds. Job titles won’t tell you where the leverage is. You need to map the actual tasks within each function and assess which can be automated or augmented with AI. That’s where you find the people who, with the right tools, become your $1M/employee talent, not because you hired differently, but because you enabled better.</p>
-
-
-
-<p class="wp-block-paragraph">This is also where the build-versus-buy question gets genuinely tricky. As AI reshapes how products are built and delivered, your internal operating model — how you work, how fast you ship, how you use data — is becoming core IP. Outsourcing delivery means outsourcing the part of the organization where your competitive advantage is now being built.</p>
-
-
-
-<h2 class="wp-block-heading" id="closing-the-gap-without-slowing-down">Closing the gap without slowing down</h2>
-
-
-
-<p class="wp-block-paragraph"><a href="mailto:https://www.saastr.com/the-great-ai-talent-grab-the-latest-20vc-with-jason-harry-and-rory/">The AI talent wars</a> are not primarily a recruiting problem. They’re a rethinking of what organizations are supposed to look like.</p>
-
-
-
-<p class="wp-block-paragraph">Boards have a new benchmark. Cloudflare, Block, Amazon, Meta and others have already started restructuring to meet it, publicly, painfully, even while beating their numbers. The question for CIOs isn’t whether this pressure arrives; it’s whether you’re ahead of it or behind it when it does.</p>
-
-
-
-<p class="wp-block-paragraph">The organizations that navigate this well won’t win by outbidding competitors for a handful of elite engineers. They’ll win by designing operating systems that amplify the leverage of the talent they do have, by enabling their best people rather than constraining them, and by treating AI fluency as a core organizational capability rather than a niche specialization.</p>
-
-
-
-<p class="wp-block-paragraph">Talent density is the new headcount model. The sooner your governance, your tooling and your board conversations reflect that, the better positioned you’ll be when the next efficiency report lands.</p>
-
-
-
-<p class="wp-block-paragraph"><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><a href="https://www.cio.com/expert-contributor-network/"><strong>Want to join?</strong></a></p>
-
-
-
-<p class="wp-block-paragraph"></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4d ago]]></description>
-</item>
-
-<item>
-  <title>🔵 The new value architecture of the AI-native SaaS era</title>
-  <link>https://www.cio.com/article/4199528/the-new-value-architecture-of-the-ai-native-saas-era.html</link>
-  <pubDate>Thu, 23 Jul 2026 12:00:00 +0000</pubDate>
-  <source>CIO.com</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><div id="remove_no_follow">
-		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
-					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
-						<div class="article-column__content">
-<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
-
-
-
-<p class="wp-block-paragraph">The traditional methods of measuring success no longer tell the full story. Here’s what should replace them — and why.</p>
-
-
-
-<p class="wp-block-paragraph">In brief:</p>
-
-
-
-<ul class="wp-block-list">
-<li><a href="https://www.cio.com/article/4146669/is-ai-the-end-of-saas-as-we-know-it.html">AI is transforming software as a service (SaaS)</a>, and the old ways of keeping score no longer apply.</li>
-
-
-
-<li>Smart companies are evolving new metrics that provide deeper insight into how AI-native software is performing in a new marketplace.</li>
-
-
-
-<li>These changes impact everything from pricing to valuations.</li>
-</ul>
-
-
-
-<p class="wp-block-paragraph">The transformation of the software-as-a-service (SaaS) industry toward AI-native operating companies is rapidly changing the unit of value across the industry.</p>
-
-
-
-<p class="wp-block-paragraph">The traditional metric of seats — which measured access — is rapidly giving way to credits designed to measure work performed. This evolution is upending the industry in multiple ways, impacting everything from pricing to enterprise valuations.</p>
-
-
-
-<p class="wp-block-paragraph">While many companies still cling to seat-based metrics to measure growth, efficiency and durability, the future is likely to be one in which companies utilize a <a href="https://www.cio.com/article/4184688/it-hurtles-toward-the-great-enterprise-pricing-reset.html">credit-centric metrics framework</a>, with seats and outcomes as the bookends of a spectrum.</p>
-
-
-
-<h2 class="wp-block-heading" id="why-do-software-companies-need-new-metrics">Why do software companies need new metrics?</h2>
-
-
-
-<p class="wp-block-paragraph">Why the rethink, and why now? There are five major forces that are driving this shift:</p>
-
-
-
-<ol class="wp-block-list" start="1">
-<li><a href="https://www.idc.com/resource-center/blog/is-saas-dead-rethinking-the-future-of-software-in-the-age-of-ai/"><strong>The unit of value is changing</strong></a><strong>.</strong> Seats measured who could access software, and credits measure what the software actually does. But in an AI-native world, agents don’t have seats; they have workloads. Over the past 18 months, every major SaaS platform has moved to some forms of credit or consumption unit.</li>
-
-
-
-<li><strong>The cost of goods sold (COGS) is exploding.</strong> AI inference adds real per-unit costs that scale with usage. In an AI-native world, software companies can’t scale to infinite users at near‑zero marginal cost as before.</li>
-
-
-
-<li><strong>Buying is moving up the org chart.</strong> AI-native applications shift purchasing to higher-level operators — such as line-of-business leaders or chief operating officers — which expands the market from software budgets to labor budgets. And because AI agents replace services as well as software, the total market opportunity is 3x to 10x larger than traditional SaaS.</li>
-
-
-
-<li><strong>Time to value (TTV) is collapsing.</strong> With AI-native tools, customers start seeing meaningful results in weeks rather than quarters. Onboarding and setup are fast, workflows are pre-built, and there’s no need for extensive customer success or professional services — dramatically reducing implementation time and costs.</li>
-
-
-
-<li><strong>Retention is bifurcating.</strong> AI forces clarity in a way that traditional SaaS couldn’t. Products that can provide value become even “stickier” and retain customers. Those that don’t churn faster. In an AI-native marketplace, the middle disappears.</li>
-</ol>
-
-
-
-<h2 class="wp-block-heading" id="how-this-shift-is-impacting-pricing">How this shift is impacting pricing</h2>
-
-
-
-<p class="wp-block-paragraph"><a href="https://www.ey.com/en_us/insights/strategy/grow-with-trusted-software-portfolio-management">Given how AI-native software is transforming the market</a>, the shift to more variable pricing options is inevitable.</p>
-
-
-
-<p class="wp-block-paragraph">Seats won’t go away completely. Subscription pricing based on the number of users is stable and predictable and will continue to work for some customers. Tokens — the use of pass-through pricing for underlying compute — will fit those customers where the AI feature is commoditized or the buyer wants transparency into costs.</p>
-
-
-
-<p class="wp-block-paragraph">Credits will likely become the dominant architecture because they provide a simple metric for both customers and providers. The vendor sets the conversation ratio between credits and underlying compute, shielding the customer from inference cost details. Credits are easy to understand and can be packaged into annual contracts for multiple features and products.</p>
-
-
-
-<p class="wp-block-paragraph">Finally, the industry will likely see <a href="https://www.gartner.com/en/newsroom/press-releases/2026-07-01-gartner-says-us-dollars-234-billion-in-enterprise-application-software-spend-is-at-risk-from-agentic-artificial-intelligence">some move toward outcome-based pricing</a> for results such as resolved tickets, recovered revenue or qualified leads. This strategy will mostly be limited to verticals where it is easy to prove AI impacted the result.</p>
-
-
-
-<p class="wp-block-paragraph">Where a software vendor sits on this spectrum is a signal of differentiation and pricing power. Credits are where most defensible AI-native businesses are landing because they balance customer predictability with vendor margin control.</p>
-
-
-
-<h2 class="wp-block-heading" id="how-ai-upends-classic-saas-metrics">How AI upends classic SaaS metrics</h2>
-
-
-
-<p class="wp-block-paragraph">When SaaS was in its infancy, companies settled on key metrics designed to answer a small set of core questions. Are we growing? Are customers using the product? Are we retaining and expanding accounts?</p>
-
-
-
-<p class="wp-block-paragraph">But as AI upends software itself, it is also requiring companies to adopt new metrics to track success. These new metrics fall into three primary buckets, rebuilt around the pricing spectrum described earlier and the trend toward credits as the primary frame:</p>
-
-
-
-<h3 class="wp-block-heading" id="revenue-composition">Revenue composition</h3>
-
-
-
-<ul class="wp-block-list">
-<li>Committed credit annual recurring revenue (ARR) vs. burndown ARR: Measuring the credits sold on annual commitment vs. those consumed and replenished. This is the single most important split for valuation. Committed credits behave like subscription and burndown behaves like usage.</li>
-
-
-
-<li>Credit utilization rate: The percentage of purchased credits consumed per period. This is a leading indicator of renewal sizing.</li>
-
-
-
-<li>Credit burn velocity: How fast is a customer consuming their credits, and is that consumption increasing or decreasing quarter over quarter? This metric predicts expansion or contraction before it shows up in ARR.</li>
-
-
-
-<li>Effective price per credit: The real revenue per credit after discounts, overage and rollover, which can detect revenue leakage and help companies set smarter guide rails.</li>
-</ul>
-
-
-
-<h3 class="wp-block-heading" id="margin-reality">Margin reality</h3>
-
-
-
-<ul class="wp-block-list">
-<li>Credit margin: The gross profit the company earns per credit after subtracting inference costs. This is the core economic unit for AI-native, usage-based businesses — the replacement for gross margin per seat used in SaaS.</li>
-
-
-
-<li>Inference-adjusted gross margin: By carving out AI inference costs separately in the P&amp;L statement, you can see true AI margins, avoid hiding deterioration inside blended SaaS margins, and clearly distinguish AI economics from legacy SaaS economics.</li>
-
-
-
-<li>Compute leverage ratio: This metric measures how efficiently the business converts compute spend into revenue. It shows whether your AI margins are improving as you scale.</li>
-
-
-
-<li>AI-adjusted “Rule of 40”: This updated metric recalibrates the traditional growth and profitability benchmark to account for AI’s lower gross margins and variable inference costs, giving a more accurate picture of business health for AI-native companies.</li>
-</ul>
-
-
-
-<h3 class="wp-block-heading" id="behavioral-and-value-signals">Behavioral and value signals</h3>
-
-
-
-<ul class="wp-block-list">
-<li>Time-to-first outcome: Replaces traditional onboarding metrics. Tracks how fast a customer reaches their first measurable result.</li>
-
-
-
-<li>Adoption: AI-native adoption is measured by workflow penetration and active agent density, not seat count. As AI replaces human-driven usage, the unit of adoption shifts from people to automated workflows and agents.</li>
-
-
-
-<li>Net credit retention (NCR): Credit-volume retention across the customer base, tracked separately from net recurring revenue to avoid price-change impact.</li>
-</ul>
-
-
-
-<p class="wp-block-paragraph">Along with these new metrics, the industry’s transformation is prompting companies to retire or recalibrate old SaaS measures, including per-seat ARR as a primary key performance indicator (KPI), traditional magic number calibrated to subscription dynamics, unadjusted Rule of 40, customer success metrics tied to human touchpoints, and blended gross margin without AI COGS carve-outs.</p>
-
-
-
-<h2 class="wp-block-heading" id="what-does-this-mean-for-enterprise-value-calculations">What does this mean for enterprise value calculations?</h2>
-
-
-
-<p class="wp-block-paragraph">As the internal metrics of success change, so do the ways the investment community measures growth and long-term viability.</p>
-
-
-
-<p class="wp-block-paragraph">Increasingly, a company’s valuation multiple depends on whether its revenue behaves like committed subscription ARR or volatile usage ARR, and the commit‑to‑burndown ratio is the metric investors use to decide where the company fits.</p>
-
-
-
-<p class="wp-block-paragraph">For example, a business with 80% committed credit ARR could trade closer to subscription comps and one with 80% burndown could trade closer to usage comps even though both have the same types of customers. Being able to proactively explain the commit‑to‑burndown mix can help companies avoid undervaluation.</p>
-
-
-
-<p class="wp-block-paragraph">In addition, utilization is expected to replace net promoter scores and seat usage as the primary predictor of churn or expansion. Low utilization guarantees downsizing at renewal, so companies must track utilization cohorts the same way SaaS tracks logo retention cohorts today.</p>
-
-
-
-<p class="wp-block-paragraph">We’re also seeing an inversion of the operating model, with R&amp;D and COGS moving up the P&amp;L and sales and marketing (S&amp;M) and customer success (CS) moving down or sideways. The net operating leverage profile is structurally different from classical SaaS, and the cost-to-scale curve looks different too.</p>
-
-
-
-<p class="wp-block-paragraph">Finally, credit margin engineering is a hidden value-creation lever. The gap between price per credit and cost per credit is set by the software vendor and can be optimized. Most operators have barely started managing this rigorously, and the ones who do will pull away on margin.</p>
-
-
-
-<h2 class="wp-block-heading" id="what-this-means-for-leaders-boards-and-investors">What this means for leaders, boards and investors</h2>
-
-
-
-<p class="wp-block-paragraph">The shift from classic SaaS metrics to new AI‑native measures isn’t cosmetic. It represents the seismic change the industry is experiencing as AI matures and transforms products and organizations.</p>
-
-
-
-<p class="wp-block-paragraph">While these metrics — and perhaps others yet to be determined — may evolve over time, there is no doubt they are already changing how AI companies allocate capital, price products, incent sales teams, evaluate performance and communicate with investors.</p>
-
-
-
-<p class="wp-block-paragraph">It’s important to remember that SaaS metrics were practical tools for a specific era of software. As that era draws to a close, winning companies will choose new metrics that shape behavior and drive smart decision-making.</p>
-
-
-
-<p class="wp-block-paragraph"><em>The views reflected in this article are the views of the author and do not necessarily reflect the views of Ernst &amp; Young LLP or other members of the global EY organization.</em></p>
-
-
-
-<p class="wp-block-paragraph"><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><a href="https://www.cio.com/expert-contributor-network/"><strong>Want to join?</strong></a></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4d ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Stop asking AI nicely: Here’s how to get work-ready results every time</title>
-  <link>https://www.cio.com/article/4199501/stop-asking-ai-nicely-heres-how-to-get-work-ready-results-every-time.html</link>
-  <pubDate>Thu, 23 Jul 2026 11:00:00 +0000</pubDate>
-  <source>CIO.com</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><div id="remove_no_follow">
-		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
-					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
-						<div class="article-column__content">
-<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
-
-
-
-<p class="wp-block-paragraph">Over the past few years, I have learned that basic prompts produce inconsistent, hallucination-prone results that no executive would trust in production. What turned the tide was my move to advanced prompting techniques. These weren’t theoretical experiments; they became a practical foundation for reliable, measurable outcomes. I want to share the techniques that consistently delivered the biggest gains in my projects, complete with real before-and-after examples, copy-paste templates, lessons from failures and guidance on when to evolve beyond prompting to agentic systems.</p>
-
-
-
-<h2 class="wp-block-heading" id="why-advanced-prompting-still-matters-in-enterprise-settings">Why advanced prompting still matters in enterprise settings</h2>
-
-
-
-<p class="wp-block-paragraph">Sophisticated prompting remains essential for control, reliability and compliance. If you “ask nicely” and hope for the best, you need deterministic behavior, auditable reasoning and minimal risk of hallucination. Here’s what worked for me.</p>
-
-
-
-<h3 class="wp-block-heading" id="1-chain-of-thought-cot-and-its-variants-unlocking-step-by-step-reasoning">1. Chain-of-Thought (CoT) and its variants: Unlocking step-by-step reasoning</h3>
-
-
-
-<p class="wp-block-paragraph"><strong>The problem:</strong> Models would jump to conclusions on complex analysis tasks, especially involving data interpretation or multi-step logic.</p>
-
-
-
-<p class="wp-block-paragraph"><strong>What I did:</strong> I started explicitly instructing the model to “think step by step” and show its reasoning.</p>
-
-
-
-<p class="wp-block-paragraph"><strong>Before (basic prompt): </strong>“Analyze last quarter’s sales data and recommend three actions.”</p>
-
-
-
-<p class="wp-block-paragraph"><strong>After (CoT prompt):</strong></p>
-
-
-
-<p class="wp-block-paragraph">“You’re a senior business analyst. Analyze the following sales data step by step: [data]. First, identify the key trends. Second, calculate the rates and anomalies. Third, link findings to business context. Finally, recommend the three prioritized actions with expected impact. Explain your reasoning at each step.”  </p>
-
-
-
-<p class="wp-block-paragraph"><strong>Results:</strong> Accuracy and depth improved dramatically.</p>
-
-
-
-<p class="wp-block-paragraph"><strong>Variants that worked well:</strong> Self-consistency. I ran the same CoT prompt multiple times and took the majority consensus. This reduced variability significantly.</p>
-
-
-
-<p class="wp-block-paragraph"><strong>Template you can use:</strong></p>
-
-
-
-<pre class="wp-block-code"><code>You are [expert role]. Solve this problem by thinking step by step.
-
-[Task or question]
-
-For each step:
-
-1. State your observation or calculation.
-
-2. Explain the implication.
-
-3. Proceed only when confident.
-
-Final answer in this format: [structured output]</code></pre>
-
-
-
-<h3 class="wp-block-heading" id="2-tree-of-thoughts-tot-exploring-multiple-reasoning-paths">2. Tree-of-Thoughts (ToT): Exploring multiple reasoning paths</h3>
-
-
-
-<p class="wp-block-paragraph">For truly complex decisions such as resource allocation or risk assessment, linear CoT isn’t enough. Tree-of-Thoughts lets the model generate and evaluate multiple branches.</p>
-
-
-
-<p class="wp-block-paragraph"><strong>Example:</strong> I was helping a client evaluate three potential vendor platforms for an AI deployment. A standard prompt gave a superficial comparison. With ToT</p>
-
-
-
-<p class="wp-block-paragraph"><strong>Prompt Snippet:</strong></p>
-
-
-
-<pre class="wp-block-code"><code>Explore three different reasoning paths for selecting the best vendor platform:
-
-Path 1: Focus on cost and scalability.
-
-Path 2: Focus on security, compliance and integration.
-
-Path 3: Focus on innovation and long-term roadmap.
-
-For each path, evaluate pros/cons against our requirements [list].
-
-Then, compare the paths and recommend the strongest overall option with justification.</code></pre>
-
-
-
-<p class="wp-block-paragraph"><strong>Outcome:</strong> The model surfaced nuanced trade-offs (e.g., one vendor had superior security, but higher integration cost).</p>
-
-
-
-<p class="wp-block-paragraph"><strong>When to use:</strong> Strategic planning, troubleshooting or scenarios with high uncertainty and multiple viable approaches.</p>
-
-
-
-<h3 class="wp-block-heading" id="3-react-reason-act-and-prompt-chaining-moving-toward-agentic-behavior">3. ReAct (Reason+ Act) and prompt chaining: Moving toward agentic behavior</h3>
-
-
-
-<p class="wp-block-paragraph">One of the biggest leaps I have noticed comes from combining reasoning with tool use and chaining prompts.</p>
-
-
-
-<p class="wp-block-paragraph"><strong>ReAct example</strong>: (used in data analytics workflow)</p>
-
-
-
-<pre class="wp-block-code"><code>You are an AI analyst with access to tools. For the query below:
-
-1. Reason about what information you need.
-
-2. Choose the appropriate tool or action.
-
-3. Observe the result.
-
-4. Repeat until you can answer confidently.
-
-Query: [user request]</code></pre>
-
-
-
-<p class="wp-block-paragraph">In practice, I chained this with retrieval tools. One automated quarterly compliance reporting; the system reasoned about required data, pulled relevant records, validated them, and generated the reports.</p>
-
-
-
-<h3 class="wp-block-heading" id="4-meta-prompting-and-self-reflection-letting-the-model-improve-itself">4. Meta-prompting and self-reflection: Letting the model improve itself</h3>
-
-
-
-<p class="wp-block-paragraph">Use the model to refine its own prompt. This is a huge time-saver.</p>
-
-
-
-<pre class="wp-block-code"><code>You are an expert prompt engineer. Improve the following prompt for clarity, structure and effectiveness with [target model]. Make it more precise while preserving intent.
-
-Original prompt: [paste]
-
-Provide the improved version and explain your changes.</code></pre>
-
-
-
-<p class="wp-block-paragraph">Self-reflection loops (asking the model to critique its own output and revise) are a game-changer for content generation and code-review tasks.</p>
-
-
-
-<h3 class="wp-block-heading" id="5-multimodal-and-structured-output-techniques">5. Multimodal and structured output techniques</h3>
-
-
-
-<p class="wp-block-paragraph">With vision-enabled models, I started combining text with images (e.g., uploading architecture diagrams or dashboards).</p>
-
-
-
-<p class="wp-block-paragraph"><strong>Tip from experience:</strong> Be extremely specific in describing what the models should focus on.</p>
-
-
-
-<h4 class="wp-block-heading" id="best-practices-i-learned-the-hard-way">Best practices I learned the hard way</h4>
-
-
-
-<ul class="wp-block-list">
-<li><strong>Start simple, then layer complexity</strong>: Over-engineered prompts from Day One usually backfire.</li>
-
-
-
-<li><strong>Model specific tuning:</strong> Some models respond better to XML delimiters; others to explicit reasoning.</li>
-
-
-
-<li><strong>Evaluation and versioning:</strong> Treat prompts like code if you track versions and run automated evals.</li>
-
-
-
-<li><strong>Security guardrails:</strong> Always include instructions against prompt injections and respect data boundaries.</li>
-
-
-
-<li><strong>When to stop prompting</strong>: For repetitive, high-stakes workflows, move to full agents or an orchestration framework.</li>
-</ul>
-
-
-
-<h2 class="wp-block-heading" id="final-takeaways-for-technical-leaders">Final takeaways for technical leaders</h2>
-
-
-
-<p class="wp-block-paragraph">Advanced prompt engineering has now become a core competency for anyone responsible for enterprise AI outcomes. Start by picking one technique and apply it rigorously to a real business problem. Document before/ after and you will notice why it’s worth mastering.</p>
-
-
-
-<p class="wp-block-paragraph">The field continues evolving towards more automated and agentic systems, but the ability to precisely direct AI reasoning remains foundational.</p>
-
-
-
-<p class="wp-block-paragraph"><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><a href="https://www.cio.com/expert-contributor-network/"><strong>Want to join?</strong></a></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4d ago]]></description>
-</item>
-
-<item>
   <title>🔴 Microsoft’s 3-day patching directive comes with added operational risk</title>
   <link>https://www.csoonline.com/article/4200366/microsofts-3-day-patching-directive-comes-with-added-operational-risk.html</link>
   <pubDate>Thu, 23 Jul 2026 07:00:00 +0000</pubDate>
@@ -4865,7 +5074,7 @@ Provide the improved version and explain your changes.</code></pre>
 
 
 <p class="wp-block-paragraph">Businesses that cannot safely validate and deploy patches within three days still have options, including “compensating controls, reducing an asset’s exposure, or in some cases removing the component entirely, all of which shrink the exploitable risk and buy time to patch properly,” says Brad Hibbert, CSO of vulnerability management provider Brinqa.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 4d ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 5d ago]]></description>
 </item>
 
 <item>
@@ -5015,216 +5224,6 @@ Provide the improved version and explain your changes.</code></pre>
 
 
 <p class="wp-block-paragraph">Zimbra owner Synacor strongly advises customers to upgrade to the latest available version as soon as possible to keep their environments secure. While none of these flaws had zero-day status, hacker groups have a history for quickly adopting known Zimbra exploits.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5d ago]]></description>
-</item>
-
-<item>
-  <title>🟠 Oracle’s July update fixes ten 10.0 vulnerabilities in Fusion Middleware</title>
-  <link>https://www.csoonline.com/article/4200184/oracles-july-update-fixes-ten-10-0-vulnerabilities-in-fusion-middleware.html</link>
-  <pubDate>Wed, 22 Jul 2026 18:14:27 +0000</pubDate>
-  <source>CSO Online</source>
-  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/><div id="remove_no_follow">
-		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
-					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
-						<div class="article-column__content">
-<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
-
-
-
-<p class="wp-block-paragraph">Oracle’s July 2026 Critical Patch Update, its largest ever, contains 1,449 new security patches spanning 32 product families, from Oracle Database and E-Business Suite to PeopleSoft, GoldenGate, Java SE, and Fusion Middleware.</p>
-
-
-
-<p class="wp-block-paragraph">Fusion Middleware was particularly hard hit, with new security patches for 355 security vulnerabilities, 219 of them remotely exploitable without authentication, meaning they can be exploited over a network without requiring user credentials. Ten of them scored a “perfect” 10.0 on the Common Vulnerability Scoring System (CVSS).</p>
-
-
-
-<p class="wp-block-paragraph">These included easily exploitable vulnerabilities allowing unauthenticated attackers with network access via HTTP to compromise Oracle Data Integrator, Oracle Access Manager, Oracle HTTP Server, Oracle Platform Security for Java, Oracle WebCenter Content, Service Delivery Platform, or Oracle Weblogic Server Proxy Plug-in,</p>
-
-
-
-<p class="wp-block-paragraph">No other products were found to have quite such extreme vulnerabilities, but there were plenty of others scoring almost as badly.</p>
-
-
-
-<h2 class="wp-block-heading" id="two-critical-flaws-in-oracle-database-server">Two critical flaws in Oracle Database Server</h2>
-
-
-
-<p class="wp-block-paragraph">The most severe flaw Oracle patched in its flagship database product is CVE-2026-61211, a vulnerability in the RDBMS component’s DBMS_CLOUD package with a CVSS score of 9.9.</p>
-
-
-
-<p class="wp-block-paragraph">This easily exploitable vulnerability allows a low-privileged attacker having Execute DBMS_CLOUD privilege with network access via Oracle Net to compromise the RDBMS, <a href="https://www.oracle.com/security-alerts/cpujul2026verbose.html">Oracle said in the patch update statement</a>. “While the vulnerability is in RDBMS, attacks may significantly impact additional products (scope change). Successful attacks of this vulnerability can result in takeover of RDBMS,” it warned.</p>
-
-
-
-<p class="wp-block-paragraph">The flaw affects Database Server versions 19.3 through 19.31 and 23.4.0 through 23.26.2.</p>
-
-
-
-<p class="wp-block-paragraph">Sanchit Vir Gogia, chief analyst at Greyhound Research, said the 9.9 score should be read as serious but conditional. Exposure depends on configuration, he said: On customer-managed databases, DBMS_CLOUD is absent until installed, and grants and network access lists determine the radius from there. “Where DBMS_CLOUD is broadly granted and reachable, the emergency is real and the window is seventy-two hours; where it is absent, the accelerated database wave will do.”</p>
-
-
-
-<p class="wp-block-paragraph">Vibhum Dubey, a cybersecurity researcher and red teamer, said the flaw stood out to him because it checks several boxes that concern defenders.</p>
-
-
-
-<p class="wp-block-paragraph">“Database servers often hold an organization’s most valuable data, so even if exploitation is not publicly observed yet, I don’t think this is the kind of issue you leave until the next routine maintenance window if your environment is exposed,” Dubey said.</p>
-
-
-
-<p class="wp-block-paragraph">A second Database Server flaw, CVE-2026-47040, affects Connection Manager in Oracle Net Services, is remotely exploitable without credentials. Oracle’s risk matrix lists six Database Product vulnerabilities in this cycle as reachable over a network with no authentication required, the statement added.</p>
-
-
-
-<p class="wp-block-paragraph">CVE-2026-7383, an OpenSSL-related TLS vulnerability, affects two products, Database Server and Autonomous Health Framework, since both bundle the same third-party component. Oracle’s advisory notes the Database Server patch for that CVE also resolves 19 related OpenSSL CVEs bundled into the same fix.</p>
-
-
-
-<p class="wp-block-paragraph">Oracle GoldenGate received 27 new patches, nine of which do not require authentication to exploit, including CVE-2026-2332, a flaw in the Big Data and Application Adapters component tied to Eclipse Jetty, the statement added.</p>
-
-
-
-<p class="wp-block-paragraph">There were also two critical flaws in Oracle’s TimesTen in-memory database.</p>
-
-
-
-<p class="wp-block-paragraph">The remainder of the release spans E-Business Suite, WebLogic Server, PeopleSoft, Siebel, JD Edwards, Communications, Retail Applications, Utilities Applications, MySQL, Solaris and VM VirtualBox.</p>
-
-
-
-<h2 class="wp-block-heading" id="volume-repair">Volume repair</h2>
-
-
-
-<p class="wp-block-paragraph">Gogia said the volume itself marks a shift.</p>
-
-
-
-<p class="wp-block-paragraph">“At 1,449 patches, against 481 in April 2026 and 309 a year earlier, patch load has outgrown the queue built to hold it,” he said. He recommended a tiered response: “The reachable and the reported inside seventy-two hours, the trusted core inside ten days, the rest by risk before the October release.”</p>
-
-
-
-<p class="wp-block-paragraph">He also flagged a specific risk in how organizations might triage E-Business Suite. “Oracle’s advisory concedes that E-Business Suite exposure sits partly in underlying Database and Fusion Middleware versions outside the E-Business Suite matrix. The fastest way to mis-prioritise this release is to patch by product logo instead of trust boundary.”</p>
-
-
-
-<h2 class="wp-block-heading" id="third-tuesday-quarterly-cycle">Third Tuesday, quarterly cycle</h2>
-
-
-
-<p class="wp-block-paragraph">The July release is the third quarterly Critical Patch Update of 2026, and the first since the <a href="https://www.csoonline.com/article/4179473/oracles-first-monthly-patch-release-fixes-35-flaws-including-11-rated-critical.html">introduction in May</a> of the monthly Critical Security Patch Update program.</p>
-
-
-
-<p class="wp-block-paragraph">Gogia said Oracle has effectively layered a second cadence on top of the existing one rather than replacing it.</p>
-
-
-
-<p class="wp-block-paragraph">“Quarterly Critical Patch Updates remain and stay cumulative; monthly Critical Security Patch Updates now sit on top,” he said, adding that enterprise adoption of the new rhythm remains low because of “certification obligations, regression exposure and scarce specialist hours.”</p>
-
-
-
-<p class="wp-block-paragraph">Dubey made a similar point about organizational readiness: “In large enterprises, patching is rarely a technical problem. It is an operational one. Database administrators, application owners, infrastructure teams, business stakeholders, and change advisory boards all have to align.”</p>
-
-
-
-<p class="wp-block-paragraph">Niyati Daftary, principal analyst at Gartner, said the release underscores a broader shift in how patching is approached.</p>
-
-
-
-<p class="wp-block-paragraph">“Patching is no longer a race to remediate every vulnerability. It is a discipline of identifying the exposures that matter most and reducing business risk as efficiently as possible,” she said, adding that organizations should prioritize based on exposure, business impact and exploitability, starting with internet-facing assets and mission-critical systems.</p>
-
-
-
-<p class="wp-block-paragraph">Daftary pointed to continuous threat exposure management and adversarial exposure validation as increasingly relevant frameworks, since CVSS scores “measure theoretical severity rather than actual enterprise risk.” Patching alone will not be sufficient, Daftary said, and organizations should continue investing in defense in depth, including behavioral threat detection and incident response.</p>
-
-
-
-<p class="wp-block-paragraph">Oracle’s next cumulative Critical Patch Update will come on Oct. 20, 2026, with smaller Critical Security Patch Updates on Aug. 18 and Sept. 15.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5d ago]]></description>
-</item>
-
-<item>
-  <title>🟠 Cisco’s new AI model tells code reviewers where to look for vulnerabilities</title>
-  <link>https://www.csoonline.com/article/4200151/ciscos-new-ai-model-tells-code-reviewers-where-to-look-for-vulnerabilities-2.html</link>
-  <pubDate>Wed, 22 Jul 2026 16:47:24 +0000</pubDate>
-  <source>CSO Online</source>
-  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/><div id="remove_no_follow">
-		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
-					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
-						<div class="article-column__content">
-<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
-
-
-
-<p class="wp-block-paragraph">Cisco has revealed a family of open-weight AI models called Antares that, it said, can help security teams isolate potentially vulnerable parts of a software repository before deeper investigation begins.</p>
-
-
-
-<p class="wp-block-paragraph">Rather than detecting a specific CVE or generating a patch, these models search a codebase using only a Common Weakness Enumeration (CWE) description and return the files most likely to contain that class of vulnerability.</p>
-
-
-
-<p class="wp-block-paragraph">“Its purpose is to reduce a large codebase to a focused set of files that a security professional or a downstream security workflow should investigate,” Cisco’s AI researcher <a href="https://www.linkedin.com/in/supriti-vijay/" rel="noreferrer noopener" target="_blank">Supriti Vijay</a> said via email. “The goal is not to replace a security engineer’s judgement or send them on a wild-goose chase, but to reduce fatigue and workload by helping them triage an issue earlier and focus their investigation on the most relevant parts of the codebase.”</p>
-
-
-
-<p class="wp-block-paragraph">The Antares family consists of models with 350 million, 1 billion, and 3 billion parameters trained specifically for repository-scale vulnerability localization.</p>
-
-
-
-<p class="wp-block-paragraph">The company said its largest model approaches the performance of GPT-5.5 on its internal vulnerability localization (Vloc) benchmark while remaining small enough for low-cost local deployment.</p>
-
-
-
-<h2 class="wp-block-heading" id="a-search-assistant-not-a-vulnerability-detector">A search assistant, not a vulnerability detector</h2>
-
-
-
-<p class="wp-block-paragraph">Cisco is careful to define what Antares is, and what it is not.</p>
-
-
-
-<p class="wp-block-paragraph">“Antares outputs a ranked list of source files likely to contain a relevant vulnerability, along with the terminal exploration trace that led to that result,” Cisco Foundation AI Chief Scientist <a href="https://www.linkedin.com/in/amin-karbasi-5025335/" rel="noreferrer noopener" target="_blank">Amin Karbasi</a> wrote in a blog post, adding that the models are not meant to replace the broader application security toolchain: Human analysts or downstream security tools will still be needed to confirm exploitability, <a href="https://www.infoworld.com/article/4200083/gitlab-previews-auto-remediation-of-vulnerable-dependencies.html">identify vulnerable lines of code</a>, assess severity and generate fixes.</p>
-
-
-
-<p class="wp-block-paragraph">Antares differs from conventional static analysis platforms such as Semgrep or CodeQL, which primarily rely on predefined rules or queries. Cisco instead describes Antares as an evidence-driven exploration agent that adapts its search as it traverses the repository.</p>
-
-
-
-<p class="wp-block-paragraph">Cisco’s argument is that large repositories often contain thousands of files, making manual reviews exhaustive and unrealistic. By reducing the search space to a manageable shortlist, the company hopes to reduce investigation fatigue without replacing human judgement.</p>
-
-
-
-<h2 class="wp-block-heading" id="claims-of-specialization-over-scale">Claims of specialization over scale</h2>
-
-
-
-<p class="wp-block-paragraph">Cisco is also making a statement about how cybersecurity models should evolve.</p>
-
-
-
-<p class="wp-block-paragraph">Instead of pursuing larger foundational models, Cisco argued that specialized, task-trained models can outperform much larger open-weight alternatives for vulnerability localization. In its evaluation Antares-3B, the largest model intended for single-GPU deployments, produced results comparable to GPT-5.5 while outperforming several substantially larger open models by Google, OpenAI and Meta.</p>
-
-
-
-<p class="wp-block-paragraph">The family also includes Antares-350M for resource-constrained environments and Antares-1B for laptops and workstations, which Cisco has made available as open-weight models on Hugging Face.</p>
-
-
-
-<p class="wp-block-paragraph">The command line interface (CLI) on the models supports targeted CWE investigations, repository-wide scans, SARIF output and local inference, which Cisco said enables organizations to keep proprietary code inside their own trust boundary.</p>
-
-
-
-<p class="wp-block-paragraph">However, because Antares identifies candidate files rather than confirmed vulnerabilities, organizations will still need to understand how often such repository-wide searches should be run, how much they improve existing triage workflows, and whether the reduction in investigation effort ultimately translates into measurable security or cost benefits.</p>
-
-
-
-<p class="wp-block-paragraph"><em>This article first appeared on <a href="https://www.infoworld.com/article/4200143/ciscos-new-ai-model-tells-code-reviewers-where-to-look-for-vulnerabilities.html">InfoWorld</a>.</em></p>
 </div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5d ago]]></description>
 </item>
 

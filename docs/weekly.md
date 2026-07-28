@@ -1,25 +1,30 @@
 # IT Weekly Intelligence Briefing
 **Period:** July 21 – July 28, 2026  
-**Generated:** 2026-07-28 06:31 UTC  
+**Generated:** 2026-07-28 09:35 UTC  
 **Items reviewed:** 134  
 
 ## ⚡ Top Actions This Week
 
-1. **Apply emergency patch or mitigation now; check vendor advisory for workarounds.**  
+1. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
+   _Data breach at medical billing firm MCBS affects 1.26 million people_  
+   Source: BleepingComputer  
+
+2. **Apply emergency patch or mitigation now; check vendor advisory for workarounds.**  
    _Arista patches VeloCloud Orchestrator zero-day exploited in attacks_  
    Source: BleepingComputer  
 
-2. **Validate backups, confirm EDR coverage, and brief incident response team.**  
+3. **Validate backups, confirm EDR coverage, and brief incident response team.**  
    _Coca-Cola confirms data theft in Fairlife ransomware attack_  
-   Source: BleepingComputer  
-
-3. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _Ernst & Young data breach claimed by ShinyHunters extortion gang_  
    Source: BleepingComputer  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [Data breach at medical billing firm MCBS affects 1.26 million people](https://www.bleepingcomputer.com/news/security/data-breach-at-medical-billing-firm-mcbs-affects-126-million-people/)
+**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jul 28  
+**Why it matters:** Potential credential or data exposure.  
+**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
 ### [Arista patches VeloCloud Orchestrator zero-day exploited in attacks](https://www.bleepingcomputer.com/news/security/arista-patches-velocloud-orchestrator-zero-day-exploited-in-attacks/)
 **Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jul 27  
@@ -46,14 +51,15 @@
 **Why it matters:** Potential credential or data exposure.  
 **Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
-### [Cl0p Affiliates Target Internet-Exposed PTC Windchill and FlexPLM with Unauthenticated RCE](https://thehackernews.com/2026/07/cl0p-affiliates-target-internet-exposed.html)
-**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Jul 25  
-**Why it matters:** Elevated ransomware risk across the sector.  
-**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
-
 ---
 
 ## 🟠 Important — Review This Week
+
+- [Critical TeamCity Flaw Could Let Attackers Run OS Commands Without Logging In](https://thehackernews.com/2026/07/critical-teamcity-flaw-could-let.html)  
+  **The Hacker News** · Jul 28 · _General awareness item._  
+
+- [Researcher Says AI Helped Develop Linux Traffic-Control Race Into Root Exploit](https://thehackernews.com/2026/07/researcher-says-ai-helped-develop-linux.html)  
+  **The Hacker News** · Jul 28 · _General awareness item._  
 
 - [Microsoft Says New Cybersecurity AI Model Helps MDASH Hit 95.95% at Half the Cost](https://thehackernews.com/2026/07/microsoft-says-new-cybersecurity-ai.html)  
   **The Hacker News** · Jul 28 · _General awareness item._  
@@ -73,22 +79,16 @@
 - [CVE-2026-50333 Windows Spaceport.sys Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-50333)  
   **Microsoft Security Response Center (MSRC)** · Jul 27 · _General awareness item._  
 
-- [CVE-2026-50697 Windows Common Log File System Driver Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-50697)  
-  **Microsoft Security Response Center (MSRC)** · Jul 27 · _General awareness item._  
-
-- [CVE-2026-50343 Microsoft Install Service Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-50343)  
-  **Microsoft Security Response Center (MSRC)** · Jul 27 · _General awareness item._  
-
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [AutoIT Payload Injector , (Tue, Jul 28th)](https://isc.sans.edu/diary/rss/33192) — SANS Internet Storm Center
 - [ISC Stormcast For Tuesday, July 28th, 2026 https://isc.sans.edu/podcastdetail/10026, (Tue, Jul 28th)](https://isc.sans.edu/diary/rss/33190) — SANS Internet Storm Center
 - [New Dysphoria DDoS botnet spreads to 200k devices worldwide](https://www.bleepingcomputer.com/news/security/new-dysphoria-ddos-botnet-spreads-to-200k-devices-worldwide/) — BleepingComputer
 - [NVIDIA Forms 37-Member Open Secure AI Alliance and Open-Sources NOOA Framework](https://thehackernews.com/2026/07/nvidia-forms-37-member-open-secure-ai.html) — The Hacker News
 - [Apple sued over fake App Store crypto wallet app stealing $1.8M in Bitcoin](https://www.bleepingcomputer.com/news/apple/apple-sued-over-fake-app-store-crypto-wallet-app-stealing-18m-in-bitcoin/) — BleepingComputer
 - [Dysphoria IoT Botnet Adds Blockchain C2 and Victim Relays After JackSkid Disruption](https://thehackernews.com/2026/07/dysphoria-iot-botnet-adds-blockchain-c2.html) — The Hacker News
-- [⚡ Weekly Recap: Rogue AI Agents, Check Point Exploit, Slopsquatting, ClickFix Lures and More](https://thehackernews.com/2026/07/weekly-recap-rogue-ai-agents-check.html) — The Hacker News
 
 ---
 
