@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
 **Period:** July 21 – July 28, 2026  
-**Generated:** 2026-07-28 00:06 UTC  
+**Generated:** 2026-07-28 03:59 UTC  
 **Items reviewed:** 134  
 
 ## ⚡ Top Actions This Week
@@ -83,12 +83,12 @@
 
 ## 🔵 FYI — General Awareness
 
+- [ISC Stormcast For Tuesday, July 28th, 2026 https://isc.sans.edu/podcastdetail/10026, (Tue, Jul 28th)](https://isc.sans.edu/diary/rss/33190) — SANS Internet Storm Center
 - [New Dysphoria DDoS botnet spreads to 200k devices worldwide](https://www.bleepingcomputer.com/news/security/new-dysphoria-ddos-botnet-spreads-to-200k-devices-worldwide/) — BleepingComputer
 - [NVIDIA Forms 37-Member Open Secure AI Alliance and Open-Sources NOOA Framework](https://thehackernews.com/2026/07/nvidia-forms-37-member-open-secure-ai.html) — The Hacker News
 - [Apple sued over fake App Store crypto wallet app stealing $1.8M in Bitcoin](https://www.bleepingcomputer.com/news/apple/apple-sued-over-fake-app-store-crypto-wallet-app-stealing-18m-in-bitcoin/) — BleepingComputer
 - [Dysphoria IoT Botnet Adds Blockchain C2 and Victim Relays After JackSkid Disruption](https://thehackernews.com/2026/07/dysphoria-iot-botnet-adds-blockchain-c2.html) — The Hacker News
 - [⚡ Weekly Recap: Rogue AI Agents, Check Point Exploit, Slopsquatting, ClickFix Lures and More](https://thehackernews.com/2026/07/weekly-recap-rogue-ai-agents-check.html) — The Hacker News
-- [Shadow AI agents are multiplying. Here's how to find and secure them.](https://www.bleepingcomputer.com/news/security/shadow-ai-agents-are-multiplying-heres-how-to-find-and-secure-them/) — BleepingComputer
 
 ---
 

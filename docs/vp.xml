@@ -3,8 +3,415 @@
 <channel>
   <title>Joe — VP of IT Briefing</title>
   <description>Leadership-focused IT risk, vendors, pricing, licensing, and industry context.</description>
-  <lastBuildDate>Tue, 28 Jul 2026 00:05:32 +0000</lastBuildDate>
+  <lastBuildDate>Tue, 28 Jul 2026 03:58:34 +0000</lastBuildDate>
   
+<item>
+  <title>🔴 Hackers are compromising hotel Wi-Fi gateways to hijack Microsoft 365 accounts</title>
+  <link>https://www.csoonline.com/article/4202067/hackers-are-compromising-hotel-wi-fi-gateways-to-hijack-microsoft-365-accounts.html</link>
+  <pubDate>Tue, 28 Jul 2026 02:28:22 +0000</pubDate>
+  <source>CSO Online</source>
+  <description><![CDATA[<b>Why this matters: Elevated ransomware risk — validate backups and endpoint defenses.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<p class="wp-block-paragraph">Traveling enterprise employees beware: Think twice before you log onto that oh-so-convenient public Wi-Fi.</p>
+
+
+
+<p class="wp-block-paragraph">Since at least June, threat actors have been compromising “captive” Wi-Fi gateways and other portal appliances at hotels, conference centers, and similar shared venues to hijack users’ Microsoft 365 accounts, according to the ReliaQuest Threat Research team.</p>
+
+
+
+<p class="wp-block-paragraph">Once a threat actor controls a gateway, they can silently redirect a user’s traffic to their own infrastructure and steal their Microsoft 365 credentials without ever touching the user’s device, compromising endpoints, or sending phishing links or malicious attachments.</p>
+
+
+
+<p class="wp-block-paragraph">“The most dangerous element is that it operates at the network gateway, which sits beneath most of the trust assumptions users and devices make,” ReliaQuest told CSO Online. “It’s not necessarily an enterprise breach level event on its own, but it’s a very real risk to individual accounts.”</p>
+
+
+
+<h2 class="wp-block-heading" id="exploiting-a-fundamental-trust">Exploiting a ‘fundamental trust’</h2>
+
+
+
+<p class="wp-block-paragraph">Domain Name System (DNS) poisoning, in which false data is injected to redirect regular web traffic to fraudulent domains, has previously been observed on small office routers, but attackers are now expanding the technique to higher-level targets, the ReliaQuest researchers explained in a <a href="https://reliaquest.com/blog/threat-spotlight-dns-poisoning-tactics-expand-to-hospitality/" rel="noreferrer noopener" target="_blank">blog post</a>.</p>
+
+
+
+<p class="wp-block-paragraph">Attackers likely gain access to the gateways through weak or reused admin credentials in combination with exposed interfaces like Secure Shell (SSH), Simple Network Management Protocol (SNMP), and other web consoles, they pointed out.</p>
+
+
+
+<p class="wp-block-paragraph">Admin access to the gateway is all that malicious actors need, because devices are designed to inherently trust DNS, which translates domain names like login.microsoftonline[.]com into IP addresses to route them. Therefore, a single gateway compromise gives the attacker the ability to redirect traffic for every guest logging into the network, providing IP addresses it controls in response to DNS requests, rather than the legitimate ones, without touching a single endpoint.</p>
+
+
+
+<p class="wp-block-paragraph">“Captive portal appliances sit at the <a href="https://www.csoonline.com/article/4201019/ransomware-groups-are-hammering-your-vulnerable-vpns.html" target="_blank">network perimeter</a> for every guest on that network,” the researchers wrote. “Detection is inherently difficult because the attack happens gateway-side, outside the endpoint’s visibility.”</p>
+
+
+
+<p class="wp-block-paragraph">In the campaign tracked by ReliaQuest, four attacker-registered domains, m365-owa[.]com, owa-ms365[.]com, ms365-device[.]com, and ms365-live[.]com, were used for Microsoft-impersonation lures.</p>
+
+
+
+<p class="wp-block-paragraph">The compromised Wi-Fi gateways were discovered across multiple US cities as well as in India and Saudi Arabia, and impacted users were from companies in professional and financial services, legal, retail, health care, and energy, indicating that the method isn’t sector-specific.</p>
+
+
+
+<p class="wp-block-paragraph">“We’ve seen enough SharePoint exfiltration cases to know that a single popped account can cascade into meaningful data loss,” ReliaQuest noted. Meanwhile, for the network operators, there’s a “reputational dimension”; user compromise is a “serious trust and brand problem, regardless of how sophisticated’ the underlying attack is.”</p>
+
+
+
+<h2 class="wp-block-heading" id="safe-services-dnssec-not-enough">Safe services, DNSSEC not enough</h2>
+
+
+
+<p class="wp-block-paragraph">Locking network configurations to a ‘safe’ DNS provider such as Google (8.8.8.8), Cloudflare (1.1.1.1), or the cloud-based OpenDNS isn’t a sufficient tactic, because it doesn’t change the path that queries actually travel over, ReliaQuest contended.</p>
+
+
+
+<p class="wp-block-paragraph">By default, devices send DNS queries as unencrypted protocol traffic, and those packets still have to traverse the hotel’s network to reach Google, Cloudflare, or OpenDNS, the company explained. Since the gateway sits directly in that path, it can inspect, block, or redirect the query before it ever reaches the chosen resolver.</p>
+
+
+
+<p class="wp-block-paragraph">“Specifying a trusted DNS server changes the intended destination, not who controls the road to get there,” ReliaQuest noted.</p>
+
+
+
+<p class="wp-block-paragraph">Further, Domain Name System Security Extensions (DNSSECs), which use digital signatures and public-key cryptography, only “partially” address the problem. DNSSEC provides authentication and integrity for signed domains, which means a validating resolver can detect and reject forged or tampered responses.</p>
+
+
+
+<p class="wp-block-paragraph">“What it does not do is provide confidentiality or availability,” the company said. “It does not encrypt DNS traffic or stop an attacker from intercepting, blocking, or redirecting requests.”</p>
+
+
+
+<p class="wp-block-paragraph">So while DNSSEC can defeat certain response-forgery attacks against signed zones, an on-path gateway can still see queries, drop them, or force fallback behavior. However, this protection layer only helps when domains are actually signed, and then only when the client or resolver performs validation, which “many stub resolvers do not,” according to ReliaQuest.</p>
+
+
+
+<h2 class="wp-block-heading" id="full-tunnel-vpns-required">Full-tunnel VPNs required</h2>
+
+
+
+<p class="wp-block-paragraph">To combat the problem, enterprises should require all corporate devices to use a full-tunnel VPN for network connection. Controls should prevent internet access until a tunnel is active, ReliaQuest advised.</p>
+
+
+
+<p class="wp-block-paragraph">This will route all of a device’s traffic, including DNS, through an encrypted connection to a trusted VPN server before it travels anywhere else, the company explained, thus preventing local networks like hotel gateways from seeing or modifying DNS and internet traffic.</p>
+
+
+
+<p class="wp-block-paragraph">“In effect, it takes the untrusted network out of the trust equation,” ReliaQuest noted.</p>
+
+
+
+<p class="wp-block-paragraph">However, full-tunnel configuration is not the default for VPNs, because it comes with “real trade-offs,” the researchers noted: It adds cost, latency, and bandwidth demands, since every packet has to travel through company infrastructure. Thus, forcing all traffic through the corporate backbone is “not always practical” for distributed or bandwidth-heavy workforces.</p>
+
+
+
+<p class="wp-block-paragraph">Enterprises should also enforce conditional access in Entra ID to block <a href="https://reliaquest.com/blog/threat-spotlight-jalisco-toolkit-and-ai-powered-phishing-surge/" rel="noreferrer noopener" target="_blank">device-code authentication flow</a>, which has few legitimate use cases for most users in most environments, ReliaQuest noted.</p>
+
+
+
+<h2 class="wp-block-heading" id="additional-precautions">Additional precautions</h2>
+
+
+
+<p class="wp-block-paragraph">The company also advised:</p>
+
+
+
+<ul class="wp-block-list">
+<li>Restricting Proxy Auto-Configuration (PAC) file retrieval to approved internal hosts;</li>
+
+
+
+<li>Disabling automatic Web Proxy Auto-Discovery (WPAD) via Group Policy to (this is often enabled by default in Windows);</li>
+
+
+
+<li>Deploying encrypted DNS such as DoH or DoT in strict mode as a “complement or alternative” to full-tunnel VPN. This is particularly important for organizations where always-on VPN is not feasible.</li>
+
+
+
+<li>Training employees to verify the URL and certificate of any page requesting credentials before entering them, particularly on public Wi-Fi networks.</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">Prevention is more important than detection here, ReliaQuest pointed out: while in tools like Microsoft Defender for Endpoint, ‘<em>DnsConnectionInspected</em>’ events showing queries to attacker-controlled domains are a primary endpoint-level signal, “by the time those events fire, the redirect has typically already occurred. In other words, endpoint telemetry confirms what happened more than it prevents it.”</p>
+
+
+
+<p class="wp-block-paragraph">This is exactly why methods like encrypted transport, Conditional Access, and WPAD and PAC hardening matter more than detection alone, the researchers emphasized.</p>
+
+
+
+<p class="wp-block-paragraph"></p>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+</item>
+
+<item>
+  <title>🟠 Microsoft unveils multi-model agentic cyber stack for security operations</title>
+  <link>https://www.csoonline.com/article/4202080/microsoft-unveils-multi-model-agentic-cyber-stack-for-security-operations.html</link>
+  <pubDate>Tue, 28 Jul 2026 02:25:00 +0000</pubDate>
+  <source>CSO Online</source>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<p class="wp-block-paragraph">Microsoft announced a new AI-powered service that enables enterprise security teams to continuously evaluate and update their organization’s security posture through a series of AI agents that can find vulnerabilities, simulate attacks, detect and triage potential threats, and develop remediations.</p>
+
+
+
+<p class="wp-block-paragraph">Dubbed <a href="https://blogs.microsoft.com/blog/2026/07/27/rethinking-security-for-the-age-of-ai/">Project Perception</a>, the new service will enter public preview on Aug. 3, and takes a multi-model approach, where the underlying harness decides which AI model is best suited to solve a particular task. This aims to strike a balance between quality and cost, as not all operations require the latest frontier model to complete successfully.</p>
+
+
+
+<p class="wp-block-paragraph">The company also unveiled its own AI model dubbed <a href="https://microsoft.ai/news/introducing-mai-cyber-1-flash-inside-mdash/">MAI-Cyber-1-Flash</a> that was trained specifically to find vulnerabilities in complex codebases. When used within MDASH, Microsoft’s multi-model harness for vulnerability research, a combination of MAI-Cyber-1-Flash and GPT 5.4 achieved a considerably higher score on the CyberGym benchmark than <a href="https://www.csoonline.com/article/4198019/claude-mythos-faq-capabilities-access-competitors-implications.html">Anthropic’s Mythos</a> 5 and OpenAI GPT 5.6-Sol and it did so for nearly half the cost.</p>
+
+
+
+<p class="wp-block-paragraph"><a href="https://www.microsoft.com/en-us/security/blog/2026/05/12/defense-at-ai-speed-microsofts-new-multi-model-agentic-security-system-tops-leading-industry-benchmark/">MDASH</a>, previously announced in May, was built by a new Microsoft internal team called FORGE (Frontier Offensive Research &amp; Generative Exploration) that’s led by Georgia Tech professor Taesoo Kim and consists of many of his current and former PhD students. Several of the Microsoft Security FORGE members were previous members of Team Atlanta, which won the DARPA AI Cyber Challenge (AIxCC), a two-year competition for developing autonomous AI systems capable of securing critical open-source software.</p>
+
+
+
+<h2 class="wp-block-heading" id="a-team-of-specialized-agents">A team of specialized agents</h2>
+
+
+
+<p class="wp-block-paragraph">Project Perception combines Microsoft’s extensive threat intelligence, security telemetry, and knowledge about customer environments to create a complex security graph. This knowledge is then leveraged by a series of specialized agents — red team, blue team, and green team — that execute specialized playbooks to achieve the desired tasks.</p>
+
+
+
+<p class="wp-block-paragraph">During its <a href="https://www.youtube.com/watch?v=x6wz89MAvhY">launch event</a>, Microsoft demonstrated a case where a new threat intelligence report comes in about a new threat actor, complete with some indicators of compromise and TTPs. A human security analyst then tasks Perception to investigate whether their organization is protected against this threat group and the system automatically distributes tasks to the needed agents with the corresponding playbooks.</p>
+
+
+
+<p class="wp-block-paragraph">The agents will extract information from the report then perform reconnaissance to map the attacker’s TTPs to the organization’s exposed surface to determine which assets this threat group might target. A penetration testing agent will then be launched to identify potential exploitable vulnerabilities in those assets which will produce a report.</p>
+
+
+
+<p class="wp-block-paragraph">Because the report could contain tens of vulnerabilities of various severities, the agent will then reason to pinpoint the top ones that should be a priority for fixing and even more, the ones that are most likely to be targeted by this threat actor based on its modus operandi.</p>
+
+
+
+<p class="wp-block-paragraph">The information will then be automatically passed to another agent whose role is to generate custom detection rules that will run against collected logs and analytics to detect potential exploitation attempts for those vulnerabilities. A posture remediation agent (green) will also be launched to propose a remediation plan that can include deploying a blocking rule on the web application firewall, to suggesting code fixes and automatic patch submission to the internal repository hosting the code for the vulnerable application.</p>
+
+
+
+<p class="wp-block-paragraph">“We’ve gone from this taking hours and hours of manual work for multiple specialized folks across the security organization — appsec hunters, remediation engineers, you name it — to having a fix for all of this in minutes,” said David Weston, CVP at Microsoft Security and engineering leader for Perception. “Not only have we discovered the issues and prioritized them, but we have detection, posture fixing, and even a code fix.”</p>
+
+
+
+<p class="wp-block-paragraph">The Perception team even created an MCP implementation to enable security analysts who already work in command-line agentic harnesses such as GitHub Copilot or Claude Code to chat with the service directly and initiate playbooks without having to use the web-based interface in the browser.</p>
+
+
+
+<h2 class="wp-block-heading" id="the-harness-matters-more-than-the-model">The harness matters more than the model</h2>
+
+
+
+<p class="wp-block-paragraph">What both Project Perception with its multi-model approach and Microsoft’s new MAI-Cyber-1-Flash model proves is that in practice, and especially for cybersecurity, organizations don’t need the latest and greatest frontier model to get great results. In fact, relying only on frontier models might cost too much to make economic sense for most tasks.</p>
+
+
+
+<p class="wp-block-paragraph">That’s because to push the boundaries of machine intelligence, models need to grow bigger and bigger and in general this translates to higher inference costs. Anthropic’s Mythos 5 has 10 trillion parameters and Fable 5 is estimated at around 6 trillion. It’s not known how many parameters OpenAI’s latest GPT 5.6-Sol model has, but Microsoft said that its MAI-Cyber-1-Flash model is around 10 times smaller than GPT 5.4, which is two generations behind 5.6.</p>
+
+
+
+<p class="wp-block-paragraph">Even so, MAI-Cyber-1-Flash is able to handle 90% of the typical cybersecurity tasks in the MDASH harness with GPT 5.4 taking care of the rest that might require heavier reasoning. This combination was able to achieve a 96% completion score on CyberGym, 12 points above Mythos, for around half the cost and this shows that a well-designed and purpose-built harness matters more than the model itself.</p>
+
+
+
+<p class="wp-block-paragraph"><a href="https://www.csoonline.com/article/4181924/ai-worm-prototype-shows-attackers-dont-need-mythos-to-take-over-your-network.html">A recent study</a> by researchers from the University of Toronto proved the same by creating a self-replicating AI-powered worm that relied on a free open-weight model small enough to run on enterprise-grade GPUs. To achieve this, the researchers built a special harness to guide the model and a database-based memory system to remember important information across different workflows.</p>
+
+
+
+<p class="wp-block-paragraph">Microsoft took the same approach with Project Perception for cost considerations and because not everyone in the world might have access to the latest frontier models. The US government has already issued an export control directive once to Anthropic to restrict the access of non-US nationals to Mythos 5 and Fable 5.</p>
+
+
+
+<p class="wp-block-paragraph">“At Microsoft, we have a security team, and they actually evaluate all the models that you can find out there, and we look at which ones are going to get us the best results,” Hayete Gallot, executive vice president for security at Microsoft, said. “The reason we do that is, number one, is we want the best quality. Number two is we want to make sure that this is affordable. Security is a 24/7 operation, so you need to make sure that this is scaling. And last but not least, the reason why we’re multi-model is that not every model is available everywhere. So we need that diversity of model to make sure that every customer can defend itself. We cannot be in a world of haves and have-nots.”</p>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 At market open Korean chipmakers&#x27; stocks plunged, with Samsung Electronics dropping 11%+, SK Hynix down 12%+, and the Korea Composite Stock Price Index down 9%+ (Youkyung Lee/Bloomberg)</title>
+  <link>https://www.techmeme.com/260727/p37#a260727p37</link>
+  <pubDate>Tue, 28 Jul 2026 02:05:01 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><a href="https://www.bloomberg.com/news/articles/2026-07-28/korean-stocks-sink-as-chipmakers-plung-on-deepening-ai-fatigue"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260727/i37.jpg" vspace="4" /></a>
+<p><a href="https://www.techmeme.com/260727/p37#a260727p37" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Youkyung Lee / <a href="https://www.bloomberg.com/">Bloomberg</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/articles/2026-07-28/korean-stocks-sink-as-chipmakers-plung-on-deepening-ai-fatigue">At market open Korean chipmakers' stocks plunged, with Samsung Electronics dropping 11%+, SK Hynix down 12%+, and the Korea Composite Stock Price Index down 9%+</a></b></span>&nbsp; &mdash;&nbsp; South Korean stocks plunged, dragged by the nation's memory chipmaking powerhouses as investor sentiment continues to worsen on the artificial intelligence boom.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Samsung’s entry into AI-powered glasses forces CISOs to again consider corporate risk</title>
+  <link>https://www.csoonline.com/article/4201977/samsungs-entry-into-ai-powered-glasses-forces-cisos-to-again-consider-corporate-risk.html</link>
+  <pubDate>Tue, 28 Jul 2026 01:42:36 +0000</pubDate>
+  <source>CSO Online</source>
+  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<p class="wp-block-paragraph">Now that <a href="https://www.sammobile.com/news/samsung-galaxy-glasses-everything-to-know/" rel="noreferrer noopener" target="_blank">Samsung</a> has jumped into the crowded AI-powered glasses arena alongside <a href="https://www.macworld.com/article/3199653/apple-eyes-wwdc-smart-glasses-launch-with-a-focus-on-privacy.html" target="_blank">Apple</a>, <a href="https://www.computerworld.com/article/1519256/google-goes-mum-on-glass-release-plans.html" target="_blank">Google</a>, <a href="https://www.computerworld.com/article/3832789/why-fast-learning-robots-are-wearing-meta-glasses.html" target="_blank">Meta</a>, and others, CISOs and IT leaders are again having to think through whether it makes sense to establish enterprise restrictions on such devices, given the likely data leakage and privacy and compliance issues.</p>
+
+
+
+<p class="wp-block-paragraph">And even if those tech leaders decide that such policies might make sense, the logistical hurdles to universally enforcing them outside the office are all but insurmountable.</p>
+
+
+
+<p class="wp-block-paragraph">For example, it is up to individual wearers to choose their device’s settings, making it difficult for IT policies around data acquisition and usage to be enforced. Worse, AI devices have a <a href="https://www.computerworld.com/article/4104814/the-biggest-ai-mistake-pretending-guardrails-will-ever-protect-you.html" target="_blank">history of ignoring guardrails</a>. That means that a setting that limits how data is used may not necessarily be obeyed. </p>
+
+
+
+<p class="wp-block-paragraph">One possible mitigating factor is that smart glasses typically have a light on the frame that activates when the device is recording, but there are also many easy ways for workers to defeat or cover up those lights to conceal their activities. </p>
+
+
+
+<h2 class="wp-block-heading" id="enforcement-is-virtually-impossible">Enforcement is virtually impossible</h2>
+
+
+
+<p class="wp-block-paragraph">However, said independent technology analyst <a href="https://www.linkedin.com/in/carmi/" rel="noreferrer noopener" target="_blank">Carmi Levy</a>, “although some organizations have tried to physically ban smart glasses from their in-person and virtual workplaces, the sad reality for corporate technological gatekeepers is there is no way to completely keep any device out of the workplace.”</p>
+
+
+
+<p class="wp-block-paragraph">There is nothing stopping employees from wearing eyewear of any type, smart or not, he noted, “and attempting to do so might put employers on the wrong side of a disability lawsuit launched by a worker who needs prescription smart glasses to accommodate vision issues.”</p>
+
+
+
+<p class="wp-block-paragraph">As well, <a href="https://my.idc.com/getdoc.jsp?containerId=PRF003967" rel="noreferrer noopener" target="_blank">Jitesh Ubrani</a>, an IDC director focusing on worldwide device trackers, pointed out that the biggest challenge in creating rules around usage of smart glasses is that the data leakage problem with devices is both not new and certainly not limited to glasses. </p>
+
+
+
+<p class="wp-block-paragraph">“The instinct to ban AI smart glasses outright is understandable, but it misses that the underlying risk isn’t new. A smartphone has been able to record a whiteboard, a screen, or a conversation for close to two decades,” he said. “What’s changed is the friction. Glasses make covert capture nearly effortless and far harder to notice because there’s no phone being visibly raised or pointed. That’s a real escalation in ease of misuse, but it’s a difference of degree rather than a fundamentally new capability.”</p>
+
+
+
+<p class="wp-block-paragraph">In fact, Ubrani argued, “where this gets hard for CISOs is enforcement. A ban on paper is easy to write. Enforcing it inside a corporate office is already difficult, since most current-generation devices, including Meta’s Ray-Bans, are visually indistinguishable from ordinary eyewear.”</p>
+
+
+
+<p class="wp-block-paragraph">And, he added, “enforcing it in a hybrid or work-from-home setting is close to impossible. IT has no practical way to confirm what someone is wearing on a home Zoom call, and even in-office detection options, like scanning for Bluetooth or BLE advertising signals tied to known manufacturer IDs, only catch devices that haven’t been reconfigured or that happen to be broadcasting at the time.”</p>
+
+
+
+<h2 class="wp-block-heading" id="additional-risk">Additional risk</h2>
+
+
+
+<p class="wp-block-paragraph">Connected glasses have <a href="https://www.evenrealities.com/blogs/buyers-guide/who-invented-smart-glasses" rel="noreferrer noopener" target="_blank">a history going back decades</a>, but enterprises didn’t take them seriously until this year.</p>
+
+
+
+<p class="wp-block-paragraph">But <a href="https://moorinsightsstrategy.com/team/anshel-sag/" rel="noreferrer noopener" target="_blank">Anshel Sag</a>, principal analyst at Moor Insights &amp; Strategy, characterized the problem as more psychological than technological. </p>
+
+
+
+<p class="wp-block-paragraph">“People want to ban it because they don’t know how to handle it. But that just creates more problems than it solves. It’s a very kneejerk fear reaction,” Sag said. “We live in an era where cameras are everywhere.”</p>
+
+
+
+<p class="wp-block-paragraph"><a href="https://www.gartner.com/analyst/b9cb03be7ba0" rel="noreferrer noopener" target="_blank">Meghan Hollis</a>, a senior principal analyst for Gartner, agreed that the focus on smart glasses is misplaced, given that even headphones can today capture audio for translation and transcription. The change is not in the data capture, Hollis said, but the fact that it is adding video.</p>
+
+
+
+<p class="wp-block-paragraph">This creates additional risk, with the new capability brought into the corporate environment causing “a potential exposure for corporate intellectual property,” Hollis said.</p>
+
+
+
+<p class="wp-block-paragraph">One other often-overlooked issue is data sovereignty. Even if the glasses manufacturer agrees to store data only in specific countries, it could easily change that policy or simply switch third-party vendors. </p>
+
+
+
+<p class="wp-block-paragraph">“There could be export control issues, possibly violating regulatory controls in transmitting information,” Hollis noted. </p>
+
+
+
+<p class="wp-block-paragraph">However, Hollis said, threatening to punish workers if they are caught using unauthorized devices “is your last line of defense,” and that the best initial approach should not be enforcement, but education.</p>
+
+
+
+<p class="wp-block-paragraph">“You need to be educating your end-users, with constant reinforcement, telling them, ‘If you do this, here’s how you can harm the company and our clients/customers.’ Combine that with, ‘And if you do this, we will take action against you.’”</p>
+
+
+
+<h2 class="wp-block-heading" id="tiered-policies-required">Tiered policies required</h2>
+
+
+
+<p class="wp-block-paragraph">Hollis noted that the risk goes beyond an employee initially recording something they shouldn’t. Consider, for example, a technical meeting where an employee asks the rest of the attendees for permission to record the discussion. They agree and he starts to record. </p>
+
+
+
+<p class="wp-block-paragraph">At the end of the meeting, he leaves to return to his office, fully intending to turn off the recording function when he gets there. But on the way, he has a brief hallway meeting with an SVP who tells him, without warning, “FYI, but the board just decided to greenlight our hostile takeover of Smith Corp. We’ll explore the specifics at a 10 a.m. tomorrow. Have your team there.” The executive then walks off.</p>
+
+
+
+<p class="wp-block-paragraph">With the recording still running, that ultra-sensitive data has just been transmitted to the cloud. </p>
+
+
+
+<p class="wp-block-paragraph">IDC’s Ubrani pointed out that situations like this make smart glasses governance more challenging. “Enterprise IT and security leaders need to stop framing this as ‘ban versus allow,’ and instead build a tiered policy based on where the actual risk sits,” he said. “Boardrooms, R&amp;D labs, and any space where trade secrets or regulated data are visible or discussed out loud deserve strict no-wearables rules, enforced the same way phone bans already are in those rooms.”</p>
+
+
+
+<p class="wp-block-paragraph">Open floor plans and general office space probably don’t need that level of restriction, he said, but meeting policies should require disclosure when a device capable of recording is present, similar to the way in which some companies already handle personal recording devices in sensitive briefings.</p>
+
+
+
+<p class="wp-block-paragraph">“Companies that try to write one blanket rule for every environment are going to find it’s either unenforceable or so restrictive it interferes with accessibility, since some employees rely on these devices as assistive technology,” he said.</p>
+
+
+
+<p class="wp-block-paragraph">However, <a href="https://www.infotech.com/profiles/brian-jackson" rel="noreferrer noopener" target="_blank">Brian Jackson</a>, a principal research director at Info-Tech Research Group, argued that enterprise CISOs and IT Directors need to take a far more strict position.</p>
+
+
+
+<p class="wp-block-paragraph">“Organizations should update their acceptable use policies for personal technology ASAP,” he said. “Look back about 15 years ago at how smartphones moved from consumer life into the workplace, and we may be at the beginning of a redefinition of BYOD here. But it needs to start with an extremely restrictive policy against the use of AI wearables and similar devices.”</p>
+
+
+
+<p class="wp-block-paragraph">He added, “organizations need to hold the line against making personal recordings in the workplace and maintain not only their compliance standards, but their workplace culture. This restriction cannot go as far as an outright ban; look at how<a href="https://www.epspros.com/news-resources/news/2026/case-to-watch-whether-employers-must-consider-ai-as-a-reasonable-accommodation.html" rel="noreferrer noopener" target="_blank"> Walt Disney World got caught up in a lawsuit</a> after telling an employee she could not use Meta glasses. Still, this exception can be made narrow, and it should be made clear that other employees must be alerted when they are being recorded.”</p>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 ChatGPT appears to block direct requests to copy an author&#x27;s style, instead offering to capture the overall &quot;feeling&quot;, amid its legal battles with book authors (Kyle Orland/Ars Technica)</title>
+  <link>https://www.techmeme.com/260727/p36#a260727p36</link>
+  <pubDate>Tue, 28 Jul 2026 01:40:01 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/><a href="https://arstechnica.com/ai/2026/07/chatgpt-stops-cloning-famous-writers-voices-but-may-capture-a-similar-feeling/"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260727/i36.jpg" vspace="4" /></a>
+<p><a href="https://www.techmeme.com/260727/p36#a260727p36" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Kyle Orland / <a href="https://arstechnica.com/">Ars Technica</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://arstechnica.com/ai/2026/07/chatgpt-stops-cloning-famous-writers-voices-but-may-capture-a-similar-feeling/">ChatGPT appears to block direct requests to copy an author's style, instead offering to capture the overall &ldquo;feeling&rdquo;, amid its legal battles with book authors</a></b></span>&nbsp; &mdash;&nbsp; OpenAI's ChatGPT is now refusing requests to generate text that directly mimics the style of famous authors.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Several digital-asset treasury firms have pivoted to AI amid a slump in crypto prices, but their poor stock performance suggests the strategy is not working (Monique Mulima/Bloomberg)</title>
+  <link>https://www.techmeme.com/260727/p35#a260727p35</link>
+  <pubDate>Tue, 28 Jul 2026 00:30:01 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://www.bloomberg.com/news/articles/2026-07-27/crypto-to-data-centers-treasury-model-bust-has-firms-chasing-ai"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260727/i35.jpg" vspace="4" /></a>
+<p><a href="https://www.techmeme.com/260727/p35#a260727p35" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Monique Mulima / <a href="https://www.bloomberg.com/">Bloomberg</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/articles/2026-07-27/crypto-to-data-centers-treasury-model-bust-has-firms-chasing-ai">Several digital-asset treasury firms have pivoted to AI amid a slump in crypto prices, but their poor stock performance suggests the strategy is not working</a></b></span>&nbsp; &mdash;&nbsp; The implosion of the once-hot market for cryptocurrency treasury stocks is prompting a number of firms to pivot to artificial intelligence in an attempt to win back investors.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+</item>
+
 <item>
   <title>🟠 Apple releases updates for iOS, macOS, iPadOS, watchOS, tvOS, and visionOS with a huge number of security fixes; macOS Tahoe 26.6 alone addresses 155 CVEs (Zac Hall/9to5Mac)</title>
   <link>https://www.techmeme.com/260727/p34#a260727p34</link>
@@ -12,7 +419,37 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://9to5mac.com/2026/07/27/ios-26-6-fixes-over-75-security-issues-with-your-iphone-update-now/"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260727/i34.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260727/p34#a260727p34" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Zac Hall / <a href="https://9to5mac.com/">9to5Mac</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://9to5mac.com/2026/07/27/ios-26-6-fixes-over-75-security-issues-with-your-iphone-update-now/">Apple releases updates for iOS, macOS, iPadOS, watchOS, tvOS, and visionOS with a huge number of security fixes; macOS Tahoe 26.6 alone addresses 155 CVEs</a></b></span>&nbsp; &mdash;&nbsp; Following the release of iOS 26.6, iPadOS 26.6, and related software updates, Apple has detailed a huge number of security fixes included in today's new OS versions.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://9to5mac.com/2026/07/27/ios-26-6-fixes-over-75-security-issues-with-your-iphone-update-now/">Apple releases updates for iOS, macOS, iPadOS, watchOS, tvOS, and visionOS with a huge number of security fixes; macOS Tahoe 26.6 alone addresses 155 CVEs</a></b></span>&nbsp; &mdash;&nbsp; Following the release of iOS 26.6, iPadOS 26.6, and related software updates, Apple has detailed a huge number of security fixes included in today's new OS versions.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Claude chats showed in Google and Bing search results, despite Anthropic&#x27;s robots.txt saying not to crawl them, likely because the pages lacked a &quot;noindex&quot; tag (Maddy Varner/Wired)</title>
+  <link>https://www.techmeme.com/260727/p33#a260727p33</link>
+  <pubDate>Mon, 27 Jul 2026 22:35:01 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><a href="https://www.wired.com/story/private-claude-chats-exposed-in-google-and-bing-search-results/"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260727/i33.jpg" vspace="4" /></a>
+<p><a href="https://www.techmeme.com/260727/p33#a260727p33" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Maddy Varner / <a href="http://www.wired.com/">Wired</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://www.wired.com/story/private-claude-chats-exposed-in-google-and-bing-search-results/">Claude chats showed in Google and Bing search results, despite Anthropic's robots.txt saying not to crawl them, likely because the pages lacked a &ldquo;noindex&rdquo; tag</a></b></span>&nbsp; &mdash;&nbsp; The screwup shows how tricky it can be to stop web crawlers from making ostensibly private conversations with AI chatbots entirely too public.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Dario Amodei says Anthropic has never backed an open-weights model ban, lists reasons top chips shouldn&#x27;t be sold to China, calls for global model testing, more (Anthropic)</title>
+  <link>https://www.techmeme.com/260727/p32#a260727p32</link>
+  <pubDate>Mon, 27 Jul 2026 22:25:00 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><a href="https://www.anthropic.com/news/position-open-weights-models"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260727/i32.jpg" vspace="4" /></a>
+<p><a href="https://www.techmeme.com/260727/p32#a260727p32" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="https://www.anthropic.com/">Anthropic</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://www.anthropic.com/news/position-open-weights-models">Dario Amodei says Anthropic has never backed an open-weights model ban, lists reasons top chips shouldn't be sold to China, calls for global model testing, more</a></b></span>&nbsp; &mdash;&nbsp; Over the last few days there has been a lot of discussion about open-weights models, especially those from China.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Cadence reports Q2 revenue up 24.2% YoY to $1.58B and raises its annual revenue forecast to between $6.26B and $6.34B vs. $6.21B est.; CDNS up 4%+ after hours (Reuters)</title>
+  <link>https://www.techmeme.com/260727/p31#a260727p31</link>
+  <pubDate>Mon, 27 Jul 2026 21:55:01 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://www.reuters.com/business/retail-consumer/cadence-raises-annual-forecasts-demand-booms-ai-chip-design-2026-07-27/"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260727/i31.jpg" vspace="4" /></a>
+<p><a href="https://www.techmeme.com/260727/p31#a260727p31" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="http://www.reuters.com/">Reuters</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://www.reuters.com/business/retail-consumer/cadence-raises-annual-forecasts-demand-booms-ai-chip-design-2026-07-27/">Cadence reports Q2 revenue up 24.2% YoY to $1.58B and raises its annual revenue forecast to between $6.26B and $6.34B vs. $6.21B est.; CDNS up 4%+ after hours</a></b></span>&nbsp; &mdash;&nbsp; Cadence Design Systems (CDNS.O) raised its annual revenue and profit forecasts on Monday, banking on robust demand for its AI-powered chip and system design software.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
@@ -20,7 +457,7 @@
   <link>https://www.zdnet.com/article/hp-omnibook-ultra-14-2026-review/</link>
   <pubDate>Mon, 27 Jul 2026 17:54:00 +0000</pubDate>
   <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/>HP's OmniBook Ultra 14 combines a sleek design and OLED display with the kind of performance professionals appreciate.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/>HP's OmniBook Ultra 14 combines a sleek design and OLED display with the kind of performance professionals appreciate.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 10h ago]]></description>
 </item>
 
 <item>
@@ -30,7 +467,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: Service impact possible — prepare comms and confirm vendor status.</b><br/><a href="https://www.videogameschronicle.com/news/xbox-says-its-aware-of-major-outages-when-signing-in-and-launching-games-and-is-working-to-mitigate-the-issue/"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260727/i26.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260727/p26#a260727p26" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Chris Scullion / <a href="https://www.videogameschronicle.com/">Video Games Chronicle</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.videogameschronicle.com/news/xbox-says-its-aware-of-major-outages-when-signing-in-and-launching-games-and-is-working-to-mitigate-the-issue/">Xbox says it is working to resolve a &ldquo;major outage&rdquo; affecting its Account &amp; Profile, Store &amp; Subscriptions, and Apps &amp; Mobile services</a></b></span>&nbsp; &mdash;&nbsp; PLAYERS ARE REPORTING HAVING ISSUES WHEN TRYING TO SIGN IN OR SEE THEIR LIBRARY&nbsp; &mdash;&nbsp; Xbox has acknowledged that it's currently suffering &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.videogameschronicle.com/news/xbox-says-its-aware-of-major-outages-when-signing-in-and-launching-games-and-is-working-to-mitigate-the-issue/">Xbox says it is working to resolve a &ldquo;major outage&rdquo; affecting its Account &amp; Profile, Store &amp; Subscriptions, and Apps &amp; Mobile services</a></b></span>&nbsp; &mdash;&nbsp; PLAYERS ARE REPORTING HAVING ISSUES WHEN TRYING TO SIGN IN OR SEE THEIR LIBRARY&nbsp; &mdash;&nbsp; Xbox has acknowledged that it's currently suffering &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 10h ago]]></description>
 </item>
 
 <item>
@@ -40,7 +477,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://microsoft.ai/news/introducing-mai-cyber-1-flash-inside-mdash/"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260727/i25.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260727/p25#a260727p25" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="https://microsoft.ai/">Microsoft AI</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://microsoft.ai/news/introducing-mai-cyber-1-flash-inside-mdash/">Microsoft says MAI-Cyber-1-Flash and MDASH, its vulnerability identification harness, deliver &ldquo;world-class performance at 50% of the cost of leading models&rdquo;</a></b></span>&nbsp; &mdash;&nbsp; Today we're announcing MAI-Cyber-1-Flash inside of MDASH, our multi-agent vulnerability identification and remediation harness.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://microsoft.ai/news/introducing-mai-cyber-1-flash-inside-mdash/">Microsoft says MAI-Cyber-1-Flash and MDASH, its vulnerability identification harness, deliver &ldquo;world-class performance at 50% of the cost of leading models&rdquo;</a></b></span>&nbsp; &mdash;&nbsp; Today we're announcing MAI-Cyber-1-Flash inside of MDASH, our multi-agent vulnerability identification and remediation harness.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 10h ago]]></description>
 </item>
 
 <item>
@@ -50,7 +487,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.bloomberg.com/news/articles/2026-07-27/nvidia-makes-substantial-investment-in-sutskever-s-ai-startup"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260727/i24.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260727/p24#a260727p24" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Shirin Ghaffary / <a href="https://www.bloomberg.com/">Bloomberg</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/articles/2026-07-27/nvidia-makes-substantial-investment-in-sutskever-s-ai-startup">Sources: Nvidia has committed to invest $5B in Ilya Sutskever's SSI; the startup has previously raised about $3B in funding and was valued at $32B last year</a></b></span>&nbsp; &mdash;&nbsp; Nvidia Corp. has committed to invest $5 billion in Ilya Sutskever's artificial intelligence startup Safe Superintelligence Inc. &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/articles/2026-07-27/nvidia-makes-substantial-investment-in-sutskever-s-ai-startup">Sources: Nvidia has committed to invest $5B in Ilya Sutskever's SSI; the startup has previously raised about $3B in funding and was valued at $32B last year</a></b></span>&nbsp; &mdash;&nbsp; Nvidia Corp. has committed to invest $5 billion in Ilya Sutskever's artificial intelligence startup Safe Superintelligence Inc. &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 11h ago]]></description>
 </item>
 
 <item>
@@ -60,17 +497,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.nytimes.com/2026/07/27/technology/microsoft-unveils-ai-cybersecurity-tools.html?unlocked_article_code=1.01A.c_Y4.7RhNYnUPQCWP&amp;smid=url-share"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260727/i23.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260727/p23#a260727p23" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="https://www.nytimes.com/">New York Times</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.nytimes.com/2026/07/27/technology/microsoft-unveils-ai-cybersecurity-tools.html?unlocked_article_code=1.01A.c_Y4.7RhNYnUPQCWP&amp;smid=url-share">Microsoft introduces MAI-Cyber-1-Flash, an AI model trained for cybersecurity, and launches Perception, an agentic security system to patch vulnerabilities</a></b></span>&nbsp; &mdash;&nbsp; As some executives fret over the safety of new A.I. systems, protecting against them could be a big business for tech companies.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Moonshot AI releases model weights for Kimi K3 under the &quot;Kimi K3 License&quot; (Bloomberg)</title>
-  <link>https://www.techmeme.com/260727/p22#a260727p22</link>
-  <pubDate>Mon, 27 Jul 2026 16:30:04 +0000</pubDate>
-  <source>Techmeme</source>
-  <description><![CDATA[<b>Why this matters: Budget/licensing impact — verify renewal terms and forecast cost changes.</b><br/><a href="https://www.bloomberg.com/news/articles/2026-07-27/china-s-moonshot-to-release-breakthrough-ai-model-for-download"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260727/i22.jpg" vspace="4" /></a>
-<p><a href="https://www.techmeme.com/260727/p22#a260727p22" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="https://www.bloomberg.com/">Bloomberg</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/articles/2026-07-27/china-s-moonshot-to-release-breakthrough-ai-model-for-download">Moonshot AI releases model weights for Kimi K3 under the &ldquo;Kimi K3 License&rdquo;</a></b></span>&nbsp; &mdash;&nbsp; Moonshot AI has made its Kimi K3 model available for public download, expanding its reach and influence in the global open software community at a time of growing US concern about Chinese encroachment into the top echelons of AI development.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.nytimes.com/2026/07/27/technology/microsoft-unveils-ai-cybersecurity-tools.html?unlocked_article_code=1.01A.c_Y4.7RhNYnUPQCWP&amp;smid=url-share">Microsoft introduces MAI-Cyber-1-Flash, an AI model trained for cybersecurity, and launches Perception, an agentic security system to patch vulnerabilities</a></b></span>&nbsp; &mdash;&nbsp; As some executives fret over the safety of new A.I. systems, protecting against them could be a big business for tech companies.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 11h ago]]></description>
 </item>
 
 <item>
@@ -78,7 +505,7 @@
   <link>https://www.zdnet.com/article/is-open-source-the-answer-to-rogue-ai-security-incidents-nvidia-thinks-so/</link>
   <pubDate>Mon, 27 Jul 2026 15:52:15 +0000</pubDate>
   <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: Service impact possible — prepare comms and confirm vendor status.</b><br/>As AI cybersecurity incidents ramp up, companies are racing to find a fix.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 8h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Service impact possible — prepare comms and confirm vendor status.</b><br/>As AI cybersecurity incidents ramp up, companies are racing to find a fix.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 12h ago]]></description>
 </item>
 
 <item>
@@ -86,7 +513,7 @@
   <link>https://www.zdnet.com/article/framework-laptop-13-pro-review/</link>
   <pubDate>Mon, 27 Jul 2026 15:00:00 +0000</pubDate>
   <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/>Framework compiled user feedback to create the new Laptop 13 Pro, a sleek device with a haptic touchpad and excellent battery life.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/>Framework compiled user feedback to create the new Laptop 13 Pro, a sleek device with a haptic touchpad and excellent battery life.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 12h ago]]></description>
 </item>
 
 <item>
@@ -94,7 +521,7 @@
   <link>https://www.zdnet.com/article/best-laptop-docking-station/</link>
   <pubDate>Mon, 27 Jul 2026 14:49:24 +0000</pubDate>
   <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/>Organize your workspace with our top picks for the best laptop docking stations available now.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/>Organize your workspace with our top picks for the best laptop docking stations available now.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
 </item>
 
 <item>
@@ -103,7 +530,7 @@
   <pubDate>Mon, 27 Jul 2026 14:26:00 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: Supply chain risk — audit third-party dependencies and vendor access.</b><br/><p>Dependabot gets a three-day cooldown window before opening pull requests, and PyPI rejects file uploads to releases older than 14 days.</p>
-<p>The post <a href="https://www.securityweek.com/new-github-pypi-policies-boost-supply-chain-security/">New GitHub, PyPI Policies Boost Supply Chain Security</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/new-github-pypi-policies-boost-supply-chain-security/">New GitHub, PyPI Policies Boost Supply Chain Security</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
 </item>
 
 <item>
@@ -211,7 +638,7 @@
 
 
 <p class="wp-block-paragraph"></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 10h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 14h ago]]></description>
 </item>
 
 <item>
@@ -220,7 +647,7 @@
   <pubDate>Mon, 27 Jul 2026 12:25:43 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: Endpoint detection changes — review high-severity detections and alert noise.</b><br/><p>The Nvidia-led coalition aims to give defenders more open tools for testing, auditing and protecting AI models and agents.</p>
-<p>The post <a href="https://www.securityweek.com/nvidia-and-tech-giants-launch-ai-security-alliance/">Nvidia and Tech Giants Launch AI Security Alliance</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 11h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/nvidia-and-tech-giants-launch-ai-security-alliance/">Nvidia and Tech Giants Launch AI Security Alliance</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 15h ago]]></description>
 </item>
 
 <item>
@@ -321,15 +748,7 @@
 
 
 <p class="wp-block-paragraph">Microsoft did not immediately respond to CSO’s request for a comment.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 12h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Microsoft seeks Supreme Court lifeline in pre-owned license battle</title>
-  <link>https://www.theregister.com/software/2026/07/27/microsoft-seeks-supreme-court-lifeline-in-pre-owned-license-battle/5278823</link>
-  <pubDate>Mon, 27 Jul 2026 11:30:35 +0000</pubDate>
-  <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Budget/licensing impact — verify renewal terms and forecast cost changes.</b><br/>£270M ValueLicensing case remains mostly paused while Redmond pursues permission to appeal<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 12h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 16h ago]]></description>
 </item>
 
 <item>
@@ -378,7 +797,25 @@
 
 
 <p class="wp-block-paragraph">OpenAI did not immediately respond to questions about whether it would join the Open Secure AI Alliance.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 12h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 16h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 What’s Hiding in Your Mobile Apps? Lookout MSEC Aims to Find Out</title>
+  <link>https://www.securityweek.com/whats-hiding-in-your-mobile-apps-lookout-msec-aims-to-find-out/</link>
+  <pubDate>Mon, 27 Jul 2026 11:00:00 +0000</pubDate>
+  <source>SecurityWeek</source>
+  <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><p>The new Mobile Security Exposure Center creates SBOMs for enterprise mobile apps to uncover vulnerable components, dependencies and hidden risks.</p>
+<p>The post <a href="https://www.securityweek.com/whats-hiding-in-your-mobile-apps-lookout-msec-aims-to-find-out/">What’s Hiding in Your Mobile Apps? Lookout MSEC Aims to Find Out</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 16h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Hacked Public Wi-Fi Gateways Used to Harvest Corporate Credentials</title>
+  <link>https://www.securityweek.com/hacked-public-wi-fi-gateways-used-to-harvest-corporate-credentials/</link>
+  <pubDate>Mon, 27 Jul 2026 10:50:19 +0000</pubDate>
+  <source>SecurityWeek</source>
+  <description><![CDATA[<b>Why this matters: Credential/phishing risk — reinforce MFA and user awareness training.</b><br/><p>A threat actor has been using the compromised appliances to target the Microsoft 365 accounts of traveling corporate employees.</p>
+<p>The post <a href="https://www.securityweek.com/hacked-public-wi-fi-gateways-used-to-harvest-corporate-credentials/">Hacked Public Wi-Fi Gateways Used to Harvest Corporate Credentials</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 17h ago]]></description>
 </item>
 
 <item>
@@ -607,7 +1044,7 @@
 
 
 <p class="wp-block-paragraph">“The tradeoff is favoring the innovation side for now. That might tip toward the other side next year, though,” he says, predicting that 2027 will be “the year of AI cost optimization.”</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 14h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 17h ago]]></description>
 </item>
 
 <item>
@@ -762,7 +1199,7 @@
 
 
 <p class="wp-block-paragraph"><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><a href="https://www.cio.com/expert-contributor-network/"><strong>Want to join?</strong></a></p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 14h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 17h ago]]></description>
 </item>
 
 <item>
@@ -975,7 +1412,7 @@
 
 
 <p class="wp-block-paragraph"></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 14h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 17h ago]]></description>
 </item>
 
 <item>
@@ -1056,15 +1493,7 @@
 
 
 <p class="wp-block-paragraph">At a recent AI conference in New York, Brian Craig, senior director of architecture at Liberty IT, part of insurance firm Liberty Mutual, said you can’t lock in right now to one vendor or even one framework. “You need to keep being able to have the flexibility with that backbone to be able to hook into different models and vendors, depending not so much on who’s the flavor of the day, but on what you can feel confident about for the next six months,” he said. After all, a more fluid and uncertain world keeps emerging.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 14h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Digital sovereignty is real in Europe. The UK? Not so much</title>
-  <link>https://www.theregister.com/columnists/2026/07/27/digital-sovereignty-is-real-in-europe-the-uk-not-so-much/5276852</link>
-  <pubDate>Mon, 27 Jul 2026 10:00:00 +0000</pubDate>
-  <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Trump's unpredictability is pushing governments and businesses toward open source while Britain remains glued to US tech<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 14h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 17h ago]]></description>
 </item>
 
 <item>
@@ -1205,7 +1634,7 @@
 
 
 <p class="wp-block-paragraph"><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><a href="https://www.cio.com/expert-contributor-network/"><strong>Want to join?</strong></a></p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 15h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 18h ago]]></description>
 </item>
 
 <item>
@@ -1460,7 +1889,7 @@
 
 
 <p class="wp-block-paragraph"><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><a href="https://www.cio.com/expert-contributor-network/"><strong>Want to join?</strong></a></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 15h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 18h ago]]></description>
 </item>
 
 <item>
@@ -1580,7 +2009,7 @@
 
 
 
-<p class="wp-block-paragraph">Resilience starts with defining the minimum viable operations for the organization, according to <a href="https://www.linkedin.com/in/billoconnell/details/experience/">Bill O’Connell</a>, CommVault CSO. Then it’s a matter of working backwards to decide what to prioritize, what to protect, and rehearsing what to bring back first when things go wrong.</p>
+<p class="wp-block-paragraph">Resilience starts with defining the minimum viable operations for the organization, according to <a href="https://www.linkedin.com/in/billoconnell/details/experience/">Bill O’Connell</a>, Commvault CSO. Then it’s a matter of working backwards to decide what to prioritize, what to protect, and rehearsing what to bring back first when things go wrong.</p>
 
 
 
@@ -1645,31 +2074,23 @@
 
 
 <p class="wp-block-paragraph">“I haven’t run into a single company that has a resiliency officer. The CIO has some responsibility, the CISO has some responsibility, and the COO — who really is a chief and really is an officer — has responsibility,” he says. “I see it more as a partnership than a single role.”</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 17h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 20h ago]]></description>
 </item>
 
 <item>
-  <title>🔵 Trump expands voluntary pledge to keep datacenter costs off household power bills</title>
-  <link>https://www.theregister.com/on-prem/2026/07/26/trump-expands-voluntary-pledge-to-keep-datacenter-costs-off-household-power-bills/5278346</link>
-  <pubDate>Sun, 26 Jul 2026 10:10:00 +0000</pubDate>
-  <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Pinkie promise gains 200-plus new participants and precisely zero enforcement<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
+  <title>🔵 Samsung&#x27;s new Ultra foldable is impressive, but I&#x27;d pay close attention to this model</title>
+  <link>https://www.zdnet.com/article/samsung-galaxy-z-fold-8-ultra-hands-on/</link>
+  <pubDate>Sat, 25 Jul 2026 12:15:45 +0000</pubDate>
+  <source>ZDNet</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>The Galaxy Z Fold 8 Ultra is sure to impress power users, but Samsung took a risk with the Galaxy Z Fold 8, and it could pay off.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
 </item>
 
 <item>
-  <title>🔵 How AI drove Shopify back to clean code</title>
-  <link>https://www.theregister.com/devops/2026/07/25/how-ai-drove-shopify-back-to-clean-code/5277901</link>
-  <pubDate>Sat, 25 Jul 2026 13:06:00 +0000</pubDate>
-  <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Turns out, agents just want the same things as humans: easily-readable code, explicit contracts, and helpful feedback<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Anti-AI open source has an enemy in common, but almost nothing else</title>
-  <link>https://www.theregister.com/ai-and-ml/2026/07/25/anti-ai-open-source-has-an-enemy-in-common-but-almost-nothing-else/5278275</link>
-  <pubDate>Sat, 25 Jul 2026 10:17:00 +0000</pubDate>
-  <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Building bot-free alternatives may require lefties, libertarians, and culture warriors to share code<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
+  <title>🔵 Everything announced at Galaxy Unpacked 2026: Can Samsung compete with the rumored foldable iPhone?</title>
+  <link>https://www.zdnet.com/article/everything-announced-samsung-unpacked-2026/</link>
+  <pubDate>Sat, 25 Jul 2026 08:30:43 +0000</pubDate>
+  <source>ZDNet</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Samsung took a risk with its latest-gen foldables and smartwatches at Unpacked. We were on the ground in London - here's our analysis.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
 </item>
 
 <item>
@@ -1829,14 +2250,6 @@
 </item>
 
 <item>
-  <title>🔵 Dev accidentally commits Copilot binary to FreeBSD ports repo</title>
-  <link>https://www.theregister.com/os-platforms/2026/07/24/dev-accidentally-commits-copilot-binary-to-freebsd-ports-repo/5278458</link>
-  <pubDate>Fri, 24 Jul 2026 17:03:35 +0000</pubDate>
-  <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/>Git is aptly named: it isn’t easy – but there are alternatives<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3d ago]]></description>
-</item>
-
-<item>
   <title>🔵 Claude Opus 5 arrives with near Fable performance at half the price</title>
   <link>https://www.zdnet.com/article/claude-opus-5-near-fable-performance-at-half-the-price/</link>
   <pubDate>Fri, 24 Jul 2026 17:00:00 +0000</pubDate>
@@ -1959,22 +2372,6 @@
 
 <p class="wp-block-paragraph"><em>This article first appeared on <a href="https://www.infoworld.com/article/4201254/model-context-protocol-is-going-stateless-to-make-scaling-simpler.html">InfoWorld</a>.</em></p>
 </div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3d ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Flock cameras go up in flames as cops hunt suspected firebugs</title>
-  <link>https://www.theregister.com/offbeat/2026/07/24/flock-cameras-go-up-in-flames-as-cops-hunt-suspected-firebugs/5278357</link>
-  <pubDate>Fri, 24 Jul 2026 14:48:37 +0000</pubDate>
-  <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Budget/licensing impact — verify renewal terms and forecast cost changes.</b><br/>Two license plate readers torched in Georgia amid backlash against the surveillance network<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3d ago]]></description>
-</item>
-
-<item>
-  <title>🔵 SpaceX to try its luck again with Starship Flight 13 after engines and weather say no</title>
-  <link>https://www.theregister.com/science/2026/07/24/spacex-to-try-its-luck-again-with-starship-flight-13-after-engines-and-weather-say-no/5278239</link>
-  <pubDate>Fri, 24 Jul 2026 13:00:00 +0000</pubDate>
-  <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/>Replacement Raptors head for liftoff without a static fire test<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3d ago]]></description>
 </item>
 
 <item>
@@ -2248,14 +2645,6 @@
 
 <p class="wp-block-paragraph"><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><a href="https://www.cio.com/expert-contributor-network/"><strong>Want to join?</strong></a></p>
 </div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3d ago]]></description>
-</item>
-
-<item>
-  <title>🔵 EU telcos ask: Huawei going to afford to replace Chinese equipment?</title>
-  <link>https://www.theregister.com/networks/2026/07/24/eu-telcos-ask-huawei-going-to-afford-to-replace-chinese-equipment/5278122</link>
-  <pubDate>Fri, 24 Jul 2026 10:45:00 +0000</pubDate>
-  <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Proposed cybersecurity legislation may force a cull of high-risk network technology, costing tens of billions<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3d ago]]></description>
 </item>
 
 <item>
@@ -3378,7 +3767,7 @@
 
 
 <p class="wp-block-paragraph">“The organizations that answer both questions will be in the strongest position to adopt AI safely,” Bargury said.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3d ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4d ago]]></description>
 </item>
 
 <item>
@@ -4848,485 +5237,6 @@ Provide the improved version and explain your changes.</code></pre>
 
 
 <p class="wp-block-paragraph"><em>This article first appeared on <a href="https://www.infoworld.com/article/4200143/ciscos-new-ai-model-tells-code-reviewers-where-to-look-for-vulnerabilities.html">InfoWorld</a>.</em></p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5d ago]]></description>
-</item>
-
-<item>
-  <title>🔴 OpenAI model escape puts enterprise AI defenses on notice</title>
-  <link>https://www.csoonline.com/article/4200043/openai-model-escape-puts-enterprise-ai-defenses-on-notice.html</link>
-  <pubDate>Wed, 22 Jul 2026 13:29:30 +0000</pubDate>
-  <source>CSO Online</source>
-  <description><![CDATA[<b>Why this matters: Supply chain risk — audit third-party dependencies and vendor access.</b><br/><div id="remove_no_follow">
-		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
-					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
-						<div class="article-column__content">
-<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
-
-
-
-<p class="wp-block-paragraph">Some of OpenAI’s most powerful AI models teamed up to escape their sandbox and attack systems at Hugging Face in a cybersecurity evaluation gone wrong, the company has admitted. The models under test were modified to allow them to perform potentially harmful actions that production versions would refuse. The incident highlights how, if AI prompt guardrails fail or, as in this incident, are removed, then enterprises must have robust sandboxing or other technical restrictions in place to protect systems.</p>
-
-
-
-<p class="wp-block-paragraph">In OpenAI’s evaluation, GPT-5.6 Sol and a more capable pre-release model were competing to solve cybersecurity challenges in ExploitGym, a benchmarking tool for cybersecurity capabilities. They concluded that systems at Hugging Face could have the answers, and set out to gain access, OpenAI wrote in a <a href="https://openai.com/index/hugging-face-model-evaluation-security-incident/" rel="noreferrer noopener" target="_blank">blog post about the attack on Hugging Face</a>.</p>
-
-
-
-<p class="wp-block-paragraph">ExploitGym challenges AI models to turn security vulnerabilities into attack exploits. OpenAI gave its models limited access to the internet through a package-registry proxy to download code to build their attacks. However, the models exploited a zero-day vulnerability in the proxy to obtain unrestricted internet access, then used stolen credentials and other flaws to access Hugging Face systems.</p>
-
-
-
-<p class="wp-block-paragraph">For CIOs and CISOs, the concern extends beyond cybersecurity research. AI agents connected to corporate databases, source code repositories, or payment systems could expose sensitive resources unless <a href="https://www.csoonline.com/article/4199408/ai-agents-can-escape-sandboxes-without-ever-breaking-them.html">access controls and sandboxing</a> continue to work when model-level safeguards fail.</p>
-
-
-
-<p class="wp-block-paragraph">“Prompt guardrails are not security controls,” said <a href="https://www.forrester.com/analyst-bio/biswajeet-mahapatra/BIO20046" rel="noreferrer noopener" target="_blank">Biswajeet Mahapatra</a>, principal analyst at Forrester. “They are behavioral controls that can fail, be bypassed, or be intentionally disabled during testing.”</p>
-
-
-
-<h2 class="wp-block-heading" id="how-containment-failed">How containment failed</h2>
-
-
-
-<p class="wp-block-paragraph">Despite the relaxed model safeguards, the surrounding infrastructure was supposed to contain the activity. Network access was restricted to an internally hosted third-party service that acted as a proxy and cache for software package registries. Such proxies are typically used in the enterprise to protect against <a href="https://www.csoonline.com/article/4167465/supply-chain-attacks-take-aim-at-your-ai-coding-agents.html">software supply chain attacks</a> coming from the outside.</p>
-
-
-
-<p class="wp-block-paragraph">OpenAI said the models discovered a zero-day vulnerability in the service, exploited it and carried out privilege escalation and <a href="https://www.csoonline.com/article/4194708/lateral-movement-risk-rises-as-enterprises-emphasize-convenience-over-containment.html">lateral movement</a> until they reached a node with open internet access.</p>
-
-
-
-<p class="wp-block-paragraph">Once online, the models inferred that Hugging Face might hold models, datasets or solutions related to ExploitGym. OpenAI said that, in one attack path, the models combined stolen credentials with zero-day vulnerabilities to obtain remote code execution on Hugging Face servers.</p>
-
-
-
-<p class="wp-block-paragraph">In its account of the activity on its infrastructure, <a href="https://huggingface.co/blog/security-incident-july-2026" rel="noreferrer noopener" target="_blank">Hugging Face said</a> a malicious dataset abused two code-execution paths in its data-processing pipeline. The actor then obtained node-level access, harvested cloud and cluster credentials, and moved into several internal clusters.</p>
-
-
-
-<p class="wp-block-paragraph">OpenAI said the models ultimately obtained ExploitGym test solutions directly from a Hugging Face production database. The models remained focused on solving the benchmark, despite the lengths to which they went to achieve that objective, it said.</p>
-
-
-
-<p class="wp-block-paragraph"><a href="https://greyhoundresearch.com/svg/" rel="noreferrer noopener" target="_blank">Sanchit Vir Gogia</a>, chief analyst at Greyhound Research, said the package-registry proxy should concern enterprise security teams because it was a narrowly permitted exception inside an otherwise restricted environment.</p>
-
-
-
-<p class="wp-block-paragraph">“Every enterprise estate is built from exceptions of exactly that kind,” he said.</p>
-
-
-
-<p class="wp-block-paragraph">In this incident, OpenAI’s models were performing the intended — albeit by unintended means — but enterprises should take care that their own AI systems are kept on target.</p>
-
-
-
-<p class="wp-block-paragraph">Mahapatra said enterprises should treat AI agents as “<a href="https://www.csoonline.com/article/4194548/agentic-ai-identity-a-6-stage-maturity-model-for-non-human-identities.html">high-risk non-human identities</a>,” confining each one to an isolated environment where access is limited to the assigned task and credentials expire quickly.</p>
-
-
-
-<p class="wp-block-paragraph">“An acceptable blast radius means a compromised agent can affect only a single workflow, dataset, or application rather than providing a pathway into broader enterprise infrastructure,” Mahapatra said.</p>
-
-
-
-<p class="wp-block-paragraph">And Gogia warned that services allowed to reach package registries, update systems, or other external resources can become escape routes if they are not subjected to the same scrutiny as the agent itself.</p>
-
-
-
-<h2 class="wp-block-heading" id="defenses-enterprises-need">Defenses enterprises need</h2>
-
-
-
-<p class="wp-block-paragraph">Hugging Face said the intrusion resulted in unauthorized access to a limited number of internal datasets and several credentials used by its services. It found no evidence that public models, datasets or Spaces had been altered and said its published software packages and container images were not compromised.</p>
-
-
-
-<p class="wp-block-paragraph">The company closed the code-execution paths used to gain access and rebuilt the affected nodes. It also revoked exposed credentials and tightened the rules governing workloads admitted to its clusters.</p>
-
-
-
-<p class="wp-block-paragraph">Whether they are keeping their own AIs in or rogue Ais out, Gogia said enterprises should test whether their containment boundaries work, rather than relying on architecture diagrams or stated policies. Such tests should attempt to obtain credentials, cross trust boundaries and reach systems outside the agent’s assigned task.</p>
-
-
-
-<p class="wp-block-paragraph">Mahapatra said enterprises should assume that one containment layer may fail and ensure that an agent’s access cannot provide a route into unrelated applications or broader corporate infrastructure.</p>
-
-
-
-<p class="wp-block-paragraph">OpenAI said it is still investigating the incident with Hugging Face, and is imposing stricter configurations on its research environment while the vulnerabilities are being addressed, even if that means slowing down its research. It is also strengthening containment and monitoring around future evaluations.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 5d ago]]></description>
-</item>
-
-<item>
-  <title>🟠 AI, security operations and the new race against time</title>
-  <link>https://www.csoonline.com/article/4198963/ai-security-operations-and-the-new-race-against-time.html</link>
-  <pubDate>Wed, 22 Jul 2026 09:00:00 +0000</pubDate>
-  <source>CSO Online</source>
-  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/><div id="remove_no_follow">
-		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
-					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
-						<div class="article-column__content">
-<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
-
-
-
-<p class="wp-block-paragraph">When Anthropic unveiled Project Glasswing and the Mythos model, much of the discussion focused on the capabilities themselves.</p>
-
-
-
-<p class="wp-block-paragraph"><a href="https://www.csoonline.com/article/4158117/anthropics-mythos-signals-a-structural-cybersecurity-shift.html?utm=hybrid_search">Security leaders debated</a> what these systems could mean for vulnerability discovery, exploit development and the pace of offensive innovation. Researchers examined technical benchmarks. Industry observers questioned how quickly these capabilities might fall into attackers’ hands.</p>
-
-
-
-<p class="wp-block-paragraph">Those conversations are important. They also point to a larger question that predominates my discussions with CISOs: How much time do we have?</p>
-
-
-
-<p class="wp-block-paragraph">Over the past year, conversations about AI in cybersecurity have changed noticeably. Twelve months ago, security leaders wanted to understand whether AI could meaningfully improve security operations. They wanted to know whether it could accurately investigate alerts, reduce analyst workload and operate reliably in production environments.</p>
-
-
-
-<p class="wp-block-paragraph">Today, security leaders are asking about timelines, implementation, how quickly AI is changing the threat landscape and what that means for <a href="https://www.csoonline.com/article/4158008/the-ai-inflection-point-what-security-leaders-must-do-now.html">how security teams operate</a>.</p>
-
-
-
-<p class="wp-block-paragraph">Anthropic’s Mythos and Glasswing, OpenAI’s Daybreak and advances in DeepSeek accelerate those conversations. Each development provides another glimpse into the pace at which AI capabilities are advancing.</p>
-
-
-
-<p class="wp-block-paragraph">AI now reasons through security problems that historically required highly specialized expertise. The implications span vulnerability discovery, attack-path analysis, reconnaissance, social engineering and security operations.</p>
-
-
-
-<p class="wp-block-paragraph">The shift reflects a broader reality: cybersecurity is entering a period where the pace of adaptation may matter as much as the quality of defenses themselves. AI is accelerating both offense and defense simultaneously. Organizations are quickly redesigning security operations around that reality.</p>
-
-
-
-<p class="wp-block-paragraph">One consequence is becoming increasingly visible. For years, cybersecurity teams invested enormous effort in discovering threats, identifying vulnerabilities, gathering telemetry and collecting intelligence. AI is accelerating many of those activities simultaneously. Visibility is improving. Discovery is accelerating. Investigations are becoming faster and more comprehensive.</p>
-
-
-
-<p class="wp-block-paragraph">The bottleneck is beginning to move. The challenge increasingly centers on how quickly organizations can act on what they know. The organizations that gain an advantage may not be the ones with the most information. They will be the ones who can operationalize that information the fastest.</p>
-
-
-
-<h2 class="wp-block-heading" id="the-timeline-is-compressing">The timeline is compressing</h2>
-
-
-
-<p class="wp-block-paragraph">Cybersecurity has experienced many major technology transitions. Cloud computing changed infrastructure. Mobile devices expanded the attack surface. Digital transformation connected systems that were previously isolated.</p>
-
-
-
-<p class="wp-block-paragraph">AI introduces a different dynamic.</p>
-
-
-
-<p class="wp-block-paragraph">Most technology transitions unfolded over years. Organizations had time to evaluate, pilot, deploy and gradually adapt operating models.</p>
-
-
-
-<p class="wp-block-paragraph">The current AI cycle moves at a different pace.</p>
-
-
-
-<p class="wp-block-paragraph">Capabilities improve continuously. New models arrive every few months. New research emerges every few weeks. Security teams absorb developments at the same time attackers do.</p>
-
-
-
-<p class="wp-block-paragraph"><a href="https://www.csoonline.com/article/4155342/what-anthropic-glasswing-reveals-about-the-future-of-vulnerability-discovery.html">Vulnerability discovery</a> provides a useful example. Security teams have long operated around a familiar cycle of discovery, validation, remediation and protection. AI systems accelerate every stage of that process. Similar patterns exist in phishing, reconnaissance, social engineering and attack planning.</p>
-
-
-
-<p class="wp-block-paragraph">A vulnerability that once moved through that cycle over weeks increasingly now moves through those stages in days or, in some cases, hours.</p>
-
-
-
-<p class="wp-block-paragraph">Attackers are already operating at the speed of AI. Defenders are now focused on reaching the same level of operational speed.</p>
-
-
-
-<p class="wp-block-paragraph">This shift is changing the questions CISOs ask.</p>
-
-
-
-<p class="wp-block-paragraph">Early discussions focused on capability. Could AI investigate alerts accurately? Could it operate reliably in production environments? Could it be trusted with meaningful security work?</p>
-
-
-
-<p class="wp-block-paragraph">As organizations gained experience with AI, the discussion shifted toward implementation. Security teams began evaluating where AI could create operational leverage and how quickly they could deploy it into existing workflows.</p>
-
-
-
-<p class="wp-block-paragraph">Today, many CISOs are focused on timing.</p>
-
-
-
-<p class="wp-block-paragraph">The pace of advancement is influencing planning horizons, budget decisions and operating-model discussions. Security leaders are evaluating how quickly they can introduce AI into investigations, threat hunting, detection engineering and response workflows. Boards are asking questions. Executive teams are paying attention.</p>
-
-
-
-<p class="wp-block-paragraph">Security programs that once viewed AI as a future initiative increasingly view it as a current operational priority.</p>
-
-
-
-<p class="wp-block-paragraph">The industry is moving from evaluating AI as a technology to incorporating AI as a security capability.</p>
-
-
-
-<p class="wp-block-paragraph">The timeline compression creates pressure on the traditional security operations model. Investigation speed, response speed and defensive coverage increasingly determine whether organizations can keep pace with adversaries operating with AI assistance.</p>
-
-
-
-<h2 class="wp-block-heading" id="security-operations-are-entering-a-new-phase">Security operations are entering a new phase</h2>
-
-
-
-<p class="wp-block-paragraph">The impact of AI is becoming particularly visible inside the SOC.</p>
-
-
-
-<p class="wp-block-paragraph">Many security operations centers were built around a straightforward assumption: alerts flow to human analysts who conduct investigations. Operational capacity scales primarily through hiring.</p>
-
-
-
-<p class="wp-block-paragraph">The volume of security data, the number of alerts and the complexity of modern environments have steadily increased. Security teams have responded by building processes, adding tools and creating specialized analyst roles.</p>
-
-
-
-<p class="wp-block-paragraph">AI introduces a new source of operational capacity.</p>
-
-
-
-<p class="wp-block-paragraph">Investigations that require analysts to examine dozens or hundreds of artifacts across endpoint, identity, cloud, network and email systems can now be performed in minutes. Analysts gain access to investigative depth and consistency that would be difficult to achieve manually at scale.</p>
-
-
-
-<p class="wp-block-paragraph">Many security leaders now view this capability through the lens of operating model design. They are examining how investigations are performed, how work is distributed and where human expertise creates the greatest value.</p>
-
-
-
-<h2 class="wp-block-heading" id="the-evolution-of-the-analyst-role">The evolution of the analyst role</h2>
-
-
-
-<p class="wp-block-paragraph">One of the most important developments emerging from early production deployments is the <a href="https://www.csoonline.com/article/4163299/the-manager-of-agents-how-ai-evolves-the-soc-analyst-role.html">evolution of analyst responsibilities</a>.</p>
-
-
-
-<p class="wp-block-paragraph">Security analysts remain central to security operations. Their expertise becomes even more valuable as AI systems take on larger portions of investigative work.</p>
-
-
-
-<p class="wp-block-paragraph">Threat hunting, detection engineering, response strategy, governance and oversight are receiving increased attention. Analysts spend more time shaping how investigations are conducted, evaluating outcomes and improving overall security operations.</p>
-
-
-
-<p class="wp-block-paragraph">Many organizations are already beginning this shift.</p>
-
-
-
-<p class="wp-block-paragraph">Teams are investing more heavily in proactive security activities. Detection engineering programs are expanding. Threat hunting is becoming more accessible. Analysts are spending more time improving systems and less time repeating investigative tasks.</p>
-
-
-
-<p class="wp-block-paragraph">These changes create what I think of as an analyst-amplified SOC: an environment where AI expands the reach of security professionals and enables deeper security work across the organization.</p>
-
-
-
-<h2 class="wp-block-heading" id="trust-is-critical-and-it-doesnt-have-to-compromise-speed">Trust is critical and it doesn’t have to compromise speed</h2>
-
-
-
-<p class="wp-block-paragraph">Faced with a compressing timeline, the instinct is to treat speed and trust as a trade-off, i.e., move faster, verify less. That trade-off feels inevitable. It isn’t.</p>
-
-
-
-<p class="wp-block-paragraph">You don’t trust AI in the abstract. You trust that a system understands your tools, your telemetry and the edge cases that only exist in your network. The problem was never speed. It’s speed without context. The faster a context-blind system runs, the more decisions you’re left unable to verify.</p>
-
-
-
-<p class="wp-block-paragraph">The tension eases when the system is quick to deploy and tunes to your environment once it’s there, rather than treating every network the same. Speed stops being the thing you trade against trust. The more it learns about your environment, the sharper and more trustworthy it becomes, so the two compound rather than compete. Trust still develops through operational evidence such as measurable outcomes, visibility into decisions and consistent performance. But where that evidence accrues matters.</p>
-
-
-
-<p class="wp-block-paragraph">The organizations making the fastest real progress understand this. They don’t compromise quality and trust for speed. They invest in AI that earns trust inside their own environment, so they don’t have to choose.</p>
-
-
-
-<h2 class="wp-block-heading" id="leadership-during-a-period-of-rapid-change">Leadership during a period of rapid change</h2>
-
-
-
-<p class="wp-block-paragraph">The conversations surrounding Mythos and Glasswing reflect a broader reality facing security leaders.</p>
-
-
-
-<p class="wp-block-paragraph">AI is becoming part of both offense and defense. Security teams are incorporating it into investigations, detection engineering, response workflows and threat hunting. Attackers are incorporating it into their own operations.</p>
-
-
-
-<p class="wp-block-paragraph">Security leaders have an opportunity to modernize operating models, expand defensive capacity and build organizational experience while these capabilities continue to evolve.</p>
-
-
-
-<p class="wp-block-paragraph">The organizations making progress today are investing in readiness. They are building experience, adapting workflows and preparing teams for a new model of security operations.</p>
-
-
-
-<p class="wp-block-paragraph">The next phase of cybersecurity will be defined by how effectively organizations combine human judgment with machine-scale execution.</p>
-
-
-
-<p class="wp-block-paragraph">The question facing security leaders is increasingly clear: How quickly can their organizations adapt to a continuously changing threat environment?</p>
-
-
-
-<p class="wp-block-paragraph"><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><a href="https://www.cio.com/expert-contributor-network/"><strong>Want to join?</strong></a></p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5d ago]]></description>
-</item>
-
-<item>
-  <title>🟠 10 survival tips for CSOs who report to the CEO</title>
-  <link>https://www.csoonline.com/article/4188581/10-survival-tips-for-csos-who-report-to-the-ceo.html</link>
-  <pubDate>Wed, 22 Jul 2026 07:00:00 +0000</pubDate>
-  <source>CSO Online</source>
-  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/><div id="remove_no_follow">
-		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
-					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
-						<div class="article-column__content">
-<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
-
-
-
-<p class="wp-block-paragraph">As the CSO grows in prominence, security leaders are increasingly earning a seat at the executive table, reporting directly to the CEO with the expectation to help drive business strategy and ensure organizational success.</p>
-
-
-
-<p class="wp-block-paragraph">Reporting to the CEO unlocks greater access and influence for security leaders, and while CSOs who report to their organization’s CIO still have clout, it’s a very different experience picking up the phone to speak directly with the CEO as a strategic partner.</p>
-
-
-
-<p class="wp-block-paragraph">Regardless of reporting structure, CSOs must clearly understand what they are being tasked to solve. That might sound simple, but making the leap to being a CEO’s direct report requires a new perspective, a different set of skills, and a business-level focus on metrics to do so.</p>
-
-
-
-<p class="wp-block-paragraph">We asked several current CSOs, CEOs, and IT staffing experts for advice on how security executives can best navigate a direct reporting relationship with their CEO. Offering insights below are <a href="https://www.linkedin.com/in/georgegerchow/">George Gerchow</a>, CSO at Bedrock Data and member of the IANS faculty; <a href="https://www.linkedin.com/in/mattchiodi/">Matt Chiodi</a>, CSO of Cerby; <a href="https://www.cyderes.com/company/about/chris-schueler">Chris Schueler</a>, CEO at Cyderes; and <a href="https://www.skillsoft.com/blog-authors/greg-fuller">Greg Fuller</a>, vice president of the Technology Skills Suite at Skillsoft.</p>
-
-
-
-<h2 class="wp-block-heading" id="1-understand-how-the-ceo-views-your-role">1. Understand how the CEO views your role</h2>
-
-
-
-<p class="wp-block-paragraph">Most CEOs expect that, when you report directly to them, you fully own your functional area. Whether it’s cybersecurity, operations, or finance, they look to you as the expert in that domain. The CEO may have opinions, but ultimately, you are expected to lead and provide direction.</p>
-
-
-
-<p class="wp-block-paragraph">CEOs expect their CSO to be a <a href="https://www.csoonline.com/article/4159317/cisos-reshape-their-roles-as-business-risk-strategists.html">true strategic partner</a>, not just a risk reporter — connecting cybersecurity to revenue protection, regulatory compliance, customer trust, and operational resilience. In turn, CSOs should expect CEOs to treat governance as a strategic enabler, not a bureaucratic necessity.</p>
-
-
-
-<h2 class="wp-block-heading" id="2-power-up-on-skills-vital-to-your-organization-at-an-executive-level">2. Power up on skills vital to your organization at an executive level</h2>
-
-
-
-<p class="wp-block-paragraph">On the technology side, AI and machine learning, cloud security, incident response, zero trust architecture, and governance, risk, and compliance (GRC) are the areas where threats evolve fastest and strategic leadership has the greatest impact. </p>
-
-
-
-<p class="wp-block-paragraph">Equally important are “power skills”: communication, critical thinking, adaptability, and emotional intelligence. The ability to <a href="https://www.csoonline.com/article/4186984/6-security-leader-tips-for-mastering-business-risk.html">translate complex risk into business terms</a> is what separates a strong CSO from a purely technical one. Skills, not titles, define effectiveness in the eyes of a CEO.</p>
-
-
-
-<h2 class="wp-block-heading" id="3-take-advantage-of-your-direct-access">3. Take advantage of your direct access</h2>
-
-
-
-<p class="wp-block-paragraph">Direct access to the CEO will enable you to influence strategy, <a href="https://www.csoonline.com/article/3855823/how-cisos-can-balance-business-continuity-with-other-responsibilities.html">shape resilience planning</a>, and ensure <a href="https://www.csoonline.com/article/4080670/what-does-aligning-security-to-the-business-really-mean.html">cybersecurity is treated as a business imperative</a> rather than a cost center. That authority is strongest when the CEO understands cybersecurity as a strategic lever, not just a technical function. </p>
-
-
-
-<p class="wp-block-paragraph">While a direct reporting relationship gives you access to the CEO, it also comes with the responsibility to operate at that level. You need to provide clear, executive-level visibility into your cybersecurity program.</p>
-
-
-
-<h2 class="wp-block-heading" id="4-brush-up-on-business-translation">4. Brush up on business translation</h2>
-
-
-
-<p class="wp-block-paragraph">A <a href="https://www.csoonline.com/article/4002753/cisos-reposition-their-roles-for-business-leadership.html">CSO who leads with business alignment</a> will always carry more influence when they can translate risk into business language rather than technical jargon. Building programs that must survive an IPO, a FedRAMP audit, and real customer scrutiny forces you to tie security to revenue and trust.</p>
-
-
-
-<p class="wp-block-paragraph">The most valuable skill is translation — defining technical risk in terms of executive action and business impact that a CEO and a board can act on. You must build trust through transparency. These are the human skills that complement technology, creating a collaborative human-AI dynamic where leaders make faster, better-informed decisions. </p>
-
-
-
-<h2 class="wp-block-heading" id="5-treat-conversations-as-risk-assessment-opportunities">5. Treat conversations as risk assessment opportunities</h2>
-
-
-
-<p class="wp-block-paragraph">Highly effective security leaders treat every business conversation as a risk conversation in disguise. That mindset is what largely separates a great CSO from a great technologist. Earn the CEO’s trust by speaking business first, security second. Translate every risk into revenue, reputation, or regulatory exposure.</p>
-
-
-
-<p class="wp-block-paragraph">Remember, a good CEO wants a translator, not an alarm system. They expect no surprises, a clear read on the risks that matter, and a security leader who helps the <a href="https://www.csoonline.com/article/4021179/8-tough-trade-offs-every-ciso-must-navigate.html">business move faster rather than slowing it down</a>.</p>
-
-
-
-<h2 class="wp-block-heading" id="6-define-what-a-successful-relationship-should-look-like-and-put-it-in-writing">6. Define what a successful relationship should look like and put it in writing</h2>
-
-
-
-<p class="wp-block-paragraph">Regardless of the reporting relationship, start by defining the end goal and putting it in writing. It will evolve over time, but having that initial clarity is critical. This is especially important when you’re new in a role and aiming to make your first 60, 90, or 120 days, and your first year, successful. In such cases, it’s essential to align early.</p>
-
-
-
-<p class="wp-block-paragraph">Do that collaboratively, and document it.</p>
-
-
-
-<h2 class="wp-block-heading" id="7-prioritize-trust-and-candor">7. Prioritize trust and candor</h2>
-
-
-
-<p class="wp-block-paragraph">The CEO needs to trust that the CSO isn’t sandbagging, and the CSO needs enough psychological safety to deliver bad news fast. When those conditions exist, security becomes a strategic asset — not a cost center.</p>
-
-
-
-<p class="wp-block-paragraph">To that end, focus on clear communication above all, and present yourself as part of a team, not a solo player. Stay calm under pressure during incidents, and treat people as peers rather than policing them. The leaders who last build trust before they need it.</p>
-
-
-
-<h2 class="wp-block-heading" id="8-treat-governance-as-a-strategic-competitive-advantage">8. Treat governance as a strategic competitive advantage</h2>
-
-
-
-<p class="wp-block-paragraph">The strongest partnerships also share a commitment to governance as a competitive advantage.</p>
-
-
-
-<p class="wp-block-paragraph">Governance is the brakes that let you drive fast safely. When a CSO and CEO are aligned on that principle, the organization can innovate with AI while <a href="https://www.csoonline.com/article/4176485/the-ai-governance-imperative-you-cant-afford-to-ignore-2.html">maintaining oversight and protecting against unnecessary risk</a>. The result is an organization that does not just react to threats but builds resilience into how it operates.</p>
-
-
-
-<h2 class="wp-block-heading" id="9-set-clear-goals-and-measure-progress">9. Set clear goals and measure progress</h2>
-
-
-
-<p class="wp-block-paragraph">Setting clear goals and measuring progress against those goals is essential. When expectations are clear, the areas you need to focus on become much clearer. It doesn’t solve every problem, but aligning early with your leadership, whether that’s a CEO or a CIO, can significantly reduce the pressure you may feel.</p>
-
-
-
-<p class="wp-block-paragraph">Also, never let your boss be surprised. This is where being clear on goals and consistently tracking both leading and lagging metrics becomes especially important, particularly in a direct reporting relationship with the CEO.</p>
-
-
-
-<h2 class="wp-block-heading" id="10-be-willing-to-endure-challenge-and-discomfort">10. Be willing to endure challenge and discomfort</h2>
-
-
-
-<p class="wp-block-paragraph">Finally, persistence and a willingness to endure discomfort for something that matters more than the pain itself are critical to surviving in this relationship. The role of a cybersecurity leader is often thankless. If you’re doing your job well, no one really notices.</p>
 </div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5d ago]]></description>
 </item>
 
