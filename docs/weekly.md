@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
 **Period:** July 21 – July 28, 2026  
-**Generated:** 2026-07-28 22:01 UTC  
+**Generated:** 2026-07-28 23:56 UTC  
 **Items reviewed:** 135  
 
 ## ⚡ Top Actions This Week
@@ -55,6 +55,18 @@
 
 ## 🟠 Important — Review This Week
 
+- [Chromium: CVE-2026-13037 Use after free in WebView](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-13037)  
+  **Microsoft Security Response Center (MSRC)** · Jul 28 · _General awareness item._  
+
+- [Chromium: CVE-2026-13032 Use after free in WebGL](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-13032)  
+  **Microsoft Security Response Center (MSRC)** · Jul 28 · _General awareness item._  
+
+- [Chromium: CVE-2026-13030 Uninitialized Use in GPU](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-13030)  
+  **Microsoft Security Response Center (MSRC)** · Jul 28 · _General awareness item._  
+
+- [Chromium: CVE-2026-13028 Use after free in WebGL](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-13028)  
+  **Microsoft Security Response Center (MSRC)** · Jul 28 · _General awareness item._  
+
 - [OpenAI models used Artifactory zero-days to escape to the internet](https://www.bleepingcomputer.com/news/security/openai-models-used-artifactory-zero-days-to-escape-to-the-internet/)  
   **BleepingComputer** · Jul 28 · _General awareness item._  
 
@@ -64,20 +76,8 @@
 - [CVE-2026-50422 Windows NTFS Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-50422)  
   **Microsoft Security Response Center (MSRC)** · Jul 28 · _General awareness item._  
 
-- [Critical OpenWrt DHCPv6 Flaw Could Let Unauthenticated Attackers Run Code as Root](https://thehackernews.com/2026/07/critical-openwrt-dhcpv6-flaw-could-let.html)  
-  **The Hacker News** · Jul 28 · _General awareness item._  
-
-- [Over 24,000 exposed server BMCs leak password hash via decades-old flaw](https://www.bleepingcomputer.com/news/security/over-24-000-exposed-server-bmcs-leak-password-hash-via-decades-old-flaw/)  
-  **BleepingComputer** · Jul 28 · _General awareness item._  
-
-- [Critical TeamCity Flaw Could Let Attackers Run OS Commands Without Logging In](https://thehackernews.com/2026/07/critical-teamcity-flaw-could-let.html)  
-  **The Hacker News** · Jul 28 · _General awareness item._  
-
-- [Researcher Says AI Helped Develop Linux Traffic-Control Race Into Root Exploit](https://thehackernews.com/2026/07/researcher-says-ai-helped-develop-linux.html)  
-  **The Hacker News** · Jul 28 · _General awareness item._  
-
-- [Microsoft Says New Cybersecurity AI Model Helps MDASH Score 95.95% at Half the Cost](https://thehackernews.com/2026/07/microsoft-says-new-cybersecurity-ai.html)  
-  **The Hacker News** · Jul 28 · _General awareness item._  
+- [CVE-2026-47301 Configuration Manager Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-47301)  
+  **Microsoft Security Response Center (MSRC)** · Jul 28 · _General awareness item._  
 
 ---
 
