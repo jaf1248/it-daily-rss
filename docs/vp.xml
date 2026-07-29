@@ -3,8 +3,366 @@
 <channel>
   <title>Joe — VP of IT Briefing</title>
   <description>Leadership-focused IT risk, vendors, pricing, licensing, and industry context.</description>
-  <lastBuildDate>Wed, 29 Jul 2026 05:49:08 +0000</lastBuildDate>
+  <lastBuildDate>Wed, 29 Jul 2026 08:35:39 +0000</lastBuildDate>
   
+<item>
+  <title>🔵 Burnham&#x27;s spanner in the works leaves UK government tech scattered across Whitehall</title>
+  <link>https://www.theregister.com/public-sector/2026/07/29/burnhams-spanner-in-the-works-leaves-uk-government-tech-scattered-across-whitehall/5279437</link>
+  <pubDate>Wed, 29 Jul 2026 08:30:00 +0000</pubDate>
+  <source>The Register</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Splitting up responsibility for digital transformation and procurement while AI gets a seat at Cabinet risks incoherency<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔴 How MFA gets hacked — and strategies to prevent it</title>
+  <link>https://www.csoonline.com/article/570795/how-to-hack-2fa.html</link>
+  <pubDate>Wed, 29 Jul 2026 08:00:00 +0000</pubDate>
+  <source>CSO Online</source>
+  <description><![CDATA[<b>Why this matters: Elevated ransomware risk — validate backups and endpoint defenses.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<p class="wp-block-paragraph">The security benefits of <a href="https://www.csoonline.com/article/563753/two-factor-authentication-2fa-explained.html">multifactor authentication (MFA)</a> are well-known, yet MFA continues to be poorly, sporadically, and inconsistently implemented, undercutting its effectiveness as a security tool while often saddling users with an extra workflow burden — one of many obstacles to MFA’s success.</p>
+
+
+
+<p class="wp-block-paragraph">Frequent news stories that describe innovative ways to circumvent MFA don’t help, such as <a href="https://www.csoonline.com/article/4183445/autonomous-ai-agents-duped-into-leaking-sensitive-data-in-phishing-test.html">evidence of an AI-fueled phishing attack</a> that found cloud keys and SSH access details, and <a href="https://www.csoonline.com/article/4181230/claude-code-has-an-mcp-security-problem-and-your-developers-are-already-using-it.html">another case of an AI-based attack that leveraged Claude Code</a>. Even the savviest vendors aren’t immune, as <a href="https://www.csoonline.com/article/656728/okta-support-system-breach-highlights-need-for-strong-mfa-policies.html">evidenced by a series of Okta attacks in 2023</a> that resulted in stolen GitHub source code, an infected supply chain, and a compromised support portal.</p>
+
+
+
+<p class="wp-block-paragraph">Still, <a href="https://www.csoonline.com/article/1305849/mfa-adoption-peaks-despite-lower-remote-access-authentications.html">MFA methods</a> have gotten easier to use, thanks to the growing popularity and <a href="https://www.csoonline.com/article/649083/10-passwordless-authentication-solutions.html">sophistication of passwordless approaches</a>. Over the past several years, MFA mandates from big vendors such as Google and Microsoft for both employees and customers have helped motivate IT operations to strengthen their authentication practices and encourage comprehensive and continuous authentication across all applications. </p>
+
+
+
+<p class="wp-block-paragraph"><a href="https://jumpcloud.com/blog/multi-factor-authentication-statistics" rel="noreferrer noopener" target="_blank">According to a JumpCloud 2025 survey</a>, 87% of larger enterprises regularly employ MFA methods, although only about a third of smaller firms did the same. <a href="https://duo.com/resources/ebooks/beyond-mfa">Cisco more recently found</a> that while 87% of survey respondents agreed that having phishing-resistant MFA methods were critical, less than 20% had implemented any such procedure across their enterprises.</p>
+
+
+
+<p class="wp-block-paragraph">We used the following references that describe many of the MFA exploits in further technical detail, and how to prevent them, including:</p>
+
+
+
+<ul class="wp-block-list">
+<li>A collection of bypass methods <a href="https://abnormalsecurity.com/glossary/mfa-bypass" rel="noreferrer noopener" target="_blank">illustrated by Abnormal Security</a></li>
+
+
+
+<li>KnowBe4’s <a href="https://www.knowbe4.com/hubfs/KB4-CON2019-12WaystoHack2FA.pdf" rel="noreferrer noopener" target="_blank">extensive slide deck</a> detailing a number of MFA exploit methods, though somewhat outdated</li>
+
+
+
+<li>The <a href="https://fidoalliance.org/passkey-use-case/enterprise/" rel="noreferrer noopener" target="_blank">FIDO Alliance’s series of white papers</a> on how enterprises can implement better MFA methods</li>
+
+
+
+<li><a href="https://jumpcloud.com/blog/multi-factor-authentication-statistics">JumpCloud’s collection of MFA usage statistics</a> from surveys</li>
+
+
+
+<li><a href="https://resources.duo.com/explore/assets/multi-factor-authentication-buyers-evaluation-guide">Cisco Duo’s MFA Buyer’s Guide</a>, which details how to cost-justify stronger MFA deployments</li>
+
+
+
+<li><a href="https://www.rsa.com/resources/solution-briefs/the-rsa-complete-enterprise-grade-passwordless-solution/">RSA’s useful deep dive</a> on implementing better MFA programs via its passwordless solutions</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading" id="notable-mfa-threat-modalities-and-common-attack-techniques">Notable MFA threat modalities and common attack techniques</h2>
+
+
+
+<p class="wp-block-paragraph">The below table offers an overview of four common MFA threat modalities, along with the associated attack methods applied across specific locations.</p>
+
+
+
+<p class="wp-block-paragraph">Of note is that fact that attackers have found weaknesses across all aspects of enterprise computing infrastructure. Part of the problem is that the average modern authentication workflow is complex: Users can arrive at an application via a web portal, a smartphone app, an AI query, or an API. They can connect via a variety of endpoints, through a local network or a VPN, running different OSes and browsers. As a result, any enterprise testing its MFA portfolio must apply careful and continual vigilance to a grab bag of circumstances and locations where MFA codes can be intercepted.</p>
+
+
+
+<p class="wp-block-paragraph"><strong>MFA bypass and exploit technologies</strong></p>
+
+
+
+<figure class="wp-block-table"><div class="overflow-table-wrapper"><table class="has-fixed-layout"><tbody><tr><td>Methods </td><td>Network</td><td>Mobile</td><td>Applications</td><td>Workflow</td><td>Browser and cookie</td></tr><tr><td>Fatigue</td><td>Gaps in auth and access policies </td><td>Prompt bombing, Gaps in auth and access policies </td><td>Prompt bombing</td><td>Prompt bombing, Gaps in auth and access policies </td><td>Prompt bombing, Gaps in auth and access policies</td></tr><tr><td>Social Engineering</td><td>Evil proxy servers, Real-time phishing relay</td><td>Vishing, SMS phishing, SIM swapping</td><td>Non MFA-enabled apps, Faked websites, TOTP relay</td><td>Consent phishing, Account recovery abuses</td><td>Man-in-the-browser, Consent phishing</td></tr><tr><td>Stealing auth tokens/cookies</td><td>MITM attacks</td><td>Auth app phising</td><td>Malicious MFA software</td><td>Session hijacking</td><td>Session hijacking, Pass-the-cookie</td></tr><tr><td>Targeting weak authentication</td><td>Manipulate trusted IPs/devices</td><td>Reused passwords, Lack of FIDO/biometrics</td><td>Weak account recovery, Non-MFA accounts, IMAP/POP email access</td><td>Prior auth/logins, Brute force MFA</td><td>Session hijacking, Pass-the-cookie, Man-in-the-browser, Consent phishing</td></tr></tbody></table> </div></figure>
+
+
+
+<h3 class="wp-block-heading" id="mfa-fatigue">MFA fatigue</h3>
+
+
+
+<p class="wp-block-paragraph">MFA fatigue is an attack modality that involves rapidly sending numerous authorization requests, typically via SMS push messages, until a user gives in and approves the request, granting access to an attacker, such as what happened to <a href="https://www.uber.com/newsroom/security-update/" rel="noreferrer noopener" target="_blank">Uber in 2022</a>.</p>
+
+
+
+<p class="wp-block-paragraph">This is one of numerous reasons why SMS has <a href="https://www.csoonline.com/article/566075/why-sms-banking-is-still-a-bad-idea.html">long been considered a very insecure second factor channel</a> and why it still is a threat, as evidenced by <a href="https://www.csoonline.com/article/4134258/paypal-launches-latest-struggle-to-get-rid-of-sms-for-mfa.html">PayPal’s 2026 elimination of MFA-based SMS</a>.</p>
+
+
+
+<p class="wp-block-paragraph">These attacks also go by the name “push bombing” or “prompt bombing” and are not limited to mobile exploits. MFA fatigue can also take advantage of gaps in authentication or access control policies. The irony is that the more MFA an organization uses, the more likely an MFA fatigue attack will succeed.</p>
+
+
+
+<h3 class="wp-block-heading" id="social-engineering">Social engineering</h3>
+
+
+
+<p class="wp-block-paragraph">Attackers also use a combination of social engineering and<a href="https://www.csoonline.com/article/573159/office-365-phishing-campaign-that-can-bypass-mfa-targets-10-000-organizations.html">phishing attacks</a> — based on SMS (<a href="https://www.csoonline.com/article/567547/smishing-and-vishing-how-these-cyber-attacks-work-and-how-to-prevent-them.html">smishing</a>) or voice calls (<a href="https://www.csoonline.com/article/569381/vishing-explained-how-voice-phishing-attacks-scam-victims.html">vishing</a>) to disrupt the overall authentication workflow and trick users into giving up MFA tokens.</p>
+
+
+
+<p class="wp-block-paragraph">Changes in user behavior, such as more remote post-pandemic usage and events such as the World Cup, are often exploited by bad actors. Arctic Wolf <a href="https://arcticwolf.com/resources/blog/growing-risk-of-mfa-fatigue-attacks/" rel="noreferrer noopener" target="_blank">wrote in its blog</a>, “Using social engineering along with an MFA fatigue attack can be effective for threat actors, as it creates a false sense of trust.”</p>
+
+
+
+<p class="wp-block-paragraph">These combination attacks also often lure users to fake websites, real-time phishing relays, or proxy servers to capture one-time passcodes. For mobile authenticators, SIM swaps can also be used to redirect one-time codes to an attacker’s phone. These happen by convincing a customer service employee at a telecommunications provider that they are the legitimate phone owner and then use SMS to access authentication messages.</p>
+
+
+
+<p class="wp-block-paragraph">More recently we’ve seen exploits that use <a href="https://workos.com/blog/passkeys-stop-ai-phishing-mfa-fallbacks">account recovery or password reset fallbacks</a> to circumvent MFA protections.</p>
+
+
+
+<h3 class="wp-block-heading" id="stealing-authentication-cookies">Stealing authentication cookies</h3>
+
+
+
+<p class="wp-block-paragraph">Hijackers can also compromise MFA sessions by stealing authentication cookies or other tokens. This can be accomplished in several ways, including setting up phony login pages, using relays or <a href="https://zitadel.com/blog/2fa-bypass-attacks" rel="noreferrer noopener" target="_blank">man-in-the-middle or man-in-the-browser</a> proxies to intercept and obtain the MFA codes.</p>
+
+
+
+<p class="wp-block-paragraph">A <a href="https://www.sentinelone.com/vulnerability-database/cve-2025-25227/">Joomla compromise from last year</a> provides an example. Because numerous websites don’t enforce session inactivity time limits, attackers could use endpoints that had received prior authentication and steal cookies to bypass MFA. “The authorization process does not have a way of knowing whether the current holder of that access control token was the legitimate user or ever successfully authenticated. This key fact is often used by hackers to compromise MFA,” KnowBe4’s researchers wrote in their report.</p>
+
+
+
+<h2 class="wp-block-heading" id="targeting-weak-authentication">Targeting weak authentication</h2>
+
+
+
+<p class="wp-block-paragraph">Targeting non-MFA users and applications with weak passwords is another common threat modality that can operate across the entire computing spectrum. While MFA adoption has improved, it still is far from universal, and attackers count on finding those unprotected places and users to target their efforts accordingly.</p>
+
+
+
+<p class="wp-block-paragraph">A few years ago Akira ransomware threat actors <a href="https://blogs.cisco.com/security/akira-ransomware-targeting-vpns-without-multi-factor-authentication" rel="noreferrer noopener" target="_blank">infiltrated organizations using Cisco VPNs</a> that were not configured for MFA, where they could use brute force to obtain user credentials. Going back to the 2021 Colonial Pipeline attack, analysts found it was caused by compromising <a href="https://www.reuters.com/business/colonial-pipeline-ceo-tells-senate-cyber-defenses-were-compromised-ahead-hack-2021-06-08/" rel="noreferrer noopener" target="_blank">a single password used on a legacy VPN that wasn’t running any MFA</a>.</p>
+
+
+
+<p class="wp-block-paragraph">Using other service accounts that may have been once used by administrators or by users who have either forgotten them or left the company are also a common pathway for these types of compromises. There are also cases of taking advantage of already-authenticated IP addresses or devices, or direct attacks on cellular networks, or setting up proxy servers to intercept MFA codes.</p>
+
+
+
+<h2 class="wp-block-heading" id="strategies-to-stop-mfa-attacks">Strategies to stop MFA attacks</h2>
+
+
+
+<p class="wp-block-paragraph">Given all these exploits, MFA needs attention to detail to ensure security. Here are a few tips for ensuring your MFA strategy will be successful.</p>
+
+
+
+<h3 class="wp-block-heading" id="1-understand-what-youre-trying-to-protect">1. Understand what you’re trying to protect</h3>
+
+
+
+<p class="wp-block-paragraph">First, security teams must understand the resources they seek to protect from compromise. “For example, cyber threat actors often target email systems, file servers, and remote access systems to gain access to an organization’s data, along with trying to compromise identity servers like Active Directory, which would allow them to create new accounts or take control of user accounts,” <a href="https://www.cisa.gov/sites/default/files/publications/fact-sheet-implementing-phishing-resistant-mfa-508c.pdf" rel="noreferrer noopener" target="_blank">according to this CISA fact sheet</a>.</p>
+
+
+
+<p class="wp-block-paragraph">CISA recommends systems that support <a href="https://www.csoonline.com/article/574265/why-it-might-be-time-to-consider-using-fido-based-authentication-devices.html" target="_blank">FIDO</a> protocols for the first recipients of MFA protection. This includes using hardware keys, better biometric controls, and setting up passwordless access for the most sensitive applications.</p>
+
+
+
+<p class="wp-block-paragraph">CISA’s fact sheet came out more than three years ago, and I feel its recommendations don’t go far enough: Better MFA should be enterprise wide.</p>
+
+
+
+<p class="wp-block-paragraph">Kevin Surace, CEO of biometric authentication provider Token.com, tells CSO: <em>“</em>We moved to MFA, and [the attackers] moved with us.” This means that enterprise security managers must up their game as well.</p>
+
+
+
+<p class="wp-block-paragraph">“There are some MFA methods without biometrics so it’s not as secure, as it doesn’t guarantee the person, just possession,” Surace says. “While it technically works short term, it’s not the end game. We will all be given services like Zoom and banking that will require real live biometrics to verify identity.”</p>
+
+
+
+<p class="wp-block-paragraph">One example is when <a href="https://entra.microsoft.com/blog/2025/02/security-updates-mfa-bypass/">Microsoft introduced conditional access and risk-based authentication</a> to combat advanced MFA bypass techniques such as token theft and session hijacking, reflecting its ongoing efforts to strengthen identity security.</p>
+
+
+
+<h3 class="wp-block-heading" id="2-get-adaptive-with-authentication">2. Get adaptive with authentication</h3>
+
+
+
+<p class="wp-block-paragraph">Next, all authentications should be real-time, continuous risk-based assessments, and they should dynamically step up security requirements automatically based on what users are doing at any given moment.</p>
+
+
+
+<p class="wp-block-paragraph">The old ways of using a single access control moment when a user logs in need to be replaced accordingly. There are a <a href="https://www.csoonline.com/article/572123/12-risk-based-authentication-tools-compared.html" target="_blank">number of authentication products that couple MFA into their adaptive authentication processes</a>, and combine with the above hardened methods, such as asking for a passwordless verification when you want to add a new payee on your bank account.</p>
+
+
+
+<h3 class="wp-block-heading" id="3-button-down-access-rights">3. Button down access rights</h3>
+
+
+
+<p class="wp-block-paragraph">A companion effort should be a careful assessment and frequent review of user and application access rights.</p>
+
+
+
+<p class="wp-block-paragraph">IT security staff should ensure employees only receive access to limited data needed to accomplish their job responsibilities. But this is not always simple to accomplish, as roles and responsibilities change. Still, over the years it is common to see numerous users who are overprovisioned access rights without any subsequent auditing or reduction in these rights.</p>
+
+
+
+<h3 class="wp-block-heading" id="4-conduct-mfa-workflow-analysis-regularly">4. Conduct MFA workflow analysis regularly</h3>
+
+
+
+<p class="wp-block-paragraph">All these points should be part of an overall MFA workflow analysis, which really isn’t anything new. <a href="https://www.akamai.com/blog/trends/keeping-up-with-the-botnets" rel="noreferrer noopener" target="_blank">Gerhard Giese from Akamai points this out in a 2021 blog post</a>, when he talks about how MFA doesn’t always prevent <a href="https://www.csoonline.com/article/567905/credential-stuffing-explained-how-to-prevent-detect-and-defend-against-it.html" target="_blank">credential stuffing</a>.</p>
+
+
+
+<p class="wp-block-paragraph">Giese says IT managers need to “re-examine your authentication workflows and login screens to make sure an attacker cannot uncover valid credentials by interrogating the web server’s response and implement a bot management solution to make sure you are not making things easier for the bad guys.”</p>
+
+
+
+<h3 class="wp-block-heading" id="5-review-your-password-reset-workflow">5. Review your password reset workflow</h3>
+
+
+
+<p class="wp-block-paragraph">One aspect that seems to get historically neglected is the password reset workflow process, which is why it is a common target of attackers.</p>
+
+
+
+<p class="wp-block-paragraph">“Surprisingly, there are many websites that don’t have a second layer of verification for their 2FA reset password process, or they offer MFA but do not enforce users to employ it,” says <a href="https://www.mitnicksecurity.com/blog/bypass-2fa" rel="noreferrer noopener" target="_blank">Mitnick Security in this blog post</a>. Having better MFA, along with limits on unsuccessful login attempts and password reuse can also help.</p>
+
+
+
+<h3 class="wp-block-heading" id="6-ensure-the-security-of-high-value-targets">6. Ensure the security of high-value targets</h3>
+
+
+
+<p class="wp-block-paragraph">Finally, you should assess and locate users who might be high-value targets.</p>
+
+
+
+<p class="wp-block-paragraph">“Every organization has a small number of user accounts that have additional access or privileges, which are especially valuable to cyber threat actors,” CISA writes in its report. Examples include IT and system administrators, staff attorneys, and HR managers. Consider these groups for an initial rollout phase of your MFA project.</p>
+
+
+
+<p class="wp-block-paragraph">MFA technology should be a part of corporate security’s critical infrastructure. Recent attacks, as well as urging from experts across government and the private sector, should provide further impetus for intelligent implementations.</p>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔴 Ransomware report: VPNs in the crosshairs, AI attacks</title>
+  <link>https://www.csoonline.com/article/4201372/ransomware-report-vpns-in-the-crosshairs-ai-attacks.html</link>
+  <pubDate>Wed, 29 Jul 2026 07:30:00 +0000</pubDate>
+  <source>CSO Online</source>
+  <description><![CDATA[<b>Why this matters: Elevated ransomware risk — validate backups and endpoint defenses.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<p class="wp-block-paragraph">Ransomware attacks were up year over year in June for the fourth consecutive month, according to the NCC Group, though attacks increased just 3% in Q2 2026 versus the previous quarter. VPNs and other network edge devices continue to be prime initial access targets. And an autonomous AI agent enters the fray.</p>
+
+
+
+<p class="wp-block-paragraph">Here is a rundown of recent ransomware developments.</p>
+
+
+
+<h3 class="wp-block-heading" id="industries-at-risk">Industries at risk</h3>
+
+
+
+<p class="wp-block-paragraph">NCC Group reports that ransomware gangs targeted the industrials sector (30%) above all other verticals in Q2, followed by the consumer discretionary industry (24%) and information technology (11%). Healthcare (10%) was the fourth most targeted industry, with an April attack on Signature Healthcare in Massachusetts <a href="https://www.securityweek.com/massachusetts-hospital-diverts-ambulances-as-cyberattack-causes-disruption/">disrupting ambulance services</a>, forcing cancer treatment cancellations, and leading Brockton Hospital to <a href="https://www.hipaajournal.com/signature-healthcare-brockton-hospital-cyberattack/">use downtime procedures for several weeks</a>.</p>
+
+
+
+<p class="wp-block-paragraph">Government entities experienced 89 confirmed and 98 unconfirmed ransomware attacks in the first half of 2026, according to a <a href="https://www.comparitech.com/news/government-ransomware-roundup-h1-2026-stats-on-attacks-ransoms-and-data-breaches/">report from Comparitech</a>. US government agencies were targeted the most, accounting for 31% of those attacks, though at a rate 23% less than 2H 2025. Industries under increasing attack over the past six months include transportation (52%), healthcare (35%), retail (28%), and technology (23%), Comparitech found.</p>
+
+
+
+<h3 class="wp-block-heading" id="most-active-threat-actors">Most active threat actors</h3>
+
+
+
+<p class="wp-block-paragraph">Ransomware groups Qilin and The Gentlemen came in No. 1 and No. 2 in both NCC Group’s list for most attacks in Q2 2026 and Comparitech’s list for 1H 2026, though Comparitech notes that The Gentlemen, reportedly a Qilin splinter group, topped Qilin in victims claimed on their respective data leak sites for the month of June. Cyber resilience platform vendor Halcyon recently called The Gentlemen “<a href="https://www.halcyon.ai/ransomware-research-reports/threat-assessment-the-gentlemen-ransomware-group">one of the fastest-scaling ransomware threats</a>” it has tracked.</p>
+
+
+
+<p class="wp-block-paragraph">Akira, DragonForce, Lockbit, and INC rounded out both lists’ top 6 most active threat ransomware actors. NCC Group also singled out KryBit as a notable emerging group — first observed in March 2026 — that operates as ransomware-as-a-service specializing in targeting Windows, Linux, VMware ESXi, and NAS devices. According to Halcyon, KryBit’s activity model <a href="https://www.halcyon.ai/ransomware-research-reports/0apt-vs-krybit-ransomware-actors-list-opposing-operators-as-victims">gives the group notable growth potential</a>.</p>
+
+
+
+<h3 class="wp-block-heading" id="ttp-trends">TTP trends</h3>
+
+
+
+<p class="wp-block-paragraph">Both Qilin and The Gentlemen have been observed deploying “EDR killer” tools of late, according to reports from <a href="https://blog.talosintelligence.com/qilin-edr-killer/">Cisco Talos</a> and <a href="https://www.csoonline.com/article/4187329/threat-actor-adds-advanced-edr-killer-tools-to-ransomware-as-a-service-platform.html">ESET</a>, respectively.</p>
+
+
+
+<p class="wp-block-paragraph">The tools, which are not new, attempt to bypass or disable endpoint security agents on PCs and servers. Notable, however, is that affiliates must develop or source their own EDR killers, a significant undertaking given the breadth of platforms used by defenders and thus a sign of growing threat group sophistication.</p>
+
+
+
+<p class="wp-block-paragraph">Network edge vulnerabilities and credentials, VPNs in particular, are being increasingly exploited by ransomware groups, according to NCC Group, which notes Akira, Qilin, and The Gentlemen as heavy users of these primary vectors. Targeted devices include systems from Fortinet, Citrix, and Check Point. Arctic Wolf recently announced an ongoing Qilin campaign <a href="https://arcticwolf.com/resources/blog/exploitation-of-cve-2026-0257-leads-to-qilin-ransomware/">versus a vulnerability in Palo Alto Networks’ GlobalProtect VPN</a>.</p>
+
+
+
+<h3 class="wp-block-heading" id="ai-watch">AI watch</h3>
+
+
+
+<p class="wp-block-paragraph">Researchers from Sysdig detailed the operations of an autonomous AI agent, dubbed JadePuffer, that completed its entire intrusion chain, from initial access to database extortion, <a href="https://www.csoonline.com/article/4193195/this-ai-agent-autonomously-hacked-a-network-adapted-on-the-fly-and-demanded-a-ransom.html">using an LLM to adapt its actions</a> and execute more than 600 coordinated payloads. The agent harvested credentials, established persistence, and mapped internal services before encrypting configuration records, deleting the original tables, and leaving behind a Bitcoin ransom demand in what Sysdig researchers labeled “<a href="https://www.sysdig.com/blog/jadepuffer-agentic-ransomware-for-automated-database-extortion">the first documented case of agentic ransomware</a>.”</p>
+
+
+
+<h3 class="wp-block-heading" id="in-depth">In depth:</h3>
+
+
+
+<ul class="wp-block-list">
+<li><a href="https://www.csoonline.com/article/4201019/ransomware-groups-are-hammering-your-vulnerable-vpns.html">Ransomware groups increasingly hammer network edge for access</a></li>
+
+
+
+<li><a href="https://www.csoonline.com/article/4195470/microsoft-uncovers-gigawiper-a-backdoor-designed-for-destruction-on-demand.html">Microsoft uncovers GigaWiper, a backdoor designed for destruction on demand</a></li>
+
+
+
+<li><a href="https://www.csoonline.com/article/4193699/why-the-gentlemen-ransomware-is-a-test-of-identity-and-recovery-controls.html">Why The Gentlemen ransomware is a test of identity and recovery controls</a></li>
+
+
+
+<li><a href="https://www.csoonline.com/article/4193195/this-ai-agent-autonomously-hacked-a-network-adapted-on-the-fly-and-demanded-a-ransom.html">This AI agent autonomously hacked a network, adapted on the fly, and demanded a ransom</a></li>
+
+
+
+<li><a href="https://www.csoonline.com/article/4192741/new-citrixbleed-like-netscaler-flaw-sees-exploit-attempts-in-the-wild.html">New CitrixBleed-like NetScaler flaw sees exploit attempts in the wild</a></li>
+
+
+
+<li><a href="https://www.csoonline.com/article/4189132/be-on-the-lookout-for-mistic-a-new-backdoor-used-by-ransomware-broker.html">Be on the lookout for Mistic, a new backdoor used by ransomware broker</a></li>
+
+
+
+<li><a href="https://www.csoonline.com/article/4186790/fortibleed-campaign-exposes-75000-fortinet-firewalls-worldwide.html">FortiBleed campaign exposes 75,000 Fortinet firewalls worldwide</a></li>
+
+
+
+<li><a href="https://www.csoonline.com/article/4182898/check-point-warns-of-ransomware-linked-attacks-exploiting-outdated-vpn-protocol.html">Check Point warns of ransomware-linked attacks exploiting outdated VPN protocol</a></li>
+</ul>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+</item>
+
 <item>
   <title>🔵 Sources: Google DeepMind has reassigned the majority of the original authors of the AlphaFold papers; about a quarter of the papers&#x27; full-time authors have left (Madhumita Murgia/Financial Times)</title>
   <link>https://www.techmeme.com/260729/p2#a260729p2</link>
@@ -12,7 +370,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.ft.com/content/61b2953d-ee0d-45de-af6e-a9c1cf524b33?accessToken=zwAAAZ-saIC9kc9hspU97g1F3tOvbqnBz1JLMw.MEUCIDABGXDaUtwfjiMl_j0Ohk_6Hx0HjyE1Uzp_OG2oNaMlAiEA6DTjVNTJxSj7jaq_c69FedmGnNqmN-lSINe3xyIgX4A&amp;sharetype=gift&amp;token=56cb59cc-cc42-4a97-9807-70b1d6540680"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260729/i2.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260729/p2#a260729p2" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Madhumita Murgia / <a href="https://www.ft.com/">Financial Times</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.ft.com/content/61b2953d-ee0d-45de-af6e-a9c1cf524b33?accessToken=zwAAAZ-saIC9kc9hspU97g1F3tOvbqnBz1JLMw.MEUCIDABGXDaUtwfjiMl_j0Ohk_6Hx0HjyE1Uzp_OG2oNaMlAiEA6DTjVNTJxSj7jaq_c69FedmGnNqmN-lSINe3xyIgX4A&amp;sharetype=gift&amp;token=56cb59cc-cc42-4a97-9807-70b1d6540680">Sources: Google DeepMind has reassigned the majority of the original authors of the AlphaFold papers; about a quarter of the papers' full-time authors have left</a></b></span>&nbsp; &mdash;&nbsp; Landmark project that solved protein folding gives way to a wider race to build AI systems for scientific discovery</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.ft.com/content/61b2953d-ee0d-45de-af6e-a9c1cf524b33?accessToken=zwAAAZ-saIC9kc9hspU97g1F3tOvbqnBz1JLMw.MEUCIDABGXDaUtwfjiMl_j0Ohk_6Hx0HjyE1Uzp_OG2oNaMlAiEA6DTjVNTJxSj7jaq_c69FedmGnNqmN-lSINe3xyIgX4A&amp;sharetype=gift&amp;token=56cb59cc-cc42-4a97-9807-70b1d6540680">Sources: Google DeepMind has reassigned the majority of the original authors of the AlphaFold papers; about a quarter of the papers' full-time authors have left</a></b></span>&nbsp; &mdash;&nbsp; Landmark project that solved protein folding gives way to a wider race to build AI systems for scientific discovery</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
 </item>
 
 <item>
@@ -21,7 +379,7 @@
   <pubDate>Wed, 29 Jul 2026 04:45:01 +0000</pubDate>
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><p><a href="https://www.techmeme.com/260729/p1#a260729p1" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="https://x.com/openai">@openai</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://x.com/openai/status/2082263717916586117">OpenAI releases an &ldquo;early&rdquo; version of the open-source Codex Security CLI for scanning repositories, verifying fixes, adding CI/CD security checks, and more</a></b></span>&nbsp; &mdash;&nbsp; We quietly released the open-source Codex Security CLI, but Hacker News found it before we had a chance to share it here... You can now use it to scan repositories, track findings across runs, verify fixes, and add security checks to CI/CD. This is an early release, and we're listening to your feedback as we continue improving it.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://x.com/openai/status/2082263717916586117">OpenAI releases an &ldquo;early&rdquo; version of the open-source Codex Security CLI for scanning repositories, verifying fixes, adding CI/CD security checks, and more</a></b></span>&nbsp; &mdash;&nbsp; We quietly released the open-source Codex Security CLI, but Hacker News found it before we had a chance to share it here... You can now use it to scan repositories, track findings across runs, verify fixes, and add security checks to CI/CD. This is an early release, and we're listening to your feedback as we continue improving it.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
 </item>
 
 <item>
@@ -31,27 +389,15 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/><a href="https://www.ft.com/content/af4fa147-7fdd-42eb-8eb2-3f624a89a4e4?accessToken=zwAAAZ-sanlskdOvT6FHf91C69OOsj9iSomk5A.MEQCIEaTp2G5DgLhXA4ltTNuoo77RpDvXbvwqf-w2UXjqMTUAiALH1L5jNJJu6QLe7xZbeWKNVRs2ztPEMt10vsVjiv02g&amp;sharetype=gift&amp;token=eec2d779-e254-4609-b44e-77dc88732c7c"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260728/i54.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260728/p54#a260728p54" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Hannah Murphy / <a href="https://www.ft.com/">Financial Times</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.ft.com/content/af4fa147-7fdd-42eb-8eb2-3f624a89a4e4?accessToken=zwAAAZ-sanlskdOvT6FHf91C69OOsj9iSomk5A.MEQCIEaTp2G5DgLhXA4ltTNuoo77RpDvXbvwqf-w2UXjqMTUAiALH1L5jNJJu6QLe7xZbeWKNVRs2ztPEMt10vsVjiv02g&amp;sharetype=gift&amp;token=eec2d779-e254-4609-b44e-77dc88732c7c">Mark Zuckerberg says the US should not ban Chinese AI models and that AI model peer reviews or vetting could be positive if &ldquo;done well with thoughtful people&rdquo;</a></b></span>&nbsp; &mdash;&nbsp; Meta chief warns against &lsquo;regulatory capture&rsquo; of American rules on the technology&nbsp; &mdash;&nbsp; Mark Zuckerberg &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.ft.com/content/af4fa147-7fdd-42eb-8eb2-3f624a89a4e4?accessToken=zwAAAZ-sanlskdOvT6FHf91C69OOsj9iSomk5A.MEQCIEaTp2G5DgLhXA4ltTNuoo77RpDvXbvwqf-w2UXjqMTUAiALH1L5jNJJu6QLe7xZbeWKNVRs2ztPEMt10vsVjiv02g&amp;sharetype=gift&amp;token=eec2d779-e254-4609-b44e-77dc88732c7c">Mark Zuckerberg says the US should not ban Chinese AI models and that AI model peer reviews or vetting could be positive if &ldquo;done well with thoughtful people&rdquo;</a></b></span>&nbsp; &mdash;&nbsp; Meta chief warns against &lsquo;regulatory capture&rsquo; of American rules on the technology&nbsp; &mdash;&nbsp; Mark Zuckerberg &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
-  <title>🔵 Doctors and researchers worry that FDA-related wagers on Kalshi and Polymarket could compromise drug development tests and erode public trust in the process (Rebecca Robbins/New York Times)</title>
-  <link>https://www.techmeme.com/260728/p53#a260728p53</link>
-  <pubDate>Wed, 29 Jul 2026 02:25:02 +0000</pubDate>
-  <source>Techmeme</source>
-  <description><![CDATA[<b>Why this matters: Regulatory/compliance signal — assess applicability and remediation timeline.</b><br/><a href="https://www.nytimes.com/2026/07/28/business/kalshi-polymarket-prediction-market-drugs.html?unlocked_article_code=1.1FA.v7pw.l7VK2Yjz9HVK&amp;smid=url-share"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260728/i53.jpg" vspace="4" /></a>
-<p><a href="https://www.techmeme.com/260728/p53#a260728p53" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Rebecca Robbins / <a href="https://www.nytimes.com/">New York Times</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.nytimes.com/2026/07/28/business/kalshi-polymarket-prediction-market-drugs.html?unlocked_article_code=1.1FA.v7pw.l7VK2Yjz9HVK&amp;smid=url-share">Doctors and researchers worry that FDA-related wagers on Kalshi and Polymarket could compromise drug development tests and erode public trust in the process</a></b></span>&nbsp; &mdash;&nbsp; On the betting websites Kalshi and Polymarket, people can now wager on whether the Food and Drug Administration will decide this year &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Anthropic faces backlash from Silicon Valley partners, founders, and researchers for competitive tactics, guardrails, and lack of support for open-weight models (Wall Street Journal)</title>
-  <link>https://www.techmeme.com/260728/p52#a260728p52</link>
-  <pubDate>Wed, 29 Jul 2026 01:50:05 +0000</pubDate>
-  <source>Techmeme</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://www.wsj.com/tech/ai/a-backlash-against-anthropic-is-brewing-in-silicon-valley-3b3ddc80?st=HcuwR3&amp;reflink=desktopwebshare_permalink"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260728/i52.jpg" vspace="4" /></a>
-<p><a href="https://www.techmeme.com/260728/p52#a260728p52" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="https://www.wsj.com/">Wall Street Journal</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.wsj.com/tech/ai/a-backlash-against-anthropic-is-brewing-in-silicon-valley-3b3ddc80?st=HcuwR3&amp;reflink=desktopwebshare_permalink">Anthropic faces backlash from Silicon Valley partners, founders, and researchers for competitive tactics, guardrails, and lack of support for open-weight models</a></b></span>&nbsp; &mdash;&nbsp; The AI pioneer faces growing distrust from startup founders and researchers over competitive tactics, guardrails and lack of support for open-weight models</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+  <title>🔵 America bans imported robots due to supply chain and security risks</title>
+  <link>https://www.theregister.com/security/2026/07/29/america-bans-imported-robots-due-to-supply-chain-and-security-risks/5280145</link>
+  <pubDate>Wed, 29 Jul 2026 02:16:31 +0000</pubDate>
+  <source>The Register</source>
+  <description><![CDATA[<b>Why this matters: Supply chain risk — audit third-party dependencies and vendor access.</b><br/>Docs point to China’s Unitree as prime example of the foreign clanker threat<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
@@ -96,7 +442,7 @@
 
 
 <p class="wp-block-paragraph">FortiGate 1200G is expected to be available in Q3 2026.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
 </item>
 
 <item>
@@ -263,7 +609,7 @@
 
 
 <p class="wp-block-paragraph"></p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
 </item>
 
 <item>
@@ -371,7 +717,7 @@
 
 
 <p class="wp-block-paragraph">For a deeper dive into the five pillars and a practical framework for modernizing your platform, read the full whitepaper: <a href="https://brcm.tech/PE2WhitePaper"><em>Platform Engineering 2.0: An Evolution for the AI Era</em></a>, co-authored by Broadcom and PlatformEngineering.org. </p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
 </item>
 
 <item>
@@ -381,7 +727,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: Credential/phishing risk — reinforce MFA and user awareness training.</b><br/><a href="https://www.wired.com/story/openais-rogue-ai-agent-hacked-more-than-just-hugging-face/"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260728/i51.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260728/p51#a260728p51" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="http://www.wired.com/">Wired</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.wired.com/story/openais-rogue-ai-agent-hacked-more-than-just-hugging-face/">OpenAI says the rogue AI that breached Hugging Face used exposed credentials from &ldquo;four accounts&rdquo; tied to four &ldquo;publicly available&rdquo; third-party services</a></b></span>&nbsp; &mdash;&nbsp; In a new disclosure, OpenAI says its agent used exposed logins to gain access to at least four &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.wired.com/story/openais-rogue-ai-agent-hacked-more-than-just-hugging-face/">OpenAI says the rogue AI that breached Hugging Face used exposed credentials from &ldquo;four accounts&rdquo; tied to four &ldquo;publicly available&rdquo; third-party services</a></b></span>&nbsp; &mdash;&nbsp; In a new disclosure, OpenAI says its agent used exposed logins to gain access to at least four &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
 </item>
 
 <item>
@@ -513,7 +859,7 @@
 
 
 <p class="wp-block-paragraph">For a comprehensive framework on embedding security into the AI-era platform, read the full whitepaper: <a href="https://brcm.tech/PE2WhitePaper"><em>Platform Engineering 2.0: An Evolution for the AI Era</em></a>, co-authored by Broadcom and PlatformEngineering.org. </p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
 </item>
 
 <item>
@@ -638,37 +984,7 @@
 
 
 <p class="wp-block-paragraph">“Testing confirms features still work, but it rarely rechecks whether an old internal-only assumption survived the move,” he said.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 xAI sues Minnesota&#x27;s AG over a state law banning apps and sites that create fake, sexualized pictures of individuals, claiming it violates the First Amendment (Riley Moser/CBS News)</title>
-  <link>https://www.techmeme.com/260728/p50#a260728p50</link>
-  <pubDate>Wed, 29 Jul 2026 00:30:00 +0000</pubDate>
-  <source>Techmeme</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://www.cbsnews.com/minnesota/news/elon-musk-xai-sues-minnesota-law-banning-ai-nudification/"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260728/i50.jpg" vspace="4" /></a>
-<p><a href="https://www.techmeme.com/260728/p50#a260728p50" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Riley Moser / <a href="http://www.cbsnews.com/">CBS News</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.cbsnews.com/minnesota/news/elon-musk-xai-sues-minnesota-law-banning-ai-nudification/">xAI sues Minnesota's AG over a state law banning apps and sites that create fake, sexualized pictures of individuals, claiming it violates the First Amendment</a></b></span>&nbsp; &mdash;&nbsp; Billionaire Elon Musk's artificial intelligence company is suing Minnesota over a first-of-its-kind law that bans apps and websites &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 SK Hynix reports Q2 revenue up 257% YoY to ~$54.34B, below ~$57.56B est., and operating profit up 557% YoY to ~$41.48B, below analyst estimate of ~$43.85B (Jenny Lee/CNBC)</title>
-  <link>https://www.techmeme.com/260728/p49#a260728p49</link>
-  <pubDate>Wed, 29 Jul 2026 00:25:06 +0000</pubDate>
-  <source>Techmeme</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://www.cnbc.com/2026/07/29/sk-hynix-earnings-profit-revenue-hbm-memory.html"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260728/i49.jpg" vspace="4" /></a>
-<p><a href="https://www.techmeme.com/260728/p49#a260728p49" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Jenny Lee / <a href="http://www.cnbc.com/">CNBC</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.cnbc.com/2026/07/29/sk-hynix-earnings-profit-revenue-hbm-memory.html">SK Hynix reports Q2 revenue up 257% YoY to ~$54.34B, below ~$57.56B est., and operating profit up 557% YoY to ~$41.48B, below analyst estimate of ~$43.85B</a></b></span>&nbsp; &mdash;&nbsp; SK Hynix shares nosedived on Wednesday as exponential second-quarter earnings and revenue growth still failed to satisfy analysts &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Security- and AI-related startups have raised $855M across more than 150 reported seed-stage rounds this year, on track for an all-time high (Joanna Glasner/Crunchbase News)</title>
-  <link>https://www.techmeme.com/260728/p48#a260728p48</link>
-  <pubDate>Tue, 28 Jul 2026 23:40:02 +0000</pubDate>
-  <source>Techmeme</source>
-  <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><a href="https://news.crunchbase.com/cybersecurity/seed-trends-ai-security-startup-funding-2026/"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260728/i48.jpg" vspace="4" /></a>
-<p><a href="https://www.techmeme.com/260728/p48#a260728p48" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Joanna Glasner / <a href="http://news.crunchbase.com/">Crunchbase News</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://news.crunchbase.com/cybersecurity/seed-trends-ai-security-startup-funding-2026/">Security- and AI-related startups have raised $855M across more than 150 reported seed-stage rounds this year, on track for an all-time high</a></b></span>&nbsp; &mdash;&nbsp; Seed funding trends tell us a lot about how savvy investors see the future unfolding.&nbsp; And lately, the data tells us there's great concern about cybersecurity risks posed by AI.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
 </item>
 
 <item>
@@ -678,47 +994,15 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://www.reuters.com/legal/litigation/tech-employees-call-us-backed-global-effort-manage-risks-advanced-ai-2026-07-28/"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260728/i47.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260728/p47#a260728p47" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Anhata Rooprai / <a href="http://www.reuters.com/">Reuters</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.reuters.com/legal/litigation/tech-employees-call-us-backed-global-effort-manage-risks-advanced-ai-2026-07-28/">OpenAI and Anthropic release statements in support of the &ldquo;Pacing the Frontier&rdquo; initiative; Anthropic says Dario Amodei and several co-founders have signed it</a></b></span>&nbsp; &mdash;&nbsp; More than 1,100 employees from leading tech firms on Tuesday urged the U.S. government to support an international effort &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.reuters.com/legal/litigation/tech-employees-call-us-backed-global-effort-manage-risks-advanced-ai-2026-07-28/">OpenAI and Anthropic release statements in support of the &ldquo;Pacing the Frontier&rdquo; initiative; Anthropic says Dario Amodei and several co-founders have signed it</a></b></span>&nbsp; &mdash;&nbsp; More than 1,100 employees from leading tech firms on Tuesday urged the U.S. government to support an international effort &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
 </item>
 
 <item>
-  <title>🔵 NXP reports Q2 revenue up 19% YoY to $3.5B, vs. $3.46B est., as it struggled to impress investors with a generally upbeat Q3 forecast; NXPI down 5%+ after hours (Christina Kyriasoglou/Bloomberg)</title>
-  <link>https://www.techmeme.com/260728/p46#a260728p46</link>
-  <pubDate>Tue, 28 Jul 2026 21:55:03 +0000</pubDate>
-  <source>Techmeme</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://www.bloomberg.com/news/articles/2026-07-28/nxp-s-upbeat-revenue-forecast-fails-to-impress-investors"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260728/i46.jpg" vspace="4" /></a>
-<p><a href="https://www.techmeme.com/260728/p46#a260728p46" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Christina Kyriasoglou / <a href="https://www.bloomberg.com/">Bloomberg</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/articles/2026-07-28/nxp-s-upbeat-revenue-forecast-fails-to-impress-investors">NXP reports Q2 revenue up 19% YoY to $3.5B, vs. $3.46B est., as it struggled to impress investors with a generally upbeat Q3 forecast; NXPI down 5%+ after hours</a></b></span>&nbsp; &mdash;&nbsp; NXP Semiconductors NV struggled to impress investors with a generally upbeat forecast for the current period, the latest sign of deepening concern about the chip sector.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
-</item>
-
-<item>
-  <title>🔴 Sources: the OpenAI agent that breached Hugging Face also compromised a customer at AI infrastructure company Modal Labs (Reuters)</title>
-  <link>https://www.techmeme.com/260728/p45#a260728p45</link>
-  <pubDate>Tue, 28 Jul 2026 21:45:01 +0000</pubDate>
-  <source>Techmeme</source>
-  <description><![CDATA[<b>Why this matters: Potential data exposure — check monitoring and incident response readiness.</b><br/><a href="https://www.reuters.com/business/openais-rogue-agent-compromised-an-account-second-tech-firm-sources-say-2026-07-28/"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260728/i45.jpg" vspace="4" /></a>
-<p><a href="https://www.techmeme.com/260728/p45#a260728p45" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="http://www.reuters.com/">Reuters</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.reuters.com/business/openais-rogue-agent-compromised-an-account-second-tech-firm-sources-say-2026-07-28/">Sources: the OpenAI agent that breached Hugging Face also compromised a customer at AI infrastructure company Modal Labs</a></b></span>&nbsp; &mdash;&nbsp; The rogue agent that escaped from OpenAI and went on a days-long hacking spree at the AI firm Hugging Face also compromised a customer at a second tech company &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 8h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Bitcoin miner and AI infrastructure company Ionic Digital surged more than 25% to nearly $63 in its Nasdaq debut, giving it an implied valuation of ~$2.75B (Kyle Baird/The Block)</title>
-  <link>https://www.techmeme.com/260728/p44#a260728p44</link>
-  <pubDate>Tue, 28 Jul 2026 21:20:01 +0000</pubDate>
-  <source>Techmeme</source>
-  <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><a href="https://www.theblock.co/post/409945/ionic-digital-jumps-22-nasdaq-debut-celsius-bitcoin-mining-assets-ai-infrastructure"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260728/i44.jpg" vspace="4" /></a>
-<p><a href="https://www.techmeme.com/260728/p44#a260728p44" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Kyle Baird / <a href="https://www.theblock.co/">The Block</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.theblock.co/post/409945/ionic-digital-jumps-22-nasdaq-debut-celsius-bitcoin-mining-assets-ai-infrastructure">Bitcoin miner and AI infrastructure company Ionic Digital surged more than 25% to nearly $63 in its Nasdaq debut, giving it an implied valuation of ~$2.75B</a></b></span>&nbsp; &mdash;&nbsp; Quick Take&nbsp; &mdash; Ionic Digital was formed from Celsius Mining's assets and later took direct control of its sites from Hut 8.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 8h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Seagate reports Q4 revenue up 49% YoY to $3.6B, vs. $3.5B est., adjusted earnings of $5.71 a share, above analysts&#x27; forecast of $5.10; STX jumps 6%+ after hours (Nate Wolf/Barron&#x27;s Online)</title>
-  <link>https://www.techmeme.com/260728/p42#a260728p42</link>
-  <pubDate>Tue, 28 Jul 2026 20:45:01 +0000</pubDate>
-  <source>Techmeme</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.barrons.com/articles/seagate-earnings-stock-price-57669b63?st=e1hAsp&amp;reflink=desktopwebshare_permalink"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260728/i42.jpg" vspace="4" /></a>
-<p><a href="https://www.techmeme.com/260728/p42#a260728p42" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Nate Wolf / <a href="http://online.barrons.com/public/main/">Barron's Online</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.barrons.com/articles/seagate-earnings-stock-price-57669b63?st=e1hAsp&amp;reflink=desktopwebshare_permalink">Seagate reports Q4 revenue up 49% YoY to $3.6B, vs. $3.5B est., adjusted earnings of $5.71 a share, above analysts' forecast of $5.10; STX jumps 6%+ after hours</a></b></span>&nbsp; &mdash;&nbsp; Choose Barron's as a preferred source of financial news&nbsp; &mdash;&nbsp; Key Points&nbsp; &mdash;&nbsp; Seagate Technology stock jumped &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
+  <title>🟠 Looks like JFrog&#x27;s 0-days let OpenAI&#x27;s models hack Hugging Face</title>
+  <link>https://www.theregister.com/security/2026/07/28/looks-like-jfrogs-0-days-let-openais-models-hack-hugging-face/5280001</link>
+  <pubDate>Tue, 28 Jul 2026 22:01:53 +0000</pubDate>
+  <source>The Register</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>The vendor won't confirm or deny<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 10h ago]]></description>
 </item>
 
 <item>
@@ -811,7 +1095,23 @@
 
 
 <p class="wp-block-paragraph">Machine-speed attacks require machine-speed defenses. Future-proofing your enterprise requires a unified cloud architecture, aligned leadership, and identity-centric controls. Learn how Palo Alto Networks and Accenture can help you build a future-proof network at <a href="https://www.paloaltonetworks.com/partners/nextwave-for-gsi/accenture-and-palo-alto-networks.html">paloaltonetworks.com/accenture</a>.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 12h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 War machines can run amok with AI in control</title>
+  <link>https://www.theregister.com/ai-and-ml/2026/07/28/war-machines-can-run-amok-with-ai-in-control/5279937</link>
+  <pubDate>Tue, 28 Jul 2026 19:51:08 +0000</pubDate>
+  <source>The Register</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Tour of the AI kill chain maps the risks of ubiquitous surveillance and flawed algorithms<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 12h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Microsoft and Wiz mind-meld agents catch more than 90% of bugs</title>
+  <link>https://www.theregister.com/security/2026/07/28/microsoft-and-wiz-mind-meld-agents-catch-more-than-90-of-bugs/5279914</link>
+  <pubDate>Tue, 28 Jul 2026 19:21:01 +0000</pubDate>
+  <source>The Register</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Secret to their success: Using the right model for the right security job<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
 </item>
 
 <item>
@@ -819,7 +1119,7 @@
   <link>https://www.zdnet.com/article/ai-model-release-tracker/</link>
   <pubDate>Tue, 28 Jul 2026 16:59:00 +0000</pubDate>
   <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Our AI Model Release Tracker keeps new models in context with their peers, so you know which are worth your time.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 12h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Our AI Model Release Tracker keeps new models in context with their peers, so you know which are worth your time.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 15h ago]]></description>
 </item>
 
 <item>
@@ -827,7 +1127,15 @@
   <link>https://www.zdnet.com/article/remap-copilot-key/</link>
   <pubDate>Tue, 28 Jul 2026 15:58:00 +0000</pubDate>
   <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/>Pressing the Copilot key on your laptop keyboard launches Copilot. But whether or not you use Microsoft's AI, you can remap the key to trigger a different feature.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/>Pressing the Copilot key on your laptop keyboard launches Copilot. But whether or not you use Microsoft's AI, you can remap the key to trigger a different feature.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 16h ago]]></description>
+</item>
+
+<item>
+  <title>🟠 AI-found bugs aren&#x27;t proving any easier to exploit despite the hype</title>
+  <link>https://www.theregister.com/security/2026/07/28/ai-found-bugs-arent-proving-any-easier-to-exploit-despite-the-hype/5279637</link>
+  <pubDate>Tue, 28 Jul 2026 15:26:41 +0000</pubDate>
+  <source>The Register</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>VulnCheck says fewer than 2% of AI-assisted vulnerability discoveries have been weaponized, casting doubt on claims frontier models are handing attackers a major advantage<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 17h ago]]></description>
 </item>
 
 <item>
@@ -835,7 +1143,7 @@
   <link>https://www.zdnet.com/article/ransomware-attacks-decline-business-4-best-defenses/</link>
   <pubDate>Tue, 28 Jul 2026 14:21:25 +0000</pubDate>
   <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: Elevated ransomware risk — validate backups and endpoint defenses.</b><br/>Did it look like the ransomware threat was receding last year? New research suggests it was more of a reshuffle - and recommends renewed vigilance.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 15h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Elevated ransomware risk — validate backups and endpoint defenses.</b><br/>Did it look like the ransomware threat was receding last year? New research suggests it was more of a reshuffle - and recommends renewed vigilance.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 18h ago]]></description>
 </item>
 
 <item>
@@ -908,7 +1216,7 @@
 
 
 <p class="wp-block-paragraph">“The simple question every security leader should be able to answer is: ‘What can an attacker reach right now?’” said <a href="https://www.linkedin.com/in/mukesh77/" rel="noreferrer noopener" target="_blank">Mukesh Gupta, chief product officer at Infoblox</a>. He argued that AI has made answering that question significantly harder by accelerating attacker reconnaissance, making continuous external visibility a key component of modern cybersecurity operations.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 16h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 19h ago]]></description>
 </item>
 
 <item>
@@ -1033,15 +1341,7 @@
 
 
 <p class="wp-block-paragraph"><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><a href="https://www.cio.com/expert-contributor-network/"><strong>Want to join?</strong></a></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 16h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 My 5 favorite Windows Insider features in 2026 so far</title>
-  <link>https://www.zdnet.com/article/my-5-favorite-windows-insider-features-in-2026-so-far/</link>
-  <pubDate>Tue, 28 Jul 2026 12:14:00 +0000</pubDate>
-  <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Microsoft's Windows 11 insider builds let you preview and try upcoming new features and settings. Here are my five favorites this year so far and how you can check them out.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 17h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 19h ago]]></description>
 </item>
 
 <item>
@@ -1162,7 +1462,7 @@
 
 
 <p class="wp-block-paragraph">“The ‘SaaSpocalypse’ will not begin when enterprises stop buying software,” he said. “It will begin when enterprises stop paying for access and start paying for execution.”</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 17h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 20h ago]]></description>
 </item>
 
 <item>
@@ -1375,16 +1675,7 @@
 
 
 <p class="wp-block-paragraph"><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><a href="https://www.cio.com/expert-contributor-network/"><strong>Want to join?</strong></a></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 17h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Microsoft Unveils MAI-Cyber-1-Flash, Its First Cybersecurity AI Model</title>
-  <link>https://www.securityweek.com/microsoft-unveils-mai-cyber-1-flash-its-first-cybersecurity-ai-model/</link>
-  <pubDate>Tue, 28 Jul 2026 11:11:48 +0000</pubDate>
-  <source>SecurityWeek</source>
-  <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><p>The company claims MAI-Cyber-1-Flash tops Anthropic’s Mythos and OpenAI’s GPT-5.6 Sol in CyberGym testing.</p>
-<p>The post <a href="https://www.securityweek.com/microsoft-unveils-mai-cyber-1-flash-its-first-cybersecurity-ai-model/">Microsoft Unveils MAI-Cyber-1-Flash, Its First Cybersecurity AI Model </a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 18h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 20h ago]]></description>
 </item>
 
 <item>
@@ -1651,7 +1942,15 @@
 
 
 <p class="wp-block-paragraph"><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><a href="https://www.cio.com/expert-contributor-network/"><strong>Want to join?</strong></a></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 18h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 21h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Signals are grim for Jodrell Bank Observatory after UK science funding decision</title>
+  <link>https://www.theregister.com/science/2026/07/28/signals-are-grim-for-jodrell-bank-observatory-after-uk-science-funding-decision/5279451</link>
+  <pubDate>Tue, 28 Jul 2026 10:28:50 +0000</pubDate>
+  <source>The Register</source>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Support for e-MERLIN ends 2028 unless the historic radio astronomy center can find another source of cash<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 22h ago]]></description>
 </item>
 
 <item>
@@ -1810,7 +2109,7 @@
 
 
 <p class="wp-block-paragraph">The aim, Kornutick adds, is alignment — “everyone rowing the boat in the same direction” — where governance is viewed as a business enabler, not a stop gate. Gartner calls this “Return on Integrity”: making investments in governance that enable the business rather than slow it down.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 19h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 22h ago]]></description>
 </item>
 
 <item>
@@ -2003,7 +2302,7 @@
 
 
 <p class="wp-block-paragraph"><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><a href="https://www.cio.com/expert-contributor-network/"><strong>Want to join?</strong></a></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 19h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 22h ago]]></description>
 </item>
 
 <item>
@@ -2100,7 +2399,15 @@
 
 
 <p class="wp-block-paragraph">When I recently told my musician friend about my journey to becoming a conductor, he chuckled and revealed that conductors are often the butt of jokes behind their backs. And who knows, maybe the AI ​​agents are even talking <a href="https://www.computerwoche.de/article/4142865/undercover-als-ki-agent-bei-moltbook-ein-erfahrungsbericht.html" target="_blank">about me</a> among themselves? If so, I’d love to hear something like this: “Luckily, our conductor quickly brought me back under control; he’s got us all under control.”</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 20h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 23h ago]]></description>
+</item>
+
+<item>
+  <title>🔴 Arista patches actively exploited VeloCloud bug as CISA puts admins on the clock</title>
+  <link>https://www.theregister.com/security/2026/07/28/arista-patches-actively-exploited-velocloud-bug-as-cisa-puts-admins-on-the-clock/5279414</link>
+  <pubDate>Tue, 28 Jul 2026 09:15:00 +0000</pubDate>
+  <source>The Register</source>
+  <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/>Unauthenticated command injection scores perfect 10 and may expose managed Edge devices<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 23h ago]]></description>
 </item>
 
 <item>
@@ -2319,7 +2626,7 @@
 
 
 <p class="wp-block-paragraph"><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><a href="https://www.cio.com/expert-contributor-network/"><strong>Want to join?</strong></a></p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 20h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 23h ago]]></description>
 </item>
 
 <item>
@@ -2468,190 +2775,7 @@
 
 
 <p class="wp-block-paragraph"><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><a href="https://www.cio.com/expert-contributor-network/"><strong>Want to join?</strong></a></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 20h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 IT jobs report: Demand for AI fluency rises</title>
-  <link>https://www.cio.com/article/4201347/information-technology-jobs-report.html</link>
-  <pubDate>Tue, 28 Jul 2026 09:00:00 +0000</pubDate>
-  <source>CIO.com</source>
-  <description><![CDATA[<b>Why this matters: Could impact email access or mail flow — monitor delivery and client issues.</b><br/><div id="remove_no_follow">
-		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
-					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
-						<div class="article-column__content">
-<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
-
-
-
-<p class="wp-block-paragraph">AI skills continue to drive IT job postings, with 75% of US technology openings requiring AI fluency in June, up 178% year-over-year, according to the <a href="https://www.dice.com/hiring/recruitment/reports/dice-tech-job-report">Dice July 2026 Jobs Report</a>.</p>
-
-
-
-<p class="wp-block-paragraph">Roles in the <a href="https://www.cio.com/article/4195780/it-hiring-sees-a-boost-as-software-development-jobs-slowly-bounce-back.html">software industry continue to rise</a>, ranking second behind consulting as the industry seeking the most IT help right now. Aerospace/defense, finance/banking, and manufacturing round out the top five.</p>
-
-
-
-<p class="wp-block-paragraph">Most sought after in the market right now are software engineers, data engineers, systems engineers, electrical engineers, business analysts, data scientists, network engineers, systems administrators, data analysts, and AI engineers, according to Dice.</p>
-
-
-
-<p class="wp-block-paragraph">While these roles remain in high demand, the biggest shift can be seen in the skills that hiring managers are seeking — a list now <a href="https://www.cio.com/article/4134254/state-of-it-jobs-ai-sparks-rapidly-changing-market-for-skills.html">dominated by AI or AI-adjacent skills</a> as companies rush to adopt enterprise AI tools and services.</p>
-
-
-
-<h3 class="wp-block-heading" id="the-skills-that-matter-most">The skills that matter most</h3>
-
-
-
-<p class="wp-block-paragraph">Demand for enterprise integration skills grew 638% from June 2025 to 2026, the biggest rise year over year, according to Dice, noting that this aligns with other indicators that “connecting agentic systems to existing infrastructure is growing faster than the agentic systems themselves.”</p>
-
-
-
-<p class="wp-block-paragraph">Following in terms of highest growth in demand over the past year are skills involving:</p>
-
-
-
-<ul class="wp-block-list">
-<li>Agentic AI (587%)</li>
-
-
-
-<li>AI agents (503%)</li>
-
-
-
-<li>Responsible AI (495%)</li>
-
-
-
-<li>AI infrastructure (366%)</li>
-
-
-
-<li>Vector databases (353%)</li>
-
-
-
-<li>Event-driven programming (310%)</li>
-
-
-
-<li>Product family engineering (287%)</li>
-
-
-
-<li>Prompt engineering (253%)</li>
-
-
-
-<li>Observability (251%)</li>
-</ul>
-
-
-
-<p class="wp-block-paragraph">Month over month, the list of fastest growing skills in Dice’s July jobs report includes:</p>
-
-
-
-<ul class="wp-block-list">
-<li>Electronic engineering (69%)</li>
-
-
-
-<li>API system integration (58%)</li>
-
-
-
-<li>LDAP (55%)</li>
-
-
-
-<li>Digital forensics (54%)</li>
-
-
-
-<li>Data exchange (53%)</li>
-
-
-
-<li>Enterprise integration (50%)</li>
-
-
-
-<li>Threat detection (48%)</li>
-
-
-
-<li>NIST Cybersecurity Framework (47%)</li>
-
-
-
-<li>SAML (45%)</li>
-</ul>
-
-
-
-<p class="wp-block-paragraph">Again, the rise in demand for API, data exchange, and integration skills highlights the recent push to “connect AI systems to enterprise data and workflows,” according to Dice.</p>
-
-
-
-<h3 class="wp-block-heading" id="hot-hiring-markets">Hot hiring markets</h3>
-
-
-
-<p class="wp-block-paragraph">Some metro areas are seeing faster increases in tech job postings, with a focus around the New York, Washington, Dallas, Chicago, and San Francisco metro areas. These areas have seen greater growth than the rest of the country, making these metro areas the best to live in if you’re a job seeker with AI fluency skills:</p>
-
-
-
-<figure class="wp-block-table"><div class="overflow-table-wrapper"><table class="has-fixed-layout"><tbody><tr><td><strong>Metro area</strong></td><td><strong>IT job postings (June)</strong></td></tr><tr><td>New York-Newark-Jersey City, NY-NJ </td><td>20,858</td></tr><tr><td>Washington-Arlington-Alexandria, DC-VA-MD-WV</td><td>19,906</td></tr><tr><td>Dallas-Fort Worth-Arlington, TX</td><td>11,932</td></tr><tr><td>Chicago-Naperville-Elgin, IL-IN</td><td>9,346</td></tr><tr><td>San Francisco-Oakland-Fremont, CA</td><td>8,699</td></tr></tbody></table> </div></figure>
-
-
-
-<p class="wp-block-paragraph"><em>Credit: Dice July 2026 Jobs Report </em></p>
-
-
-
-<p class="wp-block-paragraph">New Jersey (64%), Maryland (47%), and Illinois (41%) are the states that have seen the highest year-over-year increase in hiring.</p>
-
-
-
-<h3 class="wp-block-heading" id="roles-in-demand">Roles in demand</h3>
-
-
-
-<p class="wp-block-paragraph">Companies are looking for enterprise systems and consulting managers, including Appian developers, Oracle Cloud financial consultants, ServiceNow managers, principal consultants, and technology consultants. Additionally, they are seeking out IT software engineers, C++ software developers, configuration analysts, support engineers, network infrastructure engineers, AI analysts, and cyber threat intelligence analysts.</p>
-
-
-
-<h3 class="wp-block-heading" id="outlook">Outlook</h3>
-
-
-
-<p class="wp-block-paragraph">Businesses inside and outside the tech industry will continue to seek tech workers to help realize AI visions, requiring a wide range of AI fluency and skills. It seems this trend will continue for the foreseeable future, as the job market slowly recovers from <a href="https://www.cio.com/article/2100525/state-of-it-jobs-mixed-signals-changes-ahead.html">several tumultuous years</a>.</p>
-
-
-
-<h3 class="wp-block-heading" id="in-depth">In depth:</h3>
-
-
-
-<ul class="wp-block-list">
-<li><a href="https://www.cio.com/article/4183254/ai-experience-is-the-hottest-it-hiring-need-what-if-you-dont-have-much.html">AI experience is the hottest IT hiring need. What if you don’t have much?</a></li>
-
-
-
-<li><a href="https://www.cio.com/article/4134254/state-of-it-jobs-ai-sparks-rapidly-changing-market-for-skills.html">State of IT jobs: AI sparks rapidly changing market for skills</a></li>
-
-
-
-<li><a href="https://www.cio.com/article/4066676/what-an-it-career-will-look-like-in-5-years-and-how-to-thrive-through-the-changes.html">What an IT career will look like in 5 years — and how to thrive through the changes</a></li>
-
-
-
-<li><a href="https://www.cio.com/article/230935/hiring-the-most-in-demand-tech-jobs-for-2021.html">The 10 most in-demand tech jobs for 2026 — and how to hire for them</a></li>
-</ul>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 20h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 23h ago]]></description>
 </item>
 
 <item>
@@ -2784,7 +2908,7 @@
 
 
 <p class="wp-block-paragraph">“Organizations should have vetted AI models they can operate inside their own trust boundary before an incident happens,” Shah says. “That said, better models alone aren’t enough. AI for cybersecurity is still maturing, and organizations shouldn’t blindly trust autonomous systems.”</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 21h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
@@ -3173,14 +3297,6 @@
 </item>
 
 <item>
-  <title>🟠 Is open source the answer to rogue AI agents? Nvidia&#x27;s new alliance says yes</title>
-  <link>https://www.zdnet.com/article/is-open-source-the-answer-to-rogue-ai-security-incidents-nvidia-thinks-so/</link>
-  <pubDate>Mon, 27 Jul 2026 15:52:15 +0000</pubDate>
-  <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: Service impact possible — prepare comms and confirm vendor status.</b><br/>As AI cybersecurity incidents ramp up, companies are racing to find a fix.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
-</item>
-
-<item>
   <title>🔵 What it really means to be an AI-first organization</title>
   <link>https://www.cio.com/article/4200284/what-it-really-means-to-be-an-ai-first-organization.html</link>
   <pubDate>Mon, 27 Jul 2026 13:26:17 +0000</pubDate>
@@ -3387,6 +3503,14 @@
 
 <p class="wp-block-paragraph">Microsoft did not immediately respond to CSO’s request for a comment.</p>
 </div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Microsoft seeks Supreme Court lifeline in pre-owned license battle</title>
+  <link>https://www.theregister.com/software/2026/07/27/microsoft-seeks-supreme-court-lifeline-in-pre-owned-license-battle/5278823</link>
+  <pubDate>Mon, 27 Jul 2026 11:30:35 +0000</pubDate>
+  <source>The Register</source>
+  <description><![CDATA[<b>Why this matters: Budget/licensing impact — verify renewal terms and forecast cost changes.</b><br/>£270M ValueLicensing case remains mostly paused while Redmond pursues permission to appeal<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
@@ -4117,6 +4241,14 @@
 </item>
 
 <item>
+  <title>🔵 Digital sovereignty is real in Europe. The UK? Not so much</title>
+  <link>https://www.theregister.com/columnists/2026/07/27/digital-sovereignty-is-real-in-europe-the-uk-not-so-much/5276852</link>
+  <pubDate>Mon, 27 Jul 2026 10:00:00 +0000</pubDate>
+  <source>The Register</source>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Trump's unpredictability is pushing governments and businesses toward open source while Britain remains glued to US tech<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
+</item>
+
+<item>
   <title>🔴 When the hackers get hacked: The Klue breach and the new reality of third-party cyber risk</title>
   <link>https://www.csoonline.com/article/4200130/when-the-hackers-get-hacked-the-klue-breach-and-the-new-reality-of-third-party-cyber-risk.html</link>
   <pubDate>Mon, 27 Jul 2026 09:00:00 +0000</pubDate>
@@ -4694,7 +4826,31 @@
 
 
 <p class="wp-block-paragraph">“I haven’t run into a single company that has a resiliency officer. The CIO has some responsibility, the CISO has some responsibility, and the COO — who really is a chief and really is an officer — has responsibility,” he says. “I see it more as a partnership than a single role.”</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Trump expands voluntary pledge to keep datacenter costs off household power bills</title>
+  <link>https://www.theregister.com/on-prem/2026/07/26/trump-expands-voluntary-pledge-to-keep-datacenter-costs-off-household-power-bills/5278346</link>
+  <pubDate>Sun, 26 Jul 2026 10:10:00 +0000</pubDate>
+  <source>The Register</source>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Pinkie promise gains 200-plus new participants and precisely zero enforcement<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
+</item>
+
+<item>
+  <title>🔵 How AI drove Shopify back to clean code</title>
+  <link>https://www.theregister.com/devops/2026/07/25/how-ai-drove-shopify-back-to-clean-code/5277901</link>
+  <pubDate>Sat, 25 Jul 2026 13:06:00 +0000</pubDate>
+  <source>The Register</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Turns out, agents just want the same things as humans: easily-readable code, explicit contracts, and helpful feedback<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3d ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Anti-AI open source has an enemy in common, but almost nothing else</title>
+  <link>https://www.theregister.com/ai-and-ml/2026/07/25/anti-ai-open-source-has-an-enemy-in-common-but-almost-nothing-else/5278275</link>
+  <pubDate>Sat, 25 Jul 2026 10:17:00 +0000</pubDate>
+  <source>The Register</source>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Building bot-free alternatives may require lefties, libertarians, and culture warriors to share code<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3d ago]]></description>
 </item>
 
 <item>
@@ -5290,220 +5446,6 @@
 
 
 <p class="wp-block-paragraph">“Threat intelligence and evidence of active exploitation should help determine which vulnerabilities demand immediate action,” Recorded Future’s Leslie said.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 4d ago]]></description>
-</item>
-
-<item>
-  <title>🟠 AgentForger proves AI agents can become persistent insider threats</title>
-  <link>https://www.csoonline.com/article/4200978/agentforger-proves-ai-agents-can-become-persistent-insider-threats.html</link>
-  <pubDate>Fri, 24 Jul 2026 00:29:34 +0000</pubDate>
-  <source>CSO Online</source>
-  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/><div id="remove_no_follow">
-		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
-					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
-						<div class="article-column__content">
-<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
-
-
-
-<p class="wp-block-paragraph">A new attack method found by Zenity Labs reveals that AI agents are becoming persistent insiders that attackers can recruit, rather than malware they have to install.</p>
-
-
-
-<p class="wp-block-paragraph">Its researchers have discovered <a href="https://labs.zenity.io/p/agentforger-part-1-chatgpt-cross-site-agent-forgery" rel="noreferrer noopener" target="_blank">AgentForger</a>, a phishing-based attack that silently creates and launches a fully autonomous AI agent within OpenAI workspaces.</p>
-
-
-
-<p class="wp-block-paragraph">Once running, the agent has full access to apps like Outlook, Slack, SharePoint, and Google Drive. It is configured to operate indefinitely without further user interaction, can approve its own access by toggling “never ask” settings, and can continue to act on new assignments sent via email by the attackers that control it. Broad, unfettered access to systems allows it to perform reconnaissance, harvest sensitive data and credentials, impersonate victims, and launch phishing campaigns.</p>
-
-
-
-<p class="wp-block-paragraph">While OpenAI resolved the vulnerability four days after disclosure, on a larger scale, AgentForger sheds light on what can happen when <a href="https://www.csoonline.com/article/4200043/openai-model-escape-puts-enterprise-ai-defenses-on-notice.html" target="_blank">AI agents go rogue</a>.</p>
-
-
-
-<p class="wp-block-paragraph">“We’re moving into a world where software doesn’t just help people work. It works alongside them,” said <a href="https://zenity.io/authors/michael-bargury" rel="noreferrer noopener" target="_blank">Michael Bargury</a>, co-founder and CTO of agentic AI security platform Zenity. “As AI agents become more capable, attackers will naturally look for ways to influence them, just as they’ve always looked for ways to influence people.”</p>
-
-
-
-<h2 class="wp-block-heading" id="a-persistent-operator-that-acts-without-approval">A ‘persistent operator’ that acts without approval</h2>
-
-
-
-<p class="wp-block-paragraph">OpenAI’s Workspace Agents can connect and work autonomously across Outlook, Gmail, Slack, Google Drive, SharePoint, and Teams. Users open the agent builder, describe what the agent can do in natural language, connect to tools, set approvals, review and test, schedule actions, then publish. For instance, an agent can autonomously handle incoming emails, review and take actions with approval, gather information from various sources to send out daily briefings, or automatically respond to questions in ChatGPT or Slack channels.</p>
-
-
-
-<p class="wp-block-paragraph">Normally, this is “useful automation,” Zenity AI red team researcher <a href="https://labs.zenity.io/authors/mike-takahashi" rel="noreferrer noopener" target="_blank">Mike Takahashi</a> wrote in a <a href="https://labs.zenity.io/p/agentforger-part-1-chatgpt-cross-site-agent-forgery" rel="noreferrer noopener" target="_blank">blog post</a>. But in this attack, “the same scheduler becomes the persistence mechanism.”</p>
-
-
-
-<p class="wp-block-paragraph">The creation workflow kicks off the moment a user clicks on a phishing link containing instructions from the threat actor. For the attack to work, a victim must be logged into ChatGPT and Workspace Agents, and have at least one integration with another app, such as Outlook, Gmail, Slack, Google Drive, SharePoint, or Teams.</p>
-
-
-
-<p class="wp-block-paragraph">Because those connections already exist, OAuth consent screens are not triggered. Furthermore, the victim does not need to click on another link, keep a Builder tab open, or even visit ChatGPT again.</p>
-
-
-
-<p class="wp-block-paragraph">The forged agent is a “persistent operator;” it is installed on the original click and given a schedule, and at those predetermined times, the agent invokes itself, scans for emails from attacker addresses with the subject line “task”, carries those orders out, then returns results to the same attacker-controlled email address.</p>
-
-
-
-<p class="wp-block-paragraph">It goes undetected because the attacker prompt instructs the Builder to toggle Outlook to never ask for approval of its actions. Typically, the default is “always ask,” to keep agents from taking unauthorized action; that switch gives agents the ability to act without asking for human approval.</p>
-
-
-
-<p class="wp-block-paragraph">“AgentForger showed that an attacker could deploy an autonomous insider agent inside your ChatGPT workspace with a single click,” said Bargury. From there, it can continue to access information, harvest credentials from various sources, impersonate employees, and carry out phishing attacks and fraud while “leveraging the trusted victim’s identity.”</p>
-
-
-
-<h2 class="wp-block-heading" id="a-planted-accomplice-that-does-all-the-work">A ‘planted accomplice’ that does all the work</h2>
-
-
-
-<p class="wp-block-paragraph">Once activated, AgentForger can perform reconnaissance to create an internal map of a company. For instance, agents can scan Outlook, Slack, Teams, Google Drive, SharePoint, or calendar data to identify people, roles, active projects, internal discussions, or all-hands recurring meetings. This can help attackers identify where in the enterprise to target next, based on active teams and channels, projects in the works, or prominent users.</p>
-
-
-
-<p class="wp-block-paragraph">“This is the kind of internal context an attacker normally has to build slowly,” Takahashi noted. But in this scenario, action is based on a single emailed assignment. The attacker’s “planted accomplice” does all the work.</p>
-
-
-
-<p class="wp-block-paragraph">In another scenario, the agent can steal data by searching for and identifying financial documents, business agreements, or invoices. Or, it can steal credentials by scanning for messages containing passwords, one-time codes, access tokens, password recovery links, or API keys. Further, it can impersonate victims to carry out phishing scams, for instance, by sending legitimate-looking Teams messages instructing users to confirm their credentials on a fake Microsoft login page.</p>
-
-
-
-<p class="wp-block-paragraph">In all cases, collected information is organized, analyzed, and sent back to the attacker.</p>
-
-
-
-<p class="wp-block-paragraph">“AgentForger points to something much bigger than a single vulnerability,” said Bargury. “It’s less about one bug and more about understanding how the <a href="https://www.csoonline.com/article/4198963/ai-security-operations-and-the-new-race-against-time.html" target="_blank">security model changes</a> as AI becomes part of everyday business operations.”</p>
-
-
-
-<h2 class="wp-block-heading" id="fomo-exposing-security-gaps">FOMO exposing security gaps</h2>
-
-
-
-<p class="wp-block-paragraph">This isn’t necessarily about trust, but more about the need to move fast and adapt, Bargury emphasized. AI agents are helping employees automate work, make decisions faster, and get more done. But enterprises fear they’ll fall behind if they don’t move quickly enough.</p>
-
-
-
-<p class="wp-block-paragraph">“The challenge is that we’re introducing a fundamentally new kind of technology into the enterprise,” said Bargury. “The pressure to integrate the next AI feature is outpacing the security controls needed to safely deploy it.”</p>
-
-
-
-<p class="wp-block-paragraph">However, the answer isn’t to slow down adoption, he emphasized; the business value is too significant. Rather, the first step is understanding where AI agents exist, who created them, what they’re connected to, and what they’re allowed to do. And when it comes to autonomous agents, enterprises need to pay attention to the processes that trigger them: A schedule, an incoming email, or another automated event.</p>
-
-
-
-<p class="wp-block-paragraph">“Those triggers should be governed just as carefully as the agent itself,” said Bargury.</p>
-
-
-
-<p class="wp-block-paragraph">High-impact actions should require approval where appropriate, and security teams should be able to quickly disable an agent or its triggers if something doesn’t look right, he said.</p>
-
-
-
-<p class="wp-block-paragraph">More broadly, AI agents are introducing the need for a new security model, he pointed out. The question is no longer just “Does this agent have permission?” It’s also, “Is this the behavior we intended?”</p>
-
-
-
-<p class="wp-block-paragraph">“The organizations that answer both questions will be in the strongest position to adopt AI safely,” Bargury said.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5d ago]]></description>
-</item>
-
-<item>
-  <title>🔴 Check Point hole grants unauthenticated attackers full SmartConsole admin privileges</title>
-  <link>https://www.csoonline.com/article/4200913/check-point-hole-grants-unauthenticated-attackers-full-smartconsole-admin-privileges.html</link>
-  <pubDate>Thu, 23 Jul 2026 20:14:58 +0000</pubDate>
-  <source>CSO Online</source>
-  <description><![CDATA[<b>Why this matters: Credential/phishing risk — reinforce MFA and user awareness training.</b><br/><div id="remove_no_follow">
-		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
-					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
-						<div class="article-column__content">
-<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
-
-
-
-<p class="wp-block-paragraph">Check Point has confirmed that a critical security hole in its SmartConsole management tool, one that <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-16232" rel="noreferrer noopener" target="_blank">allows unauthenticated attackers</a> to assume full admin privileges, is now being exploited in the wild. The vulnerability, <a href="https://github.com/advisories/ghsa-m2xx-23gx-734v" rel="noreferrer noopener" target="_blank">CVE-2026-16232</a>, was given a CVSS score of 9.3.</p>
-
-
-
-<p class="wp-block-paragraph">In its security alert, <a href="https://support.checkpoint.com/results/sk/sk185169/" rel="noreferrer noopener" target="_blank">Check Point described</a> the bug as one allowing an unauthenticated attacker to “obtain an application login token and use it to login via SmartConsole with full admin privileges and apply changes to the security policy and security configuration.”</p>
-
-
-
-<p class="wp-block-paragraph">The company has <a href="https://sc1.checkpoint.com/documents/Jumbo_HFA/R82.10/R82.10/R82.10-List-of-all-Resolved-Issues.htm" rel="noreferrer noopener" target="_blank">released a patch</a> for the bug and also recommends that users “limit Trusted Clients, GUI clients, to trusted IP addresses/subnets.” That approach has always been a best practice, but practical networking realities today make it challenging to maintain. <a href="https://www.csoonline.com/article/4195311/check-point-cto-jonathan-zanger-sees-ai-elevating-the-value-of-cyber.html" target="_blank">Check Point</a> said that the exploit has impacted ten of its customers, all of whom it had notified directly.</p>
-
-
-
-<h2 class="wp-block-heading" id="far-worse-than-most">Far worse than most</h2>
-
-
-
-<p class="wp-block-paragraph"><a href="https://my.idc.com/getdoc.jsp?containerId=PRF004767" rel="noreferrer noopener" target="_blank">Frank Dickson</a>, group VP for security at IDC, said this security hole is far worse than most.</p>
-
-
-
-<p class="wp-block-paragraph">“This hits harder than your average CVE because of where it lives,” he said. “The CVE targets the SmartConsole login on Check Point’s Security Management Server, the console that pushes policy to every gateway underneath it. Popping a gateway gets you one lock picked. Popping the management server is more like finding the One Ring: one stolen token to rule every gateway it manages, no need to fight each one individually. The attacker can rewrite policy, open new VPN paths and kill the logging.”</p>
-
-
-
-<p class="wp-block-paragraph">In an interview with CSO Online, <a href="https://www.linkedin.com/in/lotem-finkelstein-05797a85/" rel="noreferrer noopener" target="_blank">Lotem Finkelstein</a>, vice president of research at Check Point, said that the company learned of the vulnerability on Sunday, emailed customers the same day, and released the patch within 72 hours.</p>
-
-
-
-<p class="wp-block-paragraph">But when his team re-reviewed earlier logs, knowing what to look for, they spotted this hole being attacked as early as April, Finkelstein said.</p>
-
-
-
-<p class="wp-block-paragraph">The fact that, over the course of three months, the team only found ten organizations under attack, indicated that it has been very difficult for the attacker to find vulnerable systems, he noted; customers were, in the main, using secure settings to protect themselves.</p>
-
-
-
-<p class="wp-block-paragraph">Nonetheless, Finkelstein said, Check Point considers this hole to be “a severe vulnerability.”</p>
-
-
-
-<h2 class="wp-block-heading" id="challenges-of-ip-address-restrictions">Challenges of IP address restrictions</h2>
-
-
-
-<p class="wp-block-paragraph">While it can be technically challenging to keep the IP address allowlists that Check Point recommends current, given DHCP’s ability to easily change those addresses, <a href="https://www.linkedin.com/in/assafmo/" rel="noreferrer noopener" target="_blank">Assaf Morag</a>, a cybersecurity researcher at Flare, noted that specifically limiting access to a management console is far more critical than limiting overall external access.</p>
-
-
-
-<p class="wp-block-paragraph">“Implementing Trusted Clients as a per-IP allowlist is impractical,” he said, but that is not the case with restricting management access. “The more scalable solution is to restrict access based on trusted administrative network segments such as VPN pools, management VLANs, or jump hosts rather than maintaining lists of individual DHCP-assigned client addresses,” he explained. “That gives you the security benefit without creating a full-time administrative task. Maintaining allowlists for individual hosts is much more practical when those hosts have stable, predictable IP addresses, rather than dynamically assigned DHCP addresses.”</p>
-
-
-
-<p class="wp-block-paragraph"><a href="https://www.linkedin.com/in/pieter-arntz-04164b2/" rel="noreferrer noopener" target="_blank">Pieter Arntz</a>, malware intelligence researcher at Malwarebytes, also noted that the constantly changing nature of global IP addresses can prove annoying to IT teams. Stressing that he is not familiar with Check Point’s specific settings, he noted, “Certain settings are a nuisance when applied strictly, and at some point the IT staff gets tired of constantly tweaking and they abandon the most secure path.”</p>
-
-
-
-<h2 class="wp-block-heading" id="ideal-platform-for-long-term-attacks">Ideal platform for long-term attacks</h2>
-
-
-
-<p class="wp-block-paragraph"><a href="https://www.linkedin.com/in/eclectiqus/" rel="noreferrer noopener" target="_blank">Mike Wilkes</a>, enterprise CISO at Aikido Security,  agreed that the severity and exposure of this hole is alarming.</p>
-
-
-
-<p class="wp-block-paragraph">“This is exactly the kind of vulnerability that keeps CISOs awake at night because it strikes at the one system that is supposed to stand between the attacker and everything else. An authentication bypass that grants administrative control of a perimeter firewall isn’t just another CVE to patch. It’s an invitation for an adversary to rewrite the rules of the network itself,” he said. “The uncomfortable reality is that nobody runs a CrowdStrike agent on their firewall. Once an attacker owns an edge device, they gain a uniquely privileged position that often falls outside the visibility of traditional endpoint security, making it an ideal platform for persistence, credential theft, traffic manipulation, and long-term espionage.”</p>
-
-
-
-<p class="wp-block-paragraph">IDC’s Dickson strongly encouraged CISOs to deploy the patch, not to just change settings to mitigate the issue. </p>
-
-
-
-<p class="wp-block-paragraph">“Apply the actual hotfix,” he said. “Don’t just restrict Trusted Client IPs and call it done. That’s a stopgap, not a fix. Any internet-facing management console, Check Point or otherwise, is a five-alarm architecture problem independent of this CVE.”</p>
-
-
-
-<p class="wp-block-paragraph">And, he added, “since attackers here can disable logging, audit admin activity going back before the bug surfaced. Quiet logs aren’t proof nothing happened. This is the recurring theme with ‘single pane of glass’ security tools: the console built to make everything easier to run is also the one thing you really don’t want someone else driving.”</p>
 </div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 5d ago]]></description>
 </item>
 
