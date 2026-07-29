@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
 **Period:** July 22 – July 29, 2026  
-**Generated:** 2026-07-29 08:36 UTC  
+**Generated:** 2026-07-29 11:23 UTC  
 **Items reviewed:** 134  
 
 ## ⚡ Top Actions This Week
@@ -55,6 +55,12 @@
 
 ## 🟠 Important — Review This Week
 
+- [Public PoC Released for Exploited Check Point SmartConsole Authentication Bypass](https://thehackernews.com/2026/07/rapid7-releases-poc-for-exploited-check.html)  
+  **The Hacker News** · Jul 29 · _General awareness item._  
+
+- [New Gitea RCE Lets Repository Writers Plant a Git Hook to Run Shell Commands](https://thehackernews.com/2026/07/new-gitea-rce-lets-repository-writers.html)  
+  **The Hacker News** · Jul 29 · _General awareness item._  
+
 - [Apple Patches Everything (July 2026), (Wed, Jul 29th)](https://isc.sans.edu/diary/rss/33196)  
   **SANS Internet Storm Center** · Jul 29 · _General awareness item._  
 
@@ -73,22 +79,16 @@
 - [OpenAI models used Artifactory zero-days to escape to the internet](https://www.bleepingcomputer.com/news/security/openai-models-used-artifactory-zero-days-to-escape-to-the-internet/)  
   **BleepingComputer** · Jul 28 · _General awareness item._  
 
-- [vBulletin fixes critical pre-auth RCE flaw with public exploit](https://www.bleepingcomputer.com/news/security/vbulletin-fixes-critical-pre-auth-rce-flaw-with-public-exploit/)  
-  **BleepingComputer** · Jul 28 · _General awareness item._  
-
-- [CVE-2026-50422 Windows NTFS Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-50422)  
-  **Microsoft Security Response Center (MSRC)** · Jul 28 · _General awareness item._  
-
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [These near-mint ASUS Chromebook refurbs are only $145](https://www.bleepingcomputer.com/news/security/these-near-mint-asus-chromebook-refurbs-are-only-145/) — BleepingComputer
+- [Russia Charges Telegram Founder Pavel Durov With Aiding Terrorist Activity](https://thehackernews.com/2026/07/russia-charges-telegram-founder-pavel.html) — The Hacker News
 - [Flying Eagle Android RAT Traces Found on 170 Servers as Source Code Circulates](https://thehackernews.com/2026/07/flying-eagle-android-rat-traces-found.html) — The Hacker News
 - [Two Compromised joyfill npm Packages Run RAT When Imported Into Node.js](https://thehackernews.com/2026/07/two-compromised-joyfill-npm-packages.html) — The Hacker News
 - [ISC Stormcast For Wednesday, July 29th, 2026 https://isc.sans.edu/podcastdetail/10028, (Wed, Jul 29th)](https://isc.sans.edu/diary/rss/33194) — SANS Internet Storm Center
 - [CubePilot drone software dev hit by DNS hijacking to intercept traffic](https://www.bleepingcomputer.com/news/security/cubepilot-drone-software-dev-hit-by-dns-hijacking-to-intercept-traffic/) — BleepingComputer
-- [Claude AI Just Cracked a Post-Quantum Test Scheme and Found a Faster 7-Round AES Attack](https://thehackernews.com/2026/07/claude-ai-just-cracked-post-quantum.html) — The Hacker News
-- [CISA shares advice on isolating vital systems during cyberattacks](https://www.bleepingcomputer.com/news/security/cisa-shares-advice-on-isolating-vital-systems-during-cyberattacks/) — BleepingComputer
 
 ---
 
