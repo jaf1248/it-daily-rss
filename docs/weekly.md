@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
 **Period:** July 22 – July 29, 2026  
-**Generated:** 2026-07-29 16:19 UTC  
+**Generated:** 2026-07-29 18:05 UTC  
 **Items reviewed:** 134  
 
 ## ⚡ Top Actions This Week
@@ -61,7 +61,7 @@
 - [Three Critical VMware Flaws Allow Auth Bypass, Code Execution, and VM Escape](https://thehackernews.com/2026/07/three-critical-vmware-flaws-allow-auth.html)  
   **The Hacker News** · Jul 29 · _General awareness item._  
 
-- [Hackers target over 30 Minnesota water utilities in coordinated OT attack](https://www.bleepingcomputer.com/news/security/hackers-target-over-30-minnesota-water-utilities-in-coordinated-ot-attack/)  
+- [Hackers disrupt over 30 Minnesota water utilities in coordinated OT attack](https://www.bleepingcomputer.com/news/security/hackers-target-over-30-minnesota-water-utilities-in-coordinated-ot-attack/)  
   **BleepingComputer** · Jul 29 · _General awareness item._  
 
 - [Coordinated Cyberattack Targets 30+ Minnesota Water Systems as One Plant Goes Offline](https://thehackernews.com/2026/07/coordinated-cyberattack-targets-30.html)  
@@ -83,12 +83,12 @@
 
 ## 🔵 FYI — General Awareness
 
+- [Health-ISAC warns of rising ShinyHunters data theft attacks on healthcare](https://www.bleepingcomputer.com/news/security/health-isac-warns-of-rising-shinyhunters-data-theft-attacks-on-healthcare/) — BleepingComputer
 - [Your AI Agents Are Guessing at Scale: Permissions Decide the Damage](https://www.bleepingcomputer.com/news/security/your-ai-agents-are-guessing-at-scale-permissions-decide-the-damage/) — BleepingComputer
 - [Windows 11 KB5101684 update released with 42 changes and fixes](https://www.bleepingcomputer.com/news/microsoft/windows-11-kb5101684-update-released-with-42-changes-and-fixes/) — BleepingComputer
 - [Nine-Year Fraud Campaign Clones Russian Company Sites to Steal Advance Payments](https://thehackernews.com/2026/07/nine-year-fraud-campaign.html) — The Hacker News
 - [These near-mint ASUS Chromebook refurbs are only $145](https://www.bleepingcomputer.com/news/security/these-near-mint-asus-chromebook-refurbs-are-only-145/) — BleepingComputer
 - [Russia Charges Telegram Founder Pavel Durov With Aiding Terrorist Activity](https://thehackernews.com/2026/07/russia-charges-telegram-founder-pavel.html) — The Hacker News
-- [Flying Eagle Android RAT Traces Found on 170 Servers as Source Code Circulates](https://thehackernews.com/2026/07/flying-eagle-android-rat-traces-found.html) — The Hacker News
 
 ---
 
