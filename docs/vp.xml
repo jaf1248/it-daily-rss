@@ -3,82 +3,216 @@
 <channel>
   <title>Joe — VP of IT Briefing</title>
   <description>Leadership-focused IT risk, vendors, pricing, licensing, and industry context.</description>
-  <lastBuildDate>Thu, 30 Jul 2026 21:05:24 +0000</lastBuildDate>
+  <lastBuildDate>Thu, 30 Jul 2026 23:03:07 +0000</lastBuildDate>
   
+<item>
+  <title>🟠 A coordinated attack hit 30+ Minnesota water systems. Who did it, and what does a Rockwell notice add to the picture?</title>
+  <link>https://www.csoonline.com/article/4203638/a-coordinated-attack-hit-30-minnesota-water-systems-who-did-it-and-what-does-a-rockwell-notice-add-to-the-picture.html</link>
+  <pubDate>Thu, 30 Jul 2026 21:53:36 +0000</pubDate>
+  <source>CSO Online</source>
+  <description><![CDATA[<b>Why this matters: Credential/phishing risk — reinforce MFA and user awareness training.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<p class="wp-block-paragraph">A coordinated cyberattack that targeted more than 30 Minnesota community water systems has alarmed industrial cybersecurity experts, not because it caused widespread disruption, but because it appears to represent the first distributed campaign against dozens of small utilities linked by a common operational technology weakness.</p>
+
+
+
+<p class="wp-block-paragraph">While the affected communities reported that drinking water remained safe and disruptions were limited, security researchers say the incident marks another escalation in a months-long campaign targeting US water infrastructure amid heightened geopolitical tensions with Iran.</p>
+
+
+
+<p class="wp-block-paragraph">“This is a first-of-its-kind distributed attack on water utilities,” <a href="https://www.linkedin.com/in/markusmuellerics/">Markus Mueller</a>, field CISO at Nozomi Networks, tells CSO. “Based on the publicly available information, it was clearly aimed at disruption rather than financial gain.”</p>
+
+
+
+<h2 class="wp-block-heading" id="what-happened">What happened?</h2>
+
+
+
+<p class="wp-block-paragraph">Minnesota IT Services <a href="https://mn.gov/mnit/media/blog/?id=38-761869">disclosed</a> that the water systems experienced coordinated cyber activity over a two-day period from July 26 to July 27. The city of Braham, with roughly 1,700 people in Isanti County, <a href="https://www.mprnews.org/story/2026/07/27/braham-cyberattack-knocked-water-system-offline">suffered</a> the most visible operational impact after shutting down portions of its water system for roughly two hours while operators regained control of affected systems.</p>
+
+
+
+<p class="wp-block-paragraph">The city of Plymouth <a href="https://www.plymouthmn.gov/Home/Components/News/News/8977/542">disconnected</a> cellular-connected equipment at two water towers and multiple wastewater lift stations to stop the intrusion and prevent the attackers from regaining access while the equipment was reconfigured. The city of <a href="https://www.startribune.com/plymouth-south-st-paul-water-system-cyber-attack/601872810">South St. Paul</a> said some automated controls were affected, and the city of Maple Plain declared a local state of emergency to expand its response.</p>
+
+
+
+<p class="wp-block-paragraph">The incident comes just days after CISA, the FBI, NSA and EPA <a href="https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-097a">expanded</a> an advisory warning that Iranian-affiliated cyber actors continue targeting programmable logic controllers (PLCs) used throughout US critical infrastructure, including water systems.</p>
+
+
+
+<p class="wp-block-paragraph">“CISA is currently observing a significant increase in cyber threat actors targeting programmable logic controllers at water utilities,” CISA Acting Director Nick Andersen said in a statement provided to CSO. “We urge critical infrastructure owners and operators to remove publicly exposed PLCs and other operational technology from the internet as soon as possible.”</p>
+
+
+
+<p class="wp-block-paragraph">“We also encourage all organizations to review the latest guidance on CISA.gov and to report suspected incidents or anomalous activity to us for further support,” Andersen said.</p>
+
+
+
+<h2 class="wp-block-heading" id="more-than-another-utility-hack">More than another utility hack</h2>
+
+
+
+<p class="wp-block-paragraph">Experts agree that the attacks stand apart from previous incidents because they were coordinated across numerous utilities rather than focused on a single victim.</p>
+
+
+
+<p class="wp-block-paragraph">Nozomi’s Mueller believes that this coordination strongly suggests investigators will eventually identify some technical thread connecting the affected communities.</p>
+
+
+
+<p class="wp-block-paragraph">“To be this sector-specific,” he says, “my assumption would be that there is something that ties these together beyond simply being Minnesota water utilities.” He thinks investigators may ultimately discover a shared systems integrator, communications architecture or other common infrastructure that made the utilities collectively vulnerable.</p>
+
+
+
+<p class="wp-block-paragraph"><a href="https://www.linkedin.com/in/ronniefabela/">Ron Fabela</a>, an industrial control systems researcher who closely tracks attacks against operational technology, reached a similar conclusion after examining publicly available information.</p>
+
+
+
+<p class="wp-block-paragraph">“I searched Minnesota’s public IP space and didn’t find obvious exposed water infrastructure,” he says. “Many of these utilities use cellular communications, which makes them much harder to identify than internet-facing industrial systems.”</p>
+
+
+
+<p class="wp-block-paragraph">That distinction could explain why dozens of geographically clustered utilities were affected while neighboring infrastructure apparently was not.</p>
+
+
+
+<h2 class="wp-block-heading" id="the-rockwell-connection">The Rockwell connection</h2>
+
+
+
+<p class="wp-block-paragraph">An additional development could prove significant as investigators continue examining the attacks.</p>
+
+
+
+<p class="wp-block-paragraph">According to a source familiar with the federal investigation, authorities are examining whether vulnerable Rockwell Automation MicroLogix 1400 PLCs served as a common enabling factor in the campaign.</p>
+
+
+
+<p class="wp-block-paragraph">Fabela ran a targeted Shodan search on Plymouth’s public IP space and found the city using at <a href="https://www.shodan.io/host/166.163.186.2">least</a> <a href="https://www.shodan.io/host/166.163.186.6">two</a> Rockwell Automation MicroLogix 1400 controllers.</p>
+
+
+
+<p class="wp-block-paragraph">The possibility aligns with both recent federal warnings and a July 30 <a href="https://www.rockwellautomation.com/en-us/trust-center/security-advisories/advisory.SD1790.html">Rockwell Automation security advisory</a> addressing the MicroLogix 1400 family of controllers. Earlier federal guidance identified Rockwell Automation/Allen-Bradley PLCs among the industrial controllers being actively targeted by Iranian-affiliated threat actors before expanding the warning to additional PLC manufacturers.</p>
+
+
+
+<p class="wp-block-paragraph">On July 30, amid the investigation into the Minnesota attacks, CISA issued <a href="https://www.cisa.gov/news-events/alerts/2026/07/30/cisa-urges-water-and-wastewater-systems-sector-protect-ot-against-activity-targeting-plcs">fresh guidance</a> urging water and wastewater utilities to remove publicly exposed PLCs and other operational technology from the internet as quickly as possible.</p>
+
+
+
+<p class="wp-block-paragraph"><a href="https://www.tenable.com/profile/scott-caveza">Scott Caveza</a>, senior staff research engineer at Tenable, the first security organization to issue a <a href="https://www.tenable.com/blog/coordinated-cyberattack-on-minnesota-water-utilities-what-you-need-to-knowhttps:/www.tenable.com/blog/coordinated-cyberattack-on-minnesota-water-utilities-what-you-need-to-know">report</a> on the incident, cautioned that the timing alone does not establish causation. “The timing certainly makes it suspicious,” Caveza says. “Rockwell Automation devices have routinely been targeted by these groups before, so it’s definitely plausible.”</p>
+
+
+
+<p class="wp-block-paragraph">If exposed PLCs did provide attackers with access, the implications extend beyond simple monitoring.</p>
+
+
+
+<p class="wp-block-paragraph">“Depending on configuration,” Caveza explains, “an attacker could gain monitoring capability, manipulate what operators see, or in some circumstances modify operational settings.” Fortunately, manual safety controls built into most water facilities make catastrophic consequences considerably more difficult.</p>
+
+
+
+<p class="wp-block-paragraph">The relatively quick recovery in Braham appears consistent with that assessment. Operators restored systems within roughly two hours, and no boil-water orders were issued.</p>
+
+
+
+<p class="wp-block-paragraph">CISA’s July 30 alert did not identify the equipment involved in the Minnesota incidents or address whether Rockwell controllers played a role. However, the agency’s renewed emphasis on removing internet-exposed PLCs closely mirrors both Rockwell’s own mitigation guidance and one of the questions investigators are now examining: whether exposed Rockwell controllers provided a common avenue into multiple utilities.</p>
+
+
+
+<h2 class="wp-block-heading" id="attribution-remains-the-biggest-unanswered-question">Attribution remains the biggest unanswered question</h2>
+
+
+
+<p class="wp-block-paragraph">Federal agencies have stopped short of publicly identifying those responsible, although most experts believe Iranian-affiliated actors remain the leading suspects.</p>
+
+
+
+<p class="wp-block-paragraph"><a href="https://www.linkedin.com/in/cynthia-kaiser-cyber/">Cynthia Kaiser</a>, former FBI cyber deputy director and now vice president of strategy and policy at Halcyon, says the attacks closely followed recent federal warnings describing an active Iranian campaign targeting operational technology.</p>
+
+
+
+<p class="wp-block-paragraph">“You have the FBI and other US government agencies putting out an urgent warning about Iran targeting operational controls,” she tells CSO. “Then this larger coordinated campaign occurs. Geopolitically, Iran has the strongest motivation to conduct this kind of chaos-driven cyberattack.”</p>
+
+
+
+<p class="wp-block-paragraph">Still, Kaiser acknowledges investigators lack a definitive technical smoking gun. Instead, she argues Iran increasingly benefits from what she calls “strategic ambiguity.”</p>
+
+
+
+<p class="wp-block-paragraph">“They thrive in people suspecting it might be them but not knowing for sure,” she says. “That ambiguity complicates response and buys them time operationally.”</p>
+
+
+
+<p class="wp-block-paragraph">That explanation may help resolve one of the attack’s biggest mysteries.</p>
+
+
+
+<p class="wp-block-paragraph">Unlike previous campaigns by CyberAv3ngers and other Iranian-aligned hacktivist groups, no convincing public victory videos or detailed Telegram posts immediately appeared following the Minnesota attacks. In an unusual delay, an Iranian state publication <a href="https://wanaen.com/handala-launches-widespread-attack-on-minnesota-water-infrastructure/">attributed</a> the attack to threat group Handala only on July 29, days after the incident.</p>
+
+
+
+<p class="wp-block-paragraph">Handala itself has been silent, even though it <a href="https://x.com/H4ND4L4/status/2081289467390771391?s=20">claimed credit</a> on X on July 26 for a cyberattack targeting the network infrastructure of SupraNet Communications, a major internet service provider based in Madison, Wisc.</p>
+
+
+
+<p class="wp-block-paragraph">That Handala claimed credit for one attack days earlier but has said nothing about Minnesota deepens the mystery of its silence here.</p>
+
+
+
+<p class="wp-block-paragraph">Fabela noted that absence stood out. “Neither Handala nor CyberAv3ngers has publicly claimed responsibility the way we’ve seen in previous campaigns,” he says. “Normally they post screenshots or proof. We haven’t seen that yet.”</p>
+
+
+
+<p class="wp-block-paragraph">Mueller also found the silence unusual.</p>
+
+
+
+<p class="wp-block-paragraph">“At the peak we were tracking more than a hundred Iranian splinter groups,” he says. “Then everything became very quiet. Even with renewed kinetic activity, we haven’t seen the same level of public boasting.”</p>
+
+
+
+<h2 class="wp-block-heading" id="lessons-for-water-utilities">Lessons for water utilities</h2>
+
+
+
+<p class="wp-block-paragraph">Whatever the final attribution, experts say the attacks reinforce an uncomfortable reality: Attackers often do not need sophisticated zero-day exploits to disrupt operational technology.</p>
+
+
+
+<p class="wp-block-paragraph">Rather, they succeed because industrial control devices remain directly reachable from the internet, protected by weak credentials, or deployed without the network segmentation long recommended by federal agencies.</p>
+
+
+
+<p class="wp-block-paragraph">Fabela summed up the irony this way: “Tying all these pieces together, it seems the threat actors are implementing the CISA-recommended actions for PLCs — without operator permission, of course: set a password, remove them from the internet. Joking, not joking.”</p>
+
+
+
+<p class="wp-block-paragraph">“The guidance is pretty typical,” Caveza says. “Don’t connect these devices directly to the internet. These are things we hope would already be common knowledge—but unfortunately things happen.”</p>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 What the FCC ban on foreign-made robot vacuums means for your Roomba</title>
+  <link>https://www.zdnet.com/article/fcc-ban-on-foreign-made-robot-vacuums-and-your-roomba/</link>
+  <pubDate>Thu, 30 Jul 2026 21:36:41 +0000</pubDate>
+  <source>ZDNet</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>The FCC's robot ban includes many of the world's most popular vacuums and lawn mowers. Is that Roomba in your closet a security risk?<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+</item>
+
 <item>
   <title>🔵 Bank of America to Acquire Cybersecurity Firm MDSec</title>
   <link>https://www.securityweek.com/bank-of-america-to-acquire-cybersecurity-firm-mdsec/</link>
   <pubDate>Thu, 30 Jul 2026 21:02:21 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: Vendor risk signal — evaluate roadmap and support stability.</b><br/><p>The acquisition will add approximately 65 cybersecurity professionals to Bank of America’s operations in the United Kingdom.</p>
-<p>The post <a href="https://www.securityweek.com/bank-of-america-to-acquire-cybersecurity-firm-mdsec/">Bank of America to Acquire Cybersecurity Firm MDSec</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Apple reports Q3 revenue from Services, which includes the App Store, Apple TV, and more, grew 12% YoY to $30.74B, vs. $31.36B est.; AAPL drops 4%+ after hours (Todd Spangler/Variety)</title>
-  <link>https://www.techmeme.com/260730/p53#a260730p53</link>
-  <pubDate>Thu, 30 Jul 2026 20:55:00 +0000</pubDate>
-  <source>Techmeme</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://variety.com/2026/digital/news/apple-q3-2026-earnings-tim-cook-ceo-final-quarter-1236824534/"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260730/i53.jpg" vspace="4" /></a>
-<p><a href="https://www.techmeme.com/260730/p53#a260730p53" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Todd Spangler / <a href="http://www.variety.com/">Variety</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://variety.com/2026/digital/news/apple-q3-2026-earnings-tim-cook-ceo-final-quarter-1236824534/">Apple reports Q3 revenue from Services, which includes the App Store, Apple TV, and more, grew 12% YoY to $30.74B, vs. $31.36B est.; AAPL drops 4%+ after hours</a></b></span>&nbsp; &mdash;&nbsp; For the three months ended June 27, Apple's Q3 of fiscal 2026, the tech giant reported total revenue of $109.4 billion, up 16%.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Apple reports Q3 revenue up 16% YoY to $109.42B, vs. $108.65B est., net income up 27% to $29.79B, and China revenue up 22% to $18.82B, vs. $19.6B estimated (Apple)</title>
-  <link>https://www.techmeme.com/260730/p52#a260730p52</link>
-  <pubDate>Thu, 30 Jul 2026 20:41:07 +0000</pubDate>
-  <source>Techmeme</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://www.businesswire.com/news/home/20260730284687/en/"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260730/i52.jpg" vspace="4" /></a>
-<p><a href="https://www.techmeme.com/260730/p52#a260730p52" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="https://www.businesswire.com/">Apple</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.businesswire.com/news/home/20260730284687/en/">Apple reports Q3 revenue up 16% YoY to $109.42B, vs. $108.65B est., net income up 27% to $29.79B, and China revenue up 22% to $18.82B, vs. $19.6B estimated</a></b></span>&nbsp; &mdash;&nbsp; CUPERTINO, Calif.&mdash;(BUSINESS WIRE)&mdash;Apple&reg; today announced financial results for its fiscal 2026 third quarter ended June 27, 2026.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Reddit reports Q2 revenue up 61% YoY to $805M, vs. $730M est., forecasts Q3 revenue above est., says search referrals were &quot;choppy&quot;; RDDT drops 6%+ after hours (Jonathan Vanian/CNBC)</title>
-  <link>https://www.techmeme.com/260730/p51#a260730p51</link>
-  <pubDate>Thu, 30 Jul 2026 20:35:05 +0000</pubDate>
-  <source>Techmeme</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://www.cnbc.com/2026/07/30/reddit-rddt-q2-2026-earnings-report.html"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260730/i51.jpg" vspace="4" /></a>
-<p><a href="https://www.techmeme.com/260730/p51#a260730p51" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Jonathan Vanian / <a href="http://www.cnbc.com/">CNBC</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.cnbc.com/2026/07/30/reddit-rddt-q2-2026-earnings-report.html">Reddit reports Q2 revenue up 61% YoY to $805M, vs. $730M est., forecasts Q3 revenue above est., says search referrals were &ldquo;choppy&rdquo;; RDDT drops 6%+ after hours</a></b></span>&nbsp; &mdash;&nbsp; Reddit reported second-quarter earnings on Thursday that beat on the top and the bottom lines, and the company issued guidance that sailed past expectations.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Amazon reports Q2 AWS revenue up 37% YoY to $42.2B, above estimates of a 31.21% increase, and AWS operating income up 64% to $16.6B; AMZN jumps 8%+ after hours (Deborah Sophia/Reuters)</title>
-  <link>https://www.techmeme.com/260730/p50#a260730p50</link>
-  <pubDate>Thu, 30 Jul 2026 20:22:02 +0000</pubDate>
-  <source>Techmeme</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://www.reuters.com/business/retail-consumer/amazon-beats-estimates-quarterly-cloud-revenue-growth-2026-07-30/"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260730/i50.jpg" vspace="4" /></a>
-<p><a href="https://www.techmeme.com/260730/p50#a260730p50" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Deborah Sophia / <a href="http://www.reuters.com/">Reuters</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.reuters.com/business/retail-consumer/amazon-beats-estimates-quarterly-cloud-revenue-growth-2026-07-30/">Amazon reports Q2 AWS revenue up 37% YoY to $42.2B, above estimates of a 31.21% increase, and AWS operating income up 64% to $16.6B; AMZN jumps 8%+ after hours</a></b></span>&nbsp; &mdash;&nbsp; Amazon.com (AMZN.O) topped market expectations for quarterly cloud revenue growth on Thursday on the back of surging enterprise AI spending &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Amazon reports Q2 ad revenue up 26% YoY to $19.81B, vs. $19.43B est., and subscription services revenue up 12% YoY to $13.73B (Annie Palmer/CNBC)</title>
-  <link>https://www.techmeme.com/260730/p49#a260730p49</link>
-  <pubDate>Thu, 30 Jul 2026 20:15:01 +0000</pubDate>
-  <source>Techmeme</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://www.cnbc.com/2026/07/30/amazon-amzn-q2-earnings-report-2026.html"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260730/i49.jpg" vspace="4" /></a>
-<p><a href="https://www.techmeme.com/260730/p49#a260730p49" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Annie Palmer / <a href="http://www.cnbc.com/">CNBC</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.cnbc.com/2026/07/30/amazon-amzn-q2-earnings-report-2026.html">Amazon reports Q2 ad revenue up 26% YoY to $19.81B, vs. $19.43B est., and subscription services revenue up 12% YoY to $13.73B</a></b></span>&nbsp; &mdash;&nbsp; Amazon reported better-than-expected revenue and cloud growth for the second quarter.&nbsp; The stock shot up more than 9% in extended trading.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 I tried Android Auto offline while on a road trip, and it beats mobile data in 2 ways</title>
-  <link>https://www.zdnet.com/article/i-tried-android-auto-offline-while-on-a-road-trip-and-it-beats-mobile-data-in-2-ways/</link>
-  <pubDate>Thu, 30 Jul 2026 20:08:00 +0000</pubDate>
-  <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>A recent trip upstate revealed the benefits and limitations of running Android Auto in low- to no-signal areas.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Amazon reports Q2 revenue up 20% YoY to $200.6B, net income up 245% to $62.6B, operating income up 43% to $27.5B, and a $25B+ annual revenue run rate for chips (Amazon)</title>
-  <link>https://www.techmeme.com/260730/p48#a260730p48</link>
-  <pubDate>Thu, 30 Jul 2026 20:07:39 +0000</pubDate>
-  <source>Techmeme</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><p><a href="https://www.techmeme.com/260730/p48#a260730p48" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="https://www.businesswire.com/">Amazon</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.businesswire.com/news/home/20260729379483/en/">Amazon reports Q2 revenue up 20% YoY to $200.6B, net income up 245% to $62.6B, operating income up 43% to $27.5B, and a $25B+ annual revenue run rate for chips</a></b></span>&nbsp; &mdash;&nbsp; SEATTLE&mdash;(BUSINESS WIRE)&mdash;Amazon.com, Inc. (NASDAQ: AMZN) today announced financial results for its second quarter ended June 30, 2026.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/bank-of-america-to-acquire-cybersecurity-firm-mdsec/">Bank of America to Acquire Cybersecurity Firm MDSec</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
 </item>
 
 <item>
@@ -88,7 +222,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.bloomberg.com/news/articles/2026-07-30/deepseek-is-developing-massive-ai-data-center-in-inner-mongolia"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260730/i47.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260730/p47#a260730p47" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="https://www.bloomberg.com/">Bloomberg</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/articles/2026-07-30/deepseek-is-developing-massive-ai-data-center-in-inner-mongolia">Sources: DeepSeek plans to build a 1 GW data center in Inner Mongolia and aims to bring at least part of its capacity online by the end of 2027 or early 2028</a></b></span>&nbsp; &mdash;&nbsp; China's DeepSeek is planning a massive artificial-intelligence data center in Inner Mongolia, according to people familiar with the matter &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/articles/2026-07-30/deepseek-is-developing-massive-ai-data-center-in-inner-mongolia">Sources: DeepSeek plans to build a 1 GW data center in Inner Mongolia and aims to bring at least part of its capacity online by the end of 2027 or early 2028</a></b></span>&nbsp; &mdash;&nbsp; China's DeepSeek is planning a massive artificial-intelligence data center in Inner Mongolia, according to people familiar with the matter &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
 </item>
 
 <item>
@@ -98,7 +232,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://www.axios.com/2026/07/30/judge-pentagon-case-worse-anthropic"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260730/i45.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260730/p45#a260730p45" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Maria Curi / <a href="https://www.axios.com/">Axios</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.axios.com/2026/07/30/judge-pentagon-case-worse-anthropic">At a hearing, a US judge says &ldquo;I don't see additional evidence&rdquo; from the Pentagon justifying its designation of Anthropic as a supply-chain risk</a></b></span>&nbsp; &mdash;&nbsp; A federal judge on Thursday signaled she's become even more skeptical of the Pentagon's decision to blacklist Anthropic &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.axios.com/2026/07/30/judge-pentagon-case-worse-anthropic">At a hearing, a US judge says &ldquo;I don't see additional evidence&rdquo; from the Pentagon justifying its designation of Anthropic as a supply-chain risk</a></b></span>&nbsp; &mdash;&nbsp; A federal judge on Thursday signaled she's become even more skeptical of the Pentagon's decision to blacklist Anthropic &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
 </item>
 
 <item>
@@ -108,7 +242,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.bloomberg.com/news/articles/2026-07-30/situational-awareness-assets-fall-to-10-billion-after-losses"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260730/i44.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260730/p44#a260730p44" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="https://www.bloomberg.com/">Bloomberg</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/articles/2026-07-30/situational-awareness-assets-fall-to-10-billion-after-losses">Source: Situational Awareness' assets have fallen to ~$10B after it liquidated some positions to meet margin calls, down from a reported $20B+ as of late May</a></b></span>&nbsp; &mdash;&nbsp; Assets at Leopold Aschenbrenner's hedge fund Situational Awareness have slumped to about $10 billion after it was forced to liquidate some positions to meet margin calls.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/articles/2026-07-30/situational-awareness-assets-fall-to-10-billion-after-losses">Source: Situational Awareness' assets have fallen to ~$10B after it liquidated some positions to meet margin calls, down from a reported $20B+ as of late May</a></b></span>&nbsp; &mdash;&nbsp; Assets at Leopold Aschenbrenner's hedge fund Situational Awareness have slumped to about $10 billion after it was forced to liquidate some positions to meet margin calls.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
 </item>
 
 <item>
@@ -118,35 +252,15 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://techcrunch.com/2026/07/30/okta-buys-ai-security-startup-permiso-source-says-for-about-200m/"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260730/i43.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260730/p43#a260730p43" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Jagmeet Singh / <a href="http://techcrunch.com/">TechCrunch</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://techcrunch.com/2026/07/30/okta-buys-ai-security-startup-permiso-source-says-for-about-200m/">Okta agrees to acquire AI identity security startup Permiso; source: the acquisition is valued at just under $200M and is structured as an almost all-cash deal</a></b></span>&nbsp; &mdash;&nbsp; Okta on Thursday agreed to acquire AI identity security startup Permiso Security, betting that demand for protecting AI agents &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://techcrunch.com/2026/07/30/okta-buys-ai-security-startup-permiso-source-says-for-about-200m/">Okta agrees to acquire AI identity security startup Permiso; source: the acquisition is valued at just under $200M and is structured as an almost all-cash deal</a></b></span>&nbsp; &mdash;&nbsp; Okta on Thursday agreed to acquire AI identity security startup Permiso Security, betting that demand for protecting AI agents &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
 </item>
 
 <item>
-  <title>🔵 Sources: a group of banks is in talks to lend $15B to Nexus to build a Texas data center; Anthropic will lease it and Google has provided financial guarantees (Anissa Gardizy/Wall Street Journal)</title>
-  <link>https://www.techmeme.com/260730/p41#a260730p41</link>
-  <pubDate>Thu, 30 Jul 2026 17:55:02 +0000</pubDate>
-  <source>Techmeme</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.wsj.com/tech/banks-in-talks-to-lend-15-billion-for-anthropic-data-center-backed-by-google-606d7afd?st=xCJsTe&amp;reflink=desktopwebshare_permalink"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260730/i41.jpg" vspace="4" /></a>
-<p><a href="https://www.techmeme.com/260730/p41#a260730p41" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Anissa Gardizy / <a href="https://www.wsj.com/">Wall Street Journal</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.wsj.com/tech/banks-in-talks-to-lend-15-billion-for-anthropic-data-center-backed-by-google-606d7afd?st=xCJsTe&amp;reflink=desktopwebshare_permalink">Sources: a group of banks is in talks to lend $15B to Nexus to build a Texas data center; Anthropic will lease it and Google has provided financial guarantees</a></b></span>&nbsp; &mdash;&nbsp; Google's guarantees of power and lease obligations would help developer secure financing for the 1.6-gigawatt Texas project</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
-</item>
-
-<item>
-  <title>🟠 Google pilots a faster twice-a-week schedule for Chrome security releases as AI tools drive a surge in bug discoveries; Chrome 149 and 150 fixed 1,072 bugs (Lily Hay Newman/Wired)</title>
-  <link>https://www.techmeme.com/260730/p40#a260730p40</link>
-  <pubDate>Thu, 30 Jul 2026 17:50:15 +0000</pubDate>
-  <source>Techmeme</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://www.wired.com/story/chrome-needs-twice-a-week-patching-thanks-to-ai-bug-hunting-for-now/"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260730/i40.jpg" vspace="4" /></a>
-<p><a href="https://www.techmeme.com/260730/p40#a260730p40" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Lily Hay Newman / <a href="http://www.wired.com/">Wired</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.wired.com/story/chrome-needs-twice-a-week-patching-thanks-to-ai-bug-hunting-for-now/">Google pilots a faster twice-a-week schedule for Chrome security releases as AI tools drive a surge in bug discoveries; Chrome 149 and 150 fixed 1,072 bugs</a></b></span>&nbsp; &mdash;&nbsp; The two Chrome updates in June patched more bugs than the 23 updates before them.&nbsp; Now, Google is ramping up its patching schedule thanks &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 What the FCC ban on foreign-made robot vacuums means for your Roomba</title>
-  <link>https://www.zdnet.com/article/fcc-ban-on-foreign-made-robot-vacuums-and-your-roomba/</link>
-  <pubDate>Thu, 30 Jul 2026 17:11:47 +0000</pubDate>
-  <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>The FCC's robot ban includes many of the world's most popular vacuums and lawn mowers. Is that Roomba in your closet a security risk?<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+  <title>🔵 Open source project fools AI scrapers with poisoned font</title>
+  <link>https://www.theregister.com/ai-and-ml/2026/07/30/open-source-project-fools-ai-scrapers-with-poisoned-font/5281303</link>
+  <pubDate>Thu, 30 Jul 2026 17:19:23 +0000</pubDate>
+  <source>The Register</source>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>ShieldFont is available today if you've got copy that needs protecting<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -154,7 +268,7 @@
   <link>https://www.zdnet.com/article/openais-rogue-ai-models-attacked-other-companies-besides-hugging-face/</link>
   <pubDate>Thu, 30 Jul 2026 16:06:50 +0000</pubDate>
   <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: Potential data exposure — check monitoring and incident response readiness.</b><br/>The same autonomous OpenAI agent that escaped its test environment and breached Hugging Face was also busy hacking other AI systems. Lucky us.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Potential data exposure — check monitoring and incident response readiness.</b><br/>The same autonomous OpenAI agent that escaped its test environment and breached Hugging Face was also busy hacking other AI systems. Lucky us.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
@@ -163,7 +277,7 @@
   <pubDate>Thu, 30 Jul 2026 15:46:17 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: Regulatory/compliance signal — assess applicability and remediation timeline.</b><br/><p>The best compliance programs aren't the biggest ones. They're the ones built on a short list of questions that can actually be answered, and that still hold true when the models change.</p>
-<p>The post <a href="https://www.securityweek.com/timeless-compliance-why-better-questions-beat-bigger-frameworks/">Timeless Compliance: Why Better Questions Beat Bigger Frameworks</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/timeless-compliance-why-better-questions-beat-bigger-frameworks/">Timeless Compliance: Why Better Questions Beat Bigger Frameworks</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
 </item>
 
 <item>
@@ -236,7 +350,7 @@
 
 
 <p class="wp-block-paragraph"><a href="https://www.linkedin.com/in/ramvaradarajan/" rel="noreferrer noopener" target="_blank">Ram Varadarajan</a>, CEO at Acalvio, said traditional security approaches are unlikely to help. “General-purpose AI and traditional ‘check-the-box’ security audits are a false comfort when the actual battle is moving in milliseconds,” he said. “To maintain competitive edge and protect valuation, companies have to pivot from reactive defense to active, game-theoretic defense.”</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 8h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 10h ago]]></description>
 </item>
 
 <item>
@@ -345,7 +459,15 @@
 
 
 <p class="wp-block-paragraph">“If a component can execute a shell command or query a database, it gets the same authentication, network segmentation, and logging as any other privileged system in the environment,” he said. He also recommended that security teams inventory the tools exposed through AI agent deployments, audit persistent AI memory separately from software patching, and narrowly scope and rotate LLM provider credentials following any suspected exposure.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 8h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 10h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Microsoft makes Copilot harder to miss in Classic Outlook</title>
+  <link>https://www.theregister.com/on-prem/2026/07/30/microsoft-makes-copilot-harder-to-miss-in-classic-outlook/5280997</link>
+  <pubDate>Thu, 30 Jul 2026 12:28:00 +0000</pubDate>
+  <source>The Register</source>
+  <description><![CDATA[<b>Why this matters: Could impact email access or mail flow — monitor delivery and client issues.</b><br/>New button beside the ribbon promises consistency – and more questions for admins<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 10h ago]]></description>
 </item>
 
 <item>
@@ -353,7 +475,7 @@
   <link>https://www.zdnet.com/article/bleachbit-free-windows-utility-free-up-disk-space/</link>
   <pubDate>Thu, 30 Jul 2026 12:25:28 +0000</pubDate>
   <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Running low on hard disk space or just want to get rid of junk files? The free BleachBit utility can easily handle that assignment. Here's why it beats Storage Sense.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 8h ago]]></description>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Running low on hard disk space or just want to get rid of junk files? The free BleachBit utility can easily handle that assignment. Here's why it beats Storage Sense.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 10h ago]]></description>
 </item>
 
 <item>
@@ -468,7 +590,7 @@
 
 
 <p class="wp-block-paragraph"><a href="#_ftnref2" id="_ftn2">[2]</a> <a href="https://www.gartner.com/en/documents/5330263">The CIOs Guide to Broadcom’s Acquisition of VMware</a>, Gartner, Inc, Julia Palmer, Mike Cisek, Tony Harvey, April 3, 2024.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 11h ago]]></description>
 </item>
 
 <item>
@@ -587,7 +709,15 @@
 
 
 <p class="wp-block-paragraph"><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><a href="https://www.cio.com/expert-contributor-network/"><strong>Want to join?</strong></a></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 11h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 MariaDB again faces questions over Galera&#x27;s open source future</title>
+  <link>https://www.theregister.com/databases/2026/07/30/mariadb-again-faces-questions-over-galeras-open-source-future/5280975</link>
+  <pubDate>Thu, 30 Jul 2026 11:01:00 +0000</pubDate>
+  <source>The Register</source>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Support for the MySQL build ends in September as the company develops separate premium replication technology<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 12h ago]]></description>
 </item>
 
 <item>
@@ -724,7 +854,7 @@
 
 
 <p class="wp-block-paragraph"><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><a href="https://www.cio.com/expert-contributor-network/"><strong>Want to join?</strong></a></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 10h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 12h ago]]></description>
 </item>
 
 <item>
@@ -817,7 +947,7 @@
 
 
 <p class="wp-block-paragraph">Detecting the threat requires cross-layer correlation, Prabhu said. He recommended starting with users that opened suspicious OWA messages, then reviewing subsequent mailbox-permission changes, add-in activity, and OAuth events. Investigators should also examine browser-storage artifacts and related network metadata.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 10h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 12h ago]]></description>
 </item>
 
 <item>
@@ -968,7 +1098,7 @@
 
 
 <p class="wp-block-paragraph">“Rising infrastructure costs also accelerate innovation in model optimization, inference efficiency, and intelligent orchestration,” Gurtu says. “History shows constraints often become the catalyst for the next wave of breakthroughs.”</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 11h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
 </item>
 
 <item>
@@ -1081,7 +1211,7 @@
 
 
 <p class="wp-block-paragraph">The implementation of the onboarding assistant is one example of a much broader strategy in which AI, data, and automation are used to transform the relationship between the bank and its customers. “The key is no longer just being available, but providing real value in every interaction, and strengthening trust through useful experiences tailored to each user,” says Vicens.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 11h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
 </item>
 
 <item>
@@ -1198,7 +1328,7 @@
 
 
 <p class="wp-block-paragraph"><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><a href="https://www.cio.com/expert-contributor-network/"><strong>Want to join?</strong></a><strong></strong></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 11h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
 </item>
 
 <item>
@@ -1323,7 +1453,7 @@
 
 
 <p class="wp-block-paragraph">“People should be clearly told when persistent device identifiers are being used, what activities may be linked to them, how long the data is retained, and how they can reduce the collection of such information,” according to Lupton. “The fact that these records may help investigate serious crime does not eliminate the need for meaningful privacy protections and proper legal oversight.”</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 12h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 14h ago]]></description>
 </item>
 
 <item>
@@ -1496,7 +1626,7 @@
 
 
 <p class="wp-block-paragraph">“Progressively removing access to OT systems as the cyber threat environment deteriorates may be effective in halting or hindering attacks on vital OT and enabling systems,” the guide notes.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 20h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 22h ago]]></description>
 </item>
 
 <item>
@@ -1662,6 +1792,14 @@
 </item>
 
 <item>
+  <title>🔵 Closed models refuse to help researcher swat Linux bug</title>
+  <link>https://www.theregister.com/ai-and-ml/2026/07/29/closed-models-refuse-to-help-researcher-swat-linux-bug/5280647</link>
+  <pubDate>Wed, 29 Jul 2026 18:33:16 +0000</pubDate>
+  <source>The Register</source>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>"I'm sorry, Dave. I'm afraid I can't do that" is an effective sales pitch for open source<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
+</item>
+
+<item>
   <title>🔵 Oracle simplifies migrating legacy databases off IBM mainframes with support for EBCDIC</title>
   <link>https://www.cio.com/article/4202975/oracle-simplifies-migrating-legacy-databases-off-ibm-mainframes-with-support-for-ebcdic.html</link>
   <pubDate>Wed, 29 Jul 2026 18:01:44 +0000</pubDate>
@@ -1783,84 +1921,11 @@
 </item>
 
 <item>
-  <title>🔵 Mythos takes its first shot at post-quantum cryptography</title>
-  <link>https://www.csoonline.com/article/4202920/mythos-takes-its-first-shot-at-post-quantum-cryptography.html</link>
-  <pubDate>Wed, 29 Jul 2026 15:17:06 +0000</pubDate>
-  <source>CSO Online</source>
-  <description><![CDATA[<b>Why this matters: Endpoint detection changes — review high-severity detections and alert noise.</b><br/><div id="remove_no_follow">
-		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
-					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
-						<div class="article-column__content">
-<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
-
-
-
-<p class="wp-block-paragraph">Anthropic’s Claude <a href="https://www.csoonline.com/article/4198019/claude-mythos-faq-capabilities-access-competitors-implications.html">Mythos</a> Preview model has helped researchers discover ways to speed up attacks against two widely studied cryptographic algorithms.</p>
-
-
-
-<p class="wp-block-paragraph">One of the targets is Hawk, a candidate for post-quantum digital signature algorithms currently being evaluated by NIST, while the other improves the best previously known attack against a weakened version of the widely used Advanced Encryption Standard (<a href="https://www.csoonline.com/article/548682/encryption-crypto-is-cracked-how-not-to-fall-in.html">AES</a>).</p>
-
-
-
-<p class="wp-block-paragraph">Neither finding compromises production deployments nor weakens the security of real-world systems. Instead, Anthropic said, the findings improve the understanding of the security margins of modern cryptographic designs.</p>
-
-
-
-<h2 class="wp-block-heading" id="security-margin-reduced">Security margin reduced</h2>
-
-
-
-<p class="wp-block-paragraph">Hawk is among the post-quantum cryptographic (<a href="https://www.csoonline.com/article/4142174/pqc-roadmap-remains-hazy-as-vendors-race-for-early-advantage.html">PQC</a>) schemes under consideration by the US National Institute of Standards and Technology as it evaluates <a href="https://csrc.nist.gov/projects/pqc-dig-sig">additional algorithms</a> designed to withstand attacks from quantum computers, and like some previously evaluated submissions relies on lattice-based cryptography.</p>
-
-
-
-<p class="wp-block-paragraph">“Despite Hawk having survived two rounds of expert human review over a period of two years, Mythos was able to improve the best-known attack on it in just 60 hours of work,” Anthropic said in a <a href="https://www.anthropic.com/research/discovering-cryptographic-weaknesses">blog post about its research</a>.</p>
-
-
-
-<p class="wp-block-paragraph">Anthropic only studied the 256-bit version of Hawk, while the submission NIST is evaluating concerns the 512- and 1024-bit versions. However, said Anthropic, its findings are still relevant.</p>
-
-
-
-<p class="wp-block-paragraph">“The key sizes proposed in the HAWK submission are significantly weaker than originally suggested,” it said in its blog post, but for larger keys, Hawk “remains impractical to attack.”</p>
-
-
-
-<p class="wp-block-paragraph">On the other hand, the post said, <a href="https://anthropic.com/document/hawk_key_recovery.pdf" rel="noreferrer noopener" target="_blank">Anthropic’s attack</a> makes Hawk less practical to use because it effectively halves Hawk’s security level, meaning substantially larger key sizes will be required to restore its intended security. Such an increase would diminish many of the efficiency benefits that made Hawk an attractive post-quantum signature candidate, Anthropic wrote.</p>
-
-
-
-<p class="wp-block-paragraph">Anthropic’s new finding “is specific to Hawk and does not impact other NIST post-quantum signature candidates or lattice-based cryptography in general,” the company wrote.</p>
-
-
-
-<p class="wp-block-paragraph">The <a href="https://anthropic.com/document/aes_mobius_bridge.pdf" rel="noreferrer noopener" target="_blank">second attack</a> is based on a new cryptanalytic technique, dubbed “Mobius Bridge,” which improves attacks against a weakened version of AES-128 using only seven “rounds” instead of the full-strength version’s 10. Rounds are the repeated series of mathematical transformations that AES and other encryption algorithms apply to protect data. Security researchers commonly study reduced-round variants to evaluate the security margins of block ciphers like AES.</p>
-
-
-
-<p class="wp-block-paragraph">Anthropic said the new technique improving the speed of the previous best attacks by 200-800 times previous attacks on the reduced-round construction while remaining well short of threatening the full versions of AES used in production.</p>
-
-
-
-<h2 class="wp-block-heading" id="no-practical-application">No practical application</h2>
-
-
-
-<p class="wp-block-paragraph">Anthropic explicitly stated that the research has no practical impact on the security of deployed AES implementations — and for good reason.</p>
-
-
-
-<p class="wp-block-paragraph">“The attack operates under a chosen plaintext threat model, which is the most common assumption used for studying ciphers like AES,” it explained in the blog post. This assumes that an attacker is able to request that the defender encrypt arbitrary inputs with a fixed, unknown key, and then gets to see the corresponding output. In this case, it assumes the attacker can request the encryption of 2^105 (about 4 billion billion billion) chosen plaintexts. “This attack is therefore completely impractical but quantifies the attack cost against AES under these assumptions,” it said.</p>
-
-
-
-<p class="wp-block-paragraph">Claude Mythos Preview discovered the attack almost entirely autonomously, Anthropic said, adding, “A researcher at Anthropic built a scaffold that enabled Claude to pose hypotheses, run experiments to experimentally validate or refute these hypotheses, and then asked Claude to design an attack that improves on the best cryptanalysis of AES.”</p>
-
-
-
-<p class="wp-block-paragraph">Even with AI accelerating some parts of the research, more time is spent verifying the correctness of results. The improved attack on AES was discovered in about a week, but took two researchers nearly a month to validate, Anthropic said.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
+  <title>🟠 Word worm crawls into Copilot, spreads chaos</title>
+  <link>https://www.theregister.com/security/2026/07/29/word-worm-crawls-into-copilot-spreads-chaos/5280588</link>
+  <pubDate>Wed, 29 Jul 2026 16:43:54 +0000</pubDate>
+  <source>The Register</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Researcher says months of coordination with Microsoft have yet to produce a robust mitigation<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
@@ -3025,6 +3090,14 @@
 </item>
 
 <item>
+  <title>🔵 Burnham&#x27;s spanner in the works leaves UK government tech scattered across Whitehall</title>
+  <link>https://www.theregister.com/public-sector/2026/07/29/burnhams-spanner-in-the-works-leaves-uk-government-tech-scattered-across-whitehall/5279437</link>
+  <pubDate>Wed, 29 Jul 2026 08:30:00 +0000</pubDate>
+  <source>The Register</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Splitting up responsibility for digital transformation and procurement while AI gets a seat at Cabinet risks incoherency<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
+</item>
+
+<item>
   <title>🔴 How MFA gets hacked — and strategies to prevent it</title>
   <link>https://www.csoonline.com/article/570795/how-to-hack-2fa.html</link>
   <pubDate>Wed, 29 Jul 2026 08:00:00 +0000</pubDate>
@@ -3268,6 +3341,14 @@
 </item>
 
 <item>
+  <title>🟠 Why the &#x27;patchpocalypse&#x27; demands immediate isolation</title>
+  <link>https://www.theregister.com/patches/2026/07/29/partner-content/5280568</link>
+  <pubDate>Wed, 29 Jul 2026 08:00:00 +0000</pubDate>
+  <source>The Register</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>PARTNER CONTENT: Attackers automated, but your 30-day patch window didn't<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
+</item>
+
+<item>
   <title>🔴 Ransomware report: VPNs in the crosshairs, AI attacks</title>
   <link>https://www.csoonline.com/article/4201372/ransomware-report-vpns-in-the-crosshairs-ai-attacks.html</link>
   <pubDate>Wed, 29 Jul 2026 07:30:00 +0000</pubDate>
@@ -3372,6 +3453,14 @@
 <li><a href="https://www.csoonline.com/article/4182898/check-point-warns-of-ransomware-linked-attacks-exploiting-outdated-vpn-protocol.html">Check Point warns of ransomware-linked attacks exploiting outdated VPN protocol</a></li>
 </ul>
 </div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
+</item>
+
+<item>
+  <title>🔵 America bans imported robots due to supply chain and security risks</title>
+  <link>https://www.theregister.com/security/2026/07/29/america-bans-imported-robots-due-to-supply-chain-and-security-risks/5280145</link>
+  <pubDate>Wed, 29 Jul 2026 02:16:31 +0000</pubDate>
+  <source>The Register</source>
+  <description><![CDATA[<b>Why this matters: Supply chain risk — audit third-party dependencies and vendor access.</b><br/>Docs point to China’s Unitree as prime example of the foreign clanker threat<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
@@ -3952,6 +4041,14 @@
 </item>
 
 <item>
+  <title>🟠 JFrog&#x27;s 0-days let OpenAI&#x27;s models hack Hugging Face</title>
+  <link>https://www.theregister.com/security/2026/07/28/jfrogs-0-days-let-openais-models-hack-hugging-face/5280001</link>
+  <pubDate>Tue, 28 Jul 2026 22:01:53 +0000</pubDate>
+  <source>The Register</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>OpenAI confirms the link<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
+</item>
+
+<item>
   <title>🔴 Security at the speed of AI: How to protect against sophisticated cyberattacks</title>
   <link>https://www.cio.com/article/4202405/security-at-the-speed-of-ai-how-to-protect-against-sophisticated-cyberattacks.html</link>
   <pubDate>Tue, 28 Jul 2026 20:14:27 +0000</pubDate>
@@ -4042,6 +4139,14 @@
 
 <p class="wp-block-paragraph">Machine-speed attacks require machine-speed defenses. Future-proofing your enterprise requires a unified cloud architecture, aligned leadership, and identity-centric controls. Learn how Palo Alto Networks and Accenture can help you build a future-proof network at <a href="https://www.paloaltonetworks.com/partners/nextwave-for-gsi/accenture-and-palo-alto-networks.html">paloaltonetworks.com/accenture</a>.</p>
 </div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
+</item>
+
+<item>
+  <title>🔵 War machines can run amok with AI in control</title>
+  <link>https://www.theregister.com/ai-and-ml/2026/07/28/war-machines-can-run-amok-with-ai-in-control/5279937</link>
+  <pubDate>Tue, 28 Jul 2026 19:51:08 +0000</pubDate>
+  <source>The Register</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Tour of the AI kill chain maps the risks of ubiquitous surveillance and flawed algorithms<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
 </item>
 
 <item>
@@ -4925,157 +5030,6 @@
 
 
 <p class="wp-block-paragraph">“Organizations should have vetted AI models they can operate inside their own trust boundary before an incident happens,” Shah says. “That said, better models alone aren’t enough. AI for cybersecurity is still maturing, and organizations shouldn’t blindly trust autonomous systems.”</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
-</item>
-
-<item>
-  <title>🔴 Hackers are compromising hotel Wi-Fi gateways to hijack Microsoft 365 accounts</title>
-  <link>https://www.csoonline.com/article/4202067/hackers-are-compromising-hotel-wi-fi-gateways-to-hijack-microsoft-365-accounts.html</link>
-  <pubDate>Tue, 28 Jul 2026 02:28:22 +0000</pubDate>
-  <source>CSO Online</source>
-  <description><![CDATA[<b>Why this matters: Elevated ransomware risk — validate backups and endpoint defenses.</b><br/><div id="remove_no_follow">
-		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
-					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
-						<div class="article-column__content">
-<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
-
-
-
-<p class="wp-block-paragraph">Traveling enterprise employees beware: Think twice before you log onto that oh-so-convenient public Wi-Fi.</p>
-
-
-
-<p class="wp-block-paragraph">Since at least June, threat actors have been compromising “captive” Wi-Fi gateways and other portal appliances at hotels, conference centers, and similar shared venues to hijack users’ Microsoft 365 accounts, according to the ReliaQuest Threat Research team.</p>
-
-
-
-<p class="wp-block-paragraph">Once a threat actor controls a gateway, they can silently redirect a user’s traffic to their own infrastructure and steal their Microsoft 365 credentials without ever touching the user’s device, compromising endpoints, or sending phishing links or malicious attachments.</p>
-
-
-
-<p class="wp-block-paragraph">“The most dangerous element is that it operates at the network gateway, which sits beneath most of the trust assumptions users and devices make,” ReliaQuest told CSO Online. “It’s not necessarily an enterprise breach level event on its own, but it’s a very real risk to individual accounts.”</p>
-
-
-
-<h2 class="wp-block-heading" id="exploiting-a-fundamental-trust">Exploiting a ‘fundamental trust’</h2>
-
-
-
-<p class="wp-block-paragraph">Domain Name System (DNS) poisoning, in which false data is injected to redirect regular web traffic to fraudulent domains, has previously been observed on small office routers, but attackers are now expanding the technique to higher-level targets, the ReliaQuest researchers explained in a <a href="https://reliaquest.com/blog/threat-spotlight-dns-poisoning-tactics-expand-to-hospitality/" rel="noreferrer noopener" target="_blank">blog post</a>.</p>
-
-
-
-<p class="wp-block-paragraph">Attackers likely gain access to the gateways through weak or reused admin credentials in combination with exposed interfaces like Secure Shell (SSH), Simple Network Management Protocol (SNMP), and other web consoles, they pointed out.</p>
-
-
-
-<p class="wp-block-paragraph">Admin access to the gateway is all that malicious actors need, because devices are designed to inherently trust DNS, which translates domain names like login.microsoftonline[.]com into IP addresses to route them. Therefore, a single gateway compromise gives the attacker the ability to redirect traffic for every guest logging into the network, providing IP addresses it controls in response to DNS requests, rather than the legitimate ones, without touching a single endpoint.</p>
-
-
-
-<p class="wp-block-paragraph">“Captive portal appliances sit at the <a href="https://www.csoonline.com/article/4201019/ransomware-groups-are-hammering-your-vulnerable-vpns.html" target="_blank">network perimeter</a> for every guest on that network,” the researchers wrote. “Detection is inherently difficult because the attack happens gateway-side, outside the endpoint’s visibility.”</p>
-
-
-
-<p class="wp-block-paragraph">In the campaign tracked by ReliaQuest, four attacker-registered domains, m365-owa[.]com, owa-ms365[.]com, ms365-device[.]com, and ms365-live[.]com, were used for Microsoft-impersonation lures.</p>
-
-
-
-<p class="wp-block-paragraph">The compromised Wi-Fi gateways were discovered across multiple US cities as well as in India and Saudi Arabia, and impacted users were from companies in professional and financial services, legal, retail, health care, and energy, indicating that the method isn’t sector-specific.</p>
-
-
-
-<p class="wp-block-paragraph">“We’ve seen enough SharePoint exfiltration cases to know that a single popped account can cascade into meaningful data loss,” ReliaQuest noted. Meanwhile, for the network operators, there’s a “reputational dimension”; user compromise is a “serious trust and brand problem, regardless of how sophisticated’ the underlying attack is.”</p>
-
-
-
-<h2 class="wp-block-heading" id="safe-services-dnssec-not-enough">Safe services, DNSSEC not enough</h2>
-
-
-
-<p class="wp-block-paragraph">Locking network configurations to a ‘safe’ DNS provider such as Google (8.8.8.8), Cloudflare (1.1.1.1), or the cloud-based OpenDNS isn’t a sufficient tactic, because it doesn’t change the path that queries actually travel over, ReliaQuest contended.</p>
-
-
-
-<p class="wp-block-paragraph">By default, devices send DNS queries as unencrypted protocol traffic, and those packets still have to traverse the hotel’s network to reach Google, Cloudflare, or OpenDNS, the company explained. Since the gateway sits directly in that path, it can inspect, block, or redirect the query before it ever reaches the chosen resolver.</p>
-
-
-
-<p class="wp-block-paragraph">“Specifying a trusted DNS server changes the intended destination, not who controls the road to get there,” ReliaQuest noted.</p>
-
-
-
-<p class="wp-block-paragraph">Further, Domain Name System Security Extensions (DNSSECs), which use digital signatures and public-key cryptography, only “partially” address the problem. DNSSEC provides authentication and integrity for signed domains, which means a validating resolver can detect and reject forged or tampered responses.</p>
-
-
-
-<p class="wp-block-paragraph">“What it does not do is provide confidentiality or availability,” the company said. “It does not encrypt DNS traffic or stop an attacker from intercepting, blocking, or redirecting requests.”</p>
-
-
-
-<p class="wp-block-paragraph">So while DNSSEC can defeat certain response-forgery attacks against signed zones, an on-path gateway can still see queries, drop them, or force fallback behavior. However, this protection layer only helps when domains are actually signed, and then only when the client or resolver performs validation, which “many stub resolvers do not,” according to ReliaQuest.</p>
-
-
-
-<h2 class="wp-block-heading" id="full-tunnel-vpns-required">Full-tunnel VPNs required</h2>
-
-
-
-<p class="wp-block-paragraph">To combat the problem, enterprises should require all corporate devices to use a full-tunnel VPN for network connection. Controls should prevent internet access until a tunnel is active, ReliaQuest advised.</p>
-
-
-
-<p class="wp-block-paragraph">This will route all of a device’s traffic, including DNS, through an encrypted connection to a trusted VPN server before it travels anywhere else, the company explained, thus preventing local networks like hotel gateways from seeing or modifying DNS and internet traffic.</p>
-
-
-
-<p class="wp-block-paragraph">“In effect, it takes the untrusted network out of the trust equation,” ReliaQuest noted.</p>
-
-
-
-<p class="wp-block-paragraph">However, full-tunnel configuration is not the default for VPNs, because it comes with “real trade-offs,” the researchers noted: It adds cost, latency, and bandwidth demands, since every packet has to travel through company infrastructure. Thus, forcing all traffic through the corporate backbone is “not always practical” for distributed or bandwidth-heavy workforces.</p>
-
-
-
-<p class="wp-block-paragraph">Enterprises should also enforce conditional access in Entra ID to block <a href="https://reliaquest.com/blog/threat-spotlight-jalisco-toolkit-and-ai-powered-phishing-surge/" rel="noreferrer noopener" target="_blank">device-code authentication flow</a>, which has few legitimate use cases for most users in most environments, ReliaQuest noted.</p>
-
-
-
-<h2 class="wp-block-heading" id="additional-precautions">Additional precautions</h2>
-
-
-
-<p class="wp-block-paragraph">The company also advised:</p>
-
-
-
-<ul class="wp-block-list">
-<li>Restricting Proxy Auto-Configuration (PAC) file retrieval to approved internal hosts;</li>
-
-
-
-<li>Disabling automatic Web Proxy Auto-Discovery (WPAD) via Group Policy to (this is often enabled by default in Windows);</li>
-
-
-
-<li>Deploying encrypted DNS such as DoH or DoT in strict mode as a “complement or alternative” to full-tunnel VPN. This is particularly important for organizations where always-on VPN is not feasible.</li>
-
-
-
-<li>Training employees to verify the URL and certificate of any page requesting credentials before entering them, particularly on public Wi-Fi networks.</li>
-</ul>
-
-
-
-<p class="wp-block-paragraph">Prevention is more important than detection here, ReliaQuest pointed out: while in tools like Microsoft Defender for Endpoint, ‘<em>DnsConnectionInspected</em>’ events showing queries to attacker-controlled domains are a primary endpoint-level signal, “by the time those events fire, the redirect has typically already occurred. In other words, endpoint telemetry confirms what happened more than it prevents it.”</p>
-
-
-
-<p class="wp-block-paragraph">This is exactly why methods like encrypted transport, Conditional Access, and WPAD and PAC hardening matter more than detection alone, the researchers emphasized.</p>
-
-
-
-<p class="wp-block-paragraph"></p>
 </div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
 </item>
 

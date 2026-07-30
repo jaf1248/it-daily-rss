@@ -1,25 +1,30 @@
 # IT Weekly Intelligence Briefing
 **Period:** July 23 – July 30, 2026  
-**Generated:** 2026-07-30 21:05 UTC  
+**Generated:** 2026-07-30 23:03 UTC  
 **Items reviewed:** 106  
 
 ## ⚡ Top Actions This Week
 
-1. **Audit third-party software dependencies and review vendor access.**  
+1. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
+   _South Korea fines telco giant KT $39 million for customer data breach_  
+   Source: BleepingComputer  
+
+2. **Audit third-party software dependencies and review vendor access.**  
    _Amazon links Debug, Chalk NPM supply-chain attacks to North Korean hackers_  
    Source: BleepingComputer  
 
-2. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
+3. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
    _ShinyHunters claims Brinks Home breach, threatens to leak stolen data_  
-   Source: BleepingComputer  
-
-3. **Validate backups, confirm EDR coverage, and brief incident response team.**  
-   _Microsoft Teams vishing attacks lead to Chaos ransomware attacks_  
    Source: BleepingComputer  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [South Korea fines telco giant KT $39 million for customer data breach](https://www.bleepingcomputer.com/news/security/south-korea-fines-telco-giant-kt-39-million-for-customer-data-breach/)
+**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jul 30  
+**Why it matters:** Potential credential or data exposure.  
+**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
 ### [Amazon links Debug, Chalk NPM supply-chain attacks to North Korean hackers](https://www.bleepingcomputer.com/news/security/amazon-links-debug-chalk-npm-supply-chain-attacks-to-north-korean-hackers/)
 **Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jul 30  
@@ -46,14 +51,12 @@
 **Why it matters:** Potential credential or data exposure.  
 **Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
-### [Cisco FMC Zero-Day Actively Exploited, Static Credentials Could Expose Sensitive Data](https://thehackernews.com/2026/07/cisco-fmc-zero-day-actively-exploited.html)
-**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Jul 30  
-**Why it matters:** General awareness item.  
-**Recommended action:** Apply emergency patch or mitigation now; check vendor advisory for workarounds.  
-
 ---
 
 ## 🟠 Important — Review This Week
+
+- [JetBrains warns of critical TeamCity remote code execution flaw](https://www.bleepingcomputer.com/news/security/jetbrains-warns-of-critical-teamcity-remote-code-execution-flaw/)  
+  **BleepingComputer** · Jul 30 · _General awareness item._  
 
 - [VMware fixes three critical flaws allowing auth bypass, VM escapes](https://www.bleepingcomputer.com/news/security/vmware-fixes-three-critical-flaws-allowing-auth-bypass-vm-escapes/)  
   **BleepingComputer** · Jul 30 · _General awareness item._  
@@ -61,10 +64,10 @@
 - [Google says AI helped Chrome fix 1,072 security bugs in two releases](https://www.bleepingcomputer.com/news/google/google-says-ai-helped-chrome-fix-1-072-security-bugs-in-two-releases/)  
   **BleepingComputer** · Jul 30 · _General awareness item._  
 
-- [CVE-2026-24304 Azure Resource Manager Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-24304)  
+- [CVE-2026-54128 Windows DHCP Client Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-54128)  
   **Microsoft Security Response Center (MSRC)** · Jul 30 · _General awareness item._  
 
-- [CVE-2026-54128 Windows DHCP Client Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-54128)  
+- [CVE-2026-55129 Microsoft Office Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-55129)  
   **Microsoft Security Response Center (MSRC)** · Jul 30 · _General awareness item._  
 
 - [CVE-2026-56197 Windows Admin Center (WAC) Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-56197)  
@@ -73,11 +76,8 @@
 - [CVE-2026-66803 Azure Cosmos DB Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-66803)  
   **Microsoft Security Response Center (MSRC)** · Jul 30 · _General awareness item._  
 
-- [CVE-2026-55129 Microsoft Office Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-55129)  
+- [CVE-2026-24304 Azure Resource Manager Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-24304)  
   **Microsoft Security Response Center (MSRC)** · Jul 30 · _General awareness item._  
-
-- [Azure Cosmos DB Flaw Exposed Platform-Wide Key That Could Access Any Database](https://thehackernews.com/2026/07/azure-cosmos-db-flaw-exposed-platform.html)  
-  **The Hacker News** · Jul 30 · _General awareness item._  
 
 ---
 
@@ -92,4 +92,4 @@
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 12 critical · 57 important · 37 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 13 critical · 58 important · 35 FYI_
