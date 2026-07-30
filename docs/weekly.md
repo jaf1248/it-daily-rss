@@ -1,25 +1,35 @@
 # IT Weekly Intelligence Briefing
 **Period:** July 23 – July 30, 2026  
-**Generated:** 2026-07-30 15:51 UTC  
-**Items reviewed:** 102  
+**Generated:** 2026-07-30 17:24 UTC  
+**Items reviewed:** 103  
 
 ## ⚡ Top Actions This Week
 
 1. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _Analog Devices discloses data breach, says operations unaffected_  
+   _ShinyHunters claims Brinks Home breach, threatens to leak stolen data_  
    Source: BleepingComputer  
 
-2. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _The Network Has Become the Control Plane for AI Security_  
-   Source: The Hacker News  
+2. **Validate backups, confirm EDR coverage, and brief incident response team.**  
+   _Microsoft Teams vishing attacks lead to Chaos ransomware attacks_  
+   Source: BleepingComputer  
 
-3. **Apply emergency patch or mitigation now; check vendor advisory for workarounds.**  
-   _Cisco FMC Zero-Day Actively Exploited, Static Credentials Could Expose Sensitive Data_  
-   Source: The Hacker News  
+3. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
+   _Analog Devices discloses data breach, says operations unaffected_  
+   Source: BleepingComputer  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [ShinyHunters claims Brinks Home breach, threatens to leak stolen data](https://www.bleepingcomputer.com/news/security/shinyhunters-claims-brinks-home-breach-threatens-to-leak-stolen-data/)
+**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jul 30  
+**Why it matters:** Potential credential or data exposure.  
+**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
+
+### [Microsoft Teams vishing attacks lead to Chaos ransomware attacks](https://www.bleepingcomputer.com/news/security/microsoft-teams-vishing-attacks-lead-to-chaos-ransomware-attacks/)
+**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jul 30  
+**Why it matters:** Elevated ransomware risk across the sector.  
+**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
 
 ### [Analog Devices discloses data breach, says operations unaffected](https://www.bleepingcomputer.com/news/security/analog-devices-discloses-data-breach-says-operations-unaffected/)
 **Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jul 30  
@@ -41,19 +51,12 @@
 **Why it matters:** General awareness item.  
 **Recommended action:** Apply emergency patch or mitigation now; check vendor advisory for workarounds.  
 
-### [OpenAI agent used exposed credentials at 4 services in Hugging Face breach](https://www.bleepingcomputer.com/news/security/openai-agent-used-exposed-credentials-at-4-services-in-hugging-face-breach/)
-**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jul 29  
-**Why it matters:** Potential credential or data exposure.  
-**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
-
-### [OpenAI Agent Used Exposed Credentials Across Four Services During Hugging Face Breach](https://thehackernews.com/2026/07/openai-agent-used-exposed-credentials.html)
-**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Jul 29  
-**Why it matters:** Potential credential or data exposure.  
-**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
-
 ---
 
 ## 🟠 Important — Review This Week
+
+- [Google says AI helped Chrome fix 1,072 security bugs in two releases](https://www.bleepingcomputer.com/news/google/google-says-ai-helped-chrome-fix-1-072-security-bugs-in-two-releases/)  
+  **BleepingComputer** · Jul 30 · _General awareness item._  
 
 - [CVE-2026-56197 Windows Admin Center (WAC) Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-56197)  
   **Microsoft Security Response Center (MSRC)** · Jul 30 · _General awareness item._  
@@ -76,20 +79,17 @@
 - [Critical Rails Flaw Could Let Unauthenticated Attackers Read Server Files via Image Uploads](https://thehackernews.com/2026/07/critical-rails-flaw-could-let.html)  
   **The Hacker News** · Jul 29 · _General awareness item._  
 
-- [Ruflo MCP Flaw Lets Unauthenticated Attackers Run Commands and Poison AI Memory](https://thehackernews.com/2026/07/ruflo-mcp-flaw-lets-unauthenticated.html)  
-  **The Hacker News** · Jul 29 · _General awareness item._  
-
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [Read This Before You Buy That TV Streaming Stick](https://krebsonsecurity.com/2026/07/read-this-before-you-buy-that-tv-streaming-stick/) — Krebs on Security
+- [ThreatsDay: AI-Powered Hacking, 370 Chrome Flaws, SonicWall Attacks, DNS Hijacking + 22 More Stories](https://thehackernews.com/2026/07/threatsday-ai-powered-hacking-370.html) — The Hacker News
 - [After the Break-In: What Attackers Do Once They're Already Inside](https://www.bleepingcomputer.com/news/security/after-the-break-in-what-attackers-do-once-theyre-already-inside/) — BleepingComputer
 - [Microsoft Copilot for Word Can Copy Hidden Prompts Into New Documents](https://thehackernews.com/2026/07/microsoft-copilot-for-word-can-copy.html) — The Hacker News
 - [Hackers Exploit AnySign4PC via Hacked Korean Sites to Install Backdoors Without Prompts](https://thehackernews.com/2026/07/hackers-exploit-anysign4pc-via-hacked.html) — The Hacker News
 - [SilverFox Targets Japanese Manufacturer with 3-Driver BYOVD Chain and ValleyRAT](https://thehackernews.com/2026/07/silverfox-targets-japanese-manufacturer.html) — The Hacker News
-- [FCC Blocks New Foreign-Produced Robots and Power Inverters Over Cyber Risks](https://thehackernews.com/2026/07/fcc-blocks-new-foreign-produced-robots.html) — The Hacker News
-- [ISC Stormcast For Thursday, July 30th, 2026 https://isc.sans.edu/podcastdetail/10030, (Thu, Jul 30th)](https://isc.sans.edu/diary/rss/33200) — SANS Internet Storm Center
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 9 critical · 54 important · 39 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 11 critical · 53 important · 39 FYI_
