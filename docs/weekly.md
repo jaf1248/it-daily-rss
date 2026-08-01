@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
 **Period:** July 25 – August 01, 2026  
-**Generated:** 2026-08-01 16:03 UTC  
+**Generated:** 2026-08-01 17:58 UTC  
 **Items reviewed:** 97  
 
 ## ⚡ Top Actions This Week
@@ -83,12 +83,12 @@
 
 ## 🔵 FYI — General Awareness
 
+- [Coldcard Hardware Wallet Flaw Linked to $70 Million Bitcoin Theft in 41 Minutes](https://thehackernews.com/2026/08/coldcard-hardware-wallet-flaw-linked-to.html) — The Hacker News
 - [Phishing Campaigns Targeting AI Solutions Providers, (Sat, Aug 1st)](https://isc.sans.edu/diary/rss/33206) — SANS Internet Storm Center
 - [Hijacked Hotel Wi-Fi Pushes Fake Updates to Deliver Surveillance Malware](https://thehackernews.com/2026/08/hijacked-hotel-wi-fi-pushes-fake.html) — The Hacker News
 - [Arch Linux disables AUR package adoption to stop malware flood](https://www.bleepingcomputer.com/news/security/arch-linux-disables-aur-package-adoption-to-stop-malware-flood/) — BleepingComputer
 - [Online ad firm Adform’s script compromised to steal cryptocurrency](https://www.bleepingcomputer.com/news/security/online-ad-firm-adforms-script-compromised-to-steal-cryptocurrency/) — BleepingComputer
 - [OpenAI says its new GPT 5.6 models are becoming more cost-efficient](https://www.bleepingcomputer.com/news/artificial-intelligence/openai-says-its-new-gpt-56-models-are-becoming-more-cost-efficient/) — BleepingComputer
-- [Suspected Chinese-Speaking Hackers Target Central Asian Governments With OctLurk and SilkLurk](https://thehackernews.com/2026/08/suspected-chinese-speaking-hackers.html) — The Hacker News
 
 ---
 
