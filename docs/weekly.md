@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
 **Period:** July 25 – August 01, 2026  
-**Generated:** 2026-08-01 09:03 UTC  
+**Generated:** 2026-08-01 11:14 UTC  
 **Items reviewed:** 97  
 
 ## ⚡ Top Actions This Week
@@ -55,6 +55,9 @@
 
 ## 🟠 Important — Review This Week
 
+- [Hackers Poison Adform Script to Swap Crypto Wallet Addresses Across Customer Sites](https://thehackernews.com/2026/08/hackers-poison-adform-script-to-swap.html)  
+  **The Hacker News** · Aug 01 · _General awareness item._  
+
 - [Adobe Campaign Classic CVSS 10.0 Flaw Could Run Code Without User Interaction](https://thehackernews.com/2026/08/adobe-campaign-classic-cvss-100-flaw.html)  
   **The Hacker News** · Aug 01 · _General awareness item._  
 
@@ -74,9 +77,6 @@
   **Microsoft Security Response Center (MSRC)** · Jul 30 · _General awareness item._  
 
 - [CVE-2026-55129 Microsoft Office Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-55129)  
-  **Microsoft Security Response Center (MSRC)** · Jul 30 · _General awareness item._  
-
-- [CVE-2026-56197 Windows Admin Center (WAC) Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-56197)  
   **Microsoft Security Response Center (MSRC)** · Jul 30 · _General awareness item._  
 
 ---
