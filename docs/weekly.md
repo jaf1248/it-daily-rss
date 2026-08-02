@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
 **Period:** July 26 – August 02, 2026  
-**Generated:** 2026-08-02 20:52 UTC  
+**Generated:** 2026-08-02 21:53 UTC  
 **Items reviewed:** 97  
 
 ## ⚡ Top Actions This Week
@@ -55,6 +55,9 @@
 
 ## 🟠 Important — Review This Week
 
+- [COLDCARD wallet RNG flaw likely linked to $88 million Bitcoin theft](https://www.bleepingcomputer.com/news/security/coldcard-wallet-rng-flaw-likely-linked-to-88-million-bitcoin-theft/)  
+  **BleepingComputer** · Aug 02 · _General awareness item._  
+
 - [Rails patches critical Active Storage flaw with RCE potential](https://www.bleepingcomputer.com/news/security/rails-patches-critical-active-storage-flaw-with-rce-potential/)  
   **BleepingComputer** · Aug 01 · _General awareness item._  
 
@@ -71,9 +74,6 @@
   **BleepingComputer** · Jul 30 · _General awareness item._  
 
 - [VMware fixes three critical flaws allowing auth bypass, VM escapes](https://www.bleepingcomputer.com/news/security/vmware-fixes-three-critical-flaws-allowing-auth-bypass-vm-escapes/)  
-  **BleepingComputer** · Jul 30 · _General awareness item._  
-
-- [Google says AI helped Chrome fix 1,072 security bugs in two releases](https://www.bleepingcomputer.com/news/google/google-says-ai-helped-chrome-fix-1-072-security-bugs-in-two-releases/)  
   **BleepingComputer** · Jul 30 · _General awareness item._  
 
 - [CVE-2026-54128 Windows DHCP Client Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-54128)  
