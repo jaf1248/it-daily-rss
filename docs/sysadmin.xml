@@ -3,106 +3,14 @@
 <channel>
   <title>Joe SysAdmin and Operations</title>
   <description>Operational IT changes, Microsoft updates, outages, and infrastructure issues.</description>
-  <lastBuildDate>Mon, 03 Aug 2026 11:43:59 +0000</lastBuildDate>
+  <lastBuildDate>Mon, 03 Aug 2026 13:38:03 +0000</lastBuildDate>
   
-<item>
-  <title>🟠 Designing Azure Networks That Scale: From Small Deployments to Enterprise-Grade</title>
-  <link>https://techcommunity.microsoft.com/t5/itops-talk-blog/designing-azure-networks-that-scale-from-small-deployments-to/ba-p/4542489</link>
-  <pubDate>Mon, 03 Aug 2026 07:00:00 +0000</pubDate>
-  <source>Microsoft Tech Community IT Ops</source>
-  <description><![CDATA[<b>Why this matters: Service impact possible — prepare comms and confirm vendor status.</b><br/><p>Hello Folks!</p>
-<p>If you have ever spent a long afternoon untangling overlapping CIDR ranges, chasing down a broken VNet peering, or trying to remember which UDR points to which firewall, this MAIS 2026 session is going to feel uncomfortably familiar. Jon Ormond (Principal PM, Azure Networking) brought along Jay Li and Jeff Lovett from the Azure Networking team to walk through what actually happens when an Azure network grows from a handful of VNets into a real enterprise estate, and where most teams hit the wall.</p>
-<p>The headline they kept coming back to is simple. Azure networks do not usually fail because they were built wrong on day one. They fail because they did not evolve fast enough. Scale is not a smooth ramp. It is a step function, and every step adds an order of magnitude of complexity.</p>
-<p>&nbsp;</p>
-<div class="lia-embeded-content" contenteditable="false">
-</div>
-<p>&nbsp;</p>
-<h2>Why IT Pros Should Care</h2>
-<p>You may be running three VNets today. That is fine. But the day a second team shows up, or you cross into a second region, or somebody asks for hybrid connectivity to the datacenter, your operating model changes whether you planned for it or not. The session is built around two pivots every growing Azure environment hits:</p>
-<ul>
-<li>Management and control inside Azure (VNets, peerings, routes, security rules).</li>
-<li>Connectivity and hybrid (VPN, ExpressRoute, Virtual WAN, reliability).</li>
-</ul>
-<p>Both of those break quietly. By the time you notice, you are already firefighting drift, broken peerings, or unpredictable latency from on-prem.</p>
-<p>Bottom line, here is what you take away:</p>
-<ul>
-<li>Design for the next stage, not the one you are in.</li>
-<li>Put the management layer in before complexity outpaces manual effort.</li>
-<li>Treat reliability as a design choice, not an afterthought.</li>
-</ul>
-<h2>Start Small, Plan to Grow</h2>
-<p>One VNet, one subnet, one workload. Nothing wrong with that. You can manage it with the portal, a spreadsheet for CIDR tracking, and a calm heart.</p>
-<p>The problem is that the jump from “one VNet” to “a few VNets across teams” is not gradual. As soon as you have a second team that needs isolation, you are into hub and spoke territory. Ten spokes feels manageable. Fifty spokes across multiple subscriptions does not. And by the time you hit a hundred, the spreadsheet is a liability.</p>
-<p>Jay made the case that the smartest move at small scale is not to stay manual until it hurts. It is to put Azure Virtual Network Manager (AVNM) in early, even if you only have three VNets. AVNM lets you declare intent once and let the platform handle the rest:</p>
-<ul>
-<li>IP address management (IPAM) so new spokes get non-overlapping CIDRs automatically.</li>
-<li>Network groups with tag-based dynamic membership so VNets land in the right group the moment they exist.</li>
-<li>Connectivity (hub and spoke or mesh) without hand-built peerings.</li>
-<li>Security admin rules pushed centrally across the estate.</li>
-<li>Routing intent so traffic flows through the right firewall by default.</li>
-</ul>
-<p>The honest tradeoff: AVNM is one more thing to learn and operate, and it adds cost. The counter-question Jay kept asking is, “What is the cost of drift?” One overlapping CIDR or one missing UDR at 100 VNets can cascade into an outage that takes days to unwind. That is the real tradeoff.</p>
-<h2>Mid-Stage Patterns: Hub and Spoke, Peering, and the First Cracks</h2>
-<p>The hub and spoke topology is the workhorse of Azure networking and the pattern the Cloud Adoption Framework recommends for most enterprises. It centralises shared services (firewall, DNS, ExpressRoute and VPN gateways, Private DNS zones) in a hub VNet, and connects spoke VNets through peerings.</p>
-<p>Where teams get into trouble at this stage:</p>
-<ul>
-<li><strong>Peering sprawl.</strong> Every new spoke needs a peering, sometimes two if you want transitive paths. Doing this by hand across subscriptions is where human error lives.</li>
-<li><strong>Route table drift.</strong> UDRs copied from spoke to spoke get out of sync. One spoke routes through the firewall, another bypasses it. Now you have a compliance problem.</li>
-<li><strong>Security rule drift.</strong> NSGs and security policies start as a copy paste exercise and end as a forensic exercise.</li>
-<li><strong>CIDR collisions.</strong> “Just give me a /24” turns into a multi day investigation when the new spoke overlaps with on-prem.</li>
-</ul>
-<p>Jay’s point on this was sharp. The mistake is not the topology. Hub and spoke is the right pattern. The mistake is staying manual on top of it. AVNM network groups let you say, “any VNet tagged environment=production joins the production group, gets the production security baseline, peers to the production hub, and inherits the routing intent that sends east-west traffic through the firewall.” No tickets, no copy paste, no drift.</p>
-<p>If you are already deployed via Azure Landing Zones (ALZ) with Bicep or Terraform, AVNM is not a replacement, it is another construct in your template. As Jon put it in the chat, it is “just another object” in your ALZ, and the two layers work together rather than competing.</p>
-<h2>Enterprise Scale: Virtual WAN, Segmentation, and Governance</h2>
-<p>At some point hub and spoke stops scaling cleanly. You start adding regions. Branch offices show up. You need SD-WAN integration, more than 30 IPsec tunnels, or transitive routing between VPN and ExpressRoute. That is when Microsoft pushes you toward Azure Virtual WAN.</p>
-<p>Virtual WAN is a Microsoft managed global transit network. You deploy regional virtual hubs and connect everything (Azure VNets, branches, remote users, ExpressRoute circuits) into them with consistent routing and security. The trade up is real:</p>
-<ul>
-<li><strong>Any to any connectivity by default.</strong> Hub to hub mesh is built in.</li>
-<li><strong>Routing intent and policies</strong> for centralised internet egress and east-west inspection through Azure Firewall or a partner NVA in a secured hub.</li>
-<li><strong>Branch scale.</strong> Tens or hundreds of sites stop being a custom integration project.</li>
-<li><strong>Operational simplification.</strong> Microsoft owns the hub control plane so you stop babysitting peerings.</li>
-</ul>
-<p>For hybrid connectivity itself, Jeff walked the curve every customer travels:</p>
-<ul>
-<li><strong>VPN Gateway</strong> is the on-ramp. Cheap, fast to stand up, good enough until public internet latency, throughput, or regulatory requirements force a change.</li>
-<li><strong>ExpressRoute circuits</strong> give you dedicated bandwidth from 50 Mbps to 100+ Gbps, with predictable performance and over 200 service providers worldwide.</li>
-<li><strong>Scalable ExpressRoute virtual network gateways</strong> grow and shrink with usage, so you deploy once and stop re-architecting every time traffic changes.</li>
-<li><strong>ExpressRoute Metro</strong> is the headliner. Same price as a standard circuit, but the redundant device lives in a second, physically distinct co-location facility across town. Building fire, flood, or power outage in one site, and your traffic keeps flowing.</li>
-<li><strong>Multiple circuits</strong> are still on the table when “this cannot fail” actually means it cannot fail.</li>
-</ul>
-<p>Honest tradeoff on Virtual WAN: it is opinionated, Microsoft managed, and you give up some of the granular control you have in a customer managed hub. For most enterprises that is a win. For the few with very specific routing requirements or heavy NVA investments, traditional hub and spoke with Azure Route Server can still be the right call. The CAF guidance lays this out in detail.</p>
-<h2>Getting Started</h2>
-<p>If you take one thing from this session, take this. Design for the next stage. Three concrete moves:</p>
-<ul>
-<li><strong>Stand up AVNM now, even at small scale.</strong> Declare your intent for IPAM, connectivity, security, and routing once. Let new VNets inherit it.</li>
-<li><strong>Pick your topology with eyes open.</strong> Hub and spoke for customer managed control, Virtual WAN for Microsoft managed global transit at scale. The CAF decision tree is the right starting point.</li>
-<li><strong>Plan hybrid for failure, not for the sunny day.</strong> ExpressRoute with Metro by default. Multiple circuits for the workloads that genuinely cannot go down. Test the failover.</li>
-</ul>
-<h2>Resources</h2>
-<ul>
-<li><a href="https://learn.microsoft.com/azure/virtual-network/network-manager-overview" target="_blank">Azure Virtual Network Manager overview</a></li>
-<li><a href="https://learn.microsoft.com/azure/expressroute/expressroute-introduction" target="_blank">Azure ExpressRoute introduction</a></li>
-<li><a href="https://learn.microsoft.com/azure/expressroute/expressroute-about-virtual-network-gateways" target="_blank">About ExpressRoute virtual network gateways</a></li>
-<li><a href="https://learn.microsoft.com/azure/vpn-gateway/vpn-gateway-about-vpngateways" target="_blank">About Azure VPN Gateway</a></li>
-<li><a href="https://learn.microsoft.com/azure/virtual-wan/virtual-wan-about" target="_blank">About Azure Virtual WAN</a></li>
-<li><a href="https://learn.microsoft.com/azure/architecture/networking/architecture/hub-spoke" target="_blank">Hub-spoke network topology in Azure</a></li>
-<li><a href="https://learn.microsoft.com/azure/cloud-adoption-framework/ready/azure-best-practices/define-an-azure-network-topology" target="_blank">Define an Azure network topology (Cloud Adoption Framework)</a></li>
-<li><a href="https://learn.microsoft.com/azure/cloud-adoption-framework/ready/azure-best-practices/virtual-wan-network-topology" target="_blank">Virtual WAN network topology in an Azure landing zone</a></li>
-</ul>
-<h2>Watch the Rest of the Summit</h2>
-<p>This was one of many great sessions at the Microsoft Azure Infra Summit 2026. If you want to catch the keynotes, the deep dives on storage and AKS, and everything in between, the full playlist is here:</p>
-<p><a href="https://www.youtube.com/playlist?list=PLjt5SKzX1iI8con7FJDB56G6hHqxGm7ki" target="_blank">Microsoft Azure Infra Summit 2026 Playlist</a></p>
-<p>Big thanks to Jon Ormond for moderating, and to Jay Li and Jeff Lovett for the practical, no-fluff walk through what actually breaks at scale and how to design ahead of it.</p>
-<p>Cheers!</p>
-<p>Pierre Roman</p><br/><br/><b>Source:</b> Microsoft Tech Community IT Ops &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
-</item>
-
 <item>
   <title>🔵 OpenAI teases Astra, its next major AI model, after it solves 10 long-standing math problems</title>
   <link>https://www.bleepingcomputer.com/news/artificial-intelligence/openai-teases-astra-its-next-major-ai-model-after-it-solves-10-long-standing-math-problems/</link>
   <pubDate>Sun, 02 Aug 2026 22:31:41 +0000</pubDate>
   <source>BleepingComputer</source>
-  <description><![CDATA[<b>Why this matters: Operational impact possible — watch for changes that generate tickets.</b><br/>OpenAI has revealed Astra, an unreleased model designed to tackle complex, long-running tasks, after an internal version produced ten significant advances in mathematics and theoretical computer science. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Operational impact possible — watch for changes that generate tickets.</b><br/>OpenAI has revealed Astra, an unreleased model designed to tackle complex, long-running tasks, after an internal version produced ten significant advances in mathematics and theoretical computer science. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 15h ago]]></description>
 </item>
 
 <item>

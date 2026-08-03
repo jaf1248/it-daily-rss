@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
 **Period:** July 27 – August 03, 2026  
-**Generated:** 2026-08-03 11:44 UTC  
+**Generated:** 2026-08-03 13:38 UTC  
 **Items reviewed:** 92  
 
 ## ⚡ Top Actions This Week
@@ -55,6 +55,9 @@
 
 ## 🟠 Important — Review This Week
 
+- [FOMO in the SOC: Where AI Platforms like Claude Actually Fit](https://thehackernews.com/2026/08/fomo-in-soc-where-ai-platforms-like.html)  
+  **The Hacker News** · Aug 03 · _General awareness item._  
+
 - [Thermo Fisher Patches Flaw That Could Make DNA File Tampering Nearly Undetectable](https://thehackernews.com/2026/08/thermo-fisher-patches-flaw-that-could.html)  
   **The Hacker News** · Aug 03 · _General awareness item._  
 
@@ -75,9 +78,6 @@
 
 - [Three Recent Chrome Releases Fix 1,442 Flaws, More Than Prior 23 Updates Combined](https://thehackernews.com/2026/07/three-recent-chrome-releases-fix-1442.html)  
   **The Hacker News** · Jul 31 · _General awareness item._  
-
-- [JetBrains warns of critical TeamCity remote code execution flaw](https://www.bleepingcomputer.com/news/security/jetbrains-warns-of-critical-teamcity-remote-code-execution-flaw/)  
-  **BleepingComputer** · Jul 30 · _General awareness item._  
 
 ---
 
