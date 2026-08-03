@@ -1,25 +1,30 @@
 # IT Weekly Intelligence Briefing
 **Period:** July 27 – August 03, 2026  
-**Generated:** 2026-08-03 18:49 UTC  
+**Generated:** 2026-08-03 20:26 UTC  
 **Items reviewed:** 88  
 
 ## ⚡ Top Actions This Week
 
-1. **Validate backups, confirm EDR coverage, and brief incident response team.**  
+1. **Audit third-party software dependencies and review vendor access.**  
+   _18 Malicious npm Packages Deliver Cross-Platform RAT to Alibaba Tool Users_  
+   Source: The Hacker News  
+
+2. **Validate backups, confirm EDR coverage, and brief incident response team.**  
    _INC Ransomware Emerges as Dominant Actor Exploiting SonicWall SMA 1000 Flaws_  
    Source: The Hacker News  
 
-2. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
+3. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
    _PNLD Breach Exposes U.K. Police and Government Contact Details on Dark Web_  
    Source: The Hacker News  
-
-3. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _Amgen says cloud data breach exposed patient health, proprietary info_  
-   Source: BleepingComputer  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [18 Malicious npm Packages Deliver Cross-Platform RAT to Alibaba Tool Users](https://thehackernews.com/2026/08/18-malicious-npm-packages-deliver-cross.html)
+**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Aug 03  
+**Why it matters:** Third-party/software supply chain integrity risk.  
+**Recommended action:** Audit third-party software dependencies and review vendor access.  
 
 ### [INC Ransomware Emerges as Dominant Actor Exploiting SonicWall SMA 1000 Flaws](https://thehackernews.com/2026/08/inc-ransomware-emerges-as-dominant.html)
 **Source:** The Hacker News &nbsp;·&nbsp; **Date:** Aug 03  
@@ -36,18 +41,13 @@
 **Why it matters:** Potential credential or data exposure.  
 **Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
-### [ESET tracks rise in malicious AI skills and adaptable malware](https://www.bleepingcomputer.com/news/security/eset-tracks-rise-in-malicious-ai-skills-and-adaptable-malware/)
-**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jul 31  
-**Why it matters:** Elevated ransomware risk across the sector.  
-**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
-
 ### [Anthropic Says Claude Mistook the Open Internet for a CTF and Breached Three Organizations](https://thehackernews.com/2026/07/anthropic-says-claude-mistook-open.html)
 **Source:** The Hacker News &nbsp;·&nbsp; **Date:** Jul 31  
 **Why it matters:** Potential credential or data exposure.  
 **Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
-### [Anthropic's Claude breached 3 orgs, uploaded PyPI malware during tests](https://www.bleepingcomputer.com/news/security/anthropics-claude-breached-3-orgs-uploaded-pypi-malware-during-tests/)
-**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Jul 31  
+### [The Network Has Become the Control Plane for AI Security](https://thehackernews.com/2026/07/the-network-has-become-control-plane.html)
+**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Jul 30  
 **Why it matters:** Potential credential or data exposure.  
 **Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
@@ -83,13 +83,13 @@
 
 ## 🔵 FYI — General Awareness
 
+- [New DOUBLECUP ClickFix service hides malware in browser cache images](https://www.bleepingcomputer.com/news/security/new-doublecup-clickfix-service-hides-malware-in-browser-cache-images/) — BleepingComputer
+- [Fake Roblox Xeno script launcher pushes infostealer, RAT malware](https://www.bleepingcomputer.com/news/security/fake-roblox-xeno-script-launcher-pushes-infostealer-rat-malware/) — BleepingComputer
 - [Google Password Manager Attacks Could Let Malware Hijack Passkey-Protected Accounts](https://thehackernews.com/2026/08/google-password-manager-attacks-could.html) — The Hacker News
 - [ExfilSquad hackers leak info of over 100,000 UK police officers, staff](https://www.bleepingcomputer.com/news/security/exfilsquad-hackers-leak-info-of-over-100-000-uk-police-officers-staff/) — BleepingComputer
 - [Inside the Underground Business of the Android BTMOB RAT malware](https://www.bleepingcomputer.com/news/security/inside-the-underground-business-of-btmob-rat/) — BleepingComputer
 - [⚡ Weekly Recap: Rogue AI Models, $88M Bitcoin Theft, Water-System Attacks and Dangling DNS Hijacks](https://thehackernews.com/2026/08/weekly-recap-rogue-ai-models-88m.html) — The Hacker News
-- [Chinese Threat Actor Uses Leaked DarkSword Kit to Deploy GHOSTBLADE on iOS](https://thehackernews.com/2026/08/chinese-threat-actor-uses-leaked.html) — The Hacker News
-- [Hugging Face Diffusers Flaws Could Let Model Repositories Execute Arbitrary Code](https://thehackernews.com/2026/08/hugging-face-diffusers-flaws-could-let.html) — The Hacker News
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 10 critical · 34 important · 44 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 8 critical · 34 important · 46 FYI_
