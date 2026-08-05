@@ -3,14 +3,14 @@
 <channel>
   <title>Joe SysAdmin and Operations</title>
   <description>Operational IT changes, Microsoft updates, outages, and infrastructure issues.</description>
-  <lastBuildDate>Tue, 04 Aug 2026 22:59:46 +0000</lastBuildDate>
+  <lastBuildDate>Wed, 05 Aug 2026 00:11:15 +0000</lastBuildDate>
   
 <item>
   <title>🔵 Phishing service spoofs RingCentral to steal Microsoft 365 accounts</title>
   <link>https://www.bleepingcomputer.com/news/security/phishing-service-spoofs-ringcentral-to-steal-microsoft-365-accounts/</link>
   <pubDate>Tue, 04 Aug 2026 21:45:36 +0000</pubDate>
   <source>BleepingComputer</source>
-  <description><![CDATA[<b>Why this matters: Credential/phishing risk — reinforce MFA and user awareness training.</b><br/>The Greatness phishing-as-a-service (PhaaS) platform has expanded from credential phishing to adversary-in-the-middle attacks and device-code phishing targeting Microsoft 365 accounts. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Credential/phishing risk — reinforce MFA and user awareness training.</b><br/>The Greatness phishing-as-a-service (PhaaS) platform has expanded from credential phishing to adversary-in-the-middle attacks and device-code phishing targeting Microsoft 365 accounts. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
 </item>
 
 <item>
@@ -18,87 +18,7 @@
   <link>https://arstechnica.com/health/2026/08/trump-admin-aware-of-deaths-in-explosive-diarrhea-outbreak-delays-reporting/</link>
   <pubDate>Tue, 04 Aug 2026 15:06:07 +0000</pubDate>
   <source>Ars Technica</source>
-  <description><![CDATA[<b>Why this matters: Operational impact possible — watch for changes that generate tickets.</b><br/>Federal officials will update the outbreak sometime "this week," a spokesperson said.<br/><br/><b>Source:</b> Ars Technica &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
-</item>
-
-<item>
-  <title>🟠 From Alert to Resolved: Building a Self-Healing Azure Platform with SRE Agent</title>
-  <link>https://techcommunity.microsoft.com/t5/itops-talk-blog/from-alert-to-resolved-building-a-self-healing-azure-platform/ba-p/4542491</link>
-  <pubDate>Tue, 04 Aug 2026 07:00:00 +0000</pubDate>
-  <source>Microsoft Tech Community IT Ops</source>
-  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/><p>Hello Folks!</p>
-<p>It’s 3 a.m. Your phone lights up. A critical workload that spans multiple clouds is on fire, ownership is fuzzy, the alert routed to the wrong team first, and now it’s your problem. You sit up in bed, cold and groggy, and start the ritual. Open the runbook. Pull logs from one place. Pull metrics from another. Stare at three dashboards. None of them tell the whole story. So you build a theory. The theory is wrong. The clock keeps ticking. The customer impact keeps climbing. Every wrong turn costs you time, context, and confidence.</p>
-<p>That is the scene Lee Oommen opened with at MAIS14, and it is the reason Azure SRE Agent exists. In this session, Lee walks through the four classic SRE pain points and shows how an agentic operations platform compresses MTTR from hours to minutes. I am going to unpack what he showed, why it matters for IT pros, and how to get your hands on it.</p>
-<p>&nbsp;</p>
-<div class="lia-embeded-content" contenteditable="false">
-</div>
-<h2>Why IT Pros Should Care</h2>
-<p>If you carry a pager, write runbooks, or get pulled into post-mortems, this one is for you.</p>
-<ul>
-<li><strong>The clock is the enemy, not the incident.</strong> Lee said it plainly: there is almost always an expert who can fix the problem. The real damage comes from the minutes spent finding that expert and reconstructing context.</li>
-<li><strong>Dashboards lie in both directions.</strong> False positives create alert fatigue. False negatives let the customer call you before your monitors do. Neither outcome is acceptable.</li>
-<li><strong>RCAs take weeks because the answer never lives in one layer.</strong> Infrastructure, network, deployments, dependencies, databases, app code. You need someone, or something, that can correlate across all of them in one pass.</li>
-<li><strong>You did not become an SRE to be a dashboard watcher.</strong> Toil is the work that holds back the people who should be designing reliability into the next generation of services.</li>
-</ul>
-<h2>What is the SRE Agent</h2>
-<p>Let’s start with what it is not. It is not a dashboard. It is not a monitoring tool. It is not a chatbot.</p>
-<p>Azure SRE Agent is an end-to-end agentic operations platform. Think of it as a senior SRE who sits inside your team, works 24 by 7, never gets tired, never misses a signal, and is fluent in your stack.</p>
-<ul>
-<li><strong>Reasons over telemetry, not just text.</strong> It pulls metrics, logs, traces, deployment history, and activity logs, then correlates across them.</li>
-<li><strong>Takes governed actions.</strong> Every action runs inside the permission boundary you define. You decide whether the agent proposes a fix, asks for approval, or acts autonomously.</li>
-<li><strong>Authors RCAs in minutes, not weeks.</strong> It traces the root cause in a single flow across the entire stack and produces the report immediately after remediation.</li>
-<li><strong>Remembers.</strong> It captures organizational memory from every incident, every chat, and every scheduled task, then applies it to the next investigation.</li>
-</ul>
-<p>Lee called it the operations half of DevOps, and that framing stuck with me. We have automated build and deploy. The operations side has been stuck in toil. SRE Agent closes that loop.</p>
-<h2>From Alert to Resolved (the workflow)</h2>
-<p>Lee demonstrated the full loop live. Here is what it looks like end to end.</p>
-<ol>
-<li><strong>Detect.</strong> The agent integrates with Azure Monitor, PagerDuty, or ServiceNow. When an alert fires, the agent acknowledges it within seconds. The human does not have to wake up cold.</li>
-<li><strong>Investigate.</strong> The agent runs diagnostics in parallel across the connected resources. It queries Log Analytics, App Insights, Azure Monitor metrics, and any third-party observability tools you wired in through MCP connectors.</li>
-<li><strong>Correlate.</strong> It uses distributed tracing, cross-workspace KQL queries, and time-based signal alignment to connect dots across services that do not even share trace IDs. It also checks past incidents in memory to see if this looks familiar.</li>
-<li><strong>Diagnose.</strong> It produces a root cause analysis with the relevant evidence linked inline. No more reconstruction exercise across multiple teams.</li>
-<li><strong>Propose or Act.</strong> Based on your run mode and the permissions granted, the agent either proposes a fix and waits for approval, or executes the remediation autonomously. Lee demonstrated both. He set up a bad slot swap on Azure App Service, generated HTTP 500 errors, watched the agent acknowledge the alert, investigate, identify the bad slot, ask for permission, and then perform the slot swap to restore the service.</li>
-<li><strong>Close the loop.</strong> The agent files a GitHub or Azure DevOps issue with full context, opens a pull request with proposed code changes when appropriate, and writes a session insights summary you can review.</li>
-</ol>
-<p>Three modes to interact with it:</p>
-<ul>
-<li><strong>Interactive.</strong> Chat with the agent like a copilot. Most customers start here to build trust.</li>
-<li><strong>Reactive.</strong> Event-driven. The agent reacts to incidents from Azure Monitor, PagerDuty, or ServiceNow. One agent per incident platform.</li>
-<li><strong>Proactive.</strong> Scheduled tasks that run every five minutes, every hour, daily, or weekly. Certificate health audits, well-architected framework assessments, cost optimization sweeps, compliance checks. Lee showed a scheduled task that flagged a certificate expiring in 50 days before it could ever fire an alert.</li>
-</ul>
-<h2>Real-World Value</h2>
-<p>This is where the conversation gets practical. A few things from Lee’s demo and the live Q&amp;A that I want to call out.</p>
-<ul>
-<li><strong>Multi-cloud reality.</strong> SRE Agent lives in Azure but is not limited to Azure. Custom runbooks, Python execution, MCP servers, and connectors let it orchestrate across AWS, GCP, and on-premises. Treat it as the central SRE brain.</li>
-<li><strong>Your data stays yours.</strong> Each agent gets a dedicated data store in your subscription and resource group. Memory, knowledge, threads, and session insights live in your chosen region. Nothing is used to train the model provider. Encryption at rest, TLS 1.2 in transit, Azure RBAC, managed identity, customer-managed keys all apply.</li>
-<li><strong>Identity boundary you already know.</strong> The agent uses standard Azure managed identity. Grant the identity RBAC on any cross-subscription resource it needs to reach. Least privilege still applies.</li>
-<li><strong>Region availability.</strong> At session time, agents can be deployed in EastUS2, Sweden Central, and Australia East. The list is updating roughly monthly. Canada is coming. An agent in one region can act on resources globally, but if you have data residency rules, deploy the agent inside the same jurisdiction.</li>
-<li><strong>Private endpoints today.</strong> If your Log Analytics Workspace or databases are fully locked down behind private endpoints with public access disabled, the agent currently needs a VNet-integrated Azure Function as a proxy. Microsoft is actively working on injecting agents directly into private networks.</li>
-<li><strong>Memory is the multiplier.</strong> A principal engineer is more valuable than a junior engineer because of pattern recognition. SRE Agent captures that pattern recognition for the whole team, every time it investigates.</li>
-</ul>
-<h2>Getting Started</h2>
-<p>The pattern is simple, and Lee summarized it cleanly: you teach the tool, you make the connections, and it works for you.</p>
-<ul>
-<li><strong>Provision the agent.</strong> Go to sre.azure.com or the Azure portal, pick a subscription and resource group, pick a region, and stand it up. Takes a few minutes.</li>
-<li><strong>Onboard it like a new engineer.</strong> Tell it about your team, your workloads, and your procedures. Upload runbooks, troubleshooting guides, wikis, and architecture docs to the knowledge base. If you do not have these documents, ask the agent to draft them for you.</li>
-<li><strong>Connect your observability stack.</strong> Azure Monitor, Log Analytics, App Insights are wired in by default. Add third-party tools through MCP connectors.</li>
-<li><strong>Wire in your incident platform.</strong> Azure Monitor, PagerDuty, or ServiceNow. One agent per platform.</li>
-<li><strong>Grant code access.</strong> Connect your GitHub or Azure DevOps repositories so the agent can reason over application code, propose fixes, and open pull requests.</li>
-<li><strong>Pick your run mode.</strong> Start in interactive mode while you build trust. Move to approval-gated reactive mode. Graduate to autonomous mode on safe operations once you have the audit trail you trust.</li>
-</ul>
-<h2>Resources</h2>
-<ul>
-<li><a class="lia-external-url" href="https://learn.microsoft.com/azure/sre-agent/" target="_blank">Azure SRE Agent documentation on Microsoft Learn</a></li>
-<li><a class="lia-external-url" href="http://%20https://sre.azure.com/docs/" target="_blank">Azure SRE Agent product docs</a></li>
-<li><a class="lia-external-url" href="http://%20https://sre.azure.com/docs/get-started/" target="_blank">Get Started guide</a></li>
-<li><a class="lia-external-url" href="https://learn.microsoft.com/azure/sre-agent/incident-response" target="_blank">Automate incident response</a></li>
-<li><a class="lia-external-url" href="http://%20https://github.com/microsoft/sre-agent" target="_blank">Official Microsoft SRE Agent GitHub repository (issues, labs, resources)</a></li>
-</ul>
-<h2>Watch the Rest of the Summit</h2>
-<p>If you found this useful, the rest of the Azure Infra Summit 2026 is packed with sessions on identity, AKS, deployment, storage, networking, and resiliency. Grab the full playlist here and binge what is relevant to your stack:<a class="lia-external-url" href="http:// https://www.youtube.com/playlist?list=PLjt5SKzX1iI8con7FJDB56G6hHqxGm7ki&nbsp;" target="_blank">Microsoft Azure Infra Summit 2026</a></p>
-<p>Big thanks to Lee Oommen for walking us through this. The 3 a.m. pager scenario is something every one of us has lived, and seeing an agent take the first hour of that incident off your plate is a tangible win.</p>
-<p>Cheers!</p>
-<p>Pierre Roman</p><br/><br/><b>Source:</b> Microsoft Tech Community IT Ops &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 15h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Operational impact possible — watch for changes that generate tickets.</b><br/>Federal officials will update the outbreak sometime "this week," a spokesperson said.<br/><br/><b>Source:</b> Ars Technica &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
 </item>
 
 <item>
