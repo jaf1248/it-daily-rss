@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
 **Period:** July 29 – August 05, 2026  
-**Generated:** 2026-08-05 09:35 UTC  
+**Generated:** 2026-08-05 11:58 UTC  
 **Items reviewed:** 84  
 
 ## ⚡ Top Actions This Week
@@ -55,6 +55,12 @@
 
 ## 🟠 Important — Review This Week
 
+- [Critical Gitea Flaw Let Unauthenticated Attackers Read Server Files via Org-Mode Markup](https://thehackernews.com/2026/08/critical-gitea-flaw-let-unauthenticated.html)  
+  **The Hacker News** · Aug 05 · _General awareness item._  
+
+- [Leaked n8n API Tokens Exposed Live Instances to Credential Theft](https://thehackernews.com/2026/08/leaked-n8n-api-tokens-exposed-live.html)  
+  **The Hacker News** · Aug 05 · _General awareness item._  
+
 - [New cPanel Critical Flaw Could Let Hosting Customers Run SQL as Database Root](https://thehackernews.com/2026/08/new-cpanel-critical-flaw-could-let.html)  
   **The Hacker News** · Aug 04 · _General awareness item._  
 
@@ -73,22 +79,16 @@
 - [CVE-2026-50493 DirectX Graphics Kernel Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-50493)  
   **Microsoft Security Response Center (MSRC)** · Aug 03 · _General awareness item._  
 
-- [FOMO in the SOC: Where AI Platforms like Claude Actually Fit](https://thehackernews.com/2026/08/fomo-in-soc-where-ai-platforms-like.html)  
-  **The Hacker News** · Aug 03 · _General awareness item._  
-
-- [Thermo Fisher Patches Flaw That Could Make DNA File Tampering Nearly Undetectable](https://thehackernews.com/2026/08/thermo-fisher-patches-flaw-that-could.html)  
-  **The Hacker News** · Aug 03 · _General awareness item._  
-
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [Open VSX Removes 77 Malicious Evil Twin Extensions Exfiltrating Developer Data](https://thehackernews.com/2026/08/open-vsx-removes-77-malicious-evil-twin.html) — The Hacker News
 - [Claude Mythos 5 Tried to Backdoor a Real Open-Source Project in Testing, Then Vouched for Itself](https://thehackernews.com/2026/08/claude-mythos-5-tried-to-backdoor-real.html) — The Hacker News
 - [ISC Stormcast For Wednesday, August 5th, 2026 https://isc.sans.edu/podcastdetail/10038, (Wed, Aug 5th)](https://isc.sans.edu/diary/rss/33216) — SANS Internet Storm Center
 - [Phishing service spoofs RingCentral to steal Microsoft 365 accounts](https://www.bleepingcomputer.com/news/security/phishing-service-spoofs-ringcentral-to-steal-microsoft-365-accounts/) — BleepingComputer
 - [New XCSSET variant targets macOS devs via compromised Xcode projects](https://www.bleepingcomputer.com/news/security/new-xcsset-variant-targets-macos-devs-via-compromised-xcode-projects/) — BleepingComputer
 - [77 Open VSX extensions found harvesting developer info](https://www.bleepingcomputer.com/news/security/77-open-vsx-extensions-found-harvesting-developer-info/) — BleepingComputer
-- [Greatness PhaaS Adds Device Code Phishing to Bypass MFA and Steal Tokens](https://thehackernews.com/2026/08/greatness-phaas-adds-device-code.html) — The Hacker News
 
 ---
 

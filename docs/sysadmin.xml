@@ -3,93 +3,14 @@
 <channel>
   <title>Joe SysAdmin and Operations</title>
   <description>Operational IT changes, Microsoft updates, outages, and infrastructure issues.</description>
-  <lastBuildDate>Wed, 05 Aug 2026 09:34:32 +0000</lastBuildDate>
+  <lastBuildDate>Wed, 05 Aug 2026 11:57:09 +0000</lastBuildDate>
   
-<item>
-  <title>🔵 Agentic Migrations and Modernization: How the Azure Migrate Agent Keeps Your Intent Alive End to End</title>
-  <link>https://techcommunity.microsoft.com/t5/itops-talk-blog/agentic-migrations-and-modernization-how-the-azure-migrate-agent/ba-p/4542513</link>
-  <pubDate>Wed, 05 Aug 2026 07:00:00 +0000</pubDate>
-  <source>Microsoft Tech Community IT Ops</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><p>Hello Folks!</p>
-<p>If you have ever tried to move a few hundred VMs, a pile of databases, and a couple of web apps from on-prem to Azure, you already know the hard part is not the tooling.</p>
-<p>The hard part is keeping context, intent, and momentum alive across weeks of planning, hand-offs, and decisions. In session MAIS15 at the Microsoft Azure Infra Summit 2026, Ankur Gupta (Senior Product Manager on the Azure Migrate team) walked us through the new Azure Migrate agent, an AI layer that sits on top of Azure Migrate and carries your intent from “I have an idea” all the way to “the landing zone is deployed.”</p>
-<p>&nbsp;</p>
-<div class="lia-embeded-content" contenteditable="false">
-</div>
-<h2>Why IT Pros Should Care</h2>
-<p>Ankur opened with a line that stuck with me. Infrastructure complexity has far outpaced human scale. We have MySQL here, PostgreSQL there, web apps, storage devices, networking gear, multiple dashboards, multiple alerts, and we are all expected to move faster than ever, with fewer mistakes. In short, migrations rarely fail because someone picked the wrong tool. They fail because the system between the stages breaks.</p>
-<p>Here is why the agentic approach matters for the folks in the trenches:</p>
-<ul>
-<li>It keeps context across the entire lifecycle, so the intent you set on day one is still the intent at execution.</li>
-<li>It guides you when you are stuck, instead of leaving you to figure out which of three discovery methods is the right one.</li>
-<li>It compresses tasks that used to take days of analysis (think side-by-side business cases) into a few hours.</li>
-<li>It connects IT ops, architects, and developers through a single thread of information, including a clean handoff to GitHub Copilot for code work.</li>
-<li>It builds on the Azure Migrate portal you already know, so nothing you have learned goes to waste.</li>
-</ul>
-<p>That last point is important. The portal does not go away. The agent is a layer on top. You can still do everything you do today.</p>
-<h2>What the Azure Migrate Agent Is, technical overview</h2>
-<p>Azure Migrate has always been Microsoft’s hub for discover, assess, and migrate. What Ankur showed at <a class="lia-external-url" href="https://www.youtube.com/live/oa8CHk33AuQ" target="_blank">MAIS15 </a>is the next evolution. Azure Migrate is becoming a migration control plane that spans the whole lifecycle (Decide, Plan, Execute), and the Azure Migrate agent is the conversational, guidance-oriented layer that ties it all together.</p>
-<p>In Ankur’s words, the agent is educational and guidance-oriented. You ask one natural-language question, like “how should I plan moving my VMware workloads to Azure,” and you get the next steps you actually need to take. Behind the scenes, the agent is doing three things very well.</p>
-<ol>
-<li>It maintains state across the entire lifecycle. Preferences you set early stay with you.</li>
-<li>It carries context across discovery, plan, and execute. You can jump around, repeat steps, change your mind, and the agent remembers what your goal was.</li>
-<li>It recommends the right next move based on what it has learned about your intent.</li>
-</ol>
-<p>This is the heart of the “agentic” part. The agent is not a chatbot grafted onto a portal. It is a stateful workflow runner that remembers you.</p>
-<h2>How It Works, under the hood</h2>
-<p>The session walked through a full VMware-to-Azure scenario, and the flow is worth seeing because it shows how the pieces snap together.</p>
-<p>The agent supports three discovery methods today: appliance-based discovery, RV Tools, and the new Azure Migrate collector. The collector is the new lightweight option. It ships as a set of PowerShell scripts you run on a machine that can reach your vCenter, it produces a zip file, and you upload that zip to your Azure Migrate project. No appliance to deploy, no inbound network plumbing.</p>
-<p>Once the inventory lands, the agent reads it. Ankur asked for a summary and got a card showing 207 VMs, 177 SQL databases, one PostgreSQL instance, and some web apps. He then asked for all servers with an out-of-support OS, got a list of around 50, and tagged them right inside the conversation so he could refer back to them later.</p>
-<p>Next came the business case. Ankur asked the agent to generate one based on a modernize preference. A few minutes later, he had Azure cost, on-prem cost, and projected savings. Then he asked for a second business case for lift and shift, and a side-by-side comparison. The agent ran it, showed that the on-prem cost in the lift-and-shift comparison was higher and that lift-and-shift TCO savings were actually higher in that specific scenario, and gave him the data points he needed to bring the decision to leadership.</p>
-<p>From there, Ankur moved to application assessment, this time back in the portal. He created an assessment for two apps (Airsonic and Parts Unlimited), let the high-confidence plan run, and got a modernize recommendation with 100% readiness and a target cost of about $580 per month, plus an emissions estimate of 32 kgs of CO2. App Service for the web tier, Azure Database for PostgreSQL for the data tier. Both were flagged “ready with conditions,” with clickable links into why.</p>
-<p>Then came one of my favorite parts. Ankur connected GitHub for a Copilot Assessment, which adds code-level insights on top of the infrastructure readiness assessment. The system recalculated, and the migration effort estimate sharpened up.</p>
-<p>Finally, the agent built a wave plan from the assessment, then generated a platform landing zone aligned with Azure best practices. He could ask the agent about chosen defaults, request changes to the deployment mechanism, swap in a third-party firewall, or apply naming conventions. The agent produced a downloadable Infrastructure-as-Code template and handed it to a cloud architect, who refined it in their IDE using GitHub Copilot.</p>
-<p>That last handoff is the bridge between Azure Migrate’s planning world and the developer world.</p>
-<h2>Real-World Value (use cases, ROI, scenarios)</h2>
-<p>So where does this actually pay off? A few scenarios stood out.</p>
-<ul>
-<li>Pitching the business case to leadership. Ankur framed the demo around “I need to pitch a migration proposal to the planning committee.” Generating modernize, lift-and-shift, and Azure VMware Solution business cases used to be days of spreadsheet work. With the agent, it is hours.</li>
-<li>Cleaning up legacy debt. Tagging out-of-support servers in one conversational step lets you plan upgrades without exporting CSVs and slicing them by hand.</li>
-<li>Mixed estates with web apps and databases. The agent surfaces App Service and Azure Database for PostgreSQL targets, gives SKU recommendations, and flags the warnings worth investigating.</li>
-<li>Closing the IT-to-developer gap. The GitHub Copilot Assessment and the IaC handoff to the IDE means developers and architects work from the same context.</li>
-<li>Reducing intent drift on long migrations. Multi-week journeys lose their original intent. The agent remembers.</li>
-</ul>
-<p>In short, the ROI here is measured in calendar time, not just dollars. And honestly, in fewer late-night calls when something goes sideways because nobody remembered the original decision.</p>
-<p>Tradeoffs worth flagging: the agentic capabilities are landing in preview, and outputs are advisory. You still need human review, testing, and governance on every recommendation. That is by design.</p>
-<h2>Getting Started (concrete first steps)</h2>
-<p>Here is a practical onramp.</p>
-<ol>
-<li>Stand up an Azure Migrate project in the Azure portal if you do not already have one.</li>
-<li>Pick a discovery method that fits your environment. If you cannot deploy an appliance, try the new collector. Download the PowerShell scripts, run them from a host that can reach vCenter, and upload the zip.</li>
-<li>Bring in the Azure Migrate agent from inside the portal and ask it to summarize your discovered inventory.</li>
-<li>Generate at least two business cases (modernize and lift-and-shift). Compare them.</li>
-<li>Run an application assessment on a small, representative set of apps. Connect GitHub and add a Copilot Assessment for code-level insight.</li>
-<li>Ask the agent to build a wave plan and a platform landing zone template, then push the IaC to your repo for the architects.</li>
-</ol>
-<p>Start small, build the muscle, and scale out.</p>
-<h2>Resources</h2>
-<ul>
-<li><a href="https://learn.microsoft.com/en-us/azure/migrate/?view=migrate" target="_blank">Azure Migrate documentation (Microsoft Learn)</a></li>
-<li><a href="https://github.com/MicrosoftDocs/azure-docs/blob/main/articles/migrate/migrate-services-overview.md" target="_blank">About Azure Migrate, including the Azure Copilot migration agent (Microsoft Learn)</a></li>
-<li><a href="https://learn.microsoft.com/en-us/azure/developer/github-copilot-app-modernization/overview" target="_blank">GitHub Copilot modernization overview (Microsoft Learn)</a></li>
-<li><a href="https://learn.microsoft.com/en-us/azure/developer/github-copilot-app-modernization/modernization-agent/overview" target="_blank">GitHub Copilot modernization agent overview (Microsoft Learn)</a></li>
-<li><a href="https://learn.microsoft.com/en-us/azure/developer/github-copilot-app-modernization/" target="_blank">GitHub Copilot modernization documentation (Microsoft Learn)</a></li>
-<li><a href="https://learn.microsoft.com/en-us/dotnet/azure/migration/appmod/quickstart" target="_blank">Assess and migrate a .NET project with GitHub Copilot modernization (Microsoft Learn)</a></li>
-<li><a href="https://learn.microsoft.com/en-us/dotnet/core/porting/github-copilot-app-modernization/overview" target="_blank">GitHub Copilot modernization overview for .NET (Microsoft Learn)</a></li>
-</ul>
-<p>Keep Learning at the Summit</p>
-<p>Catch the full Microsoft Azure Infra Summit 2026 session playlist here <a class="lia-external-url" href="http://%20https://www.youtube.com/playlist?list=PLjt5SKzX1iI8con7FJDB56G6hHqxGm7ki" target="_blank">Microsoft Azure Infra Summit 2026</a></p>
-<p>Cheers!</p>
-<p>Pierre Roman</p>
-<p>&nbsp;</p><br/><br/><b>Source:</b> Microsoft Tech Community IT Ops &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
-</item>
-
 <item>
   <title>🔵 Phishing service spoofs RingCentral to steal Microsoft 365 accounts</title>
   <link>https://www.bleepingcomputer.com/news/security/phishing-service-spoofs-ringcentral-to-steal-microsoft-365-accounts/</link>
   <pubDate>Tue, 04 Aug 2026 21:45:36 +0000</pubDate>
   <source>BleepingComputer</source>
-  <description><![CDATA[<b>Why this matters: Credential/phishing risk — reinforce MFA and user awareness training.</b><br/>The Greatness phishing-as-a-service (PhaaS) platform has expanded from credential phishing to adversary-in-the-middle attacks and device-code phishing targeting Microsoft 365 accounts. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 11h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Credential/phishing risk — reinforce MFA and user awareness training.</b><br/>The Greatness phishing-as-a-service (PhaaS) platform has expanded from credential phishing to adversary-in-the-middle attacks and device-code phishing targeting Microsoft 365 accounts. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 14h ago]]></description>
 </item>
 
 <item>
@@ -97,7 +18,7 @@
   <link>https://arstechnica.com/health/2026/08/trump-admin-aware-of-deaths-in-explosive-diarrhea-outbreak-delays-reporting/</link>
   <pubDate>Tue, 04 Aug 2026 15:06:07 +0000</pubDate>
   <source>Ars Technica</source>
-  <description><![CDATA[<b>Why this matters: Operational impact possible — watch for changes that generate tickets.</b><br/>Federal officials will update the outbreak sometime "this week," a spokesperson said.<br/><br/><b>Source:</b> Ars Technica &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 18h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Operational impact possible — watch for changes that generate tickets.</b><br/>Federal officials will update the outbreak sometime "this week," a spokesperson said.<br/><br/><b>Source:</b> Ars Technica &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 20h ago]]></description>
 </item>
 
 <item>

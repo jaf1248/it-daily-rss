@@ -3,14 +3,857 @@
 <channel>
   <title>Joe — VP of IT Briefing</title>
   <description>Leadership-focused IT risk, vendors, pricing, licensing, and industry context.</description>
-  <lastBuildDate>Wed, 05 Aug 2026 09:34:48 +0000</lastBuildDate>
+  <lastBuildDate>Wed, 05 Aug 2026 11:57:32 +0000</lastBuildDate>
   
 <item>
-  <title>🔵 Double trouble for Microsoft as pre-owned software licenses claims converge</title>
-  <link>https://www.theregister.com/saas/2026/08/05/double-trouble-for-microsoft-as-pre-owned-software-licenses-claims-converge/5282421</link>
+  <title>🟠 OpenAI, Anthropic AI agents resorted to deception in new cybersecurity incidents</title>
+  <link>https://www.csoonline.com/article/4205612/openai-anthropic-ai-agents-resorted-to-deception-in-new-cybersecurity-incidents.html</link>
+  <pubDate>Wed, 05 Aug 2026 11:41:46 +0000</pubDate>
+  <source>CSO Online</source>
+  <description><![CDATA[<b>Why this matters: Service impact possible — prepare comms and confirm vendor status.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<p class="wp-block-paragraph">OpenAI’s GPT-5.6 Sol and Anthropic’s Mythos 5 have been implicated in another series of AI security incidents after the models created fake online identities, targeted real people, and attempted to manipulate developers into approving malicious code during controlled cyber evaluations, according to the UK AI Security Institute.</p>
+
+
+
+<p class="wp-block-paragraph">“On 28<sup>th</sup> July 2026, AISI’s Security Team detected unusual data transfers leaving our research systems during a routine cyber evaluation,” AISI <a href="https://www.aisi.gov.uk/blog/incident-report-unsanctioned-agent-behaviour-during-cyber-testing" rel="noreferrer noopener" target="_blank">said in a blog post</a>. “On investigation, we found that some of the agents being tested had engaged in sustained, potentially harmful activity directed at real people and organisations.”</p>
+
+
+
+<p class="wp-block-paragraph">The incidents occurred during cybersecurity tests in which researchers deliberately gave frontier AI models broad internet access and relaxed some safety controls to measure their underlying cyber capabilities. AISI said the incidents marked the first time it had seen “risks around autonomy and deception manifest this clearly, without specific prompting, in the real world.”</p>
+
+
+
+<p class="wp-block-paragraph">AISI ran the cyber challenge 122 times across seven frontier models and identified 19 autonomous, unsanctioned actions during 10 evaluation runs.</p>
+
+
+
+<p class="wp-block-paragraph">“Almost all of this behaviour (17 actions) came from a single model, Anthropic’s Mythos 5, with 2 actions involving OpenAI’s GPT-5.6-Sol with cyber classifiers (mechanisms to prevent misuse) disabled,” the post added.</p>
+
+
+
+<p class="wp-block-paragraph">The disclosure comes less than two weeks after OpenAI <a href="https://www.csoonline.com/article/4202852/openai-rogue-ai-agents-attack-expanded-beyond-hugging-face.html">revealed</a> that one of its frontier models compromised infrastructure at Hugging Face during a cyber evaluation, and days after researchers disclosed another AI agent security incident involving Modal.</p>
+
+
+
+<h2 class="wp-block-heading" id="deception-emerged-without-instruction">Deception emerged without instruction</h2>
+
+
+
+<p class="wp-block-paragraph">The most serious sequence involved an AI agent attempting what AISI described as a software supply-chain attack.</p>
+
+
+
+<p class="wp-block-paragraph">“In the most serious sequence, an agent tried to insert malicious code into a publicly used open-source project and took actions in an attempt to secure approval for this insertion by human reviewers,” AISI wrote. “The agent researched the project’s human maintainers, created multiple fake identities, and used the fake identities to socially engineer a real maintainer into approving the code.”</p>
+
+
+
+<p class="wp-block-paragraph">The researchers further added that “When the agent’s pull request was challenged in public, it edited its earlier activity to appear harmless and considered adopting a fresh identity to continue.”</p>
+
+
+
+<p class="wp-block-paragraph">However, the institute added that “Our investigation has not identified any resulting real-world harm.”</p>
+
+
+
+<p class="wp-block-paragraph">Investigators also found agents contacting real people, attempting prompt injections, and leaving messages inviting other concurrently running agents to collaborate.</p>
+
+
+
+<p class="wp-block-paragraph">“It was never instructed to deceive; deception emerged as a by-product of pursuing the task, the kind of goal-directed deception that, until recently, had been largely theoretical,” AISI wrote, adding that while unrestricted internet access and evaluation design contributed to the behavior, they did not fully explain it.</p>
+
+
+
+<h2 class="wp-block-heading" id="not-a-sandbox-escape">Not a sandbox escape</h2>
+
+
+
+<p class="wp-block-paragraph">AISI emphasized that the models did not escape their sandboxed environments. Instead, internet access had been intentionally enabled and cyber safety classifiers deliberately disabled to measure maximum cyber capability rather than public deployment behavior.</p>
+
+
+
+<p class="wp-block-paragraph">“This was not a sandbox escape. It was a boundary that existed in language and nowhere else,” said Sanchit Vir Gogia, chief analyst at Greyhound Research. “The risk variable is not how clever the model is. It is how much practical authority the organisation has handed over, and how little of it can be independently withdrawn.”</p>
+
+
+
+<p class="wp-block-paragraph">OpenAI, whose GPT-5.6 Sol model accounted for two of the recorded actions, posted a blog describing the AISI evaluation and a separate incident involving an external testing partner named “Irregular.”</p>
+
+
+
+<p class="wp-block-paragraph">“As model capabilities advance, the security and safety systems around models need to advance too,” the company wrote in the blog post. OpenAI said it will review third-party evaluation practices, including controls around internet access, isolation, monitoring, and incident response, and work with AI labs and independent evaluators to strengthen industry standards.</p>
+
+
+
+<p class="wp-block-paragraph">Anthropic, however, did not make any public announcement related to AISI’s disclosure.</p>
+
+
+
+<p class="wp-block-paragraph">Anthropic and OpenAI did not immediately respond to a request for comment.</p>
+
+
+
+<h2 class="wp-block-heading" id="enterprise-guardrails">Enterprise guardrails</h2>
+
+
+
+<p class="wp-block-paragraph">For enterprise security leaders, the findings extend beyond AI red teaming, said Enza Iannopollo, principal analyst at Forrester.</p>
+
+
+
+<p class="wp-block-paragraph">“This data confirms our expectations on agents’ behaviours. They can, and they will, overcome boundaries and safeguards to accomplish their objectives,” she said. “The real question is what can happen when organizations deploy these systems in their production environments.”</p>
+
+
+
+<p class="wp-block-paragraph">Iannopollo said enterprises should apply least privilege, continuous risk management, and governance controls when deploying AI agents.</p>
+
+
+
+<p class="wp-block-paragraph">The findings also underscore the need to rethink how AI systems are evaluated, according to Vibhum Dubey, a cybersecurity researcher and red teamer.</p>
+
+
+
+<p class="wp-block-paragraph">“For years, security testing has focused on whether an AI model could complete a task. We now need to evaluate how it completes that task,” Dubey said.</p>
+
+
+
+<p class="wp-block-paragraph">While AISI stressed that the incidents occurred under highly specific evaluation conditions and found no evidence of resulting real-world harm, it argued that they point to a broader shift in how AI security risks may emerge. “Harm may arise not only when people deliberately misuse publicly available models, but when capable agents operating in an internal research or privileged-access setting take unintended action beyond their authorised scope,” the institute wrote.</p>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Uber CEO Dara Khosrowshahi says the company plans to spend $10B+ &quot;over the coming years&quot; to deploy 120K driverless vehicles, aiming to hit 15+ cities in 2026 (Financial Times)</title>
+  <link>https://www.techmeme.com/260805/p14#a260805p14</link>
+  <pubDate>Wed, 05 Aug 2026 11:35:02 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://www.ft.com/content/04d6fcb4-03e4-4ee5-9017-ccaa7808c934"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260805/i14.jpg" vspace="4" /></a>
+<p><a href="https://www.techmeme.com/260805/p14#a260805p14" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="https://www.ft.com/">Financial Times</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://www.ft.com/content/04d6fcb4-03e4-4ee5-9017-ccaa7808c934">Uber CEO Dara Khosrowshahi says the company plans to spend $10B+ &ldquo;over the coming years&rdquo; to deploy 120K driverless vehicles, aiming to hit 15+ cities in 2026</a></b></span>&nbsp; &mdash;&nbsp; Chief Dara Khosrowshahi lauds strong bookings and record cash flow as company seeks to fund costly AV push</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</item>
+
+<item>
+  <title>🟠 The 5 stages of AI adoption maturity: Where businesses create real value</title>
+  <link>https://www.cio.com/article/4205150/the-5-stages-of-ai-adoption-maturity-where-businesses-create-real-value.html</link>
+  <pubDate>Wed, 05 Aug 2026 11:00:00 +0000</pubDate>
+  <source>CIO.com</source>
+  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<p class="wp-block-paragraph">Most enterprises are rushing toward autonomous AI. They shouldn’t. Autonomy you haven’t earned doesn’t speed you up. In fact, it slows you down.</p>
+
+
+
+<p class="wp-block-paragraph">Here’s what I’ve moved our organization toward: a five-stage set of AI adoption maturity benchmarks. It’s a practical framework for understanding where employee development, decision-making and business value intersect. Each stage provides value for your organization. Some roles and functions may only ever reach Stage 1 or 2, while others should be fast-tracked to Stage 5. By understanding this progression, leadership can stop viewing AI as a tool for task delegation and treat it as a catalyst for developing stronger, more decisive and more valuable teams.</p>
+
+
+
+<h2 class="wp-block-heading" id="stage-1-research-assistance">Stage 1: Research assistance</h2>
+
+
+
+<p class="wp-block-paragraph">You hand people a premium ChatGPT account. Employees stop Googling and start prompting. Their experience improves: no ads, paragraph-form answers instead of blue links. But the underlying dynamic hasn’t changed. Output quality depends on input quality. A vague Google search returns a mess of links. A vague ChatGPT prompt returns a well-formatted mess of paragraphs. If your team didn’t know how to ask a precise question before, they still don’t.<br />           <br />The real danger at Stage 1 isn’t the bad answers – it’s the <a href="https://link.springer.com/article/10.3758/s13421-025-01755-4">confident-sounding</a> ones. A hallucinated statistic arrives in the same calm, authoritative prose as an accurate one. Teams that don’t verify sources in Google don’t suddenly fact-check ChatGPT. Before moving to Stage 2, your team needs to develop the instinct to ask, “How do I know this is true?”</p>
+
+
+
+<h2 class="wp-block-heading" id="stage-2-task-assistance">Stage 2: Task assistance</h2>
+
+
+
+<p class="wp-block-paragraph">The next stage uses AI tools to complete tasks. It starts simply: “I need to write this email,” or “Make a spreadsheet to track open items.”</p>
+
+
+
+<p class="wp-block-paragraph">The average employee takes what AI produces and passes it off without revision. At best, their efforts pass muster, with only a dash of <a href="https://hbr.org/2025/09/ai-generated-workslop-is-destroying-productivity">workslop</a>. At worst, the flood of unchecked AI outputs creates rework for teammates and clients.</p>
+
+
+
+<p class="wp-block-paragraph">Another employee further along in Stage 2 may augment what AI produces. That impulse serves them well. But if they default to editing AI output rather than dictating the rules for what AI should produce, they can easily spend more time editing AI’s work than creating work from scratch.</p>
+
+
+
+<p class="wp-block-paragraph">For employees whose work will largely remain in Stage 2, the focus should be on writing more precise prompts. The instinct to edit AI output isn’t wrong. The problem arises when the prompt is a rough starting point rather than a detailed spec. AI cares that your instructions are clear, specific and unambiguous. Get the spec right up front.</p>
+
+
+
+<h2 class="wp-block-heading" id="stage-3-workflow-integration">Stage 3: Workflow integration</h2>
+
+
+
+<p class="wp-block-paragraph">My daughter’s class recently had an assignment: write a paper on the causes of the Civil War.</p>
+
+
+
+<p class="wp-block-paragraph">Her teacher knew what was going to happen. Every 11-year-old would go home and use ChatGPT to write a five-paragraph essay. So, she changed the exercise. The class generated and printed out the essay. Then, the teacher explained how to annotate, how to ask follow-up questions and how to revise in ChatGPT using the marked-up draft.<br /><br />The same three-step sequence — assemble context, build the prompt, edit hard — applies when someone writes a post-mortem. The temptation is to skip straight to the draft. Pull the incident data, ask Gemini for a timeline and root cause analysis, clean it up, get a quick peer review and send it.<br /><br />An engineer working at Stage 3 does what the teacher did. First, they assemble context: the Slack thread where someone flagged the anomaly two hours before the alert fired, the Jira ticket, the gap in monitoring that nobody documented. Then they build a prompt that reflects the full context and generate a draft. Now the red pen comes out: push back on the root cause analysis, add the institutional context Gemini couldn’t know, tighten the remediation steps until they’re actionable.</p>
+
+
+
+<p class="wp-block-paragraph">The result is a better document — and an engineer who understands what failed and builds a better repeatable process. Saving time on a first draft is a fine side effect. The goal is to produce a final draft that’s worthy of review.</p>
+
+
+
+<h2 class="wp-block-heading" id="stage-4-guided-automation">Stage 4: Guided automation</h2>
+
+
+
+<p class="wp-block-paragraph">The fourth stage is where collaboration becomes self-sustaining. You’re no longer asking AI to help you do a task. You’re asking it to run the task and surface the decisions that require your judgment.</p>
+
+
+
+<p class="wp-block-paragraph">My LinkedIn workflow is a good example of what this looks like in practice.</p>
+
+
+
+<p class="wp-block-paragraph">A couple of years ago, I would read an article, develop a point of view, write two or three paragraphs and publish. Not bad, but dependent on me having the time and cognitive bandwidth.</p>
+
+
+
+<p class="wp-block-paragraph">The friction was the 15 decisions that came before drafting: Which angle is worth pursuing? Does this use my voice? Have I said this before?</p>
+
+
+
+<p class="wp-block-paragraph">So, I started researching my patterns. First, I fed Claude my prior LinkedIn posts and prompted it to analyze my tone, sentence patterns and structural habits. I didn’t ask it to “describe my voice” – that gets you a paragraph of flattering generalities. This analysis became the base layer of the tool.</p>
+
+
+
+<p class="wp-block-paragraph">Then I added a second layer: LinkedIn-specific rules and AI writing patterns to avoid. That context got embedded alongside the voice analysis.</p>
+
+
+
+<p class="wp-block-paragraph">Now the workflow runs like this. I click a link, save the article, highlight and annotate the sections that interest me. My Claude Managed Agent picks up the annotation, infers what I found worth engaging with and writes four drafts with meaningfully different angles on the source material. It compares each draft against my post history and proposes two. I read the proposals, pick one, edit and authorize publication with Buffer.<br /><br />The automation didn’t remove my judgment from the process. It freed me from work that didn’t depend on judgment. Now I do the work that matters: deciding what to say, identifying patterns and sharing my point of view.</p>
+
+
+
+<p class="wp-block-paragraph">That shift in what I’m accountable for is where the ROI changes. The value isn’t in the time saved on any single post. It’s that the workflow no longer depends on me having the bandwidth to start from zero. The capacity was always there; the system makes it consistent and repeatable.</p>
+
+
+
+<h2 class="wp-block-heading" id="stage-5-full-automation">Stage 5: Full automation</h2>
+
+
+
+<p class="wp-block-paragraph">The most advanced stage of maturity is when the system largely runs on its own. You’re no longer managing step-by-step actions; you’re defining goals, setting guardrails and measuring outcomes.</p>
+
+
+
+<p class="wp-block-paragraph">We have one running in our engineering org right now. When a ticket gets escalated from our support team to engineering, the agent triages it and routes it to the team responsible for the fix. When an engineering manager reassigns the ticket – because the routing was wrong – the agent picks up that correction, feeds it back into its prompt tooling and updates its model of who owns what. We’re now extending it further: the agent is learning which parts of the codebase need to change and which engineers are likely to own the fix.</p>
+
+
+
+<p class="wp-block-paragraph">There’s a critical catch: this stage only works if you’ve earned your way there. We learned this firsthand. When we first rolled out the routing agent, we used a static map of application areas to engineering teams and assumed that was enough. It wasn’t. We couldn’t reliably distinguish front-end bugs from back-end ones, so the front-end team kept getting tickets caused by a misbehaving API. Features were split between teams in ways the map didn’t capture — one team owned exports, another owned reports. Before the routing could work, the knowledge had to exist somewhere it could be used. An autonomous system is only as good as the foundation beneath it – the clarity of your workflows, the health of your data, the alignment of your teams. Deploy an autonomous agent into a broken process and you get bad results at scale. You cannot safely delegate what you don’t fully understand.</p>
+
+
+
+<p class="wp-block-paragraph">This is why racing straight to Stage 5 often fails. You need to know what “good” output looks like (Stages 2 and 3) and how to orchestrate the pieces (Stage 4) before you can confidently take your hands off the wheel.</p>
+
+
+
+<h2 class="wp-block-heading" id="where-business-value-emerges">Where business value emerges</h2>
+
+
+
+<p class="wp-block-paragraph">The evolution from a premium search engine to an autonomous system is an organizational challenge, not a technology one. Realizing the <a href="https://www.cio.com/article/4157498/kpmg-report-finds-enterprise-disconnect-between-ai-and-its-roi.html">value of AI</a> is determined not by the sophistication of the underlying model, but by the maturity of the team wielding it.</p>
+
+
+
+<p class="wp-block-paragraph">The practical move isn’t to audit your whole organization’s AI readiness. Start with one workflow. Push it one stage higher. Measure what changes. That’s how you find out if this matters in your specific context – not in theory, but in the work your team actually does.</p>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 AI Security Institute Reports Anthropic and OpenAI Models Going Rogue Against Organizations</title>
+  <link>https://www.securityweek.com/ai-security-institute-reports-anthropic-and-openai-models-going-rogue-against-organizations/</link>
+  <pubDate>Wed, 05 Aug 2026 10:33:41 +0000</pubDate>
+  <source>SecurityWeek</source>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><p>In one instance, an unsanctioned model attempted to inject malicious code into an open source repository.</p>
+<p>The post <a href="https://www.securityweek.com/ai-security-institute-reports-anthropic-and-openai-models-going-rogue-against-organizations/">AI Security Institute Reports Anthropic and OpenAI Models Going Rogue Against Organizations</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔴 One C2 kit. 30 customers. 2 governments</title>
+  <link>https://www.csoonline.com/article/4205129/one-c2-kit-30-customers-2-governments.html</link>
+  <pubDate>Wed, 05 Aug 2026 10:00:00 +0000</pubDate>
+  <source>CSO Online</source>
+  <description><![CDATA[<b>Why this matters: Elevated ransomware risk — validate backups and endpoint defenses.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<p class="wp-block-paragraph">I was mapping the command-and-control infrastructure behind a state-linked intrusion set when the query came back and effectively ended the exercise I thought I was running.</p>
+
+
+
+<p class="wp-block-paragraph">The malware resolved its C2 address by reading a smart contract on a public blockchain. Public reporting described one contract. Working from the chain rather than the sample, I found that contract was one member of a family: Two dozen byte-identical contracts plus a set of variants, all emitting the same event, all stamped out by the same builder. Roughly 30 operator wallets were driving them.</p>
+
+
+
+<p class="wp-block-paragraph">Two of those wallets are plausibly state-aligned. The other 28 or so look like ordinary crimeware.</p>
+
+
+
+<p class="wp-block-paragraph">I went in looking for an actor’s infrastructure. What I found was a product with a customer list.</p>
+
+
+
+<p class="wp-block-paragraph">The convergence story is well covered by now, and CSO has already written about nation-state actors hiding behind criminal tooling. Most of that reporting frames it behaviorally: States are acting like crooks, running ransomware, taking payment. That’s true and it isn’t the part that changes my working day. The narrower thing I keep hitting in casework is structural. State programs aren’t building the infrastructure they run on; they’re renting it, and once you internalize that, several things your SOC does every day stop making sense.</p>
+
+
+
+<h2 class="wp-block-heading" id="what-a-shared-kit-does-to-your-indicators">What a shared kit does to your indicators</h2>
+
+
+
+<p class="wp-block-paragraph">Start with that ratio, because it’s the whole argument. A state program and roughly 28 unrelated criminal operators were running the same C2 kit, from the same builder, on the same infrastructure pattern. Any fingerprint I write for that kit fires on all 30 of them and tells you nothing about which one is in your network.</p>
+
+
+
+<p class="wp-block-paragraph">That inverts how most of us were trained to think. A shared kit isn’t a weak attribution signal; it’s an anti-signal. It pools unrelated actors under a single indicator. The more distinctive the fingerprint, the more confidently it groups people who have nothing to do with each other.</p>
+
+
+
+<p class="wp-block-paragraph">The defensible read is a shared supplier with independent customers. Two government programs and a few dozen crooks sourced C2 tradecraft from the same criminal market, the way they might all buy the same commercial exploit. I want to be careful about the limits of that claim, because the data invites overreach. I make no operator-level attribution from the on-chain data at all. Nothing about a shared contract family implies the customers know each other, coordinate or share tasking. The nation-state labels attached to two of those wallets come from malware-family attribution done by other researchers on the implants riding the kit, not from anything I read off the contracts. The chain tells you there’s one builder and many buyers. It doesn’t tell you which buyers carry flags.</p>
+
+
+
+<p class="wp-block-paragraph">The same shape keeps showing up in the malware itself. When I worked an Iranian-nexus botnet using that on-chain technique, the tooling turned out to be a Russian-origin criminal service the actor had adopted rather than invented. That’s worth sitting with: A state intelligence service outsourced its C2 layer to a criminal vendor. On several China-nexus loader teardowns I’ve done, I’ve had to hold attribution at low confidence for the same structural reason. Side-loading chains and stock Cobalt Strike are communal property, shared across state and criminal operators alike. In one case the entire payload was off-the-shelf Cobalt Strike. There is nothing in that binary that can tell you who sent it, and any analyst claiming otherwise is reading tea leaves.</p>
+
+
+
+<h2 class="wp-block-heading" id="the-same-pattern-from-three-other-directions">The same pattern, from three other directions</h2>
+
+
+
+<p class="wp-block-paragraph">I only see my own casework, so it’s worth noting that researchers coming at this from completely different angles land in the same place.</p>
+
+
+
+<p class="wp-block-paragraph">Mandiant approached it from the network side, documenting how China-nexus actors route operations through <a href="https://cloud.google.com/blog/topics/threat-intelligence/china-nexus-espionage-orb-networks">contractor-run relay networks</a> that undermine the whole concept of actor-controlled infrastructure. Their point about indicator lifespan is the one defenders should sit with: A node’s IP address can cycle out in about a month, so any blocklist built on it is decaying before you finish writing the ticket.</p>
+
+
+
+<p class="wp-block-paragraph">Russia gets there by a different route again. Microsoft and Lumen documented Turla, an FSB-linked group, <a href="https://www.microsoft.com/en-us/security/blog/2024/12/11/frequent-freeloader-part-ii-russian-actor-secret-blizzard-using-tools-of-other-groups-to-attack-ukraine/">riding other actors’ infrastructure outright</a>, including commodity Amadey bots, to deliver its own backdoors onto Ukrainian military targets. The detail I find clarifying is that their analysts couldn’t determine whether Turla had paid for the access or simply broken into the criminal panels. When the pros can’t tell purchase from theft, the idea that you’ll infer nationality from infrastructure is finished.</p>
+
+
+
+<p class="wp-block-paragraph">Iran shows up on both sides of the market. CISA, the FBI and DC3 documented an Iranian state-linked group <a href="https://www.cisa.gov/news-events/cybersecurity-advisories/aa24-241a">working the criminal underground as an access broker</a>, selling footholds to ransomware affiliates for a cut and hiding its own nationality from its customers.</p>
+
+
+
+<p class="wp-block-paragraph">The motives differ, and that’s the interesting part. Iran and North Korea buy, because sanctions leave them shopping in a market they don’t control. China subcontracts to a domestic industry that exists for the purpose. Russia mostly takes what it wants from actors already in the neighborhood. Four routes, one destination: There is no operator-owned infrastructure left for you to find.</p>
+
+
+
+<h2 class="wp-block-heading" id="why-this-breaks-your-triage-not-just-your-attribution">Why this breaks your triage, not just your attribution</h2>
+
+
+
+<p class="wp-block-paragraph">Attribution is the part everyone talks about. Triage is the part that costs you money, and almost nobody has updated it.</p>
+
+
+
+<p class="wp-block-paragraph">Most SOCs route severity partly on presumed actor, whether or not anyone wrote it down. Commodity infostealer on a workstation gets a tier-one ticket and a reimage. Suspected state activity gets escalated, gets the retainer call, gets the full hunt. That rule is reasonable, it’s close to universal and it rests on an assumption that no longer holds: That tooling correlates with actor.</p>
+
+
+
+<p class="wp-block-paragraph">Watch what that assumption does. Amadey is textbook commodity crimeware, and in Ukraine it was the delivery vehicle for an FSB backdoor. Play ransomware is a criminal operation, and Unit 42 found a North Korean state group operating inside a Play incident. If your rule is “Amadey is commodity, close it,” you closed an intelligence service’s operation and filed it as adware.</p>
+
+
+
+<p class="wp-block-paragraph">So, three changes, and none of them need new tooling.</p>
+
+
+
+<p class="wp-block-paragraph">Sever severity from attribution. Triage on what the intrusion is doing, not on who you think owns it. Access, persistence, staging, exfiltration and impact are all observable in your telemetry. The operator’s nationality isn’t, certainly not at the moment you have to make the call. Commodity tooling must stop functioning as a de-escalation signal on a host that matters.</p>
+
+
+
+<p class="wp-block-paragraph">Anchor detections on the durable constants rather than the infrastructure. Rented addresses rotate, relay nodes cycle monthly, on-chain C2 repoints for about the price of a coffee. What doesn’t move is the technical fingerprint of the kit: The event signature, a custom cipher’s modified constants, a specific side-load chain, a distinctive string table. Those survive rotation. Build there, and accept that the same rule will fire on a nation-state and a teenager both.</p>
+
+
+
+<p class="wp-block-paragraph">Cap your confidence and put the number in writing. When tooling is communal, tooling-based attribution is worth low confidence at best. Say so in the report. An honest low is more useful than a confident guess, because people make decisions on what you write.</p>
+
+
+
+<p class="wp-block-paragraph">The infrastructure was never going to tell you who they are. It isn’t theirs. Once you stop asking it that question, it becomes a much more useful piece of evidence.</p>
+
+
+
+<p class="wp-block-paragraph">I’ve published the detection content and the on-chain queries from this work on <a href="https://github.com/yankywilson">my GitHub</a>.</p>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Never mind clean data. Annotate as you collect it.</title>
+  <link>https://www.cio.com/article/4204899/never-mind-clean-data-annotate-as-you-collect-it.html</link>
+  <pubDate>Wed, 05 Aug 2026 10:00:00 +0000</pubDate>
+  <source>CIO.com</source>
+  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<p class="wp-block-paragraph">Generative AI is notoriously eager to help, to the point that if it can’t find something matching what you ask for, it’ll create it. So the problem with relying on guardrails is that all too often, a model will be wrong, showing a high confidence score for an incorrect answer because it’s relying on stale or non-canonical data.</p>
+
+
+
+<p class="wp-block-paragraph">Not only do you need to be able to track the lineage of data your model uses from source to token, something the <a href="https://digital-strategy.ec.europa.eu/en/faqs/guidelines-and-code-practice-transparent-ai-systems?ref=distributedthoughts.org">EU AI Act requires</a>, you also need to be able to take into account where the data came from, whether it’s <a href="https://www.hbs.edu/faculty/Pages/item.aspx?num=58832&amp;ref=distributedthoughts.org">out of date</a>, if it changed in a way that affects the result, or if it was never really relevant or authoritative in the first place.</p>
+
+
+
+<p class="wp-block-paragraph">Gartner expects organizations will abandon 60% of AI projects because they don’t have the right <a href="https://www.gartner.com/en/newsroom/press-releases/2025-02-26-lack-of-ai-ready-data-puts-ai-projects-at-risk">metadata management, data quality, and data observability</a>. IBM’s acquisition of Confluent also highlights the importance of real-time data with lineage, governance, and policy for AI agents, and <a href="https://www.ibm.com/think/news/ai-tech-trends-predictions-2026?ref=distributedthoughts.org">one of IBM’s 2026 predictions</a> was the importance of smarter data.</p>
+
+
+
+<p class="wp-block-paragraph">The usual approach is adding metadata and validation later in the data pipeline. That’s similar to the way the bronze, silver, and gold tiers of typical lakehouse architecture are supposed to represent how filtering, cleaning, and augmenting data improves structure and quality until it’s ready to use. That can mean an enormous amount of work since nearly three quarters of the CPU work in training a frontier model is data cleansing and validation.</p>
+
+
+
+<p class="wp-block-paragraph">But that can also remove a lot of the context crucial for gen AI. Rather than <a href="https://www.cio.com/article/3611247/when-is-data-too-clean-to-be-useful-for-enterprise-ai.html">cleaning data and losing the original context</a>, it’s often more effective to keep as much information about the original state of the data, says David Aronchick, open-source platform Kubeflow founder, and CEO of distributed data pipeline vendor Expanso. “You can’t pursue exactly purely clean data; that’s just not possible,” he says. “As you pull data into your ML model, every line should have some mechanism saying where it came from. Otherwise, you’re never really going to know because you can’t mix them together and tease them apart later. You can search your raw content, your raw logs, but it’s just not going to be there.”</p>
+
+
+
+<p class="wp-block-paragraph">IoT digital twin systems often tag data all the way back to the device capturing it so you can see whether a temperature spike is a critical failure, which you want to react to, or a routine calibration, which you don’t. But that information may well be relevant down the line when you want to use that data more broadly. So unless you capture at least some elements about the source of data before you move it, you’re not going to be able to easily reconstruct the context later, or at all sometimes.</p>
+
+
+
+<p class="wp-block-paragraph">Ulrik Hansen, co-CEO of Encord, a platform for managing and annotating data, calls this in-stream labelling and cautions it’s not an alternative to cleansing data. “Dirty conflates two things: actual corruption you should fix, and context dependence, where a reading only looks anomalous because you threw away the frame that explained it,” he says. “Cleansing kills both. The point isn’t to stop cleaning, it’s to stop normalizing away context you can never recover.”</p>
+
+
+
+<p class="wp-block-paragraph">Context can be cheap to capture at the source and nearly impossible to recover after, he adds. “The question isn’t whether to keep it,” he says, “it’s about curating what actually helps.”</p>
+
+
+
+<h2 class="wp-block-heading" id="raw-but-not-rancid">Raw but not rancid</h2>
+
+
+
+<p class="wp-block-paragraph">Aronchick characterizes the state of most bronze tiers as toxic waste because raw data doesn’t get validated before ingestion, or have a metadata wrapper on each data point. “You’ve taken raw data and stripped it of context,” he says.</p>
+
+
+
+<p class="wp-block-paragraph">Take a wind farm operator, for instance. When sensor data about the turbines is generated, it comes from a particular turbine at a particular position in a specific wind farm at a known location, running at a specific speed in specific weather conditions, at a particular time. “If you have other turbines also working in the field, the performance of your turbine will go down, but the field performance will go up,” says Aronchick. “The performance of your turbine going down isn’t a negative, but unless you have the context at the point of data collection, you’re going to make your life much harder later on, when someone asks about the efficiency.”</p>
+
+
+
+<p class="wp-block-paragraph">Metadata needs to be much richer, and it needs to be added as early in your data pipeline as possible when you have the most detail available to make sense of the structure and complexity of the data, Aronchick adds. “You want to capture as much about the data you’re collecting as possible, where it doesn’t require insane activity to do so.”</p>
+
+
+
+<p class="wp-block-paragraph">But not all the metadata you need will be generated with the data, he says. You almost certainly need to augment and annotate your data, and provide extra structure, especially for something like a point of sale system with very light metadata. “Data comes off these things in poor structure,” he says. “It’s not OpenLineage, it’s often a CSV or a text record, and you have to reconstruct them into a full structured log. So do smart things where you’re creating data. That might be compressing, sampling, converting, appending metadata to it, and enforcing schema and lineage all before you start moving anything.”</p>
+
+
+
+<p class="wp-block-paragraph">That doesn’t have to mean bloating your data, Hansen points out. He suggests capturing what’s free and unrecoverable. “The system of origin is the label,” he says. “You don’t tag HR policy, you capture that it came from the HR system. Anything a model can derive later, you can skip.”</p>
+
+
+
+<h2 class="wp-block-heading" id="structure-isnt-static">Structure isn’t static</h2>
+
+
+
+<p class="wp-block-paragraph">Routine changes to APIs, schemas, and how data is collected or stored happen in every organization, and need to be reflected in metadata that lives alongside the data or added as data is collected, not reconstructed later in a fragile process that depends on knowing about all those changes. Google’s research into these <a href="https://research.google/blog/data-cascades-in-machine-learning/">data cascades</a> shows how easily context gets lost and how badly it affects data quality.</p>
+
+
+
+<p class="wp-block-paragraph">Shifting schema enforcement further left in your data pipeline so you deal with it as soon as possible allows you to make more effective downstream decisions. For a sensor recording temperature and humidity, you need to know the temperature scale it uses, readings, and how the timestamp is recorded. Checking that against the schema before ingesting the data lets you route it differently depending on whether it validates or triggers alerts about data quality.</p>
+
+
+
+<p class="wp-block-paragraph">“Maybe I’ll delete it, or send it off to some place where a human being or other tooling can reconstruct it into something valuable,” says Aronchick. “But what it doesn’t do is allow the polluted or bad data into my pipeline. Saying whether or not something passed your schema makes your downstream systems much more reliable.”</p>
+
+
+
+<h2 class="wp-block-heading" id="sensing-structure">Sensing structure</h2>
+
+
+
+<p class="wp-block-paragraph">Unstructured and semistructured data needs more augmentation. A PDF or Word document has an author and a creation date, but doesn’t necessarily include any context about the job title and department of the author, whether it’s up to date, only applies to a particular group of customers, or is based on accounting regulations that can change. If that information is available, it needs to travel with the document, not be left in a compliance spreadsheet.</p>
+
+
+
+<p class="wp-block-paragraph">Data platforms like DataHub and SurrealDB both capture and create context. The latter can analyze a photo, for instance, using vision AI to understand what’s in the image. “From completely unstructured data, we get as much structure as possible,” says the company’s CEO Tobie Morgan Hitchcock.</p>
+
+
+
+<p class="wp-block-paragraph">That’s paired with other data potentially useful for an AI agent down the line. “Understanding what happened around an event becomes a lot easier if you’re tracking the conversation, telemetry, tool and model usage, geospatial data, and the vector search and relationships,” he says. “You’re going to have a far better chance of getting an accurate understanding of that data, which started off completely unstructured, than if you weren’t capturing anything.”</p>
+
+
+
+<p class="wp-block-paragraph">Metadata about document authors, which might come from the company directory, can show how much authority a document has. He describes that as building an understanding of what trust and provenance is over time by the weight and authority of who’s updating the information. After all, he says, company-generated information has more trust or can have traced provenance compared to conversational inputs from a user.</p>
+
+
+
+<h2 class="wp-block-heading" id="incentives-for-annotating">Incentives for annotating</h2>
+
+
+
+<p class="wp-block-paragraph">DataHub CTO Shirshanka Das saw how much of a mess data can be even with strong guidelines as former architect of LinkedIn’s GDPR strategy. “The data was a swamp, despite us having had pretty good data-first and schema-first practices,” he says. As well as cleaning up the data governance, they added in the first nuggets of the DevOps’ ‘shift left’ approach.</p>
+
+
+
+<p class="wp-block-paragraph">LinkedIn already required data checked in to its Kafka ecosystem to have a schema, and ran CI/CD pipelines to check backward compatibility. “I attached metadata attribution and collection around compliance metadata into that pipeline, where developers weren’t able to check in a schema until they had declared what every column meant.”</p>
+
+
+
+<p class="wp-block-paragraph">The extra work was unpopular until teams who didn’t participate saw the flood of tickets that came their way, which allowed him to extend that same proactive governance and annotation at source approach to pretty much every data set being produced.</p>
+
+
+
+<p class="wp-block-paragraph">“The starting point of data at most companies is a lot more swampy,” he says. “Many people are using Kafka, which is a very schema forward system, and yet they’re just shoving in JSON and unstructured stuff.”</p>
+
+
+
+<p class="wp-block-paragraph">That’s common, agrees Megha Kumar, research VP for analytics and AI at IDC, because while collecting more metadata provides better context and cleaner data lineage, it’s hard in practice. “Most organizations batch process data, so real-time context capture rarely happens,” she says. “Even the ones that process in real-time tend to have pre-defined schemas, so adding context requires changes to the data, which unfortunately happens later.”</p>
+
+
+
+<p class="wp-block-paragraph">People don’t know how to start, says Das, so DataHub Cloud tries to add back context by collecting operational metadata from multiple systems, including queries and BI tools to extrapolate a semantic model. “We confront the mess by giving them something they can react to,” he says. “They can quickly validate, and then it starts becoming a governance layer on top where humans annotate at source.”</p>
+
+
+
+<p class="wp-block-paragraph">Online whiteboard provider Miro, for example, dramatically improved AI agent query accuracy from about 50% to 90% using DataHub. Then they applied GitOps principles on top of what was inferred with a human in the loop for approvals.</p>
+
+
+
+<p class="wp-block-paragraph">So getting people to do the work happened the same way at LinkedIn, says Das. “When a data scientist gets 10 times more requests because they didn’t document their work well, resulting in the AI making lots of mistakes and stakeholders constantly pinging them for answers, they have the incentive to add the annotation when they produce an analysis, because then they get out of the critical path.”</p>
+
+
+
+<h2 class="wp-block-heading" id="dboms-and-data-contracts">DBOMs and data contracts</h2>
+
+
+
+<p class="wp-block-paragraph">Provenance and lineage of data is critical, Aronchick says, so you can preserve details like who collected the data, when, from where, if the source was authoritative or canonical, what transformations were run, and exactly what the model saw.</p>
+
+
+
+<p class="wp-block-paragraph">“It’s not just about the version and the metadata,” he says. “Where things really start to change is when you can say along the way this data has gone through these steps, this is the root source, and these were the other elements.” You want to be able to find out if there were any experimental flags, like a new customer campaign running when it was collected, as well as what claims the data contributes to.</p>
+
+
+
+<p class="wp-block-paragraph">Aronchick advocates for a SLSA-style data bill of materials using a tool like <a href="https://usemakoto.dev/">Makoto</a>, which can add signed provenance and attestation to simplify applying central concepts of governance and structure to upstream data.</p>
+
+
+
+<p class="wp-block-paragraph">The notion of a data contract or a data product spec is starting to become common in the financial sector says Das, defining it as a data set, or a group of data sets, bound together by a contract that defines expectations which aren’t just cosmetic but machine verifiable. They can also include operational SLOs for APIs as contracts describe not just the shape of the data but operational characteristics and guarantees.</p>
+
+
+
+<p class="wp-block-paragraph">Document graph markup language (DGML), a new open source specification from Docugami, promises provenance down to individual data points automatically extracted from documents.</p>
+
+
+
+<p class="wp-block-paragraph">“It’s critical to know the validity and provenance of the information your AI is relying on,” Docugami CEO and XML co-creator Jean Paoli says. “Establishing the validity of data right from the start, at scale, is vital and far more efficient than trying to clean up bad data later.” DGML combines semantic tags describing what content means in its business context with bounding boxes showing exactly where in the document the content comes from, with attestation to prove it.</p>
+
+
+
+<h2 class="wp-block-heading" id="ai-demands-provenance">AI demands provenance</h2>
+
+
+
+<p class="wp-block-paragraph">All this context is the kind of metadata <a href="https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents?ref=distributedthoughts.org">Anthropic’s context engineering guide</a> recommends feeding to agents for accuracy. Developers are already used to giving coding agents more context, Das argues. “The same thing is happening with data, as when people realize when AI agents can’t make sense of what they’re doing, hallucinations happen,” he says.</p>
+
+
+
+<p class="wp-block-paragraph">Kumar agrees that organizations realize agents need context to provide better insights. “In many cases, it has to do with ensuring the existing data had clear semantics and relationships,” she says.</p>
+
+
+
+<p class="wp-block-paragraph">If you want to make sure the purchase return window an AI chatbot promises customers is based on your own policy, not a wish list from a user forum, you need rich context. It’s not just metadata. Organizations need to have semantics, data lineage, and ontologies. “Many are also building knowledge and ontology graphs,” adds Kumar. “By ensuring the systems understand what the data means, it’ll be able to provide a better response.”</p>
+
+
+
+<p class="wp-block-paragraph">And if you’re going to the expense of fine tuning, which needs relevant and domain- or task-specific examples, you don’t want noise, duplication, or irrelevant content in your data. You can, of course, exclude poor data if it’s annotated and verified earlier, but you can also improve model performance with extra information, Aronchick points out. “The augmentation of the existing data makes the data you pull out more valuable,” he says.</p>
+
+
+
+<p class="wp-block-paragraph">Expanso recently <a href="https://expanso.io/news/edge-ai-startup-of-the-year-2026/">won an Edge AI award</a> for fine tuning a base level model with only about 3,200 images by augmenting them with metadata. “The reason it worked on that few is because I could tell it deterministically what was in the frame,” he adds. “It’s labeling at the point of capture instead of paying somebody to label it later. What if I developed models for predictive analytics of store behavior on a per city, region, or country basis? If I’m able to take the raw point of sale information and augment it with additional metadata, I’m turning this into a much easier thing to fine tune.”</p>
+
+
+
+<p class="wp-block-paragraph">Or you might even avoid the expense of fine tuning entirely, suggests Das. “You get the short-term advantage by fine-tuning and getting great performance at much cheaper cost on a smaller model, and it gets stripped away in a couple of months as a new model shows up,” he says. “You have to always run that calculus of when’s the right threshold to fine tune an existing model, distil it, and then run it for a fair amount of time to recoup the costs of fine tuning.”</p>
+
+
+
+<p class="wp-block-paragraph">Although regulated or slow-moving industries will see benefits from fine tuning a model they can run for six to 12 months on data with higher quality and better provenance, many organizations may use the improved data quality to get good results without fine tuning.</p>
+
+
+
+<p class="wp-block-paragraph">“We’re taking a more knowledge graph-oriented approach to grounding the model, and betting on the fact that because the knowledge graph is changing often, it’s better to keep it as a runtime artifact than a baked-in one.”</p>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+</item>
+
+<item>
+  <title>🟠 The production assumptions AI just broke</title>
+  <link>https://www.cio.com/article/4205139/the-production-assumptions-ai-just-broke.html</link>
+  <pubDate>Wed, 05 Aug 2026 10:00:00 +0000</pubDate>
+  <source>CIO.com</source>
+  <description><![CDATA[<b>Why this matters: Service impact possible — prepare comms and confirm vendor status.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<p class="wp-block-paragraph">Over the past decade, I have worked through multiple technology transitions, from virtualization and cloud adoption to containers and large-scale automation. Each changed how enterprise IT operated, but they all shared one characteristic: production systems still behaved in broadly predictable ways. AI is the first shift I have seen that changes the behavior of production itself.</p>
+
+
+
+<p class="wp-block-paragraph">In the infrastructure environments I have worked with, production has always depended on a few basic assumptions. Workloads are tied to applications. Applications have owners. Traffic patterns are reasonably predictable. Change windows are planned. Incident response starts with a known service, a known dependency or a known user action.</p>
+
+
+
+<p class="wp-block-paragraph">AI agents challenge each one of those assumptions.</p>
+
+
+
+<p class="wp-block-paragraph">An AI agent may initiate work without a human clicking a button. It may call APIs at machine speed, move across systems to complete a task, retry failed actions aggressively or generate unusual traffic patterns that look nothing like a traditional application flow. The individual action may be legitimate, but the operational behavior is different.</p>
+
+
+
+<p class="wp-block-paragraph">That is the shift CIOs should pay attention to. The question is not only whether AI can be useful in enterprise operations. The harder question is whether production environments are ready for AI-driven activity that behaves less like an application and more like an autonomous participant in the enterprise.</p>
+
+
+
+<h2 class="wp-block-heading" id="production-was-built-around-predictable-workloads">Production was built around predictable workloads</h2>
+
+
+
+<p class="wp-block-paragraph">For years, production operations have been built around patterns that are easier to manage because they are relatively stable. A user logs in. An application receives a request. A service calls another service. Monitoring tools evaluate latency, errors, saturation and availability. Incident teams look for deviations from known baselines.</p>
+
+
+
+<p class="wp-block-paragraph">This model worked because most production systems had a recognizable shape. Even in complex environments, teams could usually identify the application owner, the expected request flow, the normal volume range and the rollback path when something failed.</p>
+
+
+
+<p class="wp-block-paragraph">AI workloads do not always behave that way. A single agent completing a business task may generate a burst of API calls, invoke several backend services, open and close sessions quickly and repeat requests in a pattern that looks abnormal when compared with human activity. From a traditional monitoring perspective, this can look like abuse, instability or an integration defect even when the agent is doing exactly what it was asked to do.</p>
+
+
+
+<p class="wp-block-paragraph">The opposite problem is just as serious. If teams relax controls broadly to avoid blocking legitimate AI activity, they may also create room for real abuse to hide inside higher-volume machine traffic. That is not a model issue. It is an operational assumption issue.</p>
+
+
+
+<p class="wp-block-paragraph">The <a href="https://www.nist.gov/itl/ai-risk-management-framework">NIST AI Risk Management Framework</a> emphasizes that AI risk must be understood across the full lifecycle of AI systems, including design, deployment, use and evaluation. For CIOs, that lifecycle needs to include production operations, not just model selection or application launch.</p>
+
+
+
+<p class="wp-block-paragraph">In practice, this means AI cannot be treated as a normal application feature once it begins triggering workflows, touching data, generating traffic or interacting with operational systems. It becomes part of the production environment. That requires a different level of readiness.</p>
+
+
+
+<p class="wp-block-paragraph">I have seen similar transitions before with cloud and automation. The first wave is usually tool-focused. Teams ask what the technology can do. The second wave is operational. Teams discover what the technology changes. AI is entering that second phase now.</p>
+
+
+
+<h2 class="wp-block-heading" id="ai-changes-incident-response-and-observability">AI changes incident response and observability</h2>
+
+
+
+<p class="wp-block-paragraph">When production breaks, teams need to answer a few basic questions quickly. What changed? What system is affected? What users are impacted? Which dependency is failing? Can we roll back safely?</p>
+
+
+
+<p class="wp-block-paragraph">AI makes those questions harder because the cause of an incident may not be a code deployment, infrastructure outage or human-initiated workflow. It may be an agent making a decision that is technically allowed but operationally unexpected.</p>
+
+
+
+<p class="wp-block-paragraph">For example, an AI-enabled support workflow might retry a failed backend request repeatedly because it is trying to complete a customer task. A human operator may have stopped after one or two failures. The agent may continue until it exhausts a threshold, creates noise across monitoring systems or triggers downstream rate limits. The failure is not that the agent is malicious. The failure is that production systems were not designed to interpret that behavior correctly.</p>
+
+
+
+<p class="wp-block-paragraph">This is where observability becomes critical. Traditional dashboards may show traffic growth, error spikes or latency changes, but they may not explain whether the behavior came from a user, application, script, automation job or AI agent. If those categories are not visible, incident response teams are forced to guess.</p>
+
+
+
+<p class="wp-block-paragraph">Google’s <a href="https://sre.google/sre-book/monitoring-distributed-systems/">Site Reliability Engineering guidance on monitoring distributed systems</a> is useful because it frames monitoring around symptoms that require action, not just raw system signals. That distinction becomes even more important when AI-driven workflows introduce new behaviors into production.</p>
+
+
+
+<p class="wp-block-paragraph">CIOs should expect AI to change what good observability means. It is no longer enough to monitor infrastructure health and application performance. Teams also need visibility into AI-initiated actions, agent-driven traffic patterns, tool usage, retries, failed task loops and dependency chains.</p>
+
+
+
+<p class="wp-block-paragraph">The operational question becomes simple: when an AI system causes a production symptom, can the organization trace the action from the agent to the service to the business impact? If the answer is no, AI is already ahead of the operating model.</p>
+
+
+
+<p class="wp-block-paragraph">The <a href="https://github.com/cncf/tag-observability/blob/main/whitepaper.md">CNCF observability whitepaper</a> describes observability as a way to understand complex system behavior from external outputs. That idea applies directly here: AI-driven systems will require observability that explains behavior across workflows, not just infrastructure components.</p>
+
+
+
+<h2 class="wp-block-heading" id="production-readiness-needs-to-change-before-ai-scales">Production readiness needs to change before AI scales</h2>
+
+
+
+<p class="wp-block-paragraph">The mistake many organizations make is preparing AI for production without preparing production for AI.</p>
+
+
+
+<p class="wp-block-paragraph"><em>“The mistake many organizations make is preparing AI for production without preparing production for AI.”</em></p>
+
+
+
+<p class="wp-block-paragraph">A pilot can succeed with limited users, narrow workflows and close supervision. Production is different. Production introduces volume, concurrency, exceptions, outages, retries, partial failures, support queues and business pressure. AI agents will encounter all of that, and they will do so at a speed that traditional operational processes may not be ready to absorb.</p>
+
+
+
+<p class="wp-block-paragraph">This is why CIOs should treat AI readiness as a production discipline. Before scaling AI-enabled workflows, teams should define what normal AI activity looks like, what abnormal behavior looks like and what evidence is required to troubleshoot the difference. They should know which systems an agent can touch, how agent traffic is labeled, how rate limits apply, how errors are escalated and how failed workflows are stopped.</p>
+
+
+
+<p class="wp-block-paragraph">This is not about slowing AI adoption. It is about preventing production from becoming the testing ground for assumptions that were never validated.</p>
+
+
+
+<p class="wp-block-paragraph">The 2024 <a href="https://dora.dev/research/2024/dora-report/">DORA Accelerate State of DevOps Report</a> noted that AI can improve individual productivity while also creating tradeoffs for delivery stability and throughput. That is a useful warning for CIOs: productivity gains do not automatically translate into operational maturity.</p>
+
+
+
+<p class="wp-block-paragraph">The organizations that will handle this transition well will not be the ones that simply deploy the most AI tools. They will be the ones that adjust production operations early. That means treating AI activity as something to be observed, tested, limited, measured and supported like any other production workload, but with the added recognition that it may behave differently from traditional software.</p>
+
+
+
+<p class="wp-block-paragraph">Capacity planning will also need to change. AI workflows may create irregular demand patterns, especially when agents run multi-step tasks across internal systems. A workload that looks small in a pilot can create meaningful load when hundreds or thousands of users trigger agents throughout the day. The cost impact may appear in compute, API calls, storage, logs, monitoring systems or downstream service usage.</p>
+
+
+
+<p class="wp-block-paragraph">Change management will need to account for model behavior, prompt updates, tool integrations and workflow changes. A small update to an agent’s instructions may alter how it calls systems, how often it retries, which APIs it uses or how it handles exceptions. In production, that is not merely a content update. It is an operational change.</p>
+
+
+
+<p class="wp-block-paragraph">Rollback planning will also need to evolve because reverting an AI-enabled workflow may involve more than restoring application code. It may require disabling agent actions, reverting prompts or temporarily removing tool integrations while preserving business continuity.</p>
+
+
+
+<p class="wp-block-paragraph">Incident response will need clearer playbooks. Teams should know how to pause an agent, isolate a workflow, disable a tool integration, reduce task volume or route activity back to human handling when production behavior becomes unsafe or unstable.</p>
+
+
+
+<p class="wp-block-paragraph">The larger point is that AI is not just entering the enterprise as another user-facing capability. It is entering the operating fabric of the enterprise. That makes it a CIO concern, not only an AI team concern.</p>
+
+
+
+<p class="wp-block-paragraph">Every major technology shift eventually becomes an operational discipline rather than a technology project. AI is reaching that point now. Organizations that recognize this early will be better positioned to scale AI with confidence instead of discovering its operational consequences through production incidents. The next challenge for CIOs is not deploying AI. It is preparing production environments for how AI actually behaves.</p>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Put trust infrastructure before intelligent automation for better collaboration</title>
+  <link>https://www.cio.com/article/4203470/put-trust-infrastructure-before-intelligent-automation-for-better-collaboration.html</link>
+  <pubDate>Wed, 05 Aug 2026 10:00:00 +0000</pubDate>
+  <source>CIO.com</source>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<p class="wp-block-paragraph">Astute leaders recognize that many times, automation and technology failures aren’t really about the technology itself. Rather, failures occur because the necessary underlying infrastructure linking people, processes, and technology isn’t in place. For example, consider organizations that try to partner together but don’t take the time to align their tech implementations in a way that match the <a href="https://www.cio.com/article/4147718/why-enterprises-arent-seeing-ai-roi-and-what-cios-can-do-about-it.html">real-world outcomes</a> they want to achieve. Without trust infrastructure and meaningful alignment, such collaborations are doomed to fail.</p>
+
+
+
+<h2 class="wp-block-heading" id="creating-a-foundation-of-trust">Creating a foundation of trust</h2>
+
+
+
+<p class="wp-block-paragraph">AI adoption brings its own unique opportunities and challenges to both internal and external collaborations, especially in the way it disrupts existing workflows and encourages new forms of risk-taking.</p>
+
+
+
+<p class="wp-block-paragraph"><a href="https://www.ccl.org/articles/leading-effectively-articles/trust-and-ai-transformation/">An analysis by the Center for Creative Leadership</a> notes that leaders should build cultural foundations of trust so new technology implementations strengthen rather than erode that trust. Creating psychological safety in the workplace occurs when leaders model learning rather than feign certainty about AI changes, and seek honest involvement and feedback from team members while being transparent about intentions and trade-offs associated with AI use.</p>
+
+
+
+<p class="wp-block-paragraph">After all, it’s hard to build a cultural trust infrastructure when one day everyone’s told how much they’re valued, and the following day, <a href="https://www.thestreet.com/personal-finance/meta-layoffs-hint-at-an-income-threat-ai-could-worsen">thousands are laid off</a> because of AI restructuring.</p>
+
+
+
+<p class="wp-block-paragraph">When your internal team can’t trust your approach to intelligent automation, outside organizations you partner with may also develop trust barriers. How can they trust your organization to treat them fairly and with transparency if they’re concerned you’re planning to use tech in a way that will undermine a partnership?</p>
+
+
+
+<h2 class="wp-block-heading" id="extending-trust-to-digital-spaces">Extending trust to digital spaces</h2>
+
+
+
+<p class="wp-block-paragraph">In addition to using the foundation of cultural trust in communicating efforts to implement AI, the idea of trust can directly impact how these tools are used and set up. Because of this, intelligent automation needs a solid trust infrastructure in place to succeed. Partners sharing digital resources need to clearly define how they configure and manage their tech, as well as the real, measurable KPIs they want to achieve through implementation. Processes and procedures for sharing data in a secure and timely manner gives both sides the necessary information to leverage tech in the way intended.</p>
+
+
+
+<p class="wp-block-paragraph">A lack of trust — particularly fear of the unknown — can often undermine cross-enterprise collaborations, and this is especially true of tech implementations. A <a href="https://www.cio.com/article/4136829/from-digital-transformation-to-intelligent-transformation.html">shared foundational infrastructure</a> helps improve cultural trust through increased transparency, which in turn can improve buy-in among the individuals who interact with that tech on a day-to-day basis.</p>
+
+
+
+<p class="wp-block-paragraph">Digital trust infrastructure also enables AI tools to be more effective, so when team members interact with the AI to get insights, recommendations, or data reports, they can trust what the tech tells them. Instead of trying to create their own workarounds to avoid using the tools, they become adopters and promoters, closing the gap in data and insights that so often plague other collaborations.</p>
+
+
+
+<h2 class="wp-block-heading" id="ai-wont-fix-whats-broken">AI won’t fix what’s broken</h2>
+
+
+
+<p class="wp-block-paragraph">Unfortunately, many organizational leaders seek AI implementation to be a cure-all for problems. Astute leaders recognize if their organization doesn’t have a solid trust infrastructure in place, AI will magnify those problems, not fix them.</p>
+
+
+
+<p class="wp-block-paragraph">“Think of AI as a piece of world-class, designer furniture,” says Jary Carter, co-founder and CRO of B2B-focused commerce platform OroCommerce. “If you put a $20,000 Italian sofa in a home filled with clutter, dust, and bad flooring, it doesn’t make the house look better. It just further highlights your mess. In business, that mess is legacy systems, fragmented data, and siloed teams. If you haven’t built a unified digital infrastructure first, AI will only accentuate your flaws. It also won’t improve your customer experience by highlighting inefficiencies directly to customers.”</p>
+
+
+
+<p class="wp-block-paragraph">While throwing AI at existing data gaps won’t solve your collaboration problems, the automation isn’t necessarily to blame. Trust-building needs to happen alongside tech implementations because otherwise, the right data won’t be shared, people and machines won’t have access to the info they need, and the entire collaboration will falter.</p>
+
+
+
+<h2 class="wp-block-heading" id="laying-the-foundation-for-better-collaboration">Laying the foundation for better collaboration</h2>
+
+
+
+<p class="wp-block-paragraph">The emergence of gen AI means that when we talk about trust infrastructure, we can no longer consider cultural and organizational trust alone. Leaders must also consider what that trust infrastructure looks like for their digital applications and automations.</p>
+
+
+
+<p class="wp-block-paragraph">By taking proper steps to build a dependable infrastructure based on <a href="https://www.cio.com/article/4148759/the-ai-information-gap-and-the-cios-mandate-for-transparency.html">transparency</a>, aligned values, and clearly defined goals, leaders can increase their digital trust. This will yield greater buy-in of automated intelligence within the organization, and improve its applications during cross-enterprise collaborations.</p>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Uber and Wayve say Wayve received London private hire vehicle licenses for supervised robotaxis ahead of a full rollout; Waymo plans to offer robotaxis in 2026 (Natalie Lung/Bloomberg)</title>
+  <link>https://www.techmeme.com/260805/p6#a260805p6</link>
+  <pubDate>Wed, 05 Aug 2026 09:50:01 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: Budget/licensing impact — verify renewal terms and forecast cost changes.</b><br/><a href="https://www.bloomberg.com/news/articles/2026-08-05/uber-and-wayve-win-licenses-for-supervised-robotaxis-in-london"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260805/i6.jpg" vspace="4" /></a>
+<p><a href="https://www.techmeme.com/260805/p6#a260805p6" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Natalie Lung / <a href="https://www.bloomberg.com/">Bloomberg</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/articles/2026-08-05/uber-and-wayve-win-licenses-for-supervised-robotaxis-in-london">Uber and Wayve say Wayve received London private hire vehicle licenses for supervised robotaxis ahead of a full rollout; Waymo plans to offer robotaxis in 2026</a></b></span>&nbsp; &mdash;&nbsp; Uber Technologies Inc. and UK startup Wayve Technologies Ltd. are preparing to launch their robotaxi service in London with a safety driver &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Double trouble for Microsoft as pre-owned software license claims converge</title>
+  <link>https://www.theregister.com/saas/2026/08/05/double-trouble-for-microsoft-as-pre-owned-software-license-claims-converge-1/5282421</link>
   <pubDate>Wed, 05 Aug 2026 09:02:00 +0000</pubDate>
   <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Budget/licensing impact — verify renewal terms and forecast cost changes.</b><br/>Tribunal to explore how £270 million reseller case intersects with multibillion-pound class action<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Budget/licensing impact — verify renewal terms and forecast cost changes.</b><br/>Tribunal to explore how £270 million reseller case intersects with multibillion-pound class action<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
 </item>
 
 <item>
@@ -99,7 +942,7 @@
 
 
 <p class="wp-block-paragraph">The tanker is still off the coast, transponder dark. The organizations that will know what that silence means aren’t the ones with the flashiest model. They’re the ones whose data connects, whose answers can be traced to their sources and who kept adding reliable, interoperable pieces until the bridges between them started producing intelligence no single dataset ever could.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
 </item>
 
 <item>
@@ -217,7 +1060,7 @@
 
 
 <p class="wp-block-paragraph"></p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
 </item>
 
 <item>
@@ -396,7 +1239,7 @@
 
 
 </div></div></div>
-</div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+</div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
 </item>
 
 <item>
@@ -519,7 +1362,7 @@
 
 <li><a href="https://www.csoonline.com/article/4198007/senior-executives-are-killing-your-shadow-ai-strategy.html">Senior executives are killing your shadow AI strategy</a></li>
 </ul>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
 </item>
 
 <item>
@@ -529,7 +1372,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.reuters.com/world/china/samsung-sk-hynix-test-chinese-chip-tools-hedge-against-us-risks-2026-08-05/"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260805/i1.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260805/p1#a260805p1" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="http://www.reuters.com/">Reuters</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.reuters.com/world/china/samsung-sk-hynix-test-chinese-chip-tools-hedge-against-us-risks-2026-08-05/">Sources: Samsung and SK Hynix are evaluating chipmaking equipment from China's AMEC for possible use at their Chinese factories, as they hedge against US curbs</a></b></span>&nbsp; &mdash;&nbsp; Samsung Electronics and SK Hynix are evaluating chipmaking equipment from China's Advanced Micro-Fabrication Equipment (AMEC) &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.reuters.com/world/china/samsung-sk-hynix-test-chinese-chip-tools-hedge-against-us-risks-2026-08-05/">Sources: Samsung and SK Hynix are evaluating chipmaking equipment from China's AMEC for possible use at their Chinese factories, as they hedge against US curbs</a></b></span>&nbsp; &mdash;&nbsp; Samsung Electronics and SK Hynix are evaluating chipmaking equipment from China's Advanced Micro-Fabrication Equipment (AMEC) &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
 </item>
 
 <item>
@@ -539,7 +1382,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://fortune.com/2026/08/04/cloudflare-ai-agents-wallets-id/"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260804/i57.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260804/p57#a260804p57" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Jeff John Roberts / <a href="http://www.fortune.com/">Fortune</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://fortune.com/2026/08/04/cloudflare-ai-agents-wallets-id/">Cloudflare announces Cloudflare Wallets for users to pay for APIs and content via stablecoins, with the ability to create virtual wallets for agentic shopping</a></b></span>&nbsp; &mdash;&nbsp; The field of agentic commerce&mdash;a term that describes the use of bots for online buying and selling&mdash;is evolving fast.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://fortune.com/2026/08/04/cloudflare-ai-agents-wallets-id/">Cloudflare announces Cloudflare Wallets for users to pay for APIs and content via stablecoins, with the ability to create virtual wallets for agentic shopping</a></b></span>&nbsp; &mdash;&nbsp; The field of agentic commerce&mdash;a term that describes the use of bots for online buying and selling&mdash;is evolving fast.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 8h ago]]></description>
 </item>
 
 <item>
@@ -692,7 +1535,7 @@
 
 
 <p class="wp-block-paragraph">Therefore, he said, “even organizations that see no obvious evidence of compromise should not assume that patching alone removes the risk created by previously exposed secrets.”</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 10h ago]]></description>
 </item>
 
 <item>
@@ -700,27 +1543,7 @@
   <link>https://www.theregister.com/ai-and-ml/2026/08/05/amds-results-spotlight-risks-of-putting-all-your-ai-eggs-in-too-few-baskets/5283142</link>
   <pubDate>Wed, 05 Aug 2026 00:40:10 +0000</pubDate>
   <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>The House of Zen's new Helios racks, Venice Epycs, may dent Nvidia's dominance — if the bubble doesn't pop first<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 8h ago]]></description>
-</item>
-
-<item>
-  <title>🟠 OpenAI says one of its models exploited a website after third-party AI security lab Irregular mistakenly gave it access to the internet during evaluations (Wired)</title>
-  <link>https://www.techmeme.com/260804/p53#a260804p53</link>
-  <pubDate>Tue, 04 Aug 2026 23:45:00 +0000</pubDate>
-  <source>Techmeme</source>
-  <description><![CDATA[<b>Why this matters: Service impact possible — prepare comms and confirm vendor status.</b><br/><a href="https://www.wired.com/story/ok-well-there-are-even-more-ai-agent-hacking-incidents/"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260804/i53.jpg" vspace="4" /></a>
-<p><a href="https://www.techmeme.com/260804/p53#a260804p53" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="http://www.wired.com/">Wired</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.wired.com/story/ok-well-there-are-even-more-ai-agent-hacking-incidents/">OpenAI says one of its models exploited a website after third-party AI security lab Irregular mistakenly gave it access to the internet during evaluations</a></b></span>&nbsp; &mdash;&nbsp; Rogue AI agents from OpenAI and Anthropic have again been caught trying to disrupt servers and software&mdash;and leaving instructions for future bad behavior.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
-</item>
-
-<item>
-  <title>🔴 Coupang reports Q2 revenue up 4% YoY to $8.9B and an operating loss of $556M, above $361M est., due to a $409M data breach fine; CPNG drops 7%+ pre-market (Yoolim Lee/Bloomberg)</title>
-  <link>https://www.techmeme.com/260804/p52#a260804p52</link>
-  <pubDate>Tue, 04 Aug 2026 23:30:02 +0000</pubDate>
-  <source>Techmeme</source>
-  <description><![CDATA[<b>Why this matters: Potential data exposure — check monitoring and incident response readiness.</b><br/><a href="https://www.bloomberg.com/news/articles/2026-08-04/coupang-s-losses-grow-after-fallout-from-data-breach-deepens"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260804/i52.jpg" vspace="4" /></a>
-<p><a href="https://www.techmeme.com/260804/p52#a260804p52" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Yoolim Lee / <a href="https://www.bloomberg.com/">Bloomberg</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/articles/2026-08-04/coupang-s-losses-grow-after-fallout-from-data-breach-deepens">Coupang reports Q2 revenue up 4% YoY to $8.9B and an operating loss of $556M, above $361M est., due to a $409M data breach fine; CPNG drops 7%+ pre-market</a></b></span>&nbsp; &mdash;&nbsp; Coupang Inc. reported a larger-than-expected loss, underscoring the damage from a massive personal data leak that resulted &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 10h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>The House of Zen's new Helios racks, Venice Epycs, may dent Nvidia's dominance — if the bubble doesn't pop first<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 11h ago]]></description>
 </item>
 
 <item>
@@ -809,7 +1632,7 @@
 
 
 <p class="wp-block-paragraph">Security companies continuously scan and monitor the npm registry and new supply chain compromises are usually discovered within minutes or hours. In this case the malicious versions began being removed by the npm team within two hours, but being a worm, the attack keeps propagating via newly compromised developer accounts.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 10h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
 </item>
 
 <item>
@@ -974,7 +1797,7 @@
 
 
 <p class="wp-block-paragraph"><em>This article originally appeared on <a href="https://www.networkworld.com/article/4205228/with-fcc-ban-on-new-chinese-made-optical-transceivers-for-dcs-likely-it-may-be-time-to-stock-up.html" target="_blank">NetworkWorld</a>.</em></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 12h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 15h ago]]></description>
 </item>
 
 <item>
@@ -1073,7 +1896,7 @@
 
 
 <p class="wp-block-paragraph"><strong>erin.welke@airlockdigital.com</strong></p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 16h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 19h ago]]></description>
 </item>
 
 <item>
@@ -1214,7 +2037,7 @@
 
 
 <p class="wp-block-paragraph"></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 17h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 20h ago]]></description>
 </item>
 
 <item>
@@ -1222,7 +2045,7 @@
   <link>https://www.theregister.com/security/2026/08/04/feds-get-3-days-to-patch-n-able-god-mode-flaw-under-active-exploit/5282894</link>
   <pubDate>Tue, 04 Aug 2026 15:38:00 +0000</pubDate>
   <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Could impact sign-ins/MFA/Conditional Access — watch for login issues.</b><br/>Experts warn hotfix not optional. MSPs warned attacker gains 'full administrative access to an N-central console'<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 17h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Could impact sign-ins/MFA/Conditional Access — watch for login issues.</b><br/>Experts warn hotfix not optional. MSPs warned attacker gains 'full administrative access to an N-central console'<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 20h ago]]></description>
 </item>
 
 <item>
@@ -1230,7 +2053,7 @@
   <link>https://www.theregister.com/security/2026/08/04/ai-helps-microsoft-bug-hunters-chase-a-record-20m-payday/5282821</link>
   <pubDate>Tue, 04 Aug 2026 14:40:49 +0000</pubDate>
   <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Broader bounty rules added to a swelling volume of machine-assisted vulnerability reports<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 18h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Broader bounty rules added to a swelling volume of machine-assisted vulnerability reports<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 21h ago]]></description>
 </item>
 
 <item>
@@ -1238,7 +2061,7 @@
   <link>https://www.zdnet.com/article/microsoft-finally-realized-windows-11-is-too-annoying-can-it-be-fixed/</link>
   <pubDate>Tue, 04 Aug 2026 13:43:26 +0000</pubDate>
   <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Microsoft's latest progress report details much-needed Windows 11 improvements in reliability, performance, stability, and usability. But pressure to monetize key features remains.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 19h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Microsoft's latest progress report details much-needed Windows 11 improvements in reliability, performance, stability, and usability. But pressure to monetize key features remains.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 22h ago]]></description>
 </item>
 
 <item>
@@ -1343,7 +2166,7 @@
 
 
 <p class="wp-block-paragraph">“Hyperscale services often depend on privileged gateways, control planes, metadata stores and service identities that operate across large numbers of customers,” she said. “Whenever tenant-controlled input is processed close to those components, a vulnerability can cross what appeared to be separate security boundaries and create platform-scale consequences.”</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 21h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 23h ago]]></description>
 </item>
 
 <item>
@@ -1351,7 +2174,7 @@
   <link>https://www.theregister.com/security/2026/08/04/us-house-candidate-allegedly-shoots-down-four-flock-cameras/5282696</link>
   <pubDate>Tue, 04 Aug 2026 12:08:00 +0000</pubDate>
   <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Budget/licensing impact — verify renewal terms and forecast cost changes.</b><br/>Cops arrest budding politician for allegedly dealing with Flock's expansion the American way<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 21h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Budget/licensing impact — verify renewal terms and forecast cost changes.</b><br/>Cops arrest budding politician for allegedly dealing with Flock's expansion the American way<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 23h ago]]></description>
 </item>
 
 <item>
@@ -1460,7 +2283,7 @@
 
 
 <p class="wp-block-paragraph">Tanium announced several additions to its Autonomous IT Platform spanning agentic AI, exposure management, and security operations. New Alas capabilities include background AI agents, agentic performance analysis, expanded automation, and an <a href="https://www.csoonline.com/article/4087656/what-cisos-need-to-know-about-new-tools-for-securing-mcp-servers.html">MCP server</a> that exposes governed Tanium data to compatible AI assistants. The company also introduced External Attack Surface Management, Attack Path Mapping, Agent-Guided Threat Hunting, and a private preview integration with Google Threat Intelligence, extending its focus from endpoint management to coordinated autonomous security operations.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 21h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 23h ago]]></description>
 </item>
 
 <item>
@@ -1887,7 +2710,7 @@
 
 
 <p class="wp-block-paragraph"><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><a href="https://www.cio.com/expert-contributor-network/"><strong>Want to join?</strong></a></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 21h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 23h ago]]></description>
 </item>
 
 <item>
@@ -1992,7 +2815,7 @@
 
 
 <p class="wp-block-paragraph">Grover added that changes to reviews, comments, and approval states should also be treated as security events and exported to an independent logging system that the workflow’s own identity cannot alter.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 21h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
@@ -2000,7 +2823,7 @@
   <link>https://www.theregister.com/security/2026/08/04/caf-bank-reopens-online-service-but-warns-of-further-outages/5282668</link>
   <pubDate>Tue, 04 Aug 2026 11:23:36 +0000</pubDate>
   <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Service impact possible — prepare comms and confirm vendor status.</b><br/>Customers told traffic may be limited at certain times following more than ten days offline<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 22h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Service impact possible — prepare comms and confirm vendor status.</b><br/>Customers told traffic may be limited at certain times following more than ten days offline<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
@@ -2101,7 +2924,7 @@
 
 
 <p class="wp-block-paragraph"><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><a href="https://www.cio.com/expert-contributor-network/"><strong>Want to join?</strong></a></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 22h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
@@ -2452,7 +3275,7 @@
 
 <li><a href="https://www.cio.com/article/286354/project-management-7-must-have-project-management-skills-for-it-pros.html">7 must-have project management skills</a></li>
 </ul>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 23h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
@@ -2559,7 +3382,7 @@
 
 
 <p class="wp-block-paragraph"><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><a href="https://www.cio.com/expert-contributor-network/"><strong>Want to join?</strong></a></p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 23h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
@@ -2720,7 +3543,7 @@
 
 
 <p class="wp-block-paragraph"><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><a href="https://www.cio.com/expert-contributor-network/"><strong>Want to join?</strong></a></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 23h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
@@ -4114,7 +4937,7 @@
 
 
 <p class="wp-block-paragraph"><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><a href="https://www.cio.com/expert-contributor-network/"><strong>Want to join?</strong></a></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
 </item>
 
 <item>
@@ -4255,566 +5078,6 @@
 
 
 <p class="wp-block-paragraph">“The encouraging part here is that the entire art is just a couple of years old, so in under a month, you can pretty much catch up to the very top,” he says. “The moment you do that, you become literally the most indispensable and the most needed resource in the organization because every leader wants to partner with you to supercharge them.”</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
-</item>
-
-<item>
-  <title>🟠 Frontier AI will not break finance. Slow cyber decisions will</title>
-  <link>https://www.cio.com/article/4204031/frontier-ai-will-not-break-finance-slow-cyber-decisions-will.html</link>
-  <pubDate>Mon, 03 Aug 2026 10:00:00 +0000</pubDate>
-  <source>CIO.com</source>
-  <description><![CDATA[<b>Why this matters: Credential/phishing risk — reinforce MFA and user awareness training.</b><br/><div id="remove_no_follow">
-		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
-					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
-						<div class="article-column__content">
-<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
-
-
-
-<p class="wp-block-paragraph">The scariest thing about frontier AI is that it gives lazy criminals better legs.</p>
-
-
-
-<p class="wp-block-paragraph">That sounds flippant until you watch how cyber failure works. I have seen that weakness in many costumes: A server waiting for a patch, an access path nobody wants to touch, a supplier marked “low risk” because the contract said so, and a legacy system kept alive by one person who retired years ago.</p>
-
-
-
-<p class="wp-block-paragraph">It is a known weakness with no owner.</p>
-
-
-
-<p class="wp-block-paragraph">Frontier AI only needs to find them faster, join them better and act before the committee has finished admiring the heat map.</p>
-
-
-
-<p class="wp-block-paragraph">On 15 May 2026, the <a href="https://www.bankofengland.co.uk/news/2026/may/boe-fca-and-hm-treasury-joint-statement-on-frontier-ai-models-and-cyber-resilience">Bank of England, the FCA and HM Treasury</a> warned that frontier AI models carry serious cyber and operational resilience implications for regulated firms and financial market infrastructures. Cyber capability is getting faster and cheaper to scale.</p>
-
-
-
-<p class="wp-block-paragraph"><a href="https://www.esrb.europa.eu/news/pr/date/2026/html/esrb.pr260707~4e1b68241a.en.html">The European Systemic Risk Board (ESRB) warned in June 2026</a> that frontier AI models with cyber capabilities can discover vulnerabilities, generate working exploits and execute attacks at a speed, scale and accuracy beyond those of earlier models. It also warned that this may reduce response time, increase concentration risk and weaken resilience across the financial system. Three weeks earlier, a <a href="https://www.whitehouse.gov/presidential-actions/2026/06/promoting-advanced-artificial-intelligence-innovation-and-security">US executive order</a> directed the Treasury, along with CISA and the NSA, to establish an AI cybersecurity clearinghouse and a pre-release evaluation framework for frontier models with advanced cyber capabilities.</p>
-
-
-
-<h2 class="wp-block-heading" id="the-clock-has-changed">The clock has changed</h2>
-
-
-
-<p class="wp-block-paragraph">For years, cyber programmes lived on borrowed time.</p>
-
-
-
-<p class="wp-block-paragraph">A weakness appeared. Someone logged it. Technology needed a change window. Procurement checked the supplier. Legal asked what could be said. Everyone was busy. Nobody was idle. Yet the decision moved like a suitcase with one broken wheel.</p>
-
-
-
-<p class="wp-block-paragraph">Frontier AI punishes that rhythm.</p>
-
-
-
-<p class="wp-block-paragraph"><a href="https://www.iif.com/Publications/ID/6618/IIF-Staff-Paper-Speed-Scale-and-Systemic-Risk-Frontier-AI-and-Cybersecurity">The Institute of International Finance (IIF)</a> staff paper says frontier AI has lowered the barriers to discovering, exploiting and combining vulnerabilities. It also says the answer is not a new risk framework, but faster use of existing ones, with more senior ownership and faster remediation.</p>
-
-
-
-<p class="wp-block-paragraph">A patching process that looked mature when attackers needed weeks may look quaint when exploitation can follow in hours. A vulnerability backlog that once looked like a queue can become a menu. And menus are for customers. Not attackers.</p>
-
-
-
-<h2 class="wp-block-heading" id="when-firm-weakness-becomes-market-fragility">When firm weakness becomes market fragility</h2>
-
-
-
-<p class="wp-block-paragraph">In finance, a cyber incident can travel.</p>
-
-
-
-<p class="wp-block-paragraph">A bank does not sit alone. A payment system does not hum in a private corner. A firm and financial market infrastructure (FMI) does not clear and settle trades as a hobby. These institutions share technology, suppliers, market data, cloud services, open-source code, identity systems and habits. When one pipe shakes, another pipe may feel the vibration.</p>
-
-
-
-<p class="wp-block-paragraph">That is why the ESRB treats frontier AI as a systemic risk, rather than a security issue. It points to shared technology stacks, common service providers, open-source dependencies and the risk of incidents spreading across critical functions. It also warns about asymmetry: Some firms and jurisdictions will have better skills, tools and access than others, while attackers may benefit sooner than defenders.</p>
-
-
-
-<p class="wp-block-paragraph">For FMIs, the useful question is blunt: What failure would stop the market completing the day? Not “which system is red?” Not “which supplier scored medium?” If this breaks, who cannot pay, clear, settle, price, report or trust?</p>
-
-
-
-<p class="wp-block-paragraph">In finance, one firm’s backlog can become another firm’s outage.</p>
-
-
-
-<h2 class="wp-block-heading" id="governance-means-naming-the-decision">Governance means naming the decision</h2>
-
-
-
-<p class="wp-block-paragraph">There will be a new policy. A renamed committee. A dashboard that tells directors what everyone already knows: the risk is high.</p>
-
-
-
-<p class="wp-block-paragraph">Fine. Keep the dashboard. But do not confuse it with movement.</p>
-
-
-
-<p class="wp-block-paragraph">Supervisors have already moved this to the top table. On 7 July 2026, the ECB, as banking supervisor, has <a href="https://www.bankingsupervision.europa.eu/press/letterstobanks/shared/pdf/2026/ssm.2026_letter_on_AI_enabled_cybersecurity_threats.en.pdf">asked significant institutions</a> to assess the changed threat environment without delay and to deliver a full action plan by 31 October 2026. The ESRB says financial authorities should ensure boards are fully committed to mitigating frontier-AI-driven cyber risks, with clear governance, planned, timely responses and internal investment.</p>
-
-
-
-<p class="wp-block-paragraph">Governance should name the decisions before the incident names them for you. Which important services are most exposed? Which vulnerabilities must be fixed first? Which patching risks will the board accept to avoid a worse cyber risk? Which suppliers can hurt the firm? Which defensive AI tools are safe enough to use, and under whose authority?</p>
-
-
-
-<p class="wp-block-paragraph">Each important business service should have a Frontier AI Cyber Risk Position. One page. Service. Scenario. Owner. Gap. Decision. Funding. Date. Proof.</p>
-
-
-
-<p class="wp-block-paragraph">If it cannot fit on one page, it may not be due to complexity. It may be fog.</p>
-
-
-
-<p class="wp-block-paragraph">A policy says the firm noticed. A decision says the firm moved.</p>
-
-
-
-<h2 class="wp-block-heading" id="threat-modelling-must-grow-up">Threat modelling must grow up</h2>
-
-
-
-<p class="wp-block-paragraph">Old threat models ask what an attacker might do. Useful, yes. But frontier AI adds a sharper question: What does the model make easier?</p>
-
-
-
-<p class="wp-block-paragraph">The <a href="https://www.frontiermodelforum.org/technical-reports/managing-advanced-cyber-risks-in-frontier-ai-frameworks/">Frontier Model Forum</a> says cyber risk frameworks use capability thresholds, capability assessments and extra safeguards when models reach levels that could enable serious harm. Two thresholds matter for finance: Models that give meaningful uplift to less-skilled attackers, and systems that can carry out parts or all of an attack chain with little human direction.</p>
-
-
-
-<p class="wp-block-paragraph">So do not only ask whether phishing improves. Ask whether a novice can now perform work that once needed a specialist. Ask whether vulnerabilities can be discovered, chained, tested and used against hardened targets.</p>
-
-
-
-<p class="wp-block-paragraph">The Frontier AI Risk Management Framework offers a useful lens: Deployment environment, threat source and enabling capability. In plain English: Where is the tool, who can misuse it and what does it let them do that they could not do before?</p>
-
-
-
-<h2 class="wp-block-heading" id="patching-is-now-a-resilience-test">Patching is now a resilience test</h2>
-
-
-
-<p class="wp-block-paragraph">Patching used to be treated like hygiene. Necessary, dull and easy to postpone.</p>
-
-
-
-<p class="wp-block-paragraph">Not anymore.</p>
-
-
-
-<p class="wp-block-paragraph">The ESRB warns that current patching practices in finance are largely reactive. They rely on periodic updates and ad hoc responses. That may fail if frontier AI increases the volume of critical vulnerabilities. Firms may then face an ugly choice: Leave systems exposed or reduce patch testing, risking outages.</p>
-
-
-
-<p class="wp-block-paragraph">The IIF paper adds another sting. A published patch can become a signal. Attackers can inspect the fix, infer the weakness and move faster than firms can test and deploy it. In that world, “we are waiting for the next maintenance window” starts to sound less like discipline and more like hope in a suit.</p>
-
-
-
-<p class="wp-block-paragraph">Firms need a patch-wave model: Asset visibility tied to critical services, component visibility, exploitability scoring, attack-path analysis, emergency change lanes, rollback plans and senior visibility when the clock collapses.</p>
-
-
-
-<p class="wp-block-paragraph">Do not let <a href="https://www.first.org/cvss/">CVSS</a> become theatre. A lower-scored weakness on a live path to a critical service may matter more than a higher-scored weakness buried in a corner.</p>
-
-
-
-<p class="wp-block-paragraph">A patch is not always the end of the story. Under pressure from frontier AI, it can be the starting gun.</p>
-
-
-
-<h2 class="wp-block-heading" id="your-supplier-map-is-part-of-your-attack-surface">Your supplier map is part of your attack surface</h2>
-
-
-
-<p class="wp-block-paragraph">No firm owns its full risk anymore.</p>
-
-
-
-<p class="wp-block-paragraph">Some of it sits on cloud platforms, in managed services and in open-source packages maintained by tired volunteers, software vendors and AI providers whose access decisions may depend on governments, export rules or commercial priorities.</p>
-
-
-
-<p class="wp-block-paragraph">The IIF paper notes that weaknesses now being surfaced are not unique to financial services. They live in operating systems, browsers, cloud platforms and open-source software used across the wider economy. The capacity to fix many of them sits with technology developers, platform firms and governments.</p>
-
-
-
-<p class="wp-block-paragraph">A contract clause does not patch a supplier. A right-to-audit clause does not restore settlement at 3 a.m. A service credit does not rebuild confidence.</p>
-
-
-
-<p class="wp-block-paragraph">Firms and FMIs need sharper dependency maps. Which providers support important services? Which have production access? Which hold sensitive data? Which supplier failure would stop the day?</p>
-
-
-
-<p class="wp-block-paragraph">Ask for proof. Patch proof. Incident routes. Recovery test results. Component lists. Exit options that can survive contact with reality.</p>
-
-
-
-<p class="wp-block-paragraph">Procurement should not buy what resilience cannot recover. Your perimeter ends at the contract. The attacker’s path does not.</p>
-
-
-
-<h2 class="wp-block-heading" id="use-ai-for-defence-but-keep-humans-in-authority">Use AI for defence, but keep humans in authority</h2>
-
-
-
-<p class="wp-block-paragraph">Frontier AI can help search code, correlate signals, support testing and speed up triage. The ESRB accepts the defensive value, but warns that offensive gains may arrive sooner than defensive maturity. The IIF paper says firms that move faster to build defensive capability will be better placed as the threat shifts.</p>
-
-
-
-<p class="wp-block-paragraph">So yes, use AI to test, find weak paths, help the SOC cut noise and scan code before deployment.</p>
-
-
-
-<p class="wp-block-paragraph">But do not let speed smuggle in authority.</p>
-
-
-
-<p class="wp-block-paragraph">If a containment action could affect payments, settlement, customer access or market operations, a named human must own the call. AI can suggest. AI can rank. AI can warn. It should not inherit a mandate by accident.</p>
-
-
-
-<p class="wp-block-paragraph">Agents that write code, test controls, scan infrastructure or act in workflows need scoped permissions, monitoring, logs and kill switches. They also need owners who understand what the agent can touch.</p>
-
-
-
-<p class="wp-block-paragraph">Use AI to gain speed. Do not let it become the ghost in the control room.</p>
-
-
-
-<h2 class="wp-block-heading" id="assurance-must-reconstruct-the-story">Assurance must reconstruct the story</h2>
-
-
-
-<p class="wp-block-paragraph">After an incident, the question will not be, “Did you have controls?”</p>
-
-
-
-<p class="wp-block-paragraph">It will be sharper. What did you know? When did you know it? Who decided? What did they reject? Why was the choice reasonable? Where is the proof?</p>
-
-
-
-<p class="wp-block-paragraph">Assurance means following the decision trail from threat signal to board action to funding to remediation to test result. Evidence should include board papers, risk decisions, expired acceptances, supplier attestations, incident timelines, recovery tests and lessons learned.</p>
-
-
-
-<p class="wp-block-paragraph">The scrutiny will keep moving. The ESRB will reassess these risks at each quarterly meeting of its General Board. Supervisors are calibrating expectations to the trajectory of AI capability because anything anchored to today’s models will be stale before it lands.</p>
-
-
-
-<p class="wp-block-paragraph">One caution runs the other way. Firm-level disclosure of live vulnerabilities can itself concentrate targeting information. Push for aggregate reporting where the rules allow, and remediate before you broadcast.</p>
-
-
-
-<p class="wp-block-paragraph">Internal audit should ask one brutal question: Could a competent stranger reconstruct the decision six months later? If the answer is no, you may have done work rather than built defensibility.</p>
-
-
-
-<h2 class="wp-block-heading" id="conclusion">Conclusion</h2>
-
-
-
-<p class="wp-block-paragraph">Frontier AI will not break finance by magic. It will test whether finance can move before its own processes turn against it.</p>
-
-
-
-<p class="wp-block-paragraph">Frontier AI will punish firms that treat it as a chore and reward those that treat the next 12 months as a decision problem with a clock on it.</p>
-
-
-
-<p class="wp-block-paragraph">The EU and the US reached the same conclusion by different routes: The rulebook already exists. DORA, the AI Act and the new US clearinghouse point to frameworks in place today. The variable is the speed, ownership and evidence with which firms apply them.</p>
-
-
-
-<p class="wp-block-paragraph">The board questions are plain. Do we know our important services? Do we know the paths that can break them? Which suppliers and which models can hurt us? Can we patch in hours? Can we contain without guessing? Can we recover within tolerance? Can we prove who decided what, when and why?</p>
-
-
-
-<p class="wp-block-paragraph"><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><a href="https://www.cio.com/expert-contributor-network/"><strong>Want to join?</strong></a></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
-</item>
-
-<item>
-  <title>🔵 12 business analyst certifications to level up your career</title>
-  <link>https://www.cio.com/article/228834/6-business-analyst-certifications-to-advance-your-analytics-career.html</link>
-  <pubDate>Mon, 03 Aug 2026 09:30:00 +0000</pubDate>
-  <source>CIO.com</source>
-  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/><div id="remove_no_follow">
-		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
-					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
-						<div class="article-column__content">
-<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
-
-
-
-<p class="wp-block-paragraph"><a href="https://www.cio.com/article/276798/what-is-a-business-analyst-a-key-role-for-business-it-efficiencywhat-is-a-business-analyst-a-key-role-for-business-it-efficiency.html">Business analysts</a> help organizations make the most of the data they collect by finding trends, patterns, and errors that might otherwise go unnoticed. <a href="https://www.cio.com/article/189108/essential-traits-of-elite-business-analysts.html">Successful business analysts</a> have the skills to work with data, the acumen to understand the business side of the organization, and the ability to communicate that information to people outside of IT. Certifications provide a great way to prove your business analyst bona fides or get started in the field.</p>
-
-
-
-<p class="wp-block-paragraph">Business analytics is a lucrative role in IT, with an average entry-level salary of $80,692 per year. Throughout their careers, <a href="https://www.cio.com/article/276798/project-management-what-do-business-analysts-actually-do-for-software-implementation-projects.html">business analysts</a> report average salaries ranging from $58,000 to $114,000 per year, <a href="https://www.payscale.com/research/US/Job=Business_Analyst%2C_IT/Salary">according to PayScale</a>. If you want to advance your business analyst career, or change career paths, here are 12 certifications that will help prove your mettle. Not finding what you’re looking for? Check out our list of <a href="https://www.cio.com/article/230388/big-data-certifications-that-will-pay-off.html">big data and data analytics certifications</a>.</p>
-
-
-
-<h2 class="wp-block-heading" id="top-12-business-analyst-certifications">Top 12 business analyst certifications</h2>
-
-
-
-<ul class="wp-block-list">
-<li>Certified Analytics Professional (CAP)</li>
-
-
-
-<li>IIBA Entry Certificate in Business Analysis (ECBA)</li>
-
-
-
-<li>IIBA Certification of Competency in Business Analysis (CCBA)</li>
-
-
-
-<li>IIBA Certified Business Analysis Professional (CBAP)</li>
-
-
-
-<li>IIBA Agile Analysis Certification (AAC)</li>
-
-
-
-<li>IIBA Certification in Business Data Analytics (CBDA)</li>
-
-
-
-<li>IQBBA Certified Foundation Level Business Analyst (CFLBA)</li>
-
-
-
-<li>IQBBA Certified Advanced Level Business Analyst (CALBA)</li>
-
-
-
-<li>IQBBA Certified Agile Business Analyst (CABA)</li>
-
-
-
-<li>IREB Certified Professional for Requirements Engineering (CPRE)</li>
-
-
-
-<li>PMI Professional in Business Analysis (PBA)</li>
-
-
-
-<li>Salesforce Certified Business Analyst</li>
-</ul>
-
-
-
-<h3 class="wp-block-heading" id="certified-analytics-professional-cap">Certified Analytics Professional (CAP)</h3>
-
-
-
-<p class="wp-block-paragraph">The <a href="https://www.certifiedanalytics.org/">Certified Analytics Professional (CAP)</a> is a vendor-neutral certification that certifies your skills and ability to draw valuable insights from complex data sets to help guide strategic businesses decisions. There are three levels of the exam — the essentials, pro, and expert certifications. Essentials is for entry-level analytics professionals, Pro is for mid-career analytics practitioners, and Expert is aimed at senior analytics leaders and directors. Depending on the level of certification, each has different requirements ranging from no-prerequisites at the Essentials level to advanced degrees to qualify for the Expert certification.</p>
-
-
-
-<ul class="wp-block-list">
-<li><em>Essentials exam fee:</em> $195 for INFORMS members, $275 for non-members</li>
-
-
-
-<li><em>Professional exam fee:</em> $325 for INFORMS members, $460 for non-members</li>
-
-
-
-<li><em>Expert exam fee:</em> $440 for INFORMS members, $640 for non-members</li>
-</ul>
-
-
-
-<h3 class="wp-block-heading" id="iiba-entry-certificate-in-business-analysis-ecba">IIBA Entry Certificate in Business Analysis (ECBA)</h3>
-
-
-
-<p class="wp-block-paragraph">The <a href="https://www.cio.com/article/189169/ecba-certification-an-entry-level-credential-for-business-analysts.html">Entry Certificate in Business Analysis (ECBA)</a> is the first level of certification with the International Institute of Business Analysis (IIBA), it’s designed for less experienced and entry-level business analysts. You will need to complete at least 21 hours of professional training credits, within the past four years, before you will be eligible for the exam. You don’t have to renew your ECBA certification, but it’s assumed you’ll move on to the second or third levels of certification.</p>
-
-
-
-<ul class="wp-block-list">
-<li><em>Exam fee: </em>$395</li>
-</ul>
-
-
-
-<p class="wp-block-paragraph">For more, <a href="https://www.cio.com/article/189169/ecba-certification-an-entry-level-credential-for-business-analysts.html">see our guide on the ECBA</a>.</p>
-
-
-
-<h3 class="wp-block-heading" id="iiba-certification-of-competency-in-business-analysis-ccba">IIBA Certification of Competency in Business Analysis (CCBA)</h3>
-
-
-
-<p class="wp-block-paragraph">Level 2 of the IIBA certification, the <a href="https://www.iiba.org/business-analysis-certifications/ccba/">Certification of Competency in Business Analysis (CCBA)</a> requires a minimum 3,750 hours of business analytics work aligned with the IIBA’s BABOK guide in the past 7 years, 900 hours in two of six BABOK knowledge areas, or 500 hours in four of six BABOK knowledge areas. The certification also requires a minimum of 21 hours of professional development training in the past four years and two professional references. The CCBA exam consists of 130 multiple-choice questions that are scenario-based and require some analysis. It covers fundamentals, underlying competencies, key concepts, techniques, and all six knowledge areas covered in the BABOK.</p>
-
-
-
-<ul class="wp-block-list">
-<li><em>Application fee:</em> $145</li>
-
-
-
-<li><em>Exam fee:</em> $240 for members, $405 for non-members</li>
-</ul>
-
-
-
-<h3 class="wp-block-heading" id="iiba-certified-business-analysis-professional-cbap">IIBA Certified Business Analysis Professional (CBAP)</h3>
-
-
-
-<p class="wp-block-paragraph">The <a href="https://www.cio.com/article/189143/cbap-certification-a-high-profile-credential-for-business-analysts.html">Certified Business Analysis Professional (CBAP) certification</a> is the third level of certification with IIBA and is designed for “individuals with extensive business analysis experience.” To qualify for this certification, you’ll need a minimum of 7,500 hours of business analyst work experience in the past 10 years, 900 hours of work experience hours within four of the six BABOK knowledge areas, at least 35 hours of professional development in the past four years and professional references. The exam is 3.5 hours long and includes 120 multiple-choice questions based on case studies. After you pass, you’ll need to report at least 60 hours of continuing development units every three years.</p>
-
-
-
-<ul class="wp-block-list">
-<li><em>Application fee:</em> $145</li>
-
-
-
-<li><em>Exam fee:</em> $350 for members, $505 for non-members</li>
-</ul>
-
-
-
-<p class="wp-block-paragraph">For more, <a href="https://www.cio.com/article/189143/cbap-certification-a-high-profile-credential-for-business-analysts.html">see our guide on the CBAP</a>.</p>
-
-
-
-<h3 class="wp-block-heading" id="iiba-agile-analysis-certification-aac">IIBA Agile Analysis Certification (AAC)</h3>
-
-
-
-<p class="wp-block-paragraph">The agile methodology has been rising in importance for business analysts over the past several years, according to the IIBA. The association’s competency-based <a href="https://www.iiba.org/business-analysis-certifications/agile-analysis/">Agile Analysis Certification (AAC)</a> exam was designed to address this skillset and to certify business analyst professionals working in agile environments, which require fast adaption and rapid change. The exam was developed using the Agile Extension to the Business Analysis Book of Knowledge (BABOK) guide and released in May 2018 as a standalone certification and is separate from the other IIBA business analyst certifications, which stack on top of one another. The exam’s four main topics include agile mindset (30%), strategy horizon (10%), initiative horizon (25%) and delivery horizon (35%). There aren’t any eligibility requirements to take the exam, but the IIBA recommends at least two to five years of agile-related experience.</p>
-
-
-
-<ul class="wp-block-list">
-<li><em>Exam fee:</em> $250 for members, $405 for non-members</li>
-</ul>
-
-
-
-<h3 class="wp-block-heading" id="iiba-certification-in-business-data-analytics-cbda">IIBA Certification in Business Data Analytics (CBDA)</h3>
-
-
-
-<p class="wp-block-paragraph">The <a href="https://www.iiba.org/certification/iiba-certifications/specialized-business-analysis-certifications/business-data-analytics-certification/">Certification Business Data Analytics (IIBA-CBDA)</a> from the IIBA is a certification that “recognizes your ability to effectively execute analysis-related work in support of business analytics initiatives.” To pass the exam, you will need to examine a real-world business problem, identify the data sources and how to obtain data, analyze the data, interpret and report results from the data. You’ll then need demonstrate how those results can influence business decision-making and guide company-level strategies for business analytics.</p>
-
-
-
-<ul class="wp-block-list">
-<li><em>Exam fee:</em> $250 for members, $405 for non-members</li>
-</ul>
-
-
-
-<h3 class="wp-block-heading" id="iqbba-certified-foundation-level-business-analyst-cflba">IQBBA Certified Foundation Level Business Analyst (CFLBA)</h3>
-
-
-
-<p class="wp-block-paragraph">The International Qualifications Board for Business Analysts (IQBBA) offers the <a href="https://www.iqbba.org/en/scheme/foundation-level.html">Certified Foundation Level Business Analysis (CFLBA)</a> as an entry-level certification, which will qualify you to earn higher levels of certification. It’s a globally recognized certification with accredited exam and training centers across the world. It’s designed for “people involved in analyzing business processes within an organization, modeling businesses and process improvement.” The foundation level covers enterprise analysis, business analysis process planning, requirements elicitation, requirements analysis, solution validation, tools and techniques, innovation, and design.</p>
-
-
-
-<ul class="wp-block-list">
-<li><em>Exam fee:</em> $215</li>
-</ul>
-
-
-
-<h3 class="wp-block-heading" id="iqbba-certified-advanced-level-business-analyst-calba">IQBBA Certified Advanced Level Business Analyst (CALBA)</h3>
-
-
-
-<p class="wp-block-paragraph">The <a href="https://iqbba.org/iqbba/certifications/calba-certified-advanced-level-business-analysis-course/">IQBBA Certified Advanced Level Business Analysis</a> certification offers an advanced-level qualification for those who have passed the entry-level CFLBA exam. At this level, you’ll gain skills in business analysis process management, strategic analysis and optimization, and requirements management. Learning modules focus on enhancing the skills gained at the foundational level, deepening your knowledge of more advanced skills that will be necessary in your career.</p>
-
-
-
-<ul class="wp-block-list">
-<li><em>Exam fee: $215</em></li>
-</ul>
-
-
-
-<h3 class="wp-block-heading" id="iqbba-certified-agile-business-analysis-caba">IQBBA Certified Agile Business Analysis (CABA)</h3>
-
-
-
-<p class="wp-block-paragraph">The <a href="https://iqbba.org/iqbba/certifications/caba-certified-agile-business-analysis/">IQBBA Certified Agile Business Analyst </a>certification is another foundational-level qualification designed for anyone who wants to strengthen their business analysis skills with a focus on the Agile framework. The course covers how to recognize the role of a BA in agile software development projects, contribute to agile software teams, understand the principles of agile business analysis, and employ BA techniques in an enterprise setting. In addition to BA principles, the course and certification cover agile skills as well, including the 12 principles of the Agile Manifesto and how they intertwine with BA methods.</p>
-
-
-
-<ul class="wp-block-list">
-<li><em>Exam fee: $215</em></li>
-</ul>
-
-
-
-<h3 class="wp-block-heading" id="ireb-certified-professional-for-requirements-engineering-cpre">IREB Certified Professional for Requirements Engineering (CPRE)</h3>
-
-
-
-<p class="wp-block-paragraph">The International Requirements Engineering Board (IREB) offers the <a href="https://cpre.ireb.org/en">Certified Professional for Requirements Engineering (CPRE)</a> certification is designed for those working in requirements engineering (RE), and it’s offered at three levels. The Foundation Level is first, where you’ll be certified in the basics of RE. The Practitioner Level is next, where you can choose between four paths, including management, modeling, elicitation, and RE@Agile followed by Specialist level in the same four pathways. Finally, the Expert Level certifies you at the “highest level of expert knowledge,” which includes both your hands-on experience as well as your knowledge and skills gained through previous certifications.</p>
-
-
-
-<p class="wp-block-paragraph">Your certification will not expire, and you will not need to renew it. The IREB states that the CPRE is “based on the fundamental methods and approaches of Requirements Engineering, and these alter only slowly,” so at this time, they don’t see a need for renewal.</p>
-
-
-
-<ul class="wp-block-list">
-<li><em>Exam fee:</em> Varies by testing center</li>
-</ul>
-
-
-
-<h3 class="wp-block-heading" id="pmi-professional-in-business-analysis-pba-certification">PMI Professional in Business Analysis (PBA) Certification</h3>
-
-
-
-<p class="wp-block-paragraph">The <a href="https://www.pmi.org/certifications/business-analysis-pba">PMI Professional in Business Analysis (PBA)</a> certification is designed for business analysts who work with projects or programs, or project and program managers who work with analytics. It’s offered through the Project Management Institute, which specializes in widely recognized project management certifications, such as the PMP. The certification focuses on business analysis training through hands-on projects and testing on business analysis principles, tools and fundamentals.</p>
-
-
-
-<p class="wp-block-paragraph">If you’ve already earned a bachelor’s degree, you’ll need at least three years’ experience, or 4,500 hours, in business analysis consecutively within the past eight years to earn this certification. Without a bachelor’s degree, you’ll need five years or 7,500 hours experience.</p>
-
-
-
-<p class="wp-block-paragraph">You’ll be required to earn 60 professional development units within three years after completing the certification to maintain your renewal status. If you let your renewal lapse, your credentials will be suspended for one year until you fulfill the requirements — after that, it will be terminated and you’ll need to reapply.</p>
-
-
-
-<ul class="wp-block-list">
-<li><em>Exam fee:</em> $405 for PMI members, $555 for non-members</li>
-</ul>
-
-
-
-<h3 class="wp-block-heading" id="salesforce-certified-business-analyst">Salesforce Certified Business Analyst</h3>
-
-
-
-<p class="wp-block-paragraph">The Salesforce Certified Business Analyst certification is a vendor-specific certification for business analysts — or similar roles — who work directly with Salesforce technology. The exam covers customer discovery, collaboration with stakeholders, business process mapping, requirements, user stories, and development support and user acceptance. You will need to pass a 60-question multiple choice question test and up to five additional unscored questions. While it’s not required, candidates should have around 2 years of business analyst experience and Salesforce Platform experience.</p>
-
-
-
-<ul class="wp-block-list">
-<li><em>Exam fee:</em> $200</li>
-</ul>
 </div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
 </item>
 
@@ -4941,115 +5204,6 @@
 
 <p class="wp-block-paragraph"><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><a href="https://www.cio.com/expert-contributor-network/"><strong>Want to join?</strong></a></p>
 </div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
-</item>
-
-<item>
-  <title>🔵 AI can do your tasks. That doesn’t mean it will do your job</title>
-  <link>https://www.cio.com/article/4204021/ai-can-do-your-tasks-that-doesnt-mean-it-will-do-your-job.html</link>
-  <pubDate>Mon, 03 Aug 2026 09:00:00 +0000</pubDate>
-  <source>CIO.com</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><div id="remove_no_follow">
-		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
-					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
-						<div class="article-column__content">
-<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
-
-
-
-<p class="wp-block-paragraph"></p>
-
-
-
-<p class="wp-block-paragraph">Much of the conversation around AI and work has centered on a single question: Will AI take my job?</p>
-
-
-
-<p class="wp-block-paragraph">It’s an understandable concern. Every week AI becomes increasingly more capable. We see AI summarizing meetings, generating content, analyzing data, writing software and automating workflows that once required significant human effort. Agentic AI is also becoming more established in the workplace, with virtual agents that can reason, plan and act across workflows. As those capabilities continue to improve, many employees are looking at the tasks they perform every day and wondering how much longer they will belong to them.</p>
-
-
-
-<p class="wp-block-paragraph">I believe that question reveals a bigger issue that has little to do with the technology itself.</p>
-
-
-
-<p class="wp-block-paragraph">Too many people have become defined by the tasks they perform rather than the value they create. Over time, the administrative work surrounding a role can overshadow the purpose behind it. According to Asana’s <a href="https://asana.com/resources/why-work-about-work-is-bad?utm_source=chatgpt.com">Anatomy of Work Index</a>, knowledge workers spend 60% of their time on “work about work” — coordinating, tracking and managing tasks rather than driving meaningful outcomes. As AI automates more of this work, it can feel less like a productivity breakthrough and more like a threat because many employees equate their value with the activities that consume most of their day.</p>
-
-
-
-<p class="wp-block-paragraph">But most people were not hired to perform a task. They were hired to fulfill a purpose.</p>
-
-
-
-<h2 class="wp-block-heading" id="tasks-are-not-the-job">Tasks are not the job</h2>
-
-
-
-<p class="wp-block-paragraph">A customer service representative isn’t successful because they spend their day summarizing conversations, looking up account information or navigating multiple systems to find answers. Those activities may have become part of the job, but they aren’t the reason the role exists. Great service professionals build trust, solve problems and create moments that strengthen customer relationships. AI can, and should, take on this administrative work, but the human value has never been in completing those tasks. It has always been in helping customers through moments that matter.</p>
-
-
-
-<p class="wp-block-paragraph">The industry increasingly recognizes this distinction. In fact, 91% of CX leaders believe human agents will remain a critical part of delivering customer experience, according to my company’s <a href="https://www.genesys.com/resources/state-of-cx">State of Customer Experience</a> 2026 report. As AI takes on more routine work, the role of the employee doesn’t disappear. It becomes even more focused on the judgment, empathy and relationship-building that customers value most.</p>
-
-
-
-<p class="wp-block-paragraph">The same principle applies across every profession. A marketer isn’t measured by the number of presentations they build or approvals they coordinate; they’re hired to shape customer perception and drive growth; an HR professional isn’t successful because they schedule interviews or process paperwork; they’re there to identify, develop and retain talent. The examples go on, but the principle remains the same: Organizations create roles because outcomes need to be achieved, not because tasks need to be completed.<strong></strong></p>
-
-
-
-<p class="wp-block-paragraph">I’ve helped lead four major AI transformations, spanning everything from machine learning and big data to conversational AI, generative AI and now agentic AI. While the technology has evolved dramatically, one pattern has remained remarkably consistent.</p>
-
-
-
-<p class="wp-block-paragraph">The employees who embrace AI tend to focus on outcomes, while those who fear it often focus on tasks. The more someone defines their contribution through a list of activities, the easier it becomes to imagine AI replacing them. The more someone understands the purpose they serve, the easier it becomes to see AI as a tool that helps them deliver greater value.</p>
-
-
-
-<p class="wp-block-paragraph">As part of AI transformations, CIO organizations are often responsible for mapping jobs and core workflows. Inevitably, employees think we’re mapping their jobs to figure out what AI can replace. But once we start identifying repetitive work they’d gladly hand off, perspectives change. Someone says, “If AI handled that, I’d finally have time to work directly with customers.” Another realizes they could spend more time creating. People start thinking less about what AI might replace and more about what they’d finally have time to do. They’re reconnecting with the reason they wanted the role in the first place.</p>
-
-
-
-<p class="wp-block-paragraph">I’ve seen this play out as AI adoption expands. Our team responsible for responding to customer RFPs began using AI to analyze requirements, surface relevant information and accelerate response development. Their purpose is to help the organization communicate our value to customers and win new business. By reducing the time spent on low-value activities, AI created more capacity for strategic thinking, collaboration and customer-focused work, which directly influences the revenue and growth of our company.</p>
-
-
-
-<p class="wp-block-paragraph">I’ve even had to confront this myself. I used to spend hours coaching leaders before operational reviews: reviewing KPIs, challenging assumptions and helping them prepare for difficult questions. I used to think this was part of what made me valuable as a CIO, but I realized that I didn’t need to spend my time repeating the same coaching session. That’s why I built a virtual coach that helps my team prepare for operational reviews using many of the frameworks and lessons I’ve accumulated throughout my career. Now I have more time to spend strategizing on how to lead through the breakneck speed of AI evolution and helping the business think differently.</p>
-
-
-
-<h2 class="wp-block-heading" id="rediscovering-purpose">Rediscovering purpose</h2>
-
-
-
-<p class="wp-block-paragraph">What employees are really confronting is a different question: What was my purpose in being hired in the first place?</p>
-
-
-
-<p class="wp-block-paragraph">As organizations move from AI experimentation to AI-first operating models, this question becomes harder to avoid. The tension is already visible across the workforce. A recent <a href="https://www.ey.com/en_us/newsroom/2025/10/new-ey-survey-reveals-majority-of-workers-are-enthusiastic-about-agentic-ai-but-leadership-gaps-in-communication-and-lack-of-training-threaten-impact">EY survey</a> found that 84% of employees are eager to embrace agentic AI because they expect it to improve productivity, efficiency and the overall work experience. Yet 56% also worry about their job security working alongside AI systems. Employees aren’t rejecting AI; they’re trying to understand which parts of their contributions remain uniquely theirs as technology takes on more of the tasks they perform today.</p>
-
-
-
-<p class="wp-block-paragraph">Success will depend greatly on helping employees reconnect with the value they were hired to create. For leaders looking for practical guidance on how organizations are actually approaching AI-first transformation, the World Economic Forum’s <a href="https://www.weforum.org/publications/the-ai-first-operating-system-a-blueprint-for-operating-and-business-model-innovation/">AI-First Operating System</a> offers a useful framework. Rather than treating AI as another technological tool, this approach encourages organizations to redesign work around value creation. As AI increasingly takes on routine tasks, employees must become clearer about where human judgment, creativity and relationships can create the greatest impact. You cannot redesign work around value if people no longer understand the purpose behind the work that they do.</p>
-
-
-
-<p class="wp-block-paragraph">In my experience, the organizations seeing the strongest results are helping employees reconnect with the outcomes they were hired to create. The conversation shifts from “What tasks can AI do?” to “What is the purpose of this role?” Once people answer that question, it becomes much easier to decide what should remain human, what can be delegated to AI and where the combination creates the most value.</p>
-
-
-
-<p class="wp-block-paragraph">None of this means change won’t happen. Some responsibilities will disappear. Some jobs will evolve significantly. New roles will emerge that we cannot fully predict today. Every major technology shift creates that kind of change.</p>
-
-
-
-<p class="wp-block-paragraph">But I believe many people are looking at this transformation through the wrong lens.</p>
-
-
-
-<p class="wp-block-paragraph">The question is not whether AI can do your tasks. The question is whether you understand the purpose behind them. Because while AI may increasingly perform the work, humans will continue to provide the judgment, creativity, accountability and value that give that work meaning.</p>
-
-
-
-<p class="wp-block-paragraph"><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><a href="https://www.cio.com/expert-contributor-network/"><strong>Want to join?</strong></a></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
 </item>
 
 <item>
@@ -5310,7 +5464,7 @@
   <link>https://www.theregister.com/offbeat/2026/08/01/unexpected-item-in-the-bagging-area-as-windows-activation-error-pops-up-at-check-in/5281946</link>
   <pubDate>Sat, 01 Aug 2026 10:00:00 +0000</pubDate>
   <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Budget/licensing impact — verify renewal terms and forecast cost changes.</b><br/>Bags weighed down by a Microsoft license key<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3d ago]]></description>
+  <description><![CDATA[<b>Why this matters: Budget/licensing impact — verify renewal terms and forecast cost changes.</b><br/>Bags weighed down by a Microsoft license key<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4d ago]]></description>
 </item>
 
 <item>
@@ -5417,217 +5571,6 @@
 
 <p class="wp-block-paragraph"></p>
 </div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4d ago]]></description>
-</item>
-
-<item>
-  <title>🟠 Microsoft almost gave away the keys to everyone’s Azure Cosmos DBs</title>
-  <link>https://www.csoonline.com/article/4203921/microsoft-almost-gave-away-the-keys-to-everyones-azure-cosmos-dbs.html</link>
-  <pubDate>Fri, 31 Jul 2026 12:53:47 +0000</pubDate>
-  <source>CSO Online</source>
-  <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><div id="remove_no_follow">
-		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
-					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
-						<div class="article-column__content">
-<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
-
-
-
-<p class="wp-block-paragraph">Microsoft has had a narrow escape from total embarrassment: A security company uncovered a critical vulnerability that could have compromised all Azure Cosmos DB databases — both those of customers and Microsoft’s own.</p>
-
-
-
-<p class="wp-block-paragraph">Google subsidiary Wiz found a flaw in the database’s Gremlin API, usually used for storing and managing property graph data.</p>
-
-
-
-<p class="wp-block-paragraph">If bad actors had discovered it first, they could have exploited it to acquire what Wiz called the Cosmos Master Key, which would have enabled them to use the primary key of any Cosmos database, resulting in read and write access to any account. They would also have had access to a list of every database on the service, with identifiers such as subscription and tenant IDs.</p>
-
-
-
-<p class="wp-block-paragraph">Azure Cosmos DB is a NoSQL database that underpins Microsoft’s cloud services. It can be accessed through SDKs for framework such as Python, Node.js, Java, and .NET.</p>
-
-
-
-<p class="wp-block-paragraph"><a href="https://www.wiz.io/blog/cosmosescape-taking-over-every-database-in-azure-cosmos-db" rel="noreferrer noopener" target="_blank">Wiz described how it discovered the vulnerability</a> in a blog post. It disclosed details of the flaw to Microsoft in November 2025.</p>
-
-
-
-<p class="wp-block-paragraph">Microsoft deployed a hot fix within two days, but it took another eight months to re-engineer the infrastructure, removing the Cosmos Master Key and introducing new guardrails to Cosmos DB to prevent similar attacks.</p>
-
-
-
-<p class="wp-block-paragraph">It is not the first time Cosmos DB customers’ primary keys have been under threat: In 2021, <a href="https://www.csoonline.com/article/571251/cosmos-db-users-advised-to-regenerate-their-keys-following-serious-vulnerability.html">Wiz found a flaw in data exploration tool Jupyter Notebook</a> that could be exploited to access the database keys and other secrets.</p>
-
-
-
-<p class="wp-block-paragraph"></p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4d ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Three becomes one as Vodafone buys out merger partner</title>
-  <link>https://www.theregister.com/networks/2026/07/31/three-becomes-one-as-vodafone-buys-out-merger-partner/5281722</link>
-  <pubDate>Fri, 31 Jul 2026 12:11:00 +0000</pubDate>
-  <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Vendor risk signal — evaluate roadmap and support stability.</b><br/>£4.3B deal gives telco full control of Britain's largest mobile operator<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4d ago]]></description>
-</item>
-
-<item>
-  <title>🟠 JetBrains says a crafted HTTP request could break TeamCity</title>
-  <link>https://www.csoonline.com/article/4203872/jetbrains-says-a-crafted-http-request-could-break-teamcity.html</link>
-  <pubDate>Fri, 31 Jul 2026 10:46:30 +0000</pubDate>
-  <source>CSO Online</source>
-  <description><![CDATA[<b>Why this matters: Supply chain risk — audit third-party dependencies and vendor access.</b><br/><div id="remove_no_follow">
-		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
-					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
-						<div class="article-column__content">
-<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
-
-
-
-<p class="wp-block-paragraph">JetBrains is warning of a critical security vulnerability in its TeamCity DevOps platform that could allow unauthenticated attackers to execute arbitrary operating system commands on vulnerable servers.</p>
-
-
-
-<p class="wp-block-paragraph">“If exploited, this vulnerability may allow an unauthenticated attacker with HTTP(S) access to a TeamCity server to bypass authentication checks and execute arbitrary commands,“ the company said in a security <a href="https://blog.jetbrains.com/teamcity/2026/07/cve-2026-63077/" rel="noreferrer noopener" target="_blank">advisory</a>.</p>
-
-
-
-<p class="wp-block-paragraph">The flaw, tracked as CVE-2026-63077, affects all TeamCity On-Premises deployments and has been fixed in versions 2025.11.7 and 2026.1.3.</p>
-
-
-
-<p class="wp-block-paragraph">JetBrains warned that the flaw potentially exposes build environments, stored credentials, and software supply chains. Customers unable to upgrade are advised to deploy a security patch plugin immediately.</p>
-
-
-
-<p class="wp-block-paragraph">TeamCity Cloud customers are not required to take any action, the company reassured.</p>
-
-
-
-<h2 class="wp-block-heading"><a></a>RCE achieved without authentication</h2>
-
-
-
-<p class="wp-block-paragraph">According to JetBrains, the vulnerability resides in the TeamCity agent polling protocol, allowing an attacker with HTTP(S) access to bypass authentication and execute code with the <a href="https://www.csoonline.com/article/1312926/bianlian-group-exploits-teamcity-again-deploys-powershell-backdoor.html">privileges </a>of the TeamCity server process.</p>
-
-
-
-<p class="wp-block-paragraph">The vulnerability carries a CVSS score of 9.8 out of 10 as it requires no authentication or user interaction, making internet-exposed TeamCity servers particularly attractive targets. Classified under <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-63077">CWE-502</a> (deserialization of unstructured data), the flaw can be used to send specially crafted data through the affected agent polling protocol to trigger remote code execution (RCE).</p>
-
-
-
-<p class="wp-block-paragraph">“Depending on the privileges granted to the TeamCity server process, a successful attack could expose TeamCity data, configurations, and stored credentials, modify server state, and potentially compromise the integrity of build artifacts and downstream CI/CD pipelines,” the company added.</p>
-
-
-
-<p class="wp-block-paragraph">The issue was privately reported on July 10 by security researcher Antoni Tremblay through JetBrains’ coordinated disclosure process.</p>
-
-
-
-<p class="wp-block-paragraph">JetBrains said it had found no evidence of active exploitation at the time of publishing the advisory.</p>
-
-
-
-<h2 class="wp-block-heading"><a></a>Developers have two mitigation paths</h2>
-
-
-
-<p class="wp-block-paragraph">JetBrains is recommending that customers upgrade directly to TeamCity 2025.11.7 or 2026.1.3, both of which include a permanent fix for the vulnerability.</p>
-
-
-
-<p class="wp-block-paragraph">Organizations unable to upgrade immediately can instead deploy a <a href="https://www.jetbrains.com/help/teamcity/installing-additional-plugins.html" rel="noreferrer noopener" target="_blank">security patch plugin</a>, which is available for TeamCity versions 2017.1 and later. Servers running versions 2017.1 through 2018.1 require a restart after installing the plugin, while newer supported releases can enable the fix without restarting, the company added.</p>
-
-
-
-<p class="wp-block-paragraph">The company also advised administrators whose TeamCity servers are publicly accessible to restrict external access if neither mitigation can be applied immediately.</p>
-
-
-
-<p class="wp-block-paragraph">“As a general best practice, we strongly recommend limiting network access to TeamCity servers to trusted networks wherever possible,” the company said. “We also recommend running the TeamCity server with the minimum operating system privileges required for normal operation.”</p>
-
-
-
-<p class="wp-block-paragraph">Given the vulnerability’s pre-authentication nature and the <a href="https://www.csoonline.com/article/1312183/teamcity-supply-chain-bugs-receive-massive-exploitation.html">history</a> of threat actors rapidly weaponizing TeamCity flaws, organizations running self-hosted CI/CD infrastructure are advised to prioritize emergency patching over routine maintenance windows.</p>
-
-
-
-<p class="wp-block-paragraph">The advisory also recommended running TeamCity servers on dedicated hosts separate from build agents, as per official <a href="https://www.jetbrains.com/help/teamcity/install-and-start-teamcity-agents.html" rel="noreferrer noopener" target="_blank">instructions</a>.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4d ago]]></description>
-</item>
-
-<item>
-  <title>🔴 How AI helps the US Senate Federal Credit Union better manage risk</title>
-  <link>https://www.cio.com/article/4202133/how-ai-helps-the-us-senate-federal-credit-union-better-manage-risk.html</link>
-  <pubDate>Fri, 31 Jul 2026 10:00:00 +0000</pubDate>
-  <source>CIO.com</source>
-  <description><![CDATA[<b>Why this matters: Potential data exposure — check monitoring and incident response readiness.</b><br/><div id="remove_no_follow">
-		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
-					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
-						<div class="article-column__content">
-<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
-
-
-
-<p class="wp-block-paragraph">The United States Senate Federal Credit Union (USSFCU) is a nonprofit financial cooperative that provides traditional retail banking services to entities within the US government, such as the Senate and the Supreme Court.At present, the credit union’s headcount stands at nearly 150 people, managing around $1.6 billion in assets.</p>
-
-
-
-<p class="wp-block-paragraph">A few years back, when it started to expand its use of technology, cybersecurity was a key focus area, but the financial institution faced two major challenges in boosting security as it scaled. The USSFCU was carrying significant technical debt, and there were holes in the organization’s defenses.</p>
-
-
-
-<p class="wp-block-paragraph">“We found gaps where we needed more systems, tools, and people, and then there were instances where we had technologies in place that weren’t being used effectively,” says Mark Fournier, CIO at the credit union. “We weren’t buying a bunch of shiny new things without thinking about it. We were actually quite prescriptive every year, performing a number of different exercises to identify our shortcomings and then finding the right solution to fill the gaps. But over time this adds up. It was clear we couldn’t keep hiring more people and bringing in new solutions.”</p>
-
-
-
-<p class="wp-block-paragraph">The USSFCU needed a more efficient way to bring everything together and make its cyber estate easier to manage. For Fournier and his team, vulnerability management was the hardest hill to climb since they have to deal with about 100 new possible breach points every day.</p>
-
-
-
-<p class="wp-block-paragraph">“When we looked at the problem more closely, the impact of these vulnerabilities was far greater than we realized,” he says. “Not only because of the volume but because of a lack of clear understanding around the potential impact of each one across the broader business.”</p>
-
-
-
-<h2 class="wp-block-heading" id="improved-risk-management">Improved risk management</h2>
-
-
-
-<p class="wp-block-paragraph">The USSFCU didn’t lack security tools, however. In fact, it had plenty, from scanners and endpoint tools to asset records, tickets, and internal documentation. But each tool saw only a slice of the environment, so there was little to no context. This made it difficult for the security team to separate real business risk from noise.</p>
-
-
-
-<p class="wp-block-paragraph">So for each new vulnerability, the security team had to run a manual investigation, which could take days. And while doing this, they still had to triage the next wave of findings. The organization, therefore, needed a way to know what mattered, why it mattered, who owned it, and whether taking the time to make a fix actually reduced risk. The USSFCU also required a solution to be deployed entirely in-house, leveraging its internal inferences.</p>
-
-
-
-<p class="wp-block-paragraph">Working with Tonic Security, the organization deployed an exposure management solution that pulls together data from different tools and data sources to create a clear picture of business risk. “One of the key functions of the platform is the ability to ingest anything,” says Fournier. “Breaking down silos between disparate systems is essential to unlock valuable contextual information.”</p>
-
-
-
-<p class="wp-block-paragraph">For the USSFCU, transparency and explainability are critical, he adds. This tool uses an AI data fabric to extract context from structured and unstructured data. This context drives prioritization, ensuring the right owner gets the right evidence, not a vague ticket. And once the work is done, the solution checks whether the exposure was reduced.</p>
-
-
-
-<p class="wp-block-paragraph">Because the AI is grounded in the customer’s own environment, it isn’t just guessing from a generic risk model. It reasons over USSFCU’s assets, owners, services, tickets, controls, and business context. But it isn’t using this data to train external models.</p>
-
-
-
-<p class="wp-block-paragraph">Describing one particular incident, Fournier explains that shortly after the initial deployment, various stakeholders met to assess progress. “We thought we were smart because we found an error with the platform,” he says. “The solution had labelled an asset as internet exposed, which we knew was incorrect.” But after a review and lengthy discussion, they were proven wrong. “Almost immediately, the value of bringing this information together became apparent.”</p>
-
-
-
-<h2 class="wp-block-heading" id="a-template-for-bigger-things">A template for bigger things</h2>
-
-
-
-<p class="wp-block-paragraph">Before this solution, a high-severity finding could send an analyst on a lengthy scavenger hunt because of data located in so many different places. They’d check the scanner, asset inventory, tickets, and maybe even ask around to find the owner. But now they can find the asset, the owner, the business relevance, the exposure path, and the recommended action in one place. The solution has reduced the time taken to resolve a vulnerability by 75%. And with a clearer idea of what is and isn’t important, and what adds practical value, the number of incidents someone needs to respond to has reduced from about 100 a month to just 10.</p>
-
-
-
-<p class="wp-block-paragraph">Sharing his lessons from the project, Fournier says one needs to keep an open mind because the problem you think you have is often very different from the one you actually have. “This project has also been an eye-opener around how people can collaborate and operate across different areas of the business,” he says. “When I talk to my peers, they regularly highlight the disconnect between different departments and business functions. But with a project like this, when you’re crossing traditional boundaries, you need to have open lines of communication to succeed.”</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 4d ago]]></description>
 </item>
 
 </channel>
