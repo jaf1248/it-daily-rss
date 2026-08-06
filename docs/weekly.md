@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
-**Period:** July 29 – August 05, 2026  
-**Generated:** 2026-08-05 23:58 UTC  
+**Period:** July 30 – August 06, 2026  
+**Generated:** 2026-08-06 02:41 UTC  
 **Items reviewed:** 84  
 
 ## ⚡ Top Actions This Week
@@ -83,12 +83,12 @@
 
 ## 🔵 FYI — General Awareness
 
+- [ISC Stormcast For Thursday, August 6th, 2026 https://isc.sans.edu/podcastdetail/10040, (Thu, Aug 6th)](https://isc.sans.edu/diary/rss/33222) — SANS Internet Storm Center
+- [22 Seconds to Compromise: How Automated SSH Actors Move From Login to Persistence Before You Can Blink &#x5b;Guest Diary&#x5d;, (Thu, Aug 6th)](https://isc.sans.edu/diary/rss/33220) — SANS Internet Storm Center
 - [Canadian pleads guilty to Snowflake cloud data-theft attacks](https://www.bleepingcomputer.com/news/security/canadian-pleads-guilty-to-snowflake-cloud-data-theft-attacks/) — BleepingComputer
 - [Over 250 ClickFix Domains Use Browser Fingerprinting to Hide macOS Malware Lures](https://thehackernews.com/2026/08/over-250-clickfix-domains-use-browser.html) — The Hacker News
 - [OpenAI Disrupts Poipet Scam Network Using ChatGPT Across Multiple Fraud Schemes](https://thehackernews.com/2026/08/openai-disrupts-poipet-scam-network.html) — The Hacker News
 - [Poison Claude Sells Discounted Claude Access While Its Operator Sees Every Customer Prompt](https://thehackernews.com/2026/08/poison-claude-sells-discounted-claude.html) — The Hacker News
-- [Paperclip AI Flaws Let Attackers Run Host Commands via Malicious Agent Imports](https://thehackernews.com/2026/08/paperclip-ai-flaws-let-attackers-run.html) — The Hacker News
-- [Google Blogger locks hundreds of blogs in malware false positive](https://www.bleepingcomputer.com/news/google/google-blogger-locks-hundreds-of-blogs-in-malware-false-positive/) — BleepingComputer
 
 ---
 
