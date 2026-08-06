@@ -3,8 +3,210 @@
 <channel>
   <title>Joe — VP of IT Briefing</title>
   <description>Leadership-focused IT risk, vendors, pricing, licensing, and industry context.</description>
-  <lastBuildDate>Thu, 06 Aug 2026 05:46:00 +0000</lastBuildDate>
+  <lastBuildDate>Thu, 06 Aug 2026 08:30:37 +0000</lastBuildDate>
   
+<item>
+  <title>🔴 Evidence points to cybercriminals stepping up their AI game</title>
+  <link>https://www.csoonline.com/article/4205861/evidence-points-to-cybercriminals-stepping-up-their-ai-game.html</link>
+  <pubDate>Thu, 06 Aug 2026 08:25:00 +0000</pubDate>
+  <source>CSO Online</source>
+  <description><![CDATA[<b>Why this matters: Supply chain risk — audit third-party dependencies and vendor access.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<p class="wp-block-paragraph">More evidence is emerging about how AI is becoming part of the day-to-day workflow for cybercriminals, from building and refining tools to managing infrastructure and accelerating vulnerability research.</p>
+
+
+
+<p class="wp-block-paragraph">Drawing on recovered prompt logs, attack tooling, and threat actor conversations, research from Cisco Talos documents how AI is being used to develop malicious code, build fraud infrastructure, and accelerate vulnerability research and exploitation.</p>
+
+
+
+<p class="wp-block-paragraph">The <a href="https://blog.talosintelligence.com/keep-going-bro-youve-got-this-a-data-driven-look-at-how-adversaries-are-weaponizing-ai/">study</a>, released during the Black Hat USA conference, found AI systems guardrails were often ineffective.</p>
+
+
+
+<p class="wp-block-paragraph">Cisco Talos researchers write that threat actors frequently bypass guardrails with basic social engineering claims (“this is authorised testing” or “I’m asking this as part of a capture the flag exercise”) that convince most models to comply.</p>
+
+
+
+<p class="wp-block-paragraph">This duped permissiveness wasn’t specific to a single model or platform. Instead, analysis of prompt logs related to Claude Code, CodeX, Cursor, and Gemini showed this shortcoming was an issue across the board. And when censored models refuse, threat actors simply switch to uncensored alternatives.</p>
+
+
+
+<p class="wp-block-paragraph">Whereas novice cybercriminals continue to produce clunky malware with limited functionality, sophisticated threat groups are increasingly leveraging AI as a development assistant to rapidly build exploits, and some are even deploying it as a system administration tool for managing large-scale attack infrastructure.</p>
+
+
+
+<p class="wp-block-paragraph">Cisco Talos found real-world examples of attackers abusing AI systems to build a bulk-mail validation service processing tens of millions of email records, adapting the <a href="https://www.csoonline.com/article/4111888/react2shell-anatomy-of-a-max-severity-flaw-that-sent-shockwaves-through-the-web.html">React2Shell vulnerability</a> into a credential-harvesting pipeline, developing DDoS infrastructure targeting Android TVs, and supporting cryptocurrency theft operations, among other attacks.</p>
+
+
+
+<p class="wp-block-paragraph">Joseph Rooke, senior director at Recorded Future’s Insikt Group, sees attacker tradecraft evolving away from traditional code-based exploits toward prompt-based manipulation of large language models.</p>
+
+
+
+<p class="wp-block-paragraph">“Targeting weakness in LLMs enables malicious prompts to be embedded in shared text, video, or image files, with the aim of hijacking LLM-based assistants to carry out attacks,” Rooke tells CSO.</p>
+
+
+
+<p class="wp-block-paragraph">Norwegian AI researcher Håkon Måløy recently demonstrated such an attack, which could result in a <a href="https://www.csoonline.com/article/4203630/copilot-worm-can-spread-through-microsoft-word-docs.html">Copilot worm spreading through Microsoft Word docs</a>. Attackers are also <a href="https://www.csoonline.com/article/4204731/attackers-are-crafting-malicious-ai-instruction-files-to-turn-your-agentic-workflows-into-quiet-criminal-helpers.html">crafting malicious AI instruction files</a>, like CLAUDE.md, to trick agents into exfiltrating data and other tasks on their behalf.</p>
+
+
+
+<p class="wp-block-paragraph">“Malicious prompts will increasingly replace malware as the preferred intrusion method, enabling adversaries to extract sensitive data, override guardrails, or induce harmful actions without breaching traditional defenses,” Rooke says.</p>
+
+
+
+<h2 class="wp-block-heading" id="attacking-ai-through-the-software-supply-chain">Attacking AI through the software supply chain</h2>
+
+
+
+<p class="wp-block-paragraph">Separately, research from CrowdStrike shows that adversaries are increasingly targeting AI infrastructure through software supply chain-style attacks.</p>
+
+
+
+<p class="wp-block-paragraph">For example, in March 2026, North Korean cybercrime group Stardust Chollima used stolen maintainer credentials to <a href="https://www.csoonline.com/article/4152696/attackers-trojanize-axios-http-library-in-highest-impact-npm-supply-chain-attack.html">compromise the Axios npm package</a> and deliver platform-specific variants of their ZshBucket malware.</p>
+
+
+
+<p class="wp-block-paragraph">In June 2026, the same group injected a malicious npm package as a dependency into at least 131 <a href="https://www.csoonline.com/article/4072341/introducing-maestro-a-framework-for-securing-generative-and-agentic-ai.html">Mastra AI framework</a> packages, indicating that trusted AI building blocks are becoming targets in supply chain attacks.</p>
+
+
+
+<p class="wp-block-paragraph">During 1H 2026, 87% of identified software registry threats involved malicious npm packages. “This indicates adversaries’ preference for JavaScript’s scale, dependency chains, and automatic install scripts to spread downstream risk,” CrowdStrike’s researchers report.</p>
+
+
+
+<p class="wp-block-paragraph"><a href="https://www.crowdstrike.com/en-us/blog/crowdstrike-2026-threat-hunting-report/">CrowdStrike’s 2026 Threat Hunting Report</a> also reveals how AI is collapsing the window between vulnerability disclosure and active exploitation.</p>
+
+
+
+<p class="wp-block-paragraph">For example, two separate Chinese APT groups exploited critical vulnerabilities within 24 hours of public proof-of-concept (PoC) release. From January through June 2026, 88% of CrowdStrike-observed exploitation of vulnerabilities with a public PoC was conducted within 48 hours of the PoC’s release.</p>
+
+
+
+<p class="wp-block-paragraph">After the React2Shell vulnerability disclosure, CrowdStrike responded to over 800 hunting leads across more than 80 victims in just four days.</p>
+
+
+
+<p class="wp-block-paragraph">Cybercrime group Altered Spider (aka TeamPCP) <a href="https://www.csoonline.com/article/4170284/mistral-ai-sdk-tanstack-router-hit-in-npm-software-supply-chain-attack.html">compromised more than 300 software dependencies</a> in a single day to harvest credentials and pivot into cloud environments.</p>
+
+
+
+<h2 class="wp-block-heading" id="authentication-systems-under-attack">Authentication systems under attack</h2>
+
+
+
+<p class="wp-block-paragraph">The study — based on frontline intelligence from CrowdStrike’s threat hunters and intelligence analysts — also found that trusted authentication has become a favored attack path with, for example, vishing intrusions doubling in 1H 2026. On a related front, cybercrime groups Cordial Spider and Snarky Spider compromised single sign-on (SSO) integrated SaaS applications for data exfiltration.</p>
+
+
+
+<p class="wp-block-paragraph">Recorded Future’s Rooke points out other ways authentication systems are at the front line of AI-based attacks.</p>
+
+
+
+<p class="wp-block-paragraph">“AI-generated deepfake videos and audio are also more likely to be used as part of business email compromise attacks and social engineering,” Rooke tells CSO. “Biometric and identity-verification systems will likely remain vulnerable to spoofing, replay, and cloned credentials, enabling synthetic personas to coerce payments, manipulate employees, and facilitate access handoffs to cyber operators.”</p>
+
+
+
+<p class="wp-block-paragraph">Cloud-focused cybercrime activity surged 171% as adversaries executed credential theft, cryptomining, LLM abuse, and digital financial asset theft, according to CrowdStrike.</p>
+
+
+
+<h2 class="wp-block-heading" id="how-cyber-teams-should-respond">How cyber teams should respond</h2>
+
+
+
+<p class="wp-block-paragraph">“AI is now embedded in modern adversary operations. It is changing how attacks are planned, executed, and scaled while expanding the attack surface organizations must defend,” says Adam Meyers, head of counter adversary operations at CrowdStrike. “The organizations that succeed will secure AI as aggressively as they adopt it and use AI to defend at the speed of the adversary.”</p>
+
+
+
+<p class="wp-block-paragraph">Comprehensive industry-wide data remains limited because evidence of AI abuse is often difficult to identify via traditional security telemetry. Incidents documented by Cisco Talos and CrowdStrike, however, show how CISOs need to adapt in response to the growing threat.</p>
+
+
+
+<p class="wp-block-paragraph">Cisco Talos urges enterprises to improve detection, prioritization, and their own use of AI platforms and agents to handle the growing volume of alerts and vulnerabilities. “The organisations best equipped to handle the coming deluge of additional vulnerabilities, alerts, and incidents will be the ones that prepare now by deploying their own AI-assisted security capabilities,” according to the report.</p>
+
+
+
+<p class="wp-block-paragraph">“Security teams should assume AI is already embedded in attacker workflows; focus on detecting malicious behavior rather than proving AI involvement; treat LLMs and APIs as privileged, high-risk infrastructure; and strengthen logging, patching, and containment,” says Oliver Simonnet, lead cybersecurity researcher at AI security and governance platform CultureAI.</p>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 A look at Sequoia&#x27;s revamped strategy under new stewards Alfred Lin and Pat Grady, including bold AI bets; sources: Sequoia recently closed $10B in new funding (Bloomberg)</title>
+  <link>https://www.techmeme.com/260806/p10#a260806p10</link>
+  <pubDate>Thu, 06 Aug 2026 06:55:05 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.bloomberg.com/news/articles/2026-08-05/sequoia-aims-10-billion-at-ai-reindustrialization?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc4NTk2NDQwNywiZXhwIjoxNzg2NTY5MjA3LCJhcnRpY2xlSWQiOiJUSkJEN0hLR1pBTEcwMCIsImJjb25uZWN0SWQiOiI5QzM2NzM0NDJERDY0MjcyOEFFNjY2QTJGQjhFRDJDMiJ9.wVq0yEmEKSa_qoquzlnhPDSPYPO2rmk06p4hhhNpmEg&amp;leadSource=article-gifting"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260806/i10.jpg" vspace="4" /></a>
+<p><a href="https://www.techmeme.com/260806/p10#a260806p10" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="https://www.bloomberg.com/">Bloomberg</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/articles/2026-08-05/sequoia-aims-10-billion-at-ai-reindustrialization?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc4NTk2NDQwNywiZXhwIjoxNzg2NTY5MjA3LCJhcnRpY2xlSWQiOiJUSkJEN0hLR1pBTEcwMCIsImJjb25uZWN0SWQiOiI5QzM2NzM0NDJERDY0MjcyOEFFNjY2QTJGQjhFRDJDMiJ9.wVq0yEmEKSa_qoquzlnhPDSPYPO2rmk06p4hhhNpmEg&amp;leadSource=article-gifting">A look at Sequoia's revamped strategy under new stewards Alfred Lin and Pat Grady, including bold AI bets; sources: Sequoia recently closed $10B in new funding</a></b></span>&nbsp; &mdash;&nbsp; Alfred Lin and Pat Grady are repositioning the 54-year-old firm for a world dominated by artificial intelligence.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 DeepSeek says it plans to implement substantial price increases across its services; it currently charges $0.14/1M input and $0.28/1M output tokens for V4 Flash (Bloomberg)</title>
+  <link>https://www.techmeme.com/260806/p9#a260806p9</link>
+  <pubDate>Thu, 06 Aug 2026 06:45:00 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://www.bloomberg.com/news/articles/2026-08-06/deepseek-plans-significant-price-increase-for-its-ai-services"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260806/i9.jpg" vspace="4" /></a>
+<p><a href="https://www.techmeme.com/260806/p9#a260806p9" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="https://www.bloomberg.com/">Bloomberg</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/articles/2026-08-06/deepseek-plans-significant-price-increase-for-its-ai-services">DeepSeek says it plans to implement substantial price increases across its services; it currently charges $0.14/1M input and $0.28/1M output tokens for V4 Flash</a></b></span>&nbsp; &mdash;&nbsp; DeepSeek plans to implement a significant price increase across its AI services, an unusual shift from the disruptive Chinese player &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 OpenAI says &quot;Apple should not be permitted to use a baseless and pretextual lawsuit to make up for its failures to integrate AI into its products&quot; (Megan Morrone/Axios)</title>
+  <link>https://www.techmeme.com/260806/p8#a260806p8</link>
+  <pubDate>Thu, 06 Aug 2026 06:40:01 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><a href="https://www.axios.com/2026/08/06/openai-apple-motion-to-dismiss"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260806/i8.jpg" vspace="4" /></a>
+<p><a href="https://www.techmeme.com/260806/p8#a260806p8" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Megan Morrone / <a href="https://www.axios.com/">Axios</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://www.axios.com/2026/08/06/openai-apple-motion-to-dismiss">OpenAI says &ldquo;Apple should not be permitted to use a baseless and pretextual lawsuit to make up for its failures to integrate AI into its products&rdquo;</a></b></span>&nbsp; &mdash;&nbsp; If the case survives, discovery could expose sensitive details about both companies' hiring, hardware development and data-security practices.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 OpenAI files a motion to dismiss Apple&#x27;s lawsuit accusing the AI company of stealing trade secrets, saying that the iPhone maker&#x27;s allegations are meritless (Bloomberg)</title>
+  <link>https://www.techmeme.com/260806/p7#a260806p7</link>
+  <pubDate>Thu, 06 Aug 2026 06:35:00 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://www.bloomberg.com/news/articles/2026-08-06/openai-asks-judge-to-toss-apple-suit-alleging-trade-secret-theft"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260806/i7.jpg" vspace="4" /></a>
+<p><a href="https://www.techmeme.com/260806/p7#a260806p7" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="https://www.bloomberg.com/">Bloomberg</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/articles/2026-08-06/openai-asks-judge-to-toss-apple-suit-alleging-trade-secret-theft">OpenAI files a motion to dismiss Apple's lawsuit accusing the AI company of stealing trade secrets, saying that the iPhone maker's allegations are meritless</a></b></span>&nbsp; &mdash;&nbsp; OpenAI is asking a federal judge to dismiss a lawsuit filed by Apple Inc. accusing the artificial intelligence company of stealing trade secrets &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 An interview with TMTG interim CEO Kevin McGurn on the paid API for high-speed access to Truth Social posts, the pending $6B TMTG-TAE merger, and more (Financial Times)</title>
+  <link>https://www.techmeme.com/260806/p6#a260806p6</link>
+  <pubDate>Thu, 06 Aug 2026 06:10:02 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: Vendor risk signal — evaluate roadmap and support stability.</b><br/><a href="https://www.ft.com/content/33303552-64c0-444f-8d43-e853cfd09a41"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260806/i6.jpg" vspace="4" /></a>
+<p><a href="https://www.techmeme.com/260806/p6#a260806p6" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="https://www.ft.com/">Financial Times</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://www.ft.com/content/33303552-64c0-444f-8d43-e853cfd09a41">An interview with TMTG interim CEO Kevin McGurn on the paid API for high-speed access to Truth Social posts, the pending $6B TMTG-TAE merger, and more</a></b></span>&nbsp; &mdash;&nbsp; Interview.&nbsp; The executive trying to turn Trump's posts into a media empire&nbsp; &mdash;&nbsp; Kevin McGurn, head of Trump Media &amp; Technology Group &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+</item>
+
+<item>
+  <title>🔴 A researcher with access to North Korean hackers&#x27; servers says their operations have impacted 1,640 companies across 57 countries over the past 22 months (Wired)</title>
+  <link>https://www.techmeme.com/260806/p5#a260806p5</link>
+  <pubDate>Thu, 06 Aug 2026 06:00:46 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: Potential data exposure — check monitoring and incident response readiness.</b><br/><a href="https://www.wired.com/story/a-security-pro-hacked-north-korean-hackers-he-found-theyd-breached-hundreds-of-networks-worldwide/"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260806/i5.jpg" vspace="4" /></a>
+<p><a href="https://www.techmeme.com/260806/p5#a260806p5" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="http://www.wired.com/">Wired</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://www.wired.com/story/a-security-pro-hacked-north-korean-hackers-he-found-theyd-breached-hundreds-of-networks-worldwide/">A researcher with access to North Korean hackers' servers says their operations have impacted 1,640 companies across 57 countries over the past 22 months</a></b></span>&nbsp; &mdash;&nbsp; For nearly two years, researcher Vangelis Stykas has maintained access to North Korean hackers' servers.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 PitchBook: AI voice startups raised $7B in Q1 &#x27;26, vs. $1B in Q1 &#x27;25, as OpenAI and Google bet on voice as the main interface for a new generation of AI agents (Cristina Criddle/Financial Times)</title>
+  <link>https://www.techmeme.com/260806/p4#a260806p4</link>
+  <pubDate>Thu, 06 Aug 2026 05:50:01 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><p><a href="https://www.techmeme.com/260806/p4#a260806p4" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Cristina Criddle / <a href="https://www.ft.com/">Financial Times</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://www.ft.com/content/b7d917d4-9304-4dfe-99bd-db19fafd5238">PitchBook: AI voice startups raised $7B in Q1 '26, vs. $1B in Q1 '25, as OpenAI and Google bet on voice as the main interface for a new generation of AI agents</a></b></span>&nbsp; &mdash;&nbsp; OpenAI and Google invest heavily in voice systems as main way to interact with a new generation of AI agents.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+</item>
+
 <item>
   <title>🔵 How Trump&#x27;s push for data centers is driving a boom in gas power plants, and a look at Meta&#x27;s El Paso data center, which will have 813 gas-burning generators (Hiroko Tabuchi/New York Times)</title>
   <link>https://www.techmeme.com/260806/p3#a260806p3</link>
@@ -12,7 +214,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://www.nytimes.com/2026/08/05/climate/data-centers-pollution-trump-ai-energy.html?unlocked_article_code=1.3FA.T2_t.oEqQcit6Goa4&amp;smid=nytcore-ios-share"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260806/i3.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260806/p3#a260806p3" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Hiroko Tabuchi / <a href="https://www.nytimes.com/">New York Times</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.nytimes.com/2026/08/05/climate/data-centers-pollution-trump-ai-energy.html?unlocked_article_code=1.3FA.T2_t.oEqQcit6Goa4&amp;smid=nytcore-ios-share">How Trump's push for data centers is driving a boom in gas power plants, and a look at Meta's El Paso data center, which will have 813 gas-burning generators</a></b></span>&nbsp; &mdash;&nbsp; In March, a developer working on a Meta data center in El Paso applied to power the site with a gas-burning plant large enough to supply electricity to 300,000 homes.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.nytimes.com/2026/08/05/climate/data-centers-pollution-trump-ai-energy.html?unlocked_article_code=1.3FA.T2_t.oEqQcit6Goa4&amp;smid=nytcore-ios-share">How Trump's push for data centers is driving a boom in gas power plants, and a look at Meta's El Paso data center, which will have 813 gas-burning generators</a></b></span>&nbsp; &mdash;&nbsp; In March, a developer working on a Meta data center in El Paso applied to power the site with a gas-burning plant large enough to supply electricity to 300,000 homes.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
 </item>
 
 <item>
@@ -22,7 +224,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.ft.com/content/77ece212-2768-4abe-9af1-b40a0db27c8f?accessToken=zwAAAZ_Vm2wKkc937OISJ2hKvtOa8bQKDbJ8jw.MEUCIQDaAn7VNdEsQ5F6Bl_qSerfGnyBJ6rIrQECb_BsBFs-tAIgUlWbQRve_RhLdiIxpTh3VpS6ob5TKnFSlMfKI34KZG0&amp;sharetype=gift&amp;token=e8c2d126-6f65-4f6a-8a67-4aeb882284f2"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260806/i2.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260806/p2#a260806p2" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Michael Acton / <a href="https://www.ft.com/">Financial Times</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.ft.com/content/77ece212-2768-4abe-9af1-b40a0db27c8f?accessToken=zwAAAZ_Vm2wKkc937OISJ2hKvtOa8bQKDbJ8jw.MEUCIQDaAn7VNdEsQ5F6Bl_qSerfGnyBJ6rIrQECb_BsBFs-tAIgUlWbQRve_RhLdiIxpTh3VpS6ob5TKnFSlMfKI34KZG0&amp;sharetype=gift&amp;token=e8c2d126-6f65-4f6a-8a67-4aeb882284f2">Sources detail Intel's turnaround under Lip-Bu Tan as AI demand for CPUs boosts business; Intel's deal to make Arm's AI data center chip fell through in 2024</a></b></span>&nbsp; &mdash;&nbsp; The group's shares have quadrupled, but it has yet to prove itself a serious manufacturing competitor to Taiwan's TSMC.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.ft.com/content/77ece212-2768-4abe-9af1-b40a0db27c8f?accessToken=zwAAAZ_Vm2wKkc937OISJ2hKvtOa8bQKDbJ8jw.MEUCIQDaAn7VNdEsQ5F6Bl_qSerfGnyBJ6rIrQECb_BsBFs-tAIgUlWbQRve_RhLdiIxpTh3VpS6ob5TKnFSlMfKI34KZG0&amp;sharetype=gift&amp;token=e8c2d126-6f65-4f6a-8a67-4aeb882284f2">Sources detail Intel's turnaround under Lip-Bu Tan as AI demand for CPUs boosts business; Intel's deal to make Arm's AI data center chip fell through in 2024</a></b></span>&nbsp; &mdash;&nbsp; The group's shares have quadrupled, but it has yet to prove itself a serious manufacturing competitor to Taiwan's TSMC.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
 </item>
 
 <item>
@@ -32,7 +234,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: Vendor risk signal — evaluate roadmap and support stability.</b><br/><a href="https://www.nytimes.com/2026/08/05/technology/tiktok-layoffs-nashville.html?unlocked_article_code=1.3VA.1ZGO.sEYAsyVgjLL2&amp;smid=url-share"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260806/i1.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260806/p1#a260806p1" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Emmett Lindner / <a href="https://www.nytimes.com/">New York Times</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.nytimes.com/2026/08/05/technology/tiktok-layoffs-nashville.html?unlocked_article_code=1.3VA.1ZGO.sEYAsyVgjLL2&amp;smid=url-share">TikTok's US entity says it is closing its Nashville office, which held some of its content moderation team; filing: TikTok laid off 250 employees at the office</a></b></span>&nbsp; &mdash;&nbsp; The office was home to members of the app's content moderation team.&nbsp; &mdash;&nbsp; TikTok's U.S. joint venture said on Wednesday &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.nytimes.com/2026/08/05/technology/tiktok-layoffs-nashville.html?unlocked_article_code=1.3VA.1ZGO.sEYAsyVgjLL2&amp;smid=url-share">TikTok's US entity says it is closing its Nashville office, which held some of its content moderation team; filing: TikTok laid off 250 employees at the office</a></b></span>&nbsp; &mdash;&nbsp; The office was home to members of the app's content moderation team.&nbsp; &mdash;&nbsp; TikTok's U.S. joint venture said on Wednesday &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
 </item>
 
 <item>
@@ -41,7 +243,7 @@
   <pubDate>Thu, 06 Aug 2026 03:55:02 +0000</pubDate>
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><p><a href="https://www.techmeme.com/260805/p55#a260805p55" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="https://www.lawfaremedia.org/">Lawfare</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.lawfaremedia.org/article/grokipedia-stopped-reviewing-edits-in-april.-it-didn-t-tell-anyone">Analysis: Grokipedia appears not to have updated any articles since April 24, when it stopped processing human-suggested edits; xAI launched it in October 2025</a></b></span>&nbsp; &mdash;&nbsp; A halt in Grokipedia's edit pipeline offers a case study in how an AI-generated reference system governs its own content.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.lawfaremedia.org/article/grokipedia-stopped-reviewing-edits-in-april.-it-didn-t-tell-anyone">Analysis: Grokipedia appears not to have updated any articles since April 24, when it stopped processing human-suggested edits; xAI launched it in October 2025</a></b></span>&nbsp; &mdash;&nbsp; A halt in Grokipedia's edit pipeline offers a case study in how an AI-generated reference system governs its own content.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
 </item>
 
 <item>
@@ -51,7 +253,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://siliconangle.com/2026/08/05/cloudflare-launches-cloudflare-os-open-source-ai-agentic-workspace-enterprise/"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260805/i54.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260805/p54#a260805p54" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Kyt Dotson / <a href="http://siliconangle.com/">SiliconANGLE</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://siliconangle.com/2026/08/05/cloudflare-launches-cloudflare-os-open-source-ai-agentic-workspace-enterprise/">Cloudflare open sources a new version of Cloudflare OS, a browser-accessible AI agentic workspace for enterprises that lets employees build custom micro-apps</a></b></span>&nbsp; &mdash;&nbsp; Cloudflare Inc. today announced the launch of Cloudflare OS, an open-source artificial intelligence agentic workspace available through &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://siliconangle.com/2026/08/05/cloudflare-launches-cloudflare-os-open-source-ai-agentic-workspace-enterprise/">Cloudflare open sources a new version of Cloudflare OS, a browser-accessible AI agentic workspace for enterprises that lets employees build custom micro-apps</a></b></span>&nbsp; &mdash;&nbsp; Cloudflare Inc. today announced the launch of Cloudflare OS, an open-source artificial intelligence agentic workspace available through &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -61,7 +263,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: Could impact email access or mail flow — monitor delivery and client issues.</b><br/><a href="https://www.wsj.com/business/earnings/applovin-second-quarter-sales-gain-gives-soft-third-quarter-outlook-202082a6"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260805/i53.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260805/p53#a260805p53" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Kelly Cloonan / <a href="https://www.wsj.com/">Wall Street Journal</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.wsj.com/business/earnings/applovin-second-quarter-sales-gain-gives-soft-third-quarter-outlook-202082a6">AppLovin reports Q2 revenue up 53% YoY to $1.92B, below $1.94B est., and forecasts Q3 revenue within estimates; APP drops 16% after hours</a></b></span>&nbsp; &mdash;&nbsp; The shortcomings in the latest quarter came down to timing&nbsp; &mdash;&nbsp; AppLovin's profit and revenue growth continued in the latest quarter but the advertising company &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.wsj.com/business/earnings/applovin-second-quarter-sales-gain-gives-soft-third-quarter-outlook-202082a6">AppLovin reports Q2 revenue up 53% YoY to $1.92B, below $1.94B est., and forecasts Q3 revenue within estimates; APP drops 16% after hours</a></b></span>&nbsp; &mdash;&nbsp; The shortcomings in the latest quarter came down to timing&nbsp; &mdash;&nbsp; AppLovin's profit and revenue growth continued in the latest quarter but the advertising company &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
@@ -69,7 +271,7 @@
   <link>https://www.zdnet.com/article/duckduckgo-is-adding-a-feature-for-iphone-that-everyone-should-have/</link>
   <pubDate>Thu, 06 Aug 2026 02:00:43 +0000</pubDate>
   <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>The iPhone version of the DuckDuckGo app has a new feature that makes sharing links easier and safer.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>The iPhone version of the DuckDuckGo app has a new feature that makes sharing links easier and safer.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
@@ -79,7 +281,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://techcrunch.com/2026/08/05/nikita-bier-steps-down-as-xs-head-of-product/"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260805/i52.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260805/p52#a260805p52" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Sean O'Kane / <a href="http://techcrunch.com/">TechCrunch</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://techcrunch.com/2026/08/05/nikita-bier-steps-down-as-xs-head-of-product/">Nikita Bier steps down as head of product at X after a little more than a year in the role and says he will continue as an adviser</a></b></span>&nbsp; &mdash;&nbsp; Nikita Bier has stepped down as head of product at X, Elon Musk's social media platform, after a little more than a year in the role.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://techcrunch.com/2026/08/05/nikita-bier-steps-down-as-xs-head-of-product/">Nikita Bier steps down as head of product at X after a little more than a year in the role and says he will continue as an adviser</a></b></span>&nbsp; &mdash;&nbsp; Nikita Bier has stepped down as head of product at X, Elon Musk's social media platform, after a little more than a year in the role.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
@@ -89,17 +291,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: Potential data exposure — check monitoring and incident response readiness.</b><br/><a href="https://www.wired.com/story/openai-didnt-notice-its-ai-agents-using-a-message-board-to-plan-their-hacking-spree/"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260805/i51.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260805/p51#a260805p51" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Lily Hay Newman / <a href="http://www.wired.com/">Wired</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.wired.com/story/openai-didnt-notice-its-ai-agents-using-a-message-board-to-plan-their-hacking-spree/">OpenAI says the Hugging Face breach involved AI agents creating an internal message board, unnoticed by humans, where they shared exploits and planned the hacks</a></b></span>&nbsp; &mdash;&nbsp; At the Black Hat security conference, the AI giant revealed new details about how its agents went rogue, hacked several other companies &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Sapiom, which helps businesses build, ship, and scale AI agents and lower token costs, raised a $35M Series A led by Dragonfly, taking its total funding to $50M (Reed Albergotti/Semafor)</title>
-  <link>https://www.techmeme.com/260805/p50#a260805p50</link>
-  <pubDate>Thu, 06 Aug 2026 00:55:00 +0000</pubDate>
-  <source>Techmeme</source>
-  <description><![CDATA[<b>Why this matters: Vendor advisory — check installed firmware/software version and patch status.</b><br/><a href="https://www.semafor.com/article/08/05/2026/startup-sapiom-routes-clients-ai-to-lowest-cost-tokens"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260805/i50.jpg" vspace="4" /></a>
-<p><a href="https://www.techmeme.com/260805/p50#a260805p50" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Reed Albergotti / <a href="https://www.semafor.com/">Semafor</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.semafor.com/article/08/05/2026/startup-sapiom-routes-clients-ai-to-lowest-cost-tokens">Sapiom, which helps businesses build, ship, and scale AI agents and lower token costs, raised a $35M Series A led by Dragonfly, taking its total funding to $50M</a></b></span>&nbsp; &mdash;&nbsp; THE SCOOP&nbsp; &mdash;&nbsp; Quintessential San Francisco AI startup Polsia employs nobody and operates swarms of AI agents to help run other businesses.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.wired.com/story/openai-didnt-notice-its-ai-agents-using-a-message-board-to-plan-their-hacking-spree/">OpenAI says the Hugging Face breach involved AI agents creating an internal message board, unnoticed by humans, where they shared exploits and planned the hacks</a></b></span>&nbsp; &mdash;&nbsp; At the Black Hat security conference, the AI giant revealed new details about how its agents went rogue, hacked several other companies &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
@@ -107,17 +299,7 @@
   <link>https://www.zdnet.com/article/how-to-run-dumpstate-analysis-on-android-phone/</link>
   <pubDate>Thu, 06 Aug 2026 00:24:00 +0000</pubDate>
   <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>The hidden diagnostic file breaks down all the logging your Pixel, Samsung, or even Motorola does daily. Here's how I've been using it.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Block reports Q2 revenue up 9% YoY to $6.62B, vs. $6.49B est., Cash App gross profit up 31% to $1.97B, and raises its FY 2026 gross profit forecast (Manya Saini/Reuters)</title>
-  <link>https://www.techmeme.com/260805/p49#a260805p49</link>
-  <pubDate>Thu, 06 Aug 2026 00:00:54 +0000</pubDate>
-  <source>Techmeme</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://www.reuters.com/business/blocks-second-quarter-profit-rises-consumer-spending-stays-resilient-2026-08-05/"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260805/i49.jpg" vspace="4" /></a>
-<p><a href="https://www.techmeme.com/260805/p49#a260805p49" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Manya Saini / <a href="http://www.reuters.com/">Reuters</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.reuters.com/business/blocks-second-quarter-profit-rises-consumer-spending-stays-resilient-2026-08-05/">Block reports Q2 revenue up 9% YoY to $6.62B, vs. $6.49B est., Cash App gross profit up 31% to $1.97B, and raises its FY 2026 gross profit forecast</a></b></span>&nbsp; &mdash;&nbsp; Block (XYZ.N) raised its full-year gross profit forecast on Wednesday after delivering market-beating second-quarter results &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>The hidden diagnostic file breaks down all the logging your Pixel, Samsung, or even Motorola does daily. Here's how I've been using it.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 8h ago]]></description>
 </item>
 
 <item>
@@ -226,55 +408,7 @@
 
 
 <p class="wp-block-paragraph"></p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Canadian national Connor Moucka pleads guilty to participating in the 2024 Snowflake hacks involving data theft from at least 165 companies, including AT&amp;T (Jonathan Greig/The Record)</title>
-  <link>https://www.techmeme.com/260805/p48#a260805p48</link>
-  <pubDate>Wed, 05 Aug 2026 23:45:01 +0000</pubDate>
-  <source>Techmeme</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://therecord.media/guilty-plea-snowflake-hack-connor-riley-moucka"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260805/i48.jpg" vspace="4" /></a>
-<p><a href="https://www.techmeme.com/260805/p48#a260805p48" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Jonathan Greig / <a href="https://therecord.media/">The Record</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://therecord.media/guilty-plea-snowflake-hack-connor-riley-moucka">Canadian national Connor Moucka pleads guilty to participating in the 2024 Snowflake hacks involving data theft from at least 165 companies, including AT&amp;T</a></b></span>&nbsp; &mdash;&nbsp; A Canadian national is facing decades in prison for participating in the hacking of data storage platform Snowflake.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Sources: Demis Hassabis had been drifting away from Google DeepMind CEO day-to-day duties for at least a year and struggled to get satisfaction out of the role (Reed Albergotti/Semafor)</title>
-  <link>https://www.techmeme.com/260805/p47#a260805p47</link>
-  <pubDate>Wed, 05 Aug 2026 23:25:02 +0000</pubDate>
-  <source>Techmeme</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.semafor.com/article/08/05/2026/demis-hassabis-was-shifting-away-from-deepmind-ceo-duties-for-a-year"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260805/i47.jpg" vspace="4" /></a>
-<p><a href="https://www.techmeme.com/260805/p47#a260805p47" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Reed Albergotti / <a href="https://www.semafor.com/">Semafor</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.semafor.com/article/08/05/2026/demis-hassabis-was-shifting-away-from-deepmind-ceo-duties-for-a-year">Sources: Demis Hassabis had been drifting away from Google DeepMind CEO day-to-day duties for at least a year and struggled to get satisfaction out of the role</a></b></span>&nbsp; &mdash;&nbsp; THE SCOOP&nbsp; &mdash;&nbsp; Google DeepMind CEO Demis Hassabis's departure Wednesday from the top job at the company he founded in 2010 &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Figma reports Q2 revenue up 48% YoY to $370.1M, vs. $351.6M est., and lifts annual revenue forecast but keeps profit outlook intact; FIG drops 15%+ after hours (Deborah Mary Sophia/Reuters)</title>
-  <link>https://www.techmeme.com/260805/p46#a260805p46</link>
-  <pubDate>Wed, 05 Aug 2026 23:05:01 +0000</pubDate>
-  <source>Techmeme</source>
-  <description><![CDATA[<b>Why this matters: Could impact email access or mail flow — monitor delivery and client issues.</b><br/><p><a href="https://www.techmeme.com/260805/p46#a260805p46" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Deborah Mary Sophia / <a href="http://www.reuters.com/">Reuters</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.reuters.com/technology/figma-lifts-annual-revenue-forecast-ai-efforts-drive-solid-demand-2026-08-05/">Figma reports Q2 revenue up 48% YoY to $370.1M, vs. $351.6M est., and lifts annual revenue forecast but keeps profit outlook intact; FIG drops 15%+ after hours</a></b></span>&nbsp; &mdash;&nbsp; Figma (FIG.N) on Wednesday reported a sharp rise in costs and a decline in profit margins as the design software company ramps up AI investments &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
-</item>
-
-<item>
-  <title>🔴 Source: Muse Spark 1.1 model breached a company&#x27;s systems during cybersecurity testing; Meta says evaluation partner Irregular caused a sandbox misconfiguration (Jyoti Mann/The Information)</title>
-  <link>https://www.techmeme.com/260805/p45#a260805p45</link>
-  <pubDate>Wed, 05 Aug 2026 22:50:02 +0000</pubDate>
-  <source>Techmeme</source>
-  <description><![CDATA[<b>Why this matters: Potential data exposure — check monitoring and incident response readiness.</b><br/><a href="https://www.theinformation.com/articles/meta-ai-model-hacked-another-company-cybersecurity-testing"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260805/i45.jpg" vspace="4" /></a>
-<p><a href="https://www.techmeme.com/260805/p45#a260805p45" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Jyoti Mann / <a href="https://www.theinformation.com/">The Information</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.theinformation.com/articles/meta-ai-model-hacked-another-company-cybersecurity-testing">Source: Muse Spark 1.1 model breached a company's systems during cybersecurity testing; Meta says evaluation partner Irregular caused a sandbox misconfiguration</a></b></span>&nbsp; &mdash;&nbsp; A Meta Platforms artificial intelligence model accessed the internet during cybersecurity testing and hacked into another company &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Sandisk reports Q4 revenue up 372% YoY to $8.97B, vs. $8.48B est., and forecasts Q1 revenue below estimates; SNDK drops 5%+ after hours (Britney Nguyen/MarketWatch)</title>
-  <link>https://www.techmeme.com/260805/p44#a260805p44</link>
-  <pubDate>Wed, 05 Aug 2026 22:35:02 +0000</pubDate>
-  <source>Techmeme</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><p><a href="https://www.techmeme.com/260805/p44#a260805p44" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Britney Nguyen / <a href="http://www.djnewswires.com/">MarketWatch</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.morningstar.com/news/marketwatch/20260805348/sandisks-stock-falls-as-the-companys-forecast-doesnt-live-up-to-high-expectations">Sandisk reports Q4 revenue up 372% YoY to $8.97B, vs. $8.48B est., and forecasts Q1 revenue below estimates; SNDK drops 5%+ after hours</a></b></span>&nbsp; &mdash;&nbsp; The midpoint of the company's revenue forecast was below what analysts had been modeling&nbsp; &mdash;&nbsp; Sandisk's stock was falling on Wednesday afternoon.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 8h ago]]></description>
 </item>
 
 <item>
@@ -411,7 +545,7 @@
 
 
 <p class="wp-block-paragraph"></p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 10h ago]]></description>
 </item>
 
 <item>
@@ -510,7 +644,7 @@
 
 
 <p class="wp-block-paragraph"></p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 8h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 10h ago]]></description>
 </item>
 
 <item>
@@ -519,7 +653,7 @@
   <pubDate>Wed, 05 Aug 2026 19:40:00 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><p>The chain involved the exploitation of several vulnerabilities in the Samsung Members and Samsung Account applications.</p>
-<p>The post <a href="https://www.securityweek.com/how-a-50000-exploit-chain-turned-bixby-against-samsung-phones/">How a $50,000 Exploit Chain Turned Bixby Against Samsung Phones </a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 10h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/how-a-50000-exploit-chain-turned-bixby-against-samsung-phones/">How a $50,000 Exploit Chain Turned Bixby Against Samsung Phones </a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 12h ago]]></description>
 </item>
 
 <item>
@@ -527,7 +661,7 @@
   <link>https://www.zdnet.com/article/t-mobile-outage-credit/</link>
   <pubDate>Wed, 05 Aug 2026 17:18:59 +0000</pubDate>
   <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: Service impact possible — prepare comms and confirm vendor status.</b><br/>T-Mobile customers affected by the outage in July have been requesting credit. Though $10 is standard, the more persistent you are, the more you may be able to get.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 12h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Service impact possible — prepare comms and confirm vendor status.</b><br/>T-Mobile customers affected by the outage in July have been requesting credit. Though $10 is standard, the more persistent you are, the more you may be able to get.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 15h ago]]></description>
 </item>
 
 <item>
@@ -670,7 +804,7 @@
 
 
 <p class="wp-block-paragraph"></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 16h ago]]></description>
 </item>
 
 <item>
@@ -759,7 +893,7 @@
 
 
 <p class="wp-block-paragraph">Guccione argues that traditional access controls are ill-suited for autonomous agents. “The security question is no longer whether a credential is valid at the point of entry,” he said. “It’s whether the agent invoking that credential is doing so within the intended scope, for the intended purpose, under the authority of a human who would sanction that action.”</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 17h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 20h ago]]></description>
 </item>
 
 <item>
@@ -880,7 +1014,7 @@
 
 
 <p class="wp-block-paragraph">While AISI stressed that the incidents occurred under highly specific evaluation conditions and found no evidence of resulting real-world harm, it argued that they point to a broader shift in how AI security risks may emerge. “Harm may arise not only when people deliberately misuse publicly available models, but when capable agents operating in an internal research or privileged-access setting take unintended action beyond their authorised scope,” the institute wrote.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 18h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 20h ago]]></description>
 </item>
 
 <item>
@@ -1013,7 +1147,7 @@
 
 
 <p class="wp-block-paragraph">The practical move isn’t to audit your whole organization’s AI readiness. Start with one workflow. Push it one stage higher. Measure what changes. That’s how you find out if this matters in your specific context – not in theory, but in the work your team actually does.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 18h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 21h ago]]></description>
 </item>
 
 <item>
@@ -1022,7 +1156,7 @@
   <pubDate>Wed, 05 Aug 2026 10:33:41 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><p>AI Security Institute reports Anthropic and OpenAI models going rogue against real people, organizations, and open source projects.</p>
-<p>The post <a href="https://www.securityweek.com/ai-security-institute-reports-anthropic-and-openai-models-going-rogue-against-organizations/">AI Agents Targeted Real People and Projects During Cybersecurity Tests</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 19h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/ai-security-institute-reports-anthropic-and-openai-models-going-rogue-against-organizations/">AI Agents Targeted Real People and Projects During Cybersecurity Tests</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 21h ago]]></description>
 </item>
 
 <item>
@@ -1139,7 +1273,7 @@
 
 
 <p class="wp-block-paragraph">I’ve published the detection content and the on-chain queries from this work on <a href="https://github.com/yankywilson">my GitHub</a>.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 19h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 22h ago]]></description>
 </item>
 
 <item>
@@ -1344,7 +1478,7 @@
 
 
 <p class="wp-block-paragraph">“We’re taking a more knowledge graph-oriented approach to grounding the model, and betting on the fact that because the knowledge graph is changing often, it’s better to keep it as a runtime artifact than a baked-in one.”</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 19h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 22h ago]]></description>
 </item>
 
 <item>
@@ -1501,7 +1635,7 @@
 
 
 <p class="wp-block-paragraph">Every major technology shift eventually becomes an operational discipline rather than a technology project. AI is reaching that point now. Organizations that recognize this early will be better positioned to scale AI with confidence instead of discovering its operational consequences through production incidents. The next challenge for CIOs is not deploying AI. It is preparing production environments for how AI actually behaves.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 19h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 22h ago]]></description>
 </item>
 
 <item>
@@ -1582,7 +1716,7 @@
 
 
 <p class="wp-block-paragraph">By taking proper steps to build a dependable infrastructure based on <a href="https://www.cio.com/article/4148759/the-ai-information-gap-and-the-cios-mandate-for-transparency.html">transparency</a>, aligned values, and clearly defined goals, leaders can increase their digital trust. This will yield greater buy-in of automated intelligence within the organization, and improve its applications during cross-enterprise collaborations.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 19h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 22h ago]]></description>
 </item>
 
 <item>
@@ -1671,7 +1805,7 @@
 
 
 <p class="wp-block-paragraph">The tanker is still off the coast, transponder dark. The organizations that will know what that silence means aren’t the ones with the flashiest model. They’re the ones whose data connects, whose answers can be traced to their sources and who kept adding reliable, interoperable pieces until the bridges between them started producing intelligence no single dataset ever could.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 20h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 23h ago]]></description>
 </item>
 
 <item>
@@ -1789,7 +1923,7 @@
 
 
 <p class="wp-block-paragraph"></p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 20h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 23h ago]]></description>
 </item>
 
 <item>
@@ -1968,7 +2102,7 @@
 
 
 </div></div></div>
-</div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 21h ago]]></description>
+</div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
@@ -2091,7 +2225,7 @@
 
 <li><a href="https://www.csoonline.com/article/4198007/senior-executives-are-killing-your-shadow-ai-strategy.html">Senior executives are killing your shadow AI strategy</a></li>
 </ul>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 22h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
@@ -4767,7 +4901,7 @@
 
 
 <p class="wp-block-paragraph">Unexpected outbound HTTP requests before or after assistant responses; repeated POST requests containing environment variables, project paths, or prompt text; and the addition of new MCP servers, URL overrides, or tool endpoints to agent configurations should be investigated.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
 </item>
 
 <item>
@@ -5575,131 +5709,6 @@
 
 <p class="wp-block-paragraph"><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><a href="https://www.cio.com/expert-contributor-network/"><strong>Want to join?</strong></a></p>
 </div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
-</item>
-
-<item>
-  <title>🟠 Stop depending on heroics and start operationalizing third-party risk</title>
-  <link>https://www.csoonline.com/article/4204027/stop-depending-on-heroics-and-start-operationalizing-third-party-risk.html</link>
-  <pubDate>Mon, 03 Aug 2026 09:00:00 +0000</pubDate>
-  <source>CSO Online</source>
-  <description><![CDATA[<b>Why this matters: Potential data exposure — check monitoring and incident response readiness.</b><br/><div id="remove_no_follow">
-		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
-					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
-						<div class="article-column__content">
-<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
-
-
-
-<p class="wp-block-paragraph">In cybersecurity, third-party risk management normally looks simple on paper: evaluate your vendor, learn the risk, report out on the gaps and weaknesses, transfer to the contract, and continue. Unfortunately, it seldom works that way in practice.</p>
-
-
-
-<p class="wp-block-paragraph">In my roles as a CISO, I find my teams in an intermediary position as the compliance and cybersecurity expert between the end-user purchaser and the vendors they want to work with: A typically high-pressure position when you’re perceived as a roadblock to a business goal.</p>
-
-
-
-<p class="wp-block-paragraph">As a consultant, we are helping clients establish a formal <a href="https://www.csoonline.com/article/567861/third-party-risk-management-a-getting-started-guide.html">third-party risk management</a> program often for the very first time. Alternatively, you are providing <a href="https://www.csoonline.com/article/3977845/the-rise-of-vciso-as-a-viable-cybersecurity-career-path.html">vCISO</a> or trusted adviser services to perhaps evaluate a specific product or service that lies fairly deep down in the purchasing timeline. That distinction is important, because how quickly security gets involved often determines how much friction everyone experiences.</p>
-
-
-
-<p class="wp-block-paragraph">The number one problem I see? Security is always last to know.</p>
-
-
-
-<h2 class="wp-block-heading" id="when-security-enters-too-late">When security enters too late</h2>
-
-
-
-<p class="wp-block-paragraph">A business team determines what kind of tool it needs. Operations want efficiency. Finance is ready to fund it. Momentum builds. Then someone says, “Wait a minute… What about cybersecurity and compliance? At that point, our role is to ask the questions that should have been asked earlier: What data will this vendor touch? Where will it reside? What controls exist and are needed? Does the vendor’s security posture (and its product) match the client’s obligations and risk tolerance?</p>
-
-
-
-<p class="wp-block-paragraph">Being the one applying the brakes at the 11th hour is not a role anyone relishes. But that often becomes what third-party cyber risk management turns into when there is no formal intake and review process.</p>
-
-
-
-<p class="wp-block-paragraph">This is something that I have witnessed time and again with clients. The team is excited about a new platform and reasonably anticipates a quick go/no-go. Instead, the review process turns into weeks of ping-ponging with the vendor: Responses to questionnaires, security documentation, clarifying calls, proof or non-provision of compliance, legalese and data flow discussions. That delay can feel painful to all involved if the end user organization does not have a mature process already in place. The business sees friction. The vendor sees hurdles. Security sees unresolved risk.</p>
-
-
-
-<p class="wp-block-paragraph">The key to getting in early is working with your legal and finance, or procurement teams to bring you in as early as possible. These will be your partners in making sure the assessment is done before anything is signed. In my experience, once the ink is dry on the contract, you have lost all leverage in being able to get action from the third-party. A mature assessment will build in contract language to address gaps or weaknesses. This is the only thing that works in getting the outcomes you are looking for.</p>
-
-
-
-<h2 class="wp-block-heading" id="building-a-repeatable-review-process">Building a repeatable review process</h2>
-
-
-
-<p class="wp-block-paragraph">At root, we’re trying to help end-user organizations build structures around vendor evaluations to ensure a repeatable process; something that is defensible and aligned to their business operations. This is not a simple product review. We are helping them translate security, compliance and operational requirements into a workable framework for making a deployment decision.</p>
-
-
-
-<p class="wp-block-paragraph">A lot of end-user organizations lack the internal time, expertise or leverage to push solution providers on technical controls, audit evidence, shared responsibility or gaps in documentation. As the intermediary between them and the vendor, we do that legwork for them. Because we can ask the questions that need to be asked and how those answers should be interpreted. When one listens to a polished sales narrative, it is not the same thing as sustainable assurance for compliance.</p>
-
-
-
-<p class="wp-block-paragraph">The most important part here is making sure the assessment timelines are clear and consistent, and the purchaser is aware of them. It is also critical that the end user is aware of where the assessment is and if it is sitting with the internal team or the customer. The internal budget holder is always the key to getting action from the vendor, as they typically see the security team as an impediment to the sale.</p>
-
-
-
-<p class="wp-block-paragraph">Done well, third-party cyber risk management is not about blocking business. It’s really about getting clients onto their projects faster and with fewer surprises and less business risk.</p>
-
-
-
-<h2 class="wp-block-heading" id="expanding-beyond-security-to-add-business-value">Expanding beyond security to add business value</h2>
-
-
-
-<p class="wp-block-paragraph">Today, any employee with a budget expects to bring in new technology on a very tight timeline. But I’ve seen this lead to many problems: the biggest of which is failing to solve the business problem. Purchasers fall in love with the interface, one specific feature, the price, the salesperson — you name it, I’ve seen it. Often not even defining what they are trying to solve prior to a purchase.</p>
-
-
-
-<p class="wp-block-paragraph">The business problem and success criteria should be defined before any purchase is made, and security can be one of the criteria for scoring, provided the vendor meets a qualifying security score.</p>
-
-
-
-<h2 class="wp-block-heading" id="ai-makes-the-challenge-more-urgent">AI makes the challenge more urgent</h2>
-
-
-
-<p class="wp-block-paragraph">AI is shaking up the world of third-party risk in two ways at once. One is that vendors have been speed-dialing AI into their respective solutions. Secondly, AI tools are being brought into the workplace without IT authorization [<a href="https://www.csoonline.com/article/4143096/a-5-step-approach-to-taming-shadow-ai.html">shadow AI</a>], often happening before security or compliance teams are made aware. Essentially, the age-old third-party risk problem of security teams learning last is moving more quickly and on a larger scale.</p>
-
-
-
-<p class="wp-block-paragraph">It’s not only because AI tools are new that causes organizations to worry. It is that people can start using them at once, usually entering sensitive business data into systems that have not been vetted for privacy, retention period and whether models trained on this data will be available for other users to access. Proactive vendor governance is therefore all the more crucial. With no front-end process for intake and assessment, the organization will always be reacting after the fact.</p>
-
-
-
-<p class="wp-block-paragraph">This is where a lot of companies need to reset their expectations. Third-party cyber risk management is an ongoing process that does not work as a side task of procurement, nor can it live entirely in security. It needs to be operationalized across the business. The organizations that do this best set up workflows for bringing in new vendors, identify data exposure early, assign review responsibilities and earmark exceptions before signing a contract.</p>
-
-
-
-<p class="wp-block-paragraph">Companies that fall behind depend on heroics. Somebody sees a risk late, hustles to gather documentation from two parties in different time zones and then fights the vendor for answers while trying to make a sound judgment on limited information. It can work once or twice, but it’s not a program.</p>
-
-
-
-<p class="wp-block-paragraph">What you can do is simple: build up the process before urgency hits. Know who owns intake. Know when security gets involved. Know what evidence is required. Understand how the AI tools will be assessed before they start entering the workspace.</p>
-
-
-
-<p class="wp-block-paragraph">Balancing the needs for compliance, operational realities and the pace of technology adoption enables the business to make decisions about the vendors they depend on with confidence.</p>
-
-
-
-<p class="wp-block-paragraph">The reality is that there are vendors that are good at securing your data, and there are vendors that haven’t even thought about it and all kinds in between. The goal of a good process is to identify which kind of vendor you are dealing with and hold them accountable for any risk.</p>
-
-
-
-<p class="wp-block-paragraph">One of the most important features of a mature third-party risk program that is most often ignored is using the contract to hold vendors accountable. A third-party program without this step rarely produces the expected outcomes because there are no financial teeth to the requirements.</p>
-
-
-
-<p class="wp-block-paragraph">Third-party risk management is not about eliminating friction but shifting it to the right place where it can make an actual difference and organizing it in a way where one can manage it.</p>
-
-
-
-<p class="wp-block-paragraph"><strong>This article is published as part of the Foundry Expert Contributor Network.</strong><br /><a href="https://www.cio.com/expert-contributor-network/"><strong>Want to join?</strong></a></p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
 </item>
 
 </channel>
