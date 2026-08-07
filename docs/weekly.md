@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
 **Period:** July 31 – August 07, 2026  
-**Generated:** 2026-08-07 09:59 UTC  
+**Generated:** 2026-08-07 10:57 UTC  
 **Items reviewed:** 100  
 
 ## ⚡ Top Actions This Week
@@ -55,6 +55,9 @@
 
 ## 🟠 Important — Review This Week
 
+- [AI-Assisted HTTP Terminator Finds Novel HTTP Desync Techniques and Apache Zero-Day](https://thehackernews.com/2026/08/ai-assisted-http-terminator-finds-novel.html)  
+  **The Hacker News** · Aug 07 · _General awareness item._  
+
 - [New Zapscape KVM Flaw Could Let Privileged L1 Guest Code Escape to Linux Hosts](https://thehackernews.com/2026/08/new-zapscape-kvm-flaw-could-let.html)  
   **The Hacker News** · Aug 06 · _General awareness item._  
 
@@ -76,19 +79,16 @@
 - [CVE-2026-50516 Microsoft Azure Kubernetes Service Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-50516)  
   **Microsoft Security Response Center (MSRC)** · Aug 06 · _General awareness item._  
 
-- [CVE-2026-50481 Azure Active Directory Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-50481)  
-  **Microsoft Security Response Center (MSRC)** · Aug 06 · _General awareness item._  
-
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [Microsoft 365 AitM Phishing Hijacks Accounts to Collect Payroll and Finance Emails](https://thehackernews.com/2026/08/microsoft-365-aitm-phishing-hijacks.html) — The Hacker News
 - [New NatJack Attacks Hijack TCP Sessions and Spoof DNS by Manipulating NAT Tables](https://thehackernews.com/2026/08/new-natjack-attacks-hijack-tcp-sessions.html) — The Hacker News
 - [Malware Can Abuse Windows Hello for Business Keys for Persistent Entra ID Access](https://thehackernews.com/2026/08/malware-can-abuse-windows-hello-for.html) — The Hacker News
 - [Claude Code and Gemini CLI Flaws Let a GitHub Issue Reach CI Workflow Secrets](https://thehackernews.com/2026/08/claude-code-and-gemini-cli-flaws-let.html) — The Hacker News
 - [Linux Shell Forensic: Let&#x3f;s Dive Into Atuin&#x21;, (Fri, Aug 7th)](https://isc.sans.edu/diary/rss/33226) — SANS Internet Storm Center
 - [TeamPCP Linked To Redis Attacks Dating Back To 2020 And Later Supply Chain Campaign](https://thehackernews.com/2026/08/teampcp-linked-to-redis-attacks-dating.html) — The Hacker News
-- [ISC Stormcast For Friday, August 7th, 2026 https://isc.sans.edu/podcastdetail/10042, (Fri, Aug 7th)](https://isc.sans.edu/diary/rss/33224) — SANS Internet Storm Center
 
 ---
 
