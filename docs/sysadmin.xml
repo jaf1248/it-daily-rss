@@ -3,8 +3,90 @@
 <channel>
   <title>Joe SysAdmin and Operations</title>
   <description>Operational IT changes, Microsoft updates, outages, and infrastructure issues.</description>
-  <lastBuildDate>Thu, 06 Aug 2026 13:59:06 +0000</lastBuildDate>
+  <lastBuildDate>Fri, 07 Aug 2026 00:39:09 +0000</lastBuildDate>
   
+<item>
+  <title>🟠 Zonal Resiliency in Azure: Application-Centric Goals, Recovery Plans, and Drills</title>
+  <link>https://techcommunity.microsoft.com/t5/itops-talk-blog/zonal-resiliency-in-azure-application-centric-goals-recovery/ba-p/4542514</link>
+  <pubDate>Thu, 06 Aug 2026 07:00:00 +0000</pubDate>
+  <source>Microsoft Tech Community IT Ops</source>
+  <description><![CDATA[<b>Why this matters: Service impact possible — prepare comms and confirm vendor status.</b><br/><p>Hello Folks</p>
+<p>&nbsp;If you have ever stared at a multi-tier app in Azure and asked yourself, “Is this actually going to survive a zone outage?”, you are not alone. In session MAIS23 of the Microsoft Azure Infra Summit 2026, Bhavya, Aditya, and Chaya from the Azure Resiliency product team walked us through the new Resiliency in Azure experiences (formerly Azure Business Continuity Center) and showed how to stop treating resiliency as a per-resource checkbox and start treating it as an application-level outcome.</p>
+<p>&nbsp;</p>
+<div class="lia-embeded-content" contenteditable="false">
+</div>
+<h2>Why IT Pros Should Care</h2>
+<p>Most of us have lived this story. An app is “in the cloud”, spread across IaaS VMs, PaaS databases, an app service plan, and a shared Azure Firewall managed by some other team. Then a zonal blip hits, and suddenly nobody can answer the simple question: was this app supposed to be zone resilient or not?</p>
+<p>The session opened with a customer scenario called Zava, a fast-growing insurance company running a claims app at 99.9 percent availability that just lost more than $40,000 in revenue in one week because of zonal outages. That is the price tag the speakers put on the problem, and it lines up with the patterns I see every week.</p>
+<p>Here is why this matters to IT pros:</p>
+<ul>
+<li>You finally get a single pane to see zonal resiliency posture across IaaS, PaaS, and shared services.</li>
+<li>Resiliency goals are set at the application level, not buried inside each resource blade.</li>
+<li>You get tailored Azure Advisor recommendations plus an Azure Copilot guided flow that emits remediation scripts.</li>
+<li>You can run zone-down drills powered by Azure Chaos Studio without stitching together five different tools.</li>
+<li>Recovery plans orchestrate failover in a defined order, with on-demand readiness checks before the next real outage.</li>
+</ul>
+<p>In short, less guessing, less spreadsheet bookkeeping, and a lot more confidence that the app will behave the way you told the business it would.</p>
+<h2>What Resiliency in Azure Does, a Technical Overview</h2>
+<p>The team has rebranded Azure Business Continuity Center to <strong>Resiliency in Azure</strong>. It is a unified solution that covers infra, data, and cyber resiliency in one place. Today the focus is <strong>zonal resiliency</strong>, with regional disaster recovery (and proper RPO/RTO goals) on the roadmap.</p>
+<p>The central concept is the <strong>service group</strong>. A service group is a logical application unit that can span subscriptions and resource groups. You add the VMs, databases, app service plans, Redis caches, and other Azure resources that make up an application, and from that point on, resiliency operations work against the whole app, not one resource at a time.</p>
+<p>There are two views you will spend most of your time in:</p>
+<ul>
+<li><strong>Resource resiliency</strong>, a zonal configuration summary across the (roughly 20) resource types supported today.</li>
+<li><strong>Service group resiliency</strong>, the same summary but pivoted to the application level, so you can prioritize the apps that need attention first.</li>
+</ul>
+<p>The speakers were honest about scope. Goals today are a simple intent (“this service group should be evaluated for zonal resilience”). Once additional pillars like regional DR ship, goals will expand to include RPO and RTO targets. I appreciate that they did not oversell it.</p>
+<h2>How It Works, Under the Hood</h2>
+<p>Once a service group exists, the workflow has three big building blocks. Each one solves a problem I bet you have hit.</p>
+<ol>
+<li><strong> Goals and recommendations.</strong> You assign a zonal resiliency goal to the service group, and Azure Advisor surfaces tailored recommendations for the resources inside it. Two details I liked:</li>
+</ol>
+<ul>
+<li>The view shows <strong>cost implications</strong> before you flip the switch. Some Azure services have no cost delta for zone redundancy. Others do. You see it inline, not in a separate calculator tab.</li>
+<li>There is an <strong>Azure Copilot guided remediation</strong> flow that walks you through the recommendation and, at the end, emits a script. That script accounts for resource-type corner cases (SKU changes, redeploys, and so on) and is meant to be run through your automation pipeline.</li>
+</ul>
+<p>You can also <strong>exclude</strong> a resource with a reason (“not critical, zonal redundancy not required”) or <strong>manually attest</strong> a resource when your own custom solution already provides resiliency that the platform cannot auto-detect. That escape hatch is important, because real environments always have a few weird cases.</p>
+<ol start="2">
+<li><strong> Application-centric recovery plans.</strong> Instead of failing over one resource at a time, a recovery plan orchestrates the entire app. It auto-detects existing solutions (Azure Site Recovery for VMs, for example), lets you group and order the resources for failover, and excludes resources that are already configured for high availability (no point failing them over if they did not go down). You can run an <strong>on-demand readiness check</strong> any time the app structure changes, so you find configuration drift before an outage finds it for you.</li>
+<li><strong> Zone-down drills powered by Azure Chaos Studio.</strong> A zone-down drill template identifies the service group resources, pre-populates the right native faults per resource type (think a Redis cache fault, a VM scale set shutdown, and so on), bundles in identity and permission checks, monitoring, and the recovery plan you already built. When you execute, you pick the region and the target zone, the drill runs a pre-validation check, injects the fault, runs failover, then reprotection and failback, and tracks all of it as a single job in the execution report. Per-resource metrics let you visualize the actual downtime each component experienced. If a native fault is not what you want, you can override with a custom runbook.</li>
+</ol>
+<p>That last point is the part I think a lot of folks miss. <strong>A drill is not just fault injection.</strong> It is fault injection plus failover plus reprotection plus failback, all measured and attestable in one place.</p>
+<h2>Real-World Value</h2>
+<p>Back to Zava. They needed to answer three questions: what is our current zonal resiliency posture across these Azure services, what should we prioritize against our 99.9 percent target, and how do we validate that we will actually perform during an outage? Resiliency in Azure answers all three without forcing the platform team to write a 200-line PowerShell script.</p>
+<p>Use cases that should be on your shortlist:</p>
+<ul>
+<li><strong>Regulated workloads</strong> (insurance, healthcare, financial services) that need to evidence drills for compliance. The notes and manual attestation features were clearly designed with auditors in mind.</li>
+<li><strong>Apps with mixed estates</strong>, where a central platform team owns shared services (firewalls, identity) and app teams own everything else. Service groups can be parented to mirror that org structure.</li>
+<li><strong>Apps with custom resiliency solutions</strong> that the platform cannot detect. Manual attestation keeps the dashboard honest without forcing you to refactor.</li>
+<li><strong>Game-day rehearsals.</strong> The pre-built zone-down template means you can run a meaningful drill in an afternoon instead of standing up a custom Chaos Studio experiment from scratch.</li>
+</ul>
+<p>The honest tradeoff: zone redundancy is not free for every service, and not every resource type is in scope yet (around 20 today). Plan accordingly, exclude what is not critical, and attest what is covered by something else.</p>
+<h2>Getting Started</h2>
+<p>Here is the path I would take on a Monday morning:</p>
+<ol>
+<li>Open the Azure portal and search for <strong>Resiliency</strong>. You will land on the Resiliency in Azure page that replaces the old Business Continuity Center.</li>
+<li>Create a <strong>service group</strong>. Add resources directly, or add resource groups if each resource group is already an application boundary in your environment.</li>
+<li>Assign the <strong>zonal resiliency goal</strong> to the service group.</li>
+<li>Review the summary tiles. Exclude or manually attest the resources that need it.</li>
+<li>Walk the <strong>Advisor recommendations</strong>. Use the Copilot guided flow to generate a remediation script and run it through your automation.</li>
+<li>Build an <strong>application-centric recovery plan</strong>, group and order the resources, run an on-demand readiness check.</li>
+<li>Create a <strong>zone-down drill</strong> from the template, validate identity, monitoring, and faults, then execute the drill in a non-production zone first.</li>
+</ol>
+<h2>Resources</h2>
+<ul>
+<li><a href="https://learn.microsoft.com/azure/reliability/" target="_blank">Resiliency in Azure documentation</a></li>
+<li><a href="https://learn.microsoft.com/en-us/azure/reliability/availability-zones-zonal-resource-resiliency" target="_blank">Zonal resources and zone resiliency</a></li>
+<li><a href="https://learn.microsoft.com/en-us/azure/governance/service-groups/overview" target="_blank">Azure service groups overview</a></li>
+<li><a href="https://learn.microsoft.com/azure/advisor/advisor-reference-reliability-recommendations" target="_blank">Azure Advisor reliability recommendations</a></li>
+<li><a href="https://learn.microsoft.com/en-us/azure/chaos-studio/" target="_blank">Azure Chaos Studio documentation</a></li>
+<li><a href="https://learn.microsoft.com/azure/site-recovery/site-recovery-overview" target="_blank">Azure Site Recovery overview</a></li>
+</ul>
+<h2>Keep Learning at the Summit</h2>
+<p>Catch the full Microsoft Azure Infra Summit 2026 session playlist here: https://www.youtube.com/playlist?list=PLjt5SKzX1iI8con7FJDB56G6hHqxGm7ki</p>
+<p>Cheers!</p>
+<p>Pierre Roman</p><br/><br/><b>Source:</b> Microsoft Tech Community IT Ops &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 17h ago]]></description>
+</item>
+
 <item>
   <title>🔵 Agentic Migrations and Modernization: How the Azure Migrate Agent Keeps Your Intent Alive End to End</title>
   <link>https://techcommunity.microsoft.com/t5/itops-talk-blog/agentic-migrations-and-modernization-how-the-azure-migrate-agent/ba-p/4542513</link>
@@ -82,14 +164,6 @@
 <p>Cheers!</p>
 <p>Pierre Roman</p>
 <p>&nbsp;</p><br/><br/><b>Source:</b> Microsoft Tech Community IT Ops &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Phishing service spoofs RingCentral to steal Microsoft 365 accounts</title>
-  <link>https://www.bleepingcomputer.com/news/security/phishing-service-spoofs-ringcentral-to-steal-microsoft-365-accounts/</link>
-  <pubDate>Tue, 04 Aug 2026 21:45:36 +0000</pubDate>
-  <source>BleepingComputer</source>
-  <description><![CDATA[<b>Why this matters: Credential/phishing risk — reinforce MFA and user awareness training.</b><br/>The Greatness phishing-as-a-service (PhaaS) platform has expanded from credential phishing to adversary-in-the-middle attacks and device-code phishing targeting Microsoft 365 accounts. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
