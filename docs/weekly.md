@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
 **Period:** July 31 – August 07, 2026  
-**Generated:** 2026-08-07 14:12 UTC  
+**Generated:** 2026-08-07 15:53 UTC  
 **Items reviewed:** 100  
 
 ## ⚡ Top Actions This Week
@@ -83,12 +83,12 @@
 
 ## 🔵 FYI — General Awareness
 
+- [Levi Strauss & Co. says hackers stole corporate data in cyberattack](https://www.bleepingcomputer.com/news/security/levi-strauss-and-co-says-hackers-stole-corporate-data-in-cyberattack/) — BleepingComputer
 - [Real emails, hijacked payments: Two H1 2026 attack chains](https://www.bleepingcomputer.com/news/security/real-emails-hijacked-payments-two-h1-2026-attack-chains/) — BleepingComputer
 - [North Carolina Ports confirms cyberattack disrupting operations](https://www.bleepingcomputer.com/news/security/north-carolina-ports-confirms-cyberattack-disrupting-operations/) — BleepingComputer
 - [Growing Up The Hard Way](https://thehackernews.com/2026/08/growing-up-hard-way.html) — The Hacker News
 - [18-Year-Old Linux SCTP Flaw Could Let Local Users Gain Root and Escape Containers](https://thehackernews.com/2026/08/18-year-old-linux-sctp-flaw-could-let.html) — The Hacker News
 - [New NatJack Attacks Hijack TCP Sessions and Spoof DNS by Manipulating NAT Tables](https://thehackernews.com/2026/08/new-natjack-attacks-hijack-tcp-sessions.html) — The Hacker News
-- [Microsoft 365 AitM Phishing Hijacks Accounts to Collect Payroll and Finance Emails](https://thehackernews.com/2026/08/microsoft-365-aitm-phishing-hijacks.html) — The Hacker News
 
 ---
 
