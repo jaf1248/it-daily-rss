@@ -3,15 +3,56 @@
 <channel>
   <title>Joe — Security Intelligence</title>
   <description>Cybersecurity threats, vulnerabilities, breaches, and Microsoft security updates.</description>
-  <lastBuildDate>Fri, 07 Aug 2026 11:43:36 +0000</lastBuildDate>
+  <lastBuildDate>Fri, 07 Aug 2026 12:55:38 +0000</lastBuildDate>
   
+<item>
+  <title>🟠 Agentic AI for Cyber Defenders: What Security Teams Built at Black Hat USA 2026</title>
+  <link>https://www.tenable.com/blog/agentic-ai-for-cyber-defenders-what-security-teams-built-at-black-hat-usa-2026</link>
+  <pubDate>Fri, 07 Aug 2026 12:00:00 +0000</pubDate>
+  <source>Tenable Blog</source>
+  <description><![CDATA[<b>Why this matters: Credential/phishing risk — reinforce MFA and user awareness training.</b><br/><p>Agentic AI armed attackers first, but it also put real building power in defenders’ hands. Here’s what security practitioners built in two days at Black Hat USA 2026, and how the CyberAgents Exchange keeps that work compounding long after the event.</p><div><div><h2><strong>Key takeaways</strong></h2><ol><li><strong>Building defensive cybersecurity tooling no longer requires a developer.</strong> Agentic tooling drove the cost of finding and exploiting a vulnerability down to 1990s levels; it also removed the engineering barrier that kept defenders from building the automation they’ve always wanted.<br />&nbsp;</li><li><strong>The unglamorous work won the room: triage, reconciliation, toil.</strong> Given two days and a requirement to publish, practitioners at SWARM developed agents for prioritization, cross-tool reconciliation, and the unglamorous toil they recognize from their own environments.<br />&nbsp;</li><li><strong>All SWARM builds live on the </strong><a href="https://exchange.tenable.com" target="_blank"><strong>CyberAgents Exchange</strong></a><strong>, source repos attached.</strong> Every component built at SWARM is published open source with its source repository attached, so the next team facing the same problem starts from working code instead of a blank editor.</li></ol></div></div><h2>Another security team already built the AI agent you need</h2><p>You may not realize it, but somewhere out in the ether, there’s a security team facing the same challenge as you. The only difference is they just solved the problem with agentic AI. The problem is, you have no way to find out the solution even exists.</p><p>It could be an asset inventory that three systems describe in three different ways; a findings queue nobody has the hours to work; or a “critical” that a platform upgrade quietly neutralized six months ago, still sitting there waiting for someone to prove it. Somebody has already built the thing you keep meaning to build. Now it’s time we help you find it.</p><p>At Black Hat USA 2026, nearly 100 registrants had the opportunity to come together for 48 hours and solve both halves of that problem: identifying a key operational pain point and building the fix.</p><p>Problems like those got solved at SWARM, and the fixes are sitting on the <a href="https://exchange.tenable.com" target="_blank">CyberAgents Exchange</a> right now, open source, with their source repositories attached.&nbsp;</p><p>One team built the agent that works out which handful of fixes retires the most risk across thousands of findings. Another correlated two scanners to tell whether a flaw in the code is even reachable in the running application. A third made the case that a finding had already been mitigated, with evidence an auditor would accept. You can download and deploy any of them today.</p><h2>Agentic AI doesn’t just arm attackers</h2><p>Black Hat’s keynote stage spent this year focused on one theme: the plummeting cost of cyber offense in the agentic AI era. The price for an attacker to find and exploit a vulnerability is at lows the industry hasn’t seen since the 1990s, when a working exploit meant weeks of expert reverse engineering. Now all it takes is an afternoon and a subscription.</p><p>The artisanal exploit isn’t rare anymore. True. But neither is the defender who can build.&nbsp;</p><p>The same agentic tooling that’s arming attackers puts real building power in everyone’s hands, and that half of the story got almost no airtime. <strong>Security automation used to require the work and ongoing maintenance of skilled engineers. Now practitioners who understand the problem can build the fix.</strong></p><p>Inside the conference room at the Mandalay Bay where Tenable hosted our inaugural <a href="https://www.tenable.com/blog/black-hat-2026-swarm-event-build-AI-security-agents" target="_blank">SWARM</a> event, the proof of that was on every table. The winning ranking engine ships as <a href="https://exchange.tenable.com/skills/chokepoint-finder-skill/" target="_blank">a skill that runs on the Python standard library alone</a> — no packages, no install step, no build pipeline. Point it at the bundled demo estate and it answers “what should we fix first?” in seconds. That’s a deliverable a practitioner can produce and a colleague can run, and two days was enough.</p><p>The attacker-defender asymmetry doesn’t stem from a lack of talent or willingness. Offensive cyber capabilities compound because the tooling circulates: it’s built once, forked, passed on, or sold to the next threat actor to leverage in their attack.&nbsp;</p><p>Meanwhile, defenders continue to build in silos, with hundreds of teams solving the same fix for the same problem. Not because anyone wants to keep it to themselves, but because there’s never been an easy way to pass it along. Defensive cyber tools are built, then lost, then rebuilt somewhere else. That’s a distribution gap, and now defenders can close it themselves on the <a href="https://exchange.tenable.com" target="_blank">CyberAgents Exchange</a>.</p><h2>We gave defenders a mission and two days to build</h2><p>Tenable hosted its first SWARM event, running alongside Black Hat, so practitioners could come together and build open-source agentic AI. Sponsored by AWS and with technical staff from Anthropic onsite for judging, SWARM came with a couple simple rules: build something practical that solves a real problem for your team, and publish it to the CyberAgents Exchange.</p><p>Then we got out of the way, and the magic immediately took shape.</p><h3>Practitioners built AI agents for Monday morning, not for the demo</h3><p>The room skewed hard toward unglamorous work. Not autonomous red teams or self-healing networks, but the specific tasks that eat a practitioner’s week: reconciling asset inventories that three systems disagree about, triaging a findings queue nobody has time for, chasing down whether a finding is even real before someone spends a sprint on it.&nbsp;</p><p>One team built an agent that reads vendor advisories and mitigation notes, compares them against live findings, and recommends risk recasts — the kind of work a senior engineer does by hand, one CVE at a time, and never gets credit for. They built the thing that was annoying them last Tuesday.</p><h3>Defenders didn’t build robot analysts, they built plumbing</h3><p>The most common thing in the room wasn’t a flashy autonomous agent. It was connective tissue: capabilities to normalize findings across scanners that describe the same asset three different ways, wrap the tools that teams already own so an agent can reach them, and package recurring analyst tasks as reusable skills instead of one-off scripts.&nbsp;</p><p>That tracks with how this technology actually gets adopted. Nobody rips out their stack to adopt agentic AI. They teach an agent to drive what’s already there, and the integration layer is where the real work sits.</p><h2>The agentic AI builds the judges put on the podium</h2><p>Three teams took the podium. None of their work stayed in the room: every build had to ship to the CyberAgents Exchange as open source to be eligible to win, so the shortlist below is a set of tools you can read and run tonight. The judges — Tenable CSO Robert Huber, AWS Security Specialist SA Leader Chris Elmore, and a member of Anthropic’s technical staff — scored impact above everything else, and all three solve problems you probably recognize.</p><h3>First place: from thousands of findings to a handful of proven fixes</h3><h4><a href="https://exchange.tenable.com/playbooks/chokepoint-remediation-playbook/" target="_blank"><strong>Chokepoint Finder</strong></a></h4><p>Built by Team Vauban; MIT licensed</p><p>Security teams don’t have a detection problem, they have a selection problem: a mid-size estate carries thousands of open findings and capacity for maybe 10 changes a week. Published as four agentic components—an <a href="https://exchange.tenable.com/agents/chokepoint-finder/">agent</a>, <a href="https://exchange.tenable.com/mcp-servers/chokepoint-finder-mcp/">MCP server</a>, <a href="https://exchange.tenable.com/skills/chokepoint-finder-skill/">skill</a>, and <a href="https://exchange.tenable.com/playbooks/chokepoint-remediation-playbook/">playbook</a>—Chokepoint Finder ranks fixes, not findings. It groups findings by the single action that resolves them (i.e., patches, base images, IAM roles, security groups, etc.) then solves for the shortest ordered list that mitigates the most weighted risk, leveraging its playbook to agentically inspect and rank fixes over eight distinct stages, with a human decision in the middle.</p><p>That discipline earned the top spot. The agent holds no write credentials, evidence it can’t read or can’t date resolves to a hold, and a re-scan has to prove the risk moved before the record closes. The team’s week stops being an unmanageable queue, collapsing its demo estate with 3,734 synthetic findings across 783 assets into seven concrete remediation actions. Each member of Team Vauban took home $2,000 in Anthropic credits, an AWS specialist certification voucher, and a gold-border SWARM patch.</p><h3>2nd Place: determine if flaws in code are reachable</h3><h4><a href="https://github.com/giraldomauricio/threatcorraling" target="_blank"><strong>ThreatCorraling</strong></a></h4><p>by Team ShellCodeandChill; MIT licensed</p><p>A team running two scanners has two lists and no shared view: the code scanner flags a flaw, the application scanner watches the running app, and nobody can say whether the flaw is reachable. ThreatCorraling correlates Checkmarx static analysis results against Tenable Web Application Scanning findings for the same scoped assets, so a team can tell which flagged flaws are actually exposed in production.</p><p>From there it maps what it finds to SOC 2 and ISO 27001 controls and generates remediation and regression-testing patterns specific to the team’s stack, rather than generic advice. The reconciliation spreadsheet becomes a ranked, control-mapped list. It ships as both halves of the same code: a local app, and an MCP server exposing the same tools to clients like Claude Code. Each member of Team ShellCodeandChill took home $1,500 in Anthropic credits, an AWS specialist certification voucher, and a silver-border SWARM patch.</p><h3>3rd place: prove if findings were already mitigated</h3><h4><a href="https://exchange.tenable.com/agents/evidence-backed-vulnerability-investigator/" target="_blank"><strong>Evidence-Backed Vulnerability Investigator</strong></a></h4><p>by Team ZeroSignal; MIT licensed</p><p>Arguing that a finding was already mitigated usually means an analyst has to rebuild the case from memory with no traceable record of why. The Evidence-Backed Vulnerability Investigator loads scanner findings, matches them against the vendor advisories a team already keeps on disk, and asks Claude for a disposition with detailed justification evidence.</p><p>The matching is deterministic, performed by an identifier and keyword scoring script so analysts can reliably see why advisories are returned, and only the human’s decision gets recorded. The disposition arrives with its evidence attached instead of as an assertion. Anyone who’s argued with an auditor about a “critical” upgrade that’s quietly fixed knows what that saves. Each member of Team ZeroSignal took home $1,000 in Anthropic credits, an AWS specialist certification voucher, and a bronze-border SWARM patch.</p><h3>Congratulations to the winners!</h3><p>Congratulations to all three teams, and to everyone who shipped something in 48 hours and put their name on it in public. That takes more nerve than a demo. One SWARM participant walked out with an NVIDIA DGX Spark, drawn from raffle tickets every ceremony attendee earned just by being in the room.</p><h2>SWARM was two days, the CyberAgents Exchange lives on</h2><p>Every component built at SWARM is now on the <a href="https://exchange.tenable.com/" target="_blank">CyberAgents Exchange</a>, under open licenses, and that’s the whole point. The work gets done once. Take two days of work from a few dozen practitioners, then multiply it by a community publishing continuously instead of once at a hackathon, and you get the two things threat actors have always had that defenders haven’t: scale and distribution.</p><h3>What is the CyberAgents Exchange?</h3><p>The CyberAgents Exchange is the industry’s <a href="https://exchange.tenable.com/" target="_blank">first open-source, vendor agnostic AI agent exchange</a>, a cybersecurity-native registry for AI agents, skills, MCP servers, and multi-agent playbooks. It’s built around the objection practitioners actually have to agentic AI, and that objection was never automation. It’s opacity. You can’t responsibly hand production authority to something whose reasoning and provenance you can’t inspect. That isn’t blind distrust; it’s justifiable caution.</p><p>So every component links to its source repository. No bundled binaries. You can see who built it, when, and whether it’s been reviewed by Tenable, vetted by the community, or if it was freshly submitted. You set your own trust threshold before you run anything. The CyberAgents Exchange is free: there are no fees to list or use what’s there. SentinelOne and Recorded Future joined as founding members, which matters, because a registry carrying one vendor’s agents isn’t an exchange.</p><p>That’s the idea Tenable CTO Vlad Korsunsky keeps coming back to: “Security is a team sport,” he says. “We’re creating a collaborative ‘town square’ where cybersecurity practitioners can build, test, improve, and share the best in agentic defense.” Security has already learned to circulate threat intelligence, indicators of compromise, and detection rules. Agentic tooling is simply the next.</p><h2><strong>Your turn to build an AI agent</strong></h2><p>Please <a href="https://exchange.tenable.com" target="_blank">check out the CyberAgents Exchange</a> for yourself!</p><p>Start by leveraging what other teams have already contributed. Find the component that maps to your own worst Tuesday scenario, read the source, inspect the code, and deploy it on your terms. Build if you feel inspired. If not, express your gratitude to builders, and strengthen our collective defense either way.</p><h2><strong>Learn more</strong></h2><ul><li>Read the <a href="https://www.tenable.com/press-releases/tenable-launches-industrys-first-open-source-ai-agent-exchange" target="_blank">announcement of the CyberAgents Exchange</a>, the industry’s first open-source AI agent exchange for cybersecurity</li><li>See what <a href="https://www.tenable.com/blog/testing-claude-mythos-preview-for-code-security-tenable" target="_blank">30 days with Claude Mythos Preview</a> taught Tenable’s own security team about proving exploitability instead of ranking suspicion</li><li>Explore how <a href="https://www.tenable.com/blog/tenable-hexa-ai-automating-exposure-remediation-with-agentic-routines" target="_blank">Tenable Hexa AI automates exposure remediation with agentic routines</a>, with a human in the loop</li></ul>
+<img src="https://www.tenable.com/sites/default/files/images/articles/agentic-ai-for-cybersecurity.png" /><br/><br/><b>Source:</b> Tenable Blog &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Growing Up The Hard Way</title>
+  <link>https://thehackernews.com/2026/08/growing-up-hard-way.html</link>
+  <pubDate>Fri, 07 Aug 2026 11:55:26 +0000</pubDate>
+  <source>The Hacker News</source>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Open Source had a great childhood.
+
+For two decades it got to be a kid. It ran around barefoot, gave everything away, trusted strangers, and never once thought about who was watching. It ran the kind of lemonade stand that took IOUs from anyone who wandered up — take what you need, pay me back whenever, no need to leave a name. It was idyllic. It was also, in retrospect, a little feral.
+
+Then,<br/><br/><b>Source:</b> The Hacker News &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 18-Year-Old Linux SCTP Flaw Could Let Local Users Gain Root and Escape Containers</title>
+  <link>https://thehackernews.com/2026/08/18-year-old-linux-sctp-flaw-could-let.html</link>
+  <pubDate>Fri, 07 Aug 2026 11:10:33 +0000</pubDate>
+  <source>The Hacker News</source>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>A use-after-free bug in Linux's SCTP networking code can be turned into full root on a host, and Tencent researchers say they used it to escape a container and reach the machine underneath.
+
+The flaw has existed since 2008. The fix already shipped: stable kernels 7.1.6, 6.18.42, 6.12.101 and 6.6.148, released August 3, close it. Anyone running an older kernel with SCTP reachable should update.<br/><br/><b>Source:</b> The Hacker News &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+</item>
+
 <item>
   <title>🔵 Vishing Extortion Group UNC6671 Rebrands After Making Millions</title>
   <link>https://www.securityweek.com/vishing-extortion-group-unc6671-rebrands-after-making-millions/</link>
   <pubDate>Fri, 07 Aug 2026 11:06:01 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><p>Initially calling itself BlackFile, the group has expanded operations to the Redact, Pink, Helix, and Falcon brands.</p>
-<p>The post <a href="https://www.securityweek.com/vishing-extortion-group-unc6671-rebrands-after-making-millions/">Vishing Extortion Group UNC6671 Rebrands After Making Millions</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/vishing-extortion-group-unc6671-rebrands-after-making-millions/">Vishing Extortion Group UNC6671 Rebrands After Making Millions</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 New NatJack Attacks Hijack TCP Sessions and Spoof DNS by Manipulating NAT Tables</title>
+  <link>https://thehackernews.com/2026/08/new-natjack-attacks-hijack-tcp-sessions.html</link>
+  <pubDate>Fri, 07 Aug 2026 10:58:38 +0000</pubDate>
+  <source>The Hacker News</source>
+  <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/>Security researcher Malcolm Stagg has disclosed a new attack class called&nbsp;NatJack&nbsp;that manipulates network address translation (NAT) connection state to hijack active TCP sessions, spoof DNS responses, expose mapped ports, and exhaust NAT tables.
+
+Presented at Black Hat USA 2026, the research found affected behavior across independently developed implementations, including Windows and<br/><br/><b>Source:</b> The Hacker News &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
 </item>
 
 <item>
@@ -21,7 +62,7 @@
   <source>The Hacker News</source>
   <description><![CDATA[<b>Why this matters: Credential/phishing risk — reinforce MFA and user awareness training.</b><br/>Cybersecurity researchers have called attention to an active "widespread email-driven phishing campaign" that employs adversary-in-the-middle (AitM) techniques to take control of Microsoft 365 accounts with an aim to identify key personnel involved in financial workflows and gather related email.
 
-"The campaign uses residential proxies to disguise malicious sign-ins as ordinary consumer traffic,<br/><br/><b>Source:</b> The Hacker News &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+"The campaign uses residential proxies to disguise malicious sign-ins as ordinary consumer traffic,<br/><br/><b>Source:</b> The Hacker News &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
 </item>
 
 <item>
@@ -29,7 +70,7 @@
   <link>https://www.schneier.com/blog/archives/2026/08/ice-is-buying-access-to-credit-card-records.html</link>
   <pubDate>Fri, 07 Aug 2026 10:26:41 +0000</pubDate>
   <source>Schneier on Security</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/><p>Through data brokers, ICE is <a href="https://www.404media.co/you-opened-a-credit-card-ice-now-knows-where-you-live/">buying</a> <a href="https://boingboing.net/2026/07/23/credit-header-data-ice.html">the</a> <a href="https://mastodon.social/@heidilifeldman/116981503852352281">information</a> you provided to open a credit card.</p><br/><br/><b>Source:</b> Schneier on Security &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/><p>Through data brokers, ICE is <a href="https://www.404media.co/you-opened-a-credit-card-ice-now-knows-where-you-live/">buying</a> <a href="https://boingboing.net/2026/07/23/credit-header-data-ice.html">the</a> <a href="https://mastodon.social/@heidilifeldman/116981503852352281">information</a> you provided to open a credit card.</p><br/><br/><b>Source:</b> Schneier on Security &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
 </item>
 
 <item>
@@ -37,9 +78,9 @@
   <link>https://thehackernews.com/2026/08/ai-assisted-http-terminator-finds-novel.html</link>
   <pubDate>Fri, 07 Aug 2026 10:09:54 +0000</pubDate>
   <source>The Hacker News</source>
-  <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/>PortSwigger says HTTP Terminator, an artificial intelligence (AI)-assisted research system built by James Kettle, generated and proved new HTTP desynchronization techniques after exploring 30,000 candidate attack vectors.
+  <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/>PortSwigger says HTTP Terminator, an artificial intelligence (AI)-assisted research system built by James Kettle, generated and proved new HTTP desynchronization techniques after exploring 30,000 candidate desync vectors.
 
-PortSwigger said a separate human-guided discovery cascade also exposed a zero-day in Apache Traffic Server. Kettle said HTTP Terminator tested 30,000 websites where scanning<br/><br/><b>Source:</b> The Hacker News &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+PortSwigger said a separate human-guided discovery cascade also exposed a zero-day in Apache Traffic Server. Kettle said HTTP Terminator tested 30,000 websites where<br/><br/><b>Source:</b> The Hacker News &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
 </item>
 
 <item>
@@ -48,26 +89,7 @@ PortSwigger said a separate human-guided discovery cascade also exposed a zero-d
   <pubDate>Fri, 07 Aug 2026 10:00:00 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><p>NMFTA research shows a Bendix EC80 brake controller safety recall also patched remote code execution and DoS vulnerabilities.</p>
-<p>The post <a href="https://www.securityweek.com/truck-brake-controllers-safety-recall-doubled-as-hidden-security-fix/">Truck Brake Controller&#8217;s Safety Recall Doubled as Hidden Security Fix</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 New NatJack Attacks Hijack TCP Sessions and Spoof DNS by Manipulating NAT Tables</title>
-  <link>https://thehackernews.com/2026/08/new-natjack-attacks-hijack-tcp-sessions.html</link>
-  <pubDate>Fri, 07 Aug 2026 09:32:57 +0000</pubDate>
-  <source>The Hacker News</source>
-  <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/>Security researcher Malcolm Stagg has disclosed a new attack class called&nbsp;NatJack&nbsp;that manipulates network address translation (NAT) connection state to hijack active TCP sessions, spoof DNS responses, expose mapped ports, and exhaust NAT tables.
-
-Presented at Black Hat USA 2026, the research found affected behavior across independently developed implementations, including Windows and<br/><br/><b>Source:</b> The Hacker News &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Black Hat USA 2026 – Summary of Vendor Announcements (Part 4)</title>
-  <link>https://www.securityweek.com/black-hat-usa-2026-summary-of-vendor-announcements-part-4/</link>
-  <pubDate>Fri, 07 Aug 2026 09:24:22 +0000</pubDate>
-  <source>SecurityWeek</source>
-  <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><p>Companies are showcasing their products and services this week at the 2026 edition of the Black Hat conference in Las Vegas.</p>
-<p>The post <a href="https://www.securityweek.com/black-hat-usa-2026-summary-of-vendor-announcements-part-4/">Black Hat USA 2026 – Summary of Vendor Announcements (Part 4)</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/truck-brake-controllers-safety-recall-doubled-as-hidden-security-fix/">Truck Brake Controller&#8217;s Safety Recall Doubled as Hidden Security Fix</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
 </item>
 
 <item>
@@ -76,7 +98,7 @@ Presented at Black Hat USA 2026, the research found affected behavior across ind
   <pubDate>Fri, 07 Aug 2026 09:09:54 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: Auth bypass — review access controls and check for unauthorized access.</b><br/><p>Microsoft fixed critical vulnerabilities across Azure, Entra, and SharePoint, while Apple patched a high-severity authentication bypass.</p>
-<p>The post <a href="https://www.securityweek.com/microsoft-apple-release-fresh-security-updates/">Microsoft, Apple Release Fresh Security Updates</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/microsoft-apple-release-fresh-security-updates/">Microsoft, Apple Release Fresh Security Updates</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
 </item>
 
 <item>
@@ -86,7 +108,7 @@ Presented at Black Hat USA 2026, the research found affected behavior across ind
   <source>The Hacker News</source>
   <description><![CDATA[<b>Why this matters: Could impact sign-ins/MFA/Conditional Access — watch for login issues.</b><br/>Entra ID researcher Dirk-jan Mollema demonstrated that malware already running in a signed-in Windows session can silently use the victim's Windows Hello for Business key to authenticate to Microsoft Entra ID.
 
-The attacker can then establish longer-term cloud access, register a device it controls, obtain a Primary Refresh Token (PRT), and add further authentication methods where tenant policies<br/><br/><b>Source:</b> The Hacker News &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+The attacker can then establish longer-term cloud access, register a device it controls, obtain a Primary Refresh Token (PRT), and add further authentication methods where tenant policies<br/><br/><b>Source:</b> The Hacker News &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
 </item>
 
 <item>
@@ -94,7 +116,7 @@ The attacker can then establish longer-term cloud access, register a device it c
   <link>https://isc.sans.edu/diary/rss/33226</link>
   <pubDate>Fri, 07 Aug 2026 07:22:28 +0000</pubDate>
   <source>SANS Internet Storm Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/><p>UNIX systems (including Linux) are well-known to record a lot of activities in many different locations. But there is one domain where they definitely lack of "modern" logging: shells. Most shells provide an historization of the typed commands through a flat file in the &#x24;HOME directory (ex: &#x24;HOME/.bash&#x5f;history). They suffer of multiple problems:</p>&#xd;<br/><br/><b>Source:</b> SANS Internet Storm Center &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/><p>UNIX systems (including Linux) are well-known to record a lot of activities in many different locations. But there is one domain where they definitely lack of "modern" logging: shells. Most shells provide an historization of the typed commands through a flat file in the &#x24;HOME directory (ex: &#x24;HOME/.bash&#x5f;history). They suffer of multiple problems:</p>&#xd;<br/><br/><b>Source:</b> SANS Internet Storm Center &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -103,7 +125,7 @@ The attacker can then establish longer-term cloud access, register a device it c
   <pubDate>Fri, 07 Aug 2026 07:22:05 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: Potential data exposure — check monitoring and incident response readiness.</b><br/><p>Hackers stole personal, medical, and health insurance information from a company’s data center.</p>
-<p>The post <a href="https://www.securityweek.com/3-8-million-impacted-by-unlimited-technology-systems-data-breach/">3.8 Million Impacted by Unlimited Technology Systems Data Breach</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/3-8-million-impacted-by-unlimited-technology-systems-data-breach/">3.8 Million Impacted by Unlimited Technology Systems Data Breach</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -112,7 +134,7 @@ The attacker can then establish longer-term cloud access, register a device it c
   <pubDate>Fri, 07 Aug 2026 06:56:56 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><p>The browser refresh eliminates over two dozen memory safety bugs, including critical use-after-free flaws.</p>
-<p>The post <a href="https://www.securityweek.com/critical-vulnerabilities-patched-with-chrome-151-update/">Critical Vulnerabilities Patched With Chrome 151 Update</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/critical-vulnerabilities-patched-with-chrome-151-update/">Critical Vulnerabilities Patched With Chrome 151 Update</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -122,7 +144,7 @@ The attacker can then establish longer-term cloud access, register a device it c
   <source>The Hacker News</source>
   <description><![CDATA[<b>Why this matters: Supply chain risk — audit third-party dependencies and vendor access.</b><br/>A new analysis has uncovered that the threat actor tracked as TeamPCP has been active on the cybercrime scene as far back as 2020, indicating the group has been compromising internet-facing infrastructure for years before training their sights on the software supply chain.
 
-"The connection is supported by overlapping domains, malware deployment paths, staging techniques, backend infrastructure,<br/><br/><b>Source:</b> The Hacker News &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+"The connection is supported by overlapping domains, malware deployment paths, staging techniques, backend infrastructure,<br/><br/><b>Source:</b> The Hacker News &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
@@ -130,7 +152,7 @@ The attacker can then establish longer-term cloud access, register a device it c
   <link>https://isc.sans.edu/diary/rss/33224</link>
   <pubDate>Fri, 07 Aug 2026 02:00:02 +0000</pubDate>
   <source>SANS Internet Storm Center</source>
-  <description><![CDATA[<b>Why this matters: Budget/licensing impact — verify renewal terms and forecast cost changes.</b><br/>(c) SANS Internet Storm Center. https://isc.sans.edu Creative Commons Attribution-Noncommercial 3.0 United States License.<br/><br/><b>Source:</b> SANS Internet Storm Center &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Budget/licensing impact — verify renewal terms and forecast cost changes.</b><br/>(c) SANS Internet Storm Center. https://isc.sans.edu Creative Commons Attribution-Noncommercial 3.0 United States License.<br/><br/><b>Source:</b> SANS Internet Storm Center &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 10h ago]]></description>
 </item>
 
 <item>
@@ -139,7 +161,7 @@ The attacker can then establish longer-term cloud access, register a device it c
   <pubDate>Thu, 06 Aug 2026 22:26:39 +0000</pubDate>
   <source>Unit 42</source>
   <description><![CDATA[<b>Why this matters: Supply chain risk — audit third-party dependencies and vendor access.</b><br/><p>Analysis of ChainDrop, an npm supply chain worm extracting GitHub Actions runner secrets and using Ethereum smart contracts for C2 routing.</p>
-<p>The post <a href="https://unit42.paloaltonetworks.com/chaindrop-npm-worm-analysis/">ChainDrop: Inside a Self-Propagating npm Worm</a> appeared first on <a href="https://unit42.paloaltonetworks.com">Unit 42</a>.</p><br/><br/><b>Source:</b> Unit 42 &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
+<p>The post <a href="https://unit42.paloaltonetworks.com/chaindrop-npm-worm-analysis/">ChainDrop: Inside a Self-Propagating npm Worm</a> appeared first on <a href="https://unit42.paloaltonetworks.com">Unit 42</a>.</p><br/><br/><b>Source:</b> Unit 42 &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 14h ago]]></description>
 </item>
 
 <item>
@@ -147,7 +169,7 @@ The attacker can then establish longer-term cloud access, register a device it c
   <link>https://www.wired.com/story/hackers-stalked-me-by-hijacking-a-smartwatch-for-kids/</link>
   <pubDate>Thu, 06 Aug 2026 21:35:00 +0000</pubDate>
   <source>Wired Security</source>
-  <description><![CDATA[<b>Why this matters: Supply chain risk — audit third-party dependencies and vendor access.</b><br/>Security researchers tracked and eavesdropped on a WIRED reporter using vulnerabilities in a pink plastic smartwatch. It’s just one piece of a deeply insecure supply chain of GPS-enabled gadgets.<br/><br/><b>Source:</b> Wired Security &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 14h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Supply chain risk — audit third-party dependencies and vendor access.</b><br/>Security researchers tracked and eavesdropped on a WIRED reporter using vulnerabilities in a pink plastic smartwatch. It’s just one piece of a deeply insecure supply chain of GPS-enabled gadgets.<br/><br/><b>Source:</b> Wired Security &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 15h ago]]></description>
 </item>
 
 <item>
@@ -155,7 +177,7 @@ The attacker can then establish longer-term cloud access, register a device it c
   <link>https://www.bleepingcomputer.com/news/security/swiss-government-sharepoint-breach-compromised-200-accounts/</link>
   <pubDate>Thu, 06 Aug 2026 18:14:19 +0000</pubDate>
   <source>BleepingComputer</source>
-  <description><![CDATA[<b>Why this matters: Potential data exposure — check monitoring and incident response readiness.</b><br/>Switzerland's federal IT office says hackers exploited vulnerabilities to breach its Microsoft SharePoint servers and compromised approximately 200 accounts. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 17h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Potential data exposure — check monitoring and incident response readiness.</b><br/>Switzerland's federal IT office says hackers exploited vulnerabilities to breach its Microsoft SharePoint servers and compromised approximately 200 accounts. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 18h ago]]></description>
 </item>
 
 <item>
@@ -163,7 +185,7 @@ The attacker can then establish longer-term cloud access, register a device it c
   <link>https://www.bleepingcomputer.com/news/security/new-tontou-cpu-attack-bypasses-spectre-v2-fixes-leaks-linux-password-hashes/</link>
   <pubDate>Thu, 06 Aug 2026 18:03:45 +0000</pubDate>
   <source>BleepingComputer</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Researchers found a way to bypass recent mitigations for Spectre v2 speculative execution side-channel attacks and developed an exploit to leak secrets from Linux machines. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 17h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Researchers found a way to bypass recent mitigations for Spectre v2 speculative execution side-channel attacks and developed an exploit to leak secrets from Linux machines. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 18h ago]]></description>
 </item>
 
 <item>
@@ -173,7 +195,7 @@ The attacker can then establish longer-term cloud access, register a device it c
   <source>The Hacker News</source>
   <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/>Zapscape, a new Linux kernel vulnerability, could allow an attacker with kernel privileges inside an L1 guest virtual machine (VM) to escape KVM isolation and execute code on the host. The risk applies when nested virtualization is exposed to untrusted guests.
 
-The flaw is tracked as&nbsp;CVE-2026-64561&nbsp;and affects KVM/x86's shadow memory management unit (MMU), which manages shadow page<br/><br/><b>Source:</b> The Hacker News &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 17h ago]]></description>
+The flaw is tracked as&nbsp;CVE-2026-64561&nbsp;and affects KVM/x86's shadow memory management unit (MMU), which manages shadow page<br/><br/><b>Source:</b> The Hacker News &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 18h ago]]></description>
 </item>
 
 <item>
@@ -185,7 +207,7 @@ The flaw is tracked as&nbsp;CVE-2026-64561&nbsp;and affects KVM/x86's shadow mem
 
 The security issues affect Cisco Catalyst SD-WAN Software, regardless of device configuration, and Cisco IOS XE Software when it is running in autonomous or controller mode.
 
-"These vulnerabilities were found<br/><br/><b>Source:</b> The Hacker News &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 18h ago]]></description>
+"These vulnerabilities were found<br/><br/><b>Source:</b> The Hacker News &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 19h ago]]></description>
 </item>
 
 <item>
@@ -195,7 +217,7 @@ The security issues affect Cisco Catalyst SD-WAN Software, regardless of device 
   <source>The Hacker News</source>
   <description><![CDATA[<b>Why this matters: Could impact sign-ins/MFA/Conditional Access — watch for login issues.</b><br/>An unprivileged Linux program can time a hardware interrupt to land in the gap between a processor sanitizing its branch predictor and the kernel using it, re-poisoning the predictor after the defense has run.
 
-MIT CSAIL researchers Daniël Trujillo and Mengjia Yan named the technique INTERRUPT INJECTION. On an AMD Zen 2 machine running Linux 6.14 with every default Spectre v2 mitigation on,<br/><br/><b>Source:</b> The Hacker News &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 19h ago]]></description>
+MIT CSAIL researchers Daniël Trujillo and Mengjia Yan named the technique INTERRUPT INJECTION. On an AMD Zen 2 machine running Linux 6.14 with every default Spectre v2 mitigation on,<br/><br/><b>Source:</b> The Hacker News &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 20h ago]]></description>
 </item>
 
 <item>
@@ -203,7 +225,7 @@ MIT CSAIL researchers Daniël Trujillo and Mengjia Yan named the technique INTER
   <link>https://www.bleepingcomputer.com/news/security/meta-ai-model-hacked-a-company-during-misconfigured-cyber-test/</link>
   <pubDate>Thu, 06 Aug 2026 16:11:39 +0000</pubDate>
   <source>BleepingComputer</source>
-  <description><![CDATA[<b>Why this matters: Potential data exposure — check monitoring and incident response readiness.</b><br/>Meta has become the latest AI company to confirm that one of its models hacked a real organization during cybersecurity testing, as similar incidents continue to emerge following OpenAI'sOpenAI's initial disclosure that its agents breached Hugging Face. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 19h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Potential data exposure — check monitoring and incident response readiness.</b><br/>Meta has become the latest AI company to confirm that one of its models hacked a real organization during cybersecurity testing, as similar incidents continue to emerge following OpenAI'sOpenAI's initial disclosure that its agents breached Hugging Face. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 20h ago]]></description>
 </item>
 
 <item>
@@ -215,7 +237,7 @@ MIT CSAIL researchers Daniël Trujillo and Mengjia Yan named the technique INTER
 
 This week runs on cheap leverage: exposed servers, recycled bugs, poisoned agent instructions, remote-access tools dressed as support software, and trusted defaults doing attackers a favor.
 
-Nothing here is especially mystical.<br/><br/><b>Source:</b> The Hacker News &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 20h ago]]></description>
+Nothing here is especially mystical.<br/><br/><b>Source:</b> The Hacker News &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 21h ago]]></description>
 </item>
 
 <item>
@@ -223,7 +245,7 @@ Nothing here is especially mystical.<br/><br/><b>Source:</b> The Hacker News &nb
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-68823</link>
   <pubDate>Thu, 06 Aug 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Exposed dangerous method or function in Azure Confidential Ledger allows an authorized attacker to execute code over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 21h ago]]></description>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Exposed dangerous method or function in Azure Confidential Ledger allows an authorized attacker to execute code over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 22h ago]]></description>
 </item>
 
 <item>
@@ -231,7 +253,7 @@ Nothing here is especially mystical.<br/><br/><b>Source:</b> The Hacker News &nb
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-50515</link>
   <pubDate>Thu, 06 Aug 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Deserialization of untrusted data in Azure Service Bus allows an authorized attacker to execute code over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 21h ago]]></description>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Deserialization of untrusted data in Azure Service Bus allows an authorized attacker to execute code over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 22h ago]]></description>
 </item>
 
 <item>
@@ -239,7 +261,7 @@ Nothing here is especially mystical.<br/><br/><b>Source:</b> The Hacker News &nb
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-63522</link>
   <pubDate>Thu, 06 Aug 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Incorrect permission assignment for critical resource in Azure SQL Database allows an authorized attacker to elevate privileges locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 21h ago]]></description>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Incorrect permission assignment for critical resource in Azure SQL Database allows an authorized attacker to elevate privileges locally.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 22h ago]]></description>
 </item>
 
 <item>
@@ -247,7 +269,7 @@ Nothing here is especially mystical.<br/><br/><b>Source:</b> The Hacker News &nb
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-62836</link>
   <pubDate>Thu, 06 Aug 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Improper restriction of communication channel to intended endpoints in Azure SQL Managed Instance allows an unauthorized attacker to elevate privileges over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 21h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Improper restriction of communication channel to intended endpoints in Azure SQL Managed Instance allows an unauthorized attacker to elevate privileges over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 22h ago]]></description>
 </item>
 
 <item>
@@ -255,7 +277,7 @@ Nothing here is especially mystical.<br/><br/><b>Source:</b> The Hacker News &nb
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-62896</link>
   <pubDate>Thu, 06 Aug 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Could impact sign-ins/MFA/Conditional Access — watch for login issues.</b><br/>Improper authentication in Microsoft Teams allows an authorized attacker to elevate privileges over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 21h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Could impact sign-ins/MFA/Conditional Access — watch for login issues.</b><br/>Improper authentication in Microsoft Teams allows an authorized attacker to elevate privileges over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 22h ago]]></description>
 </item>
 
 <item>
@@ -263,7 +285,7 @@ Nothing here is especially mystical.<br/><br/><b>Source:</b> The Hacker News &nb
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-65668</link>
   <pubDate>Thu, 06 Aug 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Improper access control in Microsoft Purview eDiscovery allows an authorized attacker to elevate privileges over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 21h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Improper access control in Microsoft Purview eDiscovery allows an authorized attacker to elevate privileges over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 22h ago]]></description>
 </item>
 
 <item>
@@ -271,7 +293,7 @@ Nothing here is especially mystical.<br/><br/><b>Source:</b> The Hacker News &nb
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-59118</link>
   <pubDate>Thu, 06 Aug 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Improper authorization in Microsoft Power Apps allows an unauthorized attacker to elevate privileges over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 21h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Improper authorization in Microsoft Power Apps allows an unauthorized attacker to elevate privileges over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 22h ago]]></description>
 </item>
 
 <item>
@@ -279,7 +301,7 @@ Nothing here is especially mystical.<br/><br/><b>Source:</b> The Hacker News &nb
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-50516</link>
   <pubDate>Thu, 06 Aug 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Could impact sign-ins/MFA/Conditional Access — watch for login issues.</b><br/>Missing authentication for critical function in Microsoft Azure Kubernetes Service allows an unauthorized attacker to elevate privileges over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 21h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Could impact sign-ins/MFA/Conditional Access — watch for login issues.</b><br/>Missing authentication for critical function in Microsoft Azure Kubernetes Service allows an unauthorized attacker to elevate privileges over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 22h ago]]></description>
 </item>
 
 <item>
@@ -287,7 +309,7 @@ Nothing here is especially mystical.<br/><br/><b>Source:</b> The Hacker News &nb
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-50481</link>
   <pubDate>Thu, 06 Aug 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Modification of assumed-immutable data (maid) in Azure Active Directory allows an authorized attacker to elevate privileges over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 21h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Modification of assumed-immutable data (maid) in Azure Active Directory allows an authorized attacker to elevate privileges over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 22h ago]]></description>
 </item>
 
 <item>
@@ -295,7 +317,7 @@ Nothing here is especially mystical.<br/><br/><b>Source:</b> The Hacker News &nb
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-62918</link>
   <pubDate>Thu, 06 Aug 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Improper verification of cryptographic signature in Microsoft Teams allows an unauthorized attacker to perform spoofing over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 21h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Improper verification of cryptographic signature in Microsoft Teams allows an unauthorized attacker to perform spoofing over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 22h ago]]></description>
 </item>
 
 <item>
@@ -303,7 +325,7 @@ Nothing here is especially mystical.<br/><br/><b>Source:</b> The Hacker News &nb
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-59115</link>
   <pubDate>Thu, 06 Aug 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Could impact sign-ins/MFA/Conditional Access — watch for login issues.</b><br/>'.../...//' in Microsoft Entra Provisioning Service (SyncFabric) allows an authorized attacker to elevate privileges over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 21h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Could impact sign-ins/MFA/Conditional Access — watch for login issues.</b><br/>'.../...//' in Microsoft Entra Provisioning Service (SyncFabric) allows an authorized attacker to elevate privileges over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 22h ago]]></description>
 </item>
 
 <item>
@@ -311,7 +333,7 @@ Nothing here is especially mystical.<br/><br/><b>Source:</b> The Hacker News &nb
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-49163</link>
   <pubDate>Thu, 06 Aug 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Improper limitation of a pathname to a restricted directory ('path traversal') in Application Insights Profiler allows an authorized attacker to elevate privileges over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 21h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Improper limitation of a pathname to a restricted directory ('path traversal') in Application Insights Profiler allows an authorized attacker to elevate privileges over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 22h ago]]></description>
 </item>
 
 <item>
@@ -319,7 +341,7 @@ Nothing here is especially mystical.<br/><br/><b>Source:</b> The Hacker News &nb
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-70332</link>
   <pubDate>Thu, 06 Aug 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Improper neutralization of input during web page generation ('cross-site scripting') in Microsoft Office SharePoint allows an unauthorized attacker to perform spoofing over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 21h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Improper neutralization of input during web page generation ('cross-site scripting') in Microsoft Office SharePoint allows an unauthorized attacker to perform spoofing over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 22h ago]]></description>
 </item>
 
 <item>
@@ -327,7 +349,7 @@ Nothing here is especially mystical.<br/><br/><b>Source:</b> The Hacker News &nb
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-56161</link>
   <pubDate>Thu, 06 Aug 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Improper access control in Azure Logic Apps allows an authorized attacker to disclose information over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 21h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Improper access control in Azure Logic Apps allows an authorized attacker to disclose information over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 22h ago]]></description>
 </item>
 
 <item>
@@ -335,7 +357,7 @@ Nothing here is especially mystical.<br/><br/><b>Source:</b> The Hacker News &nb
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-62830</link>
   <pubDate>Thu, 06 Aug 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Missing authorization in Azure SRE Agent allows an authorized attacker to elevate privileges over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 21h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Missing authorization in Azure SRE Agent allows an authorized attacker to elevate privileges over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 22h ago]]></description>
 </item>
 
 <item>
@@ -343,7 +365,7 @@ Nothing here is especially mystical.<br/><br/><b>Source:</b> The Hacker News &nb
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-65667</link>
   <pubDate>Thu, 06 Aug 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Missing authorization in Microsoft Teams allows an unauthorized attacker to elevate privileges over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 21h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Missing authorization in Microsoft Teams allows an unauthorized attacker to elevate privileges over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 22h ago]]></description>
 </item>
 
 <item>
@@ -351,7 +373,7 @@ Nothing here is especially mystical.<br/><br/><b>Source:</b> The Hacker News &nb
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-56162</link>
   <pubDate>Thu, 06 Aug 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Could impact sign-ins/MFA/Conditional Access — watch for login issues.</b><br/>Improper authentication in Azure SQL Database allows an unauthorized attacker to elevate privileges over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 21h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Could impact sign-ins/MFA/Conditional Access — watch for login issues.</b><br/>Improper authentication in Azure SQL Database allows an unauthorized attacker to elevate privileges over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 22h ago]]></description>
 </item>
 
 <item>
@@ -359,7 +381,7 @@ Nothing here is especially mystical.<br/><br/><b>Source:</b> The Hacker News &nb
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-62869</link>
   <pubDate>Thu, 06 Aug 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Could impact sign-ins/MFA/Conditional Access — watch for login issues.</b><br/>Insufficient verification of data authenticity in Azure Entra ID allows an authorized attacker to perform spoofing over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 21h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Could impact sign-ins/MFA/Conditional Access — watch for login issues.</b><br/>Insufficient verification of data authenticity in Azure Entra ID allows an authorized attacker to perform spoofing over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 22h ago]]></description>
 </item>
 
 <item>
@@ -367,7 +389,7 @@ Nothing here is especially mystical.<br/><br/><b>Source:</b> The Hacker News &nb
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-63508</link>
   <pubDate>Thu, 06 Aug 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Could impact sign-ins/MFA/Conditional Access — watch for login issues.</b><br/>Missing authentication for critical function in Microsoft Planetary Computer Pro allows an unauthorized attacker to elevate privileges over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 21h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Could impact sign-ins/MFA/Conditional Access — watch for login issues.</b><br/>Missing authentication for critical function in Microsoft Planetary Computer Pro allows an unauthorized attacker to elevate privileges over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 22h ago]]></description>
 </item>
 
 <item>
@@ -375,7 +397,7 @@ Nothing here is especially mystical.<br/><br/><b>Source:</b> The Hacker News &nb
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-62873</link>
   <pubDate>Thu, 06 Aug 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Improper verification of cryptographic signature in Microsoft 365 Admin Center allows an unauthorized attacker to elevate privileges over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 21h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Improper verification of cryptographic signature in Microsoft 365 Admin Center allows an unauthorized attacker to elevate privileges over a network.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 22h ago]]></description>
 </item>
 
 <item>
@@ -383,7 +405,7 @@ Nothing here is especially mystical.<br/><br/><b>Source:</b> The Hacker News &nb
   <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-55050</link>
   <pubDate>Thu, 06 Aug 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Acknowledgement Updated<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 21h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant change — confirm exposure and patch/mitigation status.</b><br/>Acknowledgement Updated<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 22h ago]]></description>
 </item>
 
 <item>
@@ -392,7 +414,7 @@ Nothing here is especially mystical.<br/><br/><b>Source:</b> The Hacker News &nb
   <pubDate>Thu, 06 Aug 2026 12:54:09 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><p>Zenity researchers reported the findings to Anthropic and OpenAI in late 2025 and early 2026, but they remain unpatched.</p>
-<p>The post <a href="https://www.securityweek.com/zero-click-ai-browser-hacking-claude-and-chatgpt-atlas-hijacked-via-emails-x-posts/">Zero-Click AI Browser Hacking: Claude and ChatGPT Atlas Hijacked via Emails, X Posts</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 22h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/zero-click-ai-browser-hacking-claude-and-chatgpt-atlas-hijacked-via-emails-x-posts/">Zero-Click AI Browser Hacking: Claude and ChatGPT Atlas Hijacked via Emails, X Posts</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
@@ -401,7 +423,7 @@ Nothing here is especially mystical.<br/><br/><b>Source:</b> The Hacker News &nb
   <pubDate>Thu, 06 Aug 2026 12:00:00 +0000</pubDate>
   <source>Tenable Blog</source>
   <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/><p>We spent 500+ hours and 40 billion tokens testing Anthropic’s Claude Mythos Preview for Project Glasswing. The takeaway: frontier AI won't run your code security program, but used well, it can make one even stronger.</p><div class="blog-see-also"><div class="col-sm-12"><h2><strong>Key takeaways</strong></h2><ol><li><strong>Frontier AI dramatically scales security testing.</strong> In one month, Tenable dedicated 11 security experts and more than 40 billion tokens testing Claude Mythos Preview across source code analysis, exploit creation, binary reverse engineering, threat modeling, and dynamic testing.<br />&nbsp;</li><li><strong>Human expertise turns frontier AI findings into real risk reduction.</strong> More findings don't automatically mean more risk. Mythos Preview surfaced a high volume of findings, but only a fraction proved to be true exposures once Tenable experts determined their reachability, exploitability, and whether existing controls already mitigated them.<br />&nbsp;</li><li><strong>Source code access is the defender's asymmetric advantage.</strong> Frontier AI is far more powerful when it can read the full source, and that visibility is something defenders have and outside attackers don't. Securing code repositories is more important than ever.<br />&nbsp;</li></ol></div></div><p>Ever since Anthropic introduced <a href="https://www.tenable.com/blog/claude-mythos-prepare-for-AI-cybersecurity-questions-from-your-board-of-directors" target="_blank">Claude Mythos Preview</a>, the security community has been buzzing with equal amounts of excitement, anxiety, and healthy skepticism.</p><p>After well over <a href="https://www.tenable.com/blog/testing-claude-mythos-preview-for-code-security-tenable" target="_blank">500 hours of rigorous testing</a> at the hands of Tenable security analysts, engineers, and researchers, we’re excited to share our assessment, even as we proceed with testing Claude Mythos 5 (more to come on that).</p><p>Here’s what Tenable learned from <a href="https://www.tenable.com/blog/testing-claude-mythos-preview-for-code-security-tenable" target="_blank">our month in the trenches with Mythos Preview</a>, and what it means for your organization’s security posture. Our headline finding: used well, frontier AI earns a real place in a modern code security program. It won't run the program on its own, but paired with the right harness and expert oversight, it makes a strong program measurably stronger.</p><h2>How Tenable is testing Claude Mythos Preview</h2><p>It’s important to clarify that we are not using <a href="https://www.tenable.com/cybersecurity-guide/principles/claude-mythos-preview" target="_blank">Claude Mythos Preview</a> in any Tenable products. The same restriction applies to all <a href="https://www.tenable.com/blog/anthropic-claude-mythos-tenable-joins-project-glasswing" target="_blank">Project Glasswing</a> participants: The model may be evaluated for research purposes, but it cannot be incorporated into commercial products.</p><p><strong>We evaluated the source code scanning, exploit creation, binary reverse engineering, threat model creation, and dynamic testing capabilities of Claude Mythos Preview.</strong> <strong>Tenable dedicated a team of experienced security engineers for the testing along with white-box source code analysis and a purpose-built testing harness (the set of prompts and tools that constrain and orchestrate a model across a multi-step task).</strong></p><p>Before evaluating Claude Mythos Preview, we built an independent testing harness. Our testing showed that the real power comes not from the model alone, but from the combination of the model, a purpose-built harness, rich context, and expert human oversight.&nbsp;</p><h2>Where Mythos and frontier AI fit alongside SAST, DAST, and SCA</h2><p>To understand where a frontier model like Claude Mythos Preview fits into your software security posture, it helps to compare Mythos directly to your existing stack of deterministic tools, including static application security testing (SAST), dynamic application security testing (DAST), and software composition analysis (SCA).&nbsp;</p><p>Deterministic tools rely on hard-coded rules and produce the same exact output for any given input. Non-deterministic tools, like frontier AI models and generative AI systems, use statistical probabilities to predict outcomes. Consequently, non-deterministic systems can yield different results across identical inputs.&nbsp;</p><p>The bottom line: Traditional, deterministic code security tools remain the core of an effective, audit- and compliance-ready program. <strong>Frontier AI models like Claude Mythos Preview provide additional capability for the creative, variance-tolerant layer where humans continue to review findings.</strong> In other words, it’s a powerful new arrow in the quiver with the potential to make your whole security arsenal more effective.</p><p><strong>Table 1: Traditional security scanning tools vs. Claude Mythos Preview&nbsp;</strong></p><table class="table"><tbody><tr><td><strong>Feature</strong></td><td><strong>Traditional tools (SAST, DAST, SCA)</strong></td><td><strong>Frontier AI models</strong></td></tr><tr><td><strong>Consistency</strong></td><td><strong>Deterministic</strong>: Produces identical, highly repeatable results every run. Perfect for enterprises with rigorous compliance requirements.</td><td><strong>Non-deterministic</strong>: Yielded as much as a 30% run-to-run variance in finding counts and severity rankings during Tenable’s testing.</td></tr><tr><td><strong>Operational cost</strong></td><td><strong>Low</strong>: Fast, cheap, and easily integrated into continuous <a href="https://www.tenable.com/cybersecurity-guide/learn/ci-cd-workflow-integration" target="_blank">CI/CD pipelines</a>.</td><td><strong>High</strong>: Expensive to validate raw, noisy outputs; best used for periodic testing.</td></tr><tr><td><strong>Strength</strong></td><td>Catching known vulnerabilities, patch-diffing, and maintaining compliance baselines.</td><td>Creative, exploratory “offensive” testing, threat modeling, and contextual code analysis.</td></tr></tbody></table><h2>Match the tool to the task: determinism for audit, frontier AI for exploration</h2><p>Frontier AI models, including Claude Mythos Preview, are fundamentally non-deterministic. If you run the exact same target through the exact same model on different days, the model will yield different results.</p><p>In Tenable’s testing, we observed Mythos outputting different issue counts <em>and</em> different severity rankings, despite using the exact same prompt. That variance is an asset for creative, exploratory work with an expert reviewing output, but it's the wrong fit as the backbone of a consistent, repeatable, audit-grade security or compliance program. For this reason, deterministic tooling remains core, though it will need to adapt to AI and integrate it in a meaningful way.</p><p>That adaptation isn't free. Before you fold a frontier model into a security program, three constraints shape where and how it earns its place:</p><ol><li><strong>The cost </strong>- The economics only work when you're deliberate about where you deploy it. The tokens required to run the model as a continuous scanning tool would be cost-prohibitive — in our estimation, costs could reach $500,000 per full-time employee (FTE) per year, based on an estimated one-month token usage of roughly $41,700 per FTE.&nbsp;</li><li><strong>The noise </strong>- In Tenable tests, model outputs (the findings) were noisy and required heavy validation. Consequently, if you’re going to use Claude Mythos Preview for source code scanning, you’ll want to feed the model’s high-quality findings into your existing static analysis and gating workflows. Without a validation pipeline working alongside the model, you’ll get buried in noise.&nbsp;</li><li><strong>The results </strong>- Claude Mythos Preview produced different outputs even when our inputs were the same. This kind of inconsistent model behavior breaks pipelines that need to run predictably at scale. What’s more, compliance requirements demand reproducible, defensible evidence. A model that produces different results each run won’t stand up to auditors.&nbsp;</li></ol><h2>The real costs of code security with frontier AI go beyond tokens</h2><p>When calculating the total cost of ownership (TCO) for frontier AI as code security tool, many organizations make the mistake of focusing exclusively on API and token costs.&nbsp;</p><p>While token costs can quickly add up, they still represent just one factor in the TCO equation. Because frontier models generate a high volume of noisy findings, your TCO model should include the cost to validate the findings, which includes the cost of the experienced security engineers required to handle the manual validation.&nbsp;</p><p><strong>TCO is why frontier AI works best as a targeted, high-value layer rather than a day-to-day security scanning engine.</strong> Run it against everything continuously and the costs quickly become prohibitive, quickly. Consider that just one of our security analysts used more than 10 billion tokens in a month of rigorous testing, which cost $41,700. Multiply that by 12 months, and you’ve got a nearly $500,000 annual run rate for just that one person.&nbsp;</p><h2>Frontier AI changes the scale of discovery, not the nature of source code flaws</h2><p>Some organizations are bracing for a new class of “Mythos-level” bugs. Based on our experience with Mythos, that’s the wrong worry. The model finds the same kinds of source code flaws a pen tester would, such as broken logic and memory corruption; it just finds far more of them, at much greater speed, and if appropriately prompted, can create the exploit. <strong>Claude Mythos hasn’t uncovered a new class of vulnerabilities; it’s amplified the speed and volume of findings.</strong></p><p>It’s important to remember that a potential finding is not the same as a validated exposure. A finding signals a <em>potential</em> issue. AI surfaces a large volume of findings, but <a href="https://www.tenable.com/products/tenable-one" target="_blank">security teams require context</a> about potential flaws in the source code — whether they’re reachable, exploitable, and the extent to which any existing security controls mitigate them — to validate and remediate the findings that do indeed create true exposure.&nbsp;</p><blockquote><p>In a world of AI-driven vulnerability discovery, the context, triage, validation, and prioritization work become much more important. Once you subtract what your existing tools already catch, what others have reported, and what isn’t actually reachable, the list worth acting on gets shorter. Your capacity to validate and fix is the constraint now, not discovery.</p></blockquote><h2>Source code access gives defenders a major advantage</h2><p>The immense power of frontier models in code security relies on “white-box” source code analysis. Source code access gives internal security teams the ultimate asymmetric advantage against threat actors. The deep source code visibility that supercharges an internal defender’s automated pipeline is exactly what an outside, black-box attacker lacks.&nbsp;</p><p>Consequently, protecting your source code repository has never been more vital. If an attacker gains access to your source code, they gain the keys to run their own highly optimized AI discovery engines against you.</p><h2>The bottom line: frontier AI shifts your edge from finding flaws to proving what matters</h2><p>Tenable testing confirmed Claude Mythos Preview can function as a highly capable pen-testing tool.&nbsp;</p><p>When combined with a purpose-built harness and the two things only a human defender has — source code access and the ability to validate findings live — Claude Mythos Preview can deliver powerful results. Give it a harness and an expert to drive it, and it becomes a genuine force multiplier; leave Mythos to run on its own and the output tends to be noisy, with many of the findings never making it to validation. Either way, frontier AI shifts the hard work from discovery to verification, prioritization, and remediation.</p><p>We continue to evaluate frontier AI models, including Mythos 5, to identify where they’ll serve customers best, and we look forward to sharing our ongoing findings in upcoming blogs.&nbsp;</p><h2>Learn more</h2><ul><li><a href="https://www.tenable.com/blog/testing-claude-mythos-preview-for-code-security-tenable">Inside Tenable’s first 30 days with Claude Mythos Preview</a></li><li><a href="https://www.tenable.com/cybersecurity-guide/principles/claude-mythos-preview">What is Claude Mythos Preview?</a></li><li><a href="https://www.tenable.com/blog/claude-mythos-prepare-for-AI-cybersecurity-questions-from-your-board-of-directors">Claude Mythos: Prepare for your board’s cybersecurity questions about the latest model from Anthropic</a></li><li><a href="https://www.tenable.com/blog/anthropic-claude-mythos-tenable-joins-project-glasswing">Tenable joins Anthropic’s Project Glasswing to advance AI-era cyber defense&nbsp;</a></li></ul>
-<img src="https://www.tenable.com/sites/default/files/images/articles/ai%20code%20security%20with%20claude%20mythos%20preview.png" /><br/><br/><b>Source:</b> Tenable Blog &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 23h ago]]></description>
+<img src="https://www.tenable.com/sites/default/files/images/articles/ai%20code%20security%20with%20claude%20mythos%20preview.png" /><br/><br/><b>Source:</b> Tenable Blog &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
@@ -410,7 +432,7 @@ Nothing here is especially mystical.<br/><br/><b>Source:</b> The Hacker News &nb
   <pubDate>Thu, 06 Aug 2026 12:00:00 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: Supply chain risk — audit third-party dependencies and vendor access.</b><br/><p>(Video) In this podcast, we share insights from Edna Conway, a recognized leader in cybersecurity and supply chain resilience with over 40 years of experience in the field. </p>
-<p>The post <a href="https://www.securityweek.com/podcast-compliance-wont-save-you-the-future-of-cyber-risk-with-edna-conway/">Podcast: Compliance Won’t Save You: The Future of Cyber Risk with Edna Conway</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 23h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/podcast-compliance-wont-save-you-the-future-of-cyber-risk-with-edna-conway/">Podcast: Compliance Won’t Save You: The Future of Cyber Risk with Edna Conway</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
@@ -602,7 +624,7 @@ The three most serious:
 <figcaption><em>The Agent Center dashboard in Tenable One</em></figcaption>
 </figure>
 <h2>The agentic AI harness under every routine</h2><p>None of what makes the routines safe is a property of the model. It comes from the harness Tenable One puts around any model or agent working in a customer environment.&nbsp;</p><p>The harness starts from a blunt assumption: models and agents are untrusted participants. Permissions, context boundaries, approval gates, validation, and auditability all sit outside the model, and a routine never reaches past the permissions of the person who created it.</p><p>You can see this today in Tenable Hexa AI. The objective resolves against Tenable’s Exposure Data Fabric — your real environment, priorities, and prior context — not the internet. Tenable Hexa AI picks capabilities so you never wire steps; the approval gate defines what runs; and a separate check validates every state change before it leaves the queue. The audit log makes it verifiable after the fact, and failures, fallbacks, model changes, and latency are the harness’s problem rather than your own.</p><p>This is why a proposal to write into your endpoint management tool is something you can reasonably approve at 8 AM. Access to a frontier model is not what makes agentic security work; everything around the model does. The Exposure Data Fabric makes the answers relevant to your environment, and the harness makes the actions taken against it trustworthy.</p><p>The model reasons. Tenable Hexa AI coordinates. Agents do the specialized work. The harness holds the boundary.</p><h2>How to get started with Tenable Hexa AI</h2><p>To begin automating exposure management with Tenable Hexa AI, follow these three simple steps:&nbsp;</p><ol><li><strong>Identify a repetitive task</strong> - Pick the job you are tired of starting.&nbsp;</li><li><strong>Define your objective and guardrails</strong> - Write down what you want Tenable Hexa AI to do and set the limits you would want if you were handing the routine to a new analyst.&nbsp;</li><li><strong>Set the cadence</strong> - Observe the first few runs of the routine to make sure it’s executing properly. When you’re ready, put the routine on a schedule.</li></ol><p>Delegating your first routine does more than save you a couple of hours. It gives you back nights and weekends while closing exposures in minutes.&nbsp;</p><h2><strong>Frequently asked questions (FAQs)</strong></h2><h3><strong>What is Tenable Hexa AI?</strong></h3><p>Tenable Hexa AI is an agentic security automation capability within Tenable One that automates vulnerability triage, asset scoping, endpoint patch deployment, and post-remediation verification across integrated tools like Jamf.</p><h3><strong>What are routines in Tenable Hexa AI?</strong></h3><p>Routines are intent-driven automations defined in natural language. They consist of an objective (what to accomplish), guardrails (operational constraints), and a schedule. Unlike traditional scripts, routines adapt dynamically to changes in your infrastructure.</p><h3><strong>How does Tenable Hexa AI prevent unauthorized changes to endpoints?</strong></h3><p>Tenable Hexa AI enforces human-in-the-loop approval gates before any changes are committed to endpoint tools. Furthermore, the <strong>Tenable One harness</strong> guarantees that a routine can never exceed the strict access permissions of the security professional who created it.</p><h3><strong>What is the Tenable One Exposure Data Fabric?</strong></h3><p>The Exposure Data Fabric is the underlying data architecture in Tenable One that provides real-time asset context, priorities, and environment data to Hexa AI. This ensures AI reasoning is anchored in actual enterprise context rather than external data.</p><h2>Learn more</h2><ul><li><a href="https://www.tenable.com/blog/hexa-ai-agentic-ai-for-exposure-management">Meet Tenable Hexa AI: Agentic AI for exposure management</a></li><li><a href="https://www.tenable.com/blog/implement-agentic-ai-in-cybersecurity-to-reduce-risk-tenable-hexa-ai" title="Implement agentic AI in cybersecurity with Tenable Hexa AI">Implement agentic AI in cybersecurity with Tenable Hexa AI</a></li><li><a href="https://www.tenable.com/blog/beating-the-mythos-clock-using-tenable-hexa-ai-custom-agents-for-automated-patching">Beating the Mythos clock: Automate patching with Tenable Hexa AI</a></li></ul>
-<img src="https://www.tenable.com/sites/default/files/images/articles/Automate%20exposure%20remediation%20with%20Tenable%20Hexa%20AI.png" /><br/><br/><b>Source:</b> Tenable Blog &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
+<img src="https://www.tenable.com/sites/default/files/images/articles/Automate%20exposure%20remediation%20with%20Tenable%20Hexa%20AI.png" /><br/><br/><b>Source:</b> Tenable Blog &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
 </item>
 
 <item>
@@ -710,23 +732,6 @@ According to Fortinet FortiGuard Labs, the supply chain attack has been ongoing 
   <source>Unit 42</source>
   <description><![CDATA[<b>Why this matters: Supply chain risk — audit third-party dependencies and vendor access.</b><br/><p>Frontier AI is reshaping vulnerability discovery. Learn how our NOVA system found 14,000+ unknown vulnerabilities across the open-source software supply chain.</p>
 <p>The post <a href="https://unit42.paloaltonetworks.com/frontier-ai-vulnerability-burst/">The Frontier AI Vulnerability Burst: Industrializing Autonomous Zero-Day Discovery in Open-Source Software</a> appeared first on <a href="https://unit42.paloaltonetworks.com">Unit 42</a>.</p><br/><br/><b>Source:</b> Unit 42 &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Almost Half of Malware Samples Communicate Direct to IP</title>
-  <link>https://unit42.paloaltonetworks.com/malware-bypass-dns-direct-to-ip/</link>
-  <pubDate>Tue, 04 Aug 2026 12:50:53 +0000</pubDate>
-  <source>Unit 42</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><p>Nearly half of C2 malware bypasses DNS by connecting directly to IP addresses. Zero trust IP enforcement secures networks against these threats.</p>
-<p>The post <a href="https://unit42.paloaltonetworks.com/malware-bypass-dns-direct-to-ip/">Almost Half of Malware Samples Communicate Direct to IP</a> appeared first on <a href="https://unit42.paloaltonetworks.com">Unit 42</a>.</p><br/><br/><b>Source:</b> Unit 42 &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
-</item>
-
-<item>
-  <title>🔴 Botnet Hunting for Vulnerabilities in Diagnostic Tools, (Tue, Aug 4th)</title>
-  <link>https://isc.sans.edu/diary/rss/33214</link>
-  <pubDate>Tue, 04 Aug 2026 12:46:19 +0000</pubDate>
-  <source>SANS Internet Storm Center</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><p>This morning, I noticed specific sources "hunting" for vulnerabilities in URLs that I haven&&#x23&#x3b;x26&#x3b;&#x23&#x3b;39&#x3b;t noticed before. All of these URLs appear to be associated with diagnostic tools:</p>&#xd;<br/><br/><b>Source:</b> SANS Internet Storm Center &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
 </item>
 
 </channel>
