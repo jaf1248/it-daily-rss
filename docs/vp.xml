@@ -3,8 +3,420 @@
 <channel>
   <title>Joe — VP of IT Briefing</title>
   <description>Leadership-focused IT risk, vendors, pricing, licensing, and industry context.</description>
-  <lastBuildDate>Fri, 07 Aug 2026 07:10:06 +0000</lastBuildDate>
+  <lastBuildDate>Fri, 07 Aug 2026 08:55:40 +0000</lastBuildDate>
   
+<item>
+  <title>🟠 Human oversight is still critical as AI patching tools miss security risks</title>
+  <link>https://www.csoonline.com/article/4206598/human-oversight-is-still-critical-as-ai-patching-tools-miss-security-risks.html</link>
+  <pubDate>Fri, 07 Aug 2026 08:50:54 +0000</pubDate>
+  <source>CSO Online</source>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<p class="wp-block-paragraph">AI-generated vulnerability patches still heavily depend on human review, particularly the ones involving security-sensitive code, according to a research.</p>
+
+
+
+<p class="wp-block-paragraph">Researchers from 1Password have disclosed an internal evaluation that found AI-generated fixes frequently overlook broader <a href="https://www.csoonline.com/article/4202381/risk-based-patching-is-the-future-ai-made-it-table-stakes.html" target="_blank">concerns</a> such as architectural intent, business requirements, security implications, and long-term maintainability, despite being syntactically correct.</p>
+
+
+
+<p class="wp-block-paragraph">“We studied what happens when Large Language Models (LLMs) generate vulnerability patches for recently disclosed, complex vulnerabilities,” said 1Password researcher <a href="https://www.linkedin.com/in/securingdev/" rel="noreferrer noopener" target="_blank">Keith Hoodlet</a> in a blog <a href="https://1password.com/blog/why-ai-generated-patches-still-require-human-review" rel="noreferrer noopener" target="_blank">post</a>. “Our data shows that LLMs produce Fix-Like Artifacts with Embedded Defects (FLAWED) 53.9% of the time when complex patches are required.”</p>
+
+
+
+<p class="wp-block-paragraph">The evaluation tested the AI-generated fixes across six recently disclosed CVEs, including CVE-2026-31431 (“<a href="https://www.csoonline.com/article/4169399/new-dirty-frag-exploit-targets-linux-kernel-for-root-access.html">Copy Fail</a>”), CVE-2026-34197 (<a href="https://www.csoonline.com/article/4157146/claude-uncovers-a-13%E2%80%91year%E2%80%91old-activemq-rce-bug-within-minutes.html">ActiveMQ RCE</a>), CVE-2026-8512, CVE-2026-45185 (EXIM RCE), CVE-2026-22738 (<a href="https://nvd.nist.gov/vuln/detail/cve-2026-22738">SpringAI SpEL RCE</a>), and the <a href="https://www.csoonline.com/article/4165470/max-severity-rce-flaw-found-in-google-gemini-cli.html">Gemini CLI RCE</a> (GHSA-wpqr-6v78-jr5g).</p>
+
+
+
+<p class="wp-block-paragraph">1Password reportedly evaluated 6080 patches generated using ChatGPT-5.5 and Claude Opus 4.8, two frontier AI coding models, and found that only a little over a quarter of the fixes fully remediated the flaw without altering application behavior.</p>
+
+
+
+<p class="wp-block-paragraph">“Patches that successfully resolved the vulnerability, but altered the application’s behavior in the process, occurred 20.1% of the time,” Hoodlet added.</p>
+
+
+
+<h2 class="wp-block-heading"><a></a>Fixing is not the same as securing</h2>
+
+
+
+<p class="wp-block-paragraph">Instead of simply checking whether the fixed code compiled or passed automated tests, 1Password said it reviewed every generated fix for complete elimination of the vulnerability, preservation of application behavior, and avoidance of new security risks.</p>
+
+
+
+<p class="wp-block-paragraph">While only 26% of the patches successfully fixed the vulnerability without introducing application changes, 49.3% failed to remove at least one exploitable attack path, 2.3% fixed the original vulnerability but introduced a new one, and 2.2% both failed to remediate the issue and created an additional security weakness.</p>
+
+
+
+<p class="wp-block-paragraph">The researchers also found that passing pre-defined tests can create deeper problems. More than one-third of the patches that initially appeared successful were classified as “fragile” because they simply blocked the proof-of-concept (POC) exploit used during testing instead of addressing the underlying root cause.</p>
+
+
+
+<p class="wp-block-paragraph">Hoodlet explained this with the example of the SpringAI CVE patches. Both GPT and Claude models were found generating patches that targeted specific characters from the input string used in the POC presented to them, leaving the root cause untouched.</p>
+
+
+
+<p class="wp-block-paragraph">“If the guarded code were to become reachable again by using alternative inputs, it would lead to the old vulnerability resurfacing in the software,” he noted.</p>
+
+
+
+<h2 class="wp-block-heading"><a></a>Human review remains the last security control</h2>
+
+
+
+<p class="wp-block-paragraph">1Password argues that these shortcomings stem from the contextual reasoning required to produce production-ready security fixes.</p>
+
+
+
+<p class="wp-block-paragraph">Anthropic was reached out to and reportedly recommended keeping humans in the loop. “Patch generation has outpaced patch verification, and the fix is to make verification execution-grounded rather than inspection-based, while keeping domain experts as the final reviewers at current model capabilities,” it was quoted as saying.</p>
+
+
+
+<p class="wp-block-paragraph">1Password also challenged the notion that AI-generated patches are effectively “free.” While the average patch-and-validation cycle cost approximately $2.11 using ChatGPT-5.5 and $2.81 using Claude Opus 4.8, Hoodlet argued that the real expense lies in validating whether those patches are secure enough for production.</p>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔴 What does a data breach cost? AI is a sizable factor</title>
+  <link>https://www.csoonline.com/article/567697/what-is-the-cost-of-a-data-breach-3.html</link>
+  <pubDate>Fri, 07 Aug 2026 08:25:00 +0000</pubDate>
+  <source>CSO Online</source>
+  <description><![CDATA[<b>Why this matters: Elevated ransomware risk — validate backups and endpoint defenses.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<p class="wp-block-paragraph">The financial impact of a data breach is substantial for any modern business, regardless of industry or size. <a href="https://www.ibm.com/reports/data-breach">IBM’s latest Cost of a Data Breach report</a> discovered that, from March 2025 to February 2026, the average cost of a <a href="https://www.csoonline.com/article/574289/twitters-mushrooming-data-breach-crisis-could-prove-costly.html">data breach</a> rose to $6 million, up 35% from $4.44 million a year earlier.</p>
+
+
+
+<p class="wp-block-paragraph">The 2026 report, conducted by Ponemon Institute and sponsored by IBM, is based on an analysis of data breaches experienced by 600 organizations globally.</p>
+
+
+
+<p class="wp-block-paragraph">According to the report, one in four malicious breaches were AI-enabled. Deepfake impersonation and AI-enabled malware made up the majority of these AI-assisted attacks.</p>
+
+
+
+<p class="wp-block-paragraph">The study found that AI and automation in security operations cut breach costs by an average of almost $2 million dollars. Despite that impact, one in four organizations have yet to adopt these tools in their security operations, the survey found.</p>
+
+
+
+<p class="wp-block-paragraph">In a follow-up study, more than half the organizations reported using agents for threat detection and containment but only 18% apply agents to vulnerability management. Three in four of the enterprises polled say that frontier AI threats are prompting them to rethink how agents are deployed across their security operations.</p>
+
+
+
+<p class="wp-block-paragraph">“AI is making attacks faster and cheaper, while breaches keep getting more expensive. When organizations have an extended gap between discovery and remediation, that imbalance shows up directly in breach costs,” says <strong>Suja Viswesan, VP of IBM Security Software</strong>.</p>
+
+
+
+<h2 class="wp-block-heading" id="ai-models-under-attack">AI models under attack</h2>
+
+
+
+<p class="wp-block-paragraph">One in five organizations reported a breach targeting AI models or applications. The most common causes were weaknesses in surrounding systems: compromised APIs, applications, or plug-ins (27%) and cloud misconfigurations affecting AI workloads (27%).</p>
+
+
+
+<p class="wp-block-paragraph">The vast majority of organizations suffering AI-related breaches lacked proper access controls, yet only 40% deployed access controls on their AI models and data.</p>
+
+
+
+<p class="wp-block-paragraph">Improving access controls on AI models is the most obvious security gap to close, according to Kayne McGladrey, a senior member of IEEE, CISSP-certified cybersecurity advisor, and former CISO of compliance automation vendor Hyperproof.</p>
+
+
+
+<p class="wp-block-paragraph">“Treat your models and their APIs like crown jewels,” says McGladrey. “If you wouldn’t expose your database to the public internet without identity and access controls, why would you do that for your AI model?”</p>
+
+
+
+<p class="wp-block-paragraph">Udaya Bhaskar Vemuri, senior application security analyst and DevSecOps professional, adds that organizations should also be “reviewing integrations and plug-ins, monitoring unusual activity, protecting sensitive data, and making sure every AI system has a clearly defined owner who is responsible for its security and oversight.”</p>
+
+
+
+<h2 class="wp-block-heading" id="prompt-criticality">Prompt criticality</h2>
+
+
+
+<p class="wp-block-paragraph">Beyond deepfakes and AI malware, <a href="https://www.csoonline.com/article/3850783/11-ways-cybercriminals-are-making-phishing-more-potent-than-ever.html">AI-driven phishing</a> and <a href="https://www.csoonline.com/article/4110008/top-cyber-threats-to-your-ai-systems-and-infrastructure.html">direct attacks on AI models</a>, such as prompt injection, are emerging as costly enterprise blind spots.</p>
+
+
+
+<p class="wp-block-paragraph">“The threat isn’t just external; unapproved employee use of AI applications introduces unmanaged vulnerabilities into corporate environments,” says Dray Agha, senior manager of security operations at managed detection and response firm Huntress.</p>
+
+
+
+<p class="wp-block-paragraph">CISOs must shift to proactive governance by embedding security into development workflows, managing exposures aggressively, and applying strict access controls to AI workloads, Agha advises.</p>
+
+
+
+<p class="wp-block-paragraph">Peter Garraghan, CSO and founder at AI security testing firm Mindgard, adds that blindly trusting in the effectiveness of AI security guardrails is fraught with risk.</p>
+
+
+
+<p class="wp-block-paragraph">“Research has demonstrated that existing guardrails currently have various blind spots, and that a defense in depth approach is required,” says Garraghan. “Attackers are constantly adapting, so organizations need to continuously test AI models and applications against realistic adversarial attacks to identify where protections fail.”</p>
+
+
+
+<p class="wp-block-paragraph">Garraghan adds: “By validating guardrails before and throughout deployment, CISOs can ensure AI systems are resilient enough to protect sensitive data, and user privacy as threats evolve.”</p>
+
+
+
+<p class="wp-block-paragraph">Attackers are compromising APIs, plug-ins, and cloud misconfigurations around models rather than defeating them, according to Ariel Parnes, co-founder and COO of cloud security vendor Mitiga.</p>
+
+
+
+<p class="wp-block-paragraph">“These attacks land in the telemetry of the cloud and identity environments, not in the model itself, so the defense is behavioral detection across everything the AI touches,” Parnes advises.</p>
+
+
+
+<h2 class="wp-block-heading" id="upping-the-ante">Upping the ante</h2>
+
+
+
+<p class="wp-block-paragraph">The abuse of AI tools by attackers doesn’t just mean enterprises are subject to more sophisticated attacks. It also means that these attacks unfold more quickly.</p>
+
+
+
+<p class="wp-block-paragraph">“Organizations need to respond with the same level of automation, but with strong guardrails,” says John-Paul Cunningham, CISO at identity security vendor Silverfort. “AI can improve the speed of cyber defense, but only if organizations build governance and accountability into those systems from the start.”</p>
+
+
+
+<h2 class="wp-block-heading" id="regional-costs">Regional costs</h2>
+
+
+
+<p class="wp-block-paragraph">Average breach costs in the US reached a record $11.5 million, an 11% increase over last year and nearly double the global average.</p>
+
+
+
+<p class="wp-block-paragraph">This rise was driven in part by steeper regulatory penalties and higher business costs, according to the IBM-sponsored study.</p>
+
+
+
+<p class="wp-block-paragraph">The Middle East, which considered Saudi Arabia and the United Arab Emirates for the report, was No. 2 of the 16 countries and regions surveyed, at $8 million.</p>
+
+
+
+<p class="wp-block-paragraph">Canada ($5.2 million) and the UK ($4.17 million) remain in the top 10 hardest hit, with ASEAN or Association of Southeast Asian Nations ($4.12 million), <a href="https://www.csoonline.com/article/1309403/australian-government-back-on-top-5-sectors-with-most-reported-data-breaches.html">Australia</a> ($2.96 million), and India ($2.79 million) among the top 15.</p>
+
+
+
+<p class="wp-block-paragraph">Phishing topped initial attack vectors and led to the costliest breaches. Social engineering, such as impersonating help desk staff, was used in 13% of attacks while voice and SMS phishing featured in 17% of attacks.</p>
+
+
+
+<h2 class="wp-block-heading" id="breaches-by-industry">Breaches by industry</h2>
+
+
+
+<p class="wp-block-paragraph">Healthcare remains the industry hit with the highest average costs per breach at $6.64 million despite a drop from $7.42 million last year.</p>
+
+
+
+<p class="wp-block-paragraph">Attackers continue to value and target the industry’s patient personal identification information (PII), which can be used for identity theft, insurance fraud, and other financial crimes.</p>
+
+
+
+<p class="wp-block-paragraph">The mean time organizations took to identify and contain a breach rose to 247 days, a slight 2.5% year-on-year increase that reversed a five-year decline. “New threats from AI-driven attacks are challenging even the quickest response times,” the IBM-sponsored study notes.</p>
+
+
+
+<p class="wp-block-paragraph"><strong>Average breach cost by industry</strong></p>
+
+
+
+<figure class="wp-block-table"><div class="overflow-table-wrapper"><table class="has-fixed-layout"><tbody><tr><td><strong>Industry</strong></td><td><strong>2026</strong></td><td><strong>2025</strong></td><td><strong>Change</strong></td></tr><tr><td>Healthcare</td><td>$6.64M</td><td>$7.42M</td><td>-11%</td></tr><tr><td>Financial</td><td>$6.29M</td><td>$5.56M</td><td>+13%</td></tr><tr><td>Industrial</td><td>$5.50M</td><td>$5.00M</td><td>+10%</td></tr><tr><td>Technology</td><td>$5.50M</td><td>$4.79M</td><td>+15%</td></tr><tr><td>Entertainment</td><td>$5.38M</td><td>$4.43M</td><td>+21%</td></tr><tr><td>Pharmaceuticals</td><td>$5.25M</td><td>$4.61M</td><td>+13%</td></tr><tr><td>Energy</td><td>$5.24M</td><td>$4.83M</td><td>+8%</td></tr><tr><td>Professional services</td><td>$5.08M</td><td>$4.56M</td><td>+11%</td></tr><tr><td>Communications</td><td>$4.71M</td><td>$3.75M</td><td>+26%</td></tr><tr><td>Transportation</td><td>$4.50M</td><td>$3.98M</td><td>+13%</td></tr></tbody></table> </div></figure>
+
+
+
+<h2 class="wp-block-heading" id="breach-cost-variables">Breach cost variables</h2>
+
+
+
+<p class="wp-block-paragraph">While industry averages provide benchmarks, calculating the true, final cost of a specific data breach is notoriously difficult and relies heavily on forecasting.</p>
+
+
+
+<p class="wp-block-paragraph">“Immediate technical costs are quantifiable, but devastating long-term impacts like reputational damage, lost business, and regulatory fines are intangibles, making total breach cost figures informed estimates rather than exact science,” says Huntress’ Agha.</p>
+
+
+
+<p class="wp-block-paragraph">Several experts quizzed by CSO named the cybersecurity skills gap, supply chain vulnerabilities, and the escalating threat landscape as the three main factors in making breaches more expensive and harder to manage.</p>
+
+
+
+<p class="wp-block-paragraph">AJ Thompson, chief commercial officer at IT consultancy Northdoor, who sits on IBM’s Worldwide Security Advisory Council advising on data access and security, says the “bigger cost driver is still ‘how fast you spot a breach’ rather than the sophistication of an attack.”</p>
+
+
+
+<p class="wp-block-paragraph">“A shortage of experienced security staff and patchy visibility into supply chain and third-party risk both stretch out that detection window, and every extra week unnoticed adds to the bill,” Thompson adds.</p>
+
+
+
+<h2 class="wp-block-heading"><a></a>Reputational damage remains a key cost of being breached</h2>
+
+
+
+<p class="wp-block-paragraph">In many ways immeasurable, <a href="https://www.csoonline.com/article/571857/the-emotional-stages-of-a-data-breach-how-to-deal-with-panic-anger-and-guilt.html">reputational damage</a> remains among the most significant costs in the wake of a breach. “Ultimately, customer trust is very easy to break, and very difficult to build,” <a href="https://www.forrester.com/analyst-bio/allie-mellen/BIO16084">Allie Mellen</a>, senior analyst at Forrester, tells CSO.</p>
+
+
+
+<p class="wp-block-paragraph"><a href="https://www.linkedin.com/in/businessvalue/">Bob Dutile</a>, chief commercial officer at UST, agrees: “The cost of a data breach is typically realized in relative competitive change in the marketplace. Companies find that their brand does not command the same price premium, customer conversion costs are higher, and market share is lost. For a public company, the near-term assessment of the cost impact is reflected in stock price movement.”</p>
+
+
+
+<p class="wp-block-paragraph">According to Dutile, research shows that between $8 million and $10 million is a good planning number in the US for a midsize business facing a modest breach of under 250,000 records. About a third of that cost will be loss of business due to reputation damage.</p>
+
+
+
+<p class="wp-block-paragraph">How a company responds to and communicates a breach can have a large bearing on that reputational impact, Forrester’s Mellen notes. “Understanding how to maintain trust with your consumers and customers is really critical here,” she adds. “There are ways to do this, especially around building transparency and using empathy, which can make a huge difference in how your customers perceive you after a breach. If you try to sweep it under the rug or hide it, then that will truly affect their trust in you far more than the breach alone.”</p>
+
+
+
+<h2 class="wp-block-heading" id="severe-business-downtime-can-cost-millions">Severe business downtime can cost millions</h2>
+
+
+
+<p class="wp-block-paragraph">Business downtime can also be significantly costly for a breached organization, depending on the level and extent of the downtime and how technology-dependent the firm is.</p>
+
+
+
+<p class="wp-block-paragraph">Nearly all the organizations studied suffered operational disruption, taking an average of 100 days to recover from a security incident.</p>
+
+
+
+<p class="wp-block-paragraph"><a href="https://heretoserve.org/team/jason-hicks/">Jason Hicks</a>, field CISO at Coalfire, tells CSO: “Often a breach is not going to take a company completely offline, but it can happen. The more critical systems that are taken down, the more significant the cost.”</p>
+
+
+
+<p class="wp-block-paragraph">Manufacturing tends to have the best metrics around this, as it’s relatively simple to measure the cost per minute if an assembly line is down, Hicks says. “This can translate into millions of dollars a day for a large manufacturing company. This can be more nebulous for other industry verticals, but there are models to get a reasonable feel that can be applied to each vertical.”</p>
+
+
+
+<h2 class="wp-block-heading" id="regulation-and-litigation-add-to-data-breach-costs">Regulation and litigation add to data breach costs</h2>
+
+
+
+<p class="wp-block-paragraph">Increasingly strict <a href="https://www.csoonline.com/article/573561/instagram-faces-402-million-fine-for-alleged-mishandling-of-childrens-data.html">data protection and privacy laws</a> along with litigation are seeing a growing number of companies issued large fines, paying hefty settlements, and stumping up for legal fees following data breaches and non-compliance.</p>
+
+
+
+<p class="wp-block-paragraph">“Regulated industries suffer not only the immediate cost of responding to, containing, and remediating vulnerabilities but also the long-term effects of additional penalties from their regulatory bodies and legal settlements,” Nick says. Highly regulated industries, such as healthcare and financial services, typically run one and two in order of cost per breach because they will pay more non-compliance fines than others, he adds.</p>
+
+
+
+<p class="wp-block-paragraph">“Investigation and adjudication often take years for the victim organization to reach a monetary settlement with affected parties.” <a href="https://www.csoonline.com/article/574681/paypal-sued-for-negligence-in-data-breach-that-affected-35000-users.html">Legal costs</a> are one of the largest expenditures organizations face in data breaches, Nick states. “Organizations rarely have the legal and privacy expertise in-house. To ensure compliance, they must hire outside counsel to lead their reporting.”</p>
+
+
+
+<h2 class="wp-block-heading" id="the-role-of-cyber-insurance">The role of cyber insurance</h2>
+
+
+
+<p class="wp-block-paragraph"><a href="https://www.csoonline.com/article/571703/cyber-insurance-explained.html">Cyber insurance</a> is one way that companies mitigate the cost risks of breaches. Sharp increases in cyber insurance premiums <a href="https://www.csoonline.com/article/3537205/cyber-insurance-price-hikes-stabilize-as-insurers-expect-more-from-cisos.html">have been stabilizing of late</a>, but even organizations covered by insurance can expect to dole out extra cash to make good after a breach. One definite cost hit will be a hike in their premiums, Guidehouse’s Nick says.</p>
+
+
+
+<p class="wp-block-paragraph">“Some organizations have reported post-breach increases in premiums of approximately 200%,” he adds.</p>
+
+
+
+<p class="wp-block-paragraph">Insurers are also implementing more coverage limitations, meaning that even with a policy in place, businesses could find themselves financially responsible for certain breach-related costs.</p>
+
+
+
+<p class="wp-block-paragraph">In fact, Forrester’s Mellen says any notion that policies will allow organizations to fully recover financially from a cyberattack is folly. “In reality, it’s not going to cover all of the costs associated with any type of cyberattack, and we see some insurance firms not even covering ransomware at this point as part of their payouts,” she adds.</p>
+
+
+
+<p class="wp-block-paragraph">Another factor to consider is that cyber insurance providers typically have a list of approved service providers such as lawyers and forensics firms, Hicks says.</p>
+
+
+
+<p class="wp-block-paragraph">“If your preferred provider is not on their list, you may have to work with them to get them included, or potentially have to change providers. This can be costly, as firms are often leveraging their existing service providers to secure the maximum discounts based on the volume of work done with the partners,” Hicks says.</p>
+
+
+
+<h2 class="wp-block-heading" id="ransomware-extortion-on-the-rise">Ransomware extortion on the rise</h2>
+
+
+
+<p class="wp-block-paragraph">Reported ransomware incidents rose in the last 12 months compared to the year prior (39% vs. 34%) as attackers have abused AI technologies to automate and scale their attacks.</p>
+
+
+
+<p class="wp-block-paragraph">While disrupting operations through encrypting<strong> </strong>remains a key tactic (23%), attackers are shifting to higher-impact pressure methods, such as threatening to leak stolen data (a common feature of so-called double extortion attacks).</p>
+
+
+
+<h2 class="wp-block-heading" id="insufficient-security-staffing-leads-to-higher-breach-costs">Insufficient security staffing leads to higher breach costs</h2>
+
+
+
+<p class="wp-block-paragraph">According to IBM’s latest report, the security skills shortage is one of the biggest data breach cost amplifiers, with the average additional cost of data breach due to cyber skills shortage pegged at $180,000.</p>
+
+
+
+<p class="wp-block-paragraph">If insufficient security staff equates to greater data breach costs, organizations should heed Mellen’s warning about the impact a poorly handled data breach can have on employees.</p>
+
+
+
+<p class="wp-block-paragraph">“If they don’t feel like the organization is able to protect them or customers in the event of a breach, or that they blame their employees for a breach, then they’re likely going to start looking for jobs elsewhere because it creates a bit of a hostile environment for them,” she says. “It is very important for organizations to recognize that they need to accept responsibility and protect both their employees and their customers.”</p>
+
+
+
+<p class="wp-block-paragraph">Taking a DevSecOps approach to software development was the No. 1 factor that reduced breach costs, according to the report, ahead of use of identity and access management. Running key lifecycle management tools rounded out the top three factors.</p>
+
+
+
+<p class="wp-block-paragraph">Security incidents involving <a href="https://www.csoonline.com/article/3964282/cisos-no-closer-to-containing-shadow-ais-skyrocketing-data-risks.html">shadow or unsanctioned use of AI tools</a> more than doubled to 43% this year compared to 20% in 2025. Shadow AI is starting to rival supply chain breaches and security system complexity as a leading factor in exacerbating breach costs, according to the report.</p>
+
+
+
+<h2 class="wp-block-heading"><a></a>Preparedness is key to managing data breach costs</h2>
+
+
+
+<p class="wp-block-paragraph">No matter the specific costs involved, experts agree that preparedness is key to mitigating the financial repercussions of a breach.</p>
+
+
+
+<p class="wp-block-paragraph">“Faster incident response continues to be a clear driver for lowering the cost of a breach,” UST’s Dutile says. “The worst losses are those that go undetected for an extended time or have a slow or ineffective response.”</p>
+
+
+
+<p class="wp-block-paragraph">To that end, more than half of organizations surveyed say they plan to invest in AI security and governance tools post-breach, an 88% increase from last year and a reaction to concerns over frontier AI model threats.</p>
+
+
+
+<p class="wp-block-paragraph">Modern cybersecurity requires a post-breach mindset which understands that, eventually, a successful data breach is going to occur, Forrester’s Mellen adds.</p>
+
+
+
+<p class="wp-block-paragraph">“Operating under those conditions, you need to figure out how you’re going to handle that and build your resiliency to respond better and faster. This isn’t just about the security function either, and it needs to be spread across an organization, considering what marketing is going to do, what sales is going to do, etc. — how, as a business, you can demonstrate you value your customers and that you want to make it right as quickly and effectively as possible,” she says.</p>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Sources: up to five people tied to US Cyber Command died by suicide from early June to early July 2026, prompting it to flag a potential suicide cluster (Bloomberg)</title>
+  <link>https://www.techmeme.com/260807/p4#a260807p4</link>
+  <pubDate>Fri, 07 Aug 2026 08:05:02 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.bloomberg.com/news/articles/2026-08-06/us-military-s-cyber-command-unit-grapples-with-cluster-of-deaths-by-suicide?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc4NjA0MjQzNCwiZXhwIjoxNzg2NjQ3MjM0LCJhcnRpY2xlSWQiOiJUSjlGTTNUOTZPU0cwMCIsImJjb25uZWN0SWQiOiI0OEFDOEE5MkEwNTM0MkQ4OEIyRjkwQjhDMTgzMTdDMyJ9.m-IAuV3sebL_WR3AKvma_4KEcsUWnjiZf5cmAI_i3L8"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260807/i4.jpg" vspace="4" /></a>
+<p><a href="https://www.techmeme.com/260807/p4#a260807p4" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="https://www.bloomberg.com/">Bloomberg</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/articles/2026-08-06/us-military-s-cyber-command-unit-grapples-with-cluster-of-deaths-by-suicide?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc4NjA0MjQzNCwiZXhwIjoxNzg2NjQ3MjM0LCJhcnRpY2xlSWQiOiJUSjlGTTNUOTZPU0cwMCIsImJjb25uZWN0SWQiOiI0OEFDOEE5MkEwNTM0MkQ4OEIyRjkwQjhDMTgzMTdDMyJ9.m-IAuV3sebL_WR3AKvma_4KEcsUWnjiZf5cmAI_i3L8">Sources: up to five people tied to US Cyber Command died by suicide from early June to early July 2026, prompting it to flag a potential suicide cluster</a></b></span>&nbsp; &mdash;&nbsp; The US military's cyberwarfare unit is scrutinizing an unusually high number of deaths by suicide among personnel over a month-long period this summer &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</item>
+
 <item>
   <title>🔵 Filing: ex-a16z partner Bryan Kim is forming venture firm Mido Capital; sources: he plans to raise ~$100M for a fund backing early-stage AI and other startups (Yuliya Chernova/Wall Street Journal)</title>
   <link>https://www.techmeme.com/260807/p3#a260807p3</link>
@@ -12,7 +424,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.wsj.com/pro/venture-capital/former-andreessen-horowitz-partner-targets-100-million-new-fund-29e24438?st=7NLRyz&amp;reflink=desktopwebshare_permalink"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260807/i3.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260807/p3#a260807p3" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Yuliya Chernova / <a href="https://www.wsj.com/">Wall Street Journal</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.wsj.com/pro/venture-capital/former-andreessen-horowitz-partner-targets-100-million-new-fund-29e24438?st=7NLRyz&amp;reflink=desktopwebshare_permalink">Filing: ex-a16z partner Bryan Kim is forming venture firm Mido Capital; sources: he plans to raise ~$100M for a fund backing early-stage AI and other startups</a></b></span>&nbsp; &mdash;&nbsp; Bryan Kim, who invested in consumer tech and AI startups at Andreessen, is creating his own firm, Mido Capital Bryan Kim &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.wsj.com/pro/venture-capital/former-andreessen-horowitz-partner-targets-100-million-new-fund-29e24438?st=7NLRyz&amp;reflink=desktopwebshare_permalink">Filing: ex-a16z partner Bryan Kim is forming venture firm Mido Capital; sources: he plans to raise ~$100M for a fund backing early-stage AI and other startups</a></b></span>&nbsp; &mdash;&nbsp; Bryan Kim, who invested in consumer tech and AI startups at Andreessen, is creating his own firm, Mido Capital Bryan Kim &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
 </item>
 
 <item>
@@ -22,7 +434,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.ft.com/content/9b8383b1-a28d-4940-8c4e-2f0cd21556ef"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260807/i2.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260807/p2#a260807p2" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="https://www.ft.com/">Financial Times</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.ft.com/content/9b8383b1-a28d-4940-8c4e-2f0cd21556ef">Sources: ByteDance is pretraining an AI model with up to 10T parameters, roughly 3x larger than Kimi K3 and larger than the 8T estimate for Anthropic's Mythos 5</a></b></span>&nbsp; &mdash;&nbsp; TikTok owner training a model three times larger than Moonshot's Kimi K3&nbsp; &mdash;&nbsp; ByteDance is training an AI model that could approach &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.ft.com/content/9b8383b1-a28d-4940-8c4e-2f0cd21556ef">Sources: ByteDance is pretraining an AI model with up to 10T parameters, roughly 3x larger than Kimi K3 and larger than the 8T estimate for Anthropic's Mythos 5</a></b></span>&nbsp; &mdash;&nbsp; TikTok owner training a model three times larger than Moonshot's Kimi K3&nbsp; &mdash;&nbsp; ByteDance is training an AI model that could approach &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
 </item>
 
 <item>
@@ -32,7 +444,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.bloomberg.com/news/articles/2026-08-06/trump-could-net-big-tax-windfall-in-crypto-bill-divestiture-plan"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260807/i1.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260807/p1#a260807p1" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="https://www.bloomberg.com/">Bloomberg</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/articles/2026-08-06/trump-could-net-big-tax-windfall-in-crypto-bill-divestiture-plan">Sources: an addendum to the bipartisan Clarity Act would force President Trump to divest from crypto businesses, letting him defer paying taxes on the gains</a></b></span>&nbsp; &mdash;&nbsp; The bipartisan ethics proposal senators have pitched to President Donald Trump to get landmark crypto legislation over the line &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/articles/2026-08-06/trump-could-net-big-tax-windfall-in-crypto-bill-divestiture-plan">Sources: an addendum to the bipartisan Clarity Act would force President Trump to divest from crypto businesses, letting him defer paying taxes on the gains</a></b></span>&nbsp; &mdash;&nbsp; The bipartisan ethics proposal senators have pitched to President Donald Trump to get landmark crypto legislation over the line &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
 </item>
 
 <item>
@@ -42,7 +454,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.reuters.com/business/retail-consumer/alibaba-plans-charge-big-users-its-next-open-source-ai-model-sources-say-2026-08-07/"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260806/i59.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260806/p59#a260806p59" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="http://www.reuters.com/">Reuters</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.reuters.com/business/retail-consumer/alibaba-plans-charge-big-users-its-next-open-source-ai-model-sources-say-2026-08-07/">Sources: Alibaba plans to ask heavy commercial users of its next Qwen open model for a share of revenue; Moonshot's Kimi K3 requires up to a 30% revenue share</a></b></span>&nbsp; &mdash;&nbsp; Chinese technology giant Alibaba (9988.HK) plans to ask major users of the next version of its Qwen open-source AI model for a share &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.reuters.com/business/retail-consumer/alibaba-plans-charge-big-users-its-next-open-source-ai-model-sources-say-2026-08-07/">Sources: Alibaba plans to ask heavy commercial users of its next Qwen open model for a share of revenue; Moonshot's Kimi K3 requires up to a 30% revenue share</a></b></span>&nbsp; &mdash;&nbsp; Chinese technology giant Alibaba (9988.HK) plans to ask major users of the next version of its Qwen open-source AI model for a share &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
@@ -195,7 +607,7 @@
 
 
 <p class="wp-block-paragraph">Ultimately, he said, vendors who free IT from having to independently assemble the pieces of their own AI implementations, and who assist them with answers to AI-specific questions, “will gain advantage over vendors that aren’t looking at the bigger picture.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 8h ago]]></description>
 </item>
 
 <item>
@@ -205,7 +617,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.bloomberg.com/news/articles/2026-08-06/alphabet-returns-to-bond-market-amid-ai-spending-worries"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260806/i54.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260806/p54#a260806p54" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="https://www.bloomberg.com/">Bloomberg</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/articles/2026-08-06/alphabet-returns-to-bond-market-amid-ai-spending-worries">Alphabet raises $25B in an investment-grade bond sale; sources say it attracted ~$115B of peak demand and that Alphabet plans to issue US debt twice per year</a></b></span>&nbsp; &mdash;&nbsp; Alphabet Inc. sold $25 billion of investment-grade bonds after generous yield payouts helped secure one of the year's largest order books for AI-related debt.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/articles/2026-08-06/alphabet-returns-to-bond-market-amid-ai-spending-worries">Alphabet raises $25B in an investment-grade bond sale; sources say it attracted ~$115B of peak demand and that Alphabet plans to issue US debt twice per year</a></b></span>&nbsp; &mdash;&nbsp; Alphabet Inc. sold $25 billion of investment-grade bonds after generous yield payouts helped secure one of the year's largest order books for AI-related debt.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
 </item>
 
 <item>
@@ -215,17 +627,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.theinformation.com/articles/canva-hits-ai-speedbump-costs-chatgpt-competition"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260806/i51.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260806/p51#a260806p51" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="https://www.theinformation.com/">The Information</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.theinformation.com/articles/canva-hits-ai-speedbump-costs-chatgpt-competition">Sources: Canva cut its revenue growth forecast as popular new AI features drove up costs, forced it to slow their rollout, and more Canva users moved to ChatGPT</a></b></span>&nbsp; &mdash;&nbsp; Executives at Canva, the design software app with more than 200 million users, had high hopes for a rollout of AI tools that marked &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Cloudflare reports Q2 revenue up 36% YoY to $696.1M, above $665M est., and forecasts Q3 revenue above estimates; NET jumps 17%+ after hours (Angela Palumbo/Barron&#x27;s Online)</title>
-  <link>https://www.techmeme.com/260806/p50#a260806p50</link>
-  <pubDate>Thu, 06 Aug 2026 21:45:57 +0000</pubDate>
-  <source>Techmeme</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.barrons.com/articles/cloudflare-stock-price-earnings-56cdd8b5"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260806/i50.jpg" vspace="4" /></a>
-<p><a href="https://www.techmeme.com/260806/p50#a260806p50" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Angela Palumbo / <a href="http://online.barrons.com/public/main/">Barron's Online</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.barrons.com/articles/cloudflare-stock-price-earnings-56cdd8b5">Cloudflare reports Q2 revenue up 36% YoY to $696.1M, above $665M est., and forecasts Q3 revenue above estimates; NET jumps 17%+ after hours</a></b></span>&nbsp; &mdash;&nbsp; Choose Barron's as a preferred source of financial news&nbsp; &mdash;&nbsp; Key Points&nbsp; &mdash;&nbsp; Cloudflare stock was climbing Thursday night after the company reported better &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.theinformation.com/articles/canva-hits-ai-speedbump-costs-chatgpt-competition">Sources: Canva cut its revenue growth forecast as popular new AI features drove up costs, forced it to slow their rollout, and more Canva users moved to ChatGPT</a></b></span>&nbsp; &mdash;&nbsp; Executives at Canva, the design software app with more than 200 million users, had high hopes for a rollout of AI tools that marked &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 10h ago]]></description>
 </item>
 
 <item>
@@ -404,7 +806,7 @@
 
 
 <p class="wp-block-paragraph">Explore how organizations are operationalizing exposure management through CTEM by <a href="https://horizon3.ai/downloads/whitepapers/operationalizing-ctem-practical-playbook/" rel="noreferrer noopener" target="_blank">downloading</a> the “<a href="https://horizon3.ai/downloads/whitepapers/operationalizing-ctem-practical-playbook/" rel="noreferrer noopener" target="_blank"><em>Operationalizing CTEM: A Practical Playbook for Continuous Threat Exposure Management.”</em> </a>You’ll learn how leading teams are moving beyond visibility and building programs focused on measurable exposure reduction. </p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 11h ago]]></description>
 </item>
 
 <item>
@@ -412,7 +814,7 @@
   <link>https://www.theregister.com/ai-and-ml/2026/08/06/ai-struggles-to-patch-vulns-without-adult-supervision/5284319</link>
   <pubDate>Thu, 06 Aug 2026 19:04:30 +0000</pubDate>
   <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Left alone, autonomous fixes often fail to fully remediate flaws<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 12h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Left alone, autonomous fixes often fail to fully remediate flaws<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
 </item>
 
 <item>
@@ -565,7 +967,7 @@
 
 
 <p class="wp-block-paragraph">“A lot of networks are vulnerable to this, and you can’t always rely on the Layer 2 isolations that are in place,” Stagg said. “When you’re relying on historical design choices, those threat models might not be the same now as they were back then. It’s important to look at those design assumptions and see if there are any updates that might be necessary based on the new threat models.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 12h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 14h ago]]></description>
 </item>
 
 <item>
@@ -573,7 +975,7 @@
   <link>https://www.theregister.com/devops/2026/08/06/latest-github-outage-squeezes-actions-pages-to-death/5284297</link>
   <pubDate>Thu, 06 Aug 2026 18:30:48 +0000</pubDate>
   <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Service impact possible — prepare comms and confirm vendor status.</b><br/>Look over there, Copilot - it's a beautiful AI farm where you can tend some digital rabbits<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 12h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Service impact possible — prepare comms and confirm vendor status.</b><br/>Look over there, Copilot - it's a beautiful AI farm where you can tend some digital rabbits<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 14h ago]]></description>
 </item>
 
 <item>
@@ -581,7 +983,7 @@
   <link>https://www.theregister.com/science/2026/08/06/next-step-for-link-spacecraft-a-software-update-that-wont-make-things-worse-are-you-listening-microsoft/5284143</link>
   <pubDate>Thu, 06 Aug 2026 15:11:00 +0000</pubDate>
   <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Spin slows as orbital rescue mission creeps forward<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 15h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Spin slows as orbital rescue mission creeps forward<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 17h ago]]></description>
 </item>
 
 <item>
@@ -589,7 +991,7 @@
   <link>https://www.theregister.com/ai-and-ml/2026/08/06/microsoft-excludes-domain-exclusion-from-ms-365-copilot-days-after-rolling-it-out/5284106</link>
   <pubDate>Thu, 06 Aug 2026 14:34:00 +0000</pubDate>
   <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Perhaps an allow list of domains might be better?<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 16h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Perhaps an allow list of domains might be better?<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 18h ago]]></description>
 </item>
 
 <item>
@@ -670,7 +1072,7 @@
 
 
 <p class="wp-block-paragraph"></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 16h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 18h ago]]></description>
 </item>
 
 <item>
@@ -759,7 +1161,7 @@
 
 
 <p class="wp-block-paragraph"></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 17h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 18h ago]]></description>
 </item>
 
 <item>
@@ -902,7 +1304,7 @@
 
 
 <p class="wp-block-paragraph"><a href="https://horizon3.ai/" rel="noreferrer noopener" target="_blank">Learn more about Horizon3.ai and NodeZero.</a></p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 17h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 19h ago]]></description>
 </item>
 
 <item>
@@ -1049,7 +1451,7 @@
 
 
 <p class="wp-block-paragraph"></p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 17h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 19h ago]]></description>
 </item>
 
 <item>
@@ -1174,7 +1576,7 @@
 
 
 <p class="wp-block-paragraph">“These incidents should not be reduced either to models ‘going rogue’ or to simple network misconfiguration,” she said. “They show that capable agents can turn ordinary control weaknesses, ambiguous tasks, and excessive permissions into real-world consequences.” Both Meta and Irregular did not immediately respond to a request for comment.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 17h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 19h ago]]></description>
 </item>
 
 <item>
@@ -1526,7 +1928,7 @@
 
 
 <p class="wp-block-paragraph"></p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 18h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 19h ago]]></description>
 </item>
 
 <item>
@@ -1693,7 +2095,7 @@
 
 
 <p class="wp-block-paragraph"><a href="https://horizon3.ai/contact-us/schedule-demo/" rel="noreferrer noopener" target="_blank">Schedule a demo now</a>.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 18h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 20h ago]]></description>
 </item>
 
 <item>
@@ -1701,7 +2103,7 @@
   <link>https://www.zdnet.com/article/ai-isnt-ready-to-patch-your-software-74-of-them-miss-the-mark/</link>
   <pubDate>Thu, 06 Aug 2026 12:45:41 +0000</pubDate>
   <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>We might be eager to thread AI into every area of our cybersecurity defenses, but new research reveals why we should pull back.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 18h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>We might be eager to thread AI into every area of our cybersecurity defenses, but new research reveals why we should pull back.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 20h ago]]></description>
 </item>
 
 <item>
@@ -1900,7 +2302,7 @@
 
 
 <p class="wp-block-paragraph"></p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 18h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 20h ago]]></description>
 </item>
 
 <item>
@@ -2027,7 +2429,7 @@
 
 
 <p class="wp-block-paragraph"><a href="https://events.horizon3.ai/introducing-nodezero-webapp/" rel="noreferrer noopener" target="_blank"><strong>Register for the webinar</strong></a><strong> “From Probability to Proof: The Art of the Possible with Proactive Cybersecurity,”</strong> and explore how AI-native proactive security is helping organizations continuously find, fix, and verify exploitable attack paths so they can move beyond assumptions and prove resilience. Also, download the “<a href="https://horizon3.ai/downloads/whitepapers/operationalizing-ctem-practical-playbook/" rel="noreferrer noopener" target="_blank">Operationalizing CTEM: A Practical Playbook for Continuous Threat Exposure Management</a>” playbook for guidance on building a repeatable CTEM operating model.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 18h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 20h ago]]></description>
 </item>
 
 <item>
@@ -2148,7 +2550,7 @@
 
 
 <p class="wp-block-paragraph"><a href="https://horizon3.ai/contact-us/schedule-demo/" rel="noreferrer noopener" target="_blank">Get a demo</a></p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 18h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 20h ago]]></description>
 </item>
 
 <item>
@@ -2229,7 +2631,7 @@
 
 
 <p class="wp-block-paragraph">Huntress recommended looking beyond indicators of SQL injection during incident response. Examining Oracle environments for unexpected Java source objects, compiled Java classes, and stored procedures could indicate abuse of the embedded Java Virtual Machine, it said. The firm also shared indicators of compromise (IOCs), including file hashes, malicious Java artifacts, SQL statements, and search terms to help defenders identify affected systems.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 19h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 20h ago]]></description>
 </item>
 
 <item>
@@ -2362,7 +2764,7 @@
 
 
 <p class="wp-block-paragraph">For organizations planning the next phase of their infrastructure, cooling can no longer be treated as an afterthought. It needs to be considered alongside compute, storage and networking from the outset.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 19h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 20h ago]]></description>
 </item>
 
 <item>
@@ -2371,7 +2773,7 @@
   <pubDate>Thu, 06 Aug 2026 12:00:00 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: Supply chain risk — audit third-party dependencies and vendor access.</b><br/><p>(Video) In this podcast, we share insights from Edna Conway, a recognized leader in cybersecurity and supply chain resilience with over 40 years of experience in the field. </p>
-<p>The post <a href="https://www.securityweek.com/podcast-compliance-wont-save-you-the-future-of-cyber-risk-with-edna-conway/">Podcast: Compliance Won’t Save You: The Future of Cyber Risk with Edna Conway</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 19h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/podcast-compliance-wont-save-you-the-future-of-cyber-risk-with-edna-conway/">Podcast: Compliance Won’t Save You: The Future of Cyber Risk with Edna Conway</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 20h ago]]></description>
 </item>
 
 <item>
@@ -2379,7 +2781,7 @@
   <link>https://www.theregister.com/security/2026/08/06/it-department-put-sticky-notes-on-the-laptops-to-help-employees-log-in/5283662</link>
   <pubDate>Thu, 06 Aug 2026 12:00:00 +0000</pubDate>
   <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/>Leaving this information exposed allowed someone else to gain access<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 19h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/>Leaving this information exposed allowed someone else to gain access<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 20h ago]]></description>
 </item>
 
 <item>
@@ -2554,7 +2956,7 @@
 
 
 <p class="wp-block-paragraph">Get a <a href="https://horizon3.ai/contact-us/schedule-demo/" rel="noreferrer noopener" target="_blank">demo</a></p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 19h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 21h ago]]></description>
 </item>
 
 <item>
@@ -2562,7 +2964,7 @@
   <link>https://www.theregister.com/os-platforms/2026/08/06/windows-10-ltsc-2021-has-five-months-before-security-updates-cost-extra/5283904</link>
   <pubDate>Thu, 06 Aug 2026 11:03:00 +0000</pubDate>
   <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>ESU meter starts running in January, unless you're on the IoT edition<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 20h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>ESU meter starts running in January, unless you're on the IoT edition<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 21h ago]]></description>
 </item>
 
 <item>
@@ -2745,7 +3147,7 @@
 
 
 <p class="wp-block-paragraph">I’ve published the full discipline behind this approach (the five principles, the roles, the facilitation guides and the objections seasoned practitioners will raise, along with my answers) as a <a href="https://pmworldlibrary.net/wp-content/uploads/2026/02/pmwj161-Feb2026-Kadaoui-Structural-Agile-featured-paper-1.pdf">featured paper in PM World Journal</a>. The mechanics are free to steal. The forgetting, at this point, is optional.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 20h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 21h ago]]></description>
 </item>
 
 <item>
@@ -2966,7 +3368,7 @@
 
 
 <p class="wp-block-paragraph">NTT DATA is working with Brownville, Texas, to set up a citywide alert system to send workers for incidents such as when a park’s garbage containers are full and to assist police officers in filling out reports, notes Sandhu.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 21h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 22h ago]]></description>
 </item>
 
 <item>
@@ -3181,7 +3583,7 @@
 
 
 <p class="wp-block-paragraph">I am therefore not writing a conclusion here. I would probably be back in a few months writing about the outcome of this exercise. Somehow deep-down I suspect it would be less oriented to technology but how the change management progressed. I have a strong feeling that “…operational leaders stop managing the volatility of daily schedules. Instead, they focus on creating and managing policy boundaries …” would be the toughest part of this change.   </p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 21h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 22h ago]]></description>
 </item>
 
 <item>
@@ -3298,7 +3700,7 @@
 
 
 <p class="wp-block-paragraph">The key risk factor for now is volume, with agents deploying actions at higher numbers than our pipelines are built to catch, and organizations that survive the next iteration of “rogue agents” will be the ones that assume as much beforehand.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 21h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 22h ago]]></description>
 </item>
 
 <item>
@@ -3461,7 +3863,7 @@
 
 
 <p class="wp-block-paragraph"><em>While many organizations search for shortcuts to AI success, GE Aerospace’s disciplined investment in data, analytics, talent, and operational excellence sets the company apart. Burns’ experience offers a clear lesson for CIOs: Creating the greatest value from AI requires building the capabilities, culture, and foundations that allow AI to amplify what the organization already does exceptionally well. For more from his leadership playbook, </em><a href="https://linktr.ee/techwhisperers"><em>tune in to the Tech Whisperers</em></a><em>.</em></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 21h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 23h ago]]></description>
 </item>
 
 <item>
@@ -3562,7 +3964,7 @@
 
 
 <p class="wp-block-paragraph">Looking back, the most valuable lesson hasn’t been about prompt engineering, model selection or agent frameworks. It’s that secure AI isn’t achieved through one perfect control but through hundreds of small engineering decisions that keep autonomous systems aligned with business intent. As we move from assistants toward fully autonomous agents, that distinction only matters more. The teams I trust to scale AI aren’t the ones with the smartest models. They’re the ones who can answer, for any action an agent took, why it took it — and where it would have stopped.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 22h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 23h ago]]></description>
 </item>
 
 <item>
@@ -3769,7 +4171,7 @@
 
 
 <p class="wp-block-paragraph">Measure the learning, and the returns will follow. Measure only the returns, and you may kill the learning that produces them.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 22h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 23h ago]]></description>
 </item>
 
 <item>
@@ -3902,7 +4304,7 @@
 
 
 <p class="wp-block-paragraph">“Security teams should assume AI is already embedded in attacker workflows; focus on detecting malicious behavior rather than proving AI involvement; treat LLMs and APIs as privileged, high-risk infrastructure; and strengthen logging, patching, and containment,” says Oliver Simonnet, lead cybersecurity researcher at AI security and governance platform CultureAI.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 22h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
@@ -4415,216 +4817,6 @@
   <pubDate>Wed, 05 Aug 2026 13:04:00 +0000</pubDate>
   <source>The Register</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Anthropic said to be the client wanting to secure rent-a-GPU company's compute resources<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
-</item>
-
-<item>
-  <title>🟠 Critical Paperclip bugs expose AI agent trust failures</title>
-  <link>https://www.csoonline.com/article/4205630/critical-paperclip-bugs-expose-ai-agent-trust-failures.html</link>
-  <pubDate>Wed, 05 Aug 2026 12:00:17 +0000</pubDate>
-  <source>CSO Online</source>
-  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/><div id="remove_no_follow">
-		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
-					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
-						<div class="article-column__content">
-<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
-
-
-
-<p class="wp-block-paragraph">Security researchers are warning against trust assumptions in AI security with newly detailed flaws affecting the open-source AI agent platform Paperclip that could be chained into remote code execution (RCE), data exposure, and developer-machine compromise.</p>
-
-
-
-<p class="wp-block-paragraph">An Oasis Security <a href="https://www.oasis.security/blog/paperclip-agent-vulnerabilities">research</a> shared with CSO ahead of its publication on Wednesday disclosed details of three recent vulnerabilities affecting different Paperclip deployment modes. These include a max-severity authorization bypass issue, multiple improperly protected API endpoints, and a DNS rebinding flaw that enables drive-by RCE against locally deployed instances.</p>
-
-
-
-<p class="wp-block-paragraph">Oasis argues they all stemmed from the same underlying trust assumption Paperclip makes.</p>
-
-
-
-<p class="wp-block-paragraph">“The Paperclip vulnerabilities Oasis Security has disclosed expose something more consequential than a single open-source project: a systemic failure in how AI agent control planes handle identity boundaries,” said <a href="https://www.linkedin.com/in/darrenguccione/" rel="noreferrer noopener" target="_blank">Darren Guccione</a>, CEO and co-founder of Keeper Security, who has also reviewed Oasis’ research. “An attacker who gains control of an agent configuration doesn’t just access data; they gain the ability to direct privileged action across every system that agent can reach.”</p>
-
-
-
-<p class="wp-block-paragraph">The flaws are now all patched with fixes shipped in versions 2026.416.0 and 0.3.1.</p>
-
-
-
-<h2 class="wp-block-heading"><a></a>Configuration exploited for code execution</h2>
-
-
-
-<p class="wp-block-paragraph">The most severe finding, tracked as <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-41679" rel="noreferrer noopener" target="_blank">CVE-2026-41679</a>, affected authenticated deployments using Paperclip’s default registration settings.</p>
-
-
-
-<p class="wp-block-paragraph">Oasis found that an attacker could begin as an unauthenticated user, self-register for an account, approve their own command-line (CLI) authorization request, and obtain persistent board-level API access without requiring separate administrative approval.</p>
-
-
-
-<p class="wp-block-paragraph">Basically, an attacker on the internet can simply sign up for an account, immediately log in, and use the account to win board-level permissions through the CLI.</p>
-
-
-
-<p class="wp-block-paragraph">Those permissions were sufficient to exploit another authorization mismatch issue in the platform’s company import workflow, Oasis researchers wrote. </p>
-
-
-
-<p class="wp-block-paragraph">In affected versions, while creating a new company directly required instance administrator privileges, importing a company enforced only board-level permissions. Because imported company bundles could include executable agent definitions, an attacker could upload a malicious “.paperclip.yaml” file specifying a process-based agent, then trigger that agent to execute arbitrary operating system commands under the Paperclip server’s privileges.</p>
-
-
-
-<p class="wp-block-paragraph">Oasis warned that this is why AI agent configuration should be treated as <a href="https://www.csoonline.com/article/4199408/ai-agents-can-escape-sandboxes-without-ever-breaking-them.html">executable</a> input rather than simple data. Paperclip did not immediately respond to CSO’s requests for comments.</p>
-
-
-
-<h2 class="wp-block-heading"><a></a>Bugs exploited the same underlying assumption</h2>
-
-
-
-<p class="wp-block-paragraph">Other than the critical RCE chain, Oasis disclosed two vulnerabilities that highlight the same architectural flaws.</p>
-
-
-
-<p class="wp-block-paragraph">One is about several API endpoints that either lacked authentication or <a href="https://github.com/advisories/GHSA-xfqj-r5qw-8g4j" rel="noreferrer noopener" target="_blank">failed to enforce</a> tenant-level authorization, exposing workflow information, skill documentation, and deployment metadata that could aid attackers in reconnaissance or cross-tenant information disclosure.</p>
-
-
-
-<p class="wp-block-paragraph">The other <a href="https://github.com/microsoft/amplifier-app-paperclip/blob/main/.agents/skills/deal-with-security-advisory/SKILL.md" rel="noreferrer noopener" target="_blank">issue</a> (CVSS 9.6) affected Paperclip’s default “local_trusted” deployment mode, where the platform assumed requests reaching localhost originated from trusted software. Oasis demonstrated that a DNS rebinding attack could violate that assumption, allowing an attacker-controlled webpage to communicate with the local Paperclip service and ultimately execute commands on a developer’s machine after importing and triggering a malicious agent.</p>
-
-
-
-<p class="wp-block-paragraph">Paperclip patched the RCE path and the leaking APIs issues in version 2026.416.0 by requiring administrator privileges for new-company imports, strengthening authorization checks across related operations, and adding regression tests.</p>
-
-
-
-<p class="wp-block-paragraph">The third issue was addressed in Paperclip 0.3.1 by enabling hostname validation, hardening imports, and restricting risky adapters in agent-safe imports.</p>
-
-
-
-<p class="wp-block-paragraph">Guccione argues that traditional access controls are ill-suited for autonomous agents. “The security question is no longer whether a credential is valid at the point of entry,” he said. “It’s whether the agent invoking that credential is doing so within the intended scope, for the intended purpose, under the authority of a human who would sanction that action.”</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
-</item>
-
-<item>
-  <title>🟠 OpenAI, Anthropic AI agents resorted to deception in new cybersecurity incidents</title>
-  <link>https://www.csoonline.com/article/4205612/openai-anthropic-ai-agents-resorted-to-deception-in-new-cybersecurity-incidents.html</link>
-  <pubDate>Wed, 05 Aug 2026 11:41:46 +0000</pubDate>
-  <source>CSO Online</source>
-  <description><![CDATA[<b>Why this matters: Service impact possible — prepare comms and confirm vendor status.</b><br/><div id="remove_no_follow">
-		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
-					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
-						<div class="article-column__content">
-<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
-
-
-
-<p class="wp-block-paragraph">OpenAI’s GPT-5.6 Sol and Anthropic’s Mythos 5 have been implicated in another series of AI security incidents after the models created fake online identities, targeted real people, and attempted to manipulate developers into approving malicious code during controlled cyber evaluations, according to the UK AI Security Institute.</p>
-
-
-
-<p class="wp-block-paragraph">“On 28<sup>th</sup> July 2026, AISI’s Security Team detected unusual data transfers leaving our research systems during a routine cyber evaluation,” AISI <a href="https://www.aisi.gov.uk/blog/incident-report-unsanctioned-agent-behaviour-during-cyber-testing" rel="noreferrer noopener" target="_blank">said in a blog post</a>. “On investigation, we found that some of the agents being tested had engaged in sustained, potentially harmful activity directed at real people and organisations.”</p>
-
-
-
-<p class="wp-block-paragraph">The incidents occurred during cybersecurity tests in which researchers deliberately gave frontier AI models broad internet access and relaxed some safety controls to measure their underlying cyber capabilities. AISI said the incidents marked the first time it had seen “risks around autonomy and deception manifest this clearly, without specific prompting, in the real world.”</p>
-
-
-
-<p class="wp-block-paragraph">AISI ran the cyber challenge 122 times across seven frontier models and identified 19 autonomous, unsanctioned actions during 10 evaluation runs.</p>
-
-
-
-<p class="wp-block-paragraph">“Almost all of this behaviour (17 actions) came from a single model, Anthropic’s Mythos 5, with 2 actions involving OpenAI’s GPT-5.6-Sol with cyber classifiers (mechanisms to prevent misuse) disabled,” the post added.</p>
-
-
-
-<p class="wp-block-paragraph">The disclosure comes less than two weeks after OpenAI <a href="https://www.csoonline.com/article/4202852/openai-rogue-ai-agents-attack-expanded-beyond-hugging-face.html">revealed</a> that one of its frontier models compromised infrastructure at Hugging Face during a cyber evaluation, and days after researchers disclosed another AI agent security incident involving Modal.</p>
-
-
-
-<h2 class="wp-block-heading" id="deception-emerged-without-instruction">Deception emerged without instruction</h2>
-
-
-
-<p class="wp-block-paragraph">The most serious sequence involved an AI agent attempting what AISI described as a software supply-chain attack.</p>
-
-
-
-<p class="wp-block-paragraph">“In the most serious sequence, an agent tried to insert malicious code into a publicly used open-source project and took actions in an attempt to secure approval for this insertion by human reviewers,” AISI wrote. “The agent researched the project’s human maintainers, created multiple fake identities, and used the fake identities to socially engineer a real maintainer into approving the code.”</p>
-
-
-
-<p class="wp-block-paragraph">The researchers further added that “When the agent’s pull request was challenged in public, it edited its earlier activity to appear harmless and considered adopting a fresh identity to continue.”</p>
-
-
-
-<p class="wp-block-paragraph">However, the institute added that “Our investigation has not identified any resulting real-world harm.”</p>
-
-
-
-<p class="wp-block-paragraph">Investigators also found agents contacting real people, attempting prompt injections, and leaving messages inviting other concurrently running agents to collaborate.</p>
-
-
-
-<p class="wp-block-paragraph">“It was never instructed to deceive; deception emerged as a by-product of pursuing the task, the kind of goal-directed deception that, until recently, had been largely theoretical,” AISI wrote, adding that while unrestricted internet access and evaluation design contributed to the behavior, they did not fully explain it.</p>
-
-
-
-<h2 class="wp-block-heading" id="not-a-sandbox-escape">Not a sandbox escape</h2>
-
-
-
-<p class="wp-block-paragraph">AISI emphasized that the models did not escape their sandboxed environments. Instead, internet access had been intentionally enabled and cyber safety classifiers deliberately disabled to measure maximum cyber capability rather than public deployment behavior.</p>
-
-
-
-<p class="wp-block-paragraph">“This was not a sandbox escape. It was a boundary that existed in language and nowhere else,” said Sanchit Vir Gogia, chief analyst at Greyhound Research. “The risk variable is not how clever the model is. It is how much practical authority the organisation has handed over, and how little of it can be independently withdrawn.”</p>
-
-
-
-<p class="wp-block-paragraph">OpenAI, whose GPT-5.6 Sol model accounted for two of the recorded actions, posted a blog describing the AISI evaluation and a separate incident involving an external testing partner named “Irregular.”</p>
-
-
-
-<p class="wp-block-paragraph">“As model capabilities advance, the security and safety systems around models need to advance too,” the company wrote in the blog post. OpenAI said it will review third-party evaluation practices, including controls around internet access, isolation, monitoring, and incident response, and work with AI labs and independent evaluators to strengthen industry standards.</p>
-
-
-
-<p class="wp-block-paragraph">Anthropic, however, did not make any public announcement related to AISI’s disclosure.</p>
-
-
-
-<p class="wp-block-paragraph">Anthropic and OpenAI did not immediately respond to a request for comment.</p>
-
-
-
-<h2 class="wp-block-heading" id="enterprise-guardrails">Enterprise guardrails</h2>
-
-
-
-<p class="wp-block-paragraph">For enterprise security leaders, the findings extend beyond AI red teaming, said Enza Iannopollo, principal analyst at Forrester.</p>
-
-
-
-<p class="wp-block-paragraph">“This data confirms our expectations on agents’ behaviours. They can, and they will, overcome boundaries and safeguards to accomplish their objectives,” she said. “The real question is what can happen when organizations deploy these systems in their production environments.”</p>
-
-
-
-<p class="wp-block-paragraph">Iannopollo said enterprises should apply least privilege, continuous risk management, and governance controls when deploying AI agents.</p>
-
-
-
-<p class="wp-block-paragraph">The findings also underscore the need to rethink how AI systems are evaluated, according to Vibhum Dubey, a cybersecurity researcher and red teamer.</p>
-
-
-
-<p class="wp-block-paragraph">“For years, security testing has focused on whether an AI model could complete a task. We now need to evaluate how it completes that task,” Dubey said.</p>
-
-
-
-<p class="wp-block-paragraph">While AISI stressed that the incidents occurred under highly specific evaluation conditions and found no evidence of resulting real-world harm, it argued that they point to a broader shift in how AI security risks may emerge. “Harm may arise not only when people deliberately misuse publicly available models, but when capable agents operating in an internal research or privileged-access setting take unintended action beyond their authorised scope,” the institute wrote.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
