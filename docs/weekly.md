@@ -1,25 +1,30 @@
 # IT Weekly Intelligence Briefing
 **Period:** August 01 – August 08, 2026  
-**Generated:** 2026-08-08 13:43 UTC  
+**Generated:** 2026-08-08 14:29 UTC  
 **Items reviewed:** 124  
 
 ## ⚡ Top Actions This Week
 
-1. **Apply emergency patch or mitigation now; check vendor advisory for workarounds.**  
+1. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
+   _Hackers breach TrueConf to trojanize client installers with backdoors_  
+   Source: BleepingComputer  
+
+2. **Apply emergency patch or mitigation now; check vendor advisory for workarounds.**  
    _Metabase Zero-Day Exploited in Wild Allows Admin Access Without Authentication_  
    Source: The Hacker News  
 
-2. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _Metabase SQLi zero-day exploited in customer data-theft attacks_  
-   Source: BleepingComputer  
-
 3. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _Unlimited Technology Systems breach impacts 3.8 million people_  
+   _Metabase SQLi zero-day exploited in customer data-theft attacks_  
    Source: BleepingComputer  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [Hackers breach TrueConf to trojanize client installers with backdoors](https://www.bleepingcomputer.com/news/security/hackers-breach-trueconf-to-trojanize-client-installers-with-backdoors/)
+**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Aug 08  
+**Why it matters:** Potential credential or data exposure.  
+**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
 ### [Metabase Zero-Day Exploited in Wild Allows Admin Access Without Authentication](https://thehackernews.com/2026/08/metabase-zero-day-exploited-in-wild.html)
 **Source:** The Hacker News &nbsp;·&nbsp; **Date:** Aug 08  
@@ -45,11 +50,6 @@
 **Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Aug 06  
 **Why it matters:** Potential credential or data exposure.  
 **Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
-
-### [Ransom Cartel Creator Gets 16 Years in Prison for Operating Ransomware-as-a-Service](https://thehackernews.com/2026/08/ransom-cartel-creator-gets-16-years-in.html)
-**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Aug 06  
-**Why it matters:** Elevated ransomware risk across the sector.  
-**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
 
 ---
 
