@@ -1,7 +1,7 @@
 # IT Weekly Intelligence Briefing
 **Period:** August 01 – August 08, 2026  
-**Generated:** 2026-08-08 03:22 UTC  
-**Items reviewed:** 112  
+**Generated:** 2026-08-08 04:54 UTC  
+**Items reviewed:** 122  
 
 ## ⚡ Top Actions This Week
 
@@ -55,29 +55,29 @@
 
 ## 🟠 Important — Review This Week
 
-- [CVE-2026-40400 Windows PowerShell Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-40400)  
-  **Microsoft Security Response Center (MSRC)** · Aug 07 · _General awareness item._  
+- [CVE-2026-55995 Double-free in the iSNS attribute decoder in open-iscsi](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-55995)  
+  **Microsoft Security Response Center (MSRC)** · Aug 08 · _General awareness item._  
 
-- [CVE-2026-50659 .NET Spoofing Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-50659)  
-  **Microsoft Security Response Center (MSRC)** · Aug 07 · _General awareness item._  
+- [CVE-2026-44944 iscsiuio control-socket authentication bypass in open-iscsi](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-44944)  
+  **Microsoft Security Response Center (MSRC)** · Aug 08 · _General awareness item._  
 
-- [CVE-2026-47303 ASP.NET Core Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-47303)  
-  **Microsoft Security Response Center (MSRC)** · Aug 07 · _General awareness item._  
+- [CVE-2026-44943 remote limited file-write as root via discovery in open-iscsi](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-44943)  
+  **Microsoft Security Response Center (MSRC)** · Aug 08 · _General awareness item._  
 
-- [New WordPress Pre-Auth XSS Could Lead to PHP Code Execution - Patch ASAP](https://thehackernews.com/2026/08/new-wordpress-pre-auth-xss-could-lead.html)  
-  **The Hacker News** · Aug 07 · _General awareness item._  
+- [CVE-2026-6879 Quadratic Behavior in xml.etree.ElementPath Index Predicates](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-6879)  
+  **Microsoft Security Response Center (MSRC)** · Aug 08 · _General awareness item._  
 
-- [AI-Assisted HTTP Terminator Finds Novel HTTP Desync Techniques and Apache Zero-Day](https://thehackernews.com/2026/08/ai-assisted-http-terminator-finds-novel.html)  
-  **The Hacker News** · Aug 07 · _General awareness item._  
+- [CVE-2025-62725 Docker Compose Vulnerable to Path Traversal via OCI Artifact Layer Annotations](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-62725)  
+  **Microsoft Security Response Center (MSRC)** · Aug 08 · _General awareness item._  
 
-- [CVE-2019-9192 In the GNU C Library (aka glibc or libc6) through 2.29, check_dst_limits_calc_pos_1 in posix/regexec.c has Uncontrolled Recursion](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2019-9192)  
-  **Microsoft Security Response Center (MSRC)** · Aug 07 · _General awareness item._  
+- [CVE-2026-44508 Rejected reason: ** REJECT ** DO NOT USE THIS CANDIDATE NUMBER. ConsultIDs: CVE-2026-43618. Reason: This candidate is a duplicate of CVE-2026-43618. Notes: All CVE users should reference CVE-2026-43618 instead of this candidate.](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-44508)  
+  **Microsoft Security Response Center (MSRC)** · Aug 08 · _General awareness item._  
 
-- [CVE-2019-9924 rbash in Bash before 4.4-beta2 did not prevent the shell user from modifying BASH_CMDS, thus allowing the user to execute any command with the permissions of the shell.](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2019-9924)  
-  **Microsoft Security Response Center (MSRC)** · Aug 07 · _General awareness item._  
+- [CVE-2026-44510 Rejected reason: ** REJECT ** DO NOT USE THIS CANDIDATE NUMBER. ConsultIDs: CVE-2026-43620. Reason: This candidate is a duplicate of CVE-2026-43620. Notes: All CVE users should reference CVE-2026-43620 instead of this candidate.](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-44510)  
+  **Microsoft Security Response Center (MSRC)** · Aug 08 · _General awareness item._  
 
-- [CVE-2010-4052 Stack consumption vulnerability in the regcomp implementation in the GNU C Library (aka glibc or libc6) through 2.11.3, and 2.12.x through 2.12.2, allows context-dependent attackers to cause a denial of service (resource exhaustion) via a regular expression containing adjacent repetition operators, as demonstrated by a {10,}{10,}{10,}{10,} sequence in the proftpd.gnu.c exploit for ProFTPD.](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2010-4052)  
-  **Microsoft Security Response Center (MSRC)** · Aug 07 · _General awareness item._  
+- [CVE-2026-44509 Rejected reason: ** REJECT ** DO NOT USE THIS CANDIDATE NUMBER. ConsultIDs: CVE-2026-43619. Reason: This candidate is a duplicate of CVE-2026-43619. Notes: All CVE users should reference CVE-2026-43619 instead of this candidate.](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-44509)  
+  **Microsoft Security Response Center (MSRC)** · Aug 08 · _General awareness item._  
 
 ---
 
@@ -92,4 +92,4 @@
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 12 critical · 49 important · 51 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 12 critical · 59 important · 51 FYI_
