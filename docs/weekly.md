@@ -1,7 +1,7 @@
 # IT Weekly Intelligence Briefing
 **Period:** August 03 – August 10, 2026  
-**Generated:** 2026-08-10 07:26 UTC  
-**Items reviewed:** 135  
+**Generated:** 2026-08-10 09:16 UTC  
+**Items reviewed:** 134  
 
 ## ⚡ Top Actions This Week
 
@@ -55,41 +55,41 @@
 
 ## 🟠 Important — Review This Week
 
-- [CVE-2026-64584 usb: gadget: f_midi: cancel pending IN work before freeing the midi object](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-64584)  
-  **Microsoft Security Response Center (MSRC)** · Aug 09 · _General awareness item._  
+- [CVE-2026-54876 Client-Side Memory Leak in OCSP Response Checking](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-54876)  
+  **Microsoft Security Response Center (MSRC)** · Aug 10 · _General awareness item._  
 
-- [CVE-2026-64583 usb: gadget: udc: bdc: free IRQ and drain func_wake_notify before teardown](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-64583)  
-  **Microsoft Security Response Center (MSRC)** · Aug 09 · _General awareness item._  
+- [CVE-2026-56145 Uncontrolled Resource Consumption in Elasticsearch Leading to Denial of Service](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-56145)  
+  **Microsoft Security Response Center (MSRC)** · Aug 10 · _General awareness item._  
 
-- [CVE-2026-64604 KVM: VMX: Grab vmcs12 on CR8 interception update iff vCPU is in guest mode](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-64604)  
-  **Microsoft Security Response Center (MSRC)** · Aug 09 · _General awareness item._  
+- [CVE-2026-39879 SQL injection in syslog-ng SQL destionation driver](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-39879)  
+  **Microsoft Security Response Center (MSRC)** · Aug 10 · _General awareness item._  
 
-- [CVE-2026-64590 dma-buf/udmabuf: skip redundant cpu sync to fix cacheline EEXIST warning](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-64590)  
-  **Microsoft Security Response Center (MSRC)** · Aug 09 · _General awareness item._  
+- [CVE-2026-64189 netfilter: ipset: fix race between dump and ip_set_list resize](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-64189)  
+  **Microsoft Security Response Center (MSRC)** · Aug 10 · _General awareness item._  
 
-- [CVE-2026-64577 gtp: check skb_pull_data() return in gtp1u_send_echo_resp()](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-64577)  
-  **Microsoft Security Response Center (MSRC)** · Aug 09 · _General awareness item._  
+- [CVE-2026-64206 Bluetooth: L2CAP: cancel pending_rx_work before taking conn->lock](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-64206)  
+  **Microsoft Security Response Center (MSRC)** · Aug 10 · _General awareness item._  
 
-- [CVE-2026-64567 btrfs: reject free space cache with more entries than pages](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-64567)  
-  **Microsoft Security Response Center (MSRC)** · Aug 09 · _General awareness item._  
+- [CVE-2026-64190 net: team: fix NULL pointer dereference in team_xmit during mode change](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-64190)  
+  **Microsoft Security Response Center (MSRC)** · Aug 10 · _General awareness item._  
 
-- [CVE-2026-64569 mpls: fix NULL deref in mpls_valid_fib_dump_req() on CONFIG_INET=n](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-64569)  
-  **Microsoft Security Response Center (MSRC)** · Aug 09 · _General awareness item._  
+- [CVE-2026-64205 i2c: i801: fix hardware state machine corruption in error path](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-64205)  
+  **Microsoft Security Response Center (MSRC)** · Aug 10 · _General awareness item._  
 
-- [CVE-2026-64572 ipv4: fib: free fib_alias with kfree_rcu() on insert error path](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-64572)  
-  **Microsoft Security Response Center (MSRC)** · Aug 09 · _General awareness item._  
+- [CVE-2026-64192 bpf: Reject BPF_MAP_TYPE_INODE_STORAGE creation if BPF LSM is uninitialized](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-64192)  
+  **Microsoft Security Response Center (MSRC)** · Aug 10 · _General awareness item._  
 
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [Solidity Pro VS Code Extensions Steal Crypto Wallets, API Keys, and Credentials](https://thehackernews.com/2026/08/solidity-pro-vs-code-extensions-steal.html) — The Hacker News
 - [OpenAI's Next AI Model Astra Shows Cyber Performance Strong Enough to Trigger Pause](https://thehackernews.com/2026/08/openais-next-ai-model-astra-shows-cyber.html) — The Hacker News
 - [ISC Stormcast For Monday, August 10th, 2026 https://isc.sans.edu/podcastdetail/10044, (Mon, Aug 10th)](https://isc.sans.edu/diary/rss/33228) — SANS Internet Storm Center
 - [Atlassian Rovo Can Be Tricked Into Sending Jira and Confluence Data to Attackers](https://thehackernews.com/2026/08/atlassian-rovo-can-be-tricked-into.html) — The Hacker News
 - [New CSS Attacks Can Break Webmail Defenses to Steal Passwords and Tokens](https://thehackernews.com/2026/08/new-css-attacks-can-break-webmail.html) — The Hacker News
 - [N-able Issues N-central Hotfix 2 as Attackers Reach Managed Systems and Persist](https://thehackernews.com/2026/08/n-central-attackers-reach-managed.html) — The Hacker News
-- [Nearly 800 Malicious npm Packages Deliver Cross-Platform RAT and Infostealer](https://thehackernews.com/2026/08/nearly-800-malicious-npm-packages.html) — The Hacker News
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 12 critical · 72 important · 51 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 11 critical · 71 important · 52 FYI_
