@@ -1,25 +1,30 @@
 # IT Weekly Intelligence Briefing
 **Period:** August 03 – August 10, 2026  
-**Generated:** 2026-08-10 11:05 UTC  
+**Generated:** 2026-08-10 13:00 UTC  
 **Items reviewed:** 134  
 
 ## ⚡ Top Actions This Week
 
-1. **Apply emergency patch or mitigation now; check vendor advisory for workarounds.**  
+1. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
+   _Valve notifies Steam hardware customers of a data breach_  
+   Source: BleepingComputer  
+
+2. **Apply emergency patch or mitigation now; check vendor advisory for workarounds.**  
    _Critical Progress LoadMaster flaw now actively exploited in attacks_  
    Source: BleepingComputer  
 
-2. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
+3. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
    _Hackers breach TrueConf to trojanize client installers with backdoors_  
    Source: BleepingComputer  
-
-3. **Apply emergency patch or mitigation now; check vendor advisory for workarounds.**  
-   _Metabase Zero-Day Exploited in Wild Allows Admin Access Without Authentication_  
-   Source: The Hacker News  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [Valve notifies Steam hardware customers of a data breach](https://www.bleepingcomputer.com/news/security/valve-notifies-steam-hardware-customers-of-a-data-breach/)
+**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Aug 10  
+**Why it matters:** Potential credential or data exposure.  
+**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
 ### [Critical Progress LoadMaster flaw now actively exploited in attacks](https://www.bleepingcomputer.com/news/security/cisa-warns-of-critical-progress-loadmaster-flaw-exploited-in-attacks/)
 **Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Aug 10  
@@ -46,14 +51,12 @@
 **Why it matters:** Potential credential or data exposure.  
 **Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
-### [Swiss government SharePoint breach compromised 200 accounts](https://www.bleepingcomputer.com/news/security/swiss-government-sharepoint-breach-compromised-200-accounts/)
-**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Aug 06  
-**Why it matters:** Potential credential or data exposure.  
-**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
-
 ---
 
 ## 🟠 Important — Review This Week
+
+- [TrueConf Server Flaws Exploited to Replace Client Installers with PhantomCore](https://thehackernews.com/2026/08/head-mare-exploits-trueconf-flaws-to.html)  
+  **The Hacker News** · Aug 10 · _General awareness item._  
 
 - [CVE-2026-54876 Client-Side Memory Leak in OCSP Response Checking](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-54876)  
   **Microsoft Security Response Center (MSRC)** · Aug 10 · _General awareness item._  
@@ -76,20 +79,17 @@
 - [CVE-2026-64205 i2c: i801: fix hardware state machine corruption in error path](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-64205)  
   **Microsoft Security Response Center (MSRC)** · Aug 10 · _General awareness item._  
 
-- [CVE-2026-64192 bpf: Reject BPF_MAP_TYPE_INODE_STORAGE creation if BPF LSM is uninitialized](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-64192)  
-  **Microsoft Security Response Center (MSRC)** · Aug 10 · _General awareness item._  
-
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [Member of The Com sent to prison for blackmail, sextortion](https://www.bleepingcomputer.com/news/security/member-of-the-com-sent-to-prison-for-blackmail-sextortion/) — BleepingComputer
+- [New Passkey Attacks Can Recover Synced Private Keys or Bypass Phishing-Resistant MFA](https://thehackernews.com/2026/08/new-passkey-attacks-can-recover-synced.html) — The Hacker News
+- [LexisNexis shuts down services after suspicious activity on servers](https://www.bleepingcomputer.com/news/security/lexisnexis-shuts-down-services-after-suspicious-activity-on-servers/) — BleepingComputer
+- [Shipping 10–50× More Code? Watch This Webinar on Securing AI-Speed Development](https://thehackernews.com/2026/08/shipping-1050-more-code-watch-this.html) — The Hacker News
 - [Solidity Pro VS Code Extensions Steal Crypto Wallets, API Keys, and Credentials](https://thehackernews.com/2026/08/solidity-pro-vs-code-extensions-steal.html) — The Hacker News
 - [OpenAI's Next AI Model Astra Shows Cyber Performance Strong Enough to Trigger Pause](https://thehackernews.com/2026/08/openais-next-ai-model-astra-shows-cyber.html) — The Hacker News
-- [ISC Stormcast For Monday, August 10th, 2026 https://isc.sans.edu/podcastdetail/10044, (Mon, Aug 10th)](https://isc.sans.edu/diary/rss/33228) — SANS Internet Storm Center
-- [Atlassian Rovo Can Be Tricked Into Sending Jira and Confluence Data to Attackers](https://thehackernews.com/2026/08/atlassian-rovo-can-be-tricked-into.html) — The Hacker News
-- [New CSS Attacks Can Break Webmail Defenses to Steal Passwords and Tokens](https://thehackernews.com/2026/08/new-css-attacks-can-break-webmail.html) — The Hacker News
-- [N-able Issues N-central Hotfix 2 as Attackers Reach Managed Systems and Persist](https://thehackernews.com/2026/08/n-central-attackers-reach-managed.html) — The Hacker News
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 12 critical · 71 important · 51 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 11 critical · 72 important · 51 FYI_
