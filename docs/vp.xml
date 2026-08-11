@@ -3,8 +3,101 @@
 <channel>
   <title>Joe — VP of IT Briefing</title>
   <description>Leadership-focused IT risk, vendors, pricing, licensing, and industry context.</description>
-  <lastBuildDate>Tue, 11 Aug 2026 22:38:20 +0000</lastBuildDate>
+  <lastBuildDate>Tue, 11 Aug 2026 23:36:10 +0000</lastBuildDate>
   
+<item>
+  <title>🔴 Zoom zero-click RCE flaws allow attackers to compromise meeting participants</title>
+  <link>https://www.csoonline.com/article/4208223/zoom-zero-click-rce-flaws-allow-attackers-to-compromise-meeting-participants.html</link>
+  <pubDate>Tue, 11 Aug 2026 22:56:27 +0000</pubDate>
+  <source>CSO Online</source>
+  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<p class="wp-block-paragraph">Zoom has fixed four vulnerabilities across its applications, including two that could allow attackers who join a meeting to execute malicious code on the systems of all other meeting participants with no interaction required from them.</p>
+
+
+
+<p class="wp-block-paragraph">Three of the vulnerabilities affect all Zoom client applications for all platforms before versions 7.1.5 and 7.0.6, while the fourth impacts Zoom Workplace VDI Client for Windows and VDI Plugins on all supported platforms before versions 7.0.11 and 6.6.15. Products such as Zoom Rooms and Zoom Meeting SDK before versions 7.1.0 are also affected.</p>
+
+
+
+<p class="wp-block-paragraph">The three client vulnerabilities are memory corruption issues in the text annotation function and were found by a researcher from A Security by using an AI agent.</p>
+
+
+
+<p class="wp-block-paragraph">“The entire operation, from finding the flaw to building a working exploit, was carried out by A [Security] using fewer than 20 prompts on publicly available AI models in under 24 hours,” the company said in <a href="https://a.security/blog/asecurity-zoomsday">its report</a>. “This class of capability would previously have only been available to nation-state threat actors, but the model requiring elite teams, months of effort, and weapons-grade budgets has collapsed. Today, a single researcher was able to develop a nation-state-level exploit in less than a day.”</p>
+
+
+
+<p class="wp-block-paragraph">The researchers point out the massive potential blast radius of such an exploit, with Zoom being used by 70% of the Fortune 100 companies, most of the Fortune 500 ones, and federal agencies. In addition, this exploit doesn’t need meeting participants to perform any type of action such as clicking or downloading anything. It all happens silently with no indication that the attacker has executed malicious code on their computer.</p>
+
+
+
+<h2 class="wp-block-heading" id="how-the-vulnerability-works">How the vulnerability works</h2>
+
+
+
+<p class="wp-block-paragraph">When a participant draws, writes, or highlights text on a shared screen or whiteboard in Zoom, their client doesn’t send pixels. Instead, it builds a typed in-memory object that describes the action, then serializes this object into a byte stream and sends it to Zoom’s Multimedia Router, which then forwards it to all meeting participants, whose client application deserializes the object.</p>
+
+
+
+<p class="wp-block-paragraph">Data serialization and deserialization operations have been a big source of memory corruption vulnerabilities in applications because it’s easy to get wrong and the input is attacker-controlled. Zoom allocates four fixed 128-byte buffers to write the deserialized annotation packets in, but the code only checks that the packets are non-zero, not their size.</p>
+
+
+
+<p class="wp-block-paragraph">Therefore, if an attacker can generate a packet that fills and exceeds the four fixed buffers, they have a buffer overflow condition they can exploit to insert malicious code in the application’s memory.</p>
+
+
+
+<p class="wp-block-paragraph">The A Security researcher has identified a buffer overflow vulnerability, <a href="https://www.zoom.com/en/trust/security-bulletin/zsb-26015/">CVE-2026-53413</a>, and a use-after-free memory error, <a href="https://www.zoom.com/en/trust/security-bulletin/zsb-26017/">CVE-2026-53415</a>, both of which can read to remote code execution. A third flaw, <a href="https://www.zoom.com/en/trust/security-bulletin/zsb-26016/">CVE-2026-53414</a>, is a missing bounds check that can lead to a denial-of-service condition.</p>
+
+
+
+<p class="wp-block-paragraph">Zoom also patched a path traversal flaw, <a href="https://www.zoom.com/en/trust/security-bulletin/zsb-26018/">CVE-2026-53416</a>, in the VDI client and plugins that could lead to information disclosure. Zoom VDI (Virtual Desktop Infrastructure) is a special version of the Zoom app that’s designed to run on virtual desktops such as Citrix, VMware Horizon, and Azure Virtual Desktop.</p>
+
+
+
+<h2 class="wp-block-heading" id="mitigation">Mitigation</h2>
+
+
+
+<p class="wp-block-paragraph">Aside from updating Zoom clients, organizations can disable the end-to-end encryption (E2EE) setting for their meetings. That’s because Zoom has deployed server-side mitigation for this flaw that filters malicious annotation messages. When E2EE is enabled, the server only sees encrypted messages and cannot perform such filtering.</p>
+
+
+
+<p class="wp-block-paragraph">Another mitigation is to set the per-platform minimum version for guests and staff in the meeting preferences and only allow patched clients to join meetings.</p>
+
+
+
+<p class="wp-block-paragraph">“This exploit needed only presence in the meeting, so joining rules are access control: waiting rooms, passcodes, authenticated-users-only, no published personal meeting link,” the researchers said. “Then cut what nobody uses, because every optional feature is another parser. In Zoom, consider locking annotation, file transfer, whiteboarding, remote control and third-party apps, and limiting screen sharing to hosts.”</p>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 OpenAI launches a ChatGPT desktop app for Linux in preview, supporting ChatGPT Work, Codex, and more; Computer Use outside the in-app browser is not available (Frederic Lardinois/The New Stack)</title>
+  <link>https://www.techmeme.com/260811/p41#a260811p41</link>
+  <pubDate>Tue, 11 Aug 2026 22:55:01 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://thenewstack.io/openais-chatgpt-desktop-linux/"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260811/i41.jpg" vspace="4" /></a>
+<p><a href="https://www.techmeme.com/260811/p41#a260811p41" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Frederic Lardinois / <a href="http://thenewstack.io/">The New Stack</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://thenewstack.io/openais-chatgpt-desktop-linux/">OpenAI launches a ChatGPT desktop app for Linux in preview, supporting ChatGPT Work, Codex, and more; Computer Use outside the in-app browser is not available</a></b></span>&nbsp; &mdash;&nbsp; On Tuesday, OpenAI launched its ChatGPT desktop for Linux.&nbsp; &mdash;&nbsp; Now in preview, the app, which combines ChatGPT, ChatGPT Work &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 The CFTC uses its &quot;emergency authority&quot; to order Kalshi to continue operating in New York after the state filed a lawsuit in July seeking to shutter Kalshi (Nikhilesh De/CoinDesk)</title>
+  <link>https://www.techmeme.com/260811/p40#a260811p40</link>
+  <pubDate>Tue, 11 Aug 2026 22:40:01 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: Regulatory/compliance signal — assess applicability and remediation timeline.</b><br/><a href="https://www.coindesk.com/policy/2026/08/11/cftc-orders-kalshi-to-continue-offering-prediction-markets-in-new-york-after-state-lawsuit"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260811/i40.jpg" vspace="4" /></a>
+<p><a href="https://www.techmeme.com/260811/p40#a260811p40" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Nikhilesh De / <a href="http://www.coindesk.com/">CoinDesk</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://www.coindesk.com/policy/2026/08/11/cftc-orders-kalshi-to-continue-offering-prediction-markets-in-new-york-after-state-lawsuit">The CFTC uses its &ldquo;emergency authority&rdquo; to order Kalshi to continue operating in New York after the state filed a lawsuit in July seeking to shutter Kalshi</a></b></span>&nbsp; &mdash;&nbsp; The U.S. Commodity Futures Trading Commission announced it had ordered prediction market operator Kalshi to continue operating &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</item>
+
 <item>
   <title>🔵 Source: Kalshi&#x27;s annualized revenue topped $4B in July, up from $2B+ two months earlier, and its operating expenses totaled $300M in June (Yueqi Yang/The Information)</title>
   <link>https://www.techmeme.com/260811/p39#a260811p39</link>
@@ -12,7 +105,35 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.theinformation.com/articles/kalshi-tops-4-billion-annualized-revenue-seeks-40-billion-valuation"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260811/i39.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260811/p39#a260811p39" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Yueqi Yang / <a href="https://www.theinformation.com/">The Information</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.theinformation.com/articles/kalshi-tops-4-billion-annualized-revenue-seeks-40-billion-valuation">Source: Kalshi's annualized revenue topped $4B in July, up from $2B+ two months earlier, and its operating expenses totaled $300M in June</a></b></span>&nbsp; &mdash;&nbsp; World Cup wagers helped double Kalshi's revenue to a more than $4 billion annualized rate in July, from a pace of over $2 billion two months earlier, a person familiar with the matter said.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.theinformation.com/articles/kalshi-tops-4-billion-annualized-revenue-seeks-40-billion-valuation">Source: Kalshi's annualized revenue topped $4B in July, up from $2B+ two months earlier, and its operating expenses totaled $300M in June</a></b></span>&nbsp; &mdash;&nbsp; World Cup wagers helped double Kalshi's revenue to a more than $4 billion annualized rate in July, from a pace of over $2 billion two months earlier, a person familiar with the matter said.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Accel raised $3.5B in funds for early-stage investments, including a $1.35B global expansion fund for larger early-stage rounds and rapid follow-on investments (Natasha Mascarenhas/Bloomberg)</title>
+  <link>https://www.techmeme.com/260811/p38#a260811p38</link>
+  <pubDate>Tue, 11 Aug 2026 21:45:01 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://www.bloomberg.com/news/articles/2026-08-11/accel-raises-3-5-billion-to-invest-in-emerging-global-ai-startups"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260811/i38.jpg" vspace="4" /></a>
+<p><a href="https://www.techmeme.com/260811/p38#a260811p38" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Natasha Mascarenhas / <a href="https://www.bloomberg.com/">Bloomberg</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/articles/2026-08-11/accel-raises-3-5-billion-to-invest-in-emerging-global-ai-startups">Accel raised $3.5B in funds for early-stage investments, including a $1.35B global expansion fund for larger early-stage rounds and rapid follow-on investments</a></b></span>&nbsp; &mdash;&nbsp; Accel, a global venture capital firm with offices in Silicon Valley, London and Bangalore, India, has raised $3.5 billion &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Why software factories are back - and how they work in the age of AI</title>
+  <link>https://www.zdnet.com/article/why-software-factories-are-back-ai/</link>
+  <pubDate>Tue, 11 Aug 2026 21:23:33 +0000</pubDate>
+  <source>ZDNet</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Imagine submitting your vibe-coded app to a service that validates, tests, and then mass-produces it in a repeatable, automated fashion for delivery to a wide audience.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Researchers find that feeding a frontier model&#x27;s encrypted reasoning traces to a weaker model from the same provider can make it output the traces in plaintext (Will Knight/Wired)</title>
+  <link>https://www.techmeme.com/260811/p37#a260811p37</link>
+  <pubDate>Tue, 11 Aug 2026 21:10:02 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://www.wired.com/story/a-new-trick-reveals-ai-models-inner-thoughts/"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260811/i37.jpg" vspace="4" /></a>
+<p><a href="https://www.techmeme.com/260811/p37#a260811p37" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Will Knight / <a href="http://www.wired.com/">Wired</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://www.wired.com/story/a-new-trick-reveals-ai-models-inner-thoughts/">Researchers find that feeding a frontier model's encrypted reasoning traces to a weaker model from the same provider can make it output the traces in plaintext</a></b></span>&nbsp; &mdash;&nbsp; Researchers devised a way to extract &ldquo;reasoning traces&rdquo; from Claude, GPT, and Gemini.&nbsp; What they found, they say &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
 </item>
 
 <item>
@@ -22,7 +143,15 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.businessinsider.com/weil-valuation-750-million-for-ai-science-startup-2026-8"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260811/i36.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260811/p36#a260811p36" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="https://www.businessinsider.com/">Business Insider</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.businessinsider.com/weil-valuation-750-million-for-ai-science-startup-2026-8">Sources: former OpenAI Chief Product Officer Kevin Weil is aiming to raise $150M for a new AI science startup, seeking a valuation of at least $750M</a></b></span>&nbsp; &mdash;&nbsp; Kevin Weil, the former chief product officer of OpenAI, has sought a valuation of at least $750 million for a new AI science startup &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.businessinsider.com/weil-valuation-750-million-for-ai-science-startup-2026-8">Sources: former OpenAI Chief Product Officer Kevin Weil is aiming to raise $150M for a new AI science startup, seeking a valuation of at least $750M</a></b></span>&nbsp; &mdash;&nbsp; Kevin Weil, the former chief product officer of OpenAI, has sought a valuation of at least $750 million for a new AI science startup &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 How to create flyers with AI that people won&#x27;t hate: 8 tips (and prompts) that really work</title>
+  <link>https://www.zdnet.com/article/how-to-make-generate-ai-flyer-tips-prompts-that-work/</link>
+  <pubDate>Tue, 11 Aug 2026 20:53:19 +0000</pubDate>
+  <source>ZDNet</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Most AI flyers are still a mess, but the right prompts can make all the difference.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
 </item>
 
 <item>
@@ -32,7 +161,37 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://www.cnbc.com/2026/08/11/coreweave-crwv-q2-earnings-report-2026.html"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260811/i35.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260811/p35#a260811p35" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Jordan Novet / <a href="http://www.cnbc.com/">CNBC</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.cnbc.com/2026/08/11/coreweave-crwv-q2-earnings-report-2026.html">CoreWeave reports Q2 revenue up 112% YoY to $2.58B, vs. $2.56B est., and a $104B revenue backlog, with 1.5 GW of contracted power; CRWV jumps 9%+ after hours</a></b></span>&nbsp; &mdash;&nbsp; CoreWeave shares jumped 13% in extended trading on Tuesday after the AI infrastructure provider reported revenue than topped Wall Street expectations.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.cnbc.com/2026/08/11/coreweave-crwv-q2-earnings-report-2026.html">CoreWeave reports Q2 revenue up 112% YoY to $2.58B, vs. $2.56B est., and a $104B revenue backlog, with 1.5 GW of contracted power; CRWV jumps 9%+ after hours</a></b></span>&nbsp; &mdash;&nbsp; CoreWeave shares jumped 14% in extended trading on Tuesday after the AI infrastructure provider reported results than topped Wall Street expectations.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Super Micro reports Q4 revenue up 93% YoY to $11.1B, vs. $11.3B est., and forecasts Q1 and FY 2027 revenue above estimates; SMCI jumps 9%+ after hours (Dina Bass/Bloomberg)</title>
+  <link>https://www.techmeme.com/260811/p34#a260811p34</link>
+  <pubDate>Tue, 11 Aug 2026 20:30:01 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://www.bloomberg.com/news/articles/2026-08-11/super-micro-gives-sales-forecast-that-tops-rosiest-projections"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260811/i34.jpg" vspace="4" /></a>
+<p><a href="https://www.techmeme.com/260811/p34#a260811p34" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Dina Bass / <a href="https://www.bloomberg.com/">Bloomberg</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/articles/2026-08-11/super-micro-gives-sales-forecast-that-tops-rosiest-projections">Super Micro reports Q4 revenue up 93% YoY to $11.1B, vs. $11.3B est., and forecasts Q1 and FY 2027 revenue above estimates; SMCI jumps 9%+ after hours</a></b></span>&nbsp; &mdash;&nbsp; Super Micro Computer Inc. gave a revenue forecast for the current quarter that topped analysts' estimates, a sign the booming artificial &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Filings show Uber divested from long-time partner Serve Robotics in Q2, as the companies clash over how to deploy delivery robots; Serve has a DoorDash deal (Natalie Lung/Bloomberg)</title>
+  <link>https://www.techmeme.com/260811/p33#a260811p33</link>
+  <pubDate>Tue, 11 Aug 2026 20:20:37 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://www.bloomberg.com/news/articles/2026-08-11/uber-exits-serve-robotics-stake-as-delivery-alliance-unravels"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260811/i33.jpg" vspace="4" /></a>
+<p><a href="https://www.techmeme.com/260811/p33#a260811p33" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Natalie Lung / <a href="https://www.bloomberg.com/">Bloomberg</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/articles/2026-08-11/uber-exits-serve-robotics-stake-as-delivery-alliance-unravels">Filings show Uber divested from long-time partner Serve Robotics in Q2, as the companies clash over how to deploy delivery robots; Serve has a DoorDash deal</a></b></span>&nbsp; &mdash;&nbsp; Uber Technologies Inc. has divested from long-time partner Serve Robotics Inc. as the two companies clash over how to deploy delivery robots &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Similarweb: Bluesky&#x27;s mobile MAUs fell 27% YoY to 10.4M in June and DAUs fell 26% to 3M in July; X&#x27;s mobile MAUs fell 3% to 302M and DAUs fell 7% to 123.7M (Sarah Perez/TechCrunch)</title>
+  <link>https://www.techmeme.com/260811/p32#a260811p32</link>
+  <pubDate>Tue, 11 Aug 2026 19:30:03 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: Could impact sign-ins/MFA/Conditional Access — watch for login issues.</b><br/><a href="https://techcrunch.com/2026/08/11/blueskys-active-user-base-is-shrinking-as-its-focus-expands-beyond-the-app/"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260811/i32.jpg" vspace="4" /></a>
+<p><a href="https://www.techmeme.com/260811/p32#a260811p32" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Sarah Perez / <a href="http://techcrunch.com/">TechCrunch</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://techcrunch.com/2026/08/11/blueskys-active-user-base-is-shrinking-as-its-focus-expands-beyond-the-app/">Similarweb: Bluesky's mobile MAUs fell 27% YoY to 10.4M in June and DAUs fell 26% to 3M in July; X's mobile MAUs fell 3% to 302M and DAUs fell 7% to 123.7M</a></b></span>&nbsp; &mdash;&nbsp; Decentralized social network Bluesky was one of the bigger beneficiaries of the exodus from Elon Musk's X in November 2024, following the U.S. elections.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
 </item>
 
 <item>
@@ -42,7 +201,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.theinformation.com/articles/sacks-craft-targets-1-billion-first-fund-since-white-house-stint"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260811/i30.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260811/p30#a260811p30" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="https://www.theinformation.com/">The Information</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.theinformation.com/articles/sacks-craft-targets-1-billion-first-fund-since-white-house-stint">Sources: David Sacks' Craft Ventures is targeting around $1B for a new fund, its first since Sacks stepped down as the White House AI and crypto czar</a></b></span>&nbsp; &mdash;&nbsp; Craft Ventures, the VC firm helmed by former White House AI czar David Sacks, is raising its first fund since Sacks stepped away &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.theinformation.com/articles/sacks-craft-targets-1-billion-first-fund-since-white-house-stint">Sources: David Sacks' Craft Ventures is targeting around $1B for a new fund, its first since Sacks stepped down as the White House AI and crypto czar</a></b></span>&nbsp; &mdash;&nbsp; Craft Ventures, the VC firm helmed by former White House AI czar David Sacks, is raising its first fund since Sacks stepped away &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -127,7 +286,7 @@
 
 
 <p class="wp-block-paragraph"></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -137,7 +296,15 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.theinformation.com/articles/nvidia-trying-develop-worlds-best-open-source-ai-models"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260811/i28.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260811/p28#a260811p28" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="https://www.theinformation.com/">The Information</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.theinformation.com/articles/nvidia-trying-develop-worlds-best-open-source-ai-models">Sources: Nvidia is developing a Nemotron 4 model with 1T+ parameters, up from Nemotron 3 Ultra's 550B parameters but smaller than leading Chinese open models</a></b></span>&nbsp; &mdash;&nbsp; Nvidia is doubling down on its open-source efforts, pouring investment into an ambitious new in-house AI model that it hopes &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.theinformation.com/articles/nvidia-trying-develop-worlds-best-open-source-ai-models">Sources: Nvidia is developing a Nemotron 4 model with 1T+ parameters, up from Nemotron 3 Ultra's 550B parameters but smaller than leading Chinese open models</a></b></span>&nbsp; &mdash;&nbsp; Nvidia is doubling down on its open-source efforts, pouring investment into an ambitious new in-house AI model that it hopes &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 A developer got Word 1.1a from 1990 to run on Windows 11 - try it yourself</title>
+  <link>https://www.zdnet.com/article/microsoft-word-1-1a-windows/</link>
+  <pubDate>Tue, 11 Aug 2026 16:55:09 +0000</pubDate>
+  <source>ZDNet</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Longing for a plain, old-fashioned version of Microsoft Word without all the bells, whistles, and AI slop? One developer managed to coax Word 1.1a to run on today's Windows.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
@@ -146,7 +313,7 @@
   <pubDate>Tue, 11 Aug 2026 16:50:19 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><p>The security defects could be exploited for arbitrary code execution and denial-of-service.</p>
-<p>The post <a href="https://www.securityweek.com/adobe-urges-immediate-patching-of-critical-coldfusion-campaign-classic-flaws/">Adobe Urges Immediate Patching of Critical ColdFusion, Campaign Classic Flaws</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/adobe-urges-immediate-patching-of-critical-coldfusion-campaign-classic-flaws/">Adobe Urges Immediate Patching of Critical ColdFusion, Campaign Classic Flaws</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
@@ -253,23 +420,7 @@
 
 
 <p class="wp-block-paragraph"><strong>See more insights from the report </strong><a href="https://business.adobe.com/resources/digital-trends-research-center.html" rel="noreferrer noopener nofollow" target="_blank"><strong>here</strong></a><strong>. </strong></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Two wars and a World Cup lead to epic DDoS attacks on publishers</title>
-  <link>https://www.theregister.com/security/2026/08/11/two-wars-and-a-world-cup-lead-to-epic-ddos-attacks-on-publishers/5286278</link>
-  <pubDate>Tue, 11 Aug 2026 15:33:00 +0000</pubDate>
-  <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Ukraine, Iran, and football inspire geopolitically motivated DDoS attacks, while 1 Tbps traffic jams up 519 percent<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
-</item>
-
-<item>
-  <title>🔴 Feds warn Gunra ransomware is exploiting known bugs to hit critical infrastructure</title>
-  <link>https://www.theregister.com/cyber-crime/2026/08/11/feds-warn-gunra-ransomware-is-exploiting-known-bugs-to-hit-critical-infrastructure/5286263</link>
-  <pubDate>Tue, 11 Aug 2026 14:36:00 +0000</pubDate>
-  <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Elevated ransomware risk — validate backups and endpoint defenses.</b><br/>Newly minted RaaS crew breaks in through using internet-facing kit via known Fortinet flaws, then steals and scrambles data<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 8h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
 </item>
 
 <item>
@@ -278,7 +429,7 @@
   <pubDate>Tue, 11 Aug 2026 14:14:32 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><p>SAP released 28 new and two updated security notes, including four notes dealing with critical-severity bugs.</p>
-<p>The post <a href="https://www.securityweek.com/sap-patches-critical-code-injection-memory-corruption-vulnerabilities/">SAP Patches Critical Code Injection, Memory Corruption Vulnerabilities</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 8h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/sap-patches-critical-code-injection-memory-corruption-vulnerabilities/">SAP Patches Critical Code Injection, Memory Corruption Vulnerabilities</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
 </item>
 
 <item>
@@ -287,7 +438,7 @@
   <pubDate>Tue, 11 Aug 2026 14:03:32 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><p>The Water Watch Center launched at DEF CON aims to help under-resourced utilities protect their systems against hackers.</p>
-<p>The post <a href="https://www.securityweek.com/us-water-systems-get-cyber-boost-from-new-senate-bill-and-water-watch-center/">US Water Systems Get Cyber Boost From New Senate Bill and &#8216;Water Watch Center&#8217;</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 8h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/us-water-systems-get-cyber-boost-from-new-senate-bill-and-water-watch-center/">US Water Systems Get Cyber Boost From New Senate Bill and &#8216;Water Watch Center&#8217;</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
 </item>
 
 <item>
@@ -380,7 +531,7 @@
 
 
 <p class="wp-block-paragraph">The system, however, is not without drawbacks. Some of the trade-offs it carries include possibly disabled webhooks, rate-limited APIs, and Git inspection not being real-time.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 10h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 11h ago]]></description>
 </item>
 
 <item>
@@ -497,15 +648,7 @@
 
 
 <p class="wp-block-paragraph">Analysts said such credits are tied to usage-based pricing. “Worth being clear that this isn’t a discount. Credits are currency inside OpenAI’s metered layer,” Chopra said. “Free credits get a workspace comfortable for consuming metered features,” Gogia said the offer should be treated as a pilot incentive. “The promotion should fund the pilot. It should not shorten the runway,” Gogia said, adding that billing controls, including pooled credits and auto-recharge settings, require close oversight.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 10h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Mozilla revokes Firefox signing key after unencrypted copy lands in GitHub</title>
-  <link>https://www.theregister.com/security/2026/08/11/mozilla-revokes-firefox-signing-key-after-unencrypted-copy-lands-in-github/5285908</link>
-  <pubDate>Tue, 11 Aug 2026 11:36:00 +0000</pubDate>
-  <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Audit logs found no unexpected visitors, but release verification still needs an update<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 11h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 11h ago]]></description>
 </item>
 
 <item>
@@ -602,7 +745,7 @@
 
 
 <p class="wp-block-paragraph">CISOs should look for shorter exposure windows, Mahapatra said, along with faster remediation of critical flaws and fewer exploitable exposures. He added that vulnerability severity should be considered alongside exploit likelihood, the importance of the affected business system, and the context in which it is exposed.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 11h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 12h ago]]></description>
 </item>
 
 <item>
@@ -785,15 +928,7 @@
 
 
 <p class="wp-block-paragraph">Leaders who redesign workflows before automating them will create simpler processes, better employee experiences and stronger business outcomes. Those who automate first may improve efficiency for a while, but they also risk embedding yesterday’s assumptions into tomorrow’s technology.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 11h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Building up the US power grid won&#x27;t be wasted, even if the AI bubble bursts</title>
-  <link>https://www.theregister.com/on-prem/2026/08/11/building-up-the-us-power-grid-wont-be-wasted-even-if-the-ai-bubble-bursts/5285563</link>
-  <pubDate>Tue, 11 Aug 2026 10:31:00 +0000</pubDate>
-  <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>The bigger risk is underinvestment, claims consulting biz McKinsey<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 12h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 12h ago]]></description>
 </item>
 
 <item>
@@ -1008,7 +1143,7 @@
 
 
 <p class="wp-block-paragraph">CIOs looking to deploy more AI agents to production need a well-defined operating model that addresses a continuous lifecycle of delivery, deployment, measurement, feedback, and improvement.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 12h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
 </item>
 
 <item>
@@ -1155,7 +1290,7 @@
 
 
 <p class="wp-block-paragraph">They’re measured by the commercial outcomes they create.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 12h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
 </item>
 
 <item>
@@ -1250,7 +1385,7 @@
 
 
 <p class="wp-block-paragraph">This allows n8n to be self-hosted and operated independently of the cloud. In other words, the platform runs within a secure and governance-compliant environment within the group. This way, Mercedes-Benz retains full control over critical systems, data, and work processes.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 14h ago]]></description>
 </item>
 
 <item>
@@ -1399,7 +1534,7 @@
 
 
 <p class="wp-block-paragraph">Companies should split the review job before <a href="https://www.cloudbees.com/blog/2026-state-of-code-abundance-report" rel="noreferrer noopener" target="_blank">CloudBees’ 81%</a> becomes a number on the quarterly slide. Without that change, they will be impressively good at shipping code they never fully check.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 14h ago]]></description>
 </item>
 
 <item>
@@ -1464,7 +1599,7 @@
 
 
 <p class="wp-block-paragraph">Every revolution in manufacturing has been defined by the emergence of a resource that reshaped how value was created, whether that was steam, electricity or silicon. Industry 5.0 is introducing another, albeit one that can’t be stored in a warehouse or delivered on a truck. Data has become the factory’s most valuable raw material, and controlling its movement is every bit as important as controlling the movement of physical goods. The term “industrial equipment” may continue to describe what’s happening on the factory floor, but it no longer captures where competitive advantage is really being created. Increasingly, the intelligence surrounding a machine is becoming just as valuable as the machine itself, and the networks carrying that intelligence are becoming part of the production process in their own right.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 14h ago]]></description>
 </item>
 
 <item>
@@ -1593,7 +1728,7 @@
 
 
 <p class="wp-block-paragraph">“You can stop it, but soft guardrails are useless,” he says. “Do not try to patch the prompt or filter the text. You have to treat the agent like a compromised user account. Pull the OAuth tokens and kill the access immediately.”</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 14h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 15h ago]]></description>
 </item>
 
 <item>
@@ -1730,7 +1865,7 @@
 
 
 <p class="wp-block-paragraph">“Fully autonomous research is real,” Kettle acknowledged. However, “humans are a massive power amplifier for AI research systems.”</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 20h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 21h ago]]></description>
 </item>
 
 <item>
@@ -1937,14 +2072,6 @@
   <pubDate>Mon, 10 Aug 2026 16:08:17 +0000</pubDate>
   <source>ZDNet</source>
   <description><![CDATA[<b>Why this matters: Elevated ransomware risk — validate backups and endpoint defenses.</b><br/>Almost two-thirds of the victims targeted in a single ransomware campaign held managerial positions or higher.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
-</item>
-
-<item>
-  <title>🟠 Cyber vulnerability sweep picks up Royal Navy drones sending data to China</title>
-  <link>https://www.theregister.com/edge-and-iot/2026/08/10/cyber-vulnerability-sweep-picks-up-royal-navy-drones-sending-data-to-china/5285430</link>
-  <pubDate>Mon, 10 Aug 2026 12:25:00 +0000</pubDate>
-  <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>No, no nasties to see here, guv...<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
@@ -2163,14 +2290,6 @@
 
 <p class="wp-block-paragraph">Varonis drew parallels with other recently disclosed AI attacks like <a href="https://www.csoonline.com/article/4186970/m365-copilot-searchleak-your-prompt-injection-attack-surface-just-got-bigger.html">SearchLeak</a>, <a href="https://www.csoonline.com/article/4068175/gemini-trifecta-ai-autonomy-without-guardrails-opens-new-attack-surface.html">EchoLeak</a>, <a href="https://www.csoonline.com/article/4059606/meet-shadowleak-impossible-to-detect-data-theft-using-ai.html">ShadowLeak</a>, and <a href="https://www.csoonline.com/article/4161382/prompt-injection-turned-googles-antigravity-file-search-into-rce.html">Antigravity</a>. The company said RovoBlast is just another example of a broader AI security issue where “untrusted inputs, autonomous behavior, and trusted communication” are together creating serious data exposure.</p>
 </div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
-</item>
-
-<item>
-  <title>🟠 Framework loses customer data in Metabase zero-day attack</title>
-  <link>https://www.theregister.com/personal-tech/2026/08/10/framework-loses-customer-data-in-metabase-zero-day-attack/5285302</link>
-  <pubDate>Mon, 10 Aug 2026 11:21:00 +0000</pubDate>
-  <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Repairable hardware is little comfort when personal details escape<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
@@ -3571,14 +3690,6 @@
 </item>
 
 <item>
-  <title>🔴 Ransomware gangs skip the CEO, head straight for the 40-something IT manager</title>
-  <link>https://www.theregister.com/security/2026/08/09/ransomware-gangs-skip-the-ceo-head-straight-for-the-40-something-it-manager/5284499</link>
-  <pubDate>Sun, 09 Aug 2026 09:33:00 +0000</pubDate>
-  <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Elevated ransomware risk — validate backups and endpoint defenses.</b><br/>Gen Xers who feel triggered by this should remember to unplug the network cable and call the cops<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
-</item>
-
-<item>
   <title>🔴 From ambition to action: What Canadian tech leaders must get right to see meaningful value from transformation efforts</title>
   <link>https://www.cio.com/article/4206862/4206862.html</link>
   <pubDate>Fri, 07 Aug 2026 19:52:05 +0000</pubDate>
@@ -3806,30 +3917,6 @@
 
 <p class="wp-block-paragraph">The Zenity researchers built and launched a free service called <a href="https://aitotal.io/">AI Total</a> that borrows the concept of malware detonation and applies it to skills. The service downloads the skill and activates it inside a live agent that runs inside a sandbox, then monitors its behavior. The sandbox has decoy credentials and sensitive files, as well as full network monitoring and logging to observe what domains the agent reaches, what packages it downloads, what files it touches, and what other actions it takes after enabling the skill.</p>
 </div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4d ago]]></description>
-</item>
-
-<item>
-  <title>🔴 Ransomware attacks spike as world distracted by AI</title>
-  <link>https://www.theregister.com/security/2026/08/07/ransomware-attacks-spike-as-world-distracted-by-ai/5284934</link>
-  <pubDate>Fri, 07 Aug 2026 16:45:00 +0000</pubDate>
-  <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Elevated ransomware risk — validate backups and endpoint defenses.</b><br/>What, you didn't think the top gangs were busy watching agents escape their sandboxes too, did you?<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 4d ago]]></description>
-</item>
-
-<item>
-  <title>🟠 N-able God mode flaw: Vendor confirms attackers reached customer networks as second hotfix lands</title>
-  <link>https://www.theregister.com/networks/2026/08/07/n-able-god-mode-flaw-vendor-confirms-attackers-reached-customer-networks-as-second-hotfix-lands/5284730</link>
-  <pubDate>Fri, 07 Aug 2026 15:01:00 +0000</pubDate>
-  <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Could impact sign-ins/MFA/Conditional Access — watch for login issues.</b><br/>Attackers turned admin access into a route downstream, while N-able tells N-central customers to patch – again<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4d ago]]></description>
-</item>
-
-<item>
-  <title>🔴 ShinyHunters called cancer diagnostics biz and tricked staffers into giving them access. Now they&#x27;ve dumped 10.9M email addresses</title>
-  <link>https://www.theregister.com/cyber-crime/2026/08/07/shinyhunters-called-cancer-diagnostics-biz-and-tricked-staffers-into-giving-them-access-now-theyve-dumped-109m-email-addresses/5284857</link>
-  <pubDate>Fri, 07 Aug 2026 14:53:57 +0000</pubDate>
-  <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Potential data exposure — check monitoring and incident response readiness.</b><br/>Cancer diagnostics breach spills personal and health info as extortion crew says healthcare giant ‘should’ve paid the ransom’<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 4d ago]]></description>
 </item>
 
 <item>
@@ -5419,358 +5506,6 @@
 
 
 <p class="wp-block-paragraph">“These incidents should not be reduced either to models ‘going rogue’ or to simple network misconfiguration,” she said. “They show that capable agents can turn ordinary control weaknesses, ambiguous tasks, and excessive permissions into real-world consequences.” Both Meta and Irregular did not immediately respond to a request for comment.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 5d ago]]></description>
-</item>
-
-<item>
-  <title>🔴 You’re only as secure as your last evaluation</title>
-  <link>https://www.csoonline.com/article/4206147/youre-only-as-secure-as-your-last-evaluation.html</link>
-  <pubDate>Thu, 06 Aug 2026 13:02:17 +0000</pubDate>
-  <source>CSO Online</source>
-  <description><![CDATA[<b>Why this matters: Supply chain risk — audit third-party dependencies and vendor access.</b><br/><div id="remove_no_follow">
-		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
-					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
-						<div class="article-column__content">
-<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
-
-
-
-<p class="wp-block-paragraph">The updated Cybersecurity Maturity Model Certification (CMMC) represents a critical evolution in the Department of War (DoW) strategy to secure the Defense Industrial Base (DIB). It is more than a regulatory hurdle. It is a direct response to a rapidly changing and increasingly hostile threat landscape faced by the DIB.</p>
-
-
-
-<p class="wp-block-paragraph">Updated CMMC guidance issued in 2025 simplifies the prior framework, focusing on the most essential security practices aligned with National Institute of Standards and Technology (NIST) Special Publication (SP) 800-171. Its fundamental purpose remains unchanged: to protect sensitive, unclassified defense information — specifically Federal Contract Information (FCI) and Controlled Unclassified Information (CUI) — from foreign adversaries.</p>
-
-
-<div class="extendedBlock-wrapper block-coreImage undefined"><figure class="wp-block-image size-full"><img alt="CMMC phases" class="wp-image-4206154" height="352" src="https://b2b-contenthub.com/wp-content/uploads/2026/08/CMMC.png" width="624" /></figure><p class="imageCredit">Horizon3</p></div><p class="wp-block-paragraph"><em>The updated CMMC phases. Image from </em><a href="https://dodcio.defense.gov/cmmc/About/" rel="noreferrer noopener" target="_blank"><em>https://dodcio.defense.gov/cmmc/About/</em></a><em> </em></p>
-
-
-
-<h3 class="wp-block-heading" id="cmmc-implementation-phases">CMMC implementation phases</h3>
-
-
-
-<p class="wp-block-paragraph">The CMMC requirements are being implemented in phases to ease the burden on both organizations and auditors.</p>
-
-
-
-<ul class="wp-block-list">
-<li><strong>Phase 1 (Nov 10, 2025 – Nov 9, 2026):</strong> Focus on self-assessments for Levels 1 and 2</li>
-
-
-
-<li><strong>Beginning Nov 10, 2026:</strong> Solicitations will require Level 2 certifications</li>
-</ul>
-
-
-
-<p class="wp-block-paragraph">For thousands of companies across the DIB— from prime contractors to small, specialized machine shops — compliance is not optional. It is the prerequisite for doing business with the DoW. It establishes a standardized, measured approach to cybersecurity across the supply chain.</p>
-
-
-
-<h3 class="wp-block-heading" id="a-shift-in-adversary-strategy">A shift in adversary strategy</h3>
-
-
-
-<p class="wp-block-paragraph">The strategic focus of adversaries has shifted. Rather than launching costly, direct attacks against well-defended prime contractors, they increasingly target the weakest link in the supply chain.</p>
-
-
-
-<p class="wp-block-paragraph">Suppliers and subcontractors often:</p>
-
-
-
-<ul class="wp-block-list">
-<li>Possess valuable intellectual property, schematics, and operational details</li>
-
-
-
-<li>Operate without the same security resources as larger defense firms</li>
-</ul>
-
-
-
-<p class="wp-block-paragraph">These operational activities create a pathway into the broader ecosystem. A breach at any tier can reverberate across the supply chain, exposing sensitive information and impacting mission outcomes.</p>
-
-
-
-<h3 class="wp-block-heading" id="the-limitations-of-point-in-time-security">The limitations of point-in-time security</h3>
-
-
-
-<p class="wp-block-paragraph">The traditional model of cybersecurity compliance has relied on periodic, point-in-time assessments. This approach is fundamentally limited in the context of a dynamic and interconnected supply chain.</p>
-
-
-
-<p class="wp-block-paragraph">Security is not static. A posture that was compliant weeks ago can become vulnerable due to:</p>
-
-
-
-<ul class="wp-block-list">
-<li>New exploits or zero-day vulnerabilities</li>
-
-
-
-<li>System configuration changes</li>
-
-
-
-<li>Introduction of new technologies or shadow IT</li>
-</ul>
-
-
-
-<p class="wp-block-paragraph"><strong>The core issue is straightforward: You are only as secure as your last evaluation. </strong>In an environment that is constantly evolving, this model leaves a persistent gap between compliance and actual risk.</p>
-
-
-
-<h3 class="wp-block-heading" id="enabling-continuous-validation">Enabling continuous validation</h3>
-
-
-
-<p class="wp-block-paragraph">Horizon3.ai’s <a href="https://horizon3.ai/vertical/federal/" rel="noreferrer noopener" target="_blank">NodeZero Federal</a>™ enables a more continuous approach to security validation. Unlike traditional penetration testing or vulnerability scanning, NodeZero identifies and validates exploitable weaknesses and demonstrates how they can be chained together.</p>
-
-
-
-<p class="wp-block-paragraph">This provides organizations with the ability to:</p>
-
-
-
-<ul class="wp-block-list">
-<li><strong>Validate controls regularly: </strong>Demonstrate effectiveness on an ongoing basis, not just during audits</li>
-
-
-
-<li><strong>Close the compliance gap: </strong>Move beyond documentation to show how controls mitigate real-world risk</li>
-
-
-
-<li><strong>Identify attack paths: </strong>Understand how an adversary could move through the environment</li>
-</ul>
-
-
-
-<p class="wp-block-paragraph">This approach supports a more realistic understanding of security posture and risk.</p>
-
-
-
-<h3 class="wp-block-heading" id="expanding-the-scope-from-enterprise-to-ecosystem">Expanding the scope: From enterprise to ecosystem</h3>
-
-
-
-<p class="wp-block-paragraph">Elevating supply chain security for FCI and CUI represents a broader shift in how the DoW approaches risk. The focus is no longer limited to securing individual networks. It extends across the entire DIB ecosystem.</p>
-
-
-
-<p class="wp-block-paragraph">The objective is not only compliance, but:</p>
-
-
-
-<ul class="wp-block-list">
-<li>Measurable risk reduction</li>
-
-
-
-<li>Greater resilience across interconnected environments</li>
-
-
-
-<li>Assurance of mission continuity</li>
-</ul>
-
-
-
-<h3 class="wp-block-heading" id="implications-for-prime-contractors">Implications for prime contractors</h3>
-
-
-
-<p class="wp-block-paragraph">CMMC reinforces a long-standing reality: The security posture of a prime contractor is directly influenced by the posture of its suppliers.</p>
-
-
-
-<p class="wp-block-paragraph">This introduces cascading risks across the supply chain, particularly where subcontractors process, store, or transmit CUI.</p>
-
-
-
-<p class="wp-block-paragraph">Key implications include:</p>
-
-
-
-<ul class="wp-block-list">
-<li><strong>Jeopardized prime contractor posture: </strong>A security incident at a supplier can impact the prime’s certification.</li>
-
-
-
-<li><strong>Contract ineligibility and business impact: </strong>Non-compliance may lead to disqualification from DoW contracts.</li>
-
-
-
-<li><strong>Mission assurance risk: </strong>Compromised CUI can affect operational integrity and outcomes</li>
-</ul>
-
-
-
-<h3 class="wp-block-heading" id="common-sources-of-compromise">Common sources of compromise</h3>
-
-
-
-<p class="wp-block-paragraph">Compromise often originates in predictable areas of the supply chain.</p>
-
-
-
-<p class="wp-block-paragraph"><strong>Third-party providers. </strong>Managed service providers (MSPs) and vendors supporting multiple organizations can introduce systemic risk. A single compromise can expose multiple environments.</p>
-
-
-
-<p class="wp-block-paragraph"><strong>Specialized suppliers. </strong>Small and medium-sized organizations may handle sensitive data but lack enterprise-grade security controls.</p>
-
-
-
-<p class="wp-block-paragraph"><strong>Interconnected access points. </strong>Common weaknesses include:</p>
-
-
-
-<ul class="wp-block-list">
-<li>Shared credentials</li>
-
-
-
-<li>Weak or misconfigured VPN access</li>
-
-
-
-<li>Federated identity systems without proper segmentation</li>
-</ul>
-
-
-
-<h3 class="wp-block-heading" id="example-assume-breach-scenario">Example: Assume-breach scenario</h3>
-
-
-
-<p class="wp-block-paragraph">In a recent assume-breach test, NodeZero began with access to a single host without credentials. From that starting point, it enumerated domain users and executed a password spray, successfully obtaining a valid domain credential.</p>
-
-
-
-<p class="wp-block-paragraph">That account had local administrator privileges, enabling further actions:</p>
-
-
-
-<ul class="wp-block-list">
-<li>Deployment of a remote access tool (RAT)</li>
-
-
-
-<li>LSASS access and credential harvesting</li>
-</ul>
-
-
-
-<p class="wp-block-paragraph">This scenario highlights a common issue: controls that are assumed to be in place may not perform as expected in practice.</p>
-
-
-
-<h3 class="wp-block-heading" id="why-the-legacy-model-does-not-scale">Why the legacy model does not scale</h3>
-
-
-
-<p class="wp-block-paragraph">The legacy model of periodic assessments does not account for the dynamic nature of modern environments.</p>
-
-
-
-<p class="wp-block-paragraph">Risk is introduced through:</p>
-
-
-
-<ul class="wp-block-list">
-<li>Supply chain changes and new vendors</li>
-
-
-
-<li>Ongoing system reconfigurations</li>
-
-
-
-<li>Expansion of SaaS, APIs, and cloud services</li>
-
-
-
-<li>Gradual degradation of controls over time</li>
-</ul>
-
-
-
-<p class="wp-block-paragraph">As a result, a point-in-time certification can quickly become outdated.</p>
-
-
-
-<h3 class="wp-block-heading" id="continuous-readiness-under-cmmc">Continuous readiness under CMMC</h3>
-
-
-
-<p class="wp-block-paragraph">The updated CMMC guidance emphasizes continuous readiness rather than periodic validation. Self-assessments are expected to be supported by documented, day-to-day evidence of control effectiveness.</p>
-
-
-
-<p class="wp-block-paragraph">This reflects the need to maintain security posture over time, not just demonstrate it at a single point.</p>
-
-
-
-<h3 class="wp-block-heading" id="continuous-validation-as-a-practical-requirement">Continuous validation as a practical requirement</h3>
-
-
-
-<p class="wp-block-paragraph">Moving to continuous validation helps organizations keep pace with:</p>
-
-
-
-<ul class="wp-block-list">
-<li>Changing threat activity</li>
-
-
-
-<li>Evolving supplier ecosystems</li>
-
-
-
-<li>The need to maintain confidence in control effectiveness</li>
-</ul>
-
-
-
-<p class="wp-block-paragraph">Without this, organizations rely on outdated assumptions about their environment and exposure.</p>
-
-
-
-<h3 class="wp-block-heading" id="closing-the-gap-between-compliance-and-security">Closing the gap between compliance and security</h3>
-
-
-
-<p class="wp-block-paragraph">HORIZON3.ai’s NodeZero® Proactive Security Platform helps bridge the gap between compliance and operational security. By validating controls through real-world attack scenarios, it provides evidence of effectiveness and identifies gaps across both internal environments and critical suppliers.</p>
-
-
-
-<p class="wp-block-paragraph">This enables organizations to treat CMMC not just as a compliance requirement, but as part of an ongoing risk management program.</p>
-
-
-
-<h3 class="wp-block-heading" id="final-thought">Final thought</h3>
-
-
-
-<p class="wp-block-paragraph">True security posture is not defined by a completed assessment.</p>
-
-
-
-<p class="wp-block-paragraph">It is defined by how systems perform under real conditions, and how quickly organizations can identify and address weaknesses as they emerge. </p>
-
-
-
-<p class="wp-block-paragraph">Learn more about how Horizon3.ai strengthens supply chain security for CMMC.<br /><a href="https://horizon3.ai/wp-content/uploads/2026/05/2605_Whitepaper_Supply-Chain-Security-CMMC_US_Digital.pdf" rel="noreferrer noopener" target="_blank">Please refer to the full white paper</a>.</p>
-
-
-
-<p class="wp-block-paragraph"></p>
 </div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 5d ago]]></description>
 </item>
 
