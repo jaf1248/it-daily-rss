@@ -1,25 +1,30 @@
 # IT Weekly Intelligence Briefing
 **Period:** August 04 – August 11, 2026  
-**Generated:** 2026-08-11 07:01 UTC  
-**Items reviewed:** 135  
+**Generated:** 2026-08-11 08:51 UTC  
+**Items reviewed:** 136  
 
 ## ⚡ Top Actions This Week
 
-1. **Audit third-party software dependencies and review vendor access.**  
+1. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
+   _Hackers Breach Polish Power Plant Controls via Private Cellular Network and Shut Turbine_  
+   Source: The Hacker News  
+
+2. **Audit third-party software dependencies and review vendor access.**  
    _BdThemes Supply Chain Attack Poisons JSON to Create Rogue WordPress Admins_  
    Source: The Hacker News  
 
-2. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
+3. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
    _Hackers breached a small Polish energy plant via private APN last year_  
-   Source: BleepingComputer  
-
-3. **Validate backups, confirm EDR coverage, and brief incident response team.**  
-   _New StormEncryptor ransomware used by former Medusa affiliate_  
    Source: BleepingComputer  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [Hackers Breach Polish Power Plant Controls via Private Cellular Network and Shut Turbine](https://thehackernews.com/2026/08/hackers-breach-polish-power-plant.html)
+**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Aug 11  
+**Why it matters:** Potential credential or data exposure.  
+**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
 ### [BdThemes Supply Chain Attack Poisons JSON to Create Rogue WordPress Admins](https://thehackernews.com/2026/08/bdthemes-supply-chain-attack-poisons.html)
 **Source:** The Hacker News &nbsp;·&nbsp; **Date:** Aug 11  
@@ -46,38 +51,33 @@
 **Why it matters:** Elevated ransomware risk across the sector.  
 **Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
 
-### [Valve notifies Steam hardware customers of a data breach](https://www.bleepingcomputer.com/news/security/valve-notifies-steam-hardware-customers-of-a-data-breach/)
-**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Aug 10  
-**Why it matters:** Potential credential or data exposure.  
-**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
-
 ---
 
 ## 🟠 Important — Review This Week
 
-- [OpenAI releases ChatGPT 5.6 Cyber, but it's only for approved users](https://www.bleepingcomputer.com/news/security/openai-releases-chatgpt-56-cyber-but-its-only-for-approved-users/)  
-  **BleepingComputer** · Aug 10 · _General awareness item._  
+- [CVE-2026-68141 net/af_iucv: fix NULL deref in afiucv_hs_callback_syn()](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-68141)  
+  **Microsoft Security Response Center (MSRC)** · Aug 11 · _General awareness item._  
 
-- [⚡ Weekly Recap: AI Goes Rogue, Metabase 0-Day, MCP Supply-Chain Attacks, and Router Backdoors](https://thehackernews.com/2026/08/weekly-recap-ai-goes-rogue-metabase-0.html)  
-  **The Hacker News** · Aug 10 · _Third-party/software supply chain integrity risk._  
+- [CVE-2026-68371 usb: musb: omap2430: Do not put borrowed of_node in probe](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-68371)  
+  **Microsoft Security Response Center (MSRC)** · Aug 11 · _General awareness item._  
 
-- [CVE-2024-21380 Microsoft Dynamics Business Central/NAV Information Disclosure Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-21380)  
-  **Microsoft Security Response Center (MSRC)** · Aug 10 · _Possible impact to authentication and sign-in flows._  
+- [CVE-2026-68110 drm/amdgpu/sdma4.4.2: replace BUG_ON() with WARN_ON()](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-68110)  
+  **Microsoft Security Response Center (MSRC)** · Aug 11 · _General awareness item._  
 
-- [CVE-2026-50309 Windows NTFS Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-50309)  
-  **Microsoft Security Response Center (MSRC)** · Aug 10 · _General awareness item._  
+- [CVE-2026-68297 tipc: fix u16 MTU truncation in media and bearer MTU validation](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-68297)  
+  **Microsoft Security Response Center (MSRC)** · Aug 11 · _General awareness item._  
 
-- [CVE-2026-50357 Windows Resilient File System (ReFS) Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-50357)  
-  **Microsoft Security Response Center (MSRC)** · Aug 10 · _General awareness item._  
+- [CVE-2026-68395 ata: sata_dwc_460ex: enable SATA interrupts only after IRQ handler is registered](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-68395)  
+  **Microsoft Security Response Center (MSRC)** · Aug 11 · _General awareness item._  
 
-- [CVE-2026-40417 Microsoft Dynamics 365 Business Central Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-40417)  
-  **Microsoft Security Response Center (MSRC)** · Aug 10 · _Possible impact to authentication and sign-in flows._  
+- [CVE-2026-68337 bpf: Reject redirect helpers without a bpf_net_context](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-68337)  
+  **Microsoft Security Response Center (MSRC)** · Aug 11 · _General awareness item._  
 
-- [CVE-2025-29821 Microsoft Dynamics Business Central Information Disclosure Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-29821)  
-  **Microsoft Security Response Center (MSRC)** · Aug 10 · _Possible impact to authentication and sign-in flows._  
+- [CVE-2026-68130 ksmbd: defer destroy_previous_session() until after NTLM authentication](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-68130)  
+  **Microsoft Security Response Center (MSRC)** · Aug 11 · _General awareness item._  
 
-- [CVE-2021-34474 Microsoft Dynamics 365 Business Central Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-34474)  
-  **Microsoft Security Response Center (MSRC)** · Aug 10 · _Possible impact to authentication and sign-in flows._  
+- [CVE-2026-68350 wifi: carl9170: fix OOB read from off-by-two in TX status handler](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-68350)  
+  **Microsoft Security Response Center (MSRC)** · Aug 11 · _General awareness item._  
 
 ---
 
@@ -92,4 +92,4 @@
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 13 critical · 74 important · 48 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 14 critical · 74 important · 48 FYI_
