@@ -1,25 +1,40 @@
 # IT Weekly Intelligence Briefing
 **Period:** August 04 – August 11, 2026  
-**Generated:** 2026-08-11 18:01 UTC  
+**Generated:** 2026-08-11 19:59 UTC  
 **Items reviewed:** 136  
 
 ## ⚡ Top Actions This Week
 
-1. **Prioritize patching of affected systems; check for internet-exposed attack surface.**  
-   _Microsoft Patch Tuesday August 2026, (Tue, Aug 11th)_  
-   Source: SANS Internet Storm Center  
+1. **Apply emergency patch or mitigation now; check vendor advisory for workarounds.**  
+   _Cisco warns of ASA and FTD VPN flaw exploited to crash devices_  
+   Source: BleepingComputer  
 
-2. **Validate backups, confirm EDR coverage, and brief incident response team.**  
-   _DeadLock Ransomware Uses Polygon Smart Contracts to Make Extortion Infra Harder to Disrupt_  
+2. **Elevate monitoring posture; brief security team on threat actor TTPs.**  
+   _Sandworm-Linked UAC-0145 Uses Fake Job Interviews to Push VPN That Can Run Commands_  
    Source: The Hacker News  
 
-3. **Validate backups, confirm EDR coverage, and brief incident response team.**  
-   _CISA: Microsoft SharePoint flaw now exploited in ransomware attacks_  
+3. **Apply emergency patch or mitigation now; check vendor advisory for workarounds.**  
+   _Microsoft August 2026 Patch Tuesday fixes 400 flaws, 3 zero-days_  
    Source: BleepingComputer  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [Cisco warns of ASA and FTD VPN flaw exploited to crash devices](https://www.bleepingcomputer.com/news/security/cisco-warns-of-asa-and-ftd-vpn-flaw-exploited-to-crash-devices/)
+**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Aug 11  
+**Why it matters:** General awareness item.  
+**Recommended action:** Apply emergency patch or mitigation now; check vendor advisory for workarounds.  
+
+### [Sandworm-Linked UAC-0145 Uses Fake Job Interviews to Push VPN That Can Run Commands](https://thehackernews.com/2026/08/sandworm-linked-uac-0145-uses-fake-job.html)
+**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Aug 11  
+**Why it matters:** Advanced persistent threat activity detected.  
+**Recommended action:** Elevate monitoring posture; brief security team on threat actor TTPs.  
+
+### [Microsoft August 2026 Patch Tuesday fixes 400 flaws, 3 zero-days](https://www.bleepingcomputer.com/news/microsoft/microsoft-august-2026-patch-tuesday-fixes-400-flaws-3-zero-days/)
+**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Aug 11  
+**Why it matters:** General awareness item.  
+**Recommended action:** Apply emergency patch or mitigation now; check vendor advisory for workarounds.  
 
 ### [Microsoft Patch Tuesday August 2026, (Tue, Aug 11th)](https://isc.sans.edu/diary/rss/33236)
 **Source:** SANS Internet Storm Center &nbsp;·&nbsp; **Date:** Aug 11  
@@ -36,24 +51,12 @@
 **Why it matters:** Elevated ransomware risk across the sector.  
 **Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
 
-### [US and South Korea warn of Gunra ransomware targeting govt agencies](https://www.bleepingcomputer.com/news/security/us-warns-of-gunra-ransomware-attacks-against-government-critical-infrastructure/)
-**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Aug 11  
-**Why it matters:** Elevated ransomware risk across the sector.  
-**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
-
-### [Gunra Ransomware Exploits Fortinet and Schneider Electric Flaws to Breach Networks](https://thehackernews.com/2026/08/gunra-ransomware-exploits-fortinet-and.html)
-**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Aug 11  
-**Why it matters:** Elevated ransomware risk across the sector.  
-**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
-
-### [Hackers Breach Polish Power Plant Controls via Private Cellular Network and Shut Turbine](https://thehackernews.com/2026/08/hackers-breach-polish-power-plant.html)
-**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Aug 11  
-**Why it matters:** Potential credential or data exposure.  
-**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
-
 ---
 
 ## 🟠 Important — Review This Week
+
+- [Microsoft releases Windows 10 KB5120249 extended security update](https://www.bleepingcomputer.com/news/microsoft/windows-10-kb5120249-cumulative-update-released-with-fixes/)  
+  **BleepingComputer** · Aug 11 · _General awareness item._  
 
 - [Researchers Disclose AI-Assisted SharePoint Exploit Chain Reaching Unauthenticated RCE](https://thehackernews.com/2026/08/researchers-disclose-ai-assisted.html)  
   **The Hacker News** · Aug 11 · _General awareness item._  
@@ -76,20 +79,17 @@
 - [CVE-2026-57105 Microsoft Office SharePoint Spoofing Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-57105)  
   **Microsoft Security Response Center (MSRC)** · Aug 11 · _General awareness item._  
 
-- [CVE-2026-62829 Microsoft SharePoint Server Spoofing Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-62829)  
-  **Microsoft Security Response Center (MSRC)** · Aug 11 · _General awareness item._  
-
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [Delta probes Wi-Fi deauth attack on flight carrying DEF CON attendees](https://www.bleepingcomputer.com/news/security/delta-probes-wi-fi-deauth-attack-on-flight-carrying-def-con-attendees/) — BleepingComputer
 - [Windows 11 KB5121003 & KB5120240 cumulative updates released](https://www.bleepingcomputer.com/news/microsoft/windows-11-kb5121003-and-kb5120240-cumulative-updates-released/) — BleepingComputer
 - [Mozilla updates GPG signing key for Firefox releases after exposure](https://www.bleepingcomputer.com/news/security/mozilla-updates-gpg-key-for-signing-firefox-thunderbird-releases-after-exposure/) — BleepingComputer
 - [Vague Task, Total Access: When AI Delegation Becomes a Security Risk](https://www.bleepingcomputer.com/news/security/vague-task-total-access-when-ai-delegation-becomes-a-security-risk/) — BleepingComputer
 - [DDoS attacks over 1 Tbps surged fivefold in the second quarter](https://www.bleepingcomputer.com/news/security/ddos-attacks-over-1-tbps-surged-fivefold-in-the-second-quarter/) — BleepingComputer
 - [A Malicious SIM Card Can Run Attacker Code Inside the Modems Behind Cellular IoT Devices](https://thehackernews.com/2026/08/a-malicious-sim-card-can-run-attacker.html) — The Hacker News
-- [Mozilla Revokes Firefox and Thunderbird Linux Signing Key After Key Lands in Private Repo](https://thehackernews.com/2026/08/mozilla-revokes-firefox-and-thunderbird.html) — The Hacker News
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 14 critical · 74 important · 48 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 14 critical · 75 important · 47 FYI_
