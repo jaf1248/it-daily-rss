@@ -3,8 +3,245 @@
 <channel>
   <title>Joe — VP of IT Briefing</title>
   <description>Leadership-focused IT risk, vendors, pricing, licensing, and industry context.</description>
-  <lastBuildDate>Tue, 11 Aug 2026 11:41:17 +0000</lastBuildDate>
+  <lastBuildDate>Tue, 11 Aug 2026 12:56:15 +0000</lastBuildDate>
   
+<item>
+  <title>🔵 IBM and Together AI sign a $240M, multi-year deal to build an AI inference cluster on IBM Cloud, using Nvidia&#x27;s HGX B300 systems, to support open-source models (Anhata Rooprai/Reuters)</title>
+  <link>https://www.techmeme.com/260811/p14#a260811p14</link>
+  <pubDate>Tue, 11 Aug 2026 12:40:01 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.reuters.com/business/ibm-together-ai-ink-240-million-deal-nvidia-powered-ai-inference-cluster-2026-08-11/"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260811/i14.jpg" vspace="4" /></a>
+<p><a href="https://www.techmeme.com/260811/p14#a260811p14" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Anhata Rooprai / <a href="http://www.reuters.com/">Reuters</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://www.reuters.com/business/ibm-together-ai-ink-240-million-deal-nvidia-powered-ai-inference-cluster-2026-08-11/">IBM and Together AI sign a $240M, multi-year deal to build an AI inference cluster on IBM Cloud, using Nvidia's HGX B300 systems, to support open-source models</a></b></span>&nbsp; &mdash;&nbsp; IBM (IBM.N) and startup Together AI have signed a $240 million multi-year agreement to build a large-scale artificial intelligence cluster &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</item>
+
+<item>
+  <title>🟠 GitHub already has an EDR. You just have to listen to it</title>
+  <link>https://www.csoonline.com/article/4207927/github-already-has-an-edr-you-just-have-to-listen-to-it.html</link>
+  <pubDate>Tue, 11 Aug 2026 12:02:23 +0000</pubDate>
+  <source>CSO Online</source>
+  <description><![CDATA[<b>Why this matters: Credential/phishing risk — reinforce MFA and user awareness training.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<p class="wp-block-paragraph">Many of the recent supply-chain attacks could have been caught earlier if defenders looked closely at the telemetry GitHub already provides, researchers said.</p>
+
+
+
+<p class="wp-block-paragraph">At their Black Hat USA 2026 presentation, researchers <a href="https://www.linkedin.com/in/yossi-weizman/" rel="noreferrer noopener" target="_blank">Yossi Weizman</a> of Microsoft and <a href="https://www.linkedin.com/in/morwn/" rel="noreferrer noopener" target="_blank">Mor Weinberger </a>of Echo argued the case, saying, “GitHub can tell you’re being hacked. You’re just not listening.”</p>
+
+
+
+<p class="wp-block-paragraph">The duo <a href="https://blackhat.com/us-26/briefings/schedule/?#github-can-tell-youre-being-hacked-youre-just-not-listening-building-edr-for-github-from-its-own-event-stream-53981" rel="noreferrer noopener" target="_blank">described</a> an EDR-style detection approach built from GitHub’s own event stream rather than relying solely on conventional endpoint or network telemetry.</p>
+
+
+
+<p class="wp-block-paragraph">After studying recent supply-chain attacks, including <a href="https://www.csoonline.com/article/4136476/shai-hulud-style-npm-worm-hits-ci-pipelines-and-ai-coding-tools.html">Shai-Hulud</a>, Trivy, and Megalodon, the researchers found that seemingly different incidents repeatedly used the same techniques, from forged commit identities and poisoned tags to workflow abuse, OpenID Connect (OIDC) theft, and attempts to erase evidence.</p>
+
+
+
+<p class="wp-block-paragraph">They said they turned those recurring techniques into behavioral detections, combining GitHub webhooks, API data, and Git repository inspection to build a historical view of activity.</p>
+
+
+
+<p class="wp-block-paragraph">Their new open-source tool, dubbed “GitHub Threat Detector,” reportedly includes 22 production detection rules and 12 beta rules, with compound detections designed to correlate individually weaker signals into high-confidence alerts.</p>
+
+
+
+<h2 class="wp-block-heading"><a></a>Everything leaves evidence on GitHub</h2>
+
+
+
+<p class="wp-block-paragraph">The central observation in Weizman and Weinberger’s <a href="https://i.blackhat.com/BH-USA-26/Presentations/USA26-Weinberger-GitHub_Can_Tell-Wed.pdf" rel="noreferrer noopener" target="_blank">research</a> is that supply-chain attacks often repeat the same patterns even when the targeted projects are unrelated.</p>
+
+
+
+<p class="wp-block-paragraph">A compromised identity, for example, may not be obvious from the commit itself because Git metadata can be forged. An attacker can set the author name, email, timestamp, parent, and other metadata to make a malicious commit appear legitimate.</p>
+
+
+
+<p class="wp-block-paragraph">But GitHub separately records the authenticated user who pushed the commit.</p>
+
+
+
+<p class="wp-block-paragraph">When the commit author does not match the authenticated pusher, defenders have something worth investigating, they explained. Added to this, their analysis revealed that attackers sometimes reuse the same forged identities across multiple victims. Searching GitHub for the same author’s email can therefore help connect seemingly unrelated incidents into a broader campaign.</p>
+
+
+
+<p class="wp-block-paragraph">“Forged identities in the repo which appear in other repos as well-is a strong indication of compromise,” they said.</p>
+
+
+
+<p class="wp-block-paragraph">The research found “forged maintainer’s identity” used across many attacks, including <a href="https://www.csoonline.com/article/4149905/pypi-warns-developers-after-litellm-malware-found-stealing-cloud-and-ci-cd-credentials.html">Trivy</a>, <a href="https://www.csoonline.com/article/4008621/github-actions-attack-renders-even-security-aware-orgs-vulnerable.html">tj-actions</a>, <a href="https://www.csoonline.com/article/4162865/bitwarden-cli-password-manager-trojanized-in-supply-chain-attack.html">Megalodon</a>, <a href="https://www.csoonline.com/article/4170284/mistral-ai-sdk-tanstack-router-hit-in-npm-software-supply-chain-attack.html">TanStack</a>, and <a href="https://www.csoonline.com/article/4179866/infected-red-hat-npm-packages-expose-developer-credentials.html">Red Hat</a>.</p>
+
+
+
+<p class="wp-block-paragraph">Another detection pitched on the same principle included tracking “Mass tag poisoning.” Mass tag poisoning involves force-moving numerous release tags onto a malicious commit so that workflows using a version such as @v1 execute attacker-controlled code. Researchers recommended adding tracking GitHub tag history through the GitHub API and comparing old and new commit references to catch this out.</p>
+
+
+
+<p class="wp-block-paragraph">OIDC offers another signal. Attackers can modify workflows to generate short-lived identities for cloud or package registries instead of stealing long-lived credentials. Watching for new or modified workflows that enable OIDC token issuance can help, the researchers said.</p>
+
+
+
+<h2 class="wp-block-heading"><a></a>Correlating weak signals for stronger detection</h2>
+
+
+
+<p class="wp-block-paragraph">GitHub Threat Detector follows an EDR-like pipeline: collect activity, enrich it with context, detect suspicious behavior, and then investigate or respond. The signals it ingests include live GitHub webhooks, API events, commits, tags, and Actions activity, while Git inspection provides additional context such as tag provenance.</p>
+
+
+
+<p class="wp-block-paragraph">Additionally, a PostgreSQL-backed activity store keeps the history needed to correlate events over time.</p>
+
+
+
+<p class="wp-block-paragraph">The tool took over 30 detection rules and tested them against 52 attack simulations, including reproduction of Trivy, TanStack, Megalodon, and Bitwarden CLI incidents. A separate “noise lab” helped researchers measure detection prevalence and recall, while tuning rules through allowlisting and severity adjustments.</p>
+
+
+
+<p class="wp-block-paragraph">The system, however, is not without drawbacks. Some of the trade-offs it carries include possibly disabled webhooks, rate-limited APIs, and Git inspection not being real-time.</p>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 OpenAI targets heavy users with premium ChatGPT Business seats</title>
+  <link>https://www.cio.com/article/4207908/openai-targets-heavy-users-with-premium-chatgpt-business-seats.html</link>
+  <pubDate>Tue, 11 Aug 2026 12:00:00 +0000</pubDate>
+  <source>CIO.com</source>
+  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<p class="wp-block-paragraph">OpenAI is introducing a higher-priced “Premium” tier for its ChatGPT Business offering, allowing enterprises to assign higher-capacity access to select users alongside standard licences – a move analysts said is about enterprise AI vendors redesigning pricing to capture more value from high-intensity workloads.</p>
+
+
+
+<p class="wp-block-paragraph">The company said the new tier provides “5x more usage than Standard” and “removes the five-hour usage limit,” enabling users to “take on larger projects and work with fewer interruptions.”</p>
+
+
+
+<p class="wp-block-paragraph">“Premium seats cost $125 per user per month, or $100 per user per month when billed annually,” OpenAI said in a <a href="https://openai.com/index/premium-seats-chatgpt-business/" rel="noreferrer noopener" target="_blank">statement</a>. “Standard seats remain $25 per user per month, or $20 per user per month when billed annually.”</p>
+
+
+
+<p class="wp-block-paragraph">OpenAI said enterprises can “mix Standard and Premium seats across the same team” and “upgrade or reassign seats as business needs change,” with administrators able to “monitor usage across the workspace” and “manage billing, usage, and spend limits in one place.”</p>
+
+
+
+<h2 class="wp-block-heading" id="vendors-converge-on-seat-plus-usage-pricing">Vendors converge on seat-plus-usage pricing</h2>
+
+
+
+<p class="wp-block-paragraph">Analysts said the introduction of a higher-capacity tier reflects a broader shift toward hybrid pricing models.</p>
+
+
+
+<p class="wp-block-paragraph">“Read this as vendors converging on a two-layer bill rather than abandoning flat pricing,” said Bhupendra Chopra, chief revenue officer at Kanerika. “There’s a predictable per-seat charge for everyday chat, and a separate metered charge for heavy agentic work.”</p>
+
+
+
+<p class="wp-block-paragraph">Chopra said vendors are packaging this differently. “Google bundles the first into Workspace and meters the second. Microsoft folds Copilot into its bundles and sells credit packs for agent runs. OpenAI has no productivity suite to hide the seat cost inside, so it built a higher seat tier instead.”</p>
+
+
+
+<p class="wp-block-paragraph">That model is reflected in current offerings. Microsoft 365 Copilot <a href="https://www.microsoft.com/en-us/microsoft-365-copilot/pricing" rel="noreferrer noopener" target="_blank">pricing</a> positions Copilot as a per-user add-on to Microsoft 365, while Google Gemini enterprise pricing shows model and agent usage billed separately from Workspace plans. Anthropic’s Claude pricing similarly outlines subscription tiers alongside usage-based model access.</p>
+
+
+
+<p class="wp-block-paragraph">For CIOs, this changes how AI spending is managed, Chopra said. “Your AI budget now has a fixed component and a variable one, and they need different owners. Seat count is a procurement problem. Metered spend is a FinOps problem.”</p>
+
+
+
+<h2 class="wp-block-heading" id="premium-seats-target-high-usage-workloads">Premium seats target high-usage workloads</h2>
+
+
+
+<p class="wp-block-paragraph">OpenAI said Premium seats are designed for “your most active teammates,” citing use cases such as “organizing inventory,” “building marketing campaigns,” and “analyzing business performance.”</p>
+
+
+
+<p class="wp-block-paragraph">The company said Premium users can “take on bigger projects and keep work moving,” with “predictable weekly usage resets” and the option to add “shared workspace credits” if limits are reached.</p>
+
+
+
+<p class="wp-block-paragraph">Analysts said this reflects a shift in how enterprise AI usage is being monetized.</p>
+
+
+
+<p class="wp-block-paragraph">“This is not vendors admitting that flat seats failed. It is vendors admitting that one seat no longer describes one economic profile,” said Sanchit Vir Gogia, chief analyst at Greyhound Research. “The seat is the engine an enterprise licenses. The fuel is now billed separately.”</p>
+
+
+
+<p class="wp-block-paragraph">Gogia added that vendors are structuring pricing differently around that model. “OpenAI has kept a fixed seat and meters what sits above it. Microsoft has kept a $30 Copilot licence carrying no entitlement to its agentic layer at all. Google, meanwhile, has left its seat editions alone while switching agent meters on by published date.”</p>
+
+
+
+<p class="wp-block-paragraph">Greyhound Research pointed to the treatment of usage caps as a signal of how capacity is being priced.</p>
+
+
+
+<p class="wp-block-paragraph">“Most will read this as segmentation. Greyhound Research reads it as rationing, and the five-hour limit is the tell,” Gogia said. “On July 12, OpenAI removed that limit free of charge. At the end of July, it was restored. On August 10, it became a paid entitlement.”</p>
+
+
+
+<h2 class="wp-block-heading" id="cios-face-allocation-and-cost-decisions">CIOs face allocation and cost decisions</h2>
+
+
+
+<p class="wp-block-paragraph">The higher-priced tier raises questions about how enterprises assign access, analysts said.</p>
+
+
+
+<p class="wp-block-paragraph">“Don’t start with people. Start with your billing data,” Chopra said. “If someone is regularly drawing down shared workspace credits, a fixed higher seat may cost less and forecast better than open-ended credit consumption.”</p>
+
+
+
+<p class="wp-block-paragraph">He said allocation based on hierarchy can lead to inefficiencies. “You end up paying premium rates for executives who open it twice a week while the analyst-blocked mid-close stays throttled.”</p>
+
+
+
+<p class="wp-block-paragraph">Gogia echoed that view. “Power user should describe a workload pattern, not a job title,” he said. “The right question is whose work becomes materially more valuable when Standard stops being enough.”</p>
+
+
+
+<h2 class="wp-block-heading" id="credits-positioned-to-drive-metered-usage">Credits positioned to drive metered usage</h2>
+
+
+
+<p class="wp-block-paragraph">According to the statement, OpenAI is offering incentives, stating that eligible customers can receive “$100 worth of workspace credits (2,500 credits) for each Premium seat they add, up to 5 seats.”</p>
+
+
+
+<p class="wp-block-paragraph">Analysts said such credits are tied to usage-based pricing. “Worth being clear that this isn’t a discount. Credits are currency inside OpenAI’s metered layer,” Chopra said. “Free credits get a workspace comfortable for consuming metered features,” Gogia said the offer should be treated as a pilot incentive. “The promotion should fund the pilot. It should not shorten the runway,” Gogia said, adding that billing controls, including pooled credits and auto-recharge settings, require close oversight.</p>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Big Tech&#x27;s AI boom echoes the 1870s railroad buildout, and Nvidia shifting risk to institutional capital may expose investors if AI revenues fail to materialize (Ben Thompson/Stratechery)</title>
+  <link>https://www.techmeme.com/260811/p13#a260811p13</link>
+  <pubDate>Tue, 11 Aug 2026 11:45:01 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><p><a href="https://www.techmeme.com/260811/p13#a260811p13" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Ben Thompson / <a href="https://stratechery.com/">Stratechery</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://stratechery.com/2026/nvidias-risky-business/">Big Tech's AI boom echoes the 1870s railroad buildout, and Nvidia shifting risk to institutional capital may expose investors if AI revenues fail to materialize</a></b></span>&nbsp; &mdash;&nbsp; On January 1, 1870, Jay Cooke, hailed as an American hero for his role in financing the Union effort in the Civil War &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Mozilla revokes Firefox signing key after unencrypted copy lands in GitHub</title>
+  <link>https://www.theregister.com/security/2026/08/11/mozilla-revokes-firefox-signing-key-after-unencrypted-copy-lands-in-github/5285908</link>
+  <pubDate>Tue, 11 Aug 2026 11:36:00 +0000</pubDate>
+  <source>The Register</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Audit logs found no unexpected visitors, but release verification still needs an update<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+</item>
+
 <item>
   <title>🔵 An NYC bill, backed by Mayor Zohran Mamdani, calls for Amazon, FedEx, and others to directly employ thousands of delivery workers; the bill could pass this fall (Bloomberg)</title>
   <link>https://www.techmeme.com/260811/p12#a260811p12</link>
@@ -12,7 +249,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><a href="https://www.bloomberg.com/news/features/2026-08-11/amazon-is-in-the-crosshairs-of-mamdani-s-nyc-worker-agenda"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260811/i12.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260811/p12#a260811p12" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="https://www.bloomberg.com/">Bloomberg</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/features/2026-08-11/amazon-is-in-the-crosshairs-of-mamdani-s-nyc-worker-agenda">An NYC bill, backed by Mayor Zohran Mamdani, calls for Amazon, FedEx, and others to directly employ thousands of delivery workers; the bill could pass this fall</a></b></span>&nbsp; &mdash;&nbsp; A New York City bill calls for the company to hire thousands of contract couriers.&nbsp; Amazon says the proposal will make delivery pricier and slower.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/features/2026-08-11/amazon-is-in-the-crosshairs-of-mamdani-s-nyc-worker-agenda">An NYC bill, backed by Mayor Zohran Mamdani, calls for Amazon, FedEx, and others to directly employ thousands of delivery workers; the bill could pass this fall</a></b></span>&nbsp; &mdash;&nbsp; A New York City bill calls for the company to hire thousands of contract couriers.&nbsp; Amazon says the proposal will make delivery pricier and slower.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
 </item>
 
 <item>
@@ -109,26 +346,7 @@
 
 
 <p class="wp-block-paragraph">CISOs should look for shorter exposure windows, Mahapatra said, along with faster remediation of critical flaws and fewer exploitable exposures. He added that vulnerability severity should be considered alongside exploit likelihood, the importance of the affected business system, and the context in which it is exposed.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 xAI co-founder Igor Babuschkin&#x27;s River AI raised $1B led by General Catalyst to build home or small business computer servers capable of running AI locally (Cade Metz/New York Times)</title>
-  <link>https://www.techmeme.com/260811/p11#a260811p11</link>
-  <pubDate>Tue, 11 Aug 2026 11:20:00 +0000</pubDate>
-  <source>Techmeme</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://www.nytimes.com/2026/08/11/technology/his-start-ups-goal-ai-that-is-trainable-and-not-controlled-by-a-big-company.html"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260811/i11.jpg" vspace="4" /></a>
-<p><a href="https://www.techmeme.com/260811/p11#a260811p11" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Cade Metz / <a href="https://www.nytimes.com/">New York Times</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.nytimes.com/2026/08/11/technology/his-start-ups-goal-ai-that-is-trainable-and-not-controlled-by-a-big-company.html">xAI co-founder Igor Babuschkin's River AI raised $1B led by General Catalyst to build home or small business computer servers capable of running AI locally</a></b></span>&nbsp; &mdash;&nbsp; Igor Babuschkin built a new start-up, River AI, and hopes to provide ways for people to &ldquo;retrain,&rdquo; or modify, artificial intelligence &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Extension Banned for Stealing AI Chats Returns to Chrome Store, Resumes Malicious Activities</title>
-  <link>https://www.securityweek.com/extension-banned-for-stealing-ai-chats-returns-to-chrome-store-resumes-malicious-activities/</link>
-  <pubDate>Tue, 11 Aug 2026 11:15:15 +0000</pubDate>
-  <source>SecurityWeek</source>
-  <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><p>The extension amassed over 300,000 installs and a 4.6 rating before Google removed it for stealing data.</p>
-<p>The post <a href="https://www.securityweek.com/extension-banned-for-stealing-ai-chats-returns-to-chrome-store-resumes-malicious-activities/">Extension Banned for Stealing AI Chats Returns to Chrome Store, Resumes Malicious Activities</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
 </item>
 
 <item>
@@ -311,36 +529,15 @@
 
 
 <p class="wp-block-paragraph">Leaders who redesign workflows before automating them will create simpler processes, better employee experiences and stronger business outcomes. Those who automate first may improve efficiency for a while, but they also risk embedding yesterday’s assumptions into tomorrow’s technology.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
 </item>
 
 <item>
-  <title>🔵 How India&#x27;s IT services sector, which employs 6M people, contributes ~7% of GDP, and generates $300B+ annually, is shedding jobs as AI automates formulaic work (Financial Times)</title>
-  <link>https://www.techmeme.com/260811/p10#a260811p10</link>
-  <pubDate>Tue, 11 Aug 2026 10:50:02 +0000</pubDate>
-  <source>Techmeme</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><p><a href="https://www.techmeme.com/260811/p10#a260811p10" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="https://www.ft.com/">Financial Times</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.ft.com/content/dee4bd2c-fbad-4713-9b14-22d441967ce4">How India's IT services sector, which employs 6M people, contributes ~7% of GDP, and generates $300B+ annually, is shedding jobs as AI automates formulaic work</a></b></span>&nbsp; &mdash;&nbsp; It was around 1.30am by the time Rakesh, a 45-year-old Oracle employee in the Indian technology hub of Bengaluru &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 OpenAI is hiring a power-trading lead to manage commodity hedging across its expanding data center power portfolio, as tech companies seek reliable electricity (Julian Hast/Bloomberg)</title>
-  <link>https://www.techmeme.com/260811/p9#a260811p9</link>
-  <pubDate>Tue, 11 Aug 2026 10:30:02 +0000</pubDate>
-  <source>Techmeme</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://www.bloomberg.com/news/articles/2026-08-10/openai-is-hiring-a-power-trading-lead-for-its-data-center-portfolio"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260811/i9.jpg" vspace="4" /></a>
-<p><a href="https://www.techmeme.com/260811/p9#a260811p9" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Julian Hast / <a href="https://www.bloomberg.com/">Bloomberg</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/articles/2026-08-10/openai-is-hiring-a-power-trading-lead-for-its-data-center-portfolio">OpenAI is hiring a power-trading lead to manage commodity hedging across its expanding data center power portfolio, as tech companies seek reliable electricity</a></b></span>&nbsp; &mdash;&nbsp; OpenAI is hiring a power-trading lead to help manage the expanding energy needs of the electricity-intensive data centers running its artificial intelligence models.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 How a wave of disinformation on Facebook, WhatsApp, TikTok, Instagram, and Telegram contributed to a surge of migrants from Morocco to Spain&#x27;s Ceuta enclave (New York Times)</title>
-  <link>https://www.techmeme.com/260811/p8#a260811p8</link>
-  <pubDate>Tue, 11 Aug 2026 10:15:05 +0000</pubDate>
-  <source>Techmeme</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://www.nytimes.com/2026/08/11/technology/social-media-ceuta-spain-morocco.html"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260811/i8.jpg" vspace="4" /></a>
-<p><a href="https://www.techmeme.com/260811/p8#a260811p8" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="https://www.nytimes.com/">New York Times</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.nytimes.com/2026/08/11/technology/social-media-ceuta-spain-morocco.html">How a wave of disinformation on Facebook, WhatsApp, TikTok, Instagram, and Telegram contributed to a surge of migrants from Morocco to Spain's Ceuta enclave</a></b></span>&nbsp; &mdash;&nbsp; A wave of disinformation online contributed to a surge of migrants in the Spanish enclave of Ceuta who were trying to reach Europe, resulting in about 90 deaths.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+  <title>🔵 Building up the US power grid won&#x27;t be wasted, even if the AI bubble bursts</title>
+  <link>https://www.theregister.com/on-prem/2026/08/11/building-up-the-us-power-grid-wont-be-wasted-even-if-the-ai-bubble-bursts/5285563</link>
+  <pubDate>Tue, 11 Aug 2026 10:31:00 +0000</pubDate>
+  <source>The Register</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>The bigger risk is underinvestment, claims consulting biz McKinsey<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
 </item>
 
 <item>
@@ -555,15 +752,7 @@
 
 
 <p class="wp-block-paragraph">CIOs looking to deploy more AI agents to production need a well-defined operating model that addresses a continuous lifecycle of delivery, deployment, measurement, feedback, and improvement.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Best robot mowers of 2026: Expert tested</title>
-  <link>https://www.zdnet.com/article/best-robot-mower/</link>
-  <pubDate>Tue, 11 Aug 2026 10:00:57 +0000</pubDate>
-  <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>I went hands-on with the best robot mowers that can cut your lawn regularly, so you can kick back and relax this summer.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
 </item>
 
 <item>
@@ -710,16 +899,7 @@
 
 
 <p class="wp-block-paragraph">They’re measured by the commercial outcomes they create.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Hacker Conversations: Marcus Hutchins and the Journey From the Gray Zone to Redemption</title>
-  <link>https://www.securityweek.com/hacker-conversations-marcus-hutchins/</link>
-  <pubDate>Tue, 11 Aug 2026 10:00:00 +0000</pubDate>
-  <source>SecurityWeek</source>
-  <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><p>Marcus Hutchins doesn’t personally consider himself a hacker – but he accepts the epithet because it’s a widely used term for what he once did.</p>
-<p>The post <a href="https://www.securityweek.com/hacker-conversations-marcus-hutchins/">Hacker Conversations: Marcus Hutchins and the Journey From the Gray Zone to Redemption</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
 </item>
 
 <item>
@@ -728,16 +908,7 @@
   <pubDate>Tue, 11 Aug 2026 09:55:01 +0000</pubDate>
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><p><a href="https://www.techmeme.com/260811/p7#a260811p7" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="https://www.ft.com/">Financial Times</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.ft.com/content/02e29d7f-9e3e-4977-a5d3-ea3f2d9efd10">A look at London-based AI startup Cosine, which is building a frontier model with UK government backing, as some question if it has the talent and resources</a></b></span>&nbsp; &mdash;&nbsp; Britain's bid to build a &ldquo;sovereign&rdquo; AI model rests with a London start-up of about 30 employees that has raised just $15mn.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 OpenAI Unveils New Cybersecurity Model GPT-5.6-Cyber</title>
-  <link>https://www.securityweek.com/openai-unveils-new-cybersecurity-model-gpt-5-6-cyber/</link>
-  <pubDate>Tue, 11 Aug 2026 09:45:05 +0000</pubDate>
-  <source>SecurityWeek</source>
-  <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><p>OpenAI has also announced the expansion of its Daybreak platform to give more organizations access to its AI.</p>
-<p>The post <a href="https://www.securityweek.com/openai-unveils-new-cybersecurity-model-gpt-5-6-cyber/">OpenAI Unveils New Cybersecurity Model GPT-5.6-Cyber</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.ft.com/content/02e29d7f-9e3e-4977-a5d3-ea3f2d9efd10">A look at London-based AI startup Cosine, which is building a frontier model with UK government backing, as some question if it has the talent and resources</a></b></span>&nbsp; &mdash;&nbsp; Britain's bid to build a &ldquo;sovereign&rdquo; AI model rests with a London start-up of about 30 employees that has raised just $15mn.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
 </item>
 
 <item>
@@ -747,15 +918,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.bloomberg.com/news/articles/2026-08-10/intel-is-said-to-near-share-sale-upsize-to-raise-20-billion"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260811/i6.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260811/p6#a260811p6" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="https://www.bloomberg.com/">Bloomberg</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/articles/2026-08-10/intel-is-said-to-near-share-sale-upsize-to-raise-20-billion">Intel raised $20B in an upsized share sale, up from the $15B it was targeting; sources say the sale drew $100B+ in demand; INTC is up ~146% in 2026 so far</a></b></span>&nbsp; &mdash;&nbsp; Making Sense of the Multibillion-Dollar Numbers of Nvidia Deal, Intel Share Sale&nbsp; &mdash;&nbsp; Video Player is loading.&nbsp; &mdash;&nbsp; Unmute</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 7 simple gadgets that can make your home smarter for under $100</title>
-  <link>https://www.zdnet.com/article/simple-smart-home-gadgets-under-100/</link>
-  <pubDate>Tue, 11 Aug 2026 09:30:46 +0000</pubDate>
-  <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>You don't have to spend lots of money to make your home smarter. Here are the best affordable gadgets to upgrade your space.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/articles/2026-08-10/intel-is-said-to-near-share-sale-upsize-to-raise-20-billion">Intel raised $20B in an upsized share sale, up from the $15B it was targeting; sources say the sale drew $100B+ in demand; INTC is up ~146% in 2026 so far</a></b></span>&nbsp; &mdash;&nbsp; Making Sense of the Multibillion-Dollar Numbers of Nvidia Deal, Intel Share Sale&nbsp; &mdash;&nbsp; Video Player is loading.&nbsp; &mdash;&nbsp; Unmute</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
 </item>
 
 <item>
@@ -850,7 +1013,7 @@
 
 
 <p class="wp-block-paragraph">This allows n8n to be self-hosted and operated independently of the cloud. In other words, the platform runs within a secure and governance-compliant environment within the group. This way, Mercedes-Benz retains full control over critical systems, data, and work processes.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
 </item>
 
 <item>
@@ -999,7 +1162,7 @@
 
 
 <p class="wp-block-paragraph">Companies should split the review job before <a href="https://www.cloudbees.com/blog/2026-state-of-code-abundance-report" rel="noreferrer noopener" target="_blank">CloudBees’ 81%</a> becomes a number on the quarterly slide. Without that change, they will be impressively good at shipping code they never fully check.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
 </item>
 
 <item>
@@ -1064,7 +1227,7 @@
 
 
 <p class="wp-block-paragraph">Every revolution in manufacturing has been defined by the emergence of a resource that reshaped how value was created, whether that was steam, electricity or silicon. Industry 5.0 is introducing another, albeit one that can’t be stored in a warehouse or delivered on a truck. Data has become the factory’s most valuable raw material, and controlling its movement is every bit as important as controlling the movement of physical goods. The term “industrial equipment” may continue to describe what’s happening on the factory floor, but it no longer captures where competitive advantage is really being created. Increasingly, the intelligence surrounding a machine is becoming just as valuable as the machine itself, and the networks carrying that intelligence are becoming part of the production process in their own right.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
 </item>
 
 <item>
@@ -1193,7 +1356,7 @@
 
 
 <p class="wp-block-paragraph">“You can stop it, but soft guardrails are useless,” he says. “Do not try to patch the prompt or filter the text. You have to treat the agent like a compromised user account. Pull the OAuth tokens and kill the access immediately.”</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
 </item>
 
 <item>
@@ -1202,7 +1365,7 @@
   <pubDate>Tue, 11 Aug 2026 06:45:01 +0000</pubDate>
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><p><a href="https://www.techmeme.com/260811/p4#a260811p4" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Nick Gray / <a href="https://patronview.com/">PatronView</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://patronview.com/news/99-percent-of-my-website-traffic-is-bots/">PatronView's owner details a year of fighting scrapers: 214:1 bot-to-human page loads, 35,000 Claude crawls per referred user, and Amazon's bot referred none</a></b></span>&nbsp; &mdash;&nbsp; A year of fighting scrapers on my 1.5 million-page website.&nbsp; What I tried, how I failed, and what's working now.&nbsp; August 7, 2026</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://patronview.com/news/99-percent-of-my-website-traffic-is-bots/">PatronView's owner details a year of fighting scrapers: 214:1 bot-to-human page loads, 35,000 Claude crawls per referred user, and Amazon's bot referred none</a></b></span>&nbsp; &mdash;&nbsp; A year of fighting scrapers on my 1.5 million-page website.&nbsp; What I tried, how I failed, and what's working now.&nbsp; August 7, 2026</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
@@ -1212,27 +1375,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.wsj.com/tech/ai/anthropic-tries-to-shore-up-investor-confidence-ahead-of-blockbuster-ipo-0ff736ad?st=whk1xw"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260811/i1.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260811/p1#a260811p1" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="https://www.wsj.com/">Wall Street Journal</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.wsj.com/tech/ai/anthropic-tries-to-shore-up-investor-confidence-ahead-of-blockbuster-ipo-0ff736ad?st=whk1xw">Sources: Anthropic is courting investors for what could be the biggest IPO ever, touting rapid growth and plans to address mounting public backlash against AI</a></b></span>&nbsp; &mdash;&nbsp; Company is racing to public markets this fall and has fielded tough investor questions on Chinese rivals, Trump-era tensions and AI infrastructure boom</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Sources: investor interest in Situational Awareness surged after it nearly blew up on leveraged positions; the fund says it&#x27;s not accepting new capital for now (Matt Levine/Bloomberg)</title>
-  <link>https://www.techmeme.com/260810/p49#a260810p49</link>
-  <pubDate>Tue, 11 Aug 2026 03:20:01 +0000</pubDate>
-  <source>Techmeme</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.bloomberg.com/opinion/newsletters/2026-08-10/the-situation-is-fine"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260810/i49.jpg" vspace="4" /></a>
-<p><a href="https://www.techmeme.com/260810/p49#a260810p49" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Matt Levine / <a href="https://www.bloomberg.com/">Bloomberg</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/opinion/newsletters/2026-08-10/the-situation-is-fine">Sources: investor interest in Situational Awareness surged after it nearly blew up on leveraged positions; the fund says it's not accepting new capital for now</a></b></span>&nbsp; &mdash;&nbsp; Also leveraged ETF momentum, GameStop's eBay bid, event contract tick sizes and private equity boyfriends.&nbsp; &mdash;&nbsp; Situational Awareness</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 8h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Sources: Anthropic agreed to a 20-year compute deal worth $9.1B with Riot Platforms for 191 MW of capacity at Riot&#x27;s Rockdale, Texas campus; RIOT jumps ~25% (Shirin Ghaffary/Bloomberg)</title>
-  <link>https://www.techmeme.com/260810/p48#a260810p48</link>
-  <pubDate>Tue, 11 Aug 2026 02:31:08 +0000</pubDate>
-  <source>Techmeme</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.bloomberg.com/news/articles/2026-08-11/anthropic-strikes-9-billion-deal-with-cloud-computing-firm-riot"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260810/i48.jpg" vspace="4" /></a>
-<p><a href="https://www.techmeme.com/260810/p48#a260810p48" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Shirin Ghaffary / <a href="https://www.bloomberg.com/">Bloomberg</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/articles/2026-08-11/anthropic-strikes-9-billion-deal-with-cloud-computing-firm-riot">Sources: Anthropic agreed to a 20-year compute deal worth $9.1B with Riot Platforms for 191 MW of capacity at Riot's Rockdale, Texas campus; RIOT jumps ~25%</a></b></span>&nbsp; &mdash;&nbsp; Anthropic PBC has struck a $9.1 billion deal with Riot Platforms Inc., a Bitcoin mining company that recently began selling AI data center capacity &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.wsj.com/tech/ai/anthropic-tries-to-shore-up-investor-confidence-ahead-of-blockbuster-ipo-0ff736ad?st=whk1xw">Sources: Anthropic is courting investors for what could be the biggest IPO ever, touting rapid growth and plans to address mounting public backlash against AI</a></b></span>&nbsp; &mdash;&nbsp; Company is racing to public markets this fall and has fielded tough investor questions on Chinese rivals, Trump-era tensions and AI infrastructure boom</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 8h ago]]></description>
 </item>
 
 <item>
@@ -1369,17 +1512,7 @@
 
 
 <p class="wp-block-paragraph">“Fully autonomous research is real,” Kettle acknowledged. However, “humans are a massive power amplifier for AI research systems.”</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 How a clause in Elon Musk&#x27;s Tesla pay package, worth up to ~$1T, could provide him a shortcut around lofty performance targets if Tesla merged with SpaceX (Wall Street Journal)</title>
-  <link>https://www.techmeme.com/260810/p47#a260810p47</link>
-  <pubDate>Tue, 11 Aug 2026 02:15:01 +0000</pubDate>
-  <source>Techmeme</source>
-  <description><![CDATA[<b>Why this matters: Vendor risk signal — evaluate roadmap and support stability.</b><br/><a href="https://www.wsj.com/business/see-how-a-tesla-spacex-merger-gives-musk-a-shortcut-to-his-1-trillion-payday-327bc491?st=BXtV5H"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260810/i47.jpg" vspace="4" /></a>
-<p><a href="https://www.techmeme.com/260810/p47#a260810p47" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="https://www.wsj.com/">Wall Street Journal</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.wsj.com/business/see-how-a-tesla-spacex-merger-gives-musk-a-shortcut-to-his-1-trillion-payday-327bc491?st=BXtV5H">How a clause in Elon Musk's Tesla pay package, worth up to ~$1T, could provide him a shortcut around lofty performance targets if Tesla merged with SpaceX</a></b></span>&nbsp; &mdash;&nbsp; A critical clause in the CEO's Tesla stock award would wipe away lofty performance targets if a merger happened</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 10h ago]]></description>
 </item>
 
 <item>
@@ -1428,7 +1561,7 @@
 
 
 <p class="wp-block-paragraph"><strong>Build real resilience</strong><br /><a href="https://www.commvault.com/real-resilience?utm_source=foundry&amp;utm_medium=paid-article&amp;utm_campaign=amer_brnd&amp;utm_content=text-link" rel="noreferrer noopener" target="_blank">Learn how organizations are proving recoverability and achieving clean recovery when it matters most.</a></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 16h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 17h ago]]></description>
 </item>
 
 <item>
@@ -1436,7 +1569,7 @@
   <link>https://www.zdnet.com/article/why-recovery-readiness-has-become-the-new-standard-for-cyber-resilience/</link>
   <pubDate>Mon, 10 Aug 2026 18:56:00 +0000</pubDate>
   <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: Service impact possible — prepare comms and confirm vendor status.</b><br/>As outages become more expensive and frequent, recovery readiness is emerging as the true measure of resilience.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 16h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Service impact possible — prepare comms and confirm vendor status.</b><br/>As outages become more expensive and frequent, recovery readiness is emerging as the true measure of resilience.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 18h ago]]></description>
 </item>
 
 <item>
@@ -1577,7 +1710,7 @@
 
 
 <p class="wp-block-paragraph"><em>This article first appeared on <a href="https://www.infoworld.com/article/4207403/microsofts-postgresql-alternative-horizondb-worth-the-wait.html">InfoWorld</a>.</em></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 16h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 18h ago]]></description>
 </item>
 
 <item>
@@ -1585,7 +1718,15 @@
   <link>https://www.zdnet.com/article/managers-biggest-ransomware-targets-ways-to-stay-safe/</link>
   <pubDate>Mon, 10 Aug 2026 16:08:17 +0000</pubDate>
   <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: Elevated ransomware risk — validate backups and endpoint defenses.</b><br/>Almost two-thirds of the victims targeted in a single ransomware campaign held managerial positions or higher.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 19h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Elevated ransomware risk — validate backups and endpoint defenses.</b><br/>Almost two-thirds of the victims targeted in a single ransomware campaign held managerial positions or higher.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 20h ago]]></description>
+</item>
+
+<item>
+  <title>🟠 Cyber vulnerability sweep picks up Royal Navy drones sending data to China</title>
+  <link>https://www.theregister.com/edge-and-iot/2026/08/10/cyber-vulnerability-sweep-picks-up-royal-navy-drones-sending-data-to-china/5285430</link>
+  <pubDate>Mon, 10 Aug 2026 12:25:00 +0000</pubDate>
+  <source>The Register</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>No, no nasties to see here, guv...<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
@@ -1710,7 +1851,7 @@
 
 
 <p class="wp-block-paragraph">“We will work with relevant government agencies and select AI safety organizations to test the capabilities for this model,” the company said, adding that it will also share guidance with third-party testing partners. The company said it is disclosing the findings to be transparent about what it called a “potential shift in capabilities.”</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 23h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
@@ -1803,7 +1944,15 @@
 
 
 <p class="wp-block-paragraph">Varonis drew parallels with other recently disclosed AI attacks like <a href="https://www.csoonline.com/article/4186970/m365-copilot-searchleak-your-prompt-injection-attack-surface-just-got-bigger.html">SearchLeak</a>, <a href="https://www.csoonline.com/article/4068175/gemini-trifecta-ai-autonomy-without-guardrails-opens-new-attack-surface.html">EchoLeak</a>, <a href="https://www.csoonline.com/article/4059606/meet-shadowleak-impossible-to-detect-data-theft-using-ai.html">ShadowLeak</a>, and <a href="https://www.csoonline.com/article/4161382/prompt-injection-turned-googles-antigravity-file-search-into-rce.html">Antigravity</a>. The company said RovoBlast is just another example of a broader AI security issue where “untrusted inputs, autonomous behavior, and trusted communication” are together creating serious data exposure.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 23h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
+</item>
+
+<item>
+  <title>🟠 Framework loses customer data in Metabase zero-day attack</title>
+  <link>https://www.theregister.com/personal-tech/2026/08/10/framework-loses-customer-data-in-metabase-zero-day-attack/5285302</link>
+  <pubDate>Mon, 10 Aug 2026 11:21:00 +0000</pubDate>
+  <source>The Register</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Repairable hardware is little comfort when personal details escape<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
@@ -3204,6 +3353,22 @@
 </item>
 
 <item>
+  <title>🔴 Ransomware gangs skip the CEO, head straight for the 40-something IT manager</title>
+  <link>https://www.theregister.com/security/2026/08/09/ransomware-gangs-skip-the-ceo-head-straight-for-the-40-something-it-manager/5284499</link>
+  <pubDate>Sun, 09 Aug 2026 09:33:00 +0000</pubDate>
+  <source>The Register</source>
+  <description><![CDATA[<b>Why this matters: Elevated ransomware risk — validate backups and endpoint defenses.</b><br/>Gen Xers who feel triggered by this should remember to unplug the network cable and call the cops<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Water system controllers don&#x27;t belong on the internet, says ex-NSA chief after suspected Iran attacks</title>
+  <link>https://www.theregister.com/security/2026/08/07/water-system-controllers-dont-belong-on-the-internet-says-ex-nsa-chief-after-suspected-iran-attacks/5285070</link>
+  <pubDate>Fri, 07 Aug 2026 19:53:10 +0000</pubDate>
+  <source>The Register</source>
+  <description><![CDATA[<b>Why this matters: Endpoint detection changes — review high-severity detections and alert noise.</b><br/>Calling all defenders<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3d ago]]></description>
+</item>
+
+<item>
   <title>🔴 From ambition to action: What Canadian tech leaders must get right to see meaningful value from transformation efforts</title>
   <link>https://www.cio.com/article/4206862/4206862.html</link>
   <pubDate>Fri, 07 Aug 2026 19:52:05 +0000</pubDate>
@@ -3434,11 +3599,35 @@
 </item>
 
 <item>
+  <title>🔴 Ransomware attacks spike as world distracted by AI</title>
+  <link>https://www.theregister.com/security/2026/08/07/ransomware-attacks-spike-as-world-distracted-by-ai/5284934</link>
+  <pubDate>Fri, 07 Aug 2026 16:45:00 +0000</pubDate>
+  <source>The Register</source>
+  <description><![CDATA[<b>Why this matters: Elevated ransomware risk — validate backups and endpoint defenses.</b><br/>What, you didn't think the top gangs were busy watching agents escape their sandboxes too, did you?<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 3d ago]]></description>
+</item>
+
+<item>
   <title>🔵 I read Microsoft&#x27;s Windows 11 &#x27;quality&#x27; progress report - and the subtext says it all</title>
   <link>https://www.zdnet.com/article/i-read-microsofts-windows-11-quality-progress-report-and-the-subtext-says-it-all/</link>
   <pubDate>Fri, 07 Aug 2026 15:09:00 +0000</pubDate>
   <source>ZDNet</source>
   <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Microsoft's latest progress report details much-needed Windows 11 improvements in reliability, performance, stability, and usability. But here's what else I see.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3d ago]]></description>
+</item>
+
+<item>
+  <title>🟠 N-able God mode flaw: Vendor confirms attackers reached customer networks as second hotfix lands</title>
+  <link>https://www.theregister.com/networks/2026/08/07/n-able-god-mode-flaw-vendor-confirms-attackers-reached-customer-networks-as-second-hotfix-lands/5284730</link>
+  <pubDate>Fri, 07 Aug 2026 15:01:00 +0000</pubDate>
+  <source>The Register</source>
+  <description><![CDATA[<b>Why this matters: Could impact sign-ins/MFA/Conditional Access — watch for login issues.</b><br/>Attackers turned admin access into a route downstream, while N-able tells N-central customers to patch – again<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3d ago]]></description>
+</item>
+
+<item>
+  <title>🔴 ShinyHunters called cancer diagnostics biz and tricked staffers into giving them access. Now they&#x27;ve dumped 10.9M email addresses</title>
+  <link>https://www.theregister.com/cyber-crime/2026/08/07/shinyhunters-called-cancer-diagnostics-biz-and-tricked-staffers-into-giving-them-access-now-theyve-dumped-109m-email-addresses/5284857</link>
+  <pubDate>Fri, 07 Aug 2026 14:53:57 +0000</pubDate>
+  <source>The Register</source>
+  <description><![CDATA[<b>Why this matters: Potential data exposure — check monitoring and incident response readiness.</b><br/>Cancer diagnostics breach spills personal and health info as extortion crew says healthcare giant ‘should’ve paid the ransom’<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 3d ago]]></description>
 </item>
 
 <item>
@@ -3778,7 +3967,7 @@
 
 <li><strong>Build around nondeterminism</strong>: In more regulated environments, FDEs should be hyper-focused on making products reliable for specific use cases <a href="https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents">using evals</a> and configs. Previously, product reliability lived with product and support. As companies provide outcomes instead of tools, configuring products appropriately and managing evals shifts towards FDE teams.</li>
 </ol>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3d ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4d ago]]></description>
 </item>
 
 <item>
@@ -4049,116 +4238,11 @@
 </item>
 
 <item>
-  <title>🟠 Inside the post-merger IT overhaul at Alaska Airlines</title>
-  <link>https://www.cio.com/article/4201772/inside-the-post-merger-it-overhaul-at-alaska-airlines.html</link>
-  <pubDate>Fri, 07 Aug 2026 10:01:00 +0000</pubDate>
-  <source>CIO.com</source>
-  <description><![CDATA[<b>Why this matters: Service impact possible — prepare comms and confirm vendor status.</b><br/><div id="remove_no_follow">
-		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
-					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
-						<div class="article-column__content">
-<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
-
-
-
-<p class="wp-block-paragraph">As an aviation industry veteran with over 30 years of experience, Alaska Airlines CIO Charu Jain is all too familiar with the technology integration process that often follows a big airline merger.</p>
-
-
-
-<p class="wp-block-paragraph">By her count, she’s been involved in four such projects. But none, she says, has brought her greater satisfaction than leading the overhaul of Alaska’s PSS following its $1.9 billion acquisition of Hawaiian Airlines in September 2024.</p>
-
-
-
-<p class="wp-block-paragraph">“This is one of the biggest milestones in any merger work done between airlines,” says Jain, speaking from her company’s Seattle offices just two months after Alaska and Hawaiian <a href="https://news.alaskaair.com/company/alaska-airlines-hawaiian-airlines-transition-to-shared-passenger-service-system-to-deliver-a-more-seamless-guest-experience/">completed their transition</a> to a shared PSS.</p>
-
-
-
-<p class="wp-block-paragraph">In its simplest terms, a PSS is an all-encompassing software suite used by airlines to record and manage a passenger’s journey, from booking tickets and checking in baggage at the airport, to boarding the aircraft and accessing the in-flight menu. “A PSS touches almost every function of an airline from employees to guests,” says Jain.</p>
-
-
-
-<h2 class="wp-block-heading" id="two-brands-one-system">Two brands, one system</h2>
-
-
-
-<p class="wp-block-paragraph">At the time of the merger, Alaska and Hawaiian each had its own PSS. No sooner had the ink dried on the deal than the cutover project got underway to bring both airlines’ systems under a single operating platform.</p>
-
-
-
-<p class="wp-block-paragraph">According to Jain, the two airlines agreed from the get-go that they’d retain their own unique historic brands, both with a combined history of close to 200 years, which would be reflected through the system.</p>
-
-
-
-<p class="wp-block-paragraph">“It had never been done before, developing capabilities to enable two brands on one platform,” adds Jain, who also serves as Alaska’s SVP of merchandising and innovation. “We didn’t want a situation where a passenger travelling from Spokane to Seattle on an Alaska-branded flight, and then onto Honolulu on a Hawaiian-branded flight, would have to navigate two separate systems. So we thought about how to make that experience more seamless.”</p>
-
-
-
-<p class="wp-block-paragraph">After settling on a PSS, developed by travel software manufacturer Sabre, Jain and her colleagues began work on migrating the airlines’ millions of bookings and passenger information, while also updating their various guest- and employee-facing tools for the new system.</p>
-
-
-
-<h2 class="wp-block-heading" id="selling-cutovers-and-mock-flights">Selling cutovers and mock flights</h2>
-
-
-
-<p class="wp-block-paragraph">Executing a system cutover on such a large scale is a delicate balancing act, not least in a live-environment where, for a major airline, any form of disruption to the passenger experience can be bad for business. So there was no attempt to rush the project.</p>
-
-
-
-<p class="wp-block-paragraph">“To make sure we didn’t have any issues with customers’ bookings, we really took a risk-optimized approach with a phased deployment and a phased cutover,” says Jain.</p>
-
-
-
-<p class="wp-block-paragraph">Much of this hinged on what Alaska refers to as a selling cutover. Starting in October last year, all new bookings were made on the new PSS, which allowed the group to drain old bookings from the legacy system, and start selling tickets six months in advance of the official transition date; the average booking curve for an airline is around six months.</p>
-
-
-
-<p class="wp-block-paragraph">“There was no migration of millions of records and bookings,” says Jain. “This meant when our customers checked in on the first day [of the PSS], it was as if the booking had been made on the native system.”</p>
-
-
-
-<p class="wp-block-paragraph">While this was going on, however, Alaska was hit by a sizeable IT outage that grounded flights across the country and impacted the travel plans of nearly 50,000 passengers. It followed a previous IT outage in July. However, Jain says the disruptions didn’t impact the project in any way.</p>
-
-
-
-<p class="wp-block-paragraph">So in the final months leading up to the cutover completion, Alaska carried out several dress rehearsals to test the system, including mock flights for domestic and international routes in anticipation of the recent launch of <a href="https://news.alaskaair.com/destinations/alaska-airlines-advances-global-expansion-with-launch-of-new-european-routes-and-landmark-lounge-investment/">several non-stop services to Europe</a>.</p>
-
-
-
-<p class="wp-block-paragraph">This involved real guests arriving at the airport, completing check-in, going through security, and taking their seats as if they were about to take off. Leaving no stone unturned, the simulation also accounted for baggage collection, pets, wheelchair users, and onboard hospitality, stopping just short of passengers being served actual food.</p>
-
-
-
-<p class="wp-block-paragraph">Alaksa completed five such mock rehearsals in all. “The fifth one was when everything worked without any medium or high issues, and gave us the confidence we were ready,” says Jain.</p>
-
-
-
-<p class="wp-block-paragraph">As part of the airline’s scenario planning, it also set up command centers in various locations, including Honolulu and Seattle, to plan for unforeseen and unrelated problems on the day of the cutover.</p>
-
-
-
-<h2 class="wp-block-heading" id="a-dedication-to-collaboration">A dedication to collaboration</h2>
-
-
-
-<p class="wp-block-paragraph">A project is only ever as a good as its people, and Jain is quick to hail the collaborative spirit that Alaska and Hawaiian brought to the table. As a PSS involves both the operational side of an airline’s business — touching on everyone from pilots, flight attendants, and baggage handlers — and commercial departments responsible for policies and pricing, this was more than a purely technological undertaking.</p>
-
-
-
-<p class="wp-block-paragraph">“This was about people coming together from two companies to make this one big thing happen,” says Jain.</p>
-
-
-
-<p class="wp-block-paragraph">When Alaska started making bookings on the new PSS last fall as part of the selling cutover, it also began training employees how to use system. It was around that time as well, says Jain, that the airline was confident the transition would be completed by April 2026, just in time for the busy summer travel season.</p>
-
-
-
-<p class="wp-block-paragraph">Since the PSS has been up and running, the company has also introduced a single mobile app to replace Alaska and Hawaiian’s separate existing ones, allowing passengers to personalize their experience to the airline brand they’re more familiar with.</p>
-
-
-
-<p class="wp-block-paragraph">“It’s a much more seamless experience now that there’s no confusion knowing which app to go on, or why they have two booking numbers,” says Jain. Alaska’s employees are also just as happy with their new tools, she adds.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4d ago]]></description>
+  <title>🔵 Intrusion at US healthcare software provider puts 3.8M people&#x27;s data at risk</title>
+  <link>https://www.theregister.com/cyber-crime/2026/08/07/intrusion-at-us-healthcare-software-provider-puts-38m-peoples-data-at-risk/5284609</link>
+  <pubDate>Fri, 07 Aug 2026 10:45:00 +0000</pubDate>
+  <source>The Register</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Unlimited Technology Systems says names, Social Security numbers, diagnoses, and insurance details may have been swiped<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4d ago]]></description>
 </item>
 
 <item>
@@ -5761,173 +5845,6 @@
 
 <p class="wp-block-paragraph"></p>
 </div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 4d ago]]></description>
-</item>
-
-<item>
-  <title>🟠 Cybersecurity needs a new operating model</title>
-  <link>https://www.csoonline.com/article/4206138/cybersecurity-needs-a-new-operating-model.html</link>
-  <pubDate>Thu, 06 Aug 2026 12:48:42 +0000</pubDate>
-  <source>CSO Online</source>
-  <description><![CDATA[<b>Why this matters: Supply chain risk — audit third-party dependencies and vendor access.</b><br/><div id="remove_no_follow">
-		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
-					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
-						<div class="article-column__content">
-<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
-
-
-
-<p class="wp-block-paragraph">For decades, cybersecurity has been built around one assumption: defenders had enough time to:</p>
-
-
-
-<ul class="wp-block-list">
-<li>Discover vulnerabilities.</li>
-
-
-
-<li>Assess exposure.</li>
-
-
-
-<li>Deploy patches.</li>
-
-
-
-<li>Verify that critical systems remained protected.</li>
-</ul>
-
-
-
-<p class="wp-block-paragraph">That assumption shaped how organizations built security programs, how vendors developed security products, and how regulators measured cyber resilience.</p>
-
-
-
-<p class="wp-block-paragraph"><strong>That assumption no longer holds</strong></p>
-
-
-
-<p class="wp-block-paragraph">AI has not created a new category of cyber risk. Rather, it has exposed the limitations of a security operating model built for a time when attackers operated at human speed. When AI can identify vulnerabilities, generate working exploits, analyze attack surfaces, and chain weaknesses together at scale, the timeline between exposure and exploitation compresses dramatically.</p>
-
-
-
-<p class="wp-block-paragraph">That shift is beginning to reshape more than cyber operations. It is changing how governments, regulators, and security leaders think about resilience itself.</p>
-
-
-
-<p class="wp-block-paragraph">The European Central Bank’s (ECB) recent <a href="https://www.bankingsupervision.europa.eu/press/letterstobanks/shared/pdf/2026/ssm.2026_letter_on_AI_enabled_cybersecurity_threats.ro.pdf" rel="noreferrer noopener" target="_blank">supervisory letter</a> is one of the clearest examples yet.</p>
-
-
-
-<p class="wp-block-paragraph">On July 7, 2026, the ECB directed every significant institution under its supervision to submit a comprehensive action plan addressing AI-enabled cybersecurity threats by Oct. 31, 2026.</p>
-
-
-
-<p class="wp-block-paragraph">While the letter applies specifically to Europe’s largest banking institutions, its significance extends well beyond financial services. More important than the deadline is the ECB’s conclusion that AI represents a long-term shift in the threat landscape rather than a temporary phenomenon or a risk associated with any single technology.</p>
-
-
-
-<p class="wp-block-paragraph">That statement marks an important moment in the evolution of cybersecurity.</p>
-
-
-
-<h2 class="wp-block-heading" id="the-ecb-isnt-asking-for-more-of-the-same">The ECB isn’t asking for more of the same</h2>
-
-
-
-<p class="wp-block-paragraph">At first glance, the ECB’s recommendations appear familiar:</p>
-
-
-
-<ul class="wp-block-list">
-<li>Protect the attack surface.</li>
-
-
-
-<li>Accelerate vulnerability and patch management at scale.</li>
-
-
-
-<li>Enhance monitoring, detection, and defense.</li>
-
-
-
-<li>Strengthen governance, funding, training, and supply chain assurance.</li>
-
-
-
-<li>Reinforce defense-in-depth while modernizing infrastructure.</li>
-
-
-
-<li>Improve operational resilience and information-sharing.</li>
-</ul>
-
-
-
-<p class="wp-block-paragraph">None of those disciplines are new. Mature security programs have invested in them for years, and many are already reflected in frameworks such as DORA and existing supervisory expectations.</p>
-
-
-
-<p class="wp-block-paragraph">What the ECB is acknowledging is something more fundamental. Cybersecurity’s traditional operating model was built for a time when attackers operated at human speed, giving organizations time to reduce risk before adversaries could exploit it. AI eliminated that advantage. The ECB’s letter reflects a broader shift that is already underway.</p>
-
-
-
-<p class="wp-block-paragraph">The challenge is no longer whether organizations have visibility into their environments. It is whether they can generate enough evidence to make confident security decisions before attackers exploit them.</p>
-
-
-
-<ul class="wp-block-list">
-<li><strong>Security has become an evidence problem, not a visibility problem. </strong></li>
-
-
-
-<li><strong>Visibility tells you what exists. Evidence tells you what matters.</strong></li>
-</ul>
-
-
-
-<p class="wp-block-paragraph">These distinctions sit at the heart of the ECB’s letter. The objective is no longer to perform more security activities. It is to ensure those activities produce meaningful reductions in operational risk despite dramatically compressed attack timelines.</p>
-
-
-
-<h2 class="wp-block-heading" id="this-shift-didnt-begin-with-the-ecb">This shift didn’t begin with the ECB</h2>
-
-
-
-<p class="wp-block-paragraph">The ECB’s supervisory letter did not emerge in isolation. It is the latest signal in a broader progression that has been unfolding across governments, intelligence agencies, and cybersecurity organizations over the past year.</p>
-
-
-
-<p class="wp-block-paragraph">Last month, CISA’s Binding Operational Directive 26-04 signaled an important shift away from treating vulnerability management primarily as a severity problem. Instead, it emphasizes prioritizing remediation based on operational risk, exposure, and the likelihood of exploitation.</p>
-
-
-
-<p class="wp-block-paragraph">Around the same time, the Five Eyes intelligence alliance, CERT-EU, the UK’s National Cyber Security Centre, FS-ISAC, and other organizations warned that frontier AI models are fundamentally changing the economics of cyber operations. Activities that once required experienced operators working methodically over days or weeks can increasingly be executed in minutes and repeated at virtually unlimited scale.</p>
-
-
-
-<p class="wp-block-paragraph">Although each organization framed the challenge differently, they all point toward the same conclusion: The assumptions that have shaped cybersecurity for decades are no longer sufficient in an era of AI-accelerated attacks.</p>
-
-
-
-<p class="wp-block-paragraph">The ECB’s letter represents the next step in that progression. Rather than encouraging institutions to prepare for a future possibility, it acknowledges that AI-enabled cyber threats are already reshaping how regulators evaluate cyber resilience. That distinction matters because it marks a shift from discussing AI as an emerging risk to managing it as an operational reality.</p>
-
-
-
-<p class="wp-block-paragraph">Continue reading <a href="https://horizon3.ai/intelligence/blogs/cybersecurity-new-operating-model/#:~:text=The%20Operating%20Model%20Must%20Change" rel="noreferrer noopener" target="_blank">here</a> to discover how to better manage your cybersecurity model.</p>
-
-
-
-<p class="wp-block-paragraph">The significance of the ECB’s letter is not that another regulator issued another cybersecurity directive. It is that one of the world’s leading banking supervisors publicly acknowledged what security teams have already been experiencing in practice.</p>
-
-
-
-<p class="wp-block-paragraph"><a href="https://horizon3.ai/contact-us/schedule-demo/" rel="noreferrer noopener" target="_blank">See how the NodeZero<sup>®</sup> Proactive Security Platform helps significant institutions address the ECB’s six cybersecurity priorities and build a credible action plan backed by evidence.</a> </p>
-
-
-
-<p class="wp-block-paragraph"><a href="https://horizon3.ai/contact-us/schedule-demo/" rel="noreferrer noopener" target="_blank">Schedule a demo now</a>.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4d ago]]></description>
 </item>
 
 </channel>
