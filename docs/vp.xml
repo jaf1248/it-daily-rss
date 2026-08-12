@@ -3,8 +3,431 @@
 <channel>
   <title>Joe — VP of IT Briefing</title>
   <description>Leadership-focused IT risk, vendors, pricing, licensing, and industry context.</description>
-  <lastBuildDate>Wed, 12 Aug 2026 06:11:02 +0000</lastBuildDate>
+  <lastBuildDate>Wed, 12 Aug 2026 08:14:11 +0000</lastBuildDate>
   
+<item>
+  <title>🟠 ICS Patch Tuesday: Vulnerabilities Fixed by Siemens, Schneider, Phoenix Contact</title>
+  <link>https://www.securityweek.com/ics-patch-tuesday-vulnerabilities-fixed-by-siemens-schneider-phoenix-contact-2/</link>
+  <pubDate>Wed, 12 Aug 2026 07:51:55 +0000</pubDate>
+  <source>SecurityWeek</source>
+  <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><p>CISA has also published several advisories describing vulnerabilities in ICS and other OT products.</p>
+<p>The post <a href="https://www.securityweek.com/ics-patch-tuesday-vulnerabilities-fixed-by-siemens-schneider-phoenix-contact-2/">ICS Patch Tuesday: Vulnerabilities Fixed by Siemens, Schneider, Phoenix Contact</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</item>
+
+<item>
+  <title>🟠 SonicWall Patches Critical Vulnerabilities in Discontinued GMS Platform</title>
+  <link>https://www.securityweek.com/sonicwall-patches-critical-vulnerabilities-in-discontinued-gms-platform/</link>
+  <pubDate>Wed, 12 Aug 2026 07:31:11 +0000</pubDate>
+  <source>SecurityWeek</source>
+  <description><![CDATA[<b>Why this matters: Vendor advisory — check installed firmware/software version and patch status.</b><br/><p>The security defects could allow unauthenticated attackers to execute arbitrary code remotely and read sensitive data.</p>
+<p>The post <a href="https://www.securityweek.com/sonicwall-patches-critical-vulnerabilities-in-discontinued-gms-platform/">SonicWall Patches Critical Vulnerabilities in Discontinued GMS Platform</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔴 17 old software bugs that took way too long to squash</title>
+  <link>https://www.csoonline.com/article/570815/old-software-bugs-that-took-way-too-long-to-squash.html</link>
+  <pubDate>Wed, 12 Aug 2026 07:30:00 +0000</pubDate>
+  <source>CSO Online</source>
+  <description><![CDATA[<b>Why this matters: Supply chain risk — audit third-party dependencies and vendor access.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity" />
+
+
+
+<p class="wp-block-paragraph">In 2021, a vulnerability was revealed in a system that lay at the foundation of modern computing. An attacker could force the system to execute arbitrary code. Shockingly, the vulnerable code was almost 54 years old — and there was no patch available, and no expectation that one would be forthcoming.</p>
+
+
+
+<p class="wp-block-paragraph">Fortunately, that’s because the system in question was Marvin Minsky’s <a href="https://www.theregister.com/2021/05/11/turing_machine_0day_no_patch_available/" rel="noreferrer noopener" target="_blank">1967 implementation of a Universal Turing Machine</a>, which, despite its momentous theoretical importance for the field of computer science, had never actually been built into a real-world computer. But in the decade or so after Minsky’s design, the earliest versions of Unix and DOS came into use, and their descendants are still with us today in the 21st century. Some of those systems have had bugs lurking beneath the surface for years or even decades.</p>
+
+
+
+<p class="wp-block-paragraph"><a href="https://www.csoonline.com/article/4198019/claude-mythos-faq-capabilities-access-competitors-implications.html">Frontier AI tools such as Claude Mythos are making it much easier to uncover latent vulnerabilities at pace</a> since discovery is no longer limited by human attention span or manual triage speed. The resulting acceleration on flaw discovery is possible not because AI tools are uncovering new exploit classes but because they are able to scan, chain reasoning, and test exploit paths at machine speed.</p>
+
+
+
+<p class="wp-block-paragraph">Here are 17 noteworthy bugs that, once long dormant, took over a decade to be discovered and fixed — in descending order of how long they went unaddressed.</p>
+
+
+
+<h2 class="wp-block-heading"><a></a>Libpng graphics library flaw</h2>
+
+
+
+<p class="wp-block-paragraph"><em>Age:</em><strong> 30 years</strong><br /><em>Date introduced: </em><strong>1995</strong><br /><em>Date fixed:</em><strong> February 2026</strong></p>
+
+
+
+<p class="wp-block-paragraph">Researchers unearthed a <a href="https://www.csoonline.com/article/4132296/researchers-unearth-30-year-old-vulnerability-in-libpng-library.html">legacy flaw in the widely used libpng open-source library</a> that had existed since the technology was first released more than 30 years ago.</p>
+
+
+
+<p class="wp-block-paragraph">The heap buffer overflow vulnerability (<a href="https://www.cvedetails.com/cve/CVE-2026-25646/">CVE-2026-25646</a>) meant that applications using the flawed software would crash when presented with a maliciously constructed PNG raster image file. Although difficult to exploit, the vulnerability potentially poses an information disclosure or remote code execution risk.</p>
+
+
+
+<p class="wp-block-paragraph">The vulnerable png_set_quantize function, previously called png_set_dither, is rarely used. This in combination with the difficulty of exploitation mean that the flaw earns a CVSS score of 8.3, rating it as a “high” rather than “critical” risk.</p>
+
+
+
+<p class="wp-block-paragraph">Nonetheless many Linux distributions (Debian, Red Hat, Ubuntu), desktop apps, and some Java runtimes rely on vulnerable versions of the library and need to be patched.</p>
+
+
+
+<h2 class="wp-block-heading" id="printdemon">PrintDemon</h2>
+
+
+
+<p class="wp-block-paragraph"><em>Age: </em><strong>24 years<br /></strong><em>Date introduced: </em><strong>1996<br /></strong><em>Date fixed: </em><strong>May 2020</strong></p>
+
+
+
+<p class="wp-block-paragraph">Printers are a frequent pain point for IT because there are a <em>lot </em>of models, they aren’t made by the same vendors who make computers and operating systems, and users expect to plug them in and start printing. Microsoft in its early years battled to make installing a printer driver relatively easy and painless. But a bug found in 2020, dubbed <a href="https://www.csoonline.com/article/569383/printdemon-vulnerability-explained-its-risks-and-how-to-mitigate.html">PrintDemon</a>, showed that maybe they took that a bit too far back in the ’90s — and paid for it for decades.</p>
+
+
+
+<p class="wp-block-paragraph">The core of the vulnerability lies in three facts: Non-administrative users can add printers to a Windows machine; the underlying mechanics make it possible to print to a file rather than a physical printing device; and crucial <a href="https://www.csoonline.com/article/572319/vulnerabilities-found-in-250-hp-printer-models.html">printing services</a> on Windows run with system privileges. That means that, if you do it right, you can build a “printer” driver that can create a file (even an executable one) anywhere on the filesystem (even in privileged directories). There are plenty of exploits that have been cooked up to take advantage of these design flaws — <a href="https://www.csoonline.com/article/562691/stuxnet-explained-the-first-known-cyberweapon.html">Stuxnet</a>, it turns out, was one of them — but PrintDemon was a real doozy, made possible because Microsoft’s fixes over the years had been patches rather than a complete rebuild of the printing subsystem.</p>
+
+
+
+<p class="wp-block-paragraph">As <a href="https://windows-internals.com/printdemon-cve-2020-1048/" rel="noreferrer noopener" target="_blank">Winsider described it</a>, “With very subtle file system modifications, you can achieve file copy/write behavior that is not attributable to any process, especially after a reboot … with a carefully crafted port name, you can imagine simply having the Spooler drop a [portable executable] file anywhere on disk for you.” </p>
+
+
+
+<h2 class="wp-block-heading" id="win32k-sys-vulnerabilities">win32k.sys vulnerabilities</h2>
+
+
+
+<p class="wp-block-paragraph"><em>Age: </em><strong>23 years<br /></strong><em>Date introduced: </em><strong>1996<br /></strong><em>Date fixed: </em><strong>2019</strong></p>
+
+
+
+<p class="wp-block-paragraph">Two big vulnerabilities were detected in the Win32 API in Microsoft Windows in 2019. The first, found in April, was a <a href="https://encyclopedia.kaspersky.com/glossary/use-after-free/?utm_source=securelist&amp;utm_medium=blog&amp;utm_campaign=termin-explanation">Use-After-Free vulnerability</a>, in which OS coding errors made it possible for programs to access system memory that should’ve been protected; this vulnerability was detected by security researchers when they discovered malicious hackers <a href="https://securelist.com/new-win32k-zero-day-cve-2019-0859/90435/" rel="noreferrer noopener" target="_blank">attempting to use it in the wild</a> to gain control of computers. The other, discovered in December, was an elevation-of-privilege vulnerability lurking in the OS’s window switching functionality; this vulnerability was similarly discovered in the course of <a href="https://securelist.com/windows-0-day-exploit-cve-2019-1458-used-in-operation-wizardopium/95432/" rel="noreferrer noopener" target="_blank">active attacks</a>, which simulated keystrokes to create memory leaks.</p>
+
+
+
+<p class="wp-block-paragraph">Both vulnerabilities have their origins in the early days of Windows. “The problem originates from the time when WIN32K made its debut with Windows NT 4.0, when much of Win32’s graphics engine was moved from user level to kernel to boost performance,” explained Boris Larin, senior security researcher at Kaspersky, back in 2019. And while these two vulnerabilities have been patched, that long-ago decision on the part of Microsoft has had much broader effects — and probably will continue to do so, Larin said then. “Throughout the years, the WIN32K component has been responsible for more than a half of all kernel security vulnerabilities discovered in Windows.”</p>
+
+
+
+<h2 class="wp-block-heading" id="putty-heap-overflow">PuTTY heap overflow</h2>
+
+
+
+<p class="wp-block-paragraph"><em>Age: </em><strong>20 years, 9 months<br /></strong><em>Date introduced: </em><strong>January 1999<br /></strong><em>Date fixed: </em><strong>October 2019</strong></p>
+
+
+
+<p class="wp-block-paragraph">PuTTY is a free and open-source suite of tools that includes a serial console, a terminal emulator, and various network file transfer applications, with SSH and other encryption schemes built in. It was originally released to bring tools Unix admins took for granted to Windows and Mac OS, but has expanded its scope and is <a href="https://www.networkworld.com/article/2867362/improving-your-putty-connections.html" target="_blank">now in wide use on Unix systems as well</a>. While PuTTY was designed to secure network connections, it turns out there was a vulnerability lurking at its heart. This was a heap overflow that could be triggered by an insufficiently long SSH key, which could result in crashing PuTTY or even remote code execution.</p>
+
+
+
+<p class="wp-block-paragraph">The vulnerability was <a href="https://hackerone.com/reports/630462" rel="noreferrer noopener" target="_blank">submitted to HackerOne</a> as part of a bug bounty program, netting the submitter a $3,645 reward and a thank you from the PuTTY team, which noted that the bug had been present in the very earliest versions of the source code, dating back to 1999.</p>
+
+
+
+<h2 class="wp-block-heading" id="postgresql-database-vulnerabilities">PostgreSQL database vulnerabilities</h2>
+
+
+
+<p class="wp-block-paragraph"><em>Age: </em><strong>20+ years</strong><strong><br /></strong><em>Date introduced: <strong>2005</strong></em><strong><br /></strong><em>Date fixed: <strong>February</strong></em><strong><em> 2026</em></strong><strong><em></em></strong></p>
+
+
+
+<p class="wp-block-paragraph">An AI-powered security analysis tool was able to <a href="https://www.csoonline.com/article/4167137/ai-finds-20-year-old-bugs-in-postgresql-and-mariadb.html">uncover a high-severity vulnerability in PostgreSQL</a>, stemming from a flaw that dated back more than 20 years to early versions of the open-source relational database technologies.</p>
+
+
+
+<p class="wp-block-paragraph">The AI tool — Xint Code — surfaced a <a href="https://www.zeroday.cloud/blog/postgres-xint">critical remote code execution (RCE) vulnerability in PostgreSQL’s ‘pgcrypto’ extension</a>, an encryption-based technology first contributed in 2005.</p>
+
+
+
+<p class="wp-block-paragraph">Another team of security researchers discovered a critical validation vulnerability in the same PostgreSQL ‘pgcrypto’ extension. Both flaws were discovered during security vendor <a href="https://www.zeroday.cloud/blog">Wiz’s zeroday.cloud hacking event</a> in late 2025, reported to developers and patched in February 2026.</p>
+
+
+
+<p class="wp-block-paragraph">Developers of both PostgreSQL and MariaDB responded with the release of software updates to address all these security flaws.</p>
+
+
+
+<h2 class="wp-block-heading" id="nginx-web-server">Nginx web server</h2>
+
+
+
+<p class="wp-block-paragraph"><em>Age: <strong>18</strong></em><strong> years<br /></strong><em>Date introduced: <strong>2008</strong></em><strong><br /></strong><em>Date fixed: <strong>May 2026</strong></em><strong><em></em></strong></p>
+
+
+
+<p class="wp-block-paragraph">A <a href="https://www.csoonline.com/article/4171437/ai-agent-finds-18-year-old-remote-code-execution-flaw-in-nginx.html">critical and long latent vulnerability in the popular Nginx web server software</a> was exposed by an AI-based security scanning tool.</p>
+
+
+
+<p class="wp-block-paragraph">The <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-42945">CVE-2026-42945</a> vulnerability, a heap buffer overflow in NGINX’s URL rewrite module, was one of four flaws uncovered by security startup DepthFirst’s LLM-powered analysis platform.</p>
+
+
+
+<p class="wp-block-paragraph"><a href="https://my.f5.com/manage/s/article/K000161019">Developers at F5 warn</a> exploitation can cause a crash, and in some conditions could enable arbitrary code execution, especially if Address Space Layout Randomization (ASLR) is disabled.</p>
+
+
+
+<p class="wp-block-paragraph">System administrators are urged to update to patched versions of the software, 1.30.1 and 1.31.0, for the open-source version of Nginx. The commercial product, Nginx Plus, was also patched against the CVE-2026-42945 vulnerability and the three less severe flaws discovered by DepthFirst, as explained in a <a href="https://depthfirst.com/research/nginx-rift-achieving-nginx-rce-via-an-18-year-old-vulnerability">blog post</a>.</p>
+
+
+
+<h2 class="wp-block-heading" id="sigred-dns-vulnerability">SIGRed DNS vulnerability</h2>
+
+
+
+<p class="wp-block-paragraph"><em>Age: </em><strong>17 years<br /></strong><em>Date introduced: </em><strong>2003<br /></strong><em>Date fixed: </em><strong>2020</strong></p>
+
+
+
+<p class="wp-block-paragraph">DNS is one of the underrated backbones of the internet, the system by which your <a href="https://www.networkworld.com/article/3268449/what-is-dns-and-how-does-it-work.html" target="_blank">computer knows what IP address correlates to any given URL</a>. The system is hierarchical, with requests sent up and down the pyramid looking for DNS servers that know the answer to the question, “Where is this computer?” As a result, DNS has been built into all major operating systems.</p>
+
+
+
+<p class="wp-block-paragraph">In 2020, Microsoft disclosed a <a href="https://www.csoonline.com/article/569845/sigred-what-is-it-how-serious-is-it-and-how-should-you-respond.html">critical vulnerability in its own version of DNS</a>, which had been lurking in the code for 17 years. The vulnerability, <a href="https://research.checkpoint.com/2020/resolving-your-way-into-domain-admin-exploiting-a-17-year-old-bug-in-windows-dns-servers/" rel="noreferrer noopener" target="_blank">dubbed SIGRed by its discoverers at Check Point</a>, was a <a href="https://www.csoonline.com/article/568835/what-is-a-buffer-overflow-and-how-hackers-exploit-these-vulnerabilities.html">buffer overflow</a> flaw in Windows DNS servers that could be triggered by exploit code tucked into a DNS packet’s signature. A malicious nameserver could send such packets in response to requests, bypassing most security protections and potentially gaining remote access to the Microsoft DNS server. The attack would be potentially wormable, meaning that it could be automated and spread without user intervention.</p>
+
+
+
+<h2 class="wp-block-heading" id="linux-kernel-based-virtualization-module-januscape-vulnerability">Linux kernel-based virtualization module Januscape vulnerability</h2>
+
+
+
+<p class="wp-block-paragraph"><em>Age: </em><strong>16 years<br /></strong><em>Date introduced: </em><strong>2010<br /></strong><em>Date fixed: </em><em><strong>June</strong></em><strong> 2026</strong></p>
+
+
+
+<p class="wp-block-paragraph">A <a href="https://www.csoonline.com/article/4194085/16-year-old-kvm-flaw-allows-attackers-to-escape-vms-and-take-over-linux-servers.html">long dormant vulnerability in a Linux kernel-based virtualization module (KVM)</a> poses arbitrary code execution risk to multi-tenant cloud environments and virtualized enterprise servers.</p>
+
+
+
+<p class="wp-block-paragraph">The critical vulnerability — dubbed <a href="https://github.com/V4bel/Januscape">Januscape</a> — creates a means for potential mechanism for attackers to escape VMs and execute malware upon host systems.</p>
+
+
+
+<p class="wp-block-paragraph">More specifically the <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-53359">CVE-2026-53359</a> vulnerability arises from a use-after-free memory bug in the shadow MMU emulation of KVM on x86 CPU architecture machines. As such the critical vulnerability circumvents the security boundary that cloud providers and enterprises rely on to isolate sensitive processes on servers.</p>
+
+
+
+<p class="wp-block-paragraph">The flaw stems from software introduced into Linux kernel code in 2010 and is the first KVM guest-to-host escape vulnerability that works on both Intel and AMD CPUs, according to <a href="https://x.com/v4bel">Hyunwoo Kim</a>, the security researcher who discovered the flaw.</p>
+
+
+
+<h2 class="wp-block-heading" id="python-tarfile-vulnerability-rises-again">Python tarfile vulnerability rises again</h2>
+
+
+
+<p class="wp-block-paragraph"><em>Age: </em><strong>15 years<br /></strong><em>Date introduced: </em><strong>2007<br /></strong><em>Date fixed: </em><strong>September 2022</strong></p>
+
+
+
+<p class="wp-block-paragraph">Cybersecurity company Trellix discovered that CVE-2007-4559, a vulnerability affecting Python’s tarfile module first identified in 2007, continued to affect hundreds of thousands of repositories up until at least September 2022.</p>
+
+
+
+<p class="wp-block-paragraph">“While investigating an unrelated vulnerability, Trellix Advanced Research Center stumbled across a vulnerability in Python’s tarfile module,” Kasimir Schulz, a vulnerability researcher for Trellix’s Threat Labs, <a href="https://www.trellix.com/en-us/about/newsroom/stories/research/tarfile-exploiting-the-world.html" rel="noreferrer noopener" target="_blank">wrote on the firm’s blog</a>. “Initially we thought we had found a new zero-day vulnerability. As we dug into the issue, we realized this was in fact CVE-2007-4559.”</p>
+
+
+
+<p class="wp-block-paragraph">According to NIST, <a href="https://nvd.nist.gov/vuln/detail/CVE-2007-4559" rel="noreferrer noopener" target="_blank">CVE-2007-4559</a> is a directory traversal vulnerability in the extract and extractall functions in the tarfile module in Python that allows user-assisted remote attackers to overwrite arbitrary files via a “..” sequence in filenames in a TAR archive.</p>
+
+
+
+<p class="wp-block-paragraph">Bad actors can create exploits with as few as six lines of code added to the tarfile module, which allows users to add a filter to parse and modify a file’s metadata before it is added to the tar archive, Schulz said. CVE-2007-4559 “is incredibly easy to exploit, requiring little to no knowledge about complicated security topics. Due to this fact and the prevalence of the vulnerability in the wild, Python’s tarfile module has become a massive supply chain issue threatening infrastructure around the world.” Trellix has found more than 300,000 repositories affected by the vulnerability.</p>
+
+
+
+<p class="wp-block-paragraph">Trellix developed a <a href="https://github.com/advanced-threat-research/Creosote" rel="noreferrer noopener" target="_blank">scanning utility</a> to identify the vulnerability and patched a number of open-source repositories.</p>
+
+
+
+<h2 class="wp-block-heading" id="linux-scsi-subsystem-bugs">Linux SCSI subsystem bugs</h2>
+
+
+
+<p class="wp-block-paragraph"><em>Age: </em><strong>15 years<br /></strong><em>Date introduced: </em><strong>2006<br /></strong><em>Date fixed: </em><strong>March 2021</strong></p>
+
+
+
+<p class="wp-block-paragraph">SCSI, a 1980s-era data transfer standard, is still in use in some contexts today, and Linux, always intended to be as flexible and universal as possible, still has an extensive SCSI subsystem for those systems that need it. These modules are available via <em>automatic module loading,</em> in which the OS grabs and installs the system code it needs when it needs it — helpful if you find yourself plugging a SCSI drive into your Linux machine and don’t want to hunt down the necessary supporting code.</p>
+
+
+
+<p class="wp-block-paragraph">Cybersecurity consultancy Grimm posted an extensive breakdown of <a href="https://blog.grimm-co.com/2021/03/new-old-bugs-in-linux-kernel.html" rel="noreferrer noopener" target="_blank">several bugs in this Linux SCSI code</a> that they discovered in March 2021. One was a buffer overflow vulnerability that could allow a normal user to gain root privileges, and the others were errors where information from the kernel could be leaked to user space<s>, and.</s> All could be used to get privileged information or as part of a DoS attack on the affected machine. Grimm dates the bugs back to 2006 and dryly notes that they’re “an indication of a lack of security-conscious programming practices that was prevalent at the time this code was developed.”</p>
+
+
+
+<h2 class="wp-block-heading" id="domain-time-ii-man-on-the-side-attack">Domain Time II man-on-the-side attack</h2>
+
+
+
+<p class="wp-block-paragraph"><em>Age: </em><strong>14 years<br /></strong><em>Date introduced: </em><strong>2007<br /></strong><em>Date fixed: </em><strong>April 2021</strong></p>
+
+
+
+<p class="wp-block-paragraph">If two computers on the same network can’t agree on the time, the results can range from <a href="https://www.networkworld.com/article/3189131/the-growing-importance-of-time-sensitive-networks.html" target="_blank">annoying to disastrous</a>. This <a href="https://en.wikipedia.org/wiki/Clock_synchronization" rel="noreferrer noopener" target="_blank">longstanding problem</a> was to be solved by <a href="https://www.greyware.com/software/domaintime/" rel="noreferrer noopener" target="_blank">Domain Time II</a>, a closed-source application in use on Windows, Linux, and Solaris.</p>
+
+
+
+<p class="wp-block-paragraph">But Domain Time II harbored for most of its existence a very serious vulnerability. At intervals or on conditions the user can set, the program sends UDP queries to an update server run by Greyware Automation Products, the software’s vendor. If the server replies with a URL, Domain Time II will run a program with admin privileges to download and install an update from that URL.</p>
+
+
+
+<p class="wp-block-paragraph">The problem? If a malicious actor manages to reply to the query before Greyware’s server does, that attacker can <a href="https://blog.grimm-co.com/2021/04/time-for-upgrade.html" rel="noreferrer noopener" target="_blank">send its own reply</a>, prompting Domain Time II to download whatever <a href="https://www.csoonline.com/article/565999/what-is-malware-viruses-worms-trojans-and-beyond.html">malware</a> the attacker wants installed. In a true <a href="https://www.csoonline.com/article/566905/man-in-the-middle-attack-definition-and-examples.html">man-in-the-middle attack</a>, the attacker would be intercepting communications in both directions; in contrast, this <em>man-on-the-side</em> attack can’t stop replies to its target machine getting through and so has to send its own reply more quickly.</p>
+
+
+
+<p class="wp-block-paragraph">In practice, this means the attacker would need to control a computer on the target’s local network to pull this off, but this attack represents a way an attacker could escalate their intrusion onto more valuable and secure machines within a local network. This vulnerability was spotted by the security firm Grimm, which noted that the flaw was present in versions of the software going back at least to 2007.</p>
+
+
+
+<h2 class="wp-block-heading"><a></a>Critical vulnerability in Redis in-memory store</h2>
+
+
+
+<p class="wp-block-paragraph"><em>Age: </em><strong>13 years</strong><br /><em>Date introduced:</em><strong> 2012</strong><br /><em>Date fixed:</em><strong> October 2025</strong></p>
+
+
+
+<p class="wp-block-paragraph">A <a href="https://www.csoonline.com/article/4069136/10-0-severity-rce-flaw-puts-60000-redis-instances-at-risk.html">vulnerability in Redis in-memory store</a> posed a critical risk for servers hosting the database.</p>
+
+
+
+<p class="wp-block-paragraph">The vulnerability, identified as CVE-2025-49844 or RediShell, stemmed from a use-after-free memory corruption bug that has existed in the Redis code base for around 13 years and posed a remote code execution risk.</p>
+
+
+
+<p class="wp-block-paragraph">While the flaw required authentication to exploit, an estimated 60,000 internet exposed Redis instances were exposed to the internet without authentication enabled, leaving these systems open to attack. Wiz researchers discovered the flaw and used it in the Pwn2Own Berlin contest in May 2025, weeks before its public disclosure in October 2025.</p>
+
+
+
+<h2 class="wp-block-heading" id="lionwiki-local-file-inclusion">LionWiki local file inclusion</h2>
+
+
+
+<p class="wp-block-paragraph"><em>Age: </em><strong>11 years, 11 months<br /></strong><em>Date introduced: </em><strong>November 2008<br /></strong><em>Date fixed: </em><strong>October 2020</strong></p>
+
+
+
+<p class="wp-block-paragraph"><a href="https://lionwiki.0o.cz/index.php?page=Main+page" rel="noreferrer noopener" target="_blank">LionWiki</a> is a minimalist wiki engine, programmed in PHP. Unlike many popular wiki engines, LionWiki doesn’t use a database, and instead is entirely file-based. Because its goal is simplicity, this is a strength, but it also makes a significant vulnerability possible.</p>
+
+
+
+<p class="wp-block-paragraph">In essence, the various files underlying a particular LionWiki instance are accessed by file and pathnames in the URL of the corresponding pages. This means that, with a correctly crafted URL, you could traverse the filesystem of the server hosting the LionWiki instance. There are URL-filtering provisions in place to block attempts to do this, but as Infosec Institute’s cyber range engineer June Werner discovered, they could be <a href="https://www.junebug.site/blog/cve-2020-27191-lionwiki-3-2-11-lfi" rel="noreferrer noopener" target="_blank">defeated fairly easily</a>.</p>
+
+
+
+<p class="wp-block-paragraph">One thing Werner noted is that the vulnerability persisted despite attempts to correct it. “Some mitigations were first put in place in July of 2009, and then more extensive mitigations were put in place in January of 2012,” she noted. “Despite these mitigations, the code was still vulnerable to the same type of attack. This vulnerability stayed in the code for another eight years until it was rediscovered, along with a way to bypass the mitigations, in October 2020.” After the bug was <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-27191" rel="noreferrer noopener" target="_blank">formally reported</a>, it was patched by the developer.</p>
+
+
+
+<h2 class="wp-block-heading" id="sudo-host">sudo host</h2>
+
+
+
+<p class="wp-block-paragraph"><em>Age: </em><strong>11 years, 10 months<br /></strong><em>Date introduced: </em><strong>September 2013<br /></strong><em>Date fixed: </em><strong>July 2024</strong></p>
+
+
+
+<p class="wp-block-paragraph">The sudo command is an important tool in any Unix admin’s toolkit, granting <a href="https://www.networkworld.com/article/3322504/selectively-deploying-your-superpowers-on-linux.html" target="_blank">superpowered user privileges</a> to those who have the permission to invoke it. To access these privileges, a user must be listed in a configuration file called sudoers. Because many organizations centrally administer many Unix hosts, sudoers can include a list of specific hosts where each user has sudo rights, so that these config files can be written once and then be pushed out to all the organization’s hosts.</p>
+
+
+
+<p class="wp-block-paragraph">The problem is that, to get access to the sudoers file and see the hosts on which you or another user might have sudo powers, you need those sudo powers yourself. But a command-line flag intended to let users view host-specific privileges could be abused to trick sudo into treating the command as if it were running on a different host — potentially one where the user has elevated privileges. That could allow the user to run commands, including those that edit sudoers, even if they shouldn’t have that access on the local machine. This <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-32462">security flaw isn’t rated as too serious</a>, but it did lurk undetected for nearly 12 years. (Another <a href="https://www.csoonline.com/article/4018715/how-a-12-year-old-bug-in-sudo-is-haunting-linux-users.html">more serious flaw with the chroot option</a>, revealed at the same time, is a mere baby at two years old.)</p>
+
+
+
+<h2 class="wp-block-heading"><a></a>HashiCorp Vault and CyberArk Conjur logic flaws</h2>
+
+
+
+<p class="wp-block-paragraph"><em>Age: </em><strong>10 years</strong><br /><em>Date introduced:</em><strong> 2015</strong><br /><em>Date fixed:</em><strong> August 2025</strong></p>
+
+
+
+<p class="wp-block-paragraph"><a href="https://www.csoonline.com/article/4035274/researchers-uncover-rce-attack-chains-in-popular-enterprise-credential-vaults.html">Multiple flaws in components of HashiCorp Vault and CyberArk Conjur</a>, two open-source credential management systems, left the door open to a variety of attacks, including authentication bypass and the theft or erasure of supposedly protected secrets.</p>
+
+
+
+<p class="wp-block-paragraph">Both HashiCorp Vault and CyberArk Conjur are used for storing and controlling access to secrets such as API keys, database passwords, certificates, and encryption keys. Each technology is commonly used in DevSecOps pipelines.</p>
+
+
+
+<p class="wp-block-paragraph">Researchers from Cyata discovered an array of issues, many of which had remained hidden in the codebase of widely used open-source secrets vaults for years. The vulnerabilities were discovered after manual code reviews that focused on logic flaws in components responsible for authentication and policy enforcement rather than memory corruption issues typically detected by automated tools.</p>
+
+
+
+<p class="wp-block-paragraph">Findings from the research — which led to the discovery of a combined total of 14 vulnerabilities in the two secrets vaults — were revealed at Black Hat USA in August 2025.</p>
+
+
+
+<p class="wp-block-paragraph">The most severe vulnerability in HashiCorp Vault (<a href="https://nvd.nist.gov/vuln/detail/CVE-2025-6000" rel="noreferrer noopener" target="_blank">CVE-2025-6000</a>) created a mechanism for attackers to delete a critical file containing the keys needed to decrypt stored secrets, leaving data unreachable.</p>
+
+
+
+<p class="wp-block-paragraph">All the vulnerabilities were addressed before the research was publicly disclosed.</p>
+
+
+
+<h2 class="wp-block-heading" id="linux-grub2-secure-boot-hole">Linux GRUB2 Secure Boot hole</h2>
+
+
+
+<p class="wp-block-paragraph"><em>Age: </em><strong>10 years<br /></strong><em>Date introduced: </em><strong>2010<br /></strong><em>Date fixed: </em><strong>July 2020</strong></p>
+
+
+
+<p class="wp-block-paragraph">When UEFI was introduced to replace BIOS, it was <a href="https://www.csoonline.com/article/548540/ultimate-pc-security-requires-uefi-and-windows-8-or-linux.html">deemed the cutting edge of security</a>, with features to fight attacks that operated on the level of the bootloading software that starts up an OS. Key to this is an interlocked chain of signed cryptographic certificates that verifies each bootloader program as legitimate, a mechanism known as Secure Boot. The root certificate for UEFI is signed by Microsoft, and Linux distributions put their own bootloaders, each with its own validated certificate, further down the chain.</p>
+
+
+
+<p class="wp-block-paragraph">But GRUB2, a widely popular Linux bootloader with a UEFI-ready certificate, <a href="https://www.csoonline.com/article/569663/linux-grub2-bootloader-flaw-breaks-secure-boot-on-most-computers-and-servers.html">contains a buffer overflow vulnerability</a> that can be exploited by malicious code inserted into in its configuration file. (While GRUB2 itself is signed, its configuration file, meant to be editable by local admins, is not.) This hole was <a href="https://eclypsium.com/2020/07/29/theres-a-hole-in-the-boot/" rel="noreferrer noopener" target="_blank">spotted by Eclypsium</a>, and while an attacker would need to have a degree of local control of the target machine to implement this attack, if they pulled it off successfully, they could ensure that they remain in control of that computer going forward each time it boots up, making it difficult to evict them from the system.</p>
+
+
+
+<h2 class="wp-block-heading"><a></a>Telnet</h2>
+
+
+
+<p class="wp-block-paragraph"><em>Age:</em> <strong>10 years, 8 months</strong><br /><em>Date introduced:</em> <strong>May 2017</strong><br /><em>Date fixed:</em> <strong>Jan 2026</strong></p>
+
+
+
+<p class="wp-block-paragraph">Telnet is an early internet protocol and associated tools used for remotely logging into another machine via a text-based terminal session. Although superseded by the more secure and encrypted SSH technology since the mid-1990s, Telnet is still widely used by embedded systems, network hardware, and other legacy systems.</p>
+
+
+
+<p class="wp-block-paragraph">An <a href="https://www.csoonline.com/article/4120997/trivial-telnet-authentication-bypass-exposes-devices-to-complete-takeover.html">easily-exploited Telnet authentication bypass vulnerability</a> (CVE-2026-24061), introduced in code changes release in May 2017, left devices running pre-patched versions of the software wide open to remote compromise, provided that its Telnet server was exposed to the internet.</p>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Some health and fitness obsessives are using AI for hyperpersonalized training, building custom dashboards and tools to analyze their sleep, workouts, and diet (Wall Street Journal)</title>
+  <link>https://www.techmeme.com/260812/p6#a260812p6</link>
+  <pubDate>Wed, 12 Aug 2026 06:30:02 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://www.wsj.com/tech/ai/the-datamaxxers-feeding-their-every-health-move-to-ai-df0af9b5?st=hqiG7z&amp;reflink=desktopwebshare_permalink"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260812/i6.jpg" vspace="4" /></a>
+<p><a href="https://www.techmeme.com/260812/p6#a260812p6" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="https://www.wsj.com/">Wall Street Journal</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://www.wsj.com/tech/ai/the-datamaxxers-feeding-their-every-health-move-to-ai-df0af9b5?st=hqiG7z&amp;reflink=desktopwebshare_permalink">Some health and fitness obsessives are using AI for hyperpersonalized training, building custom dashboards and tools to analyze their sleep, workouts, and diet</a></b></span>&nbsp; &mdash;&nbsp; From marathon training to tracking office angst, health obsessives are linking their data to chatbots to build hyperpersonalized coaches</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Briter: Africa-focused startups raised $3.3B in H1 2026, up 73% YoY, driven by Zipline&#x27;s $950M raise; US- and UAE-incorporated entities raised half the capital (Nduka Orjinmo/Bloomberg)</title>
+  <link>https://www.techmeme.com/260812/p5#a260812p5</link>
+  <pubDate>Wed, 12 Aug 2026 05:45:01 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://www.bloomberg.com/news/articles/2026-08-11/healthcare-ev-startups-steer-africa-toward-record-funding-year"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260812/i5.jpg" vspace="4" /></a>
+<p><a href="https://www.techmeme.com/260812/p5#a260812p5" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Nduka Orjinmo / <a href="https://www.bloomberg.com/">Bloomberg</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/articles/2026-08-11/healthcare-ev-startups-steer-africa-toward-record-funding-year">Briter: Africa-focused startups raised $3.3B in H1 2026, up 73% YoY, driven by Zipline's $950M raise; US- and UAE-incorporated entities raised half the capital</a></b></span>&nbsp; &mdash;&nbsp; African-focused startups are on track for a record fundraising year after investments surged in the first six months &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+</item>
+
 <item>
   <title>🔵 Bengaluru-based Yulu, which gets ~95% of its revenue from renting e-bikes to gig workers, raised a $93M Series C, sources say at a ~$170M post-money valuation (Jagmeet Singh/TechCrunch)</title>
   <link>https://www.techmeme.com/260812/p4#a260812p4</link>
@@ -12,7 +435,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://techcrunch.com/2026/08/11/indias-yulu-raises-93m-as-quick-commerce-boom-fuels-e-bike-demand/"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260812/i4.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260812/p4#a260812p4" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Jagmeet Singh / <a href="http://techcrunch.com/">TechCrunch</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://techcrunch.com/2026/08/11/indias-yulu-raises-93m-as-quick-commerce-boom-fuels-e-bike-demand/">Bengaluru-based Yulu, which gets ~95% of its revenue from renting e-bikes to gig workers, raised a $93M Series C, sources say at a ~$170M post-money valuation</a></b></span>&nbsp; &mdash;&nbsp; As India's quick-commerce platforms race to deliver everything from groceries to smartphones in minutes, electric mobility startup Yulu &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://techcrunch.com/2026/08/11/indias-yulu-raises-93m-as-quick-commerce-boom-fuels-e-bike-demand/">Bengaluru-based Yulu, which gets ~95% of its revenue from renting e-bikes to gig workers, raised a $93M Series C, sources say at a ~$170M post-money valuation</a></b></span>&nbsp; &mdash;&nbsp; As India's quick-commerce platforms race to deliver everything from groceries to smartphones in minutes, electric mobility startup Yulu &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
 </item>
 
 <item>
@@ -22,7 +445,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.bloomberg.com/news/articles/2026-08-11/dayone-data-centers-said-to-confidentially-file-for-5-billion-ipo-us"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260812/i3.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260812/p3#a260812p3" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="https://www.bloomberg.com/">Bloomberg</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/articles/2026-08-11/dayone-data-centers-said-to-confidentially-file-for-5-billion-ipo-us">Sources: Singapore-based data center operator DayOne confidentially files for a US IPO, aims to list as soon as next quarter, and is considering raising ~$5B</a></b></span>&nbsp; &mdash;&nbsp; DayOne Data Centers has confidentially filed for a US initial public offering, according to people familiar with the matter.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/articles/2026-08-11/dayone-data-centers-said-to-confidentially-file-for-5-billion-ipo-us">Sources: Singapore-based data center operator DayOne confidentially files for a US IPO, aims to list as soon as next quarter, and is considering raising ~$5B</a></b></span>&nbsp; &mdash;&nbsp; DayOne Data Centers has confidentially filed for a US initial public offering, according to people familiar with the matter.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
 </item>
 
 <item>
@@ -32,7 +455,16 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.ft.com/content/7d2ab3e0-9085-48f6-b38a-d90260d58795"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260812/i2.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260812/p2#a260812p2" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Tom Wilson / <a href="https://www.ft.com/">Financial Times</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.ft.com/content/7d2ab3e0-9085-48f6-b38a-d90260d58795">Researchers say suspected Chinese hackers used open-source AI agents to build an autonomous hacking tool that compromised Taiwanese government websites in July</a></b></span>&nbsp; &mdash;&nbsp; AI agents ran simultaneous reconnaissance and break-ins in display of new phase of cyberwarfare.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.ft.com/content/7d2ab3e0-9085-48f6-b38a-d90260d58795">Researchers say suspected Chinese hackers used open-source AI agents to build an autonomous hacking tool that compromised Taiwanese government websites in July</a></b></span>&nbsp; &mdash;&nbsp; AI agents ran simultaneous reconnaissance and break-ins in display of new phase of cyberwarfare.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 OpenAI VP of Global Policy Ann O&#x27;Leary says AI policy in the US is anchored in the states and informed by California&#x27;s AI transparency law passed last year (Chase DiFeliciantonio/Politico)</title>
+  <link>https://www.techmeme.com/260812/p1#a260812p1</link>
+  <pubDate>Wed, 12 Aug 2026 04:55:02 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><p><a href="https://www.techmeme.com/260812/p1#a260812p1" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Chase DiFeliciantonio / <a href="http://www.politico.com/">Politico</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://www.politico.com/news/2026/08/11/openai-ai-policy-will-still-be-made-in-states-01034394">OpenAI VP of Global Policy Ann O'Leary says AI policy in the US is anchored in the states and informed by California's AI transparency law passed last year</a></b></span>&nbsp; &mdash;&nbsp; SACRAMENTO, California &mdash; A senior OpenAI global affairs chief said AI policy is still anchored in the states &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
 </item>
 
 <item>
@@ -177,7 +609,7 @@
 
 
 <p class="wp-block-paragraph"></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
 </item>
 
 <item>
@@ -304,15 +736,17 @@
 
 
 <p class="wp-block-paragraph">Anaconda, for its part, urges customers to remain diligent: “Be on alert for phishing/social engineering, and maintain credential hygiene (including auditing, reviewing, and rotating credentials regularly) and spam monitoring.”</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
-  <title>🔵 India’s central bank wants AI to approve loans that humans would reject</title>
-  <link>https://www.theregister.com/ai-and-ml/2026/08/12/indias-central-bank-wants-ai-to-approve-loans-that-humans-would-reject/5286572</link>
-  <pubDate>Wed, 12 Aug 2026 01:18:21 +0000</pubDate>
-  <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Could impact sign-ins/MFA/Conditional Access — watch for login issues.</b><br/>Regulator hopes for greater financial inclusion, without extra risk or blaming models for bad decisions<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+  <title>🔵 A look at Candy Crush&#x27;s continued popularity 15 years after its launch, with an estimated 81.5M MAUs and in-app revenue of $876.5M in fiscal year 2025 (Alanna Okun/Bloomberg)</title>
+  <link>https://www.techmeme.com/260811/p43#a260811p43</link>
+  <pubDate>Wed, 12 Aug 2026 01:00:13 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://www.bloomberg.com/news/features/2026-08-11/how-candy-crush-became-one-of-the-most-successful-mobile-games-of-all-time?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc4NjQ5MTYwNywiZXhwIjoxNzg3MDk2NDA3LCJhcnRpY2xlSWQiOiJUSkxRS0dWVFREME4wMCIsImJjb25uZWN0SWQiOiI4OUM4OTNDMDhGOTQ0NThDQkQwQTQyREY1RDFCOTY0QyJ9.R164SGt8FSWSxuGNL_HttryWoEsH57So_okLoVo4-yQ"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260811/i43.jpg" vspace="4" /></a>
+<p><a href="https://www.techmeme.com/260811/p43#a260811p43" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Alanna Okun / <a href="https://www.bloomberg.com/">Bloomberg</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/features/2026-08-11/how-candy-crush-became-one-of-the-most-successful-mobile-games-of-all-time?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc4NjQ5MTYwNywiZXhwIjoxNzg3MDk2NDA3LCJhcnRpY2xlSWQiOiJUSkxRS0dWVFREME4wMCIsImJjb25uZWN0SWQiOiI4OUM4OTNDMDhGOTQ0NThDQkQwQTQyREY1RDFCOTY0QyJ9.R164SGt8FSWSxuGNL_HttryWoEsH57So_okLoVo4-yQ">A look at Candy Crush's continued popularity 15 years after its launch, with an estimated 81.5M MAUs and in-app revenue of $876.5M in fiscal year 2025</a></b></span>&nbsp; &mdash;&nbsp; Fifteen years in, those shiny sweets are still on top.&nbsp; &mdash;&nbsp; Johanna Chouraqui doesn't time travel anymore.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
 </item>
 
 <item>
@@ -429,15 +863,17 @@
 
 
 <p class="wp-block-paragraph">The memory corruption comes from logical errors in DIAG protocol parsing that allow an unauthenticated attacker to generate memory corruptions, said Onapsis. The vulnerability could potentially disclose sensitive system information or crash the system, leading to a high impact on the confidentiality, integrity, and availability of the application. Stross noted that an attacker does not require authentication to exploit this hole.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
 </item>
 
 <item>
-  <title>🔵 Modular&#x27;s Mojo programming language hits 1.0 milestone</title>
-  <link>https://www.theregister.com/ai-and-ml/2026/08/12/modulars-mojo-programming-language-hits-10-milestone/5286545</link>
-  <pubDate>Tue, 11 Aug 2026 23:50:25 +0000</pubDate>
-  <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Developers await open source compiler release to dispel uncertainty following Qualcomm acquisition<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
+  <title>🔵 A profile of Suno, which has been used by more than 100M people since 2023 and has 2M+ paid subscribers, as it faces copyright lawsuits from UMG and Sony Music (Bloomberg)</title>
+  <link>https://www.techmeme.com/260811/p42#a260811p42</link>
+  <pubDate>Tue, 11 Aug 2026 23:55:01 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://www.bloomberg.com/news/features/2026-08-11/suno-stares-down-universal-and-sony-to-reshape-the-future-of-music?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc4NjQ4NjQxMCwiZXhwIjoxNzg3MDkxMjEwLCJhcnRpY2xlSWQiOiJUSk1JQ0hSMjRVOU8wMCIsImJjb25uZWN0SWQiOiI4OUM4OTNDMDhGOTQ0NThDQkQwQTQyREY1RDFCOTY0QyJ9.TBMIeS8NPLcnFaiLOvDCXHN0JX7ghM24kRXIhlh_tTY"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260811/i42.jpg" vspace="4" /></a>
+<p><a href="https://www.techmeme.com/260811/p42#a260811p42" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="https://www.bloomberg.com/">Bloomberg</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/features/2026-08-11/suno-stares-down-universal-and-sony-to-reshape-the-future-of-music?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc4NjQ4NjQxMCwiZXhwIjoxNzg3MDkxMjEwLCJhcnRpY2xlSWQiOiJUSk1JQ0hSMjRVOU8wMCIsImJjb25uZWN0SWQiOiI4OUM4OTNDMDhGOTQ0NThDQkQwQTQyREY1RDFCOTY0QyJ9.TBMIeS8NPLcnFaiLOvDCXHN0JX7ghM24kRXIhlh_tTY">A profile of Suno, which has been used by more than 100M people since 2023 and has 2M+ paid subscribers, as it faces copyright lawsuits from UMG and Sony Music</a></b></span>&nbsp; &mdash;&nbsp; Investors are betting the $5 billion company will be the next Spotify.&nbsp; &mdash;&nbsp; Mikey Shulman stands in the middle of a dark concert hall &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 8h ago]]></description>
 </item>
 
 <item>
@@ -510,7 +946,17 @@
 
 
 <p class="wp-block-paragraph">“This exploit needed only presence in the meeting, so joining rules are access control: waiting rooms, passcodes, authenticated-users-only, no published personal meeting link,” the researchers said. “Then cut what nobody uses, because every optional feature is another parser. In Zoom, consider locking annotation, file transfer, whiteboarding, remote control and third-party apps, and limiting screen sharing to hosts.”</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 OpenAI launches a ChatGPT desktop app for Linux in preview, supporting ChatGPT Work, Codex, and more; Computer Use outside the in-app browser is not available (Frederic Lardinois/The New Stack)</title>
+  <link>https://www.techmeme.com/260811/p41#a260811p41</link>
+  <pubDate>Tue, 11 Aug 2026 22:55:01 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://thenewstack.io/openais-chatgpt-desktop-linux/"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260811/i41.jpg" vspace="4" /></a>
+<p><a href="https://www.techmeme.com/260811/p41#a260811p41" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Frederic Lardinois / <a href="http://thenewstack.io/">The New Stack</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://thenewstack.io/openais-chatgpt-desktop-linux/">OpenAI launches a ChatGPT desktop app for Linux in preview, supporting ChatGPT Work, Codex, and more; Computer Use outside the in-app browser is not available</a></b></span>&nbsp; &mdash;&nbsp; On Tuesday, OpenAI launched its ChatGPT desktop for Linux.&nbsp; &mdash;&nbsp; Now in preview, the app, which combines ChatGPT, ChatGPT Work &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
 </item>
 
 <item>
@@ -520,15 +966,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.theinformation.com/articles/kalshi-tops-4-billion-annualized-revenue-seeks-40-billion-valuation"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260811/i39.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260811/p39#a260811p39" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Yueqi Yang / <a href="https://www.theinformation.com/">The Information</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.theinformation.com/articles/kalshi-tops-4-billion-annualized-revenue-seeks-40-billion-valuation">Source: Kalshi's annualized revenue topped $4B in July, up from $2B+ two months earlier, and its operating expenses totaled $300M in June</a></b></span>&nbsp; &mdash;&nbsp; World Cup wagers helped double Kalshi's revenue to a more than $4 billion annualized rate in July, from a pace of over $2 billion two months earlier, a person familiar with the matter said.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 8h ago]]></description>
-</item>
-
-<item>
-  <title>🟠 421 bugs in Microsoft&#x27;s Patch Tuesday release, and the Norks have already attacked one</title>
-  <link>https://www.theregister.com/security/2026/08/11/421-bugs-in-microsofts-patch-tuesday-release-and-the-norks-have-already-attacked-one/5286483</link>
-  <pubDate>Tue, 11 Aug 2026 21:31:00 +0000</pubDate>
-  <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Sysadmins, welcome to your new norm<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 8h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.theinformation.com/articles/kalshi-tops-4-billion-annualized-revenue-seeks-40-billion-valuation">Source: Kalshi's annualized revenue topped $4B in July, up from $2B+ two months earlier, and its operating expenses totaled $300M in June</a></b></span>&nbsp; &mdash;&nbsp; World Cup wagers helped double Kalshi's revenue to a more than $4 billion annualized rate in July, from a pace of over $2 billion two months earlier, a person familiar with the matter said.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 10h ago]]></description>
 </item>
 
 <item>
@@ -538,7 +976,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.businessinsider.com/weil-valuation-750-million-for-ai-science-startup-2026-8"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260811/i36.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260811/p36#a260811p36" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="https://www.businessinsider.com/">Business Insider</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.businessinsider.com/weil-valuation-750-million-for-ai-science-startup-2026-8">Sources: former OpenAI Chief Product Officer Kevin Weil is aiming to raise $150M for a new AI science startup, seeking a valuation of at least $750M</a></b></span>&nbsp; &mdash;&nbsp; Kevin Weil, the former chief product officer of OpenAI, has sought a valuation of at least $750 million for a new AI science startup &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.businessinsider.com/weil-valuation-750-million-for-ai-science-startup-2026-8">Sources: former OpenAI Chief Product Officer Kevin Weil is aiming to raise $150M for a new AI science startup, seeking a valuation of at least $750M</a></b></span>&nbsp; &mdash;&nbsp; Kevin Weil, the former chief product officer of OpenAI, has sought a valuation of at least $750 million for a new AI science startup &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 11h ago]]></description>
 </item>
 
 <item>
@@ -548,7 +986,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://www.cnbc.com/2026/08/11/coreweave-crwv-q2-earnings-report-2026.html"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260811/i35.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260811/p35#a260811p35" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Jordan Novet / <a href="http://www.cnbc.com/">CNBC</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.cnbc.com/2026/08/11/coreweave-crwv-q2-earnings-report-2026.html">CoreWeave reports Q2 revenue up 112% YoY to $2.58B, vs. $2.56B est., and a $104B revenue backlog, with 1.5 GW of contracted power; CRWV jumps 9%+ after hours</a></b></span>&nbsp; &mdash;&nbsp; CoreWeave shares jumped 14% in extended trading on Tuesday after the AI infrastructure provider reported results than topped Wall Street expectations.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.cnbc.com/2026/08/11/coreweave-crwv-q2-earnings-report-2026.html">CoreWeave reports Q2 revenue up 112% YoY to $2.58B, vs. $2.56B est., and a $104B revenue backlog, with 1.5 GW of contracted power; CRWV jumps 9%+ after hours</a></b></span>&nbsp; &mdash;&nbsp; CoreWeave shares jumped 14% in extended trading on Tuesday after the AI infrastructure provider reported results than topped Wall Street expectations.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 11h ago]]></description>
 </item>
 
 <item>
@@ -633,7 +1071,15 @@
 
 
 <p class="wp-block-paragraph"></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 12h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 14h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 A developer got Word 1.1a from 1990 to run on Windows 11 - try it yourself</title>
+  <link>https://www.zdnet.com/article/microsoft-word-1-1a-windows/</link>
+  <pubDate>Tue, 11 Aug 2026 16:55:09 +0000</pubDate>
+  <source>ZDNet</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Longing for a plain, old-fashioned version of Microsoft Word without all the bells, whistles, and AI slop? One developer managed to coax Word 1.1a to run on today's Windows.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 15h ago]]></description>
 </item>
 
 <item>
@@ -642,7 +1088,7 @@
   <pubDate>Tue, 11 Aug 2026 16:50:19 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><p>The security defects could be exploited for arbitrary code execution and denial-of-service.</p>
-<p>The post <a href="https://www.securityweek.com/adobe-urges-immediate-patching-of-critical-coldfusion-campaign-classic-flaws/">Adobe Urges Immediate Patching of Critical ColdFusion, Campaign Classic Flaws</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/adobe-urges-immediate-patching-of-critical-coldfusion-campaign-classic-flaws/">Adobe Urges Immediate Patching of Critical ColdFusion, Campaign Classic Flaws</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 15h ago]]></description>
 </item>
 
 <item>
@@ -749,23 +1195,7 @@
 
 
 <p class="wp-block-paragraph"><strong>See more insights from the report </strong><a href="https://business.adobe.com/resources/digital-trends-research-center.html" rel="noreferrer noopener nofollow" target="_blank"><strong>here</strong></a><strong>. </strong></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 14h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Two wars and a World Cup lead to epic DDoS attacks on publishers</title>
-  <link>https://www.theregister.com/security/2026/08/11/two-wars-and-a-world-cup-lead-to-epic-ddos-attacks-on-publishers/5286278</link>
-  <pubDate>Tue, 11 Aug 2026 15:33:00 +0000</pubDate>
-  <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Ukraine, Iran, and football inspire geopolitically motivated DDoS attacks, while 1 Tbps traffic jams up 519 percent<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 14h ago]]></description>
-</item>
-
-<item>
-  <title>🔴 Feds warn Gunra ransomware is exploiting known bugs to hit critical infrastructure</title>
-  <link>https://www.theregister.com/cyber-crime/2026/08/11/feds-warn-gunra-ransomware-is-exploiting-known-bugs-to-hit-critical-infrastructure/5286263</link>
-  <pubDate>Tue, 11 Aug 2026 14:36:00 +0000</pubDate>
-  <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Elevated ransomware risk — validate backups and endpoint defenses.</b><br/>Newly minted RaaS crew breaks in through using internet-facing kit via known Fortinet flaws, then steals and scrambles data<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 15h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 16h ago]]></description>
 </item>
 
 <item>
@@ -774,7 +1204,7 @@
   <pubDate>Tue, 11 Aug 2026 14:14:32 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><p>SAP released 28 new and two updated security notes, including four notes dealing with critical-severity bugs.</p>
-<p>The post <a href="https://www.securityweek.com/sap-patches-critical-code-injection-memory-corruption-vulnerabilities/">SAP Patches Critical Code Injection, Memory Corruption Vulnerabilities</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 15h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/sap-patches-critical-code-injection-memory-corruption-vulnerabilities/">SAP Patches Critical Code Injection, Memory Corruption Vulnerabilities</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 17h ago]]></description>
 </item>
 
 <item>
@@ -783,7 +1213,7 @@
   <pubDate>Tue, 11 Aug 2026 14:03:32 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><p>The Water Watch Center launched at DEF CON aims to help under-resourced utilities protect their systems against hackers.</p>
-<p>The post <a href="https://www.securityweek.com/us-water-systems-get-cyber-boost-from-new-senate-bill-and-water-watch-center/">US Water Systems Get Cyber Boost From New Senate Bill and &#8216;Water Watch Center&#8217;</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 16h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/us-water-systems-get-cyber-boost-from-new-senate-bill-and-water-watch-center/">US Water Systems Get Cyber Boost From New Senate Bill and &#8216;Water Watch Center&#8217;</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 18h ago]]></description>
 </item>
 
 <item>
@@ -876,7 +1306,7 @@
 
 
 <p class="wp-block-paragraph">The system, however, is not without drawbacks. Some of the trade-offs it carries include possibly disabled webhooks, rate-limited APIs, and Git inspection not being real-time.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 18h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 20h ago]]></description>
 </item>
 
 <item>
@@ -993,7 +1423,7 @@
 
 
 <p class="wp-block-paragraph">Analysts said such credits are tied to usage-based pricing. “Worth being clear that this isn’t a discount. Credits are currency inside OpenAI’s metered layer,” Chopra said. “Free credits get a workspace comfortable for consuming metered features,” Gogia said the offer should be treated as a pilot incentive. “The promotion should fund the pilot. It should not shorten the runway,” Gogia said, adding that billing controls, including pooled credits and auto-recharge settings, require close oversight.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 18h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 20h ago]]></description>
 </item>
 
 <item>
@@ -1090,7 +1520,7 @@
 
 
 <p class="wp-block-paragraph">CISOs should look for shorter exposure windows, Mahapatra said, along with faster remediation of critical flaws and fewer exploitable exposures. He added that vulnerability severity should be considered alongside exploit likelihood, the importance of the affected business system, and the context in which it is exposed.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 18h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 20h ago]]></description>
 </item>
 
 <item>
@@ -1273,7 +1703,7 @@
 
 
 <p class="wp-block-paragraph">Leaders who redesign workflows before automating them will create simpler processes, better employee experiences and stronger business outcomes. Those who automate first may improve efficiency for a while, but they also risk embedding yesterday’s assumptions into tomorrow’s technology.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 19h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 21h ago]]></description>
 </item>
 
 <item>
@@ -1488,7 +1918,7 @@
 
 
 <p class="wp-block-paragraph">CIOs looking to deploy more AI agents to production need a well-defined operating model that addresses a continuous lifecycle of delivery, deployment, measurement, feedback, and improvement.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 20h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 22h ago]]></description>
 </item>
 
 <item>
@@ -1635,7 +2065,7 @@
 
 
 <p class="wp-block-paragraph">They’re measured by the commercial outcomes they create.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 20h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 22h ago]]></description>
 </item>
 
 <item>
@@ -1730,7 +2160,7 @@
 
 
 <p class="wp-block-paragraph">This allows n8n to be self-hosted and operated independently of the cloud. In other words, the platform runs within a secure and governance-compliant environment within the group. This way, Mercedes-Benz retains full control over critical systems, data, and work processes.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 20h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 22h ago]]></description>
 </item>
 
 <item>
@@ -1879,7 +2309,7 @@
 
 
 <p class="wp-block-paragraph">Companies should split the review job before <a href="https://www.cloudbees.com/blog/2026-state-of-code-abundance-report" rel="noreferrer noopener" target="_blank">CloudBees’ 81%</a> becomes a number on the quarterly slide. Without that change, they will be impressively good at shipping code they never fully check.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 21h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 23h ago]]></description>
 </item>
 
 <item>
@@ -1944,7 +2374,7 @@
 
 
 <p class="wp-block-paragraph">Every revolution in manufacturing has been defined by the emergence of a resource that reshaped how value was created, whether that was steam, electricity or silicon. Industry 5.0 is introducing another, albeit one that can’t be stored in a warehouse or delivered on a truck. Data has become the factory’s most valuable raw material, and controlling its movement is every bit as important as controlling the movement of physical goods. The term “industrial equipment” may continue to describe what’s happening on the factory floor, but it no longer captures where competitive advantage is really being created. Increasingly, the intelligence surrounding a machine is becoming just as valuable as the machine itself, and the networks carrying that intelligence are becoming part of the production process in their own right.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 21h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 23h ago]]></description>
 </item>
 
 <item>
@@ -2073,7 +2503,7 @@
 
 
 <p class="wp-block-paragraph">“You can stop it, but soft guardrails are useless,” he says. “Do not try to patch the prompt or filter the text. You have to treat the agent like a compromised user account. Pull the OAuth tokens and kill the access immediately.”</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 21h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 23h ago]]></description>
 </item>
 
 <item>
@@ -2420,14 +2850,6 @@
 </item>
 
 <item>
-  <title>🟠 Cyber vulnerability sweep picks up Royal Navy drones sending data to China</title>
-  <link>https://www.theregister.com/edge-and-iot/2026/08/10/cyber-vulnerability-sweep-picks-up-royal-navy-drones-sending-data-to-china/5285430</link>
-  <pubDate>Mon, 10 Aug 2026 12:25:00 +0000</pubDate>
-  <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>No, no nasties to see here, guv...<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
-</item>
-
-<item>
   <title>🟠 OpenAI says Astra could reach ‘critical’ cyber capability, tightens safeguards</title>
   <link>https://www.csoonline.com/article/4207311/openai-says-astra-could-reach-critical-cyber-capability-tightens-safeguards.html</link>
   <pubDate>Mon, 10 Aug 2026 12:07:10 +0000</pubDate>
@@ -2643,14 +3065,6 @@
 
 <p class="wp-block-paragraph">Varonis drew parallels with other recently disclosed AI attacks like <a href="https://www.csoonline.com/article/4186970/m365-copilot-searchleak-your-prompt-injection-attack-surface-just-got-bigger.html">SearchLeak</a>, <a href="https://www.csoonline.com/article/4068175/gemini-trifecta-ai-autonomy-without-guardrails-opens-new-attack-surface.html">EchoLeak</a>, <a href="https://www.csoonline.com/article/4059606/meet-shadowleak-impossible-to-detect-data-theft-using-ai.html">ShadowLeak</a>, and <a href="https://www.csoonline.com/article/4161382/prompt-injection-turned-googles-antigravity-file-search-into-rce.html">Antigravity</a>. The company said RovoBlast is just another example of a broader AI security issue where “untrusted inputs, autonomous behavior, and trusted communication” are together creating serious data exposure.</p>
 </div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
-</item>
-
-<item>
-  <title>🟠 Framework loses customer data in Metabase zero-day attack</title>
-  <link>https://www.theregister.com/personal-tech/2026/08/10/framework-loses-customer-data-in-metabase-zero-day-attack/5285302</link>
-  <pubDate>Mon, 10 Aug 2026 11:21:00 +0000</pubDate>
-  <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Repairable hardware is little comfort when personal details escape<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
@@ -4051,14 +4465,6 @@
 </item>
 
 <item>
-  <title>🔴 Ransomware gangs skip the CEO, head straight for the 40-something IT manager</title>
-  <link>https://www.theregister.com/security/2026/08/09/ransomware-gangs-skip-the-ceo-head-straight-for-the-40-something-it-manager/5284499</link>
-  <pubDate>Sun, 09 Aug 2026 09:33:00 +0000</pubDate>
-  <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Elevated ransomware risk — validate backups and endpoint defenses.</b><br/>Gen Xers who feel triggered by this should remember to unplug the network cable and call the cops<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
-</item>
-
-<item>
   <title>🔴 From ambition to action: What Canadian tech leaders must get right to see meaningful value from transformation efforts</title>
   <link>https://www.cio.com/article/4206862/4206862.html</link>
   <pubDate>Fri, 07 Aug 2026 19:52:05 +0000</pubDate>
@@ -4289,30 +4695,6 @@
 </item>
 
 <item>
-  <title>🔴 Ransomware attacks spike as world distracted by AI</title>
-  <link>https://www.theregister.com/security/2026/08/07/ransomware-attacks-spike-as-world-distracted-by-ai/5284934</link>
-  <pubDate>Fri, 07 Aug 2026 16:45:00 +0000</pubDate>
-  <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Elevated ransomware risk — validate backups and endpoint defenses.</b><br/>What, you didn't think the top gangs were busy watching agents escape their sandboxes too, did you?<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 4d ago]]></description>
-</item>
-
-<item>
-  <title>🟠 N-able God mode flaw: Vendor confirms attackers reached customer networks as second hotfix lands</title>
-  <link>https://www.theregister.com/networks/2026/08/07/n-able-god-mode-flaw-vendor-confirms-attackers-reached-customer-networks-as-second-hotfix-lands/5284730</link>
-  <pubDate>Fri, 07 Aug 2026 15:01:00 +0000</pubDate>
-  <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Could impact sign-ins/MFA/Conditional Access — watch for login issues.</b><br/>Attackers turned admin access into a route downstream, while N-able tells N-central customers to patch – again<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4d ago]]></description>
-</item>
-
-<item>
-  <title>🔴 ShinyHunters called cancer diagnostics biz and tricked staffers into giving them access. Now they&#x27;ve dumped 10.9M email addresses</title>
-  <link>https://www.theregister.com/cyber-crime/2026/08/07/shinyhunters-called-cancer-diagnostics-biz-and-tricked-staffers-into-giving-them-access-now-theyve-dumped-109m-email-addresses/5284857</link>
-  <pubDate>Fri, 07 Aug 2026 14:53:57 +0000</pubDate>
-  <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Potential data exposure — check monitoring and incident response readiness.</b><br/>Cancer diagnostics breach spills personal and health info as extortion crew says healthcare giant ‘should’ve paid the ransom’<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 4d ago]]></description>
-</item>
-
-<item>
   <title>🔴 Moonshot’s Kimi AI model has also escaped from a test environment</title>
   <link>https://www.csoonline.com/article/4206782/moonshots-kimi-ai-model-has-also-escaped-from-a-test-environment.html</link>
   <pubDate>Fri, 07 Aug 2026 14:48:48 +0000</pubDate>
@@ -4420,6 +4802,84 @@
 
 <p class="wp-block-paragraph">“Now what you’re starting to see people do is very action oriented. So instead of asking ’how do I file a form to request my vacation’ from our employee agent, they’re telling the employee agent, ‘hey I’m taking a vacation, you need to enter this form for me, and here’s the details,’” he said, adding that this bias towards action represents the evolution of agentic use.</p>
 </div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4d ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Snowflake attacker pleads guilty to hack of 165 companies’ data</title>
+  <link>https://www.cio.com/article/4206761/snowflake-attacker-pleads-guilty-to-hack-of-165-companies-data-3.html</link>
+  <pubDate>Fri, 07 Aug 2026 13:26:53 +0000</pubDate>
+  <source>CIO.com</source>
+  <description><![CDATA[<b>Why this matters: Credential/phishing risk — reinforce MFA and user awareness training.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<p class="wp-block-paragraph">A Canadian hacker has admitted being part of a group responsible for several major cyberattacks. <a href="https://www.justice.gov/opa/pr/canadian-man-pleads-guilty-hacking-us-cloud-storage-provider-and-extorting-its-customers" rel="noreferrer noopener" target="_blank">Connor Riley Moucka pleaded guilty</a> to being part of a coterie of hackers that hit 165 organizations, resulting in the theft of customer records and the extortion of millions of dollars.</p>
+
+
+
+<p class="wp-block-paragraph">Industry sources have identified Moucka as one of the main players in attacks on data hosted by cloud data warehouse Snowflake. Companies affected by the hacks <a href="https://www.csoonline.com/article/3629818/7-biggest-cybersecurity-stories-of-2024.html">include the likes of AT&amp;T, Ticketmaster and the Neiman Marcus Group</a>.</p>
+
+
+
+<p class="wp-block-paragraph">He worked with two other hackers: <a href="https://www.csoonline.com/article/2517422/hacker-allegedly-paid-370000-ransom-to-delete-stolen-att-data.html">John Edward Binns</a> and Cameron John Wagenius. Binns was <a href="https://www.justice.gov/usao-wdwa/united-states-vs-connor-riley-moucka-and-john-erin-binns" rel="noreferrer noopener" target="_blank">not in US custody as of April 2026</a>, while Wagenius, going by the name of <a href="https://www.csoonline.com/article/3631033/us-soldier-linked-to-trump-call-log-hack-arrested-in-texas.html">Kiberphant0m, was arrested in January 2025</a> and <a href="https://www.justice.gov/opa/pr/former-us-soldier-pleads-guilty-hacking-and-extortion-scheme-involving-telecommunications" rel="noreferrer noopener" target="_blank">pleaded guilty in July that year</a></p>
+
+
+
+<p class="wp-block-paragraph">Moucka and other members of the group used stolen login credentials to compromise data belonging to at least 165 customers of a US-based software-as-a-service company. This unauthorized access was used to steal billions of sensitive customer records and download terabytes of information,</p>
+
+
+
+<p class="wp-block-paragraph">“Connor Moucka hacked over 150 companies and organizations, obtained extremely sensitive information, and extorted the victims for millions of dollars. Today’s guilty plea serves as a reminder to all cybercriminals, regardless of where they live, that they cannot hide behind a wall of anonymity. You will be found and brought to justice,” said assistant attorney general A. Tysen Duva of the Justice Department’s Criminal Division</p>
+
+
+
+<p class="wp-block-paragraph">The trial is the result of a coordinated worldwide action against the Snowflake group. The investigation was led by the FBI but benefited from contributions from the Royal Canadian Mounted Police, the Australian Federal Police, Spain’s Guardia Civil, the Security Service of Ukraine and the Turkish National Police.</p>
+
+
+
+<p class="wp-block-paragraph"><em>This article first appeared on <a href="https://www.csoonline.com/article/4206739/snowflake-attacker-pleads-guilty-to-hack-of-165-companies-data.html">CSO</a>.</em></p>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4d ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Snowflake attacker pleads guilty to hack of 165 companies’ data</title>
+  <link>https://www.csoonline.com/article/4206739/snowflake-attacker-pleads-guilty-to-hack-of-165-companies-data.html</link>
+  <pubDate>Fri, 07 Aug 2026 13:22:34 +0000</pubDate>
+  <source>CSO Online</source>
+  <description><![CDATA[<b>Why this matters: Credential/phishing risk — reinforce MFA and user awareness training.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<p class="wp-block-paragraph">A Canadian hacker has admitted being part of a group responsible for several major cyberattacks. <a href="https://www.justice.gov/opa/pr/canadian-man-pleads-guilty-hacking-us-cloud-storage-provider-and-extorting-its-customers" rel="noreferrer noopener" target="_blank">Connor Riley Moucka pleaded guilty</a> to being part of a coterie of hackers that hit 165 organizations, resulting in the theft of customer records and the extortion of millions of dollars.</p>
+
+
+
+<p class="wp-block-paragraph">Industry sources have identified Moucka as one of the main players in attacks on data hosted by cloud data warehouse Snowflake. Companies affected by the hacks <a href="https://www.csoonline.com/article/3629818/7-biggest-cybersecurity-stories-of-2024.html">include the likes of AT&amp;T, Ticketmaster and the Neiman Marcus Group</a>.</p>
+
+
+
+<p class="wp-block-paragraph">He worked with two other hackers: <a href="https://www.csoonline.com/article/2517422/hacker-allegedly-paid-370000-ransom-to-delete-stolen-att-data.html">John Edward Binns</a> and Cameron John Wagenius. Binns was <a href="https://www.justice.gov/usao-wdwa/united-states-vs-connor-riley-moucka-and-john-erin-binns" rel="noreferrer noopener" target="_blank">not in US custody as of April 2026</a>, while Wagenius, going by the name of <a href="https://www.csoonline.com/article/3631033/us-soldier-linked-to-trump-call-log-hack-arrested-in-texas.html">Kiberphant0m, was arrested in January 2025</a> and <a href="https://www.justice.gov/opa/pr/former-us-soldier-pleads-guilty-hacking-and-extortion-scheme-involving-telecommunications" rel="noreferrer noopener" target="_blank">pleaded guilty in July that year</a></p>
+
+
+
+<p class="wp-block-paragraph">Moucka and other members of the group used stolen login credentials to compromise data belonging to at least 165 customers of a US-based software-as-a-service company. This unauthorized access was used to steal billions of sensitive customer records and download terabytes of information,</p>
+
+
+
+<p class="wp-block-paragraph">“Connor Moucka hacked over 150 companies and organizations, obtained extremely sensitive information, and extorted the victims for millions of dollars. Today’s guilty plea serves as a reminder to all cybercriminals, regardless of where they live, that they cannot hide behind a wall of anonymity. You will be found and brought to justice,” said assistant attorney general A. Tysen Duva of the Justice Department’s Criminal Division</p>
+
+
+
+<p class="wp-block-paragraph">The trial is the result of a coordinated worldwide action against the Snowflake group. The investigation was led by the FBI but benefited from contributions from the Royal Canadian Mounted Police, the Australian Federal Police, Spain’s Guardia Civil, the Security Service of Ukraine and the Turkish National Police.</p>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4d ago]]></description>
 </item>
 
 <item>
@@ -5254,149 +5714,6 @@
 
 
 <p class="wp-block-paragraph">“A lot of networks are vulnerable to this, and you can’t always rely on the Layer 2 isolations that are in place,” Stagg said. “When you’re relying on historical design choices, those threat models might not be the same now as they were back then. It’s important to look at those design assumptions and see if there are any updates that might be necessary based on the new threat models.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5d ago]]></description>
-</item>
-
-<item>
-  <title>🟠 How a software provider closed unknown paths to cloud compromise</title>
-  <link>https://www.csoonline.com/article/4206219/how-a-software-provider-closed-unknown-paths-to-cloud-compromise.html</link>
-  <pubDate>Thu, 06 Aug 2026 13:55:09 +0000</pubDate>
-  <source>CSO Online</source>
-  <description><![CDATA[<b>Why this matters: Credential/phishing risk — reinforce MFA and user awareness training.</b><br/><div id="remove_no_follow">
-		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
-					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
-						<div class="article-column__content">
-<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
-
-
-
-<p class="wp-block-paragraph">A healthcare software provider believed its segmented environment was reasonably secure. The company had invested heavily in layered controls across a distributed workforce, separating developer environments, segmenting cloud infrastructure, and tightly managing administrative access. Multifactor authentication (MFA) was enforced broadly, vulnerability scanning was routine, and annual penetration tests were part of the organization’s broader security and compliance efforts.</p>
-
-
-
-<p class="wp-block-paragraph">Then an insider threat penetration test (pentest) with NodeZero<sup>®</sup> showed how quickly a single compromised developer credential could enable lateral movement through the environment and toward cloud infrastructure supporting software delivery.</p>
-
-
-
-<p class="wp-block-paragraph">“It owned our network in a matter of minutes,” said the company’s IT operations leader.</p>
-
-
-
-<p class="wp-block-paragraph">That result changed the conversation immediately. This was not simply a healthcare organization protecting endpoints and servers. The provider was operating in a position of downstream trust, where a compromise would potentially impact customers, healthcare operations, and the systems relying on their software.</p>
-
-
-
-<p class="wp-block-paragraph">The organization realized that annual pentests and scanner output were not enough to answer the question that actually mattered: What can an attacker really do once inside the environment?</p>
-
-
-
-<p class="wp-block-paragraph">That realization pushed the company toward continuous validation, repeated testing, and a far more operational approach to exposure management.</p>
-
-
-
-<h3 class="wp-block-heading" id="outcomes-at-a-glance">Outcomes at a glance</h3>
-
-
-
-<ul class="wp-block-list">
-<li>Eliminated internal exposure stemming from 16 weaknesses that compromised four hosts leading to AWS compromise and sensitive data exposure</li>
-
-
-
-<li>Reduced AWS exposure leading to critical business impacts to two low-severity weaknesses that were not able to be chained together to lead to any business impact</li>
-
-
-
-<li>Eliminated overly permissive, local-administrator access across the environment after NodeZero demonstrated rapid lateral movement and privilege escalation</li>
-
-
-
-<li>Implemented privileged access approval workflows and expanded MFA enforcement</li>
-
-
-
-<li>Established a repeatable monthly cadence of testing, remediation, and validation</li>
-</ul>
-
-
-
-<p class="wp-block-paragraph"> src="https://b2b-contenthub.com/wp-content/uploads/2026/08/Image1.png" alt="Internal Testing"&gt;<a href="https://horizon3.ai/wp-content/uploads/2026/05/image-4.png"></a></p>
-
-
-
-<p class="wp-block-paragraph"><em>Image 1: Initial internal testing identified 16 weaknesses compromising 4 hosts which led to AWS compromise and sensitive data exposure.</em></p>
-
-
-
-<h3 class="wp-block-heading" id="impact">Impact</h3>
-
-
-
-<p class="wp-block-paragraph">The security team believed their network was secure. That was until they understood what an attacker could do once inside their network. The real question wasn’t whether individual weaknesses existed. It was what an attacker could accomplish when those weaknesses were chained together in a real environment.</p>
-
-
-
-<p class="wp-block-paragraph">Like many software providers, the organization operated with a widely distributed workforce, extensive developer access requirements, hybrid infrastructure, and growing cloud dependencies. </p>
-
-
-
-<p class="wp-block-paragraph">Before adopting NodeZero, the company relied heavily on traditional vulnerability scanning and annual penetration testing. The team understood the limitations immediately after running NodeZero for the first time because the insider threat pentest exposed how quickly those assumptions did break down.</p>
-
-
-
-<p class="wp-block-paragraph">“When you think about what an annual penetration test is, it’s a snapshot at a moment in time,” said the IT operations leader. “Technology does not stand still. It only changes.”</p>
-
-
-
-<p class="wp-block-paragraph">The team initially attempted a phishing impact pentest paired with their Microsoft 365 environment, but no employees entered credentials during the exercise. Rather than stopping there and trusting their employees would never fall for a phish, the organization decided to model a more realistic compromise scenario by asking three employees — a developer, someone in HR, and someone in support — to intentionally submit credentials into the phishing pentest so the team could observe what an attacker could actually do with different levels of access.</p>
-
-
-
-<p class="wp-block-paragraph">That decision quickly exposed where the real risk existed.</p>
-
-
-
-<p class="wp-block-paragraph">The HR and support accounts were effectively contained, but once NodeZero impersonated the developer account, the attack path expanded rapidly. The platform cracked password hashes, escalated privileges, moved laterally across segmented environments, and attempted to traverse toward AWS-connected resources.</p>
-
-
-
-<p class="wp-block-paragraph">“We’re completely segmented,” said the operations leader. “We thought we were fine by being siloed. But NodeZero jumped the segments.”</p>
-
-
-
-<p class="wp-block-paragraph">The speed of the compromise surprised the team, but the path itself was even more important. A single developer system with elevated access had effectively become the pivot point that would allow attackers to move through the environment.</p>
-
-
-
-<p class="wp-block-paragraph">That moment reframed the problem entirely. The organization was no longer looking at isolated vulnerabilities. It was looking at exposure, attack chaining, and the reality that one compromised developer credential could potentially become something much larger.</p>
-
-
-
-<p class="wp-block-paragraph"> src="https://b2b-contenthub.com/wp-content/uploads/2026/08/Image2.png" alt="Image2"&gt;<a href="https://horizon3.ai/wp-content/uploads/2026/05/image-3.png"></a></p>
-
-
-
-<p class="wp-block-paragraph"><em>Image 2: NodeZero demonstrated how a compromised developer path could move laterally across segmented environments to obtain host compromise.</em></p>
-
-
-
-<p class="wp-block-paragraph">Click <a href="https://horizon3.ai/intelligence/blogs/patch-tuesday-to-pentest-wednesday-cloud-compromise/#:~:text=operations%20moving%20forward.-,Mitigation,-The%20insider%20threat" rel="noreferrer noopener" target="_blank">here</a> to explore the details around mitigation and remediation efforts.</p>
-
-
-
-<h3 class="wp-block-heading" id="conclusion">Conclusion</h3>
-
-
-
-<p class="wp-block-paragraph">“Ultimately, our goal is to make sure our staff has jobs to come to each day,” said the IT operations leader.</p>
-
-
-
-<p class="wp-block-paragraph">That perspective reframed the problem entirely. Not as compliance or vulnerability management, but as the ongoing responsibility to continuously validate that it is not possible for a real adversary to traverse their environment.</p>
-
-
-
-<p class="wp-block-paragraph"><a href="https://horizon3.ai/" rel="noreferrer noopener" target="_blank">Learn more about Horizon3.ai and NodeZero.</a></p>
 </div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5d ago]]></description>
 </item>
 
