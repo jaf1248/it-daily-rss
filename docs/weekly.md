@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
 **Period:** August 05 – August 12, 2026  
-**Generated:** 2026-08-12 16:55 UTC  
+**Generated:** 2026-08-12 17:56 UTC  
 **Items reviewed:** 137  
 
 ## ⚡ Top Actions This Week
@@ -73,10 +73,10 @@
 - [CVE-2026-70348 Windows Management Services Denial of Service Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-70348)  
   **Microsoft Security Response Center (MSRC)** · Aug 12 · _General awareness item._  
 
-- [CVE-2026-50687 Windows Win32k Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-50687)  
+- [CVE-2026-42976 Remote Access Management service/API (RPC server) Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-42976)  
   **Microsoft Security Response Center (MSRC)** · Aug 12 · _General awareness item._  
 
-- [CVE-2026-58538 Windows Bluetooth Service Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-58538)  
+- [CVE-2026-50687 Windows Win32k Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-50687)  
   **Microsoft Security Response Center (MSRC)** · Aug 12 · _General awareness item._  
 
 ---
