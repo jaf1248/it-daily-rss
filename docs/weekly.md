@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
 **Period:** August 05 – August 12, 2026  
-**Generated:** 2026-08-12 13:02 UTC  
+**Generated:** 2026-08-12 14:53 UTC  
 **Items reviewed:** 137  
 
 ## ⚡ Top Actions This Week
@@ -55,41 +55,41 @@
 
 ## 🟠 Important — Review This Week
 
-- [Hackers leverage new Microsoft SharePoint exploit in attacks](https://www.bleepingcomputer.com/news/microsoft/hackers-leverage-new-microsoft-sharepoint-exploit-in-attacks/)  
-  **BleepingComputer** · Aug 12 · _General awareness item._  
+- [CVE-2026-62696 Windows Program Compatibility Assistant Service Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-62696)  
+  **Microsoft Security Response Center (MSRC)** · Aug 12 · _General awareness item._  
 
-- [Adobe Patches Three CVSS 10.0 ColdFusion and Campaign Classic Flaws](https://thehackernews.com/2026/08/adobe-patches-three-cvss-100-coldfusion.html)  
-  **The Hacker News** · Aug 12 · _General awareness item._  
+- [CVE-2026-62747 Windows Device Association Service Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-62747)  
+  **Microsoft Security Response Center (MSRC)** · Aug 12 · _General awareness item._  
 
-- [New Microsoft Defender 'ShieldBreak' zero-day grants SYSTEM privileges](https://www.bleepingcomputer.com/news/security/new-microsoft-defender-shieldbreak-zero-day-grants-system-privileges/)  
-  **BleepingComputer** · Aug 12 · _General awareness item._  
+- [CVE-2026-70348 Windows Management Services Denial of Service Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-70348)  
+  **Microsoft Security Response Center (MSRC)** · Aug 12 · _General awareness item._  
 
-- [Attackers Exploit VMware vCenter Vulnerability to Gain Persistent Remote Access](https://thehackernews.com/2026/08/attackers-exploit-vmware-vcenter.html)  
-  **The Hacker News** · Aug 12 · _General awareness item._  
+- [CVE-2026-68815 Microsoft Excel Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-68815)  
+  **Microsoft Security Response Center (MSRC)** · Aug 12 · _General awareness item._  
 
-- [SAP Commerce Cloud Flaw Could Let Unauthenticated Attackers Execute Arbitrary Code](https://thehackernews.com/2026/08/sap-commerce-cloud-flaw-could-let.html)  
-  **The Hacker News** · Aug 12 · _General awareness item._  
+- [CVE-2026-62913 Microsoft Exchange Server Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-62913)  
+  **Microsoft Security Response Center (MSRC)** · Aug 12 · _Potential email disruption for users._  
 
-- [ShieldBreak Zero-Day PoC Claims Microsoft Defender Patch Bypass With SYSTEM Access](https://thehackernews.com/2026/08/shieldbreak-zero-day-poc-claims.html)  
-  **The Hacker News** · Aug 12 · _General awareness item._  
+- [CVE-2026-50687 Windows Win32k Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-50687)  
+  **Microsoft Security Response Center (MSRC)** · Aug 12 · _General awareness item._  
 
-- [Microsoft Patches 398 Flaws Including a Windows Driver Zero-Day Under Active Attack](https://thehackernews.com/2026/08/microsoft-patches-398-flaws-including.html)  
-  **The Hacker News** · Aug 11 · _General awareness item._  
+- [CVE-2026-58538 Windows Bluetooth Service Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-58538)  
+  **Microsoft Security Response Center (MSRC)** · Aug 12 · _General awareness item._  
 
-- [Microsoft releases Windows 10 KB5120249 extended security update](https://www.bleepingcomputer.com/news/microsoft/windows-10-kb5120249-cumulative-update-released-with-fixes/)  
-  **BleepingComputer** · Aug 11 · _General awareness item._  
+- [CVE-2026-50655 Microsoft Windows Media Foundation Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-50655)  
+  **Microsoft Security Response Center (MSRC)** · Aug 12 · _General awareness item._  
 
 ---
 
 ## 🔵 FYI — General Awareness
 
-- [Signal adds new security feature to thwart man-in-the-middle attacks](https://www.bleepingcomputer.com/news/security/signal-adds-new-security-feature-to-thwart-man-in-the-middle-attacks/) — BleepingComputer
-- [Malicious LiteLLM Releases Tied to Trivy Hack May Have Exposed 2,100+ Organizations](https://thehackernews.com/2026/08/malicious-litellm-releases-tied-to.html) — The Hacker News
-- [ISC Stormcast For Wednesday, August 12th, 2026 https://isc.sans.edu/podcastdetail/10048, (Wed, Aug 12th)](https://isc.sans.edu/diary/rss/33238) — SANS Internet Storm Center
-- [Google says Chrome cuts 7 billion unwanted Android notifications a day to fight abuse](https://www.bleepingcomputer.com/news/security/google-says-chrome-cuts-7-billion-unwanted-android-notifications-a-day-to-fight-abuse/) — BleepingComputer
-- [Sandworm hackers target IT pros with trojanized WireGuard VPN client](https://www.bleepingcomputer.com/news/security/sandworm-hackers-target-it-pros-with-trojanized-wireguard-vpn-client/) — BleepingComputer
-- [Kimwolf v7 Android Botnet Makes HTTP/2 DDoS Traffic Look Like Legitimate Browsing](https://thehackernews.com/2026/08/kimwolf-v7-android-botnet-makes-http2.html) — The Hacker News
+- [Linux Kernel Process Accounting, (Wed, Aug 12th)](https://isc.sans.edu/diary/rss/33240) — SANS Internet Storm Center
+- [FBI: Hackers target online accounts to steal nude photos](https://www.bleepingcomputer.com/news/security/fbi-warns-of-hackers-targeting-online-accounts-to-steal-explicit-photos/) — BleepingComputer
+- [737 Chrome VPN Extensions Caught Routing Traffic Through Proxies. Check If You Have One](https://thehackernews.com/2026/08/737-chrome-vpn-extensions-caught.html) — The Hacker News
+- [The Threat Hiding in Your Hiring Process: How Fake Remote Workers Get In](https://www.bleepingcomputer.com/news/security/the-threat-hiding-in-your-hiring-process-how-fake-remote-workers-get-in/) — BleepingComputer
+- [OpenAI, Anthropic, Google API Flaw Let Weaker AI Models Decode Stronger Models' Reasoning](https://thehackernews.com/2026/08/openai-anthropic-google-api-flaw-let.html) — The Hacker News
+- [Enterprise Defenses Recovered at the Edge and Collapsed Inside](https://thehackernews.com/2026/08/enterprise-defenses-recovered-at-edge.html) — The Hacker News
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 13 critical · 79 important · 45 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 13 critical · 77 important · 47 FYI_
