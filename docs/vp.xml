@@ -3,8 +3,105 @@
 <channel>
   <title>Joe — VP of IT Briefing</title>
   <description>Leadership-focused IT risk, vendors, pricing, licensing, and industry context.</description>
-  <lastBuildDate>Wed, 12 Aug 2026 20:01:22 +0000</lastBuildDate>
+  <lastBuildDate>Wed, 12 Aug 2026 21:41:44 +0000</lastBuildDate>
   
+<item>
+  <title>🔴 Researcher creates workaround for Microsoft Defender security patch</title>
+  <link>https://www.csoonline.com/article/4208760/researcher-creates-workaround-for-microsoft-defender-security-patch.html</link>
+  <pubDate>Wed, 12 Aug 2026 21:07:24 +0000</pubDate>
+  <source>CSO Online</source>
+  <description><![CDATA[<b>Why this matters: Elevated ransomware risk — validate backups and endpoint defenses.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<p class="wp-block-paragraph">Just weeks after Microsoft patched a critical hole in Microsoft Defender, a cybersecurity researcher has posted an apparent workaround that provides system-level control to attackers once they gain any level of access. </p>
+
+
+
+<p class="wp-block-paragraph">The researcher, who goes by the name Nightmare Eclipse, has been engaged in a <a href="https://www.csoonline.com/article/4178869/microsoft-and-security-researchers-dueling-posts-about-cybersecurity-disclosures-get-nasty.html" target="_blank">long-running battle with Microsoft Security</a>. </p>
+
+
+
+<p class="wp-block-paragraph">As of publication time, neither Microsoft nor Nightmare Eclipse has provided further details we requested.</p>
+
+
+
+<p class="wp-block-paragraph">But the proof of concept (PoC) security workaround, ShieldBreak, <a href="https://github.com/MSNightmare/ShieldBreak" rel="noreferrer noopener" target="_blank">described by Nightmare Eclipse</a> in <a href="https://git.projectnightcrawler.dev/NightmareEclipse/ShieldBreak" rel="noreferrer noopener" target="_blank">a series of</a> public <a href="https://git.churchofmalware.org/Nightmare_Eclipse/ShieldBreak" rel="noreferrer noopener" target="_blank">posts</a>, potentially threatens to be more damaging than earlier workarounds. </p>
+
+
+
+<p class="wp-block-paragraph">Like other <a href="https://www.csoonline.com/article/4205751/enterprise-passkey-security-under-threat-from-malware-2.html" target="_blank">recently reported vulnerabilities</a>, ShieldBreak requires an attacker to first somehow gain system access, typically via a successful phishing scam. Once in, however, the attacker can gain full admin/root access.</p>
+
+
+
+<p class="wp-block-paragraph">But there is a troubling psychological component to ShieldBreak, in that it is a workaround for a recently posted security patch from Microsoft, noted <a href="https://acceligence.com/talent/profiles/justin-greis/" rel="noreferrer noopener" target="_blank">Justin Greis</a>, CEO of consulting firm Acceligence.  The problem is that CISOs who have already deployed that patch might feel protected when they are not.</p>
+
+
+
+<p class="wp-block-paragraph">“This one is concerning because the patch bypass directly calls the integrity of the remediation into question,” he said. “ShieldBreak appears to demonstrate that an attacker can bypass the fix Microsoft shipped for CVE-2026-50656 and ultimately obtain system-level privileges on the endpoint. That is an important distinction for enterprise defenders, because organizations may believe they have already remediated the underlying vulnerability. A successful patch bypass means the exposure can persist even after the normal vulnerability-management process says the system is protected.”</p>
+
+
+
+<p class="wp-block-paragraph">Greis added that such workarounds can reduce overall trust in official patches. </p>
+
+
+
+<p class="wp-block-paragraph">“When public proof of concept code can bypass it, the CISO’s question becomes ‘have we actually removed the exposure?’ rather than simply ‘have we deployed the patch?’,” he said. “From an architecture perspective, organizations should be very careful about allowing the same security product to become both the control being relied upon and the only source of evidence that the control is working.”</p>
+
+
+
+<p class="wp-block-paragraph"><a href="https://www.linkedin.com/in/fvillanustre/" rel="noreferrer noopener" target="_blank">Flavio Villanustre</a>, CISO for the LexisNexis Risk Solutions Group, said he was especially concerned about the timing of the PoC’s release, given that it seemed to be intended to put the most pressure on Microsoft, given its <a href="https://www.csoonline.com/article/4208185/patch-tuesday-august-2026-a-zero-day-winsock-driver-hole-under-exploit-and-a-maximum-severity-sap-vulnerability.html" target="_blank">typical timing for security patches</a>. </p>
+
+
+
+<p class="wp-block-paragraph">“This vulnerability, if valid, would need a fix from Microsoft, but because those patches are usually only released on the second Tuesday of the month and the security researcher seems to have carefully timed the release of the PoC, we may have this exposure for another 4 weeks unless Microsoft deems this a very high severity risk, which is unlikely,” he pointed out.</p>
+
+
+
+<p class="wp-block-paragraph">Cybersecurity consultant <a href="https://formergov.com/directory/brianlevine" rel="noreferrer noopener" target="_blank">Brian Levine</a>, executive director of FormerGov, agreed that CISOs should not underestimate the damage potential if this PoC proves valid. </p>
+
+
+
+<p class="wp-block-paragraph">“What makes it dangerous is what it does once they’re in: it turns an ordinary low-privilege account into full system control by abusing Defender itself, the security tool running at the highest privilege on the box,” he said. “An exploit that lives inside your antivirus is quiet, it’s trusted, and it can be used to blind or disable the very thing you’re counting on to catch the intruder. It’s not a worm, but it’s a near-ideal second stage for ransomware crews and anyone doing hands-on-keyboard intrusion.”</p>
+
+
+
+<p class="wp-block-paragraph">Levine suggested that CISOs not wait for a Microsoft fix, but immediately take an aggressive defensive stance.</p>
+
+
+
+<p class="wp-block-paragraph">“Assume it’s live and lean on defense in depth, because this is exactly the scenario where treating Defender as your only line fails you. Application allowlisting, such as WDAC or AppLocker in enforced mode, is the strongest hardening available and can stop the payload even if the race succeeds,” Levine said. </p>
+
+
+
+<p class="wp-block-paragraph">“Tighten local admin rights and least privilege so a foothold has less to escalate from. And give your hunters one very specific thing to watch for: an interactive shell or scripting host running as system whose parent process is Defender’s engine, MsMpEng.exe. That should never happen in a healthy environment and it’s a high-fidelity sign someone is running this.”</p>
+
+
+
+<p class="wp-block-paragraph">But he also suggested that CISOs not assume that the PoC necessarily works as advertised. </p>
+
+
+
+<p class="wp-block-paragraph">“This is a single researcher’s proof of concept. It hasn’t been independently verified, and it’s coming from someone in the middle of a very public and very bitter fight with Microsoft, so perhaps some of the theater around it should be discounted,” Levine said. “But you can’t wave it away either. Patch bypasses are extremely common, and the claim that Microsoft’s fix for RoguePlanet didn’t fully close the door is entirely plausible. Defenders should treat it as credible until proven otherwise, not the reverse.”</p>
+
+
+
+<p class="wp-block-paragraph">Although Levine and other analysts were initially dubious, there are now indications that the PoC’s effectiveness has been independently verified. </p>
+
+
+
+<p class="wp-block-paragraph">Cybersecurity and risk advisor <a href="https://www.linkedin.com/in/steveneric/" rel="noreferrer noopener" target="_blank">Steven Eric Fisher</a>, a former cybersecurity risk specialist at Walmart, said, “I’ve seen <a href="https://cyberplace.social/@GossiTheDog/117082623896479140" rel="noreferrer noopener" target="_blank">independent confirmation</a> that ShieldBreak works, although its exploitation method differs materially from the original RoguePlanet exploit. RoguePlanet relied on a filesystem race condition, while ShieldBreak appears to use a different Defender/Cloud Filter API path,” Fisher said. “So while it is being characterized as a bypass of Microsoft’s CVE-2026-50656 fix, it is not simply a replay of the original exploit.”</p>
+
+
+
+<p class="wp-block-paragraph">He added that cybersecurity researcher Kevin Beaumont has already published <a href="https://github.com/GossiTheDog/ThreatHunting/blob/master/AdvancedHuntingQueries/ShieldBreak.kql" rel="noreferrer noopener" target="_blank">Microsoft Defender Advanced Hunting detections</a> for ShieldBreak that organizations can incorporate into monitoring while evaluating their exposure.</p>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</item>
+
 <item>
   <title>🔵 Freedom of the Press Foundation and The Intercept sue Trump after Trump Media &amp; Technology offered a subscription service for faster access to Trump&#x27;s posts (Bernard Condon/Associated Press)</title>
   <link>https://www.techmeme.com/260812/p47#a260812p47</link>
@@ -12,7 +109,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://apnews.com/article/trump-media-lawsuit-truth-social-access-wall-street-traders-7f057fd1dba31dd4e357c8bf635ee009"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260812/i47.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260812/p47#a260812p47" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Bernard Condon / <a href="http://www.apnews.com/">Associated Press</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://apnews.com/article/trump-media-lawsuit-truth-social-access-wall-street-traders-7f057fd1dba31dd4e357c8bf635ee009">Freedom of the Press Foundation and The Intercept sue Trump after Trump Media &amp; Technology offered a subscription service for faster access to Trump's posts</a></b></span>&nbsp; &mdash;&nbsp; President Donald Trump was sued in federal court Wednesday to stop him from making money off a new, paid service &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://apnews.com/article/trump-media-lawsuit-truth-social-access-wall-street-traders-7f057fd1dba31dd4e357c8bf635ee009">Freedom of the Press Foundation and The Intercept sue Trump after Trump Media &amp; Technology offered a subscription service for faster access to Trump's posts</a></b></span>&nbsp; &mdash;&nbsp; President Donald Trump was sued in federal court Wednesday to stop him from making money off a new, paid service &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
 </item>
 
 <item>
@@ -22,7 +119,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.nytimes.com/2026/08/12/us/politics/prediction-markets-insider-trading.html"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260812/i46.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260812/p46#a260812p46" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Sharon LaFraniere / <a href="https://www.nytimes.com/">New York Times</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.nytimes.com/2026/08/12/us/politics/prediction-markets-insider-trading.html">Kalshi referred 32 possible insider traders to the CFTC in the three months through June; sources: CFTC has up to 20 ongoing probes using just Kalshi's evidence</a></b></span>&nbsp; &mdash;&nbsp; The agency that polices the industry does not have the staffing, the legal tools or the will to broadly crack down on wagers that are easily manipulated, experts say.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.nytimes.com/2026/08/12/us/politics/prediction-markets-insider-trading.html">Kalshi referred 32 possible insider traders to the CFTC in the three months through June; sources: CFTC has up to 20 ongoing probes using just Kalshi's evidence</a></b></span>&nbsp; &mdash;&nbsp; The agency that polices the industry does not have the staffing, the legal tools or the will to broadly crack down on wagers that are easily manipulated, experts say.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
 </item>
 
 <item>
@@ -31,7 +128,7 @@
   <pubDate>Wed, 12 Aug 2026 18:50:01 +0000</pubDate>
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><p><a href="https://www.techmeme.com/260812/p45#a260812p45" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Yueqi Yang / <a href="https://www.theinformation.com/">The Information</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.theinformation.com/briefings/exclusive-sequoia-wellington-talks-back-kalshi-40-billion-valuation">Sources: Kalshi is in advanced talks to raise $750M+ co-led by Sequoia Capital and Wellington Management at a $40B valuation; Kalshi was valued at $22B in May</a></b></span>&nbsp; &mdash;&nbsp; Kalshi, the biggest prediction market, is in advanced talks to raise at least $750 million in a new financing round at a $40 billion valuation &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.theinformation.com/briefings/exclusive-sequoia-wellington-talks-back-kalshi-40-billion-valuation">Sources: Kalshi is in advanced talks to raise $750M+ co-led by Sequoia Capital and Wellington Management at a $40B valuation; Kalshi was valued at $22B in May</a></b></span>&nbsp; &mdash;&nbsp; Kalshi, the biggest prediction market, is in advanced talks to raise at least $750 million in a new financing round at a $40 billion valuation &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
 </item>
 
 <item>
@@ -41,23 +138,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.reuters.com/world/inside-google-executive-moves-that-led-its-big-ai-reshuffle-2026-08-12/"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260812/i44.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260812/p44#a260812p44" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Kenrick Cai / <a href="http://www.reuters.com/">Reuters</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.reuters.com/world/inside-google-executive-moves-that-led-its-big-ai-reshuffle-2026-08-12/">Sources detail moves behind Google's AI reshuffle; Sergey Brin urged key staff to go all in on Gemini, and some teams shifted from DeepMind to corporate Google</a></b></span>&nbsp; &mdash;&nbsp; Google co-founder Sergey Brin in recent months has urged key AI staff to go all in on the company's Gemini model as parent Alphabet &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Every Amazon Google Pixel 11 preorder deal - get up to $350 on an Amazon gift card, free</title>
-  <link>https://www.zdnet.com/article/google-pixel-11-amazon-deals/</link>
-  <pubDate>Wed, 12 Aug 2026 17:34:05 +0000</pubDate>
-  <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Google's latest lineup of Pixel 11 phones is here, and Amazon has a free gift card offer on every single one.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Sparky Linux just restored 32-bit support - why that still matters</title>
-  <link>https://www.zdnet.com/article/sparky-linux-32-bit-support/</link>
-  <pubDate>Wed, 12 Aug 2026 17:33:54 +0000</pubDate>
-  <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Got an old 32-bit computer lying around? Don't throw it away - Sparky Linux has decided not to give up on the aging architecture.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.reuters.com/world/inside-google-executive-moves-that-led-its-big-ai-reshuffle-2026-08-12/">Sources detail moves behind Google's AI reshuffle; Sergey Brin urged key staff to go all in on Gemini, and some teams shifted from DeepMind to corporate Google</a></b></span>&nbsp; &mdash;&nbsp; Google co-founder Sergey Brin in recent months has urged key AI staff to go all in on the company's Gemini model as parent Alphabet &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
 </item>
 
 <item>
@@ -67,7 +148,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.bloomberg.com/news/articles/2026-08-12/apple-taps-american-airlines-veteran-as-government-affairs-head?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc4NjU1MzM1NSwiZXhwIjoxNzg3MTU4MTU1LCJhcnRpY2xlSWQiOiJUSk5XWTVUOU5KTFMwMCIsImJjb25uZWN0SWQiOiJDNEVEQ0FFMUZBMDU0MEJFQTI0QTlGMjExQzFFOTA4MCJ9.ifjL3r95MbnLYiNwFY3GCeIlEeDmLo8UBXyYsnWNJLU"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260812/i43.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260812/p43#a260812p43" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Mark Gurman / <a href="https://www.bloomberg.com/">Bloomberg</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/articles/2026-08-12/apple-taps-american-airlines-veteran-as-government-affairs-head?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc4NjU1MzM1NSwiZXhwIjoxNzg3MTU4MTU1LCJhcnRpY2xlSWQiOiJUSk5XWTVUOU5KTFMwMCIsImJjb25uZWN0SWQiOiJDNEVEQ0FFMUZBMDU0MEJFQTI0QTlGMjExQzFFOTA4MCJ9.ifjL3r95MbnLYiNwFY3GCeIlEeDmLo8UBXyYsnWNJLU">Sources: Apple hired Nate Gatten, an American Airlines exec with GOP ties, as government affairs VP, seeking someone who could align with Trump administration</a></b></span>&nbsp; &mdash;&nbsp; Apple Inc. hired Nate Gatten as its new head of government affairs, tapping a longtime American Airlines Group Inc. executive &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/articles/2026-08-12/apple-taps-american-airlines-veteran-as-government-affairs-head?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc4NjU1MzM1NSwiZXhwIjoxNzg3MTU4MTU1LCJhcnRpY2xlSWQiOiJUSk5XWTVUOU5KTFMwMCIsImJjb25uZWN0SWQiOiJDNEVEQ0FFMUZBMDU0MEJFQTI0QTlGMjExQzFFOTA4MCJ9.ifjL3r95MbnLYiNwFY3GCeIlEeDmLo8UBXyYsnWNJLU">Sources: Apple hired Nate Gatten, an American Airlines exec with GOP ties, as government affairs VP, seeking someone who could align with Trump administration</a></b></span>&nbsp; &mdash;&nbsp; Apple Inc. hired Nate Gatten as its new head of government affairs, tapping a longtime American Airlines Group Inc. executive &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
 </item>
 
 <item>
@@ -77,25 +158,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.bloomberg.com/news/articles/2026-08-12/uk-plans-safeguards-to-stop-terrorists-using-ai-for-bioweapons"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260812/i42.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260812/p42#a260812p42" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Ellen Milligan / <a href="https://www.bloomberg.com/">Bloomberg</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/articles/2026-08-12/uk-plans-safeguards-to-stop-terrorists-using-ai-for-bioweapons">Sources: the UK government is planning to regulate the use of AI in gene synthesis to prevent terrorists and other bad actors from using AI for bioweapons</a></b></span>&nbsp; &mdash;&nbsp; The UK government is planning to regulate the use of artificial intelligence in gene synthesis as officials become increasingly concerned &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Bank of America says it plans to deploy $250B by July 2027 to support US digital and infrastructure projects, including data centers and energy infrastructure (Reuters)</title>
-  <link>https://www.techmeme.com/260812/p41#a260812p41</link>
-  <pubDate>Wed, 12 Aug 2026 16:10:00 +0000</pubDate>
-  <source>Techmeme</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://www.reuters.com/legal/transactional/bank-america-launches-250-billion-initiative-us-tech-energy-infrastructure-2026-08-12/"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260812/i41.jpg" vspace="4" /></a>
-<p><a href="https://www.techmeme.com/260812/p41#a260812p41" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="http://www.reuters.com/">Reuters</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.reuters.com/legal/transactional/bank-america-launches-250-billion-initiative-us-tech-energy-infrastructure-2026-08-12/">Bank of America says it plans to deploy $250B by July 2027 to support US digital and infrastructure projects, including data centers and energy infrastructure</a></b></span>&nbsp; &mdash;&nbsp; Bank of America (BAC.N) said on Wednesday it plans to deploy $250 billion by July 2027 to support U.S. digital and infrastructure projects &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Hackers are hunting for your private photos, FBI warns: 6 ways to avoid a sextortion nightmare</title>
-  <link>https://www.zdnet.com/article/hackers-private-photos-fbi-avoid-sextortion/</link>
-  <pubDate>Wed, 12 Aug 2026 15:37:36 +0000</pubDate>
-  <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Hackers who steal compromising images of you from social media and personal accounts are selling them on the dark web. Here's how to protect yourself.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/articles/2026-08-12/uk-plans-safeguards-to-stop-terrorists-using-ai-for-bioweapons">Sources: the UK government is planning to regulate the use of AI in gene synthesis to prevent terrorists and other bad actors from using AI for bioweapons</a></b></span>&nbsp; &mdash;&nbsp; The UK government is planning to regulate the use of artificial intelligence in gene synthesis as officials become increasingly concerned &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -105,7 +168,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: Could impact email access or mail flow — monitor delivery and client issues.</b><br/><a href="https://www.axios.com/pro/enterprise-software-deals/2026/08/11/silicon-data-compute-pricing-nvidia"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260812/i40.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260812/p40#a260812p40" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Chris Metinko / <a href="https://www.axios.com/">Axios</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.axios.com/pro/enterprise-software-deals/2026/08/11/silicon-data-compute-pricing-nvidia">Silicon Data, which offers real-time compute pricing data to financial institutions and exchanges, raised a $30.5M Series A led by the Valor Atreides AI Fund</a></b></span>&nbsp; &mdash;&nbsp; Silicon Data, a financial data platform for the AI economy, raised $30.5 million in Series A funding led by the Valor Atreides AI Fund, CEO Carmen Li tells Axios Pro.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.axios.com/pro/enterprise-software-deals/2026/08/11/silicon-data-compute-pricing-nvidia">Silicon Data, which offers real-time compute pricing data to financial institutions and exchanges, raised a $30.5M Series A led by the Valor Atreides AI Fund</a></b></span>&nbsp; &mdash;&nbsp; Silicon Data, a financial data platform for the AI economy, raised $30.5 million in Series A funding led by the Valor Atreides AI Fund, CEO Carmen Li tells Axios Pro.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
@@ -115,7 +178,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.reuters.com/legal/litigation/flightaware-withdraws-lawsuit-against-kalshi-over-flight-cancellation-markets-2026-08-12/"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260812/i37.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260812/p37#a260812p37" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Sumedha Mukherjee / <a href="http://www.reuters.com/">Reuters</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.reuters.com/legal/litigation/flightaware-withdraws-lawsuit-against-kalshi-over-flight-cancellation-markets-2026-08-12/">FlightAware withdraws its Kalshi lawsuit, after alleging Kalshi used its data to let users bet on flight cancellations; Kalshi no longer names it as a source</a></b></span>&nbsp; &mdash;&nbsp; Flight-tracking company FlightAware withdrew its lawsuit against Kalshi on Tuesday, a day after it filed the suit that accuses &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.reuters.com/legal/litigation/flightaware-withdraws-lawsuit-against-kalshi-over-flight-cancellation-markets-2026-08-12/">FlightAware withdraws its Kalshi lawsuit, after alleging Kalshi used its data to let users bet on flight cancellations; Kalshi no longer names it as a source</a></b></span>&nbsp; &mdash;&nbsp; Flight-tracking company FlightAware withdrew its lawsuit against Kalshi on Tuesday, a day after it filed the suit that accuses &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
@@ -125,7 +188,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/><a href="https://www.theverge.com/tech/978084/google-camera-looks-interview-computational-photography"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260812/i36.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260812/p36#a260812p36" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> David Imel / <a href="https://www.theverge.com/">The Verge</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.theverge.com/tech/978084/google-camera-looks-interview-computational-photography">Google's Pixel 11 introduces Camera Looks, a total rethink of how the camera captures and styles an image, as users seek &ldquo;more authentic or traditional&rdquo; photos</a></b></span>&nbsp; &mdash;&nbsp; If you look at a photo taken by a smartphone today, it's hard to find much that's technically wrong.&nbsp; Faces are bright and visible.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.theverge.com/tech/978084/google-camera-looks-interview-computational-photography">Google's Pixel 11 introduces Camera Looks, a total rethink of how the camera captures and styles an image, as users seek &ldquo;more authentic or traditional&rdquo; photos</a></b></span>&nbsp; &mdash;&nbsp; If you look at a photo taken by a smartphone today, it's hard to find much that's technically wrong.&nbsp; Faces are bright and visible.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
@@ -133,7 +196,23 @@
   <link>https://www.zdnet.com/article/microsoft-august-windows-update-421-bugs-zero-day-exploited/</link>
   <pubDate>Wed, 12 Aug 2026 14:15:33 +0000</pubDate>
   <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>The exploited zero-day flaw could allow an attacker to gain system privileges on a Windows PC.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>The exploited zero-day flaw could allow an attacker to gain system privileges on a Windows PC.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
+</item>
+
+<item>
+  <title>🟠 Exposed: Woeful security at UK criminal records office that led to sensitive data leak</title>
+  <link>https://www.theregister.com/security/2026/08/12/exposed-woeful-security-at-uk-criminal-records-office-that-led-to-sensitive-data-leak/5286736</link>
+  <pubDate>Wed, 12 Aug 2026 13:40:00 +0000</pubDate>
+  <source>The Register</source>
+  <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/>Nobody patched the CMS or read the alerts, and ACRO still cannot tell whether info was exfiltrated<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 8h ago]]></description>
+</item>
+
+<item>
+  <title>🔴 Akira ransomware scum blocked victim&#x27;s security tools – and broke their own encryptor</title>
+  <link>https://www.theregister.com/research/2026/08/12/akira-ransomware-scum-blocked-victims-security-tools-and-broke-their-own-encryptor/5286515</link>
+  <pubDate>Wed, 12 Aug 2026 13:00:00 +0000</pubDate>
+  <source>The Register</source>
+  <description><![CDATA[<b>Why this matters: Elevated ransomware risk — validate backups and endpoint defenses.</b><br/>Gives a whole new meaning to Safe Mode<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 8h ago]]></description>
 </item>
 
 <item>
@@ -142,120 +221,7 @@
   <pubDate>Wed, 12 Aug 2026 13:00:00 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><p>Researchers observed the novel campaign exploiting unauthenticated guest access to quietly enumerate and exfiltrate exposed data from both platforms.</p>
-<p>The post <a href="https://www.securityweek.com/stealthy-city-forum-attacks-target-salesforce-and-servicenow-with-custom-toolset/">Stealthy ‘City-Forum’ Attacks Target Salesforce and ServiceNow With Custom Toolset</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Oracle set to bring quantum computing to OCI for hybrid AI</title>
-  <link>https://www.cio.com/article/4208592/oracle-set-to-bring-quantum-computing-to-oci-for-hybrid-ai.html</link>
-  <pubDate>Wed, 12 Aug 2026 11:43:54 +0000</pubDate>
-  <source>CIO.com</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><div id="remove_no_follow">
-		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
-					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
-						<div class="article-column__content">
-<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
-
-
-
-<p class="wp-block-paragraph">Oracle said it will deploy Quantinuum’s Helios quantum computer inside its cloud infrastructure and provide enterprise customers access through a planned Oracle Cloud Infrastructure (OCI) quantum service for hybrid quantum-AI workloads.</p>
-
-
-
-<p class="wp-block-paragraph">The companies have forged a multi-year partnership in this regard.</p>
-
-
-
-<p class="wp-block-paragraph">The partnership will see Helios installed in a US-based OCI AI data center, where it will support hybrid quantum-AI workloads delivered as a cloud service. Oracle said it plans to preview the OCI quantum service in the coming months.</p>
-
-
-
-<p class="wp-block-paragraph">“With Quantinuum’s Helios on OCI, customers can expect to gain managed, secure access to cloud-hosted quantum computing without having to procure, install, or operate dedicated hardware or specialized facilities,” the companies said in a joint statement.</p>
-
-
-
-<h2 class="wp-block-heading" id="oci-to-deliver-hybrid-quantum-ai-workloads">OCI to deliver hybrid quantum-AI workloads</h2>
-
-
-
-<p class="wp-block-paragraph">The partnership is focused on enabling hybrid workloads that combine quantum computing with classical HPC and AI systems, according to the statement.</p>
-
-
-
-<p class="wp-block-paragraph">Under the arrangement, OCI customers will be able to access the Helios system alongside existing GPU and HPC resources.</p>
-
-
-
-<p class="wp-block-paragraph">“By operating on-premises within OCI’s infrastructure, Helios is anticipated to be able to integrate seamlessly with existing OCI compute, networking, storage, identity, and data services under the same governance and access controls customers already use,” the statement added.</p>
-
-
-
-<p class="wp-block-paragraph">By hosting Helios within OCI infrastructure, customers will be able to access quantum resources without procuring, installing, or operating dedicated hardware or specialized facilities, the statement said.</p>
-
-
-
-<p class="wp-block-paragraph">Oracle said the planned OCI quantum service will allow developers to move from simulation to execution on quantum hardware. The service is expected to combine Quantinuum’s development stack with support for open-source hybrid programming frameworks, enabling developers to build and test quantum-classical applications.</p>
-
-
-
-<p class="wp-block-paragraph">Charlie Dai, vice president and principal analyst at Forrester, said the integration lowers access barriers by embedding quantum computing into existing enterprise environments. “Integrating Helios into OCI lowers access barriers by embedding quantum into existing cloud governance, security, and AI/HPC workflows,” he said.</p>
-
-
-
-<p class="wp-block-paragraph">However, Dai added that this shift does not materially change adoption timelines. “Most organizations remain in the PoC phase, with production quantum advantage still limited to a narrow set of problems,” he said.</p>
-
-
-
-<h2 class="wp-block-heading" id="use-cases-center-on-research-early-enterprise-exploration">Use cases center on research, early enterprise exploration</h2>
-
-
-
-<p class="wp-block-paragraph">The companies said the platform could support applications across drug discovery, materials science, financial modelling, and large-scale optimization, including AI workloads.</p>
-
-
-
-<p class="wp-block-paragraph">“Deploying Helios inside OCI gives Quantinuum and Oracle an opportunity to create a unique and deeply integrated environment for hybrid workloads, explore enterprise use cases with customers, and accelerate commercial adoption,” Quantinuum President and CEO Dr. Rajeeb Hazra said in the statement.</p>
-
-
-
-<p class="wp-block-paragraph">The statement added the partnership will explore enterprise, AI lab, academic, and research applications, and reflects a shared view that combining quantum computing with AI and classical systems could help address computational challenges that are difficult to solve using conventional approaches alone.</p>
-
-
-
-<p class="wp-block-paragraph">Dai said CIOs should approach hybrid quantum-classical workloads as a long-term capability-building exercise rather than a near-term ROI driver. “For most enterprises, the business case today is capability building rather than measurable operational ROI,” he said.</p>
-
-
-
-<p class="wp-block-paragraph">He added that near-term value is likely to come from areas such as algorithm development, workforce readiness, and targeted research in optimization, materials science, and drug discovery.</p>
-
-
-
-<h2 class="wp-block-heading" id="enterprise-adoption-remains-focused-on-experimentation">Enterprise adoption remains focused on experimentation</h2>
-
-
-
-<p class="wp-block-paragraph">Helios, Quantinuum’s third-generation quantum computer, is based on a 98-physical-qubit trapped-ion architecture and has been used in demonstrations involving 48 logical qubits, the statement said.</p>
-
-
-
-<p class="wp-block-paragraph">Quantinuum said the Helios system is designed for hybrid integration with classical HPC and AI environments.</p>
-
-
-
-<p class="wp-block-paragraph">The statement said a single Helios system has an estimated power draw of less than one percent of the draw reported for leading supercomputers, positioning it as a lower-power complementary resource for suitable hybrid workloads.</p>
-
-
-
-<p class="wp-block-paragraph">Dai said Oracle’s move aligns with broader quantum-as-a-service strategies from hyperscale cloud providers.</p>
-
-
-
-<p class="wp-block-paragraph">“Oracle’s move aligns with broader quantum-as-a-service strategies from other hyperscalers,” he said, adding that while the integration strengthens the developer environment, enterprise adoption remains focused on experimentation rather than broad production deployment.</p>
-
-
-
-<p class="wp-block-paragraph"><em>The article originally appeared on <a href="https://www.networkworld.com/article/4208583/oracle-set-to-bring-quantum-computing-to-oci-for-hybrid-ai-workloads.html">NetworkWorld</a>.</em></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 8h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/stealthy-city-forum-attacks-target-salesforce-and-servicenow-with-custom-toolset/">Stealthy ‘City-Forum’ Attacks Target Salesforce and ServiceNow With Custom Toolset</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 8h ago]]></description>
 </item>
 
 <item>
@@ -264,7 +230,7 @@
   <pubDate>Wed, 12 Aug 2026 11:37:28 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: Service impact possible — prepare comms and confirm vendor status.</b><br/><p>Affecting European contract logistics operations at eight Ceva warehouses, the incident caused shipment delays for multiple customers.</p>
-<p>The post <a href="https://www.securityweek.com/ceva-logistics-operations-disrupted-by-cyberattack/">Ceva Logistics Operations Disrupted by Cyberattack</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 8h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/ceva-logistics-operations-disrupted-by-cyberattack/">Ceva Logistics Operations Disrupted by Cyberattack</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 10h ago]]></description>
 </item>
 
 <item>
@@ -353,7 +319,7 @@
 
 
 <p class="wp-block-paragraph">Keeping the operating system, browser, and security software up to date remains a must.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 8h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 10h ago]]></description>
 </item>
 
 <item>
@@ -608,7 +574,7 @@
 
 
 <p class="wp-block-paragraph">It may be what the system is not allowed to negotiate.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 10h ago]]></description>
 </item>
 
 <item>
@@ -617,7 +583,7 @@
   <pubDate>Wed, 12 Aug 2026 10:55:04 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: Privilege escalation risk — review local admin exposure and endpoint controls.</b><br/><p>Intel has informed customers about several high-severity vulnerabilities that can lead to privilege escalation and even code execution.</p>
-<p>The post <a href="https://www.securityweek.com/chipmaker-patch-tuesday-intel-amd-fix-over-80-vulnerabilities-combined/">Chipmaker Patch Tuesday: Intel, AMD Fix Over 80 Vulnerabilities Combined</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/chipmaker-patch-tuesday-intel-amd-fix-over-80-vulnerabilities-combined/">Chipmaker Patch Tuesday: Intel, AMD Fix Over 80 Vulnerabilities Combined</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 10h ago]]></description>
 </item>
 
 <item>
@@ -870,7 +836,7 @@
 
 
 <p class="wp-block-paragraph">“There’s a lot of marketing speak that RPA is dead,” he says. “I don’t think that. Even the AI vendors are using RPA in the back, but now they’re calling it workflow automation.”</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 10h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 11h ago]]></description>
 </item>
 
 <item>
@@ -1146,7 +1112,7 @@
 
 
 <p class="wp-block-paragraph">Ultimately, the next generation of AI leaders will not be measured by how many Proofs-of-Concept or AI pilots they launched, but by how securely, responsibly and repeatably they operationalized AI to deliver measurable business value at enterprise scale.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 10h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 11h ago]]></description>
 </item>
 
 <item>
@@ -1539,86 +1505,7 @@
 
 
 <p class="wp-block-paragraph"><strong>Morongo appoints Tony Gawne as CIO</strong></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 10h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Where IT leaders find strength and opportunity in the age of AI</title>
-  <link>https://www.cio.com/article/4207836/where-it-leaders-find-strength-and-opportunity-in-the-age-of-ai.html</link>
-  <pubDate>Wed, 12 Aug 2026 10:00:00 +0000</pubDate>
-  <source>CIO.com</source>
-  <description><![CDATA[<b>Why this matters: Regulatory/compliance signal — assess applicability and remediation timeline.</b><br/><div id="remove_no_follow">
-		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
-					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
-						<div class="article-column__content">
-<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
-
-
-
-<p class="wp-block-paragraph">With vision comes perspective, and over a distinguished career, IT and digital transformation leader Niraj Bhatt has held may titles, and earned three consecutive <a href="https://www.cio.com/article/4206446/cio-100-award-winners-spotlight-its-power-to-transform.html">CIO 100</a> awards since 2023.</p>
-
-
-
-<p class="wp-block-paragraph">As a storied advisor for startups and Fortune 500 companies, helping them navigate the unpredictability and fluidity of AI, Bhatt knows how emerging tech is rapidly reshaping the way organizations build products and deliver value, and how challenges shift as companies move from experimentation to real-world deployment.</p>
-
-
-
-<p class="wp-block-paragraph">AI, of course means a lot of different things to different people, and also for frictionless startups and large enterprises. For the former, speed is a huge asset, allowing them to punch above their weight. But it also means they need lightning fast reactions when landscapes shift. “The same speed can also hurt them when larger AI companies release new offerings that disrupt what startups are building,” he says, referencing recent moves by Anthropic and Google.</p>
-
-
-
-<p class="wp-block-paragraph">On the enterprise side, the conversation is more about scale and risk. Many large organizations have moved past the POC stage and now wrestle with the realities of putting AI into production.</p>
-
-
-
-<p class="wp-block-paragraph">Cost for both is naturally a recurring theme as organizations scale up AI efforts, and true expenses become clear only after the initial excitement fades. “Every input and output token, and the model you’re selecting, add up,” he says. Some customers like Open AI, he adds, get throttled because their usage, volumes, and costs are growing so fast, making planning, observability, and monitoring critical for any team moving beyond experimentation.</p>
-
-
-
-<p class="wp-block-paragraph">So understanding the full software development lifecycle is also vital. Therefore, before committing to production, he helps clients see the big picture, and make sure they understand technical requirements as well as operational and financial implications. “The cost picture isn’t just about usage, but scale and the model choices teams make,” he says.</p>
-
-
-
-<p class="wp-block-paragraph">Bhatt also discusses effective approaches to AI and enterprise IT, technology leadership, and the evolving role of today’s CIOs. Watch the full video below for more insights, and be sure to subscribe to the monthly Center Stage newsletter by clicking <a href="https://www.cio.com/newsletters/signup/">here</a>.</p>
-
-
-
-<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper youtube-video">
-
-</div></figure>
-
-
-
-<p class="wp-block-paragraph"><strong>On AI hype: </strong>If you can’t explain something to someone who’s eight or 80, you don’t really understand it. It’s gone from LLMs, to RAG, to agentic AI, and now the essence is all about tokens. It’s predicting that next token and understanding that is key. So when LLMs came out, they were good at doing that on the data on which they were trained. When the enterprises looked at it, they wanted to make those LLMs work for their data. And the question became how to provide our data and context. It’s about building the right context for the LLM. Agentic AI is similar and that’s where the RAG evolution came in, in that I’ve got my data because every LLM has limitations in terms of how much context it can carry.</p>
-
-
-
-<p class="wp-block-paragraph">There are ranges of LLMs, where Google has the highest in regard to the context window size and what they support. Agentic AI is more action oriented, though. LLMs rely on the metadata you provide for the tools. Then they’re doing token prediction in that whatever I’m looking for, I should use a specific tool. Then it’s the infrastructure underlying which LLM it relies on to invoke the agent. So if you try to explain the microservices to a person, you’re going to struggle. But it’s very important to understand the evolution and that’s where you can cut through the hype. Understanding in this context is key.</p>
-
-
-
-<p class="wp-block-paragraph"><strong>On navigating challenges around talent: </strong>What I’m seeing on the IT side is there’s so much cognitive load, so how do we empower people to build solutions with the right mix of products and platforms? I think it’s about democratizing AI for the entire organization. Your talent strategy is everyone, all inclusive, starting from interns, the business and tech sides, CEO, everybody.Like your customer success or revenue officers, you need a talent strategy because in the end, IT alone isn’t going to be in a position to deliver for everyone in the organization.</p>
-
-
-
-<p class="wp-block-paragraph">AI has the potential to make everyone in the organization more productive. You have to plan that and facilitate broad innovation across the organization.That’s where the talent strategy, and working with HR and the people officer becomes very important providing those tools. One part of it is training, but how do I build an agent for a receptionist receiving calls, for instance?I’m not going to rely on vibe coding or things of that nature. But what are the tools? Where do I go, where do I host this? I think through that entire ecosystem beyond copilots. That’s where innovation can kick in, and that broader talent strategy is something I’m working with my customers on.</p>
-
-
-
-<p class="wp-block-paragraph"><strong>On collaboration: </strong>I heard a panel discussion recently, and a question was asked about what’s the number-one trait CIO needs to be successful at in the world of AI, and the answer was collaboration. You need to bring everybody together, move forward together, and make sure everybody’s on board. And in my mind, simplifying that is more like systems thinking when you operate, just bringing everybody along and ensuring they’re meeting outcomes.</p>
-
-
-
-<p class="wp-block-paragraph">But maybe what’s more important is managing expectations. Because if you’re a CIO, there’s a tremendous amount of pressure to deliver and have a rock solid AI strategy. So what I’m doing with my customers is get the board, CEO, and CFO into a room and help them understand what I’m talking about, the evolution, and what’s the art of possible. You don’t want to be a CIO who thinks I have a hammer and everything is a nail. Having buy in from the senior leaders is essential to know you’re headed in the right direction. You’re not reacting to pressure from top leadership, but driving and becoming the change agent for good for the company.</p>
-
-
-
-<p class="wp-block-paragraph"><strong>On navigating AI: </strong>It’s interesting times. I’m covering a spectrum of startups, non-technical and technical founders, and advising Fortune 500 companies. What I’m seeing is they love the velocity and momentum because that’s what they’ve always wanted, and AI is providing that. They’re able to bring their products to markets very quickly, so something that would’ve taken three years a couple of years ago is probably now taking them three months. There’s a lot of excitement there. But on the flip side, the same velocity is also hurting them. There are so many frontier AI companies getting disrupted. OpenAI, for instance, has offerings in sales and marketing, and Google has an interactive video model. So a lot of startups working in the marketing space are getting stuck. A lot of what I’m focused on is working with founders, helping them pivot in the gen AI space, ensuring their systems and products are built and structured in the right manner.</p>
-
-
-
-<p class="wp-block-paragraph">And on the enterprise space, what I’m seeing is the POC wave, and people have seen the value. There’s some excitement but now the struggle is getting them to production. That’s where you run into cost, latency, legal compliance, privacy issues, and customer concerns that if we get tickets to production, how’s it going to look and how are we going to scale. So engineering and product teams have to be ably supported by the enterprise architecture and R&amp;D teams. I then help them get up to speed and build that internal platform product for the production workloads. It’s exciting times on both sides.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 10h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 11h ago]]></description>
 </item>
 
 <item>
@@ -1627,7 +1514,7 @@
   <pubDate>Wed, 12 Aug 2026 09:55:45 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: Supply chain risk — audit third-party dependencies and vendor access.</b><br/><p>LiteLLM was compromised through the Trivy hack and abused to distribute information-stealing malware to its users.</p>
-<p>The post <a href="https://www.securityweek.com/over-2500-organizations-impacted-by-litellm-supply-chain-attack/">Over 2,500 Organizations Impacted by LiteLLM Supply Chain Attack</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 10h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/over-2500-organizations-impacted-by-litellm-supply-chain-attack/">Over 2,500 Organizations Impacted by LiteLLM Supply Chain Attack</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 11h ago]]></description>
 </item>
 
 <item>
@@ -1798,7 +1685,7 @@
 
 
 <p class="wp-block-paragraph"><em>This article was made possible by our partnership with the IASA </em><a href="https://chiefarchitectforum.org/" rel="noreferrer noopener" target="_blank"><em>Chief Architect Forum</em></a><em>. The CAF’s purpose is to test, challenge and support the art and science of Business Technology Architecture and its evolution over time as well as grow the influence and leadership of chief architects both inside and outside the profession. The CAF is a leadership community of the </em><a href="https://iasaglobal.org/" rel="noreferrer noopener" target="_blank"><em>IASA</em></a><em>, the leading non-profit professional association for business technology architects.</em> </p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 11h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 12h ago]]></description>
 </item>
 
 <item>
@@ -2059,7 +1946,7 @@
 
 
 <p class="wp-block-paragraph">Because the future of AI in the enterprise SOC isn’t about replacing analysts. It’s about giving them the visibility, context, and automation they need to make better security decisions, faster.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 11h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 12h ago]]></description>
 </item>
 
 <item>
@@ -2312,7 +2199,7 @@
 
 
 <p class="wp-block-paragraph">“The product said it was safe,” he said, “and that’s where we started.”</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 11h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
 </item>
 
 <item>
@@ -2321,7 +2208,7 @@
   <pubDate>Wed, 12 Aug 2026 08:14:46 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: Credential/phishing risk — reinforce MFA and user awareness training.</b><br/><p>The vulnerabilities could be exploited to leak credentials for external SQL connections or crash an agent service.</p>
-<p>The post <a href="https://www.securityweek.com/ivanti-epm-update-patches-remotely-exploitable-flaws/">Ivanti EPM Update Patches Remotely Exploitable Flaws</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 11h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/ivanti-epm-update-patches-remotely-exploitable-flaws/">Ivanti EPM Update Patches Remotely Exploitable Flaws</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
 </item>
 
 <item>
@@ -2330,7 +2217,7 @@
   <pubDate>Wed, 12 Aug 2026 07:51:55 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><p>CISA has also published several advisories describing vulnerabilities in ICS and other OT products.</p>
-<p>The post <a href="https://www.securityweek.com/ics-patch-tuesday-vulnerabilities-fixed-by-siemens-schneider-phoenix-contact-2/">ICS Patch Tuesday: Vulnerabilities Fixed by Siemens, Schneider, Phoenix Contact</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 12h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/ics-patch-tuesday-vulnerabilities-fixed-by-siemens-schneider-phoenix-contact-2/">ICS Patch Tuesday: Vulnerabilities Fixed by Siemens, Schneider, Phoenix Contact</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
 </item>
 
 <item>
@@ -2715,7 +2602,7 @@
 
 
 <p class="wp-block-paragraph">An <a href="https://www.csoonline.com/article/4120997/trivial-telnet-authentication-bypass-exposes-devices-to-complete-takeover.html">easily-exploited Telnet authentication bypass vulnerability</a> (CVE-2026-24061), introduced in code changes release in May 2017, left devices running pre-patched versions of the software wide open to remote compromise, provided that its Telnet server was exposed to the internet.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 12h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 14h ago]]></description>
 </item>
 
 <item>
@@ -2860,7 +2747,7 @@
 
 
 <p class="wp-block-paragraph"></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 16h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 18h ago]]></description>
 </item>
 
 <item>
@@ -2987,7 +2874,15 @@
 
 
 <p class="wp-block-paragraph">Anaconda, for its part, urges customers to remain diligent: “Be on alert for phishing/social engineering, and maintain credential hygiene (including auditing, reviewing, and rotating credentials regularly) and spam monitoring.”</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 17h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 19h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 India’s central bank wants AI to approve loans that humans would reject</title>
+  <link>https://www.theregister.com/ai-and-ml/2026/08/12/indias-central-bank-wants-ai-to-approve-loans-that-humans-would-reject/5286572</link>
+  <pubDate>Wed, 12 Aug 2026 01:18:21 +0000</pubDate>
+  <source>The Register</source>
+  <description><![CDATA[<b>Why this matters: Could impact sign-ins/MFA/Conditional Access — watch for login issues.</b><br/>Regulator hopes for greater financial inclusion, without extra risk or blaming models for bad decisions<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 20h ago]]></description>
 </item>
 
 <item>
@@ -3104,7 +2999,15 @@
 
 
 <p class="wp-block-paragraph">The memory corruption comes from logical errors in DIAG protocol parsing that allow an unauthenticated attacker to generate memory corruptions, said Onapsis. The vulnerability could potentially disclose sensitive system information or crash the system, leading to a high impact on the confidentiality, integrity, and availability of the application. Stross noted that an attacker does not require authentication to exploit this hole.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 19h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 20h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Modular&#x27;s Mojo programming language hits 1.0 milestone</title>
+  <link>https://www.theregister.com/ai-and-ml/2026/08/12/modulars-mojo-programming-language-hits-10-milestone/5286545</link>
+  <pubDate>Tue, 11 Aug 2026 23:50:25 +0000</pubDate>
+  <source>The Register</source>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Developers await open source compiler release to dispel uncertainty following Qualcomm acquisition<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 21h ago]]></description>
 </item>
 
 <item>
@@ -3177,7 +3080,15 @@
 
 
 <p class="wp-block-paragraph">“This exploit needed only presence in the meeting, so joining rules are access control: waiting rooms, passcodes, authenticated-users-only, no published personal meeting link,” the researchers said. “Then cut what nobody uses, because every optional feature is another parser. In Zoom, consider locking annotation, file transfer, whiteboarding, remote control and third-party apps, and limiting screen sharing to hosts.”</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 21h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 22h ago]]></description>
+</item>
+
+<item>
+  <title>🟠 421 bugs in Microsoft&#x27;s Patch Tuesday release, and the Norks have already attacked one</title>
+  <link>https://www.theregister.com/security/2026/08/11/421-bugs-in-microsofts-patch-tuesday-release-and-the-norks-have-already-attacked-one/5286483</link>
+  <pubDate>Tue, 11 Aug 2026 21:31:00 +0000</pubDate>
+  <source>The Register</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Sysadmins, welcome to your new norm<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
@@ -3266,110 +3177,11 @@
 </item>
 
 <item>
-  <title>🔵 What CIOs must get right before AI can scale</title>
-  <link>https://www.cio.com/article/4208047/what-cios-must-get-right-before-ai-can-scale.html</link>
-  <pubDate>Tue, 11 Aug 2026 15:38:54 +0000</pubDate>
-  <source>CIO.com</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><div id="remove_no_follow">
-		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
-					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
-						<div class="article-column__content">
-<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
-
-
-
-<p class="wp-block-paragraph">AI is reshaping operations faster than organizations can keep up. Technology leaders — from chief data officers to CIOs and CTOs — are under pressure to get the fundamentals right. That means building the data infrastructure AI requires, preparing workforces for roles that are changing in real time, and scaling AI in ways that are secure and trusted.</p>
-
-
-
-<p class="wp-block-paragraph">This article distills the <a href="https://business.adobe.com/resources/digital-trends-report.html" rel="noreferrer noopener nofollow" target="_blank">Adobe <em>2026 AI and Digital Trends</em></a> findings into three critical areas for the CIO to prioritize: data readiness, change management, and enterprise-level security.</p>
-
-
-
-<ul class="wp-block-list">
-<li><strong>Preparing your data for agentic AI</strong></li>
-</ul>
-
-
-
-<p class="wp-block-paragraph">Scaling AI-driven experiences requires a foundation of high-quality, connected data — yet many organizations are not ready. <strong>The gap between AI ambition and AI readiness is widening, and data is the main bottleneck. Among survey respondents:</strong><strong></strong></p>
-
-
-
-<ul class="wp-block-list">
-<li><strong>Only 37% </strong>say their organization’s data quality and accessibility are adequate for AI.</li>
-
-
-
-<li>78% cite data integration and quality as a top challenge to implementing agentic AI.</li>
-
-
-
-<li>52% say limited data unification and structure are holding back their AI initiative.</li>
-</ul>
-
-
-
-<p class="wp-block-paragraph">Organizations that act now to unify data infrastructure and modernize content operations will have a structural advantage as <a href="https://business.adobe.com/ai/what-is-agentic-ai.html" rel="noreferrer noopener nofollow" target="_blank">agentic AI</a> matures. The potential benefits are real: the survey revealed 60% of participants believe agentic AI will enable their organization to focus more on strategy and creative opportunities.</p>
-
-
-
-<ul class="wp-block-list">
-<li><strong>Turning AI adoption into an enterprise advantage</strong></li>
-</ul>
-
-
-
-<p class="wp-block-paragraph">As organizations scale generative and agentic AI across marketing and creative workflows, the rate of <a href="https://business.adobe.com/resources/sdk/the-ai-inflection-point.html" rel="noreferrer noopener nofollow" target="_blank">AI adoption</a> is outpacing workforce readiness. <strong>For technology leaders, workforce readiness is one of the biggest barriers standing between AI investment and AI returns. Yet only 44% of respondents say they </strong>have sufficient AI training and upskilling programs, and only 30% say they have training in place for agentic AI.</p>
-
-
-
-<p class="wp-block-paragraph">It’s clear that the brands that treat upskilling as a strategic investment will be better equipped to move beyond AI pilots to organization-wide deployment.</p>
-
-
-
-<ul class="wp-block-list">
-<li><strong>Creating AI-powered experiences that customers can trust</strong></li>
-</ul>
-
-
-
-<p class="wp-block-paragraph">As agentic AI moves to the forefront of customer experience, the CIO’s role will need to expand from systems management to enterprise-wide AI stewardship. Technology leaders expect agentic AI to play an increasingly large role in customer interactions: 76% anticipate that at least half of customer support interactions will be handled directly by agentic AI within the next 18 months.</p>
-
-
-
-<p class="wp-block-paragraph">But governance is critical. Translating governance policies into consistent practice will ensure organizations can deliver AI-driven experiences that customers trust.</p>
-
-
-
-<p class="wp-block-paragraph"><strong>The bottom line</strong></p>
-
-
-
-<p class="wp-block-paragraph">CIOs who connect data, invest in talent, and scale responsibly will turn AI investments into real value. For CIOs to move from ambition to execution, they must meet the three priorities:</p>
-
-
-
-<ul class="wp-block-list">
-<li><strong>Build the data foundation</strong></li>
-
-
-
-<li><strong>Prepare your workforce</strong></li>
-
-
-
-<li><strong>Govern AI as a business-critical function.</strong></li>
-</ul>
-
-
-
-<p class="wp-block-paragraph"><strong>Learn more and read the full excerpts </strong><a href="https://business.adobe.com/resources/reports/cio-digital-trends.html?sdid=NYTLQLMS&amp;mv=display&amp;mv2=display" rel="noreferrer noopener nofollow" target="_blank"><strong>here</strong></a><strong>.</strong></p>
-
-
-
-<p class="wp-block-paragraph"><strong>See more insights from the report </strong><a href="https://business.adobe.com/resources/digital-trends-research-center.html" rel="noreferrer noopener nofollow" target="_blank"><strong>here</strong></a><strong>. </strong></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
+  <title>🔴 Feds warn Gunra ransomware is exploiting known bugs to hit critical infrastructure</title>
+  <link>https://www.theregister.com/cyber-crime/2026/08/11/feds-warn-gunra-ransomware-is-exploiting-known-bugs-to-hit-critical-infrastructure/5286263</link>
+  <pubDate>Tue, 11 Aug 2026 14:36:00 +0000</pubDate>
+  <source>The Register</source>
+  <description><![CDATA[<b>Why this matters: Elevated ransomware risk — validate backups and endpoint defenses.</b><br/>Newly minted RaaS crew breaks in through using internet-facing kit via known Fortinet flaws, then steals and scrambles data<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
@@ -4990,6 +4802,14 @@
 </item>
 
 <item>
+  <title>🟠 Cyber vulnerability sweep picks up Royal Navy drones sending data to China</title>
+  <link>https://www.theregister.com/edge-and-iot/2026/08/10/cyber-vulnerability-sweep-picks-up-royal-navy-drones-sending-data-to-china/5285430</link>
+  <pubDate>Mon, 10 Aug 2026 12:25:00 +0000</pubDate>
+  <source>The Register</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>No, no nasties to see here, guv...<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
+</item>
+
+<item>
   <title>🟠 OpenAI says Astra could reach ‘critical’ cyber capability, tightens safeguards</title>
   <link>https://www.csoonline.com/article/4207311/openai-says-astra-could-reach-critical-cyber-capability-tightens-safeguards.html</link>
   <pubDate>Mon, 10 Aug 2026 12:07:10 +0000</pubDate>
@@ -5205,6 +5025,14 @@
 
 <p class="wp-block-paragraph">Varonis drew parallels with other recently disclosed AI attacks like <a href="https://www.csoonline.com/article/4186970/m365-copilot-searchleak-your-prompt-injection-attack-surface-just-got-bigger.html">SearchLeak</a>, <a href="https://www.csoonline.com/article/4068175/gemini-trifecta-ai-autonomy-without-guardrails-opens-new-attack-surface.html">EchoLeak</a>, <a href="https://www.csoonline.com/article/4059606/meet-shadowleak-impossible-to-detect-data-theft-using-ai.html">ShadowLeak</a>, and <a href="https://www.csoonline.com/article/4161382/prompt-injection-turned-googles-antigravity-file-search-into-rce.html">Antigravity</a>. The company said RovoBlast is just another example of a broader AI security issue where “untrusted inputs, autonomous behavior, and trusted communication” are together creating serious data exposure.</p>
 </div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
+</item>
+
+<item>
+  <title>🟠 Framework loses customer data in Metabase zero-day attack</title>
+  <link>https://www.theregister.com/personal-tech/2026/08/10/framework-loses-customer-data-in-metabase-zero-day-attack/5285302</link>
+  <pubDate>Mon, 10 Aug 2026 11:21:00 +0000</pubDate>
+  <source>The Register</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Repairable hardware is little comfort when personal details escape<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
 </item>
 
 <item>
@@ -5829,43 +5657,6 @@
 </item>
 
 <item>
-  <title>🔵 Snowflake attacker pleads guilty to hack of 165 companies’ data</title>
-  <link>https://www.csoonline.com/article/4206739/snowflake-attacker-pleads-guilty-to-hack-of-165-companies-data.html</link>
-  <pubDate>Fri, 07 Aug 2026 13:22:34 +0000</pubDate>
-  <source>CSO Online</source>
-  <description><![CDATA[<b>Why this matters: Credential/phishing risk — reinforce MFA and user awareness training.</b><br/><div id="remove_no_follow">
-		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
-					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
-						<div class="article-column__content">
-<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
-
-
-
-<p class="wp-block-paragraph">A Canadian hacker has admitted being part of a group responsible for several major cyberattacks. <a href="https://www.justice.gov/opa/pr/canadian-man-pleads-guilty-hacking-us-cloud-storage-provider-and-extorting-its-customers" rel="noreferrer noopener" target="_blank">Connor Riley Moucka pleaded guilty</a> to being part of a coterie of hackers that hit 165 organizations, resulting in the theft of customer records and the extortion of millions of dollars.</p>
-
-
-
-<p class="wp-block-paragraph">Industry sources have identified Moucka as one of the main players in attacks on data hosted by cloud data warehouse Snowflake. Companies affected by the hacks <a href="https://www.csoonline.com/article/3629818/7-biggest-cybersecurity-stories-of-2024.html">include the likes of AT&amp;T, Ticketmaster and the Neiman Marcus Group</a>.</p>
-
-
-
-<p class="wp-block-paragraph">He worked with two other hackers: <a href="https://www.csoonline.com/article/2517422/hacker-allegedly-paid-370000-ransom-to-delete-stolen-att-data.html">John Edward Binns</a> and Cameron John Wagenius. Binns was <a href="https://www.justice.gov/usao-wdwa/united-states-vs-connor-riley-moucka-and-john-erin-binns" rel="noreferrer noopener" target="_blank">not in US custody as of April 2026</a>, while Wagenius, going by the name of <a href="https://www.csoonline.com/article/3631033/us-soldier-linked-to-trump-call-log-hack-arrested-in-texas.html">Kiberphant0m, was arrested in January 2025</a> and <a href="https://www.justice.gov/opa/pr/former-us-soldier-pleads-guilty-hacking-and-extortion-scheme-involving-telecommunications" rel="noreferrer noopener" target="_blank">pleaded guilty in July that year</a></p>
-
-
-
-<p class="wp-block-paragraph">Moucka and other members of the group used stolen login credentials to compromise data belonging to at least 165 customers of a US-based software-as-a-service company. This unauthorized access was used to steal billions of sensitive customer records and download terabytes of information,</p>
-
-
-
-<p class="wp-block-paragraph">“Connor Moucka hacked over 150 companies and organizations, obtained extremely sensitive information, and extorted the victims for millions of dollars. Today’s guilty plea serves as a reminder to all cybercriminals, regardless of where they live, that they cannot hide behind a wall of anonymity. You will be found and brought to justice,” said assistant attorney general A. Tysen Duva of the Justice Department’s Criminal Division</p>
-
-
-
-<p class="wp-block-paragraph">The trial is the result of a coordinated worldwide action against the Snowflake group. The investigation was led by the FBI but benefited from contributions from the Royal Canadian Mounted Police, the Australian Federal Police, Spain’s Guardia Civil, the Security Service of Ukraine and the Turkish National Police.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 5d ago]]></description>
-</item>
-
-<item>
   <title>🔴 Python package security in 2026: How supply chain attacks are targeting your AI development environment</title>
   <link>https://www.csoonline.com/article/4206245/python-package-security-in-2026.html</link>
   <pubDate>Fri, 07 Aug 2026 09:00:00 +0000</pubDate>
@@ -5964,83 +5755,6 @@
 
 <p class="wp-block-paragraph">Your developers trust their tools. Make sure that trust is warranted.</p>
 </div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 5d ago]]></description>
-</item>
-
-<item>
-  <title>🟠 Human oversight is still critical as AI patching tools miss security risks</title>
-  <link>https://www.csoonline.com/article/4206598/human-oversight-is-still-critical-as-ai-patching-tools-miss-security-risks.html</link>
-  <pubDate>Fri, 07 Aug 2026 08:50:54 +0000</pubDate>
-  <source>CSO Online</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><div id="remove_no_follow">
-		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
-					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
-						<div class="article-column__content">
-<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
-
-
-
-<p class="wp-block-paragraph">AI-generated vulnerability patches still heavily depend on human review, particularly the ones involving security-sensitive code, according to a research.</p>
-
-
-
-<p class="wp-block-paragraph">Researchers from 1Password have disclosed an internal evaluation that found AI-generated fixes frequently overlook broader <a href="https://www.csoonline.com/article/4202381/risk-based-patching-is-the-future-ai-made-it-table-stakes.html" target="_blank">concerns</a> such as architectural intent, business requirements, security implications, and long-term maintainability, despite being syntactically correct.</p>
-
-
-
-<p class="wp-block-paragraph">“We studied what happens when Large Language Models (LLMs) generate vulnerability patches for recently disclosed, complex vulnerabilities,” said 1Password researcher <a href="https://www.linkedin.com/in/securingdev/" rel="noreferrer noopener" target="_blank">Keith Hoodlet</a> in a blog <a href="https://1password.com/blog/why-ai-generated-patches-still-require-human-review" rel="noreferrer noopener" target="_blank">post</a>. “Our data shows that LLMs produce Fix-Like Artifacts with Embedded Defects (FLAWED) 53.9% of the time when complex patches are required.”</p>
-
-
-
-<p class="wp-block-paragraph">The evaluation tested the AI-generated fixes across six recently disclosed CVEs, including CVE-2026-31431 (“<a href="https://www.csoonline.com/article/4169399/new-dirty-frag-exploit-targets-linux-kernel-for-root-access.html">Copy Fail</a>”), CVE-2026-34197 (<a href="https://www.csoonline.com/article/4157146/claude-uncovers-a-13%E2%80%91year%E2%80%91old-activemq-rce-bug-within-minutes.html">ActiveMQ RCE</a>), CVE-2026-8512, CVE-2026-45185 (EXIM RCE), CVE-2026-22738 (<a href="https://nvd.nist.gov/vuln/detail/cve-2026-22738">SpringAI SpEL RCE</a>), and the <a href="https://www.csoonline.com/article/4165470/max-severity-rce-flaw-found-in-google-gemini-cli.html">Gemini CLI RCE</a> (GHSA-wpqr-6v78-jr5g).</p>
-
-
-
-<p class="wp-block-paragraph">1Password reportedly evaluated 6080 patches generated using ChatGPT-5.5 and Claude Opus 4.8, two frontier AI coding models, and found that only a little over a quarter of the fixes fully remediated the flaw without altering application behavior.</p>
-
-
-
-<p class="wp-block-paragraph">“Patches that successfully resolved the vulnerability, but altered the application’s behavior in the process, occurred 20.1% of the time,” Hoodlet added.</p>
-
-
-
-<h2 class="wp-block-heading"><a></a>Fixing is not the same as securing</h2>
-
-
-
-<p class="wp-block-paragraph">Instead of simply checking whether the fixed code compiled or passed automated tests, 1Password said it reviewed every generated fix for complete elimination of the vulnerability, preservation of application behavior, and avoidance of new security risks.</p>
-
-
-
-<p class="wp-block-paragraph">While only 26% of the patches successfully fixed the vulnerability without introducing application changes, 49.3% failed to remove at least one exploitable attack path, 2.3% fixed the original vulnerability but introduced a new one, and 2.2% both failed to remediate the issue and created an additional security weakness.</p>
-
-
-
-<p class="wp-block-paragraph">The researchers also found that passing pre-defined tests can create deeper problems. More than one-third of the patches that initially appeared successful were classified as “fragile” because they simply blocked the proof-of-concept (POC) exploit used during testing instead of addressing the underlying root cause.</p>
-
-
-
-<p class="wp-block-paragraph">Hoodlet explained this with the example of the SpringAI CVE patches. Both GPT and Claude models were found generating patches that targeted specific characters from the input string used in the POC presented to them, leaving the root cause untouched.</p>
-
-
-
-<p class="wp-block-paragraph">“If the guarded code were to become reachable again by using alternative inputs, it would lead to the old vulnerability resurfacing in the software,” he noted.</p>
-
-
-
-<h2 class="wp-block-heading"><a></a>Human review remains the last security control</h2>
-
-
-
-<p class="wp-block-paragraph">1Password argues that these shortcomings stem from the contextual reasoning required to produce production-ready security fixes.</p>
-
-
-
-<p class="wp-block-paragraph">Anthropic was reached out to and reportedly recommended keeping humans in the loop. “Patch generation has outpaced patch verification, and the fix is to make verification execution-grounded rather than inspection-based, while keeping domain experts as the final reviewers at current model capabilities,” it was quoted as saying.</p>
-
-
-
-<p class="wp-block-paragraph">1Password also challenged the notion that AI-generated patches are effectively “free.” While the average patch-and-validation cycle cost approximately $2.11 using ChatGPT-5.5 and $2.81 using Claude Opus 4.8, Hoodlet argued that the real expense lies in validating whether those patches are secure enough for production.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5d ago]]></description>
 </item>
 
 </channel>

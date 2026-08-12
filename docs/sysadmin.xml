@@ -3,14 +3,14 @@
 <channel>
   <title>Joe SysAdmin and Operations</title>
   <description>Operational IT changes, Microsoft updates, outages, and infrastructure issues.</description>
-  <lastBuildDate>Wed, 12 Aug 2026 20:00:56 +0000</lastBuildDate>
+  <lastBuildDate>Wed, 12 Aug 2026 21:41:10 +0000</lastBuildDate>
   
 <item>
   <title>🔵 Hundreds of fake Chrome VPN extensions route traffic through a proxy</title>
   <link>https://www.bleepingcomputer.com/news/security/hundreds-of-fake-chrome-vpn-extensions-route-traffic-through-a-proxy/</link>
   <pubDate>Wed, 12 Aug 2026 18:54:57 +0000</pubDate>
   <source>BleepingComputer</source>
-  <description><![CDATA[<b>Why this matters: Operational impact possible — watch for changes that generate tickets.</b><br/>More than 737 browser extensions published on the Chrome Web Store impersonated well-known VPN and proxy services while routing users' traffic through SOCKS5 proxies operated by a single provider. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Operational impact possible — watch for changes that generate tickets.</b><br/>More than 737 browser extensions published on the Chrome Web Store impersonated well-known VPN and proxy services while routing users' traffic through SOCKS5 proxies operated by a single provider. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
 </item>
 
 <item>
@@ -18,7 +18,7 @@
   <link>https://www.bleepingcomputer.com/news/microsoft/hackers-leverage-new-microsoft-sharepoint-exploit-in-attacks/</link>
   <pubDate>Wed, 12 Aug 2026 12:25:37 +0000</pubDate>
   <source>BleepingComputer</source>
-  <description><![CDATA[<b>Why this matters: Operational impact possible — watch for changes that generate tickets.</b><br/>Hackers have already begun using a proof-of-concept (PoC) exploit for a critical Microsoft SharePoint vulnerability, published by cybersecurity company Rapid7 on Tuesday. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Operational impact possible — watch for changes that generate tickets.</b><br/>Hackers have already begun using a proof-of-concept (PoC) exploit for a critical Microsoft SharePoint vulnerability, published by cybersecurity company Rapid7 on Tuesday. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
 </item>
 
 <item>
@@ -26,7 +26,78 @@
   <link>https://www.bleepingcomputer.com/news/security/new-microsoft-defender-shieldbreak-zero-day-grants-system-privileges/</link>
   <pubDate>Wed, 12 Aug 2026 10:15:22 +0000</pubDate>
   <source>BleepingComputer</source>
-  <description><![CDATA[<b>Why this matters: Endpoint detection changes — review high-severity detections and alert noise.</b><br/>Nightmare Eclipse has released a new Microsoft Defender zero-day exploit named "ShieldBreak" after Microsoft released the August 2026 Patch Tuesday security updates. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Endpoint detection changes — review high-severity detections and alert noise.</b><br/>Nightmare Eclipse has released a new Microsoft Defender zero-day exploit named "ShieldBreak" after Microsoft released the August 2026 Patch Tuesday security updates. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 11h ago]]></description>
+</item>
+
+<item>
+  <title>🟠 Container Network Insights Agent (CNIA): Your AI Teammate for AKS Networking Incidents</title>
+  <link>https://techcommunity.microsoft.com/t5/itops-talk-blog/container-network-insights-agent-cnia-your-ai-teammate-for-aks/ba-p/4545971</link>
+  <pubDate>Wed, 12 Aug 2026 07:00:00 +0000</pubDate>
+  <source>Microsoft Tech Community IT Ops</source>
+  <description><![CDATA[<b>Why this matters: Credential/phishing risk — reinforce MFA and user awareness training.</b><br/><p>Hello Folks!</p>
+<p>If you run AKS in production, you already know the script. A pod cannot reach an external service, every dashboard says the cluster is healthy, and somebody is SSHing into a node with five browser tabs open trying to piece the story together.&nbsp; This session from the Microsoft Azure Infra Summit 2026 tackles that exact pain.</p>
+<p>Shaifali Garg (PM for Azure Container Networking on AKS) sits down with Jonathan Wang, an AKS operator running 30 clusters across two regions on Cilium, and they walk through what a real networking incident feels like, then introduce the Container Network Insights Agent (CNIA) live in the cluster.</p>
+<p>&nbsp;</p>
+<div class="lia-embeded-content" contenteditable="false">
+</div>
+<p>&nbsp;</p>
+<h2>Why IT Pros Should Care</h2>
+<p>In Jonathan’s environment, about 40% of incidents end up being networking problems. The tools all exist (kubectl, dashboards, detectors, Hubble), but the time sink is figuring out which layer the problem lives in and what to check next. CNIA goes after that gap. Here is what you actually get back:</p>
+<ul>
+<li>A symptom-to-classification jump in seconds, so you skip the first 30 minutes of “is this DNS, policy, node, or app?”</li>
+<li>One chat window with one evidence table, one root cause, and one copy-paste fix command, instead of jumping across five tabs</li>
+<li>Senior SRE tribal knowledge baked into the workflow, so anyone on the team can run the same investigation a principal engineer would</li>
+<li>Read-only by design, so the agent never changes anything on your cluster. You stay the human in the loop</li>
+<li>Installs as an AKS extension (no Helm chart, no YAML to babysit), and Azure handles the lifecycle</li>
+</ul>
+<p>In short, CNIA is not trying to replace your SRE team. It hands them back 20 or 30 minutes on every networking ticket, which adds up fast across a fleet.</p>
+<h2>What CNIA Is, A Technical Overview</h2>
+<p>Think of CNIA as an AI teammate that lives inside your AKS cluster as a pod. You describe what is broken in plain English, the way you would ping a senior engineer on Slack, and behind the scenes the agent does four things in order. It classifies the kind of problem (DNS, egress, policy, node, app), it pulls live evidence from your cluster, it analyzes that evidence, and it hands you back a clean report with evidence, root cause, and a copy-paste exec command.</p>
+<p>Two architectural choices stand out. First, the agent uses your own Azure OpenAI resource (bring your own), so prompts and diagnostic content stay in your tenant and your region. Microsoft does not see your diagnostic data, and nothing gets persisted externally. Second, the answer is grounded in evidence pulled from your cluster, not from the internet. Your pods, your policies, your CoreDNS, your host-level NIC and kernel counters. If the evidence is inconclusive, CNIA says so rather than fabricating a root cause. That last bit is what earns trust with senior SREs.</p>
+<p>CNIA fits inside the broader Advanced Container Networking Services (ACNS) story on AKS. ACNS gives you metrics in Azure Managed Prometheus and Grafana, stored and on-demand network logs with Hubble, and FQDN-based filtering with Cilium. CNIA sits on top, automating the triage loop across those signals so you do not have to walk through the playbook by hand every time.</p>
+<h2>How It Works, Under the Hood</h2>
+<p>The install is an AKS extension. Roughly 5 to 7 minutes from “az aks extension” to “you have an SRE buddy in your cluster.” One small pod runs continuously. A second helper only spins up on the node during a deep packet-drop investigation, reads host-level network counters, and is cleaned up right after. Nothing left behind.</p>
+<p>Permissions are deliberately narrow:</p>
+<ul>
+<li>Read-only RBAC on the cluster. The agent looks, it never changes anything</li>
+<li>A workload identity tied to your Azure OpenAI resource. No shared credentials</li>
+<li>Outbound traffic is HTTPS to your OpenAI endpoint on port 443, and nothing else. If you want to log that further through an NSG or firewall, that is supported</li>
+</ul>
+<p>On the safety side, CNIA layers two protections against prompt injection. The agent is scope-restricted by design, so off-topic requests get rejected straight away. In one of Jonathan’s demos, Shefali asks the agent to “delete core-dns” and to “write a script to scrape LinkedIn profiles.” Both are refused on the spot. The second layer is the read-only RBAC at the cluster level. Even if someone tricked the prompt into emitting a destructive command, the cluster itself would refuse. The pod’s execution is scoped to specific diagnostic commands. It is not an open shell.</p>
+<p>Honest tradeoffs, because you will ask:</p>
+<ul>
+<li>It is one cluster at a time. Multi-cluster correlation is not in scope yet</li>
+<li>It does not auto-remediate. It tells you the fix, you verify and run it</li>
+<li>It is AKS only. EKS and GKE are not supported today</li>
+<li>Session state lives in the pod in memory. If the pod restarts, you start a fresh chat (past sessions are still available in history)</li>
+<li>Heavy packet-drop investigations have been validated up to around 7 concurrent users on smaller clusters. The team is actively scaling that up</li>
+</ul>
+<h2>Real-World Value</h2>
+<p>The session includes two demos that map directly to incidents you have probably lived through.</p>
+<p><strong>Demo 1, egress that silently dies.</strong> Pods cannot reach google.com. CoreDNS resolves it fine, example.com works from the same pod, every dashboard says healthy. CNIA classifies it as an egress connectivity problem (not DNS) and surfaces the actual culprit: a Cilium network policy named “restrict external FQDN” with a toFQDN rule that only allows example.com. Everything else gets silently dropped at the egress gate. DNS was allowed, the TCP connection was not. The fix command (a kubectl patch to add google.com to the allow list) is right there in the report. End-to-end fix in under a minute.</p>
+<p><strong>Demo 2, the target port typo.</strong> A service is down with connection refused. Pods running, service exists, endpoints populated, no network policies. The agent goes inside the pod, looks at the actual listening sockets, and proves the mismatch: target port 8080, but nginx listens on port 80. One-digit typo in YAML that no kubectl get would surface on its own.</p>
+<p>The ROI math is straightforward. If your team handles networking incidents weekly and each one costs 20 to 30 minutes of “where do I even start,” that capacity adds up across the org. And critically, the win is not just speed. When the one engineer who knows where to look goes on leave, the rest of the team is no longer stuck calling them at home.</p>
+<h2>Getting Started</h2>
+<p>Three steps. That is it.</p>
+<ol>
+<li>Read the public docs, get an overview, scan the use cases, and understand what CNIA does and does not cover</li>
+<li>Pick a cluster (dev or staging is a great place to start) and install the AKS extension. Give it 5 to 7 minutes</li>
+<li>Run a few real network tickets through it. Compare your time-to-answer before and after. Hit thumbs-up or thumbs-down in the chat so the product team sees real signal</li>
+</ol>
+<p>Pricing in preview: no license fee. You pay for the Azure OpenAI tokens it uses (your tenant, your resource), plus the tiny bit of cluster compute for the pod. If you already have Azure OpenAI in your tenant, just point CNIA at it.</p>
+<h2>Resources</h2>
+<ul>
+<li><a href="https://learn.microsoft.com/en-us/azure/aks/container-network-observability-guide" target="_blank">Diagnose and resolve AKS network issues with Advanced Container Networking Services</a></li>
+<li><a href="https://learn.microsoft.com/en-us/azure/aks/advanced-container-networking-services-overview" target="_blank">Advanced Container Networking Services overview</a></li>
+<li><a href="https://learn.microsoft.com/en-us/azure/aks/azure-cni-powered-by-cilium" target="_blank">Configure Azure CNI Powered by Cilium in AKS</a></li>
+<li><a href="https://learn.microsoft.com/en-us/azure/aks/cluster-extensions" target="_blank">AKS cluster extensions</a></li>
+<li><a href="https://learn.microsoft.com/en-us/azure/aks/workload-identity-deploy-cluster" target="_blank">Deploy and configure Microsoft Entra Workload ID on an AKS cluster</a></li>
+<li><a href="https://learn.microsoft.com/en-us/azure/ai-services/openai/overview" target="_blank">What is Azure OpenAI Service?</a></li>
+</ul>
+<h2>Keep Learning at the Summit</h2>
+<p>Catch the full Microsoft Azure Infra Summit 2026 session playlist here: https://www.youtube.com/playlist?list=PLjt5SKzX1iI8con7FJDB56G6hHqxGm7ki</p>
+<p>Cheers!</p>
+<p>Pierre Roman</p><br/><br/><b>Source:</b> Microsoft Tech Community IT Ops &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 14h ago]]></description>
 </item>
 
 <item>
@@ -34,7 +105,7 @@
   <link>https://arstechnica.com/information-technology/2026/08/def-con-crowd-suspected-in-fake-hotspot-attack-on-delta-flight/</link>
   <pubDate>Wed, 12 Aug 2026 00:08:40 +0000</pubDate>
   <source>Ars Technica</source>
-  <description><![CDATA[<b>Why this matters: Service impact possible — prepare comms and confirm vendor status.</b><br/>FBI Atlanta confirms it's looking into the incident, no arrests made.<br/><br/><b>Source:</b> Ars Technica &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 19h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Service impact possible — prepare comms and confirm vendor status.</b><br/>FBI Atlanta confirms it's looking into the incident, no arrests made.<br/><br/><b>Source:</b> Ars Technica &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 21h ago]]></description>
 </item>
 
 <item>
@@ -42,7 +113,7 @@
   <link>https://www.bleepingcomputer.com/news/security/sandworm-hackers-target-it-pros-with-trojanized-wireguard-vpn-client/</link>
   <pubDate>Tue, 11 Aug 2026 21:07:24 +0000</pubDate>
   <source>BleepingComputer</source>
-  <description><![CDATA[<b>Why this matters: Could impact sign-ins/MFA/Conditional Access — watch for login issues.</b><br/>Hackers associated with the Russian threat group Sandworm have been targeting system administrators and IT professionals through fake job offers since at least May. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 22h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Could impact sign-ins/MFA/Conditional Access — watch for login issues.</b><br/>Hackers associated with the Russian threat group Sandworm have been targeting system administrators and IT professionals through fake job offers since at least May. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
