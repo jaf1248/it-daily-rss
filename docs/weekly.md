@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
 **Period:** August 05 – August 12, 2026  
-**Generated:** 2026-08-12 17:56 UTC  
+**Generated:** 2026-08-12 18:58 UTC  
 **Items reviewed:** 137  
 
 ## ⚡ Top Actions This Week
@@ -55,6 +55,9 @@
 
 ## 🟠 Important — Review This Week
 
+- [Lazarus Exploits Windows Zero-Day to Gain SYSTEM Access and Deploy Backdoor](https://thehackernews.com/2026/08/lazarus-exploits-windows-zero-day-to.html)  
+  **The Hacker News** · Aug 12 · _General awareness item._  
+
 - [Lazarus hackers exploited Windows zero-day to target defense firms](https://www.bleepingcomputer.com/news/security/lazarus-hackers-exploited-windows-zero-day-to-target-defense-firms/)  
   **BleepingComputer** · Aug 12 · _General awareness item._  
 
@@ -76,19 +79,16 @@
 - [CVE-2026-42976 Remote Access Management service/API (RPC server) Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-42976)  
   **Microsoft Security Response Center (MSRC)** · Aug 12 · _General awareness item._  
 
-- [CVE-2026-50687 Windows Win32k Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-50687)  
-  **Microsoft Security Response Center (MSRC)** · Aug 12 · _General awareness item._  
-
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [Hundreds of fake Chrome VPN extensions route traffic through a proxy](https://www.bleepingcomputer.com/news/security/hundreds-of-fake-chrome-vpn-extensions-route-traffic-through-a-proxy/) — BleepingComputer
 - [Plug and Pwn attack uses fake USB devices for Windows SYSTEM access](https://www.bleepingcomputer.com/news/security/plug-and-pwn-attack-uses-fake-usb-devices-for-windows-system-access/) — BleepingComputer
 - [Linux Kernel Process Accounting, (Wed, Aug 12th)](https://isc.sans.edu/diary/rss/33240) — SANS Internet Storm Center
 - [FBI: Hackers target online accounts to steal nude photos](https://www.bleepingcomputer.com/news/security/fbi-warns-of-hackers-targeting-online-accounts-to-steal-explicit-photos/) — BleepingComputer
 - [737 Chrome VPN Extensions Caught Routing Traffic Through Proxies. Check If You Have One](https://thehackernews.com/2026/08/737-chrome-vpn-extensions-caught.html) — The Hacker News
 - [The Threat Hiding in Your Hiring Process: How Fake Remote Workers Get In](https://www.bleepingcomputer.com/news/security/the-threat-hiding-in-your-hiring-process-how-fake-remote-workers-get-in/) — BleepingComputer
-- [OpenAI, Anthropic, Google API Flaw Let Weaker AI Models Decode Stronger Models' Reasoning](https://thehackernews.com/2026/08/openai-anthropic-google-api-flaw-let.html) — The Hacker News
 
 ---
 
