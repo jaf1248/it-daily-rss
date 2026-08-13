@@ -1,25 +1,30 @@
 # IT Weekly Intelligence Briefing
 **Period:** August 06 – August 13, 2026  
-**Generated:** 2026-08-13 20:42 UTC  
+**Generated:** 2026-08-13 21:42 UTC  
 **Items reviewed:** 134  
 
 ## ⚡ Top Actions This Week
 
-1. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _Hackers breach govt webmail while running parallel crypto fraud_  
+1. **Validate backups, confirm EDR coverage, and brief incident response team.**  
+   _Akira hackers disable EDR with Safe Mode, steal data but fail to encrypt_  
    Source: BleepingComputer  
 
 2. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _Trezor discloses data breach affecting nearly 14,000 customers_  
+   _Hackers breach govt webmail while running parallel crypto fraud_  
    Source: BleepingComputer  
 
-3. **Elevate monitoring posture; brief security team on threat actor TTPs.**  
-   _Cisco ASA and FTD Flaw Exploited in the Wild Can Trigger Remote DoS_  
-   Source: The Hacker News  
+3. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
+   _Trezor discloses data breach affecting nearly 14,000 customers_  
+   Source: BleepingComputer  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [Akira hackers disable EDR with Safe Mode, steal data but fail to encrypt](https://www.bleepingcomputer.com/news/security/akira-hackers-disable-edr-with-safe-mode-steal-data-but-fail-to-encrypt/)
+**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Aug 13  
+**Why it matters:** Elevated ransomware risk across the sector.  
+**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
 
 ### [Hackers breach govt webmail while running parallel crypto fraud](https://www.bleepingcomputer.com/news/security/hackers-breach-govt-webmail-while-running-parallel-crypto-fraud/)
 **Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Aug 13  
@@ -46,11 +51,6 @@
 **Why it matters:** Advanced persistent threat activity detected.  
 **Recommended action:** Elevate monitoring posture; brief security team on threat actor TTPs.  
 
-### [Microsoft Patch Tuesday August 2026, (Tue, Aug 11th)](https://isc.sans.edu/diary/rss/33236)
-**Source:** SANS Internet Storm Center &nbsp;·&nbsp; **Date:** Aug 11  
-**Why it matters:** General awareness item.  
-**Recommended action:** Prioritize patching of affected systems; check for internet-exposed attack surface.  
-
 ---
 
 ## 🟠 Important — Review This Week
@@ -61,35 +61,35 @@
 - [Critical VMware vCenter RCE flaw exploited for reverse SSH access](https://www.bleepingcomputer.com/news/security/critical-vmware-vcenter-rce-flaw-exploited-for-reverse-ssh-access/)  
   **BleepingComputer** · Aug 13 · _General awareness item._  
 
-- [CVE-2026-61346 Windows Graphics Kernel Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-61346)  
+- [CVE-2026-45592 Windows Internet (wininet.dll) Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45592)  
   **Microsoft Security Response Center (MSRC)** · Aug 13 · _General awareness item._  
 
-- [CVE-2026-62695 Windows Storage Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-62695)  
+- [CVE-2026-45593 Windows SDK Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45593)  
   **Microsoft Security Response Center (MSRC)** · Aug 13 · _General awareness item._  
 
-- [CVE-2026-61359 Windows Storage Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-61359)  
+- [CVE-2026-45597 Windows UI Automation Manager (uiamanager.dll) Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45597)  
   **Microsoft Security Response Center (MSRC)** · Aug 13 · _General awareness item._  
 
-- [CVE-2026-66804 Microsoft Windows Cross Device Service Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-66804)  
+- [CVE-2026-45638 Windows Ancillary Function Driver for WinSock Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45638)  
   **Microsoft Security Response Center (MSRC)** · Aug 13 · _General awareness item._  
 
-- [CVE-2026-62913 Microsoft Exchange Server Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-62913)  
-  **Microsoft Security Response Center (MSRC)** · Aug 13 · _Potential email disruption for users._  
+- [CVE-2026-45637 Microsoft DWM Core Library Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45637)  
+  **Microsoft Security Response Center (MSRC)** · Aug 13 · _General awareness item._  
 
-- [CVE-2026-62688 Windows MIDI Service Module Elevation of Privileges Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-62688)  
+- [CVE-2026-44814 Windows DWM Core Library Information Disclosure  Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-44814)  
   **Microsoft Security Response Center (MSRC)** · Aug 13 · _General awareness item._  
 
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [Ukraine shuts down 94 fraudulent call centers, seize millions in cash](https://www.bleepingcomputer.com/news/security/ukraine-shuts-down-94-fraudulent-call-centers-seize-millions-in-cash/) — BleepingComputer
 - [AI 'watermark removers' flood the web. Almost none can prove they work.](https://www.bleepingcomputer.com/news/security/ai-watermark-removers-flood-the-web-almost-none-can-prove-they-work/) — BleepingComputer
 - [Who Vets AI’s Code? The Scale Challenge Facing Open Source Ingestion](https://www.bleepingcomputer.com/news/security/who-vets-ais-code-the-scale-challenge-facing-open-source-ingestion/) — BleepingComputer
 - [White House taps security firms for offensive hack-back operations](https://www.bleepingcomputer.com/news/security/white-house-taps-security-firms-for-offensive-hack-back-operations/) — BleepingComputer
 - [WhatsApp rolls out new feature that flags potential scam messages](https://www.bleepingcomputer.com/news/security/whatsapp-rolls-out-new-feature-that-flags-potential-scam-messages/) — BleepingComputer
 - [ISC Stormcast For Thursday, August 13th, 2026 https://isc.sans.edu/podcastdetail/10050, (Thu, Aug 13th)](https://isc.sans.edu/diary/rss/33244) — SANS Internet Storm Center
-- [Using Gemma4 with Ollama - Testing File Hash Analysis and Recommendations with AI, (Wed, Aug 12th)](https://isc.sans.edu/diary/rss/33242) — SANS Internet Storm Center
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 12 critical · 76 important · 46 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 13 critical · 75 important · 46 FYI_
