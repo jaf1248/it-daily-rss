@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
-**Period:** August 05 – August 12, 2026  
-**Generated:** 2026-08-12 23:38 UTC  
+**Period:** August 06 – August 13, 2026  
+**Generated:** 2026-08-13 01:43 UTC  
 **Items reviewed:** 137  
 
 ## ⚡ Top Actions This Week
@@ -83,12 +83,12 @@
 
 ## 🔵 FYI — General Awareness
 
+- [Using Gemma4 with Ollama - Testing File Hash Analysis and Recommendations with AI, (Wed, Aug 12th)](https://isc.sans.edu/diary/rss/33242) — SANS Internet Storm Center
 - ["City-Forum" data-theft attacks target Salesforce, ServiceNow portals](https://www.bleepingcomputer.com/news/security/city-forum-data-theft-attacks-target-salesforce-servicenow-portals/) — BleepingComputer
 - [Android malware combo takes out loans and relays victims' credit cards](https://www.bleepingcomputer.com/news/security/android-malware-combo-takes-out-loans-and-relays-victims-credit-cards/) — BleepingComputer
 - [Hundreds of fake Chrome VPN extensions route traffic through a proxy](https://www.bleepingcomputer.com/news/security/hundreds-of-fake-chrome-vpn-extensions-route-traffic-through-a-proxy/) — BleepingComputer
 - [Plug and Pwn attack uses fake USB devices for Windows SYSTEM access](https://www.bleepingcomputer.com/news/security/plug-and-pwn-attack-uses-fake-usb-devices-for-windows-system-access/) — BleepingComputer
 - [Linux Kernel Process Accounting, (Wed, Aug 12th)](https://isc.sans.edu/diary/rss/33240) — SANS Internet Storm Center
-- [FBI: Hackers target online accounts to steal nude photos](https://www.bleepingcomputer.com/news/security/fbi-warns-of-hackers-targeting-online-accounts-to-steal-explicit-photos/) — BleepingComputer
 
 ---
 
