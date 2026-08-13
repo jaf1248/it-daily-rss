@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
 **Period:** August 06 – August 13, 2026  
-**Generated:** 2026-08-13 22:38 UTC  
+**Generated:** 2026-08-13 23:38 UTC  
 **Items reviewed:** 134  
 
 ## ⚡ Top Actions This Week
@@ -61,22 +61,22 @@
 - [Critical VMware vCenter RCE flaw exploited for reverse SSH access](https://www.bleepingcomputer.com/news/security/critical-vmware-vcenter-rce-flaw-exploited-for-reverse-ssh-access/)  
   **BleepingComputer** · Aug 13 · _General awareness item._  
 
-- [CVE-2026-45592 Windows Internet (wininet.dll) Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45592)  
+- [CVE-2026-49162 Microsoft Brokering File System Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-49162)  
   **Microsoft Security Response Center (MSRC)** · Aug 13 · _General awareness item._  
 
-- [CVE-2026-45593 Windows SDK Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45593)  
+- [CVE-2026-49798 Windows Kernel Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-49798)  
   **Microsoft Security Response Center (MSRC)** · Aug 13 · _General awareness item._  
 
-- [CVE-2026-45597 Windows UI Automation Manager (uiamanager.dll) Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45597)  
+- [CVE-2026-50342 Windows MIDI Service Module Elevation of Privileges Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-50342)  
   **Microsoft Security Response Center (MSRC)** · Aug 13 · _General awareness item._  
 
-- [CVE-2026-45638 Windows Ancillary Function Driver for WinSock Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45638)  
+- [CVE-2026-50298 Windows Spaceport.sys Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-50298)  
   **Microsoft Security Response Center (MSRC)** · Aug 13 · _General awareness item._  
 
-- [CVE-2026-45637 Microsoft DWM Core Library Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45637)  
+- [CVE-2026-50309 Windows NTFS Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-50309)  
   **Microsoft Security Response Center (MSRC)** · Aug 13 · _General awareness item._  
 
-- [CVE-2026-44814 Windows DWM Core Library Information Disclosure  Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-44814)  
+- [CVE-2026-50387 Windows GDI Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-50387)  
   **Microsoft Security Response Center (MSRC)** · Aug 13 · _General awareness item._  
 
 ---
