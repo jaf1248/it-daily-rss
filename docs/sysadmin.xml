@@ -3,14 +3,97 @@
 <channel>
   <title>Joe SysAdmin and Operations</title>
   <description>Operational IT changes, Microsoft updates, outages, and infrastructure issues.</description>
-  <lastBuildDate>Thu, 13 Aug 2026 10:00:47 +0000</lastBuildDate>
+  <lastBuildDate>Thu, 13 Aug 2026 11:42:26 +0000</lastBuildDate>
   
+<item>
+  <title>🟠 Resilient Azure Platforms: Durable Functions, Cosmos DB, and DR by Design</title>
+  <link>https://techcommunity.microsoft.com/t5/itops-talk-blog/resilient-azure-platforms-durable-functions-cosmos-db-and-dr-by/ba-p/4546001</link>
+  <pubDate>Thu, 13 Aug 2026 07:00:00 +0000</pubDate>
+  <source>Microsoft Tech Community IT Ops</source>
+  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/><p>Hello Folks!</p>
+<p>Operating at Azure scale means managing change across multiple interconnected systems. As applications, services, and dependencies evolve, resilience becomes a foundational design principle rather than an afterthought. In this<a class="lia-external-url" href="https://www.youtube.com/playlist?list=PLjt5SKzX1iI8con7FJDB56G6hHqxGm7ki" target="_blank"> Microsoft Azure Infra Summit 2026 session</a>, Bhavana Konchada, Principal Software Engineer at Microsoft and lead architect of the Resilience Control Platform, takes us behind the scenes of a production-grade resilience platform built on Azure and explains the engineering choices that helped bring it to life.</p>
+<p>&nbsp;</p>
+<div class="lia-embeded-content" contenteditable="false">
+</div>
+<h2>Why IT Pros Should Care</h2>
+<p>Most of us have shipped a system that worked beautifully on day one and then quietly fell apart the first time something downstream blinked. Bhavana’s session is a brutally honest tour of the decisions you make early that determine whether your platform survives reality. Here’s what you walk away with:</p>
+<ul>
+<li>A pragmatic blueprint for service boundaries that you can actually operate at 2 a.m.</li>
+<li>Concrete Durable Functions patterns (Monitor, continue-as-new, idempotency) that keep long-running workflows healthy.</li>
+<li>A Cosmos DB partitioning strategy grounded in real access patterns, not gut feel.</li>
+<li>A multi-region, fail-and-continue mindset (instead of fail-and-recover) that holds up when a region disappears.</li>
+<li>Real lessons from production, including the “non-deterministic orchestration” outages nobody warns you about.</li>
+</ul>
+<p>In short, if you build, run, or modernize platforms on Azure, this session reshapes how you think about reliability.</p>
+<h2>What DR by Design Actually Means, a Technical Overview</h2>
+<p>Bhavana frames the Resilience Control Platform as five chapters: architecture and service boundaries, orchestration with Durable Functions, the Cosmos DB data layer, identity across multiple user realms, and the resilience playbook itself.</p>
+<p>The platform has four moving parts:</p>
+<ul>
+<li>A portal where operators define and monitor scenarios.</li>
+<li>An orchestration engine that executes long-running workflows.</li>
+<li>Cosmos DB as a shared persistence layer.</li>
+<li>Downstream infrastructure APIs the engine acts on.</li>
+</ul>
+<p>The big “DR by Design” idea is that resiliency isn’t bolted on later. It’s a property of every choice from boundaries upward. As Bhavana puts it, you stop designing for “fail and recover” and start designing for “fail and continue.” Users don’t know (or care) which region runs their workflow; they just need it to run reliably, consistently, and without interruption.</p>
+<h2>How It Works, Under the Hood</h2>
+<p>Bhavana’s team made several deliberate design moves worth borrowing.</p>
+<p><strong>Arm’s-length service boundaries.</strong> Version one had the portal and orchestration engine tightly coupled with shared dependency injection and a shared database context. It felt clean until they tried to operate it. Now the two services talk over REST contracts, each with its own dependencies. Yes, that means a bit of duplicated code. What they gained, independent deployments, isolated failures, and clear ownership, more than paid for it.</p>
+<p><strong>The right runtime for the workload.</strong> The portal is a session-driven web app, so it lives on App Service. The orchestration engine bursts on demand and runs workflows for minutes (sometimes hours), so it’s built on Durable Functions. Forcing both into one model would have looked simpler on paper and been worse in practice.</p>
+<p><strong>Accept Fast, Process Asynchronously.</strong> Clicking Execute returns a 202 immediately. The orchestrator does the heavy lifting in the background and updates status in Cosmos DB. The portal just reflects progress. Users never wait on long workflows.</p>
+<p><strong>Durable Functions patterns that actually scale.</strong> Three lessons stood out:</p>
+<ul>
+<li>The Monitor pattern replaces busy polling with durable timers. The orchestrator wakes up, checks status, and goes back to sleep without holding compute.</li>
+<li>Orchestrators are state machines, not scripts. Calling DateTime.UtcNow inside an orchestrator produces non-deterministic replay and random production failures. The fix is to use the orchestration context for time and IDs.</li>
+<li>Continue-as-new keeps replay history bounded. Long-running orchestrations otherwise spend more time replaying history than doing real work.</li>
+</ul>
+<p><strong>Cosmos DB designed around access, not org charts.</strong> Partitioning by tenant feels logical and creates hotspots the moment one tenant gets busy. The team partitions by entity (each plan owns its partition) and uses hierarchical keys combining plan ID and execution ID. They also lean on TTL for data lifecycle so completed records expire automatically, no cleanup jobs required.</p>
+<p><strong>Identity as an execution boundary.</strong> Corporate users authenticate through Microsoft Entra with OpenID Connect. Operations users come in through a federated WS-Federation system. Instead of forking the app, the team built home realm discovery at the front door, normalized everything into a single identity model behind it, and added custom middleware in the Azure Functions isolated worker model to extract, validate, enrich, and fail-fast on every token. Authorization is config-driven so every endpoint gets the same treatment.</p>
+<p><strong>Multi-region from day one.</strong> The full stack (portal, engine, APIs, supporting services) runs in parallel across regions, fronted by Azure Front Door as the global entry point. Health probes drive automatic regional failover with no human in the loop.</p>
+<p><strong>Cosmos DB single-write with automatic failover.</strong> Multi-write looks attractive on a slide and introduces real conflict-resolution complexity. The team chose one primary write region plus a replica with automatic failover. The Cosmos SDK detects region unavailability and routes requests to the promoted region without application code changes.</p>
+<p><strong>Idempotency from day zero.</strong> Once you have retries (and Front Door, the SDK, and your clients all retry), every operation has to be safe to run more than once. Client-provided IDs, Cosmos conflict detection (a 409 means “already succeeded”), and idempotent orchestration events make sure the same outcome lands no matter how many times a signal arrives.</p>
+<h2>Real-World Value, Use Cases, ROI, Scenarios</h2>
+<p>What does this buy you in practice?</p>
+<ul>
+<li><strong>Scenario validation under stress</strong> without compromising production. The platform is built to proactively validate and govern system behavior at scale.</li>
+<li><strong>Long-running workflows that survive everything.</strong> Host restarts, transient downstream errors, regional failovers, none of them lose work in flight.</li>
+<li><strong>Predictable cost.</strong> Durable timers and continue-as-new mean you stop paying for compute that’s only waiting.</li>
+<li><strong>Operability at scale.</strong> Independent services, clean contracts, and centralized identity all mean a smaller cognitive load when something breaks at 2 a.m.</li>
+<li><strong>Honest tradeoffs.</strong> Single-write Cosmos loses theoretical write latency in the second region and gains predictable behavior, no conflict ambiguity, and far easier debugging during failovers. That’s usually the right trade.</li>
+</ul>
+<p>In short, the platform behaves the same on a quiet Tuesday and during a regional outage. That’s the whole point.</p>
+<h2>Getting Started</h2>
+<p>You don’t need to build the Resilience Control Platform tomorrow. You can start applying these patterns this week.</p>
+<ol>
+<li>Map your service boundaries honestly. If two services share a DI container or database context, decouple them behind a REST contract.</li>
+<li>Pick runtimes by workload, not by consistency. Interactive UI on App Service; long-running orchestrations on Durable Functions.</li>
+<li>Adopt the 202-Accepted pattern for anything that could take more than a couple of seconds.</li>
+<li>Audit your Durable orchestrators for DateTime.UtcNow, Guid.NewGuid, and direct HTTP calls. Move them into activities, use the orchestration context for time and IDs, and apply continue-as-new on long loops.</li>
+<li>Revisit your Cosmos partition keys against actual access patterns and enable TTL for transient data.</li>
+<li>Stand up a second region behind Azure Front Door, enable Cosmos DB automatic failover, and make every write operation idempotent with client-provided IDs.</li>
+</ol>
+<h2>Resources</h2>
+<ul>
+<li><a class="lia-external-url" href="https://learn.microsoft.com/azure/well-architected/reliability/principles" target="_blank">Reliability design principles, Azure Well-Architected Framework</a></li>
+<li><a class="lia-external-url" href="https://learn.microsoft.com/azure/durable-task/common/durable-task-orchestrations" target="_blank">Durable Orchestrations overview</a></li>
+<li><a class="lia-external-url" href="https://learn.microsoft.com/azure/azure-functions/durable/" target="_blank">Azure Durable Functions documentation</a></li>
+<li><a class="lia-external-url" href="https://learn.microsoft.com/azure/azure-functions/" target="_blank">Azure Functions documentation</a></li>
+<li><a class="lia-external-url" href="https://learn.microsoft.com/azure/cosmos-db/hierarchical-partition-keys" target="_blank">Hierarchical partition keys in Azure Cosmos DB</a></li>
+<li><a class="lia-external-url" href="https://learn.microsoft.com/azure/cosmos-db/" target="_blank">Azure Cosmos DB documentation</a></li>
+<li><a class="lia-external-url" href="https://learn.microsoft.com/azure/frontdoor/" target="_blank">Azure Front Door documentation</a></li>
+<li><a class="lia-external-url" href="https://learn.microsoft.com/entra/identity/" target="_blank">Microsoft Entra ID documentation</a></li>
+</ul>
+<h2>Keep Learning at the Summit</h2>
+<p>Catch the full <a class="lia-external-url" href="https://www.youtube.com/playlist?list=PLjt5SKzX1iI8con7FJDB56G6hHqxGm7ki" target="_blank">Microsoft Azure Infra Summit 2026 session playlist here</a></p>
+<p>Cheers!</p>
+<p>Pierre Roman</p><br/><br/><b>Source:</b> Microsoft Tech Community IT Ops &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+</item>
+
 <item>
   <title>🔵 Hundreds of fake Chrome VPN extensions route traffic through a proxy</title>
   <link>https://www.bleepingcomputer.com/news/security/hundreds-of-fake-chrome-vpn-extensions-route-traffic-through-a-proxy/</link>
   <pubDate>Wed, 12 Aug 2026 18:54:57 +0000</pubDate>
   <source>BleepingComputer</source>
-  <description><![CDATA[<b>Why this matters: Operational impact possible — watch for changes that generate tickets.</b><br/>More than 737 browser extensions published on the Chrome Web Store impersonated well-known VPN and proxy services while routing users' traffic through SOCKS5 proxies operated by a single provider. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 15h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Operational impact possible — watch for changes that generate tickets.</b><br/>More than 737 browser extensions published on the Chrome Web Store impersonated well-known VPN and proxy services while routing users' traffic through SOCKS5 proxies operated by a single provider. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 16h ago]]></description>
 </item>
 
 <item>
@@ -18,7 +101,7 @@
   <link>https://www.bleepingcomputer.com/news/microsoft/hackers-leverage-new-microsoft-sharepoint-exploit-in-attacks/</link>
   <pubDate>Wed, 12 Aug 2026 12:25:37 +0000</pubDate>
   <source>BleepingComputer</source>
-  <description><![CDATA[<b>Why this matters: Operational impact possible — watch for changes that generate tickets.</b><br/>Hackers have already begun using a proof-of-concept (PoC) exploit for a critical Microsoft SharePoint vulnerability, published by cybersecurity company Rapid7 on Tuesday. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 21h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Operational impact possible — watch for changes that generate tickets.</b><br/>Hackers have already begun using a proof-of-concept (PoC) exploit for a critical Microsoft SharePoint vulnerability, published by cybersecurity company Rapid7 on Tuesday. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 23h ago]]></description>
 </item>
 
 <item>
@@ -26,7 +109,78 @@
   <link>https://www.bleepingcomputer.com/news/security/new-microsoft-defender-shieldbreak-zero-day-grants-system-privileges/</link>
   <pubDate>Wed, 12 Aug 2026 10:15:22 +0000</pubDate>
   <source>BleepingComputer</source>
-  <description><![CDATA[<b>Why this matters: Endpoint detection changes — review high-severity detections and alert noise.</b><br/>Nightmare Eclipse has released a new Microsoft Defender zero-day exploit named "ShieldBreak" after Microsoft released the August 2026 Patch Tuesday security updates. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 23h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Endpoint detection changes — review high-severity detections and alert noise.</b><br/>Nightmare Eclipse has released a new Microsoft Defender zero-day exploit named "ShieldBreak" after Microsoft released the August 2026 Patch Tuesday security updates. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
+</item>
+
+<item>
+  <title>🟠 Container Network Insights Agent (CNIA): Your AI Teammate for AKS Networking Incidents</title>
+  <link>https://techcommunity.microsoft.com/t5/itops-talk-blog/container-network-insights-agent-cnia-your-ai-teammate-for-aks/ba-p/4545971</link>
+  <pubDate>Wed, 12 Aug 2026 07:00:00 +0000</pubDate>
+  <source>Microsoft Tech Community IT Ops</source>
+  <description><![CDATA[<b>Why this matters: Credential/phishing risk — reinforce MFA and user awareness training.</b><br/><p>Hello Folks!</p>
+<p>If you run AKS in production, you already know the script. A pod cannot reach an external service, every dashboard says the cluster is healthy, and somebody is SSHing into a node with five browser tabs open trying to piece the story together.&nbsp; This session from the Microsoft Azure Infra Summit 2026 tackles that exact pain.</p>
+<p>Shaifali Garg (PM for Azure Container Networking on AKS) sits down with Jonathan Wang, an AKS operator running 30 clusters across two regions on Cilium, and they walk through what a real networking incident feels like, then introduce the Container Network Insights Agent (CNIA) live in the cluster.</p>
+<p>&nbsp;</p>
+<div class="lia-embeded-content" contenteditable="false">
+</div>
+<p>&nbsp;</p>
+<h2>Why IT Pros Should Care</h2>
+<p>In Jonathan’s environment, about 40% of incidents end up being networking problems. The tools all exist (kubectl, dashboards, detectors, Hubble), but the time sink is figuring out which layer the problem lives in and what to check next. CNIA goes after that gap. Here is what you actually get back:</p>
+<ul>
+<li>A symptom-to-classification jump in seconds, so you skip the first 30 minutes of “is this DNS, policy, node, or app?”</li>
+<li>One chat window with one evidence table, one root cause, and one copy-paste fix command, instead of jumping across five tabs</li>
+<li>Senior SRE tribal knowledge baked into the workflow, so anyone on the team can run the same investigation a principal engineer would</li>
+<li>Read-only by design, so the agent never changes anything on your cluster. You stay the human in the loop</li>
+<li>Installs as an AKS extension (no Helm chart, no YAML to babysit), and Azure handles the lifecycle</li>
+</ul>
+<p>In short, CNIA is not trying to replace your SRE team. It hands them back 20 or 30 minutes on every networking ticket, which adds up fast across a fleet.</p>
+<h2>What CNIA Is, A Technical Overview</h2>
+<p>Think of CNIA as an AI teammate that lives inside your AKS cluster as a pod. You describe what is broken in plain English, the way you would ping a senior engineer on Slack, and behind the scenes the agent does four things in order. It classifies the kind of problem (DNS, egress, policy, node, app), it pulls live evidence from your cluster, it analyzes that evidence, and it hands you back a clean report with evidence, root cause, and a copy-paste exec command.</p>
+<p>Two architectural choices stand out. First, the agent uses your own Azure OpenAI resource (bring your own), so prompts and diagnostic content stay in your tenant and your region. Microsoft does not see your diagnostic data, and nothing gets persisted externally. Second, the answer is grounded in evidence pulled from your cluster, not from the internet. Your pods, your policies, your CoreDNS, your host-level NIC and kernel counters. If the evidence is inconclusive, CNIA says so rather than fabricating a root cause. That last bit is what earns trust with senior SREs.</p>
+<p>CNIA fits inside the broader Advanced Container Networking Services (ACNS) story on AKS. ACNS gives you metrics in Azure Managed Prometheus and Grafana, stored and on-demand network logs with Hubble, and FQDN-based filtering with Cilium. CNIA sits on top, automating the triage loop across those signals so you do not have to walk through the playbook by hand every time.</p>
+<h2>How It Works, Under the Hood</h2>
+<p>The install is an AKS extension. Roughly 5 to 7 minutes from “az aks extension” to “you have an SRE buddy in your cluster.” One small pod runs continuously. A second helper only spins up on the node during a deep packet-drop investigation, reads host-level network counters, and is cleaned up right after. Nothing left behind.</p>
+<p>Permissions are deliberately narrow:</p>
+<ul>
+<li>Read-only RBAC on the cluster. The agent looks, it never changes anything</li>
+<li>A workload identity tied to your Azure OpenAI resource. No shared credentials</li>
+<li>Outbound traffic is HTTPS to your OpenAI endpoint on port 443, and nothing else. If you want to log that further through an NSG or firewall, that is supported</li>
+</ul>
+<p>On the safety side, CNIA layers two protections against prompt injection. The agent is scope-restricted by design, so off-topic requests get rejected straight away. In one of Jonathan’s demos, Shefali asks the agent to “delete core-dns” and to “write a script to scrape LinkedIn profiles.” Both are refused on the spot. The second layer is the read-only RBAC at the cluster level. Even if someone tricked the prompt into emitting a destructive command, the cluster itself would refuse. The pod’s execution is scoped to specific diagnostic commands. It is not an open shell.</p>
+<p>Honest tradeoffs, because you will ask:</p>
+<ul>
+<li>It is one cluster at a time. Multi-cluster correlation is not in scope yet</li>
+<li>It does not auto-remediate. It tells you the fix, you verify and run it</li>
+<li>It is AKS only. EKS and GKE are not supported today</li>
+<li>Session state lives in the pod in memory. If the pod restarts, you start a fresh chat (past sessions are still available in history)</li>
+<li>Heavy packet-drop investigations have been validated up to around 7 concurrent users on smaller clusters. The team is actively scaling that up</li>
+</ul>
+<h2>Real-World Value</h2>
+<p>The session includes two demos that map directly to incidents you have probably lived through.</p>
+<p><strong>Demo 1, egress that silently dies.</strong> Pods cannot reach google.com. CoreDNS resolves it fine, example.com works from the same pod, every dashboard says healthy. CNIA classifies it as an egress connectivity problem (not DNS) and surfaces the actual culprit: a Cilium network policy named “restrict external FQDN” with a toFQDN rule that only allows example.com. Everything else gets silently dropped at the egress gate. DNS was allowed, the TCP connection was not. The fix command (a kubectl patch to add google.com to the allow list) is right there in the report. End-to-end fix in under a minute.</p>
+<p><strong>Demo 2, the target port typo.</strong> A service is down with connection refused. Pods running, service exists, endpoints populated, no network policies. The agent goes inside the pod, looks at the actual listening sockets, and proves the mismatch: target port 8080, but nginx listens on port 80. One-digit typo in YAML that no kubectl get would surface on its own.</p>
+<p>The ROI math is straightforward. If your team handles networking incidents weekly and each one costs 20 to 30 minutes of “where do I even start,” that capacity adds up across the org. And critically, the win is not just speed. When the one engineer who knows where to look goes on leave, the rest of the team is no longer stuck calling them at home.</p>
+<h2>Getting Started</h2>
+<p>Three steps. That is it.</p>
+<ol>
+<li>Read the public docs, get an overview, scan the use cases, and understand what CNIA does and does not cover</li>
+<li>Pick a cluster (dev or staging is a great place to start) and install the AKS extension. Give it 5 to 7 minutes</li>
+<li>Run a few real network tickets through it. Compare your time-to-answer before and after. Hit thumbs-up or thumbs-down in the chat so the product team sees real signal</li>
+</ol>
+<p>Pricing in preview: no license fee. You pay for the Azure OpenAI tokens it uses (your tenant, your resource), plus the tiny bit of cluster compute for the pod. If you already have Azure OpenAI in your tenant, just point CNIA at it.</p>
+<h2>Resources</h2>
+<ul>
+<li><a href="https://learn.microsoft.com/en-us/azure/aks/container-network-observability-guide" target="_blank">Diagnose and resolve AKS network issues with Advanced Container Networking Services</a></li>
+<li><a href="https://learn.microsoft.com/en-us/azure/aks/advanced-container-networking-services-overview" target="_blank">Advanced Container Networking Services overview</a></li>
+<li><a href="https://learn.microsoft.com/en-us/azure/aks/azure-cni-powered-by-cilium" target="_blank">Configure Azure CNI Powered by Cilium in AKS</a></li>
+<li><a href="https://learn.microsoft.com/en-us/azure/aks/cluster-extensions" target="_blank">AKS cluster extensions</a></li>
+<li><a href="https://learn.microsoft.com/en-us/azure/aks/workload-identity-deploy-cluster" target="_blank">Deploy and configure Microsoft Entra Workload ID on an AKS cluster</a></li>
+<li><a href="https://learn.microsoft.com/en-us/azure/ai-services/openai/overview" target="_blank">What is Azure OpenAI Service?</a></li>
+</ul>
+<h2>Keep Learning at the Summit</h2>
+<p>Catch the full Microsoft Azure Infra Summit 2026 session playlist here: https://www.youtube.com/playlist?list=PLjt5SKzX1iI8con7FJDB56G6hHqxGm7ki</p>
+<p>Cheers!</p>
+<p>Pierre Roman</p><br/><br/><b>Source:</b> Microsoft Tech Community IT Ops &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
