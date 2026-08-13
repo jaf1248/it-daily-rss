@@ -1,7 +1,7 @@
 # IT Weekly Intelligence Briefing
 **Period:** August 06 – August 13, 2026  
-**Generated:** 2026-08-13 13:03 UTC  
-**Items reviewed:** 137  
+**Generated:** 2026-08-13 14:54 UTC  
+**Items reviewed:** 135  
 
 ## ⚡ Top Actions This Week
 
@@ -9,13 +9,13 @@
    _Cisco ASA and FTD Flaw Exploited in the Wild Can Trigger Remote DoS_  
    Source: The Hacker News  
 
-2. **Validate backups, confirm EDR coverage, and brief incident response team.**  
-   _DeadLock ransomware uses blockchain to resist infrastructure takedown_  
-   Source: BleepingComputer  
-
-3. **Apply emergency patch or mitigation now; check vendor advisory for workarounds.**  
+2. **Apply emergency patch or mitigation now; check vendor advisory for workarounds.**  
    _Microsoft Plugs Nearly 400 Security Holes_  
    Source: Krebs on Security  
+
+3. **Elevate monitoring posture; brief security team on threat actor TTPs.**  
+   _Sandworm-Linked UAC-0145 Uses Fake Job Interviews to Push VPN That Can Run Commands_  
+   Source: The Hacker News  
 
 ---
 
@@ -25,11 +25,6 @@
 **Source:** The Hacker News &nbsp;·&nbsp; **Date:** Aug 12  
 **Why it matters:** General awareness item.  
 **Recommended action:** Elevate monitoring posture; brief security team on threat actor TTPs.  
-
-### [DeadLock ransomware uses blockchain to resist infrastructure takedown](https://www.bleepingcomputer.com/news/security/deadlock-ransomware-uses-blockchain-to-resist-infrastructure-takedown/)
-**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Aug 11  
-**Why it matters:** Elevated ransomware risk across the sector.  
-**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
 
 ### [Microsoft Plugs Nearly 400 Security Holes](https://krebsonsecurity.com/2026/08/microsoft-plugs-nearly-400-security-holes/)
 **Source:** Krebs on Security &nbsp;·&nbsp; **Date:** Aug 11  
@@ -51,45 +46,50 @@
 **Why it matters:** Elevated ransomware risk across the sector.  
 **Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
 
+### [Gunra Ransomware Exploits Fortinet FortiOS, FortiProxy Flaws to Breach Networks](https://thehackernews.com/2026/08/gunra-ransomware-exploits-fortinet-and.html)
+**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Aug 11  
+**Why it matters:** Elevated ransomware risk across the sector.  
+**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
+
 ---
 
 ## 🟠 Important — Review This Week
 
-- [Attackers Exploit SharePoint Authentication Bypass After Public PoC Release](https://thehackernews.com/2026/08/attackers-exploit-sharepoint.html)  
-  **The Hacker News** · Aug 13 · _General awareness item._  
+- [CVE-2026-61346 Windows Graphics Kernel Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-61346)  
+  **Microsoft Security Response Center (MSRC)** · Aug 13 · _General awareness item._  
 
-- [Hackers exploit critical Adobe Commerce flaw to hijack customer accounts](https://www.bleepingcomputer.com/news/security/hackers-exploit-critical-adobe-commerce-flaw-to-hijack-customer-accounts/)  
-  **BleepingComputer** · Aug 12 · _General awareness item._  
+- [CVE-2026-62695 Windows Storage Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-62695)  
+  **Microsoft Security Response Center (MSRC)** · Aug 13 · _General awareness item._  
 
-- [Lazarus Exploits Windows Zero-Day to Gain SYSTEM Access and Deploy Backdoor](https://thehackernews.com/2026/08/lazarus-exploits-windows-zero-day-to.html)  
-  **The Hacker News** · Aug 12 · _General awareness item._  
+- [CVE-2026-61359 Windows Storage Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-61359)  
+  **Microsoft Security Response Center (MSRC)** · Aug 13 · _General awareness item._  
 
-- [Lazarus hackers exploited Windows zero-day to target defense firms](https://www.bleepingcomputer.com/news/security/lazarus-hackers-exploited-windows-zero-day-to-target-defense-firms/)  
-  **BleepingComputer** · Aug 12 · _General awareness item._  
-
-- [CVE-2026-62696 Windows Program Compatibility Assistant Service Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-62696)  
-  **Microsoft Security Response Center (MSRC)** · Aug 12 · _General awareness item._  
-
-- [CVE-2026-62747 Windows Device Association Service Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-62747)  
-  **Microsoft Security Response Center (MSRC)** · Aug 12 · _General awareness item._  
+- [CVE-2026-66804 Microsoft Windows Cross Device Service Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-66804)  
+  **Microsoft Security Response Center (MSRC)** · Aug 13 · _General awareness item._  
 
 - [CVE-2026-62913 Microsoft Exchange Server Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-62913)  
-  **Microsoft Security Response Center (MSRC)** · Aug 12 · _Potential email disruption for users._  
+  **Microsoft Security Response Center (MSRC)** · Aug 13 · _Potential email disruption for users._  
 
-- [CVE-2026-68815 Microsoft Excel Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-68815)  
-  **Microsoft Security Response Center (MSRC)** · Aug 12 · _General awareness item._  
+- [CVE-2026-44814 Windows DWM Core Library Information Disclosure  Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-44814)  
+  **Microsoft Security Response Center (MSRC)** · Aug 13 · _General awareness item._  
+
+- [CVE-2026-45638 Windows Ancillary Function Driver for WinSock Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45638)  
+  **Microsoft Security Response Center (MSRC)** · Aug 13 · _General awareness item._  
+
+- [CVE-2026-45637 Microsoft DWM Core Library Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45637)  
+  **Microsoft Security Response Center (MSRC)** · Aug 13 · _General awareness item._  
 
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [Who Vets AI’s Code? The Scale Challenge Facing Open Source Ingestion](https://www.bleepingcomputer.com/news/security/who-vets-ais-code-the-scale-challenge-facing-open-source-ingestion/) — BleepingComputer
+- [White House taps security firms for offensive hack-back operations](https://www.bleepingcomputer.com/news/security/white-house-taps-security-firms-for-offensive-hack-back-operations/) — BleepingComputer
 - [WhatsApp rolls out new feature that flags potential scam messages](https://www.bleepingcomputer.com/news/security/whatsapp-rolls-out-new-feature-that-flags-potential-scam-messages/) — BleepingComputer
 - [ISC Stormcast For Thursday, August 13th, 2026 https://isc.sans.edu/podcastdetail/10050, (Thu, Aug 13th)](https://isc.sans.edu/diary/rss/33244) — SANS Internet Storm Center
 - [Using Gemma4 with Ollama - Testing File Hash Analysis and Recommendations with AI, (Wed, Aug 12th)](https://isc.sans.edu/diary/rss/33242) — SANS Internet Storm Center
 - ["City-Forum" data-theft attacks target Salesforce, ServiceNow portals](https://www.bleepingcomputer.com/news/security/city-forum-data-theft-attacks-target-salesforce-servicenow-portals/) — BleepingComputer
-- [Android malware combo takes out loans and relays victims' credit cards](https://www.bleepingcomputer.com/news/security/android-malware-combo-takes-out-loans-and-relays-victims-credit-cards/) — BleepingComputer
-- [Hundreds of fake Chrome VPN extensions route traffic through a proxy](https://www.bleepingcomputer.com/news/security/hundreds-of-fake-chrome-vpn-extensions-route-traffic-through-a-proxy/) — BleepingComputer
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 11 critical · 78 important · 48 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 10 critical · 76 important · 49 FYI_
