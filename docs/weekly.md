@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
 **Period:** August 06 – August 13, 2026  
-**Generated:** 2026-08-13 15:57 UTC  
+**Generated:** 2026-08-13 16:55 UTC  
 **Items reviewed:** 135  
 
 ## ⚡ Top Actions This Week
@@ -55,6 +55,9 @@
 
 ## 🟠 Important — Review This Week
 
+- [Critical VMware vCenter RCE flaw exploited for reverse SSH access](https://www.bleepingcomputer.com/news/security/critical-vmware-vcenter-rce-flaw-exploited-for-reverse-ssh-access/)  
+  **BleepingComputer** · Aug 13 · _General awareness item._  
+
 - [CVE-2026-61346 Windows Graphics Kernel Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-61346)  
   **Microsoft Security Response Center (MSRC)** · Aug 13 · _General awareness item._  
 
@@ -73,10 +76,7 @@
 - [CVE-2026-65796 Windows iSCSI Target Service Denial of Service Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-65796)  
   **Microsoft Security Response Center (MSRC)** · Aug 13 · _General awareness item._  
 
-- [CVE-2026-44814 Windows DWM Core Library Information Disclosure  Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-44814)  
-  **Microsoft Security Response Center (MSRC)** · Aug 13 · _General awareness item._  
-
-- [CVE-2026-45638 Windows Ancillary Function Driver for WinSock Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45638)  
+- [CVE-2026-62688 Windows MIDI Service Module Elevation of Privileges Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-62688)  
   **Microsoft Security Response Center (MSRC)** · Aug 13 · _General awareness item._  
 
 ---
