@@ -3,15 +3,501 @@
 <channel>
   <title>Joe — VP of IT Briefing</title>
   <description>Leadership-focused IT risk, vendors, pricing, licensing, and industry context.</description>
-  <lastBuildDate>Fri, 14 Aug 2026 08:12:41 +0000</lastBuildDate>
+  <lastBuildDate>Fri, 14 Aug 2026 09:57:21 +0000</lastBuildDate>
   
 <item>
-  <title>🔵 Z.ai debuts GLM-5.3, using the same base model as GLM-5.2 with scaled post-training for stronger coding and cyber skills, with weights due in two weeks (Z.ai)</title>
+  <title>🔴 Akira ransomware reboots into Windows Safe Mode to knock EDR offline</title>
+  <link>https://www.csoonline.com/article/4209606/akira-ransomware-reboots-into-windows-safe-mode-to-knock-edr-offline.html</link>
+  <pubDate>Fri, 14 Aug 2026 09:12:37 +0000</pubDate>
+  <source>CSO Online</source>
+  <description><![CDATA[<b>Why this matters: Elevated ransomware risk — validate backups and endpoint defenses.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<p class="wp-block-paragraph">Akira ransomware affiliates were seen using a new technique to evade endpoint detection and response (EDR), where they rebooted a compromised Windows system into Safe Mode with Networking enabled.</p>
+
+
+
+<p class="wp-block-paragraph">According to Huntress, the technique successfully took both its agent and Microsoft Defender’s real-time protection offline. This, the researchers said, gave the attacker a window to operate without endpoint defenses.</p>
+
+
+
+<p class="wp-block-paragraph">The incident investigated by Huntress began on August 4 with a credential-spraying attack against an <a href="https://www.csoonline.com/article/3706518/sonicwall-firewall-hit-with-critical-authentication-bypass-vulnerability.html">exposed</a> SonicWall SSL VPN. About seven minutes after the failed login attempts began, an attacker successfully authenticated to an account that did not have multi-factor authentication (<a href="https://www.csoonline.com/article/570795/how-to-hack-2fa.html">MFA</a>) enabled, Huntress analyst <a href="https://www.linkedin.com/in/j-northey/" rel="noreferrer noopener" target="_blank">James Northey</a> said in a blog <a href="https://www.huntress.com/blog/akira-hits-safe-mode-ransomware-rebooting-around-edr" rel="noreferrer noopener" target="_blank">post</a>. </p>
+
+
+
+<p class="wp-block-paragraph">Two hours after authentication was managed, the operator reportedly accessed the domain controller over <a href="https://www.csoonline.com/article/569621/rdp-hijacking-attacks-explained-and-how-to-mitigate-them.html">RDP</a>, performed extensive Active Directory enumeration, and subsequently moved to an application server to archive mapped file shares with WinRAR.</p>
+
+
+
+<p class="wp-block-paragraph">The stolen data was uploaded to an attacker-controlled S3 bucket using s5cmd, establishing the data-theft component of a double-extortion attack.</p>
+
+
+
+<p class="wp-block-paragraph">Ultimately, AnyDesk was installed on the host machine for persistent remote access and to deliver the Akira ransomware payload. This is when the operator used “msconfig.exe” to force the machine into Safe Mode with Networking, instead of disabling EDR directly.</p>
+
+
+
+<p class="wp-block-paragraph">Huntress says this is the first time it has observed Akira using the technique.</p>
+
+
+
+<h2 class="wp-block-heading"><a></a>Safe Mode is becoming a popular ransomware technique</h2>
+
+
+
+<p class="wp-block-paragraph">Safe Mode is normally a Windows troubleshooting environment that loads only essential drivers and services. That makes it useful to attackers because many third-party security products are excluded from the minimal startup configuration.</p>
+
+
+
+<p class="wp-block-paragraph">Anticipating that AnyDesk itself might also be unavailable in Safe Mode, the attackers modified the Safe Boot registry configuration to ensure the remote-access service would start.</p>
+
+
+
+<p class="wp-block-paragraph">The approach is not entirely new. Huntress pointed to ransomware families, including <a href="https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-263a">Snatch</a> and <a href="https://www.csoonline.com/article/571211/4-most-dangerous-emerging-ransomware-threat-groups-to-watch.html?utm=hybrid_search#:~:text=four%20ransomware%20groups.-,AvosLocker,-First%20observed%20in">AvosLocker, </a>that have used Safe Mode to disable defenses for years. MITRE ATT&amp;CK tracks the behaviour as <a href="https://attack.mitre.org/techniques/T1688/">T1688</a>, impair Defenses: Safe Mode Boot.</p>
+
+
+
+<p class="wp-block-paragraph">Akira picking up the technique now aligns with its recent attempts to operate outside EDR coverage. Earlier this year, an Akira affiliate was <a href="https://www.huntress.com/blog/akira-ransomware-limewire-data-exfiltration">reported</a> creating a new virtual machine on a victim’s hypervisor specifically to run the encryptor where Huntress was not installed.</p>
+
+
+
+<h2 class="wp-block-heading"><a></a>The anti-EDR move accidentally stopped the ransomware</h2>
+
+
+
+<p class="wp-block-paragraph">The technique, however, did not produce the outcome the attacker wanted, Northey noted. After “akira.exe” launched in Safe Mode, the system began reporting virtual memory failures. Huntress observed “Virtual Memory Minimum Too Low” and “Out of Virtual Memory” errors, followed by PowerShell failures.</p>
+
+
+
+<p class="wp-block-paragraph">The ransomware apparently could not operate correctly within Safe Mode’s constrained environment.</p>
+
+
+
+<p class="wp-block-paragraph">Defender eventually detected the Akira binary, but could not remediate it while real-time protection was unavailable. The file was successfully quarantined only after the attacker rebooted the machine back into normal Windows operation, restoring Defender’s protection.</p>
+
+
+
+<p class="wp-block-paragraph">Huntress cautions not to take the encryption failure too positively. The failure, it said, was likely a side effect of Akira’s resource requirements rather than a dependable defense. More memory, a larger page file, or changes to the encryptor could allow a future version to work in Safe Mode.</p>
+
+
+
+<p class="wp-block-paragraph">The priority, therefore, remains detection before reboot. Huntress recommended organizations to require <a href="https://www.csoonline.com/article/3535222/mfa-adoption-is-catching-up-but-is-not-quite-there.html">MFA</a> on every VPN account, correlate bursts of failed VPN logins with subsequent successful authentication, and deploy EDR across all hosts. Huntress also advised monitoring SIEM feeds for “msconfig.exe” or “bccedit” activity, Safe Mode boot events, security service stopping, and additions to the Safe Boot registry configuration.</p>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔴 The cybersecurity backlog is not a security problem</title>
+  <link>https://www.csoonline.com/article/4209334/the-cybersecurity-backlog-is-not-a-security-problem.html</link>
+  <pubDate>Fri, 14 Aug 2026 09:00:00 +0000</pubDate>
+  <source>CSO Online</source>
+  <description><![CDATA[<b>Why this matters: Service impact possible — prepare comms and confirm vendor status.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<p class="wp-block-paragraph">Cybersecurity teams should be responsible for risk oversight, rather than for executing every corrective action. Assigning security teams the tasks of finding, prioritizing, assigning, implementing, tracking and validating every remediation does not foster accountability. Instead, it results in an organizational repository for unresolved issues.</p>
+
+
+
+<p class="wp-block-paragraph">A more effective model distinguishes roles clearly: security functions as the overseer, while technology and business operations execute remediation. Security should maintain the authoritative risk inventory, determine priorities, establish remediation standards, escalate missed commitments and verify closure. Owners of the affected infrastructure, cloud environment, application, identity platform or business process are responsible for implementing fixes. Executives are tasked with resolving resource conflicts and explicitly accepting risks that the organization elects not to remediate.</p>
+
+
+
+<p class="wp-block-paragraph">This distinction is substantive, as it determines whether a vulnerability management program effectively reduces risk or simply generates remediation tickets.</p>
+
+
+
+<h2 class="wp-block-heading" id="an-increasing-backlog-indicates-a-failure-in-the-operating-model">An increasing backlog indicates a failure in the operating model</h2>
+
+
+
+<p class="wp-block-paragraph">Security teams often become the default owners of any issue labeled as a security concern. For example, when a scanner identifies an outdated package, security is expected to patch the server. If a cloud security platform detects an exposed storage bucket, security is tasked with redesigning the deployment. Similarly, when an audit reveals excessive privileges in a business application, security is expected to negotiate access changes with the department responsible for the workflow.</p>
+
+
+
+<p class="wp-block-paragraph">This dynamic arises because discovery is highly visible, while remediation is often inconvenient. When the security team produces a report, the organization may assume that the team is also responsible for implementing the solutions. Over time, infrastructure, engineering and business owners come to expect that security will initiate tickets, provide instructions, schedule meetings, monitor deadlines, request exceptions and communicate delays to leadership. As a result, the actual system owner becomes a participant in a process that should have been their primary responsibility.</p>
+
+
+
+<p class="wp-block-paragraph">The resulting backlog is often attributed to the security team, as they maintain the dashboard. However, the dashboard merely reveals a broader organizational failure: ownership was never assigned to the asset, remediation work was not incorporated into operational capacity and leadership did not establish clear decision-making authority regarding when reliability, product delivery, customer commitments or technical debt should be deprioritized in favor of risk reduction.</p>
+
+
+
+<p class="wp-block-paragraph"><a href="https://www.nist.gov/publications/nist-cybersecurity-framework-csf-20">NIST’s Cybersecurity Framework 2.0</a> emphasizes governance, prioritization and communication of cybersecurity risk throughout the organization. It does not recommend that the security function personally execute every remediation. Similarly, <a href="https://csrc.nist.gov/pubs/sp/800/40/r4/final">NIST’s enterprise patch management guidance</a> characterizes patching as preventive maintenance and a standard business cost, rather than a specialized task performed solely by the security team.</p>
+
+
+
+<p class="wp-block-paragraph">A backlog is not merely a compilation of technical weaknesses; it represents a record of unresolved organizational decisions. Each aging item reflects unanswered questions, such as: Who owns the system? Who has the authority to implement changes? What business impacts must be considered? What capacity is available? Who is authorized to accept the remaining risk?</p>
+
+
+
+<h2 class="wp-block-heading" id="security-is-responsible-for-maintaining-the-risk-record-while-system-owners-are-accountable-for-executing-remediation">Security is responsible for maintaining the risk record, while system owners are accountable for executing remediation</h2>
+
+
+
+<p class="wp-block-paragraph">The most effective way to preserve accountability is to define responsibilities prior to the identification of new findings.</p>
+
+
+
+<p class="wp-block-paragraph">Security should own the authoritative inventory of known risk. That includes validating findings, removing duplicates and false positives, connecting technical weaknesses to affected assets and business services, assigning risk-based priority, defining minimum remediation evidence, escalating overdue items and independently verifying closure. Security should also identify patterns. Ten nearly identical cloud misconfigurations are not ten unrelated tickets; they are evidence of a broken deployment standard, missing automation or weak preventive control.</p>
+
+
+
+<p class="wp-block-paragraph">Prioritization should extend beyond simple severity scoring. The Cybersecurity and Infrastructure Security Agency (CISA) recommends using<a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog"> its Known Exploited Vulnerabilities Catalog</a> as an input for vulnerability management prioritization, as it highlights vulnerabilities with evidence of active exploitation. For instance, a critical vulnerability on an isolated test asset may warrant less urgent action than a lower-scored weakness that is internet-facing, associated with privileged access, or actively exploited. Security teams are best positioned to make these distinctions due to their comprehensive understanding of threat and control contexts.</p>
+
+
+
+<p class="wp-block-paragraph">Remediation execution should be the responsibility of the teams that own the relevant technology or process. Infrastructure teams are tasked with patching and reconfiguring servers and endpoints. Cloud platform teams address identity, network, storage and logging controls. Application teams update dependencies and redesign vulnerable code, while business system owners approve workflow and access changes. These teams possess the necessary understanding of dependencies, testing requirements, outage risks and operational consequences, as well as control over the engineering mechanisms required for durable solutions.</p>
+
+
+
+<p class="wp-block-paragraph">Executives own the decisions that neither security nor system owners can resolve. When a remediation commitment conflicts with a product launch, customer obligation, reliability concern or budget constraint, the issue has become a management decision. Leadership must choose to provide capacity, change the deadline, approve a compensating control or accept the risk. Silence is not risk acceptance. Allowing a finding to age because every team has more urgent work is unmanaged risk with no accountable decision. This model also redefines performance metrics. Security should be evaluated based on coverage, validation speed, prioritization quality, escalation timeliness and closure verification. Remediation owners should be assessed on risk reduction, the aging of high-priority findings, recurrence rates and the proportion of work eliminated through automation or permanent design changes. Executives should monitor backlog growth relative to available capacity, unresolved resource conflicts, expired exceptions and the volume of risk accepted without a funded treatment plan</p>
+
+
+
+<p class="wp-block-paragraph">No organizational function should be held accountable for tasks beyond its control.</p>
+
+
+
+<h2 class="wp-block-heading" id="backlogs-are-resolved-through-increased-capacity-not-by-implementing-additional-service-level-agreements">Backlogs are resolved through increased capacity, not by implementing additional service-level agreements</h2>
+
+
+
+<p class="wp-block-paragraph">Many organizations address a growing backlog by introducing stricter service-level agreements, such as requiring critical findings to be resolved within 15 days and high-priority findings within 30 days. While policies may change and dashboards reflect increased urgency, the underlying remediation capacity often remains unchanged.</p>
+
+
+
+<p class="wp-block-paragraph">An SLA is a commitment, not a source of labor. <a href="https://www.csoonline.com/article/4169623/why-patching-slas-should-be-the-floor-not-the-strategy.html">A recent CSO article made a related point</a>: patching SLAs should be the floor, not the strategy, because green compliance metrics can hide the small number of difficult risks that matter most. Deadlines are useful only when the responsible teams have the authority, skills, maintenance windows, testing environments and engineering time required to meet them.</p>
+
+
+
+<p class="wp-block-paragraph">This issue is particularly significant when an organization inherits substantial technical debt. Thousands of legacy vulnerabilities, unsupported systems, cloud misconfigurations, identity weaknesses and audit findings cannot be simply assigned to engineering teams already committed to ongoing operations and strategic initiatives. Such an approach does not constitute a viable remediation plan. Overloaded teams are unlikely to generate additional capacity solely based on the importance of the backlog.</p>
+
+
+
+<p class="wp-block-paragraph">At a certain scale, organizations should allocate resources to a temporary remediation team dedicated to eliminating historic risk debt and establishing a sustainable operational cadence. This team should be time-limited, separately funded and composed of personnel with expertise in infrastructure, cloud, application, automation and program management, enabling them to implement changes directly rather than merely coordinate efforts. Security should retain responsibility for prioritization and independent validation, rather than serving as the primary remediation workforce.</p>
+
+
+
+<p class="wp-block-paragraph">The temporary remediation team should address categories of problems rather than individual tickets. Its responsibilities include developing automated patching and configuration baselines, replacing unsupported components, correcting reusable infrastructure templates, removing abandoned assets, standardizing evidence collection and identifying systems that require executive decisions instead of repeated exceptions. <a href="https://csrc.nist.gov/pubs/sp/1308/final">NIST’s 2026 guidance, which links cybersecurity risk, enterprise risk management and workforce planning,</a> reinforces the principle that risk responses and workforce decisions must be coordinated.</p>
+
+
+
+<p class="wp-block-paragraph">The activation of this team should not be based on an arbitrary number of findings, but rather on a persistent imbalance between incoming risk and remediation capacity. Indicators include a consistently growing backlog, high-risk findings that exceed normal change cycles, recurring weaknesses or remediation efforts that would require multiple quarters of existing capacity. These conditions provide leadership with evidence that standard operations are insufficient to restore the program.</p>
+
+
+
+<p class="wp-block-paragraph">Exit criteria should be clearly defined: eliminate the historic high-risk backlog, reduce remaining work to a manageable level for standard teams, automate recurring fixes, assign each asset to an accountable owner and establish a measurable cadence in which new high-priority risks are resolved more quickly than they are generated.</p>
+
+
+
+<p class="wp-block-paragraph">A cybersecurity backlog does not indicate failure on the part of the security team. Rather, it demonstrates that the organization has separated the authority to identify risk from the capacity and accountability necessary to address it.</p>
+
+
+
+<p class="wp-block-paragraph">Security should be responsible for monitoring, validating, prioritizing, escalating and verifying risk. System owners should implement remediations and executives should make strategic decisions. Unless these responsibilities are explicitly defined and appropriately resourced, the backlog will persist regardless of the number of scanners, tickets, dashboards or service-level agreements introduced.</p>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 The case and model for real-time AI cost visibility at the infrastructure layer</title>
+  <link>https://www.cio.com/article/4209328/the-case-and-model-for-real-time-ai-cost-visibility-at-the-infrastructure-layer.html</link>
+  <pubDate>Fri, 14 Aug 2026 09:00:00 +0000</pubDate>
+  <source>CIO.com</source>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<p class="wp-block-paragraph">I spend most of my time inside other companies’ engineering teams, building systems to track and optimize AI spend. The conversation almost always starts the same way. Someone pulls up a dashboard, points at a number bigger than it should be, and says some version of “we know it went up; we just can’t tell you why.”</p>
+
+
+
+<p class="wp-block-paragraph">I use an analogy for it: AI-era CIOs are like city planners optimizing a busy intersection. They can measure the volume and hear the pleas to fix congestion, but can’t tell whether a vehicle is a truck or a bike, or why it’s on the road. Without that, they can’t design the right fix, so they build a highway at great expense when the data would show all it needed was a bike lane.</p>
+
+
+
+<p class="wp-block-paragraph">Every model choice and budget conversation happens against that blurry picture, and the traffic gets heavier every quarter. Gartner expects <a href="https://www.gartner.com/en/newsroom/press-releases/2026-05-19-gartner-forecasts-worldwide-ai-spending-to-grow-47-percent-in-2026">worldwide AI spending to grow 47% this year</a>, with agentic AI software up roughly 141%. <a href="https://www.gartner.com/en/newsroom/press-releases/2026-04-28-gartner-identifies-six-steps-to-manage-artificial-intelligence-agent-sprawl">By 2028</a>, it projects an average Fortune 500 enterprise will run over 150,000 agents, up from fewer than 15 in 2025.</p>
+
+
+
+<h2 class="wp-block-heading" id="why-the-cloud-playbook-cant-answer-the-ai-question">Why the cloud playbook can’t answer the AI question</h2>
+
+
+
+<p class="wp-block-paragraph">AI presents a fundamentally different problem than cloud cost management, where we answered, “whose spend is this?” largely by tagging the resource. A VM has an owner, a bucket belongs to a team and FinOps optimizes from there. Billing was slow but acceptable, because spend moved inside predictable bands, a human provisioned each resource before it cost anything, and governance capped how fast costs grew. Surprises were unpleasant, rarely existential.</p>
+
+
+
+<p class="wp-block-paragraph">AI took that model, put it to the test and laughed it out of the room. A token call isn’t a resource the way a VM is, so tags have nothing to attach to. To make them affordable, hyperscalers run large models on shared, multi-tenant infrastructure, dropping the per-token price but stripping out the granularity needed to track and control spend.</p>
+
+
+
+<p class="wp-block-paragraph">One API key can carry a dozen workflows across three teams, and the consumer is often an autonomous agent, not a person. The failure modes are also new. An agent can drift off task, loop on a retrieval endpoint hunting for an answer it can’t find, and restart from scratch when it comes up empty. At a few dollars per million tokens, it seems trivial, until that loop runs across thousands of parallel sessions and clears five figures in a day. None of it trips a provisioning gate or maps to a taggable resource. The control points that cloud governance leaned on don’t exist for AI.</p>
+
+
+
+<p class="wp-block-paragraph">The consequences can be severe. Uber <a href="https://www.forbes.com/sites/janakirammsv/2026/05/17/uber-burns-its-2026-ai-budget-in-four-months-on-claude-code/">spent its entire 2026 AI budget in four months</a> after Claude Code usage ran far ahead of its projection, and they’re far from alone. I’ve worked with plenty of large enterprises hitting the same thing without the headlines. In almost every case, the teams driving the spend weren’t accountable for the budget, and no one saw the scale until it hit an invoice. It’s a credibility destroyer, as <a href="https://www.cio.com/article/4064319/ai-cost-overruns-are-adding-up-with-major-implications-for-cios.html">these overruns erode margins and stakeholder confidence</a> for the leaders on whose watch it happens, even when their only fault was doing their best with the tools they had.</p>
+
+
+
+<p class="wp-block-paragraph">The data backs this up. Recent DoiT research into enterprise finance leaders found that <a href="https://www.doit.com/blog/ai-spending-survey">89% of the organizations that rate themselves most mature at FinOps still overspent on AI</a> last year, and by the widest margin in the study. Again, the teams with the best cost discipline overspent the most. They built excellent governance for human-gated, taggable resources, then tried to retrofit it for workloads that have neither. They see the overrun, just too late to stop it, and without the insight to know where to focus.</p>
+
+
+
+<h2 class="wp-block-heading" id="the-instrumentation-era-got-us-closer-at-a-real-cost">The instrumentation era got us closer, at a real cost</h2>
+
+
+
+<p class="wp-block-paragraph">Our best answer was to instrument the application itself: wrap every LLM call in an <a href="https://opentelemetry.io/">OpenTelemetry</a> span, inject cost-allocation metadata and propagate that context across a multi-agent workflow so token counts roll up to a budget owner. I’ve done it dozens of times, and it works: accurate per-request attribution, far better than splitting the monthly bill by best guess.</p>
+
+
+
+<p class="wp-block-paragraph">But it was always a workaround. You can only measure what you thought to instrument, and even when you do that, the answer often arrives too late.</p>
+
+
+
+<p class="wp-block-paragraph">One customer I worked with recently had built about ten agents that worked together to automate security and quality evaluation of their software, most of them running constantly. Their bill kept climbing with no obvious cause, and it took a long investigation to find why: one agent, running 24/7, was burning 20 times the tokens of any other, caught in an infinite loop that respawned a never-ending process every time it spun up. The signal was right there in the data, but it only surfaced after weeks of digging and real money out the door.</p>
+
+
+
+<p class="wp-block-paragraph">There’s an irony too. AI is supposed to buy back engineering time, and instrumentation spends it right back. You put senior engineers on measurement plumbing to control the cost of the thing meant to make them more productive. Plus, it’s fragile; every new model, SDK and agent framework is another integration to keep alive. “Instrument everything you might ever build” isn’t realistic when tens of thousands of employees and countless agents launch new workflows daily.</p>
+
+
+
+<h2 class="wp-block-heading" id="what-changes-when-attribution-moves-to-the-infrastructure-layer">What changes when attribution moves to the infrastructure layer</h2>
+
+
+
+<p class="wp-block-paragraph">The approach now emerging, and the one changing how I run these engagements, moves attribution from the application down to the infrastructure. Instead of teams describing their spend through code they wrote, you observe what’s running underneath them.</p>
+
+
+
+<p class="wp-block-paragraph">The mechanism is a kernel-level sensor, the same <a href="https://ebpf.io/">eBPF</a> technology that security and observability tools use to watch system calls without touching the applications above them. It maps each unit of GPU, CPU, memory and network back to the process, container and request that caused it, then joins every outbound model call with provider cost data so token spend on Anthropic, OpenAI, Gemini or Bedrock is matched to the workload and agent that drove it.</p>
+
+
+
+<p class="wp-block-paragraph">This delivers the same answer OpenTelemetry can give you, at equal or better accuracy, but in real time and without the instrumentation work. Nothing has to be planned in advance, and nothing gets missed. For the first time, the data to manage AI spend is continuously available at an actionable grain. That runaway agent my customer dealt with would have been identified and addressed as soon as it began to snowball.</p>
+
+
+
+<h2 class="wp-block-heading" id="governance-stops-being-a-top-down-audit">Governance stops being a top-down audit</h2>
+
+
+
+<p class="wp-block-paragraph">Changes in governance is the part I find most interesting, because with continuous, accurate attribution, you can design governance purpose-built for AI rather than retrofitting a system built for an era with different physics.</p>
+
+
+
+<p class="wp-block-paragraph">Strategy still belongs at the top, with the CIO and finance leaders setting the direction, the budgets and the priorities. But daily responsibility for staying inside those lines shifts toward practitioners. Cloud governance was top-down because provisioning ran through the few people with the full business context to weigh it. With AI, spending decisions happen everywhere at once, across shared keys, agents and dozens of teams, so adherence has to sit with the people making them.</p>
+
+
+
+<p class="wp-block-paragraph">Real-time attribution makes that possible. An engineer can see the cost of what they’re building as they build it. A frontier-model call when a smaller model would do, a retrieval loop fanning out across a fragmented data store, an agent retrying a failed tool call in a tight loop — those stop being mysteries at the quarterly review; they’re caught while the work is still warm. And because the same numbers reach leadership, they can weigh spend against value and steer the portfolio rather than litigate a bill nobody can explain. Back at the intersection, the planner can finally tell the trucks from the bikes, and so can every engineer on the road.</p>
+
+
+
+<h2 class="wp-block-heading" id="what-visibility-is-actually-for">What visibility is actually for</h2>
+
+
+
+<p class="wp-block-paragraph">So, the biggest foundational roadblock (pun intended) that tripped up even the most disciplined teams is solvable now in a way it wasn’t a year ago. But solving it was never the real goal. Visibility is a means to an end; it just had to be solved first.</p>
+
+
+
+<p class="wp-block-paragraph">Real-time, granular attribution lets companies start treating AI as a managed investment instead of a pay-and-pray experiment. When you connect spend to the work, the work to an outcome and the outcome to the business case that justified it, you can govern AI with intention and put money where it earns its keep.</p>
+
+
+
+<p class="wp-block-paragraph">The last two years rewarded productivity to whoever shipped faster with AI. The next phase gets won on efficiency and impact, by whoever gets the most value per dollar of inference and can prove it. That’s a matter of strategy, and for the first time the data exists to compete on it. What you’re really adding for the customer, and what it costs, stop being a guess.</p>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Blackbird and Airtree revalue Canva at $34.9B, down from $42B in 2025, as it struggles in the AI era; Canva&#x27;s internal valuation falls to $31B, down from $38.9B (Australian Financial Review)</title>
+  <link>https://www.techmeme.com/260814/p6#a260814p6</link>
+  <pubDate>Fri, 14 Aug 2026 08:30:01 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://www.afr.com/technology/canva-investors-wipe-10b-from-valuation-20260813-p60o48"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260814/i6.jpg" vspace="4" /></a>
+<p><a href="https://www.techmeme.com/260814/p6#a260814p6" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="https://www.afr.com/">Australian Financial Review</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://www.afr.com/technology/canva-investors-wipe-10b-from-valuation-20260813-p60o48">Blackbird and Airtree revalue Canva at $34.9B, down from $42B in 2025, as it struggles in the AI era; Canva's internal valuation falls to $31B, down from $38.9B</a></b></span>&nbsp; &mdash;&nbsp; Canva and two of its longest-standing Australian backers have wiped over $10 billion ($US7.1 billion) off the design software giant's valuation &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+</item>
+
+<item>
+  <title>🟠 How CSOs can turn cybersecurity into a business growth strategy</title>
+  <link>https://www.csoonline.com/article/4208202/how-csos-can-turn-cybersecurity-into-a-business-growth-strategy.html</link>
+  <pubDate>Fri, 14 Aug 2026 08:25:00 +0000</pubDate>
+  <source>CSO Online</source>
+  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<p class="wp-block-paragraph">For years, cybersecurity leaders have worked to convince organizations that security deserves a seat at the executive table. Today, that conversation is changing.</p>
+
+
+
+<p class="wp-block-paragraph">The challenge is no longer proving that cybersecurity matters; it is demonstrating how security leaders can help organizations innovate, modernize, and grow with confidence.</p>
+
+
+
+<p class="wp-block-paragraph">As organizations accelerate digital transformation, CSOs have an opportunity to redefine their role. Rather than serving primarily as defenders of technology, cybersecurity leaders are becoming strategic business partners who help shape operational decisions, influence technology investments, and build the trust required for innovation.</p>
+
+
+
+<p class="wp-block-paragraph">Making that transition requires more than technical expertise. It requires cybersecurity leaders to rethink how they communicate value and engage the business.</p>
+
+
+
+<h2 class="wp-block-heading" id="stop-talking-about-security-start-talking-about-business-outcomes">Stop talking about security. Start talking about business outcomes.</h2>
+
+
+
+<p class="wp-block-paragraph">Executive teams do not wake up thinking about firewalls, vulnerabilities, or compliance checklists. They think about growth, customer expectations, operational continuity, and delivering results. Cybersecurity leaders must be able to connect the two and translate cyber risk into business impact.</p>
+
+
+
+<p class="wp-block-paragraph">Most CSOs have probably heard some version of this: “Security is slowing us down.”</p>
+
+
+
+<p class="wp-block-paragraph">Changing that perception starts with changing the conversation. Security should not be viewed as the final checkpoint before launch; it should be part of the roadmap from day one.</p>
+
+
+
+<p class="wp-block-paragraph">The most effective security teams are not the ones that create the most friction. Instead, they help organizations move forward because leaders know risk is being managed along the way.</p>
+
+
+
+<p class="wp-block-paragraph">Security becomes far more influential when it is positioned as a catalyst for transformation rather than a cost of doing business.</p>
+
+
+
+<h2 class="wp-block-heading" id="build-security-into-the-business-not-around-it">Build security into the business, not around it</h2>
+
+
+
+<p class="wp-block-paragraph">The most effective cybersecurity programs are not created in isolation. They are built through partnership with the teams responsible for driving the business forward.</p>
+
+
+
+<p class="wp-block-paragraph">For CSOs, that means getting involved earlier, before technology decisions are finalized, before new platforms are deployed, and before security becomes a last-minute review. It means building relationships with business leaders, understanding their priorities, and identifying where security can help them achieve their goals.</p>
+
+
+
+<p class="wp-block-paragraph">Whether supporting healthcare systems, research environments, educational institutions, or corporate workplaces, cybersecurity leaders should work alongside operational teams to understand how technology enables their work and where risks may emerge.</p>
+
+
+
+<p class="wp-block-paragraph">When security is part of the conversation from the beginning, teams can identify challenges earlier, make smarter decisions, and avoid costly changes later.</p>
+
+
+
+<p class="wp-block-paragraph">The goal is to shift the perception of cybersecurity from the team that creates obstacles to the team helping the organization move forward with confidence. The most effective CSOs do not just manage risk; they help the business take on new opportunities securely.</p>
+
+
+
+<p class="wp-block-paragraph">That shift also changes how the business views security. Instead of being the team that says “no,” cybersecurity becomes the team that helps the organization move forward safely.</p>
+
+
+
+<h2 class="wp-block-heading" id="make-resilience-the-metric-that-matters">Make resilience the metric that matters</h2>
+
+
+
+<p class="wp-block-paragraph">Successful cybersecurity leaders are increasingly measured by more than their ability to prevent incidents. The question is no longer only, “How do we stop something bad from happening?” It is also, “How quickly can we recover, adapt, and continue serving people when challenges arise?”</p>
+
+
+
+<p class="wp-block-paragraph">Cyber resilience has become a business capability because organizations are defined not only by how they prevent disruption, but by how they respond when disruption occurs.</p>
+
+
+
+<p class="wp-block-paragraph">Resilience looks different across industries, but the responsibility remains the same: helping organizations maintain critical operations and protect the people who depend on them.</p>
+
+
+
+<p class="wp-block-paragraph">For food and facilities management providers, that means supporting essential services across healthcare, education, research environments, and corporate environments. Technology underpins everything from patient care and research to workplace operations, meaning even a brief disruption can create significant operational and human consequences.</p>
+
+
+
+<p class="wp-block-paragraph">For CSOs, this creates an opportunity to reframe the conversation. Cybersecurity investments should not only be measured by what they prevent, but by the continuity, confidence, and resilience they enable across the organization.</p>
+
+
+
+<h2 class="wp-block-heading" id="design-security-people-will-actually-use">Design security people will actually use</h2>
+
+
+
+<p class="wp-block-paragraph">The best cybersecurity programs do more than protect systems; they enable people to do their jobs more effectively. And the strongest security controls are often the ones employees barely notice.</p>
+
+
+
+<p class="wp-block-paragraph">If security introduces unnecessary complexity, people will find ways around it. But when protections are intuitive and seamlessly integrated into daily workflows, secure behavior becomes the default.</p>
+
+
+
+<p class="wp-block-paragraph">For CSOs, this means thinking beyond traditional security controls and focusing on how security enables the business. Identity management, secure access, automation, and user-centered design are not just technical investments; they are tools that help employees work more efficiently, adopt new technologies with confidence, and reduce friction across the organization.</p>
+
+
+
+<p class="wp-block-paragraph">Good cybersecurity is not simply about making systems more secure. It is about creating an environment where people can move faster, make better decisions, and innovate without unnecessary barriers.</p>
+
+
+
+<p class="wp-block-paragraph">When employees have access to the tools they need while protections operate seamlessly in the background, organizations can strengthen security while improving productivity and accelerating business outcomes.</p>
+
+
+
+<h2 class="wp-block-heading" id="the-csos-role-is-expanding">The CSO’s role is expanding</h2>
+
+
+
+<p class="wp-block-paragraph">Cybersecurity leaders are uniquely positioned to bridge technology and business strategy.</p>
+
+
+
+<p class="wp-block-paragraph">As organizations adopt AI increasingly, expand connected operations and modernize critical infrastructure, executive teams increasingly need security leaders who can influence strategy, not only manage risk.</p>
+
+
+
+<p class="wp-block-paragraph">That requires building relationships across the organization, understanding business priorities, speaking the language of the business, and demonstrating how cybersecurity enables innovation rather than constrains it.</p>
+
+
+
+<p class="wp-block-paragraph">Organizations will continue investing in digital transformation. The question is whether cybersecurity leaders choose to participate in shaping that transformation or simply respond to it.</p>
+
+
+
+<p class="wp-block-paragraph">The future of cybersecurity leadership is not about being the team that says no. It is about being the team that helps organizations say yes — with confidence.</p>
+
+
+
+<p class="wp-block-paragraph">When security is designed into the way organizations operate, it becomes more than protection. It becomes a foundation for innovation, resilience and growth.</p>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Z.ai debuts GLM-5.3, which uses the same base model as GLM-5.2 with scaled post-training for stronger coding skills; Z.ai plans to release weights in two weeks (Z.ai)</title>
   <link>https://www.techmeme.com/260814/p5#a260814p5</link>
   <pubDate>Fri, 14 Aug 2026 06:50:01 +0000</pubDate>
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><p><a href="https://www.techmeme.com/260814/p5#a260814p5" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="https://z.ai/">Z.ai</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://z.ai/blog/glm-5.3">Z.ai debuts GLM-5.3, using the same base model as GLM-5.2 with scaled post-training for stronger coding and cyber skills, with weights due in two weeks</a></b></span>&nbsp; &mdash;&nbsp; With GLM-5.2 we built the stack: IndexShare for efficient long-context processing, SAO for RL on long-horizon tasks &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://z.ai/blog/glm-5.3">Z.ai debuts GLM-5.3, which uses the same base model as GLM-5.2 with scaled post-training for stronger coding skills; Z.ai plans to release weights in two weeks</a></b></span>&nbsp; &mdash;&nbsp; With GLM-5.2 we built the stack: IndexShare for efficient long-context processing, SAO for RL on long-horizon tasks &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
 </item>
 
 <item>
@@ -20,7 +506,7 @@
   <pubDate>Fri, 14 Aug 2026 06:41:43 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><p>The Rust-based macOS infostealer harvests users’ passwords, keychain information, Chromium-based browser data, and Safari cookies.</p>
-<p>The post <a href="https://www.securityweek.com/amnesiastealer-macos-malware-steals-data-controls-browser-sessions/">AmnesiaStealer macOS Malware Steals Data, Controls Browser Sessions</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/amnesiastealer-macos-malware-steals-data-controls-browser-sessions/">AmnesiaStealer macOS Malware Steals Data, Controls Browser Sessions</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
 </item>
 
 <item>
@@ -30,7 +516,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="http://www.cnn.com/2026/08/11/business/data-centers-ai-economy"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260814/i4.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260814/p4#a260814p4" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Nathaniel Meyersohn / <a href="https://www.cnn.com/">CNN</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="http://www.cnn.com/2026/08/11/business/data-centers-ai-economy">A look at Quincy, a rural Washington farming town of 8,500 that benefited from a data center boom as its poverty rate fell from 29.4% in 2012 to 6.2% in 2024</a></b></span>&nbsp; &mdash;&nbsp; A $15 million aquatic center with a six-lane pool, waterslides and a lazy river opened in Quincy, Washington, a few weeks ago.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="http://www.cnn.com/2026/08/11/business/data-centers-ai-economy">A look at Quincy, a rural Washington farming town of 8,500 that benefited from a data center boom as its poverty rate fell from 29.4% in 2012 to 6.2% in 2024</a></b></span>&nbsp; &mdash;&nbsp; A $15 million aquatic center with a six-lane pool, waterslides and a lazy river opened in Quincy, Washington, a few weeks ago.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
 </item>
 
 <item>
@@ -40,7 +526,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><a href="https://www.ft.com/content/5ca83d6d-2c13-4d5e-b564-881f89189b3e"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260814/i3.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260814/p3#a260814p3" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Demetri Sevastopulo / <a href="https://www.ft.com/">Financial Times</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.ft.com/content/5ca83d6d-2c13-4d5e-b564-881f89189b3e">The White House announces new tariffs on drones and components, including a 100% levy on &ldquo;particularly sensitive&rdquo; models, aiming to cut reliance on Chinese tech</a></b></span>&nbsp; &mdash;&nbsp; US to impose up to 100% levies on unmanned aircraft and their components&nbsp; &mdash;&nbsp; President Donald Trump has imposed sweeping &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.ft.com/content/5ca83d6d-2c13-4d5e-b564-881f89189b3e">The White House announces new tariffs on drones and components, including a 100% levy on &ldquo;particularly sensitive&rdquo; models, aiming to cut reliance on Chinese tech</a></b></span>&nbsp; &mdash;&nbsp; US to impose up to 100% levies on unmanned aircraft and their components&nbsp; &mdash;&nbsp; President Donald Trump has imposed sweeping &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
 </item>
 
 <item>
@@ -50,7 +536,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.reuters.com/business/retail-consumer/apple-trains-its-own-ai-model-china-market-with-alibabas-support-sources-say-2026-08-14/"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260814/i2.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260814/p2#a260814p2" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="http://www.reuters.com/">Reuters</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.reuters.com/business/retail-consumer/apple-trains-its-own-ai-model-china-market-with-alibabas-support-sources-say-2026-08-14/">Sources: Apple trained a China-specific LLM with Alibaba's support, which would make Apple the first foreign company to offer a proprietary AI model in China</a></b></span>&nbsp; &mdash;&nbsp; Apple (AAPL.O) has trained a large language model specifically for the China market, three people familiar with the matter said &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.reuters.com/business/retail-consumer/apple-trains-its-own-ai-model-china-market-with-alibabas-support-sources-say-2026-08-14/">Sources: Apple trained a China-specific LLM with Alibaba's support, which would make Apple the first foreign company to offer a proprietary AI model in China</a></b></span>&nbsp; &mdash;&nbsp; Apple (AAPL.O) has trained a large language model specifically for the China market, three people familiar with the matter said &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -60,7 +546,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://www.reuters.com/world/china/chinese-chipmaker-smic-increases-prices-strong-ai-demand-2026-08-14/"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260814/i1.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260814/p1#a260814p1" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="http://www.reuters.com/">Reuters</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.reuters.com/world/china/chinese-chipmaker-smic-increases-prices-strong-ai-demand-2026-08-14/">SMIC co-CEO Zhao Haijun says the company raised prices following negotiations with customers in Q1, and that it will charge more for wafers processed in Q3</a></b></span>&nbsp; &mdash;&nbsp; China's top foundry, Semiconductor Manufacturing International Corp (0981.HK), said on Friday that AI-related demand would continue &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.reuters.com/world/china/chinese-chipmaker-smic-increases-prices-strong-ai-demand-2026-08-14/">SMIC co-CEO Zhao Haijun says the company raised prices following negotiations with customers in Q1, and that it will charge more for wafers processed in Q3</a></b></span>&nbsp; &mdash;&nbsp; China's top foundry, Semiconductor Manufacturing International Corp (0981.HK), said on Friday that AI-related demand would continue &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
 </item>
 
 <item>
@@ -70,7 +556,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.npr.org/2026/08/13/nx-s1-5930689/cftc-probe-mention-markets-prediction-markets-kalshi"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260813/i57.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260813/p57#a260813p57" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Bobby Allyn / <a href="http://www.npr.org/">NPR</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.npr.org/2026/08/13/nx-s1-5930689/cftc-probe-mention-markets-prediction-markets-kalshi">Sources: the CFTC has launched a probe into prediction markets' &ldquo;mention markets&rdquo;, prompting Kalshi to remove bets on word choices from sports-related offerings</a></b></span>&nbsp; &mdash;&nbsp; Federal regulators have launched a review of so-called &ldquo;mention markets&rdquo; on prediction market sites &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.npr.org/2026/08/13/nx-s1-5930689/cftc-probe-mention-markets-prediction-markets-kalshi">Sources: the CFTC has launched a probe into prediction markets' &ldquo;mention markets&rdquo;, prompting Kalshi to remove bets on word choices from sports-related offerings</a></b></span>&nbsp; &mdash;&nbsp; Federal regulators have launched a review of so-called &ldquo;mention markets&rdquo; on prediction market sites &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
@@ -195,7 +681,7 @@
 
 
 <p class="wp-block-paragraph">Both Microsoft and Linux maintainers have issued patches for the issue in response to Stagg’s revelations.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
 </item>
 
 <item>
@@ -205,7 +691,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://www.bloomberg.com/news/articles/2026-08-14/uber-and-china-s-pony-ai-to-deploy-2-000-robotaxis-in-europe"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260813/i56.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260813/p56#a260813p56" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="https://www.bloomberg.com/">Bloomberg</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/articles/2026-08-14/uber-and-china-s-pony-ai-to-deploy-2-000-robotaxis-in-europe">Pony AI plans to deploy 2K+ robotaxis across Europe in partnership with Uber and add four more European cities, after Zagreb, with a later Middle East expansion</a></b></span>&nbsp; &mdash;&nbsp; Pony AI Inc. said it plans to deploy more than 2,000 robotaxis across Europe in partnership with Uber Technologies Inc. &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/articles/2026-08-14/uber-and-china-s-pony-ai-to-deploy-2-000-robotaxis-in-europe">Pony AI plans to deploy 2K+ robotaxis across Europe in partnership with Uber and add four more European cities, after Zagreb, with a later Middle East expansion</a></b></span>&nbsp; &mdash;&nbsp; Pony AI Inc. said it plans to deploy more than 2,000 robotaxis across Europe in partnership with Uber Technologies Inc. &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
 </item>
 
 <item>
@@ -356,7 +842,17 @@
 
 
 <p class="wp-block-paragraph"><em>This article originally appeared on <a href="https://www.infoworld.com/article/4209439/deepseek-raises-some-v4-prices-by-more-than-10x-as-ai-demand-strains-capacity.html" target="_blank">InfoWorld</a>.</em></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 A profile of Amy Kremer, a pro-Trump activist who helped organize the January 6 rally and currently chairs the grassroots anti-data center group Humans First (Veronica Irwin/Transformer)</title>
+  <link>https://www.techmeme.com/260813/p55#a260813p55</link>
+  <pubDate>Fri, 14 Aug 2026 01:55:00 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><a href="https://www.transformernews.ai/p/the-jan-6-organizer-getting-conservatives-angry-about-ai"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260813/i55.jpg" vspace="4" /></a>
+<p><a href="https://www.techmeme.com/260813/p55#a260813p55" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Veronica Irwin / <a href="https://www.transformernews.ai/">Transformer</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://www.transformernews.ai/p/the-jan-6-organizer-getting-conservatives-angry-about-ai">A profile of Amy Kremer, a pro-Trump activist who helped organize the January 6 rally and currently chairs the grassroots anti-data center group Humans First</a></b></span>&nbsp; &mdash;&nbsp; Amy Kremer's resume makes her loyalty to Trump impossible to question.&nbsp; Humans First is banking that will help mobilize the right</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 8h ago]]></description>
 </item>
 
 <item>
@@ -366,7 +862,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: Service impact possible — prepare comms and confirm vendor status.</b><br/><a href="https://www.wired.com/story/openai-safety-security-ai-agents-culture/"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260813/i54.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260813/p54#a260813p54" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Maxwell Zeff / <a href="http://www.wired.com/">Wired</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.wired.com/story/openai-safety-security-ai-agents-culture/">Current and former OpenAI employees say pressure to quickly ship products left less time for safety, contributing to incidents like the rogue agent hack</a></b></span>&nbsp; &mdash;&nbsp; OpenAI's rogue agent hack was a watershed moment for AI safety and cybersecurity.&nbsp; It also sparked internal questions about the culture that led to it.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.wired.com/story/openai-safety-security-ai-agents-culture/">Current and former OpenAI employees say pressure to quickly ship products left less time for safety, contributing to incidents like the rogue agent hack</a></b></span>&nbsp; &mdash;&nbsp; OpenAI's rogue agent hack was a watershed moment for AI safety and cybersecurity.&nbsp; It also sparked internal questions about the culture that led to it.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 8h ago]]></description>
 </item>
 
 <item>
@@ -376,7 +872,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: Budget/licensing impact — verify renewal terms and forecast cost changes.</b><br/><a href="https://9to5mac.com/2026/08/13/apple-proposes-commissions-of-up-to-15-for-off-app-store-purchases-in-the-us/"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260813/i51.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260813/p51#a260813p51" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Marcus Mendes / <a href="https://9to5mac.com/">9to5Mac</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://9to5mac.com/2026/08/13/apple-proposes-commissions-of-up-to-15-for-off-app-store-purchases-in-the-us/">Epic v. Apple: Apple proposes commissions on US linked-out purchases of 15% for standard apps, 10% for partner programs and renewals, 5% for Small Business apps</a></b></span>&nbsp; &mdash;&nbsp; Apple has submitted its proposal for the fees it should be allowed to charge for purchases made outside of the App Store system in the Epic Games case.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://9to5mac.com/2026/08/13/apple-proposes-commissions-of-up-to-15-for-off-app-store-purchases-in-the-us/">Epic v. Apple: Apple proposes commissions on US linked-out purchases of 15% for standard apps, 10% for partner programs and renewals, 5% for Small Business apps</a></b></span>&nbsp; &mdash;&nbsp; Apple has submitted its proposal for the fees it should be allowed to charge for purchases made outside of the App Store system in the Epic Games case.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 10h ago]]></description>
 </item>
 
 <item>
@@ -386,7 +882,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://www.bloomberg.com/news/articles/2026-08-13/judge-orders-kalshi-to-stop-offering-most-wagers-in-washington"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260813/i50.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260813/p50#a260813p50" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> J.J. McCorvey / <a href="https://www.bloomberg.com/">Bloomberg</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/articles/2026-08-13/judge-orders-kalshi-to-stop-offering-most-wagers-in-washington">A judge orders Kalshi to stop offering most of its prediction contracts in Washington state, after finding it likely violated state gambling-related laws</a></b></span>&nbsp; &mdash;&nbsp; Kalshi was told by a judge to stop offering most of its prediction market contracts in Washington state, after regulators &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/articles/2026-08-13/judge-orders-kalshi-to-stop-offering-most-wagers-in-washington">A judge orders Kalshi to stop offering most of its prediction contracts in Washington state, after finding it likely violated state gambling-related laws</a></b></span>&nbsp; &mdash;&nbsp; Kalshi was told by a judge to stop offering most of its prediction market contracts in Washington state, after regulators &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 11h ago]]></description>
 </item>
 
 <item>
@@ -396,7 +892,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.bloomberg.com/news/articles/2026-08-13/openai-s-revenue-run-rate-tops-40-billion-ahead-of-ipo"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260813/i49.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260813/p49#a260813p49" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="https://www.bloomberg.com/">Bloomberg</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/articles/2026-08-13/openai-s-revenue-run-rate-tops-40-billion-ahead-of-ipo">Sources: OpenAI is on track to generate annualized revenue of $40B+ based on its current performance, roughly doubling its run rate from the end of 2025</a></b></span>&nbsp; &mdash;&nbsp; OpenAI is on track to generate annualized revenue of more than $40 billion based on its current performance, according to people familiar &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/articles/2026-08-13/openai-s-revenue-run-rate-tops-40-billion-ahead-of-ipo">Sources: OpenAI is on track to generate annualized revenue of $40B+ based on its current performance, roughly doubling its run rate from the end of 2025</a></b></span>&nbsp; &mdash;&nbsp; OpenAI is on track to generate annualized revenue of more than $40 billion based on its current performance, according to people familiar &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 11h ago]]></description>
 </item>
 
 <item>
@@ -437,7 +933,7 @@
 
 
 <p class="wp-block-paragraph">Until a patch becomes available, organizations who run GeoServer should identify their internet exposed instances and restrict public access to them. They should also check the logs for any signs that exploitation has already occurred.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 11h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
 </item>
 
 <item>
@@ -662,7 +1158,7 @@
 
 
 <p class="wp-block-paragraph"><a href="https://www.gonitro.com/nitro-ai?utm_source=pcworld.com&amp;utm_medium=referral&amp;utm_campaign=Using+Functional+AI+to+Automate+Document+Workflows"><strong>Discover Nitro’s AI workflow tools.</strong></a></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 11h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
 </item>
 
 <item>
@@ -815,7 +1311,7 @@
 
 
 <p class="wp-block-paragraph"><a href="https://www.gonitro.com/contact-sales?utm_source=pcworld.com&amp;utm_medium=referral&amp;utm_campaign=Manual+vs.+AI-Powered+PDF+Redaction%3A+Protecting+Sensitive+Data+in+2026">Speak with a Nitro team member</a> to learn how Nitro’s AI-driven Smart Redact technology provides a faster, safer way to prepare documents for secure sharing.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 11h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
 </item>
 
 <item>
@@ -996,7 +1492,7 @@
 
 
 <p class="wp-block-paragraph">Let the Nitro team show you why 67% of the Fortune 500 trust our AI-powered PDF editing, eSign, and redaction solutions. See <a href="https://www.gonitro.com/pricing?utm_source=pcworld.com&amp;utm_medium=referral&amp;utm_campaign=Professional+PDF+Solutions+for+Teams%3A+Scale+Without+Breaking+Your+Budget">plans and pricing</a> or <a href="https://www.gonitro.com/contact-sales?utm_source=pcworld.com&amp;utm_medium=referral&amp;utm_campaign=Professional+PDF+Solutions+for+Teams%3A+Scale+Without+Breaking+Your+Budget">get in touch with sales</a> today.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 11h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
 </item>
 
 <item>
@@ -1301,7 +1797,7 @@
 
 
 <p class="wp-block-paragraph"></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 11h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
 </item>
 
 <item>
@@ -1575,7 +2071,7 @@
 
 
 <p class="wp-block-paragraph">Learn how Nitro’s AI-driven <a href="https://www.gonitro.com/smart-redact?utm_source=pcworld.com&amp;utm_medium=referral&amp;utm_campaign=Nitro+Smart+Redact%3A+The+Complete+Guide+to+Automated+AI+Redaction" rel="noreferrer noopener" target="_blank">Smart Redact</a> technology provides a faster, safer way to prepare documents for secure sharing, or <a href="https://www.gonitro.com/contact-sales?utm_source=pcworld.com&amp;utm_medium=referral&amp;utm_campaign=Nitro+Smart+Redact%3A+The+Complete+Guide+to+Automated+AI+Redaction" rel="noreferrer noopener" target="_blank">contact a Nitro expert to get started</a>.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 11h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
 </item>
 
 <item>
@@ -1762,7 +2258,7 @@
 
 
 <p class="wp-block-paragraph"></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 11h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 13h ago]]></description>
 </item>
 
 <item>
@@ -1770,7 +2266,7 @@
   <link>https://www.zdnet.com/article/microsoft-to-merge-copilot-and-copilot-365-into-one-unified-app-retiring-features/</link>
   <pubDate>Thu, 13 Aug 2026 13:32:06 +0000</pubDate>
   <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>The move should cut down on the confusion between the two apps, especially for anyone who bounces back and forth between the two of them.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 18h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>The move should cut down on the confusion between the two apps, especially for anyone who bounces back and forth between the two of them.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 20h ago]]></description>
 </item>
 
 <item>
@@ -1903,7 +2399,7 @@
 
 
 <p class="wp-block-paragraph">The researchers wrote that safeguards designed to restrict AI behavior were bypassed in the campaign by framing the activity as authorized testing. They added that linguistic analysis suggests the campaign was carried out by a “Chinese-language operator,” though the report does not attribute it to any specific group or country.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 18h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 20h ago]]></description>
 </item>
 
 <item>
@@ -1976,7 +2472,7 @@
 
 
 <p class="wp-block-paragraph"></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 18h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 20h ago]]></description>
 </item>
 
 <item>
@@ -2053,7 +2549,7 @@
 
 
 <p class="wp-block-paragraph"></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 19h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 20h ago]]></description>
 </item>
 
 <item>
@@ -2062,7 +2558,7 @@
   <pubDate>Thu, 13 Aug 2026 12:53:56 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><p>Attackers with Author-level user or higher permissions could exploit the flaw via malicious Postscript files.</p>
-<p>The post <a href="https://www.securityweek.com/wordpress-7-0-4-patches-remote-code-execution-vulnerability/">WordPress 7.0.4 Patches Remote Code Execution Vulnerability</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 19h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/wordpress-7-0-4-patches-remote-code-execution-vulnerability/">WordPress 7.0.4 Patches Remote Code Execution Vulnerability</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 21h ago]]></description>
 </item>
 
 <item>
@@ -2171,7 +2667,7 @@
 
 
 <p class="wp-block-paragraph">“I don’t see the financial incentive for a mega-cap cyber company to undertake the risks,” Ong said. Access to adversary infrastructure could offer intelligence value, but Ong said that information may not necessarily translate into material that can be used for detection engineering or commercial threat feeds.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 19h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 21h ago]]></description>
 </item>
 
 <item>
@@ -2256,7 +2752,7 @@
 
 
 <p class="wp-block-paragraph">Microsoft is reportedly working on patches for the remaining flaws. It did not immediately respond to CSO’s request for comment.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 19h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 21h ago]]></description>
 </item>
 
 <item>
@@ -2381,7 +2877,7 @@
 
 
 <p class="wp-block-paragraph"></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 21h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 22h ago]]></description>
 </item>
 
 <item>
@@ -2390,7 +2886,7 @@
   <pubDate>Thu, 13 Aug 2026 10:40:57 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: Could impact sign-ins/MFA/Conditional Access — watch for login issues.</b><br/><p>The vulnerabilities could allow attackers to log in with random usernames and passwords or impersonate any FortiGate appliance.</p>
-<p>The post <a href="https://www.securityweek.com/fortinet-patches-authentication-flaws-in-fortiweb-and-fortimanager/">Fortinet Patches Authentication Flaws in FortiWeb and FortiManager</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 21h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/fortinet-patches-authentication-flaws-in-fortiweb-and-fortimanager/">Fortinet Patches Authentication Flaws in FortiWeb and FortiManager</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 23h ago]]></description>
 </item>
 
 <item>
@@ -2519,7 +3015,7 @@
 
 
 <p class="wp-block-paragraph">But that’s only half the battle. Vendors also need to back their AI tools with structured, scaled adoption models that tie directly back to value realization and ROI, she adds. “Capability without that structure is where the gap shows up,” she says.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 22h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 23h ago]]></description>
 </item>
 
 <item>
@@ -2675,7 +3171,7 @@
 
 
 <p class="wp-block-paragraph">Eliminating systemic blind spots doesn’t require perfect foresight; it requires intentional architecture, well-designed collaborative ownership across silos and explicitly named human decision-makers. It’s possible to prevent the compounding liability that falls between AI decision-making and unstructured human accountability by answering two key questions early on:  Who owns which decisions? And how do we clearly incentivize accountability?</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 22h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 23h ago]]></description>
 </item>
 
 <item>
@@ -2684,16 +3180,7 @@
   <pubDate>Thu, 13 Aug 2026 09:53:04 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><p>Contracts may require a $1 million bond, which will be forfeited if a company fails to comply with operational requirements.</p>
-<p>The post <a href="https://www.securityweek.com/white-house-mobilizes-security-firms-for-operations-against-foreign-cybercrime-gangs/">White House Mobilizes Security Firms for Operations Against Foreign Cybercrime Gangs</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 22h ago]]></description>
-</item>
-
-<item>
-  <title>🟠 Critical VMware vCenter Vulnerability in Attackers’ Crosshairs</title>
-  <link>https://www.securityweek.com/critical-vmware-vcenter-vulnerability-in-attackers-crosshairs/</link>
-  <pubDate>Thu, 13 Aug 2026 09:06:40 +0000</pubDate>
-  <source>SecurityWeek</source>
-  <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><p>Tracked as CVE-2026–59310, the directory traversal bug allows remote attackers to execute arbitrary code.</p>
-<p>The post <a href="https://www.securityweek.com/critical-vmware-vcenter-vulnerability-in-attackers-crosshairs/">Critical VMware vCenter Vulnerability in Attackers&#8217; Crosshairs</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 23h ago]]></description>
+<p>The post <a href="https://www.securityweek.com/white-house-mobilizes-security-firms-for-operations-against-foreign-cybercrime-gangs/">White House Mobilizes Security Firms for Operations Against Foreign Cybercrime Gangs</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
@@ -2794,7 +3281,7 @@
 
 
 <p class="wp-block-paragraph">The second you cannot walk, the price stops being yours to negotiate. Most consolidation programs remove your ability to walk as their first move, and most CIOs do not realize they have given it up until the next renewal arrives and reminds them.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 23h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
@@ -2802,16 +3289,7 @@
   <link>https://www.zdnet.com/article/best-antivirus-2026/</link>
   <pubDate>Thu, 13 Aug 2026 09:00:00 +0000</pubDate>
   <source>ZDNet</source>
-  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/>Our favorite antivirus software protects your PC, laptop, and mobile devices from malware without costing a fortune.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 23h ago]]></description>
-</item>
-
-<item>
-  <title>🟠 Nightmare Eclipse Drops Windows Zero-Day Exploit ‘ShieldBreak’</title>
-  <link>https://www.securityweek.com/nightmare-eclipse-drops-windows-zero-day-exploit-shieldbreak/</link>
-  <pubDate>Thu, 13 Aug 2026 08:38:03 +0000</pubDate>
-  <source>SecurityWeek</source>
-  <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><p>Dropped on Patch Tuesday, the exploit allows any user to spawn a shell with System privileges.</p>
-<p>The post <a href="https://www.securityweek.com/nightmare-eclipse-drops-windows-zero-day-exploit-shieldbreak/">Nightmare Eclipse Drops Windows Zero-Day Exploit &#8216;ShieldBreak&#8217;</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 23h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/>Our favorite antivirus software protects your PC, laptop, and mobile devices from malware without costing a fortune.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
@@ -2964,7 +3442,7 @@
 
 
 <p class="wp-block-paragraph">Rewriting in a safer language removes some classes of bugs but not the underlying design-level weaknesses unless active steps to rewrite problematic code are undertaken, Shoshitaishvili concluded.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 23h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
 </item>
 
 <item>
@@ -4432,85 +4910,6 @@
 </item>
 
 <item>
-  <title>🔵 Where IT leaders find strength and opportunity in the age of AI</title>
-  <link>https://www.cio.com/article/4207836/where-it-leaders-find-strength-and-opportunity-in-the-age-of-ai.html</link>
-  <pubDate>Wed, 12 Aug 2026 10:00:00 +0000</pubDate>
-  <source>CIO.com</source>
-  <description><![CDATA[<b>Why this matters: Regulatory/compliance signal — assess applicability and remediation timeline.</b><br/><div id="remove_no_follow">
-		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
-					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
-						<div class="article-column__content">
-<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
-
-
-
-<p class="wp-block-paragraph">With vision comes perspective, and over a distinguished career, IT and digital transformation leader Niraj Bhatt has held may titles, and earned three consecutive <a href="https://www.cio.com/article/4206446/cio-100-award-winners-spotlight-its-power-to-transform.html">CIO 100</a> awards since 2023.</p>
-
-
-
-<p class="wp-block-paragraph">As a storied advisor for startups and Fortune 500 companies, helping them navigate the unpredictability and fluidity of AI, Bhatt knows how emerging tech is rapidly reshaping the way organizations build products and deliver value, and how challenges shift as companies move from experimentation to real-world deployment.</p>
-
-
-
-<p class="wp-block-paragraph">AI, of course means a lot of different things to different people, and also for frictionless startups and large enterprises. For the former, speed is a huge asset, allowing them to punch above their weight. But it also means they need lightning fast reactions when landscapes shift. “The same speed can also hurt them when larger AI companies release new offerings that disrupt what startups are building,” he says, referencing recent moves by Anthropic and Google.</p>
-
-
-
-<p class="wp-block-paragraph">On the enterprise side, the conversation is more about scale and risk. Many large organizations have moved past the POC stage and now wrestle with the realities of putting AI into production.</p>
-
-
-
-<p class="wp-block-paragraph">Cost for both is naturally a recurring theme as organizations scale up AI efforts, and true expenses become clear only after the initial excitement fades. “Every input and output token, and the model you’re selecting, add up,” he says. Some customers like Open AI, he adds, get throttled because their usage, volumes, and costs are growing so fast, making planning, observability, and monitoring critical for any team moving beyond experimentation.</p>
-
-
-
-<p class="wp-block-paragraph">So understanding the full software development lifecycle is also vital. Therefore, before committing to production, he helps clients see the big picture, and make sure they understand technical requirements as well as operational and financial implications. “The cost picture isn’t just about usage, but scale and the model choices teams make,” he says.</p>
-
-
-
-<p class="wp-block-paragraph">Bhatt also discusses effective approaches to AI and enterprise IT, technology leadership, and the evolving role of today’s CIOs. Watch the full video below for more insights, and be sure to subscribe to the monthly Center Stage newsletter by clicking <a href="https://www.cio.com/newsletters/signup/">here</a>.</p>
-
-
-
-<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper youtube-video">
-
-</div></figure>
-
-
-
-<p class="wp-block-paragraph"><strong>On AI hype: </strong>If you can’t explain something to someone who’s eight or 80, you don’t really understand it. It’s gone from LLMs, to RAG, to agentic AI, and now the essence is all about tokens. It’s predicting that next token and understanding that is key. So when LLMs came out, they were good at doing that on the data on which they were trained. When the enterprises looked at it, they wanted to make those LLMs work for their data. And the question became how to provide our data and context. It’s about building the right context for the LLM. Agentic AI is similar and that’s where the RAG evolution came in, in that I’ve got my data because every LLM has limitations in terms of how much context it can carry.</p>
-
-
-
-<p class="wp-block-paragraph">There are ranges of LLMs, where Google has the highest in regard to the context window size and what they support. Agentic AI is more action oriented, though. LLMs rely on the metadata you provide for the tools. Then they’re doing token prediction in that whatever I’m looking for, I should use a specific tool. Then it’s the infrastructure underlying which LLM it relies on to invoke the agent. So if you try to explain the microservices to a person, you’re going to struggle. But it’s very important to understand the evolution and that’s where you can cut through the hype. Understanding in this context is key.</p>
-
-
-
-<p class="wp-block-paragraph"><strong>On navigating challenges around talent: </strong>What I’m seeing on the IT side is there’s so much cognitive load, so how do we empower people to build solutions with the right mix of products and platforms? I think it’s about democratizing AI for the entire organization. Your talent strategy is everyone, all inclusive, starting from interns, the business and tech sides, CEO, everybody.Like your customer success or revenue officers, you need a talent strategy because in the end, IT alone isn’t going to be in a position to deliver for everyone in the organization.</p>
-
-
-
-<p class="wp-block-paragraph">AI has the potential to make everyone in the organization more productive. You have to plan that and facilitate broad innovation across the organization.That’s where the talent strategy, and working with HR and the people officer becomes very important providing those tools. One part of it is training, but how do I build an agent for a receptionist receiving calls, for instance?I’m not going to rely on vibe coding or things of that nature. But what are the tools? Where do I go, where do I host this? I think through that entire ecosystem beyond copilots. That’s where innovation can kick in, and that broader talent strategy is something I’m working with my customers on.</p>
-
-
-
-<p class="wp-block-paragraph"><strong>On collaboration: </strong>I heard a panel discussion recently, and a question was asked about what’s the number-one trait CIO needs to be successful at in the world of AI, and the answer was collaboration. You need to bring everybody together, move forward together, and make sure everybody’s on board. And in my mind, simplifying that is more like systems thinking when you operate, just bringing everybody along and ensuring they’re meeting outcomes.</p>
-
-
-
-<p class="wp-block-paragraph">But maybe what’s more important is managing expectations. Because if you’re a CIO, there’s a tremendous amount of pressure to deliver and have a rock solid AI strategy. So what I’m doing with my customers is get the board, CEO, and CFO into a room and help them understand what I’m talking about, the evolution, and what’s the art of possible. You don’t want to be a CIO who thinks I have a hammer and everything is a nail. Having buy in from the senior leaders is essential to know you’re headed in the right direction. You’re not reacting to pressure from top leadership, but driving and becoming the change agent for good for the company.</p>
-
-
-
-<p class="wp-block-paragraph"><strong>On navigating AI: </strong>It’s interesting times. I’m covering a spectrum of startups, non-technical and technical founders, and advising Fortune 500 companies. What I’m seeing is they love the velocity and momentum because that’s what they’ve always wanted, and AI is providing that. They’re able to bring their products to markets very quickly, so something that would’ve taken three years a couple of years ago is probably now taking them three months. There’s a lot of excitement there. But on the flip side, the same velocity is also hurting them. There are so many frontier AI companies getting disrupted. OpenAI, for instance, has offerings in sales and marketing, and Google has an interactive video model. So a lot of startups working in the marketing space are getting stuck. A lot of what I’m focused on is working with founders, helping them pivot in the gen AI space, ensuring their systems and products are built and structured in the right manner.</p>
-
-
-
-<p class="wp-block-paragraph">And on the enterprise space, what I’m seeing is the POC wave, and people have seen the value. There’s some excitement but now the struggle is getting them to production. That’s where you run into cost, latency, legal compliance, privacy issues, and customer concerns that if we get tickets to production, how’s it going to look and how are we going to scale. So engineering and product teams have to be ably supported by the enterprise architecture and R&amp;D teams. I then help them get up to speed and build that internal platform product for the production workloads. It’s exciting times on both sides.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
-</item>
-
-<item>
   <title>🟠 4 gaps slowing AI in enterprise SOCs</title>
   <link>https://www.csoonline.com/article/4208086/4-gaps-slowing-ai-in-enterprise-socs.html</link>
   <pubDate>Wed, 12 Aug 2026 09:00:00 +0000</pubDate>
@@ -4768,7 +5167,7 @@
 
 
 <p class="wp-block-paragraph">Because the future of AI in the enterprise SOC isn’t about replacing analysts. It’s about giving them the visibility, context, and automation they need to make better security decisions, faster.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
 </item>
 
 <item>
@@ -5021,7 +5420,7 @@
 
 
 <p class="wp-block-paragraph">“The product said it was safe,” he said, “and that’s where we started.”</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
 </item>
 
 <item>
@@ -6042,362 +6441,7 @@
 
 
 <p class="wp-block-paragraph">“You can stop it, but soft guardrails are useless,” he says. “Do not try to patch the prompt or filter the text. You have to treat the agent like a compromised user account. Pull the OAuth tokens and kill the access immediately.”</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
-</item>
-
-<item>
-  <title>🔴 The future of AI security research isn’t autonomous, it’s human-amplified</title>
-  <link>https://www.csoonline.com/article/4207666/the-future-of-ai-security-research-isnt-autonomous-its-human-amplified.html</link>
-  <pubDate>Tue, 11 Aug 2026 02:18:14 +0000</pubDate>
-  <source>CSO Online</source>
-  <description><![CDATA[<b>Why this matters: Credential/phishing risk — reinforce MFA and user awareness training.</b><br/><div id="remove_no_follow">
-		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
-					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
-						<div class="article-column__content">
-<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
-
-
-
-<p class="wp-block-paragraph">Meet HTTP Terminator, a new AI system that has identified hundreds of websites vulnerable to HTTP request smuggling, hacked them live at scale, and even identified a “genuinely new class” of vulnerability, dubbed “shared-parser confusion.”</p>
-
-
-
-<p class="wp-block-paragraph">But it didn’t do it alone; it was guided by a human the entire time, which may be the most interesting finding of all.</p>
-
-
-
-<p class="wp-block-paragraph">A researcher from security company PortSwigger used his own processes to design and build the AI, HTTP Terminator, posed narrow, high-value questions, ruled out weak answers, applied anomaly-detection logic, used deterministic code to restrict agent behavior, and applied findings to subsequent ‘cascade’ research.</p>
-
-
-
-<p class="wp-block-paragraph">“This inverts the accepted narrative by showing an expert can be a massive amplifier for an AI research system,” <a href="https://portswigger.net/research/james-kettle" rel="noreferrer noopener" target="_blank">James Kettle</a>, PortSwigger’s director of research, explained in a <a href="https://portswigger.net/research/can-ai-do-novel-security-research" rel="noreferrer noopener" target="_blank">white paper</a>. “A human in the loop can still add significant value, as opposed to just building the loop, then stepping back.”</p>
-
-
-
-<h2 class="wp-block-heading" id="disrupting-http-request-flow">Disrupting HTTP request flow</h2>
-
-
-
-<p class="wp-block-paragraph">HTTP desync attacks, also known as <a href="https://portswigger.net/web-security/request-smuggling" rel="noreferrer noopener" target="_blank">HTTP request smuggling</a>, interfere with the way web sites process HTTP requests from various users. In this architecture, users send requests to a front-end server, which then forwards them to back-end servers.</p>
-
-
-
-<p class="wp-block-paragraph">The issue is in the inherently “weak” isolation of requests, Kettle pointed out: The front-end server typically sends several requests at once over the same back-end network connection to improve performance and efficiency.</p>
-
-
-
-<p class="wp-block-paragraph">“HTTP requests are sent one after another, and the receiving server has to determine where one request ends and the next one begins,” he explained. But front-end and back-end systems must “agree” on where each request ends, otherwise, attackers can send ambiguous messages that are interpreted as two requests by the back end.</p>
-
-
-
-<p class="wp-block-paragraph">Through response query poisoning (RQP), those attackers can inject false information into subsequent requests or otherwise manipulate data flows so that systems lose track of which responses came from where. They can then intercept responses intended for other users, which can sometimes include sensitive information, credentials, or API keys.</p>
-
-
-
-<p class="wp-block-paragraph">While request smuggling is typically associated with HTTP/1 requests, websites that support HTTP/2 might also be vulnerable, depending on their back-end architecture, Kettle noted.</p>
-
-
-
-<p class="wp-block-paragraph">“Request smuggling vulnerabilities are often critical in nature, allowing an attacker to bypass security controls, gain unauthorized access to sensitive data, and directly compromise other application users,” he said.</p>
-
-
-
-<h2 class="wp-block-heading" id="http-terminators-methodology">HTTP Terminator’s methodology</h2>
-
-
-
-<p class="wp-block-paragraph">Kettle built HTTP Terminator around his own research methodologies.</p>
-
-
-
-<p class="wp-block-paragraph">The initial phase is ideation: It autonomously generates hypothetical testable RQP attacks, such as, for instance, desync triggers, patterns, or weaponization techniques.</p>
-
-
-
-<p class="wp-block-paragraph">The next step is <a href="https://www.csoonline.com/article/4206598/human-oversight-is-still-critical-as-ai-patching-tools-miss-security-risks.html" target="_blank">evaluation</a>: hypotheses are tested at large scale to identify which actually worked. HTTP Terminator used live websites that allow security testing via bug-bounty and Vulnerability Disclosure Programs (VDPs). A built-in anomaly detection layer flagged unusual responses.</p>
-
-
-
-<p class="wp-block-paragraph">Following that is a weaponization phase, which determines whether findings actually have real-life impact.</p>
-
-
-
-<p class="wp-block-paragraph">In some cases, they did: HTTP Terminator initially generated 30,000 unique <a href="https://www.csoonline.com/article/4204731/attackers-are-crafting-malicious-ai-instruction-files-to-turn-your-agentic-workflows-into-quiet-criminal-helpers.html" target="_blank">attack vectors</a> that it tested continuously, soon identifying 700 vulnerable targets, including financial institutions and government infrastructure. The system even stole a live API key from one of these banks, and other breaches were traced back to flaws in popular enterprise products like Apache Traffic Server, Citrix NetScaler, and BeyondTrust.</p>
-
-
-
-<p class="wp-block-paragraph">Finally, there’s a step Kettle calls ‘cascade.’ Each finding may be a clue to an overlooked target or detection path. “When you discover something, if you explore back up the tree you may find other undiscovered branches,” he explained.</p>
-
-
-
-<p class="wp-block-paragraph">For instance: How could you detect similar behavior elsewhere? And could the behavior enable other types of attacks? Essentially, each finding becomes “the seed for the next.”</p>
-
-
-
-<p class="wp-block-paragraph">“That might not look like much, but it creates a positive feedback loop which can spiral into a cascade of discoveries taking you beyond predictable findings, into the unknown,” Kettle said.</p>
-
-
-
-<p class="wp-block-paragraph">Ultimately, “I realized that autonomous vs human is the wrong framing,” he explained. “It’s better to frame system design as AI vs code vs human.”</p>
-
-
-
-<h2 class="wp-block-heading" id="a-new-tool-for-security-teams">A new tool for security teams</h2>
-
-
-
-<p class="wp-block-paragraph">HTTP Terminator was able to invent and prove several novel desync triggers, one novel desync pattern, and a desync weaponization technique.</p>
-
-
-
-<p class="wp-block-paragraph">Notably, though, it identified a new “shared-parser confusion” technique that allows attackers to parse requests and responses and thus increase their attack surface.</p>
-
-
-
-<p class="wp-block-paragraph">“That, by itself, is absolutely huge,” Kettle said. But, he emphasized, “this discovery was not fully autonomous — the HTTP Terminator proposed it, and I validated it. Neither of us would have discovered it alone.”</p>
-
-
-
-<p class="wp-block-paragraph">Kettle has open-sourced HTTP Terminator along with his research blueprint so other security teams can “turn their own methodology and instincts into an autonomous research weapon.”</p>
-
-
-
-<p class="wp-block-paragraph">The researcher advised tackling tasks in four steps: Set an objective, create an evaluation strategy, establish inspiration sources, and explore cascade routes for new discoveries. </p>
-
-
-
-<p class="wp-block-paragraph">“Evaluation is the first concrete step for both design and implementation,” he said, “because any issues there will derail the entire project.”</p>
-
-
-
-<p class="wp-block-paragraph">It’s also important to “aggressively” identify and resolve data quality issues, as those will be difficult to correct later on. Further, ask high-value questions without being too broad; review outputs in initial test runs and use them to rule out low-value hypotheses; and remember that “every extra sentence of prompt risks context-contamination,” Kettle said.</p>
-
-
-
-<p class="wp-block-paragraph">When a system is fully AI-driven and also reliant on AI-built code, it’s near-impossible for it to improve over time, he said. It’s better to start quickly with an AI-heavy approach, then move responsibility to deterministic code for speed and accuracy.</p>
-
-
-
-<p class="wp-block-paragraph">“Fully autonomous research is real,” Kettle acknowledged. However, “humans are a massive power amplifier for AI research systems.”</p>
 </div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 3d ago]]></description>
-</item>
-
-<item>
-  <title>🟠 OpenAI says Astra could reach ‘critical’ cyber capability, tightens safeguards</title>
-  <link>https://www.csoonline.com/article/4207311/openai-says-astra-could-reach-critical-cyber-capability-tightens-safeguards.html</link>
-  <pubDate>Mon, 10 Aug 2026 12:07:10 +0000</pubDate>
-  <source>CSO Online</source>
-  <description><![CDATA[<b>Why this matters: Endpoint detection changes — review high-severity detections and alert noise.</b><br/><div id="remove_no_follow">
-		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
-					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
-						<div class="article-column__content">
-<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
-
-
-
-<p class="wp-block-paragraph">OpenAI said its upcoming model Astra is showing cybersecurity capabilities that could reach its highest risk category, where a system can autonomously find and exploit vulnerabilities or carry out end-to-end cyberattacks against hardened targets.</p>
-
-
-
-<p class="wp-block-paragraph">The company disclosed the assessment following recent internal testing and expert reviews.</p>
-
-
-
-<p class="wp-block-paragraph">“Our latest internal evaluations of Astra, one of our upcoming models, over the past few days indicate significant advancements in agentic coding and cybersecurity,” OpenAI said in a <a href="https://openai.com/index/responding-next-frontier-critical-cyber-capabilities/" rel="noreferrer noopener" target="_blank">statement</a>. “These results, in addition to expert assessments, have led us to conclude last night that we cannot rule out critical cyber capabilities under our Preparedness Framework⁠.</p>
-
-
-
-<h2 class="wp-block-heading" id="what-has-changed">What has changed</h2>
-
-
-
-<p class="wp-block-paragraph">To explain the shift, OpenAI pointed to its internal <a href="https://cdn.openai.com/pdf/18a02b5d-6b67-4cec-ab64-68cdfbddebcd/preparedness-framework-v2.pdf" rel="noreferrer noopener" target="_blank">Preparedness Framework</a>, which tracks how far AI models advance in sensitive areas such as cybersecurity.</p>
-
-
-
-<p class="wp-block-paragraph">At the top end of that framework are systems that no longer just assist humans but can act on their own, the company said.</p>
-
-
-
-<p class="wp-block-paragraph">“A model reaches the Critical cybersecurity threshold if it can identify and develop functional zero-day exploits of all severity levels in many hardened real-world critical systems without human intervention, or can devise and execute end-to-end novel strategies for cyberattacks against hardened targets given only a high-level desired goal,” the statement added.</p>
-
-
-
-<p class="wp-block-paragraph">The company said Astra has not yet been definitively classified at that level, but its early performance is “strong enough” that such a designation cannot be ruled out. Its earlier models, including GPT 5.6 Sol, “have been evaluated for frontier cyber capabilities and assessed at the High (rather than Critical) threshold.”</p>
-
-
-
-<p class="wp-block-paragraph">“This is a substantial inflection point,” said Apeksha Kaushik, senior principal analyst at Gartner. “An AI system could autonomously discover vulnerabilities, develop exploits, and execute end-to-end attacks with minimal human guidance.”</p>
-
-
-
-<h2 class="wp-block-heading" id="why-this-matters-for-enterprises">Why this matters for enterprises</h2>
-
-
-
-<p class="wp-block-paragraph">For security teams, the change is not just technical — it affects how attacks may unfold, analysts feel.</p>
-
-
-
-<p class="wp-block-paragraph">Kaushik said the pace of progress suggests “practical, real-world exploitation is becoming increasingly feasible,” meaning attackers could automate large parts of the attack process. That reduces the time defenders have to react.</p>
-
-
-
-<p class="wp-block-paragraph">“The implication is clear: enterprise security must evolve from reactive to preemptive,” she said, adding that organizations should move toward continuous, AI-driven exposure assessment and predictive analysis.</p>
-
-
-
-<p class="wp-block-paragraph">Sanchit Vir Gogia, chief analyst at Greyhound Research, said companies should not wait for a formal label before acting.</p>
-
-
-
-<p class="wp-block-paragraph">“OpenAI has said it cannot rule out critical cybersecurity capability in Astra and is treating the model accordingly. That is a precautionary trigger rather than a finished finding,” he said.</p>
-
-
-
-<p class="wp-block-paragraph">He added that the focus should shift beyond patching speed. “The measure that matters is defensive response latency. A flat vulnerability queue is no longer a security posture.”</p>
-
-
-
-<h2 class="wp-block-heading" id="what-openai-is-doing-now">What OpenAI is doing now</h2>
-
-
-
-<p class="wp-block-paragraph">Based on the development, OpenAI said it is tightening controls around Astra’s development.</p>
-
-
-
-<p class="wp-block-paragraph">“We are implementing stricter security controls for higher-capability models,” the company said, including “isolated testing environments, restricted network and tool access, enhanced model weight protections and encryption, additional monitoring and detection capabilities, and sandboxed execution,” OpenAI added I n the statement.</p>
-
-
-
-<p class="wp-block-paragraph">It is also “pausing internal activities involving Astra that do not yet meet these strengthened security control requirements.”</p>
-
-
-
-<p class="wp-block-paragraph">The company said it has expanded monitoring across how the model is used. “We have implemented universal monitoring for risky actions and misalignment,” it said, adding that systems can “trigger a security response to review and interrupt high-risk activity.”</p>
-
-
-
-<h2 class="wp-block-heading" id="are-the-safeguards-enough">Are the safeguards enough?</h2>
-
-
-
-<p class="wp-block-paragraph">Analysts said these steps are necessary, but may not fully address the risks as capabilities improve.</p>
-
-
-
-<p class="wp-block-paragraph">“Current safeguards such as restricted environments, continuous monitoring, and external red-teaming are necessary, but the gap between safeguards and emerging threats is increasing,” Kaushik said. She pointed to risks such as prompt injection and weak access controls in AI systems.</p>
-
-
-
-<p class="wp-block-paragraph">Gogia said safeguards need to be viewed in the context of the broader system.</p>
-
-
-
-<p class="wp-block-paragraph">“A capable model does not operate inside a framework document. It operates inside a system, and systems leak authority through their exceptions,” he said. “Gated access buys defenders time. It does not repeal a capability.”</p>
-
-
-
-<p class="wp-block-paragraph">OpenAI said it will work with governments and external safety groups to further test Astra.</p>
-
-
-
-<p class="wp-block-paragraph">“We will work with relevant government agencies and select AI safety organizations to test the capabilities for this model,” the company said, adding that it will also share guidance with third-party testing partners. The company said it is disclosing the findings to be transparent about what it called a “potential shift in capabilities.”</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3d ago]]></description>
-</item>
-
-<item>
-  <title>🟠 One-click flaw in Atlassian Rovo exposed enterprise data via prompt injection attack</title>
-  <link>https://www.csoonline.com/article/4207306/one-click-flaw-in-atlassian-rovo-exposed-enterprise-data-via-prompt-injection-attack.html</link>
-  <pubDate>Mon, 10 Aug 2026 11:59:41 +0000</pubDate>
-  <source>CSO Online</source>
-  <description><![CDATA[<b>Why this matters: Credential/phishing risk — reinforce MFA and user awareness training.</b><br/><div id="remove_no_follow">
-		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
-					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
-						<div class="article-column__content">
-<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
-
-
-
-<p class="wp-block-paragraph">Atlassian’s enterprise AI assistant Rovo, which is usually connected across sensitive work environments like Slack, Microsoft 365, and Google Workspace, was found vulnerable to data leaks through malicious instructions.</p>
-
-
-
-<p class="wp-block-paragraph">At <a href="https://defcon.org" rel="noreferrer noopener" target="_blank">DEF CON 34</a>, researchers from Varonis demonstrated an attack that used Rovo’s rovoChatPrompt parameter to place attacker-controlled instructions directly into Rovo Chat.</p>
-
-
-
-<p class="wp-block-paragraph">“A single click on a link triggers the attacker’s embedded instructions and forces Rovo to accept externally supplied parameters as trusted inputs within a user’s session,” Varonis researcher Dolev Taler said in a blog <a href="https://www.varonis.com/blog/rovoblast" rel="noreferrer noopener" target="_blank">post</a>, dubbing the attack “RovoBlast.”</p>
-
-
-
-<p class="wp-block-paragraph">The attack only required one click by the victim on a specially crafted link, which then allowed the attacker to potentially access anything Rovo is privileged.</p>
-
-
-
-<p class="wp-block-paragraph">The issue was reported to Atlassian through a bug bounty program hosted on Bugcrowd, and the company has since <a href="https://bugcrowd.com/disclosures/bf1922fb-99d0-4d3b-b419-1728720d29ec/one-click-data-exfiltration-via-rovochatprompt-url-parameter-confluence-rovo" rel="noreferrer noopener" target="_blank">fixed</a> it. The company, however, did not immediately respond to CSO’s request for comments.</p>
-
-
-
-<h2 class="wp-block-heading"><a></a>Rovo’s broad access made the click worse</h2>
-
-
-
-<p class="wp-block-paragraph">Varonis found that Rovo could enumerate and search data across a wide range of sources available to an organization, including Jira, Confluence, Bitbucket, Slack, Google Workspace, Microsoft 365, relational databases, uploaded files, webpages, and archives.</p>
-
-
-
-<p class="wp-block-paragraph">Rovo connectors extend reach to more than 50 platforms, Varonis said. Attackers could access data protected behind credentials without a compromise. This could all look like legitimate activity performed by the assistant on behalf of a user.</p>
-
-
-
-<p class="wp-block-paragraph">Taler also noted that Rovo cannot be fully uninstalled.</p>
-
-
-
-<p class="wp-block-paragraph">“Organizations attempting to remove the risk may not be able to eliminate Rovo’s presence in their environment or the associated attack surface, making robust input validation and security controls even more critical,” he said.</p>
-
-
-
-<h2 class="wp-block-heading"><a></a>Exfiltration was possible</h2>
-
-
-
-<p class="wp-block-paragraph">Varonis researchers then looked at whether Rovo’s agent capabilities could turn the access to corporate information into an actual data-exfiltration path.</p>
-
-
-
-<p class="wp-block-paragraph">They found that they could.</p>
-
-
-
-<p class="wp-block-paragraph">Rovo’s “ResearchAgent,” it turned out, could perform deep, multi-source web research and navigate across websites through multiple autonomous steps. In Varonis’ testing, that created a potential chain in which Rovo could retrieve information from internal sources and move it toward an external destination.</p>
-
-
-
-<p class="wp-block-paragraph">Importantly, the researchers said they did not need a jailbreak, a double request technique, or a complicated prompt-surgery attack. The single culprit clicking on the crafted Rovo link was enough to seed the malicious instructions.</p>
-
-
-
-<p class="wp-block-paragraph">Once inside the session, autonomous agent capabilities were shown to be capable of carrying out the attack in its entirety. “Rovo includes built-in automation that accelerates exfiltration once misused,” Taler added.</p>
-
-
-
-<p class="wp-block-paragraph">As the threat extended from a failing AI guardrail to the risk of automated damage escalation, researchers advised measures beyond a patch.</p>
-
-
-
-<p class="wp-block-paragraph">They recommended shrinking Rovo’s blast radius by limiting connected systems, keeping highly sensitive areas such as legal, HR, finance, and incident response out of scope, and disabling browsing or multi-step automation that organizations do not need.</p>
-
-
-
-<p class="wp-block-paragraph">“The less the assistant can see, the less it can leak, regardless of prompt injection or agent abuse,” they said.</p>
-
-
-
-<p class="wp-block-paragraph">Varonis drew parallels with other recently disclosed AI attacks like <a href="https://www.csoonline.com/article/4186970/m365-copilot-searchleak-your-prompt-injection-attack-surface-just-got-bigger.html">SearchLeak</a>, <a href="https://www.csoonline.com/article/4068175/gemini-trifecta-ai-autonomy-without-guardrails-opens-new-attack-surface.html">EchoLeak</a>, <a href="https://www.csoonline.com/article/4059606/meet-shadowleak-impossible-to-detect-data-theft-using-ai.html">ShadowLeak</a>, and <a href="https://www.csoonline.com/article/4161382/prompt-injection-turned-googles-antigravity-file-search-into-rce.html">Antigravity</a>. The company said RovoBlast is just another example of a broader AI security issue where “untrusted inputs, autonomous behavior, and trusted communication” are together creating serious data exposure.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3d ago]]></description>
 </item>
 
 </channel>
