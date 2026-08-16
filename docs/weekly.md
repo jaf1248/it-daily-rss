@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
 **Period:** August 09 – August 16, 2026  
-**Generated:** 2026-08-16 16:20 UTC  
+**Generated:** 2026-08-16 17:17 UTC  
 **Items reviewed:** 117  
 
 ## ⚡ Top Actions This Week
@@ -55,6 +55,15 @@
 
 ## 🟠 Important — Review This Week
 
+- [CVE-2026-65769 Microsoft Teams iOS Information Disclosure Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-65769)  
+  **Microsoft Security Response Center (MSRC)** · Aug 16 · _General awareness item._  
+
+- [CVE-2026-65767 Microsoft Teams for Android Spoofing Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-65767)  
+  **Microsoft Security Response Center (MSRC)** · Aug 16 · _General awareness item._  
+
+- [CVE-2026-65768 Microsoft Teams Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-65768)  
+  **Microsoft Security Response Center (MSRC)** · Aug 16 · _General awareness item._  
+
 - [Chromium: CVE-2026-19560 Use after free in Blink](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-19560)  
   **Microsoft Security Response Center (MSRC)** · Aug 14 · _General awareness item._  
 
@@ -68,15 +77,6 @@
   **Microsoft Security Response Center (MSRC)** · Aug 14 · _General awareness item._  
 
 - [Chromium: CVE-2026-19556 Use after free in V8](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-19556)  
-  **Microsoft Security Response Center (MSRC)** · Aug 14 · _General awareness item._  
-
-- [Hackers arrested over €30M bank fraud exploiting service provider flaw](https://www.bleepingcomputer.com/news/security/hackers-arrested-over-30m-bank-fraud-exploiting-service-provider-flaw/)  
-  **BleepingComputer** · Aug 14 · _General awareness item._  
-
-- [Hackers exploit macOS Screen Sharing flaw to deploy Monero miner](https://www.bleepingcomputer.com/news/security/hackers-exploit-macos-screen-sharing-flaw-to-deploy-monero-miner/)  
-  **BleepingComputer** · Aug 14 · _General awareness item._  
-
-- [CVE-2026-72970 Microsoft Edge (Chromium-based) Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-72970)  
   **Microsoft Security Response Center (MSRC)** · Aug 14 · _General awareness item._  
 
 ---
