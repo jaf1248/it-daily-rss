@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
 **Period:** August 10 – August 17, 2026  
-**Generated:** 2026-08-17 15:22 UTC  
+**Generated:** 2026-08-17 16:23 UTC  
 **Items reviewed:** 134  
 
 ## ⚡ Top Actions This Week
@@ -61,6 +61,9 @@
 - [Certighost and the Privilege Hiding in Your Certificate Authority](https://www.bleepingcomputer.com/news/security/certighost-and-the-privilege-hiding-in-your-certificate-authority/)  
   **BleepingComputer** · Aug 17 · _General awareness item._  
 
+- [CVE-2026-62722 Microsoft Brokering File System Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-62722)  
+  **Microsoft Security Response Center (MSRC)** · Aug 17 · _General awareness item._  
+
 - [⚡ Weekly Recap: VMware Exploits, Windows 0-Day, MCP Attacks, Browser Hijacks and More](https://thehackernews.com/2026/08/weekly-recap-vmware-exploits-windows-0.html)  
   **The Hacker News** · Aug 17 · _General awareness item._  
 
@@ -74,9 +77,6 @@
   **BleepingComputer** · Aug 16 · _Service continuity risk to users._  
 
 - [CVE-2026-65768 Microsoft Teams Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-65768)  
-  **Microsoft Security Response Center (MSRC)** · Aug 16 · _General awareness item._  
-
-- [CVE-2026-65769 Microsoft Teams iOS Information Disclosure Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-65769)  
   **Microsoft Security Response Center (MSRC)** · Aug 16 · _General awareness item._  
 
 ---
