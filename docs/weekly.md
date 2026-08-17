@@ -1,25 +1,30 @@
 # IT Weekly Intelligence Briefing
-**Period:** August 09 – August 16, 2026  
-**Generated:** 2026-08-16 23:16 UTC  
+**Period:** August 10 – August 17, 2026  
+**Generated:** 2026-08-17 01:04 UTC  
 **Items reviewed:** 119  
 
 ## ⚡ Top Actions This Week
 
-1. **Validate backups, confirm EDR coverage, and brief incident response team.**  
+1. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
+   _SafePal data breach impacts 39,798 customers, stolen info for sale_  
+   Source: BleepingComputer  
+
+2. **Validate backups, confirm EDR coverage, and brief incident response team.**  
    _Shell investigates 'potential incident' after Clop data theft claims_  
    Source: BleepingComputer  
 
-2. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
+3. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
    _RingCentral data breach exposed info of 1.6 million accounts_  
-   Source: BleepingComputer  
-
-3. **Validate backups, confirm EDR coverage, and brief incident response team.**  
-   _Akira hackers disable EDR with Safe Mode, steal data but fail to encrypt_  
    Source: BleepingComputer  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [SafePal data breach impacts 39,798 customers, stolen info for sale](https://www.bleepingcomputer.com/news/security/safepal-data-breach-impacts-39-798-customers-stolen-info-for-sale/)
+**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Aug 16  
+**Why it matters:** Potential credential or data exposure.  
+**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
 ### [Shell investigates 'potential incident' after Clop data theft claims](https://www.bleepingcomputer.com/news/security/shell-investigates-potential-incident-after-clop-data-theft-claims/)
 **Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Aug 14  
@@ -30,11 +35,6 @@
 **Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Aug 14  
 **Why it matters:** Potential credential or data exposure.  
 **Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
-
-### [Akira hackers disable EDR with Safe Mode, steal data but fail to encrypt](https://www.bleepingcomputer.com/news/security/akira-hackers-disable-edr-with-safe-mode-steal-data-but-fail-to-encrypt/)
-**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Aug 13  
-**Why it matters:** Elevated ransomware risk across the sector.  
-**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
 
 ### [Cisco ASA and FTD Flaw Exploited in the Wild Can Trigger Remote DoS](https://thehackernews.com/2026/08/cisco-asa-and-ftd-flaw-exploited-in.html)
 **Source:** The Hacker News &nbsp;·&nbsp; **Date:** Aug 12  
