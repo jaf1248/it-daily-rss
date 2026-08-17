@@ -3,8 +3,172 @@
 <channel>
   <title>Joe — VP of IT Briefing</title>
   <description>Leadership-focused IT risk, vendors, pricing, licensing, and industry context.</description>
-  <lastBuildDate>Mon, 17 Aug 2026 10:28:27 +0000</lastBuildDate>
+  <lastBuildDate>Mon, 17 Aug 2026 11:21:41 +0000</lastBuildDate>
   
+<item>
+  <title>🔵 Conflicting Test Goals Pushed Claude Agents to Deploy Self-Replicating Malware</title>
+  <link>https://www.securityweek.com/conflicting-test-goals-pushed-claude-agents-to-deploy-self-replicating-malware/</link>
+  <pubDate>Mon, 17 Aug 2026 11:09:57 +0000</pubDate>
+  <source>SecurityWeek</source>
+  <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><p>Anthropic has been conducting tests to identify issues in how AI agents interact with each other.</p>
+<p>The post <a href="https://www.securityweek.com/conflicting-test-goals-pushed-claude-agents-to-deploy-self-replicating-malware/">Conflicting Test Goals Pushed Claude Agents to Deploy Self-Replicating Malware</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</item>
+
+<item>
+  <title>🟠 Your enterprise isn’t ready for enterprise AI</title>
+  <link>https://www.cio.com/article/4209896/your-enterprise-isnt-ready-for-enterprise-ai.html</link>
+  <pubDate>Mon, 17 Aug 2026 11:00:00 +0000</pubDate>
+  <source>CIO.com</source>
+  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<p class="wp-block-paragraph">Let’s say one of your teams builds an AI agent that actually works. Word gets around, and seemingly overnight, there are twenty more built by people in finance, legal, HR, and support. Most of them are useful, but when someone suddenly gets a chatbot response showing customer data they shouldn’t have access to, reality hits.</p>
+
+
+
+<p class="wp-block-paragraph">The real test of enterprise AI readiness isn’t at all whether your coworkers can confidently work with AI. Instead, it has everything to do with governance and security, global, cross-cutting policy, and privacy. Many enterprises are underprepared to face these issues: a <a href="https://www.databricks.com/blog/enterprise-ai-agent-trends-top-use-cases-governance-evaluations-and-more">survey from Databricks and the Economist</a> found that “40% of respondents believed their organization’s AI governance program is insufficient.” And <a href="https://news.microsoft.com/source/emea/features/microsoft-cyber-pulse-ai-agents/">Microsoft’s Data Security Index</a> reports that “only 47% of organizations across industries report they are implementing specific GenAI security controls.”</p>
+
+
+
+<p class="wp-block-paragraph">Having worked with many CIOs to develop strategies to govern their AI systems, this piece is a deep dive into the specifics of what works and what doesn’t. Keeping employees, customers and your entire organization safe must be your top priority before you even start rolling agents out.</p>
+
+
+
+<h2 class="wp-block-heading" id="8-layers-of-governance-every-enterprise-needs">8 layers of governance every enterprise needs</h2>
+
+
+
+<p class="wp-block-paragraph">It’s no doubt that the enthusiasm for AI is real, but so is the list of questions that bubble up a month later: Who’s allowed to publish an agent to the rest of the company? How do we track versions, and can we roll one back? Can we require SSO on every agent? What data does this have access to, and does it respect the permissions on those documents? Where do the logs live, and how quickly can we see them?</p>
+
+
+
+<p class="wp-block-paragraph">I think of enterprise AI governance as a set of layers, each answering one of the questions above. You can build them incrementally, but ideally all eight are in place before you have more agents than you can list off from memory.</p>
+
+
+
+<ol class="wp-block-list">
+<li><strong>Roles and groups.</strong> Whatever platform you choose, ensure that it offers granular role-based access control. At the level of abstraction higher, map groups to real departments (Legal, HR, Capture Team) and assign those groups to their own. Keep the admin count small enough to list out loud. Though this is the coarsest measure, it still bears a big responsibility down the line — according to <a href="https://www.fortunebusinessinsights.com/role-based-access-control-market-111247">Fortune Business Insights</a>, “RBAC solutions help reduce unauthorized access incidents by nearly 30%, enhancing data security.”</li>
+
+
+
+<li><strong>Scope.</strong> It’s extremely helpful to build out private folders with explicit allowlists, so a project, agent, or workflow isn’t merely locked to outsiders but invisible to them. Agents with access to sensitive customer data shouldn’t advertise their own existence.</li>
+
+
+
+<li><strong>Change control.</strong> Those who are building AI agents should be able to place locks on so that only the owner can edit it, with admin override. Every change should land in a version history with a diff and a commit message, and rolling back should take one click so that you know exactly what was edited if an agent stops performing. According to <a href="https://www.gitrecap.com/blog/dora-metrics-benchmarks">Google’s DORA State of DevOps research</a>, teams with strong version control and rollback practices recover from failed changes in under an hour, versus a week or more for teams without them.</li>
+
+
+
+<li><strong>Publication.</strong> When a builder finalizes an agent and wants to release it to the rest of their team, depending on the use case, they should consider adding one-click SSO, a password option for external collaborators, and restrictions on which origins and which users can reach it. <a href="https://owasp.org/Top10/2025/A01_2025-Broken_Access_Control/">OWASP’s 2025 Top 10</a> keeps broken access control at #1, observing that every application they tested had some form of broken access control.</li>
+
+
+
+<li><strong>Org-wide policy.</strong> This is the layer CIOs underuse. Require SSO on all interfaces rather than hoping. Restrict who can publish, so shipping to the company is an admin action. Create approval workflows, where a builder requests review and an admin does the publishing (similar to traditional SDLC best practices around pull requests). Allow or deny specific tools and connectors across the enterprise, so nobody connects a data source that procurement hasn’t approved yet. Lastly, vary policy by group, so only Legal can reach the legal agents.</li>
+
+
+
+<li><strong>Data access.</strong> <a href="https://www.obsidiansecurity.com/blog/ai-agent-market-landscape">Obsidian Security’s 2025 AI Agent Security Landscape</a> report found that 90% of deployed AI agents are over-permissioned relative to the actual scope of their assigned tasks, and separately estimates that agents are typically granted about 10 times more access than their workflows need. That’s why connections and knowledge bases deserve their own permission model. Credentials should be encrypted and owned by whoever created the connection to a given tool, app, or data lake, with sharing as an explicit decision. Here’s where it gets tricky: if a builder connects SharePoint with their own account, the agent sees what that person can see. Connect through a service account and the agent inherits the service account’s entire scope, which is usually far wider than anyone intended. The safer pattern is to check end-user access at runtime, so the person asking has to authenticate before retrieval happens and only gets what they’re already entitled to.</li>
+
+
+
+<li><strong>Observability.</strong> It’s imperative to have exportable records of who ran what, when, against which model, with token counts and latency, plus per-step traces showing inputs, retrieved chunks and outputs. Give builders the ability to mask or disable logging where the data is too sensitive to retain. Then push those records out of the platform on a schedule so security’s pipeline consumes them automatically.</li>
+
+
+
+<li><strong>Authentication.</strong> SSO over passwords, MFA through whatever authenticator your org already runs, and defaulting new users into the lowest-privilege role until an admin promotes them. <a href="https://learn.microsoft.com/en-us/entra/identity/authentication/concept-mandatory-multifactor-authentication?tabs=dotnet">According to Microsoft</a>, MFA can block more than 99.2% of account compromise attacks. And SSO gives you the email address of everyone using your interfaces, which makes for an additional layer of security.</li>
+</ol>
+
+
+
+<p class="wp-block-paragraph">None of these are new inventions; they’re the same controls you already apply to internal software. But most organizations haven’t extended them to AI that both talks to customers and writes to the CRM.</p>
+
+
+
+<h2 class="wp-block-heading" id="dont-forget-about-deployment">Don’t forget about deployment</h2>
+
+
+
+<p class="wp-block-paragraph">After governance, the other half of enterprise AI readiness is deployment. Regardless of what platform you choose, there are four realistic postures:</p>
+
+
+
+<ol class="wp-block-list" start="1">
+<li><strong>Multi-tenant SaaS</strong>, where you share infrastructure with others and rely on tenant isolation at the database layer.</li>
+
+
+
+<li><strong>Dedicated single-tenant</strong>, where the vendor operates a VPC that only you occupy.</li>
+
+
+
+<li><strong>Bring-your-own-cloud</strong>, where the software runs inside your own cloud account and your data never leaves it.</li>
+
+
+
+<li><strong>On-premise</strong>, where you own the infrastructure, the control plane and the data plane outright.</li>
+</ol>
+
+
+
+<p class="wp-block-paragraph">It’s well known that multi-tenant is available as soon as possible and updates itself continuously. Dedicated takes a couple of weeks to stand up and updates on a schedule the vendor applies. Bring-your-own-cloud runs two to four weeks and splits responsibility, with the vendor managing the application through a scoped cross-account role while your team owns networking and IAM. On-premise starts at a month or more, and after that your team applies every release itself.</p>
+
+
+
+<p class="wp-block-paragraph">My honest read? Most organizations are well served by multi-tenant, and choosing it doesn’t compromise on security or privacy. Bring-your-own-cloud and on-premise make sense when you have a data sovereignty requirement and a mature internal platform team, but they result in manual updates and slower time to value. There’s no right or wrong answer here — but it’s helpful for CIOs to understand the trade-offs between each of these common deployment methods so they can choose what fits best for their enterprise.</p>
+
+
+
+<h2 class="wp-block-heading" id="a-readiness-test-you-can-run-this-week">A readiness test you can run this week</h2>
+
+
+
+<p class="wp-block-paragraph">So, are you ready for enterprise AI? Here’s a quick self-diagnostic that I like to run with CIOs. Pick your three highest-privilege AI agents or workflows in production and try to list these attributes yourself:</p>
+
+
+
+<p class="wp-block-paragraph">Who owns each one by name. What changed in it most recently, and who approved that change. Which connectors and knowledge bases it can reach, and whose permissions those reads run under. Whether accessing it requires SSO. Where its logs are, and how long they’re retained. What happens to it if the model version it depends on is deprecated next quarter.</p>
+
+
+
+<p class="wp-block-paragraph">If most of those answers are “I’d have to ask around,” you’re not ready to scale, and that’s fine. All it means is that you have a week of policy work ahead — but you’ll thank yourself later for figuring the tough stuff out first.</p>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Sources: Meta and BlackRock&#x27;s $14B El Paso data center project is not insured against total loss, exposing lenders to credit risks and big potential liabilities (Financial Times)</title>
+  <link>https://www.techmeme.com/260817/p11#a260817p11</link>
+  <pubDate>Mon, 17 Aug 2026 10:45:03 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.ft.com/content/adeca274-67a3-4ee8-94f1-f43e4f28be97"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260817/i11.jpg" vspace="4" /></a>
+<p><a href="https://www.techmeme.com/260817/p11#a260817p11" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="https://www.ft.com/">Financial Times</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://www.ft.com/content/adeca274-67a3-4ee8-94f1-f43e4f28be97">Sources: Meta and BlackRock's $14B El Paso data center project is not insured against total loss, exposing lenders to credit risks and big potential liabilities</a></b></span>&nbsp; &mdash;&nbsp; Investors in gigawatt-scale campuses face billions in underinsured risks as insurers balk at cost of full coverage</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Russian law enforcement docs: Binance provided Russia with transaction records and passport copies of IT specialist Yuri Belenkiy, leading to terrorism charges (Anton Zverev/Reuters)</title>
+  <link>https://www.techmeme.com/260817/p10#a260817p10</link>
+  <pubDate>Mon, 17 Aug 2026 10:30:01 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.reuters.com/legal/government/binance-gave-moscow-client-details-used-charge-russian-over-ukraine-donations-2026-08-17/"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260817/i10.jpg" vspace="4" /></a>
+<p><a href="https://www.techmeme.com/260817/p10#a260817p10" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Anton Zverev / <a href="http://www.reuters.com/">Reuters</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://www.reuters.com/legal/government/binance-gave-moscow-client-details-used-charge-russian-over-ukraine-donations-2026-08-17/">Russian law enforcement docs: Binance provided Russia with transaction records and passport copies of IT specialist Yuri Belenkiy, leading to terrorism charges</a></b></span>&nbsp; &mdash;&nbsp; Binance last year handed Russian authorities details of cryptocurrency donations to Ukrainian fundraising campaigns that were used &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 An analysis of 60 of the largest planned US data centers: they could together produce 101.5M tons of CO2 per year, or ~7% of US power sector emissions in 2025 (Financial Times)</title>
+  <link>https://www.techmeme.com/260817/p9#a260817p9</link>
+  <pubDate>Mon, 17 Aug 2026 10:10:03 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://www.ft.com/content/8158cb5a-4bbd-43fd-b329-15a54e8422c8"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260817/i9.jpg" vspace="4" /></a>
+<p><a href="https://www.techmeme.com/260817/p9#a260817p9" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="https://www.ft.com/">Financial Times</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://www.ft.com/content/8158cb5a-4bbd-43fd-b329-15a54e8422c8">An analysis of 60 of the largest planned US data centers: they could together produce 101.5M tons of CO2 per year, or ~7% of US power sector emissions in 2025</a></b></span>&nbsp; &mdash;&nbsp; FT analysis finds 60 largest planned facilities could emit equivalent of 27 coal plants or 24mn cars per year</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+</item>
+
 <item>
   <title>🔵 How to level up from IT management to IT leadership</title>
   <link>https://www.cio.com/article/4207533/how-to-level-up-from-it-management-to-it-leadership.html</link>
@@ -361,7 +525,7 @@
 
 <li><a href="https://www.cio.com/article/4189688/6-new-rules-of-it-leadership-and-what-they-replace.html">6 new rules of IT leadership — and what they replace</a></li>
 </ul>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
 </item>
 
 <item>
@@ -506,7 +670,7 @@
 
 
 <p class="wp-block-paragraph">CIOs have to become not just custodians of organizational systems, but of organizational memory. In the new Badlands of the AI age, the CIO is the morally upright gunslinger. Organizational memory is the line she must defend.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
 </item>
 
 <item>
@@ -603,7 +767,7 @@
 
 
 <p class="wp-block-paragraph">“Pilots tend to die because of no result, which isn’t the same as a bad result,” Inamdar says. “Emphasize to the deployment team on day one that if a target result by a certain month isn’t seen, we shut it down. Otherwise, you’re funding a zombie pilot because everyone’s invested and no one wants to be the one to call it out.”</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
 </item>
 
 <item>
@@ -613,15 +777,17 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.reuters.com/legal/transactional/shein-eyes-company-valuation-around-25-billion-hong-kong-ipo-sources-say-2026-08-17/"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260817/i8.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260817/p8#a260817p8" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="http://www.reuters.com/">Reuters</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.reuters.com/legal/transactional/shein-eyes-company-valuation-around-25-billion-hong-kong-ipo-sources-say-2026-08-17/">Sources: Singapore-based Shein is aiming to hit a ~$25B valuation in its Hong Kong IPO, down from its $30B-$40B goal earlier in August after investor meetings</a></b></span>&nbsp; &mdash;&nbsp; Online fast-fashion retailer Shein is eyeing a company valuation of around $25 billion in its Hong Kong IPO &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.reuters.com/legal/transactional/shein-eyes-company-valuation-around-25-billion-hong-kong-ipo-sources-say-2026-08-17/">Sources: Singapore-based Shein is aiming to hit a ~$25B valuation in its Hong Kong IPO, down from its $30B-$40B goal earlier in August after investor meetings</a></b></span>&nbsp; &mdash;&nbsp; Online fast-fashion retailer Shein is eyeing a company valuation of around $25 billion in its Hong Kong IPO &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
 </item>
 
 <item>
-  <title>🟠 Code fixers have fired up the AI warp drive. Strange new worlds await</title>
-  <link>https://www.theregister.com/columnists/2026/08/17/code-fixers-have-fired-up-the-ai-warp-drive-strange-new-worlds-await/5287681</link>
-  <pubDate>Mon, 17 Aug 2026 09:04:00 +0000</pubDate>
-  <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>With more patches per month than at a pirate convention, the bug must be an endangered species. Well, about that<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+  <title>🔵 Analysis: nine top tech companies including Alphabet and Meta had ~$3T of AI-related off-balance-sheet commitments, far exceeding their $600B in reported capex (Wall Street Journal)</title>
+  <link>https://www.techmeme.com/260817/p7#a260817p7</link>
+  <pubDate>Mon, 17 Aug 2026 09:45:03 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://www.wsj.com/tech/ai/why-big-techs-ai-spending-is-3-trillion-higher-than-it-seems-e1067bb2?st=hKauuG&amp;reflink=desktopwebshare_permalink"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260817/i7.jpg" vspace="4" /></a>
+<p><a href="https://www.techmeme.com/260817/p7#a260817p7" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="https://www.wsj.com/">Wall Street Journal</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://www.wsj.com/tech/ai/why-big-techs-ai-spending-is-3-trillion-higher-than-it-seems-e1067bb2?st=hKauuG&amp;reflink=desktopwebshare_permalink">Analysis: nine top tech companies including Alphabet and Meta had ~$3T of AI-related off-balance-sheet commitments, far exceeding their $600B in reported capex</a></b></span>&nbsp; &mdash;&nbsp; Massive spending commitments for data-center leases and chips aren't shown on companies' balance sheets</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
 </item>
 
 <item>
@@ -742,7 +908,15 @@
 
 
 <p class="wp-block-paragraph">Put simply — the winners in the Agentic AI era won’t be the companies that deploy the most agents the quickest but those whose agents understand their businesses the best.</p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 I&#x27;ve tested dozens of tablets - this $300 TCL is a back-to-school powerhouse</title>
+  <link>https://www.zdnet.com/article/tcl-tab-a1-plus-nxtpaper-tablet-review-2026/</link>
+  <pubDate>Mon, 17 Aug 2026 08:45:57 +0000</pubDate>
+  <source>ZDNet</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>The Tab A1 Plus Nxtpaper is a new offering from TCL that has arrived just in time to become a partner for school productivity.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
 </item>
 
 <item>
@@ -752,7 +926,7 @@
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://www.theguardian.com/film/2026/aug/16/directors-embracing-ai-film-making"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260817/i6.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260817/p6#a260817p6" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Robert Booth / <a href="http://www.theguardian.com/">The Guardian</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.theguardian.com/film/2026/aug/16/directors-embracing-ai-film-making">AI film startups are setting up studios in Hollywood, using US and Chinese AI models while touting lower production costs and a way around traditional financing</a></b></span>&nbsp; &mdash;&nbsp; Amid fears for jobs, some film-makers say AI could enable them bypass studio giants and take more creative risks</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://www.theguardian.com/film/2026/aug/16/directors-embracing-ai-film-making">AI film startups are setting up studios in Hollywood, using US and Chinese AI models while touting lower production costs and a way around traditional financing</a></b></span>&nbsp; &mdash;&nbsp; Amid fears for jobs, some film-makers say AI could enable them bypass studio giants and take more creative risks</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
 </item>
 
 <item>
@@ -958,6 +1132,25 @@
 
 <p class="wp-block-paragraph">“The CISO’s responsibility is still to protect the organization’s ability to operate by understanding risk, communicating it effectively, and helping the business make informed decisions,” he adds. “Technology evolves, but leadership, trust, sound judgment, and clear communication remain constant requirements.”</p>
 </div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 How US industrial companies like Caterpillar, Cummins, Eaton, and Ford are pivoting their businesses to feed a booming AI data-center market for power equipment (Bob Tita/Wall Street Journal)</title>
+  <link>https://www.techmeme.com/260817/p5#a260817p5</link>
+  <pubDate>Mon, 17 Aug 2026 07:45:01 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://www.wsj.com/business/big-manufacturers-find-new-demand-in-equipping-ai-data-centers-14e869ee?st=CNXFQm&amp;reflink=desktopwebshare_permalink"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260817/i5.jpg" vspace="4" /></a>
+<p><a href="https://www.techmeme.com/260817/p5#a260817p5" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Bob Tita / <a href="https://www.wsj.com/">Wall Street Journal</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://www.wsj.com/business/big-manufacturers-find-new-demand-in-equipping-ai-data-centers-14e869ee?st=CNXFQm&amp;reflink=desktopwebshare_permalink">How US industrial companies like Caterpillar, Cummins, Eaton, and Ford are pivoting their businesses to feed a booming AI data-center market for power equipment</a></b></span>&nbsp; &mdash;&nbsp; Companies such as Caterpillar and Cummins are pivoting to feed a booming market for once-prosaic power equipment</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+</item>
+
+<item>
+  <title>🔵 Fortune 500 Companies Hit in Azure Data Theft Campaign</title>
+  <link>https://www.securityweek.com/fortune-500-companies-hit-in-azure-data-theft-campaign/</link>
+  <pubDate>Mon, 17 Aug 2026 06:51:08 +0000</pubDate>
+  <source>SecurityWeek</source>
+  <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><p>A threat actor is claiming the exfiltration of millions of records from McDonald’s, TCS, Vodafone, and other large organizations.</p>
+<p>The post <a href="https://www.securityweek.com/fortune-500-companies-hit-in-azure-data-theft-campaign/">Fortune 500 Companies Hit in Azure Data Theft Campaign</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
 </item>
 
 <item>
@@ -1552,7 +1745,7 @@
 
 
 <p class="wp-block-paragraph"></p>
-</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 3h ago]]></description>
+</div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 4h ago]]></description>
 </item>
 
 <item>
@@ -1566,63 +1759,63 @@
 </item>
 
 <item>
+  <title>🔵 AI video generation startup Higgsfield raised $400M from DST, Goldman Sachs, Liberty Global, Intel, and others at a $5.4B valuation, up from $1.3B in January (James Fontanella-Khan/Financial Times)</title>
+  <link>https://www.techmeme.com/260817/p3#a260817p3</link>
+  <pubDate>Mon, 17 Aug 2026 05:10:01 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://www.ft.com/content/719c8108-f4ae-466b-80f4-96f26558d642"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260817/i3.jpg" vspace="4" /></a>
+<p><a href="https://www.techmeme.com/260817/p3#a260817p3" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> James Fontanella-Khan / <a href="https://www.ft.com/">Financial Times</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://www.ft.com/content/719c8108-f4ae-466b-80f4-96f26558d642">AI video generation startup Higgsfield raised $400M from DST, Goldman Sachs, Liberty Global, Intel, and others at a $5.4B valuation, up from $1.3B in January</a></b></span>&nbsp; &mdash;&nbsp; Company founded by former Snap executive Alex Mashrabov targets marketing content for businesses</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
+</item>
+
+<item>
   <title>🔵 Chainalysis sues the US government over ICE&#x27;s $94.6M contract to buy forensic software and services from its competitor TRM Labs, calling the deal &quot;arbitrary&quot; (Ezra Reguerra/Cointelegraph)</title>
   <link>https://www.techmeme.com/260817/p2#a260817p2</link>
   <pubDate>Mon, 17 Aug 2026 04:45:01 +0000</pubDate>
   <source>Techmeme</source>
   <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://cointelegraph.com/news/chainalysis-sues-us-over-ices-sole-source-contract-with-trm-labs"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260817/i2.jpg" vspace="4" /></a>
 <p><a href="https://www.techmeme.com/260817/p2#a260817p2" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Ezra Reguerra / <a href="http://cointelegraph.com/">Cointelegraph</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://cointelegraph.com/news/chainalysis-sues-us-over-ices-sole-source-contract-with-trm-labs">Chainalysis sues the US government over ICE's $94.6M contract to buy forensic software and services from its competitor TRM Labs, calling the deal &ldquo;arbitrary&rdquo;</a></b></span>&nbsp; &mdash;&nbsp; The sealed complaint leaves Chainalysis' specific objections and requested remedy undisclosed as briefing continues.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 5h ago]]></description>
+<span style="font-size: 1.3em;"><b><a href="https://cointelegraph.com/news/chainalysis-sues-us-over-ices-sole-source-contract-with-trm-labs">Chainalysis sues the US government over ICE's $94.6M contract to buy forensic software and services from its competitor TRM Labs, calling the deal &ldquo;arbitrary&rdquo;</a></b></span>&nbsp; &mdash;&nbsp; The sealed complaint leaves Chainalysis' specific objections and requested remedy undisclosed as briefing continues.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 6h ago]]></description>
 </item>
 
 <item>
-  <title>🔵 Microsoft blames AI for delayed Exchange update, can’t say when it will arrive</title>
-  <link>https://www.theregister.com/software/2026/08/17/microsoft-blames-ai-for-delayed-exchange-update-cant-say-when-it-will-arrive/5288227</link>
-  <pubDate>Mon, 17 Aug 2026 02:31:58 +0000</pubDate>
-  <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Could impact email access or mail flow — monitor delivery and client issues.</b><br/>Dealing with machine-made bug backlog makes it hard to find a moment to deliver promised subscription service<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
-</item>
-
-<item>
-  <title>🔴 Chinese AI company Zhipu claims its new model is a better bug-finder than Anthropic, OpenAI</title>
-  <link>https://www.theregister.com/security/2026/08/17/chinese-ai-company-zhipu-claims-its-new-model-is-a-better-bug-finder-than-anthropic-openai/5288203</link>
-  <pubDate>Mon, 17 Aug 2026 00:51:21 +0000</pubDate>
-  <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Potential data exposure — check monitoring and incident response readiness.</b><br/>PLUS: HCL, TCS, admit data breaches; South Korea to fine Apple, Google; India bans some rideshare tips; and more!<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Sources: Stripe has finalized a deal to acquire AI model marketplace OpenRouter for more than $7B; founded in 2023, OpenRouter had a $1.3B valuation in May (Bloomberg)</title>
-  <link>https://www.techmeme.com/260816/p9#a260816p9</link>
-  <pubDate>Sun, 16 Aug 2026 20:10:01 +0000</pubDate>
+  <title>🔵 Anthropic&#x27;s text watermark alters word probabilities to embed a fingerprint, which could degrade Claude&#x27;s writing, despite its claim of no impact on quality (John Gruber/Daring Fireball)</title>
+  <link>https://www.techmeme.com/260817/p1#a260817p1</link>
+  <pubDate>Mon, 17 Aug 2026 04:00:13 +0000</pubDate>
   <source>Techmeme</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/><a href="https://www.bloomberg.com/news/articles/2026-08-16/stripe-nears-deal-to-buy-ai-firm-openrouter-for-over-7-billion"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260816/i9.jpg" vspace="4" /></a>
-<p><a href="https://www.techmeme.com/260816/p9#a260816p9" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="https://www.bloomberg.com/">Bloomberg</a>:<br />
-<span style="font-size: 1.3em;"><b><a href="https://www.bloomberg.com/news/articles/2026-08-16/stripe-nears-deal-to-buy-ai-firm-openrouter-for-over-7-billion">Sources: Stripe has finalized a deal to acquire AI model marketplace OpenRouter for more than $7B; founded in 2023, OpenRouter had a $1.3B valuation in May</a></b></span>&nbsp; &mdash;&nbsp; Stripe Inc. has finalized an agreement to acquire OpenRouter Inc., a startup that helps companies switch between artificial intelligence models &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 14h ago]]></description>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://daringfireball.net/2026/08/anthropics_watermark_text_adulteration_in_claude_is_a_perversion_of_writing"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260817/i1.jpg" vspace="4" /></a>
+<p><a href="https://www.techmeme.com/260817/p1#a260817p1" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> John Gruber / <a href="https://daringfireball.net/">Daring Fireball</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://daringfireball.net/2026/08/anthropics_watermark_text_adulteration_in_claude_is_a_perversion_of_writing">Anthropic's text watermark alters word probabilities to embed a fingerprint, which could degrade Claude's writing, despite its claim of no impact on quality</a></b></span>&nbsp; &mdash;&nbsp; When I wrote this week about Anthropic's announcement that all Claude models, worldwide, would soon begin &ldquo;watermarking&rdquo; &hellip; </p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 7h ago]]></description>
 </item>
 
 <item>
-  <title>🔵 Stopping a cyberattack while walking your dog - defensive AI security CEO says it&#x27;s not ruff to do</title>
-  <link>https://www.theregister.com/security/2026/08/16/stopping-a-cyberattack-while-walking-your-dog-defensive-ai-security-ceo-says-its-not-ruff-to-do/5288126</link>
-  <pubDate>Sun, 16 Aug 2026 10:06:00 +0000</pubDate>
-  <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Endpoint detection changes — review high-severity detections and alert noise.</b><br/>Corma CEO tells The Reg it's building 'One ring to rule them all, for the defenders to have this power'<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
+  <title>🔵 Singapore hopes access to advanced AI models will stem the flow of finance talent to Hong Kong, where financial firms struggle to access the latest US AI models (Financial Times)</title>
+  <link>https://www.techmeme.com/260816/p13#a260816p13</link>
+  <pubDate>Mon, 17 Aug 2026 02:10:01 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://www.ft.com/content/7d2969fd-85aa-43fb-ae04-97d1d0ee2463"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260816/i13.jpg" vspace="4" /></a>
+<p><a href="https://www.techmeme.com/260816/p13#a260816p13" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> <a href="https://www.ft.com/">Financial Times</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://www.ft.com/content/7d2969fd-85aa-43fb-ae04-97d1d0ee2463">Singapore hopes access to advanced AI models will stem the flow of finance talent to Hong Kong, where financial firms struggle to access the latest US AI models</a></b></span>&nbsp; &mdash;&nbsp; Close relations with both US and China mean the latest AI models are easily accessible in the city-state</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 9h ago]]></description>
 </item>
 
 <item>
-  <title>🔵 The what, why, and how of pull requests and source comments</title>
-  <link>https://www.theregister.com/offbeat/2026/08/16/the-what-why-and-how-of-pull-requests-and-source-comments/5287914</link>
-  <pubDate>Sun, 16 Aug 2026 07:58:00 +0000</pubDate>
-  <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Microsoft veteran on knowing the difference and convincing approvers to accept a change<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
+  <title>🔵 A look at companies like Inception Point creating AI personas for media, fashion, film, and music industries that could host podcasts, model clothes, and more (Reggie Ugwu/New York Times)</title>
+  <link>https://www.techmeme.com/260816/p12#a260816p12</link>
+  <pubDate>Mon, 17 Aug 2026 00:40:01 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://www.nytimes.com/2026/08/13/arts/ai-podcasts-fashion-pop-avatars.html?unlocked_article_code=1.5FA.fKfk.bMp5uecIkIOV&amp;smid=bs-share"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260816/i12.jpg" vspace="4" /></a>
+<p><a href="https://www.techmeme.com/260816/p12#a260816p12" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Reggie Ugwu / <a href="https://www.nytimes.com/">New York Times</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://www.nytimes.com/2026/08/13/arts/ai-podcasts-fashion-pop-avatars.html?unlocked_article_code=1.5FA.fKfk.bMp5uecIkIOV&amp;smid=bs-share">A look at companies like Inception Point creating AI personas for media, fashion, film, and music industries that could host podcasts, model clothes, and more</a></b></span>&nbsp; &mdash;&nbsp; The A.I. personas created by Inception Point AI include, clockwise from top left, Claire Delish, VV Steele, Nigel Thistledown and Lila Walker.Inception Point AI</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 10h ago]]></description>
 </item>
 
 <item>
-  <title>🔵 ChainDrop worm crawls into npm supply chain, evades standard defenses</title>
-  <link>https://www.theregister.com/security/2026/08/15/chaindrop-worm-crawls-into-npm-supply-chain-evades-standard-defenses/5287958</link>
-  <pubDate>Sat, 15 Aug 2026 10:31:00 +0000</pubDate>
-  <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Supply chain risk — audit third-party dependencies and vendor access.</b><br/>Shai-Hulud variant poisons 444 packages, spreads via tarballs and dev-tool hooks<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1d ago]]></description>
+  <title>🔵 How Anthropic&#x27;s Claude made a math breakthrough during its unsuccessful 54-hour attempt to solve the Riemann hypothesis, aided by a staffer&#x27;s encouragement (Ben Cohen/Wall Street Journal)</title>
+  <link>https://www.techmeme.com/260816/p11#a260816p11</link>
+  <pubDate>Sun, 16 Aug 2026 22:35:01 +0000</pubDate>
+  <source>Techmeme</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/><a href="https://www.wsj.com/tech/ai/ai-math-riemann-hypothesis-anthropic-openai-22f98a87?st=7mfzgc&amp;reflink=desktopwebshare_permalink"><img align="RIGHT" border="0" hspace="4" src="http://www.techmeme.com/260816/i11.jpg" vspace="4" /></a>
+<p><a href="https://www.techmeme.com/260816/p11#a260816p11" title="Techmeme permalink"><img height="12" src="http://www.techmeme.com/img/pml.png" style="border: none; padding: 0; margin: 0;" width="11" /></a> Ben Cohen / <a href="https://www.wsj.com/">Wall Street Journal</a>:<br />
+<span style="font-size: 1.3em;"><b><a href="https://www.wsj.com/tech/ai/ai-math-riemann-hypothesis-anthropic-openai-22f98a87?st=7mfzgc&amp;reflink=desktopwebshare_permalink">How Anthropic's Claude made a math breakthrough during its unsuccessful 54-hour attempt to solve the Riemann hypothesis, aided by a staffer's encouragement</a></b></span>&nbsp; &mdash;&nbsp; The world's smartest AI models are now superhuman at math.&nbsp; They still respond to moral support and encouragement from mere humans.</p><br/><br/><b>Source:</b> Techmeme &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 12h ago]]></description>
 </item>
 
 <item>
@@ -1749,11 +1942,48 @@
 </item>
 
 <item>
-  <title>🔴 Crypto wallet maker Trezor confirms 13,000 customers&#x27; details exposed in logistics breach</title>
-  <link>https://www.theregister.com/security/2026/08/14/crypto-wallet-maker-trezor-confirms-13000-customers-details-exposed-in-logistics-breach/5287734</link>
-  <pubDate>Fri, 14 Aug 2026 10:29:00 +0000</pubDate>
-  <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Potential data exposure — check monitoring and incident response readiness.</b><br/>Even if your hardware is secure, quantum-ready, encrypted, and future-proof, no one is immune to a supplier letting the side down<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
+  <title>🔵 IBM partners with OpenAI to drive enterprise AI deployment</title>
+  <link>https://www.cio.com/article/4209708/ibm-partners-with-openai-to-drive-enterprise-ai-deployment.html</link>
+  <pubDate>Fri, 14 Aug 2026 11:38:40 +0000</pubDate>
+  <source>CIO.com</source>
+  <description><![CDATA[<b>Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<p class="wp-block-paragraph">IBM will embed OpenAI frontier models and products such as Codex and ChatGPT embedded into IBM’s AI consulting services platform, IBM Consulting Advantage, as well as expanding the companies’ existing collaboration in the cybersecurity realm, they announced Thursday.</p>
+
+
+
+<p class="wp-block-paragraph">Joint initiatives will include the creation of industry-specific products for financial services, government, telecommunications, and retail, as well as serving key enterprise domains such as finance, procurement, customer operations, and HR.</p>
+
+
+
+<p class="wp-block-paragraph">IBM will join the OpenAI Partner Network and engage forward-deployed engineers and consultants trained through the network to help clients accelerate their AI implementations. It will also create a dedicated OpenAI practice, certifying thousands of consultants and engineers via the Partner Network, it said.</p>
+
+
+
+<p class="wp-block-paragraph">There will be three focus areas in the new partnership: helping organizations transform their businesses to integrate AI into their daily work, assisting clients in modernizing legacy applications through a combination of OpenAI products and IBM’s expertise, and an expansion of an existing cybersecurity collaboration combining OpenAI frontier AI capabilities with IBM Autonomous Security.</p>
+
+
+
+<p class="wp-block-paragraph">Everyone, it seems, is engaging forward-deployed engineers to help enterprises build systems around their AI models: OpenAI announced its initiative, <a href="https://www.cio.com/article/4169759/openais-new-ai-consulting-offering-raises-questions-of-trust-strategy.html">OpenAI Deployment Company</a>, on May 11, a week after <a href="https://www.cio.com/article/4167981/anthropics-financial-agents-expose-forward-deployed-engineers-as-new-ai-limiting-factor.html">Anthropic</a> launched its efforts. <a href="https://www.cio.com/article/4193510/microsoft-bets-that-enterprise-ai-needs-engineers-not-bigger-sales-teams.html">Microsoft</a> and <a href="https://www.cio.com/article/4192504/microsoft-and-amazon-devote-billions-of-dollars-to-thousands-of-fdes.html">AWS</a> too have jumped into the ring.</p>
+
+
+
+<p class="wp-block-paragraph">But, said Info-Tech Research Group distinguished analyst <a href="https://www.infotech.com/profiles/mark-tauschek" rel="noreferrer noopener" target="_blank">Mark Tauschek</a>, “This is becoming table stakes. The consulting firms that have the horsepower and technical talent to partner with a frontier AI lab to do this are all picking their horses. Anthropic has some, Microsoft has some, and of course OpenAI has some. There will be more announcements like this to follow, and while it’s good PR for both IBM and OpenAI, it’s certainly not differentiating.”</p>
+
+
+
+<p class="wp-block-paragraph">Enterprises will choose the consulting firms that work with their AI vendor of choice, he noted, although he does think that Microsoft had the initial advantage because they were able to quickly provide thousands of skilled FDEs.</p>
+
+
+
+<p class="wp-block-paragraph">“But,” he said, “this is a horse race, and it’s going to be a tight one.”</p>
+</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2d ago]]></description>
 </item>
 
 <item>
@@ -1985,14 +2215,6 @@
 
 <p class="wp-block-paragraph">My client’s health scare became the moment he gave himself permission to ask for help. My hope is that IT executives reach out long before their minds and bodies reach that point. In my experience, the leaders who ask for help early are the ones who stay healthy and remain in their roles, and their organizations are better for it.</p>
 </div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3d ago]]></description>
-</item>
-
-<item>
-  <title>🔴 BOFH: How our Covid ransomware protocol&#x27;s Y2K blockchain lowered uptime</title>
-  <link>https://www.theregister.com/bofh/2026/08/14/bofh-how-our-covid-ransomware-protocols-y2k-blockchain-lowered-uptime/5284585</link>
-  <pubDate>Fri, 14 Aug 2026 09:29:00 +0000</pubDate>
-  <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Elevated ransomware risk — validate backups and endpoint defenses.</b><br/>Diary of an excuse hound: Pie charts make us hungry for pizza<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 3d ago]]></description>
 </item>
 
 <item>
@@ -2478,15 +2700,6 @@
 
 <p class="wp-block-paragraph">When security is designed into the way organizations operate, it becomes more than protection. It becomes a foundation for innovation, resilience and growth.</p>
 </div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3d ago]]></description>
-</item>
-
-<item>
-  <title>🔴 14,000 Trezor Customers Impacted by Data Breach at ShipMonk</title>
-  <link>https://www.securityweek.com/14000-trezor-customers-impacted-by-data-breach-at-shipmonk/</link>
-  <pubDate>Fri, 14 Aug 2026 08:16:00 +0000</pubDate>
-  <source>SecurityWeek</source>
-  <description><![CDATA[<b>Why this matters: Potential data exposure — check monitoring and incident response readiness.</b><br/><p>Hackers stole the customers’ shipping information, including names, addresses, email addresses, and phone numbers.</p>
-<p>The post <a href="https://www.securityweek.com/14000-trezor-customers-impacted-by-data-breach-at-shipmonk/">14,000 Trezor Customers Impacted by Data Breach at ShipMonk</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 3d ago]]></description>
 </item>
 
 <item>
@@ -4132,27 +4345,11 @@
 </item>
 
 <item>
-  <title>🔵 Trump wants to grant private cyber firms a license to hack back</title>
-  <link>https://www.theregister.com/security/2026/08/13/trump-wants-to-grant-private-cyber-firms-a-license-to-hack-back/5287420</link>
-  <pubDate>Thu, 13 Aug 2026 15:04:09 +0000</pubDate>
-  <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Budget/licensing impact — verify renewal terms and forecast cost changes.</b><br/>Contractors could surveil and disrupt foreign criminal networks, provided they follow strict rules and put up $1M<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3d ago]]></description>
-</item>
-
-<item>
-  <title>🔴 The backup Microsoft never promised you</title>
-  <link>https://www.theregister.com/security/2026/08/13/sponsored-the-backup-microsoft-never-promised-you/5284957</link>
-  <pubDate>Thu, 13 Aug 2026 15:00:00 +0000</pubDate>
-  <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Elevated ransomware risk — validate backups and endpoint defenses.</b><br/>SPONSORED FEATURE: Your M365 and Azure data might not be as safe as you think from ransomware; time for a reality check<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 3d ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Mystery attacker spent a year raiding Salesforce and ServiceNow portals</title>
-  <link>https://www.theregister.com/cyber-crime/2026/08/13/mystery-attacker-spent-a-year-raiding-salesforce-and-servicenow-portals/5287368</link>
-  <pubDate>Thu, 13 Aug 2026 13:32:00 +0000</pubDate>
-  <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface.</b><br/>Custom tools harvested whatever over-permissioned guest accounts would surrender<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3d ago]]></description>
+  <title>🔵 Microsoft is merging Copilot and Copilot 365 into one unified app - and retiring 3 features</title>
+  <link>https://www.zdnet.com/article/microsoft-to-merge-copilot-and-copilot-365-into-one-unified-app-retiring-features/</link>
+  <pubDate>Thu, 13 Aug 2026 13:32:06 +0000</pubDate>
+  <source>ZDNet</source>
+  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>The move should cut down on the confusion between the two apps, especially for anyone who bounces back and forth between the two of them.<br/><br/><b>Source:</b> ZDNet &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3d ago]]></description>
 </item>
 
 <item>
@@ -4354,83 +4551,6 @@
 
 
 <p class="wp-block-paragraph">You can add more agents anytime. The norms that make them worth having take longer and matter more: ownership that stays with people, skepticism that’s welcomed, judgement that’s grown deliberately, and work that’s visible by default. Build those and every tool you adopt compounds on top of them. See how leading engineering organizations are building the culture and habits that make agents worth having at <a href="https://www.atlassian.com/software/jira/dev?utm_source=foundry&amp;utm_medium=paid-social&amp;utm_campaign=P:jira%7CO:ppm%7CV:foundry%7CG:us%7CL:en%7CF:aware%7CT:prospecting%7CI:imc-jira-ai-sdlc%7CA:display%7CD:alld&amp;utm_content=P:jira%7CO:ppm%7CV:foundry%7CG:us%7CL:en%7CF:aware%7CT:prospecting%7CI:imc-jira-ai-sdlc%7CA:display%7CD:alld%7CU:cio-8" rel="noreferrer noopener" target="_blank">jira.dev.</a></p>
-
-
-
-<p class="wp-block-paragraph"></p>
-</div></div></div></div><br/><br/><b>Source:</b> CIO.com &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3d ago]]></description>
-</item>
-
-<item>
-  <title>🔵 Where agentic work should start</title>
-  <link>https://www.cio.com/article/4209206/where-agentic-work-should-start.html</link>
-  <pubDate>Thu, 13 Aug 2026 13:05:23 +0000</pubDate>
-  <source>CIO.com</source>
-  <description><![CDATA[<b>Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk.</b><br/><div id="remove_no_follow">
-		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
-					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
-						<div class="article-column__content">
-<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
-
-
-
-<p class="wp-block-paragraph">The task an agent picks up starts somewhere messy: a message in a channel, a line in a planning doc, a bug buried in a customer thread. Most of the time it also builds on work the team already did. Turning that raw signal into a task an agent can act on, with the right context carried forward, is where most of the output quality is decided. This is context engineering: the work of shaping intent and context into something an agent can build against.</p>
-
-
-
-<p class="wp-block-paragraph">For years it didn’t need designing. An engineer picked up a vague ticket and filled the gaps from experience: they knew the system, knew who to ask, and knew which unwritten constraints applied. The ambiguity got resolved quietly on the way to writing the code. An agent has none of that. It builds exactly what the task describes, and it fills gaps with guesses rather than judgment. Without the right context, code gets generated faster and productivity still takes a hit, because the wrong thing got built quickly.</p>
-
-
-
-<p class="wp-block-paragraph"> <strong>Ambiguous in, expensive out</strong></p>
-
-
-
-<p class="wp-block-paragraph"> When a poorly formed task reaches an agent, the cost doesn’t show up right away. The agent produces something plausible, the work moves forward, and the mismatch between what was meant and what was built surfaces later, in review or after it ships. By then it’s more expensive to unwind than it would have been to specify correctly at the start. Across a team running many agents, vague work compounds faster than any reviewer can catch</p>
-
-
-
-<p class="wp-block-paragraph"><strong>Context is a design problem, not a discipline problem</strong></p>
-
-
-
-<p class="wp-block-paragraph">If the fix is just to write better tickets, that treats a structural gap as a personal failing, and it doesn’t holdup when work originates in a dozen places at once. The organizations getting ahead treat context as something to build, so that turning a raw signal into agent-ready work is a repeatable step rather than a task on individuals’ plates. In practice that means you can:</p>
-
-
-
-<p class="wp-block-paragraph"><strong>Give raw signal one place to land</strong>. When an idea can come from a chat message, a document, or a support conversation and be captured as a task in the same system where it will be tracked and acted on, the intent survives the trip.</p>
-
-
-
-<p class="wp-block-paragraph"><strong>Make the task carry its own context</strong>. A well-formed task states what outcome it wants, what constraints apply, and what “done” looks like. On top of that, the strongest setups also let an agent draw on the surrounding body of work, the related decisions and prior tasks, so it inherits the situational awareness an engineer would have brought in without being told.</p>
-
-
-
-<p class="wp-block-paragraph"><strong>Close the gap while the intent is fresh</strong>. The moment to resolve ambiguity is when the task is created, while the person who understands it is still in the loop, not after an agent has acted on the unclear version.</p>
-
-
-
-<p class="wp-block-paragraph"><strong>Every finished task is the next task’s starting point</strong></p>
-
-
-
-<p class="wp-block-paragraph">This isn’t a factory line where every task is the same. Each finished piece of work feeds more context into the next, and the leader’s job is to build the machine that captures it. Work comes in, an agent acts on it, and the result becomes part of the ground the next task stands on.</p>
-
-
-
-<p class="wp-block-paragraph">When an agent finishes, the summary of what it did belongs back in the same system the work was tracked in, attached to the thing it acted on, available to the next person or agent who touches that area. Do that consistently and the context compounds: each finished task leaves the ground clearer than it found it, so the next task arrives with more to build on and needs less repair.</p>
-
-
-
-<p class="wp-block-paragraph"><strong>What this means for leaders</strong></p>
-
-
-
-<p class="wp-block-paragraph">Investing in agentic engineering means investing in context: clear, context-rich tasks produce output that reflects what the team intended, while vague ones produce motion that has to be corrected. The job isn’t to write better tasks one at a time. It’s to build the system that turns every finished task into context for the next one, so the work gets easier as it compounds.</p>
-
-
-
-<p class="wp-block-paragraph">See how leading engineering organizations turn raw signal into agent-ready work at <a href="https://www.atlassian.com/software/jira/dev?utm_source=foundry&amp;utm_medium=paid-social&amp;utm_campaign=P:jira%7CO:ppm%7CV:foundry%7CG:us%7CL:en%7CF:aware%7CT:prospecting%7CI:imc-jira-ai-sdlc%7CA:display%7CD:alld&amp;utm_content=P:jira%7CO:ppm%7CV:foundry%7CG:us%7CL:en%7CF:aware%7CT:prospecting%7CI:imc-jira-ai-sdlc%7CA:display%7CD:alld%7CU:cio-7" rel="noreferrer noopener" target="_blank">jira.dev.</a></p>
 
 
 
@@ -4786,14 +4906,6 @@
 </item>
 
 <item>
-  <title>🟠 Deeply buried 16-year-old SQLite bug caused last year&#x27;s Tailscale outages</title>
-  <link>https://www.theregister.com/databases/2026/08/12/deeply-buried-16-year-old-sqlite-bug-caused-last-years-tailscale-outages/5287004</link>
-  <pubDate>Wed, 12 Aug 2026 21:29:09 +0000</pubDate>
-  <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Service impact possible — prepare comms and confirm vendor status.</b><br/>Think your bugs are a pain to track? WAL-Reset took six months of hunting and development of a new logging tool to identify<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4d ago]]></description>
-</item>
-
-<item>
   <title>🔴 Researcher bypasses Microsoft Defender security patch, seizing control</title>
   <link>https://www.csoonline.com/article/4208760/researcher-bypasses-microsoft-defender-security-patch-seizing-control.html</link>
   <pubDate>Wed, 12 Aug 2026 21:07:24 +0000</pubDate>
@@ -4900,14 +5012,6 @@
 
 <p class="wp-block-paragraph"></p>
 </div></div></div></div><br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 4d ago]]></description>
-</item>
-
-<item>
-  <title>🟠 Microsoft-vendetta hacker has a new zero day that gives system privileges on fully patched Windows</title>
-  <link>https://www.theregister.com/cyber-crime/2026/08/12/microsoft-vendetta-hacker-has-a-new-zero-day-that-gives-system-privileges-on-fully-patched-windows/5286889</link>
-  <pubDate>Wed, 12 Aug 2026 18:12:44 +0000</pubDate>
-  <source>The Register</source>
-  <description><![CDATA[<b>Why this matters: Leadership context — useful for risk, budget, and vendor conversations.</b><br/>Exploit Wednesday's back, baby<br/><br/><b>Source:</b> The Register &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4d ago]]></description>
 </item>
 
 <item>

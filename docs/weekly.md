@@ -1,7 +1,7 @@
 # IT Weekly Intelligence Briefing
 **Period:** August 10 – August 17, 2026  
-**Generated:** 2026-08-17 10:28 UTC  
-**Items reviewed:** 117  
+**Generated:** 2026-08-17 11:22 UTC  
+**Items reviewed:** 135  
 
 ## ⚡ Top Actions This Week
 
@@ -9,12 +9,12 @@
    _French tax authority data breach affects 678,000 individuals_  
    Source: BleepingComputer  
 
-2. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _SafePal data breach impacts 39,798 customers, stolen info for sale_  
-   Source: BleepingComputer  
+2. **Validate backups, confirm EDR coverage, and brief incident response team.**  
+   _Suspected China-Nexus Actor Exploits VMware vCenter Flaw, Deploys Babuk-Derived Ransomware_  
+   Source: The Hacker News  
 
-3. **Validate backups, confirm EDR coverage, and brief incident response team.**  
-   _Shell investigates 'potential incident' after Clop data theft claims_  
+3. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
+   _SafePal data breach impacts 39,798 customers, stolen info for sale_  
    Source: BleepingComputer  
 
 ---
@@ -25,6 +25,11 @@
 **Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Aug 17  
 **Why it matters:** Potential credential or data exposure.  
 **Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
+
+### [Suspected China-Nexus Actor Exploits VMware vCenter Flaw, Deploys Babuk-Derived Ransomware](https://thehackernews.com/2026/08/suspected-china-nexus-actor-exploits.html)
+**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Aug 17  
+**Why it matters:** Elevated ransomware risk across the sector.  
+**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
 
 ### [SafePal data breach impacts 39,798 customers, stolen info for sale](https://www.bleepingcomputer.com/news/security/safepal-data-breach-impacts-39-798-customers-stolen-info-for-sale/)
 **Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Aug 16  
@@ -41,15 +46,10 @@
 **Why it matters:** Potential credential or data exposure.  
 **Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
-### [Cisco ASA and FTD Flaw Exploited in the Wild Can Trigger Remote DoS](https://thehackernews.com/2026/08/cisco-asa-and-ftd-flaw-exploited-in.html)
-**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Aug 12  
-**Why it matters:** General awareness item.  
-**Recommended action:** Elevate monitoring posture; brief security team on threat actor TTPs.  
-
-### [Microsoft Plugs Nearly 400 Security Holes](https://krebsonsecurity.com/2026/08/microsoft-plugs-nearly-400-security-holes/)
-**Source:** Krebs on Security &nbsp;·&nbsp; **Date:** Aug 11  
-**Why it matters:** General awareness item.  
-**Recommended action:** Apply emergency patch or mitigation now; check vendor advisory for workarounds.  
+### [ThreatsDay: GhostJacking AI Attacks, EtherHiding ClickFix, Cursor CLI Flaw + 17 More Stories](https://thehackernews.com/2026/08/threatsday-ghostjacking-ai-attacks.html)
+**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Aug 13  
+**Why it matters:** Potential credential or data exposure.  
+**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
 ---
 
@@ -76,20 +76,20 @@
 - [CVE-2026-59124 Microsoft High Performance Computing (HPC) Pack Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-59124)  
   **Microsoft Security Response Center (MSRC)** · Aug 16 · _General awareness item._  
 
-- [Chromium: CVE-2026-19560 Use after free in Blink](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-19560)  
-  **Microsoft Security Response Center (MSRC)** · Aug 14 · _General awareness item._  
+- [SAP Commerce Cloud CVE-2026-58231 Targeted in Exploitation Attempts Days After Patch](https://thehackernews.com/2026/08/sap-commerce-cloud-cve-2026-58231.html)  
+  **The Hacker News** · Aug 15 · _General awareness item._  
 
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [Evooo1Bot Linux Botnet Exploits Known Flaws to Turn Edge Devices Into SOCKS5 Proxies](https://thehackernews.com/2026/08/evooo1bot-linux-botnet-exploits-known.html) — The Hacker News
 - [ISC Stormcast For Monday, August 17th, 2026 https://isc.sans.edu/podcastdetail/10054, (Mon, Aug 17th)](https://isc.sans.edu/diary/rss/33250) — SANS Internet Storm Center
 - [Wireshark 4.6.8 Released, (Sun, Aug 16th)](https://isc.sans.edu/diary/rss/33248) — SANS Internet Storm Center
 - [Large-scale DDoS attacks disrupted Threema secure messaging service](https://www.bleepingcomputer.com/news/security/large-scale-ddos-attacks-disrupted-threema-secure-messaging-service/) — BleepingComputer
 - [New AmnesiaStealer macOS malware hijacks browser sessions via remote control](https://www.bleepingcomputer.com/news/security/new-amnesiastealer-macos-malware-hijacks-browser-sessions-via-remote-control/) — BleepingComputer
 - [New Evooo1Bot Linux botnet turns routers into traffic relay nodes](https://www.bleepingcomputer.com/news/security/new-evooo1bot-linux-botnet-turns-routers-into-traffic-relay-nodes/) — BleepingComputer
-- [How Anthropic plans to watermark Claude's AI-generated text](https://www.bleepingcomputer.com/news/artificial-intelligence/how-anthropic-plans-to-watermark-claudes-ai-generated-text/) — BleepingComputer
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 13 critical · 74 important · 30 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 15 critical · 78 important · 42 FYI_
