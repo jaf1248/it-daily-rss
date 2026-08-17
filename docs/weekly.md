@@ -1,7 +1,7 @@
 # IT Weekly Intelligence Briefing
 **Period:** August 10 – August 17, 2026  
-**Generated:** 2026-08-17 19:25 UTC  
-**Items reviewed:** 144  
+**Generated:** 2026-08-17 20:22 UTC  
+**Items reviewed:** 147  
 
 ## ⚡ Top Actions This Week
 
@@ -9,13 +9,13 @@
    _Pokémon Center data breach exposes customer info, cancels some orders_  
    Source: BleepingComputer  
 
-2. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
+2. **Elevate monitoring posture; brief security team on threat actor TTPs.**  
+   _Cavern C2 Uses DNS and Google Apps Script to Blend Into Legitimate Traffic_  
+   Source: The Hacker News  
+
+3. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
    _680,000 Impacted by French Tax Authority Data Breach_  
    Source: SecurityWeek  
-
-3. **Validate backups, confirm EDR coverage, and brief incident response team.**  
-   _Philips and GE investigating Clop ransomware data theft claims_  
-   Source: BleepingComputer  
 
 ---
 
@@ -25,6 +25,11 @@
 **Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Aug 17  
 **Why it matters:** Potential credential or data exposure.  
 **Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
+
+### [Cavern C2 Uses DNS and Google Apps Script to Blend Into Legitimate Traffic](https://thehackernews.com/2026/08/cavern-c2-uses-dns-and-google-apps.html)
+**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Aug 17  
+**Why it matters:** Advanced persistent threat activity detected.  
+**Recommended action:** Elevate monitoring posture; brief security team on threat actor TTPs.  
 
 ### [680,000 Impacted by French Tax Authority Data Breach](https://www.securityweek.com/680000-impacted-by-french-tax-authority-data-breach/)
 **Source:** SecurityWeek &nbsp;·&nbsp; **Date:** Aug 17  
@@ -46,14 +51,15 @@
 **Why it matters:** Potential credential or data exposure.  
 **Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
-### [Suspected China-Nexus Actor Exploits VMware vCenter Flaw, Deploys Babuk-Derived Ransomware](https://thehackernews.com/2026/08/suspected-china-nexus-actor-exploits.html)
-**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Aug 17  
-**Why it matters:** Elevated ransomware risk across the sector.  
-**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
-
 ---
 
 ## 🟠 Important — Review This Week
+
+- [Snowflake GitHub Actions Flaw Lets Crafted Issues Trigger Command Injection](https://thehackernews.com/2026/08/snowflake-github-actions-flaw-lets_0330881554.html)  
+  **The Hacker News** · Aug 17 · _General awareness item._  
+
+- [Forminator WordPress Flaw Can Enable Unauthenticated RCE via Malicious PHP Uploads](https://thehackernews.com/2026/08/forminator-wordpress-flaw-can-enable.html)  
+  **The Hacker News** · Aug 17 · _General awareness item._  
 
 - [Microsoft confirms GitHub is down worldwide](https://www.bleepingcomputer.com/news/microsoft/microsoft-confirms-github-is-down-worldwide/)  
   **BleepingComputer** · Aug 17 · _Service continuity risk to users._  
@@ -73,23 +79,17 @@
 - [CVE-2026-63513 Microsoft Office Graphics Component Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-63513)  
   **Microsoft Security Response Center** · Aug 17 · _General awareness item._  
 
-- [CVE-2026-70337 Microsoft PowerShell Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-70337)  
-  **Microsoft Security Response Center** · Aug 17 · _General awareness item._  
-
-- [CVE-2026-58612 PowerShell Information Disclosure Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-58612)  
-  **Microsoft Security Response Center** · Aug 17 · _General awareness item._  
-
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [Hacker claims 3.6 million Azure account records stolen from major companies](https://www.bleepingcomputer.com/news/security/hacker-claims-36-million-azure-account-records-stolen-from-major-companies/) — BleepingComputer
 - [Apple Screen Sharing Security, (Mon, Aug 17th)](https://isc.sans.edu/diary/rss/33252) — SANS Internet Storm Center
 - [Windows Server 2022 reaches end of mainstream support in 60 days](https://www.bleepingcomputer.com/news/microsoft/windows-server-2022-reaches-end-of-mainstream-support-in-60-days/) — BleepingComputer
 - [How MCP Servers Can Expose Enterprise Secrets](https://thehackernews.com/2026/08/how-mcp-servers-can-expose-enterprise.html) — The Hacker News
 - [Conflicting Test Goals Pushed Claude Agents to Deploy Self-Replicating Malware](https://www.securityweek.com/conflicting-test-goals-pushed-claude-agents-to-deploy-self-replicating-malware/) — SecurityWeek
 - [Evooo1Bot Linux Botnet Exploits Known Flaws to Turn Edge Devices Into SOCKS5 Proxies](https://thehackernews.com/2026/08/evooo1bot-linux-botnet-exploits-known.html) — The Hacker News
-- [Fortune 500 Companies Hit in Azure Data Theft Campaign](https://www.securityweek.com/fortune-500-companies-hit-in-azure-data-theft-campaign/) — SecurityWeek
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 18 critical · 81 important · 45 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 19 critical · 82 important · 46 FYI_
