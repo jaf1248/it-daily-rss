@@ -3,7 +3,7 @@
 <channel>
   <title>Joe — Network / Infrastructure</title>
   <description>Aruba, SonicWall, ADTRAN, Microsoft infrastructure, networking, and operational platform changes.</description>
-  <lastBuildDate>Mon, 17 Aug 2026 19:12:52 +0000</lastBuildDate>
+  <lastBuildDate>Mon, 17 Aug 2026 19:24:58 +0000</lastBuildDate>
   
 <item>
   <title>🟠 NB587: US Calls for CyberSec Privateers; Oracle To Rent Out Quantum Computers</title>
@@ -69,12 +69,53 @@
 </item>
 
 <item>
+  <title>🟠 Resilient Azure Platforms: Durable Functions, Cosmos DB, and DR by Design</title>
+  <link>https://techcommunity.microsoft.com/t5/itops-talk-blog/resilient-azure-platforms-durable-functions-cosmos-db-and-dr-by/ba-p/4546001</link>
+  <guid isPermaLink="false">https://techcommunity.microsoft.com/t5/itops-talk-blog/resilient-azure-platforms-durable-functions-cosmos-db-and-dr-by/ba-p/4546001</guid>
+  <pubDate>Thu, 13 Aug 2026 07:00:00 +0000</pubDate>
+  <source>Microsoft Tech Community IT Ops</source>
+  <description><![CDATA[<b>Why this matters: Service impact is possible — verify vendor status before troubleshooting internally.</b><br/><p>Hello Folks!</p>
+<p>Operating at Azure scale means managing change across multiple interconnected systems. As applications, services, and dependencies evolve, resilience becomes a foundational design principle rather than an afterthought. In this<a class="lia-external-url" href="https://www.youtube.com/playlist?list=PLjt5SKzX1iI8con7FJDB56G6hHqxGm7ki" target="_blank"> Microsoft Azure Infra Summit 2026 session</a>, Bhavana Konchada, Principal Software Engineer at Microsoft and lead architect of the Resilience Control Platform, takes us behind the scenes of a production-grade resilience platform built on Azure and explains the engineering choices that helped bring it to life.</p>
+<p>&nbsp;</p>
+<div class="lia-embeded-content" contenteditable="false">
+</div>
+<h2>Why IT Pros Should Care</h2>
+<p>Most of us have shipped a system that worked beautifully on day one and then quietly fell apart the first time something downstream blinked. Bhavana’s session is a brutally honest tour of the decisions you make early that determine whether your platform survives reality. Here’s what you walk away with:</p>
+<ul>
+<li>A pragmatic blueprint for service boundaries that you can actually operate at 2 a.m.</li>
+<li>Concrete Durable Functions patterns (Monitor, continue-as-new, idempotency) that keep long-running workflows healthy.</li>
+<li>A Cosmos DB partitioning strategy grounded in real access patterns, not gut feel.</li>
+<li>A multi-region, fail-and-continue mindset (instead of fail-and-rec…<br/><br/><b>Source:</b> Microsoft Tech Community IT Ops &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4d]]></description>
+</item>
+
+<item>
   <title>🔵 D2DO310: Developing Efficient AI Workflows</title>
   <link>https://packetpushers.net/podcasts/day-two-devops/d2do310-developing-efficient-ai-workflows/</link>
   <guid isPermaLink="false">https://packetpushers.net/podcasts/day-two-devops/d2do310-developing-efficient-ai-workflows/</guid>
   <pubDate>Wed, 12 Aug 2026 15:27:22 +0000</pubDate>
   <source>Packet Pushers</source>
   <description><![CDATA[<b>Why this matters: Network/infrastructure development — consider firmware, configuration, and availability impact.</b><br/>Tyler Lynch, Outbound CTO at IBM, joins the show to discuss shifting from &#8220;tokenmaxxing&#8221; to &#8220;valuemaxxing&#8221; by optimizing AI agent workflows for efficiency. They explore using Obsidian for persistent agent memory to combat context bloat, the critical importance of secure sandboxing practices, and the strategic use of parallel verification to ensure your agents are performing<a class="excerpt-read-more" href="https://packetpushers.net/podcasts/day-two-devops/d2do310-developing-efficient-ai-workflows/" title="ReadD2DO310: Developing Efficient AI Workflows">... Read more &#187;</a><br/><br/><b>Source:</b> Packet Pushers &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 5d]]></description>
+</item>
+
+<item>
+  <title>🟠 Container Network Insights Agent (CNIA): Your AI Teammate for AKS Networking Incidents</title>
+  <link>https://techcommunity.microsoft.com/t5/itops-talk-blog/container-network-insights-agent-cnia-your-ai-teammate-for-aks/ba-p/4545971</link>
+  <guid isPermaLink="false">https://techcommunity.microsoft.com/t5/itops-talk-blog/container-network-insights-agent-cnia-your-ai-teammate-for-aks/ba-p/4545971</guid>
+  <pubDate>Wed, 12 Aug 2026 07:00:00 +0000</pubDate>
+  <source>Microsoft Tech Community IT Ops</source>
+  <description><![CDATA[<b>Why this matters: Credential/phishing risk — reinforce MFA and watch for suspicious sign-ins.</b><br/><p>Hello Folks!</p>
+<p>If you run AKS in production, you already know the script. A pod cannot reach an external service, every dashboard says the cluster is healthy, and somebody is SSHing into a node with five browser tabs open trying to piece the story together.&nbsp; This session from the Microsoft Azure Infra Summit 2026 tackles that exact pain.</p>
+<p>Shaifali Garg (PM for Azure Container Networking on AKS) sits down with Jonathan Wang, an AKS operator running 30 clusters across two regions on Cilium, and they walk through what a real networking incident feels like, then introduce the Container Network Insights Agent (CNIA) live in the cluster.</p>
+<p>&nbsp;</p>
+<div class="lia-embeded-content" contenteditable="false">
+</div>
+<p>&nbsp;</p>
+<h2>Why IT Pros Should Care</h2>
+<p>In Jonathan’s environment, about 40% of incidents end up being networking problems. The tools all exist (kubectl, dashboards, detectors, Hubble), but the time sink is figuring out which layer the problem lives in and what to check next. CNIA goes after that gap. Here is what you actually get back:</p>
+<ul>
+<li>A symptom-to-classification jump in seconds, so you skip the first 30 minutes of “is this DNS, policy, node, or app?”</li>
+<li>One chat window with one evidence table, one root cause, and one copy-paste fix command, instead of jumping across five tabs</li>
+<li>Senior SRE tribal knowledge baked into the workflow, so anyone on the team can run the same investigation a principal engineer would</l…<br/><br/><b>Source:</b> Microsoft Tech Community IT Ops &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5d]]></description>
 </item>
 
 <item>
@@ -105,12 +146,23 @@
 </item>
 
 <item>
-  <title>🔴 NB579: Datadog Unleashes Autonomous Agents; SpaceX Launches IPO</title>
-  <link>https://packetpushers.net/podcasts/network-break/nb579-datadog-unleashes-autonomous-agents-spacex-launches-ipo/</link>
-  <guid isPermaLink="false">https://packetpushers.net/podcasts/network-break/nb579-datadog-unleashes-autonomous-agents-spacex-launches-ipo/</guid>
-  <pubDate>Mon, 15 Jun 2026 18:05:25 +0000</pubDate>
-  <source>Packet Pushers</source>
-  <description><![CDATA[<b>Why this matters: Authentication bypass — review access controls and look for unauthorized access.</b><br/>Take a Network Break! Our Red Alert covers critical vulnerabilities in Ivanti Sentry, including OS command injection and authentication bypass, for which patches are now available. On the news front, we dig into Arista’s new 1.6Tbps rack-scale portfolio for AI infrastructure and Nokia’s Deepfield Genome Shield, designed to proactively stop DDoS from residential proxy botnets. We<a class="excerpt-read-more" href="https://packetpushers.net/podcasts/network-break/nb579-datadog-unleashes-autonomous-agents-spacex-launches-ipo/" title="ReadNB579: Datadog Unleashes Autonomous Agents; SpaceX Launches IPO">... Read more &#187;</a><br/><br/><b>Source:</b> Packet Pushers &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 63d]]></description>
+  <title>🔴 Operating Azure Backup at Scale: Day-2 Excellence for IaaS, PaaS, and Storage Workloads</title>
+  <link>https://techcommunity.microsoft.com/t5/itops-talk-blog/operating-azure-backup-at-scale-day-2-excellence-for-iaas-paas/ba-p/4545638</link>
+  <guid isPermaLink="false">https://techcommunity.microsoft.com/t5/itops-talk-blog/operating-azure-backup-at-scale-day-2-excellence-for-iaas-paas/ba-p/4545638</guid>
+  <pubDate>Tue, 11 Aug 2026 07:00:00 +0000</pubDate>
+  <source>Microsoft Tech Community IT Ops</source>
+  <description><![CDATA[<b>Why this matters: Elevated ransomware risk — validate backups, endpoint protection, and recovery readiness.</b><br/><p>Hello Folks!</p>
+<p>If you have ever inherited a sprawling Azure environment and quietly wondered whether every VM, database, AKS cluster, and storage account in it is actually being backed up the way the business thinks it is, you are in good company.</p>
+<p>In session this session of the Microsoft Azure Infra Summit 2026, Bhavya Tadikonda and Shobhit Garg from the Azure Resiliency product team walked us through how Azure Backup is evolving into a unified, application-centric service that protects IaaS, PaaS, AKS, PostgreSQL, and unstructured storage from a single pane of glass.</p>
+<p>&nbsp;</p>
+<div class="lia-embeded-content" contenteditable="false">
+</div>
+<h2>Why IT Pros Should Care</h2>
+<p>Backup is one of those topics nobody talks about until the day it really matters. Then it is the only topic. The session framed Azure Resiliency around three pillars (infrastructure resiliency, data resiliency, and cyber recovery), and Azure Backup sits squarely in the middle of the last two. The reason this session lands hard for ops teams is that the surface area we are expected to protect keeps growing: VMs, SQL on Azure VMs, SAP HANA, Sybase, AKS, PostgreSQL flexible servers, Azure Files, blobs, ADLS, and on it goes.</p>
+<p>Here is why this should matter to you:</p>
+<ul>
+<li>One vault model now protects IaaS, PaaS, AKS, PostgreSQL flexible server, and storage workloads, with consistent policies and reporting.</li>
+<li>Cyber resiliency is built into the vault layer with immutab…<br/><br/><b>Source:</b> Microsoft Tech Community IT Ops &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 6d]]></description>
 </item>
 
 </channel>
