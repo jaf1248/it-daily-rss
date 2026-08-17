@@ -51,7 +51,7 @@ jobs:
         run: |
           git config user.name "rss-bot"
           git config user.email "rss-bot@users.noreply.github.com"
-          git add docs/*.xml docs/weekly.md
+          git add docs/*.xml docs/weekly.md docs/feed_health.json
           git add docs/feed_health.json || true
           git commit -m "Update feeds $(date -u '+%Y-%m-%d %H:%M UTC')" || echo "No changes"
           git push origin main
