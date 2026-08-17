@@ -6,6 +6,7 @@ import os
 import re
 import json
 import urllib.request
+import urllib.error
 from datetime import datetime, timezone, timedelta
 from email.utils import format_datetime
 from dateutil import parser as dp
@@ -29,32 +30,65 @@ CONFIGS = [
     ("feeds-archive.yaml",      "archive.xml",     "archive"),
 ]
 
-MIN_ITEMS    = {"security": 15, "sysadmin": 15, "vp": 12, "radar": 12, "master": 25, "archive": 40, "vendor": 10, "compliance": 10}
-MAX_ITEMS    = {"security": 80, "sysadmin": 80, "vp": 60, "radar": 60, "master": 120, "archive": 200, "urgent": 30, "vendor": 40, "compliance": 40}
-FALLBACK_DAYS = {"security": 7, "sysadmin": 7, "vp": 10, "radar": 14, "master": 7, "archive": 30, "vendor": 14, "compliance": 14}
-
-# Per-kind max age in hours (0 = no cap). Override via feeds-X.yaml: max_age_hours: N
-DEFAULT_MAX_AGE_HOURS = {
-    "urgent":     12,
-    "security":   72,
-    "microsoft":  72,
-    "sysadmin":   72,
-    "network":    72,
-    "hospitality": 168,
-    "vp":         168,
-    "ai":         72,
-    "tech":       168,
-    "radar":      168,
-    "vendor":     168,
-    "compliance": 336,
-    "master":     72,
-    "archive":    0,
+# Minimum number of articles we'd LIKE each category to contain.
+# If the normal freshness window doesn't supply enough, the script
+# automatically widens the window using older available articles.
+MIN_ITEMS = {
+    "urgent": 8,
+    "security": 15,
+    "microsoft": 15,
+    "sysadmin": 15,
+    "network": 12,
+    "hospitality": 10,
+    "vp": 12,
+    "ai": 12,
+    "tech": 12,
+    "radar": 12,
+    "vendor": 10,
+    "compliance": 8,
+    "master": 25,
+    "archive": 40,
 }
 
-UA = "Mozilla/5.0 (GitHubActions; it-daily-rss)"
+MAX_ITEMS = {
+    "urgent": 30,
+    "security": 80,
+    "microsoft": 80,
+    "sysadmin": 80,
+    "network": 60,
+    "hospitality": 50,
+    "vp": 60,
+    "ai": 60,
+    "tech": 60,
+    "radar": 60,
+    "vendor": 50,
+    "compliance": 40,
+    "master": 120,
+    "archive": 250,
+}
 
-# Health tracking — written to docs/feed_health.json after each run
-_health: dict = {}
+# Preferred freshness window for each dashboard category.
+DEFAULT_MAX_AGE_HOURS = {
+    "urgent": 48,          # 2 days
+    "security": 168,       # 7 days
+    "microsoft": 168,      # 7 days
+    "sysadmin": 168,       # 7 days
+    "network": 168,        # 7 days
+    "hospitality": 336,    # 14 days
+    "vp": 336,             # 14 days
+    "ai": 168,             # 7 days
+    "tech": 336,           # 14 days
+    "radar": 336,          # 14 days
+    "vendor": 336,         # 14 days
+    "compliance": 720,     # 30 days
+    "master": 168,         # 7 days
+    "archive": 0,          # no age limit
+}
+
+UA = "Mozilla/5.0 (compatible; JoeITIntelligence/1.0; GitHubActions)"
+
+_health = {}
+_feed_counts = {}
 
 
 def load_cfg(path: str) -> dict:
@@ -62,44 +96,88 @@ def load_cfg(path: str) -> dict:
         return yaml.safe_load(f) or {}
 
 
-def normalize(s: str) -> str:
-    return re.sub(r"\s+", " ", (s or "").strip()).lower()
+def normalize(value: str) -> str:
+    return re.sub(r"\s+", " ", (value or "").strip()).lower()
 
 
 def stable_dedupe_key(title: str, link: str) -> str:
-    link_n = normalize(link)
-    if link_n and link_n != "#":
-        return link_n
-    return "title:" + hashlib.sha1(normalize(title).encode("utf-8")).hexdigest()
+    normalized_link = normalize(link)
+
+    if normalized_link and normalized_link != "#":
+        # Remove common tracking parameters so syndicated copies dedupe better.
+        normalized_link = re.sub(
+            r"([?&])(utm_[^=&]+|fbclid|gclid)=[^&]*",
+            "",
+            normalized_link,
+        )
+        normalized_link = normalized_link.rstrip("?&")
+        return normalized_link
+
+    return "title:" + hashlib.sha1(
+        normalize(title).encode("utf-8")
+    ).hexdigest()
 
 
 def parse_date(entry) -> datetime:
-    try:
-        raw = getattr(entry, "published", "") or getattr(entry, "updated", "")
-        return dp.parse(raw).astimezone(timezone.utc)
-    except Exception:
-        return datetime.now(timezone.utc)
+    for field in ("published", "updated", "created"):
+        raw = getattr(entry, field, "")
+        if not raw:
+            continue
+
+        try:
+            parsed = dp.parse(raw)
+            if parsed.tzinfo is None:
+                parsed = parsed.replace(tzinfo=timezone.utc)
+            return parsed.astimezone(timezone.utc)
+        except Exception:
+            pass
+
+    return datetime.now(timezone.utc)
 
 
 def classify_severity(text: str):
     t = normalize(text)
+
     critical_terms = [
-        "actively exploited", "exploited in the wild", "in the wild",
-        "ransomware", "mass exploitation", "wormable", "botnet",
-        "breach", "data breach", "stolen data", "nation-state",
-        "supply chain attack", "zero-click",
+        "actively exploited",
+        "exploited in the wild",
+        "mass exploitation",
+        "ransomware",
+        "wormable",
+        "zero-click",
+        "supply chain attack",
+        "authentication bypass",
+        "remote code execution",
+        "data breach",
+        "stolen data",
+        "nation-state",
     ]
+
     important_terms = [
-        "cve-", "cve", "vulnerability", "zero-day", "0-day",
-        "patch", "security update", "hotfix", "mitigation",
-        "outage", "service disruption", "incident", "critical severity",
-        "high severity", "authentication bypass", "remote code execution",
-        "privilege escalation", "data exposure",
+        "cve-",
+        "cve",
+        "vulnerability",
+        "zero-day",
+        "0-day",
+        "patch",
+        "security update",
+        "hotfix",
+        "mitigation",
+        "outage",
+        "service disruption",
+        "incident",
+        "critical severity",
+        "high severity",
+        "privilege escalation",
+        "data exposure",
     ]
-    if any(x in t for x in critical_terms):
+
+    if any(term in t for term in critical_terms):
         return "🔴", "Critical"
-    if any(x in t for x in important_terms):
+
+    if any(term in t for term in important_terms):
         return "🟠", "Important"
+
     return "🔵", "FYI"
 
 
@@ -107,253 +185,757 @@ def why_this_matters(text: str, kind: str) -> str:
     t = normalize(text)
 
     if "ransomware" in t:
-        return "Why this matters: Elevated ransomware risk — validate backups and endpoint defenses."
+        return (
+            "Why this matters: Elevated ransomware risk — validate backups, "
+            "endpoint protection, and recovery readiness."
+        )
+
     if "supply chain" in t:
-        return "Why this matters: Supply chain risk — audit third-party dependencies and vendor access."
-    if "nation-state" in t or "apt" in t:
-        return "Why this matters: Nation-state threat actor — elevated persistence and lateral movement risk."
+        return (
+            "Why this matters: Supply-chain risk — review third-party access "
+            "and affected vendor dependencies."
+        )
+
+    if "nation-state" in t or " apt " in f" {t} ":
+        return (
+            "Why this matters: Advanced threat activity — review privileged "
+            "access, persistence detection, and lateral-movement controls."
+        )
+
     if "phish" in t or "credential" in t:
-        return "Why this matters: Credential/phishing risk — reinforce MFA and user awareness training."
+        return (
+            "Why this matters: Credential/phishing risk — reinforce MFA and "
+            "watch for suspicious sign-ins."
+        )
+
     if "breach" in t or "stolen" in t or "data exposure" in t:
-        return "Why this matters: Potential data exposure — check monitoring and incident response readiness."
-    if "outage" in t or "service disruption" in t or "incident" in t:
-        return "Why this matters: Service impact possible — prepare comms and confirm vendor status."
-    if "remote code execution" in t or "rce" in t:
-        return "Why this matters: RCE vulnerability — patch immediately, check for exposed attack surface."
+        return (
+            "Why this matters: Potential data exposure — review monitoring "
+            "and incident-response readiness."
+        )
+
+    if "remote code execution" in t or " rce " in f" {t} ":
+        return (
+            "Why this matters: Remote-code-execution risk — assess exposure "
+            "and patch or mitigate quickly."
+        )
+
     if "authentication bypass" in t:
-        return "Why this matters: Auth bypass — review access controls and check for unauthorized access."
+        return (
+            "Why this matters: Authentication bypass — review access controls "
+            "and look for unauthorized access."
+        )
+
     if "privilege escalation" in t:
-        return "Why this matters: Privilege escalation risk — review local admin exposure and endpoint controls."
+        return (
+            "Why this matters: Privilege-escalation risk — review local admin "
+            "and endpoint controls."
+        )
 
-    if any(x in t for x in ["entra", "azure ad", "conditional access", "mfa", "authentication", "sso"]):
-        return "Why this matters: Could impact sign-ins/MFA/Conditional Access — watch for login issues."
-    if any(x in t for x in ["exchange", "outlook", "mail flow"]):
-        return "Why this matters: Could impact email access or mail flow — monitor delivery and client issues."
-    if any(x in t for x in ["intune", "mdm", "device compliance"]):
-        return "Why this matters: Could affect device enrollment/compliance — watch policy deployment."
+    if "outage" in t or "service disruption" in t or "incident" in t:
+        return (
+            "Why this matters: Service impact is possible — verify vendor "
+            "status before troubleshooting internally."
+        )
+
+    if any(
+        term in t
+        for term in [
+            "entra",
+            "azure ad",
+            "conditional access",
+            "mfa",
+            "authentication",
+            "sso",
+        ]
+    ):
+        return (
+            "Why this matters: Could affect sign-ins, MFA, or Conditional "
+            "Access — watch for authentication issues."
+        )
+
+    if any(term in t for term in ["exchange", "outlook", "mail flow"]):
+        return (
+            "Why this matters: Could affect email access or mail flow — "
+            "monitor delivery and Outlook behavior."
+        )
+
+    if any(term in t for term in ["intune", "mdm", "device compliance"]):
+        return (
+            "Why this matters: Could affect device enrollment or compliance — "
+            "watch policy deployment."
+        )
+
     if "defender" in t or "edr" in t:
-        return "Why this matters: Endpoint detection changes — review high-severity detections and alert noise."
-    if any(x in t for x in ["sonicwall", "aruba", "adtran", "fortinet", "cisco", "palo alto"]):
-        return "Why this matters: Vendor advisory — check installed firmware/software version and patch status."
-    if any(x in t for x in ["pricing", "license", "licensing", "renewal"]):
-        return "Why this matters: Budget/licensing impact — verify renewal terms and forecast cost changes."
-    if any(x in t for x in ["acquisition", "merger", "layoffs"]):
-        return "Why this matters: Vendor risk signal — evaluate roadmap and support stability."
-    if any(x in t for x in ["compliance", "regulation", "gdpr", "hipaa", "pci", "nist", "ftc"]):
-        return "Why this matters: Regulatory/compliance signal — assess applicability and remediation timeline."
-    if any(x in t for x in ["pms", "pос", "pos", "point of sale", "guest", "property management"]):
-        return "Why this matters: Hospitality system impact — check guest-facing services and PMS/POS status."
+        return (
+            "Why this matters: Endpoint-security changes may affect detection "
+            "and alerting."
+        )
 
-    if kind == "security":
-        return "Why this matters: Security-relevant change — confirm exposure and patch/mitigation status."
-    if kind == "sysadmin":
-        return "Why this matters: Operational impact possible — watch for changes that generate tickets."
-    if kind == "vendor":
-        return "Why this matters: Vendor security advisory — check your installed version against affected range."
-    if kind == "compliance":
-        return "Why this matters: Regulatory/compliance context — assess scope and action timeline."
-    if kind == "radar":
-        return "Why this matters: Early signal from niche sources — worth a quick scan."
-    return "Why this matters: Leadership context — useful for risk, budget, and vendor conversations."
+    if any(
+        term in t
+        for term in ["sonicwall", "aruba", "adtran", "fortinet", "cisco", "palo alto"]
+    ):
+        return (
+            "Why this matters: Infrastructure/vendor signal — compare your "
+            "installed versions and support status."
+        )
+
+    if any(term in t for term in ["pricing", "license", "licensing", "renewal"]):
+        return (
+            "Why this matters: Potential budget or licensing impact — verify "
+            "renewal terms and forecast changes."
+        )
+
+    if any(term in t for term in ["acquisition", "merger", "layoffs"]):
+        return (
+            "Why this matters: Vendor-risk signal — consider roadmap, support, "
+            "and renewal implications."
+        )
+
+    if any(
+        term in t
+        for term in [
+            "compliance",
+            "regulation",
+            "gdpr",
+            "hipaa",
+            "pci",
+            "nist",
+            "ftc",
+        ]
+    ):
+        return (
+            "Why this matters: Compliance/regulatory signal — determine "
+            "applicability and required action."
+        )
+
+    if any(
+        term in t
+        for term in [
+            "pms",
+            "pos",
+            "point of sale",
+            "guest",
+            "property management system",
+        ]
+    ):
+        return (
+            "Why this matters: Hospitality-system impact — consider guest "
+            "services, PMS/POS, and property operations."
+        )
+
+    defaults = {
+        "urgent": (
+            "Why this matters: Potentially urgent issue — confirm whether your "
+            "environment is exposed."
+        ),
+        "security": (
+            "Why this matters: Security-relevant development — confirm "
+            "exposure and mitigation status."
+        ),
+        "microsoft": (
+            "Why this matters: Microsoft-platform change — assess user, "
+            "identity, messaging, or administration impact."
+        ),
+        "sysadmin": (
+            "Why this matters: Operational impact is possible — watch for "
+            "changes that generate tickets or outages."
+        ),
+        "network": (
+            "Why this matters: Network/infrastructure development — consider "
+            "firmware, configuration, and availability impact."
+        ),
+        "hospitality": (
+            "Why this matters: Hospitality-technology development — consider "
+            "property operations and guest-facing systems."
+        ),
+        "vp": (
+            "Why this matters: Leadership context — useful for risk, budget, "
+            "vendor, and strategic conversations."
+        ),
+        "ai": (
+            "Why this matters: Enterprise-AI development — consider security, "
+            "governance, productivity, and infrastructure implications."
+        ),
+        "tech": (
+            "Why this matters: Developing technology — useful for future "
+            "infrastructure and purchasing decisions."
+        ),
+        "radar": (
+            "Why this matters: Early technical signal — worth a quick scan for "
+            "issues that may become more important."
+        ),
+        "vendor": (
+            "Why this matters: Vendor advisory — compare affected versions "
+            "against your environment."
+        ),
+        "compliance": (
+            "Why this matters: Regulatory/compliance context — assess scope "
+            "and action timeline."
+        ),
+    }
+
+    return defaults.get(
+        kind,
+        "Why this matters: Useful IT context for operational and leadership awareness.",
+    )
 
 
-def fetch_url_bytes(url: str, timeout_seconds: int = 20) -> bytes | None:
+def fetch_url_bytes(url: str, timeout_seconds: int = 20):
     try:
-        req = urllib.request.Request(
+        request = urllib.request.Request(
             url,
             headers={
                 "User-Agent": UA,
-                "Accept": "application/rss+xml, application/atom+xml, application/xml, text/xml, */*",
+                "Accept": (
+                    "application/rss+xml, application/atom+xml, "
+                    "application/xml, text/xml, */*"
+                ),
             },
         )
-        with urllib.request.urlopen(req, timeout=timeout_seconds) as resp:
-            return resp.read()
-    except Exception as e:
-        print(f"[WARN] Fetch failed: {url} :: {e}")
-        return None
+
+        with urllib.request.urlopen(request, timeout=timeout_seconds) as response:
+            return response.read(), response.getcode()
+
+    except urllib.error.HTTPError as exc:
+        print(f"[WARN] Fetch failed: {url} :: HTTP {exc.code}")
+        return None, exc.code
+
+    except Exception as exc:
+        print(f"[WARN] Fetch failed: {url} :: {exc}")
+        return None, None
 
 
 def parse_feed(url: str, source_name: str, kind: str):
-    """Fetch and parse a feed, recording health status."""
-    data = fetch_url_bytes(url, timeout_seconds=20)
+    data, http_status = fetch_url_bytes(url)
     key = f"{kind}::{source_name}"
 
+    checked = datetime.now(timezone.utc).isoformat()
+
     if not data:
-        _health[key] = {"source": source_name, "url": url, "kind": kind, "status": "fetch_failed", "items": 0, "checked": datetime.now(timezone.utc).isoformat()}
+        _health[key] = {
+            "source": source_name,
+            "url": url,
+            "kind": kind,
+            "status": "fetch_failed",
+            "http_status": http_status,
+            "items": 0,
+            "checked": checked,
+        }
         return None
 
     feed = feedparser.parse(data)
-    entry_count = len(getattr(feed, "entries", []))
+    entries = getattr(feed, "entries", [])
+    entry_count = len(entries)
 
     if getattr(feed, "bozo", False):
-        print(f"[WARN] Parse bozo: {url} :: {getattr(feed, 'bozo_exception', '')}")
-        _health[key] = {"source": source_name, "url": url, "kind": kind, "status": "parse_warning", "items": entry_count, "checked": datetime.now(timezone.utc).isoformat()}
+        print(
+            f"[WARN] Parse warning: {url} :: "
+            f"{getattr(feed, 'bozo_exception', '')}"
+        )
+
+        _health[key] = {
+            "source": source_name,
+            "url": url,
+            "kind": kind,
+            "status": "parse_warning",
+            "http_status": http_status,
+            "items": entry_count,
+            "checked": checked,
+        }
     else:
-        _health[key] = {"source": source_name, "url": url, "kind": kind, "status": "ok", "items": entry_count, "checked": datetime.now(timezone.utc).isoformat()}
+        _health[key] = {
+            "source": source_name,
+            "url": url,
+            "kind": kind,
+            "status": "ok",
+            "http_status": http_status,
+            "items": entry_count,
+            "checked": checked,
+        }
 
     return feed
 
 
-def score_item(kind: str, text: str, source_name: str, sev_label: str) -> int:
+def configured_keyword_score(cfg: dict, text: str) -> int:
+    """
+    YAML keywords are ranking signals, NOT hard filters.
+    This prevents categories from becoming empty.
+    """
+    keywords = cfg.get("keywords") or []
+
+    if not keywords:
+        return 0
+
     t = normalize(text)
-    s = 0
+    hits = sum(1 for keyword in keywords if normalize(keyword) in t)
 
-    if sev_label == "Critical":
-        s += 100
-    elif sev_label == "Important":
-        s += 60
+    # First matches matter most; cap so generic Microsoft-type words
+    # don't overpower truly critical content.
+    return min(hits * 12, 60)
+
+
+def score_item(
+    cfg: dict,
+    kind: str,
+    text: str,
+    source_name: str,
+    severity_label: str,
+) -> int:
+    t = normalize(text)
+    score = 0
+
+    if severity_label == "Critical":
+        score += 100
+    elif severity_label == "Important":
+        score += 60
     else:
-        s += 10
+        score += 10
 
-    if "cve" in t:              s += 25
-    if "zero-day" in t or "0-day" in t: s += 30
-    if "exploited" in t or "in the wild" in t: s += 35
-    if "ransomware" in t:       s += 40
-    if "breach" in t:           s += 35
-    if "rce" in t or "remote code execution" in t: s += 30
-    if "authentication bypass" in t: s += 28
-    if "outage" in t or "incident" in t or "service disruption" in t: s += 25
-    if "supply chain" in t:     s += 30
-    if "nation-state" in t or "apt" in t: s += 35
+    # Config-specific relevance.
+    score += configured_keyword_score(cfg, text)
 
-    if any(x in t for x in ["microsoft", "m365", "entra", "azure ad", "intune", "exchange", "defender"]):
-        s += 15
-    if any(x in t for x in ["sonicwall", "aruba", "adtran", "fortinet"]):
-        s += 10
+    signal_weights = {
+        "cve": 25,
+        "zero-day": 30,
+        "0-day": 30,
+        "exploited": 35,
+        "in the wild": 35,
+        "ransomware": 40,
+        "breach": 35,
+        "remote code execution": 30,
+        "authentication bypass": 28,
+        "outage": 25,
+        "incident": 20,
+        "service disruption": 25,
+        "supply chain": 30,
+        "nation-state": 35,
+    }
 
-    if kind == "security":
-        if any(x in t for x in ["ransomware", "cve", "vulnerability", "zero-day", "breach", "exploited"]):
-            s += 25
+    for phrase, points in signal_weights.items():
+        if phrase in t:
+            score += points
+
+    if any(
+        term in t
+        for term in [
+            "microsoft",
+            "m365",
+            "entra",
+            "azure ad",
+            "intune",
+            "exchange",
+            "defender",
+            "copilot",
+        ]
+    ):
+        score += 15
+
+    if any(term in t for term in ["sonicwall", "aruba", "adtran"]):
+        score += 15
+
+    if kind == "urgent":
+        if severity_label == "Critical":
+            score += 50
+        if any(
+            term in t
+            for term in [
+                "actively exploited",
+                "emergency",
+                "ransomware",
+                "zero-day",
+                "remote code execution",
+            ]
+        ):
+            score += 40
+
+    elif kind == "security":
+        if any(
+            term in t
+            for term in [
+                "ransomware",
+                "cve",
+                "vulnerability",
+                "zero-day",
+                "breach",
+                "exploited",
+            ]
+        ):
+            score += 25
+
+    elif kind == "microsoft":
+        if any(
+            term in t
+            for term in [
+                "microsoft",
+                "m365",
+                "entra",
+                "exchange",
+                "outlook",
+                "intune",
+                "defender",
+                "teams",
+                "copilot",
+                "azure",
+            ]
+        ):
+            score += 35
+
     elif kind == "sysadmin":
-        if any(x in t for x in ["outage", "incident", "degradation", "patch", "update", "release", "breaking change", "deprecation"]):
-            s += 25
-        if any(x in t for x in ["mail flow", "dns", "certificate", "vpn", "authentication"]):
-            s += 15
+        if any(
+            term in t
+            for term in [
+                "outage",
+                "incident",
+                "degradation",
+                "patch",
+                "update",
+                "release",
+                "breaking change",
+                "deprecation",
+                "dns",
+                "certificate",
+                "vpn",
+                "authentication",
+                "mail flow",
+            ]
+        ):
+            score += 30
+
+    elif kind == "network":
+        if any(
+            term in t
+            for term in [
+                "aruba",
+                "sonicwall",
+                "adtran",
+                "wireless",
+                "wifi",
+                "wi-fi",
+                "switch",
+                "router",
+                "firewall",
+                "network",
+                "ethernet",
+                "firmware",
+            ]
+        ):
+            score += 35
+
+    elif kind == "hospitality":
+        if any(
+            term in t
+            for term in [
+                "hotel",
+                "hospitality",
+                "pms",
+                "pos",
+                "guest",
+                "property management",
+                "digital key",
+                "booking",
+                "reservation",
+                "travel",
+            ]
+        ):
+            score += 35
+
     elif kind == "vp":
-        if any(x in t for x in ["pricing", "license", "licensing", "renewal", "contract", "acquisition", "merger", "layoffs"]):
-            s += 35
-        if any(x in t for x in ["risk", "compliance", "audit", "regulation"]):
-            s += 20
+        if any(
+            term in t
+            for term in [
+                "pricing",
+                "license",
+                "licensing",
+                "renewal",
+                "contract",
+                "acquisition",
+                "merger",
+                "layoffs",
+                "risk",
+                "compliance",
+                "regulation",
+                "strategy",
+            ]
+        ):
+            score += 35
+
+    elif kind == "ai":
+        if any(
+            term in t
+            for term in [
+                "artificial intelligence",
+                " ai ",
+                "copilot",
+                "agent",
+                "llm",
+                "model",
+                "gpu",
+                "inference",
+                "openai",
+                "anthropic",
+                "gemini",
+                "nvidia",
+            ]
+        ):
+            score += 35
+
+    elif kind == "tech":
+        if any(
+            term in t
+            for term in [
+                "cpu",
+                "gpu",
+                "server",
+                "storage",
+                "processor",
+                "chip",
+                "semiconductor",
+                "ethernet",
+                "datacenter",
+                "data center",
+                "hardware",
+            ]
+        ):
+            score += 30
+
     elif kind == "vendor":
-        if any(x in t for x in ["advisory", "psirt", "cve", "patch", "firmware", "affected versions"]):
-            s += 30
+        if any(
+            term in t
+            for term in [
+                "advisory",
+                "psirt",
+                "cve",
+                "patch",
+                "firmware",
+                "affected versions",
+            ]
+        ):
+            score += 30
+
     elif kind == "compliance":
-        if any(x in t for x in ["rule", "regulation", "enforcement", "deadline", "fine", "penalty"]):
-            s += 25
+        if any(
+            term in t
+            for term in [
+                "rule",
+                "regulation",
+                "enforcement",
+                "deadline",
+                "fine",
+                "penalty",
+                "compliance",
+            ]
+        ):
+            score += 30
 
-    src = normalize(source_name)
-    if "msrc" in src or "microsoft security" in src: s += 10
-    if "cisa" in src:  s += 15
-    if "sans" in src:  s += 5
-    if "psirt" in src: s += 10
+    source = normalize(source_name)
 
-    return s
+    if "msrc" in source or "microsoft security" in source:
+        score += 12
+
+    if "cisa" in source:
+        score += 15
+
+    if "sans" in source:
+        score += 8
+
+    if "psirt" in source:
+        score += 10
+
+    return score
 
 
-def collect_candidates(cfg: dict, kind: str, global_seen: set, max_age_hours: int) -> list:
+def collect_candidates(cfg: dict, kind: str) -> list:
+    """
+    Collect ALL available articles first.
+
+    Important: no age filtering and no hard keyword filtering happen here.
+    This ensures fallback always has articles available.
+    """
     candidates = []
     local_seen = set()
-    age_cutoff = (datetime.now(timezone.utc) - timedelta(hours=max_age_hours)) if max_age_hours > 0 else None
 
     for source in cfg.get("sources", []) or []:
         url = source.get("url")
-        name = source.get("name", "Source")
+        source_name = source.get("name", "Source")
+
         if not url:
             continue
 
-        feed = parse_feed(url, name, kind)
+        feed = parse_feed(url, source_name, kind)
+
         if not feed:
             continue
 
-        for entry in getattr(feed, "entries", [])[:80]:
-            title   = (getattr(entry, "title",   "") or "").strip() or "(No title)"
-            link    = (getattr(entry, "link",    "") or url).strip()
+        for entry in getattr(feed, "entries", [])[:100]:
+            title = (getattr(entry, "title", "") or "").strip() or "(No title)"
+            link = (getattr(entry, "link", "") or url).strip()
             summary = (getattr(entry, "summary", "") or "").strip()
             published = parse_date(entry)
 
-            # Age gate — skip items older than max_age_hours
-            if age_cutoff and published < age_cutoff:
+            dedupe_key = stable_dedupe_key(title, link)
+
+            if dedupe_key in local_seen:
                 continue
 
-            combined = f"{title} {summary} {name}"
-            key = stable_dedupe_key(title, link)
+            local_seen.add(dedupe_key)
 
-            if key in global_seen:
-                continue
-            if key in local_seen:
-                continue
-            local_seen.add(key)
+            combined = f"{title} {summary} {source_name}"
 
-            # Keyword filter (optional, driven by YAML config)
-            if cfg.get("keyword_filter_enabled"):
-                keywords = [normalize(k) for k in (cfg.get("keywords") or [])]
-                if keywords and not any(kw in normalize(combined) for kw in keywords):
-                    continue
-
-            sev_emoji, sev_label = classify_severity(combined)
+            severity_emoji, severity_label = classify_severity(combined)
             why = why_this_matters(combined, kind)
-            score = score_item(kind, combined, name, sev_label)
+            score = score_item(
+                cfg,
+                kind,
+                combined,
+                source_name,
+                severity_label,
+            )
 
-            candidates.append({
-                "title":      f"{sev_emoji} {title}",
-                "link":       link,
-                "summary":    summary,
-                "source":     name,
-                "date":       published,
-                "severity":   sev_label,
-                "why":        why,
-                "dedupe_key": key,
-                "score":      score,
-            })
+            candidates.append(
+                {
+                    "title": f"{severity_emoji} {title}",
+                    "link": link,
+                    "summary": summary,
+                    "source": source_name,
+                    "date": published,
+                    "severity": severity_label,
+                    "why": why,
+                    "dedupe_key": dedupe_key,
+                    "score": score,
+                }
+            )
 
     return candidates
 
 
-def choose_items(kind: str, candidates: list) -> list:
-    max_items    = MAX_ITEMS.get(kind, 80)
-    min_items    = MIN_ITEMS.get(kind, 12)
-    lookback_days = FALLBACK_DAYS.get(kind, 7)
-    cutoff       = datetime.now(timezone.utc) - timedelta(days=lookback_days)
+def choose_items(
+    kind: str,
+    cfg: dict,
+    candidates: list,
+) -> list:
+    max_items = MAX_ITEMS.get(kind, 60)
+    min_items = MIN_ITEMS.get(kind, 10)
 
-    recent = [c for c in candidates if c["date"] >= cutoff]
-    if not recent:
+    max_age_hours = cfg.get(
+        "max_age_hours",
+        DEFAULT_MAX_AGE_HOURS.get(kind, 168),
+    )
+
+    now = datetime.now(timezone.utc)
+
+    # Archive intentionally has no freshness limit.
+    if max_age_hours <= 0:
         recent = candidates[:]
+    else:
+        cutoff = now - timedelta(hours=max_age_hours)
+        recent = [
+            article
+            for article in candidates
+            if article["date"] >= cutoff
+        ]
 
-    recent.sort(key=lambda x: (x["score"], x["date"]), reverse=True)
+    # Prefer relevance, then freshness.
+    recent.sort(
+        key=lambda article: (
+            article["score"],
+            article["date"],
+        ),
+        reverse=True,
+    )
+
     chosen = recent[:max_items]
 
+    # Fallback:
+    # If the normal freshness window didn't produce enough items,
+    # pull the best older articles from the full candidate pool.
     if len(chosen) < min_items:
-        all_sorted = sorted(candidates, key=lambda x: (x["score"], x["date"]), reverse=True)
-        for c in all_sorted:
-            if c not in chosen:
-                chosen.append(c)
+        all_ranked = sorted(
+            candidates,
+            key=lambda article: (
+                article["score"],
+                article["date"],
+            ),
+            reverse=True,
+        )
+
+        chosen_keys = {
+            article["dedupe_key"]
+            for article in chosen
+        }
+
+        for article in all_ranked:
+            if article["dedupe_key"] in chosen_keys:
+                continue
+
+            chosen.append(article)
+            chosen_keys.add(article["dedupe_key"])
+
             if len(chosen) >= min_items:
                 break
 
-    chosen.sort(key=lambda x: x["date"], reverse=True)
+    # Final reading order is newest first.
+    chosen.sort(
+        key=lambda article: article["date"],
+        reverse=True,
+    )
+
     return chosen[:max_items]
 
 
-def write_rss(cfg: dict, out_path: str, items: list):
+def age_label(dt: datetime) -> str:
+    delta = datetime.now(timezone.utc) - dt
+    hours = max(0, int(delta.total_seconds() / 3600))
+
+    if hours < 1:
+        return "<1h"
+
+    if hours < 24:
+        return f"{hours}h"
+
+    days = hours // 24
+    return f"{days}d"
+
+
+def write_rss(
+    cfg: dict,
+    out_path: str,
+    items: list,
+):
     rss_items = []
-    for it in items:
-        age_label = _age_label(it["date"])
-        desc = (
-            f"<b>{html.escape(it['why'])}</b><br/>"
-            + (f"{it['summary']}<br/>" if it["summary"] else "")
-            + f"<br/><b>Source:</b> {html.escape(it['source'])}"
-            f" &nbsp;|&nbsp; <b>Severity:</b> {html.escape(it['severity'])}"
-            f" &nbsp;|&nbsp; <b>Age:</b> {html.escape(age_label)}"
+
+    for article in items:
+        summary = article["summary"]
+
+        # Avoid enormous RSS descriptions.
+        if len(summary) > 1500:
+            summary = summary[:1500].rstrip() + "…"
+
+        description = (
+            f"<b>{html.escape(article['why'])}</b><br/>"
+            + (
+                f"{summary}<br/>"
+                if summary
+                else ""
+            )
+            + f"<br/><b>Source:</b> {html.escape(article['source'])}"
+            + f" &nbsp;|&nbsp; <b>Severity:</b> {html.escape(article['severity'])}"
+            + f" &nbsp;|&nbsp; <b>Age:</b> {html.escape(age_label(article['date']))}"
         )
-        rss_items.append(f"""
+
+        rss_items.append(
+            f"""
 <item>
-  <title>{html.escape(it['title'])}</title>
-  <link>{html.escape(it['link'])}</link>
-  <pubDate>{format_datetime(it['date'])}</pubDate>
-  <source>{html.escape(it['source'])}</source>
-  <description><![CDATA[{desc}]]></description>
+  <title>{html.escape(article['title'])}</title>
+  <link>{html.escape(article['link'])}</link>
+  <guid isPermaLink="false">{html.escape(article['dedupe_key'])}</guid>
+  <pubDate>{format_datetime(article['date'])}</pubDate>
+  <source>{html.escape(article['source'])}</source>
+  <description><![CDATA[{description}]]></description>
 </item>
-""")
+"""
+        )
 
     rss = f"""<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
@@ -365,96 +947,165 @@ def write_rss(cfg: dict, out_path: str, items: list):
 </channel>
 </rss>
 """
+
     os.makedirs(os.path.dirname(out_path), exist_ok=True)
+
     with open(out_path, "w", encoding="utf-8") as f:
         f.write(rss)
 
 
-def _age_label(dt: datetime) -> str:
-    delta = datetime.now(timezone.utc) - dt
-    hours = int(delta.total_seconds() / 3600)
-    if hours < 1:
-        return "< 1h ago"
-    if hours < 24:
-        return f"{hours}h ago"
-    days = hours // 24
-    return f"{days}d ago"
+def build_feed(
+    cfg: dict,
+    out_path: str,
+    kind: str,
+):
+    candidates = collect_candidates(cfg, kind)
+    items = choose_items(kind, cfg, candidates)
 
+    _feed_counts[kind] = {
+        "category": kind,
+        "candidates": len(candidates),
+        "published": len(items),
+        "output": os.path.basename(out_path),
+    }
 
-def build_feed(cfg: dict, out_path: str, kind: str, global_seen: set):
-    # Determine max age: YAML override > per-kind default > 0 (no cap)
-    max_age_hours = cfg.get("max_age_hours", DEFAULT_MAX_AGE_HOURS.get(kind, 0))
-
-    candidates = collect_candidates(cfg, kind, global_seen, max_age_hours)
-
-    if not candidates:
-        now = datetime.now(timezone.utc)
-        items = [{
-            "title":      "🔵 No items fetched — check GitHub Actions logs for feed fetch warnings",
-            "link":       cfg.get("homepage", "https://github.com/jaf1248/it-daily-rss/actions"),
-            "summary":    "",
-            "source":     "it-daily-rss",
-            "date":       now,
-            "severity":   "FYI",
-            "why":        "Why this matters: Feeds may be blocked or timing out — logs will show which URLs failed.",
-            "dedupe_key": "diagnostic:" + kind,
-            "score":      0,
-        }]
-        write_rss(cfg, out_path, items)
-        return
-
-    if kind in ("radar", "archive"):
-        candidates.sort(key=lambda x: x["date"], reverse=True)
-        items = candidates[:MAX_ITEMS.get(kind, 200)]
-    else:
-        items = choose_items(kind, candidates)
-
-    # Cross-feed dedup: security Critical/Important block downstream feeds
-    if kind == "security":
-        for it in items:
-            if it["severity"] in ("Critical", "Important"):
-                global_seen.add(it["dedupe_key"])
+    if not items:
+        print(
+            f"[WARN] {kind}: no articles available from any "
+            "configured working source."
+        )
 
     write_rss(cfg, out_path, items)
 
 
 def write_health_report(docs_dir: str):
-    """Write feed_health.json so the dashboard can show source status."""
-    out = os.path.join(docs_dir, "feed_health.json")
+    feeds = list(_health.values())
+
+    ok = sum(
+        1
+        for feed in feeds
+        if feed["status"] == "ok"
+    )
+
+    warnings = sum(
+        1
+        for feed in feeds
+        if feed["status"] == "parse_warning"
+    )
+
+    failed = sum(
+        1
+        for feed in feeds
+        if feed["status"] == "fetch_failed"
+    )
+
+    total_articles_seen = sum(
+        feed.get("items", 0)
+        for feed in feeds
+    )
+
     report = {
         "generated": datetime.now(timezone.utc).isoformat(),
-        "feeds": list(_health.values()),
         "summary": {
-            "total":        len(_health),
-            "ok":           sum(1 for v in _health.values() if v["status"] == "ok"),
-            "parse_warning": sum(1 for v in _health.values() if v["status"] == "parse_warning"),
-            "fetch_failed": sum(1 for v in _health.values() if v["status"] == "fetch_failed"),
-        }
+            "total": len(feeds),
+            "ok": ok,
+            "parse_warning": warnings,
+            "fetch_failed": failed,
+            "articles_seen": total_articles_seen,
+        },
+        "categories": _feed_counts,
+        "feeds": feeds,
     }
-    with open(out, "w", encoding="utf-8") as f:
-        json.dump(report, f, indent=2)
 
-    # Print a summary to Actions log
-    s = report["summary"]
-    print(f"[HEALTH] {s['ok']} ok / {s['parse_warning']} warnings / {s['fetch_failed']} failed / {s['total']} total")
-    if s["fetch_failed"]:
-        failed = [v["source"] for v in _health.values() if v["status"] == "fetch_failed"]
-        print(f"[HEALTH] Failed sources: {', '.join(failed)}")
+    output_path = os.path.join(
+        docs_dir,
+        "feed_health.json",
+    )
+
+    with open(
+        output_path,
+        "w",
+        encoding="utf-8",
+    ) as f:
+        json.dump(
+            report,
+            f,
+            indent=2,
+        )
+
+    print(
+        f"[HEALTH] {ok} healthy / "
+        f"{warnings} warnings / "
+        f"{failed} failed / "
+        f"{len(feeds)} total"
+    )
+
+    for category, data in _feed_counts.items():
+        print(
+            f"[COUNT] {category}: "
+            f"{data['published']} published "
+            f"from {data['candidates']} candidates"
+        )
+
+    if failed:
+        failed_sources = [
+            feed["source"]
+            for feed in feeds
+            if feed["status"] == "fetch_failed"
+        ]
+
+        print(
+            "[HEALTH] Failed sources: "
+            + ", ".join(failed_sources)
+        )
 
 
 def main():
-    docs_dir    = os.path.join(ROOT, "docs")
-    global_seen = set()
+    docs_dir = os.path.join(ROOT, "docs")
+    os.makedirs(docs_dir, exist_ok=True)
 
     for cfg_name, out_name, kind in CONFIGS:
-        cfg_path = os.path.join(ROOT, cfg_name)
-        out_path = os.path.join(docs_dir, out_name)
+        cfg_path = os.path.join(
+            ROOT,
+            cfg_name,
+        )
+
         if not os.path.exists(cfg_path):
-            print(f"[SKIP] {cfg_name} not found")
+            print(
+                f"[SKIP] {cfg_name} not found"
+            )
             continue
-        cfg = load_cfg(cfg_path)
-        print(f"[BUILD] {cfg_name} → {out_name}")
-        build_feed(cfg, out_path, kind, global_seen)
+
+        try:
+            cfg = load_cfg(cfg_path)
+        except Exception as exc:
+            print(
+                f"[ERROR] Could not parse "
+                f"{cfg_name}: {exc}"
+            )
+            continue
+
+        out_path = os.path.join(
+            docs_dir,
+            out_name,
+        )
+
+        print(
+            f"[BUILD] {cfg_name} → {out_name}"
+        )
+
+        try:
+            build_feed(
+                cfg,
+                out_path,
+                kind,
+            )
+        except Exception as exc:
+            # One category should never kill the entire dashboard build.
+            print(
+                f"[ERROR] Failed building "
+                f"{kind}: {exc}"
+            )
 
     write_health_report(docs_dir)
 
