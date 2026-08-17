@@ -3,14 +3,229 @@
 <channel>
   <title>Joe — Microsoft / Identity / M365</title>
   <description>Microsoft 365, Entra, Exchange, Defender, Teams, and identity platform changes.</description>
-  <lastBuildDate>Mon, 17 Aug 2026 18:52:13 +0000</lastBuildDate>
+  <lastBuildDate>Mon, 17 Aug 2026 19:12:33 +0000</lastBuildDate>
   
 <item>
-  <title>🔵 No items fetched — check GitHub Actions logs for feed fetch warnings</title>
-  <link>https://github.com/jaf1248/it-daily-rss/actions</link>
-  <pubDate>Mon, 17 Aug 2026 18:52:13 +0000</pubDate>
-  <source>it-daily-rss</source>
-  <description><![CDATA[<b>Why this matters: Feeds may be blocked or timing out — logs will show which URLs failed.</b><br/><br/><b>Source:</b> it-daily-rss &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt; 1h ago]]></description>
+  <title>🔴 DeadLock ransomware: Breaking down a Rust-based encryptor with decentralized recovery infrastructure</title>
+  <link>https://www.microsoft.com/en-us/security/blog/2026/08/10/deadlock-ransomware-breaking-down-a-rust-based-encryptor-with-decentralized-recovery-infrastructure/</link>
+  <guid isPermaLink="false">https://www.microsoft.com/en-us/security/blog/2026/08/10/deadlock-ransomware-breaking-down-a-rust-based-encryptor-with-decentralized-recovery-infrastructure/</guid>
+  <pubDate>Mon, 10 Aug 2026 15:00:00 +0000</pubDate>
+  <source>Microsoft Security Blog</source>
+  <description><![CDATA[<b>Why this matters: Elevated ransomware risk — validate backups, endpoint protection, and recovery readiness.</b><br/><p>Microsoft Threat Intelligence examines DeadLock ransomware, an emerging financially motivated operation distinguished by its use of decentralized infrastructure to support victim communications, negotiations, and data leak operations alongside double extortion tactics used to pressure victims.</p>
+<p>The post <a href="https://www.microsoft.com/en-us/security/blog/2026/08/10/deadlock-ransomware-breaking-down-a-rust-based-encryptor-with-decentralized-recovery-infrastructure/">DeadLock ransomware: Breaking down a Rust-based encryptor with decentralized recovery infrastructure</a> appeared first on <a href="https://www.microsoft.com/en-us/security/blog">Microsoft Security Blog</a>.</p><br/><br/><b>Source:</b> Microsoft Security Blog &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 7d]]></description>
+</item>
+
+<item>
+  <title>🔴 128 Seconds to disruption: Microsoft Defender stops ransomware at QNET</title>
+  <link>https://www.microsoft.com/en-us/security/blog/2026/08/04/129-seconds-disruption-microsoft-defender-stops-ransomware-qnet/</link>
+  <guid isPermaLink="false">https://www.microsoft.com/en-us/security/blog/2026/08/04/129-seconds-disruption-microsoft-defender-stops-ransomware-qnet/</guid>
+  <pubDate>Tue, 04 Aug 2026 17:54:04 +0000</pubDate>
+  <source>Microsoft Security Blog</source>
+  <description><![CDATA[<b>Why this matters: Elevated ransomware risk — validate backups, endpoint protection, and recovery readiness.</b><br/><p>Microsoft Defender automatically isolated a compromised QNET endpoint in 128 seconds, stopping a multi-stage attack before the payload could persist or spread.</p>
+<p>The post <a href="https://www.microsoft.com/en-us/security/blog/2026/08/04/129-seconds-disruption-microsoft-defender-stops-ransomware-qnet/">128 Seconds to disruption: Microsoft Defender stops ransomware at QNET </a> appeared first on <a href="https://www.microsoft.com/en-us/security/blog">Microsoft Security Blog</a>.</p><br/><br/><b>Source:</b> Microsoft Security Blog &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 13d]]></description>
+</item>
+
+<item>
+  <title>🟠 Detecting CVE-2026-54121 (Certighost) with Microsoft Defender</title>
+  <link>https://techcommunity.microsoft.com/t5/microsoft-defender-xdr-blog/detecting-cve-2026-54121-certighost-with-microsoft-defender/ba-p/4542861</link>
+  <guid isPermaLink="false">https://techcommunity.microsoft.com/t5/microsoft-defender-xdr-blog/detecting-cve-2026-54121-certighost-with-microsoft-defender/ba-p/4542861</guid>
+  <pubDate>Fri, 31 Jul 2026 17:41:07 +0000</pubDate>
+  <source>Microsoft 365 Defender Blog</source>
+  <description><![CDATA[<b>Why this matters: Could affect sign-ins, MFA, or Conditional Access — watch for authentication issues.</b><br/><h1>What is CVE-2026-54121?</h1>
+<p>CVE-2026-54121 is an authentication-bypass vulnerability in Active Directory Certificate Services that allows an attacker to obtain certificates for arbitrary domain computer accounts, including Domain Controllers. A valid Domain Controller certificate enables escalation to full domain compromise: it can be used to obtain Kerberos tickets that authenticate the attacker as a Domain Controller. Those tickets can then be used to perform attacks such as DCSync, or to recover the Domain Controller's password hash for later use.</p>
+<p>The flaw lies in an AD CS enrollment fallback known as a chase, which occurs when the CA cannot resolve the requester. In such cases, the vulnerable CA contacts a client-supplied Domain Controller, specified in the cdc attribute, to retrieve fresher identity data and incorporates the response into the issued certificate, without verifying that it is communicating with a legitimate Domain Controller. The chase fallback occurs only for templates that require a DNS name, and only on CAs with the EDITF_ENABLECHASECLIENTDC flag enabled.</p>
+<p><span>A public proof of concept was released on July 24, 2026. Microsoft has not observed confirmed threat-actor exploitation, and the activity seen so far appears consistent with security testing. Organizations with affected AD CS configurations should apply the July 14 security update. Organizations should identify exposed Certificate Services hosts, confirm whether the required…<br/><br/><b>Source:</b> Microsoft 365 Defender Blog &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 17d]]></description>
+</item>
+
+<item>
+  <title>🟠 MDTI convergence in Microsoft Sentinel and Defender XDR is complete</title>
+  <link>https://techcommunity.microsoft.com/t5/microsoft-defender-xdr-blog/mdti-convergence-in-microsoft-sentinel-and-defender-xdr-is/ba-p/4541279</link>
+  <guid isPermaLink="false">https://techcommunity.microsoft.com/t5/microsoft-defender-xdr-blog/mdti-convergence-in-microsoft-sentinel-and-defender-xdr-is/ba-p/4541279</guid>
+  <pubDate>Wed, 29 Jul 2026 16:00:00 +0000</pubDate>
+  <source>Microsoft 365 Defender Blog</source>
+  <description><![CDATA[<b>Why this matters: Service impact is possible — verify vendor status before troubleshooting internally.</b><br/><p>Beginning August 1, the final phase of Microsoft Defender Threat Intelligence (MDTI) convergence will be generally available in the Defender portal, giving customers real-time Microsoft threat intelligence across detection, investigation, response, hunting, and automation at no additional cost. Announced last year, <a href="https://techcommunity.microsoft.com/blog/defenderthreatintelligence/mdti-is-converging-into-microsoft-sentinel-and-defender-xdr/4427991" rel="noopener" target="_blank">this unified SecOps experience</a> reduces fragmented context and tool handoffs, creating a clearer path from threat signal to informed action.</p>
+<h3>Latest features converging</h3>
+<h4>Entity enrichments: all the intel, right where you need it</h4>
+<p>Defender entity pages surface threat intelligence enrichments in the Threat Intelligence Insights tab for IP addresses, domains, URLs, and files. This unified view combines reputation data and scores, attributed reports, infrastructure relationships, services, certificates, DNS and WHOIS records, trackers, cookies, and sandbox analysis, helping analysts assess risk and investigate incidents without switching tabs. For more information, see&nbsp;<a href="https://learn.microsoft.com/en-us/defender-xdr/entity-page-threat-intelligence" rel="noopener" target="_blank">View threat intelligence in entity pages</a>.</p>
+<p>&nbsp;</p>
+<img /><em>Screenshot of the Threat Intelligence Insights tab under Threat Analytics in the Defender portal showing…<br/><br/><b>Source:</b> Microsoft 365 Defender Blog &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 19d]]></description>
+</item>
+
+<item>
+  <title>🟠 Microsoft Defender now integrates with Dragos, Forescout, &amp; Armis for OT Security</title>
+  <link>https://techcommunity.microsoft.com/t5/microsoft-defender-xdr-blog/microsoft-defender-now-integrates-with-dragos-forescout-armis/ba-p/4534936</link>
+  <guid isPermaLink="false">https://techcommunity.microsoft.com/t5/microsoft-defender-xdr-blog/microsoft-defender-now-integrates-with-dragos-forescout-armis/ba-p/4534936</guid>
+  <pubDate>Tue, 14 Jul 2026 13:46:58 +0000</pubDate>
+  <source>Microsoft 365 Defender Blog</source>
+  <description><![CDATA[<b>Why this matters: Service impact is possible — verify vendor status before troubleshooting internally.</b><br/><p>Co-author(s): Amit Cohen and Hadar Shindler<br /><br />Operational technology (OT) environments are unlike anything else in cybersecurity. The systems that run our factories, power grids, water treatment plants, pipelines, and transportation networks weren’t built with modern threats in mind — and they can’t simply be patched, rebooted, or scanned the way IT systems can. A misstep doesn’t just create an alert backlog; it can stop a production line, disrupt critical services, or put physical safety at risk.</p>
+<p>To support customers in bringing their OT security solutions into their Security Operation (SOC) platform, we’re excited to announce an expansion of the Microsoft ecosystem with new OT security integrations from Dragos, Forescout, and Armis from ServiceNow. This gives customers greater flexibility to use the OT security solutions that best fit their environments.</p>
+<h3><strong>Expanding OT coverage in Defender with new partner integrations</strong></h3>
+<p>We’ve built new connectors for Dragos, Forescout and Armis that are now ready for customers to start using.</p>
+<h4>Dragos</h4>
+<h6><em>"Strong OT defense starts with knowing what is running in your operational environment, the vulnerabilities those assets carry, the threats targeting your systems, and the data to determine root cause. That kind of intelligence comes from years of operating inside OT environments and tracking the groups behind those threats. As OT threats continue to grow and AI accelerates ho…<br/><br/><b>Source:</b> Microsoft 365 Defender Blog &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 34d]]></description>
+</item>
+
+<item>
+  <title>🟠 Monthly news - July 2026</title>
+  <link>https://techcommunity.microsoft.com/t5/microsoft-defender-xdr-blog/monthly-news-july-2026/ba-p/4532402</link>
+  <guid isPermaLink="false">https://techcommunity.microsoft.com/t5/microsoft-defender-xdr-blog/monthly-news-july-2026/ba-p/4532402</guid>
+  <pubDate>Wed, 01 Jul 2026 09:30:09 +0000</pubDate>
+  <source>Microsoft 365 Defender Blog</source>
+  <description><![CDATA[<b>Why this matters: Service impact is possible — verify vendor status before troubleshooting internally.</b><br/><p><strong>Microsoft Defender</strong><br />Monthly news - July 2026 Edition</p>
+<p>This is our monthly "What's new" blog post, summarizing product updates and various new assets we released over the past month across our Defender products. In this edition, we are looking at all the goodness from June 2026. We are now including news related to Defender for Cloud in the Defender portal. For all other Defender for Cloud news, have a look at the dedicated Defender for Cloud Monthly News&nbsp;<a class="lia-internal-link lia-internal-url lia-internal-url-content-type-blog" href="https://techcommunity.microsoft.com/blog/microsoftdefendercloudblog/microsoft-defender-for-cloud-customer-newsletter/4525656" rel="noopener" target="_blank">here</a><strong>.</strong>&nbsp;</p>
+<p><strong>🚀 New Virtual Ninja Show episode:</strong></p>
+<ul>
+<li><a class="lia-external-url" href="https://youtu.be/17qtl8RSFKA?si=_O1CgQpNJtQgk_dY" rel="noopener" target="_blank"> Redefining identity security for the modern enterprise</a></li>
+<li><a class="lia-external-url" href="https://youtu.be/I24oxM6rL6E?si=rgXUPok9_jVu0SsQ" rel="noopener" target="_blank"> One policy engine to govern them all: Securing agentic AI with Microsoft Purview</a></li>
+<li><a class="lia-external-url" href="https://youtu.be/q_7IXnBwv8c?si=94-NKofzzGx-3HkG" rel="noopener" target="_blank"> Building a modern detection pipeline with ContentOps</a></li>
+<li><a class="lia-external-url" href="https://youtu.be/SzTEY3sY3lA?si=HJV1MKD8tJ63_EQT…<br/><br/><b>Source:</b> Microsoft 365 Defender Blog &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 47d]]></description>
+</item>
+
+<item>
+  <title>🔴 Securing the invisible workforce</title>
+  <link>https://techcommunity.microsoft.com/t5/microsoft-defender-xdr-blog/securing-the-invisible-workforce/ba-p/4528611</link>
+  <guid isPermaLink="false">https://techcommunity.microsoft.com/t5/microsoft-defender-xdr-blog/securing-the-invisible-workforce/ba-p/4528611</guid>
+  <pubDate>Wed, 17 Jun 2026 12:35:52 +0000</pubDate>
+  <source>Microsoft 365 Defender Blog</source>
+  <description><![CDATA[<b>Why this matters: Advanced threat activity — review privileged access, persistence detection, and lateral-movement controls.</b><br/><p>Non-human identities are now the majority of the identity estate in most enterprises. Service principals access organizational resources across SharePoint, Azure, and Microsoft 365, Service accounts run critical business processes on-premises, OAuth apps move data across SaaS boundaries, and AI agents increasingly operate autonomously at machine speed.</p>
+<p>As NHIs have grown in number and importance, so to have the threats targeting them. <a href="https://www.microsoft.com/en-us/security/blog/2024/01/25/midnight-blizzard-guidance-for-responders-on-nation-state-attack/" rel="noopener" target="_blank">Midnight Blizzard</a> showed how damaging compromised NHI can be. Attackers moved laterally across cloud resources and accessed sensitive data without ever triggering user-centric controls like MFA. The challenge many security teams are faced with however is that they simply do not have the visibility into what NHI’s even exist within their organization. Unlike their human counterparts, NHI can vary drastically in purpose, behaviour and risk profile. The one consistency is that most organizations lack a formal process for their creation, management and governance. For instance, while these identities often carry high and standing privileges, those permissions are typically granted at creation and never revisited. They authenticate programmatically so they cannot be enrolled in, or benefit from the protections of multi-factor authentication.</p>
+<p>As AI adoption accelerates,…<br/><br/><b>Source:</b> Microsoft 365 Defender Blog &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 61d]]></description>
+</item>
+
+<item>
+  <title>🟠 Organize your multitenant view with Tenant Groups in Microsoft Defender</title>
+  <link>https://techcommunity.microsoft.com/t5/microsoft-defender-xdr-blog/organize-your-multitenant-view-with-tenant-groups-in-microsoft/ba-p/4522992</link>
+  <guid isPermaLink="false">https://techcommunity.microsoft.com/t5/microsoft-defender-xdr-blog/organize-your-multitenant-view-with-tenant-groups-in-microsoft/ba-p/4522992</guid>
+  <pubDate>Wed, 27 May 2026 16:00:00 +0000</pubDate>
+  <source>Microsoft 365 Defender Blog</source>
+  <description><![CDATA[<b>Why this matters: Credential/phishing risk — reinforce MFA and watch for suspicious sign-ins.</b><br/><p>Managing security across many tenants shouldn’t mean drowning in a single, flat list. We’re excited to share a new capability, now in public preview in the Microsoft Defender multitenant (MTO) porta<strong>l</strong>: <strong>Tenant Groups</strong>—a flexible way to organize the tenants you manage and switch your view between them with a single click.</p>
+<p>If you’re a managed security service provider (MSSP), a cloud service provider (CSP), or a security team operating across multiple Entra ID tenants, this one’s for you.</p>
+<h4><strong>What’s new</strong></h4>
+<p><strong>Tenant Groups</strong> let you create logical groupings of tenants (by customer segment, geography, criticality, onboarding stage—whatever fits how you work) and seamlessly switch the Defender MTO view to show data from only the tenants in that group.</p>
+<blockquote>
+<p><strong>NOTICE: </strong>The feature previously called <em>Tenant groups</em>—used for content distribution—has been renamed to <strong>Deployment profiles</strong>. The name “Tenant Groups” now refers to this new grouping experience.</p>
+</blockquote>
+<h4><strong>Why it matters</strong></h4>
+<ul>
+<li><strong>Focus, faster</strong> – Investigate incidents, hunt threats, and review posture against just the tenants you care about right now—without noise from the rest.</li>
+<li><strong>Operational clarity </strong>– Group tenants the way your team actually works (e.g., Tier 1 customers, EMEA, Pilot rollout).</li>
+<li><strong>Permissions-a…<br/><br/><b>Source:</b> Microsoft 365 Defender Blog &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 82d]]></description>
+</item>
+
+<item>
+  <title>🟠 Monthly news -  May 2026</title>
+  <link>https://techcommunity.microsoft.com/t5/microsoft-defender-xdr-blog/monthly-news-may-2026/ba-p/4516764</link>
+  <guid isPermaLink="false">https://techcommunity.microsoft.com/t5/microsoft-defender-xdr-blog/monthly-news-may-2026/ba-p/4516764</guid>
+  <pubDate>Mon, 04 May 2026 15:24:34 +0000</pubDate>
+  <source>Microsoft 365 Defender Blog</source>
+  <description><![CDATA[<b>Why this matters: Privilege-escalation risk — review local admin and endpoint controls.</b><br/><p><strong>Microsoft Defender</strong><br />Monthly news - May 2026 Edition</p>
+<p>This is our monthly "What's new" blog post, summarizing product updates and various new assets we released over the past month across our Defender products. In this edition, we are looking at all the goodness from April 2026. We are now including news related to Defender for Cloud in the Defender portal. For all other Defender for Cloud news, have a look at the dedicated Defender for Cloud Monthly News&nbsp;<a href="https://techcommunity.microsoft.com/blog/microsoftdefendercloudblog/microsoft-defender-for-cloud-customer-newsletter/4491637" rel="noopener" target="_blank">here</a><strong>.</strong>&nbsp;</p>
+<p><strong>🚀 New Virtual Ninja Show episode:</strong></p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=u9nXRABIw1k&amp;list=PLmAptfqzxVEVeZJO1kj4wiUVhCPfCa0Fm&amp;index=2" rel="noopener" target="_blank">The future of identity protection with Predictive Shielding</a></li>
+<li><a href="https://www.youtube.com/watch?v=rujGb8CEmN0&amp;list=PLmAptfqzxVEVeZJO1kj4wiUVhCPfCa0Fm&amp;index=3&amp;t=5s" rel="noopener" target="_blank">Network-layer data protection with Microsoft Entra GSA and Purview DLP</a></li>
+<li><a href="https://www.youtube.com/watch?v=pDA80Gr-0xc&amp;list=PLmAptfqzxVEVeZJO1kj4wiUVhCPfCa0Fm&amp;index=4" rel="noopener" target="_blank">Data lake federation: hunt across external data without ingesting it</a></li>
+</ul>
+<p><strong>Weekly Security News: </strong>We publish a short 1i…<br/><br/><b>Source:</b> Microsoft 365 Defender Blog &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 105d]]></description>
+</item>
+
+<item>
+  <title>🟠 Monthly news - January 2026</title>
+  <link>https://techcommunity.microsoft.com/t5/microsoft-defender-xdr-blog/monthly-news-january-2026/ba-p/4484885</link>
+  <guid isPermaLink="false">https://techcommunity.microsoft.com/t5/microsoft-defender-xdr-blog/monthly-news-january-2026/ba-p/4484885</guid>
+  <pubDate>Tue, 28 Apr 2026 23:33:54 +0000</pubDate>
+  <source>Microsoft 365 Defender Blog</source>
+  <description><![CDATA[<b>Why this matters: Credential/phishing risk — reinforce MFA and watch for suspicious sign-ins.</b><br/><p><strong>Microsoft Defender</strong><br />Monthly news - January 2026 Edition</p>
+<p>This is our monthly "What's new" blog post, summarizing product updates and various new assets we released over the past month across our Defender products. In this edition, we are looking at all the goodness from December 2025. Defender for Cloud has its own Monthly News post, have a look at<strong>&nbsp;<a href="https://techcommunity.microsoft.com/t5/microsoft-defender-for-cloud/bg-p/MicrosoftDefenderCloudBlog" rel="noopener" target="_blank">their blog space</a>.</strong>&nbsp;</p>
+<p><strong>🚀 New Virtual Ninja Show episode:</strong></p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=E9bw5I72Rz8" rel="noopener" target="_blank">Advancements in Attack Disruption</a></li>
+<li><a href="https://www.youtube.com/watch?v=CTfCwF7xSvo" rel="noopener" target="_blank">Vulnerability Remediation Agent in Microsoft Intune</a></li>
+</ul>
+<p><strong>Microsoft Defender</strong></p>
+<ul>
+<li>(Public Preview) The following <strong>advanced hunting schema tables</strong> are now available for preview:
+<ul>
+<li>The&nbsp;<a href="https://learn.microsoft.com/en-us/defender-xdr/advanced-hunting-campaigninfo-table" rel="noopener" target="_blank">CampaignInfo</a>&nbsp;table contains contains information about email campaigns identified by Microsoft Defender for Office 365</li>
+<li>The&nbsp;<a href="https://learn.microsoft.com/en-us/defender-xdr/advanced-hunting-filemaliciouscontentinfo-table" rel="noopener" tar…<br/><br/><b>Source:</b> Microsoft 365 Defender Blog &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 110d]]></description>
+</item>
+
+<item>
+  <title>🔴 Monthly news -  April 2026</title>
+  <link>https://techcommunity.microsoft.com/t5/microsoft-defender-xdr-blog/monthly-news-april-2026/ba-p/4508050</link>
+  <guid isPermaLink="false">https://techcommunity.microsoft.com/t5/microsoft-defender-xdr-blog/monthly-news-april-2026/ba-p/4508050</guid>
+  <pubDate>Wed, 08 Apr 2026 08:18:07 +0000</pubDate>
+  <source>Microsoft 365 Defender Blog</source>
+  <description><![CDATA[<b>Why this matters: Elevated ransomware risk — validate backups, endpoint protection, and recovery readiness.</b><br/><p><strong>Microsoft Defender</strong><br />Monthly news - April 2026 Edition</p>
+<p>This is our monthly "What's new" blog post, summarizing product updates and various new assets we released over the past month across our Defender products. In this edition, we are looking at all the goodness from March 2026. We are now including news related to Defender for Cloud in the Defender portal. For all other Defender for Cloud news, have a look at the dedicated Defender for Cloud Monthly News&nbsp;<a href="https://techcommunity.microsoft.com/blog/microsoftdefendercloudblog/microsoft-defender-for-cloud-customer-newsletter/4491637" rel="noopener" target="_blank">here</a><strong>.</strong>&nbsp;</p>
+<p><strong>🚀 New Virtual Ninja Show episode:</strong></p>
+<ul>
+<li><a class="lia-external-url" href="https://www.youtube.com/live/sCv_iPAxMBY?si=PvnM_k5dZ6JMQb-J" rel="noopener" target="_blank">New skills in Microsoft Defender</a></li>
+<li><a class="lia-external-url" href="https://www.youtube.com/live/Uf1bMc4vVKY?si=Tfs07p3YLeQOo6AE" rel="noopener" target="_blank">Autonomous AI Agents in Microsoft Defender</a></li>
+<li>
+<p><a class="lia-external-url" href="https://youtu.be/xJTw_Q2WVD8?si=5x9fbSZ2zW16jJ1h" rel="noopener" target="_blank"> Beyond KQL: Unlocking SOC Insights with Sentinel data lake Jupyter Notebooks</a></p>
+</li>
+<li>
+<p><a class="lia-external-url" href="https://youtu.be/-Mi-Rw3zCE0?si=p7lKt-rTxcggplW5" rel="noopener" target="_blank"> Extending Attack Disruption beyond Microsof…<br/><br/><b>Source:</b> Microsoft 365 Defender Blog &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 131d]]></description>
+</item>
+
+<item>
+  <title>🔴 Redefining identity security for the modern enterprise</title>
+  <link>https://techcommunity.microsoft.com/t5/microsoft-defender-xdr-blog/redefining-identity-security-for-the-modern-enterprise/ba-p/4503129</link>
+  <guid isPermaLink="false">https://techcommunity.microsoft.com/t5/microsoft-defender-xdr-blog/redefining-identity-security-for-the-modern-enterprise/ba-p/4503129</guid>
+  <pubDate>Fri, 20 Mar 2026 16:00:00 +0000</pubDate>
+  <source>Microsoft 365 Defender Blog</source>
+  <description><![CDATA[<b>Why this matters: Elevated ransomware risk — validate backups, endpoint protection, and recovery readiness.</b><br/><p>Every breach has one thing in common: an identity was exploited. Attackers have learned that identity is the fastest path to lateral movement and escalation. The challenge for defenders is that today's identity landscape is vast and fragmented — spanning hybrid environments, SaaS apps, cloud platforms, and autonomous agents. Protecting it demands more than point solutions. It requires continuous visibility, proactive posture reduction, and the ability to detect and disrupt identity threats across the full attack lifecycle.</p>
+<p>Leveraging our expertise as a leader in both Identity and Access Management (IAM) and Security, our focus has been to deliver a fast, comprehensive, and increasingly autonomous approach to identity security. It is designed to continuously strengthen identity posture and help SOC teams act faster with less manual effort. Today, I am excited to announce the next set of innovations including:</p>
+<ul>
+<li>Reimagined Identity Security dashboard and experiences to surface identity insights</li>
+<li>Expanded protection for more elements of modern identity fabrics including non-human identities.</li>
+<li>Streamlined detections including a new identity-level risk score that can be applied directly within risk-based conditional access policies.</li>
+<li>Unified identity view &amp; protection across Active Directory, Entra ID, IAM solutions, SaaS and Cloud – with improved at-scale identity correlations</li>
+<li>New autonomous response capabilities to furthe…<br/><br/><b>Source:</b> Microsoft 365 Defender Blog &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 150d]]></description>
+</item>
+
+<item>
+  <title>🔴 Introducing AI-powered incident prioritization in Microsoft Defender</title>
+  <link>https://techcommunity.microsoft.com/t5/microsoft-defender-xdr-blog/introducing-ai-powered-incident-prioritization-in-microsoft/ba-p/4483834</link>
+  <guid isPermaLink="false">https://techcommunity.microsoft.com/t5/microsoft-defender-xdr-blog/introducing-ai-powered-incident-prioritization-in-microsoft/ba-p/4483834</guid>
+  <pubDate>Tue, 17 Feb 2026 21:18:38 +0000</pubDate>
+  <source>Microsoft 365 Defender Blog</source>
+  <description><![CDATA[<b>Why this matters: Elevated ransomware risk — validate backups, endpoint protection, and recovery readiness.</b><br/><p>Co-Authored by: Scott Freitas &amp; Maayan Magenheim</p>
+<p>Every SOC analyst knows the moment when the incident queue fills up fast. Multiple alerts arrive with the same severity but different sources. When everything looks equally urgent, the real question becomes <strong>what do you investigate first?</strong> And how do you address it consistently across shifts, analysts, and tool stacks?</p>
+<p>At Microsoft Ignite last November, we <a href="https://techcommunity.microsoft.com/blog/microsoftthreatprotectionblog/ignite-2025-whats-new-in-microsoft-defender/4469996" rel="noopener" target="_blank">announced</a> a new capability in Microsoft Defender designed to solve exactly this problem: AI-powered incident prioritization. Today, we’re excited to share that <strong>AI-powered incident prioritization is now available in public preview for all Microsoft Defender customers</strong>. This is about helping SOC teams cut through noise, focus on what matters most, and move faster with confidence.</p>
+<h2>A new and improved incident queue experience</h2>
+<p>Microsoft Defender aggregates related alerts and automated investigations into an incident. That correlation matters because some activity is only clearly malicious when you connect the dots across multiple products and telemetry sources. Instead of chasing isolated alerts, analysts get the broader narrative: what happened, what it touched, and how it progressed.</p>
+<p>Prior to the new incident queue experience, incidents wer…<br/><br/><b>Source:</b> Microsoft 365 Defender Blog &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 180d]]></description>
+</item>
+
+<item>
+  <title>🔴 From signal to strategy: Closing attack paths with identity intelligence</title>
+  <link>https://techcommunity.microsoft.com/t5/microsoft-defender-xdr-blog/from-signal-to-strategy-closing-attack-paths-with-identity/ba-p/4491856</link>
+  <guid isPermaLink="false">https://techcommunity.microsoft.com/t5/microsoft-defender-xdr-blog/from-signal-to-strategy-closing-attack-paths-with-identity/ba-p/4491856</guid>
+  <pubDate>Mon, 09 Feb 2026 15:54:38 +0000</pubDate>
+  <source>Microsoft 365 Defender Blog</source>
+  <description><![CDATA[<b>Why this matters: Credential/phishing risk — reinforce MFA and watch for suspicious sign-ins.</b><br/><p>Compromised credentials remain one of the most common entry points for attackers. In the first half of 2025 alone, <a href="https://blogs.microsoft.com/on-the-issues/2025/10/16/mddr-2025/#:~:text=Adversaries%20aren't%20breaking%20in,based%20attacks%20surged%20by%2032%25." rel="noopener" target="_blank">identity-based attacks surged more than 32% and its estimated that 97% of them are password focused</a>. While that scale is overwhelming, it only takes a single exposed account to give an attacker a foothold from which they can move laterally towards the critical assets they are after. At today’s attack scale, identity signals need to be connected with broader context to stop attacks earlier in the kill chain.</p>
+<p>Today we are excited to share more about how Microsoft Defender can help security professionals proactively understand how identity-related risks, like leaked credentials, relate back to critical assets, helping security professionals proactively close potential entry points before they can be exploited.</p>
+<h2>Understanding leaked credentials and attack paths:</h2>
+<p>Leaked credentials refer to valid usernames and passwords that have been exposed beyond their intended scope. Whether this exposure occurs as part of a data breach, phishing attack, or postings on dark web forums, the result is the same: an attacker may be using legitimate credentials to access your organization.</p>
+<p>Similarly, attack paths describe the sequence of misconfigurations, permissi…<br/><br/><b>Source:</b> Microsoft 365 Defender Blog &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 189d]]></description>
+</item>
+
+<item>
+  <title>🟠 Monthly news -  February 2026</title>
+  <link>https://techcommunity.microsoft.com/t5/microsoft-defender-xdr-blog/monthly-news-february-2026/ba-p/4491826</link>
+  <guid isPermaLink="false">https://techcommunity.microsoft.com/t5/microsoft-defender-xdr-blog/monthly-news-february-2026/ba-p/4491826</guid>
+  <pubDate>Tue, 03 Feb 2026 11:36:55 +0000</pubDate>
+  <source>Microsoft 365 Defender Blog</source>
+  <description><![CDATA[<b>Why this matters: Credential/phishing risk — reinforce MFA and watch for suspicious sign-ins.</b><br/><p><strong>Microsoft Defender</strong><br />Monthly news - February 2026 Edition</p>
+<p>This is our monthly "What's new" blog post, summarizing product updates and various new assets we released over the past month across our Defender products. In this edition, we are looking at all the goodness from January 2026. Defender for Cloud has its own Monthly News post, have a look <a class="lia-internal-link lia-internal-url lia-internal-url-content-type-blog" href="https://techcommunity.microsoft.com/blog/microsoftdefendercloudblog/microsoft-defender-for-cloud-customer-newsletter/4491637" target="_blank">here</a><strong>.</strong>&nbsp;</p>
+<p><strong>🚀 New Virtual Ninja Show episode:</strong></p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=Ei02Yr1rE18&amp;list=PLmAptfqzxVEVeZJO1kj4wiUVhCPfCa0Fm&amp;index=5" rel="noopener" style="background-color: rgb(255, 255, 255); font-style: normal; font-weight: 400;" target="_blank">Discovering Microsoft Sentinel MCP server</a></li>
+<li><a href="https://www.youtube.com/watch?v=gbzMB3KnmvM&amp;list=PLmAptfqzxVEVeZJO1kj4wiUVhCPfCa0Fm&amp;index=4" rel="noopener" target="_blank">Microsoft Sentinel for SAP: What's New, What's Gone, and What's Next</a></li>
+<li><a href="https://www.youtube.com/watch?v=MVyHJR6TJjU&amp;list=PLmAptfqzxVEVeZJO1kj4wiUVhCPfCa0Fm&amp;index=3" rel="noopener" target="_blank">Unlocking Security Context with Microsoft Sentinel Graph</a></li>
+<li><a href="https://www.youtube.com/watch?v=d6eEklWCxXw&amp;list=PLmAptfqzxVEV…<br/><br/><b>Source:</b> Microsoft 365 Defender Blog &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 195d]]></description>
 </item>
 
 </channel>
