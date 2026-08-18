@@ -1,25 +1,35 @@
 # IT Weekly Intelligence Briefing
 **Period:** August 11 – August 18, 2026  
-**Generated:** 2026-08-18 17:23 UTC  
-**Items reviewed:** 143  
+**Generated:** 2026-08-18 18:33 UTC  
+**Items reviewed:** 146  
 
 ## ⚡ Top Actions This Week
 
 1. **Validate backups, confirm EDR coverage, and brief incident response team.**  
-   _CISA: Windows Task Host flaw now exploited by ransomware gangs_  
+   _Clop created custom web shell for Windchill data theft attacks_  
    Source: BleepingComputer  
 
-2. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _Heights Finance Data Breach Impacts at Least 1.2 Million Individuals_  
-   Source: SecurityWeek  
-
-3. **Prioritize patching of affected systems; check for internet-exposed attack surface.**  
-   _CISA Flags Actively Exploited Ray Flaw That Can Trigger Browser-Based RCE_  
+2. **Validate backups, confirm EDR coverage, and brief incident response team.**  
+   _Ransom Busters Claims It Hacked Ransomware Servers, Asks Victims for Up to $60,000_  
    Source: The Hacker News  
+
+3. **Validate backups, confirm EDR coverage, and brief incident response team.**  
+   _CISA: Windows Task Host flaw now exploited by ransomware gangs_  
+   Source: BleepingComputer  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [Clop created custom web shell for Windchill data theft attacks](https://www.bleepingcomputer.com/news/security/clop-created-custom-web-shell-for-windchill-data-theft-attacks/)
+**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Aug 18  
+**Why it matters:** Elevated ransomware risk across the sector.  
+**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
+
+### [Ransom Busters Claims It Hacked Ransomware Servers, Asks Victims for Up to $60,000](https://thehackernews.com/2026/08/ransom-busters-claims-it-hacked.html)
+**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Aug 18  
+**Why it matters:** Elevated ransomware risk across the sector.  
+**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
 
 ### [CISA: Windows Task Host flaw now exploited by ransomware gangs](https://www.bleepingcomputer.com/news/security/cisa-windows-task-host-flaw-now-exploited-by-ransomware-gangs/)
 **Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Aug 18  
@@ -41,30 +51,20 @@
 **Why it matters:** Potential credential or data exposure.  
 **Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
-### [Cavern C2 Uses DNS and Google Apps Script to Blend Into Legitimate Traffic](https://thehackernews.com/2026/08/cavern-c2-uses-dns-and-google-apps.html)
-**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Aug 17  
-**Why it matters:** Advanced persistent threat activity detected.  
-**Recommended action:** Elevate monitoring posture; brief security team on threat actor TTPs.  
-
-### [680,000 Impacted by French Tax Authority Data Breach](https://www.securityweek.com/680000-impacted-by-french-tax-authority-data-breach/)
-**Source:** SecurityWeek &nbsp;·&nbsp; **Date:** Aug 17  
-**Why it matters:** Potential credential or data exposure.  
-**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
-
 ---
 
 ## 🟠 Important — Review This Week
-
-- [CVE-2026-24301 Microsoft Copilot Information Disclosure Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-24301)  
-  **Microsoft Security Response Center** · Aug 18 · _General awareness item._  
-
-- [CVE-2026-65791 Windows iSCSI Target Service Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-65791)  
-  **Microsoft Security Response Center** · Aug 18 · _General awareness item._  
 
 - [CVE-2026-47632 Azure Connected Machine Agent Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-47632)  
   **Microsoft Security Response Center** · Aug 18 · _General awareness item._  
 
 - [CVE-2026-50419 Windows Kernel Information Disclosure Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-50419)  
+  **Microsoft Security Response Center** · Aug 18 · _General awareness item._  
+
+- [CVE-2026-24301 Microsoft Copilot Information Disclosure Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-24301)  
+  **Microsoft Security Response Center** · Aug 18 · _General awareness item._  
+
+- [CVE-2026-65791 Windows iSCSI Target Service Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-65791)  
   **Microsoft Security Response Center** · Aug 18 · _General awareness item._  
 
 - [AI-Driven Vulnerability Surge Breaks the Traditional Patching Model](https://www.securityweek.com/ai-driven-vulnerability-surge-breaks-the-traditional-patching-model/)  
@@ -83,13 +83,13 @@
 
 ## 🔵 FYI — General Awareness
 
+- [Microsoft Copilot Personal Flaws Could Let One Click Exfiltrate Data From Connected Apps](https://thehackernews.com/2026/08/microsoft-copilot-personal-flaws-could.html) — The Hacker News
+- [Attackers Exploit MLflow SSRF Flaw to Steal Cloud Credentials and Secrets](https://thehackernews.com/2026/08/attackers-exploit-mlflow-ssrf-flaw-to.html) — The Hacker News
 - [Webinar Today: Rethinking Cyber Defense for AI-Speed Attacks](https://www.securityweek.com/webinar-today-rethinking-cyber-defense-for-ai-speed-attacks/) — SecurityWeek
 - [CISO Conversations: Nico Waisman – From Self-Taught Hacker to AI-Driven Offensive Security at XBOW](https://www.securityweek.com/ciso-conversations-nico-waisman-from-self-taught-hacker-to-ai-driven-offensive-security-at-xbow/) — SecurityWeek
 - [Your Controls Block Known Attacks. What About the Behavior?](https://www.bleepingcomputer.com/news/security/your-controls-block-known-attacks-what-about-the-behavior/) — BleepingComputer
 - [AI "Mind Viruses" Can Spread Between Agents Through Persistent Prompt Files](https://thehackernews.com/2026/08/ai-mind-viruses-can-spread-between.html) — The Hacker News
-- [TWINLOOT Abuses SharePoint and Teams to Steal Credentials and Move Across Networks](https://thehackernews.com/2026/08/twinloot-abuses-sharepoint-and-teams-to.html) — The Hacker News
-- [Xpander Raises $7.5 Million for AI Management and Governance](https://www.securityweek.com/xpander-raises-7-5-million-for-ai-management-and-governance/) — SecurityWeek
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 14 critical · 84 important · 45 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 16 critical · 83 important · 47 FYI_
