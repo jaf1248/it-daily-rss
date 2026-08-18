@@ -1,25 +1,30 @@
 # IT Weekly Intelligence Briefing
 **Period:** August 11 – August 18, 2026  
-**Generated:** 2026-08-18 08:32 UTC  
+**Generated:** 2026-08-18 09:29 UTC  
 **Items reviewed:** 146  
 
 ## ⚡ Top Actions This Week
 
-1. **Prioritize patching of affected systems; check for internet-exposed attack surface.**  
+1. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
+   _Heights Finance Data Breach Impacts at Least 1.2 Million Individuals_  
+   Source: SecurityWeek  
+
+2. **Prioritize patching of affected systems; check for internet-exposed attack surface.**  
    _CISA Flags Actively Exploited Ray Flaw That Can Trigger Browser-Based RCE_  
    Source: The Hacker News  
 
-2. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
+3. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
    _Pokémon Center data breach exposes customer info, cancels some orders_  
    Source: BleepingComputer  
-
-3. **Elevate monitoring posture; brief security team on threat actor TTPs.**  
-   _Cavern C2 Uses DNS and Google Apps Script to Blend Into Legitimate Traffic_  
-   Source: The Hacker News  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [Heights Finance Data Breach Impacts at Least 1.2 Million Individuals](https://www.securityweek.com/heights-finance-data-breach-impacts-at-least-1-2-million-individuals/)
+**Source:** SecurityWeek &nbsp;·&nbsp; **Date:** Aug 18  
+**Why it matters:** Potential credential or data exposure.  
+**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
 ### [CISA Flags Actively Exploited Ray Flaw That Can Trigger Browser-Based RCE](https://thehackernews.com/2026/08/cisa-flags-actively-exploited-ray-flaw.html)
 **Source:** The Hacker News &nbsp;·&nbsp; **Date:** Aug 18  
@@ -46,14 +51,15 @@
 **Why it matters:** Elevated ransomware risk across the sector.  
 **Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
 
-### [French tax authority data breach affects 678,000 individuals](https://www.bleepingcomputer.com/news/security/french-tax-authority-data-breach-affects-678-000-individuals/)
-**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Aug 17  
-**Why it matters:** Potential credential or data exposure.  
-**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
-
 ---
 
 ## 🟠 Important — Review This Week
+
+- [Microsoft confirms outage affecting search in Microsoft 365 apps](https://www.bleepingcomputer.com/news/microsoft/microsoft-working-to-fix-bug-behind-microsoft-365-search-issues/)  
+  **BleepingComputer** · Aug 18 · _Service continuity risk to users._  
+
+- [GitLab Patches Critical Code Injection Vulnerability](https://www.securityweek.com/gitlab-patches-critical-code-injection-vulnerability/)  
+  **SecurityWeek** · Aug 18 · _General awareness item._  
 
 - [Dozens of WebKit Vulnerabilities Patched With Fresh macOS, iOS Security Updates](https://www.securityweek.com/dozens-of-webkit-vulnerabilities-patched-with-fresh-macos-ios-security-updates/)  
   **SecurityWeek** · Aug 18 · _General awareness item._  
@@ -73,23 +79,17 @@
 - [Microsoft confirms GitHub is down worldwide](https://www.bleepingcomputer.com/news/microsoft/microsoft-confirms-github-is-down-worldwide/)  
   **BleepingComputer** · Aug 17 · _Service continuity risk to users._  
 
-- [Certighost and the Privilege Hiding in Your Certificate Authority](https://www.bleepingcomputer.com/news/security/certighost-and-the-privilege-hiding-in-your-certificate-authority/)  
-  **BleepingComputer** · Aug 17 · _General awareness item._  
-
-- [CVE-2026-40400 Windows PowerShell Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-40400)  
-  **Microsoft Security Response Center** · Aug 17 · _General awareness item._  
-
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [SafePal Hardware Wallet Maker Says Flaw Exposed Data of Nearly 40,000 Customers](https://thehackernews.com/2026/08/safepal-hardware-wallet-maker-says-flaw.html) — The Hacker News
 - [Microsoft starts removing WMIC tool used by cybercriminals](https://www.bleepingcomputer.com/news/microsoft/microsoft-removes-wmic-lolbin-tool-in-windows-11-beta-builds/) — BleepingComputer
 - [ISC Stormcast For Tuesday, August 18th, 2026 https://isc.sans.edu/podcastdetail/10056, (Tue, Aug 18th)](https://isc.sans.edu/diary/rss/33256) — SANS Internet Storm Center
 - [Hacker claims 3.6 million Azure account records stolen from major companies](https://www.bleepingcomputer.com/news/security/hacker-claims-36-million-azure-account-records-stolen-from-major-companies/) — BleepingComputer
 - [Apple Screen Sharing Security, (Mon, Aug 17th)](https://isc.sans.edu/diary/rss/33252) — SANS Internet Storm Center
 - [Windows Server 2022 reaches end of mainstream support in 60 days](https://www.bleepingcomputer.com/news/microsoft/windows-server-2022-reaches-end-of-mainstream-support-in-60-days/) — BleepingComputer
-- [How MCP Servers Can Expose Enterprise Secrets](https://thehackernews.com/2026/08/how-mcp-servers-can-expose-enterprise.html) — The Hacker News
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 16 critical · 84 important · 46 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 15 critical · 86 important · 45 FYI_
