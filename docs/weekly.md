@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
 **Period:** August 12 – August 19, 2026  
-**Generated:** 2026-08-19 01:03 UTC  
+**Generated:** 2026-08-19 02:54 UTC  
 **Items reviewed:** 141  
 
 ## ⚡ Top Actions This Week
@@ -55,6 +55,9 @@
 
 ## 🟠 Important — Review This Week
 
+- [Active Directory Domain Services modules on Microsoft Learn](https://techcommunity.microsoft.com/t5/itops-talk-blog/active-directory-domain-services-modules-on-microsoft-learn/ba-p/4547604)  
+  **Microsoft Tech Community IT Ops** · Aug 18 · _Possible impact to authentication and sign-in flows._  
+
 - [CVE-2026-24301 Microsoft Copilot Information Disclosure Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-24301)  
   **Microsoft Security Response Center** · Aug 18 · _General awareness item._  
 
@@ -76,19 +79,16 @@
 - [CVE-2026-56642 Microsoft Fabric Data Warehouse Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-56642)  
   **Microsoft Security Response Center** · Aug 18 · _General awareness item._  
 
-- [AI-Driven Vulnerability Surge Breaks the Traditional Patching Model](https://www.securityweek.com/ai-driven-vulnerability-surge-breaks-the-traditional-patching-model/)  
-  **SecurityWeek** · Aug 18 · _General awareness item._  
-
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [ISC Stormcast For Wednesday, August 19th, 2026 https://isc.sans.edu/podcastdetail/10058, (Wed, Aug 19th)](https://isc.sans.edu/diary/rss/33258) — SANS Internet Storm Center
 - [Comcast turns your Xfinity WiFi into a home motion detector](https://www.bleepingcomputer.com/news/security/comcast-turns-your-xfinity-wifi-into-a-home-motion-detector/) — BleepingComputer
 - [Microsoft Copilot Personal Flaws Could Let One Click Exfiltrate Data From Connected Apps](https://thehackernews.com/2026/08/microsoft-copilot-personal-flaws-could.html) — The Hacker News
 - [Attackers Exploit MLflow SSRF Flaw to Steal Cloud Credentials and Secrets](https://thehackernews.com/2026/08/attackers-exploit-mlflow-ssrf-flaw-to.html) — The Hacker News
 - [Hunting MacSync Stealer infrastructure through behavioral pivots](https://www.microsoft.com/en-us/security/blog/2026/08/18/hunting-macsync-stealer-infrastructure-through-behavioral-pivots/) — Microsoft Security Blog
 - [Webinar Today: Rethinking Cyber Defense for AI-Speed Attacks](https://www.securityweek.com/webinar-today-rethinking-cyber-defense-for-ai-speed-attacks/) — SecurityWeek
-- [CISO Conversations: Nico Waisman – From Self-Taught Hacker to AI-Driven Offensive Security at XBOW](https://www.securityweek.com/ciso-conversations-nico-waisman-from-self-taught-hacker-to-ai-driven-offensive-security-at-xbow/) — SecurityWeek
 
 ---
 
