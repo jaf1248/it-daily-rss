@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
-**Period:** August 11 – August 18, 2026  
-**Generated:** 2026-08-18 23:19 UTC  
+**Period:** August 12 – August 19, 2026  
+**Generated:** 2026-08-19 01:03 UTC  
 **Items reviewed:** 141  
 
 ## ⚡ Top Actions This Week
@@ -55,9 +55,6 @@
 
 ## 🟠 Important — Review This Week
 
-- [Active Directory Domain Services modules on Microsoft Learn](https://techcommunity.microsoft.com/t5/itops-talk-blog/active-directory-domain-services-modules-on-microsoft-learn/ba-p/4547604)  
-  **Microsoft Tech Community IT Ops** · Aug 18 · _Possible impact to authentication and sign-in flows._  
-
 - [CVE-2026-24301 Microsoft Copilot Information Disclosure Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-24301)  
   **Microsoft Security Response Center** · Aug 18 · _General awareness item._  
 
@@ -78,6 +75,9 @@
 
 - [CVE-2026-56642 Microsoft Fabric Data Warehouse Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-56642)  
   **Microsoft Security Response Center** · Aug 18 · _General awareness item._  
+
+- [AI-Driven Vulnerability Surge Breaks the Traditional Patching Model](https://www.securityweek.com/ai-driven-vulnerability-surge-breaks-the-traditional-patching-model/)  
+  **SecurityWeek** · Aug 18 · _General awareness item._  
 
 ---
 
