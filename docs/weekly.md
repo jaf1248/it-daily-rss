@@ -1,25 +1,30 @@
 # IT Weekly Intelligence Briefing
 **Period:** August 12 – August 19, 2026  
-**Generated:** 2026-08-19 09:31 UTC  
-**Items reviewed:** 135  
+**Generated:** 2026-08-19 10:24 UTC  
+**Items reviewed:** 137  
 
 ## ⚡ Top Actions This Week
 
-1. **Validate backups, confirm EDR coverage, and brief incident response team.**  
+1. **Prioritize patching of affected systems; check for internet-exposed attack surface.**  
+   _Critical RCE flaw in Windows IKE Extension now actively exploited_  
+   Source: BleepingComputer  
+
+2. **Validate backups, confirm EDR coverage, and brief incident response team.**  
    _CISA: Medusa ransomware hit over 500 critical infrastructure orgs_  
    Source: BleepingComputer  
 
-2. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
+3. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
    _CareCloud Data Breach Impact Grows to 3.7 Million Individuals_  
    Source: SecurityWeek  
-
-3. **Validate backups, confirm EDR coverage, and brief incident response team.**  
-   _Clop created custom web shell for Windchill data theft attacks_  
-   Source: BleepingComputer  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [Critical RCE flaw in Windows IKE Extension now actively exploited](https://www.bleepingcomputer.com/news/security/cisa-critical-windows-ike-extension-flaw-now-exploited-in-attacks/)
+**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Aug 19  
+**Why it matters:** Potential email disruption for users.  
+**Recommended action:** Prioritize patching of affected systems; check for internet-exposed attack surface.  
 
 ### [CISA: Medusa ransomware hit over 500 critical infrastructure orgs](https://www.bleepingcomputer.com/news/security/cisa-medusa-ransomware-hit-over-500-critical-infrastructure-orgs/)
 **Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Aug 19  
@@ -46,11 +51,6 @@
 **Why it matters:** Elevated ransomware risk across the sector.  
 **Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
 
-### [Heights Finance Data Breach Impacts at Least 1.2 Million Individuals](https://www.securityweek.com/heights-finance-data-breach-impacts-at-least-1-2-million-individuals/)
-**Source:** SecurityWeek &nbsp;·&nbsp; **Date:** Aug 18  
-**Why it matters:** Potential credential or data exposure.  
-**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
-
 ---
 
 ## 🟠 Important — Review This Week
@@ -60,6 +60,9 @@
 
 - [Chrome, Firefox Updates Patch Dozens of Vulnerabilities](https://www.securityweek.com/chrome-firefox-updates-patch-dozens-of-vulnerabilities/)  
   **SecurityWeek** · Aug 19 · _General awareness item._  
+
+- [Active Directory Domain Services modules on Microsoft Learn](https://techcommunity.microsoft.com/t5/itops-talk-blog/active-directory-domain-services-modules-on-microsoft-learn/ba-p/4547604)  
+  **Microsoft Tech Community IT Ops** · Aug 18 · _Possible impact to authentication and sign-in flows._  
 
 - [CVE-2026-24301 Microsoft Copilot Information Disclosure Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-24301)  
   **Microsoft Security Response Center** · Aug 18 · _General awareness item._  
@@ -76,20 +79,17 @@
 - [CVE-2026-47632 Azure Connected Machine Agent Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-47632)  
   **Microsoft Security Response Center** · Aug 18 · _General awareness item._  
 
-- [CVE-2026-50419 Windows Kernel Information Disclosure Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-50419)  
-  **Microsoft Security Response Center** · Aug 18 · _General awareness item._  
-
 ---
 
 ## 🔵 FYI — General Awareness
 
 - [Windows 11 24H2 Home and Pro reach end of support in 2 months](https://www.bleepingcomputer.com/news/microsoft/windows-11-24h2-home-and-pro-reach-end-of-support-in-2-months/) — BleepingComputer
+- [Microsoft Links 30+ Rotating Domains to MacSync Stealer Infrastructure](https://thehackernews.com/2026/08/microsoft-links-30-rotating-domains-to.html) — The Hacker News
+- [Clop-Linked Windchill Web Shell Decrypts Credentials and Maps Engineering Data](https://thehackernews.com/2026/08/clop-linked-windchill-web-shell.html) — The Hacker News
 - [ISC Stormcast For Wednesday, August 19th, 2026 https://isc.sans.edu/podcastdetail/10058, (Wed, Aug 19th)](https://isc.sans.edu/diary/rss/33258) — SANS Internet Storm Center
 - [Comcast turns your Xfinity WiFi into a home motion detector](https://www.bleepingcomputer.com/news/security/comcast-turns-your-xfinity-wifi-into-a-home-motion-detector/) — BleepingComputer
 - [Microsoft Copilot Personal Flaws Could Let One Click Exfiltrate Data From Connected Apps](https://thehackernews.com/2026/08/microsoft-copilot-personal-flaws-could.html) — The Hacker News
-- [Attackers Exploit MLflow SSRF Flaw to Steal Cloud Credentials and Secrets](https://thehackernews.com/2026/08/attackers-exploit-mlflow-ssrf-flaw-to.html) — The Hacker News
-- [Hunting MacSync Stealer infrastructure through behavioral pivots](https://www.microsoft.com/en-us/security/blog/2026/08/18/hunting-macsync-stealer-infrastructure-through-behavioral-pivots/) — Microsoft Security Blog
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 12 critical · 76 important · 47 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 12 critical · 76 important · 49 FYI_
