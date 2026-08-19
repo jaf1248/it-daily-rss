@@ -1,12 +1,12 @@
 # IT Weekly Intelligence Briefing
 **Period:** August 12 – August 19, 2026  
-**Generated:** 2026-08-19 21:22 UTC  
+**Generated:** 2026-08-19 22:21 UTC  
 **Items reviewed:** 139  
 
 ## ⚡ Top Actions This Week
 
 1. **Validate backups, confirm EDR coverage, and brief incident response team.**  
-   _Rogue ransomware affiliate poses as data recovery firm to steal payments_  
+   _Rogue ransomware affiliate poses as recovery firm to steal payments_  
    Source: BleepingComputer  
 
 2. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
@@ -21,7 +21,7 @@
 
 ## 🔴 Critical — Immediate Awareness
 
-### [Rogue ransomware affiliate poses as data recovery firm to steal payments](https://www.bleepingcomputer.com/news/security/rogue-ransomware-affiliate-ransom-busters-poses-as-data-recovery-firm/)
+### [Rogue ransomware affiliate poses as recovery firm to steal payments](https://www.bleepingcomputer.com/news/security/rogue-ransomware-affiliate-ransom-busters-poses-as-recovery-firm/)
 **Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Aug 19  
 **Why it matters:** Elevated ransomware risk across the sector.  
 **Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
