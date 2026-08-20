@@ -1,25 +1,30 @@
 # IT Weekly Intelligence Briefing
 **Period:** August 13 – August 20, 2026  
-**Generated:** 2026-08-20 21:24 UTC  
-**Items reviewed:** 145  
+**Generated:** 2026-08-20 22:23 UTC  
+**Items reviewed:** 147  
 
 ## ⚡ Top Actions This Week
 
-1. **Prioritize patching of affected systems; check for internet-exposed attack surface.**  
+1. **Audit third-party software dependencies and review vendor access.**  
+   _Rust Supply Chain Attack Puts Build-Time Malware in Crates with 245 Million Downloads_  
+   Source: The Hacker News  
+
+2. **Prioritize patching of affected systems; check for internet-exposed attack surface.**  
    _Critical Zimbra RCE flaw now actively exploited in attacks_  
    Source: BleepingComputer  
 
-2. **Validate backups, confirm EDR coverage, and brief incident response team.**  
+3. **Validate backups, confirm EDR coverage, and brief incident response team.**  
    _Rogue ransomware affiliate poses as recovery firm to steal payments_  
-   Source: BleepingComputer  
-
-3. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _Healthtech firm CareCloud data breach impacts 3.7 million patients_  
    Source: BleepingComputer  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [Rust Supply Chain Attack Puts Build-Time Malware in Crates with 245 Million Downloads](https://thehackernews.com/2026/08/rust-supply-chain-attack-puts-build.html)
+**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Aug 20  
+**Why it matters:** Third-party/software supply chain integrity risk.  
+**Recommended action:** Audit third-party software dependencies and review vendor access.  
 
 ### [Critical Zimbra RCE flaw now actively exploited in attacks](https://www.bleepingcomputer.com/news/security/critical-zimbra-rce-flaw-now-actively-exploited-in-attacks/)
 **Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Aug 20  
@@ -46,11 +51,6 @@
 **Why it matters:** Elevated ransomware risk across the sector.  
 **Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
 
-### [CISA Flags Actively Exploited Ray Flaw That Can Trigger Browser-Based RCE](https://thehackernews.com/2026/08/cisa-flags-actively-exploited-ray-flaw.html)
-**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Aug 18  
-**Why it matters:** General awareness item.  
-**Recommended action:** Prioritize patching of affected systems; check for internet-exposed attack surface.  
-
 ---
 
 ## 🟠 Important — Review This Week
@@ -61,23 +61,23 @@
 - [Critical Elementor Pro bug exposes WordPress sites to RCE attacks](https://www.bleepingcomputer.com/news/security/critical-elementor-pro-bug-exposes-wordpress-sites-to-rce-attacks/)  
   **BleepingComputer** · Aug 20 · _General awareness item._  
 
-- [CVE-2026-33824 Windows Internet Key Exchange (IKE) Service Extensions Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-33824)  
+- [CVE-2026-62834 Azure Data Factory Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-62834)  
+  **Microsoft Security Response Center** · Aug 20 · _General awareness item._  
+
+- [CVE-2026-65801 Microsoft Exchange Online Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-65801)  
   **Microsoft Security Response Center** · Aug 20 · _Potential email disruption for users._  
 
-- [CVE-2026-54118 Microsoft SQL Server Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-54118)  
+- [CVE-2026-68789 Azure SQL Database Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-68789)  
   **Microsoft Security Response Center** · Aug 20 · _General awareness item._  
 
-- [CVE-2026-54117 Microsoft SQL Server Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-54117)  
+- [CVE-2026-69519 Azure Stack HCI Information Disclosure Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69519)  
   **Microsoft Security Response Center** · Aug 20 · _General awareness item._  
 
-- [CVE-2026-66802 Windows Device Health Attestation (DHA) Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-66802)  
-  **Microsoft Security Response Center** · Aug 20 · _General awareness item._  
+- [CVE-2026-69851 Microsoft Entra ID Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69851)  
+  **Microsoft Security Response Center** · Aug 20 · _Possible impact to authentication and sign-in flows._  
 
-- [CVE-2026-62754 Windows Kerberos Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-62754)  
-  **Microsoft Security Response Center** · Aug 20 · _General awareness item._  
-
-- [CVE-2026-71331 Windows Device Health Attestation (DHA) Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-71331)  
-  **Microsoft Security Response Center** · Aug 20 · _General awareness item._  
+- [CVE-2026-69836 Microsoft Entra ID Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69836)  
+  **Microsoft Security Response Center** · Aug 20 · _Possible impact to authentication and sign-in flows._  
 
 ---
 
@@ -92,4 +92,4 @@
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 8 critical · 81 important · 56 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 9 critical · 83 important · 55 FYI_
