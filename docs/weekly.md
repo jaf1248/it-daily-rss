@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
 **Period:** August 13 – August 20, 2026  
-**Generated:** 2026-08-20 05:27 UTC  
+**Generated:** 2026-08-20 06:40 UTC  
 **Items reviewed:** 137  
 
 ## ⚡ Top Actions This Week
@@ -55,6 +55,9 @@
 
 ## 🟠 Important — Review This Week
 
+- [Elementor Pro Flaw Could Let Unauthenticated Attackers Upload PHP and Execute Code](https://thehackernews.com/2026/08/elementor-pro-flaw-could-let.html)  
+  **The Hacker News** · Aug 20 · _General awareness item._  
+
 - [OpenAI confirms ChatGPT is down as logins and signups fail](https://www.bleepingcomputer.com/news/artificial-intelligence/openai-confirms-chatgpt-is-down-as-logins-and-signups-fail/)  
   **BleepingComputer** · Aug 20 · _Service continuity risk to users._  
 
@@ -74,9 +77,6 @@
   **Microsoft Security Response Center** · Aug 19 · _General awareness item._  
 
 - [CVE-2026-65675 CoPilot Chat Security Feature Bypass Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-65675)  
-  **Microsoft Security Response Center** · Aug 19 · _General awareness item._  
-
-- [CVE-2020-1173 Microsoft Power BI Report Server Spoofing Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2020-1173)  
   **Microsoft Security Response Center** · Aug 19 · _General awareness item._  
 
 ---
