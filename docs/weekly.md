@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
 **Period:** August 13 – August 20, 2026  
-**Generated:** 2026-08-20 17:25 UTC  
+**Generated:** 2026-08-20 18:34 UTC  
 **Items reviewed:** 145  
 
 ## ⚡ Top Actions This Week
@@ -61,6 +61,9 @@
 - [Critical Elementor Pro bug exposes WordPress sites to RCE attacks](https://www.bleepingcomputer.com/news/security/critical-elementor-pro-bug-exposes-wordpress-sites-to-rce-attacks/)  
   **BleepingComputer** · Aug 20 · _General awareness item._  
 
+- [CVE-2026-33824 Windows Internet Key Exchange (IKE) Service Extensions Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-33824)  
+  **Microsoft Security Response Center** · Aug 20 · _Potential email disruption for users._  
+
 - [CVE-2026-54118 Microsoft SQL Server Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-54118)  
   **Microsoft Security Response Center** · Aug 20 · _General awareness item._  
 
@@ -76,19 +79,16 @@
 - [CVE-2026-71331 Windows Device Health Attestation (DHA) Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-71331)  
   **Microsoft Security Response Center** · Aug 20 · _General awareness item._  
 
-- [Isolated-vm Flaw Lets Sandboxed JavaScript Escape to Host for Potential RCE](https://thehackernews.com/2026/08/isolated-vm-flaw-lets-sandboxed.html)  
-  **The Hacker News** · Aug 20 · _General awareness item._  
-
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [Hackers poison arrayref Rust crate to push infostealer malware](https://www.bleepingcomputer.com/news/security/hackers-poison-arrayref-rust-crate-to-push-infostealer-malware/) — BleepingComputer
 - [AI-Generated Exploit Scripts Target Siemens S7 PLCs in U.S. Critical Infrastructure](https://thehackernews.com/2026/08/ai-generated-exploit-scripts-target.html) — The Hacker News
 - [New Cryptographic Context Injection Attack Could Let Web Pages Steal Grok Chat Data](https://thehackernews.com/2026/08/new-cryptographic-context-injection.html) — The Hacker News
 - [Surveillance – Everything You Wanted to Know, But Were Afraid to Ask](https://www.securityweek.com/surveillance-everything-you-wanted-to-know-but-were-afraid-to-ask/) — SecurityWeek
 - [How MSPs can catch phishing attacks email filters miss](https://www.bleepingcomputer.com/news/security/how-msps-can-catch-phishing-attacks-email-filters-miss/) — BleepingComputer
 - [Threat Actor Hacks 14,000 IP Cameras in Ukraine and Russia](https://www.securityweek.com/threat-actor-hacks-14000-ip-cameras-in-ukraine-and-russia/) — SecurityWeek
-- [Using Microsoft Graph and Powershell - Risk Detection Commands, (Thu, Aug 20th)](https://isc.sans.edu/diary/rss/33266) — SANS Internet Storm Center
 
 ---
 
