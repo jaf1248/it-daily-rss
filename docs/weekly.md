@@ -1,7 +1,7 @@
 # IT Weekly Intelligence Briefing
 **Period:** August 13 – August 20, 2026  
-**Generated:** 2026-08-20 13:43 UTC  
-**Items reviewed:** 141  
+**Generated:** 2026-08-20 14:33 UTC  
+**Items reviewed:** 143  
 
 ## ⚡ Top Actions This Week
 
@@ -41,19 +41,34 @@
 **Why it matters:** General awareness item.  
 **Recommended action:** Review and assess impact on your environment.  
 
-### [Critical RCE flaw in Windows IKE Extension now actively exploited](https://www.bleepingcomputer.com/news/security/cisa-critical-windows-ike-extension-flaw-now-exploited-in-attacks/)
-**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Aug 19  
-**Why it matters:** Potential email disruption for users.  
-**Recommended action:** Prioritize patching of affected systems; check for internet-exposed attack surface.  
-
 ### [Ransom Busters Claims It Hacked Ransomware Servers, Asks Victims for Up to $60,000](https://thehackernews.com/2026/08/ransom-busters-claims-it-hacked.html)
 **Source:** The Hacker News &nbsp;·&nbsp; **Date:** Aug 18  
 **Why it matters:** Elevated ransomware risk across the sector.  
 **Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
 
+### [CISA Flags Actively Exploited Ray Flaw That Can Trigger Browser-Based RCE](https://thehackernews.com/2026/08/cisa-flags-actively-exploited-ray-flaw.html)
+**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Aug 18  
+**Why it matters:** General awareness item.  
+**Recommended action:** Prioritize patching of affected systems; check for internet-exposed attack surface.  
+
 ---
 
 ## 🟠 Important — Review This Week
+
+- [CVE-2026-66802 Windows Device Health Attestation (DHA) Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-66802)  
+  **Microsoft Security Response Center** · Aug 20 · _General awareness item._  
+
+- [CVE-2026-71331 Windows Device Health Attestation (DHA) Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-71331)  
+  **Microsoft Security Response Center** · Aug 20 · _General awareness item._  
+
+- [Isolated-vm Flaw Lets Sandboxed JavaScript Escape to Host for Potential RCE](https://thehackernews.com/2026/08/isolated-vm-flaw-lets-sandboxed.html)  
+  **The Hacker News** · Aug 20 · _General awareness item._  
+
+- [Critical NetScaler Flaw Can Bypass Authentication on Certain Gateway and AAA Servers](https://thehackernews.com/2026/08/critical-netscaler-flaw-can-bypass.html)  
+  **The Hacker News** · Aug 20 · _General awareness item._  
+
+- [Attackers Exploit Zimbra SNMP Flaw for Unauthenticated Remote Code Execution](https://thehackernews.com/2026/08/attackers-exploit-zimbra-snmp-flaw-for.html)  
+  **The Hacker News** · Aug 20 · _General awareness item._  
 
 - [Atlassian, Splunk Patch Dozens of Critical, High-Severity Vulnerabilities](https://www.securityweek.com/atlassian-splunk-patch-dozens-of-critical-high-severity-vulnerabilities/)  
   **SecurityWeek** · Aug 20 · _General awareness item._  
@@ -64,32 +79,17 @@
 - [MLflow Vulnerability Exploited for Cloud Credential Theft](https://www.securityweek.com/mlflow-vulnerability-exploited-for-cloud-credential-theft/)  
   **SecurityWeek** · Aug 20 · _General awareness item._  
 
-- [Cisco Patches Critical Crosswork, Secure Workload Vulnerabilities](https://www.securityweek.com/cisco-patches-critical-crosswork-secure-workload-vulnerabilities/)  
-  **SecurityWeek** · Aug 20 · _General awareness item._  
-
-- [Why "Shady AI" is Security's Next Big Governance Problem](https://thehackernews.com/2026/08/why-shady-ai-is-securitys-next-big.html)  
-  **The Hacker News** · Aug 20 · _General awareness item._  
-
-- [CISA warns of hackers exploiting critical MLflow vulnerability](https://www.bleepingcomputer.com/news/security/cisa-warns-of-hackers-exploiting-critical-mlflow-vulnerability/)  
-  **BleepingComputer** · Aug 20 · _General awareness item._  
-
-- [OpenAI Overhauls Model Security With Sandboxing, 30-Minute Alerts, and Training Pauses](https://www.securityweek.com/openai-overhauls-model-security-with-sandboxing-30-minute-alerts-and-training-pauses/)  
-  **SecurityWeek** · Aug 20 · _General awareness item._  
-
-- [Exploitation Expected for Critical Authentication Bypass Patched in Citrix NetScaler](https://www.securityweek.com/exploitation-expected-for-critical-authentication-bypass-patched-in-citrix-netscaler/)  
-  **SecurityWeek** · Aug 20 · _General awareness item._  
-
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [Surveillance – Everything You Wanted to Know, But Were Afraid to Ask](https://www.securityweek.com/surveillance-everything-you-wanted-to-know-but-were-afraid-to-ask/) — SecurityWeek
+- [How MSPs can catch phishing attacks email filters miss](https://www.bleepingcomputer.com/news/security/how-msps-can-catch-phishing-attacks-email-filters-miss/) — BleepingComputer
 - [Threat Actor Hacks 14,000 IP Cameras in Ukraine and Russia](https://www.securityweek.com/threat-actor-hacks-14000-ip-cameras-in-ukraine-and-russia/) — SecurityWeek
 - [Using Microsoft Graph and Powershell - Risk Detection Commands, (Thu, Aug 20th)](https://isc.sans.edu/diary/rss/33266) — SANS Internet Storm Center
 - [Using Microsoft Graph and Powershell to Mine for Information - Stale Accounts and Licenses, (Thu, Aug 20th)](https://isc.sans.edu/diary/rss/33264) — SANS Internet Storm Center
 - [Zombie Card Attack Can Revive Expired Visa Cards for Contactless Payments](https://thehackernews.com/2026/08/zombie-card-attack-can-revive-expired.html) — The Hacker News
-- [CDN Tsunami Attack Abuses HTTP/3 Translation for Up to 350x DoS Amplification](https://thehackernews.com/2026/08/cdn-tsunami-attack-abuses-http3.html) — The Hacker News
-- [Manic Android Malware Exfiltrates Data From Offline Phones via Nearby Infected Devices](https://thehackernews.com/2026/08/manic-android-malware-exfiltrates-data.html) — The Hacker News
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 10 critical · 77 important · 54 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 9 critical · 79 important · 55 FYI_
