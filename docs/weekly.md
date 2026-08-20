@@ -1,7 +1,7 @@
 # IT Weekly Intelligence Briefing
 **Period:** August 13 – August 20, 2026  
-**Generated:** 2026-08-20 11:23 UTC  
-**Items reviewed:** 139  
+**Generated:** 2026-08-20 12:41 UTC  
+**Items reviewed:** 138  
 
 ## ⚡ Top Actions This Week
 
@@ -36,11 +36,6 @@
 **Why it matters:** Potential credential or data exposure.  
 **Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
-### [Cl0p Ransomware Group Names Over 40 Victims of PTC Windchill Campaign](https://www.securityweek.com/cl0p-ransomware-group-names-over-40-victims-of-ptc-windchill-campaign/)
-**Source:** SecurityWeek &nbsp;·&nbsp; **Date:** Aug 19  
-**Why it matters:** Elevated ransomware risk across the sector.  
-**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
-
 ### [Critical macOS, SharePoint, vCenter, and Microsoft IKE Flaws Under Active Exploitation](https://thehackernews.com/2026/08/critical-macos-sharepoint-vcenter-and.html)
 **Source:** The Hacker News &nbsp;·&nbsp; **Date:** Aug 19  
 **Why it matters:** General awareness item.  
@@ -51,9 +46,26 @@
 **Why it matters:** Potential email disruption for users.  
 **Recommended action:** Prioritize patching of affected systems; check for internet-exposed attack surface.  
 
+### [Ransom Busters Claims It Hacked Ransomware Servers, Asks Victims for Up to $60,000](https://thehackernews.com/2026/08/ransom-busters-claims-it-hacked.html)
+**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Aug 18  
+**Why it matters:** Elevated ransomware risk across the sector.  
+**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
+
 ---
 
 ## 🟠 Important — Review This Week
+
+- [Atlassian, Splunk Patch Dozens of Critical, High-Severity Vulnerabilities](https://www.securityweek.com/atlassian-splunk-patch-dozens-of-critical-high-severity-vulnerabilities/)  
+  **SecurityWeek** · Aug 20 · _General awareness item._  
+
+- [Citrix urges admins to patch new NetScaler flaws as soon as possible](https://www.bleepingcomputer.com/news/security/citrix-urges-admins-to-patch-new-netscaler-flaws-as-soon-as-possible/)  
+  **BleepingComputer** · Aug 20 · _General awareness item._  
+
+- [MLflow Vulnerability Exploited for Cloud Credential Theft](https://www.securityweek.com/mlflow-vulnerability-exploited-for-cloud-credential-theft/)  
+  **SecurityWeek** · Aug 20 · _General awareness item._  
+
+- [Cisco Patches Critical Crosswork, Secure Workload Vulnerabilities](https://www.securityweek.com/cisco-patches-critical-crosswork-secure-workload-vulnerabilities/)  
+  **SecurityWeek** · Aug 20 · _General awareness item._  
 
 - [CISA warns of hackers exploiting critical MLflow vulnerability](https://www.bleepingcomputer.com/news/security/cisa-warns-of-hackers-exploiting-critical-mlflow-vulnerability/)  
   **BleepingComputer** · Aug 20 · _General awareness item._  
@@ -67,29 +79,17 @@
 - [Critical GitLab Flaw Exploited Shortly After Disclosure](https://www.securityweek.com/critical-gitlab-flaw-exploited-shortly-after-disclosure/)  
   **SecurityWeek** · Aug 20 · _General awareness item._  
 
-- [Elementor Pro Flaw Could Let Unauthenticated Attackers Upload PHP and Execute Code](https://thehackernews.com/2026/08/elementor-pro-flaw-could-let.html)  
-  **The Hacker News** · Aug 20 · _General awareness item._  
-
-- [OpenAI confirms ChatGPT is down as logins and signups fail](https://www.bleepingcomputer.com/news/artificial-intelligence/openai-confirms-chatgpt-is-down-as-logins-and-signups-fail/)  
-  **BleepingComputer** · Aug 20 · _Service continuity risk to users._  
-
-- [OpenAI Pauses Frontier RL Training as It Tightens Defenses Against Unsafe AI Behavior](https://thehackernews.com/2026/08/openai-pauses-frontier-rl-training-as.html)  
-  **The Hacker News** · Aug 19 · _General awareness item._  
-
-- [CVE-2026-70338 Microsoft PowerShell Security Feature Bypass Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-70338)  
-  **Microsoft Security Response Center** · Aug 19 · _General awareness item._  
-
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [Using Microsoft Graph and Powershell to Mine for Information - Stale Accounts and Licenses, (Thu, Aug 20th)](https://isc.sans.edu/diary/rss/33264) — SANS Internet Storm Center
 - [AI-Assisted Tool Helped Secure Satellite Communication System After 2022 Russian Hacking](https://www.securityweek.com/ai-assisted-tool-helped-secure-satellite-communication-system-after-2022-russian-hacking/) — SecurityWeek
 - [NASA AIT-GUI Flaws Could Let Unauthenticated Attackers Issue Spacecraft Commands](https://thehackernews.com/2026/08/nasa-ait-gui-flaws-could-let.html) — The Hacker News
 - [ToxicPanda 2.0 and GoldDigger Expand Android Banking Attacks with On-Device Fraud](https://thehackernews.com/2026/08/toxicpanda-20-and-golddigger-expand.html) — The Hacker News
 - [New Manic Android malware can exfiltrate data through nearby devices](https://www.bleepingcomputer.com/news/security/new-manic-android-malware-can-exfiltrate-data-through-nearby-devices/) — BleepingComputer
 - [40 Malicious Firefox Extensions Pose as Web3 Products to Steal Wallet Secrets](https://thehackernews.com/2026/08/40-malicious-firefox-extensions-pose-as.html) — The Hacker News
-- [Hackers Using AI to Target Siemens PLCs in Critical US Sectors](https://www.securityweek.com/hackers-using-ai-to-target-siemens-plcs-in-critical-us-sectors/) — SecurityWeek
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 11 critical · 73 important · 55 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 10 critical · 76 important · 52 FYI_
