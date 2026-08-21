@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
 **Period:** August 14 – August 21, 2026  
-**Generated:** 2026-08-21 22:21 UTC  
+**Generated:** 2026-08-21 23:20 UTC  
 **Items reviewed:** 146  
 
 ## ⚡ Top Actions This Week
@@ -67,6 +67,9 @@
 - [CVE-2026-70335 GitHub Copilot and Visual Studio Code Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-70335)  
   **Microsoft Security Response Center** · Aug 21 · _General awareness item._  
 
+- [CVE-2026-54981 Visual Studio Code Python Extension Security Feature Bypass Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-54981)  
+  **Microsoft Security Response Center** · Aug 21 · _General awareness item._  
+
 - [CVE-2026-58547 Windows Universal Plug and Play (UPnP) Device Host Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-58547)  
   **Microsoft Security Response Center** · Aug 21 · _General awareness item._  
 
@@ -74,9 +77,6 @@
   **Microsoft Security Response Center** · Aug 21 · _General awareness item._  
 
 - [CVE-2026-55134 Microsoft Word Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-55134)  
-  **Microsoft Security Response Center** · Aug 21 · _General awareness item._  
-
-- [CVE-2026-50466 Microsoft Brokering File System Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-50466)  
   **Microsoft Security Response Center** · Aug 21 · _General awareness item._  
 
 ---
