@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
 **Period:** August 14 – August 21, 2026  
-**Generated:** 2026-08-21 06:40 UTC  
+**Generated:** 2026-08-21 07:40 UTC  
 **Items reviewed:** 147  
 
 ## ⚡ Top Actions This Week
@@ -55,6 +55,9 @@
 
 ## 🟠 Important — Review This Week
 
+- [CISA Urges Immediate Patching of Exploited TrueConf Vulnerabilities](https://www.securityweek.com/cisa-urges-immediate-patching-of-exploited-trueconf-vulnerabilities/)  
+  **SecurityWeek** · Aug 21 · _General awareness item._  
+
 - [Hackers Target Zimbra Servers in Active Exploitation Campaign](https://www.securityweek.com/hackers-target-zimbra-servers-in-active-exploitation-campaign/)  
   **SecurityWeek** · Aug 20 · _General awareness item._  
 
@@ -74,9 +77,6 @@
   **Microsoft Security Response Center** · Aug 20 · _General awareness item._  
 
 - [CVE-2026-69851 Microsoft Entra ID Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69851)  
-  **Microsoft Security Response Center** · Aug 20 · _Possible impact to authentication and sign-in flows._  
-
-- [CVE-2026-69836 Microsoft Entra ID Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69836)  
   **Microsoft Security Response Center** · Aug 20 · _Possible impact to authentication and sign-in flows._  
 
 ---
