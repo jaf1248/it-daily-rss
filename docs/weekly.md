@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
 **Period:** August 14 – August 21, 2026  
-**Generated:** 2026-08-21 01:06 UTC  
+**Generated:** 2026-08-21 02:59 UTC  
 **Items reviewed:** 147  
 
 ## ⚡ Top Actions This Week
@@ -83,12 +83,12 @@
 
 ## 🔵 FYI — General Awareness
 
+- [Who Got Missed in the MFA Rollout&#x3f; More Powershell &#x2b; Graph &#x2b; Entra scripting&#x21;, (Fri, Aug 21st)](https://isc.sans.edu/diary/rss/33272) — SANS Internet Storm Center
+- [ISC Stormcast For Friday, August 21st, 2026 https://isc.sans.edu/podcastdetail/10062, (Fri, Aug 21st)](https://isc.sans.edu/diary/rss/33270) — SANS Internet Storm Center
+- [Even MOAR Powershell, looking at Entra logins - the good, the bad and the password sprays, (Fri, Aug 21st)](https://isc.sans.edu/diary/rss/33268) — SANS Internet Storm Center
 - [Suspected Russian Hackers Abuse Google OAuth and WhatsApp Linking to Hijack Accounts](https://thehackernews.com/2026/08/suspected-russian-hackers-abuse-google.html) — The Hacker News
 - [Hackers poison arrayref Rust crate to push infostealer malware](https://www.bleepingcomputer.com/news/security/hackers-poison-arrayref-rust-crate-to-push-infostealer-malware/) — BleepingComputer
 - [ThreatsDay: Gogs 10.0 RCE, n8n Workflow-to-RCE, $10M Reward, GLM-5.3 AI Exploit and More](https://thehackernews.com/2026/08/threatsday-gogs-100-rce-n8n-workflow-to.html) — The Hacker News
-- [AI-Generated Exploit Scripts Target Siemens S7 PLCs in U.S. Critical Infrastructure](https://thehackernews.com/2026/08/ai-generated-exploit-scripts-target.html) — The Hacker News
-- [New Cryptographic Context Injection Attack Could Let Web Pages Steal Grok Chat Data](https://thehackernews.com/2026/08/new-cryptographic-context-injection.html) — The Hacker News
-- [Surveillance – Everything You Wanted to Know, But Were Afraid to Ask](https://www.securityweek.com/surveillance-everything-you-wanted-to-know-but-were-afraid-to-ask/) — SecurityWeek
 
 ---
 
