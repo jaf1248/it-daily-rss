@@ -1,7 +1,7 @@
 # IT Weekly Intelligence Briefing
 **Period:** August 14 – August 21, 2026  
-**Generated:** 2026-08-21 12:39 UTC  
-**Items reviewed:** 146  
+**Generated:** 2026-08-21 13:42 UTC  
+**Items reviewed:** 147  
 
 ## ⚡ Top Actions This Week
 
@@ -55,41 +55,41 @@
 
 ## 🟠 Important — Review This Week
 
-- [Critical Isolated-vm Vulnerability Leads to RCE on Host](https://www.securityweek.com/critical-isolated-vm-vulnerability-leads-to-rce-on-host/)  
-  **SecurityWeek** · Aug 21 · _General awareness item._  
+- [CVE-2026-68801 Microsoft Excel Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-68801)  
+  **Microsoft Security Response Center** · Aug 21 · _General awareness item._  
 
-- [Microsoft warns of max severity Entra ID flaw exploited in attacks](https://www.bleepingcomputer.com/news/microsoft/microsoft-warns-of-max-severity-entra-id-flaw-exploited-in-attacks/)  
-  **BleepingComputer** · Aug 21 · _Possible impact to authentication and sign-in flows._  
+- [CVE-2026-64903 Microsoft Office Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-64903)  
+  **Microsoft Security Response Center** · Aug 21 · _General awareness item._  
 
-- [Cisco Patches Nine Crosswork and Secure Workload Flaws, Five Scoring CVSS 10.0](https://thehackernews.com/2026/08/cisco-patches-nine-crosswork-and-secure.html)  
-  **The Hacker News** · Aug 21 · _General awareness item._  
+- [CVE-2026-64899 Microsoft Office Information Disclosure Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-64899)  
+  **Microsoft Security Response Center** · Aug 21 · _General awareness item._  
 
-- [Microsoft Rolls Out 22 Fresh Security Patches](https://www.securityweek.com/microsoft-rolls-out-22-fresh-security-patches/)  
-  **SecurityWeek** · Aug 21 · _General awareness item._  
+- [CVE-2026-70335 GitHub Copilot and Visual Studio Code Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-70335)  
+  **Microsoft Security Response Center** · Aug 21 · _General awareness item._  
 
-- [CISA Urges Immediate Patching of Exploited TrueConf Vulnerabilities](https://www.securityweek.com/cisa-urges-immediate-patching-of-exploited-trueconf-vulnerabilities/)  
-  **SecurityWeek** · Aug 21 · _General awareness item._  
+- [CVE-2026-58547 Windows Universal Plug and Play (UPnP) Device Host Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-58547)  
+  **Microsoft Security Response Center** · Aug 21 · _General awareness item._  
 
-- [GitLab CVE-2026-19478 Comes Under Active Exploitation Within Days of Disclosure](https://thehackernews.com/2026/08/gitlab-cve-2026-19478-comes-under.html)  
-  **The Hacker News** · Aug 21 · _General awareness item._  
+- [CVE-2026-49183 Windows Clipboard Server Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-49183)  
+  **Microsoft Security Response Center** · Aug 21 · _General awareness item._  
 
-- [Hackers Target Zimbra Servers in Active Exploitation Campaign](https://www.securityweek.com/hackers-target-zimbra-servers-in-active-exploitation-campaign/)  
-  **SecurityWeek** · Aug 20 · _General awareness item._  
+- [CVE-2026-55134 Microsoft Word Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-55134)  
+  **Microsoft Security Response Center** · Aug 21 · _General awareness item._  
 
-- [Critical Elementor Pro bug exposes WordPress sites to RCE attacks](https://www.bleepingcomputer.com/news/security/critical-elementor-pro-bug-exposes-wordpress-sites-to-rce-attacks/)  
-  **BleepingComputer** · Aug 20 · _General awareness item._  
+- [CVE-2026-32202 Windows Shell Spoofing Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-32202)  
+  **Microsoft Security Response Center** · Aug 21 · _General awareness item._  
 
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [Microsoft rolls out Classic Outlook theme for New Outlook users](https://www.bleepingcomputer.com/news/microsoft/microsoft-rolls-out-classic-outlook-theme-for-new-outlook-users/) — BleepingComputer
 - [Wazuh and AI For Enhanced SOC Workflows](https://thehackernews.com/2026/08/wazuh-and-ai-for-enhanced-soc-workflows.html) — The Hacker News
 - [Hackers abuse FTP server banners to deliver new Windows malware](https://www.bleepingcomputer.com/news/security/hackers-abuse-ftp-server-banners-to-deliver-new-windows-malware/) — BleepingComputer
 - [Contractors’ CMMC Confidence Rises as Ability to Prove It Falls Behind](https://www.securityweek.com/contractors-cmmc-confidence-rises-as-ability-to-prove-it-falls-behind/) — SecurityWeek
 - [Who Got Missed in the MFA Rollout&#x3f; More Powershell &#x2b; Graph &#x2b; Entra scripting&#x21;, (Fri, Aug 21st)](https://isc.sans.edu/diary/rss/33272) — SANS Internet Storm Center
 - [ISC Stormcast For Friday, August 21st, 2026 https://isc.sans.edu/podcastdetail/10062, (Fri, Aug 21st)](https://isc.sans.edu/diary/rss/33270) — SANS Internet Storm Center
-- [Even MOAR Powershell, looking at Entra logins - the good, the bad and the password sprays, (Fri, Aug 21st)](https://isc.sans.edu/diary/rss/33268) — SANS Internet Storm Center
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 12 critical · 85 important · 49 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 12 critical · 86 important · 49 FYI_
