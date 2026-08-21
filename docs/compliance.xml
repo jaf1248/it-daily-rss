@@ -3,8 +3,66 @@
 <channel>
   <title>Joe — Compliance &amp; Regulatory</title>
   <description>NIST, privacy, cybersecurity compliance, PCI DSS, and IT governance updates.</description>
-  <lastBuildDate>Fri, 21 Aug 2026 08:36:30 +0000</lastBuildDate>
+  <lastBuildDate>Fri, 21 Aug 2026 09:33:16 +0000</lastBuildDate>
   
+<item>
+  <title>🔵 Backdoored Rust packages hit crates.io, exposing developers to malware at build time</title>
+  <link>https://www.csoonline.com/article/4212381/backdoored-rust-packages-hit-crates-io-exposing-developers-to-malware-at-build-time.html</link>
+  <guid isPermaLink="false">https://www.csoonline.com/article/4212381/backdoored-rust-packages-hit-crates-io-exposing-developers-to-malware-at-build-time.html</guid>
+  <pubDate>Fri, 21 Aug 2026 09:29:49 +0000</pubDate>
+  <source>CSO Online</source>
+  <description><![CDATA[<b>Why this matters: Credential/phishing risk — reinforce MFA and watch for suspicious sign-ins.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<p class="wp-block-paragraph">Malicious versions of three Rust packages, including the widely used arrayref, were published to the crates.io registry on August 20, carrying a backdoor that executed automatically when affected projects were compiled.</p>
+
+
+
+<p class="wp-block-paragraph">Security researchers at Wiz said the attack also shares infrastructure with recent supply-chain campaigns attributed to North Korean threat actors.</p>
+
+
+
+<p class="wp-block-paragraph">The compromised releases were “arrayref@0.3.10”, “internment@0.8.7,” and “append-only-vec@0.1.9.” All three introduced a dependency on “proc-macro1,” a typosquat of the legitimate and widely downloaded “proc-macro2” crate.</p>
+
+
+
+<p class="wp-block-paragraph">The malicious dependency contained a build script that downloaded and executed a second-stage payload during compilation, Wiz researchers said in a blog <a href="https://www.wiz.io/blog/rust-supply-chain-attack-on-arrayref-significant-overlap-with-dprk-campaigns" rel="noreferrer noopener" target="_blank">post</a>. “The second stage payload is selected based on the platform, with support for x86_64 versions of Linux, Windows, and macOS, in addition to aarch64 macOS,“ they…<br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> &lt;1h]]></description>
+</item>
+
+<item>
+  <title>🔴 AI threats are everywhere. A risk-first CISO decides what to prioritize</title>
+  <link>https://www.csoonline.com/article/4212017/ai-threats-are-everywhere-a-risk-first-ciso-decides-what-to-prioritize.html</link>
+  <guid isPermaLink="false">https://www.csoonline.com/article/4212017/ai-threats-are-everywhere-a-risk-first-ciso-decides-what-to-prioritize.html</guid>
+  <pubDate>Fri, 21 Aug 2026 09:00:00 +0000</pubDate>
+  <source>CSO Online</source>
+  <description><![CDATA[<b>Why this matters: Elevated ransomware risk — validate backups, endpoint protection, and recovery readiness.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<p class="wp-block-paragraph">The good news? AI gives cyber defenders some of the best discovery tooling they’ve ever had.</p>
+
+
+
+<p class="wp-block-paragraph">The bad news? It gives attackers the same capability.</p>
+
+
+
+<p class="wp-block-paragraph">This duality has left CISOs managing AI on two simultaneous fronts. Outside the organization, attackers are using AI to make phishing more convincing, automate reconnaissance and compress the time between vulnerability disclosure and exploitation. The <a href="https://www.cnbc.com/2026/07/30/open-ai-hugging-face-hack-latest.html">OpenAI/Hugging Face</a> and <a href="https://sysdig.com/blog/jadepuffer-agentic-ransomware-for-automated-database-extortion">JADEPUFFER</a> incidents exposed the risk of autonomous agents carrying out end-to-end attacks without human direction. Inside the organization, employees are adopting AI tools faster than security teams can govern them, and sensitive data is flowing into consumer AI platforms where it is not protected.</p>
+
+
+
+<p class="wp-block-paragraph">As a CISO myself, I’m noticing that when it comes to AI, the temptation is to try to secure everything, everywhere, all at once. That’s impossible. The CISOs…<br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> &lt;1h]]></description>
+</item>
+
 <item>
   <title>🔴 Ransomware takes aim at enterprise resilience</title>
   <link>https://www.csoonline.com/article/4212157/ransomware-takes-aim-at-enterprise-resilience.html</link>
@@ -27,7 +85,7 @@
 
 
 
-<p class="wp-block-paragraph">Ransomware attacks today are increasingly designed to disrupt business operations, steal sensitive data, and apply pressure far beyond an organization’s IT environmen…<br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> &lt;1h]]></description>
+<p class="wp-block-paragraph">Ransomware attacks today are increasingly designed to disrupt business operations, steal sensitive data, and apply pressure far beyond an organization’s IT environmen…<br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 1h]]></description>
 </item>
 
 <item>
@@ -52,7 +110,7 @@
 
 
 
-<p class="wp-block-paragraph">“Running untrusted JavaScript safely is one of the hardest problems in the Node.js ecosystem, and its history is littered with failures,” said Cris Staicu, lead researcher at appsec firm Edor Labs, <a href="https://www.endorlabs.com/learn/ghsa-864f-rcv7-6rh4-critical-type-confusion-vulnerability-in-isolated-vm">who found the vulnerability</a>. “Vm2, for years the default answer, accumulated more than twenty documented brea…<br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 11h]]></description>
+<p class="wp-block-paragraph">“Running untrusted JavaScript safely is one of the hardest problems in the Node.js ecosystem, and its history is littered with failures,” said Cris Staicu, lead researcher at appsec firm Edor Labs, <a href="https://www.endorlabs.com/learn/ghsa-864f-rcv7-6rh4-critical-type-confusion-vulnerability-in-isolated-vm">who found the vulnerability</a>. “Vm2, for years the default answer, accumulated more than twenty documented brea…<br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 12h]]></description>
 </item>
 
 <item>
@@ -77,7 +135,7 @@
 
 
 
-<p class="wp-block-paragraph">However, it added, “at this point [August 19] the NetScaler images available on cloud marketplaces (AWS, Azure, GCP) have not been updated. If you need to update the images to the versions containing the fix, please download them from <a href="https:…<br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 13h]]></description>
+<p class="wp-block-paragraph">However, it added, “at this point [August 19] the NetScaler images available on cloud marketplaces (AWS, Azure, GCP) have not been updated. If you need to update the images to the versions containing the fix, please download them from <a href="https:…<br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 14h]]></description>
 </item>
 
 <item>
@@ -106,7 +164,7 @@
 
 
 
-<p class="wp-block-…<br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 20h]]></description>
+<p class="wp-block-…<br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 21h]]></description>
 </item>
 
 <item>
@@ -218,7 +276,7 @@
 
 
 
-<p class="wp-block-paragraph">AI is becoming <a href="https://www.csoonline.com/article/4163299/the-manager-of-agents-how-ai-evolves-the-soc-analyst-role.html">an increasingly vital layer in cybersecurity</a>, but the NSA’s advisory statement fails to acknowledge that today’s threat environment is profoundly asymmetric; for now, threat actors have the upper hand in the ever-escala…<br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1d]]></description>
+<p class="wp-block-paragraph">AI is becoming <a href="https://www.csoonline.com/article/4163299/the-manager-of-agents-how-ai-evolves-the-soc-analyst-role.html">an increasingly vital layer in cybersecurity</a>, but the NSA’s advisory statement fails to acknowledge that today’s threat environment is profoundly asymmetric; for now, threat actors have the upper hand in the ever-escala…<br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2d]]></description>
 </item>
 
 <item>
@@ -367,7 +425,7 @@
 
 
 
-<p class="wp-block-paragraph">My experience is that <a href="https://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.csoonline.com%2Farticle%2F572499%2Fcybersecurity-litigation-risks-on-the-rise-what-cisos-should-worry-about-the-most.html&amp;data=05%7C02%7Ctweismann%40marketbridge.co…<br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2d]]></description>
+<p class="wp-block-paragraph">My experience is that <a href="https://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.csoonline.com%2Farticle%2F572499%2Fcybersecurity-litigation-risks-on-the-rise-what-cisos-should-worry-about-the-most.html&amp;data=05%7C02%7Ctweismann%40marketbridge.co…<br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3d]]></description>
 </item>
 
 <item>
@@ -509,76 +567,6 @@
 
 
 <p class="wp-block-paragraph">According to Jamf, the same fake download template has been used to distribute other macOS stealers including Atomic (<a href="https://www.csoonline.com/article/4062342/macs-go-phishing-as-…<br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3d]]></description>
-</item>
-
-<item>
-  <title>🟠 What the CISO role will look like in 2029</title>
-  <link>https://www.csoonline.com/article/4208210/what-the-ciso-role-will-look-like-in-2029.html</link>
-  <guid isPermaLink="false">https://www.csoonline.com/article/4208210/what-the-ciso-role-will-look-like-in-2029.html</guid>
-  <pubDate>Mon, 17 Aug 2026 08:25:00 +0000</pubDate>
-  <source>CSO Online</source>
-  <description><![CDATA[<b>Why this matters: Supply-chain risk — review third-party access and affected vendor dependencies.</b><br/><div id="remove_no_follow">
-		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
-					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
-						<div class="article-column__content">
-<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
-
-
-
-<p class="wp-block-paragraph"><a href="https://www.linkedin.com/in/jwgoerlich/">Wolfgang Goerlich</a> has spent his career in security and has been a CISO for the past seven years.</p>
-
-
-
-<p class="wp-block-paragraph">Like many long-term security execs, Goerlich has seen plenty of changes within the profession. He’s bracing for more.</p>
-
-
-
-<p class="wp-block-paragraph">“For the future I see growing the role of CISO to be the pacesetter for innovation, to be in the board room and executive conversations advising them on how to take smart, calculated risks with technology, including AI,” says Goerlich, who is now a public sector CISO and a faculty member with IANS Research.</p>
-
-
-
-<p class="wp-block-paragraph">Goerlich sees this as the next step for a role that has continuously evolved since its inception in 1995.</p>
-
-
-
-<p class="wp-block-paragraph">“It’s gone from the ‘department of no’ to ‘let’s slow down’ to ‘let’s take smarter risks based on our understanding of them,’” he adds. “How exciting is this? To be the one to say, ‘You want to take more risk? Let us help you. We can help you make smarter decisions.’”</p>
-
-
-
-<p class="wp-block-paragraph">Goerlich isn’t the only one with such ob…<br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4d]]></description>
-</item>
-
-<item>
-  <title>🔴 New CISO appointments 2026</title>
-  <link>https://www.csoonline.com/article/4186743/new-ciso-appointments-2026.html</link>
-  <guid isPermaLink="false">https://www.csoonline.com/article/4186743/new-ciso-appointments-2026.html</guid>
-  <pubDate>Mon, 17 Aug 2026 06:30:00 +0000</pubDate>
-  <source>CSO Online</source>
-  <description><![CDATA[<b>Why this matters: Elevated ransomware risk — validate backups, endpoint protection, and recovery readiness.</b><br/><div id="remove_no_follow">
-		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
-					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
-						<div class="article-column__content">
-<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
-
-
-
-<p class="wp-block-paragraph">The upper ranks of corporate security are seeing a high rate of change as companies try to adapt to the evolving threat landscape. Many companies are hiring a chief security officer (CSO) or <a href="https://www.csoonline.com/article/566757/what-is-a-ciso-responsibilities-and-requirements-for-this-vital-leadership-role.html">chief information security officer</a> (CISO) for the first time to support a deeper commitment to information security.</p>
-
-
-
-<p class="wp-block-paragraph">Follow this column to keep up with new appointments to senior-level security roles and perhaps gain a little insight into hiring trends. If you have an announcement of your own that you would like us to include here, contact Peter Sayer, executive editor of news, at <a href="mailto:peter_sayer@foundryco.com?subject=New%20CISO%20appointment">peter_sayer@foundryco.com</a>.</p>
-
-
-
-<h2 class="wp-block-heading" id="new-ciso-appointments-in-august-2026">New CISO appointments in August 2026</h2>
-
-
-
-<h3 class="wp-block-heading" id="erika-dean-named-ciso-at-tricentis">Erika Dean named CISO at Tricentis</h3>
-
-
-
-<p class="wp-block-paragraph">Tricentis <a href="https://www.businesswire.com/news/h…<br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 4d]]></description>
 </item>
 
 <item>
