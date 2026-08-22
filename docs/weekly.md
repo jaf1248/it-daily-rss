@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
 **Period:** August 15 – August 22, 2026  
-**Generated:** 2026-08-22 12:32 UTC  
+**Generated:** 2026-08-22 13:29 UTC  
 **Items reviewed:** 146  
 
 ## ⚡ Top Actions This Week
@@ -83,12 +83,12 @@
 
 ## 🔵 FYI — General Awareness
 
+- [Named Pipes Under Attack: Securing Windows Interprocess Communication](https://www.bleepingcomputer.com/news/security/named-pipes-under-attack-securing-windows-interprocess-communication/) — BleepingComputer
 - [Banking Trojans Manic, Grandoreiro, ToxicPanda 2.0 in the Spotlight](https://www.securityweek.com/banking-trojans-manic-grandoreiro-toxicpanda-2-0-in-the-spotlight/) — SecurityWeek
 - [14 Trojanized npm Packages Drop RedC2 4.0 Linux Backdoor With AI-Assisted C2](https://thehackernews.com/2026/08/14-trojanized-npm-packages-drop-redc2.html) — The Hacker News
 - [New SynkLoader malware pushed in Microsoft Teams phishing campaign](https://www.bleepingcomputer.com/news/security/new-synkloader-malware-pushed-in-microsoft-teams-phishing-campaign/) — BleepingComputer
 - [Former NSA Director Paul Nakasone Launches National Security Advisory Firm](https://www.securityweek.com/former-nsa-director-paul-nakasone-launches-national-security-advisory-firm/) — SecurityWeek
 - [Hundreds of leaked AWS keys give full control over corporate accounts](https://www.bleepingcomputer.com/news/security/hundreds-of-leaked-aws-keys-give-full-control-over-corporate-accounts/) — BleepingComputer
-- [Microsoft Defender's Own Driver Can Be Weaponized to Delete Security Software at Boot](https://thehackernews.com/2026/08/microsoft-defenders-own-driver-can-be.html) — The Hacker News
 
 ---
 
