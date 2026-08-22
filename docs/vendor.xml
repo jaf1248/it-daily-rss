@@ -3,17 +3,8 @@
 <channel>
   <title>Joe — Vendor Security Advisories</title>
   <description>Security advisories and PSIRTs from network and infrastructure vendors in use.</description>
-  <lastBuildDate>Sat, 22 Aug 2026 06:34:04 +0000</lastBuildDate>
+  <lastBuildDate>Sat, 22 Aug 2026 07:28:35 +0000</lastBuildDate>
   
-<item>
-  <title>🟠 CVE-2026-0292 Prisma Access Agent: Local Security Inspection Bypass Vulnerability on Windows (Severity: LOW)</title>
-  <link>https://security.paloaltonetworks.com/CVE-2026-0292</link>
-  <guid isPermaLink="false">https://security.paloaltonetworks.com/cve-2026-0292</guid>
-  <pubDate>Wed, 12 Aug 2026 16:00:00 +0000</pubDate>
-  <source>Palo Alto Networks Security Advisories</source>
-  <description><![CDATA[<b>Why this matters: Infrastructure/vendor signal — compare your installed versions and support status.</b><br/><br/><b>Source:</b> Palo Alto Networks Security Advisories &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 9d]]></description>
-</item>
-
 <item>
   <title>🟠 CVE-2026-0291 Prisma Access Agent: Authenticated Limited File Deletion on Linux (Severity: LOW)</title>
   <link>https://security.paloaltonetworks.com/CVE-2026-0291</link>
@@ -24,12 +15,21 @@
 </item>
 
 <item>
-  <title>🟠 CVE-2026-0299 GlobalProtect App: Local Privilege Escalation Vulnerabilities (Severity: MEDIUM)</title>
-  <link>https://security.paloaltonetworks.com/CVE-2026-0299</link>
-  <guid isPermaLink="false">https://security.paloaltonetworks.com/cve-2026-0299</guid>
+  <title>🟠 CVE-2026-0295 GlobalProtect App: Local Privilege Escalation via Race Condition on macOS (Severity: MEDIUM)</title>
+  <link>https://security.paloaltonetworks.com/CVE-2026-0295</link>
+  <guid isPermaLink="false">https://security.paloaltonetworks.com/cve-2026-0295</guid>
   <pubDate>Wed, 12 Aug 2026 16:00:00 +0000</pubDate>
   <source>Palo Alto Networks Security Advisories</source>
   <description><![CDATA[<b>Why this matters: Privilege-escalation risk — review local admin and endpoint controls.</b><br/><br/><b>Source:</b> Palo Alto Networks Security Advisories &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 9d]]></description>
+</item>
+
+<item>
+  <title>🟠 CVE-2026-0293 Prisma Access Agent: Anti-Tamper Protection Bypass on Windows (Severity: MEDIUM)</title>
+  <link>https://security.paloaltonetworks.com/CVE-2026-0293</link>
+  <guid isPermaLink="false">https://security.paloaltonetworks.com/cve-2026-0293</guid>
+  <pubDate>Wed, 12 Aug 2026 16:00:00 +0000</pubDate>
+  <source>Palo Alto Networks Security Advisories</source>
+  <description><![CDATA[<b>Why this matters: Infrastructure/vendor signal — compare your installed versions and support status.</b><br/><br/><b>Source:</b> Palo Alto Networks Security Advisories &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 9d]]></description>
 </item>
 
 <item>
@@ -51,7 +51,7 @@
  <em>
   Revised on 2026-08-12 00:00:00
  </em>
-</p><br/><br/><b>Source:</b> Fortinet PSIRT &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 9d]]></description>
+</p><br/><br/><b>Source:</b> Fortinet PSIRT &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 10d]]></description>
 </item>
 
 <item>
@@ -73,7 +73,7 @@
  <em>
   Revised on 2026-08-19 00:00:00
  </em>
-</p><br/><br/><b>Source:</b> Fortinet PSIRT &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 9d]]></description>
+</p><br/><br/><b>Source:</b> Fortinet PSIRT &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 10d]]></description>
 </item>
 
 <item>
@@ -98,7 +98,7 @@
  7.9
 </p>
 <p>
- Linux kernel is impacted by CVE-2026-43284 and CVE-2026-43500 which chained together create the Dirty Frag vulnerability.CVE-2026-43284In the Linux kernel, the following vulnerability has been resolved: xfrm: esp: avoid in-place decrypt on shared skb frags MSG_SPLICE_PAGES can attach pages from a pipe directly to an skb. TCP marks such skbs with SKBFL_SHARED_FRAG after skb_splice_from_iter(), so later paths that may modify packet data can first make a private copy. The IPv4/IPv6 datagram append paths did not set this flag when splicing pages into UDP skbs. That leaves an ESP-in-UDP packet made from shared pipe pages looking like an ordinary uncloned nonlinear skb. ESP input then takes the no-COW fast path for uncloned skbs without a frag_list and decrypts in place over data that is not owned privately by the skb. Mark IPv4/IPv6 datagram splice frags with SKBFL_SHARED_FRAG, matching TCP. Also make ESP input fall back to skb_cow_data() when the flag is present, so ESP does not decrypt externally backed frags in place. Private nonlinear skb frags still use the existing fast path. This intentionally does not change ESP output. In esp_output_head(), the path that appends the ESP trailer to existing skb tailroom without calling skb_cow_data() is not reachable for nonlinear skbs: skb_tailroom() returns zero when skb-&gt;data_len is nonzero, while ESP tailen is positive. Thus ESP output will either use the separate destination-f…<br/><br/><b>Source:</b> Fortinet PSIRT &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 79d]]></description>
+ Linux kernel is impacted by CVE-2026-43284 and CVE-2026-43500 which chained together create the Dirty Frag vulnerability.CVE-2026-43284In the Linux kernel, the following vulnerability has been resolved: xfrm: esp: avoid in-place decrypt on shared skb frags MSG_SPLICE_PAGES can attach pages from a pipe directly to an skb. TCP marks such skbs with SKBFL_SHARED_FRAG after skb_splice_from_iter(), so later paths that may modify packet data can first make a private copy. The IPv4/IPv6 datagram append paths did not set this flag when splicing pages into UDP skbs. That leaves an ESP-in-UDP packet made from shared pipe pages looking like an ordinary uncloned nonlinear skb. ESP input then takes the no-COW fast path for uncloned skbs without a frag_list and decrypts in place over data that is not owned privately by the skb. Mark IPv4/IPv6 datagram splice frags with SKBFL_SHARED_FRAG, matching TCP. Also make ESP input fall back to skb_cow_data() when the flag is present, so ESP does not decrypt externally backed frags in place. Private nonlinear skb frags still use the existing fast path. This intentionally does not change ESP output. In esp_output_head(), the path that appends the ESP trailer to existing skb tailroom without calling skb_cow_data() is not reachable for nonlinear skbs: skb_tailroom() returns zero when skb-&gt;data_len is nonzero, while ESP tailen is positive. Thus ESP output will either use the separate destination-f…<br/><br/><b>Source:</b> Fortinet PSIRT &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 80d]]></description>
 </item>
 
 <item>
@@ -120,7 +120,7 @@
  <em>
   Revised on 2026-05-13 00:00:00
  </em>
-</p><br/><br/><b>Source:</b> Fortinet PSIRT &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 100d]]></description>
+</p><br/><br/><b>Source:</b> Fortinet PSIRT &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 101d]]></description>
 </item>
 
 <item>
@@ -164,7 +164,7 @@
  <em>
   Revised on 2026-05-25 00:00:00
  </em>
-</p><br/><br/><b>Source:</b> Fortinet PSIRT &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 528d]]></description>
+</p><br/><br/><b>Source:</b> Fortinet PSIRT &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 529d]]></description>
 </item>
 
 </channel>
