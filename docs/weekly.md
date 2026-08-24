@@ -1,25 +1,30 @@
 # IT Weekly Intelligence Briefing
 **Period:** August 17 – August 24, 2026  
-**Generated:** 2026-08-24 09:43 UTC  
+**Generated:** 2026-08-24 10:34 UTC  
 **Items reviewed:** 145  
 
 ## ⚡ Top Actions This Week
 
 1. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
+   _Personal Information Exposed in Apollo Global Data Breach_  
+   Source: SecurityWeek  
+
+2. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
    _Is Online Privacy Possible? How Digital Identities Can Help_  
    Source: BleepingComputer  
 
-2. **Prioritize patching of affected systems; check for internet-exposed attack surface.**  
+3. **Prioritize patching of affected systems; check for internet-exposed attack surface.**  
    _CVE-2026-69836 Microsoft Entra ID Remote Code Execution Vulnerability_  
    Source: Microsoft Security Response Center  
-
-3. **Apply emergency patch or mitigation now; check vendor advisory for workarounds.**  
-   _CISA orders feds to patch actively exploited TrueConf Server flaws_  
-   Source: BleepingComputer  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [Personal Information Exposed in Apollo Global Data Breach](https://www.securityweek.com/personal-information-exposed-in-apollo-global-data-breach/)
+**Source:** SecurityWeek &nbsp;·&nbsp; **Date:** Aug 24  
+**Why it matters:** Potential credential or data exposure.  
+**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
 ### [Is Online Privacy Possible? How Digital Identities Can Help](https://www.bleepingcomputer.com/news/security/is-online-privacy-possible-how-digital-identities-can-help/)
 **Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Aug 21  
@@ -41,11 +46,6 @@
 **Why it matters:** Potential credential or data exposure.  
 **Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
-### [Rust Supply Chain Attack Linked to North Korean Hackers](https://www.securityweek.com/rust-supply-chain-attack-linked-to-north-korean-hackers/)
-**Source:** SecurityWeek &nbsp;·&nbsp; **Date:** Aug 21  
-**Why it matters:** Third-party/software supply chain integrity risk.  
-**Recommended action:** Audit third-party software dependencies and review vendor access.  
-
 ### [Rust Supply Chain Attack Puts Build-Time Malware in Crates with 245 Million Downloads](https://thehackernews.com/2026/08/rust-supply-chain-attack-puts-build.html)
 **Source:** The Hacker News &nbsp;·&nbsp; **Date:** Aug 20  
 **Why it matters:** Third-party/software supply chain integrity risk.  
@@ -54,6 +54,9 @@
 ---
 
 ## 🟠 Important — Review This Week
+
+- [Rethinking Application Security for the AI Era](https://www.securityweek.com/rethinking-application-security-for-the-ai-era/)  
+  **SecurityWeek** · Aug 24 · _General awareness item._  
 
 - [Microsoft shares temporary fix for Windows 11 gaming issues](https://www.bleepingcomputer.com/news/microsoft/microsoft-shares-temporary-fix-for-windows-11-gaming-issues/)  
   **BleepingComputer** · Aug 24 · _General awareness item._  
@@ -74,9 +77,6 @@
   **Microsoft Security Response Center** · Aug 21 · _General awareness item._  
 
 - [CVE-2026-58547 Windows Universal Plug and Play (UPnP) Device Host Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-58547)  
-  **Microsoft Security Response Center** · Aug 21 · _General awareness item._  
-
-- [CVE-2026-49183 Windows Clipboard Server Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-49183)  
   **Microsoft Security Response Center** · Aug 21 · _General awareness item._  
 
 ---
