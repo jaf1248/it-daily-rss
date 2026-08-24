@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
 **Period:** August 17 – August 24, 2026  
-**Generated:** 2026-08-24 09:05 UTC  
+**Generated:** 2026-08-24 09:43 UTC  
 **Items reviewed:** 145  
 
 ## ⚡ Top Actions This Week
@@ -55,6 +55,9 @@
 
 ## 🟠 Important — Review This Week
 
+- [Microsoft shares temporary fix for Windows 11 gaming issues](https://www.bleepingcomputer.com/news/microsoft/microsoft-shares-temporary-fix-for-windows-11-gaming-issues/)  
+  **BleepingComputer** · Aug 24 · _General awareness item._  
+
 - [CVE-2026-68801 Microsoft Excel Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-68801)  
   **Microsoft Security Response Center** · Aug 21 · _General awareness item._  
 
@@ -76,19 +79,16 @@
 - [CVE-2026-49183 Windows Clipboard Server Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-49183)  
   **Microsoft Security Response Center** · Aug 21 · _General awareness item._  
 
-- [CVE-2026-55134 Microsoft Word Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-55134)  
-  **Microsoft Security Response Center** · Aug 21 · _General awareness item._  
-
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [Iran-Linked Hackers Shut Down UK Power Plant for Four Days](https://www.securityweek.com/iran-linked-hackers-shut-down-uk-power-plant-for-four-days/) — SecurityWeek
+- [TikTok Reaches $400 Million Settlement With US Justice Department Over Children’s Privacy](https://www.securityweek.com/tiktok-reaches-400-million-settlement-with-us-justice-department-over-childrens-privacy/) — SecurityWeek
 - [UAT-10147 Uses AI to Scale Server Attacks, Deploys SPECTRE With EDR Bypass and Linux Rootkit](https://thehackernews.com/2026/08/uat-10147-uses-ai-to-scale-server.html) — The Hacker News
 - [DOUBLECUP's PNG Payload, (Mon, Aug 24th)](https://isc.sans.edu/diary/rss/33274) — SANS Internet Storm Center
 - [Anthropic Expands Mythos 5 Access to More Defenders, Unveils $35M Open Source Fund](https://www.securityweek.com/anthropic-expands-mythos-5-access-to-more-defenders-unveils-35m-open-source-fund/) — SecurityWeek
 - [ISC Stormcast For Monday, August 24th, 2026 https://isc.sans.edu/podcastdetail/10064, (Mon, Aug 24th)](https://isc.sans.edu/diary/rss/33276) — SANS Internet Storm Center
-- [ToxicPanda Android malware uses VPN permissions to block Google Play](https://www.bleepingcomputer.com/news/security/toxicpanda-android-malware-uses-vpn-permissions-to-block-google-play/) — BleepingComputer
-- [TikTok Agrees to $400 Million Settlement in U.S. Child Privacy Lawsuit](https://thehackernews.com/2026/08/tiktok-agrees-to-400-million-settlement.html) — The Hacker News
 
 ---
 
