@@ -1,7 +1,7 @@
 # IT Weekly Intelligence Briefing
 **Period:** August 18 – August 25, 2026  
-**Generated:** 2026-08-25 13:46 UTC  
-**Items reviewed:** 145  
+**Generated:** 2026-08-25 14:41 UTC  
+**Items reviewed:** 142  
 
 ## ⚡ Top Actions This Week
 
@@ -55,41 +55,41 @@
 
 ## 🟠 Important — Review This Week
 
+- [CVE-2026-62747 Windows Device Association Service Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-62747)  
+  **Microsoft Security Response Center** · Aug 25 · _General awareness item._  
+
+- [CVE-2026-61939 Winlogon Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-61939)  
+  **Microsoft Security Response Center** · Aug 25 · _General awareness item._  
+
+- [CVE-2026-62728 Windows Common Log File System Driver Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-62728)  
+  **Microsoft Security Response Center** · Aug 25 · _General awareness item._  
+
+- [CVE-2026-55137 Microsoft Excel Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-55137)  
+  **Microsoft Security Response Center** · Aug 25 · _General awareness item._  
+
+- [CVE-2026-50448 Windows NTFS Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-50448)  
+  **Microsoft Security Response Center** · Aug 25 · _General awareness item._  
+
+- [CVE-2026-49183 Windows Clipboard Server Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-49183)  
+  **Microsoft Security Response Center** · Aug 25 · _General awareness item._  
+
 - [WordPress Websites Targeted via MiniOrange Plugin Vulnerabilities](https://www.securityweek.com/wordpress-websites-targeted-via-miniorange-plugin-vulnerabilities/)  
   **SecurityWeek** · Aug 25 · _General awareness item._  
 
 - [WhatsApp Adds Multiple Passkeys and Stronger 2SV in Account Security Update](https://www.securityweek.com/whatsapp-adds-multiple-passkeys-and-stronger-2sv-in-account-security-update/)  
   **SecurityWeek** · Aug 25 · _General awareness item._  
 
-- [Marimo Notebook Flaw Could Run MCP Commands Before Cells Execute in Edit Mode](https://thehackernews.com/2026/08/marimo-notebook-flaw-could-run-mcp.html)  
-  **The Hacker News** · Aug 25 · _General awareness item._  
-
-- [Frontier AI: Vulnerability Management's Systemic Revolution](https://thehackernews.com/2026/08/frontier-ai-vulnerability-managements.html)  
-  **The Hacker News** · Aug 25 · _General awareness item._  
-
-- [Silent Patches Don’t Stop Attackers – They Blind Defenders](https://www.securityweek.com/silent-patches-dont-stop-attackers-they-blind-defenders/)  
-  **SecurityWeek** · Aug 25 · _General awareness item._  
-
-- [Attackers Target miniOrange SAML Flaws That Can Grant WordPress Admin Access](https://thehackernews.com/2026/08/attackers-target-miniorange-saml-flaws.html)  
-  **The Hacker News** · Aug 25 · _General awareness item._  
-
-- [CISA Warns of Exploited Oracle WebLogic Vulnerability](https://www.securityweek.com/cisa-warns-of-exploited-oracle-weblogic-vulnerability/)  
-  **SecurityWeek** · Aug 25 · _General awareness item._  
-
-- [Unpatched Calix flaw lets hackers bypass NAT to expose internal devices](https://www.bleepingcomputer.com/news/security/unpatched-calix-flaw-lets-hackers-bypass-nat-to-expose-internal-devices/)  
-  **BleepingComputer** · Aug 24 · _General awareness item._  
-
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [Alice Raises $140M to Expand AI Model Defenses and Enterprise Guardrails](https://www.securityweek.com/alice-raises-140m-to-expand-ai-model-defenses-and-enterprise-guardrails/) — SecurityWeek
+- [From Fake Workers to Account Recovery: The Growing Identity Verification Risk](https://www.bleepingcomputer.com/news/security/from-fake-workers-to-account-recovery-the-growing-identity-verification-risk/) — BleepingComputer
+- [Microsoft PowerToys adds Alt+Tab-style switching for an app's windows](https://www.bleepingcomputer.com/news/microsoft/microsoft-powertoys-adds-alt-plustab-style-switching-for-an-apps-windows/) — BleepingComputer
 - [WhatsApp Adds Multiple Passkeys for Phishing-Resistant Sign-Ins Across iOS and Android](https://thehackernews.com/2026/08/whatsapp-adds-multiple-passkeys-for.html) — The Hacker News
 - [WhatsApp adds stronger two-step verification, multiple passkeys](https://www.bleepingcomputer.com/news/security/whatsapp-adds-stronger-two-step-verification-multiple-passkeys/) — BleepingComputer
 - [Hands-On Cyber-Physical Systems Training Returns to ICS Cybersecurity Conference](https://www.securityweek.com/hands-on-cyber-physical-systems-training-returns-to-ics-cybersecurity-conference/) — SecurityWeek
-- [Mirage2FA Surge Hits 4,500 US and EU Companies, Abusing Microsoft 365 Login Flows](https://thehackernews.com/2026/08/mirage2fa-surge-hits-4500-us-and-eu.html) — The Hacker News
-- [24 npm Packages Abuse unpkg Mirrors to Host Fake Cloudflare CAPTCHA Pages](https://thehackernews.com/2026/08/24-npm-packages-abuse-unpkg-mirrors-to.html) — The Hacker News
-- [E4del and PINHOLE RATs Turn FTP Banners Into Dead Drops for Malware Commands](https://thehackernews.com/2026/08/e4del-and-pinhole-rats-turn-ftp-banners.html) — The Hacker News
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 9 critical · 78 important · 58 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 9 critical · 75 important · 58 FYI_
