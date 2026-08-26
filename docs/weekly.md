@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
-**Period:** August 18 – August 25, 2026  
-**Generated:** 2026-08-25 23:23 UTC  
+**Period:** August 19 – August 26, 2026  
+**Generated:** 2026-08-26 01:06 UTC  
 **Items reviewed:** 143  
 
 ## ⚡ Top Actions This Week
