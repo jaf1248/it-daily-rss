@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
 **Period:** August 19 – August 26, 2026  
-**Generated:** 2026-08-26 10:32 UTC  
+**Generated:** 2026-08-26 11:26 UTC  
 **Items reviewed:** 143  
 
 ## ⚡ Top Actions This Week
@@ -55,6 +55,9 @@
 
 ## 🟠 Important — Review This Week
 
+- [Hackers now exploit critical Gitea flaw in code injection attacks](https://www.bleepingcomputer.com/news/security/hackers-now-exploit-critical-gitea-flaw-in-code-injection-attacks/)  
+  **BleepingComputer** · Aug 26 · _General awareness item._  
+
 - [Claude Opus 4.6 Bypasses Gym Booking Limit, Cancels Other Users' Reservations in Tests](https://thehackernews.com/2026/08/claude-opus-46-bypasses-gym-booking.html)  
   **The Hacker News** · Aug 26 · _General awareness item._  
 
@@ -76,19 +79,16 @@
 - [CVE-2026-62747 Windows Device Association Service Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-62747)  
   **Microsoft Security Response Center** · Aug 25 · _General awareness item._  
 
-- [CVE-2026-61939 Winlogon Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-61939)  
-  **Microsoft Security Response Center** · Aug 25 · _General awareness item._  
-
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [The MFA Identity Trap: When Authentication Creates a False Sense of Security](https://www.securityweek.com/the-mfa-identity-trap-when-authentication-creates-a-false-sense-of-security/) — SecurityWeek
 - [OpenAI Bans Russian ChatGPT Accounts Used to Run Influence Operation](https://thehackernews.com/2026/08/openai-bans-russian-chatgpt-accounts.html) — The Hacker News
 - [INTERPOL Operation Jackal IV Arrests 58, Identifies 263 in Global Cyber Fraud Crackdown](https://thehackernews.com/2026/08/interpol-operation-jackal-iv-arrests-58.html) — The Hacker News
 - [Newly SLEEPWALKER Backdoor Waits for One Crafted Packet, Then Runs Its Own Bytecode](https://thehackernews.com/2026/08/newly-sleepwalker-backdoor-waits-for.html) — The Hacker News
 - [Fake Apple Support AI Calls Target Stolen-Device Owners for Passcodes and 2FA Codes](https://thehackernews.com/2026/08/fake-apple-support-ai-calls-target.html) — The Hacker News
 - [ISC Stormcast For Wednesday, August 26th, 2026 https://isc.sans.edu/podcastdetail/10068, (Wed, Aug 26th)](https://isc.sans.edu/diary/rss/33282) — SANS Internet Storm Center
-- [Hackers abuse npm mirrors to host phishing redirect pages](https://www.bleepingcomputer.com/news/security/hackers-abuse-npm-mirrors-to-host-phishing-redirect-pages/) — BleepingComputer
 
 ---
 
