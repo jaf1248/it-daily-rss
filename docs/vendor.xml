@@ -3,7 +3,7 @@
 <channel>
   <title>Joe — Vendor Security Advisories</title>
   <description>Security advisories and PSIRTs from network and infrastructure vendors in use.</description>
-  <lastBuildDate>Wed, 26 Aug 2026 21:39:06 +0000</lastBuildDate>
+  <lastBuildDate>Thu, 27 Aug 2026 02:53:04 +0000</lastBuildDate>
   
 <item>
   <title>🟠 CVE-2026-0293 Prisma Access Agent: Anti-Tamper Protection Bypass on Windows (Severity: MEDIUM)</title>
@@ -18,15 +18,6 @@
   <title>🟠 CVE-2026-0295 GlobalProtect App: Local Privilege Escalation via Race Condition on macOS (Severity: MEDIUM)</title>
   <link>https://security.paloaltonetworks.com/CVE-2026-0295</link>
   <guid isPermaLink="false">https://security.paloaltonetworks.com/cve-2026-0295</guid>
-  <pubDate>Wed, 12 Aug 2026 16:00:00 +0000</pubDate>
-  <source>Palo Alto Networks Security Advisories</source>
-  <description><![CDATA[<b>Why this matters: Privilege-escalation risk — review local admin and endpoint controls.</b><br/><br/><b>Source:</b> Palo Alto Networks Security Advisories &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 14d]]></description>
-</item>
-
-<item>
-  <title>🟠 CVE-2026-0299 GlobalProtect App: Local Privilege Escalation Vulnerabilities (Severity: MEDIUM)</title>
-  <link>https://security.paloaltonetworks.com/CVE-2026-0299</link>
-  <guid isPermaLink="false">https://security.paloaltonetworks.com/cve-2026-0299</guid>
   <pubDate>Wed, 12 Aug 2026 16:00:00 +0000</pubDate>
   <source>Palo Alto Networks Security Advisories</source>
   <description><![CDATA[<b>Why this matters: Privilege-escalation risk — review local admin and endpoint controls.</b><br/><br/><b>Source:</b> Palo Alto Networks Security Advisories &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 14d]]></description>
@@ -165,6 +156,22 @@
   Revised on 2026-05-25 00:00:00
  </em>
 </p><br/><br/><b>Source:</b> Fortinet PSIRT &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 533d]]></description>
+</item>
+
+<item>
+  <title>🟠 Vulnerability in OpenSSL library</title>
+  <link>https://fortiguard.fortinet.com/psirt/FG-IR-22-059</link>
+  <guid isPermaLink="false">https://fortiguard.fortinet.com/psirt/fg-ir-22-059</guid>
+  <pubDate>Fri, 01 Apr 2022 07:00:00 +0000</pubDate>
+  <source>Fortinet PSIRT</source>
+  <description><![CDATA[<b>Why this matters: Infrastructure/vendor signal — compare your installed versions and support status.</b><br/><p>
+ <strong>
+  CVSSv3 Score:
+ </strong>
+ 7.5
+</p>
+<p>
+ A security advisory was released affecting  the version of OpenSSL library used in some Fortinet products:CVE-2022-0778:The BN_mod_sqrt() function, which computes a modular square root, contains a bug that can cause it to loop forever for non-prime moduli. Internally this function is used when parsing certificates that contain elliptic curve public keys in compressed form or explicit elliptic curve parameters with a base point encoded in compressed form. It is possible to trigger the infinite loop by crafting a certificate that has invalid explicit curve parameters. Since certificate parsing happens prior to verification of the certificate signature, any process that parses an externally supplied certificate may thus be subject to a denial of service attack. The infinite loop can also be reached when parsing crafted private keys as they can contain explicit elliptic curve parameters.Thus vulnerable situations include:TLS clients consuming server certificatesTLS servers consuming client certificatesHosting providers taking certificates or private keys from customersCertificate authorities parsing certification requests from subscribersAnything else which parses ASN.1 elliptic curve parametersAlso any other applications that use the BN_mod_sqrt() where the attacker can control the parameter values are vulnerable to this DoS issue.In the OpenSSL 1.0.2 version the public key is not parsed during initial parsing of the certif…<br/><br/><b>Source:</b> Fortinet PSIRT &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1608d]]></description>
 </item>
 
 </channel>

@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
-**Period:** August 19 – August 26, 2026  
-**Generated:** 2026-08-26 21:39 UTC  
+**Period:** August 20 – August 27, 2026  
+**Generated:** 2026-08-27 02:53 UTC  
 **Items reviewed:** 143  
 
 ## ⚡ Top Actions This Week
@@ -64,6 +64,9 @@
 - [CVE-2026-62890 Windows GDI+ Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-62890)  
   **Microsoft Security Response Center** · Aug 26 · _General awareness item._  
 
+- [CVE-2026-68819 Windows Network File System Denial of Service Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-68819)  
+  **Microsoft Security Response Center** · Aug 26 · _General awareness item._  
+
 - [Ubiquiti patches three max severity security vulnerabilities](https://www.bleepingcomputer.com/news/security/ubiquiti-patches-three-max-severity-security-vulnerabilities/)  
   **BleepingComputer** · Aug 26 · _General awareness item._  
 
@@ -76,19 +79,16 @@
 - [Hackers now exploit critical Gitea flaw in code injection attacks](https://www.bleepingcomputer.com/news/security/hackers-now-exploit-critical-gitea-flaw-in-code-injection-attacks/)  
   **BleepingComputer** · Aug 26 · _General awareness item._  
 
-- [Claude Opus 4.6 Bypasses Gym Booking Limit, Cancels Other Users' Reservations in Tests](https://thehackernews.com/2026/08/claude-opus-46-bypasses-gym-booking.html)  
-  **The Hacker News** · Aug 26 · _General awareness item._  
-
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [ISC Stormcast For Thursday, August 27th, 2026 https://isc.sans.edu/podcastdetail/10070, (Thu, Aug 27th)](https://isc.sans.edu/diary/rss/33286) — SANS Internet Storm Center
 - [When AI infrastructure becomes the target: Securing gateways and control points](https://www.microsoft.com/en-us/security/blog/2026/08/26/when-ai-infrastructure-becomes-target-securing-gateways-control-points/) — Microsoft Security Blog
 - [FBI Disrupts China-Linked QTFY Infrastructure Used to Steal Data From U.S. Organizations](https://thehackernews.com/2026/08/fbi-disrupts-china-linked-qtfy.html) — The Hacker News
 - [Meta agrees to $18 billion settlement over teen social media harms](https://www.bleepingcomputer.com/news/technology/meta-agrees-to-18-billion-settlement-over-teen-social-media-harms/) — BleepingComputer
 - [Who Has Admin Rights in your Entra ID Directory&#x3f;, (Wed, Aug 26th)](https://isc.sans.edu/diary/rss/33284) — SANS Internet Storm Center
 - [Nimbus Manticore Expands Toolset With TWOSTROKE-Like Backdoor and SSH Tunneler](https://thehackernews.com/2026/08/nimbus-manticore-expands-toolset-with.html) — The Hacker News
-- [AI Speeds Up Malware Development, Not Its Success Rate: Analysis](https://www.securityweek.com/ai-speeds-up-malware-development-not-its-success-rate-analysis/) — SecurityWeek
 
 ---
 
