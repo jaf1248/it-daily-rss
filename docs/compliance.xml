@@ -3,8 +3,113 @@
 <channel>
   <title>Joe — Compliance &amp; Regulatory</title>
   <description>NIST, privacy, cybersecurity compliance, PCI DSS, and IT governance updates.</description>
-  <lastBuildDate>Fri, 28 Aug 2026 08:57:09 +0000</lastBuildDate>
+  <lastBuildDate>Fri, 28 Aug 2026 20:43:52 +0000</lastBuildDate>
   
+<item>
+  <title>🟠 GPUThor hardware attack can root Nvidia GPU systems</title>
+  <link>https://www.csoonline.com/article/4215392/gputhor-hardware-attack-can-root-nvidia-gpu-systems.html</link>
+  <guid isPermaLink="false">https://www.csoonline.com/article/4215392/gputhor-hardware-attack-can-root-nvidia-gpu-systems.html</guid>
+  <pubDate>Fri, 28 Aug 2026 18:46:28 +0000</pubDate>
+  <source>CSO Online</source>
+  <description><![CDATA[<b>Why this matters: Potential data exposure — review monitoring and incident-response readiness.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<p class="wp-block-paragraph">Hardware security researchers from University of Toronto have developed a new memory bit flipping technique that significantly improves on previously known attacks against GPU memory. The new method can defeat the error-correcting codes (ECC) defense used on enterprise Nvidia GPUs and can lead to root access on the underlying system.</p>
+
+
+
+<p class="wp-block-paragraph">Dubbed GPUThor, the technique falls in a category of attacks known as <a href="https://www.csoonline.com/article/573715/rowhammer-memory-attacks-close-in-on-the-real-world.html">Rowhammer</a> that exploits the cell density of modern random access memory (RAM) chips. The original Rowhammer attack was demonstrated against DDR3 and DDR4 chips back in 2015 and relies on an older observation that tightly packed rows of memory cells can sometimes leak electrical charges to adjacent rows, flipping the stored bit values in those cells from 0 to 1 or the other way around.</p>
+
+
+
+<p class="wp-block-paragraph">These bit flips can be triggered intentionally using rapid and repeated read operations on the same memory row — a technique dubbed row hammering — and if done in a controlled manner, they can have…<br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1h]]></description>
+</item>
+
+<item>
+  <title>🔴 The first 24 hours of an AI agent security incident</title>
+  <link>https://www.csoonline.com/article/4214961/the-first-24-hours-of-an-ai-agent-security-incident.html</link>
+  <guid isPermaLink="false">https://www.csoonline.com/article/4214961/the-first-24-hours-of-an-ai-agent-security-incident.html</guid>
+  <pubDate>Fri, 28 Aug 2026 10:00:00 +0000</pubDate>
+  <source>CSO Online</source>
+  <description><![CDATA[<b>Why this matters: Credential/phishing risk — reinforce MFA and watch for suspicious sign-ins.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<p class="wp-block-paragraph">Most of what I read on AI agent security follows the same shape: a taxonomy of risks, a list of governance principles and a call to “adopt responsible AI practices.” That’s useful for a board deck. It’s nearly useless at 2 a.m. when an autonomous agent with live credentials has just done something nobody authorized, and someone is asking me what happens next.</p>
+
+
+
+<p class="wp-block-paragraph">I don’t want to write another framework. I want to walk through what I would actually do, hour by hour, in the first day after discovering an AI agent has been hijacked, manipulated or has simply acted outside the bounds anyone intended for it.</p>
+
+
+
+<h2 class="wp-block-heading" id="why-the-clock-runs-differently-for-agents">Why the clock runs differently for agents</h2>
+
+
+
+<p class="wp-block-paragraph">I built my early incident response instincts around a human attacker moving at human speed, or malware executing a fixed set of instructions. Every time I’ve walked through an agent incident since, I’ve had to unlearn part of that instinct, because agentic AI breaks both assumptions at once.</p>
+
+
+
+<p class="wp-block-paragraph">Anthropic’s own account of the <a href="h…<br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 10h]]></description>
+</item>
+
+<item>
+  <title>🟠 Beyond compliance: Designing systems that earn customer trust</title>
+  <link>https://www.csoonline.com/article/4214953/beyond-compliance-designing-systems-that-earn-customer-trust.html</link>
+  <guid isPermaLink="false">https://www.csoonline.com/article/4214953/beyond-compliance-designing-systems-that-earn-customer-trust.html</guid>
+  <pubDate>Fri, 28 Aug 2026 09:00:00 +0000</pubDate>
+  <source>CSO Online</source>
+  <description><![CDATA[<b>Why this matters: Service impact is possible — verify vendor status before troubleshooting internally.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<p class="wp-block-paragraph">Over the years, I have learned that customer trust is not built by compliance alone. It comes from how systems actually handle data every day. In practice, I think five areas matter most</p>
+
+
+
+<ol class="wp-block-list">
+<li>Making customer intent consistent across systems</li>
+
+
+
+<li>Treating privacy as a distributed-systems problem</li>
+
+
+
+<li>Reducing unnecessary data</li>
+
+
+
+<li>Designing for failure</li>
+
+
+
+<li>Understanding how AI is expanding the trust boundary</li>
+</ol>
+
+
+
+<p class="wp-block-paragraph">I will go into each of these below and share why they matter in real systems with some of my experiences. For CISOs and other security leaders, these ideas can also help turn broad privacy and trust goals into concrete priorities for architecture, governance, data protection and operational risk.</p>
+
+
+
+<p class="wp-block-paragraph">I learned this while working on large-scale digital commerce and personalization systems. A customer action that looks simple on the surface can involve many systems behind the scenes. A preference may be stored in one place, used by several services, cached for performance and also influence analytics or machine-learning sy…<br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 11h]]></description>
+</item>
+
 <item>
   <title>🟠 CTEM can give your security team a contextual edge</title>
   <link>https://www.csoonline.com/article/4215083/ctem-redefines-the-approach-to-cybersecurity-in-organizations.html</link>
@@ -31,7 +136,7 @@
 
 
 
-<p class="wp-block-paragraph">The first, he points out, is scope. In addition to vulnerable software, CTEM also focuses on <a href="https://www.csoonline.com/article/3623709/nail-the-software-setup-and-avoid-attacks-with-the-top…<br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> &lt;1h]]></description>
+<p class="wp-block-paragraph">The first, he points out, is scope. In addition to vulnerable software, CTEM also focuses on <a href="https://www.csoonline.com/article/3623709/nail-the-software-setup-and-avoid-attacks-with-the-top…<br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 12h]]></description>
 </item>
 
 <item>
@@ -64,7 +169,7 @@
 
 
 
-<h2 class="wp-block-heading"><…<br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 21h]]></description>
+<h2 class="wp-block-heading"><…<br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1d]]></description>
 </item>
 
 <item>
@@ -77,7 +182,7 @@
 
 In a statement released today, the Australian Federal Police (AFP) said two unnamed suspects from Western Australia, aged 21 and 23, were arrested in connection with a "sophisticated cybercrime syndicate that allegedly created malicious open-source software to rob thousands of global businesses."
 
-The AFP did not name the defendants, but KrebsOnSecurity learned the 21-year-old suspect's real identity in June, and has been communicating with him ever since. This story includes interviews with TeamPCP's self-described spokesperson, and examines clues left behind by the TeamPCP leader that likely led to his undoing.<br/><br/><b>Source:</b> Krebs on Security &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 21h]]></description>
+The AFP did not name the defendants, but KrebsOnSecurity learned the 21-year-old suspect's real identity in June, and has been communicating with him ever since. This story includes interviews with TeamPCP's self-described spokesperson, and examines clues left behind by the TeamPCP leader that likely led to his undoing.<br/><br/><b>Source:</b> Krebs on Security &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 1d]]></description>
 </item>
 
 <item>
@@ -135,7 +240,7 @@ The AFP did not name the defendants, but KrebsOnSecurity learned the 21-year-old
 
 
 
-<p class="wp-block-paragraph">“With <a href="ht…<br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1d]]></description>
+<p class="wp-block-paragraph">“With <a href="ht…<br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2d]]></description>
 </item>
 
 <item>
@@ -164,7 +269,7 @@ The AFP did not name the defendants, but KrebsOnSecurity learned the 21-year-old
 
 
 
-<h2 class="wp-block-heading" id="attack-timelines-compress-as-patching-remains-…<br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 1d]]></description>
+<h2 class="wp-block-heading" id="attack-timelines-compress-as-patching-remains-…<br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 2d]]></description>
 </item>
 
 <item>
@@ -214,7 +319,7 @@ The AFP did not name the defendants, but KrebsOnSecurity learned the 21-year-old
 
 
 
-<p class="wp-block-…<br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2d]]></description>
+<p class="wp-block-…<br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3d]]></description>
 </item>
 
 <item>
@@ -247,7 +352,7 @@ The AFP did not name the defendants, but KrebsOnSecurity learned the 21-year-old
 
 
 
-<p class="wp-block-paragraph">The study evaluated the technique on a memory system called MemoryOS along with an agent framework, Me…<br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2d]]></description>
+<p class="wp-block-paragraph">The study evaluated the technique on a memory system called MemoryOS along with an agent framework, Me…<br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 3d]]></description>
 </item>
 
 <item>
@@ -276,7 +381,7 @@ The AFP did not name the defendants, but KrebsOnSecurity learned the 21-year-old
 
 
 
-<p class="wp-block-paragraph">Researchers also found a target list containing about 170,000 URLs on the group’s command-and-contro…<br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2d]]></description>
+<p class="wp-block-paragraph">Researchers also found a target list containing about 170,000 URLs on the group’s command-and-contro…<br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3d]]></description>
 </item>
 
 <item>
@@ -334,7 +439,7 @@ The AFP did not name the defendants, but KrebsOnSecurity learned the 21-year-old
 
 
 
-<p class="wp-block-paragraph">BTR.sys is a legitimate Microso…<br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3d]]></description>
+<p class="wp-block-paragraph">BTR.sys is a legitimate Microso…<br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4d]]></description>
 </item>
 
 <item>
@@ -400,7 +505,7 @@ The AFP did not name the defendants, but KrebsOnSecurity learned the 21-year-old
 
 
 
-<p class="wp-block-paragraph">…<br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 6d]]></description>
+<p class="wp-block-paragraph">…<br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 7d]]></description>
 </item>
 
 <item>
@@ -429,7 +534,7 @@ The AFP did not name the defendants, but KrebsOnSecurity learned the 21-year-old
 
 
 
-<p class="wp-block-paragraph">The malicious dependency contained a build script that downloaded and executed a second-stage payload during compilation, Wiz researchers said in a blog <a href="https://www.wiz.io/blog/rust-supply-chain-attack-on-arrayref-significant-overlap-with-dprk-campaigns" rel="noreferrer noopener" target="_blank">post</a>. “The second stage payload is selected based on the platform, with support for x86_64 versions of Linux, Windows, and macOS, in addition to aarch64 macOS,“ they…<br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 6d]]></description>
+<p class="wp-block-paragraph">The malicious dependency contained a build script that downloaded and executed a second-stage payload during compilation, Wiz researchers said in a blog <a href="https://www.wiz.io/blog/rust-supply-chain-attack-on-arrayref-significant-overlap-with-dprk-campaigns" rel="noreferrer noopener" target="_blank">post</a>. “The second stage payload is selected based on the platform, with support for x86_64 versions of Linux, Windows, and macOS, in addition to aarch64 macOS,“ they…<br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 7d]]></description>
 </item>
 
 <item>
@@ -458,7 +563,7 @@ The AFP did not name the defendants, but KrebsOnSecurity learned the 21-year-old
 
 
 
-<p class="wp-block-paragraph">As a CISO myself, I’m noticing that when it comes to AI, the temptation is to try to secure everything, everywhere, all at once. That’s impossible. The CISOs…<br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 6d]]></description>
+<p class="wp-block-paragraph">As a CISO myself, I’m noticing that when it comes to AI, the temptation is to try to secure everything, everywhere, all at once. That’s impossible. The CISOs…<br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 7d]]></description>
 </item>
 
 <item>
@@ -512,95 +617,12 @@ The AFP did not name the defendants, but KrebsOnSecurity learned the 21-year-old
 </item>
 
 <item>
-  <title>🔴 Citrix issues critical security updates for its NetScaler devices</title>
-  <link>https://www.csoonline.com/article/4212082/citrix-issues-critical-security-updates-for-its-netscaler-devices.html</link>
-  <guid isPermaLink="false">https://www.csoonline.com/article/4212082/citrix-issues-critical-security-updates-for-its-netscaler-devices.html</guid>
-  <pubDate>Thu, 20 Aug 2026 18:54:09 +0000</pubDate>
-  <source>CSO Online</source>
-  <description><![CDATA[<b>Why this matters: Elevated ransomware risk — validate backups, endpoint protection, and recovery readiness.</b><br/><div id="remove_no_follow">
-		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
-					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
-						<div class="article-column__content">
-<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
-
-
-
-<p class="wp-block-paragraph">Citrix is urging its NetScaler ADC and NetScaler Gateway customers to quickly patch two critical security holes, one involving a memory overflow vulnerability leading to unpredictable behavior or denial of service, and the other allowing authentication bypass.</p>
-
-
-
-<p class="wp-block-paragraph"><a href="https://community.citrix.com/techzone-blogs/110_security-updates/security-update-netscaler-adc-and-netscaler-gateway-vulnerabilities-r1602/" rel="noreferrer noopener" target="_blank">Citrix said in an advisory</a> that supported versions of customer-managed NetScaler ADC and NetScaler Gateway, including certain FIPS and NDcPP builds, as well as SecurAccess ZTNA Hybrid (formerly Secure Private Access Hybrid) deployments that use customer-managed NetScaler instances, are affected. Citrix-managed cloud services and Citrix-managed Adaptive Authentication have already been updated.</p>
-
-
-
-<p class="wp-block-paragraph">However, it added, “at this point [August 19] the NetScaler images available on cloud marketplaces (AWS, Azure, GCP) have not been updated. If you need to update the images to the versions containing the fix, please download them from <a href="https:…<br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 7d]]></description>
-</item>
-
-<item>
-  <title>🔵 Kriminal breaks out of Grok, Claude guardrails at $12.99</title>
-  <link>https://www.csoonline.com/article/4211952/kriminal-breaks-out-of-grok-claude-guardrails-at-12-99.html</link>
-  <guid isPermaLink="false">https://www.csoonline.com/article/4211952/kriminal-breaks-out-of-grok-claude-guardrails-at-12-99.html</guid>
-  <pubDate>Thu, 20 Aug 2026 12:00:08 +0000</pubDate>
-  <source>CSO Online</source>
-  <description><![CDATA[<b>Why this matters: Potential data exposure — review monitoring and incident-response readiness.</b><br/><div id="remove_no_follow">
-		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
-					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
-						<div class="article-column__content">
-<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
-
-
-
-<p class="wp-block-paragraph">Security researchers are warning of a criminal AI service built on Grok and Claude, among other models, that promises uncensored access to powerful AI capabilities for as little as $12.99 a month.</p>
-
-
-
-<p class="wp-block-paragraph">ThreatDown researchers say “Kriminal” is largely a storefront wrapped around legitimate AI services, using <a href="https://www.csoonline.com/article/4021749/new-grok-4-ai-breached-within-48-hours-using-whispered-jailbreaks.html" target="_blank">jailbreak</a> prompts to bypass their guardrails and resell the resulting capabilities to would-be criminals.</p>
-
-
-
-<p class="wp-block-paragraph">The service is publicly accessible on the clearnet, indexed by Google and presented like a conventional <a href="https://www.csoonline.com/article/4197923/the-saas-blind-spot-why-security-teams-cant-get-inside-their-own-apps.html" target="_blank">SaaS</a> product, featuring pricing tiers, usage statistics and a crypto payment system, the researchers said in a blog <a href="https://www.threatdown.com/blog/kriminal/" rel="noreferrer noopener" target="_blank">post</a> shared with CSO ahead of its publication on Wednesday.</p>
-
-
-
-<p class="wp-block-…<br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 7d]]></description>
-</item>
-
-<item>
-  <title>🔵 Airlock Digital Completes Independent IRAP Assessment at the PROTECTED Level</title>
-  <link>https://www.csoonline.com/article/4211754/airlock-digital-completes-independent-irap-assessment-at-the-protected-level.html</link>
-  <guid isPermaLink="false">https://www.csoonline.com/article/4211754/airlock-digital-completes-independent-irap-assessment-at-the-protected-level.html</guid>
-  <pubDate>Thu, 20 Aug 2026 04:55:04 +0000</pubDate>
-  <source>CSO Online</source>
-  <description><![CDATA[<b>Why this matters: Could affect sign-ins, MFA, or Conditional Access — watch for authentication issues.</b><br/><div id="remove_no_follow">
-		<div class="grid grid--cols-10@md grid--cols-8@lg article-column">
-					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
-						<div class="article-column__content">
-<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
-
-
-
-<p class="wp-block-paragraph">Airlock Digital, a global provider of application control and allowlisting solutions, today announced that it has completed an <a href="https://www.airlockdigital.com/irap" rel="noreferrer noopener" target="_blank">independent Information Security Registered Assessors Program (IRAP) assessment</a> at the PROTECTED classification level. </p>
-
-
-
-<p class="wp-block-paragraph">The assessment was conducted by an Australian Signals Directorate (ASD)-endorsed IRAP assessor against the Australian Government Information Security Manual (ISM). It provides Australian organisations with additional independent evidence when evaluating Airlock Digital’s security controls and their alignment with applicable Australian Government security expectations, including the ISM and Protective Security Policy Framework (PSPF). </p>
-
-
-
-<p class="wp-block-paragraph">For Australian security teams, confidence in a technology provider depends on more than features. It also means understanding how that provider approaches security, how its controls stand up to independent scrutiny, and whether it can support the security requirements of sensitive environments. </p>
-
-
-
-<p class="wp-block-par…<br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 8d]]></description>
-</item>
-
-<item>
   <title>🔵 Who’s Tracking You? Use This New Service to Find Out</title>
   <link>https://krebsonsecurity.com/2026/08/whos-tracking-you-use-this-new-service-to-find-out/</link>
   <guid isPermaLink="false">https://krebsonsecurity.com/2026/08/whos-tracking-you-use-this-new-service-to-find-out/</guid>
   <pubDate>Fri, 14 Aug 2026 11:24:35 +0000</pubDate>
   <source>Krebs on Security</source>
-  <description><![CDATA[<b>Why this matters: Regulatory/compliance context — assess scope and action timeline.</b><br/>It can be daunting to determine who's responsible for showing ads on the websites we visit, or who's harvesting data from the mobile apps we use every day. That information is already semi-public, but it is not easily parsed and traditionally much of it has remained walled away in the hands of large advertising platforms. Not anymore: A powerful and free new service called DecryptAds scrapes and correlates this adtech data and makes it simple to quickly learn a great deal about the entities that are tracking you.<br/><br/><b>Source:</b> Krebs on Security &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 13d]]></description>
+  <description><![CDATA[<b>Why this matters: Regulatory/compliance context — assess scope and action timeline.</b><br/>It can be daunting to determine who's responsible for showing ads on the websites we visit, or who's harvesting data from the mobile apps we use every day. That information is already semi-public, but it is not easily parsed and traditionally much of it has remained walled away in the hands of large advertising platforms. Not anymore: A powerful and free new service called DecryptAds scrapes and correlates this adtech data and makes it simple to quickly learn a great deal about the entities that are tracking you.<br/><br/><b>Source:</b> Krebs on Security &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 14d]]></description>
 </item>
 
 <item>
@@ -618,7 +640,7 @@ The AFP did not name the defendants, but KrebsOnSecurity learned the 21-year-old
   <guid isPermaLink="false">https://krebsonsecurity.com/2026/08/canadian-man-pleads-guilty-in-snowflake-extortions/</guid>
   <pubDate>Thu, 06 Aug 2026 17:00:56 +0000</pubDate>
   <source>Krebs on Security</source>
-  <description><![CDATA[<b>Why this matters: Regulatory/compliance context — assess scope and action timeline.</b><br/>A 26-year-old Canadian man once described as one of the most consequential cybercrime threat actors of 2024 has pleaded guilty to computer fraud and conspiracy to hack and extort more than 165 organizations that used the cloud data storage provider Snowflake. Connor Riley Moucka, of Kitchener, Ontario, also admitted to stealing call and text history records of more than 100 million AT&#038;T customers.<br/><br/><b>Source:</b> Krebs on Security &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 21d]]></description>
+  <description><![CDATA[<b>Why this matters: Regulatory/compliance context — assess scope and action timeline.</b><br/>A 26-year-old Canadian man once described as one of the most consequential cybercrime threat actors of 2024 has pleaded guilty to computer fraud and conspiracy to hack and extort more than 165 organizations that used the cloud data storage provider Snowflake. Connor Riley Moucka, of Kitchener, Ontario, also admitted to stealing call and text history records of more than 100 million AT&#038;T customers.<br/><br/><b>Source:</b> Krebs on Security &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 22d]]></description>
 </item>
 
 <item>
@@ -627,7 +649,7 @@ The AFP did not name the defendants, but KrebsOnSecurity learned the 21-year-old
   <guid isPermaLink="false">https://krebsonsecurity.com/2026/07/read-this-before-you-buy-that-tv-streaming-stick/</guid>
   <pubDate>Thu, 30 Jul 2026 16:49:00 +0000</pubDate>
   <source>Krebs on Security</source>
-  <description><![CDATA[<b>Why this matters: Regulatory/compliance context — assess scope and action timeline.</b><br/>Security experts have been sounding the alarm for years about the risks of using generic TV boxes that promise unlimited content streaming for a one-time fee, warning that they secretly rent the user's Internet connection out to strangers. But a groundbreaking new analysis finds these devices also routinely spoof themselves as mobile phones clicking ads on AI-generated websites as part of sprawling operation that seeks to defraud online merchants and advertising networks.<br/><br/><b>Source:</b> Krebs on Security &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 28d]]></description>
+  <description><![CDATA[<b>Why this matters: Regulatory/compliance context — assess scope and action timeline.</b><br/>Security experts have been sounding the alarm for years about the risks of using generic TV boxes that promise unlimited content streaming for a one-time fee, warning that they secretly rent the user's Internet connection out to strangers. But a groundbreaking new analysis finds these devices also routinely spoof themselves as mobile phones clicking ads on AI-generated websites as part of sprawling operation that seeks to defraud online merchants and advertising networks.<br/><br/><b>Source:</b> Krebs on Security &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 29d]]></description>
 </item>
 
 </channel>
