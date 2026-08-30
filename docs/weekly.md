@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
-**Period:** August 22 – August 29, 2026  
-**Generated:** 2026-08-29 22:18 UTC  
+**Period:** August 23 – August 30, 2026  
+**Generated:** 2026-08-30 01:01 UTC  
 **Items reviewed:** 151  
 
 ## ⚡ Top Actions This Week
@@ -83,12 +83,12 @@
 
 ## 🔵 FYI — General Awareness
 
+- [Anthropic is cutting Claude Code's current weekly limits by 17%](https://www.bleepingcomputer.com/news/artificial-intelligence/anthropic-is-cutting-claude-codes-current-weekly-limits-by-17-percent/) — BleepingComputer
 - [Brave browser adds email aliases to help users evade tracking](https://www.bleepingcomputer.com/news/security/brave-browser-adds-email-aliases-to-help-users-evade-tracking/) — BleepingComputer
 - [TerminalFix campaign deploys a reverse tunnel through multistage intrusion](https://www.microsoft.com/en-us/security/blog/2026/08/28/terminalfix-campaign-deploys-reverse-tunnel-through-multistage-intrusion/) — Microsoft Security Blog
 - [Berlin Refuses to Pay Hackers Who Stole Data From the City's State Network](https://thehackernews.com/2026/08/berlin-refuses-to-pay-hackers-who-stole.html) — The Hacker News
 - [68-year-old imprisoned after making $1.3 million by pirating IPTV services](https://www.bleepingcomputer.com/news/security/68-year-old-imprisoned-after-making-13-million-by-pirating-iptv-services/) — BleepingComputer
 - [Android 17 Adds OS-Wide ECH to Hide Website Visits From Network Providers](https://thehackernews.com/2026/08/android-17-adds-os-wide-ech-to-hide.html) — The Hacker News
-- [19 Chrome and Edge Extensions Found With Wallet-Stealing and Crypto-Draining Code](https://thehackernews.com/2026/08/19-chrome-and-edge-extensions-found.html) — The Hacker News
 
 ---
 
