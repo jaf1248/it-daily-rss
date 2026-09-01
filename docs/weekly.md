@@ -1,25 +1,30 @@
 # IT Weekly Intelligence Briefing
 **Period:** August 25 – September 01, 2026  
-**Generated:** 2026-09-01 13:03 UTC  
-**Items reviewed:** 153  
+**Generated:** 2026-09-01 17:34 UTC  
+**Items reviewed:** 152  
 
 ## ⚡ Top Actions This Week
 
-1. **Validate backups, confirm EDR coverage, and brief incident response team.**  
+1. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
+   _Novocure data breach affects more than 1,400 cancer patients_  
+   Source: BleepingComputer  
+
+2. **Validate backups, confirm EDR coverage, and brief incident response team.**  
    _Ransomware Gang Claims Nutex Health Data Breach_  
    Source: SecurityWeek  
 
-2. **Review access logs for unauthorized sessions; apply vendor patch immediately.**  
+3. **Review access logs for unauthorized sessions; apply vendor patch immediately.**  
    _Critical JFrog Artifactory Vulnerability Reportedly Exploited in the Wild_  
-   Source: SecurityWeek  
-
-3. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _9.5 Million Impacted by Aesto Health Data Breach_  
    Source: SecurityWeek  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [Novocure data breach affects more than 1,400 cancer patients](https://www.bleepingcomputer.com/news/security/novocure-data-breach-affects-more-than-1-400-cancer-patients/)
+**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Sep 01  
+**Why it matters:** Potential credential or data exposure.  
+**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
 ### [Ransomware Gang Claims Nutex Health Data Breach](https://www.securityweek.com/ransomware-gang-claims-nutex-health-data-breach/)
 **Source:** SecurityWeek &nbsp;·&nbsp; **Date:** Sep 01  
@@ -46,14 +51,12 @@
 **Why it matters:** Elevated ransomware risk across the sector.  
 **Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
 
-### [Aurora Ransomware Operators Use Cursor AI in Attacks Against 10 Targets](https://thehackernews.com/2026/08/aurora-ransomware-operators-use-cursor.html)
-**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Aug 31  
-**Why it matters:** Elevated ransomware risk across the sector.  
-**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
-
 ---
 
 ## 🟠 Important — Review This Week
+
+- [13 Malicious Packagist Packages Target Unpatched iPhones to Steal Crypto Wallet Seeds](https://thehackernews.com/2026/09/13-malicious-packagist-packages-target.html)  
+  **The Hacker News** · Sep 01 · _General awareness item._  
 
 - [Nearly 22,000 Microsoft Exchange servers vulnerable to hijack attacks](https://www.bleepingcomputer.com/news/security/nearly-22-000-microsoft-exchange-servers-vulnerable-to-hijack-attacks/)  
   **BleepingComputer** · Sep 01 · _Potential email disruption for users._  
@@ -76,20 +79,17 @@
 - [Attackers Exploit Critical Langflow and Rails Flaws in Credential-Probing and C2 Activity](https://thehackernews.com/2026/09/attackers-exploit-critical-langflow-and.html)  
   **The Hacker News** · Sep 01 · _General awareness item._  
 
-- [PaperCut Exploitation Escalates to Active Intrusions](https://www.securityweek.com/papercut-exploitation-escalates-to-active-intrusions/)  
-  **SecurityWeek** · Sep 01 · _General awareness item._  
-
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [Hackers push malicious Virtualizor update in BGP hijacking attack](https://www.bleepingcomputer.com/news/security/hackers-push-malicious-virtualizor-update-in-bgp-hijacking-attack/) — BleepingComputer
+- [Why Even the Best Edge Security Still Misses High-Risk Sessions](https://www.bleepingcomputer.com/news/security/why-even-the-best-edge-security-still-misses-high-risk-sessions/) — BleepingComputer
+- [Iranian Hackers Pose as Recruiters to Deliver Cross-Platform RATs Through Coding Tests](https://thehackernews.com/2026/09/iranian-hackers-pose-as-recruiters-to.html) — The Hacker News
 - [Threat Actors Don’t Want Better Attacks. They Want Repeatable Ones](https://thehackernews.com/2026/09/threat-actors-dont-want-better-attacks.html) — The Hacker News
 - [Five Venezuelans Plead Guilty in US Court to ATM Jackpotting](https://www.securityweek.com/five-venezuelans-plead-guilty-in-us-court-to-atm-jackpotting/) — SecurityWeek
 - [Five Venezuelans plead guilty to ATM jackpotting attacks in US](https://www.bleepingcomputer.com/news/security/five-venezuelans-plead-guilty-to-atm-jackpotting-attacks-in-us/) — BleepingComputer
-- [Russia-Aligned UAC-0099 Plants Nuclear Weapon Prompt in Malware to Disrupt AI Analysis](https://thehackernews.com/2026/09/russia-aligned-uac-0099-plants-nuclear.html) — The Hacker News
-- [ISC Stormcast For Tuesday, September 1st, 2026 https://isc.sans.edu/podcastdetail/10076, (Tue, Sep 1st)](https://isc.sans.edu/diary/rss/33302) — SANS Internet Storm Center
-- [Guildma (Astaroth) malware infection from Brazilian Portuguese email, (Tue, Sep 1st)](https://isc.sans.edu/diary/rss/33300) — SANS Internet Storm Center
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 11 critical · 90 important · 52 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 11 critical · 90 important · 51 FYI_
