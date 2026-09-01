@@ -1,25 +1,40 @@
 # IT Weekly Intelligence Briefing
 **Period:** August 25 – September 01, 2026  
-**Generated:** 2026-09-01 07:13 UTC  
+**Generated:** 2026-09-01 13:03 UTC  
 **Items reviewed:** 153  
 
 ## ⚡ Top Actions This Week
 
-1. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _Nightmare Eclipse Drops ‘HardBreacher’ Kaspersky Product Exploit_  
+1. **Validate backups, confirm EDR coverage, and brief incident response team.**  
+   _Ransomware Gang Claims Nutex Health Data Breach_  
    Source: SecurityWeek  
 
-2. **Validate backups, confirm EDR coverage, and brief incident response team.**  
-   _Berlin confirms data theft after Rhysida ransomware attack claims_  
-   Source: BleepingComputer  
+2. **Review access logs for unauthorized sessions; apply vendor patch immediately.**  
+   _Critical JFrog Artifactory Vulnerability Reportedly Exploited in the Wild_  
+   Source: SecurityWeek  
 
 3. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _McKesson Confirms Data Breach as Attacker Deadline Looms_  
+   _9.5 Million Impacted by Aesto Health Data Breach_  
    Source: SecurityWeek  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [Ransomware Gang Claims Nutex Health Data Breach](https://www.securityweek.com/ransomware-gang-claims-nutex-health-data-breach/)
+**Source:** SecurityWeek &nbsp;·&nbsp; **Date:** Sep 01  
+**Why it matters:** Elevated ransomware risk across the sector.  
+**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
+
+### [Critical JFrog Artifactory Vulnerability Reportedly Exploited in the Wild](https://www.securityweek.com/critical-jfrog-artifactory-vulnerability-reportedly-exploited-in-the-wild/)
+**Source:** SecurityWeek &nbsp;·&nbsp; **Date:** Sep 01  
+**Why it matters:** General awareness item.  
+**Recommended action:** Review access logs for unauthorized sessions; apply vendor patch immediately.  
+
+### [9.5 Million Impacted by Aesto Health Data Breach](https://www.securityweek.com/9-5-million-impacted-by-aesto-health-data-breach/)
+**Source:** SecurityWeek &nbsp;·&nbsp; **Date:** Sep 01  
+**Why it matters:** Potential credential or data exposure.  
+**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
 ### [Nightmare Eclipse Drops ‘HardBreacher’ Kaspersky Product Exploit](https://www.securityweek.com/nightmare-eclipse-drops-hardbreacher-kaspersky-product-exploit/)
 **Source:** SecurityWeek &nbsp;·&nbsp; **Date:** Aug 31  
@@ -31,65 +46,50 @@
 **Why it matters:** Elevated ransomware risk across the sector.  
 **Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
 
-### [McKesson Confirms Data Breach as Attacker Deadline Looms](https://www.securityweek.com/mckesson-confirms-data-breach-as-attacker-deadline-looms/)
-**Source:** SecurityWeek &nbsp;·&nbsp; **Date:** Aug 31  
-**Why it matters:** Potential credential or data exposure.  
-**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
-
 ### [Aurora Ransomware Operators Use Cursor AI in Attacks Against 10 Targets](https://thehackernews.com/2026/08/aurora-ransomware-operators-use-cursor.html)
 **Source:** The Hacker News &nbsp;·&nbsp; **Date:** Aug 31  
 **Why it matters:** Elevated ransomware risk across the sector.  
 **Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
 
-### [Extortion Group Claims Manchester Airports Group Data Breach](https://www.securityweek.com/extortion-group-claims-manchester-airports-group-data-breach/)
-**Source:** SecurityWeek &nbsp;·&nbsp; **Date:** Aug 31  
-**Why it matters:** Potential credential or data exposure.  
-**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
-
-### [OpenAI Says Reward Hacking Drove AI Agents to Exploit Zero-Days and Breach Hugging Face](https://thehackernews.com/2026/08/openai-says-reward-hacking-drove-ai.html)
-**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Aug 27  
-**Why it matters:** Potential credential or data exposure.  
-**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
-
 ---
 
 ## 🟠 Important — Review This Week
 
-- [PaperCut Exploitation Escalates to Active Intrusions](https://www.securityweek.com/papercut-exploitation-escalates-to-active-intrusions/)  
+- [Nearly 22,000 Microsoft Exchange servers vulnerable to hijack attacks](https://www.bleepingcomputer.com/news/security/nearly-22-000-microsoft-exchange-servers-vulnerable-to-hijack-attacks/)  
+  **BleepingComputer** · Sep 01 · _Potential email disruption for users._  
+
+- [Experiment: Porting a PLC Exploit With AI Takes Hours and Hundreds of Dollars](https://www.securityweek.com/experiment-porting-a-plc-exploit-with-ai-takes-hours-and-hundreds-of-dollars/)  
   **SecurityWeek** · Sep 01 · _General awareness item._  
 
-- [Microsoft Exchange Online outage causes email failures, auth issues](https://www.bleepingcomputer.com/news/microsoft/microsoft-exchange-online-outage-causes-email-failures-auth-issues/)  
-  **BleepingComputer** · Aug 31 · _Service continuity risk to users._  
+- [Hackers Start Exploiting Critical Langflow Vulnerability](https://www.securityweek.com/hackers-start-exploiting-critical-langflow-vulnerability/)  
+  **SecurityWeek** · Sep 01 · _General awareness item._  
 
-- [OpenAI confirms ChatGPT outage as users report errors](https://www.bleepingcomputer.com/news/artificial-intelligence/openai-confirms-chatgpt-outage-as-users-report-errors/)  
-  **BleepingComputer** · Aug 31 · _Service continuity risk to users._  
+- [Attackers Steal METR API Key and Consume AI Credits Worth About $600,000](https://thehackernews.com/2026/09/attackers-steal-metr-api-key-and.html)  
+  **The Hacker News** · Sep 01 · _General awareness item._  
 
-- [CVE-2026-64899 Microsoft Office Information Disclosure Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-64899)  
-  **Microsoft Security Response Center** · Aug 31 · _General awareness item._  
+- [WatchGuard Patches Critical Vulnerabilities](https://www.securityweek.com/watchguard-patches-critical-vulnerabilities/)  
+  **SecurityWeek** · Sep 01 · _General awareness item._  
 
-- [CVE-2026-65775 Windows Win32k Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-65775)  
-  **Microsoft Security Response Center** · Aug 31 · _General awareness item._  
+- [Recently patched PaperCut zero-days used in data theft attacks](https://www.bleepingcomputer.com/news/security/recently-patched-papercut-zero-days-used-in-data-theft-attacks/)  
+  **BleepingComputer** · Sep 01 · _General awareness item._  
 
-- [CVE-2026-65776 Windows Win32k Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-65776)  
-  **Microsoft Security Response Center** · Aug 31 · _General awareness item._  
+- [Attackers Exploit Critical Langflow and Rails Flaws in Credential-Probing and C2 Activity](https://thehackernews.com/2026/09/attackers-exploit-critical-langflow-and.html)  
+  **The Hacker News** · Sep 01 · _General awareness item._  
 
-- [CVE-2026-62823 Windows DHCP Server Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-62823)  
-  **Microsoft Security Response Center** · Aug 31 · _General awareness item._  
-
-- [CVE-2026-62889 Windows Secure Socket Tunneling Protocol (SSTP) Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-62889)  
-  **Microsoft Security Response Center** · Aug 31 · _General awareness item._  
+- [PaperCut Exploitation Escalates to Active Intrusions](https://www.securityweek.com/papercut-exploitation-escalates-to-active-intrusions/)  
+  **SecurityWeek** · Sep 01 · _General awareness item._  
 
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [Threat Actors Don’t Want Better Attacks. They Want Repeatable Ones](https://thehackernews.com/2026/09/threat-actors-dont-want-better-attacks.html) — The Hacker News
+- [Five Venezuelans Plead Guilty in US Court to ATM Jackpotting](https://www.securityweek.com/five-venezuelans-plead-guilty-in-us-court-to-atm-jackpotting/) — SecurityWeek
+- [Five Venezuelans plead guilty to ATM jackpotting attacks in US](https://www.bleepingcomputer.com/news/security/five-venezuelans-plead-guilty-to-atm-jackpotting-attacks-in-us/) — BleepingComputer
+- [Russia-Aligned UAC-0099 Plants Nuclear Weapon Prompt in Malware to Disrupt AI Analysis](https://thehackernews.com/2026/09/russia-aligned-uac-0099-plants-nuclear.html) — The Hacker News
 - [ISC Stormcast For Tuesday, September 1st, 2026 https://isc.sans.edu/podcastdetail/10076, (Tue, Sep 1st)](https://isc.sans.edu/diary/rss/33302) — SANS Internet Storm Center
 - [Guildma (Astaroth) malware infection from Brazilian Portuguese email, (Tue, Sep 1st)](https://isc.sans.edu/diary/rss/33300) — SANS Internet Storm Center
-- [Cronos blockchain restarts after $74 million Tectonic exploit](https://www.bleepingcomputer.com/news/security/cronos-blockchain-restarts-after-74-million-tectonic-exploit/) — BleepingComputer
-- [The Coding-Agent Trap: When a "Free" LLM Endpoint Is the Adversary, (Mon, Aug 31st)](https://isc.sans.edu/diary/rss/33298) — SANS Internet Storm Center
-- [Microsoft warns of TerminalFix attacks deploying reverse tunnels](https://www.bleepingcomputer.com/news/security/microsoft-warns-of-terminalfix-attacks-deploying-reverse-tunnels/) — BleepingComputer
-- [North Korean Job Fraud Expands Beyond IT Into Healthcare and Sales](https://thehackernews.com/2026/08/north-korean-job-fraud-expands-beyond.html) — The Hacker News
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 10 critical · 87 important · 56 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 11 critical · 90 important · 52 FYI_
