@@ -1,25 +1,30 @@
 # IT Weekly Intelligence Briefing
 **Period:** August 27 – September 03, 2026  
-**Generated:** 2026-09-03 07:45 UTC  
-**Items reviewed:** 156  
+**Generated:** 2026-09-03 12:34 UTC  
+**Items reviewed:** 155  
 
 ## ⚡ Top Actions This Week
 
-1. **Audit third-party software dependencies and review vendor access.**  
+1. **Review and assess impact on your environment.**  
+   _Pegasus Zero-Click Spyware Exploit Infects Serbian Student Movement Member's iPhone_  
+   Source: The Hacker News  
+
+2. **Audit third-party software dependencies and review vendor access.**  
    _UK Moves to Block High-Risk Tech Suppliers From Critical Infrastructure_  
    Source: SecurityWeek  
 
-2. **Validate backups, confirm EDR coverage, and brief incident response team.**  
+3. **Validate backups, confirm EDR coverage, and brief incident response team.**  
    _Ransomware protection for MSPs: A 6-point checklist for faster recovery_  
-   Source: BleepingComputer  
-
-3. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _Dropbox accounts breached through Lenovo email verification flaw_  
    Source: BleepingComputer  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [Pegasus Zero-Click Spyware Exploit Infects Serbian Student Movement Member's iPhone](https://thehackernews.com/2026/09/pegasus-zero-click-spyware-exploit.html)
+**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Sep 03  
+**Why it matters:** General awareness item.  
+**Recommended action:** Review and assess impact on your environment.  
 
 ### [UK Moves to Block High-Risk Tech Suppliers From Critical Infrastructure](https://www.securityweek.com/uk-moves-to-block-high-risk-tech-suppliers-from-critical-infrastructure/)
 **Source:** SecurityWeek &nbsp;·&nbsp; **Date:** Sep 02  
@@ -46,14 +51,21 @@
 **Why it matters:** Potential credential or data exposure.  
 **Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
-### [Novocure data breach affects more than 1,400 cancer patients](https://www.bleepingcomputer.com/news/security/novocure-data-breach-affects-more-than-1-400-cancer-patients/)
-**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Sep 01  
-**Why it matters:** Potential credential or data exposure.  
-**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
-
 ---
 
 ## 🟠 Important — Review This Week
+
+- [Plex warns users to patch security vulnerabilities immediately](https://www.bleepingcomputer.com/news/security/plex-warns-users-to-patch-security-vulnerabilities-immediately/)  
+  **BleepingComputer** · Sep 03 · _General awareness item._  
+
+- [Over 3 Million WordPress Sites Affected by Migration Plugin Vulnerability](https://www.securityweek.com/over-3-million-wordpress-sites-affected-by-migration-plugin-vulnerability/)  
+  **SecurityWeek** · Sep 03 · _General awareness item._  
+
+- [Cisco Warns of Unpatched Secure Email Flaws, Patches Critical Switch Vulnerabilities](https://www.securityweek.com/cisco-warns-of-unpatched-secure-email-flaws-patches-critical-switch-vulnerabilities/)  
+  **SecurityWeek** · Sep 03 · _General awareness item._  
+
+- [Microsoft Teams, Outlook fail to launch on ARM-based Windows PCs](https://www.bleepingcomputer.com/news/microsoft/microsoft-teams-outlook-fail-to-launch-on-arm-based-windows-pcs/)  
+  **BleepingComputer** · Sep 03 · _General awareness item._  
 
 - [Researcher Releases FalconFlank PoC Showing Privilege Escalation in CrowdStrike Falcon](https://thehackernews.com/2026/09/researcher-releases-falconflank-poc.html)  
   **The Hacker News** · Sep 03 · _General awareness item._  
@@ -67,29 +79,17 @@
 - [WordPress backup plugin flaw exposes millions of sites to takeover attacks](https://www.bleepingcomputer.com/news/security/wordpress-backup-plugin-flaw-exposes-millions-of-sites-to-takeover-attacks/)  
   **BleepingComputer** · Sep 02 · _General awareness item._  
 
-- [Hackers exploit critical JFrog Artifactory flaw to forge admin tokens](https://www.bleepingcomputer.com/news/security/hackers-exploit-critical-jfrog-artifactory-flaw-to-forge-admin-tokens/)  
-  **BleepingComputer** · Sep 02 · _General awareness item._  
-
-- [Malicious .git Configs Can Make Claude, Codex, Cursor, and Other AI Agents Run Attacker Code](https://thehackernews.com/2026/09/malicious-git-configs-can-make-claude.html)  
-  **The Hacker News** · Sep 02 · _General awareness item._  
-
-- [CVE-2026-58650 Visual Studio Code Security Feature Bypass Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-58650)  
-  **Microsoft Security Response Center** · Sep 02 · _General awareness item._  
-
-- [CVE-2026-59113 Visual Studio Code Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-59113)  
-  **Microsoft Security Response Center** · Sep 02 · _General awareness item._  
-
 ---
 
 ## 🔵 FYI — General Awareness
 
-- [Honeypot-Omaha and batch.py &#x5b;Guest Diary&#x5d;, (Wed, Sep 2nd)](https://isc.sans.edu/diary/rss/33306) — SANS Internet Storm Center
-- [ISC Stormcast For Thursday, September 3rd, 2026 https://isc.sans.edu/podcastdetail/10080, (Thu, Sep 3rd)](https://isc.sans.edu/diary/rss/33308) — SANS Internet Storm Center
-- [Impersonating IT support: how threat actors turn a remote session into enterprise-wide access](https://www.microsoft.com/en-us/security/blog/2026/09/02/impersonating-it-support-threat-actors-turn-remote-session-into-enterprise-wide-access/) — Microsoft Security Blog
-- [OpenLeash Adds a Human Check to Risky AI Agent Actions](https://www.securityweek.com/openleash-adds-a-human-check-to-risky-ai-agent-actions/) — SecurityWeek
-- [Google, Anthropic, and OpenAI Unveil Cyber AI Models, Safeguards, and Access Programs](https://thehackernews.com/2026/09/google-anthropic-and-openai-unveil.html) — The Hacker News
-- [Fake Software Installers Disable Windows Update and Weaken Microsoft Defender](https://thehackernews.com/2026/09/fake-software-installers-disable.html) — The Hacker News
+- [HiddenLayer Raises $100 Million for AI Runtime Security](https://www.securityweek.com/hiddenlayer-raises-100-million-for-ai-runtime-security/) — SecurityWeek
+- [Microsoft says KB5120998 Windows update resets desktop settings](https://www.bleepingcomputer.com/news/microsoft/microsoft-says-kb5120998-windows-update-resets-desktop-settings/) — BleepingComputer
+- [AI Agent Firewall Startup AIR Security Emerges From Stealth With $50 Million](https://www.securityweek.com/ai-agent-firewall-startup-air-security-emerges-from-stealth-with-50-million/) — SecurityWeek
+- [153 Million Driver License Images Offered on Dark Web](https://www.securityweek.com/153-million-driver-license-images-offered-on-dark-web/) — SecurityWeek
+- [Attackers Turn Trusted Node.js Runtime Into Malware Delivery Tool in Targeted Attacks](https://thehackernews.com/2026/09/attackers-turn-trusted-nodejs-runtime.html) — The Hacker News
+- [Shai-Hulud's Reach Just Grew to 469 Credential Locations. Here's What That Means](https://thehackernews.com/2026/09/shai-huluds-reach-just-grew-to-469.html) — The Hacker News
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 9 critical · 98 important · 49 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 8 critical · 97 important · 50 FYI_
