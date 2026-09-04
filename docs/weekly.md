@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
 **Period:** August 28 – September 04, 2026  
-**Generated:** 2026-09-04 00:44 UTC  
+**Generated:** 2026-09-04 05:27 UTC  
 **Items reviewed:** 154  
 
 ## ⚡ Top Actions This Week
@@ -83,12 +83,12 @@
 
 ## 🔵 FYI — General Awareness
 
+- [ISC Stormcast For Friday, September 4th, 2026 https://isc.sans.edu/podcastdetail/10082, (Fri, Sep 4th)](https://isc.sans.edu/diary/rss/33310) — SANS Internet Storm Center
 - [Coder's registry infrastructure compromised to push malicious modules](https://www.bleepingcomputer.com/news/security/coders-registry-infrastructure-compromised-to-push-malicious-modules/) — BleepingComputer
 - [ThreatsDay: CEO Phishing Kits, 5K Dropbox Account Hacks, OAuth Traps + 17 More Stories](https://thehackernews.com/2026/09/threatsday-ceo-phishing-kits-5k-dropbox.html) — The Hacker News
 - [ASCII smuggling crosses over from AI prompt injection to phishing evasion](https://www.microsoft.com/en-us/security/blog/2026/09/03/ascii-smuggling-crosses-over-from-ai-prompt-injection-to-phishing-evasion/) — Microsoft Security Blog
 - [Manchester Airports Group Data on 8.8 Million People Leaked After Ransom Refusal](https://www.securityweek.com/manchester-airports-group-data-on-8-8-million-people-leaked-after-ransom-refusal/) — SecurityWeek
 - [BraZetsu Malware Turns Compromised Windows Hosts Into Criminal Marketplace Inventory](https://thehackernews.com/2026/09/brazetsu-malware-turns-compromised.html) — The Hacker News
-- [Microsoft: KB5120998 mouse reset bug affects only non-English PCs](https://www.bleepingcomputer.com/news/microsoft/microsoft-kb5120998-mouse-reset-bug-affects-only-non-english-pcs/) — BleepingComputer
 
 ---
 
