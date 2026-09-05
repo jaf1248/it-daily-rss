@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
 **Period:** August 29 – September 05, 2026  
-**Generated:** 2026-09-05 11:36 UTC  
+**Generated:** 2026-09-05 14:32 UTC  
 **Items reviewed:** 152  
 
 ## ⚡ Top Actions This Week
@@ -55,6 +55,9 @@
 
 ## 🟠 Important — Review This Week
 
+- [Elementor Pro WordPress Plugin Vulnerability Exploited to Hack Sites](https://www.securityweek.com/elementor-pro-wordpress-plugin-vulnerability-exploited-to-hack-sites/)  
+  **SecurityWeek** · Sep 05 · _General awareness item._  
+
 - [Attackers Exploit PaperCut Flaws to Steal Credentials From Schools and Universities](https://thehackernews.com/2026/09/attackers-exploit-papercut-flaws-to.html)  
   **The Hacker News** · Sep 05 · _General awareness item._  
 
@@ -76,19 +79,16 @@
 - [CVE-2026-50376 Windows Remote Desktop Client Information Disclosure Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-50376)  
   **Microsoft Security Response Center** · Sep 04 · _General awareness item._  
 
-- [New CrowdStrike 'FalconFlank' zero-day grants SYSTEM privileges](https://www.bleepingcomputer.com/news/security/new-crowdstrike-falconflank-zero-day-grants-system-privileges/)  
-  **BleepingComputer** · Sep 04 · _General awareness item._  
-
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [Over 5,400 hacked sites serve ClickFix payloads stored on the blockchain](https://www.bleepingcomputer.com/news/security/over-5-400-hacked-sites-serve-clickfix-payloads-stored-on-the-blockchain/) — BleepingComputer
 - [Thousands of OpenAI Agents Quietly Turned an Abandoned Wiki Into Their Coordination Channel](https://thehackernews.com/2026/09/thousands-of-openai-agents-quietly.html) — The Hacker News
 - [numbat - AI agent observability, (Fri, Sep 4th)](https://isc.sans.edu/diary/rss/33312) — SANS Internet Storm Center
 - [How to secure edge AI in customer-owned environments](https://www.microsoft.com/en-us/security/blog/2026/09/04/secure-edge-ai-customer-owned-environments/) — Microsoft Security Blog
 - [OpenAI Pledges $1 Billion to Bring Frontier AI to Critical Infrastructure Defenders](https://www.securityweek.com/openai-pledges-1-billion-to-bring-frontier-ai-to-critical-infrastructure-defenders/) — SecurityWeek
 - [Phishing Campaign Sends Millions of Emails Using Invisible Unicode to Evade Filters](https://thehackernews.com/2026/09/phishing-campaign-sends-millions-of.html) — The Hacker News
-- [Microsoft says some users can’t open the Teams desktop client](https://www.bleepingcomputer.com/news/microsoft/microsoft-says-some-users-cant-open-the-teams-desktop-client/) — BleepingComputer
 
 ---
 
