@@ -1,25 +1,40 @@
 # IT Weekly Intelligence Briefing
 **Period:** September 01 – September 08, 2026  
-**Generated:** 2026-09-08 08:35 UTC  
+**Generated:** 2026-09-08 13:18 UTC  
 **Items reviewed:** 137  
 
 ## ⚡ Top Actions This Week
 
-1. **Audit third-party software dependencies and review vendor access.**  
-   _⚡ Weekly Recap: Chrome 0-Day, Router Hijacks, Coder Supply Chain Attack and More_  
+1. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
+   _Webinar: The forgotten Google Workspace access that can lead to a breach_  
+   Source: BleepingComputer  
+
+2. **Review and assess impact on your environment.**  
+   _WeChat Zero-Click Worm Took Over Accounts on iPhone and Android via Incoming Calls_  
    Source: The Hacker News  
 
-2. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _Mathspace discloses data breach affecting over 1 million people_  
-   Source: BleepingComputer  
-
 3. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _Trezor data breach impact now reaches 81,000 customers_  
-   Source: BleepingComputer  
+   _Mathspace Data Breach Exposes Over 1 Million People_  
+   Source: SecurityWeek  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [Webinar: The forgotten Google Workspace access that can lead to a breach](https://www.bleepingcomputer.com/news/security/webinar-the-forgotten-google-workspace-access-that-can-lead-to-a-breach/)
+**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Sep 08  
+**Why it matters:** Potential credential or data exposure.  
+**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
+
+### [WeChat Zero-Click Worm Took Over Accounts on iPhone and Android via Incoming Calls](https://thehackernews.com/2026/09/wechat-zero-click-worm-took-over.html)
+**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Sep 08  
+**Why it matters:** General awareness item.  
+**Recommended action:** Review and assess impact on your environment.  
+
+### [Mathspace Data Breach Exposes Over 1 Million People](https://www.securityweek.com/mathspace-data-breach-exposes-over-1-million-people/)
+**Source:** SecurityWeek &nbsp;·&nbsp; **Date:** Sep 08  
+**Why it matters:** Potential credential or data exposure.  
+**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
 ### [⚡ Weekly Recap: Chrome 0-Day, Router Hijacks, Coder Supply Chain Attack and More](https://thehackernews.com/2026/09/weekly-recap-chrome-0-day-router.html)
 **Source:** The Hacker News &nbsp;·&nbsp; **Date:** Sep 07  
@@ -36,24 +51,18 @@
 **Why it matters:** Potential credential or data exposure.  
 **Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
-### [OpenAI Agents Hijack Another Victim Website](https://www.securityweek.com/openai-agents-hijack-another-victim-website/)
-**Source:** SecurityWeek &nbsp;·&nbsp; **Date:** Sep 07  
-**Why it matters:** Potential credential or data exposure.  
-**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
-
-### [N-able Issues Fourth N-central Hotfix in Five Weeks for Unauthenticated RCE Flaw](https://thehackernews.com/2026/09/n-able-issues-fourth-n-central-hotfix.html)
-**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Sep 07  
-**Why it matters:** Possible impact to authentication and sign-in flows.  
-**Recommended action:** Prioritize patching of affected systems; check for internet-exposed attack surface.  
-
-### [Attackers Breached JetBrains Cadence via Unpatched TeamCity, Extracting AWS Credentials](https://thehackernews.com/2026/09/attackers-breached-jetbrains-cadence.html)
-**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Sep 05  
-**Why it matters:** Potential credential or data exposure.  
-**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
-
 ---
 
 ## 🟠 Important — Review This Week
+
+- [MikroTik Patches Critical Flaws Chained to Hack Routers](https://www.securityweek.com/mikrotik-patches-critical-flaws-chained-to-hack-routers/)  
+  **SecurityWeek** · Sep 08 · _General awareness item._  
+
+- [N-able Patches Critical Zero-Day in N-central](https://www.securityweek.com/n-able-patches-critical-zero-day-in-n-central/)  
+  **SecurityWeek** · Sep 08 · _Possible impact to authentication and sign-in flows._  
+
+- [Adobe Patches Magento Zero-Day Exploited to Deploy Rust Backdoor and PHP Web Shell](https://thehackernews.com/2026/09/adobe-patches-magento-zero-day.html)  
+  **The Hacker News** · Sep 08 · _General awareness item._  
 
 - [Magento StyleSmuggler zero-day exploited to deploy Linux backdoor](https://www.bleepingcomputer.com/news/security/magento-stylesmuggler-zero-day-exploited-to-deploy-linux-backdoor/)  
   **BleepingComputer** · Sep 07 · _General awareness item._  
@@ -70,26 +79,17 @@
 - [Telerik UI Padding-Oracle Bug Chained to Unauthenticated RCE — Public Exploit Released](https://thehackernews.com/2026/09/telerik-ui-padding-oracle-bug-chained.html)  
   **The Hacker News** · Sep 07 · _General awareness item._  
 
-- [ConnectWise warns of new ScreenConnect flaw without patch](https://www.bleepingcomputer.com/news/security/connectwise-warns-of-new-screenconnect-flaw-without-patch/)  
-  **BleepingComputer** · Sep 07 · _General awareness item._  
-
-- [N-able patches max severity N-central flaw amid ongoing attacks](https://www.bleepingcomputer.com/news/security/n-able-patches-max-severity-n-central-flaw-amid-ongoing-attacks/)  
-  **BleepingComputer** · Sep 07 · _Possible impact to authentication and sign-in flows._  
-
-- [Critical MikroTik Vulnerability - Patch Now, (Sun, Sep 6th)](https://isc.sans.edu/diary/rss/33314)  
-  **SANS Internet Storm Center** · Sep 06 · _General awareness item._  
-
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [Hackers build AI frameworks for widescale credential theft](https://www.bleepingcomputer.com/news/security/hackers-build-ai-frameworks-for-widescale-credential-theft/) — BleepingComputer
+- [Microsoft: Windows Server 2025 changes causing app crashes](https://www.bleepingcomputer.com/news/microsoft/microsoft-windows-server-2025-changes-may-cause-app-crashes/) — BleepingComputer
+- [What It Took to Reach 1 Billion Build Manifests](https://thehackernews.com/2026/09/what-it-took-to-reach-1-billion-build.html) — The Hacker News
+- [FreeIPA Flaw Chain Lets Anonymous Clients Create Reusable Administrator Credentials](https://thehackernews.com/2026/09/freeipa-flaw-chain-lets-anonymous.html) — The Hacker News
+- [BengalSEO Poisons Bing Search Results to Deliver MayaBot and Tech Support Scams](https://thehackernews.com/2026/09/bengalseo-poisons-bing-search-results.html) — The Hacker News
 - [220 million traveler records exposed in Vietnam-linked APIS leak](https://www.bleepingcomputer.com/news/security/220-million-traveler-records-exposed-in-vietnam-linked-apis-leak/) — BleepingComputer
-- [Grindr to Pay £26 Million to Settle U.K. Claims Over HIV Status Data Sharing](https://thehackernews.com/2026/09/grindr-to-pay-26-million-to-settle-uk.html) — The Hacker News
-- [ISC Stormcast For Tuesday, September 8th, 2026 https://isc.sans.edu/podcastdetail/10084, (Tue, Sep 8th)](https://isc.sans.edu/diary/rss/33316) — SANS Internet Storm Center
-- [PEEP Turns Chrome and Edge Into Post-Compromise Backdoors for Host Command Execution](https://thehackernews.com/2026/09/peep-turns-chrome-and-edge-into-post.html) — The Hacker News
-- [Fake IT Calls Target Executives in Microsoft 365 Data Theft and Extortion Attacks](https://thehackernews.com/2026/09/microsoft-365-attackers-use-help-desk.html) — The Hacker News
-- [BigBear Microsoft 365 phishing service bypassed MFA at 258 organizations](https://www.bleepingcomputer.com/news/security/bigbear-microsoft-365-phishing-service-bypassed-mfa-at-258-organizations/) — BleepingComputer
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 13 critical · 79 important · 45 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 13 critical · 77 important · 47 FYI_
