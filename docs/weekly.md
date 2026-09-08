@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
-**Period:** August 31 – September 07, 2026  
-**Generated:** 2026-09-07 23:58 UTC  
+**Period:** September 01 – September 08, 2026  
+**Generated:** 2026-09-08 03:42 UTC  
 **Items reviewed:** 137  
 
 ## ⚡ Top Actions This Week
@@ -83,12 +83,12 @@
 
 ## 🔵 FYI — General Awareness
 
+- [ISC Stormcast For Tuesday, September 8th, 2026 https://isc.sans.edu/podcastdetail/10084, (Tue, Sep 8th)](https://isc.sans.edu/diary/rss/33316) — SANS Internet Storm Center
 - [PEEP Turns Chrome and Edge Into Post-Compromise Backdoors for Host Command Execution](https://thehackernews.com/2026/09/peep-turns-chrome-and-edge-into-post.html) — The Hacker News
 - [Fake IT Calls Target Executives in Microsoft 365 Data Theft and Extortion Attacks](https://thehackernews.com/2026/09/microsoft-365-attackers-use-help-desk.html) — The Hacker News
 - [BigBear Microsoft 365 phishing service bypassed MFA at 258 organizations](https://www.bleepingcomputer.com/news/security/bigbear-microsoft-365-phishing-service-bypassed-mfa-at-258-organizations/) — BleepingComputer
 - [North Korean Hackers Deploy New Linux Espionage Toolkit](https://www.securityweek.com/north-korean-hackers-deploy-new-linux-espionage-toolkit/) — SecurityWeek
 - [Modified ScreenConnect Clients Used in Worm-Like Campaign](https://www.securityweek.com/modified-screenconnect-clients-used-in-worm-like-campaign/) — SecurityWeek
-- [Your Cloud Security Checklist Doesn't Work the Way You Think It Does](https://thehackernews.com/2026/09/your-cloud-security-checklist-doesnt.html) — The Hacker News
 
 ---
 
