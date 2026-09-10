@@ -1,25 +1,35 @@
 # IT Weekly Intelligence Briefing
 **Period:** September 03 – September 10, 2026  
-**Generated:** 2026-09-10 14:48 UTC  
-**Items reviewed:** 150  
+**Generated:** 2026-09-10 18:04 UTC  
+**Items reviewed:** 149  
 
 ## ⚡ Top Actions This Week
 
-1. **Review access logs for unauthorized sessions; apply vendor patch immediately.**  
+1. **Validate backups, confirm EDR coverage, and brief incident response team.**  
+   _Cisco FMC flaws exploited by ransomware gang, state-sponsored hackers_  
+   Source: BleepingComputer  
+
+2. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
+   _IDScan confirms breach tied to 153 million stolen driver’s licenses_  
+   Source: BleepingComputer  
+
+3. **Review access logs for unauthorized sessions; apply vendor patch immediately.**  
    _Critical NetScaler Vulnerability Exploited in Attacks_  
    Source: SecurityWeek  
-
-2. **Elevate monitoring posture; brief security team on threat actor TTPs.**  
-   _4.1 Million Impacted by AdaptHealth Data Breach_  
-   Source: SecurityWeek  
-
-3. **Validate backups, confirm EDR coverage, and brief incident response team.**  
-   _CISA: WatchGuard RCE flaw now exploited in ransomware attacks_  
-   Source: BleepingComputer  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [Cisco FMC flaws exploited by ransomware gang, state-sponsored hackers](https://www.bleepingcomputer.com/news/security/cisco-fmc-flaws-exploited-by-ransomware-gang-state-sponsored-hackers/)
+**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Sep 10  
+**Why it matters:** Elevated ransomware risk across the sector.  
+**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
+
+### [IDScan confirms breach tied to 153 million stolen driver’s licenses](https://www.bleepingcomputer.com/news/security/idscan-confirms-breach-tied-to-153-million-stolen-drivers-licenses/)
+**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Sep 10  
+**Why it matters:** Potential credential or data exposure.  
+**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
 ### [Critical NetScaler Vulnerability Exploited in Attacks](https://www.securityweek.com/critical-netscaler-vulnerability-exploited-in-attacks/)
 **Source:** SecurityWeek &nbsp;·&nbsp; **Date:** Sep 10  
@@ -40,16 +50,6 @@
 **Source:** The Hacker News &nbsp;·&nbsp; **Date:** Sep 10  
 **Why it matters:** Potential credential or data exposure.  
 **Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
-
-### [Trezor warns users of email provider breach, phishing attacks](https://www.bleepingcomputer.com/news/security/trezor-warns-users-of-email-provider-breach-phishing-attacks/)
-**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Sep 10  
-**Why it matters:** Potential credential or data exposure.  
-**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
-
-### [Cisco confirms CVE-2026-20079 Secure FMC flaw exploited in attacks](https://www.bleepingcomputer.com/news/security/cisco-confirms-cve-2026-20079-secure-fmc-flaw-exploited-in-attacks/)
-**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Sep 09  
-**Why it matters:** General awareness item.  
-**Recommended action:** Review access logs for unauthorized sessions; apply vendor patch immediately.  
 
 ---
 
@@ -76,20 +76,20 @@
 - [New ‘ShieldCrash’ Zero-Day Exploit Targets Microsoft Defender](https://www.securityweek.com/new-shieldcrash-zero-day-exploit-targets-microsoft-defender/)  
   **SecurityWeek** · Sep 10 · _General awareness item._  
 
-- [Fortinet Code Execution Flaw Exploited in PivotC2 RAT Attacks](https://www.securityweek.com/fortinet-code-execution-flaw-exploited-in-pivotc2-rat-attacks/)  
-  **SecurityWeek** · Sep 10 · _General awareness item._  
+- [Chromium: CVE-2026-85046 Type confusion in V8](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-85046)  
+  **Microsoft Security Response Center** · Sep 09 · _General awareness item._  
 
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [Cybersecurity M&A Roundup: 33 Deals Announced in August 2026](https://www.securityweek.com/cybersecurity-ma-roundup-33-deals-announced-in-august-2026/) — SecurityWeek
+- [AI-powered attack exploited PaperCut flaws to hack 395 organizations](https://www.bleepingcomputer.com/news/security/ai-powered-attack-exploited-papercut-flaws-to-hack-395-organizations/) — BleepingComputer
+- [Anthropic Researcher Resigns With Warning About the Dangers of AI Development](https://www.securityweek.com/anthropic-researcher-resigns-with-warning-about-the-dangers-of-ai-development/) — SecurityWeek
 - [Google Play Early Access Abused to Push Thousands of Deceptive Android Apps](https://thehackernews.com/2026/09/google-play-early-access-abused-to-push.html) — The Hacker News
 - [Hacker Conversations: Vinnie Liu, Performer Turned Ringmaster](https://www.securityweek.com/hacker-conversations-vinnie-liu-performer-turned-ringmaster/) — SecurityWeek
 - [The Top 4 Threats We Found by Investigating Every Alert for a Quarter](https://www.bleepingcomputer.com/news/security/the-top-4-threats-we-found-by-investigating-every-alert-for-a-quarter/) — BleepingComputer
-- [Deceptive Android Apps Exploit Google Play Early Access to Evade Reviews](https://www.securityweek.com/deceptive-android-apps-exploit-google-play-early-access-to-evade-reviews/) — SecurityWeek
-- [Webinar Today: Keep Pace With AI – A New Operating Model for Endpoint Remediation](https://www.securityweek.com/webinar-today-keep-pace-with-ai-a-new-operating-model-for-endpoint-remediation/) — SecurityWeek
-- [Redtail Payload Analysis &#x5b;Guest Diary&#x5d;, (Wed, Sep 9th)](https://isc.sans.edu/diary/rss/33326) — SANS Internet Storm Center
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 16 critical · 85 important · 49 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 18 critical · 82 important · 49 FYI_
