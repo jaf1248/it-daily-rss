@@ -1,25 +1,40 @@
 # IT Weekly Intelligence Briefing
 **Period:** September 04 – September 11, 2026  
-**Generated:** 2026-09-11 02:54 UTC  
+**Generated:** 2026-09-11 07:47 UTC  
 **Items reviewed:** 151  
 
 ## ⚡ Top Actions This Week
 
 1. **Validate backups, confirm EDR coverage, and brief incident response team.**  
-   _New Android malware encrypts files, steals data, and harasses victims_  
+   _Conti ransomware gang member sentenced to 4 years in prison_  
    Source: BleepingComputer  
 
-2. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _Surfshark VPN says hackers breached internal testing, proxy servers_  
-   Source: BleepingComputer  
+2. **Apply emergency patch or mitigation now; check vendor advisory for workarounds.**  
+   _PaperCut Replaces Emergency Patches With Fixes for Two Actively Exploited Flaws_  
+   Source: The Hacker News  
 
 3. **Validate backups, confirm EDR coverage, and brief incident response team.**  
-   _Cisco FMC flaws exploited by ransomware gang, state-sponsored hackers_  
-   Source: BleepingComputer  
+   _Cisco FMC Flaws Exploited to Steal Credentials and Deploy Qilin Ransomware_  
+   Source: The Hacker News  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [Conti ransomware gang member sentenced to 4 years in prison](https://www.bleepingcomputer.com/news/security/conti-ransomware-gang-member-sentenced-to-four-years-in-prison/)
+**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Sep 11  
+**Why it matters:** Elevated ransomware risk across the sector.  
+**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
+
+### [PaperCut Replaces Emergency Patches With Fixes for Two Actively Exploited Flaws](https://thehackernews.com/2026/09/papercut-replaces-emergency-patches.html)
+**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Sep 11  
+**Why it matters:** General awareness item.  
+**Recommended action:** Apply emergency patch or mitigation now; check vendor advisory for workarounds.  
+
+### [Cisco FMC Flaws Exploited to Steal Credentials and Deploy Qilin Ransomware](https://thehackernews.com/2026/09/cisco-fmc-flaws-exploited-to-steal.html)
+**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Sep 11  
+**Why it matters:** Elevated ransomware risk across the sector.  
+**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
 
 ### [New Android malware encrypts files, steals data, and harasses victims](https://www.bleepingcomputer.com/news/security/new-android-malware-encrypts-files-steals-data-and-harasses-victims/)
 **Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Sep 10  
@@ -36,24 +51,15 @@
 **Why it matters:** Elevated ransomware risk across the sector.  
 **Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
 
-### [IDScan confirms breach tied to 153 million stolen driver’s licenses](https://www.bleepingcomputer.com/news/security/idscan-confirms-breach-tied-to-153-million-stolen-drivers-licenses/)
-**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Sep 10  
-**Why it matters:** Potential credential or data exposure.  
-**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
-
-### [Critical NetScaler Vulnerability Exploited in Attacks](https://www.securityweek.com/critical-netscaler-vulnerability-exploited-in-attacks/)
-**Source:** SecurityWeek &nbsp;·&nbsp; **Date:** Sep 10  
-**Why it matters:** General awareness item.  
-**Recommended action:** Review access logs for unauthorized sessions; apply vendor patch immediately.  
-
-### [4.1 Million Impacted by AdaptHealth Data Breach](https://www.securityweek.com/4-1-million-impacted-by-adapthealth-data-breach/)
-**Source:** SecurityWeek &nbsp;·&nbsp; **Date:** Sep 10  
-**Why it matters:** Potential credential or data exposure.  
-**Recommended action:** Elevate monitoring posture; brief security team on threat actor TTPs.  
-
 ---
 
 ## 🟠 Important — Review This Week
+
+- [Chromium: CVE-2025-2137 Out of bounds read in V8](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-2137)  
+  **Microsoft Security Response Center** · Sep 11 · _General awareness item._  
+
+- [Chromium: CVE-2025-1920 Type Confusion in V8](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-1920)  
+  **Microsoft Security Response Center** · Sep 11 · _General awareness item._  
 
 - [September Windows Server updates break Remote Desktop Services](https://www.bleepingcomputer.com/news/microsoft/september-windows-server-updates-break-remote-desktop-services/)  
   **BleepingComputer** · Sep 10 · _General awareness item._  
@@ -73,23 +79,17 @@
 - [CISA Flags Exploited Cisco, Citrix, Fortinet Flaws, Sets Sept. 12 Federal Patch Deadline](https://thehackernews.com/2026/09/cisa-flags-exploited-cisco-citrix.html)  
   **The Hacker News** · Sep 10 · _General awareness item._  
 
-- [Organizations Warned of Cisco Secure FMC Exploitation](https://www.securityweek.com/organizations-warned-of-cisco-secure-fmc-exploitation/)  
-  **SecurityWeek** · Sep 10 · _General awareness item._  
-
-- [Microsoft fixes bug that wiped Windows desktop settings](https://www.bleepingcomputer.com/news/microsoft/microsoft-fixes-bug-that-wiped-windows-desktop-settings/)  
-  **BleepingComputer** · Sep 10 · _General awareness item._  
-
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [Attackers Chain JFrog Artifactory Flaws to Gain Admin Control and Plant Backdoors](https://thehackernews.com/2026/09/attackers-chain-jfrog-artifactory-flaws.html) — The Hacker News
+- [China-Linked UNC3569 Exploited Sogou Input Method Flaw to Deploy GRAYRABBIT Backdoor](https://thehackernews.com/2026/09/china-linked-unc3569-exploited-sogou.html) — The Hacker News
 - [ISC Stormcast For Friday, September 11th, 2026 https://isc.sans.edu/podcastdetail/10090, (Fri, Sep 11th)](https://isc.sans.edu/diary/rss/33330) — SANS Internet Storm Center
 - [Mandiant Founder Kevin Mandia Joins Amazon Board](https://www.securityweek.com/mandiant-founder-kevin-mandia-joins-amazon-board/) — SecurityWeek
 - [ThreatsDay: 200 Android Flaws, Browser-Built Phishing, 119K Scam Shops + 23 More Stories](https://thehackernews.com/2026/09/threatsday-200-android-flaws-browser.html) — The Hacker News
 - [Protecting organizations from AI-assisted executive impersonation and invoice fraud](https://www.microsoft.com/en-us/security/blog/2026/09/10/protecting-organizations-ai-assisted-executive-impersonation-invoice-fraud/) — Microsoft Security Blog
-- [Cybersecurity M&A Roundup: 33 Deals Announced in August 2026](https://www.securityweek.com/cybersecurity-ma-roundup-33-deals-announced-in-august-2026/) — SecurityWeek
-- [Detect and disrupt AI-themed attacks with Microsoft Defender](https://www.microsoft.com/en-us/security/blog/2026/09/10/detect-and-disrupt-ai-themed-attacks-with-microsoft-defender/) — Microsoft Security Blog
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 19 critical · 82 important · 50 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 22 critical · 80 important · 49 FYI_
