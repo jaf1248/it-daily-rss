@@ -1,25 +1,35 @@
 # IT Weekly Intelligence Briefing
 **Period:** September 04 – September 11, 2026  
-**Generated:** 2026-09-11 07:47 UTC  
+**Generated:** 2026-09-11 12:35 UTC  
 **Items reviewed:** 151  
 
 ## ⚡ Top Actions This Week
 
 1. **Validate backups, confirm EDR coverage, and brief incident response team.**  
-   _Conti ransomware gang member sentenced to 4 years in prison_  
+   _Ukrainian Conti Ransomware Developer Sentenced to 4 Years in US Prison_  
+   Source: SecurityWeek  
+
+2. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
+   _Trezor: 347,000 users targeted in phishing attacks after Brevo breach_  
    Source: BleepingComputer  
 
-2. **Apply emergency patch or mitigation now; check vendor advisory for workarounds.**  
-   _PaperCut Replaces Emergency Patches With Fixes for Two Actively Exploited Flaws_  
-   Source: The Hacker News  
-
 3. **Validate backups, confirm EDR coverage, and brief incident response team.**  
-   _Cisco FMC Flaws Exploited to Steal Credentials and Deploy Qilin Ransomware_  
-   Source: The Hacker News  
+   _Conti ransomware gang member sentenced to 4 years in prison_  
+   Source: BleepingComputer  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [Ukrainian Conti Ransomware Developer Sentenced to 4 Years in US Prison](https://www.securityweek.com/ukrainian-conti-ransomware-developer-sentenced-to-4-years-in-us-prison/)
+**Source:** SecurityWeek &nbsp;·&nbsp; **Date:** Sep 11  
+**Why it matters:** Elevated ransomware risk across the sector.  
+**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
+
+### [Trezor: 347,000 users targeted in phishing attacks after Brevo breach](https://www.bleepingcomputer.com/news/security/trezor-347-000-users-targeted-in-phishing-attacks-after-brevo-breach/)
+**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Sep 11  
+**Why it matters:** Potential credential or data exposure.  
+**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
 ### [Conti ransomware gang member sentenced to 4 years in prison](https://www.bleepingcomputer.com/news/security/conti-ransomware-gang-member-sentenced-to-four-years-in-prison/)
 **Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Sep 11  
@@ -41,19 +51,18 @@
 **Why it matters:** Elevated ransomware risk across the sector.  
 **Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
 
-### [Surfshark VPN says hackers breached internal testing, proxy servers](https://www.bleepingcomputer.com/news/security/surfshark-vpn-says-hackers-breached-internal-testing-proxy-servers/)
-**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Sep 10  
-**Why it matters:** Potential credential or data exposure.  
-**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
-
-### [Cisco FMC flaws exploited by ransomware gang, state-sponsored hackers](https://www.bleepingcomputer.com/news/security/cisco-fmc-flaws-exploited-by-ransomware-gang-state-sponsored-hackers/)
-**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Sep 10  
-**Why it matters:** Elevated ransomware risk across the sector.  
-**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
-
 ---
 
 ## 🟠 Important — Review This Week
+
+- [GitLab urges users to patch max severity path traversal flaw](https://www.bleepingcomputer.com/news/security/gitlab-urges-users-to-patch-max-severity-path-traversal-flaw/)  
+  **BleepingComputer** · Sep 11 · _General awareness item._  
+
+- [Check Point Patches Critical VPN Vulnerabilities](https://www.securityweek.com/check-point-patches-critical-vpn-vulnerabilities/)  
+  **SecurityWeek** · Sep 11 · _General awareness item._  
+
+- [Microsoft fixes Teams, Outlook launch failures on ARM Windows PCs](https://www.bleepingcomputer.com/news/microsoft/microsoft-fixes-teams-outlook-launch-failures-on-arm-windows-pcs/)  
+  **BleepingComputer** · Sep 11 · _General awareness item._  
 
 - [Chromium: CVE-2025-2137 Out of bounds read in V8](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-2137)  
   **Microsoft Security Response Center** · Sep 11 · _General awareness item._  
@@ -70,26 +79,17 @@
 - [New 'BlueMoon' kit exploited Windows and Chrome zero-day flaws](https://www.bleepingcomputer.com/news/security/new-bluemoon-kit-exploited-windows-and-chrome-zero-day-flaws/)  
   **BleepingComputer** · Sep 10 · _General awareness item._  
 
-- [Widened Scan Turns Up Fourth Rogue Claude Cyber Incident](https://www.securityweek.com/widened-scan-turns-up-fourth-rogue-claude-cyber-incident/)  
-  **SecurityWeek** · Sep 10 · _General awareness item._  
-
-- [Check Point Discloses Two 9.8-Rated VPN Certificate Flaws Enabling Unauthenticated RCE](https://thehackernews.com/2026/09/check-point-discloses-two-98-rated-vpn.html)  
-  **The Hacker News** · Sep 10 · _General awareness item._  
-
-- [CISA Flags Exploited Cisco, Citrix, Fortinet Flaws, Sets Sept. 12 Federal Patch Deadline](https://thehackernews.com/2026/09/cisa-flags-exploited-cisco-citrix.html)  
-  **The Hacker News** · Sep 10 · _General awareness item._  
-
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [Kiteworks Acquires Bonfy.AI to Fill the AI Gap in Data Governance](https://www.securityweek.com/kiteworks-acquires-bonfy-ai-to-fill-the-ai-gap-in-data-governance/) — SecurityWeek
+- [Surfshark Systems Targeted by Hackers](https://www.securityweek.com/surfshark-systems-targeted-by-hackers/) — SecurityWeek
+- [Anthropic Says Russian Hackers Used Claude AI to Automate Malware Evasion](https://www.securityweek.com/anthropic-says-russian-hackers-used-claude-ai-to-automate-malware-evasion/) — SecurityWeek
+- [PaperCut Flaws Exploited in AI-Powered Attacks](https://www.securityweek.com/papercut-flaws-exploited-in-ai-powered-attacks/) — SecurityWeek
 - [Attackers Chain JFrog Artifactory Flaws to Gain Admin Control and Plant Backdoors](https://thehackernews.com/2026/09/attackers-chain-jfrog-artifactory-flaws.html) — The Hacker News
 - [China-Linked UNC3569 Exploited Sogou Input Method Flaw to Deploy GRAYRABBIT Backdoor](https://thehackernews.com/2026/09/china-linked-unc3569-exploited-sogou.html) — The Hacker News
-- [ISC Stormcast For Friday, September 11th, 2026 https://isc.sans.edu/podcastdetail/10090, (Fri, Sep 11th)](https://isc.sans.edu/diary/rss/33330) — SANS Internet Storm Center
-- [Mandiant Founder Kevin Mandia Joins Amazon Board](https://www.securityweek.com/mandiant-founder-kevin-mandia-joins-amazon-board/) — SecurityWeek
-- [ThreatsDay: 200 Android Flaws, Browser-Built Phishing, 119K Scam Shops + 23 More Stories](https://thehackernews.com/2026/09/threatsday-200-android-flaws-browser.html) — The Hacker News
-- [Protecting organizations from AI-assisted executive impersonation and invoice fraud](https://www.microsoft.com/en-us/security/blog/2026/09/10/protecting-organizations-ai-assisted-executive-impersonation-invoice-fraud/) — Microsoft Security Blog
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 22 critical · 80 important · 49 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 20 critical · 80 important · 51 FYI_
