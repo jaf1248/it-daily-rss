@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
 **Period:** September 04 – September 11, 2026  
-**Generated:** 2026-09-11 19:27 UTC  
+**Generated:** 2026-09-11 22:13 UTC  
 **Items reviewed:** 151  
 
 ## ⚡ Top Actions This Week
@@ -55,41 +55,41 @@
 
 ## 🟠 Important — Review This Week
 
-- [GitLab CVSS 10 File-Read Flaw Draws In-the-Wild Probes After Disclosure](https://thehackernews.com/2026/09/gitlab-cvss-10-file-read-flaw-draws-in.html)  
-  **The Hacker News** · Sep 11 · _General awareness item._  
+- [Chromium CVE-2026-87491:  Out of bounds write in V8](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-87491)  
+  **Microsoft Security Response Center** · Sep 12 · _General awareness item._  
 
-- [GitLab Vulnerability Exploited One Day After Disclosure](https://www.securityweek.com/gitlab-vulnerability-exploited-one-day-after-disclosure/)  
-  **SecurityWeek** · Sep 11 · _General awareness item._  
+- [Chromium CVE-2026-76023:  Improper resource control in Linux Toolkit Theming](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-76023)  
+  **Microsoft Security Response Center** · Sep 12 · _General awareness item._  
 
-- [CVE-2026-69461 Windows NTFS Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69461)  
-  **Microsoft Security Response Center** · Sep 11 · _General awareness item._  
+- [Chromium CVE-2026-76022:  Buffer overflow in Network](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-76022)  
+  **Microsoft Security Response Center** · Sep 12 · _General awareness item._  
 
-- [CVE-2026-69468 Windows Volume Manager Extension Driver Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69468)  
-  **Microsoft Security Response Center** · Sep 11 · _General awareness item._  
+- [Chromium CVE-2026-76021:  Use after free in DOM](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-76021)  
+  **Microsoft Security Response Center** · Sep 12 · _General awareness item._  
 
-- [CVE-2026-69732 Windows Link Layer Topology Discovery Protocol Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69732)  
-  **Microsoft Security Response Center** · Sep 11 · _General awareness item._  
+- [Chromium CVE-2026-76019:  Incorrect authorization in Workers](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-76019)  
+  **Microsoft Security Response Center** · Sep 12 · _General awareness item._  
 
-- [CVE-2026-69860 Windows Imaging Component Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69860)  
-  **Microsoft Security Response Center** · Sep 11 · _General awareness item._  
+- [Chromium CVE-2026-76018:  Privilege elevation in Import](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-76018)  
+  **Microsoft Security Response Center** · Sep 12 · _General awareness item._  
 
-- [CVE-2026-70334 Visual Studio Code Security Feature Bypass Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-70334)  
-  **Microsoft Security Response Center** · Sep 11 · _General awareness item._  
+- [Chromium CVE-2026-76017:  Use after free in Chromoting](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-76017)  
+  **Microsoft Security Response Center** · Sep 12 · _General awareness item._  
 
-- [CVE-2026-71336 Windows Work Folder Service Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-71336)  
+- [Chromium CVE-2026-76039:  Incorrect reference resolution in Core](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-76039)  
   **Microsoft Security Response Center** · Sep 11 · _General awareness item._  
 
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [Hackers abused Claude to extract secrets from 1.8M Android apps](https://www.bleepingcomputer.com/news/security/hackers-abused-claude-to-extract-secrets-from-18m-android-apps/) — BleepingComputer
 - [Passkey-themed phishing attacks lead to Microsoft 365 data theft](https://www.bleepingcomputer.com/news/security/passkey-themed-phishing-attacks-lead-to-microsoft-365-data-theft/) — BleepingComputer
 - [Phishing Research Challenges Conventional Security Awareness Testing](https://www.securityweek.com/phishing-research-challenges-conventional-security-awareness-testing/) — SecurityWeek
 - [Artifactory flaws chained in attacks deploying backdoor malware](https://www.bleepingcomputer.com/news/security/artifactory-flaws-chained-in-attacks-deploying-backdoor-malware/) — BleepingComputer
 - [Anthropic Says Seven China-Based AI Labs Ran Industrial-Scale Claude Distillation Attacks](https://thehackernews.com/2026/09/anthropic-says-seven-china-based-ai.html) — The Hacker News
 - [The Self-Expanding Stolen Inference Supply Chain: An AI Agent Harvesting and Re-Serving LLM Access, (Fri, Sep 11th)](https://isc.sans.edu/diary/rss/33332) — SANS Internet Storm Center
-- [Claude Used to Automate Exploitation and Data Theft Across Multiple Victims](https://thehackernews.com/2026/09/claude-used-to-automate-exploitation.html) — The Hacker News
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 18 critical · 80 important · 53 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 17 critical · 80 important · 54 FYI_
