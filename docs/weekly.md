@@ -1,25 +1,30 @@
 # IT Weekly Intelligence Briefing
 **Period:** September 05 – September 12, 2026  
-**Generated:** 2026-09-12 16:44 UTC  
+**Generated:** 2026-09-12 18:56 UTC  
 **Items reviewed:** 150  
 
 ## ⚡ Top Actions This Week
 
-1. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
+1. **Apply emergency patch or mitigation now; check vendor advisory for workarounds.**  
+   _CISA Adds 5 Actively Exploited Artifactory, ScreenConnect, and RouterOS Flaws to KEV_  
+   Source: The Hacker News  
+
+2. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
    _Florida confirms DMV database breached via stolen police account_  
    Source: BleepingComputer  
 
-2. **Validate backups, confirm EDR coverage, and brief incident response team.**  
+3. **Validate backups, confirm EDR coverage, and brief incident response team.**  
    _Ukrainian Conti Ransomware Developer Sentenced to 4 Years in US Prison_  
    Source: SecurityWeek  
-
-3. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _Trezor: 347,000 users targeted in phishing attacks after Brevo breach_  
-   Source: BleepingComputer  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [CISA Adds 5 Actively Exploited Artifactory, ScreenConnect, and RouterOS Flaws to KEV](https://thehackernews.com/2026/09/cisa-adds-5-actively-exploited.html)
+**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Sep 12  
+**Why it matters:** General awareness item.  
+**Recommended action:** Apply emergency patch or mitigation now; check vendor advisory for workarounds.  
 
 ### [Florida confirms DMV database breached via stolen police account](https://www.bleepingcomputer.com/news/security/florida-confirms-dmv-database-breached-via-stolen-police-account/)
 **Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Sep 11  
@@ -45,11 +50,6 @@
 **Source:** The Hacker News &nbsp;·&nbsp; **Date:** Sep 11  
 **Why it matters:** General awareness item.  
 **Recommended action:** Apply emergency patch or mitigation now; check vendor advisory for workarounds.  
-
-### [Cisco FMC Flaws Exploited to Steal Credentials and Deploy Qilin Ransomware](https://thehackernews.com/2026/09/cisco-fmc-flaws-exploited-to-steal.html)
-**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Sep 11  
-**Why it matters:** Elevated ransomware risk across the sector.  
-**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
 
 ---
 
