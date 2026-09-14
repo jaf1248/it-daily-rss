@@ -1,25 +1,30 @@
 # IT Weekly Intelligence Briefing
 **Period:** September 07 – September 14, 2026  
-**Generated:** 2026-09-14 17:38 UTC  
-**Items reviewed:** 150  
+**Generated:** 2026-09-14 21:26 UTC  
+**Items reviewed:** 151  
 
 ## ⚡ Top Actions This Week
 
 1. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
+   _Japan's Digital Agency says VPN flaw exposed 246,000 personnel records_  
+   Source: BleepingComputer  
+
+2. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
    _Personal, Financial Info Exposed in Revolut Data Breach_  
    Source: SecurityWeek  
 
-2. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
+3. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
    _Webinar: How malicious OAuth apps can lead to Google Workspace breaches_  
    Source: BleepingComputer  
-
-3. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _Telus Warns Customers of Account Breaches_  
-   Source: SecurityWeek  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [Japan's Digital Agency says VPN flaw exposed 246,000 personnel records](https://www.bleepingcomputer.com/news/security/japans-digital-agency-says-vpn-flaw-exposed-246-000-personnel-records/)
+**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Sep 14  
+**Why it matters:** Potential credential or data exposure.  
+**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
 ### [Personal, Financial Info Exposed in Revolut Data Breach](https://www.securityweek.com/personal-financial-info-exposed-in-revolut-data-breach/)
 **Source:** SecurityWeek &nbsp;·&nbsp; **Date:** Sep 14  
@@ -46,14 +51,21 @@
 **Why it matters:** Potential credential or data exposure.  
 **Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
-### [CISA Adds 5 Actively Exploited Artifactory, ScreenConnect, and RouterOS Flaws to KEV](https://thehackernews.com/2026/09/cisa-adds-5-actively-exploited.html)
-**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Sep 12  
-**Why it matters:** General awareness item.  
-**Recommended action:** Apply emergency patch or mitigation now; check vendor advisory for workarounds.  
-
 ---
 
 ## 🟠 Important — Review This Week
+
+- [Microsoft releases emergency Windows updates to fix RDS failures](https://www.bleepingcomputer.com/news/microsoft/microsoft-releases-emergency-windows-updates-to-fix-rds-failures/)  
+  **BleepingComputer** · Sep 14 · _General awareness item._  
+
+- [Homebrew 7.0.0 gets built-in GUI, better security controls](https://www.bleepingcomputer.com/news/security/homebrew-700-gets-built-in-gui-better-security-controls/)  
+  **BleepingComputer** · Sep 14 · _General awareness item._  
+
+- [Apple Updates Everything, (Mon, Sep 14th)](https://isc.sans.edu/diary/rss/33336)  
+  **SANS Internet Storm Center** · Sep 14 · _General awareness item._  
+
+- [Telegram Desktop Flaw Lets Hidden JavaScript Exfiltrate Messages From HTML Exports](https://thehackernews.com/2026/09/telegram-desktop-flaw-lets-hidden.html)  
+  **The Hacker News** · Sep 14 · _General awareness item._  
 
 - [Red Heron Exploits Gitea RCE to Compromise 13 Organizations Across Six Countries](https://thehackernews.com/2026/09/red-heron-exploits-gitea-rce-to.html)  
   **The Hacker News** · Sep 14 · _General awareness item._  
@@ -67,29 +79,17 @@
 - [CVE-2026-62721 Windows User-Mode Power Service (UMPS) Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-62721)  
   **Microsoft Security Response Center** · Sep 14 · _General awareness item._  
 
-- [AI Changed the Exposure Problem. Validation Needs to Change With It.](https://thehackernews.com/2026/09/ai-changed-exposure-problem-validation.html)  
-  **The Hacker News** · Sep 14 · _General awareness item._  
-
-- [Microsoft: September updates cause RDS failures on Windows Server](https://www.bleepingcomputer.com/news/microsoft/microsoft-september-updates-cause-rds-failures-on-windows-server/)  
-  **BleepingComputer** · Sep 14 · _General awareness item._  
-
-- [ConnectWise Patches ScreenConnect Vulnerability Exploited in Worm-Like Attacks](https://www.securityweek.com/connectwise-patches-screenconnect-vulnerability-exploited-in-worm-like-attacks/)  
-  **SecurityWeek** · Sep 14 · _General awareness item._  
-
-- [Microsoft: September updates break audio on some Windows PCs](https://www.bleepingcomputer.com/news/microsoft/microsoft-september-updates-break-audio-on-some-windows-pcs/)  
-  **BleepingComputer** · Sep 14 · _General awareness item._  
-
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [Twitch extension with 30K installs exposes users’ OAuth tokens](https://www.bleepingcomputer.com/news/security/twitch-extension-with-30k-installs-exposes-users-oauth-tokens/) — BleepingComputer
+- [Hackers hijack HBO Max Reddit account to push malware in ClickFix ads](https://www.bleepingcomputer.com/news/security/hackers-hijack-hbo-max-reddit-account-to-push-malware-in-clickfix-ads/) — BleepingComputer
 - [New DDRop Attack Breaks Intel TDX and AMD SEV-SNP Confidential Computing](https://thehackernews.com/2026/09/new-ddrop-attack-breaks-intel-tdx-and.html) — The Hacker News
+- [3BB Attacker Used MeshCentral Backdoor for Root Access, Targeted Subscriber Credentials](https://thehackernews.com/2026/09/3bb-attacker-used-meshcentral-backdoor.html) — The Hacker News
 - [Hackers target exposed Vite dev servers to steal AWS, Azure secrets](https://www.bleepingcomputer.com/news/security/hackers-target-exposed-vite-dev-servers-to-steal-aws-azure-secrets/) — BleepingComputer
 - [WordPress Adds Automated Plugin Reviews to Block High-Risk Updates Before Distribution](https://thehackernews.com/2026/09/wordpress-adds-automated-plugin-reviews.html) — The Hacker News
-- [⚡ Weekly Recap: Rogue AI Agents, WeChat Worm, PaperCut Attacks, AI Espionage, and Rootkits](https://thehackernews.com/2026/09/weekly-recap-rogue-ai-agents-wechat.html) — The Hacker News
-- [Beijing Hits Back at Anthropic CEO’s Call to Curb China’s AI Development](https://www.securityweek.com/beijing-hits-back-at-anthropic-ceos-call-to-curb-chinas-ai-development/) — SecurityWeek
-- [New Warnings About the Risks of AI to Humanity Revive a Long-Running Debate](https://www.securityweek.com/new-warnings-about-the-risks-of-ai-to-humanity-revive-a-long-running-debate/) — SecurityWeek
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 15 critical · 81 important · 54 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 15 critical · 83 important · 53 FYI_
