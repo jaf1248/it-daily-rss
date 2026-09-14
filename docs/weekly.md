@@ -1,25 +1,35 @@
 # IT Weekly Intelligence Briefing
 **Period:** September 07 – September 14, 2026  
-**Generated:** 2026-09-14 11:44 UTC  
-**Items reviewed:** 150  
+**Generated:** 2026-09-14 15:02 UTC  
+**Items reviewed:** 149  
 
 ## ⚡ Top Actions This Week
 
 1. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _Telus Warns Customers of Account Breaches_  
+   _Personal, Financial Info Exposed in Revolut Data Breach_  
    Source: SecurityWeek  
 
 2. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _Revolut discloses data breach exposing financial info, passports_  
+   _Webinar: How malicious OAuth apps can lead to Google Workspace breaches_  
    Source: BleepingComputer  
 
 3. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _Attackers Use Passkey Phishing to Hijack Microsoft Cloud Accounts and Exfiltrate Data_  
-   Source: The Hacker News  
+   _Telus Warns Customers of Account Breaches_  
+   Source: SecurityWeek  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [Personal, Financial Info Exposed in Revolut Data Breach](https://www.securityweek.com/personal-financial-info-exposed-in-revolut-data-breach/)
+**Source:** SecurityWeek &nbsp;·&nbsp; **Date:** Sep 14  
+**Why it matters:** Potential credential or data exposure.  
+**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
+
+### [Webinar: How malicious OAuth apps can lead to Google Workspace breaches](https://www.bleepingcomputer.com/news/security/webinar-how-malicious-oauth-apps-can-lead-to-google-workspace-breaches/)
+**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Sep 14  
+**Why it matters:** Potential credential or data exposure.  
+**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
 ### [Telus Warns Customers of Account Breaches](https://www.securityweek.com/telus-warns-customers-of-account-breaches/)
 **Source:** SecurityWeek &nbsp;·&nbsp; **Date:** Sep 14  
@@ -41,19 +51,15 @@
 **Why it matters:** General awareness item.  
 **Recommended action:** Apply emergency patch or mitigation now; check vendor advisory for workarounds.  
 
-### [Florida confirms DMV database breached via stolen police account](https://www.bleepingcomputer.com/news/security/florida-confirms-dmv-database-breached-via-stolen-police-account/)
-**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Sep 11  
-**Why it matters:** Potential credential or data exposure.  
-**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
-
-### [Trezor: 347,000 users targeted in phishing attacks after Brevo breach](https://www.bleepingcomputer.com/news/security/trezor-347-000-users-targeted-in-phishing-attacks-after-brevo-breach/)
-**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Sep 11  
-**Why it matters:** Potential credential or data exposure.  
-**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
-
 ---
 
 ## 🟠 Important — Review This Week
+
+- [Why Patch Automation Needs Brakes, Not Just an Accelerator](https://www.bleepingcomputer.com/news/security/why-patch-automation-needs-brakes-not-just-an-accelerator/)  
+  **BleepingComputer** · Sep 14 · _General awareness item._  
+
+- [AI Changed the Exposure Problem. Validation Needs to Change With It.](https://thehackernews.com/2026/09/ai-changed-exposure-problem-validation.html)  
+  **The Hacker News** · Sep 14 · _General awareness item._  
 
 - [Microsoft: September updates cause RDS failures on Windows Server](https://www.bleepingcomputer.com/news/microsoft/microsoft-september-updates-cause-rds-failures-on-windows-server/)  
   **BleepingComputer** · Sep 14 · _General awareness item._  
@@ -73,23 +79,17 @@
 - [Dutch NCSC: Critical Check Point VPN flaws exploitation is imminent](https://www.bleepingcomputer.com/news/security/dutch-ncsc-critical-check-point-vpn-flaws-exploitation-is-imminent/)  
   **BleepingComputer** · Sep 12 · _General awareness item._  
 
-- [BlueMoon Exploit Kit Chains Recent Chrome, Windows Zero-Days](https://www.securityweek.com/bluemoon-exploit-kit-chains-recent-chrome-windows-zero-days/)  
-  **SecurityWeek** · Sep 12 · _General awareness item._  
-
-- [Chromium CVE-2026-87491:  Out of bounds write in V8](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-87491)  
-  **Microsoft Security Response Center** · Sep 12 · _General awareness item._  
-
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [Beijing Hits Back at Anthropic CEO’s Call to Curb China’s AI Development](https://www.securityweek.com/beijing-hits-back-at-anthropic-ceos-call-to-curb-chinas-ai-development/) — SecurityWeek
+- [New Warnings About the Risks of AI to Humanity Revive a Long-Running Debate](https://www.securityweek.com/new-warnings-about-the-risks-of-ai-to-humanity-revive-a-long-running-debate/) — SecurityWeek
+- [The Race to Control AI and Protect What Makes Us Human](https://www.securityweek.com/the-race-to-control-ai-and-protect-what-makes-us-human/) — SecurityWeek
+- [Chinese Hackers Exploit Critical Tencent Software Flaw for One-Click Code Execution](https://www.securityweek.com/chinese-hackers-exploit-critical-tencent-software-flaw-for-one-click-code-execution/) — SecurityWeek
 - [CISOs Race to Control AI Agents Without Destroying Their Value](https://www.securityweek.com/cisos-race-to-control-ai-agents-without-destroying-their-value/) — SecurityWeek
 - [Three JFrog Artifactory Flaws Exploited for Backdoor Deployment](https://www.securityweek.com/three-jfrog-artifactory-flaws-exploited-for-backdoor-deployment/) — SecurityWeek
-- [Malicious Twitch Browser Extension Leaks OAuth Tokens From Nearly 31,000 Users](https://thehackernews.com/2026/09/malicious-twitch-browser-extension.html) — The Hacker News
-- [ISC Stormcast For Monday, September 14th, 2026 https://isc.sans.edu/podcastdetail/10092, (Mon, Sep 14th)](https://isc.sans.edu/diary/rss/33334) — SANS Internet Storm Center
-- [Anthropic CEO Dario Amodei Says AI Industry Needs to Give Safety Measures Time to Catch Up](https://www.securityweek.com/anthropic-ceo-dario-amodei-says-ai-industry-needs-to-give-safety-measures-time-to-catch-up/) — SecurityWeek
-- [When the Whole Company Adopts AI: What It Does to Your SOC](https://thehackernews.com/2026/09/when-whole-company-adopts-ai-what-it.html) — The Hacker News
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 16 critical · 81 important · 53 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 15 critical · 81 important · 53 FYI_
