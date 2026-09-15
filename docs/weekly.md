@@ -1,25 +1,30 @@
 # IT Weekly Intelligence Briefing
 **Period:** September 08 – September 15, 2026  
-**Generated:** 2026-09-15 05:47 UTC  
+**Generated:** 2026-09-15 11:01 UTC  
 **Items reviewed:** 151  
 
 ## ⚡ Top Actions This Week
 
-1. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
+1. **Check installed firmware version against advisory; schedule patching window.**  
+   _Cisco Secure Email Gateway Flaw Exploited in the Wild, Enables Root Command Execution_  
+   Source: The Hacker News  
+
+2. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
    _Japan's Digital Agency says VPN flaw exposed 246,000 personnel records_  
    Source: BleepingComputer  
 
-2. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
+3. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
    _Personal, Financial Info Exposed in Revolut Data Breach_  
    Source: SecurityWeek  
-
-3. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _Webinar: How malicious OAuth apps can lead to Google Workspace breaches_  
-   Source: BleepingComputer  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [Cisco Secure Email Gateway Flaw Exploited in the Wild, Enables Root Command Execution](https://thehackernews.com/2026/09/cisco-secure-email-gateway-flaw.html)
+**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Sep 15  
+**Why it matters:** General awareness item.  
+**Recommended action:** Check installed firmware version against advisory; schedule patching window.  
 
 ### [Japan's Digital Agency says VPN flaw exposed 246,000 personnel records](https://www.bleepingcomputer.com/news/security/japans-digital-agency-says-vpn-flaw-exposed-246-000-personnel-records/)
 **Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Sep 14  
@@ -46,14 +51,21 @@
 **Why it matters:** Potential credential or data exposure.  
 **Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
-### [Attackers Use Passkey Phishing to Hijack Microsoft Cloud Accounts and Exfiltrate Data](https://thehackernews.com/2026/09/attackers-use-passkey-phishing-to.html)
-**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Sep 13  
-**Why it matters:** Potential credential or data exposure.  
-**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
-
 ---
 
 ## 🟠 Important — Review This Week
+
+- [Microsoft confirms KB5002914 Excel update breaks copy and paste](https://www.bleepingcomputer.com/news/microsoft/microsoft-september-kb5002914-security-update-breaks-excel-copy-and-paste/)  
+  **BleepingComputer** · Sep 15 · _General awareness item._  
+
+- [Cisco patches Secure Email Gateway zero-day exploited in attacks](https://www.bleepingcomputer.com/news/security/new-cisco-secure-email-zero-day-exploited-to-execute-commands-as-root/)  
+  **BleepingComputer** · Sep 15 · _General awareness item._  
+
+- [LiteSpeed Enterprise Flaw Could Let One Hosting Account Gain Root Access on a Shared Server](https://thehackernews.com/2026/09/litespeed-enterprise-flaw-could-let-one.html)  
+  **The Hacker News** · Sep 15 · _General awareness item._  
+
+- [China-Linked Hackers Exploit Chrome-Windows Zero-Day Chain to Deploy GRIMWEDGE](https://thehackernews.com/2026/09/china-linked-hackers-exploit-chrome.html)  
+  **The Hacker News** · Sep 15 · _General awareness item._  
 
 - [Root RCE Zero-Day in Cisco Secure Email Gateway Under Active Exploitation](https://www.securityweek.com/root-rce-zero-day-in-cisco-secure-email-gateway-under-active-exploitation/)  
   **SecurityWeek** · Sep 15 · _General awareness item._  
@@ -67,29 +79,17 @@
 - [Chromium CVE-2026-87544: Incorrect authorization in Extensions](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-87544)  
   **Microsoft Security Response Center** · Sep 15 · _General awareness item._  
 
-- [Chromium CVE-2026-87543: Missing authorization in Core](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-87543)  
-  **Microsoft Security Response Center** · Sep 15 · _General awareness item._  
-
-- [Chromium CVE-2026-87542: Use after free in Input](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-87542)  
-  **Microsoft Security Response Center** · Sep 15 · _General awareness item._  
-
-- [Chromium CVE-2026-87541: Information leak in Navigation](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-87541)  
-  **Microsoft Security Response Center** · Sep 15 · _General awareness item._  
-
-- [Chromium CVE-2026-87540: Incorrect authorization in Isolated](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-87540)  
-  **Microsoft Security Response Center** · Sep 15 · _General awareness item._  
-
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [Suspected Black Axe gang leaders face cybercrime charges in the US](https://www.bleepingcomputer.com/news/security/black-axe-gang-members-extradited-to-us-face-cybercrime-charges/) — BleepingComputer
+- [Microsoft AI Code of Conduct Sets Cyberattack Boundaries, Chain of Command, Safety Constraints](https://www.securityweek.com/microsoft-ai-code-of-conduct-sets-cyberattack-boundaries-chain-of-command-safety-constraints/) — SecurityWeek
+- [Hacked HBO Max Reddit Account Used for Malware Delivery via ClickFix Attack](https://www.securityweek.com/hacked-hbo-reddit-account-used-for-malware-delivery-via-clickfix-attack/) — SecurityWeek
 - [ISC Stormcast For Tuesday, September 15th, 2026 https://isc.sans.edu/podcastdetail/10094, (Tue, Sep 15th)](https://isc.sans.edu/diary/rss/33338) — SANS Internet Storm Center
 - [Twitch extension with 30K installs exposes users’ OAuth tokens](https://www.bleepingcomputer.com/news/security/twitch-extension-with-30k-installs-exposes-users-oauth-tokens/) — BleepingComputer
 - [Hackers hijack HBO Max Reddit account to push malware in ClickFix ads](https://www.bleepingcomputer.com/news/security/hackers-hijack-hbo-max-reddit-account-to-push-malware-in-clickfix-ads/) — BleepingComputer
-- [New DDRop Attack Breaks Intel TDX and AMD SEV-SNP Confidential Computing](https://thehackernews.com/2026/09/new-ddrop-attack-breaks-intel-tdx-and.html) — The Hacker News
-- [3BB Attacker Used MeshCentral Backdoor for Root Access, Targeted Subscriber Credentials](https://thehackernews.com/2026/09/3bb-attacker-used-meshcentral-backdoor.html) — The Hacker News
-- [Hackers target exposed Vite dev servers to steal AWS, Azure secrets](https://www.bleepingcomputer.com/news/security/hackers-target-exposed-vite-dev-servers-to-steal-aws-azure-secrets/) — BleepingComputer
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 15 critical · 84 important · 52 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 15 critical · 85 important · 51 FYI_
