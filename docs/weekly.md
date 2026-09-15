@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
-**Period:** September 07 – September 14, 2026  
-**Generated:** 2026-09-14 21:26 UTC  
+**Period:** September 08 – September 15, 2026  
+**Generated:** 2026-09-15 00:15 UTC  
 **Items reviewed:** 151  
 
 ## ⚡ Top Actions This Week
@@ -55,29 +55,29 @@
 
 ## 🟠 Important — Review This Week
 
-- [Microsoft releases emergency Windows updates to fix RDS failures](https://www.bleepingcomputer.com/news/microsoft/microsoft-releases-emergency-windows-updates-to-fix-rds-failures/)  
-  **BleepingComputer** · Sep 14 · _General awareness item._  
+- [Chromium CVE-2026-87547: Incorrect reference resolution in FileSystem](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-87547)  
+  **Microsoft Security Response Center** · Sep 15 · _General awareness item._  
 
-- [Homebrew 7.0.0 gets built-in GUI, better security controls](https://www.bleepingcomputer.com/news/security/homebrew-700-gets-built-in-gui-better-security-controls/)  
-  **BleepingComputer** · Sep 14 · _General awareness item._  
+- [Chromium CVE-2026-87546: Incorrect type conversion or cast in Safebrowsing](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-87546)  
+  **Microsoft Security Response Center** · Sep 15 · _General awareness item._  
 
-- [Apple Updates Everything, (Mon, Sep 14th)](https://isc.sans.edu/diary/rss/33336)  
-  **SANS Internet Storm Center** · Sep 14 · _General awareness item._  
+- [Chromium CVE-2026-87544: Incorrect authorization in Extensions](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-87544)  
+  **Microsoft Security Response Center** · Sep 15 · _General awareness item._  
 
-- [Telegram Desktop Flaw Lets Hidden JavaScript Exfiltrate Messages From HTML Exports](https://thehackernews.com/2026/09/telegram-desktop-flaw-lets-hidden.html)  
-  **The Hacker News** · Sep 14 · _General awareness item._  
+- [Chromium CVE-2026-87543: Missing authorization in Core](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-87543)  
+  **Microsoft Security Response Center** · Sep 15 · _General awareness item._  
 
-- [Red Heron Exploits Gitea RCE to Compromise 13 Organizations Across Six Countries](https://thehackernews.com/2026/09/red-heron-exploits-gitea-rce-to.html)  
-  **The Hacker News** · Sep 14 · _General awareness item._  
+- [Chromium CVE-2026-87542: Use after free in Input](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-87542)  
+  **Microsoft Security Response Center** · Sep 15 · _General awareness item._  
 
-- [Why Patch Automation Needs Brakes, Not Just an Accelerator](https://www.bleepingcomputer.com/news/security/why-patch-automation-needs-brakes-not-just-an-accelerator/)  
-  **BleepingComputer** · Sep 14 · _General awareness item._  
+- [Chromium CVE-2026-87541: Information leak in Navigation](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-87541)  
+  **Microsoft Security Response Center** · Sep 15 · _General awareness item._  
 
-- [CVE-2026-85921 Windows Secure Kernel Mode Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-85921)  
-  **Microsoft Security Response Center** · Sep 14 · _General awareness item._  
+- [Chromium CVE-2026-87540: Incorrect authorization in Isolated](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-87540)  
+  **Microsoft Security Response Center** · Sep 15 · _General awareness item._  
 
-- [CVE-2026-62721 Windows User-Mode Power Service (UMPS) Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-62721)  
-  **Microsoft Security Response Center** · Sep 14 · _General awareness item._  
+- [Chromium CVE-2026-87539: Observable discrepancy in Network](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-87539)  
+  **Microsoft Security Response Center** · Sep 15 · _General awareness item._  
 
 ---
 
