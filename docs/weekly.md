@@ -1,25 +1,45 @@
 # IT Weekly Intelligence Briefing
 **Period:** September 09 – September 16, 2026  
-**Generated:** 2026-09-16 13:06 UTC  
-**Items reviewed:** 146  
+**Generated:** 2026-09-16 17:57 UTC  
+**Items reviewed:** 147  
 
 ## ⚡ Top Actions This Week
 
 1. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _Webinar: What happens in the first hours of a Google Workspace breach_  
+   _Spain's data agency gets first report of AI-powered data breach_  
    Source: BleepingComputer  
 
 2. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _Threat Intelligence Alone Won't Close the Exploitation Gap_  
-   Source: The Hacker News  
+   _First Agentic AI Data Breach Reported to Spanish Regulator_  
+   Source: SecurityWeek  
 
-3. **Apply emergency patch or mitigation now; check vendor advisory for workarounds.**  
-   _Critical ScreenConnect flaw now actively exploited in attacks_  
-   Source: BleepingComputer  
+3. **Validate backups, confirm EDR coverage, and brief incident response team.**  
+   _Three Threat Groups Target Russian Enterprises With Backdoors, Ransomware, and Wipers_  
+   Source: The Hacker News  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [Spain's data agency gets first report of AI-powered data breach](https://www.bleepingcomputer.com/news/security/spains-data-agency-gets-first-report-of-ai-powered-data-breach/)
+**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Sep 16  
+**Why it matters:** Potential credential or data exposure.  
+**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
+
+### [First Agentic AI Data Breach Reported to Spanish Regulator](https://www.securityweek.com/first-agentic-ai-data-breach-reported-to-spanish-regulator/)
+**Source:** SecurityWeek &nbsp;·&nbsp; **Date:** Sep 16  
+**Why it matters:** Potential credential or data exposure.  
+**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
+
+### [Three Threat Groups Target Russian Enterprises With Backdoors, Ransomware, and Wipers](https://thehackernews.com/2026/09/three-threat-groups-target-russian.html)
+**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Sep 16  
+**Why it matters:** Elevated ransomware risk across the sector.  
+**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
+
+### [The true cost of a ransomware attack, with and without BCDR](https://www.bleepingcomputer.com/news/security/the-true-cost-of-a-ransomware-attack-with-and-without-bcdr/)
+**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Sep 16  
+**Why it matters:** Elevated ransomware risk across the sector.  
+**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
 
 ### [Webinar: What happens in the first hours of a Google Workspace breach](https://www.bleepingcomputer.com/news/security/webinar-what-happens-in-the-first-hours-of-a-google-workspace-breach/)
 **Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Sep 16  
@@ -31,29 +51,15 @@
 **Why it matters:** Potential credential or data exposure.  
 **Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
-### [Critical ScreenConnect flaw now actively exploited in attacks](https://www.bleepingcomputer.com/news/security/cisa-warns-of-hackers-exploiting-critical-screenconnect-flaw/)
-**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Sep 16  
-**Why it matters:** General awareness item.  
-**Recommended action:** Apply emergency patch or mitigation now; check vendor advisory for workarounds.  
-
-### [Acronis cPanel Backup Plugin Vulnerability Exploited in Targeted Attacks](https://thehackernews.com/2026/09/acronis-cpanel-backup-plugin.html)
-**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Sep 16  
-**Why it matters:** General awareness item.  
-**Recommended action:** Review and assess impact on your environment.  
-
-### [280,000 Impacted by Premier Medical Group Data Breach](https://www.securityweek.com/280000-impacted-by-premier-medical-group-data-breach/)
-**Source:** SecurityWeek &nbsp;·&nbsp; **Date:** Sep 16  
-**Why it matters:** Potential credential or data exposure.  
-**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
-
-### [Google fixes actively exploited Android zero-day on Pixel devices](https://www.bleepingcomputer.com/news/security/google-fixes-actively-exploited-android-zero-day-on-pixel-devices/)
-**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Sep 16  
-**Why it matters:** General awareness item.  
-**Recommended action:** Apply emergency patch or mitigation now; check vendor advisory for workarounds.  
-
 ---
 
 ## 🟠 Important — Review This Week
+
+- [Attackers Exploit Issabel Framework Flaw Enabling Unauthenticated OS Command Execution](https://thehackernews.com/2026/09/attackers-exploit-issabel-framework.html)  
+  **The Hacker News** · Sep 16 · _General awareness item._  
+
+- [Pixel Modem Zero-Day Exploited in Targeted Attacks](https://www.securityweek.com/pixel-modem-zero-day-exploited-in-targeted-attacks/)  
+  **SecurityWeek** · Sep 16 · _General awareness item._  
 
 - [Unauthenticated RCE Flaws Could Expose 200,000+ WordPress Sites to Takeover](https://www.securityweek.com/unauthenticated-rce-flaws-could-expose-200000-wordpress-sites-to-takeover/)  
   **SecurityWeek** · Sep 16 · _General awareness item._  
@@ -67,29 +73,23 @@
 - [Chrome, Firefox Updates Patch 115 Vulnerabilities](https://www.securityweek.com/chrome-firefox-updates-patch-115-vulnerabilities/)  
   **SecurityWeek** · Sep 16 · _General awareness item._  
 
-- [Acronis Patches Exploited Vulnerability in cPanel Backup Plugin](https://www.securityweek.com/acronis-patches-exploited-vulnerability-in-cpanel-backup-plugin/)  
-  **SecurityWeek** · Sep 16 · _General awareness item._  
-
-- [Enterprises Warned of Attacks Exploiting WSO2 Vulnerability](https://www.securityweek.com/enterprises-warned-of-attacks-exploiting-wso2-vulnerability/)  
-  **SecurityWeek** · Sep 16 · _General awareness item._  
-
-- [Oracle Patches 800+ Vulnerabilities in September 2026 Security Update](https://www.securityweek.com/oracle-patches-800-vulnerabilities-in-september-2026-security-update/)  
-  **SecurityWeek** · Sep 16 · _General awareness item._  
-
 - [Attackers Exploit WooCommerce Wholesale Lead Capture Flaw to Plant PHP Web Shells](https://thehackernews.com/2026/09/attackers-exploit-woocommerce-wholesale.html)  
+  **The Hacker News** · Sep 16 · _General awareness item._  
+
+- [Active Exploitation Attempts Target WSO2 API Manager JWT Bypass With Forged Admin Tokens](https://thehackernews.com/2026/09/active-exploitation-attempts-target.html)  
   **The Hacker News** · Sep 16 · _General awareness item._  
 
 ---
 
 ## 🔵 FYI — General Awareness
 
-- [Microsoft says Copilot buttons still missing in classic Outlook](https://www.bleepingcomputer.com/news/microsoft/microsoft-shares-workaround-for-missing-outlook-copilot-buttons/) — BleepingComputer
-- [US, UK, Dutch Agencies Expose Iranian ‘Chosen Brick’ Surveillance Malware](https://www.securityweek.com/us-uk-dutch-agencies-expose-iranian-chosen-brick-surveillance-malware/) — SecurityWeek
-- [N0va Phishkit Targets US and EU Businesses: A New Challenge for Identity Security](https://thehackernews.com/2026/09/n0va-phishkit-targets-us-and-eu.html) — The Hacker News
-- [Windows Server 2022 reaches end of mainstream support next month](https://www.bleepingcomputer.com/news/microsoft/windows-server-2022-reaches-end-of-mainstream-support-next-month/) — BleepingComputer
-- [ISC Stormcast For Wednesday, September 16th, 2026 https://isc.sans.edu/podcastdetail/10096, (Wed, Sep 16th)](https://isc.sans.edu/diary/rss/33342) — SANS Internet Storm Center
-- [Malcious Admin Menu Editor Pro plugin backdoors 1,500 WordPress sites](https://www.bleepingcomputer.com/news/security/malcious-admin-menu-editor-pro-plugin-backdoors-1-500-wordpress-sites/) — BleepingComputer
+- [One Extension Could Hijack AI Assistants Across Chrome, Comet, Edge, Opera Neon and Claude](https://thehackernews.com/2026/09/one-extension-could-hijack-ai.html) — The Hacker News
+- [Virtual Event Today: Attack Surface Management Summit](https://www.securityweek.com/virtual-event-today-attack-surface-management-summit-2/) — SecurityWeek
+- [EU Chief Warns of AI-Powered Hacking, Moves to Rein In Social Media](https://www.securityweek.com/eu-chief-warns-of-ai-powered-hacking-moves-to-rein-in-social-media/) — SecurityWeek
+- [AIUC Raises $40 Million to Certify Enterprise AI Agents](https://www.securityweek.com/aiuc-raises-40-million-to-certify-enterprise-ai-agents/) — SecurityWeek
+- [Attacker Hijacks AI Coding Assistant Session, Spreads Shai-Hulud Across About 100 Repositories](https://thehackernews.com/2026/09/attacker-hijacks-ai-coding-assistant.html) — The Hacker News
+- [Parallels Desktop Flaw Lets Non-Admin Mac Users Gain Root, but Intel Macs Can't Install Fix](https://thehackernews.com/2026/09/parallels-desktop-flaw-lets-non-admin.html) — The Hacker News
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 15 critical · 85 important · 46 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 19 critical · 81 important · 47 FYI_
