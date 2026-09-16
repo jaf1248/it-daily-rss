@@ -1,95 +1,95 @@
 # IT Weekly Intelligence Briefing
 **Period:** September 09 – September 16, 2026  
-**Generated:** 2026-09-16 07:11 UTC  
-**Items reviewed:** 149  
+**Generated:** 2026-09-16 13:06 UTC  
+**Items reviewed:** 146  
 
 ## ⚡ Top Actions This Week
 
-1. **Apply emergency patch or mitigation now; check vendor advisory for workarounds.**  
-   _Google fixes actively exploited Android zero-day on Pixel devices_  
+1. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
+   _Webinar: What happens in the first hours of a Google Workspace breach_  
    Source: BleepingComputer  
 
-2. **Apply emergency patch or mitigation now; check vendor advisory for workarounds.**  
-   _Acronis warns of actively exploited flaw in its cPanel backup plugin_  
-   Source: BleepingComputer  
+2. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
+   _Threat Intelligence Alone Won't Close the Exploitation Gap_  
+   Source: The Hacker News  
 
-3. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _CenterPoint Energy confirms customer data stolen in cyberattack_  
+3. **Apply emergency patch or mitigation now; check vendor advisory for workarounds.**  
+   _Critical ScreenConnect flaw now actively exploited in attacks_  
    Source: BleepingComputer  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
 
+### [Webinar: What happens in the first hours of a Google Workspace breach](https://www.bleepingcomputer.com/news/security/webinar-what-happens-in-the-first-hours-of-a-google-workspace-breach/)
+**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Sep 16  
+**Why it matters:** Potential credential or data exposure.  
+**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
+
+### [Threat Intelligence Alone Won't Close the Exploitation Gap](https://thehackernews.com/2026/09/threat-intelligence-alone-wont-close.html)
+**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Sep 16  
+**Why it matters:** Potential credential or data exposure.  
+**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
+
+### [Critical ScreenConnect flaw now actively exploited in attacks](https://www.bleepingcomputer.com/news/security/cisa-warns-of-hackers-exploiting-critical-screenconnect-flaw/)
+**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Sep 16  
+**Why it matters:** General awareness item.  
+**Recommended action:** Apply emergency patch or mitigation now; check vendor advisory for workarounds.  
+
+### [Acronis cPanel Backup Plugin Vulnerability Exploited in Targeted Attacks](https://thehackernews.com/2026/09/acronis-cpanel-backup-plugin.html)
+**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Sep 16  
+**Why it matters:** General awareness item.  
+**Recommended action:** Review and assess impact on your environment.  
+
+### [280,000 Impacted by Premier Medical Group Data Breach](https://www.securityweek.com/280000-impacted-by-premier-medical-group-data-breach/)
+**Source:** SecurityWeek &nbsp;·&nbsp; **Date:** Sep 16  
+**Why it matters:** Potential credential or data exposure.  
+**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
+
 ### [Google fixes actively exploited Android zero-day on Pixel devices](https://www.bleepingcomputer.com/news/security/google-fixes-actively-exploited-android-zero-day-on-pixel-devices/)
 **Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Sep 16  
 **Why it matters:** General awareness item.  
 **Recommended action:** Apply emergency patch or mitigation now; check vendor advisory for workarounds.  
 
-### [Acronis warns of actively exploited flaw in its cPanel backup plugin](https://www.bleepingcomputer.com/news/security/acronis-warns-of-actively-exploited-flaw-in-its-cpanel-backup-plugin/)
-**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Sep 15  
-**Why it matters:** General awareness item.  
-**Recommended action:** Apply emergency patch or mitigation now; check vendor advisory for workarounds.  
-
-### [CenterPoint Energy confirms customer data stolen in cyberattack](https://www.bleepingcomputer.com/news/security/centerpoint-energy-confirms-customer-data-stolen-in-cyberattack/)
-**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Sep 15  
-**Why it matters:** Potential credential or data exposure.  
-**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
-
-### [Texas Utility CenterPoint Energy Confirms Breach After Hacker Leaks Data](https://www.securityweek.com/texas-utility-centerpoint-energy-confirms-breach-after-hacker-leaks-data/)
-**Source:** SecurityWeek &nbsp;·&nbsp; **Date:** Sep 15  
-**Why it matters:** Potential credential or data exposure.  
-**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
-
-### [CISA: Critical VMware RCE flaw now exploited by ransomware gangs](https://www.bleepingcomputer.com/news/security/cisa-critical-vmware-vcenter-rce-flaw-now-exploited-by-ransomware-gangs/)
-**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Sep 15  
-**Why it matters:** Elevated ransomware risk across the sector.  
-**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
-
-### [240,000 Hit by Data Breach at Japan’s Digital Agency](https://www.securityweek.com/240000-hit-by-data-breach-at-japans-digital-agency/)
-**Source:** SecurityWeek &nbsp;·&nbsp; **Date:** Sep 15  
-**Why it matters:** Potential credential or data exposure.  
-**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
-
 ---
 
 ## 🟠 Important — Review This Week
 
+- [Unauthenticated RCE Flaws Could Expose 200,000+ WordPress Sites to Takeover](https://www.securityweek.com/unauthenticated-rce-flaws-could-expose-200000-wordpress-sites-to-takeover/)  
+  **SecurityWeek** · Sep 16 · _General awareness item._  
+
+- [Google Patches Pixel Modem Flaw Amid Signs of Limited Targeted Exploitation](https://thehackernews.com/2026/09/google-patches-pixel-modem-flaw-amid.html)  
+  **The Hacker News** · Sep 16 · _General awareness item._  
+
+- [Hackuity Raises $19 Million for AI-Powered Vulnerability Management](https://www.securityweek.com/hackuity-raises-19-million-for-ai-powered-vulnerability-management/)  
+  **SecurityWeek** · Sep 16 · _General awareness item._  
+
+- [Chrome, Firefox Updates Patch 115 Vulnerabilities](https://www.securityweek.com/chrome-firefox-updates-patch-115-vulnerabilities/)  
+  **SecurityWeek** · Sep 16 · _General awareness item._  
+
+- [Acronis Patches Exploited Vulnerability in cPanel Backup Plugin](https://www.securityweek.com/acronis-patches-exploited-vulnerability-in-cpanel-backup-plugin/)  
+  **SecurityWeek** · Sep 16 · _General awareness item._  
+
+- [Enterprises Warned of Attacks Exploiting WSO2 Vulnerability](https://www.securityweek.com/enterprises-warned-of-attacks-exploiting-wso2-vulnerability/)  
+  **SecurityWeek** · Sep 16 · _General awareness item._  
+
+- [Oracle Patches 800+ Vulnerabilities in September 2026 Security Update](https://www.securityweek.com/oracle-patches-800-vulnerabilities-in-september-2026-security-update/)  
+  **SecurityWeek** · Sep 16 · _General awareness item._  
+
 - [Attackers Exploit WooCommerce Wholesale Lead Capture Flaw to Plant PHP Web Shells](https://thehackernews.com/2026/09/attackers-exploit-woocommerce-wholesale.html)  
   **The Hacker News** · Sep 16 · _General awareness item._  
-
-- [Active Exploitation Attempts Target WSO2 API Manager JWT Bypass With Forged Admin Tokens](https://thehackernews.com/2026/09/active-exploitation-attempts-target.html)  
-  **The Hacker News** · Sep 16 · _General awareness item._  
-
-- [$1 Million Sandbox Challenge Uncovers Linux Kernel Flaws](https://www.securityweek.com/1-million-sandbox-challenge-uncovers-linux-kernel-flaws/)  
-  **SecurityWeek** · Sep 15 · _General awareness item._  
-
-- [Hackers target WordPress sites via third-party WooCommerce plugin](https://www.bleepingcomputer.com/news/security/hackers-target-wordpress-sites-via-third-party-woocommerce-plugin/)  
-  **BleepingComputer** · Sep 15 · _General awareness item._  
-
-- [CVE-2026-68824 Connected User Experiences and Telemetry Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-68824)  
-  **Microsoft Security Response Center** · Sep 15 · _General awareness item._  
-
-- [CVE-2026-68841 Windows NTFS Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-68841)  
-  **Microsoft Security Response Center** · Sep 15 · _General awareness item._  
-
-- [CVE-2026-68847 Connected User Experiences and Telemetry Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-68847)  
-  **Microsoft Security Response Center** · Sep 15 · _General awareness item._  
-
-- [CVE-2026-69406 Windows Kernel Information Disclosure Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69406)  
-  **Microsoft Security Response Center** · Sep 15 · _General awareness item._  
 
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [Microsoft says Copilot buttons still missing in classic Outlook](https://www.bleepingcomputer.com/news/microsoft/microsoft-shares-workaround-for-missing-outlook-copilot-buttons/) — BleepingComputer
+- [US, UK, Dutch Agencies Expose Iranian ‘Chosen Brick’ Surveillance Malware](https://www.securityweek.com/us-uk-dutch-agencies-expose-iranian-chosen-brick-surveillance-malware/) — SecurityWeek
+- [N0va Phishkit Targets US and EU Businesses: A New Challenge for Identity Security](https://thehackernews.com/2026/09/n0va-phishkit-targets-us-and-eu.html) — The Hacker News
+- [Windows Server 2022 reaches end of mainstream support next month](https://www.bleepingcomputer.com/news/microsoft/windows-server-2022-reaches-end-of-mainstream-support-next-month/) — BleepingComputer
 - [ISC Stormcast For Wednesday, September 16th, 2026 https://isc.sans.edu/podcastdetail/10096, (Wed, Sep 16th)](https://isc.sans.edu/diary/rss/33342) — SANS Internet Storm Center
 - [Malcious Admin Menu Editor Pro plugin backdoors 1,500 WordPress sites](https://www.bleepingcomputer.com/news/security/malcious-admin-menu-editor-pro-plugin-backdoors-1-500-wordpress-sites/) — BleepingComputer
-- [Microsoft Commits to Sweeping AI Privacy Rules for Students. Will Other Tech Giants Follow?](https://www.securityweek.com/microsoft-commits-to-sweeping-ai-privacy-rules-for-students-will-other-tech-giants-follow/) — SecurityWeek
-- [“We Think the Security Control Is Working” Is No Longer Good Enough](https://www.securityweek.com/we-think-the-security-control-is-working-is-no-longer-good-enough/) — SecurityWeek
-- [KREMLIN Banking Malware Hijacks Chrome and Edge to Steal Credentials and Session Tokens](https://thehackernews.com/2026/09/kremlin-banking-malware-hijacks-chrome.html) — The Hacker News
-- [Iranian Hackers Use Telegram-Controlled Malware to Spy on Dissidents and Journalists](https://thehackernews.com/2026/09/iranian-hackers-use-telegram-controlled.html) — The Hacker News
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 14 critical · 86 important · 49 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 15 critical · 85 important · 46 FYI_
