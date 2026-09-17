@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
 **Period:** September 10 – September 17, 2026  
-**Generated:** 2026-09-17 14:40 UTC  
+**Generated:** 2026-09-17 18:48 UTC  
 **Items reviewed:** 147  
 
 ## ⚡ Top Actions This Week
@@ -46,10 +46,10 @@
 **Why it matters:** Potential credential or data exposure.  
 **Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
-### [First Agentic AI Data Breach Reported to Spanish Regulator](https://www.securityweek.com/first-agentic-ai-data-breach-reported-to-spanish-regulator/)
-**Source:** SecurityWeek &nbsp;·&nbsp; **Date:** Sep 16  
-**Why it matters:** Potential credential or data exposure.  
-**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
+### [Three Threat Groups Target Russian Enterprises With Backdoors, Ransomware, and Wipers](https://thehackernews.com/2026/09/three-threat-groups-target-russian.html)
+**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Sep 16  
+**Why it matters:** Elevated ransomware risk across the sector.  
+**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
 
 ---
 
@@ -58,38 +58,38 @@
 - [CISA Retires Weekly Vulnerability Bulletin in Risk-Based Pivot](https://www.securityweek.com/cisa-retires-weekly-vulnerability-bulletin-in-risk-based-pivot/)  
   **SecurityWeek** · Sep 17 · _General awareness item._  
 
-- [ISC Patches 14 Vulnerabilities in BIND 9 Security Update](https://www.securityweek.com/isc-patches-14-vulnerabilities-in-bind-9-security-update/)  
-  **SecurityWeek** · Sep 17 · _General awareness item._  
+- [CVE-2026-50311 Windows Server Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-50311)  
+  **Microsoft Security Response Center** · Sep 17 · _General awareness item._  
 
-- [Critical Unbound DNSSEC Validator Flaw Could Allow RCE via a Malicious DNS Zone](https://thehackernews.com/2026/09/critical-unbound-dnssec-validator-flaw.html)  
-  **The Hacker News** · Sep 17 · _General awareness item._  
+- [CVE-2026-55039 Microsoft Excel Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-55039)  
+  **Microsoft Security Response Center** · Sep 17 · _General awareness item._  
 
-- [Cisco Fixes Dozens of Flaws Across FMC, ISE and Nexus Dashboard](https://www.securityweek.com/cisco-fixes-dozens-of-flaws-across-fmc-ise-and-nexus-dashboard/)  
-  **SecurityWeek** · Sep 17 · _General awareness item._  
+- [CVE-2026-66809 Microsoft Office Graphics Component Information Disclosure Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-66809)  
+  **Microsoft Security Response Center** · Sep 17 · _General awareness item._  
 
-- [Can You Prove a New CVE Is Exploitable Before Attackers Do? Learn How in This Webinar](https://thehackernews.com/2026/09/can-you-prove-new-cve-is-exploitable.html)  
-  **The Hacker News** · Sep 17 · _General awareness item._  
+- [CVE-2026-62819 Windows Routing and Remote Access Service (RRAS) Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-62819)  
+  **Microsoft Security Response Center** · Sep 17 · _General awareness item._  
 
-- [OpenAI Reveals Six Model Incidents Involving Hidden Failures and Unauthorized Uploads](https://thehackernews.com/2026/09/openai-reveals-six-model-incidents.html)  
-  **The Hacker News** · Sep 17 · _General awareness item._  
+- [CVE-2026-68794 Microsoft Excel Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-68794)  
+  **Microsoft Security Response Center** · Sep 17 · _General awareness item._  
 
-- [Microsoft shares workaround for Windows domain login issues](https://www.bleepingcomputer.com/news/microsoft/microsoft-releases-workaround-for-windows-domain-login-authentication-issues/)  
-  **BleepingComputer** · Sep 17 · _General awareness item._  
+- [CVE-2026-69724 Microsoft Office SharePoint Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69724)  
+  **Microsoft Security Response Center** · Sep 17 · _General awareness item._  
 
-- [Cisco warns of max severity ISE zero-day exploited in attacks](https://www.bleepingcomputer.com/news/security/cisco-warns-of-identity-service-engine-zero-day-exploited-in-attacks/)  
-  **BleepingComputer** · Sep 17 · _General awareness item._  
+- [CVE-2026-81957 Microsoft Excel Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-81957)  
+  **Microsoft Security Response Center** · Sep 17 · _General awareness item._  
 
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [Brevo supply-chain attack injected ClickFix scripts on customer sites](https://www.bleepingcomputer.com/news/security/brevo-supply-chain-attack-injected-clickfix-scripts-on-customer-sites/) — BleepingComputer
+- [Cyberattacks on Two Oil Tankers Prompt Coast Guard, FBI to Board Vessels](https://www.securityweek.com/cyberattacks-on-two-oil-tankers-prompt-coast-guard-fbi-to-board-vessels/) — SecurityWeek
+- [Improving email security outcomes with real-world Microsoft Defender insights](https://www.microsoft.com/en-us/security/blog/2026/09/17/improving-email-security-outcomes-with-real-world-microsoft-defender-insights/) — Microsoft Security Blog
+- [OpenAI Says Its Models Searched GitHub for Leaked API Keys During Training](https://www.securityweek.com/openai-says-its-models-hunted-github-for-leaked-api-keys-during-training/) — SecurityWeek
+- [LausivLoader analysis, or how to pass data between malware stages, (Thu, Sep 17th)](https://isc.sans.edu/diary/rss/33348) — SANS Internet Storm Center
 - [What Recent AI-Powered Attacks Mean for Your Identity Security](https://www.bleepingcomputer.com/news/security/what-recent-ai-powered-attacks-mean-for-your-identity-security/) — BleepingComputer
-- [Windows 11 24H2 Home and Pro reach end of support in October](https://www.bleepingcomputer.com/news/microsoft/windows-11-24h2-home-and-pro-reach-end-of-support-in-october/) — BleepingComputer
-- [Comp AI Raises $34 Million for AI-Native Compliance and Security](https://www.securityweek.com/comp-ai-raises-34-million-for-ai-native-compliance-and-security/) — SecurityWeek
-- [US takes down NightmareStresser DDoS-for-hire platform](https://www.bleepingcomputer.com/news/security/fbi-seizes-nightmarestresser-service-linked-to-thousands-of-ddos-attacks/) — BleepingComputer
-- [China-Aligned FamousSparrow Deploys SparroWocky Backdoor Across Latin America](https://thehackernews.com/2026/09/china-aligned-famoussparrow-deploys.html) — The Hacker News
-- [Chinese hackers use SparroWocky malware in govt espionage attacks](https://www.bleepingcomputer.com/news/security/chinese-hackers-use-sparrowocky-malware-in-govt-espionage-attacks/) — BleepingComputer
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 17 critical · 84 important · 46 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 15 critical · 83 important · 49 FYI_
