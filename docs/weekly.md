@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
 **Period:** September 10 – September 17, 2026  
-**Generated:** 2026-09-17 21:55 UTC  
+**Generated:** 2026-09-17 23:54 UTC  
 **Items reviewed:** 148  
 
 ## ⚡ Top Actions This Week
@@ -58,25 +58,25 @@
 - [CISA Retires Weekly Vulnerability Bulletin in Risk-Based Pivot](https://www.securityweek.com/cisa-retires-weekly-vulnerability-bulletin-in-risk-based-pivot/)  
   **SecurityWeek** · Sep 17 · _General awareness item._  
 
-- [CVE-2026-69671 Microsoft Office Word Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69671)  
+- [CVE-2026-55946 Microsoft Copilot Information Disclosure Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-55946)  
   **Microsoft Security Response Center** · Sep 17 · _General awareness item._  
 
-- [CVE-2026-69678 Microsoft Office PowerPoint Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69678)  
+- [CVE-2026-70009 Azure Arc Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-70009)  
   **Microsoft Security Response Center** · Sep 17 · _General awareness item._  
 
-- [CVE-2026-69686 Microsoft Office Word Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69686)  
+- [CVE-2026-69865 Microsoft Container Registry Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69865)  
   **Microsoft Security Response Center** · Sep 17 · _General awareness item._  
 
-- [CVE-2026-69722 Microsoft Office Word Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69722)  
+- [CVE-2026-77903 Microsoft Dataverse Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-77903)  
   **Microsoft Security Response Center** · Sep 17 · _General awareness item._  
 
-- [CVE-2026-69734 Microsoft Office Word Information Disclosure Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69734)  
+- [CVE-2026-69399 Azure Arc Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69399)  
   **Microsoft Security Response Center** · Sep 17 · _General awareness item._  
 
-- [CVE-2026-69724 Microsoft Office SharePoint Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69724)  
+- [CVE-2026-68791 Azure Machine Learning Information Disclosure Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-68791)  
   **Microsoft Security Response Center** · Sep 17 · _General awareness item._  
 
-- [CVE-2026-69719 Microsoft Office Word Information Disclosure Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69719)  
+- [CVE-2026-85885 Microsoft 365 Copilot Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-85885)  
   **Microsoft Security Response Center** · Sep 17 · _General awareness item._  
 
 ---
