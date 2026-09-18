@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
 **Period:** September 11 – September 18, 2026  
-**Generated:** 2026-09-18 03:05 UTC  
+**Generated:** 2026-09-18 08:44 UTC  
 **Items reviewed:** 148  
 
 ## ⚡ Top Actions This Week
@@ -55,41 +55,41 @@
 
 ## 🟠 Important — Review This Week
 
-- [CISA Retires Weekly Vulnerability Bulletin in Risk-Based Pivot](https://www.securityweek.com/cisa-retires-weekly-vulnerability-bulletin-in-risk-based-pivot/)  
-  **SecurityWeek** · Sep 17 · _General awareness item._  
+- [Chromium: CVE-2026-0899 Out of bounds memory access in V8](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-0899)  
+  **Microsoft Security Response Center** · Sep 18 · _General awareness item._  
 
-- [CVE-2026-55946 Microsoft Copilot Information Disclosure Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-55946)  
-  **Microsoft Security Response Center** · Sep 17 · _General awareness item._  
+- [Critical Orkes Conductor Vulnerability Exploited in Attacks](https://www.securityweek.com/critical-orkes-conductor-vulnerability-exploited-in-attacks/)  
+  **SecurityWeek** · Sep 18 · _General awareness item._  
 
-- [CVE-2026-70009 Azure Arc Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-70009)  
-  **Microsoft Security Response Center** · Sep 17 · _General awareness item._  
+- [Microsoft fixes broken copy and paste for Excel 2016 users](https://www.bleepingcomputer.com/news/microsoft/microsoft-fixes-broken-copy-and-paste-for-excel-2016-users/)  
+  **BleepingComputer** · Sep 18 · _General awareness item._  
 
-- [CVE-2026-69865 Microsoft Container Registry Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69865)  
-  **Microsoft Security Response Center** · Sep 17 · _General awareness item._  
+- [Check Point, Kaspersky, Tanium Patch Product Vulnerabilities](https://www.securityweek.com/check-point-kaspersky-tanium-patch-product-vulnerabilities/)  
+  **SecurityWeek** · Sep 18 · _General awareness item._  
 
-- [CVE-2026-77903 Microsoft Dataverse Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-77903)  
-  **Microsoft Security Response Center** · Sep 17 · _General awareness item._  
+- [HTTP QUERY Method: The Grey Zone Between GET And POST., (Fri, Sep 18th)](https://isc.sans.edu/diary/rss/33352)  
+  **SANS Internet Storm Center** · Sep 18 · _General awareness item._  
 
-- [CVE-2026-69399 Azure Arc Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69399)  
-  **Microsoft Security Response Center** · Sep 17 · _General awareness item._  
+- [Critical Check Point Management Flaw Lets Unauthenticated Attackers Run Code as Root](https://thehackernews.com/2026/09/critical-check-point-management-server.html)  
+  **The Hacker News** · Sep 17 · _General awareness item._  
 
-- [CVE-2026-68791 Azure Machine Learning Information Disclosure Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-68791)  
-  **Microsoft Security Response Center** · Sep 17 · _General awareness item._  
+- [ThreatsDay: Self-Rewriting Agents, 800+ Flaws Patched, Insider SIM Swaps and 22 More New Stories](https://thehackernews.com/2026/09/threatsday-self-rewriting-agents-800.html)  
+  **The Hacker News** · Sep 17 · _General awareness item._  
 
-- [CVE-2026-85885 Microsoft 365 Copilot Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-85885)  
-  **Microsoft Security Response Center** · Sep 17 · _General awareness item._  
+- [Critical Docker Sandboxes Flaw Lets Malicious Guest Code Read and Modify macOS Host Files](https://thehackernews.com/2026/09/critical-docker-sandboxes-flaw-lets.html)  
+  **The Hacker News** · Sep 17 · _General awareness item._  
 
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [MIND Secures $72 Million for AI-Powered DLP](https://www.securityweek.com/mind-secures-72-million-for-ai-powered-dlp/) — SecurityWeek
+- [RatHat Android Malware Abuses ADB to Retain Shell Access After Uninstall](https://thehackernews.com/2026/09/rathat-android-malware-abuses-adb-to.html) — The Hacker News
 - [ISC Stormcast For Friday, September 18th, 2026 https://isc.sans.edu/podcastdetail/10100, (Fri, Sep 18th)](https://isc.sans.edu/diary/rss/33350) — SANS Internet Storm Center
 - [New RatHat Android malware uses AI to automate device control](https://www.bleepingcomputer.com/news/security/new-rathat-android-malware-uses-ai-to-automate-device-control/) — BleepingComputer
 - [OpenAI details more cases of AI agents taking unauthorized actions](https://www.bleepingcomputer.com/news/security/openai-details-more-cases-of-ai-agents-taking-unauthorized-actions/) — BleepingComputer
 - [Brevo supply-chain attack injected ClickFix scripts on customer sites](https://www.bleepingcomputer.com/news/security/brevo-supply-chain-attack-injected-clickfix-scripts-on-customer-sites/) — BleepingComputer
-- [Cyberattacks on Two Oil Tankers Prompt Coast Guard, FBI to Board Vessels](https://www.securityweek.com/cyberattacks-on-two-oil-tankers-prompt-coast-guard-fbi-to-board-vessels/) — SecurityWeek
-- [From guidance to action: Security fundamentals that materially reduce risk](https://www.microsoft.com/en-us/security/blog/2026/09/17/from-guidance-to-action-security-fundamentals-that-materially-reduce-risk/) — Microsoft Security Blog
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 14 critical · 83 important · 51 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 11 critical · 88 important · 49 FYI_
