@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
 **Period:** September 12 – September 19, 2026  
-**Generated:** 2026-09-19 01:07 UTC  
+**Generated:** 2026-09-19 07:00 UTC  
 **Items reviewed:** 148  
 
 ## ⚡ Top Actions This Week
@@ -55,6 +55,9 @@
 
 ## 🟠 Important — Review This Week
 
+- [HTTP QUERY Method: The Grey Zone Between GET And POST., (Fri, Sep 18th)](https://isc.sans.edu/diary/rss/33352)  
+  **SANS Internet Storm Center** · Sep 19 · _General awareness item._  
+
 - [New WordPress Click2Shell Flaw Forces Theme Installs, Can Chain to Code Execution](https://thehackernews.com/2026/09/new-wordpress-click2shell-flaw-forces.html)  
   **The Hacker News** · Sep 18 · _General awareness item._  
 
@@ -75,9 +78,6 @@
 
 - [Chromium: CVE-2026-0899 Out of bounds memory access in V8](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-0899)  
   **Microsoft Security Response Center** · Sep 18 · _General awareness item._  
-
-- [Critical Orkes Conductor Vulnerability Exploited in Attacks](https://www.securityweek.com/critical-orkes-conductor-vulnerability-exploited-in-attacks/)  
-  **SecurityWeek** · Sep 18 · _General awareness item._  
 
 ---
 
