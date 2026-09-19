@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
 **Period:** September 12 – September 19, 2026  
-**Generated:** 2026-09-19 18:24 UTC  
+**Generated:** 2026-09-19 21:17 UTC  
 **Items reviewed:** 148  
 
 ## ⚡ Top Actions This Week
@@ -83,9 +83,9 @@
 
 ## 🔵 FYI — General Awareness
 
+- [Claude Opus 5 Helped Researchers Take Over OpenAI Staff Accounts via Chained Flaws](https://thehackernews.com/2026/09/claude-opus-5-helped-researchers-take.html) — The Hacker News
 - [TigerByte Cyber Emerges From Stealth With $3 Million in Funding](https://www.securityweek.com/tigerbyte-cyber-emerges-from-stealth-with-3-million-in-funding/) — SecurityWeek
 - [North Korean WaterPlum hackers infected 30,000 devices worldwide](https://www.bleepingcomputer.com/news/security/north-korean-waterplum-hackers-infected-30-000-devices-worldwide/) — BleepingComputer
-- [Claude Opus 5 Helped Researchers Take Over OpenAI Staff Accounts via Chained Flaws](https://thehackernews.com/2026/09/claude-opus-5-helped-researchers-take.html) — The Hacker News
 - [Viral AI actress' hotline face-scans every caller, watches their mood](https://www.bleepingcomputer.com/news/security/viral-ai-actress-hotline-face-scans-every-caller-watches-their-mood/) — BleepingComputer
 - [Public Exploits Released for Four Linux Kernel Flaws That Enable Local Root](https://thehackernews.com/2026/09/public-exploits-released-for-four-linux.html) — The Hacker News
 - [Transparent Tribe Deploys New Rust Backdoor Using Private GitHub Repositories for C2](https://thehackernews.com/2026/09/transparent-tribe-deploys-new-rust.html) — The Hacker News
