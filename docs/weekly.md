@@ -1,25 +1,30 @@
 # IT Weekly Intelligence Briefing
 **Period:** September 14 – September 21, 2026  
-**Generated:** 2026-09-21 17:55 UTC  
+**Generated:** 2026-09-21 21:41 UTC  
 **Items reviewed:** 148  
 
 ## ⚡ Top Actions This Week
 
 1. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
+   _BigCommerce alerts merchants of data breach linked to Ribon apps_  
+   Source: BleepingComputer  
+
+2. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
    _Google Hit With $463 Million Fine for EU Location Data Rule Breach_  
    Source: SecurityWeek  
 
-2. **Audit third-party software dependencies and review vendor access.**  
+3. **Audit third-party software dependencies and review vendor access.**  
    _CrowdSec Confirms Source Code Stolen in Supply Chain Attack_  
-   Source: SecurityWeek  
-
-3. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _Google Confirms Gemini AI Breached Three Firms_  
    Source: SecurityWeek  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [BigCommerce alerts merchants of data breach linked to Ribon apps](https://www.bleepingcomputer.com/news/security/bigcommerce-alerts-merchants-of-data-breach-linked-to-ribon-apps/)
+**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Sep 21  
+**Why it matters:** Potential credential or data exposure.  
+**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
 ### [Google Hit With $463 Million Fine for EU Location Data Rule Breach](https://www.securityweek.com/google-hit-with-463-million-fine-for-eu-location-data-rule-breach/)
 **Source:** SecurityWeek &nbsp;·&nbsp; **Date:** Sep 21  
@@ -46,14 +51,12 @@
 **Why it matters:** Elevated ransomware risk across the sector.  
 **Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
 
-### [Identity Visibility in 2026: The Foundation of Identity Security](https://thehackernews.com/2026/09/identity-visibility-in-2026-foundation.html)
-**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Sep 19  
-**Why it matters:** Potential credential or data exposure.  
-**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
-
 ---
 
 ## 🟠 Important — Review This Week
+
+- [WordPress Click2Shell flaw lets hackers execute PHP on the server](https://www.bleepingcomputer.com/news/security/wordpress-click2shell-flaw-lets-hackers-execute-php-on-the-server/)  
+  **BleepingComputer** · Sep 21 · _General awareness item._  
 
 - [Microsoft fixes broken Excel copy and paste for all Office users](https://www.bleepingcomputer.com/news/microsoft/microsoft-fixes-broken-excel-copy-and-paste-for-all-office-users/)  
   **BleepingComputer** · Sep 21 · _General awareness item._  
@@ -76,19 +79,16 @@
 - [CVE-2026-78524 Microsoft Office Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-78524)  
   **Microsoft Security Response Center** · Sep 21 · _General awareness item._  
 
-- [CVE-2026-78526 Microsoft Office Word Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-78526)  
-  **Microsoft Security Response Center** · Sep 21 · _General awareness item._  
-
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [CISA alerts of active exploitation of three Linux kernel flaws](https://www.bleepingcomputer.com/news/security/cisa-alerts-of-active-exploitation-of-three-linux-kernel-flaws/) — BleepingComputer
 - [Microsoft to retire Microsoft 365 Companion apps in December](https://www.bleepingcomputer.com/news/microsoft/microsoft-to-retire-microsoft-365-companion-apps-in-december/) — BleepingComputer
+- [Fake LastPass Authenticator Installer Abuses Microsoft-Signed Driver to Kill Antivirus and EDR](https://thehackernews.com/2026/09/fake-lastpass-authenticator-installer.html) — The Hacker News
+- [Contagious Interview Campaign Compromises 30,000 Devices, Steals $10.71M in Crypto](https://thehackernews.com/2026/09/contagious-interview-campaign.html) — The Hacker News
+- [Google Fined €403 Million Over GDPR Violations Tied to Location Data](https://thehackernews.com/2026/09/google-fined-403-million-over-gdpr.html) — The Hacker News
 - [Fake LastPass Installers Push Kernel-Level EDR Killer, ‘Rapuncel’ Stealer](https://www.securityweek.com/fake-lastpass-installers-push-kernel-level-edr-killer-rapuncel-stealer/) — SecurityWeek
-- [Google fined €403 million over location data privacy violations](https://www.bleepingcomputer.com/news/security/google-fined-403-million-over-location-data-privacy-violations/) — BleepingComputer
-- [CISO Conversations: Noopur Davis – The Accidental Global CISO at Comcast](https://www.securityweek.com/ciso-conversations-noopur-davis-the-accidental-global-ciso-at-comcast/) — SecurityWeek
-- [TASK#STOMP PowerShell Backdoor Steals Documents, Wi-Fi Passwords, and Clipboard Data](https://thehackernews.com/2026/09/taskstomp-powershell-backdoor-steals.html) — The Hacker News
-- [Dragos Completes NetRise and runZero Acquisitions Following Accenture Deal](https://www.securityweek.com/dragos-completes-netrise-and-runzero-acquisitions-following-accenture-deal/) — SecurityWeek
 
 ---
 
