@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
 **Period:** September 14 – September 21, 2026  
-**Generated:** 2026-09-21 00:53 UTC  
+**Generated:** 2026-09-21 05:53 UTC  
 **Items reviewed:** 148  
 
 ## ⚡ Top Actions This Week
@@ -83,12 +83,12 @@
 
 ## 🔵 FYI — General Awareness
 
+- [ISC Stormcast For Monday, September 21st, 2026 https://isc.sans.edu/podcastdetail/10102, (Mon, Sep 21st)](https://isc.sans.edu/diary/rss/33354) — SANS Internet Storm Center
 - [Malicious npm packages evade install-script defenses at runtime](https://www.bleepingcomputer.com/news/security/malicious-npm-packages-evade-install-script-defenses-at-runtime/) — BleepingComputer
 - [Claude Opus 5 Helped Researchers Take Over OpenAI Staff Accounts via Chained Flaws](https://thehackernews.com/2026/09/claude-opus-5-helped-researchers-take.html) — The Hacker News
 - [TigerByte Cyber Emerges From Stealth With $3 Million in Funding](https://www.securityweek.com/tigerbyte-cyber-emerges-from-stealth-with-3-million-in-funding/) — SecurityWeek
 - [North Korean WaterPlum hackers infected 30,000 devices worldwide](https://www.bleepingcomputer.com/news/security/north-korean-waterplum-hackers-infected-30-000-devices-worldwide/) — BleepingComputer
 - [Viral AI actress' hotline face-scans every caller, watches their mood](https://www.bleepingcomputer.com/news/security/viral-ai-actress-hotline-face-scans-every-caller-watches-their-mood/) — BleepingComputer
-- [Public Exploits Released for Four Linux Kernel Flaws That Enable Local Root](https://thehackernews.com/2026/09/public-exploits-released-for-four-linux.html) — The Hacker News
 
 ---
 
