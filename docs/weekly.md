@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
 **Period:** September 14 – September 21, 2026  
-**Generated:** 2026-09-21 11:57 UTC  
+**Generated:** 2026-09-21 15:07 UTC  
 **Items reviewed:** 148  
 
 ## ⚡ Top Actions This Week
@@ -55,41 +55,41 @@
 
 ## 🟠 Important — Review This Week
 
-- [Microsoft: September updates break File History backup feature](https://www.bleepingcomputer.com/news/microsoft/microsoft-september-updates-break-file-history-backup-feature/)  
+- [Microsoft fixes broken Excel copy and paste for all Office users](https://www.bleepingcomputer.com/news/microsoft/microsoft-fixes-broken-excel-copy-and-paste-for-all-office-users/)  
   **BleepingComputer** · Sep 21 · _General awareness item._  
 
-- [Researchers escape OpenAI Codex sandbox to run commands on host](https://www.bleepingcomputer.com/news/security/researchers-escape-openai-codex-sandbox-to-run-commands-on-host/)  
-  **BleepingComputer** · Sep 20 · _General awareness item._  
+- [⚡ Weekly Recap: Cisco 0-Day, AI Agent RCE, ClickFix Attacks, ClickFix Surge, and Browser Hijacks](https://thehackernews.com/2026/09/weekly-recap-cisco-0-day-ai-agent-rce.html)  
+  **The Hacker News** · Sep 21 · _General awareness item._  
 
-- [BragJack attacks hijack AI browser agents through malicious extensions](https://www.bleepingcomputer.com/news/security/bragjack-attacks-hijack-ai-browser-agents-through-malicious-extensions/)  
-  **BleepingComputer** · Sep 19 · _General awareness item._  
+- [FBI's CJIS v6.1: What Security Teams Need to Know.](https://www.bleepingcomputer.com/news/security/fbis-cjis-v61-what-security-teams-need-to-know/)  
+  **BleepingComputer** · Sep 21 · _General awareness item._  
 
-- [Can You Prove a New CVE Is Exploitable Before Attackers Do? Learn How in This Webinar](https://thehackernews.com/2026/09/can-you-prove-new-cve-is-exploitable.html)  
-  **The Hacker News** · Sep 19 · _General awareness item._  
+- [CVE-2026-68825 Windows Bind Filter Driver Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-68825)  
+  **Microsoft Security Response Center** · Sep 21 · _General awareness item._  
 
-- [SolarWinds Patches ARM Hard-Coded Key Flaw Enabling Unauthenticated RCE](https://thehackernews.com/2026/09/solarwinds-patches-arm-hard-coded-key.html)  
-  **The Hacker News** · Sep 19 · _General awareness item._  
+- [CVE-2026-78517 Microsoft Office Word Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-78517)  
+  **Microsoft Security Response Center** · Sep 21 · _General awareness item._  
 
-- [Google Gemini Broke Into Real Company Systems After Security Test Domain Mix-Up](https://thehackernews.com/2026/09/google-gemini-broke-into-real-company.html)  
-  **The Hacker News** · Sep 19 · _General awareness item._  
+- [CVE-2026-77901 Microsoft Office Word Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-77901)  
+  **Microsoft Security Response Center** · Sep 21 · _General awareness item._  
 
-- [HTTP QUERY Method: The Grey Zone Between GET And POST., (Fri, Sep 18th)](https://isc.sans.edu/diary/rss/33352)  
-  **SANS Internet Storm Center** · Sep 19 · _General awareness item._  
+- [CVE-2026-78524 Microsoft Office Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-78524)  
+  **Microsoft Security Response Center** · Sep 21 · _General awareness item._  
 
-- [New WordPress Click2Shell Flaw Forces Theme Installs, Can Chain to Code Execution](https://thehackernews.com/2026/09/new-wordpress-click2shell-flaw-forces.html)  
-  **The Hacker News** · Sep 18 · _General awareness item._  
+- [CVE-2026-78526 Microsoft Office Word Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-78526)  
+  **Microsoft Security Response Center** · Sep 21 · _General awareness item._  
 
 ---
 
 ## 🔵 FYI — General Awareness
 
-- [TerminalFix: PNG Steganography, (Mon, Sep 21st)](https://isc.sans.edu/diary/rss/33318) — SANS Internet Storm Center
-- [Colorado Water Utilities Hit by Cyberattacks Targeting OT Systems](https://www.securityweek.com/colorado-water-utilities-hit-by-cyberattacks-targeting-ot-systems/) — SecurityWeek
-- [Organizations Warned of 3 Exploited Linux Kernel Vulnerabilities](https://www.securityweek.com/organizations-warned-of-3-exploited-linux-kernel-vulnerabilities/) — SecurityWeek
-- [ClickFix Lures Deploy ChainScript RAT Using Polygon to Rotate C2 Infrastructure](https://thehackernews.com/2026/09/clickfix-lures-deploy-chainscript-rat.html) — The Hacker News
-- [ISC Stormcast For Monday, September 21st, 2026 https://isc.sans.edu/podcastdetail/10102, (Mon, Sep 21st)](https://isc.sans.edu/diary/rss/33354) — SANS Internet Storm Center
-- [Malicious npm packages evade install-script defenses at runtime](https://www.bleepingcomputer.com/news/security/malicious-npm-packages-evade-install-script-defenses-at-runtime/) — BleepingComputer
+- [CISO Conversations: Noopur Davis – The Accidental Global CISO at Comcast](https://www.securityweek.com/ciso-conversations-noopur-davis-the-accidental-global-ciso-at-comcast/) — SecurityWeek
+- [TASK#STOMP PowerShell Backdoor Steals Documents, Wi-Fi Passwords, and Clipboard Data](https://thehackernews.com/2026/09/taskstomp-powershell-backdoor-steals.html) — The Hacker News
+- [Dragos Completes NetRise and runZero Acquisitions Following Accenture Deal](https://www.securityweek.com/dragos-completes-netrise-and-runzero-acquisitions-following-accenture-deal/) — SecurityWeek
+- [Microsoft reminds admins to migrate Entra ID users to passkeys](https://www.bleepingcomputer.com/news/microsoft/microsoft-reminds-admins-to-migrate-entra-id-users-to-passkeys/) — BleepingComputer
+- [RatHat Android Trojan Uses AI for Automation](https://www.securityweek.com/rathat-android-trojan-uses-ai-for-automation/) — SecurityWeek
+- [Rust Team Members and Popular Crate Owners Targeted via Video Calls](https://www.securityweek.com/rust-team-members-and-popular-crate-owners-targeted-via-video-calls/) — SecurityWeek
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 18 critical · 85 important · 45 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 16 critical · 83 important · 49 FYI_
