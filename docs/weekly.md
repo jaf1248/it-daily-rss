@@ -1,25 +1,30 @@
 # IT Weekly Intelligence Briefing
 **Period:** September 15 – September 22, 2026  
-**Generated:** 2026-09-22 19:33 UTC  
+**Generated:** 2026-09-22 22:43 UTC  
 **Items reviewed:** 149  
 
 ## ⚡ Top Actions This Week
 
 1. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _ShinyHunters claims FBI hack, data theft in PeopleSoft zero-day breach_  
+   _Sweden fines Miljödata $183,000 over breach affecting 2.2 million_  
    Source: BleepingComputer  
 
 2. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _Webinar tomorrow: Inside real-world Google Workspace breaches_  
+   _ShinyHunters claims FBI hack, data theft in PeopleSoft zero-day breach_  
    Source: BleepingComputer  
 
-3. **Apply emergency patch or mitigation now; check vendor advisory for workarounds.**  
-   _New CVSS 10.0 VeloCloud Orchestrator Flaw Actively Exploited in Certificate-Based Setups_  
-   Source: The Hacker News  
+3. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
+   _Webinar tomorrow: Inside real-world Google Workspace breaches_  
+   Source: BleepingComputer  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [Sweden fines Miljödata $183,000 over breach affecting 2.2 million](https://www.bleepingcomputer.com/news/security/sweden-fines-milj-data-183-000-over-breach-affecting-22-million/)
+**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Sep 22  
+**Why it matters:** Potential credential or data exposure.  
+**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
 ### [ShinyHunters claims FBI hack, data theft in PeopleSoft zero-day breach](https://www.bleepingcomputer.com/news/security/shinyhunters-claims-fbi-hack-data-theft-in-peoplesoft-zero-day-breach/)
 **Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Sep 22  
@@ -46,11 +51,6 @@
 **Why it matters:** Potential credential or data exposure.  
 **Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
-### [Jade Sleet Linked to Indian IT Provider Breach With FLATROOF and ROOFDECK Backdoors](https://thehackernews.com/2026/09/jade-sleet-linked-to-indian-it-provider.html)
-**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Sep 21  
-**Why it matters:** Potential credential or data exposure.  
-**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
-
 ---
 
 ## 🟠 Important — Review This Week
@@ -70,26 +70,26 @@
 - [Researcher Drops BigDiskBuster Zero-Day PoC That Blocks Microsoft Defender Updates](https://thehackernews.com/2026/09/researcher-drops-bigdiskbuster-zero-day.html)  
   **The Hacker News** · Sep 22 · _General awareness item._  
 
-- [D-Link warns of max severity zero-day bug in DIR-822A routers](https://www.bleepingcomputer.com/news/security/d-link-warns-of-max-severity-zero-day-bug-in-dir-822a-routers/)  
-  **BleepingComputer** · Sep 22 · _General awareness item._  
+- [CVE-2026-57099 ASP.NET Core Denial of Service Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-57099)  
+  **Microsoft Security Response Center** · Sep 22 · _General awareness item._  
 
-- [Recent ZyXEL Switch Vulnerability Exploited by Chinese Hackers](https://www.securityweek.com/recent-zyxel-switch-vulnerability-exploited-by-chinese-hackers/)  
-  **SecurityWeek** · Sep 22 · _General awareness item._  
+- [CVE-2026-77886 Windows DHCP Server Denial of Service Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-77886)  
+  **Microsoft Security Response Center** · Sep 22 · _General awareness item._  
 
-- [DORA Year Two: Can Your SOC Actually See the Attack?](https://thehackernews.com/2026/09/dora-year-two-can-your-soc-actually-see.html)  
-  **The Hacker News** · Sep 22 · _General awareness item._  
+- [CVE-2026-68824 Connected User Experiences and Telemetry Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-68824)  
+  **Microsoft Security Response Center** · Sep 22 · _General awareness item._  
 
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [Rogue external MFA providers can steal passwords during logins](https://www.bleepingcomputer.com/news/security/rogue-external-mfa-providers-can-steal-passwords-during-logins/) — BleepingComputer
+- [Chinese hackers exploit WordPress, Zyxel flaws to steal govt data](https://www.bleepingcomputer.com/news/security/chinese-hackers-exploit-multiple-technologies-to-steal-govt-data/) — BleepingComputer
 - [The Truth about GET and HTTP Standards, (Tue, Sep 22nd)](https://isc.sans.edu/diary/rss/33358) — SANS Internet Storm Center
 - [New ClosedQuorum Windows malware uses AI for attack decisions](https://www.bleepingcomputer.com/news/security/new-closedquorum-windows-malware-uses-ai-for-attack-decisions/) — BleepingComputer
 - [Malicious npm Package Poses as Twilio Bug-Bounty Probe, Can Exfiltrate Credentials](https://thehackernews.com/2026/09/malicious-npm-package-poses-as-twilio.html) — The Hacker News
 - [BigCommerce Data Stolen via Ribon Apps Hack](https://www.securityweek.com/bigcommerce-data-stolen-via-ribon-apps-hack/) — SecurityWeek
-- [Reducing shadow IT visibility gaps with Wazuh](https://www.bleepingcomputer.com/news/security/reducing-shadow-it-visibility-gaps-with-wazuh/) — BleepingComputer
-- [Microsoft Takes Down EvilTokens Device-Code Phishing Service Tied to 12,000 Inbox Compromises](https://thehackernews.com/2026/09/microsoft-takes-down-eviltokens-device.html) — The Hacker News
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 12 critical · 90 important · 47 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 13 critical · 89 important · 47 FYI_
