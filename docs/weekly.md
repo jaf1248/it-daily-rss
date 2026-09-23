@@ -1,25 +1,30 @@
 # IT Weekly Intelligence Briefing
 **Period:** September 16 – September 23, 2026  
-**Generated:** 2026-09-23 01:14 UTC  
-**Items reviewed:** 149  
+**Generated:** 2026-09-23 07:19 UTC  
+**Items reviewed:** 150  
 
 ## ⚡ Top Actions This Week
 
 1. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
+   _ShinyHunters Claims FBI Breach, Says It Stole Data on Agents and Job Applicants_  
+   Source: The Hacker News  
+
+2. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
    _Sweden fines Miljödata $183,000 over breach affecting 2.2 million_  
    Source: BleepingComputer  
 
-2. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _ShinyHunters claims FBI hack, data theft in PeopleSoft zero-day breach_  
-   Source: BleepingComputer  
-
 3. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _Webinar tomorrow: Inside real-world Google Workspace breaches_  
+   _ShinyHunters claims FBI hack, data theft in PeopleSoft zero-day breach_  
    Source: BleepingComputer  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [ShinyHunters Claims FBI Breach, Says It Stole Data on Agents and Job Applicants](https://thehackernews.com/2026/09/shinyhunters-claims-fbi-breach-says-it.html)
+**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Sep 23  
+**Why it matters:** Potential credential or data exposure.  
+**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
 ### [Sweden fines Miljödata $183,000 over breach affecting 2.2 million](https://www.bleepingcomputer.com/news/security/sweden-fines-milj-data-183-000-over-breach-affecting-22-million/)
 **Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Sep 22  
@@ -46,50 +51,45 @@
 **Why it matters:** Potential credential or data exposure.  
 **Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
-### [Google Hit With $463 Million Fine for EU Location Data Rule Breach](https://www.securityweek.com/google-hit-with-463-million-fine-for-eu-location-data-rule-breach/)
-**Source:** SecurityWeek &nbsp;·&nbsp; **Date:** Sep 21  
-**Why it matters:** Potential credential or data exposure.  
-**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
-
 ---
 
 ## 🟠 Important — Review This Week
 
-- [Check Point Warns of Management Server Zero-Day Exploited in Targeted Attacks](https://thehackernews.com/2026/09/check-point-warns-of-management-server.html)  
-  **The Hacker News** · Sep 22 · _General awareness item._  
+- [Chromium CVE-2026-87564: Type confusion in V8](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-87564)  
+  **Microsoft Security Response Center** · Sep 23 · _General awareness item._  
 
-- [WordPress Issues Patch for Critical Flaw That Can Enable Code Execution on Some Servers](https://thehackernews.com/2026/09/wordpress-issues-patch-for-critical.html)  
-  **The Hacker News** · Sep 22 · _General awareness item._  
+- [Chromium CVE-2026-87587: Use after free in V8](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-87587)  
+  **Microsoft Security Response Center** · Sep 23 · _General awareness item._  
 
-- [Critical Bifrost AI Gateway Flaw Lets Attackers Run Commands Without Credentials](https://thehackernews.com/2026/09/critical-bifrost-ai-gateway-flaw-lets.html)  
-  **The Hacker News** · Sep 22 · _General awareness item._  
+- [Chromium CVE-2026-87612: Type confusion in V8](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-87612)  
+  **Microsoft Security Response Center** · Sep 23 · _General awareness item._  
 
-- [Check Point warns of Management Server zero-day exploited in attacks](https://www.bleepingcomputer.com/news/security/check-point-patches-management-server-zero-day-exploited-in-attacks/)  
-  **BleepingComputer** · Sep 22 · _General awareness item._  
+- [Chromium CVE-2026-87489: Memory corruption in V8](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-87489)  
+  **Microsoft Security Response Center** · Sep 23 · _General awareness item._  
 
-- [Researcher Drops BigDiskBuster Zero-Day PoC That Blocks Microsoft Defender Updates](https://thehackernews.com/2026/09/researcher-drops-bigdiskbuster-zero-day.html)  
-  **The Hacker News** · Sep 22 · _General awareness item._  
+- [Chromium CVE-2026-87536: Use after free in V8](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-87536)  
+  **Microsoft Security Response Center** · Sep 23 · _General awareness item._  
 
-- [CVE-2026-57099 ASP.NET Core Denial of Service Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-57099)  
-  **Microsoft Security Response Center** · Sep 22 · _General awareness item._  
+- [Chromium CVE-2026-87625: Use after free in V8](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-87625)  
+  **Microsoft Security Response Center** · Sep 23 · _General awareness item._  
 
-- [CVE-2026-77886 Windows DHCP Server Denial of Service Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-77886)  
-  **Microsoft Security Response Center** · Sep 22 · _General awareness item._  
+- [Chromium CVE-2026-87601: Race condition in V8](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-87601)  
+  **Microsoft Security Response Center** · Sep 23 · _General awareness item._  
 
-- [CVE-2026-68824 Connected User Experiences and Telemetry Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-68824)  
-  **Microsoft Security Response Center** · Sep 22 · _General awareness item._  
+- [F5 patches BIG-IP APM zero-day flaw exploited in RCE attacks](https://www.bleepingcomputer.com/news/security/f5-warns-of-big-ip-apm-remote-code-execution-zero-day-exploited-in-attacks/)  
+  **BleepingComputer** · Sep 23 · _General awareness item._  
 
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [ShinyHunters Claims FBI Hack, Demands Retraction of Threat Report](https://www.securityweek.com/shinyhunters-claims-fbi-hack-demands-retraction-of-threat-report/) — SecurityWeek
+- [ISC Stormcast For Wednesday, September 23rd, 2026 https://isc.sans.edu/podcastdetail/10106, (Wed, Sep 23rd)](https://isc.sans.edu/diary/rss/33362) — SANS Internet Storm Center
 - [Macfinger ClickFix campaign, (Tue, Sep 22nd)](https://isc.sans.edu/diary/rss/33360) — SANS Internet Storm Center
 - [Rogue external MFA providers can steal passwords during logins](https://www.bleepingcomputer.com/news/security/rogue-external-mfa-providers-can-steal-passwords-during-logins/) — BleepingComputer
 - [Chinese hackers exploit WordPress, Zyxel flaws to steal govt data](https://www.bleepingcomputer.com/news/security/chinese-hackers-exploit-multiple-technologies-to-steal-govt-data/) — BleepingComputer
 - [The Truth about GET and HTTP Standards, (Tue, Sep 22nd)](https://isc.sans.edu/diary/rss/33358) — SANS Internet Storm Center
-- [New ClosedQuorum Windows malware uses AI for attack decisions](https://www.bleepingcomputer.com/news/security/new-closedquorum-windows-malware-uses-ai-for-attack-decisions/) — BleepingComputer
-- [Malicious npm Package Poses as Twilio Bug-Bounty Probe, Can Exfiltrate Credentials](https://thehackernews.com/2026/09/malicious-npm-package-poses-as-twilio.html) — The Hacker News
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 13 critical · 89 important · 47 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 12 critical · 90 important · 48 FYI_
