@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
-**Period:** September 15 – September 22, 2026  
-**Generated:** 2026-09-22 22:43 UTC  
+**Period:** September 16 – September 23, 2026  
+**Generated:** 2026-09-23 01:14 UTC  
 **Items reviewed:** 149  
 
 ## ⚡ Top Actions This Week
@@ -83,12 +83,12 @@
 
 ## 🔵 FYI — General Awareness
 
+- [Macfinger ClickFix campaign, (Tue, Sep 22nd)](https://isc.sans.edu/diary/rss/33360) — SANS Internet Storm Center
 - [Rogue external MFA providers can steal passwords during logins](https://www.bleepingcomputer.com/news/security/rogue-external-mfa-providers-can-steal-passwords-during-logins/) — BleepingComputer
 - [Chinese hackers exploit WordPress, Zyxel flaws to steal govt data](https://www.bleepingcomputer.com/news/security/chinese-hackers-exploit-multiple-technologies-to-steal-govt-data/) — BleepingComputer
 - [The Truth about GET and HTTP Standards, (Tue, Sep 22nd)](https://isc.sans.edu/diary/rss/33358) — SANS Internet Storm Center
 - [New ClosedQuorum Windows malware uses AI for attack decisions](https://www.bleepingcomputer.com/news/security/new-closedquorum-windows-malware-uses-ai-for-attack-decisions/) — BleepingComputer
 - [Malicious npm Package Poses as Twilio Bug-Bounty Probe, Can Exfiltrate Credentials](https://thehackernews.com/2026/09/malicious-npm-package-poses-as-twilio.html) — The Hacker News
-- [BigCommerce Data Stolen via Ribon Apps Hack](https://www.securityweek.com/bigcommerce-data-stolen-via-ribon-apps-hack/) — SecurityWeek
 
 ---
 
