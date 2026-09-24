@@ -1,25 +1,30 @@
 # IT Weekly Intelligence Briefing
 **Period:** September 17 – September 24, 2026  
-**Generated:** 2026-09-24 13:10 UTC  
-**Items reviewed:** 150  
+**Generated:** 2026-09-24 18:10 UTC  
+**Items reviewed:** 131  
 
 ## ⚡ Top Actions This Week
 
-1. **Validate backups, confirm EDR coverage, and brief incident response team.**  
+1. **Apply emergency patch or mitigation now; check vendor advisory for workarounds.**  
+   _Hackers now exploit critical Roundcube flaw in code injection attacks_  
+   Source: BleepingComputer  
+
+2. **Validate backups, confirm EDR coverage, and brief incident response team.**  
    _CISA: Ransomware gangs now exploiting critical TeamCity flaw_  
    Source: BleepingComputer  
 
-2. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
+3. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
    _Astrana Health Data Breach Impacts Private, Confidential Information_  
-   Source: SecurityWeek  
-
-3. **Validate backups, confirm EDR coverage, and brief incident response team.**  
-   _US Court Sentences Armenian Man to Prison for Ryuk Ransomware Attacks_  
    Source: SecurityWeek  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [Hackers now exploit critical Roundcube flaw in code injection attacks](https://www.bleepingcomputer.com/news/security/critical-roundcube-flaw-now-actively-exploited-in-code-injection-attacks/)
+**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Sep 24  
+**Why it matters:** General awareness item.  
+**Recommended action:** Apply emergency patch or mitigation now; check vendor advisory for workarounds.  
 
 ### [CISA: Ransomware gangs now exploiting critical TeamCity flaw](https://www.bleepingcomputer.com/news/security/cisa-ransomware-gangs-now-exploiting-critical-teamcity-flaw/)
 **Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Sep 24  
@@ -46,50 +51,45 @@
 **Why it matters:** General awareness item.  
 **Recommended action:** Apply emergency patch or mitigation now; check vendor advisory for workarounds.  
 
-### [Ryuk ransomware member sentenced to 24 months in prison](https://www.bleepingcomputer.com/news/security/ryuk-ransomware-member-sentenced-to-24-months-in-prison/)
-**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Sep 23  
-**Why it matters:** Elevated ransomware risk across the sector.  
-**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
-
 ---
 
 ## 🟠 Important — Review This Week
 
-- [AI-Powered Campaign Targets Hundreds of Online Retailers](https://www.securityweek.com/ai-powered-campaign-targets-hundreds-of-online-retailers/)  
-  **SecurityWeek** · Sep 24 · _General awareness item._  
+- [FedRAMP VDR & VER: Daily Scans Are Only the Beginning](https://www.bleepingcomputer.com/news/security/fedramp-vdr-and-ver-daily-scans-are-only-the-beginning/)  
+  **BleepingComputer** · Sep 24 · _Regulatory compliance action may be required._  
 
-- [SolarWinds Patches Critical RCE Flaws in Observability Self-Hosted](https://www.securityweek.com/solarwinds-patches-critical-rce-flaws-in-observability-self-hosted/)  
-  **SecurityWeek** · Sep 24 · _General awareness item._  
+- [CVE-2026-69681 Virtual Hard Disk (VHD) Miniport Driver Elevation of Privilege Vulernability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69681)  
+  **Microsoft Security Response Center** · Sep 24 · _General awareness item._  
 
-- [Microsoft fixes bug that broke Windows File History backup feature](https://www.bleepingcomputer.com/news/microsoft/microsoft-fixes-windows-backup-feature-broken-by-september-updates/)  
-  **BleepingComputer** · Sep 24 · _General awareness item._  
+- [CVE-2026-71337 Windows Storage Management Provider Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-71337)  
+  **Microsoft Security Response Center** · Sep 24 · _General awareness item._  
 
-- [Critical WordPress Vulnerability Exploited Immediately After Disclosure](https://www.securityweek.com/critical-wordpress-vulnerability-exploited-immediately-after-disclosure/)  
-  **SecurityWeek** · Sep 24 · _General awareness item._  
+- [CVE-2026-81357 Visual Studio Code Security Feature Bypass Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-81357)  
+  **Microsoft Security Response Center** · Sep 24 · _General awareness item._  
 
-- [Attackers Exploit WordPress CVE-2026-87902 Within Hours of Disclosure](https://thehackernews.com/2026/09/attackers-exploit-wordpress-cve-2026.html)  
-  **The Hacker News** · Sep 24 · _General awareness item._  
+- [CVE-2026-69637 Windows DHCP Server Denial of Service Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69637)  
+  **Microsoft Security Response Center** · Sep 24 · _General awareness item._  
 
-- [Check Point warns of hackers exploiting Security Gateway VPN RCE flaw](https://www.bleepingcomputer.com/news/security/check-point-warns-of-hackers-exploiting-security-gateway-vpn-rce-flaw/)  
-  **BleepingComputer** · Sep 23 · _General awareness item._  
+- [CVE-2026-69803 Windows DHCP Server Information Disclosure Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69803)  
+  **Microsoft Security Response Center** · Sep 24 · _General awareness item._  
 
-- [Hackers start exploiting critical WordPress flaw for code execution](https://www.bleepingcomputer.com/news/security/hackers-start-exploiting-critical-wordpress-flaw-for-code-execution/)  
-  **BleepingComputer** · Sep 23 · _General awareness item._  
+- [CVE-2026-69590 Windows Routing and Remote Access Service (RRAS) Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69590)  
+  **Microsoft Security Response Center** · Sep 24 · _General awareness item._  
 
-- [A Leaked GitLab Issue Email Address Lets Anyone Push Code and Run CI Jobs as You](https://thehackernews.com/2026/09/a-leaked-gitlab-issue-email-address.html)  
-  **The Hacker News** · Sep 23 · _General awareness item._  
+- [CVE-2026-81951 Microsoft Excel Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-81951)  
+  **Microsoft Security Response Center** · Sep 24 · _General awareness item._  
 
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [Exposed GitLab project email addresses let attackers push code](https://www.bleepingcomputer.com/news/security/exposed-gitlab-project-email-addresses-let-attackers-push-code/) — BleepingComputer
+- [Kontext Security Emerges With $4 Million for AI Agent Runtime Controls](https://www.securityweek.com/kontext-security-emerges-with-4-million-for-ai-agent-runtime-controls/) — SecurityWeek
+- [Placeholder third-party[.]com Referenced Across 1,700+ Repositories Now Serves Malicious Content](https://thehackernews.com/2026/09/placeholder-third-partycom-referenced.html) — The Hacker News
+- [OpenAI Agents Probed Websites for Vulnerabilities While Fetching Public Data](https://www.securityweek.com/openai-agents-probed-websites-for-vulnerabilities-while-fetching-public-data/) — SecurityWeek
+- [Hacked Ukrainian Sites Serve Fake Cloudflare ClickFix Lures for Psychedelic Stealer](https://thehackernews.com/2026/09/hacked-ukrainian-sites-serve-fake.html) — The Hacker News
 - [Windows 11 KB5124010 update released with 46 changes and fixes](https://www.bleepingcomputer.com/news/microsoft/windows-11-kb5124010-update-released-with-46-changes-and-fixes/) — BleepingComputer
-- [Corp MDM Spyware Targets Logistics Firms, Steals New SMS and Redirects Calls](https://thehackernews.com/2026/09/corp-mdm-spyware-targets-logistics.html) — The Hacker News
-- [Island Raises $400 Million at $6.4 Billion Valuation](https://www.securityweek.com/island-raises-400-million-at-6-4-billion-valuation/) — SecurityWeek
-- [OT Security Guidance: NIST Drafts Updated Guide, CISA/FBI Advise on ICS Integrators](https://www.securityweek.com/ot-security-guidance-nist-drafts-updated-guide-cisa-fbi-advise-on-ics-integrators/) — SecurityWeek
-- [Secrets Sprawl Is an Identity Problem That AI Just Made Impossible to Ignore](https://thehackernews.com/2026/09/secrets-sprawl-is-identity-problem-that.html) — The Hacker News
-- [Begin at the End: How to Enable Agentic Remediation](https://www.securityweek.com/begin-at-the-end-how-to-enable-agentic-remediation/) — SecurityWeek
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 13 critical · 90 important · 47 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 11 critical · 72 important · 48 FYI_
