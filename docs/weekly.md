@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
 **Period:** September 17 – September 24, 2026  
-**Generated:** 2026-09-24 01:02 UTC  
+**Generated:** 2026-09-24 07:09 UTC  
 **Items reviewed:** 150  
 
 ## ⚡ Top Actions This Week
@@ -83,12 +83,12 @@
 
 ## 🔵 FYI — General Awareness
 
+- [One URL, Three Different Tricks, (Thu, Sep 24th)](https://isc.sans.edu/diary/rss/33366) — SANS Internet Storm Center
+- [ISC Stormcast For Thursday, September 24th, 2026 https://isc.sans.edu/podcastdetail/10108, (Thu, Sep 24th)](https://isc.sans.edu/diary/rss/33364) — SANS Internet Storm Center
 - [Placeholder domain used in dev docs now serves ClickFix attacks](https://www.bleepingcomputer.com/news/security/placeholder-domain-used-in-dev-docs-now-serves-clickfix-attacks/) — BleepingComputer
 - [New RemControl Android banking malware targets users in Europe and Canada](https://www.bleepingcomputer.com/news/security/new-remcontrol-android-banking-malware-targets-users-in-europe-and-canada/) — BleepingComputer
-- [IonQ Targets Quantum Error-Correction Bottleneck With Single-CPU DecoderIonQ Says Sin](https://www.securityweek.com/ionq-targets-quantum-error-correction-bottleneck-with-single-cpu-decoderionq-says-sin/) — SecurityWeek
+- [IonQ Targets Quantum Error-Correction Bottleneck With Single-CPU Decoder](https://www.securityweek.com/ionq-targets-quantum-error-correction-bottleneck-with-single-cpu-decoderionq-says-sin/) — SecurityWeek
 - [Attackers Use Malicious Terraform Providers to Deliver Go Malware via HashiCorp Registry](https://thehackernews.com/2026/09/attackers-use-malicious-terraform.html) — The Hacker News
-- [Worries About an AI Internet Takeover Gain New Urgency Among Doomsday Scenarios](https://www.securityweek.com/worries-about-an-ai-internet-takeover-gain-new-urgency-among-doomsday-scenarios/) — SecurityWeek
-- [Malicious AI agents steal 600K credit cards, infect 100+ sites with skimmers](https://www.bleepingcomputer.com/news/security/malicious-ai-agents-steal-600k-credit-cards-infect-100-plus-sites-with-skimmers/) — BleepingComputer
 
 ---
 
