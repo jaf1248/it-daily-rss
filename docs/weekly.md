@@ -1,7 +1,7 @@
 # IT Weekly Intelligence Briefing
 **Period:** September 18 – September 25, 2026  
-**Generated:** 2026-09-25 16:29 UTC  
-**Items reviewed:** 138  
+**Generated:** 2026-09-25 20:14 UTC  
+**Items reviewed:** 142  
 
 ## ⚡ Top Actions This Week
 
@@ -41,19 +41,34 @@
 **Why it matters:** General awareness item.  
 **Recommended action:** Apply emergency patch or mitigation now; check vendor advisory for workarounds.  
 
-### [CISA: Ransomware gangs now exploiting critical TeamCity flaw](https://www.bleepingcomputer.com/news/security/cisa-ransomware-gangs-now-exploiting-critical-teamcity-flaw/)
-**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Sep 24  
-**Why it matters:** Elevated ransomware risk across the sector.  
-**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
-
 ### [ShinyHunters Claims FBI Breach, Says It Stole Data on Agents and Job Applicants](https://thehackernews.com/2026/09/shinyhunters-claims-fbi-breach-says-it.html)
 **Source:** The Hacker News &nbsp;·&nbsp; **Date:** Sep 23  
 **Why it matters:** Potential credential or data exposure.  
 **Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
+### [New CVSS 10.0 VeloCloud Orchestrator Flaw Actively Exploited in Certificate-Based Setups](https://thehackernews.com/2026/09/new-cvss-100-velocloud-orchestrator.html)
+**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Sep 22  
+**Why it matters:** General awareness item.  
+**Recommended action:** Apply emergency patch or mitigation now; check vendor advisory for workarounds.  
+
 ---
 
 ## 🟠 Important — Review This Week
+
+- [Elementor WordPress flaw lets attackers create admin accounts](https://www.bleepingcomputer.com/news/security/elementor-wordpress-flaw-lets-attackers-create-admin-accounts/)  
+  **BleepingComputer** · Sep 25 · _General awareness item._  
+
+- [CISA warns of Sharepoint, WSO2, Adobe Commerce flaws exploited in attacks](https://www.bleepingcomputer.com/news/security/cisa-warns-of-sharepoint-wso2-adobe-commerce-flaws-exploited-in-attacks/)  
+  **BleepingComputer** · Sep 25 · _General awareness item._  
+
+- [CVE-2026-100208 Microsoft Office Outlook Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-100208)  
+  **Microsoft Security Response Center** · Sep 25 · _General awareness item._  
+
+- [CVE-2026-100206 Microsoft Office Information Disclosure Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-100206)  
+  **Microsoft Security Response Center** · Sep 25 · _General awareness item._  
+
+- [CVE-2026-32157 Remote Desktop Client Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-32157)  
+  **Microsoft Security Response Center** · Sep 25 · _General awareness item._  
 
 - [CVE-2026-85921 Windows Secure Kernel Mode Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-85921)  
   **Microsoft Security Response Center** · Sep 25 · _General awareness item._  
@@ -64,32 +79,17 @@
 - [The SOC Doesn't Need to Start Over with Every Alert](https://thehackernews.com/2026/09/the-soc-doesnt-need-to-start-over-with.html)  
   **The Hacker News** · Sep 25 · _General awareness item._  
 
-- [Chromium: CVE-2025-2135 Type Confusion in V8](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-2135)  
-  **Microsoft Security Response Center** · Sep 25 · _General awareness item._  
-
-- [Chromium: CVE-2026-4450 Out of bounds write in V8](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-4450)  
-  **Microsoft Security Response Center** · Sep 25 · _General awareness item._  
-
-- [Chromium CVE-2026-87612: Type confusion in V8](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-87612)  
-  **Microsoft Security Response Center** · Sep 25 · _General awareness item._  
-
-- [Chromium CVE-2026-87489: Memory corruption in V8](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-87489)  
-  **Microsoft Security Response Center** · Sep 25 · _General awareness item._  
-
-- [Chromium CVE-2026-87536: Use after free in V8](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-87536)  
-  **Microsoft Security Response Center** · Sep 25 · _General awareness item._  
-
 ---
 
 ## 🔵 FYI — General Awareness
 
 - [Anthropic rolls out up to $250 in free Claude Code credits, but only for cloud sessions](https://www.bleepingcomputer.com/news/artificial-intelligence/anthropic-rolls-out-up-to-250-in-free-claude-code-credits-but-only-for-cloud-sessions/) — BleepingComputer
+- [Storm-3168: Agentic-driven cloud attacks using compromised service principals](https://www.microsoft.com/en-us/security/blog/2026/09/25/storm-3168-agentic-driven-cloud-attacks-using-compromised-service-principals/) — Microsoft Security Blog
 - [In Other News: Clop Leak Site Takeover, Docker Botnet Hunts AI Keys, Water Utility Exposure](https://www.securityweek.com/in-other-news-clop-leak-site-takeover-docker-botnet-hunts-ai-keys-water-utility-exposure/) — SecurityWeek
 - [OpenAI is preparing a $500 ChatGPT Pro Max plan with faster Codex](https://www.bleepingcomputer.com/news/artificial-intelligence/openai-is-preparing-a-500-chatgpt-pro-max-plan-with-faster-codex/) — BleepingComputer
 - [With the Rise of AI Agents, SOC 2 Should Adapt or Risk Irrelevance](https://www.bleepingcomputer.com/news/security/with-the-rise-of-ai-agents-soc-2-should-adapt-or-risk-irrelevance/) — BleepingComputer
 - [Compromised GitHub Actions Came Back Online and Resumed Executing Mini Shai-Hulud Malware](https://thehackernews.com/2026/09/compromised-github-actions-came-back.html) — The Hacker News
-- [North Korea Suspected in $351 Million Bitget Crypto Heist](https://www.securityweek.com/north-korea-suspected-in-351-million-bitget-crypto-heist/) — SecurityWeek
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 7 critical · 71 important · 60 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 6 critical · 76 important · 60 FYI_
