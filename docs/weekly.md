@@ -1,25 +1,35 @@
 # IT Weekly Intelligence Briefing
 **Period:** September 18 – September 25, 2026  
-**Generated:** 2026-09-25 05:46 UTC  
-**Items reviewed:** 137  
+**Generated:** 2026-09-25 11:05 UTC  
+**Items reviewed:** 138  
 
 ## ⚡ Top Actions This Week
 
-1. **Validate backups, confirm EDR coverage, and brief incident response team.**  
-   _Beyond the ransomware: Tracking Storm-2570’s consistent tradecraft across deployments_  
-   Source: Microsoft Security Blog  
+1. **Apply emergency patch or mitigation now; check vendor advisory for workarounds.**  
+   _Roundcube Pre-Auth SQL Injection Flaw Actively Exploited in the Wild_  
+   Source: The Hacker News  
 
-2. **Apply emergency patch or mitigation now; check vendor advisory for workarounds.**  
-   _Hackers now exploit critical Roundcube flaw in code injection attacks_  
-   Source: BleepingComputer  
+2. **Prioritize patching of affected systems; check for internet-exposed attack surface.**  
+   _‘SalesBleed’ Flaws in Salesforce Agentforce Enabled Zero-Click Data Exfiltration_  
+   Source: SecurityWeek  
 
 3. **Validate backups, confirm EDR coverage, and brief incident response team.**  
-   _CISA: Ransomware gangs now exploiting critical TeamCity flaw_  
-   Source: BleepingComputer  
+   _Beyond the ransomware: Tracking Storm-2570’s consistent tradecraft across deployments_  
+   Source: Microsoft Security Blog  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [Roundcube Pre-Auth SQL Injection Flaw Actively Exploited in the Wild](https://thehackernews.com/2026/09/roundcube-pre-auth-sql-injection-flaw.html)
+**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Sep 25  
+**Why it matters:** General awareness item.  
+**Recommended action:** Apply emergency patch or mitigation now; check vendor advisory for workarounds.  
+
+### [‘SalesBleed’ Flaws in Salesforce Agentforce Enabled Zero-Click Data Exfiltration](https://www.securityweek.com/salesbleed-flaws-in-salesforce-agentforce-enabled-zero-click-data-exfiltration/)
+**Source:** SecurityWeek &nbsp;·&nbsp; **Date:** Sep 25  
+**Why it matters:** General awareness item.  
+**Recommended action:** Prioritize patching of affected systems; check for internet-exposed attack surface.  
 
 ### [Beyond the ransomware: Tracking Storm-2570’s consistent tradecraft across deployments](https://www.microsoft.com/en-us/security/blog/2026/09/24/beyond-ransomware-tracking-storm-2570-consistent-tradecraft-across-deployments/)
 **Source:** Microsoft Security Blog &nbsp;·&nbsp; **Date:** Sep 24  
@@ -36,60 +46,50 @@
 **Why it matters:** Elevated ransomware risk across the sector.  
 **Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
 
-### [Astrana Health Data Breach Impacts Private, Confidential Information](https://www.securityweek.com/astrana-health-data-breach-impacts-private-confidential-information/)
-**Source:** SecurityWeek &nbsp;·&nbsp; **Date:** Sep 24  
+### [ShinyHunters Claims FBI Breach, Says It Stole Data on Agents and Job Applicants](https://thehackernews.com/2026/09/shinyhunters-claims-fbi-breach-says-it.html)
+**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Sep 23  
 **Why it matters:** Potential credential or data exposure.  
 **Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
-
-### [US Court Sentences Armenian Man to Prison for Ryuk Ransomware Attacks](https://www.securityweek.com/us-court-sentences-armenian-man-to-prison-for-ryuk-ransomware-attacks/)
-**Source:** SecurityWeek &nbsp;·&nbsp; **Date:** Sep 24  
-**Why it matters:** Elevated ransomware risk across the sector.  
-**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
-
-### [InfraTrust report warns network management systems under attack](https://www.bleepingcomputer.com/news/security/infratrust-report-warns-network-management-systems-under-attack/)
-**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Sep 23  
-**Why it matters:** General awareness item.  
-**Recommended action:** Apply emergency patch or mitigation now; check vendor advisory for workarounds.  
 
 ---
 
 ## 🟠 Important — Review This Week
 
-- [Unpatched OnePlus Flaws Let Installed Android Apps Gain Root Without Permissions](https://thehackernews.com/2026/09/unpatched-oneplus-flaws-let-installed.html)  
-  **The Hacker News** · Sep 24 · _General awareness item._  
+- [Chromium: CVE-2025-2135 Type Confusion in V8](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-2135)  
+  **Microsoft Security Response Center** · Sep 25 · _General awareness item._  
 
-- [FedRAMP VDR & VER: Daily Scans Are Only the Beginning](https://www.bleepingcomputer.com/news/security/fedramp-vdr-and-ver-daily-scans-are-only-the-beginning/)  
-  **BleepingComputer** · Sep 24 · _Regulatory compliance action may be required._  
+- [Chromium: CVE-2026-4450 Out of bounds write in V8](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-4450)  
+  **Microsoft Security Response Center** · Sep 25 · _General awareness item._  
 
-- [CVE-2026-69681 Virtual Hard Disk (VHD) Miniport Driver Elevation of Privilege Vulernability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69681)  
-  **Microsoft Security Response Center** · Sep 24 · _General awareness item._  
+- [Chromium CVE-2026-87612: Type confusion in V8](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-87612)  
+  **Microsoft Security Response Center** · Sep 25 · _General awareness item._  
 
-- [CVE-2026-69732 Windows Link Layer Topology Discovery Protocol Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69732)  
-  **Microsoft Security Response Center** · Sep 24 · _General awareness item._  
+- [Chromium CVE-2026-87489: Memory corruption in V8](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-87489)  
+  **Microsoft Security Response Center** · Sep 25 · _General awareness item._  
 
-- [CVE-2026-71337 Windows Storage Management Provider Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-71337)  
-  **Microsoft Security Response Center** · Sep 24 · _General awareness item._  
+- [Chromium CVE-2026-87536: Use after free in V8](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-87536)  
+  **Microsoft Security Response Center** · Sep 25 · _General awareness item._  
 
-- [CVE-2026-69282 Microsoft Office SharePoint Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69282)  
-  **Microsoft Security Response Center** · Sep 24 · _General awareness item._  
+- [Chromium CVE-2026-87625: Use after free in V8](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-87625)  
+  **Microsoft Security Response Center** · Sep 25 · _General awareness item._  
 
-- [CVE-2026-81357 Visual Studio Code Security Feature Bypass Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-81357)  
-  **Microsoft Security Response Center** · Sep 24 · _General awareness item._  
+- [Chromium CVE-2026-87601: Race condition in V8](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-87601)  
+  **Microsoft Security Response Center** · Sep 25 · _General awareness item._  
 
-- [CVE-2026-68894 Windows Error Reporting Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-68894)  
-  **Microsoft Security Response Center** · Sep 24 · _General awareness item._  
+- [Roundcube Webmail Vulnerability in Attackers’ Crosshairs](https://www.securityweek.com/roundcube-webmail-vulnerability-in-attackers-crosshairs/)  
+  **SecurityWeek** · Sep 25 · _General awareness item._  
 
 ---
 
 ## 🔵 FYI — General Awareness
 
-- [ISC Stormcast For Friday, September 25th, 2026 https://isc.sans.edu/podcastdetail/10110, (Fri, Sep 25th)](https://isc.sans.edu/diary/rss/33370) — SANS Internet Storm Center
-- [MacSync malware uses public iCloud calendars to deliver new payloads](https://www.bleepingcomputer.com/news/security/macsync-malware-uses-public-icloud-calendars-to-deliver-new-payloads/) — BleepingComputer
-- [Autonomous AI Hacks Raise Thorny Questions of Legal Accountability](https://www.securityweek.com/autonomous-ai-hacks-raise-thorny-questions-of-legal-accountability/) — SecurityWeek
-- [New Carbonato malware uses AI agents to hijack exposed Docker hosts](https://www.bleepingcomputer.com/news/security/new-carbonato-malware-uses-ai-agents-to-hijack-exposed-docker-hosts/) — BleepingComputer
-- [ThreatsDay: AI Search Poisoning, AI Coding Tool Leaking Repos, One-Click Code Execution and 13 More Stories](https://thehackernews.com/2026/09/threatsday-ai-search-poisoning-ai.html) — The Hacker News
-- [Exposed GitLab project email addresses let attackers push code](https://www.bleepingcomputer.com/news/security/exposed-gitlab-project-email-addresses-let-attackers-push-code/) — BleepingComputer
+- [Windows, Linux, Android File Notification Systems Leak User Activity](https://www.securityweek.com/windows-linux-android-file-notification-systems-leak-user-activity/) — SecurityWeek
+- [Bitget Says Suspected North Korean Hackers Stole $351.6M After Backend Compromise](https://thehackernews.com/2026/09/bitget-says-suspected-north-korean.html) — The Hacker News
+- [Microsoft: Recent Windows updates cause desktop loading issues](https://www.bleepingcomputer.com/news/microsoft/microsoft-recent-windows-updates-cause-desktop-loading-issues/) — BleepingComputer
+- [Hackers steal $351.6 million in Bitget crypto exchange hack](https://www.bleepingcomputer.com/news/security/hackers-steal-3516-million-in-bitget-crypto-exchange-hack/) — BleepingComputer
+- [A Closer Look at Malware From the Macfinger ClickFix Campaign, (Fri, Sep 25th)](https://isc.sans.edu/diary/rss/33368) — SANS Internet Storm Center
+- [Cloudflare Fixes Flaw That Let One Container Read Another Customer's Leftover Disk Data](https://thehackernews.com/2026/09/cloudflare-fixes-flaw-that-let-one.html) — The Hacker News
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 10 critical · 73 important · 54 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 8 critical · 73 important · 57 FYI_
