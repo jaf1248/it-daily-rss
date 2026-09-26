@@ -1,25 +1,30 @@
 # IT Weekly Intelligence Briefing
 **Period:** September 19 – September 26, 2026  
-**Generated:** 2026-09-26 09:05 UTC  
+**Generated:** 2026-09-26 14:04 UTC  
 **Items reviewed:** 152  
 
 ## ⚡ Top Actions This Week
 
-1. **Validate backups, confirm EDR coverage, and brief incident response team.**  
+1. **Prioritize patching of affected systems; check for internet-exposed attack surface.**  
+   _SharePoint RCE and MikroTik RouterOS Flaws Actively Exploited in the Wild_  
+   Source: The Hacker News  
+
+2. **Validate backups, confirm EDR coverage, and brief incident response team.**  
    _ShinyHunters hacked Clop leak site using Grav CMS path traversal flaw_  
    Source: BleepingComputer  
 
-2. **Apply emergency patch or mitigation now; check vendor advisory for workarounds.**  
+3. **Apply emergency patch or mitigation now; check vendor advisory for workarounds.**  
    _Roundcube Pre-Auth SQL Injection Flaw Actively Exploited in the Wild_  
    Source: The Hacker News  
-
-3. **Prioritize patching of affected systems; check for internet-exposed attack surface.**  
-   _‘SalesBleed’ Flaws in Salesforce Agentforce Enabled Zero-Click Data Exfiltration_  
-   Source: SecurityWeek  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [SharePoint RCE and MikroTik RouterOS Flaws Actively Exploited in the Wild](https://thehackernews.com/2026/09/sharepoint-rce-and-mikrotik-routeros.html)
+**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Sep 26  
+**Why it matters:** General awareness item.  
+**Recommended action:** Prioritize patching of affected systems; check for internet-exposed attack surface.  
 
 ### [ShinyHunters hacked Clop leak site using Grav CMS path traversal flaw](https://www.bleepingcomputer.com/news/security/shinyhunters-hacked-clop-leak-site-using-grav-cms-path-traversal-flaw/)
 **Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Sep 25  
@@ -46,14 +51,12 @@
 **Why it matters:** Potential credential or data exposure.  
 **Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
-### [New CVSS 10.0 VeloCloud Orchestrator Flaw Actively Exploited in Certificate-Based Setups](https://thehackernews.com/2026/09/new-cvss-100-velocloud-orchestrator.html)
-**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Sep 22  
-**Why it matters:** General awareness item.  
-**Recommended action:** Apply emergency patch or mitigation now; check vendor advisory for workarounds.  
-
 ---
 
 ## 🟠 Important — Review This Week
+
+- [Elementor CSRF Flaw Lets Attackers Take Over Sites After Admin Clicks Crafted Link](https://thehackernews.com/2026/09/elementor-csrf-flaw-lets-attackers-take.html)  
+  **The Hacker News** · Sep 26 · _General awareness item._  
 
 - [Kiteworks urges 6-hour server shutdown over potential zero-day attacks](https://www.bleepingcomputer.com/news/security/kiteworks-urges-6-hour-server-shutdown-over-potential-zero-day-attacks/)  
   **BleepingComputer** · Sep 25 · _General awareness item._  
@@ -76,20 +79,17 @@
 - [Chromium CVE-2026-95274: Improper output encoding in DevTools](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-95274)  
   **Microsoft Security Response Center** · Sep 25 · _General awareness item._  
 
-- [Chromium CVE-2026-95275: Incorrect reference resolution in MediaStream](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-95275)  
-  **Microsoft Security Response Center** · Sep 25 · _General awareness item._  
-
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [OpenAI's AI agents accidentally uploaded user-provided images to third-party sites](https://www.bleepingcomputer.com/news/artificial-intelligence/openais-ai-agents-accidentally-uploaded-user-provided-images-to-third-party-sites/) — BleepingComputer
+- [New x47.c Windows Botnet Weaponizes xAI Grok, AI API Draining](https://www.securityweek.com/new-x47-c-windows-botnet-weaponizes-xai-grok-ai-api-draining/) — SecurityWeek
+- [OpenAI Says Its Models Engaged With US Government Websites in New Model Misbehavior Disclosure](https://www.securityweek.com/openai-says-its-models-engaged-with-us-government-websites-in-new-model-misbehavior-disclosure/) — SecurityWeek
+- [Kiteworks Urges Customers to Shut Down Systems for 9 Hours Over Possible Cyber Attack](https://thehackernews.com/2026/09/kiteworks-urges-customers-to-shut-down.html) — The Hacker News
 - [U.S. Soldier Gets 70 Months in Prison for AT&T, Verizon Extortions](https://krebsonsecurity.com/2026/09/u-s-soldier-gets-70-months-in-prison-for-att-verizon-extortions/) — Krebs on Security
 - [Anthropic rolls out up to $250 in free Claude Code credits, but only for cloud sessions](https://www.bleepingcomputer.com/news/artificial-intelligence/anthropic-rolls-out-up-to-250-in-free-claude-code-credits-but-only-for-cloud-sessions/) — BleepingComputer
-- [Storm-3168: Agentic-driven cloud attacks using compromised service principals](https://www.microsoft.com/en-us/security/blog/2026/09/25/storm-3168-agentic-driven-cloud-attacks-using-compromised-service-principals/) — Microsoft Security Blog
-- [In Other News: Clop Leak Site Takeover, Docker Botnet Hunts AI Keys, Water Utility Exposure](https://www.securityweek.com/in-other-news-clop-leak-site-takeover-docker-botnet-hunts-ai-keys-water-utility-exposure/) — SecurityWeek
-- [OpenAI is preparing a $500 ChatGPT Pro Max plan with faster Codex](https://www.bleepingcomputer.com/news/artificial-intelligence/openai-is-preparing-a-500-chatgpt-pro-max-plan-with-faster-codex/) — BleepingComputer
-- [With the Rise of AI Agents, SOC 2 Should Adapt or Risk Irrelevance](https://www.bleepingcomputer.com/news/security/with-the-rise-of-ai-agents-soc-2-should-adapt-or-risk-irrelevance/) — BleepingComputer
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 6 critical · 86 important · 60 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 7 critical · 85 important · 60 FYI_
