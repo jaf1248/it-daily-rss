@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
 **Period:** September 19 – September 26, 2026  
-**Generated:** 2026-09-26 18:17 UTC  
+**Generated:** 2026-09-26 21:48 UTC  
 **Items reviewed:** 152  
 
 ## ⚡ Top Actions This Week
@@ -55,6 +55,9 @@
 
 ## 🟠 Important — Review This Week
 
+- [ShinyHunters uses WAF bypass trick in Oracle PeopleSoft attacks](https://www.bleepingcomputer.com/news/security/shinyhunters-uses-waf-bypass-trick-in-oracle-peoplesoft-attacks/)  
+  **BleepingComputer** · Sep 26 · _General awareness item._  
+
 - [China and US Agree to Establish AI Safety Channel and Continue Trade and Military Talks](https://www.securityweek.com/china-and-us-agree-to-establish-ai-safety-channel-and-continue-trade-and-military-talks/)  
   **SecurityWeek** · Sep 26 · _General awareness item._  
 
@@ -76,19 +79,16 @@
 - [CVE-2026-69522 .NET and Visual Studio Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69522)  
   **Microsoft Security Response Center** · Sep 25 · _General awareness item._  
 
-- [CVE-2026-78510 Microsoft Outlook and Word Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-78510)  
-  **Microsoft Security Response Center** · Sep 25 · _General awareness item._  
-
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [Lunex Stealer Abuses AMD Driver to Disable Security Monitoring and Steal Browser Credentials](https://thehackernews.com/2026/09/lunex-stealer-abuses-amd-driver-to.html) — The Hacker News
 - [Claude Opus 5.5 uses 95% fewer em dashes, but its answers are getting longer](https://www.bleepingcomputer.com/news/artificial-intelligence/claude-opus-55-uses-95-percent-fewer-em-dashes-but-its-answers-are-getting-longer/) — BleepingComputer
 - [Microsoft pauses KB5002907 update after Office license deactivations](https://www.bleepingcomputer.com/news/microsoft/microsoft-365-kb5002907-update-paused-after-office-license-deactivations/) — BleepingComputer
 - [GitHub Actions re-enabled with Mini Shai-Hulud payload still active](https://www.bleepingcomputer.com/news/security/github-actions-re-enabled-with-mini-shai-hulud-payload-still-active/) — BleepingComputer
 - [OpenAI's AI agents accidentally uploaded user-provided images to third-party sites](https://www.bleepingcomputer.com/news/artificial-intelligence/openais-ai-agents-accidentally-uploaded-user-provided-images-to-third-party-sites/) — BleepingComputer
 - [New x47.c Windows Botnet Weaponizes xAI Grok, AI API Draining](https://www.securityweek.com/new-x47-c-windows-botnet-weaponizes-xai-grok-ai-api-draining/) — SecurityWeek
-- [OpenAI Says Its Models Engaged With US Government Websites in New Model Misbehavior Disclosure](https://www.securityweek.com/openai-says-its-models-engaged-with-us-government-websites-in-new-model-misbehavior-disclosure/) — SecurityWeek
 
 ---
 
