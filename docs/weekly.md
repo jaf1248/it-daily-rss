@@ -1,25 +1,35 @@
 # IT Weekly Intelligence Briefing
 **Period:** September 21 – September 28, 2026  
-**Generated:** 2026-09-28 10:31 UTC  
-**Items reviewed:** 151  
+**Generated:** 2026-09-28 16:47 UTC  
+**Items reviewed:** 154  
 
 ## ⚡ Top Actions This Week
 
-1. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _Bitget resumes Bitcoin withdrawals after $387.5 million crypto heist_  
+1. **Validate backups, confirm EDR coverage, and brief incident response team.**  
+   _JadePuffer agentic AI attacks target Azure, destroy cloud resources_  
    Source: BleepingComputer  
 
-2. **Prioritize patching of affected systems; check for internet-exposed attack surface.**  
-   _Warning: Two Unpatched Citrix NetScaler RCE Zero-Days Under Active Exploitation_  
-   Source: The Hacker News  
+2. **Validate backups, confirm EDR coverage, and brief incident response team.**  
+   _Dutch Police Arrest ‘Reformed’ Hacker in Shiny Hunters Investigation_  
+   Source: Krebs on Security  
 
-3. **Prioritize patching of affected systems; check for internet-exposed attack surface.**  
-   _Attackers Bypass WAFs to Exploit Oracle PeopleSoft Flaw and Deploy Web Shells_  
-   Source: The Hacker News  
+3. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
+   _Bitget resumes Bitcoin withdrawals after $387.5 million crypto heist_  
+   Source: BleepingComputer  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [JadePuffer agentic AI attacks target Azure, destroy cloud resources](https://www.bleepingcomputer.com/news/security/jadepuffer-agentic-ai-attacks-target-azure-destroy-cloud-resources/)
+**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Sep 28  
+**Why it matters:** Elevated ransomware risk across the sector.  
+**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
+
+### [Dutch Police Arrest ‘Reformed’ Hacker in Shiny Hunters Investigation](https://krebsonsecurity.com/2026/09/dutch-police-arrest-reformed-hacker-in-shiny-hunters-investigation/)
+**Source:** Krebs on Security &nbsp;·&nbsp; **Date:** Sep 28  
+**Why it matters:** Elevated ransomware risk across the sector.  
+**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
 
 ### [Bitget resumes Bitcoin withdrawals after $387.5 million crypto heist](https://www.bleepingcomputer.com/news/security/bitget-resumes-bitcoin-withdrawals-after-3875-million-crypto-heist/)
 **Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Sep 28  
@@ -41,19 +51,15 @@
 **Why it matters:** General awareness item.  
 **Recommended action:** Prioritize patching of affected systems; check for internet-exposed attack surface.  
 
-### [ShinyHunters hacked Clop leak site using Grav CMS path traversal flaw](https://www.bleepingcomputer.com/news/security/shinyhunters-hacked-clop-leak-site-using-grav-cms-path-traversal-flaw/)
-**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Sep 25  
-**Why it matters:** Elevated ransomware risk across the sector.  
-**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
-
-### [Roundcube Pre-Auth SQL Injection Flaw Actively Exploited in the Wild](https://thehackernews.com/2026/09/roundcube-pre-auth-sql-injection-flaw.html)
-**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Sep 25  
-**Why it matters:** General awareness item.  
-**Recommended action:** Apply emergency patch or mitigation now; check vendor advisory for workarounds.  
-
 ---
 
 ## 🟠 Important — Review This Week
+
+- [CVE-2026-81355 Virtual Hard Disk (VHD) Miniport Driver Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-81355)  
+  **Microsoft Security Response Center** · Sep 28 · _General awareness item._  
+
+- [Google Warns of ShinyHunters’ Fresh Oracle PeopleSoft Campaign](https://www.securityweek.com/google-warns-of-shinyhunters-fresh-oracle-peoplesoft-campaign/)  
+  **SecurityWeek** · Sep 28 · _General awareness item._  
 
 - [Kiteworks Urges Server Shutdown, Finds Advanced Forms Vulnerability](https://www.securityweek.com/kiteworks-urges-server-shutdown-finds-advanced-forms-vulnerability/)  
   **SecurityWeek** · Sep 28 · _General awareness item._  
@@ -67,29 +73,23 @@
 - [CISA orders feds to patch exploited Citrix flaws by Wednesday](https://www.bleepingcomputer.com/news/security/cisa-orders-feds-to-patch-exploited-citrix-flaws-by-wednesday/)  
   **BleepingComputer** · Sep 28 · _General awareness item._  
 
+- [Swarming Against Citrix 0-Day Exploitation](https://www.greynoise.io/blog/swarming-against-citrix-0-day-exploitation)  
+  **GreyNoise Blog** · Sep 28 · _General awareness item._  
+
 - [Citrix confirms two NetScaler RCE zero-days exploited in attacks](https://www.bleepingcomputer.com/news/security/citrix-admins-warned-to-shut-down-netscalers-over-2-exploited-zero-days/)  
   **BleepingComputer** · Sep 27 · _General awareness item._  
-
-- [Cloudflare fixes Containers cross-tenant flaw exposing customer data](https://www.bleepingcomputer.com/news/security/cloudflare-fixes-containers-cross-tenant-flaw-exposing-customer-data/)  
-  **BleepingComputer** · Sep 27 · _General awareness item._  
-
-- [Microsoft SharePoint Flaw CVE-2026-65660 Now Exploited in Attacks](https://www.securityweek.com/microsoft-sharepoint-flaw-cve-2026-65660-now-exploited-in-attacks/)  
-  **SecurityWeek** · Sep 27 · _General awareness item._  
-
-- [ShinyHunters uses WAF bypass trick in Oracle PeopleSoft attacks](https://www.bleepingcomputer.com/news/security/shinyhunters-uses-waf-bypass-trick-in-oracle-peoplesoft-attacks/)  
-  **BleepingComputer** · Sep 26 · _General awareness item._  
 
 ---
 
 ## 🔵 FYI — General Awareness
 
-- [Nvidia Unveils AI Agent Safety Platform With Hardware-Based Watchdog](https://www.securityweek.com/nvidia-unveils-ai-agent-safety-platform-with-hardware-based-watchdog/) — SecurityWeek
-- [JADEPUFFER-Linked Attackers Used Compromised Service Principals to Delete Azure Resources](https://thehackernews.com/2026/09/jadepuffer-linked-attackers-used.html) — The Hacker News
-- [US soldier gets 70 months in prison for extorting 10 tech, telecom firms](https://www.bleepingcomputer.com/news/security/us-soldier-gets-70-months-in-prison-for-extorting-10-tech-telecom-firms/) — BleepingComputer
-- [ISC Stormcast For Monday, September 28th, 2026 https://isc.sans.edu/podcastdetail/10112, (Mon, Sep 28th)](https://isc.sans.edu/diary/rss/33374) — SANS Internet Storm Center
-- [OpenAI is preparing “o,” an always-on ChatGPT assistant that could handle email](https://www.bleepingcomputer.com/news/artificial-intelligence/openai-is-preparing-o-an-always-on-chatgpt-assistant-that-could-handle-email/) — BleepingComputer
-- [Wireshark 4.6.9 Released, (Sun, Sep 27th)](https://isc.sans.edu/diary/rss/33372) — SANS Internet Storm Center
+- [Call for Presentations Open for 2026 CISO Forum Virtual Summit](https://www.securityweek.com/call-for-presentations-open-for-2026-ciso-forum-virtual-summit/) — SecurityWeek
+- [NeedyMantis: Unpacking a post-compromise malware family used in targeted operations](https://www.microsoft.com/en-us/security/blog/2026/09/28/needymantis-unpacking-a-post-compromise-malware-family-used-in-targeted-operations/) — Microsoft Security Blog
+- [⚡ Weekly Recap: $387M Crypto Hack, Citrix Exploits, AI Agents Go Off-Script, and More Threats](https://thehackernews.com/2026/09/weekly-recap-387m-crypto-hack-citrix.html) — The Hacker News
+- [80,000+ Organizations Had AI Logins Stolen: From Shadow AI to LLMjacking](https://www.bleepingcomputer.com/news/security/80-000-plus-organizations-had-ai-logins-stolen-from-shadow-ai-to-llmjacking/) — BleepingComputer
+- [Prison Sentence for Former US Soldier Who Hacked AT&T and Verizon](https://www.securityweek.com/prison-sentence-for-former-us-soldier-who-hacked-att-and-verizon/) — SecurityWeek
+- [Webinar: How to Govern AI Agents, Reduce Excessive Access, and Control Shadow AI](https://thehackernews.com/2026/09/webinar-how-to-govern-ai-agents-reduce.html) — The Hacker News
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 9 critical · 91 important · 51 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 10 critical · 88 important · 56 FYI_
