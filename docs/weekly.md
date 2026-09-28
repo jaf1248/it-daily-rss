@@ -1,25 +1,40 @@
 # IT Weekly Intelligence Briefing
 **Period:** September 21 – September 28, 2026  
-**Generated:** 2026-09-28 18:25 UTC  
+**Generated:** 2026-09-28 23:41 UTC  
 **Items reviewed:** 154  
 
 ## ⚡ Top Actions This Week
 
 1. **Validate backups, confirm EDR coverage, and brief incident response team.**  
-   _JadePuffer agentic AI attacks target Azure, destroy cloud resources_  
+   _Japan's Keio confirms ransomware attack disrupted business systems_  
    Source: BleepingComputer  
 
-2. **Validate backups, confirm EDR coverage, and brief incident response team.**  
-   _Dutch Police Arrest ‘Reformed’ Hacker in Shiny Hunters Investigation_  
-   Source: Krebs on Security  
+2. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
+   _Times Car confirms data breach affecting 6.6 million user accounts_  
+   Source: BleepingComputer  
 
 3. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _Bitget resumes Bitcoin withdrawals after $387.5 million crypto heist_  
-   Source: BleepingComputer  
+   _Hackers Use NeedyMantis to Maintain Long-Term Access in Breached Networks_  
+   Source: The Hacker News  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [Japan's Keio confirms ransomware attack disrupted business systems](https://www.bleepingcomputer.com/news/security/japans-keio-confirms-ransomware-attack-disrupted-business-systems/)
+**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Sep 28  
+**Why it matters:** Elevated ransomware risk across the sector.  
+**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
+
+### [Times Car confirms data breach affecting 6.6 million user accounts](https://www.bleepingcomputer.com/news/security/times-car-confirms-data-breach-affecting-66-million-user-accounts/)
+**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Sep 28  
+**Why it matters:** Potential credential or data exposure.  
+**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
+
+### [Hackers Use NeedyMantis to Maintain Long-Term Access in Breached Networks](https://thehackernews.com/2026/09/hackers-use-needymantis-to-maintain.html)
+**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Sep 28  
+**Why it matters:** Potential credential or data exposure.  
+**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
 ### [JadePuffer agentic AI attacks target Azure, destroy cloud resources](https://www.bleepingcomputer.com/news/security/jadepuffer-agentic-ai-attacks-target-azure-destroy-cloud-resources/)
 **Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Sep 28  
@@ -36,24 +51,18 @@
 **Why it matters:** Potential credential or data exposure.  
 **Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
-### [Warning: Two Unpatched Citrix NetScaler RCE Zero-Days Under Active Exploitation](https://thehackernews.com/2026/09/warning-two-unpatched-citrix-netscaler.html)
-**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Sep 27  
-**Why it matters:** General awareness item.  
-**Recommended action:** Prioritize patching of affected systems; check for internet-exposed attack surface.  
-
-### [Attackers Bypass WAFs to Exploit Oracle PeopleSoft Flaw and Deploy Web Shells](https://thehackernews.com/2026/09/attackers-bypass-wafs-to-exploit-oracle.html)
-**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Sep 26  
-**Why it matters:** General awareness item.  
-**Recommended action:** Prioritize patching of affected systems; check for internet-exposed attack surface.  
-
-### [SharePoint RCE and MikroTik RouterOS Flaws Actively Exploited in the Wild](https://thehackernews.com/2026/09/sharepoint-rce-and-mikrotik-routeros.html)
-**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Sep 26  
-**Why it matters:** General awareness item.  
-**Recommended action:** Prioritize patching of affected systems; check for internet-exposed attack surface.  
-
 ---
 
 ## 🟠 Important — Review This Week
+
+- [Apple Emergency Patch for iOS 26, macOS26, macOS15 (CVE-2026-86950), (Mon, Sep 28th)](https://isc.sans.edu/diary/rss/33376)  
+  **SANS Internet Storm Center** · Sep 28 · _General awareness item._  
+
+- [Apple Patches CoreGraphics Flaw Possibly Exploited in Targeted Attacks](https://thehackernews.com/2026/09/apple-patches-coregraphics-flaw.html)  
+  **The Hacker News** · Sep 28 · _General awareness item._  
+
+- [Bitget Says Attacker Exploited Third-Party Security Product Flaw to Steal $388M](https://thehackernews.com/2026/09/bitget-says-attacker-exploited-third.html)  
+  **The Hacker News** · Sep 28 · _Potential email disruption for users._  
 
 - [CVE-2026-81355 Virtual Hard Disk (VHD) Miniport Driver Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-81355)  
   **Microsoft Security Response Center** · Sep 28 · _General awareness item._  
@@ -70,26 +79,17 @@
 - [CISA Says Attackers Are Exploiting Two Critical Citrix NetScaler Flaws Globally](https://thehackernews.com/2026/09/cisa-says-attackers-are-exploiting-two.html)  
   **The Hacker News** · Sep 28 · _General awareness item._  
 
-- [CISA orders feds to patch exploited Citrix flaws by Wednesday](https://www.bleepingcomputer.com/news/security/cisa-orders-feds-to-patch-exploited-citrix-flaws-by-wednesday/)  
-  **BleepingComputer** · Sep 28 · _General awareness item._  
-
-- [Swarming Against Citrix 0-Day Exploitation](https://www.greynoise.io/blog/swarming-against-citrix-0-day-exploitation)  
-  **GreyNoise Blog** · Sep 28 · _General awareness item._  
-
-- [Citrix confirms two NetScaler RCE zero-days exploited in attacks](https://www.bleepingcomputer.com/news/security/citrix-admins-warned-to-shut-down-netscalers-over-2-exploited-zero-days/)  
-  **BleepingComputer** · Sep 27 · _General awareness item._  
-
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [Dutch police confirm arrest in ShinyHunters hacking investigation](https://www.bleepingcomputer.com/news/security/dutch-police-confirm-arrest-in-shinyhunters-hacking-investigation/) — BleepingComputer
+- [Over 16,000 Supabase databases expose PII, passwords, auth tokens](https://www.bleepingcomputer.com/news/security/misconfigured-supabase-apps-expose-data-in-over-16-000-databases/) — BleepingComputer
+- [IAM for AI agents: A Practical Enterprise Framework](https://thehackernews.com/2026/09/iam-for-ai-agent.html) — The Hacker News
+- [RatHat Android Malware Console Uses Gemini to Identify Higher-Value Victims](https://thehackernews.com/2026/09/rathat-android-malware-console-uses.html) — The Hacker News
 - [Modulate Raises $25 Million to Advance Deepfake Detection](https://www.securityweek.com/modulate-raises-25-million-to-advance-deepfake-detection/) — SecurityWeek
 - [Call for Presentations Open for 2026 CISO Forum Virtual Summit](https://www.securityweek.com/call-for-presentations-open-for-2026-ciso-forum-virtual-summit/) — SecurityWeek
-- [NeedyMantis: Unpacking a post-compromise malware family used in targeted operations](https://www.microsoft.com/en-us/security/blog/2026/09/28/needymantis-unpacking-a-post-compromise-malware-family-used-in-targeted-operations/) — Microsoft Security Blog
-- [⚡ Weekly Recap: $387M Crypto Hack, Citrix Exploits, AI Agents Go Off-Script, and More Threats](https://thehackernews.com/2026/09/weekly-recap-387m-crypto-hack-citrix.html) — The Hacker News
-- [80,000+ Organizations Had AI Logins Stolen: From Shadow AI to LLMjacking](https://www.bleepingcomputer.com/news/security/80-000-plus-organizations-had-ai-logins-stolen-from-shadow-ai-to-llmjacking/) — BleepingComputer
-- [Prison Sentence for Former US Soldier Who Hacked AT&T and Verizon](https://www.securityweek.com/prison-sentence-for-former-us-soldier-who-hacked-att-and-verizon/) — SecurityWeek
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 10 critical · 87 important · 57 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 12 critical · 87 important · 55 FYI_
