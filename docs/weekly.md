@@ -1,25 +1,35 @@
 # IT Weekly Intelligence Briefing
 **Period:** September 22 – September 29, 2026  
-**Generated:** 2026-09-29 11:04 UTC  
-**Items reviewed:** 154  
+**Generated:** 2026-09-29 17:35 UTC  
+**Items reviewed:** 155  
 
 ## ⚡ Top Actions This Week
 
-1. **Validate backups, confirm EDR coverage, and brief incident response team.**  
-   _Japan's Keio confirms ransomware attack disrupted business systems_  
+1. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
+   _Automated AI agent used to breach cybersecurity nonprofit DIVD_  
    Source: BleepingComputer  
 
 2. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _Times Car confirms data breach affecting 6.6 million user accounts_  
-   Source: BleepingComputer  
+   _Pentagon Personnel Agency Data Breach Impacts 3 Million People_  
+   Source: SecurityWeek  
 
-3. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _Hackers Use NeedyMantis to Maintain Long-Term Access in Breached Networks_  
-   Source: The Hacker News  
+3. **Validate backups, confirm EDR coverage, and brief incident response team.**  
+   _Japan's Keio confirms ransomware attack disrupted business systems_  
+   Source: BleepingComputer  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [Automated AI agent used to breach cybersecurity nonprofit DIVD](https://www.bleepingcomputer.com/news/security/automated-ai-agent-used-to-breach-cybersecurity-nonprofit-divd/)
+**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Sep 29  
+**Why it matters:** Potential credential or data exposure.  
+**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
+
+### [Pentagon Personnel Agency Data Breach Impacts 3 Million People](https://www.securityweek.com/pentagon-personnel-agency-data-breach-impacts-3-million-people/)
+**Source:** SecurityWeek &nbsp;·&nbsp; **Date:** Sep 29  
+**Why it matters:** Potential credential or data exposure.  
+**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
 ### [Japan's Keio confirms ransomware attack disrupted business systems](https://www.bleepingcomputer.com/news/security/japans-keio-confirms-ransomware-attack-disrupted-business-systems/)
 **Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Sep 28  
@@ -41,55 +51,45 @@
 **Why it matters:** Elevated ransomware risk across the sector.  
 **Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
 
-### [Dutch Police Arrest ‘Reformed’ Hacker in Shiny Hunters Investigation](https://krebsonsecurity.com/2026/09/dutch-police-arrest-reformed-hacker-in-shiny-hunters-investigation/)
-**Source:** Krebs on Security &nbsp;·&nbsp; **Date:** Sep 28  
-**Why it matters:** Elevated ransomware risk across the sector.  
-**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
-
-### [Bitget resumes Bitcoin withdrawals after $387.5 million crypto heist](https://www.bleepingcomputer.com/news/security/bitget-resumes-bitcoin-withdrawals-after-3875-million-crypto-heist/)
-**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Sep 28  
-**Why it matters:** Potential credential or data exposure.  
-**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
-
 ---
 
 ## 🟠 Important — Review This Week
 
-- [Kiteworks patches critical flaw, brings customer systems online](https://www.bleepingcomputer.com/news/security/kiteworks-lifts-shutdown-warning-after-patching-critical-flaw/)  
-  **BleepingComputer** · Sep 29 · _General awareness item._  
+- [New Spectre-v2 BTR Attack Leaks Linux Memory Despite Existing Defenses](https://thehackernews.com/2026/09/new-spectre-v2-btr-attack-leaks-linux.html)  
+  **The Hacker News** · Sep 29 · _General awareness item._  
 
-- [Chromium CVE-2026-91728: Integer overflow](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-91728)  
+- [Kiteworks Fixes Critical Flaw Found During Nine-Hour Precautionary Shutdown](https://thehackernews.com/2026/09/kiteworks-fixes-critical-flaw-found.html)  
+  **The Hacker News** · Sep 29 · _General awareness item._  
+
+- [CVE-2026-62694 Windows Installer Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-62694)  
   **Microsoft Security Response Center** · Sep 29 · _General awareness item._  
 
-- [Chromium CVE-2026-91745: Use after free](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-91745)  
+- [CVE-2026-69307 Windows USB Audio Class driver (usbaudio.sys) Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69307)  
   **Microsoft Security Response Center** · Sep 29 · _General awareness item._  
 
-- [Apple patches CoreGraphics zero-day flaw exploited in attacks](https://www.bleepingcomputer.com/news/security/apple-patches-coregraphics-zero-day-flaw-exploited-in-attacks/)  
-  **BleepingComputer** · Sep 29 · _General awareness item._  
+- [CVE-2026-56172 Windows VHD miniport driver Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-56172)  
+  **Microsoft Security Response Center** · Sep 29 · _General awareness item._  
 
-- [Apple Patches Zero-Day Linked to ‘Extremely Sophisticated Attack’](https://www.securityweek.com/apple-patches-meta-reported-zero-day-linked-to-extremely-sophisticated-attack/)  
-  **SecurityWeek** · Sep 29 · _General awareness item._  
+- [CVE-2026-68880 Windows Win32k Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-68880)  
+  **Microsoft Security Response Center** · Sep 29 · _General awareness item._  
 
-- [Apple Emergency Patch for iOS 26, macOS26, macOS15 (CVE-2026-86950), (Mon, Sep 28th)](https://isc.sans.edu/diary/rss/33376)  
-  **SANS Internet Storm Center** · Sep 28 · _General awareness item._  
+- [CVE-2026-61930 Windows Kernel Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-61930)  
+  **Microsoft Security Response Center** · Sep 29 · _General awareness item._  
 
-- [Apple Patches CoreGraphics Flaw Possibly Exploited in Targeted Attacks](https://thehackernews.com/2026/09/apple-patches-coregraphics-flaw.html)  
-  **The Hacker News** · Sep 28 · _General awareness item._  
-
-- [Bitget Says Attacker Exploited Third-Party Security Product Flaw to Steal $388M](https://thehackernews.com/2026/09/bitget-says-attacker-exploited-third.html)  
-  **The Hacker News** · Sep 28 · _Potential email disruption for users._  
+- [CVE-2026-62688 Windows MIDI Service Module Elevation of Privileges Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-62688)  
+  **Microsoft Security Response Center** · Sep 29 · _General awareness item._  
 
 ---
 
 ## 🔵 FYI — General Awareness
 
-- [Dutch Police Arrest Convicted Hacker in ShinyHunters Investigation](https://www.securityweek.com/dutch-police-arrest-convicted-hacker-in-shinyhunters-investigation/) — SecurityWeek
-- [Daemon Tools Hackers’ NeedyMantis Malware Dissected by Microsoft](https://www.securityweek.com/daemon-tools-hackers-needymantis-malware-dissected-by-microsoft/) — SecurityWeek
-- [Dutch Police Arrest 24-Year-Old Amsterdam Man in ShinyHunters Investigation](https://thehackernews.com/2026/09/dutch-police-arrest-24-year-old.html) — The Hacker News
-- [Official MCP Python SDK Flaw Can Let Malicious Servers Steal OAuth Credentials](https://thehackernews.com/2026/09/official-mcp-python-sdk-flaw-can-let.html) — The Hacker News
-- [OpenAI Shelves GPT-6.1 Astra After Tests Find Deception and Unauthorized Actions](https://thehackernews.com/2026/09/openai-shelves-gpt-61-astra-after-tests.html) — The Hacker News
-- [OpenAI Pauses Tool Use After Agent Bypasses Internet Controls to Reach External Chatbot](https://thehackernews.com/2026/09/openai-pauses-tool-use-after-agent.html) — The Hacker News
+- [DARPA Selects Xint to Use AI in Securing Military Messaging Apps](https://www.securityweek.com/darpa-selects-xint-to-use-ai-in-securing-military-messaging-apps/) — SecurityWeek
+- [New Spectre v2 attack variant leaks Linux root password hash in minutes](https://www.bleepingcomputer.com/news/security/new-spectre-v2-attack-variant-leaks-linux-root-password-hash-in-minutes/) — BleepingComputer
+- [New Spectre v2 Variant Exposes Intel, AMD, Arm CPUs to Data Leaks](https://www.securityweek.com/new-spectre-v2-variant-exposes-intel-amd-arm-cpus-to-data-leaks/) — SecurityWeek
+- [​​Beyond source code: A path to the keys to the kingdom](https://www.microsoft.com/en-us/security/blog/2026/09/29/beyond-source-code-a-path-to-the-keys-to-the-kingdom/) — Microsoft Security Blog
+- [Star Blizzard refines phishing and malware delivery with the RedFlick technique](https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/) — Microsoft Security Blog
+- [RemoteThreat Launches With $7 Million for Offensive Operations Platform](https://www.securityweek.com/remotethreat-launches-with-7-million-for-offensive-operations-platform/) — SecurityWeek
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 11 critical · 84 important · 59 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 13 critical · 79 important · 63 FYI_
