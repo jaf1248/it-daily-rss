@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
 **Period:** September 22 – September 29, 2026  
-**Generated:** 2026-09-29 04:06 UTC  
+**Generated:** 2026-09-29 11:04 UTC  
 **Items reviewed:** 154  
 
 ## ⚡ Top Actions This Week
@@ -55,6 +55,21 @@
 
 ## 🟠 Important — Review This Week
 
+- [Kiteworks patches critical flaw, brings customer systems online](https://www.bleepingcomputer.com/news/security/kiteworks-lifts-shutdown-warning-after-patching-critical-flaw/)  
+  **BleepingComputer** · Sep 29 · _General awareness item._  
+
+- [Chromium CVE-2026-91728: Integer overflow](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-91728)  
+  **Microsoft Security Response Center** · Sep 29 · _General awareness item._  
+
+- [Chromium CVE-2026-91745: Use after free](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-91745)  
+  **Microsoft Security Response Center** · Sep 29 · _General awareness item._  
+
+- [Apple patches CoreGraphics zero-day flaw exploited in attacks](https://www.bleepingcomputer.com/news/security/apple-patches-coregraphics-zero-day-flaw-exploited-in-attacks/)  
+  **BleepingComputer** · Sep 29 · _General awareness item._  
+
+- [Apple Patches Zero-Day Linked to ‘Extremely Sophisticated Attack’](https://www.securityweek.com/apple-patches-meta-reported-zero-day-linked-to-extremely-sophisticated-attack/)  
+  **SecurityWeek** · Sep 29 · _General awareness item._  
+
 - [Apple Emergency Patch for iOS 26, macOS26, macOS15 (CVE-2026-86950), (Mon, Sep 28th)](https://isc.sans.edu/diary/rss/33376)  
   **SANS Internet Storm Center** · Sep 28 · _General awareness item._  
 
@@ -64,32 +79,17 @@
 - [Bitget Says Attacker Exploited Third-Party Security Product Flaw to Steal $388M](https://thehackernews.com/2026/09/bitget-says-attacker-exploited-third.html)  
   **The Hacker News** · Sep 28 · _Potential email disruption for users._  
 
-- [CVE-2026-81355 Virtual Hard Disk (VHD) Miniport Driver Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-81355)  
-  **Microsoft Security Response Center** · Sep 28 · _General awareness item._  
-
-- [Google Warns of ShinyHunters’ Fresh Oracle PeopleSoft Campaign](https://www.securityweek.com/google-warns-of-shinyhunters-fresh-oracle-peoplesoft-campaign/)  
-  **SecurityWeek** · Sep 28 · _General awareness item._  
-
-- [Kiteworks Urges Server Shutdown, Finds Advanced Forms Vulnerability](https://www.securityweek.com/kiteworks-urges-server-shutdown-finds-advanced-forms-vulnerability/)  
-  **SecurityWeek** · Sep 28 · _General awareness item._  
-
-- [Citrix Confirms 2 NetScaler Zero-Days After Admins Pulled the Plug](https://www.securityweek.com/citrix-confirms-2-netscaler-zero-days-after-admins-pulled-the-plug/)  
-  **SecurityWeek** · Sep 28 · _General awareness item._  
-
-- [CISA Says Attackers Are Exploiting Two Critical Citrix NetScaler Flaws Globally](https://thehackernews.com/2026/09/cisa-says-attackers-are-exploiting-two.html)  
-  **The Hacker News** · Sep 28 · _General awareness item._  
-
 ---
 
 ## 🔵 FYI — General Awareness
 
-- [ISC Stormcast For Tuesday, September 29th, 2026 https://isc.sans.edu/podcastdetail/10114, (Tue, Sep 29th)](https://isc.sans.edu/diary/rss/33378) — SANS Internet Storm Center
-- [Dutch police confirm arrest in ShinyHunters hacking investigation](https://www.bleepingcomputer.com/news/security/dutch-police-confirm-arrest-in-shinyhunters-hacking-investigation/) — BleepingComputer
-- [Over 16,000 Supabase databases expose PII, passwords, auth tokens](https://www.bleepingcomputer.com/news/security/misconfigured-supabase-apps-expose-data-in-over-16-000-databases/) — BleepingComputer
-- [IAM for AI agents: A Practical Enterprise Framework](https://thehackernews.com/2026/09/iam-for-ai-agent.html) — The Hacker News
-- [RatHat Android Malware Console Uses Gemini to Identify Higher-Value Victims](https://thehackernews.com/2026/09/rathat-android-malware-console-uses.html) — The Hacker News
-- [Modulate Raises $25 Million to Advance Deepfake Detection](https://www.securityweek.com/modulate-raises-25-million-to-advance-deepfake-detection/) — SecurityWeek
+- [Dutch Police Arrest Convicted Hacker in ShinyHunters Investigation](https://www.securityweek.com/dutch-police-arrest-convicted-hacker-in-shinyhunters-investigation/) — SecurityWeek
+- [Daemon Tools Hackers’ NeedyMantis Malware Dissected by Microsoft](https://www.securityweek.com/daemon-tools-hackers-needymantis-malware-dissected-by-microsoft/) — SecurityWeek
+- [Dutch Police Arrest 24-Year-Old Amsterdam Man in ShinyHunters Investigation](https://thehackernews.com/2026/09/dutch-police-arrest-24-year-old.html) — The Hacker News
+- [Official MCP Python SDK Flaw Can Let Malicious Servers Steal OAuth Credentials](https://thehackernews.com/2026/09/official-mcp-python-sdk-flaw-can-let.html) — The Hacker News
+- [OpenAI Shelves GPT-6.1 Astra After Tests Find Deception and Unauthorized Actions](https://thehackernews.com/2026/09/openai-shelves-gpt-61-astra-after-tests.html) — The Hacker News
+- [OpenAI Pauses Tool Use After Agent Bypasses Internet Controls to Reach External Chatbot](https://thehackernews.com/2026/09/openai-pauses-tool-use-after-agent.html) — The Hacker News
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 12 critical · 87 important · 55 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 11 critical · 84 important · 59 FYI_
