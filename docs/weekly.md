@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
-**Period:** September 21 – September 28, 2026  
-**Generated:** 2026-09-28 23:41 UTC  
+**Period:** September 22 – September 29, 2026  
+**Generated:** 2026-09-29 04:06 UTC  
 **Items reviewed:** 154  
 
 ## ⚡ Top Actions This Week
@@ -83,12 +83,12 @@
 
 ## 🔵 FYI — General Awareness
 
+- [ISC Stormcast For Tuesday, September 29th, 2026 https://isc.sans.edu/podcastdetail/10114, (Tue, Sep 29th)](https://isc.sans.edu/diary/rss/33378) — SANS Internet Storm Center
 - [Dutch police confirm arrest in ShinyHunters hacking investigation](https://www.bleepingcomputer.com/news/security/dutch-police-confirm-arrest-in-shinyhunters-hacking-investigation/) — BleepingComputer
 - [Over 16,000 Supabase databases expose PII, passwords, auth tokens](https://www.bleepingcomputer.com/news/security/misconfigured-supabase-apps-expose-data-in-over-16-000-databases/) — BleepingComputer
 - [IAM for AI agents: A Practical Enterprise Framework](https://thehackernews.com/2026/09/iam-for-ai-agent.html) — The Hacker News
 - [RatHat Android Malware Console Uses Gemini to Identify Higher-Value Victims](https://thehackernews.com/2026/09/rathat-android-malware-console-uses.html) — The Hacker News
 - [Modulate Raises $25 Million to Advance Deepfake Detection](https://www.securityweek.com/modulate-raises-25-million-to-advance-deepfake-detection/) — SecurityWeek
-- [Call for Presentations Open for 2026 CISO Forum Virtual Summit](https://www.securityweek.com/call-for-presentations-open-for-2026-ciso-forum-virtual-summit/) — SecurityWeek
 
 ---
 
