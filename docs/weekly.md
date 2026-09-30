@@ -1,25 +1,35 @@
 # IT Weekly Intelligence Briefing
 **Period:** September 23 – September 30, 2026  
-**Generated:** 2026-09-30 07:56 UTC  
+**Generated:** 2026-09-30 14:36 UTC  
 **Items reviewed:** 155  
 
 ## ⚡ Top Actions This Week
 
 1. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _Russia's Star Blizzard Targets 100+ Organizations With Fake Event Invites to Deliver Backdoor_  
+   _Know Your Enemy: Browser-Based Attack Techniques in 2026_  
    Source: The Hacker News  
 
 2. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _Automated AI agent used to breach cybersecurity nonprofit DIVD_  
+   _Bitget hacked via zero-day in third-party security products_  
    Source: BleepingComputer  
 
 3. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _Pentagon Personnel Agency Data Breach Impacts 3 Million People_  
-   Source: SecurityWeek  
+   _Russia's Star Blizzard Targets 100+ Organizations With Fake Event Invites to Deliver Backdoor_  
+   Source: The Hacker News  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [Know Your Enemy: Browser-Based Attack Techniques in 2026](https://thehackernews.com/2026/09/know-your-enemy-browser-based-attack.html)
+**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Sep 30  
+**Why it matters:** Potential credential or data exposure.  
+**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
+
+### [Bitget hacked via zero-day in third-party security products](https://www.bleepingcomputer.com/news/security/bitget-hacked-via-zero-day-in-third-party-security-products/)
+**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Sep 30  
+**Why it matters:** Potential credential or data exposure.  
+**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
 ### [Russia's Star Blizzard Targets 100+ Organizations With Fake Event Invites to Deliver Backdoor](https://thehackernews.com/2026/09/russias-star-blizzard-targets-100.html)
 **Source:** The Hacker News &nbsp;·&nbsp; **Date:** Sep 29  
@@ -31,65 +41,55 @@
 **Why it matters:** Potential credential or data exposure.  
 **Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
-### [Pentagon Personnel Agency Data Breach Impacts 3 Million People](https://www.securityweek.com/pentagon-personnel-agency-data-breach-impacts-3-million-people/)
-**Source:** SecurityWeek &nbsp;·&nbsp; **Date:** Sep 29  
-**Why it matters:** Potential credential or data exposure.  
-**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
-
-### [Japan's Keio confirms ransomware attack disrupted business systems](https://www.bleepingcomputer.com/news/security/japans-keio-confirms-ransomware-attack-disrupted-business-systems/)
-**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Sep 28  
-**Why it matters:** Elevated ransomware risk across the sector.  
-**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
-
-### [Times Car confirms data breach affecting 6.6 million user accounts](https://www.bleepingcomputer.com/news/security/times-car-confirms-data-breach-affecting-66-million-user-accounts/)
-**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Sep 28  
-**Why it matters:** Potential credential or data exposure.  
-**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
-
 ### [Hackers Use NeedyMantis to Maintain Long-Term Access in Breached Networks](https://thehackernews.com/2026/09/hackers-use-needymantis-to-maintain.html)
 **Source:** The Hacker News &nbsp;·&nbsp; **Date:** Sep 28  
 **Why it matters:** Potential credential or data exposure.  
 **Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
+### [Dutch Police Arrest ‘Reformed’ Hacker in Shiny Hunters Investigation](https://krebsonsecurity.com/2026/09/dutch-police-arrest-reformed-hacker-in-shiny-hunters-investigation/)
+**Source:** Krebs on Security &nbsp;·&nbsp; **Date:** Sep 28  
+**Why it matters:** Elevated ransomware risk across the sector.  
+**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
+
 ---
 
 ## 🟠 Important — Review This Week
 
-- [High-Severity Vulnerabilities Patched in OpenSSL, WolfSSL](https://www.securityweek.com/high-severity-vulnerabilities-patched-in-openssl-wolfssl/)  
+- [Google: AI Is Changing the Pace and Profile of Vulnerability Discovery](https://www.securityweek.com/google-ai-is-changing-the-pace-and-profile-of-vulnerability-discovery/)  
   **SecurityWeek** · Sep 30 · _General awareness item._  
 
-- [Citrix NetScaler CVE-2026-88772 Exploit Details Show Pre-Auth Path to Shellcode Execution](https://thehackernews.com/2026/09/citrix-netscaler-cve-2026-88772-exploit.html)  
+- [WatchGuard Patches Critical Fireware OS Code Injection Vulnerability](https://www.securityweek.com/watchguard-patches-critical-fireware-os-code-injection-vulnerability/)  
+  **SecurityWeek** · Sep 30 · _General awareness item._  
+
+- [Government, Finance Orgs Targeted in Weeks-Long NetScaler Zero-Day Attacks](https://www.securityweek.com/government-finance-orgs-targeted-in-weeks-long-netscaler-zero-day-attacks/)  
+  **SecurityWeek** · Sep 30 · _General awareness item._  
+
+- [TeamViewer urges users to patch severe flaws “as soon as possible”](https://www.bleepingcomputer.com/news/security/teamviewer-urges-users-to-patch-severe-flaws-as-soon-as-possible/)  
+  **BleepingComputer** · Sep 30 · _General awareness item._  
+
+- [Chrome, Firefox Updates Patch Over 100 Vulnerabilities](https://www.securityweek.com/chrome-firefox-updates-patch-over-100-vulnerabilities/)  
+  **SecurityWeek** · Sep 30 · _General awareness item._  
+
+- [US-Focused CSuite Phishing Steals Microsoft 365 Sessions and Deploys RMM Tools for Remote Access](https://thehackernews.com/2026/09/us-focused-csuite-phishing-steals.html)  
   **The Hacker News** · Sep 30 · _General awareness item._  
 
-- [Hackers exploit Citrix NetScaler zero-day to deploy web shells](https://www.bleepingcomputer.com/news/security/hackers-exploit-citrix-netscaler-zero-day-to-deploy-web-shells/)  
-  **BleepingComputer** · Sep 29 · _General awareness item._  
+- [Attackers Exploit NetScaler Flaw for Root Access, Deploy WHIPSHOT and SLAPSHOT](https://thehackernews.com/2026/09/attackers-exploit-netscaler-flaw-for.html)  
+  **The Hacker News** · Sep 30 · _General awareness item._  
 
-- [New Spectre-v2 BTR Attack Leaks Linux Memory Despite Existing Defenses](https://thehackernews.com/2026/09/new-spectre-v2-btr-attack-leaks-linux.html)  
-  **The Hacker News** · Sep 29 · _General awareness item._  
-
-- [Kiteworks Fixes Critical Flaw Found During Nine-Hour Precautionary Shutdown](https://thehackernews.com/2026/09/kiteworks-fixes-critical-flaw-found.html)  
-  **The Hacker News** · Sep 29 · _General awareness item._  
-
-- [CVE-2026-62694 Windows Installer Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-62694)  
-  **Microsoft Security Response Center** · Sep 29 · _General awareness item._  
-
-- [CVE-2026-69307 Windows USB Audio Class driver (usbaudio.sys) Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69307)  
-  **Microsoft Security Response Center** · Sep 29 · _General awareness item._  
-
-- [CVE-2026-56172 Windows VHD miniport driver Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-56172)  
-  **Microsoft Security Response Center** · Sep 29 · _General awareness item._  
+- [High-Severity Vulnerabilities Patched in OpenSSL, WolfSSL](https://www.securityweek.com/high-severity-vulnerabilities-patched-in-openssl-wolfssl/)  
+  **SecurityWeek** · Sep 30 · _General awareness item._  
 
 ---
 
 ## 🔵 FYI — General Awareness
 
-- [ISC Stormcast For Wednesday, September 30th, 2026 https://isc.sans.edu/podcastdetail/10116, (Wed, Sep 30th)](https://isc.sans.edu/diary/rss/33384) — SANS Internet Storm Center
-- [Trump Says Top Tech Firms Have Signed Accord to ‘Self-Police’ AI Development](https://www.securityweek.com/trump-says-top-tech-firms-have-signed-accord-to-self-police-ai-development/) — SecurityWeek
-- [Microsoft is rolling out Linux container support to WSL](https://www.bleepingcomputer.com/news/microsoft/microsoft-is-rolling-out-linux-container-support-to-wsl/) — BleepingComputer
-- [Phishing Abuses RMM Tools for Persistent Access](https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/) — Microsoft Security Blog
-- [Signal adds encypted local backup support to iOS, desktop apps](https://www.bleepingcomputer.com/news/security/signal-adds-encypted-local-backup-support-to-ios-desktop-apps/) — BleepingComputer
-- [Custom ChatGPTs push ClickFix attacks to deploy RAT malware](https://www.bleepingcomputer.com/news/security/custom-chatgpts-push-clickfix-attacks-to-deploy-rat-malware/) — BleepingComputer
+- [AI's Third Wave: Coworkers Break the Security Model That Worked for Agents](https://www.bleepingcomputer.com/news/security/ais-third-wave-coworkers-break-the-security-model-that-worked-for-agents/) — BleepingComputer
+- [Microsoft to block Entra ID script injection attacks starting October](https://www.bleepingcomputer.com/news/security/microsoft-to-block-entra-id-script-injection-attacks-starting-october/) — BleepingComputer
+- [AI Coding Agents Exposed 13,000 Internal Images, Including Billing Records, on GitHub](https://thehackernews.com/2026/09/ai-coding-agents-exposed-13000-internal.html) — The Hacker News
+- [Anthropic Flags AI Agent Liability Risks as OpenAI Faces Hacking Lawsuit](https://www.securityweek.com/anthropic-flags-ai-agent-liability-risks-as-openai-faces-hacking-lawsuit/) — SecurityWeek
+- [Russian APT Star Blizzard Uses ‘RedFlick’ Infection Chain in Recent Attacks](https://www.securityweek.com/russian-apt-star-blizzard-uses-redflick-infection-chain-in-recent-attacks/) — SecurityWeek
+- [ShinyHunters Defiant After FBI Calls on Members to Come Forward](https://www.securityweek.com/shinyhunters-defiant-after-fbi-calls-on-members-to-come-forward/) — SecurityWeek
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 12 critical · 79 important · 64 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 11 critical · 82 important · 62 FYI_
