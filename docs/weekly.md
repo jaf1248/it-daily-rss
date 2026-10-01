@@ -1,25 +1,45 @@
 # IT Weekly Intelligence Briefing
 **Period:** September 24 – October 01, 2026  
-**Generated:** 2026-10-01 11:20 UTC  
+**Generated:** 2026-10-01 17:59 UTC  
 **Items reviewed:** 156  
 
 ## ⚡ Top Actions This Week
 
-1. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _Hackers stole Pentagon personnel records of over 3 million people_  
-   Source: BleepingComputer  
-
-2. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _DIVD says Zammad zero-days enabled AI-driven network breach_  
-   Source: BleepingComputer  
-
-3. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _Know Your Enemy: Browser-Based Attack Techniques in 2026_  
+1. **Validate backups, confirm EDR coverage, and brief incident response team.**  
+   _Police Arrest 16-Year-Old Suspected of Running KillSec, Seize Ransomware Leak Site and Servers_  
    Source: The Hacker News  
+
+2. **Validate backups, confirm EDR coverage, and brief incident response team.**  
+   _Police dismantle KillSec ransomware gang allegedly led by 16-year-old_  
+   Source: BleepingComputer  
+
+3. **Validate backups, confirm EDR coverage, and brief incident response team.**  
+   _Police Shut Down KillSec Ransomware, Identify Alleged Teen Leader_  
+   Source: SecurityWeek  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [Police Arrest 16-Year-Old Suspected of Running KillSec, Seize Ransomware Leak Site and Servers](https://thehackernews.com/2026/10/police-arrest-16-year-old-suspected-of.html)
+**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Oct 01  
+**Why it matters:** Elevated ransomware risk across the sector.  
+**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
+
+### [Police dismantle KillSec ransomware gang allegedly led by 16-year-old](https://www.bleepingcomputer.com/news/security/police-dismantle-killsec-ransomware-gang-allegedly-led-by-16-year-old/)
+**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Oct 01  
+**Why it matters:** Elevated ransomware risk across the sector.  
+**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
+
+### [Police Shut Down KillSec Ransomware, Identify Alleged Teen Leader](https://www.securityweek.com/police-shut-down-killsec-ransomware-identify-alleged-teen-leader/)
+**Source:** SecurityWeek &nbsp;·&nbsp; **Date:** Oct 01  
+**Why it matters:** Elevated ransomware risk across the sector.  
+**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
+
+### [Zimbra Vulnerability Exploited in the Wild Prior to Public Disclosure](https://www.securityweek.com/zimbra-vulnerability-exploited-in-the-wild-prior-to-public-disclosure/)
+**Source:** SecurityWeek &nbsp;·&nbsp; **Date:** Oct 01  
+**Why it matters:** General awareness item.  
+**Recommended action:** Review and assess impact on your environment.  
 
 ### [Hackers stole Pentagon personnel records of over 3 million people](https://www.bleepingcomputer.com/news/security/hackers-breach-pentagon-human-resources-management-system-steal-data-of-nearly-3-million-people/)
 **Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Oct 01  
@@ -31,41 +51,24 @@
 **Why it matters:** Potential credential or data exposure.  
 **Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
-### [Know Your Enemy: Browser-Based Attack Techniques in 2026](https://thehackernews.com/2026/09/know-your-enemy-browser-based-attack.html)
-**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Sep 30  
-**Why it matters:** Potential credential or data exposure.  
-**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
-
-### [Bitget hacked via zero-day in third-party security products](https://www.bleepingcomputer.com/news/security/bitget-hacked-via-zero-day-in-third-party-security-products/)
-**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Sep 30  
-**Why it matters:** Potential credential or data exposure.  
-**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
-
-### [Russia's Star Blizzard Targets 100+ Organizations With Fake Event Invites to Deliver Backdoor](https://thehackernews.com/2026/09/russias-star-blizzard-targets-100.html)
-**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Sep 29  
-**Why it matters:** Potential credential or data exposure.  
-**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
-
-### [Hackers Use NeedyMantis to Maintain Long-Term Access in Breached Networks](https://thehackernews.com/2026/09/hackers-use-needymantis-to-maintain.html)
-**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Sep 28  
-**Why it matters:** Potential credential or data exposure.  
-**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
-
 ---
 
 ## 🟠 Important — Review This Week
+
+- [ThreatsDay: AI-Powered Zero-Day Chain, 543K Live Secrets, Model Inspection RCE and 13 More Stories](https://thehackernews.com/2026/10/threatsday-ai-powered-zero-day-chain.html)  
+  **The Hacker News** · Oct 01 · _General awareness item._  
+
+- [Kiteworks patches max severity code injection vulnerability](https://www.bleepingcomputer.com/news/security/kiteworks-patches-max-severity-email-protection-gateway-code-injection-vulnerability/)  
+  **BleepingComputer** · Oct 01 · _General awareness item._  
+
+- [AI Has Changed Attack Speed, Not Security Fundamentals](https://www.securityweek.com/ai-has-changed-attack-speed-not-security-fundamentals/)  
+  **SecurityWeek** · Oct 01 · _General awareness item._  
 
 - [Zammad Zero-Days Exploited in AI-Powered DIVD Hack](https://www.securityweek.com/zammad-zero-days-exploited-in-ai-powered-divd-hack/)  
   **SecurityWeek** · Oct 01 · _General awareness item._  
 
 - [CISA Adds Exploited Cisco Catalyst SD-WAN Manager Auth Bypass to KEV](https://thehackernews.com/2026/10/cisa-adds-exploited-cisco-catalyst-sd.html)  
   **The Hacker News** · Oct 01 · _General awareness item._  
-
-- [Cisco Patches Exploited Catalyst SD-WAN Zero-Day Vulnerability](https://www.securityweek.com/cisco-patches-exploited-catalyst-sd-wan-zero-day-vulnerability/)  
-  **SecurityWeek** · Oct 01 · _General awareness item._  
-
-- [Google Launches Gemini 4 Argon With Guardrail-Free Access for Vetted Defenders](https://www.securityweek.com/google-launches-gemini-4-argon-with-guardrail-free-access-for-vetted-defenders/)  
-  **SecurityWeek** · Oct 01 · _General awareness item._  
 
 - [Metamask discloses security incident affecting its infrastructure](https://www.bleepingcomputer.com/news/security/metamask-discloses-security-incident-affecting-its-infrastructure/)  
   **BleepingComputer** · Oct 01 · _General awareness item._  
@@ -76,20 +79,17 @@
 - [Bitget Confirms Third-Party Zero-Day Behind $387.5 Million Cryptocurrency Theft](https://thehackernews.com/2026/10/bitget-confirms-third-party-zero-day.html)  
   **The Hacker News** · Oct 01 · _Potential email disruption for users._  
 
-- [MetaMask Security Incident Prompts Exit of Affected Ethereum Validators](https://thehackernews.com/2026/10/metamask-security-incident-prompts-exit.html)  
-  **The Hacker News** · Oct 01 · _General awareness item._  
-
 ---
 
 ## 🔵 FYI — General Awareness
 
-- [Microsoft enables Windows settings backup by default for orgs](https://www.bleepingcomputer.com/news/microsoft/microsoft-enables-windows-settings-backup-by-default-for-orgs/) — BleepingComputer
-- [Treasury Blacklists Most-Wanted ATM Malware Developer and His Network](https://www.securityweek.com/treasury-blacklists-most-wanted-atm-malware-developer-and-his-network/) — SecurityWeek
-- [OpenAI Disrupts Reasoning Extraction Campaign Linked to Moonshot AI Associates](https://thehackernews.com/2026/10/openai-disrupts-reasoning-extraction.html) — The Hacker News
-- [500,000 Active Credentials Left Exposed on GitHub](https://www.securityweek.com/500000-active-credentials-left-exposed-on-github/) — SecurityWeek
-- [Google Rolls Out Gemini 4 Argon to Trusted Cyber Defenders, Plans Guardrail-Free Version](https://thehackernews.com/2026/10/google-rolls-out-gemini-4-argon-to.html) — The Hacker News
-- [ScreenConnect Client (Ab)used by Attackers, (Thu, Oct 1st)](https://isc.sans.edu/diary/rss/33388) — SANS Internet Storm Center
+- [Osavul Lands $10 Million to Spot Hostile Intent Across Cyber, Physical Domains](https://www.securityweek.com/osavul-lands-10-million-to-spot-hostile-intent-across-cyber-physical-domains/) — SecurityWeek
+- [WordPress Backdoor Rebuilds Itself After Cleanup Using Files, Database, and Shared Memory](https://thehackernews.com/2026/10/wordpress-backdoor-rebuilds-itself.html) — The Hacker News
+- [Hacker Conversations: Rob Juncker, a Knock at the Door and a Moral Compass](https://www.securityweek.com/hacker-conversations-rob-juncker-a-knock-at-the-door-and-a-moral-compass/) — SecurityWeek
+- [Enterprises Struggle to Prepare for AI and Quantum Threats, PwC Says](https://www.securityweek.com/enterprises-struggle-to-prepare-for-ai-and-quantum-threats-pwc-says/) — SecurityWeek
+- [The Day-One Hole in Zero Trust Architecture](https://www.bleepingcomputer.com/news/security/the-day-one-hole-in-zero-trust-architecture/) — BleepingComputer
+- [Preparing governments for an era of interconnected cyber risk](https://blogs.microsoft.com/on-the-issues/2026/10/01/preparing-governments-for-an-era-of-interconnected-cyber-risk/) — Microsoft Security Blog
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 12 critical · 92 important · 52 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 14 critical · 88 important · 54 FYI_
