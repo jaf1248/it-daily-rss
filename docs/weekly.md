@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
-**Period:** September 23 – September 30, 2026  
-**Generated:** 2026-09-30 23:26 UTC  
+**Period:** September 24 – October 01, 2026  
+**Generated:** 2026-10-01 04:01 UTC  
 **Items reviewed:** 156  
 
 ## ⚡ Top Actions This Week
@@ -83,12 +83,12 @@
 
 ## 🔵 FYI — General Awareness
 
+- [ISC Stormcast For Thursday, October 1st, 2026 https://isc.sans.edu/podcastdetail/10118, (Thu, Oct 1st)](https://isc.sans.edu/diary/rss/33386) — SANS Internet Storm Center
+- [FTC is Investigating OpenAI and Anthropic Over Possible risks to Consumers](https://www.securityweek.com/ftc-is-investigating-openai-and-anthropic-over-possible-risks-to-consumers/) — SecurityWeek
 - [Russian state hackers use new RedFlick technique to push malware](https://www.bleepingcomputer.com/news/security/russian-state-hackers-use-new-redflick-technique-to-push-malware/) — BleepingComputer
 - [​​Secure what’s next: Your guide to Microsoft Security at Microsoft Ignite 2026](https://www.microsoft.com/en-us/security/blog/2026/09/30/secure-whats-next-your-guide-to-microsoft-security-at-microsoft-ignite-2026/) — Microsoft Security Blog
 - [Over 543,000 valid credentials exposed in public GitHub repositories](https://www.bleepingcomputer.com/news/security/over-543-000-valid-credentials-exposed-in-public-github-repositories/) — BleepingComputer
 - [Attackers Abuse MSP360 to Deploy ScreenConnect in Dual-RMM Phishing Attacks](https://thehackernews.com/2026/09/attackers-abuse-msp360-to-deploy.html) — The Hacker News
-- [Attackers Abuse ChatGPT Custom GPTs to Deliver RAT via ClickFix Lures](https://thehackernews.com/2026/09/attackers-abuse-chatgpt-custom-gpts-to.html) — The Hacker News
-- [AI's Third Wave: Coworkers Break the Security Model That Worked for Agents](https://www.bleepingcomputer.com/news/security/ais-third-wave-coworkers-break-the-security-model-that-worked-for-agents/) — BleepingComputer
 
 ---
 
