@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
 **Period:** September 25 – October 02, 2026  
-**Generated:** 2026-10-02 01:59 UTC  
+**Generated:** 2026-10-02 08:17 UTC  
 **Items reviewed:** 156  
 
 ## ⚡ Top Actions This Week
@@ -55,6 +55,12 @@
 
 ## 🟠 Important — Review This Week
 
+- [Exploited Fortinet FortiMail Zero-Day Calls for Urgent Action](https://www.securityweek.com/exploited-fortinet-fortimail-zero-day-calls-for-urgent-action/)  
+  **SecurityWeek** · Oct 02 · _General awareness item._  
+
+- [Critical FortiMail Zero-Day Flaw Exploited in Attacks Allows Unauthenticated Arbitrary File Writes](https://thehackernews.com/2026/10/critical-fortimail-zero-day-flaw.html)  
+  **The Hacker News** · Oct 02 · _General awareness item._  
+
 - [Microsoft says threat actors are ahead in the early AI race](https://www.bleepingcomputer.com/news/security/microsoft-says-threat-actors-are-ahead-in-the-early-ai-race/)  
   **BleepingComputer** · Oct 01 · _General awareness item._  
 
@@ -67,28 +73,22 @@
 - [AI Has Changed Attack Speed, Not Security Fundamentals](https://www.securityweek.com/ai-has-changed-attack-speed-not-security-fundamentals/)  
   **SecurityWeek** · Oct 01 · _General awareness item._  
 
-- [Zammad Zero-Days Exploited in AI-Powered DIVD Hack](https://www.securityweek.com/zammad-zero-days-exploited-in-ai-powered-divd-hack/)  
-  **SecurityWeek** · Oct 01 · _General awareness item._  
-
 - [CISA Adds Exploited Cisco Catalyst SD-WAN Manager Auth Bypass to KEV](https://thehackernews.com/2026/10/cisa-adds-exploited-cisco-catalyst-sd.html)  
   **The Hacker News** · Oct 01 · _General awareness item._  
 
 - [Metamask discloses security incident affecting its infrastructure](https://www.bleepingcomputer.com/news/security/metamask-discloses-security-incident-affecting-its-infrastructure/)  
   **BleepingComputer** · Oct 01 · _General awareness item._  
 
-- [Apple CoreGraphics PoC Emerges as WhatsApp PDF Checks Hint at Possible Delivery Path](https://thehackernews.com/2026/10/apple-coregraphics-poc-emerges-as.html)  
-  **The Hacker News** · Oct 01 · _General awareness item._  
-
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [Android 17 Advanced Protection Locks Accessibility Services to Verified Accessibility Tools](https://thehackernews.com/2026/10/android-17-advanced-protection-locks.html) — The Hacker News
+- [ISC Stormcast For Friday, October 2nd, 2026 https://isc.sans.edu/podcastdetail/10120, (Fri, Oct 2nd)](https://isc.sans.edu/diary/rss/33390) — SANS Internet Storm Center
 - [Autonomous AI agents tried to hack US, Canadian government websites](https://www.bleepingcomputer.com/news/security/autonomous-ai-agents-tried-to-hack-us-canadian-government-websites/) — BleepingComputer
 - [Zero Trust Creator Says Model Holds Firm Against AI-Assisted Attacks](https://www.securityweek.com/zero-trust-creator-says-model-holds-firm-against-ai-assisted-attacks/) — SecurityWeek
 - [Osavul Lands $10 Million to Spot Hostile Intent Across Cyber, Physical Domains](https://www.securityweek.com/osavul-lands-10-million-to-spot-hostile-intent-across-cyber-physical-domains/) — SecurityWeek
 - [WordPress Backdoor Rebuilds Itself After Cleanup Using Files, Database, and Shared Memory](https://thehackernews.com/2026/10/wordpress-backdoor-rebuilds-itself.html) — The Hacker News
-- [Hacker Conversations: Rob Juncker, a Knock at the Door and a Moral Compass](https://www.securityweek.com/hacker-conversations-rob-juncker-a-knock-at-the-door-and-a-moral-compass/) — SecurityWeek
-- [Enterprises Struggle to Prepare for AI and Quantum Threats, PwC Says](https://www.securityweek.com/enterprises-struggle-to-prepare-for-ai-and-quantum-threats-pwc-says/) — SecurityWeek
 
 ---
 
