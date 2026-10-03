@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
 **Period:** September 26 – October 03, 2026  
-**Generated:** 2026-10-03 19:00 UTC  
+**Generated:** 2026-10-03 22:05 UTC  
 **Items reviewed:** 131  
 
 ## ⚡ Top Actions This Week
@@ -83,12 +83,12 @@
 
 ## 🔵 FYI — General Awareness
 
+- [ShinyHunters hacker reportedly detained in Jordan, aiding FBI](https://www.bleepingcomputer.com/news/security/shinyhunters-hacker-reportedly-detained-in-jordan-aiding-fbi/) — BleepingComputer
 - [YARA-X 1.21.0 Release, (Sat, Oct 3rd)](https://isc.sans.edu/diary/rss/33392) — SANS Internet Storm Center
 - [MI5 Says China’s MSS Funded Research Involving 100+ U.K.-Linked Academics](https://thehackernews.com/2026/10/mi5-says-chinas-mss-funded-research.html) — The Hacker News
 - [doxx.net Raises $38 Million to Prevent AI Agent-on-the-Internet Misadventures](https://www.securityweek.com/doxx-net-raises-38-million-to-prevent-ai-agent-on-the-internet-misadventures/) — SecurityWeek
 - [The State of Cybersecurity in 2026: Key Segments, Insights, and Innovations](https://thehackernews.com/2026/10/the-state-of-cybersecurity-in-2026key.html) — The Hacker News
 - [Antino Backdoor Uses Outlook and OneDrive for C2 in China-Nexus Espionage Campaign](https://thehackernews.com/2026/10/antino-backdoor-uses-outlook-and.html) — The Hacker News
-- [US sanctions Tren de Aragua gang members in ATM hacks crackdown](https://www.bleepingcomputer.com/news/security/us-sanctions-tren-de-aragua-members-in-atm-jackpotting-crackdown/) — BleepingComputer
 
 ---
 
