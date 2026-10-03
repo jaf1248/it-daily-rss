@@ -1,25 +1,35 @@
 # IT Weekly Intelligence Briefing
 **Period:** September 26 – October 03, 2026  
-**Generated:** 2026-10-03 11:33 UTC  
-**Items reviewed:** 130  
+**Generated:** 2026-10-03 15:41 UTC  
+**Items reviewed:** 131  
 
 ## ⚡ Top Actions This Week
 
-1. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
+1. **Validate backups, confirm EDR coverage, and brief incident response team.**  
+   _Warlock Exploits SharePoint Flaws to Disable Security Tools and Deploy Ransomware_  
+   Source: The Hacker News  
+
+2. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
+   _Danish university DTU breach exposes data of up to 200,000 people_  
+   Source: BleepingComputer  
+
+3. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
    _Frontline Education breach exposes school district employee data_  
-   Source: BleepingComputer  
-
-2. **Validate backups, confirm EDR coverage, and brief incident response team.**  
-   _Warlock ransomware breach SharePoint in water, telecom operator attacks_  
-   Source: BleepingComputer  
-
-3. **Apply emergency patch or mitigation now; check vendor advisory for workarounds.**  
-   _Fortinet warns of critical FortiMail flaw exploited in zero-day attacks_  
    Source: BleepingComputer  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [Warlock Exploits SharePoint Flaws to Disable Security Tools and Deploy Ransomware](https://thehackernews.com/2026/10/warlock-exploits-sharepoint-flaws-to.html)
+**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Oct 03  
+**Why it matters:** Elevated ransomware risk across the sector.  
+**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
+
+### [Danish university DTU breach exposes data of up to 200,000 people](https://www.bleepingcomputer.com/news/security/danish-university-dtu-breach-exposes-data-of-up-to-200-000-people/)
+**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Oct 03  
+**Why it matters:** Potential credential or data exposure.  
+**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
 ### [Frontline Education breach exposes school district employee data](https://www.bleepingcomputer.com/news/security/frontline-education-data-breach-impacts-school-district-employees/)
 **Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Oct 02  
@@ -41,19 +51,12 @@
 **Why it matters:** Elevated ransomware risk across the sector.  
 **Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
 
-### [Police dismantle KillSec ransomware gang allegedly led by 16-year-old](https://www.bleepingcomputer.com/news/security/police-dismantle-killsec-ransomware-gang-allegedly-led-by-16-year-old/)
-**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Oct 01  
-**Why it matters:** Elevated ransomware risk across the sector.  
-**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
-
-### [Hackers stole Pentagon personnel records of over 3 million people](https://www.bleepingcomputer.com/news/security/hackers-breach-pentagon-human-resources-management-system-steal-data-of-nearly-3-million-people/)
-**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Oct 01  
-**Why it matters:** Potential credential or data exposure.  
-**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
-
 ---
 
 ## 🟠 Important — Review This Week
+
+- [Fortra Patches Critical Vulnerabilities in BoKS](https://www.securityweek.com/fortra-patches-critical-vulnerabilities-in-boks/)  
+  **SecurityWeek** · Oct 03 · _General awareness item._  
 
 - [Chromium: CVE-2025-10502 Heap buffer overflow in ANGLE](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-10502)  
   **Microsoft Security Response Center** · Oct 03 · _General awareness item._  
@@ -76,20 +79,17 @@
 - [Dell asks admins to patch max severity CSM flaws as soon as possible](https://www.bleepingcomputer.com/news/security/new-max-severity-dell-csm-flaws-give-hackers-admin-privileges/)  
   **BleepingComputer** · Oct 02 · _General awareness item._  
 
-- [Why CISOs Struggle to Answer the Board's Three Hardest Questions, and How to Fix the Report](https://thehackernews.com/2026/10/why-cisos-struggle-to-answer-boards.html)  
-  **The Hacker News** · Oct 02 · _General awareness item._  
-
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [YARA-X 1.21.0 Release, (Sat, Oct 3rd)](https://isc.sans.edu/diary/rss/33392) — SANS Internet Storm Center
+- [MI5 Says China’s MSS Funded Research Involving 100+ U.K.-Linked Academics](https://thehackernews.com/2026/10/mi5-says-chinas-mss-funded-research.html) — The Hacker News
+- [doxx.net Raises $38 Million to Prevent AI Agent-on-the-Internet Misadventures](https://www.securityweek.com/doxx-net-raises-38-million-to-prevent-ai-agent-on-the-internet-misadventures/) — SecurityWeek
 - [The State of Cybersecurity in 2026: Key Segments, Insights, and Innovations](https://thehackernews.com/2026/10/the-state-of-cybersecurity-in-2026key.html) — The Hacker News
 - [Antino Backdoor Uses Outlook and OneDrive for C2 in China-Nexus Espionage Campaign](https://thehackernews.com/2026/10/antino-backdoor-uses-outlook-and.html) — The Hacker News
 - [US sanctions Tren de Aragua gang members in ATM hacks crackdown](https://www.bleepingcomputer.com/news/security/us-sanctions-tren-de-aragua-members-in-atm-jackpotting-crackdown/) — BleepingComputer
-- [The EDR blind spot: 3 ways browser attacks evade endpoint telemetry](https://www.bleepingcomputer.com/news/security/the-edr-blind-spot-3-ways-browser-attacks-evade-endpoint-telemetry/) — BleepingComputer
-- [macOS Users Targeted by Fake Zoom Installer Carrying CloudSyncD Backdoor](https://www.securityweek.com/macos-users-targeted-by-fake-zoom-installer-carrying-cloudsyncd-backdoor/) — SecurityWeek
-- [OpenAI Parts Ways With Three Safety Researchers Over Sensitive Information Mishandling](https://thehackernews.com/2026/10/openai-parts-ways-with-three-safety.html) — The Hacker News
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 11 critical · 65 important · 54 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 11 critical · 66 important · 54 FYI_
