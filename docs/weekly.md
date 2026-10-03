@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
 **Period:** September 26 – October 03, 2026  
-**Generated:** 2026-10-03 15:41 UTC  
+**Generated:** 2026-10-03 19:00 UTC  
 **Items reviewed:** 131  
 
 ## ⚡ Top Actions This Week
