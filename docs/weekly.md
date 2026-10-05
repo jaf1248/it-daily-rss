@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
 **Period:** September 28 – October 05, 2026  
-**Generated:** 2026-10-05 01:34 UTC  
+**Generated:** 2026-10-05 08:16 UTC  
 **Items reviewed:** 132  
 
 ## ⚡ Top Actions This Week
@@ -55,6 +55,12 @@
 
 ## 🟠 Important — Review This Week
 
+- [New NetScaler Zero-Day Exploited in Targeted Attacks Can Knock SAML Deployments Offline](https://thehackernews.com/2026/10/new-netscaler-zero-day-exploited-in.html)  
+  **The Hacker News** · Oct 05 · _General awareness item._  
+
+- [Exploitation of Citrix NetScaler Zero-Day Hits Appliances Patched Days Earlier](https://www.securityweek.com/exploitation-of-citrix-netscaler-zero-day-hits-appliances-patched-days-earlier/)  
+  **SecurityWeek** · Oct 05 · _General awareness item._  
+
 - [Citrix patches NetScaler SAML zero-day exploited in attacks](https://www.bleepingcomputer.com/news/security/citrix-patches-netscaler-saml-zero-day-exploited-in-attacks/)  
   **BleepingComputer** · Oct 04 · _General awareness item._  
 
@@ -73,22 +79,16 @@
 - [GitLab Patches Critical 9.9 AI Gateway Flaw Allowing Command Execution on Self-Hosted Servers](https://thehackernews.com/2026/10/gitlab-patches-critical-self-hosted-ai.html)  
   **The Hacker News** · Oct 02 · _General awareness item._  
 
-- [Dell CSM Flaws Enable Unauthenticated Admin Access and Root on Kubernetes Nodes](https://thehackernews.com/2026/10/dell-csm-flaws-enable-unauthenticated.html)  
-  **The Hacker News** · Oct 02 · _General awareness item._  
-
-- [GitLab warns of critical RCE vulnerability in AI Gateway service](https://www.bleepingcomputer.com/news/security/gitlab-warns-of-critical-rce-vulnerability-in-ai-gateway-service/)  
-  **BleepingComputer** · Oct 02 · _General awareness item._  
-
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [Alleged ShinyHunters Leader Arrested in Jordan](https://www.securityweek.com/alleged-shinyhunters-leader-arrested-in-jordan/) — SecurityWeek
+- [ISC Stormcast For Monday, October 5th, 2026 https://isc.sans.edu/podcastdetail/10122, (Mon, Oct 5th)](https://isc.sans.edu/diary/rss/33398) — SANS Internet Storm Center
 - [TTY Logs and the Data it Captures, (Sun, Oct 4th)](https://isc.sans.edu/diary/rss/33396) — SANS Internet Storm Center
 - [Trump Names National Intelligence Director Jay Clayton to Lead a New Federal AI Task Force](https://www.securityweek.com/trump-names-national-intelligence-director-jay-clayton-to-lead-a-new-federal-ai-task-force/) — SecurityWeek
 - [Anthropic asks Claude users to share voice data for AI model training](https://www.bleepingcomputer.com/news/artificial-intelligence/anthropic-asks-claude-users-to-share-voice-data-for-ai-model-training/) — BleepingComputer
 - [User Agent Strings Curiosities, (Sun, Oct 4th)](https://isc.sans.edu/diary/rss/33394) — SANS Internet Storm Center
-- [ShinyHunters Suspect Rey Reportedly Detained in Jordan, Helping FBI Identify Group Members](https://thehackernews.com/2026/10/shinyhunters-suspect-rey-reportedly.html) — The Hacker News
-- [China-Aligned TA419 Targets U.S. AI Policy Experts With Microsoft AitM Phishing](https://thehackernews.com/2026/10/china-aligned-ta419-targets-us-ai.html) — The Hacker News
 
 ---
 
