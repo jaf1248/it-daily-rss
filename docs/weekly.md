@@ -1,53 +1,53 @@
 # IT Weekly Intelligence Briefing
 **Period:** September 28 – October 05, 2026  
-**Generated:** 2026-10-05 08:16 UTC  
-**Items reviewed:** 132  
+**Generated:** 2026-10-05 17:10 UTC  
+**Items reviewed:** 130  
 
 ## ⚡ Top Actions This Week
 
-1. **Validate backups, confirm EDR coverage, and brief incident response team.**  
-   _Warlock Exploits SharePoint Flaws to Disable Security Tools and Deploy Ransomware_  
-   Source: The Hacker News  
+1. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
+   _Denmark population registry data breach affects 8.8 million people_  
+   Source: BleepingComputer  
 
 2. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _Danish university DTU breach exposes data of up to 200,000 people_  
+   _South Korea probes bank breaches amid suspected AI-powered attacks_  
    Source: BleepingComputer  
 
-3. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _Frontline Education breach exposes school district employee data_  
-   Source: BleepingComputer  
+3. **Validate backups, confirm EDR coverage, and brief incident response team.**  
+   _⚡ Weekly Recap: NetScaler and FortiMail 0-Days, AI Coding Leaks, Spectre v2 and Ransomware Arrests_  
+   Source: The Hacker News  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
 
+### [Denmark population registry data breach affects 8.8 million people](https://www.bleepingcomputer.com/news/security/denmark-population-registry-data-breach-affects-88-million-people/)
+**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Oct 05  
+**Why it matters:** Potential credential or data exposure.  
+**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
+
+### [South Korea probes bank breaches amid suspected AI-powered attacks](https://www.bleepingcomputer.com/news/security/south-korea-probes-bank-breaches-amid-suspected-ai-powered-attacks/)
+**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Oct 05  
+**Why it matters:** Potential credential or data exposure.  
+**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
+
+### [⚡ Weekly Recap: NetScaler and FortiMail 0-Days, AI Coding Leaks, Spectre v2 and Ransomware Arrests](https://thehackernews.com/2026/10/weekly-recap-netscaler-and-fortimail-0.html)
+**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Oct 05  
+**Why it matters:** Elevated ransomware risk across the sector.  
+**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
+
+### [250,000 Impacted by Data Breaches at New Jersey, Texas Healthcare Firms](https://www.securityweek.com/250000-impacted-by-data-breaches-at-new-jersey-texas-healthcare-firms/)
+**Source:** SecurityWeek &nbsp;·&nbsp; **Date:** Oct 05  
+**Why it matters:** Potential credential or data exposure.  
+**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
+
+### [Senate Passes Bipartisan Bill to Strengthen Healthcare Cybersecurity](https://www.securityweek.com/senate-passes-bipartisan-bill-to-strengthen-healthcare-cybersecurity/)
+**Source:** SecurityWeek &nbsp;·&nbsp; **Date:** Oct 05  
+**Why it matters:** Potential credential or data exposure.  
+**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
+
 ### [Warlock Exploits SharePoint Flaws to Disable Security Tools and Deploy Ransomware](https://thehackernews.com/2026/10/warlock-exploits-sharepoint-flaws-to.html)
 **Source:** The Hacker News &nbsp;·&nbsp; **Date:** Oct 03  
-**Why it matters:** Elevated ransomware risk across the sector.  
-**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
-
-### [Danish university DTU breach exposes data of up to 200,000 people](https://www.bleepingcomputer.com/news/security/danish-university-dtu-breach-exposes-data-of-up-to-200-000-people/)
-**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Oct 03  
-**Why it matters:** Potential credential or data exposure.  
-**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
-
-### [Frontline Education breach exposes school district employee data](https://www.bleepingcomputer.com/news/security/frontline-education-data-breach-impacts-school-district-employees/)
-**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Oct 02  
-**Why it matters:** Potential credential or data exposure.  
-**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
-
-### [Warlock ransomware breach SharePoint in water, telecom operator attacks](https://www.bleepingcomputer.com/news/security/warlock-ransomware-breach-sharepoint-in-water-telecom-operator-attacks/)
-**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Oct 02  
-**Why it matters:** Elevated ransomware risk across the sector.  
-**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
-
-### [Fortinet warns of critical FortiMail flaw exploited in zero-day attacks](https://www.bleepingcomputer.com/news/security/fortinet-warns-of-critical-fortimail-flaw-exploited-in-zero-day-attacks/)
-**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Oct 01  
-**Why it matters:** General awareness item.  
-**Recommended action:** Apply emergency patch or mitigation now; check vendor advisory for workarounds.  
-
-### [Police Arrest 16-Year-Old Suspected of Running KillSec, Seize Ransomware Leak Site and Servers](https://thehackernews.com/2026/10/police-arrest-16-year-old-suspected-of.html)
-**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Oct 01  
 **Why it matters:** Elevated ransomware risk across the sector.  
 **Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
 
@@ -55,41 +55,41 @@
 
 ## 🟠 Important — Review This Week
 
-- [New NetScaler Zero-Day Exploited in Targeted Attacks Can Knock SAML Deployments Offline](https://thehackernews.com/2026/10/new-netscaler-zero-day-exploited-in.html)  
-  **The Hacker News** · Oct 05 · _General awareness item._  
+- [New Dell System Update flaw lets hackers gain root privileges](https://www.bleepingcomputer.com/news/security/new-dell-system-update-flaw-lets-hackers-gain-root-privileges/)  
+  **BleepingComputer** · Oct 05 · _General awareness item._  
 
-- [Exploitation of Citrix NetScaler Zero-Day Hits Appliances Patched Days Earlier](https://www.securityweek.com/exploitation-of-citrix-netscaler-zero-day-hits-appliances-patched-days-earlier/)  
+- [Google Narrows Open Source Bug Bounty Amid Wave of Invalid Automated Reports](https://www.securityweek.com/google-narrows-open-source-bug-bounty-amid-wave-of-invalid-automated-reports/)  
   **SecurityWeek** · Oct 05 · _General awareness item._  
 
-- [Citrix patches NetScaler SAML zero-day exploited in attacks](https://www.bleepingcomputer.com/news/security/citrix-patches-netscaler-saml-zero-day-exploited-in-attacks/)  
-  **BleepingComputer** · Oct 04 · _General awareness item._  
+- [CVE-2026-69267 Windows Connected User Experiences and Telemetry Information Disclosure Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69267)  
+  **Microsoft Security Response Center** · Oct 05 · _General awareness item._  
 
-- [Chromium: CVE-2025-2137 Out of bounds read in V8](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-2137)  
-  **Microsoft Security Response Center** · Oct 04 · _General awareness item._  
+- [Realtek Jungle SDK Exploit Attempts Deliver Cling Botnet With STUN-Based C2](https://thehackernews.com/2026/10/realtek-jungle-sdk-exploit-attempts.html)  
+  **The Hacker News** · Oct 05 · _General awareness item._  
 
-- [Chromium: CVE-2025-1920 Type Confusion in V8](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-1920)  
-  **Microsoft Security Response Center** · Oct 04 · _General awareness item._  
+- [Exploitation Hits Rejetto HFS Vulnerability Discovered by AI](https://www.securityweek.com/exploitation-hits-rejetto-hfs-vulnerability-discovered-by-ai/)  
+  **SecurityWeek** · Oct 05 · _General awareness item._  
 
-- [Fortra Patches Critical Vulnerabilities in BoKS](https://www.securityweek.com/fortra-patches-critical-vulnerabilities-in-boks/)  
-  **SecurityWeek** · Oct 03 · _General awareness item._  
+- [Google halts open-source bug bounty program amid AI spam surge](https://www.bleepingcomputer.com/news/google/google-halts-open-source-bug-bounty-program-amid-ai-spam-surge/)  
+  **BleepingComputer** · Oct 05 · _General awareness item._  
 
-- [Chromium: CVE-2025-10502 Heap buffer overflow in ANGLE](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-10502)  
-  **Microsoft Security Response Center** · Oct 03 · _General awareness item._  
+- [Attackers Target Rejetto HFS Flaw That Enables Admin Session Forgery and RCE](https://thehackernews.com/2026/10/attackers-target-rejetto-hfs-flaw-that.html)  
+  **The Hacker News** · Oct 05 · _General awareness item._  
 
-- [GitLab Patches Critical 9.9 AI Gateway Flaw Allowing Command Execution on Self-Hosted Servers](https://thehackernews.com/2026/10/gitlab-patches-critical-self-hosted-ai.html)  
-  **The Hacker News** · Oct 02 · _General awareness item._  
+- [New NetScaler Zero-Day Exploited in Targeted Attacks Can Knock SAML Deployments Offline](https://thehackernews.com/2026/10/new-netscaler-zero-day-exploited-in.html)  
+  **The Hacker News** · Oct 05 · _General awareness item._  
 
 ---
 
 ## 🔵 FYI — General Awareness
 
-- [Alleged ShinyHunters Leader Arrested in Jordan](https://www.securityweek.com/alleged-shinyhunters-leader-arrested-in-jordan/) — SecurityWeek
-- [ISC Stormcast For Monday, October 5th, 2026 https://isc.sans.edu/podcastdetail/10122, (Mon, Oct 5th)](https://isc.sans.edu/diary/rss/33398) — SANS Internet Storm Center
-- [TTY Logs and the Data it Captures, (Sun, Oct 4th)](https://isc.sans.edu/diary/rss/33396) — SANS Internet Storm Center
-- [Trump Names National Intelligence Director Jay Clayton to Lead a New Federal AI Task Force](https://www.securityweek.com/trump-names-national-intelligence-director-jay-clayton-to-lead-a-new-federal-ai-task-force/) — SecurityWeek
-- [Anthropic asks Claude users to share voice data for AI model training](https://www.bleepingcomputer.com/news/artificial-intelligence/anthropic-asks-claude-users-to-share-voice-data-for-ai-model-training/) — BleepingComputer
-- [User Agent Strings Curiosities, (Sun, Oct 4th)](https://isc.sans.edu/diary/rss/33394) — SANS Internet Storm Center
+- [tenfold CE: Our free Identity Governance tool just got 2 new features](https://www.bleepingcomputer.com/news/security/tenfold-ce-our-free-identity-governance-tool-just-got-2-new-features/) — BleepingComputer
+- [Alleged dev of Ploutus ATM malware appears in US court after arrest](https://www.bleepingcomputer.com/news/security/suspected-dev-of-ploutus-atm-malware-appears-in-us-court-after-arrest/) — BleepingComputer
+- [Linux Backdoor Abuses STUN Protocol, Exploits Dozens of Flaws](https://www.securityweek.com/linux-backdoor-abuses-stun-protocol-exploits-dozens-of-flaws/) — SecurityWeek
+- [The Credential Layer Is Expanding Faster Than Security Teams Can See It](https://thehackernews.com/2026/10/the-credential-layer-is-expanding.html) — The Hacker News
+- [Apple Plans Tighter macOS Full Disk Access Controls Over AI Agent Data Access](https://thehackernews.com/2026/10/apple-plans-tighter-macos-full-disk.html) — The Hacker News
+- [OpenAI will show visual ads in ChatGPT while you generate images](https://www.bleepingcomputer.com/news/artificial-intelligence/openai-will-show-visual-ads-in-chatgpt-while-you-generate-images/) — BleepingComputer
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 10 critical · 66 important · 56 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 13 critical · 67 important · 50 FYI_
