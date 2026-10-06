@@ -1,25 +1,45 @@
 # IT Weekly Intelligence Briefing
 **Period:** September 29 – October 06, 2026  
-**Generated:** 2026-10-06 04:45 UTC  
-**Items reviewed:** 127  
+**Generated:** 2026-10-06 11:46 UTC  
+**Items reviewed:** 128  
 
 ## ⚡ Top Actions This Week
 
 1. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _Denmark population registry data breach affects 8.8 million people_  
-   Source: BleepingComputer  
+   _8.8 Million Impacted by Data Breach at Denmark’s Central Person Register_  
+   Source: SecurityWeek  
 
 2. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _South Korea probes bank breaches amid suspected AI-powered attacks_  
+   _Nikkei discloses breaches of employees’ Microsoft, Google email accounts_  
    Source: BleepingComputer  
 
 3. **Validate backups, confirm EDR coverage, and brief incident response team.**  
-   _⚡ Weekly Recap: NetScaler and FortiMail 0-Days, AI Coding Leaks, Spectre v2 and Ransomware Arrests_  
-   Source: The Hacker News  
+   _Engineer sentenced for locking over 3,000 devices on employer network_  
+   Source: BleepingComputer  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [8.8 Million Impacted by Data Breach at Denmark’s Central Person Register](https://www.securityweek.com/8-8-million-impacted-by-data-breach-at-denmarks-central-person-register/)
+**Source:** SecurityWeek &nbsp;·&nbsp; **Date:** Oct 06  
+**Why it matters:** Potential credential or data exposure.  
+**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
+
+### [Nikkei discloses breaches of employees’ Microsoft, Google email accounts](https://www.bleepingcomputer.com/news/security/nikkei-discloses-breaches-of-employees-microsoft-google-email-accounts/)
+**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Oct 06  
+**Why it matters:** Potential credential or data exposure.  
+**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
+
+### [Engineer sentenced for locking over 3,000 devices on employer network](https://www.bleepingcomputer.com/news/security/engineer-sentenced-for-locking-thousands-of-devices-on-employer-network/)
+**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Oct 06  
+**Why it matters:** Elevated ransomware risk across the sector.  
+**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
+
+### [FBI Removes Accenture Contractor After Patch Failure Led to ShinyHunters Breach](https://thehackernews.com/2026/10/fbi-removes-accenture-contractor-after.html)
+**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Oct 06  
+**Why it matters:** Potential credential or data exposure.  
+**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
 ### [Denmark population registry data breach affects 8.8 million people](https://www.bleepingcomputer.com/news/security/denmark-population-registry-data-breach-affects-88-million-people/)
 **Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Oct 05  
@@ -31,29 +51,18 @@
 **Why it matters:** Potential credential or data exposure.  
 **Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
-### [⚡ Weekly Recap: NetScaler and FortiMail 0-Days, AI Coding Leaks, Spectre v2 and Ransomware Arrests](https://thehackernews.com/2026/10/weekly-recap-netscaler-and-fortimail-0.html)
-**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Oct 05  
-**Why it matters:** Elevated ransomware risk across the sector.  
-**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
-
-### [250,000 Impacted by Data Breaches at New Jersey, Texas Healthcare Firms](https://www.securityweek.com/250000-impacted-by-data-breaches-at-new-jersey-texas-healthcare-firms/)
-**Source:** SecurityWeek &nbsp;·&nbsp; **Date:** Oct 05  
-**Why it matters:** Potential credential or data exposure.  
-**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
-
-### [Senate Passes Bipartisan Bill to Strengthen Healthcare Cybersecurity](https://www.securityweek.com/senate-passes-bipartisan-bill-to-strengthen-healthcare-cybersecurity/)
-**Source:** SecurityWeek &nbsp;·&nbsp; **Date:** Oct 05  
-**Why it matters:** Potential credential or data exposure.  
-**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
-
-### [Warlock Exploits SharePoint Flaws to Disable Security Tools and Deploy Ransomware](https://thehackernews.com/2026/10/warlock-exploits-sharepoint-flaws-to.html)
-**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Oct 03  
-**Why it matters:** Elevated ransomware risk across the sector.  
-**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
-
 ---
 
 ## 🟠 Important — Review This Week
+
+- [Wikimedia: Rogue OpenAI agents behind unauthorized Wikipedia edits](https://www.bleepingcomputer.com/news/security/rogue-openai-agents-behind-potentially-malicious-wikipedia-edits/)  
+  **BleepingComputer** · Oct 06 · _Service continuity risk to users._  
+
+- [Google Pauses OSS Product Bug Bounty Rewards After Surge in Invalid Automated Reports](https://thehackernews.com/2026/10/google-pauses-oss-product-bug-bounty.html)  
+  **The Hacker News** · Oct 06 · _Third-party/software supply chain integrity risk._  
+
+- [Critical Atlassian Flaw Lets Unauthenticated Attackers Read Known Files Across 8 Products](https://thehackernews.com/2026/10/critical-atlassian-flaw-lets.html)  
+  **The Hacker News** · Oct 06 · _General awareness item._  
 
 - [Rejetto HFS servers now actively scanned for critical RCE flaw](https://www.bleepingcomputer.com/news/security/rejetto-hfs-servers-now-actively-scanned-for-critical-rce-flaw/)  
   **BleepingComputer** · Oct 05 · _General awareness item._  
@@ -70,26 +79,17 @@
 - [CVE-2026-69267 Windows Connected User Experiences and Telemetry Information Disclosure Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69267)  
   **Microsoft Security Response Center** · Oct 05 · _General awareness item._  
 
-- [Realtek Jungle SDK Exploit Attempts Deliver Cling Botnet With STUN-Based C2](https://thehackernews.com/2026/10/realtek-jungle-sdk-exploit-attempts.html)  
-  **The Hacker News** · Oct 05 · _General awareness item._  
-
-- [Exploitation Hits Rejetto HFS Vulnerability Discovered by AI](https://www.securityweek.com/exploitation-hits-rejetto-hfs-vulnerability-discovered-by-ai/)  
-  **SecurityWeek** · Oct 05 · _General awareness item._  
-
-- [Google halts open-source bug bounty program amid AI spam surge](https://www.bleepingcomputer.com/news/google/google-halts-open-source-bug-bounty-program-amid-ai-spam-surge/)  
-  **BleepingComputer** · Oct 05 · _General awareness item._  
-
 ---
 
 ## 🔵 FYI — General Awareness
 
-- [OpenAI is adding invisible watermarks to ChatGPT and Codex text in the EU](https://www.bleepingcomputer.com/news/artificial-intelligence/openai-is-adding-invisible-watermarks-to-chatgpt-and-codex-text-in-the-eu/) — BleepingComputer
-- [IQVIA fined $7.8 million for failing to properly anonymize health data](https://www.bleepingcomputer.com/news/security/iqvia-fined-78-million-for-failing-to-properly-anonymize-health-data/) — BleepingComputer
-- [tenfold CE: Our free Identity Governance tool just got 2 new features](https://www.bleepingcomputer.com/news/security/tenfold-ce-our-free-identity-governance-tool-just-got-2-new-features/) — BleepingComputer
-- [Alleged dev of Ploutus ATM malware appears in US court after arrest](https://www.bleepingcomputer.com/news/security/suspected-dev-of-ploutus-atm-malware-appears-in-us-court-after-arrest/) — BleepingComputer
-- [Linux Backdoor Abuses STUN Protocol, Exploits Dozens of Flaws](https://www.securityweek.com/linux-backdoor-abuses-stun-protocol-exploits-dozens-of-flaws/) — SecurityWeek
-- [The Credential Layer Is Expanding Faster Than Security Teams Can See It](https://thehackernews.com/2026/10/the-credential-layer-is-expanding.html) — The Hacker News
+- [ISC Stormcast For Tuesday, October 6th, 2026 https://isc.sans.edu/podcastdetail/10124, (Tue, Oct 6th)](https://isc.sans.edu/diary/rss/33402) — SANS Internet Storm Center
+- [Cybersecurity M&A Roundup: 39 Deals Announced in September 2026](https://www.securityweek.com/cybersecurity-ma-roundup-39-deals-announced-in-september-2026/) — SecurityWeek
+- [Long-Running NPM Malware Campaign Accumulates 40,000 Downloads](https://www.securityweek.com/long-running-npm-malware-campaign-accumulates-40000-downloads/) — SecurityWeek
+- [More RMM Tools In the Wild, (Tue, Oct 6th)](https://isc.sans.edu/diary/rss/33400) — SANS Internet Storm Center
+- [Social Engineering Detection Moves Into the Live Conversation](https://www.securityweek.com/social-engineering-detection-moves-into-the-live-conversation/) — SecurityWeek
+- [Denmark Says Attackers Accessed CPR Data for 8.8 Million People via Company Account](https://thehackernews.com/2026/10/denmark-says-attackers-accessed-cpr.html) — The Hacker News
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 9 critical · 68 important · 50 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 13 critical · 67 important · 48 FYI_
