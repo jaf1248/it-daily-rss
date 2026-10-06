@@ -1,25 +1,35 @@
 # IT Weekly Intelligence Briefing
 **Period:** September 29 – October 06, 2026  
-**Generated:** 2026-10-06 11:46 UTC  
-**Items reviewed:** 128  
+**Generated:** 2026-10-06 17:54 UTC  
+**Items reviewed:** 124  
 
 ## ⚡ Top Actions This Week
 
 1. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _8.8 Million Impacted by Data Breach at Denmark’s Central Person Register_  
-   Source: SecurityWeek  
+   _ASOS confirms data breach after “HACKED” in-app notifications_  
+   Source: BleepingComputer  
 
 2. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _Nikkei discloses breaches of employees’ Microsoft, Google email accounts_  
-   Source: BleepingComputer  
+   _FBI Blames Contractor’s Missed Patch for ShinyHunters Breach_  
+   Source: SecurityWeek  
 
-3. **Validate backups, confirm EDR coverage, and brief incident response team.**  
-   _Engineer sentenced for locking over 3,000 devices on employer network_  
-   Source: BleepingComputer  
+3. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
+   _8.8 Million Impacted by Data Breach at Denmark’s Central Person Register_  
+   Source: SecurityWeek  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [ASOS confirms data breach after “HACKED” in-app notifications](https://www.bleepingcomputer.com/news/security/asos-confirms-data-breach-after-hacked-in-app-notifications/)
+**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Oct 06  
+**Why it matters:** Potential credential or data exposure.  
+**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
+
+### [FBI Blames Contractor’s Missed Patch for ShinyHunters Breach](https://www.securityweek.com/fbi-blames-contractors-missed-patch-for-shinyhunters-breach/)
+**Source:** SecurityWeek &nbsp;·&nbsp; **Date:** Oct 06  
+**Why it matters:** Potential credential or data exposure.  
+**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
 ### [8.8 Million Impacted by Data Breach at Denmark’s Central Person Register](https://www.securityweek.com/8-8-million-impacted-by-data-breach-at-denmarks-central-person-register/)
 **Source:** SecurityWeek &nbsp;·&nbsp; **Date:** Oct 06  
@@ -41,55 +51,45 @@
 **Why it matters:** Potential credential or data exposure.  
 **Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
-### [Denmark population registry data breach affects 8.8 million people](https://www.bleepingcomputer.com/news/security/denmark-population-registry-data-breach-affects-88-million-people/)
-**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Oct 05  
-**Why it matters:** Potential credential or data exposure.  
-**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
-
-### [South Korea probes bank breaches amid suspected AI-powered attacks](https://www.bleepingcomputer.com/news/security/south-korea-probes-bank-breaches-amid-suspected-ai-powered-attacks/)
-**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Oct 05  
-**Why it matters:** Potential credential or data exposure.  
-**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
-
 ---
 
 ## 🟠 Important — Review This Week
 
-- [Wikimedia: Rogue OpenAI agents behind unauthorized Wikipedia edits](https://www.bleepingcomputer.com/news/security/rogue-openai-agents-behind-potentially-malicious-wikipedia-edits/)  
-  **BleepingComputer** · Oct 06 · _Service continuity risk to users._  
+- [Atlassian warns of critical file-access flaw in Jira, Confluence](https://www.bleepingcomputer.com/news/security/atlassian-warns-of-critical-file-access-flaw-in-jira-confluence/)  
+  **BleepingComputer** · Oct 06 · _General awareness item._  
 
-- [Google Pauses OSS Product Bug Bounty Rewards After Surge in Invalid Automated Reports](https://thehackernews.com/2026/10/google-pauses-oss-product-bug-bounty.html)  
-  **The Hacker News** · Oct 06 · _Third-party/software supply chain integrity risk._  
+- [CISO perspectives on managing vulnerability risks in the age of AI](https://www.microsoft.com/en-us/security/blog/2026/10/06/ciso-perspectives-on-managing-vulnerability-risks-in-the-age-of-ai/)  
+  **Microsoft Security Blog** · Oct 06 · _General awareness item._  
 
-- [Critical Atlassian Flaw Lets Unauthenticated Attackers Read Known Files Across 8 Products](https://thehackernews.com/2026/10/critical-atlassian-flaw-lets.html)  
-  **The Hacker News** · Oct 06 · _General awareness item._  
+- [How to secure RMM software: 8 controls MSPs should test](https://www.bleepingcomputer.com/news/security/how-to-secure-rmm-software-8-controls-msps-should-test/)  
+  **BleepingComputer** · Oct 06 · _General awareness item._  
 
-- [Rejetto HFS servers now actively scanned for critical RCE flaw](https://www.bleepingcomputer.com/news/security/rejetto-hfs-servers-now-actively-scanned-for-critical-rce-flaw/)  
-  **BleepingComputer** · Oct 05 · _General awareness item._  
+- [CVE-2026-69582 Windows Volume Manager Extension Driver Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69582)  
+  **Microsoft Security Response Center** · Oct 06 · _General awareness item._  
 
-- [Microsoft Exchange Flaw Lets Authenticated Attackers Read Other Users' Mailboxes](https://thehackernews.com/2026/10/microsoft-exchange-flaw-lets.html)  
-  **The Hacker News** · Oct 05 · _Potential email disruption for users._  
+- [CVE-2026-71343 Windows Remote Access Connection Manager Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-71343)  
+  **Microsoft Security Response Center** · Oct 06 · _General awareness item._  
 
-- [New Dell System Update flaw lets hackers gain root privileges](https://www.bleepingcomputer.com/news/security/new-dell-system-update-flaw-lets-hackers-gain-root-privileges/)  
-  **BleepingComputer** · Oct 05 · _General awareness item._  
+- [CVE-2026-78501 Microsoft 365 Copilot Business Chat Information Disclosure Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-78501)  
+  **Microsoft Security Response Center** · Oct 06 · _General awareness item._  
 
-- [Google Narrows Open Source Bug Bounty Amid Wave of Invalid Automated Reports](https://www.securityweek.com/google-narrows-open-source-bug-bounty-amid-wave-of-invalid-automated-reports/)  
-  **SecurityWeek** · Oct 05 · _General awareness item._  
+- [CVE-2026-69265 Windows NTFS Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69265)  
+  **Microsoft Security Response Center** · Oct 06 · _General awareness item._  
 
-- [CVE-2026-69267 Windows Connected User Experiences and Telemetry Information Disclosure Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69267)  
-  **Microsoft Security Response Center** · Oct 05 · _General awareness item._  
+- [CVE-2026-68894 Windows Error Reporting Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-68894)  
+  **Microsoft Security Response Center** · Oct 06 · _General awareness item._  
 
 ---
 
 ## 🔵 FYI — General Awareness
 
-- [ISC Stormcast For Tuesday, October 6th, 2026 https://isc.sans.edu/podcastdetail/10124, (Tue, Oct 6th)](https://isc.sans.edu/diary/rss/33402) — SANS Internet Storm Center
-- [Cybersecurity M&A Roundup: 39 Deals Announced in September 2026](https://www.securityweek.com/cybersecurity-ma-roundup-39-deals-announced-in-september-2026/) — SecurityWeek
-- [Long-Running NPM Malware Campaign Accumulates 40,000 Downloads](https://www.securityweek.com/long-running-npm-malware-campaign-accumulates-40000-downloads/) — SecurityWeek
+- [Fake ChatGPT, Gemini Sites steal advertising accounts, MFA codes](https://www.bleepingcomputer.com/news/security/fake-chatgpt-gemini-sites-steal-advertising-accounts-mfa-codes/) — BleepingComputer
 - [More RMM Tools In the Wild, (Tue, Oct 6th)](https://isc.sans.edu/diary/rss/33400) — SANS Internet Storm Center
-- [Social Engineering Detection Moves Into the Live Conversation](https://www.securityweek.com/social-engineering-detection-moves-into-the-live-conversation/) — SecurityWeek
-- [Denmark Says Attackers Accessed CPR Data for 8.8 Million People via Company Account](https://thehackernews.com/2026/10/denmark-says-attackers-accessed-cpr.html) — The Hacker News
+- [FBI Arrests ‘Most Wanted’ Developer of Ploutus ATM Malware](https://www.securityweek.com/fbi-arrests-most-wanted-developer-of-ploutus-atm-malware/) — SecurityWeek
+- [LibreOffice and OpenOffice Flaws Let Malicious Spreadsheets Run Code Without Macro Warnings](https://thehackernews.com/2026/10/libreoffice-and-openoffice-flaws-let.html) — The Hacker News
+- [Apple to Tighten Full Disk Access Controls in macOS Amid AI Risks](https://www.securityweek.com/apple-to-tighten-full-disk-access-controls-in-macos-amid-ai-risks/) — SecurityWeek
+- [ISC Stormcast For Tuesday, October 6th, 2026 https://isc.sans.edu/podcastdetail/10124, (Tue, Oct 6th)](https://isc.sans.edu/diary/rss/33402) — SANS Internet Storm Center
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 13 critical · 67 important · 48 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 13 critical · 64 important · 47 FYI_
