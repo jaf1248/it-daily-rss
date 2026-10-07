@@ -1,25 +1,30 @@
 # IT Weekly Intelligence Briefing
 **Period:** September 30 – October 07, 2026  
-**Generated:** 2026-10-07 02:03 UTC  
+**Generated:** 2026-10-07 09:46 UTC  
 **Items reviewed:** 125  
 
 ## ⚡ Top Actions This Week
 
 1. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
+   _ASOS Confirms Cyberattack, Data Breach_  
+   Source: SecurityWeek  
+
+2. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
    _ASOS confirms data breach after “HACKED” in-app notifications_  
    Source: BleepingComputer  
 
-2. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _FBI Blames Contractor’s Missed Patch for ShinyHunters Breach_  
-   Source: SecurityWeek  
-
 3. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _8.8 Million Impacted by Data Breach at Denmark’s Central Person Register_  
+   _FBI Blames Contractor’s Missed Patch for ShinyHunters Breach_  
    Source: SecurityWeek  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [ASOS Confirms Cyberattack, Data Breach](https://www.securityweek.com/asos-confirms-cyberattack-data-breach/)
+**Source:** SecurityWeek &nbsp;·&nbsp; **Date:** Oct 07  
+**Why it matters:** Potential credential or data exposure.  
+**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
 ### [ASOS confirms data breach after “HACKED” in-app notifications](https://www.bleepingcomputer.com/news/security/asos-confirms-data-breach-after-hacked-in-app-notifications/)
 **Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Oct 06  
@@ -27,11 +32,6 @@
 **Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
 ### [FBI Blames Contractor’s Missed Patch for ShinyHunters Breach](https://www.securityweek.com/fbi-blames-contractors-missed-patch-for-shinyhunters-breach/)
-**Source:** SecurityWeek &nbsp;·&nbsp; **Date:** Oct 06  
-**Why it matters:** Potential credential or data exposure.  
-**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
-
-### [8.8 Million Impacted by Data Breach at Denmark’s Central Person Register](https://www.securityweek.com/8-8-million-impacted-by-data-breach-at-denmarks-central-person-register/)
 **Source:** SecurityWeek &nbsp;·&nbsp; **Date:** Oct 06  
 **Why it matters:** Potential credential or data exposure.  
 **Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
@@ -55,6 +55,15 @@
 
 ## 🟠 Important — Review This Week
 
+- [Chromium: CVE-2025-0611 Object corruption in V8](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-0612)  
+  **Microsoft Security Response Center** · Oct 07 · _General awareness item._  
+
+- [Android’s October 2026 Updates Patch 25 Vulnerabilities](https://www.securityweek.com/androids-october-2026-updates-patch-25-vulnerabilities/)  
+  **SecurityWeek** · Oct 07 · _General awareness item._  
+
+- [Atlassian Patches Critical Vulnerability Affecting 8 Products](https://www.securityweek.com/atlassian-patches-critical-vulnerability-affecting-8-products/)  
+  **SecurityWeek** · Oct 07 · _General awareness item._  
+
 - [Hackers exploit 32 zero-days on first day of Pwn2Own Ireland](https://www.bleepingcomputer.com/news/security/hackers-exploit-32-zero-days-on-first-day-of-pwn2own-ireland/)  
   **BleepingComputer** · Oct 06 · _General awareness item._  
 
@@ -70,25 +79,16 @@
 - [CVE-2026-69582 Windows Volume Manager Extension Driver Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69582)  
   **Microsoft Security Response Center** · Oct 06 · _General awareness item._  
 
-- [CVE-2026-71343 Windows Remote Access Connection Manager Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-71343)  
-  **Microsoft Security Response Center** · Oct 06 · _General awareness item._  
-
-- [CVE-2026-78501 Microsoft 365 Copilot Business Chat Information Disclosure Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-78501)  
-  **Microsoft Security Response Center** · Oct 06 · _General awareness item._  
-
-- [CVE-2026-69265 Windows NTFS Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69265)  
-  **Microsoft Security Response Center** · Oct 06 · _General awareness item._  
-
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [Anthropic Expands Claude Access for Vetted Cyber Teams as Glasswing Finds 129,000 Flaws](https://thehackernews.com/2026/10/anthropic-expands-claude-access-for.html) — The Hacker News
+- [Wikimedia Says Rogue OpenAI Agents Tried to Turn Its Tools Into Proxies](https://www.securityweek.com/wikimedia-says-rogue-openai-agents-tried-to-turn-its-tools-into-proxies/) — SecurityWeek
+- [100+ Compromised Websites Use Fake Cloudflare Checks to Deliver LunexStealer](https://thehackernews.com/2026/10/100-compromised-websites-use-fake.html) — The Hacker News
 - [ISC Stormcast For Wednesday, October 7th, 2026 https://isc.sans.edu/podcastdetail/10126, (Wed, Oct 7th)](https://isc.sans.edu/diary/rss/33404) — SANS Internet Storm Center
 - [Personal Information for Over 1 Million People Stolen in a Cyberattack on Arizona’s Court System](https://www.securityweek.com/personal-information-for-over-1-million-people-stolen-in-a-cyberattack-on-arizonas-court-system/) — SecurityWeek
 - [Ninja Forms plugin flaw exploited to hack WordPress sites](https://www.bleepingcomputer.com/news/security/ninja-forms-plugin-flaw-exploited-to-hack-wordpress-sites/) — BleepingComputer
-- [Fake ChatGPT, Gemini, and Claude Ad Portals Capture Credentials and MFA Codes](https://thehackernews.com/2026/10/fake-chatgpt-gemini-and-claude-ad.html) — The Hacker News
-- [Linux Backdoors Impersonate Email Security Tools to Evade Detection in Korea and Taiwan](https://thehackernews.com/2026/10/linux-backdoors-impersonate-email.html) — The Hacker News
-- [Fake ChatGPT, Gemini Sites steal advertising accounts, MFA codes](https://www.bleepingcomputer.com/news/security/fake-chatgpt-gemini-sites-steal-advertising-accounts-mfa-codes/) — BleepingComputer
 
 ---
 
