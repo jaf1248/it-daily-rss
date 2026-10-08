@@ -1,25 +1,45 @@
 # IT Weekly Intelligence Briefing
 **Period:** October 01 – October 08, 2026  
-**Generated:** 2026-10-08 02:28 UTC  
-**Items reviewed:** 110  
+**Generated:** 2026-10-08 09:56 UTC  
+**Items reviewed:** 112  
 
 ## ⚡ Top Actions This Week
 
 1. **Validate backups, confirm EDR coverage, and brief incident response team.**  
-   _Ransomware recovery CEO charged over secret ransom payments_  
-   Source: BleepingComputer  
+   _Fake Decryption Tools Masked $11M Markup in Ransomware Recovery Scheme_  
+   Source: SecurityWeek  
 
 2. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _Hackers hijack Google domains after breaching ccTLD registries_  
-   Source: BleepingComputer  
+   _Oracle Health Data Breach Tally Climbs to Nearly 20 Million_  
+   Source: SecurityWeek  
 
-3. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _Attackers Hijack .gh, .sl, and .as Registries to Obtain Certificates for Google Domains_  
+3. **Validate backups, confirm EDR coverage, and brief incident response team.**  
+   _MonsterCloud Owner Accused of Billing Over $19M While Secretly Paying Ransoms to Decrypt Data_  
    Source: The Hacker News  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [Fake Decryption Tools Masked $11M Markup in Ransomware Recovery Scheme](https://www.securityweek.com/fake-decryption-tools-masked-11m-markup-in-ransomware-recovery-scheme/)
+**Source:** SecurityWeek &nbsp;·&nbsp; **Date:** Oct 08  
+**Why it matters:** Elevated ransomware risk across the sector.  
+**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
+
+### [Oracle Health Data Breach Tally Climbs to Nearly 20 Million](https://www.securityweek.com/oracle-health-data-breach-tally-climbs-to-nearly-20-million/)
+**Source:** SecurityWeek &nbsp;·&nbsp; **Date:** Oct 08  
+**Why it matters:** Potential credential or data exposure.  
+**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
+
+### [MonsterCloud Owner Accused of Billing Over $19M While Secretly Paying Ransoms to Decrypt Data](https://thehackernews.com/2026/10/monstercloud-owner-accused-of-billing.html)
+**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Oct 08  
+**Why it matters:** Elevated ransomware risk across the sector.  
+**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
+
+### [Tensorlake npm Package Compromised to Deliver Shai-Hulud Credential-Stealing Worm](https://thehackernews.com/2026/10/tensorlake-npm-package-compromised-to.html)
+**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Oct 08  
+**Why it matters:** Third-party/software supply chain integrity risk.  
+**Recommended action:** Audit third-party software dependencies and review vendor access.  
 
 ### [Ransomware recovery CEO charged over secret ransom payments](https://www.bleepingcomputer.com/news/security/ransomware-recovery-ceo-charged-over-secret-ransom-payments/)
 **Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Oct 07  
@@ -31,29 +51,18 @@
 **Why it matters:** Potential credential or data exposure.  
 **Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
-### [Attackers Hijack .gh, .sl, and .as Registries to Obtain Certificates for Google Domains](https://thehackernews.com/2026/10/attackers-hijack-gh-sl-and-as.html)
-**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Oct 07  
-**Why it matters:** Potential credential or data exposure.  
-**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
-
-### [Georgia Power, Alabama Power Data Breach Hits 400,000 Accounts](https://www.securityweek.com/georgia-power-alabama-power-data-breach-hits-400000-accounts/)
-**Source:** SecurityWeek &nbsp;·&nbsp; **Date:** Oct 07  
-**Why it matters:** Potential credential or data exposure.  
-**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
-
-### [Ransomware has a new target. Is your backup ready?](https://www.bleepingcomputer.com/news/security/ransomware-has-a-new-target-is-your-backup-ready/)
-**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Oct 07  
-**Why it matters:** Elevated ransomware risk across the sector.  
-**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
-
-### [Qilin Ransomware Suspect Arrested in Japan, Extradited to Germany](https://www.securityweek.com/qilin-ransomware-suspect-arrested-in-japan-extradited-to-germany/)
-**Source:** SecurityWeek &nbsp;·&nbsp; **Date:** Oct 07  
-**Why it matters:** Elevated ransomware risk across the sector.  
-**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
-
 ---
 
 ## 🟠 Important — Review This Week
+
+- [Chromium: CVE-2025-11215 Off by one error in V8](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-11215)  
+  **Microsoft Security Response Center** · Oct 08 · _General awareness item._  
+
+- [Chromium: CVE-2025-11219 Use after free in V8](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-11219)  
+  **Microsoft Security Response Center** · Oct 08 · _General awareness item._  
+
+- [Samsung Galaxy S26 hacked three more times at Pwn2Own Ireland](https://www.bleepingcomputer.com/news/security/samsung-galaxy-s26-hacked-three-more-times-at-pwn2own-ireland/)  
+  **BleepingComputer** · Oct 08 · _General awareness item._  
 
 - [SonicWall Patches CVSS 10.0 Pre-Authentication SSRF Flaw in SMA1000 Appliances](https://thehackernews.com/2026/10/sonicwall-patches-cvss-100-pre.html)  
   **The Hacker News** · Oct 07 · _General awareness item._  
@@ -70,26 +79,17 @@
 - [CVE-2026-69436 Windows State Repository Service Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69436)  
   **Microsoft Security Response Center** · Oct 07 · _General awareness item._  
 
-- [Hackers exploit critical Atlassian flaw after public PoC release](https://www.bleepingcomputer.com/news/security/hackers-exploit-critical-atlassian-flaw-after-public-poc-release/)  
-  **BleepingComputer** · Oct 07 · _General awareness item._  
-
-- [Atlassian Data Center Flaw Draws Exploitation Attempts Within Two Hours of Public Details](https://thehackernews.com/2026/10/atlassian-data-center-flaw-draws.html)  
-  **The Hacker News** · Oct 07 · _General awareness item._  
-
-- [Chrome 155 Update Patches 247 Vulnerabilities](https://www.securityweek.com/chrome-155-update-patches-247-vulnerabilities/)  
-  **SecurityWeek** · Oct 07 · _General awareness item._  
-
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [16 Malicious Firefox Extensions Pose as Rabby and OKX Wallets to Steal Recovery Phrases](https://thehackernews.com/2026/10/16-malicious-firefox-extensions-pose-as.html) — The Hacker News
+- [FortiBleed Attackers Locking Victims Out of Fortinet Devices](https://www.securityweek.com/fortibleed-attackers-locking-victims-out-of-fortinet-devices/) — SecurityWeek
+- [U.S. Offers Up to $10 Million for Tips on Zhang Yu, Charged in HAFNIUM Hacks](https://thehackernews.com/2026/10/us-offers-up-to-10-million-for-tips-on.html) — The Hacker News
 - [ISC Stormcast For Thursday, October 8th, 2026 https://isc.sans.edu/podcastdetail/10128, (Thu, Oct 8th)](https://isc.sans.edu/diary/rss/33408) — SANS Internet Storm Center
 - [FBI: Ongoing FortiBleed attacks lock out FortiGate VPN admins](https://www.bleepingcomputer.com/news/security/fbi-ongoing-fortibleed-attacks-lock-out-fortigate-vpn-admins/) — BleepingComputer
 - [Eight Malicious npm Packages Downloaded 40,767 Times Deliver Overlord RAT and Stealer](https://thehackernews.com/2026/10/eight-malicious-npm-packages-downloaded.html) — The Hacker News
-- [Microsoft Outlook to block MSIX attachments starting November](https://www.bleepingcomputer.com/news/microsoft/microsoft-outlook-to-block-msix-attachments-used-in-attacks/) — BleepingComputer
-- [PoeLLM Malware Infects 3,400+ Servers to Expand Crypto Mining Botnet](https://thehackernews.com/2026/10/poellm-malware-infects-3400-servers-to.html) — The Hacker News
-- [PoeLLM malware infects exposed AI servers in cryptomining attacks](https://www.bleepingcomputer.com/news/security/poellm-malware-infects-exposed-ai-servers-in-cryptomining-attacks/) — BleepingComputer
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 14 critical · 47 important · 49 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 18 critical · 45 important · 49 FYI_
