@@ -1,25 +1,35 @@
 # IT Weekly Intelligence Briefing
 **Period:** October 01 – October 08, 2026  
-**Generated:** 2026-10-08 09:56 UTC  
-**Items reviewed:** 112  
+**Generated:** 2026-10-08 17:13 UTC  
+**Items reviewed:** 110  
 
 ## ⚡ Top Actions This Week
 
-1. **Validate backups, confirm EDR coverage, and brief incident response team.**  
-   _Fake Decryption Tools Masked $11M Markup in Ransomware Recovery Scheme_  
-   Source: SecurityWeek  
+1. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
+   _OAuth grants pile up faster than you can review them. Here's how to keep up._  
+   Source: BleepingComputer  
 
 2. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _Oracle Health Data Breach Tally Climbs to Nearly 20 Million_  
-   Source: SecurityWeek  
+   _ASOS links data breach to social engineering attack, credential theft_  
+   Source: BleepingComputer  
 
 3. **Validate backups, confirm EDR coverage, and brief incident response team.**  
-   _MonsterCloud Owner Accused of Billing Over $19M While Secretly Paying Ransoms to Decrypt Data_  
-   Source: The Hacker News  
+   _Fake Decryption Tools Masked $11M Markup in Ransomware Recovery Scheme_  
+   Source: SecurityWeek  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [OAuth grants pile up faster than you can review them. Here's how to keep up.](https://www.bleepingcomputer.com/news/security/oauth-grants-pile-up-faster-than-you-can-review-them-heres-how-to-keep-up/)
+**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Oct 08  
+**Why it matters:** Potential credential or data exposure.  
+**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
+
+### [ASOS links data breach to social engineering attack, credential theft](https://www.bleepingcomputer.com/news/security/asos-links-data-breach-to-social-engineering-attack-credential-theft/)
+**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Oct 08  
+**Why it matters:** Potential credential or data exposure.  
+**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
 ### [Fake Decryption Tools Masked $11M Markup in Ransomware Recovery Scheme](https://www.securityweek.com/fake-decryption-tools-masked-11m-markup-in-ransomware-recovery-scheme/)
 **Source:** SecurityWeek &nbsp;·&nbsp; **Date:** Oct 08  
@@ -41,19 +51,27 @@
 **Why it matters:** Third-party/software supply chain integrity risk.  
 **Recommended action:** Audit third-party software dependencies and review vendor access.  
 
-### [Ransomware recovery CEO charged over secret ransom payments](https://www.bleepingcomputer.com/news/security/ransomware-recovery-ceo-charged-over-secret-ransom-payments/)
-**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Oct 07  
-**Why it matters:** Elevated ransomware risk across the sector.  
-**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
-
-### [Hackers hijack Google domains after breaching ccTLD registries](https://www.bleepingcomputer.com/news/security/hackers-hijack-google-domains-after-breaching-cctld-registries/)
-**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Oct 07  
-**Why it matters:** Potential credential or data exposure.  
-**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
-
 ---
 
 ## 🟠 Important — Review This Week
+
+- [Reconstructing AI Agent Activity: Two New Scripts for Forensic Review, (Thu, Oct 8th)](https://isc.sans.edu/diary/rss/33410)  
+  **SANS Internet Storm Center** · Oct 08 · _General awareness item._  
+
+- [Japan Sees Sharp Rise in Web Data Leaks Amid Mobile API Abuse and Metabase Attacks](https://thehackernews.com/2026/10/japan-sees-sharp-rise-in-web-data-leaks.html)  
+  **The Hacker News** · Oct 08 · _General awareness item._  
+
+- [Cisco Patches a Dozen Critical Vulnerabilities](https://www.securityweek.com/cisco-patches-a-dozen-critical-vulnerabilities/)  
+  **SecurityWeek** · Oct 08 · _General awareness item._  
+
+- [Attackers Target Critical Atlassian Vulnerability Within Hours of PoC Publication](https://www.securityweek.com/attackers-target-critical-atlassian-vulnerability-within-hours-of-poc-publication/)  
+  **SecurityWeek** · Oct 08 · _General awareness item._  
+
+- [CVE-2026-69581 Windows Device Association Service Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69581)  
+  **Microsoft Security Response Center** · Oct 08 · _General awareness item._  
+
+- [SonicWall and Splunk Patch Critical Vulnerabilities](https://www.securityweek.com/sonicwall-and-splunk-patch-critical-vulnerabilities/)  
+  **SecurityWeek** · Oct 08 · _General awareness item._  
 
 - [Chromium: CVE-2025-11215 Off by one error in V8](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-11215)  
   **Microsoft Security Response Center** · Oct 08 · _General awareness item._  
@@ -61,35 +79,17 @@
 - [Chromium: CVE-2025-11219 Use after free in V8](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-11219)  
   **Microsoft Security Response Center** · Oct 08 · _General awareness item._  
 
-- [Samsung Galaxy S26 hacked three more times at Pwn2Own Ireland](https://www.bleepingcomputer.com/news/security/samsung-galaxy-s26-hacked-three-more-times-at-pwn2own-ireland/)  
-  **BleepingComputer** · Oct 08 · _General awareness item._  
-
-- [SonicWall Patches CVSS 10.0 Pre-Authentication SSRF Flaw in SMA1000 Appliances](https://thehackernews.com/2026/10/sonicwall-patches-cvss-100-pre.html)  
-  **The Hacker News** · Oct 07 · _General awareness item._  
-
-- [3 lessons from frontier AI vulnerability research](https://www.microsoft.com/en-us/security/blog/2026/10/07/3-lessons-from-frontier-ai-vulnerability-research/)  
-  **Microsoft Security Blog** · Oct 07 · _General awareness item._  
-
-- [Unpatched Critical LMCache Flaw Lets Unauthenticated Attackers Run Code Remotely](https://thehackernews.com/2026/10/unpatched-critical-lmcache-flaw-lets.html)  
-  **The Hacker News** · Oct 07 · _General awareness item._  
-
-- [Scans for Atlassian vulnerablity (CVE-2026-21589), (Wed, Oct 7th)](https://isc.sans.edu/diary/rss/33406)  
-  **SANS Internet Storm Center** · Oct 07 · _General awareness item._  
-
-- [CVE-2026-69436 Windows State Repository Service Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69436)  
-  **Microsoft Security Response Center** · Oct 07 · _General awareness item._  
-
 ---
 
 ## 🔵 FYI — General Awareness
 
-- [16 Malicious Firefox Extensions Pose as Rabby and OKX Wallets to Steal Recovery Phrases](https://thehackernews.com/2026/10/16-malicious-firefox-extensions-pose-as.html) — The Hacker News
-- [FortiBleed Attackers Locking Victims Out of Fortinet Devices](https://www.securityweek.com/fortibleed-attackers-locking-victims-out-of-fortinet-devices/) — SecurityWeek
-- [U.S. Offers Up to $10 Million for Tips on Zhang Yu, Charged in HAFNIUM Hacks](https://thehackernews.com/2026/10/us-offers-up-to-10-million-for-tips-on.html) — The Hacker News
-- [ISC Stormcast For Thursday, October 8th, 2026 https://isc.sans.edu/podcastdetail/10128, (Thu, Oct 8th)](https://isc.sans.edu/diary/rss/33408) — SANS Internet Storm Center
-- [FBI: Ongoing FortiBleed attacks lock out FortiGate VPN admins](https://www.bleepingcomputer.com/news/security/fbi-ongoing-fortibleed-attacks-lock-out-fortigate-vpn-admins/) — BleepingComputer
-- [Eight Malicious npm Packages Downloaded 40,767 Times Deliver Overlord RAT and Stealer](https://thehackernews.com/2026/10/eight-malicious-npm-packages-downloaded.html) — The Hacker News
+- [FakeGit malware campaign returns with 17,610 malicious GitHub repos](https://www.bleepingcomputer.com/news/security/fakegit-malware-campaign-returns-with-17-610-malicious-github-repos/) — BleepingComputer
+- [UAC-0099 Targets Ukrainian Government Personnel With ASHVEIN RAT Hiding Commands in HTML](https://thehackernews.com/2026/10/uac-0099-targets-ukrainian-government.html) — The Hacker News
+- [Cisco warns of critical flaws allowing Nexus switch takeover](https://www.bleepingcomputer.com/news/security/cisco-warns-of-critical-flaws-allowing-nexus-switch-takeover/) — BleepingComputer
+- [Security Awareness Training Isn’t Dead, but It Needs a Rethink](https://www.securityweek.com/security-awareness-training-isnt-dead-but-it-needs-a-rethink/) — SecurityWeek
+- [ARTEX AI Pentesting Tool Used in Data Theft Attacks on South Korean Financial Firms](https://thehackernews.com/2026/10/artex-ai-pentesting-tool-used-in-data.html) — The Hacker News
+- [Uranium crypto exchange hacker convicted for stealing $53 million](https://www.bleepingcomputer.com/news/security/uranium-crypto-exchange-hacker-found-guilty-of-53-million-theft/) — BleepingComputer
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 18 critical · 45 important · 49 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 13 critical · 46 important · 51 FYI_
