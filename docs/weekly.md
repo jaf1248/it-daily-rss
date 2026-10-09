@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
 **Period:** October 02 – October 09, 2026  
-**Generated:** 2026-10-09 02:45 UTC  
+**Generated:** 2026-10-09 10:00 UTC  
 **Items reviewed:** 124  
 
 ## ⚡ Top Actions This Week
@@ -46,8 +46,8 @@
 **Why it matters:** Potential credential or data exposure.  
 **Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
-### [Fake Decryption Tools Masked $11M Markup in Ransomware Recovery Scheme](https://www.securityweek.com/fake-decryption-tools-masked-11m-markup-in-ransomware-recovery-scheme/)
-**Source:** SecurityWeek &nbsp;·&nbsp; **Date:** Oct 08  
+### [MonsterCloud Owner Accused of Billing Over $19M While Secretly Paying Ransoms to Decrypt Data](https://thehackernews.com/2026/10/monstercloud-owner-accused-of-billing.html)
+**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Oct 08  
 **Why it matters:** Elevated ransomware risk across the sector.  
 **Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
 
@@ -55,41 +55,41 @@
 
 ## 🟠 Important — Review This Week
 
+- [Citrix warns admins to patch new NetScaler RCE flaw immediately](https://www.bleepingcomputer.com/news/security/citrix-warns-admins-to-patch-new-netscaler-rce-flaw-immediately/)  
+  **BleepingComputer** · Oct 09 · _General awareness item._  
+
+- [Three Teams Demonstrate Remote Hacks of Fully Patched Google Pixel 10 at Pwn2Own](https://thehackernews.com/2026/10/three-teams-demonstrate-remote-hacks-of.html)  
+  **The Hacker News** · Oct 09 · _General awareness item._  
+
+- [Anthropic Fast-Tracks AI Bug Reports to OSS Maintainers, Taps 11 Firms for OT Security](https://www.securityweek.com/anthropic-fast-tracks-ai-bug-reports-to-oss-maintainers-taps-11-firms-for-ot-security/)  
+  **SecurityWeek** · Oct 09 · _General awareness item._  
+
+- [Citrix Patches Critical NetScaler Flaw That Could Enable RCE in SAML Deployments](https://thehackernews.com/2026/10/citrix-patches-critical-netscaler-flaw.html)  
+  **The Hacker News** · Oct 09 · _General awareness item._  
+
+- [Citrix Urges Immediate Patching of Critical NetScaler Vulnerability](https://www.securityweek.com/citrix-urges-immediate-patching-of-critical-netscaler-vulnerability/)  
+  **SecurityWeek** · Oct 09 · _General awareness item._  
+
+- [Hackers get $1,262,000 for 98 zero-days at Pwn2Own Ireland](https://www.bleepingcomputer.com/news/security/hackers-earn-1262000-for-98-zero-days-at-pwn2own-ireland/)  
+  **BleepingComputer** · Oct 09 · _General awareness item._  
+
 - [Reconstructing AI Agent Activity: Two New Scripts for Forensic Review, (Thu, Oct 8th)](https://isc.sans.edu/diary/rss/33410)  
   **SANS Internet Storm Center** · Oct 08 · _General awareness item._  
 
 - [Japan Sees Sharp Rise in Web Data Leaks Amid Mobile API Abuse and Metabase Attacks](https://thehackernews.com/2026/10/japan-sees-sharp-rise-in-web-data-leaks.html)  
   **The Hacker News** · Oct 08 · _General awareness item._  
 
-- [Cisco Patches a Dozen Critical Vulnerabilities](https://www.securityweek.com/cisco-patches-a-dozen-critical-vulnerabilities/)  
-  **SecurityWeek** · Oct 08 · _General awareness item._  
-
-- [Attackers Target Critical Atlassian Vulnerability Within Hours of PoC Publication](https://www.securityweek.com/attackers-target-critical-atlassian-vulnerability-within-hours-of-poc-publication/)  
-  **SecurityWeek** · Oct 08 · _General awareness item._  
-
-- [CVE-2026-69435 Azure SRE Agent Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69435)  
-  **Microsoft Security Response Center** · Oct 08 · _General awareness item._  
-
-- [CVE-2026-77900 Azure App Service Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-77900)  
-  **Microsoft Security Response Center** · Oct 08 · _General awareness item._  
-
-- [CVE-2026-83943 Azure API Center Information Disclosure Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-83943)  
-  **Microsoft Security Response Center** · Oct 08 · _General awareness item._  
-
-- [CVE-2026-83947 Azure Event Grid Spoofing Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-83947)  
-  **Microsoft Security Response Center** · Oct 08 · _General awareness item._  
-
 ---
 
 ## 🔵 FYI — General Awareness
 
-- [Post-quantum authentication: Why organizations should start testing certificate ecosystems now](https://www.microsoft.com/en-us/security/blog/2026/10/08/post-quantum-authentication-why-organizations-should-start-testing-certificate-ecosystems-now/) — Microsoft Security Blog
-- [Low-cost Android phones ship with residential proxy malware](https://www.bleepingcomputer.com/news/security/low-cost-android-phones-ship-with-residential-proxy-malware/) — BleepingComputer
-- [FBI Says China-Linked Hackers Ran Portal Giving Third Parties Access to Stolen Emails](https://thehackernews.com/2026/10/fbi-says-china-linked-hackers-ran.html) — The Hacker News
-- [FakeGit malware campaign returns with 17,610 malicious GitHub repos](https://www.bleepingcomputer.com/news/security/fakegit-malware-campaign-returns-with-17-610-malicious-github-repos/) — BleepingComputer
-- [UAC-0099 Targets Ukrainian Government Personnel With ASHVEIN RAT Hiding Commands in HTML](https://thehackernews.com/2026/10/uac-0099-targets-ukrainian-government.html) — The Hacker News
-- [Cisco warns of critical flaws allowing Nexus switch takeover](https://www.bleepingcomputer.com/news/security/cisco-warns-of-critical-flaws-allowing-nexus-switch-takeover/) — BleepingComputer
+- [Pre-Baked Firmware Malware Hits Budget Android Devices in 150+ Countries](https://www.securityweek.com/pre-baked-firmware-malware-hits-budget-android-devices-in-150-countries/) — SecurityWeek
+- [GoBalance Flaw Lets Attackers Hijack .onion Addresses by Recovering Tor-Format Keys](https://thehackernews.com/2026/10/gobalance-flaw-lets-attackers-hijack.html) — The Hacker News
+- [US Disrupts Chinese State-Sponsored Hacking Tools](https://www.securityweek.com/us-disrupts-chinese-state-sponsored-hacking-tools/) — SecurityWeek
+- [ISC Stormcast For Friday, October 9th, 2026 https://isc.sans.edu/podcastdetail/10130, (Fri, Oct 9th)](https://isc.sans.edu/diary/rss/33412) — SANS Internet Storm Center
+- [Google Pixel 10 Exploits Earned Hackers $560,000 at Pwn2Own](https://www.securityweek.com/google-pixel-10-exploits-earned-hackers-560000-at-pwn2own/) — SecurityWeek
+- [FBI Seizes 7 Domains, Disrupts Flax Typhoon Tools Used in Critical Infrastructure Intrusions](https://thehackernews.com/2026/10/fbi-seizes-7-domains-disrupts-flax.html) — The Hacker News
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 15 critical · 56 important · 53 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 12 critical · 59 important · 53 FYI_
