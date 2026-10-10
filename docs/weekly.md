@@ -1,12 +1,12 @@
 # IT Weekly Intelligence Briefing
 **Period:** October 03 – October 10, 2026  
-**Generated:** 2026-10-10 08:05 UTC  
+**Generated:** 2026-10-10 15:02 UTC  
 **Items reviewed:** 150  
 
 ## ⚡ Top Actions This Week
 
 1. **Validate backups, confirm EDR coverage, and brief incident response team.**  
-   _FBI Arrests Founder of Ransomware Negotiation Firm_  
+   _FBI Arrests Executive at Ransomware Negotiation Firm_  
    Source: Krebs on Security  
 
 2. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
@@ -21,7 +21,7 @@
 
 ## 🔴 Critical — Immediate Awareness
 
-### [FBI Arrests Founder of Ransomware Negotiation Firm](https://krebsonsecurity.com/2026/10/fbi-arrests-founder-of-ransomware-negotiation-firm/)
+### [FBI Arrests Executive at Ransomware Negotiation Firm](https://krebsonsecurity.com/2026/10/fbi-arrests-founder-of-ransomware-negotiation-firm/)
 **Source:** Krebs on Security &nbsp;·&nbsp; **Date:** Oct 10  
 **Why it matters:** Elevated ransomware risk across the sector.  
 **Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
@@ -55,6 +55,9 @@
 
 ## 🟠 Important — Review This Week
 
+- [Anthropic Cuts Live Internet Access for Internal AI Tests After Claude Exploits Injection Flaws](https://thehackernews.com/2026/10/anthropic-cuts-live-internet-access-for.html)  
+  **The Hacker News** · Oct 10 · _General awareness item._  
+
 - [Unpatched AhsayCBS flaws exploited to deploy webshells, mine crypto](https://www.bleepingcomputer.com/news/security/unpatched-ahsaycbs-flaws-exploited-to-deploy-webshells-mine-crypto/)  
   **BleepingComputer** · Oct 09 · _General awareness item._  
 
@@ -76,19 +79,16 @@
 - [CVE-2026-69451 Windows Management Instrumentation Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69451)  
   **Microsoft Security Response Center** · Oct 09 · _General awareness item._  
 
-- [CVE-2026-69582 Windows Volume Manager Extension Driver Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69582)  
-  **Microsoft Security Response Center** · Oct 09 · _General awareness item._  
-
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [ARTEX AI, Claude agents used in cyberattacks on South Korean banks](https://www.bleepingcomputer.com/news/security/hacker-used-artex-ai-and-claude-agents-to-target-south-korean-banks/) — BleepingComputer
+- [Criminal IP Introduces AITEM as the Next Evolution of Attack Surface Management](https://www.bleepingcomputer.com/news/security/criminal-ip-introduces-aitem-as-the-next-evolution-of-attack-surface-management/) — BleepingComputer
+- [The Third-Party Agent Problem: Why Security Built for AI You Chose Misses the Agents You Didn't](https://thehackernews.com/2026/10/the-third-party-agent-problem-why.html) — The Hacker News
+- [Insider Cyber Extortion Plot Against Industrial Firm Lands Engineer in Prison](https://www.securityweek.com/insider-cyber-extortion-plot-against-industrial-firm-lands-engineer-in-prison/) — SecurityWeek
+- [Why TLP should not replace your internal information classification, (Sat, Oct 10th)](https://isc.sans.edu/diary/rss/33414) — SANS Internet Storm Center
 - [OpenAI Fires 3 Safety Researchers in Dispute Over AI Risks](https://www.securityweek.com/openai-fires-3-safety-researchers-in-dispute-over-ai-risks/) — SecurityWeek
-- [Hackers abuse Google Ads, Bing redirects to push Claude ClickFix attacks](https://www.bleepingcomputer.com/news/security/hackers-abuse-google-ads-bing-redirects-to-push-claude-clickfix-attacks/) — BleepingComputer
-- [Credential-Stealing GitHub Actions Workflows Planted in Tens of Thousands of Repositories](https://thehackernews.com/2026/10/credential-stealing-github-actions.html) — The Hacker News
-- [P7 DarkSword iOS Exploit Kit Adds Crypto Wallet Data Theft and Remote Commands](https://thehackernews.com/2026/10/p7-darksword-ios-exploit-kit-adds.html) — The Hacker News
-- [How to keep AI agents within their permissions](https://www.bleepingcomputer.com/news/security/how-to-keep-ai-agents-within-their-permissions/) — BleepingComputer
-- [TP-Link Sued by Four More U.S. States Over Router Security and China Ties](https://thehackernews.com/2026/10/tp-link-sued-by-four-more-us-states.html) — The Hacker News
 
 ---
 
