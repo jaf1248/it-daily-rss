@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
 **Period:** October 04 – October 11, 2026  
-**Generated:** 2026-10-11 03:52 UTC  
+**Generated:** 2026-10-11 10:35 UTC  
 **Items reviewed:** 150  
 
 ## ⚡ Top Actions This Week
@@ -83,12 +83,12 @@
 
 ## 🔵 FYI — General Awareness
 
+- [P7 DarkSword iOS Exploit Kit Adds Crypto Wallet Data Theft and Remote Commands](https://thehackernews.com/2026/10/p7-darksword-ios-exploit-kit-adds.html) — The Hacker News
 - [Cyber exec arrested in case allegedly tied to ShinyHunters hackers](https://www.bleepingcomputer.com/news/security/cyber-exec-arrested-in-case-allegedly-tied-to-shinyhunters-hackers/) — BleepingComputer
 - [ARTEX AI, Claude agents used in cyberattacks on South Korean banks](https://www.bleepingcomputer.com/news/security/hacker-used-artex-ai-and-claude-agents-to-target-south-korean-banks/) — BleepingComputer
 - [Criminal IP Introduces AITEM as the Next Evolution of Attack Surface Management](https://www.bleepingcomputer.com/news/security/criminal-ip-introduces-aitem-as-the-next-evolution-of-attack-surface-management/) — BleepingComputer
 - [The Third-Party Agent Problem: Why Security Built for AI You Chose Misses the Agents You Didn't](https://thehackernews.com/2026/10/the-third-party-agent-problem-why.html) — The Hacker News
 - [Insider Cyber Extortion Plot Against Industrial Firm Lands Engineer in Prison](https://www.securityweek.com/insider-cyber-extortion-plot-against-industrial-firm-lands-engineer-in-prison/) — SecurityWeek
-- [Why TLP should not replace your internal information classification, (Sat, Oct 10th)](https://isc.sans.edu/diary/rss/33414) — SANS Internet Storm Center
 
 ---
 
