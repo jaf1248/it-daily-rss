@@ -1,7 +1,7 @@
 # IT Weekly Intelligence Briefing
-**Period:** October 06 – October 13, 2026  
-**Generated:** 2026-10-13 20:04 UTC  
-**Items reviewed:** 149  
+**Period:** October 07 – October 14, 2026  
+**Generated:** 2026-10-14 00:07 UTC  
+**Items reviewed:** 150  
 
 ## ⚡ Top Actions This Week
 
@@ -41,19 +41,25 @@
 **Why it matters:** Potential credential or data exposure.  
 **Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
-### [Anthropic takes risky AI tests offline after models breach govt sites](https://www.bleepingcomputer.com/news/security/anthropic-takes-risky-ai-tests-offline-after-models-breach-govt-sites/)
-**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Oct 12  
-**Why it matters:** Potential credential or data exposure.  
-**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
-
 ### [⚡ Weekly Recap: Helpdesk 0-Days, Rogue Certs, ShinyHunters Arrest, AI-Fooling Malware and More](https://thehackernews.com/2026/10/weekly-recap-helpdesk-0-days-rogue.html)
 **Source:** The Hacker News &nbsp;·&nbsp; **Date:** Oct 12  
+**Why it matters:** Elevated ransomware risk across the sector.  
+**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
+
+### [FBI Arrests Executive at Ransomware Negotiation Firm](https://krebsonsecurity.com/2026/10/fbi-arrests-founder-of-ransomware-negotiation-firm/)
+**Source:** Krebs on Security &nbsp;·&nbsp; **Date:** Oct 10  
 **Why it matters:** Elevated ransomware risk across the sector.  
 **Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
 
 ---
 
 ## 🟠 Important — Review This Week
+
+- [Microsoft Patches More Than 1,400 Security Flaws](https://krebsonsecurity.com/2026/10/microsoft-patches-more-than-1400-security-flaws/)  
+  **Krebs on Security** · Oct 13 · _General awareness item._  
+
+- [Ghostscript flaw lets hackers hijack servers via PDF uploads](https://www.bleepingcomputer.com/news/security/ghostscript-flaw-lets-hackers-hijack-servers-via-pdf-uploads/)  
+  **BleepingComputer** · Oct 13 · _General awareness item._  
 
 - [Microsoft releases Windows 10 KB5126657 extended security update](https://www.bleepingcomputer.com/news/microsoft/microsoft-releases-windows-10-kb5126657-extended-security-update/)  
   **BleepingComputer** · Oct 13 · _General awareness item._  
@@ -73,23 +79,17 @@
 - [Attacker Chains Three Ivanti Connect Secure Zero-Days for Root Access, Only Two Patched So Far](https://thehackernews.com/2026/10/attacker-chains-three-ivanti-connect.html)  
   **The Hacker News** · Oct 13 · _General awareness item._  
 
-- [Adobe Patches 140 Vulnerabilities Across 10 Products](https://www.securityweek.com/adobe-patches-140-vulnerabilities-across-10-products/)  
-  **SecurityWeek** · Oct 13 · _General awareness item._  
-
-- [TFG London cyberattack disrupts systems at Hobbs and Whistles retailers](https://www.bleepingcomputer.com/news/security/tfg-london-cyberattack-disrupts-systems-at-hobbs-and-whistles-retailers/)  
-  **BleepingComputer** · Oct 13 · _General awareness item._  
-
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [Employee Arrested After Listening Device Found in OpenAI Conference Room, FBI and the Company Say](https://www.securityweek.com/employee-arrested-after-listening-device-found-in-openai-conference-room-fbi-and-the-company-say/) — SecurityWeek
+- [OpenAI engineer arrested for allegedly planting spy device in office](https://www.bleepingcomputer.com/news/artificial-intelligence/openai-engineer-arrested-for-allegedly-planting-spy-device-in-office/) — BleepingComputer
+- [Anthropic warns self-replicating AI could spread to your smart devices](https://www.bleepingcomputer.com/news/security/anthropic-warns-self-replicating-ai-could-spread-to-your-smart-devices/) — BleepingComputer
 - [Microsoft: Windows 11 24H2 Home and Pro reached end of support](https://www.bleepingcomputer.com/news/microsoft/microsoft-windows-11-24h2-home-and-pro-reached-end-of-support/) — BleepingComputer
 - [Anthropic Warns Small AI Models Could Soon Form Self-Propagating IoT Botnets](https://thehackernews.com/2026/10/anthropic-warns-small-ai-models-could.html) — The Hacker News
 - [Docker Fixes Critical Two-Year-Old Hub Flaw That Let One User Push Images as Another](https://thehackernews.com/2026/10/docker-fixes-critical-two-year-old-hub.html) — The Hacker News
-- [SAP Discloses Critical CVSS 10 Flaw in Cloud SDK for Python Allowing OAuth2 Credential Theft](https://thehackernews.com/2026/10/sap-discloses-critical-cvss-10-flaw-in.html) — The Hacker News
-- [Google Partially Reverses Chrome Bug Bounty Cuts](https://www.securityweek.com/google-partially-reverses-chrome-bug-bounty-cuts/) — SecurityWeek
-- [GitHub Tightens npm Publishing After Flaw Left 1,500+ Packages Vulnerable to Hijacking](https://thehackernews.com/2026/10/github-tightens-npm-publishing-after.html) — The Hacker News
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 12 critical · 88 important · 49 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 11 critical · 90 important · 49 FYI_
