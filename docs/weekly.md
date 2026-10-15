@@ -1,7 +1,7 @@
 # IT Weekly Intelligence Briefing
 **Period:** October 08 – October 15, 2026  
-**Generated:** 2026-10-15 18:00 UTC  
-**Items reviewed:** 150  
+**Generated:** 2026-10-15 21:15 UTC  
+**Items reviewed:** 149  
 
 ## ⚡ Top Actions This Week
 
@@ -55,41 +55,41 @@
 
 ## 🟠 Important — Review This Week
 
-- [CVE-2026-32157 Remote Desktop Client Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-32157)  
+- [Hackers exploit Collabora RCE flaw to backdoor Nextcloud servers](https://www.bleepingcomputer.com/news/security/hackers-exploit-collabora-rce-flaw-to-backdoor-nextcloud-servers/)  
+  **BleepingComputer** · Oct 15 · _General awareness item._  
+
+- [Critical PwnEscape Linux Kernel Vulnerability Lets Guest VMs Read Host Memory](https://thehackernews.com/2026/10/critical-pwnescape-linux-kernel.html)  
+  **The Hacker News** · Oct 15 · _General awareness item._  
+
+- [CVE-2026-102858 Microsoft Office OneNote Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-102858)  
   **Microsoft Security Response Center** · Oct 15 · _General awareness item._  
 
-- [Next.js Ships Out-of-Band Patch for Two Critical RCE Flaws in Caching and SVG Processing](https://thehackernews.com/2026/10/nextjs-ships-out-of-band-patch-for-two.html)  
-  **The Hacker News** · Oct 15 · _General awareness item._  
+- [CVE-2026-105599 Microsoft Office PowerPoint Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-105599)  
+  **Microsoft Security Response Center** · Oct 15 · _General awareness item._  
 
-- [Drupal Patches Critical Field UI Flaw With Unauthenticated RCE Path via Contributed Modules](https://thehackernews.com/2026/10/drupal-patches-critical-core-rce-flaw.html)  
-  **The Hacker News** · Oct 15 · _General awareness item._  
+- [CVE-2026-105715 Microsoft Office Word Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-105715)  
+  **Microsoft Security Response Center** · Oct 15 · _General awareness item._  
 
-- [Fake AI Attacks Spread Across US Companies: How MSSPs Can Stop Incidents Early](https://thehackernews.com/2026/10/fake-ai-attacks-spread-across-us.html)  
-  **The Hacker News** · Oct 15 · _General awareness item._  
+- [CVE-2026-105718 Microsoft Excel Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-105718)  
+  **Microsoft Security Response Center** · Oct 15 · _General awareness item._  
 
-- [Palo Alto Networks Patches PAN-OS Authenticated RCE Flaw Amid Active Exploitation](https://thehackernews.com/2026/10/palo-alto-networks-patches-pan-os.html)  
-  **The Hacker News** · Oct 15 · _General awareness item._  
+- [CVE-2026-108426 Microsoft Office Word Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-108426)  
+  **Microsoft Security Response Center** · Oct 15 · _General awareness item._  
 
-- [Why AI Confidence Is Not Validation](https://thehackernews.com/2026/10/why-ai-confidence-is-not-validation.html)  
-  **The Hacker News** · Oct 15 · _General awareness item._  
-
-- [Langflow's Critical Authenticated RCE Flaw Targeted in 1,423 Honeypot Exploit Attempts](https://thehackernews.com/2026/10/langflows-critical-authenticated-rce.html)  
-  **The Hacker News** · Oct 15 · _General awareness item._  
-
-- [Palo Alto Networks Patches PAN-OS Zero-Day Exploited for Remote Code Execution](https://www.securityweek.com/palo-alto-networks-patches-pan-os-zero-day-exploited-for-remote-code-execution/)  
-  **SecurityWeek** · Oct 15 · _General awareness item._  
+- [CVE-2026-108427 Microsoft Office Word Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-108427)  
+  **Microsoft Security Response Center** · Oct 15 · _General awareness item._  
 
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [Android gets AI defenses against messaging scams, fake calls](https://www.bleepingcomputer.com/news/security/android-gets-ai-defenses-against-messaging-scams-fake-calls/) — BleepingComputer
+- [ThreatsDay: Adobe RCE, DNS Wallet Theft, NVIDIA Container Escape, Self-Healing Backdoor + 23 More](https://thehackernews.com/2026/10/threatsday-adobe-rce-dns-wallet-theft.html) — The Hacker News
+- [Hackers hijack D-Link, Ubiquiti devices to resell your stolen bandwidth](https://www.bleepingcomputer.com/news/security/hackers-hijack-d-link-ubiquiti-devices-to-resell-your-stolen-bandwidth/) — BleepingComputer
 - [Context Is King in the Fight Against Modern Cyberattacks](https://www.securityweek.com/context-is-king-in-the-fight-against-modern-cyberattacks/) — SecurityWeek
 - [Fake Arch Linux packages push malware with root privileges](https://www.bleepingcomputer.com/news/security/fake-arch-linux-packages-push-malware-with-root-privileges/) — BleepingComputer
 - [Watch Now: Zero Trust Strategies Summit – All Sessions Available on Demand](https://www.securityweek.com/virtual-event-today-zero-trust-strategies-summit-2/) — SecurityWeek
-- [Silent Lynx Exploits WinRAR Flaw to Deploy Reverse Shell in CIS Government Attacks](https://thehackernews.com/2026/10/silent-lynx-exploits-winrar-flaw-to.html) — The Hacker News
-- [UK Legal Aid Agency Hack Scope Widens After Forensic Review](https://www.securityweek.com/uk-legal-aid-agency-hack-scope-widens-after-forensic-review/) — SecurityWeek
-- [Help TDS Linked to Hotejka as 20,000+ Cloudflare Pages Domains Host Tech Support Scams](https://thehackernews.com/2026/10/help-tds-linked-to-hotejka-as-20000.html) — The Hacker News
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 10 critical · 87 important · 53 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 10 critical · 88 important · 51 FYI_
