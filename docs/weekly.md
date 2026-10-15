@@ -1,25 +1,30 @@
 # IT Weekly Intelligence Briefing
 **Period:** October 08 – October 15, 2026  
-**Generated:** 2026-10-15 13:55 UTC  
-**Items reviewed:** 151  
+**Generated:** 2026-10-15 18:00 UTC  
+**Items reviewed:** 150  
 
 ## ⚡ Top Actions This Week
 
-1. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
+1. **Review and assess impact on your environment.**  
+   _Citizen Lab Traces Zero-Click Candiru Spyware Infections at Al Jazeera to Targeted Online Ads_  
+   Source: The Hacker News  
+
+2. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
    _CenterPoint Energy Data Breach Impacts 1 Million Texans_  
    Source: SecurityWeek  
 
-2. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
+3. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
    _UK Legal Aid Agency: Hackers stole records dating back to 1978_  
-   Source: BleepingComputer  
-
-3. **Apply emergency patch or mitigation now; check vendor advisory for workarounds.**  
-   _Cisco patches new Secure Email Gateway zero-day exploited in attacks_  
    Source: BleepingComputer  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [Citizen Lab Traces Zero-Click Candiru Spyware Infections at Al Jazeera to Targeted Online Ads](https://thehackernews.com/2026/10/citizen-lab-traces-zero-click-candiru.html)
+**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Oct 15  
+**Why it matters:** General awareness item.  
+**Recommended action:** Review and assess impact on your environment.  
 
 ### [CenterPoint Energy Data Breach Impacts 1 Million Texans](https://www.securityweek.com/centerpoint-energy-data-breach-impacts-1-million-texans/)
 **Source:** SecurityWeek &nbsp;·&nbsp; **Date:** Oct 15  
@@ -46,16 +51,17 @@
 **Why it matters:** Potential credential or data exposure.  
 **Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
-### [CISA Urges Immediate Ivanti Connect Secure Updates as Honeypots Log 105 Exploit Attempts](https://thehackernews.com/2026/10/cisa-urges-immediate-ivanti-connect.html)
-**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Oct 14  
-**Why it matters:** General awareness item.  
-**Recommended action:** Review access logs for unauthorized sessions; apply vendor patch immediately.  
-
 ---
 
 ## 🟠 Important — Review This Week
 
-- [Drupal Patches Critical Core RCE Flaw with No-Login Path via Contributed Modules](https://thehackernews.com/2026/10/drupal-patches-critical-core-rce-flaw.html)  
+- [CVE-2026-32157 Remote Desktop Client Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-32157)  
+  **Microsoft Security Response Center** · Oct 15 · _General awareness item._  
+
+- [Next.js Ships Out-of-Band Patch for Two Critical RCE Flaws in Caching and SVG Processing](https://thehackernews.com/2026/10/nextjs-ships-out-of-band-patch-for-two.html)  
+  **The Hacker News** · Oct 15 · _General awareness item._  
+
+- [Drupal Patches Critical Field UI Flaw With Unauthenticated RCE Path via Contributed Modules](https://thehackernews.com/2026/10/drupal-patches-critical-core-rce-flaw.html)  
   **The Hacker News** · Oct 15 · _General awareness item._  
 
 - [Fake AI Attacks Spread Across US Companies: How MSSPs Can Stop Incidents Early](https://thehackernews.com/2026/10/fake-ai-attacks-spread-across-us.html)  
@@ -73,23 +79,17 @@
 - [Palo Alto Networks Patches PAN-OS Zero-Day Exploited for Remote Code Execution](https://www.securityweek.com/palo-alto-networks-patches-pan-os-zero-day-exploited-for-remote-code-execution/)  
   **SecurityWeek** · Oct 15 · _General awareness item._  
 
-- [AhsayCBS Flaws Exploited to Deploy Web Shells Get New Fixes After Incomplete Patches](https://thehackernews.com/2026/10/ahsaycbs-flaws-exploited-to-deploy-web.html)  
-  **The Hacker News** · Oct 15 · _General awareness item._  
-
-- [Cisco Warns of Exploited Secure Email Gateway Vulnerability](https://www.securityweek.com/cisco-warns-of-exploited-secure-email-gateway-vulnerability/)  
-  **SecurityWeek** · Oct 15 · _General awareness item._  
-
 ---
 
 ## 🔵 FYI — General Awareness
 
-- [Microsoft: Windows Server 2022 reached end of mainstream support](https://www.bleepingcomputer.com/news/microsoft/microsoft-windows-server-2022-reached-end-of-mainstream-support/) — BleepingComputer
-- [Supermarket Refrigeration Attack Widens to Copeland, Dixell Controllers](https://www.securityweek.com/supermarket-refrigeration-attack-widens-to-copeland-dixell-controllers/) — SecurityWeek
-- [Police arrests 95 suspects in international CSAM crackdown action](https://www.bleepingcomputer.com/news/security/police-arrests-95-suspects-in-child-sexual-abuse-material-crackdown/) — BleepingComputer
-- [CikaBika Bot RAT Uses Discord for C&C](https://www.securityweek.com/cikabika-bot-rat-uses-discord-for-cc/) — SecurityWeek
-- [India Mandates Registered Caller Name Display on 4G and Newer Networks From November 1](https://thehackernews.com/2026/10/india-mandates-registered-caller-name.html) — The Hacker News
-- [Novel Android RAT ‘Hirudo’ Replaces Banking Apps With Trojanized Copies](https://www.securityweek.com/novel-android-banking-rat-hirudo-replaces-banking-apps-with-trojanized-copies/) — SecurityWeek
+- [Context Is King in the Fight Against Modern Cyberattacks](https://www.securityweek.com/context-is-king-in-the-fight-against-modern-cyberattacks/) — SecurityWeek
+- [Fake Arch Linux packages push malware with root privileges](https://www.bleepingcomputer.com/news/security/fake-arch-linux-packages-push-malware-with-root-privileges/) — BleepingComputer
+- [Watch Now: Zero Trust Strategies Summit – All Sessions Available on Demand](https://www.securityweek.com/virtual-event-today-zero-trust-strategies-summit-2/) — SecurityWeek
+- [Silent Lynx Exploits WinRAR Flaw to Deploy Reverse Shell in CIS Government Attacks](https://thehackernews.com/2026/10/silent-lynx-exploits-winrar-flaw-to.html) — The Hacker News
+- [UK Legal Aid Agency Hack Scope Widens After Forensic Review](https://www.securityweek.com/uk-legal-aid-agency-hack-scope-widens-after-forensic-review/) — SecurityWeek
+- [Help TDS Linked to Hotejka as 20,000+ Cloudflare Pages Domains Host Tech Support Scams](https://thehackernews.com/2026/10/help-tds-linked-to-hotejka-as-20000.html) — The Hacker News
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 10 critical · 91 important · 50 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 10 critical · 87 important · 53 FYI_
