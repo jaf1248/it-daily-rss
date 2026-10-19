@@ -1,25 +1,30 @@
 # IT Weekly Intelligence Briefing
 **Period:** October 12 – October 19, 2026  
-**Generated:** 2026-10-19 05:42 UTC  
+**Generated:** 2026-10-19 12:03 UTC  
 **Items reviewed:** 150  
 
 ## ⚡ Top Actions This Week
 
 1. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
+   _OpenCode Console Breach May Have Exposed OpenAI, Anthropic, and Google API Keys_  
+   Source: The Hacker News  
+
+2. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
    _Hackers breach Microsoft 365 tenants via ConnectWise supply-chain attack_  
    Source: BleepingComputer  
 
-2. **Audit third-party software dependencies and review vendor access.**  
+3. **Audit third-party software dependencies and review vendor access.**  
    _MALFEX npm Package 'imgdecode' Hides Shellcode Loader in Windows Native Addon_  
    Source: The Hacker News  
-
-3. **Review and assess impact on your environment.**  
-   _Israeli Ad Firm Doubled as Candiru’s Zero-Click Spyware Delivery Channel_  
-   Source: SecurityWeek  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [OpenCode Console Breach May Have Exposed OpenAI, Anthropic, and Google API Keys](https://thehackernews.com/2026/10/opencode-console-breach-may-have.html)
+**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Oct 19  
+**Why it matters:** Potential credential or data exposure.  
+**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
 ### [Hackers breach Microsoft 365 tenants via ConnectWise supply-chain attack](https://www.bleepingcomputer.com/news/security/hackers-breach-microsoft-365-tenants-via-connectwise-supply-chain-attack/)
 **Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Oct 17  
@@ -46,14 +51,15 @@
 **Why it matters:** Potential credential or data exposure.  
 **Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
-### [Citizen Lab Traces Zero-Click Candiru Spyware Infections at Al Jazeera to Targeted Online Ads](https://thehackernews.com/2026/10/citizen-lab-traces-zero-click-candiru.html)
-**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Oct 15  
-**Why it matters:** General awareness item.  
-**Recommended action:** Review and assess impact on your environment.  
-
 ---
 
 ## 🟠 Important — Review This Week
+
+- [Microsoft: October Windows Server updates break Exchange sign-in, mail flow](https://www.bleepingcomputer.com/news/microsoft/microsoft-october-windows-server-updates-cause-exchange-issues/)  
+  **BleepingComputer** · Oct 19 · _Potential email disruption for users._  
+
+- [Unpatched Broadcom Wi-Fi Flaw Lets Attackers in Range Run Code as Root on Routers](https://thehackernews.com/2026/10/unpatched-broadcom-wi-fi-flaw-lets.html)  
+  **The Hacker News** · Oct 19 · _General awareness item._  
 
 - [Hackers exploit SiteGuard WAF flaw to run commands as admins](https://www.bleepingcomputer.com/news/security/hackers-exploit-siteguard-waf-flaw-to-run-commands-as-system-root/)  
   **BleepingComputer** · Oct 18 · _General awareness item._  
@@ -73,23 +79,17 @@
 - [Researchers Demonstrate OpenBSD Root Exploit Chaining 37-Year-Old Shared-Memory Bug](https://thehackernews.com/2026/10/researchers-demonstrate-openbsd-root.html)  
   **The Hacker News** · Oct 16 · _General awareness item._  
 
-- [In Other News: ICS-Sniper Attack, Hacking XWorm Malware Operators, $250k Chrome Exploit](https://www.securityweek.com/in-other-news-ics-sniper-attack-hacking-xworm-malware-operators-250k-chrome-exploit/)  
-  **SecurityWeek** · Oct 16 · _General awareness item._  
-
-- [OpenAI Research Model Spent 3rd-Party Test ETH Without Permission to Deploy Smart Contract](https://thehackernews.com/2026/10/openai-research-model-spent-3rd-party.html)  
-  **The Hacker News** · Oct 16 · _General awareness item._  
-
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [One Compromised Login Exposed Millions of California Students’ Records](https://www.securityweek.com/one-compromised-login-exposed-millions-of-california-students-records/) — SecurityWeek
+- [Exploited Fortinet Bug Linked to Stealthy FortiGate Implant in Telecom Hack](https://www.securityweek.com/exploited-fortinet-bug-linked-to-stealthy-fortigate-implant-in-telecom-hack/) — SecurityWeek
+- [Fake Web3 Accelerator Uses npm Packages to Spread Malware and Hijack AI Agent Traffic](https://thehackernews.com/2026/10/fake-web3-accelerator-uses-npm-packages.html) — The Hacker News
+- [MITRE ATT&CK v20 Catalogs AI Abuse, MFA Bypass, Water Utility Attacks](https://www.securityweek.com/mitre-attck-v20-catalogs-ai-abuse-mfa-bypass-water-utility-attacks/) — SecurityWeek
+- [Anthropic Acquires Confidential AI Startup Opaque Systems](https://www.securityweek.com/anthropic-acquires-confidential-ai-startup-opaque-systems/) — SecurityWeek
 - [Orphaned VBA Projects Inside DWG Files: YARA Rule, (Sun, Oct 18th)](https://isc.sans.edu/diary/rss/33434) — SANS Internet Storm Center
-- [US Cybersecurity Job Postings Fall 26% as AI Security Engineer Demand Soars](https://www.securityweek.com/us-cybersecurity-job-postings-fall-26-as-ai-security-engineer-demand-soars/) — SecurityWeek
-- [Hackers Use Compromised ConnectWise Credential to Sign In to 173 Microsoft 365 Tenants](https://thehackernews.com/2026/10/hackers-use-compromised-connectwise.html) — The Hacker News
-- [Attackers Tampered with AOMEI Backupper's Update Servers for Minutes to Deliver a Backdoor](https://thehackernews.com/2026/10/attackers-tampered-with-aomei.html) — The Hacker News
-- [UAT-11985 Uses Fake Event Invites to Target Taiwan Research Affiliates With Google AitM Phishing](https://thehackernews.com/2026/10/uat-11985-uses-fake-event-invites-to.html) — The Hacker News
-- [Managing open-weight model risk in enterprise deployments](https://www.microsoft.com/en-us/security/blog/2026/10/16/managing-open-weight-model-risk-in-enterprise-deployments/) — Microsoft Security Blog
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 9 critical · 96 important · 45 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 10 critical · 96 important · 44 FYI_
