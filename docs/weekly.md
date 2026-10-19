@@ -1,25 +1,30 @@
 # IT Weekly Intelligence Briefing
 **Period:** October 12 – October 19, 2026  
-**Generated:** 2026-10-19 18:59 UTC  
+**Generated:** 2026-10-19 22:51 UTC  
 **Items reviewed:** 152  
 
 ## ⚡ Top Actions This Week
 
 1. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
+   _Nikkei discloses third data breach in a month, 1.8M records exposed_  
+   Source: BleepingComputer  
+
+2. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
    _OpenCode hack exposes API keys amid AI distillation attacks_  
    Source: BleepingComputer  
 
-2. **Audit third-party software dependencies and review vendor access.**  
+3. **Audit third-party software dependencies and review vendor access.**  
    _Rank Math PRO WordPress Plugin Compromised in Supply Chain Attack_  
    Source: SecurityWeek  
-
-3. **Validate backups, confirm EDR coverage, and brief incident response team.**  
-   _Feds Suspect Ransom Negotiator Ran ShinyHunters Extortion Site_  
-   Source: Krebs on Security  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [Nikkei discloses third data breach in a month, 1.8M records exposed](https://www.bleepingcomputer.com/news/security/nikkei-discloses-third-data-breach-in-a-month-18m-records-exposed/)
+**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Oct 19  
+**Why it matters:** Potential credential or data exposure.  
+**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
 ### [OpenCode hack exposes API keys amid AI distillation attacks](https://www.bleepingcomputer.com/news/security/opencode-hack-exposes-api-keys-amid-ai-distillation-attacks/)
 **Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Oct 19  
@@ -46,11 +51,6 @@
 **Why it matters:** Potential credential or data exposure.  
 **Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
-### [Hackers breach Microsoft 365 tenants via ConnectWise supply-chain attack](https://www.bleepingcomputer.com/news/security/hackers-breach-microsoft-365-tenants-via-connectwise-supply-chain-attack/)
-**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Oct 17  
-**Why it matters:** Potential credential or data exposure.  
-**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
-
 ---
 
 ## 🟠 Important — Review This Week
@@ -64,6 +64,9 @@
 - [⚡ Weekly Recap: 98 Zero-Days, Rogue AI Agents, $100M Crypto Theft, 700 Supermarkets Hit and More](https://thehackernews.com/2026/10/weekly-recap-98-zero-days-rogue-ai.html)  
   **The Hacker News** · Oct 19 · _General awareness item._  
 
+- [CVE-2026-80092 Microsoft Identity Web Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-80092)  
+  **Microsoft Security Response Center** · Oct 19 · _General awareness item._  
+
 - [F5 releases out-of-band patches for critical NGINX vulnerabilities](https://www.bleepingcomputer.com/news/security/f5-releases-out-of-band-patches-for-critical-nginx-vulnerabilities/)  
   **BleepingComputer** · Oct 19 · _General awareness item._  
 
@@ -76,20 +79,17 @@
 - [Hackers exploit SiteGuard WAF flaw to run commands as admins](https://www.bleepingcomputer.com/news/security/hackers-exploit-siteguard-waf-flaw-to-run-commands-as-system-root/)  
   **BleepingComputer** · Oct 18 · _General awareness item._  
 
-- [ConnectWise Suspends Cloud Backup After Attackers Compromise Microsoft 365 Tenants](https://thehackernews.com/2026/10/connectwise-suspends-cloud-backup-after.html)  
-  **The Hacker News** · Oct 18 · _General awareness item._  
-
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [WordPress SEO plugin Rank Math compromised to backdoor websites](https://www.bleepingcomputer.com/news/security/wordpress-seo-plugin-rank-math-compromised-to-backdoor-websites/) — BleepingComputer
+- [Hackers hijack AOMEI update servers to secretly spread malware](https://www.bleepingcomputer.com/news/security/hackers-hijack-aomei-update-servers-to-secretly-spread-malware/) — BleepingComputer
 - [Hackers Exploit Plex2Shell Flaws to Install Crypto Miners and Linux Proxy Backdoor](https://thehackernews.com/2026/10/hackers-exploit-plex2shell-flaws-to.html) — The Hacker News
 - [Popular WordPress SEO Plugin Rank Math PRO Hijacked to Deliver Self-Restoring Backdoor](https://thehackernews.com/2026/10/popular-wordpress-seo-plugin-rank-math.html) — The Hacker News
 - [Drupal Warns of Fast Exploitation Risk for Critical Core RCE Flaw](https://www.securityweek.com/drupal-warns-of-fast-exploitation-risk-for-critical-core-rce-flaw/) — SecurityWeek
 - [Microsoft fixes game, app crashes caused by recent Windows update](https://www.bleepingcomputer.com/news/microsoft/microsoft-fixes-game-app-crashes-caused-by-windows-kb5124010-preview-update/) — BleepingComputer
-- [Inside the Underground Market for Know Your Client Services](https://www.bleepingcomputer.com/news/security/inside-the-underground-market-for-know-your-client-services/) — BleepingComputer
-- [ConnectWise Suspends Cloud Services in Response to Cyberattack](https://www.securityweek.com/connectwise-suspends-cloud-services-in-response-to-cyberattack/) — SecurityWeek
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 12 critical · 93 important · 47 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 12 critical · 92 important · 48 FYI_
