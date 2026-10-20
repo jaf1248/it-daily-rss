@@ -1,25 +1,40 @@
 # IT Weekly Intelligence Briefing
 **Period:** October 13 – October 20, 2026  
-**Generated:** 2026-10-20 13:19 UTC  
+**Generated:** 2026-10-20 18:19 UTC  
 **Items reviewed:** 152  
 
 ## ⚡ Top Actions This Week
 
-1. **Elevate monitoring posture; brief security team on threat actor TTPs.**  
-   _Russian APT28 Breaches NATO Naval Shipbuilder in NATO Country, Deploys New Reflective Loader_  
+1. **Validate backups, confirm EDR coverage, and brief incident response team.**  
+   _Qilin and INC Ransomware Groups Exploit Palo Alto Networks Flaw to Bypass MFA_  
    Source: The Hacker News  
 
 2. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _970,000 Medi-Cal Members Affected by Paradigm Healthcare Data Breach_  
-   Source: SecurityWeek  
+   _Hackers Use Autonomous AI Agents to Breach Company Websites, Target Over 1,200 Sites_  
+   Source: The Hacker News  
 
-3. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _Nikkei discloses third data breach in a month, 1.8M records exposed_  
-   Source: BleepingComputer  
+3. **Review and assess impact on your environment.**  
+   _Pegasus Spyware Infection Confirmed on Serbian University Rector's iPhone Days Before Election_  
+   Source: The Hacker News  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [Qilin and INC Ransomware Groups Exploit Palo Alto Networks Flaw to Bypass MFA](https://thehackernews.com/2026/10/qilin-and-inc-ransomware-groups-exploit.html)
+**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Oct 20  
+**Why it matters:** Elevated ransomware risk across the sector.  
+**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
+
+### [Hackers Use Autonomous AI Agents to Breach Company Websites, Target Over 1,200 Sites](https://thehackernews.com/2026/10/hackers-use-autonomous-ai-agents-to.html)
+**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Oct 20  
+**Why it matters:** Potential credential or data exposure.  
+**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
+
+### [Pegasus Spyware Infection Confirmed on Serbian University Rector's iPhone Days Before Election](https://thehackernews.com/2026/10/pegasus-spyware-infection-confirmed-on.html)
+**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Oct 20  
+**Why it matters:** General awareness item.  
+**Recommended action:** Review and assess impact on your environment.  
 
 ### [Russian APT28 Breaches NATO Naval Shipbuilder in NATO Country, Deploys New Reflective Loader](https://thehackernews.com/2026/10/russian-apt28-breaches-nato-naval.html)
 **Source:** The Hacker News &nbsp;·&nbsp; **Date:** Oct 20  
@@ -36,60 +51,45 @@
 **Why it matters:** Potential credential or data exposure.  
 **Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
-### [OpenCode hack exposes API keys amid AI distillation attacks](https://www.bleepingcomputer.com/news/security/opencode-hack-exposes-api-keys-amid-ai-distillation-attacks/)
-**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Oct 19  
-**Why it matters:** Potential credential or data exposure.  
-**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
-
-### [Rank Math PRO WordPress Plugin Compromised in Supply Chain Attack](https://www.securityweek.com/rank-math-pro-wordpress-plugin-compromised-in-supply-chain-attack/)
-**Source:** SecurityWeek &nbsp;·&nbsp; **Date:** Oct 19  
-**Why it matters:** Third-party/software supply chain integrity risk.  
-**Recommended action:** Audit third-party software dependencies and review vendor access.  
-
-### [Feds Suspect Ransom Negotiator Ran ShinyHunters Extortion Site](https://krebsonsecurity.com/2026/10/feds-suspect-ransom-negotiator-ran-shinyhunters-extortion-site/)
-**Source:** Krebs on Security &nbsp;·&nbsp; **Date:** Oct 19  
-**Why it matters:** Elevated ransomware risk across the sector.  
-**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
-
 ---
 
 ## 🟠 Important — Review This Week
 
-- [Windows Server 2025 gets support for quick machine recovery](https://www.bleepingcomputer.com/news/microsoft/windows-server-2025-gets-support-for-quick-machine-recovery/)  
-  **BleepingComputer** · Oct 20 · _General awareness item._  
+- [US Agencies Detail Incident Response Practices for Rogue AI Agents](https://www.securityweek.com/us-agencies-detail-incident-response-practices-for-rogue-ai-agents/)  
+  **SecurityWeek** · Oct 20 · _General awareness item._  
 
-- [ConnectWise Resets Credentials as Cloud Backup Remains Offline After Security Incident](https://thehackernews.com/2026/10/connectwise-resets-credentials-as-cloud.html)  
+- [Critical FortiSIEM Flaw Gets Public Exploit PoC for Unauthenticated Remote Code Execution](https://thehackernews.com/2026/10/critical-fortisiem-flaw-gets-public.html)  
   **The Hacker News** · Oct 20 · _General awareness item._  
 
-- [Revolut outage disrupts online banking operations worldwide](https://www.bleepingcomputer.com/news/security/revolut-outage-disrupts-online-banking-operations-worldwide/)  
-  **BleepingComputer** · Oct 20 · _Service continuity risk to users._  
+- [CVE-2026-70337 Microsoft PowerShell Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-70337)  
+  **Microsoft Security Response Center** · Oct 20 · _General awareness item._  
 
-- [ClickFix Attackers Exploit Siemens Software Center Flaw to Deploy Remote Access Trojan](https://thehackernews.com/2026/10/clickfix-attackers-exploit-siemens.html)  
-  **The Hacker News** · Oct 20 · _General awareness item._  
+- [CVE-2026-62913 Microsoft Exchange Server Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-62913)  
+  **Microsoft Security Response Center** · Oct 20 · _Potential email disruption for users._  
 
-- [Bullhorn takes staffing platform offline to contain cyberattack](https://www.bleepingcomputer.com/news/security/bullhorn-takes-staffing-platform-offline-to-contain-cyberattack/)  
-  **BleepingComputer** · Oct 19 · _Service continuity risk to users._  
+- [CVE-2026-96913 Windows Kernel Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-96913)  
+  **Microsoft Security Response Center** · Oct 20 · _General awareness item._  
 
-- [Siemens Software Center Vulnerability Exploited in ClickFix Malware Attacks](https://www.securityweek.com/siemens-software-center-vulnerability-exploited-in-clickfix-malware-attacks/)  
-  **SecurityWeek** · Oct 19 · _General awareness item._  
+- [CVE-2026-70074 Windows DNS Information Disclosure Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-70074)  
+  **Microsoft Security Response Center** · Oct 20 · _General awareness item._  
 
-- [⚡ Weekly Recap: 98 Zero-Days, Rogue AI Agents, $100M Crypto Theft, 700 Supermarkets Hit and More](https://thehackernews.com/2026/10/weekly-recap-98-zero-days-rogue-ai.html)  
-  **The Hacker News** · Oct 19 · _General awareness item._  
+- [CVE-2026-83839 Windows Hyper-V Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-83839)  
+  **Microsoft Security Response Center** · Oct 20 · _General awareness item._  
 
-- [CVE-2026-80092 Microsoft Identity Web Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-80092)  
-  **Microsoft Security Response Center** · Oct 19 · _General awareness item._  
+- [CVE-2026-83782 Windows Shell Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-83782)  
+  **Microsoft Security Response Center** · Oct 20 · _General awareness item._  
 
 ---
 
 ## 🔵 FYI — General Awareness
 
-- [Ahold Delhaize Restoring Services Disrupted by Cyberattack](https://www.securityweek.com/ahold-delhaize-restoring-services-disrupted-by-cyberattack/) — SecurityWeek
-- [AI Platform Cairn Abused to Hack Over 100 Organizations](https://www.securityweek.com/ai-platform-cairn-abused-to-hack-over-100-organizations/) — SecurityWeek
-- [Ex-OpenAI Worker Accused of Bugging Conference Room Planned to Fly to Saudi Arabia, Prosecutors Say](https://www.securityweek.com/ex-openai-worker-accused-of-bugging-conference-room-planned-to-fly-to-saudi-arabia-prosecutors-say/) — SecurityWeek
-- [WhatsApp Hid Instructions in Help Pages Telling Its AI Chatbot Not to Recommend Privacy Regulators](https://thehackernews.com/2026/10/whatsapp-hid-instructions-in-help-pages.html) — The Hacker News
-- [What Security Teams Can Do To Tame Wild Code](https://thehackernews.com/2026/10/what-security-teams-can-do-to-tame-wild.html) — The Hacker News
-- [Go Issues Emergency Update Blocking Eight CA Keys Over Undisclosed Security Concerns](https://thehackernews.com/2026/10/go-issues-emergency-update-blocking.html) — The Hacker News
+- [OpenAI says GPT-6.1 Sol is dramatically better at migrating legacy code](https://www.bleepingcomputer.com/news/artificial-intelligence/openai-says-gpt-61-sol-is-dramatically-better-at-migrating-legacy-code/) — BleepingComputer
+- [DHS bans DeepSeek products across US federal civilian agencies](https://www.bleepingcomputer.com/news/security/dhs-bans-deepseek-products-across-us-federal-civilian-agencies/) — BleepingComputer
+- [AOMEI Backupper Compromised in Short-Burst Supply Chain Campaign](https://www.securityweek.com/aomei-backupper-compromised-in-short-burst-supply-chain-campaign/) — SecurityWeek
+- [CJIS v6.1 Compliance: 5 Practical Priorities for Agencies](https://www.bleepingcomputer.com/news/security/cjis-v61-compliance-5-practical-priorities-for-agencies/) — BleepingComputer
+- [The Key to AI Software Security Isn’t Speed, It’s Maturity](https://www.securityweek.com/the-key-to-ai-software-security-isnt-speed-its-maturity/) — SecurityWeek
+- [Hacker gets 8 years for stealing $3.3 million from taxpayers](https://www.bleepingcomputer.com/news/security/hacker-gets-8-years-for-stealing-33-million-from-taxpayers/) — BleepingComputer
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 12 critical · 90 important · 50 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 13 critical · 88 important · 51 FYI_
