@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
-**Period:** October 12 – October 19, 2026  
-**Generated:** 2026-10-19 22:51 UTC  
+**Period:** October 13 – October 20, 2026  
+**Generated:** 2026-10-20 01:33 UTC  
 **Items reviewed:** 152  
 
 ## ⚡ Top Actions This Week
@@ -67,6 +67,9 @@
 - [CVE-2026-80092 Microsoft Identity Web Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-80092)  
   **Microsoft Security Response Center** · Oct 19 · _General awareness item._  
 
+- [CVE-2026-70197 .NET Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-70197)  
+  **Microsoft Security Response Center** · Oct 19 · _General awareness item._  
+
 - [F5 releases out-of-band patches for critical NGINX vulnerabilities](https://www.bleepingcomputer.com/news/security/f5-releases-out-of-band-patches-for-critical-nginx-vulnerabilities/)  
   **BleepingComputer** · Oct 19 · _General awareness item._  
 
@@ -75,9 +78,6 @@
 
 - [Unpatched Broadcom Wi-Fi Flaw Lets Attackers in Range Run Code as Root on Routers](https://thehackernews.com/2026/10/unpatched-broadcom-wi-fi-flaw-lets.html)  
   **The Hacker News** · Oct 19 · _General awareness item._  
-
-- [Hackers exploit SiteGuard WAF flaw to run commands as admins](https://www.bleepingcomputer.com/news/security/hackers-exploit-siteguard-waf-flaw-to-run-commands-as-system-root/)  
-  **BleepingComputer** · Oct 18 · _General awareness item._  
 
 ---
 
