@@ -1,25 +1,40 @@
 # IT Weekly Intelligence Briefing
 **Period:** October 14 – October 21, 2026  
-**Generated:** 2026-10-21 07:01 UTC  
-**Items reviewed:** 149  
+**Generated:** 2026-10-21 12:52 UTC  
+**Items reviewed:** 150  
 
 ## ⚡ Top Actions This Week
 
 1. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _Stolen UpdraftCentral keys used to backdoor WordPress sites_  
-   Source: BleepingComputer  
-
-2. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _Zeabur shutting down after second security breach in two months_  
-   Source: BleepingComputer  
-
-3. **Validate backups, confirm EDR coverage, and brief incident response team.**  
-   _Qilin and INC Ransomware Groups Exploit Palo Alto Networks Flaw to Bypass MFA_  
+   _Attackers Abuse UpdraftCentral Keys to Plant Backdoors on WordPress Sites_  
    Source: The Hacker News  
+
+2. **Validate backups, confirm EDR coverage, and brief incident response team.**  
+   _CISA: SafePay ransomware hit over 600 critical infrastructure orgs_  
+   Source: BleepingComputer  
+
+3. **Prioritize patching of affected systems; check for internet-exposed attack surface.**  
+   _PHP2Shell: Mass Exploitation Looms for Leaked Critical PHP Flaws_  
+   Source: SecurityWeek  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [Attackers Abuse UpdraftCentral Keys to Plant Backdoors on WordPress Sites](https://thehackernews.com/2026/10/attackers-abuse-updraftcentral-keys-to.html)
+**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Oct 21  
+**Why it matters:** Potential credential or data exposure.  
+**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
+
+### [CISA: SafePay ransomware hit over 600 critical infrastructure orgs](https://www.bleepingcomputer.com/news/security/cisa-and-fbi-safepay-ransomware-has-hit-over-600-critical-infrastructure-organizations/)
+**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Oct 21  
+**Why it matters:** Elevated ransomware risk across the sector.  
+**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
+
+### [PHP2Shell: Mass Exploitation Looms for Leaked Critical PHP Flaws](https://www.securityweek.com/php2shell-mass-exploitation-looms-for-leaked-critical-php-flaws/)
+**Source:** SecurityWeek &nbsp;·&nbsp; **Date:** Oct 21  
+**Why it matters:** General awareness item.  
+**Recommended action:** Prioritize patching of affected systems; check for internet-exposed attack surface.  
 
 ### [Stolen UpdraftCentral keys used to backdoor WordPress sites](https://www.bleepingcomputer.com/news/security/stolen-updraftcentral-keys-used-to-backdoor-wordpress-sites/)
 **Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Oct 21  
@@ -36,26 +51,26 @@
 **Why it matters:** Elevated ransomware risk across the sector.  
 **Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
 
-### [Hackers Use Autonomous AI Agents to Breach Company Websites, Target Over 1,200 Sites](https://thehackernews.com/2026/10/hackers-use-autonomous-ai-agents-to.html)
-**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Oct 20  
-**Why it matters:** Potential credential or data exposure.  
-**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
-
-### [Pegasus Spyware Infection Confirmed on Serbian University Rector's iPhone Days Before Election](https://thehackernews.com/2026/10/pegasus-spyware-infection-confirmed-on.html)
-**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Oct 20  
-**Why it matters:** General awareness item.  
-**Recommended action:** Review and assess impact on your environment.  
-
-### [Russian APT28 Breaches NATO Naval Shipbuilder in NATO Country, Deploys New Reflective Loader](https://thehackernews.com/2026/10/russian-apt28-breaches-nato-naval.html)
-**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Oct 20  
-**Why it matters:** Potential credential or data exposure.  
-**Recommended action:** Elevate monitoring posture; brief security team on threat actor TTPs.  
-
 ---
 
 ## 🟠 Important — Review This Week
 
+- [Critical PHP Vulnerability (CVE-2026-109618, CVE-2026-109619) &#x5b;infocon yellow&#x5d;, (Wed, Oct 21st)](https://isc.sans.edu/diary/rss/33440)  
+  **SANS Internet Storm Center** · Oct 21 · _General awareness item._  
+
+- [OpenAI Agents Silenced Security Team Alerts, Removed Misalignment Monitor](https://www.securityweek.com/openai-agents-silenced-security-team-alerts-removed-misalignment-monitor/)  
+  **SecurityWeek** · Oct 21 · _General awareness item._  
+
+- [PHP2Shell: What Actually Protects You Before the 14:00 UTC PHP RCE Patch, and What Doesn't](https://thehackernews.com/2026/10/php2shell-what-actually-protects-you.html)  
+  **The Hacker News** · Oct 21 · _General awareness item._  
+
 - [PHP2Shell: Two Unpatched Critical PHP RCE Flaws (CVSS 9.2) Trigger Emergency Security Alert](https://thehackernews.com/2026/10/php2shell-two-unpatched-critical-php.html)  
+  **The Hacker News** · Oct 21 · _General awareness item._  
+
+- [State Bank of India Confirms Data Leak After 3,897 Customer Records Found on Dark Web](https://thehackernews.com/2026/10/state-bank-of-india-confirms-data-leak.html)  
+  **The Hacker News** · Oct 21 · _Potential email disruption for users._  
+
+- [CISA Orders Federal Agencies to Patch Exploited Plex2Shell, Siemens, and SiteGuard Flaws](https://thehackernews.com/2026/10/cisa-orders-federal-agencies-to-patch.html)  
   **The Hacker News** · Oct 21 · _General awareness item._  
 
 - [PHP warns admins of two critical flaws, emergency patches coming tomorrow](https://www.bleepingcomputer.com/news/security/php-warns-admins-of-two-critical-flaws-emergency-patches-coming-tomorrow/)  
@@ -64,32 +79,17 @@
 - [US Agencies Detail Incident Response Practices for Rogue AI Agents](https://www.securityweek.com/us-agencies-detail-incident-response-practices-for-rogue-ai-agents/)  
   **SecurityWeek** · Oct 20 · _General awareness item._  
 
-- [Critical FortiSIEM Flaw Gets Public Exploit PoC for Unauthenticated Remote Code Execution](https://thehackernews.com/2026/10/critical-fortisiem-flaw-gets-public.html)  
-  **The Hacker News** · Oct 20 · _General awareness item._  
-
-- [CVE-2026-96913 Windows Kernel Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-96913)  
-  **Microsoft Security Response Center** · Oct 20 · _General awareness item._  
-
-- [CVE-2026-70074 Windows DNS Information Disclosure Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-70074)  
-  **Microsoft Security Response Center** · Oct 20 · _General awareness item._  
-
-- [CVE-2026-83839 Windows Hyper-V Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-83839)  
-  **Microsoft Security Response Center** · Oct 20 · _General awareness item._  
-
-- [CVE-2026-83782 Windows Shell Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-83782)  
-  **Microsoft Security Response Center** · Oct 20 · _General awareness item._  
-
 ---
 
 ## 🔵 FYI — General Awareness
 
-- [Hijacked Developer Account Used to Plant Stealer in OVHcloud CLI](https://www.securityweek.com/hijacked-developer-account-used-to-plant-stealer-in-ovhcloud-cli/) — SecurityWeek
-- [Accenture, Dragos, SANS Launch $10M Initiative to Defend Small US Utilities](https://www.securityweek.com/accenture-dragos-sans-launch-10m-initiative-to-defend-small-us-utilities/) — SecurityWeek
-- [ISC Stormcast For Wednesday, October 21st, 2026 https://isc.sans.edu/podcastdetail/10144, (Wed, Oct 21st)](https://isc.sans.edu/diary/rss/33438) — SANS Internet Storm Center
-- [Mozilla, Google, Apple block compromised eMudhra CA certificates](https://www.bleepingcomputer.com/news/security/mozilla-google-apple-block-compromised-emudhra-ca-certificates/) — BleepingComputer
-- [OpenAI says GPT-6.1 Sol is dramatically better at migrating legacy code](https://www.bleepingcomputer.com/news/artificial-intelligence/openai-says-gpt-61-sol-is-dramatically-better-at-migrating-legacy-code/) — BleepingComputer
-- [Eight eMudhra CA Keys Compromised, Triggering Emergency Fixes Across Browsers and Software](https://thehackernews.com/2026/10/eight-emudhra-ca-keys-compromised.html) — The Hacker News
+- [Microsoft PowerToys adds CursorHide, Button Lock mouse tools](https://www.bleepingcomputer.com/news/microsoft/microsoft-powertoys-adds-cursorhide-button-lock-mouse-tools/) — BleepingComputer
+- [China-Aligned Bronze Sandcastle Abuses Sandboxie DLL Sideloading to Deploy Backdoors](https://thehackernews.com/2026/10/china-aligned-bronze-sandcastle-abuses.html) — The Hacker News
+- [Generative AI Is Erasing Behavioral Tells, Weakening Behavior-Only Detection, Proofpoint Reports](https://thehackernews.com/2026/10/generative-ai-is-erasing-behavioral.html) — The Hacker News
+- [Browsers Block eMudhra Intermediate CAs Over Recoverable Private Keys](https://www.securityweek.com/browsers-block-emudhra-intermediate-cas-over-recoverable-private-keys/) — SecurityWeek
+- [China Defends DeepSeek After US Ban of Its AI From Government Systems](https://www.securityweek.com/china-defends-deepseek-after-us-ban-of-its-ai-from-government-systems/) — SecurityWeek
+- [The Harness Is the Hard Part of Agentic Pentesting](https://thehackernews.com/2026/10/the-harness-is-hard-part-of-agentic.html) — The Hacker News
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 13 critical · 86 important · 50 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 15 critical · 83 important · 52 FYI_
