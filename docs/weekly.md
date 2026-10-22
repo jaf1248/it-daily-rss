@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
 **Period:** October 15 – October 22, 2026  
-**Generated:** 2026-10-22 11:07 UTC  
+**Generated:** 2026-10-22 16:36 UTC  
 **Items reviewed:** 149  
 
 ## ⚡ Top Actions This Week
@@ -55,6 +55,18 @@
 
 ## 🟠 Important — Review This Week
 
+- [Amazon says PHP2Shell exploitation began 4 days before patches](https://www.bleepingcomputer.com/news/security/amazon-says-php2shell-exploitation-began-4-days-before-patches/)  
+  **BleepingComputer** · Oct 22 · _General awareness item._  
+
+- [Signal Vulnerability Lets Malicious Callers Block Hang-Ups](https://www.securityweek.com/signal-vulnerability-lets-malicious-callers-block-hang-ups/)  
+  **SecurityWeek** · Oct 22 · _General awareness item._  
+
+- [Tech and Security Companies Respond to PHP2Shell Vulnerabilities](https://www.securityweek.com/tech-and-security-companies-respond-to-php2shell-vulnerabilities/)  
+  **SecurityWeek** · Oct 22 · _General awareness item._  
+
+- [GitLab warns of new max severity code execution vulnerability](https://www.bleepingcomputer.com/news/security/gitlab-warns-of-new-max-severity-code-execution-vulnerability/)  
+  **BleepingComputer** · Oct 22 · _General awareness item._  
+
 - [Splunk, SolarWinds Release Fresh Security Updates](https://www.securityweek.com/splunk-solarwinds-release-fresh-security-updates/)  
   **SecurityWeek** · Oct 22 · _General awareness item._  
 
@@ -67,29 +79,17 @@
 - [LiteLLM Suspects GitHub Token Leak in AI Gateway Logs Behind Malicious Package Release](https://thehackernews.com/2026/10/litellm-suspects-github-token-leak-in.html)  
   **The Hacker News** · Oct 22 · _General awareness item._  
 
-- [Node.js Brotli Decoder Bug Could Allow Remote Code Execution in All Supported Versions](https://thehackernews.com/2026/10/nodejs-brotli-decoder-bug-could-allow.html)  
-  **The Hacker News** · Oct 22 · _General awareness item._  
-
-- [Oracle Patches Over 1,200 Vulnerabilities With October 2026 CPU](https://www.securityweek.com/oracle-patches-over-1200-vulnerabilities-with-october-2026-cpu/)  
-  **SecurityWeek** · Oct 22 · _General awareness item._  
-
-- [Someone Tried to Exploit PHP2Shell 4 Days Before the Vulnerabilities Were Publicly Disclosed](https://thehackernews.com/2026/10/someone-tried-to-exploit-php2shell-4.html)  
-  **The Hacker News** · Oct 22 · _General awareness item._  
-
-- [Critical PHP Vulnerability (CVE-2026-109618, CVE-2026-109619) &#x5b;infocon yellow&#x5d;, (Wed, Oct 21st)](https://isc.sans.edu/diary/rss/33440)  
-  **SANS Internet Storm Center** · Oct 21 · _General awareness item._  
-
 ---
 
 ## 🔵 FYI — General Awareness
 
-- [Meta Ordered to Pay New Mexico $25 Billion for Deceiving Users About Privacy on Facebook](https://www.securityweek.com/meta-ordered-to-pay-new-mexico-25-billion-for-deceiving-users-about-privacy-on-facebook/) — SecurityWeek
-- [New QPACK Flaws Can Crash HTTP/3 Servers, Trigger Up to 4,000-Fold Memory Amplification](https://thehackernews.com/2026/10/new-qpack-flaws-can-crash-http3-servers.html) — The Hacker News
-- [ISC Stormcast For Thursday, October 22nd, 2026 https://isc.sans.edu/podcastdetail/10146, (Thu, Oct 22nd)](https://isc.sans.edu/diary/rss/33446) — SANS Internet Storm Center
-- [Google Chrome adds Gemini-powered scam detection, warns users of ClickFix attacks](https://www.bleepingcomputer.com/news/google/google-chrome-adds-gemini-powered-scam-detection-warns-users-of-clickfix-attacks/) — BleepingComputer
-- [Japan's Onamae Desktop Cloud hacked, up to 27,000 servers affected](https://www.bleepingcomputer.com/news/security/japans-onamae-desktop-cloud-hacked-up-to-27-000-servers-affected/) — BleepingComputer
-- [Lazarus hackers use post-quantum cryptography for malware delivery](https://www.bleepingcomputer.com/news/security/lazarus-hackers-use-post-quantum-cryptography-for-malware-delivery/) — BleepingComputer
+- [Meta Ordered to Pay $25 Billion After Court Finds 43 Million Privacy Violations](https://thehackernews.com/2026/10/meta-ordered-to-pay-25-billion-after.html) — The Hacker News
+- [Microsoft shares how to fix broken Exchange Online EWS apps](https://www.bleepingcomputer.com/news/microsoft/microsoft-shares-how-to-fix-broken-exchange-online-ews-apps/) — BleepingComputer
+- [Hacker Conversations: Corey Thuen and the Evil Bit](https://www.securityweek.com/hacker-conversations-corey-thuen-and-the-evil-bit/) — SecurityWeek
+- [Machine speed attacks require machine speed detection and response](https://www.bleepingcomputer.com/news/security/machine-speed-attacks-require-machine-speed-detection-and-response/) — BleepingComputer
+- [INTERPOL Arrests 1,462 Suspects, Disrupts 10,909 Cybercrime Networks in Global Crackdown](https://thehackernews.com/2026/10/interpol-arrests-1462-suspects-disrupts.html) — The Hacker News
+- [Indurex Raises $8 Million to Expand Industrial Cybersecurity Platform](https://www.securityweek.com/indurex-raises-8-million-to-expand-industrial-cybersecurity-platform/) — SecurityWeek
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 19 critical · 87 important · 43 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 16 critical · 87 important · 46 FYI_
