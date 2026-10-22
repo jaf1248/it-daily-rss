@@ -1,25 +1,35 @@
 # IT Weekly Intelligence Briefing
 **Period:** October 15 – October 22, 2026  
-**Generated:** 2026-10-22 16:36 UTC  
+**Generated:** 2026-10-22 20:25 UTC  
 **Items reviewed:** 149  
 
 ## ⚡ Top Actions This Week
 
-1. **Validate backups, confirm EDR coverage, and brief incident response team.**  
-   _Authorities disrupt nearly 11,000 cybercrime networks in Africa_  
+1. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
+   _Capcom confirms data breach affecting 11.7 million accounts_  
    Source: BleepingComputer  
 
-2. **Audit third-party software dependencies and review vendor access.**  
-   _China-Linked Hackers Use ARTEX AI Agents in ConnectWise Supply Chain Attack_  
-   Source: The Hacker News  
+2. **Apply emergency patch or mitigation now; check vendor advisory for workarounds.**  
+   _Arista patches new VeloCloud Orchestrator zero-day exploited in attacks_  
+   Source: BleepingComputer  
 
-3. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _CISA: Hackers chain Plex flaws in Plex2Shell attacks to breach servers_  
+3. **Validate backups, confirm EDR coverage, and brief incident response team.**  
+   _Authorities disrupt nearly 11,000 cybercrime networks in Africa_  
    Source: BleepingComputer  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [Capcom confirms data breach affecting 11.7 million accounts](https://www.bleepingcomputer.com/news/security/capcom-confirms-data-breach-affecting-117-million-accounts/)
+**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Oct 22  
+**Why it matters:** Potential credential or data exposure.  
+**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
+
+### [Arista patches new VeloCloud Orchestrator zero-day exploited in attacks](https://www.bleepingcomputer.com/news/security/arista-patches-new-velocloud-orchestrator-zero-day-exploited-in-attacks/)
+**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Oct 22  
+**Why it matters:** General awareness item.  
+**Recommended action:** Apply emergency patch or mitigation now; check vendor advisory for workarounds.  
 
 ### [Authorities disrupt nearly 11,000 cybercrime networks in Africa](https://www.bleepingcomputer.com/news/security/authorities-disrupt-nearly-11-000-cybercrime-networks-in-africa/)
 **Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Oct 22  
@@ -41,19 +51,15 @@
 **Why it matters:** Third-party/software supply chain integrity risk.  
 **Recommended action:** Audit third-party software dependencies and review vendor access.  
 
-### [LiteLLM Compromised in Supply Chain Attack Delivering Credential Stealer and Backdoor](https://thehackernews.com/2026/10/litellm-compromised-in-supply-chain.html)
-**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Oct 21  
-**Why it matters:** Third-party/software supply chain integrity risk.  
-**Recommended action:** Audit third-party software dependencies and review vendor access.  
-
-### [Widespread PHP Flaw May Cause Many Site Outages Today](https://krebsonsecurity.com/2026/10/widespread-php-flaw-may-cause-many-site-outages-today/)
-**Source:** Krebs on Security &nbsp;·&nbsp; **Date:** Oct 21  
-**Why it matters:** Service continuity risk to users.  
-**Recommended action:** Prioritize patching of affected systems; check for internet-exposed attack surface.  
-
 ---
 
 ## 🟠 Important — Review This Week
+
+- [Arista Warns of Critical VeloCloud SQL Injection Zero-Day Exploited in Attacks](https://thehackernews.com/2026/10/arista-warns-of-critical-velocloud-sql.html)  
+  **The Hacker News** · Oct 22 · _Possible impact to authentication and sign-in flows._  
+
+- [Two CVSS 9.0 Linux KSMBD RCE Flaws Disclosed on Public Mailing Lists Before Kernel Fixes](https://thehackernews.com/2026/10/two-cvss-90-linux-ksmbd-rce-flaws.html)  
+  **The Hacker News** · Oct 22 · _General awareness item._  
 
 - [Amazon says PHP2Shell exploitation began 4 days before patches](https://www.bleepingcomputer.com/news/security/amazon-says-php2shell-exploitation-began-4-days-before-patches/)  
   **BleepingComputer** · Oct 22 · _General awareness item._  
@@ -73,23 +79,17 @@
 - [Cisco Patches 34 Vulnerabilities Across Multiple Products](https://www.securityweek.com/cisco-patches-34-vulnerabilities-across-multiple-products/)  
   **SecurityWeek** · Oct 22 · _General awareness item._  
 
-- [PHP2Shell Exploitation Started Days Before Patches](https://www.securityweek.com/php2shell-exploitation-started-days-before-patches/)  
-  **SecurityWeek** · Oct 22 · _General awareness item._  
-
-- [LiteLLM Suspects GitHub Token Leak in AI Gateway Logs Behind Malicious Package Release](https://thehackernews.com/2026/10/litellm-suspects-github-token-leak-in.html)  
-  **The Hacker News** · Oct 22 · _General awareness item._  
-
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [LiteLLM release pipeline hacked to distribute info-stealer malware](https://www.bleepingcomputer.com/news/security/litellm-release-pipeline-hacked-to-distribute-info-stealer-malware/) — BleepingComputer
+- [The AI Agent Nobody Owns: Watch Expert Webinar On Your Newest Insider Threat](https://thehackernews.com/2026/10/the-ai-agent-nobody-owns-watch-expert.html) — The Hacker News
+- [eMudhra to Exit Global SSL/TLS Business After 8 Intermediate CA Keys Found Easily Guessable](https://thehackernews.com/2026/10/emudhra-to-exit-global-ssltls-business.html) — The Hacker News
+- [ThreatsDay: AI Secrets Leak, PingCAP Source Theft, Signal Hang-Up Flaw, Laravel Auth Bypass + 21 More](https://thehackernews.com/2026/10/threatsday-ai-secrets-leak-pingcap.html) — The Hacker News
 - [Meta Ordered to Pay $25 Billion After Court Finds 43 Million Privacy Violations](https://thehackernews.com/2026/10/meta-ordered-to-pay-25-billion-after.html) — The Hacker News
 - [Microsoft shares how to fix broken Exchange Online EWS apps](https://www.bleepingcomputer.com/news/microsoft/microsoft-shares-how-to-fix-broken-exchange-online-ews-apps/) — BleepingComputer
-- [Hacker Conversations: Corey Thuen and the Evil Bit](https://www.securityweek.com/hacker-conversations-corey-thuen-and-the-evil-bit/) — SecurityWeek
-- [Machine speed attacks require machine speed detection and response](https://www.bleepingcomputer.com/news/security/machine-speed-attacks-require-machine-speed-detection-and-response/) — BleepingComputer
-- [INTERPOL Arrests 1,462 Suspects, Disrupts 10,909 Cybercrime Networks in Global Crackdown](https://thehackernews.com/2026/10/interpol-arrests-1462-suspects-disrupts.html) — The Hacker News
-- [Indurex Raises $8 Million to Expand Industrial Cybersecurity Platform](https://www.securityweek.com/indurex-raises-8-million-to-expand-industrial-cybersecurity-platform/) — SecurityWeek
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 16 critical · 87 important · 46 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 15 critical · 87 important · 47 FYI_
