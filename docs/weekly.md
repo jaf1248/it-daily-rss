@@ -1,25 +1,30 @@
 # IT Weekly Intelligence Briefing
 **Period:** October 15 – October 22, 2026  
-**Generated:** 2026-10-22 20:25 UTC  
-**Items reviewed:** 149  
+**Generated:** 2026-10-22 23:53 UTC  
+**Items reviewed:** 148  
 
 ## ⚡ Top Actions This Week
 
 1. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
+   _Railway warns devs to rotate secrets after potential breach_  
+   Source: BleepingComputer  
+
+2. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
    _Capcom confirms data breach affecting 11.7 million accounts_  
    Source: BleepingComputer  
 
-2. **Apply emergency patch or mitigation now; check vendor advisory for workarounds.**  
+3. **Apply emergency patch or mitigation now; check vendor advisory for workarounds.**  
    _Arista patches new VeloCloud Orchestrator zero-day exploited in attacks_  
-   Source: BleepingComputer  
-
-3. **Validate backups, confirm EDR coverage, and brief incident response team.**  
-   _Authorities disrupt nearly 11,000 cybercrime networks in Africa_  
    Source: BleepingComputer  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [Railway warns devs to rotate secrets after potential breach](https://www.bleepingcomputer.com/news/security/railway-warns-devs-to-rotate-secrets-after-potential-breach/)
+**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Oct 22  
+**Why it matters:** Potential credential or data exposure.  
+**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
 ### [Capcom confirms data breach affecting 11.7 million accounts](https://www.bleepingcomputer.com/news/security/capcom-confirms-data-breach-affecting-117-million-accounts/)
 **Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Oct 22  
@@ -46,11 +51,6 @@
 **Why it matters:** Potential credential or data exposure.  
 **Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
-### [AI-driven, large-scale nation-state campaign using ARTEX enables supply chain compromise](https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/)
-**Source:** Microsoft Security Blog &nbsp;·&nbsp; **Date:** Oct 21  
-**Why it matters:** Third-party/software supply chain integrity risk.  
-**Recommended action:** Audit third-party software dependencies and review vendor access.  
-
 ---
 
 ## 🟠 Important — Review This Week
@@ -61,23 +61,23 @@
 - [Two CVSS 9.0 Linux KSMBD RCE Flaws Disclosed on Public Mailing Lists Before Kernel Fixes](https://thehackernews.com/2026/10/two-cvss-90-linux-ksmbd-rce-flaws.html)  
   **The Hacker News** · Oct 22 · _General awareness item._  
 
-- [Amazon says PHP2Shell exploitation began 4 days before patches](https://www.bleepingcomputer.com/news/security/amazon-says-php2shell-exploitation-began-4-days-before-patches/)  
-  **BleepingComputer** · Oct 22 · _General awareness item._  
+- [CVE-2026-105014 Azure Pipelines Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-105014)  
+  **Microsoft Security Response Center** · Oct 22 · _General awareness item._  
 
-- [Signal Vulnerability Lets Malicious Callers Block Hang-Ups](https://www.securityweek.com/signal-vulnerability-lets-malicious-callers-block-hang-ups/)  
-  **SecurityWeek** · Oct 22 · _General awareness item._  
+- [CVE-2026-108456 Azure AI Foundry Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-108456)  
+  **Microsoft Security Response Center** · Oct 22 · _General awareness item._  
 
-- [Tech and Security Companies Respond to PHP2Shell Vulnerabilities](https://www.securityweek.com/tech-and-security-companies-respond-to-php2shell-vulnerabilities/)  
-  **SecurityWeek** · Oct 22 · _General awareness item._  
+- [CVE-2026-97785 AAD App Proxy Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-97785)  
+  **Microsoft Security Response Center** · Oct 22 · _General awareness item._  
 
-- [GitLab warns of new max severity code execution vulnerability](https://www.bleepingcomputer.com/news/security/gitlab-warns-of-new-max-severity-code-execution-vulnerability/)  
-  **BleepingComputer** · Oct 22 · _General awareness item._  
+- [CVE-2026-96185 Microsoft Exchange Online Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-96185)  
+  **Microsoft Security Response Center** · Oct 22 · _Potential email disruption for users._  
 
-- [Splunk, SolarWinds Release Fresh Security Updates](https://www.securityweek.com/splunk-solarwinds-release-fresh-security-updates/)  
-  **SecurityWeek** · Oct 22 · _General awareness item._  
+- [CVE-2026-83938 Azure Kubernetes Configuration Service Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-83938)  
+  **Microsoft Security Response Center** · Oct 22 · _General awareness item._  
 
-- [Cisco Patches 34 Vulnerabilities Across Multiple Products](https://www.securityweek.com/cisco-patches-34-vulnerabilities-across-multiple-products/)  
-  **SecurityWeek** · Oct 22 · _General awareness item._  
+- [CVE-2026-110063 VM Inspector for Azure Virtual Machines Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-110063)  
+  **Microsoft Security Response Center** · Oct 22 · _General awareness item._  
 
 ---
 
@@ -92,4 +92,4 @@
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 15 critical · 87 important · 47 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 16 critical · 87 important · 45 FYI_
