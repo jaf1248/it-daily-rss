@@ -1,32 +1,42 @@
 # IT Weekly Intelligence Briefing
 **Period:** October 16 – October 23, 2026  
-**Generated:** 2026-10-23 09:05 UTC  
-**Items reviewed:** 146  
+**Generated:** 2026-10-23 14:39 UTC  
+**Items reviewed:** 110  
 
 ## ⚡ Top Actions This Week
 
-1. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _11 Million Impacted by Capcom Data Breach_  
+1. **Validate backups, confirm EDR coverage, and brief incident response team.**  
+   _In Other News: Tor Exit Relays Hijacked, Banks Spot Rogue AI Agents, Self-Rebuilding macOS Ransomware_  
    Source: SecurityWeek  
 
 2. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _Quest Diagnostics Reports Cyber Breach Affecting ‘Certain Patient Records’_  
-   Source: SecurityWeek  
+   _Hackers Breach Enterprise Firewalls and VPNs, Exposing Over 70,000 Credentials_  
+   Source: The Hacker News  
 
-3. **Audit third-party software dependencies and review vendor access.**  
-   _LiteLLM Compromised in Fresh Supply Chain Attack_  
+3. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
+   _11 Million Impacted by Capcom Data Breach_  
    Source: SecurityWeek  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
 
+### [In Other News: Tor Exit Relays Hijacked, Banks Spot Rogue AI Agents, Self-Rebuilding macOS Ransomware](https://www.securityweek.com/in-other-news-tor-exit-relays-hijacked-banks-spot-rogue-ai-agents-self-rebuilding-macos-ransomware/)
+**Source:** SecurityWeek &nbsp;·&nbsp; **Date:** Oct 23  
+**Why it matters:** Elevated ransomware risk across the sector.  
+**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
+
+### [Hackers Breach Enterprise Firewalls and VPNs, Exposing Over 70,000 Credentials](https://thehackernews.com/2026/10/hackers-breach-enterprise-firewalls-and.html)
+**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Oct 23  
+**Why it matters:** Potential credential or data exposure.  
+**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
+
 ### [11 Million Impacted by Capcom Data Breach](https://www.securityweek.com/11-million-impacted-by-capcom-data-breach/)
 **Source:** SecurityWeek &nbsp;·&nbsp; **Date:** Oct 23  
 **Why it matters:** Potential credential or data exposure.  
 **Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
-### [Quest Diagnostics Reports Cyber Breach Affecting ‘Certain Patient Records’](https://www.securityweek.com/quest-diagnostics-reports-cyber-breach-affecting-certain-patient-records/)
+### [Quest Diagnostics Data Breach Exposed ‘Certain Patient Records’](https://www.securityweek.com/quest-diagnostics-reports-cyber-breach-affecting-certain-patient-records/)
 **Source:** SecurityWeek &nbsp;·&nbsp; **Date:** Oct 23  
 **Why it matters:** Potential credential or data exposure.  
 **Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
@@ -41,55 +51,45 @@
 **Why it matters:** Potential credential or data exposure.  
 **Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
-### [Capcom confirms data breach affecting 11.7 million accounts](https://www.bleepingcomputer.com/news/security/capcom-confirms-data-breach-affecting-117-million-accounts/)
-**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Oct 22  
-**Why it matters:** Potential credential or data exposure.  
-**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
-
-### [Arista patches new VeloCloud Orchestrator zero-day exploited in attacks](https://www.bleepingcomputer.com/news/security/arista-patches-new-velocloud-orchestrator-zero-day-exploited-in-attacks/)
-**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Oct 22  
-**Why it matters:** General awareness item.  
-**Recommended action:** Apply emergency patch or mitigation now; check vendor advisory for workarounds.  
-
 ---
 
 ## 🟠 Important — Review This Week
 
-- [Atlassian Patches 75 Flaws in Data Center and Server Products](https://www.securityweek.com/atlassian-patches-75-third-party-flaws-in-data-center-and-server-products/)  
+- [PHP Vulnerability Wrap-Up, (Fri, Oct 23rd)](https://isc.sans.edu/diary/rss/33450)  
+  **SANS Internet Storm Center** · Oct 23 · _General awareness item._  
+
+- [HPE patches eight max severity RCE and auth bypass AOS flaws](https://www.bleepingcomputer.com/news/security/hpe-patches-eight-max-severity-rce-and-auth-bypass-aos-flaws/)  
+  **BleepingComputer** · Oct 23 · _General awareness item._  
+
+- [PHP Warns of Another Unpatched RCE Two Days After Emergency PHP2Shell Patches](https://thehackernews.com/2026/10/urgent-php-warns-of-another-unpatched.html)  
+  **The Hacker News** · Oct 23 · _General awareness item._  
+
+- [Attackers Exploit Third Arista VCO Zero-Day in Four Months](https://www.securityweek.com/attackers-exploit-third-velocloud-orchestrator-zero-day-in-four-months/)  
   **SecurityWeek** · Oct 23 · _General awareness item._  
+
+- [Critical Flaw in Python’s Popular Pillow Image Library Allows Code Execution via a Crafted Image](https://thehackernews.com/2026/10/critical-flaw-in-pythons-popular-pillow.html)  
+  **The Hacker News** · Oct 23 · _General awareness item._  
 
 - [Researchers Demonstrate Node2Shell RCE Exploit on Node.js Build Using Crafted Brotli Data](https://thehackernews.com/2026/10/researchers-demonstrate-node2shell-rce.html)  
   **The Hacker News** · Oct 23 · _General awareness item._  
 
+- [Atlassian Patches 75 Flaws in Data Center and Server Products](https://www.securityweek.com/atlassian-patches-75-third-party-flaws-in-data-center-and-server-products/)  
+  **SecurityWeek** · Oct 23 · _General awareness item._  
+
 - [PHP2Shell Exploit Attempts Hit Millions as Attackers Try to Deploy Mirai Malware](https://thehackernews.com/2026/10/php2shell-exploit-attempts-hit-millions.html)  
   **The Hacker News** · Oct 23 · _General awareness item._  
-
-- [Arista Warns of Critical VeloCloud SQL Injection Zero-Day Exploited in Attacks](https://thehackernews.com/2026/10/arista-warns-of-critical-velocloud-sql.html)  
-  **The Hacker News** · Oct 22 · _Possible impact to authentication and sign-in flows._  
-
-- [Two CVSS 9.0 Linux KSMBD RCE Flaws Disclosed on Public Mailing Lists Before Kernel Fixes](https://thehackernews.com/2026/10/two-cvss-90-linux-ksmbd-rce-flaws.html)  
-  **The Hacker News** · Oct 22 · _General awareness item._  
-
-- [CVE-2026-105014 Azure Pipelines Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-105014)  
-  **Microsoft Security Response Center** · Oct 22 · _General awareness item._  
-
-- [CVE-2026-108456 Azure AI Foundry Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-108456)  
-  **Microsoft Security Response Center** · Oct 22 · _General awareness item._  
-
-- [CVE-2026-97785 AAD App Proxy Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-97785)  
-  **Microsoft Security Response Center** · Oct 22 · _General awareness item._  
 
 ---
 
 ## 🔵 FYI — General Awareness
 
-- [Iran’s Prince of Persia APT Hosts C&C in US for First Time Since 2016](https://www.securityweek.com/irans-prince-of-persia-apt-hosts-cc-in-us-for-first-time-since-2016/) — SecurityWeek
-- [LiteLLM release pipeline hacked to distribute info-stealer malware](https://www.bleepingcomputer.com/news/security/litellm-release-pipeline-hacked-to-distribute-info-stealer-malware/) — BleepingComputer
-- [The AI Agent Nobody Owns: Watch Expert Webinar On Your Newest Insider Threat](https://thehackernews.com/2026/10/the-ai-agent-nobody-owns-watch-expert.html) — The Hacker News
-- [eMudhra to Exit Global SSL/TLS Business After 8 Intermediate CA Keys Found Easily Guessable](https://thehackernews.com/2026/10/emudhra-to-exit-global-ssltls-business.html) — The Hacker News
-- [ThreatsDay: AI Secrets Leak, PingCAP Source Theft, Signal Hang-Up Flaw, Laravel Auth Bypass + 21 More](https://thehackernews.com/2026/10/threatsday-ai-secrets-leak-pingcap.html) — The Hacker News
-- [Meta Ordered to Pay $25 Billion After Court Finds 43 Million Privacy Violations](https://thehackernews.com/2026/10/meta-ordered-to-pay-25-billion-after.html) — The Hacker News
+- [You gave your AI agent access, but who is giving it orders?](https://www.bleepingcomputer.com/news/security/you-gave-your-ai-agent-access-but-who-is-giving-it-orders/) — BleepingComputer
+- [Mirai Botnet Operators Join PHP2Shell Attacks as ASLR Bypass Exploits Emerge](https://www.securityweek.com/mirai-botnet-operators-join-php2shell-attacks-as-aslr-bypass-exploits-emerge/) — SecurityWeek
+- [Russian-Linked Hackers Used New Mesh Network Backdoor in Destructive Ukraine Attack](https://thehackernews.com/2026/10/russian-linked-hackers-used-new-mesh.html) — The Hacker News
+- [China APT Uses AI Pentest Tool Artex in ConnectWise Attacks](https://www.securityweek.com/china-apt-uses-ai-pentest-tool-artex-in-connectwise-attacks/) — SecurityWeek
+- [ISC Stormcast For Friday, October 23rd, 2026 https://isc.sans.edu/podcastdetail/10148, (Fri, Oct 23rd)](https://isc.sans.edu/diary/rss/33448) — SANS Internet Storm Center
+- [Critical x402 SDK Flaw Could Let Malicious APIs Drain AI Agents’ Token Balances](https://thehackernews.com/2026/10/critical-x402-sdk-flaw-could-let.html) — The Hacker News
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 19 critical · 87 important · 40 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 20 critical · 49 important · 41 FYI_
