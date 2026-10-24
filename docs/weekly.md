@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
 **Period:** October 17 – October 24, 2026  
-**Generated:** 2026-10-24 14:15 UTC  
+**Generated:** 2026-10-24 17:49 UTC  
 **Items reviewed:** 112  
 
 ## ⚡ Top Actions This Week
@@ -55,6 +55,9 @@
 
 ## 🟠 Important — Review This Week
 
+- [BlackX UEFI bootkit exploits Baton Drop flaw to bypass Secure Boot](https://www.bleepingcomputer.com/news/security/blackx-uefi-bootkit-exploits-baton-drop-flaw-to-bypass-secure-boot/)  
+  **BleepingComputer** · Oct 24 · _General awareness item._  
+
 - [Brotli Decoder Flaw Behind Node.js RCE Also Affects Bun, Python and Other Widely Used Software](https://thehackernews.com/2026/10/brotli-decoder-flaw-behind-nodejs-rce.html)  
   **The Hacker News** · Oct 24 · _General awareness item._  
 
@@ -74,9 +77,6 @@
   **BleepingComputer** · Oct 23 · _General awareness item._  
 
 - [CVE-2026-83862 Windows Network Load Balancing Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-83862)  
-  **Microsoft Security Response Center** · Oct 23 · _General awareness item._  
-
-- [CVE-2026-102208 Windows Win32 Kernel Subsystem Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-102208)  
   **Microsoft Security Response Center** · Oct 23 · _General awareness item._  
 
 ---
