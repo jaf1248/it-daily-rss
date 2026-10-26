@@ -1,25 +1,35 @@
 # IT Weekly Intelligence Briefing
 **Period:** October 19 – October 26, 2026  
-**Generated:** 2026-10-26 16:28 UTC  
-**Items reviewed:** 114  
+**Generated:** 2026-10-26 21:19 UTC  
+**Items reviewed:** 121  
 
 ## ⚡ Top Actions This Week
 
-1. **Prioritize patching of affected systems; check for internet-exposed attack surface.**  
-   _PHP2Shell security flaws now sucessfully exploited in the wild_  
+1. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
+   _Former pentester used ARTEX AI to steal 8.2 million data records_  
    Source: BleepingComputer  
 
-2. **Apply emergency patch or mitigation now; check vendor advisory for workarounds.**  
-   _CISA Flags Two Actively Exploited Critical Flaws in Collabora Online and Arista VeloCloud_  
+2. **Validate backups, confirm EDR coverage, and brief incident response team.**  
+   _Attackers Use Microsoft Teams IT Support Scams to Deploy Malware and Ransomware_  
    Source: The Hacker News  
 
-3. **Validate backups, confirm EDR coverage, and brief incident response team.**  
-   _Exposed Infrastructure Reveals How Ransomware Affiliates Used AI Agents to Execute Intrusions_  
-   Source: The Hacker News  
+3. **Prioritize patching of affected systems; check for internet-exposed attack surface.**  
+   _PHP2Shell security flaws now sucessfully exploited in the wild_  
+   Source: BleepingComputer  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [Former pentester used ARTEX AI to steal 8.2 million data records](https://www.bleepingcomputer.com/news/security/former-pentester-used-artex-ai-to-steal-82-million-data-records/)
+**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Oct 26  
+**Why it matters:** Potential credential or data exposure.  
+**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
+
+### [Attackers Use Microsoft Teams IT Support Scams to Deploy Malware and Ransomware](https://thehackernews.com/2026/10/attackers-use-microsoft-teams-it.html)
+**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Oct 26  
+**Why it matters:** Elevated ransomware risk across the sector.  
+**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
 
 ### [PHP2Shell security flaws now sucessfully exploited in the wild](https://www.bleepingcomputer.com/news/security/php2shell-security-flaws-now-sucessfully-exploited-in-the-wild/)
 **Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Oct 26  
@@ -41,19 +51,18 @@
 **Why it matters:** Potential credential or data exposure.  
 **Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
-### [In Other News: Tor Exit Relays Hijacked, Banks Spot Rogue AI Agents, Self-Rebuilding macOS Ransomware](https://www.securityweek.com/in-other-news-tor-exit-relays-hijacked-banks-spot-rogue-ai-agents-self-rebuilding-macos-ransomware/)
-**Source:** SecurityWeek &nbsp;·&nbsp; **Date:** Oct 23  
-**Why it matters:** Elevated ransomware risk across the sector.  
-**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
-
-### [Hackers Breach Enterprise Firewalls and VPNs, Exposing Over 70,000 Credentials](https://thehackernews.com/2026/10/hackers-breach-enterprise-firewalls-and.html)
-**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Oct 23  
-**Why it matters:** Potential credential or data exposure.  
-**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
-
 ---
 
 ## 🟠 Important — Review This Week
+
+- [Anthropic Files for Potentially the Biggest IPO Ever as CEO Warns of Risk to Humanity From AI](https://www.securityweek.com/anthropic-files-for-potentially-the-biggest-ipo-ever-as-ceo-warns-of-risk-to-humanity-from-ai/)  
+  **SecurityWeek** · Oct 26 · _General awareness item._  
+
+- [DreamHost forces password resets in ongoing "incident"](https://www.bleepingcomputer.com/news/security/dreamhost-forces-email-ftp-sftp-password-resets-in-ongoing-incident/)  
+  **BleepingComputer** · Oct 26 · _General awareness item._  
+
+- [PHP Issues Second Windows Security Update in Five Days to Fix Brotli Code Execution Flaw](https://thehackernews.com/2026/10/php-issues-second-windows-security.html)  
+  **The Hacker News** · Oct 26 · _General awareness item._  
 
 - [Critical 'HTTP2Shell' Brotli vulnerability triggers emergency patches](https://www.bleepingcomputer.com/news/security/critical-http2shell-brotli-vulnerability-triggers-emergency-patches/)  
   **BleepingComputer** · Oct 26 · _General awareness item._  
@@ -67,29 +76,20 @@
 - [When an AI Agent Is the Incident, the Identity Record Is the Evidence](https://www.bleepingcomputer.com/news/security/when-an-ai-agent-is-the-incident-the-identity-record-is-the-evidence/)  
   **BleepingComputer** · Oct 26 · _General awareness item._  
 
-- [Node2Shell: Brotli Flaw Triggers Patching Across Microsoft, Node.js, Python Packages](https://www.securityweek.com/node2shell-brotli-flaw-triggers-patching-across-microsoft-node-js-python-packages/)  
-  **SecurityWeek** · Oct 26 · _General awareness item._  
-
-- [Unpatched Tailscale SSH Flaws Could Let a Hacked Device Reach Root on Other Servers](https://thehackernews.com/2026/10/unpatched-tailscale-ssh-flaws-could-let.html)  
-  **The Hacker News** · Oct 25 · _General awareness item._  
-
-- [CVE-2026-70197 .NET and Visual Studio Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-70197)  
-  **Microsoft Security Response Center** · Oct 25 · _General awareness item._  
-
-- [CVE-2026-102870 ASP.NET Core Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-102870)  
-  **Microsoft Security Response Center** · Oct 25 · _General awareness item._  
+- [CVE-2026-83519 Windows Error Reporting Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-83519)  
+  **Microsoft Security Response Center** · Oct 26 · _General awareness item._  
 
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [OpenAI launches GPT-6.1 Terra with 3x faster AI agents, 50% lower pricing](https://www.bleepingcomputer.com/news/artificial-intelligence/openai-launches-gpt-61-terra-with-3x-faster-ai-agents-50-percent-lower-pricing/) — BleepingComputer
+- [Hackers Infect 953 Online Stores With Scanner-Evading JavaScript, Mostly on Magento](https://thehackernews.com/2026/10/hackers-infect-953-online-stores-with.html) — The Hacker News
 - [Industrial Vendors Check Products for PHP2Shell Vulnerabilities](https://www.securityweek.com/industrial-vendors-check-products-for-php2shell-vulnerabilities/) — SecurityWeek
 - [Genesys Hack Exposes Customer Data From Internal Systems](https://www.securityweek.com/genesys-hack-exposes-customer-data-from-internal-systems/) — SecurityWeek
 - [Stolen AI Reasoning Could Help China Build Cheaper Rivals](https://www.securityweek.com/stolen-ai-reasoning-could-help-china-build-cheaper-rivals/) — SecurityWeek
 - [Chinese man extradited for role in $36 million cryptocurrency scam](https://www.bleepingcomputer.com/news/security/chinese-man-extradited-for-role-in-36-million-cryptocurrency-scam/) — BleepingComputer
-- [PHP2Shell Exploitation Moves From Probes to Working Shells](https://www.securityweek.com/php2shell-exploitation-moves-from-probes-to-working-shells/) — SecurityWeek
-- [953 Online Stores Infected in Long-Lasting Malware Campaign](https://www.securityweek.com/953-online-stores-infected-in-long-lasting-malware-campaign/) — SecurityWeek
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 10 critical · 56 important · 48 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 11 critical · 63 important · 47 FYI_
