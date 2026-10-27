@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
 **Period:** October 20 – October 27, 2026  
-**Generated:** 2026-10-27 01:05 UTC  
+**Generated:** 2026-10-27 07:15 UTC  
 **Items reviewed:** 122  
 
 ## ⚡ Top Actions This Week
@@ -55,8 +55,11 @@
 
 ## 🟠 Important — Review This Week
 
+- [CISA Confirms Active Exploitation of Two PHP2Shell Flaws Enabling Remote Code Execution](https://thehackernews.com/2026/10/cisa-confirms-active-exploitation-of.html)  
+  **The Hacker News** · Oct 27 · _General awareness item._  
+
 - [Apple Patches for October 2026, (Mon, Oct 26th)](https://isc.sans.edu/diary/rss/33458)  
-  **SANS Internet Storm Center** · Oct 26 · _General awareness item._  
+  **SANS Internet Storm Center** · Oct 27 · _General awareness item._  
 
 - [Anthropic Files for Potentially the Biggest IPO Ever as CEO Warns of Risk to Humanity From AI](https://www.securityweek.com/anthropic-files-for-potentially-the-biggest-ipo-ever-as-ceo-warns-of-risk-to-humanity-from-ai/)  
   **SecurityWeek** · Oct 26 · _General awareness item._  
@@ -76,19 +79,16 @@
 - [⚡ Weekly Recap: This2Shell, That2Shell, Everything's an RCE? Rogue AI, Supply Chain Chaos and More](https://thehackernews.com/2026/10/weekly-recap-this2shell-that2shell.html)  
   **The Hacker News** · Oct 26 · _Third-party/software supply chain integrity risk._  
 
-- [When an AI Agent Is the Incident, the Identity Record Is the Evidence](https://www.bleepingcomputer.com/news/security/when-an-ai-agent-is-the-incident-the-identity-record-is-the-evidence/)  
-  **BleepingComputer** · Oct 26 · _General awareness item._  
-
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [Attackers Hijack Dahua IP Cameras in Ukraine Using P2P Access and Auth Weaknesses](https://thehackernews.com/2026/10/attackers-hijack-dahua-ip-cameras-in.html) — The Hacker News
+- [ISC Stormcast For Tuesday, October 27th, 2026 https://isc.sans.edu/podcastdetail/10152, (Tue, Oct 27th)](https://isc.sans.edu/diary/rss/33462) — SANS Internet Storm Center
+- [Cybersecurity Issue Forces a Major New Mexico Hospital to Divert Patients and Close Clinics](https://www.securityweek.com/cybersecurity-issue-forces-a-major-new-mexico-hospital-to-divert-patients-and-close-clinics/) — SecurityWeek
 - [OpenAI launches GPT-6.1 Terra with 3x faster AI agents, 50% lower pricing](https://www.bleepingcomputer.com/news/artificial-intelligence/openai-launches-gpt-61-terra-with-3x-faster-ai-agents-50-percent-lower-pricing/) — BleepingComputer
 - [Hackers Infect 953 Online Stores With Scanner-Evading JavaScript, Mostly on Magento](https://thehackernews.com/2026/10/hackers-infect-953-online-stores-with.html) — The Hacker News
 - [Industrial Vendors Check Products for PHP2Shell Vulnerabilities](https://www.securityweek.com/industrial-vendors-check-products-for-php2shell-vulnerabilities/) — SecurityWeek
-- [Genesys Hack Exposes Customer Data From Internal Systems](https://www.securityweek.com/genesys-hack-exposes-customer-data-from-internal-systems/) — SecurityWeek
-- [Stolen AI Reasoning Could Help China Build Cheaper Rivals](https://www.securityweek.com/stolen-ai-reasoning-could-help-china-build-cheaper-rivals/) — SecurityWeek
-- [Chinese man extradited for role in $36 million cryptocurrency scam](https://www.bleepingcomputer.com/news/security/chinese-man-extradited-for-role-in-36-million-cryptocurrency-scam/) — BleepingComputer
 
 ---
 
