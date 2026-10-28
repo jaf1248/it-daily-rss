@@ -3,8 +3,91 @@
 <channel>
   <title>Joe — Compliance &amp; Regulatory</title>
   <description>NIST, privacy, cybersecurity compliance, PCI DSS, and IT governance updates.</description>
-  <lastBuildDate>Wed, 28 Oct 2026 10:19:44 +0000</lastBuildDate>
+  <lastBuildDate>Wed, 28 Oct 2026 16:59:11 +0000</lastBuildDate>
   
+<item>
+  <title>🔵 Fake ChatGPT, Claude apps spread malware via signed AI binaries</title>
+  <link>https://www.csoonline.com/article/4241634/fake-chatgpt-claude-apps-spread-malware-via-signed-ai-binaries.html</link>
+  <guid isPermaLink="false">https://www.csoonline.com/article/4241634/fake-chatgpt-claude-apps-spread-malware-via-signed-ai-binaries.html</guid>
+  <pubDate>Wed, 28 Oct 2026 12:36:48 +0000</pubDate>
+  <source>CSO Online</source>
+  <description><![CDATA[<b>Why this matters: Credential/phishing risk — reinforce MFA and watch for suspicious sign-ins.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column ">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<p class="wp-block-paragraph">Attackers are distributing malware through fake ChatGPT and Claude desktop applications, using legitimate, digitally signed executables from OpenAI and Anthropic to load malicious code onto victims’ Windows systems, according to Check Point Research.</p>
+
+
+
+<p class="wp-block-paragraph">The campaign, tracked as Yoba, uses fake GitHub repositories and websites promoting purported AI applications, including “GPT-5.6 Sol,” “GPT-6 Astra” and “Claude Opus.”</p>
+
+
+
+<p class="wp-block-paragraph">“These projects look convincing and use real GitHub infrastructure, which helps them appear legitimate to potential victims. The website exhibits search-targeted content and suspicious installer-delivery tactics consistent with an SEO-poisoning lure,” Check Point <a href="https://research.checkpoint.com/2026/tricks-from-the-past-deployed-via-signed-chatgpt-and-claude-binaries/?__cf_chl_f_tk=PFfjjPB2CZ7m9tsILoX3f8bcXIsHBewG0qnSiv8Tmzk-1793181807-1.0.1.1-Xqb4cWSedi2Yv7UnoC.RY4XM0pl9MhJbz_JGXo1qBKE" rel="noreferrer noopener" target="_blank">wrote</a> in a blog post.</p>
+
+
+
+<p class="wp-block-paragraph">The installers bundle genuine signed executables with malicious files that e…<br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4h]]></description>
+</item>
+
+<item>
+  <title>🟠 Gheist turns GitHub Actions into a secret extraction service</title>
+  <link>https://www.csoonline.com/article/4241625/gheist-turns-github-actions-into-a-secret-extraction-service.html</link>
+  <guid isPermaLink="false">https://www.csoonline.com/article/4241625/gheist-turns-github-actions-into-a-secret-extraction-service.html</guid>
+  <pubDate>Wed, 28 Oct 2026 12:05:42 +0000</pubDate>
+  <source>CSO Online</source>
+  <description><![CDATA[<b>Why this matters: Credential/phishing risk — reinforce MFA and watch for suspicious sign-ins.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column ">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<p class="wp-block-paragraph">A threat actor dubbed Gheist is turning compromised GitHub accounts into credential-harvesting platforms. By planting malicious GitHub Actions workflows in private repositories, the attackers can expose repository and environment secrets, then retrieve them through GitHub APIs before deleting evidence of the activity.</p>
+
+
+
+<p class="wp-block-paragraph">Tracked since September 15 by Wiz Research, the campaign has left more than 13,500 malicious branches across over 850 compromised accounts, spanning personal projects and private enterprise repositories.</p>
+
+
+
+<p class="wp-block-paragraph">The campaign’s weapon is <a href="https://www.csoonline.com/article/4177124/github-actions-abused-by-megalodon-attack-to-slip-malicious-commits-into-5500-repos.html">GitHub Actions</a>, the platform’s automation service, which attackers are using to turn stolen access into harvested credentials. The automation creates a branch, adds a workflow named “sync-check” that attempts to print secrets into execution logs, retrieves those logs through the GitHub API, and deletes the workflow run seconds later.</p>
+
+
+
+<p class="wp-block-paragraph">“Because the secrets leave through G…<br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h]]></description>
+</item>
+
+<item>
+  <title>🟠 Trusting Unsloth’s trust setting could mean executing malicious code</title>
+  <link>https://www.csoonline.com/article/4241619/trusting-unsloths-trust-setting-could-mean-executing-malicious-code.html</link>
+  <guid isPermaLink="false">https://www.csoonline.com/article/4241619/trusting-unsloths-trust-setting-could-mean-executing-malicious-code.html</guid>
+  <pubDate>Wed, 28 Oct 2026 11:53:22 +0000</pubDate>
+  <source>CSO Online</source>
+  <description><![CDATA[<b>Why this matters: Credential/phishing risk — reinforce MFA and watch for suspicious sign-ins.</b><br/><div id="remove_no_follow">
+		<div class="grid grid--cols-10@md grid--cols-8@lg article-column ">
+					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
+						<div class="article-column__content">
+<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
+
+
+
+<p class="wp-block-paragraph">AI developers may have a security setting enabled and still end up running attacker-controlled code. Pillar Security has <a href="https://www.pillar.security/blog/trust-disabled-code-executed-arbitrary-code-execution-in-unsloths-model-loader" rel="noreferrer noopener" target="_blank">disclosed</a> a high-severity vulnerability in Unsloth’s model loader that could allow arbitrary Python code execution when processing a maliciously crafted model configuration.</p>
+
+
+
+<p class="wp-block-paragraph">Tracked as <a href="https://nvd.nist.gov/vuln/detail/cve-2026-93348" rel="noreferrer noopener" target="_blank">CVE-2026-93348</a>, the vulnerability carries a CVSS score of 8.6. Setting <a href="https://www.csoonline.com/article/4181094/hugging-face-transformers-rce-flaw-enables-stealthy-compromise-via-ai-model-configs.html#:~:text=trust_remote_code=false">trust_remote_code=False</a> does not prevent exploitation because the vulnerable code path does not rely on Hugging Face’s remote-code mechanism.</p>
+
+
+
+<p class="wp-block-paragraph">The problem lies in how Unsloth identifies model architectures. It takes a model-type value from a model’s configuration and uses it to…<br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5h]]></description>
+</item>
+
 <item>
   <title>🔴 When prevention fails: Why cyber resilience is the next big test of trust</title>
   <link>https://www.csoonline.com/article/4241129/when-prevention-fails-why-cyber-resilience-is-the-next-big-test-of-trust.html</link>
@@ -35,7 +118,7 @@
 
 
 
-<p class="wp-block-paragraph">The National Institute of Standards and Technology (NIST), in its publication <a href="https://csrc.nist.gov/pubs/sp/800/160/v2/r1/final">Dev…<br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> &lt;1h]]></description>
+<p class="wp-block-paragraph">The National Institute of Standards and Technology (NIST), in its publication <a href="https://csrc.nist.gov/pubs/sp/800/160/v2/r1/final">Dev…<br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 6h]]></description>
 </item>
 
 <item>
@@ -64,7 +147,7 @@
 
 
 
-<p class="wp-block-paragraph">Agentic AI systems introduce new vectors of attack through delegated permissions, autonomous decision-making, and machine identi…<br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 1h]]></description>
+<p class="wp-block-paragraph">Agentic AI systems introduce new vectors of attack through delegated permissions, autonomous decision-making, and machine identi…<br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 8h]]></description>
 </item>
 
 <item>
@@ -89,7 +172,7 @@
 
 
 
-<p class="wp-block-paragraph">JFrog said that the investigation also uncovered account hijacks, forged commit timelines, short-lived publishing branches and exposed npm c…<br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 7h]]></description>
+<p class="wp-block-paragraph">JFrog said that the investigation also uncovered account hijacks, forged commit timelines, short-lived publishing branches and exposed npm c…<br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 14h]]></description>
 </item>
 
 <item>
@@ -122,7 +205,7 @@
 
 
 
-<p class="wp-block-paragraph"><a href="https://www.security.com/threat-intelligence/ai-llmjacking-skynet" rel="noreferrer noopener" target="_blank">The method</a> was discovered by the Symantec Threat Hunter Team,…<br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 8h]]></description>
+<p class="wp-block-paragraph"><a href="https://www.security.com/threat-intelligence/ai-llmjacking-skynet" rel="noreferrer noopener" target="_blank">The method</a> was discovered by the Symantec Threat Hunter Team,…<br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 14h]]></description>
 </item>
 
 <item>
@@ -151,7 +234,7 @@
 
 
 
-<p class="wp-block-paragraph">Separate research published by OpenSourceMalware identified the vulnerable decoder code in the Python packages Brotli and brotlicffi. Both packages…<br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 21h]]></description>
+<p class="wp-block-paragraph">Separate research published by OpenSourceMalware identified the vulnerable decoder code in the Python packages Brotli and brotlicffi. Both packages…<br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 1d]]></description>
 </item>
 
 <item>
@@ -180,7 +263,7 @@
 
 
 
-<p class="wp-block-paragraph">The behavior occurred in fewer than one in 100,000 evaluation calls, Cohere said. When researchers repeated the same task, the mo…<br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 23h]]></description>
+<p class="wp-block-paragraph">The behavior occurred in fewer than one in 100,000 evaluation calls, Cohere said. When researchers repeated the same task, the mo…<br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1d]]></description>
 </item>
 
 <item>
@@ -271,7 +354,7 @@
 
 
 
-<p class="wp-block-paragraph">The decision followed a September 20 incident in which an internal research model exploited…<br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1d]]></description>
+<p class="wp-block-paragraph">The decision followed a September 20 incident in which an internal research model exploited…<br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2d]]></description>
 </item>
 
 <item>
@@ -300,7 +383,7 @@
 
 
 
-<p class="wp-block-paragraph">The attack exploits the way AI coding assistants process project-specific instructions. Codex uses AGENTS.md, while Claude Code supports CLAUDE.md. Both can interpr…<br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 1d]]></description>
+<p class="wp-block-paragraph">The attack exploits the way AI coding assistants process project-specific instructions. Codex uses AGENTS.md, while Claude Code supports CLAUDE.md. Both can interpr…<br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 2d]]></description>
 </item>
 
 <item>
@@ -441,7 +524,7 @@
 
 
 
-<h3 class="wp-block-he…<br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4d]]></description>
+<h3 class="wp-block-he…<br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5d]]></description>
 </item>
 
 <item>
@@ -474,7 +557,7 @@
 
 
 
-<p class="wp-block-paragraph">Judge Francis Mathew reduced his demand to $25 billion without explanation, but wa…<br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 4d]]></description>
+<p class="wp-block-paragraph">Judge Francis Mathew reduced his demand to $25 billion without explanation, but wa…<br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 5d]]></description>
 </item>
 
 <item>
@@ -503,78 +586,7 @@
 
 
 
-<p class="wp-block-paragraph">The company said it will contact affected customers to replace certificates free of cost. It also said it will keep revocation and certificate status services running until every issued certifica…<br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4d]]></description>
-</item>
-
-<item>
-  <title>🔴 The ‘Mythos moment’ has already passed. Now comes the hard part for cybersecurity</title>
-  <link>https://www.csoonline.com/article/4239166/the-mythos-moment-has-already-passed-now-comes-the-hard-part-for-cybersecurity.html</link>
-  <guid isPermaLink="false">https://www.csoonline.com/article/4239166/the-mythos-moment-has-already-passed-now-comes-the-hard-part-for-cybersecurity.html</guid>
-  <pubDate>Fri, 23 Oct 2026 09:00:00 +0000</pubDate>
-  <source>CSO Online</source>
-  <description><![CDATA[<b>Why this matters: Credential/phishing risk — reinforce MFA and watch for suspicious sign-ins.</b><br/><div id="remove_no_follow">
-		<div class="grid grid--cols-10@md grid--cols-8@lg article-column ">
-					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
-						<div class="article-column__content">
-<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
-
-
-
-<p class="wp-block-paragraph">When Anthropic introduced Claude Mythos Preview, the cybersecurity debate quickly turned to what AI could do: <a href="https://edition.cnn.com/2026/04/07/tech/anthropic-claude-mythos-preview-cybersecurity">uncover decades-old vulnerabilities, develop working exploits and accelerate tasks that once required specialist expertise</a>. Anthropic noted that Mythos discovered software flaws no human had caught, and early tests showed it could carry out multi-stage network attacks in minutes, tasks that once took skilled pen testers days.</p>
-
-
-
-<p class="wp-block-paragraph">Security leaders and cyber defenders let out an initial sigh of relief when it was announced that Mythos would be available to a select few, with an extension to 150 other organizations.</p>
-
-
-
-<p class="wp-block-paragraph">The Mythos moment and hype have now passed, and the harder task is turning its warning into practical defensive readiness. In other words, the “ Mythos moment” and the initial “shock” is over. Now comes the <em>hard </em>part: can organizations identify their exposures, prioritize real risks and patch or mitigate them fast enough to stay ahead of AI-powered attacks? Can they…<br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 5d]]></description>
-</item>
-
-<item>
-  <title>🔵 The AI notetaker risk is now an everywhere problem</title>
-  <link>https://www.csoonline.com/article/4239372/the-ai-notetaker-risk-is-now-an-everywhere-problem.html</link>
-  <guid isPermaLink="false">https://www.csoonline.com/article/4239372/the-ai-notetaker-risk-is-now-an-everywhere-problem.html</guid>
-  <pubDate>Fri, 23 Oct 2026 08:25:00 +0000</pubDate>
-  <source>CSO Online</source>
-  <description><![CDATA[<b>Why this matters: Hospitality-system impact — consider guest services, PMS/POS, and property operations.</b><br/><div id="remove_no_follow">
-		<div class="grid grid--cols-10@md grid--cols-8@lg article-column ">
-					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
-						<div class="article-column__content">
-<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
-
-
-
-<p class="wp-block-paragraph">The businesspeople adopting AI notetakers are not being reckless. They are responding to a real business need. Our teams are in meetings all day with companies we support, and the idea that we could read a clean summary of every one of them at the end of the day makes us better partners to our customers. At the AI-first startups we spend time with, a new account manager can walk in on day one, inherit the full recorded history of every customer conversation, and ask the AI what that customer actually cares about. That is not surveillance culture for its own sake. It’s a better way to serve people.</p>
-
-
-
-<p class="wp-block-paragraph">Still, <a href="https://www.csoonline.com/article/4077438/manipulating-the-meeting-notetaker-the-rise-of-ai-summarization-optimization.html">AI notetakers present cyber risks</a>, as we have been warning about for the past year: shadow adoption measured in hundreds of accounts in a matter of weeks, vendors without SOC 2 or real encryption, consent liability, litigation exposure. In April, one of us stood on stage at the [un]prompted conference and argued that the most important attendee in your meetings is no longer a person. AI…<br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 5d]]></description>
-</item>
-
-<item>
-  <title>🔴 PHP2Shell exposes the weakness in coordinated vulnerability disclosure</title>
-  <link>https://www.csoonline.com/article/4239359/php2shell-exposes-the-weakness-in-coordinated-vulnerability-disclosure-2.html</link>
-  <guid isPermaLink="false">https://www.csoonline.com/article/4239359/php2shell-exposes-the-weakness-in-coordinated-vulnerability-disclosure-2.html</guid>
-  <pubDate>Fri, 23 Oct 2026 00:43:37 +0000</pubDate>
-  <source>CSO Online</source>
-  <description><![CDATA[<b>Why this matters: Remote-code-execution risk — assess exposure and patch or mitigate quickly.</b><br/><div id="remove_no_follow">
-		<div class="grid grid--cols-10@md grid--cols-8@lg article-column ">
-					  <div class="col-12 col-10@md col-6@lg col-start-3@lg">
-						<div class="article-column__content">
-<section class="wp-block-bigbite-multi-title"><div class="container"></div></section>
-
-
-
-<p class="wp-block-paragraph">Two <a href="https://www.csoonline.com/article/4238692/two-critical-php-flaws-put-the-web-on-alert-as-emergency-patches-arrive.html" target="_blank">critical vulnerabilities</a> discovered in the widely-used PHP programming language have shaken up enterprises, and the ramifications will take some time to truly understand. But one of the lesser-known stories centers around disclosure.</p>
-
-
-
-<p class="wp-block-paragraph">According to <a href="https://thephp.foundation/blog/2026/10/21/todays-php-security-release-and-how-were-strengthening-php-security/" rel="noreferrer noopener" target="_blank">The PHP Foundation</a>, several organizations had agreed to a coordinated release detailing the critical flaws and mitigation actions, but cybersecurity firm Chainguard “unlaterally” broke this embargo. This prompted the PHP project to release its patches early, but also allowed attackers to study the fix in binary form and craft proofs-of-concept (PoCs) for exploits before defenders had a chance to update their systems.</p>
-
-
-
-<p class="wp-block-paragraph">But some, including AWS and Cloudflare, contend that active exploits began hours, even days before the disclosure.<…<br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 5d]]></description>
+<p class="wp-block-paragraph">The company said it will contact affected customers to replace certificates free of cost. It also said it will keep revocation and certificate status services running until every issued certifica…<br/><br/><b>Source:</b> CSO Online &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5d]]></description>
 </item>
 
 <item>
@@ -583,7 +595,7 @@
   <guid isPermaLink="false">https://krebsonsecurity.com/2026/10/widespread-php-flaw-may-cause-many-site-outages-today/</guid>
   <pubDate>Wed, 21 Oct 2026 15:26:07 +0000</pubDate>
   <source>Krebs on Security</source>
-  <description><![CDATA[<b>Why this matters: Service impact is possible — verify vendor status before troubleshooting internally.</b><br/>Expect to see quite a few websites serving "404" or "Page Not Found" errors today: Nearly 70 percent of websites need to update their core software to fix a pair of vulnerabilities that allow an attacker to seize full control over affected servers. Experts say there are working exploits for the flaws, and that these critical bugs are already being exploited in the wild.<br/><br/><b>Source:</b> Krebs on Security &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 6d]]></description>
+  <description><![CDATA[<b>Why this matters: Service impact is possible — verify vendor status before troubleshooting internally.</b><br/>Expect to see quite a few websites serving "404" or "Page Not Found" errors today: Nearly 70 percent of websites need to update their core software to fix a pair of vulnerabilities that allow an attacker to seize full control over affected servers. Experts say there are working exploits for the flaws, and that these critical bugs are already being exploited in the wild.<br/><br/><b>Source:</b> Krebs on Security &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 7d]]></description>
 </item>
 
 <item>
@@ -592,7 +604,7 @@
   <guid isPermaLink="false">https://krebsonsecurity.com/2026/10/feds-suspect-ransom-negotiator-ran-shinyhunters-extortion-site/</guid>
   <pubDate>Mon, 19 Oct 2026 13:48:56 +0000</pubDate>
   <source>Krebs on Security</source>
-  <description><![CDATA[<b>Why this matters: Elevated ransomware risk — validate backups, endpoint protection, and recovery readiness.</b><br/>U.S. federal investigators pursuing the ShinyHunters hacking group that recently stole highly sensitive data from the FBI have identified executives at two different ransomware negotiation firms who maintained unusually close relations with the extortion group, KrebsOnSecurity has learned. Sources close to the investigation say one of the executives in the United States even helped ShinyHunters operate a website that pressured victims into paying a ransom.<br/><br/><b>Source:</b> Krebs on Security &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 8d]]></description>
+  <description><![CDATA[<b>Why this matters: Elevated ransomware risk — validate backups, endpoint protection, and recovery readiness.</b><br/>U.S. federal investigators pursuing the ShinyHunters hacking group that recently stole highly sensitive data from the FBI have identified executives at two different ransomware negotiation firms who maintained unusually close relations with the extortion group, KrebsOnSecurity has learned. Sources close to the investigation say one of the executives in the United States even helped ShinyHunters operate a website that pressured victims into paying a ransom.<br/><br/><b>Source:</b> Krebs on Security &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 9d]]></description>
 </item>
 
 <item>
@@ -601,7 +613,7 @@
   <guid isPermaLink="false">https://krebsonsecurity.com/2026/10/u-k-sanctions-cryptomus-for-ru-money-laundering/</guid>
   <pubDate>Wed, 14 Oct 2026 14:22:49 +0000</pubDate>
   <source>Krebs on Security</source>
-  <description><![CDATA[<b>Why this matters: Elevated ransomware risk — validate backups, endpoint protection, and recovery readiness.</b><br/>The United Kingdom has issued economic sanctions against Cryptomus, a chameleonic cryptocurrency platform that experts say serves as a major conduit for payments related to ransomware, narcotics, darknet markets, fraud and cybercrime services that are helping Russia circumvent existing financial restrictions.<br/><br/><b>Source:</b> Krebs on Security &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 13d]]></description>
+  <description><![CDATA[<b>Why this matters: Elevated ransomware risk — validate backups, endpoint protection, and recovery readiness.</b><br/>The United Kingdom has issued economic sanctions against Cryptomus, a chameleonic cryptocurrency platform that experts say serves as a major conduit for payments related to ransomware, narcotics, darknet markets, fraud and cybercrime services that are helping Russia circumvent existing financial restrictions.<br/><br/><b>Source:</b> Krebs on Security &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 14d]]></description>
 </item>
 
 <item>
@@ -628,16 +640,7 @@
   <guid isPermaLink="false">https://krebsonsecurity.com/2026/10/shinyhunters-extorted-boeing-spin-off-prior-to-arrests/</guid>
   <pubDate>Wed, 07 Oct 2026 13:48:45 +0000</pubDate>
   <source>Krebs on Security</source>
-  <description><![CDATA[<b>Why this matters: Regulatory/compliance context — assess scope and action timeline.</b><br/>A teenager from Amman, Jordan suspected of leading the prolific data theft and extortion group ShinyHunters has been detained and is reportedly cooperating with the FBI to identify other members of the hacking gang. KrebsOnSecurity has learned that the suspect, who uses the hacker handle "Rey," was detained as ShinyHunters was in the process of extorting a business unit recently divested by the global aerospace company Boeing, which manufactures the fleet of planes used by the employer of Rey's father -- Royal Jordanian Airlines.<br/><br/><b>Source:</b> Krebs on Security &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 20d]]></description>
-</item>
-
-<item>
-  <title>🔴 Dutch Police Arrest ‘Reformed’ Hacker in Shiny Hunters Investigation</title>
-  <link>https://krebsonsecurity.com/2026/09/dutch-police-arrest-reformed-hacker-in-shiny-hunters-investigation/</link>
-  <guid isPermaLink="false">https://krebsonsecurity.com/2026/09/dutch-police-arrest-reformed-hacker-in-shiny-hunters-investigation/</guid>
-  <pubDate>Mon, 28 Sep 2026 15:08:57 +0000</pubDate>
-  <source>Krebs on Security</source>
-  <description><![CDATA[<b>Why this matters: Elevated ransomware risk — validate backups, endpoint protection, and recovery readiness.</b><br/>Authorities in the Netherlands have arrested a 23-year-old convicted cybercriminal on suspicion of aiding in data thefts and extortions by the prolific hacker group ShinyHunters. In the days immediately following the suspect's arrest, remaining ShinyHunters members dramatically escalated their attacks, stealing highly sensitive data from the FBI and extorting the Russian ransomware group Cl0p.<br/><br/><b>Source:</b> Krebs on Security &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 29d]]></description>
+  <description><![CDATA[<b>Why this matters: Regulatory/compliance context — assess scope and action timeline.</b><br/>A teenager from Amman, Jordan suspected of leading the prolific data theft and extortion group ShinyHunters has been detained and is reportedly cooperating with the FBI to identify other members of the hacking gang. KrebsOnSecurity has learned that the suspect, who uses the hacker handle "Rey," was detained as ShinyHunters was in the process of extorting a business unit recently divested by the global aerospace company Boeing, which manufactures the fleet of planes used by the employer of Rey's father -- Royal Jordanian Airlines.<br/><br/><b>Source:</b> Krebs on Security &nbsp;|&nbsp; <b>Severity:</b> FYI &nbsp;|&nbsp; <b>Age:</b> 21d]]></description>
 </item>
 
 </channel>
