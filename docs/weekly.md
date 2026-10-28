@@ -1,7 +1,7 @@
 # IT Weekly Intelligence Briefing
 **Period:** October 21 – October 28, 2026  
-**Generated:** 2026-10-28 16:59 UTC  
-**Items reviewed:** 119  
+**Generated:** 2026-10-28 21:33 UTC  
+**Items reviewed:** 147  
 
 ## ⚡ Top Actions This Week
 
@@ -55,8 +55,20 @@
 
 ## 🟠 Important — Review This Week
 
+- [CVE-2026-19175 Use after free in Payments](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-19175)  
+  **Microsoft Security Response Center** · Oct 29 · _General awareness item._  
+
+- [Volt Typhoon Used Covert Silent Train Network in Four Zero-Day Exploitation Campaigns](https://thehackernews.com/2026/10/volt-typhoon-used-covert-silent-train.html)  
+  **The Hacker News** · Oct 28 · _General awareness item._  
+
 - [Volt Typhoon hides zero-day attacks using 'Silent Train' framework](https://www.bleepingcomputer.com/news/security/volt-typhoon-hides-zero-day-attacks-using-silent-train-framework/)  
   **BleepingComputer** · Oct 28 · _General awareness item._  
+
+- [CVE-2026-62740 Windows Imaging Component Information Disclosure Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-62740)  
+  **Microsoft Security Response Center** · Oct 28 · _General awareness item._  
+
+- [CVE-2026-62877 Windows Win32k Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-62877)  
+  **Microsoft Security Response Center** · Oct 28 · _General awareness item._  
 
 - [Chrome and Firefox Updates Patch Over 200 Vulnerabilities](https://www.securityweek.com/chrome-and-firefox-updates-patch-over-200-vulnerabilities/)  
   **SecurityWeek** · Oct 28 · _General awareness item._  
@@ -67,29 +79,17 @@
 - [Hackers now scanning systems for recently-patched Oracle flaw](https://www.bleepingcomputer.com/news/security/hackers-now-scanning-systems-for-recently-patched-oracle-flaw/)  
   **BleepingComputer** · Oct 28 · _General awareness item._  
 
-- [Adobe Fixes 8 Critical Campaign Classic Flaws Allowing Code Execution and Security Bypass](https://thehackernews.com/2026/10/adobe-fixes-8-critical-campaign-classic.html)  
-  **The Hacker News** · Oct 28 · _General awareness item._  
-
-- [Long-Hidden Flaws Patched in EPICS Research Facility Control Software](https://www.securityweek.com/long-hidden-flaws-patched-in-epics-research-facility-control-software/)  
-  **SecurityWeek** · Oct 28 · _General awareness item._  
-
-- [CISA warns of hackers now exploiting critical Node2Shell flaw](https://www.bleepingcomputer.com/news/security/cisa-warns-of-hackers-now-exploiting-critical-node2shell-flaw/)  
-  **BleepingComputer** · Oct 28 · _General awareness item._  
-
-- [Hackers Start Probing Fresh Oracle EBS Vulnerability](https://www.securityweek.com/hackers-start-probing-fresh-oracle-ebs-vulnerability/)  
-  **SecurityWeek** · Oct 28 · _General awareness item._  
-
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [Police seize Virtualine bulletproof service tied to ransowmare, cybercrime](https://www.bleepingcomputer.com/news/security/police-seize-virtualine-bulletproof-service-tied-to-ransowmare-cybercrime/) — BleepingComputer
+- [Discord to let search engines index public server messages](https://www.bleepingcomputer.com/news/security/discord-to-let-search-engines-index-public-server-messages/) — BleepingComputer
+- [Google to Allow One-Tap Android App Installs From Approved Third-Party Stores Outside U.S.](https://thehackernews.com/2026/10/google-to-allow-one-tap-android-app.html) — The Hacker News
+- [Researcher Reveals How Logic Bugs Alone Cracked Microsoft Edge in $175,000 Pwn2Own Win](https://thehackernews.com/2026/10/researcher-reveals-how-logic-bugs-alone.html) — The Hacker News
 - [Yet Another ClickFix Campaign, (Wed, Oct 28th)](https://isc.sans.edu/diary/rss/33466) — SANS Internet Storm Center
-- [Microsoft urges Entra ID admins to migrate users to passkeys](https://www.bleepingcomputer.com/news/microsoft/microsoft-reminds-entra-id-admins-to-migrate-users-to-passkeys/) — BleepingComputer
-- [InfraTrust report warns of exploited flaws in critical network infrastructure](https://www.bleepingcomputer.com/news/security/infratrust-report-warns-of-exploited-flaws-in-critical-network-infrastructure/) — BleepingComputer
-- [Upwind Security Raises $400 Million at $3.8 Billion Valuation](https://www.securityweek.com/upwind-security-raises-400-million-at-3-8-billion-valuation/) — SecurityWeek
-- [TLS Flaws Found in GoAhead Web Server Used in Hundreds of Millions of Devices](https://www.securityweek.com/tls-flaws-found-in-goahead-web-server-used-in-hundreds-of-millions-of-devices/) — SecurityWeek
-- [China-Linked Hackers Exploit PHP2Shell to Root Firewalls](https://www.securityweek.com/china-linked-hackers-exploit-php2shell-to-root-firewalls/) — SecurityWeek
+- [The CISO’s evolving role: Protecting and defending in the agentic era](https://www.microsoft.com/en-us/security/blog/2026/10/28/the-cisos-evolving-role-protecting-and-defending-in-the-agentic-era/) — Microsoft Security Blog
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 15 critical · 60 important · 44 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 13 critical · 86 important · 48 FYI_
