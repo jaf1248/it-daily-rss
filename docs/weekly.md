@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
 **Period:** October 22 – October 29, 2026  
-**Generated:** 2026-10-29 01:31 UTC  
+**Generated:** 2026-10-29 08:00 UTC  
 **Items reviewed:** 147  
 
 ## ⚡ Top Actions This Week
@@ -55,6 +55,12 @@
 
 ## 🟠 Important — Review This Week
 
+- [China-Linked Hackers Exploited VMware ESX Zero-Day to Reduce Audit Trail Visibility](https://thehackernews.com/2026/10/china-linked-hackers-exploited-vmware.html)  
+  **The Hacker News** · Oct 29 · _General awareness item._  
+
+- [Attackers Exploit PHP2Shell Flaws in Internet-Exposed Palo Alto Networks Management Interfaces](https://thehackernews.com/2026/10/attackers-exploit-php2shell-flaws-in.html)  
+  **The Hacker News** · Oct 29 · _General awareness item._  
+
 - [CVE-2026-19175 Use after free in Payments](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-19175)  
   **Microsoft Security Response Center** · Oct 29 · _General awareness item._  
 
@@ -73,22 +79,16 @@
 - [Chrome and Firefox Updates Patch Over 200 Vulnerabilities](https://www.securityweek.com/chrome-and-firefox-updates-patch-over-200-vulnerabilities/)  
   **SecurityWeek** · Oct 28 · _General awareness item._  
 
-- [Hackers Target Critical Oracle E-Business Suite RCE Flaw Days After Security Patch](https://thehackernews.com/2026/10/hackers-target-critical-oracle-e.html)  
-  **The Hacker News** · Oct 28 · _General awareness item._  
-
-- [Hackers now scanning systems for recently-patched Oracle flaw](https://www.bleepingcomputer.com/news/security/hackers-now-scanning-systems-for-recently-patched-oracle-flaw/)  
-  **BleepingComputer** · Oct 28 · _General awareness item._  
-
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [Deploying a Local Ghidra Server for Your Malware Analysis Lab, (Thu, Oct 29th)](https://isc.sans.edu/diary/rss/33470) — SANS Internet Storm Center
+- [ISC Stormcast For Thursday, October 29th, 2026 https://isc.sans.edu/podcastdetail/10156, (Thu, Oct 29th)](https://isc.sans.edu/diary/rss/33468) — SANS Internet Storm Center
 - [Yet Another ClickFix Campaign, (Wed, Oct 28th)](https://isc.sans.edu/diary/rss/33466) — SANS Internet Storm Center
 - [Police seize Virtualine bulletproof service tied to ransowmare, cybercrime](https://www.bleepingcomputer.com/news/security/police-seize-virtualine-bulletproof-service-tied-to-ransowmare-cybercrime/) — BleepingComputer
 - [Discord to let search engines index public server messages](https://www.bleepingcomputer.com/news/security/discord-to-let-search-engines-index-public-server-messages/) — BleepingComputer
 - [Google to Allow One-Tap Android App Installs From Approved Third-Party Stores Outside U.S.](https://thehackernews.com/2026/10/google-to-allow-one-tap-android-app.html) — The Hacker News
-- [Researcher Reveals How Logic Bugs Alone Cracked Microsoft Edge in $175,000 Pwn2Own Win](https://thehackernews.com/2026/10/researcher-reveals-how-logic-bugs-alone.html) — The Hacker News
-- [The CISO’s evolving role: Protecting and defending in the agentic era](https://www.microsoft.com/en-us/security/blog/2026/10/28/the-cisos-evolving-role-protecting-and-defending-in-the-agentic-era/) — Microsoft Security Blog
 
 ---
 
