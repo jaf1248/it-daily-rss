@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
-**Period:** October 21 – October 28, 2026  
-**Generated:** 2026-10-28 21:33 UTC  
+**Period:** October 22 – October 29, 2026  
+**Generated:** 2026-10-29 01:31 UTC  
 **Items reviewed:** 147  
 
 ## ⚡ Top Actions This Week
@@ -83,11 +83,11 @@
 
 ## 🔵 FYI — General Awareness
 
+- [Yet Another ClickFix Campaign, (Wed, Oct 28th)](https://isc.sans.edu/diary/rss/33466) — SANS Internet Storm Center
 - [Police seize Virtualine bulletproof service tied to ransowmare, cybercrime](https://www.bleepingcomputer.com/news/security/police-seize-virtualine-bulletproof-service-tied-to-ransowmare-cybercrime/) — BleepingComputer
 - [Discord to let search engines index public server messages](https://www.bleepingcomputer.com/news/security/discord-to-let-search-engines-index-public-server-messages/) — BleepingComputer
 - [Google to Allow One-Tap Android App Installs From Approved Third-Party Stores Outside U.S.](https://thehackernews.com/2026/10/google-to-allow-one-tap-android-app.html) — The Hacker News
 - [Researcher Reveals How Logic Bugs Alone Cracked Microsoft Edge in $175,000 Pwn2Own Win](https://thehackernews.com/2026/10/researcher-reveals-how-logic-bugs-alone.html) — The Hacker News
-- [Yet Another ClickFix Campaign, (Wed, Oct 28th)](https://isc.sans.edu/diary/rss/33466) — SANS Internet Storm Center
 - [The CISO’s evolving role: Protecting and defending in the agentic era](https://www.microsoft.com/en-us/security/blog/2026/10/28/the-cisos-evolving-role-protecting-and-defending-in-the-agentic-era/) — Microsoft Security Blog
 
 ---
