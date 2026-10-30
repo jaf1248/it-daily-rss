@@ -3,8 +3,37 @@
 <channel>
   <title>Joe — Security Intelligence</title>
   <description>Cybersecurity threats, vulnerabilities, breaches, and Microsoft security updates.</description>
-  <lastBuildDate>Fri, 30 Oct 2026 13:48:25 +0000</lastBuildDate>
+  <lastBuildDate>Fri, 30 Oct 2026 18:57:58 +0000</lastBuildDate>
   
+<item>
+  <title>🔴 Rapid7 Analysis: Unauthenticated File Upload to RCE in BeyondTrust Remote Support (CVE-2026-102764)</title>
+  <link>https://www.rapid7.com/blog/post/ra-rapid7-analysis-unauthenticated-file-upload-to-rce-in-beyondtrust-remote-support-cve-2026-102764</link>
+  <guid isPermaLink="false">https://www.rapid7.com/blog/post/ra-rapid7-analysis-unauthenticated-file-upload-to-rce-in-beyondtrust-remote-support-cve-2026-102764</guid>
+  <pubDate>Fri, 30 Oct 2026 16:01:53 +0000</pubDate>
+  <source>Rapid7 Blog</source>
+  <description><![CDATA[<b>Why this matters: Credential/phishing risk — reinforce MFA and watch for suspicious sign-ins.</b><br/><h2 style="direction: ltr;">Overview</h2><p style="direction: ltr;"><span style="font-size: undefined;">An origin-validation flaw in BeyondTrust Remote Support lets an unauthenticated attacker write files on the appliance and execute code as the site's operating-system user. The entry point is the public customer connection used to start a support session. No account credentials or user interaction are required.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">The flaw sits between the internal message router, </span><span style="color: rgb(24, 128, 56); font-size: undefined;">brain</span><span style="font-size: undefined;">, and an appliance-side customer worker, </span><span style="color: rgb(24, 128, 56); font-size: undefined;">thin-scc</span><span style="font-size: undefined;">. An attacker can put a reserved local router ID into a message's source address. The router forwards the message, and the worker accepts that address as proof that the request came from a local component. This gives the attacker access to an internal file-transfer service, including its native filesystem provider.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">We first confirmed the file write then used the primitive to upload a PHP file to the site's public directory. Requesting that file gave us code execution as the site user. A </span><a href="https://github.com/rapid7/metasploit-framework/pull/22083" target="_self"><span style="font-size: undef…<br/><br/><b>Source:</b> Rapid7 Blog &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 2h]]></description>
+</item>
+
+<item>
+  <title>🔴 WordPress RCE Flaw Draws Nearly 63,000 Attack Attempts in Just 24 Hours</title>
+  <link>https://thehackernews.com/2026/10/wordpress-rce-flaw-draws-nearly-63000.html</link>
+  <guid isPermaLink="false">https://thehackernews.com/2026/10/wordpress-rce-flaw-draws-nearly-63000.html</guid>
+  <pubDate>Fri, 30 Oct 2026 14:08:14 +0000</pubDate>
+  <source>The Hacker News</source>
+  <description><![CDATA[<b>Why this matters: Remote-code-execution risk — assess exposure and patch or mitigate quickly.</b><br/>Threat actors have been observed attempting to exploit a high-severity security flaw in WordPress Core shortly after patches were released.
+
+The vulnerability, which does not have a CVE identifier, relates to a case of remote code execution impacting WordPress Core versions 4.7 through 7.1.3. It carries a CVSS score of 8.1 on the CVSS scoring system. Patches for the flaw were released on October<br/><br/><b>Source:</b> The Hacker News &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 4h]]></description>
+</item>
+
+<item>
+  <title>🟠 CVE-2026-69446 Microsoft Edge (Chromium-based) Elevation of Privilege Vulnerability</title>
+  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69446</link>
+  <guid isPermaLink="false">https://msrc.microsoft.com/update-guide/vulnerability/cve-2026-69446</guid>
+  <pubDate>Fri, 30 Oct 2026 14:00:00 +0000</pubDate>
+  <source>Microsoft Security Response Center</source>
+  <description><![CDATA[<b>Why this matters: Security-relevant development — confirm exposure and mitigation status.</b><br/>Corrected CVE by adding the assigning CNA. This is an informational change only.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h]]></description>
+</item>
+
 <item>
   <title>🔴 Bulletproof Host Virtualine Loses Its Domain to FBI Seizure</title>
   <link>https://www.securityweek.com/bulletproof-host-virtualine-loses-its-domain-to-fbi-seizure/</link>
@@ -12,7 +41,7 @@
   <pubDate>Fri, 30 Oct 2026 13:36:12 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: Elevated ransomware risk — validate backups, endpoint protection, and recovery readiness.</b><br/><p>It allowed customers to host hack-for-hire services, supported ransomware and infostealer operators, and accepted crypto payments.</p>
-<p>The post <a href="https://www.securityweek.com/bulletproof-host-virtualine-loses-its-domain-to-fbi-seizure/">Bulletproof Host Virtualine Loses Its Domain to FBI Seizure</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> &lt;1h]]></description>
+<p>The post <a href="https://www.securityweek.com/bulletproof-host-virtualine-loses-its-domain-to-fbi-seizure/">Bulletproof Host Virtualine Loses Its Domain to FBI Seizure</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 5h]]></description>
 </item>
 
 <item>
@@ -21,7 +50,7 @@
   <guid isPermaLink="false">https://www.bleepingcomputer.com/news/security/hackers-now-exploiting-max-severity-gitlab-flaw-in-attacks/</guid>
   <pubDate>Fri, 30 Oct 2026 13:00:32 +0000</pubDate>
   <source>BleepingComputer</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant development — confirm exposure and mitigation status.</b><br/>Attackers have started exploiting a maximum-severity GitLab vulnerability patched earlier this month, according to the US Cybersecurity and Infrastructure Security Agency (CISA). [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> &lt;1h]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant development — confirm exposure and mitigation status.</b><br/>Attackers have started exploiting a maximum-severity GitLab vulnerability patched earlier this month, according to the US Cybersecurity and Infrastructure Security Agency (CISA). [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 5h]]></description>
 </item>
 
 <item>
@@ -31,7 +60,7 @@
   <pubDate>Fri, 30 Oct 2026 12:04:13 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: Remote-code-execution risk — assess exposure and patch or mitigate quickly.</b><br/><p>Threat actors are attempting to exploit a high-severity unauthenticated race condition leading to remote code execution.</p>
-<p>The post <a href="https://www.securityweek.com/fresh-wordpress-vulnerability-in-attackers-crosshairs/">Fresh WordPress Vulnerability in Attackers&#8217; Crosshairs</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 1h]]></description>
+<p>The post <a href="https://www.securityweek.com/fresh-wordpress-vulnerability-in-attackers-crosshairs/">Fresh WordPress Vulnerability in Attackers&#8217; Crosshairs</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 6h]]></description>
 </item>
 
 <item>
@@ -41,7 +70,7 @@
   <pubDate>Fri, 30 Oct 2026 11:07:11 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: Hospitality-system impact — consider guest services, PMS/POS, and property operations.</b><br/><p>Drupal says a highly critical Commerce Core access bypass is exploited in the wild and urges store owners to audit their orders.</p>
-<p>The post <a href="https://www.securityweek.com/drupal-commerce-core-vulnerability-exploited-against-online-stores/">Drupal Commerce Core Vulnerability Exploited Against Online Stores </a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 2h]]></description>
+<p>The post <a href="https://www.securityweek.com/drupal-commerce-core-vulnerability-exploited-against-online-stores/">Drupal Commerce Core Vulnerability Exploited Against Online Stores </a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 7h]]></description>
 </item>
 
 <item>
@@ -50,7 +79,7 @@
   <guid isPermaLink="false">https://www.bleepingcomputer.com/news/security/drupal-warns-of-critical-commerce-core-flaw-exploited-in-attacks/</guid>
   <pubDate>Fri, 30 Oct 2026 10:16:07 +0000</pubDate>
   <source>BleepingComputer</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant development — confirm exposure and mitigation status.</b><br/>Drupal warned admins to patch a critical access bypass vulnerability in the Commerce Core module that attackers are exploiting in the wild. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3h]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant development — confirm exposure and mitigation status.</b><br/>Drupal warned admins to patch a critical access bypass vulnerability in the Commerce Core module that attackers are exploiting in the wild. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 8h]]></description>
 </item>
 
 <item>
@@ -60,7 +89,7 @@
   <pubDate>Fri, 30 Oct 2026 09:32:27 +0000</pubDate>
   <source>SecurityWeek</source>
   <description><![CDATA[<b>Why this matters: Hospitality-system impact — consider guest services, PMS/POS, and property operations.</b><br/><p>Tracked as CVE-2026-97229, the bug allows unauthenticated attackers to execute arbitrary code on the server.</p>
-<p>The post <a href="https://www.securityweek.com/max-severity-gitlab-vulnerability-exploited-against-alpine-linux/">Max-Severity GitLab Vulnerability Exploited Against Alpine Linux</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4h]]></description>
+<p>The post <a href="https://www.securityweek.com/max-severity-gitlab-vulnerability-exploited-against-alpine-linux/">Max-Severity GitLab Vulnerability Exploited Against Alpine Linux</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p><br/><br/><b>Source:</b> SecurityWeek &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 9h]]></description>
 </item>
 
 <item>
@@ -74,7 +103,7 @@
 The vulnerabilities are listed below -
 
 
-  CVE-2026-97229 (CVSS score: 10.0) - An integer overflow or wraparound vulnerability in GitLab Community Edition and Enterprise<br/><br/><b>Source:</b> The Hacker News &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 6h]]></description>
+  CVE-2026-97229 (CVSS score: 10.0) - An integer overflow or wraparound vulnerability in GitLab Community Edition and Enterprise<br/><br/><b>Source:</b> The Hacker News &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 11h]]></description>
 </item>
 
 <item>
@@ -87,7 +116,7 @@ The vulnerabilities are listed below -
 
 The world's biggest cryptocurrency exchange said nearly $3 billion of those assets have been frozen on-chain so far.&nbsp;
 
-Tether and Circle said they have frozen more than 1.567 billion USDT and 800 million USDC related to the incident, respectively. The<br/><br/><b>Source:</b> The Hacker News &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 9h]]></description>
+Tether and Circle said they have frozen more than 1.567 billion USDT and 800 million USDC related to the incident, respectively. The<br/><br/><b>Source:</b> The Hacker News &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 14h]]></description>
 </item>
 
 <item>
@@ -96,7 +125,7 @@ Tether and Circle said they have frozen more than 1.567 billion USDT and 800 mil
   <guid isPermaLink="false">https://www.tenable.com/blog/php2shell-one-week-later-why-one-exploit-doesnt-work-everywhere</guid>
   <pubDate>Fri, 30 Oct 2026 01:42:06 +0000</pubDate>
   <source>Tenable Blog</source>
-  <description><![CDATA[<b>Why this matters: Remote-code-execution risk — assess exposure and patch or mitigate quickly.</b><br/><p><strong>php2shell raised fears of mass exploitation. A week of testing by our research team found that working exploits had to be fitted to each target’s exact PHP setup. Systems that share one build, such as network appliances, are the exception: one tuned exploit can reach every device that runs it.</strong></p><h2>Key takeaways</h2><ol><li>The five vulnerable PHP sites we exposed to the internet were not compromised, and public proofs-of-concept (PoCs) that go beyond version checks do not reliably confirm whether a host is vulnerable. Exploitation has been confirmed elsewhere, on researcher honeypots and on some network appliances.</li><li>In realistic environments, turning php2shell into remote code execution usually takes an exploit built for the specific target. That is hard, not impossible, and it puts php2shell in a different category from Log4Shell, even though both received near-maximum severity ratings. Where many systems share one build, such as network appliances, a single calibrated exploit can work against all of them.</li><li>Patch now, starting with internet-facing management interfaces, network appliances, and end-of-life PHP branches. Tenable Nessus and Tenable One Web App Scanning have had version-based detection since October 21.</li></ol><h2>Background</h2><p>On October 20, 2026, <a href="https://www.php.net/archive/2026.php#2026-10-20-1"><u>PHP announced two vulnerabilities</u></a>, and on October 21 released fixes for flaws that can allow unauthenti…<br/><br/><b>Source:</b> Tenable Blog &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 12h]]></description>
+  <description><![CDATA[<b>Why this matters: Remote-code-execution risk — assess exposure and patch or mitigate quickly.</b><br/><p><strong>php2shell raised fears of mass exploitation. A week of testing by our research team found that working exploits had to be fitted to each target’s exact PHP setup. Systems that share one build, such as network appliances, are the exception: one tuned exploit can reach every device that runs it.</strong></p><h2>Key takeaways</h2><ol><li>The five vulnerable PHP sites we exposed to the internet were not compromised, and public proofs-of-concept (PoCs) that go beyond version checks do not reliably confirm whether a host is vulnerable. Exploitation has been confirmed elsewhere, on researcher honeypots and on some network appliances.</li><li>In realistic environments, turning php2shell into remote code execution usually takes an exploit built for the specific target. That is hard, not impossible, and it puts php2shell in a different category from Log4Shell, even though both received near-maximum severity ratings. Where many systems share one build, such as network appliances, a single calibrated exploit can work against all of them.</li><li>Patch now, starting with internet-facing management interfaces, network appliances, and end-of-life PHP branches. Tenable Nessus and Tenable One Web App Scanning have had version-based detection since October 21.</li></ol><h2>Background</h2><p>On October 20, 2026, <a href="https://www.php.net/archive/2026.php#2026-10-20-1"><u>PHP announced two vulnerabilities</u></a>, and on October 21 released fixes for flaws that can allow unauthenti…<br/><br/><b>Source:</b> Tenable Blog &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 17h]]></description>
 </item>
 
 <item>
@@ -105,7 +134,7 @@ Tether and Circle said they have frozen more than 1.567 billion USDT and 800 mil
   <guid isPermaLink="false">https://www.bleepingcomputer.com/news/security/japan-airlines-suffers-third-party-data-breach-exposing-passenger-info/</guid>
   <pubDate>Thu, 29 Oct 2026 22:08:04 +0000</pubDate>
   <source>BleepingComputer</source>
-  <description><![CDATA[<b>Why this matters: Potential data exposure — review monitoring and incident-response readiness.</b><br/>Japan Airlines (JAL) has announced that a data breach at Amadeus's Passenger Service System exposed the data of about 92,000 customers. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 15h]]></description>
+  <description><![CDATA[<b>Why this matters: Potential data exposure — review monitoring and incident-response readiness.</b><br/>Japan Airlines (JAL) has announced that a data breach at Amadeus's Passenger Service System exposed the data of about 92,000 customers. [...]<br/><br/><b>Source:</b> BleepingComputer &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 20h]]></description>
 </item>
 
 <item>
@@ -114,7 +143,7 @@ Tether and Circle said they have frozen more than 1.567 billion USDT and 800 mil
   <guid isPermaLink="false">https://msrc.microsoft.com/update-guide/vulnerability/cve-2026-88078</guid>
   <pubDate>Thu, 29 Oct 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant development — confirm exposure and mitigation status.</b><br/>CWE added. Informational change only.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 23h]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant development — confirm exposure and mitigation status.</b><br/>CWE added. Informational change only.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1d]]></description>
 </item>
 
 <item>
@@ -155,7 +184,7 @@ The vulnerability in question is CVE-2026-41709 (CVSS score:<br/><br/><b>Source:
   <pubDate>Wed, 28 Oct 2026 18:00:10 +0000</pubDate>
   <source>Unit 42</source>
   <description><![CDATA[<b>Why this matters: Elevated ransomware risk — validate backups, endpoint protection, and recovery readiness.</b><br/><p>Unit 42 explores key peak shopping season retail cyber threats, from ransomware to AI attacks, and shares how to defend operations and customer trust.</p>
-<p>The post <a href="https://unit42.paloaltonetworks.com/unwrapping-retail-cyber-threats/">Unwrapping Retail Peak Season Cyber Threats</a> appeared first on <a href="https://unit42.paloaltonetworks.com">Unit 42</a>.</p><br/><br/><b>Source:</b> Unit 42 &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 1d]]></description>
+<p>The post <a href="https://unit42.paloaltonetworks.com/unwrapping-retail-cyber-threats/">Unwrapping Retail Peak Season Cyber Threats</a> appeared first on <a href="https://unit42.paloaltonetworks.com">Unit 42</a>.</p><br/><br/><b>Source:</b> Unit 42 &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 2d]]></description>
 </item>
 
 <item>
@@ -164,7 +193,7 @@ The vulnerability in question is CVE-2026-41709 (CVSS score:<br/><br/><b>Source:
   <guid isPermaLink="false">https://msrc.microsoft.com/update-guide/vulnerability/cve-2026-62740</guid>
   <pubDate>Wed, 28 Oct 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant development — confirm exposure and mitigation status.</b><br/>Added supported editions of Microsoft Office to the Security Updates table because they are affected by this vulnerability. Microsoft recommends that customers running any of these editions of Office install the latest security updates to be fully protected from this vulnerability.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1d]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant development — confirm exposure and mitigation status.</b><br/>Added supported editions of Microsoft Office to the Security Updates table because they are affected by this vulnerability. Microsoft recommends that customers running any of these editions of Office install the latest security updates to be fully protected from this vulnerability.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2d]]></description>
 </item>
 
 <item>
@@ -173,7 +202,7 @@ The vulnerability in question is CVE-2026-41709 (CVSS score:<br/><br/><b>Source:
   <guid isPermaLink="false">https://msrc.microsoft.com/update-guide/vulnerability/cve-2026-62877</guid>
   <pubDate>Wed, 28 Oct 2026 14:00:00 +0000</pubDate>
   <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant development — confirm exposure and mitigation status.</b><br/>Added supported editions of Microsoft Office to the Security Updates table because they are affected by this vulnerability. Microsoft recommends that customers running any of these editions of Office install the latest security updates to be fully protected from this vulnerability.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1d]]></description>
+  <description><![CDATA[<b>Why this matters: Security-relevant development — confirm exposure and mitigation status.</b><br/>Added supported editions of Microsoft Office to the Security Updates table because they are affected by this vulnerability. Microsoft recommends that customers running any of these editions of Office install the latest security updates to be fully protected from this vulnerability.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2d]]></description>
 </item>
 
 <item>
@@ -188,15 +217,6 @@ The list of eight vulnerabilities is as follows -
 
 
   CVE-2026-104351 (CVSS score: 9.9) - A code injection vulnerability that could lead to arbitrary code execution.<br/><br/><b>Source:</b> The Hacker News &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2d]]></description>
-</item>
-
-<item>
-  <title>🟠 Chromium: CVE-2026-79025 Improper input validation in Workers</title>
-  <link>https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-79025</link>
-  <guid isPermaLink="false">https://msrc.microsoft.com/update-guide/vulnerability/cve-2026-79025</guid>
-  <pubDate>Wed, 28 Oct 2026 08:51:08 +0000</pubDate>
-  <source>Microsoft Security Response Center</source>
-  <description><![CDATA[<b>Why this matters: Security-relevant development — confirm exposure and mitigation status.</b><br/>Information published.<br/><br/><b>Source:</b> Microsoft Security Response Center &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2d]]></description>
 </item>
 
 <item>
@@ -693,7 +713,7 @@ The vulnerabilities are listed below -
 
 The vulnerability, tracked as CVE-2026-86950 (CVSS score: 8.8), is an out-of-bounds write affecting CoreGraphics that could result in arbitrary code execution when processing a maliciously crafted file.
 
-Patches for the flaw were released last month by Apple in<br/><br/><b>Source:</b> The Hacker News &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2d]]></description>
+Patches for the flaw were released last month by Apple in<br/><br/><b>Source:</b> The Hacker News &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3d]]></description>
 </item>
 
 <item>
@@ -743,27 +763,7 @@ The PHP vulnerabilities, both rated 9.2 on the CVSS scoring system, facilitate u
   <guid isPermaLink="false">https://www.rapid7.com/blog/post/etr-cve-2026-111497-critical-out-of-bounds-write-in-the-node-js-brotli-decoder</guid>
   <pubDate>Mon, 26 Oct 2026 17:32:46 +0000</pubDate>
   <source>Rapid7 Blog</source>
-  <description><![CDATA[<b>Why this matters: Remote-code-execution risk — assess exposure and patch or mitigate quickly.</b><br/><h2 style="direction: ltr;">Overview</h2><p style="direction: ltr;"><span style="font-size: undefined;">On October 21, 2026, the Node.js Project </span><a href="https://nodejs.org/en/blog/vulnerability/october-2026-security-releases#nodejs-brotli-decoder-out-of-bounds-write-permits-remote-code-execution-cve-2026-111497---high"><span style="font-size: undefined;">published a security advisory</span></a><span style="font-size: undefined;"> for </span><a href="https://www.cve.org/CVERecord?id=CVE-2026-111497"><span style="font-size: undefined;">CVE-2026-111497</span></a><span style="font-size: undefined;">, an out-of-bounds write in the Brotli decoder bundled with Node.js. The vulnerability affects the Node.js </span><span style="color: rgb(24, 128, 56); font-size: undefined;">26.x</span><span style="font-size: undefined;">, </span><span style="color: rgb(24, 128, 56); font-size: undefined;">24.x</span><span style="font-size: undefined;">, and </span><span style="color: rgb(24, 128, 56); font-size: undefined;">22.x</span><span style="font-size: undefined;"> release lines. Node.js rates the issue High, while Google, the CVE Numbering Authority (CNA), gives it a critical CVSSv4 score of </span><a href="https://www.first.org/cvss/calculator/4.0#CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N"><span style="font-size: undefined;">9.2</span></a><span style="font-size: undefined;">.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">An attacker who…<br/><br/><b>Source:</b> Rapid7 Blog &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 3d]]></description>
-</item>
-
-<item>
-  <title>🔴 Attackers Use Microsoft Teams IT Support Scams to Deploy Malware and Ransomware</title>
-  <link>https://thehackernews.com/2026/10/attackers-use-microsoft-teams-it.html</link>
-  <guid isPermaLink="false">https://thehackernews.com/2026/10/attackers-use-microsoft-teams-it.html</guid>
-  <pubDate>Mon, 26 Oct 2026 15:52:40 +0000</pubDate>
-  <source>The Hacker News</source>
-  <description><![CDATA[<b>Why this matters: Elevated ransomware risk — validate backups, endpoint protection, and recovery readiness.</b><br/>Cybersecurity researchers are calling attention to what they say is a "recurring social engineering pattern" across hundreds of cases in which threat actors use Microsoft Teams' external chat creation feature to conduct impersonation scams or to deliver malware.
-
-"A consistent pattern of attacker behavior has emerged across these incidents: the use of the same throwaway tenants, the same 'IT<br/><br/><b>Source:</b> The Hacker News &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 3d]]></description>
-</item>
-
-<item>
-  <title>🔴 Metasploit Wrap Up: Langflow, MongoDB, and More</title>
-  <link>https://www.rapid7.com/blog/post/pt-metasploit-wrap-up-langflow-mongodb-and-more</link>
-  <guid isPermaLink="false">https://www.rapid7.com/blog/post/pt-metasploit-wrap-up-langflow-mongodb-and-more</guid>
-  <pubDate>Fri, 23 Oct 2026 15:38:56 +0000</pubDate>
-  <source>Rapid7 Blog</source>
-  <description><![CDATA[<b>Why this matters: Remote-code-execution risk — assess exposure and patch or mitigate quickly.</b><br/><p>This release adds multiple new modules, and 6 of those modules point at a single target: <a href="https://www.langflow.org/">Langflow</a>, the open-source LLM workflow builder. Together they cover an authentication bypass (CVE-2026-93680), 3 unauthenticated remote code execution paths (CVE-2026-0768, CVE-2026-0769, and CVE-2026-10134), and 2 authenticated code execution flaws (CVE-2026-7873 and CVE-2026-93674), spanning Langflow releases from 1.0.0 through 1.11.4. Thanks to the work of <a href="https://github.com/rmhowe425">rmhowe425</a>, with research credit to Peter Girnus and n0k0. Beyond Langflow, open source contributor <a href="https://github.com/kmkz">kmkz</a> contributed a pre-auth RCE chain against OpenCTI. MongoDB coverage has also been expanded with 3 new auxiliary modules plus an Apache Solr version scanner thanks to the work of community member <a href="https://github.com/h00die">h00die</a>.</p><h2>New Module Content (11)</h2><h3>4gaBoards Mass User Information Disclosure (CVE-2026-53959)</h3><p>Authors: Balachandar Gowrisankar, de3erve (GitHub), and lucquach (GitHub)</p><p>Type: Auxiliary</p><p>Pull request: <a href="https://github.com/rapid7/metasploit-framework/pull/21831">#21831</a> contributed by <a href="https://github.com/anirbala98">anirbala98</a></p><p>Path: gather/4gaboards_users_info_disclosure_cve_2026_53959</p><p>CVE reference: <a href="https://www.rapid7.com/db/vulnerabilities/cve-2026-53959/">CVE-2026-53959</a></p><p>Description: Adds a module t…<br/><br/><b>Source:</b> Rapid7 Blog &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 6d]]></description>
+  <description><![CDATA[<b>Why this matters: Remote-code-execution risk — assess exposure and patch or mitigate quickly.</b><br/><h2 style="direction: ltr;">Overview</h2><p style="direction: ltr;"><span style="font-size: undefined;">On October 21, 2026, the Node.js Project </span><a href="https://nodejs.org/en/blog/vulnerability/october-2026-security-releases#nodejs-brotli-decoder-out-of-bounds-write-permits-remote-code-execution-cve-2026-111497---high"><span style="font-size: undefined;">published a security advisory</span></a><span style="font-size: undefined;"> for </span><a href="https://www.cve.org/CVERecord?id=CVE-2026-111497"><span style="font-size: undefined;">CVE-2026-111497</span></a><span style="font-size: undefined;">, an out-of-bounds write in the Brotli decoder bundled with Node.js. The vulnerability affects the Node.js </span><span style="color: rgb(24, 128, 56); font-size: undefined;">26.x</span><span style="font-size: undefined;">, </span><span style="color: rgb(24, 128, 56); font-size: undefined;">24.x</span><span style="font-size: undefined;">, and </span><span style="color: rgb(24, 128, 56); font-size: undefined;">22.x</span><span style="font-size: undefined;"> release lines. Node.js rates the issue High, while Google, the CVE Numbering Authority (CNA), gives it a critical CVSSv4 score of </span><a href="https://www.first.org/cvss/calculator/4.0#CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N"><span style="font-size: undefined;">9.2</span></a><span style="font-size: undefined;">.</span></p><p style="direction: ltr;"><span style="font-size: undefined;">An attacker who…<br/><br/><b>Source:</b> Rapid7 Blog &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 4d]]></description>
 </item>
 
 </channel>
