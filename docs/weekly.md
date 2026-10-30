@@ -1,59 +1,77 @@
 # IT Weekly Intelligence Briefing
 **Period:** October 23 – October 30, 2026  
-**Generated:** 2026-10-30 06:46 UTC  
+**Generated:** 2026-10-30 13:49 UTC  
 **Items reviewed:** 149  
 
 ## ⚡ Top Actions This Week
 
-1. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _Binance Suffers Security Breach Affecting $6.3 Billion in Assets, Nearly $3 Billion Frozen_  
-   Source: The Hacker News  
+1. **Validate backups, confirm EDR coverage, and brief incident response team.**  
+   _Bulletproof Host Virtualine Loses Its Domain to FBI Seizure_  
+   Source: SecurityWeek  
 
-2. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _Binance probes potential $5.8 billion crypto-theft hack_  
+2. **Review and assess impact on your environment.**  
+   _CISA says max severity GitLab flaw now exploited in the wild_  
    Source: BleepingComputer  
 
-3. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _Japan Airlines suffers third-party data breach exposing passenger info_  
-   Source: BleepingComputer  
+3. **Prioritize patching of affected systems; check for internet-exposed attack surface.**  
+   _Drupal Commerce Core Vulnerability Exploited Against Online Stores_  
+   Source: SecurityWeek  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [Bulletproof Host Virtualine Loses Its Domain to FBI Seizure](https://www.securityweek.com/bulletproof-host-virtualine-loses-its-domain-to-fbi-seizure/)
+**Source:** SecurityWeek &nbsp;·&nbsp; **Date:** Oct 30  
+**Why it matters:** Elevated ransomware risk across the sector.  
+**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
+
+### [CISA says max severity GitLab flaw now exploited in the wild](https://www.bleepingcomputer.com/news/security/hackers-now-exploiting-max-severity-gitlab-flaw-in-attacks/)
+**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Oct 30  
+**Why it matters:** General awareness item.  
+**Recommended action:** Review and assess impact on your environment.  
+
+### [Drupal Commerce Core Vulnerability Exploited Against Online Stores](https://www.securityweek.com/drupal-commerce-core-vulnerability-exploited-against-online-stores/)
+**Source:** SecurityWeek &nbsp;·&nbsp; **Date:** Oct 30  
+**Why it matters:** General awareness item.  
+**Recommended action:** Prioritize patching of affected systems; check for internet-exposed attack surface.  
+
+### [$2 Million+ Drained From Polymarket Traders in New Supply Chain Attack](https://www.securityweek.com/2-million-drained-from-polymarket-traders-in-new-supply-chain-attack/)
+**Source:** SecurityWeek &nbsp;·&nbsp; **Date:** Oct 30  
+**Why it matters:** Third-party/software supply chain integrity risk.  
+**Recommended action:** Audit third-party software dependencies and review vendor access.  
+
+### [CISA Adds Actively Exploited GitLab RCE and Cisco Firewall DoS Flaws to KEV](https://thehackernews.com/2026/10/cisa-adds-actively-exploited-gitlab-rce.html)
+**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Oct 30  
+**Why it matters:** General awareness item.  
+**Recommended action:** Prioritize patching of affected systems; check for internet-exposed attack surface.  
 
 ### [Binance Suffers Security Breach Affecting $6.3 Billion in Assets, Nearly $3 Billion Frozen](https://thehackernews.com/2026/10/binance-suffers-security-breach.html)
 **Source:** The Hacker News &nbsp;·&nbsp; **Date:** Oct 30  
 **Why it matters:** Potential credential or data exposure.  
 **Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
-### [Binance probes potential $5.8 billion crypto-theft hack](https://www.bleepingcomputer.com/news/security/binance-probes-potential-58-billion-crypto-theft-hack/)
-**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Oct 29  
-**Why it matters:** Potential credential or data exposure.  
-**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
-
-### [Japan Airlines suffers third-party data breach exposing passenger info](https://www.bleepingcomputer.com/news/security/japan-airlines-suffers-third-party-data-breach-exposing-passenger-info/)
-**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Oct 29  
-**Why it matters:** Potential credential or data exposure.  
-**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
-
-### [Polymarket halts trading after crypto-draining script breach, $2.5M traced](https://www.bleepingcomputer.com/news/security/polymarket-halts-trading-after-crypto-draining-script-breach-25m-traced/)
-**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Oct 29  
-**Why it matters:** Potential credential or data exposure.  
-**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
-
-### [BAE Says No Data Extracted in Incident Hitting Bankruptcy Courts](https://www.securityweek.com/bae-says-no-data-extracted-in-incident-hitting-bankruptcy-courts/)
-**Source:** SecurityWeek &nbsp;·&nbsp; **Date:** Oct 29  
-**Why it matters:** Potential credential or data exposure.  
-**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
-
-### [Cisco Patches Actively Exploited ASA and FTD VPN Flaw That Can Crash Firewalls](https://thehackernews.com/2026/10/cisco-patches-actively-exploited-asa.html)
-**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Oct 29  
-**Why it matters:** General awareness item.  
-**Recommended action:** Elevate monitoring posture; brief security team on threat actor TTPs.  
-
 ---
 
 ## 🟠 Important — Review This Week
+
+- [Fresh WordPress Vulnerability in Attackers’ Crosshairs](https://www.securityweek.com/fresh-wordpress-vulnerability-in-attackers-crosshairs/)  
+  **SecurityWeek** · Oct 30 · _General awareness item._  
+
+- [Microsoft finally fixes VPN issues caused by September updates](https://www.bleepingcomputer.com/news/microsoft/microsoft-finally-fixes-vpn-issues-caused-by-september-updates/)  
+  **BleepingComputer** · Oct 30 · _General awareness item._  
+
+- [Drupal warns of critical Commerce Core flaw exploited in attacks](https://www.bleepingcomputer.com/news/security/drupal-warns-of-critical-commerce-core-flaw-exploited-in-attacks/)  
+  **BleepingComputer** · Oct 30 · _General awareness item._  
+
+- [Max-Severity GitLab Vulnerability Exploited Against Alpine Linux](https://www.securityweek.com/max-severity-gitlab-vulnerability-exploited-against-alpine-linux/)  
+  **SecurityWeek** · Oct 30 · _General awareness item._  
+
+- [TeamViewer Flaw Could Let Malicious Hosts Take Over Support Technicians’ Machines](https://www.securityweek.com/teamviewer-flaw-could-let-malicious-hosts-take-over-support-technicians-machines/)  
+  **SecurityWeek** · Oct 30 · _General awareness item._  
+
+- [Hackers Actively Exploit Highly Critical Drupal Commerce Core Authorization Bypass Flaw](https://thehackernews.com/2026/10/hackers-actively-exploit-highly.html)  
+  **The Hacker News** · Oct 30 · _General awareness item._  
 
 - [Hackers exploit Cisco SD-WAN flaw to deploy custom KeyDrift malware](https://www.bleepingcomputer.com/news/security/hackers-exploit-cisco-sd-wan-flaw-to-deploy-custom-keydrift-malware/)  
   **BleepingComputer** · Oct 29 · _General awareness item._  
@@ -61,35 +79,17 @@
 - [Linux Kernel TCP Flaw With 9.8 CVSS Score Affects Ubuntu, Red Hat and Other Distributions](https://thehackernews.com/2026/10/linux-kernel-tcp-flaw-with-98-cvss.html)  
   **The Hacker News** · Oct 29 · _General awareness item._  
 
-- [How Secure Are US Elections? Voting Machine Risks and the Growing Threat of AI](https://www.securityweek.com/how-secure-are-us-elections-voting-machine-risks-and-the-growing-threat-of-ai/)  
-  **SecurityWeek** · Oct 29 · _General awareness item._  
-
-- [CVE-2026-88078 Microsoft Edge (Chromium-based) Spoofing Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-88078)  
-  **Microsoft Security Response Center** · Oct 29 · _General awareness item._  
-
-- [CISA warns of Fragnesia Linux flaw chained in PHP2Shell attacks](https://www.bleepingcomputer.com/news/security/cisa-warns-of-fragnesia-linux-flaw-chained-in-php2shell-attacks/)  
-  **BleepingComputer** · Oct 29 · _General awareness item._  
-
-- [Adobe, Veeam, Juniper Networks Patch Critical Vulnerabilities](https://www.securityweek.com/adobe-veeam-juniper-networks-patch-critical-vulnerabilities/)  
-  **SecurityWeek** · Oct 29 · _General awareness item._  
-
-- [Google's Gemini 4 Carbon Leads Benchmarks for Finding, Exploiting, and Patching Vulnerabilities](https://thehackernews.com/2026/10/googles-gemini-4-carbon-leads.html)  
-  **The Hacker News** · Oct 29 · _General awareness item._  
-
-- [Webinar: How to Build AI Threat Readiness Into Your Security Operations](https://thehackernews.com/2026/08/learn-how-to-build-security-operations.html)  
-  **The Hacker News** · Oct 29 · _General awareness item._  
-
 ---
 
 ## 🔵 FYI — General Awareness
 
-- [ISC Stormcast For Friday, October 30th, 2026 https://isc.sans.edu/podcastdetail/10158, (Fri, Oct 30th)](https://isc.sans.edu/diary/rss/33472) — SANS Internet Storm Center
-- [OpenAI doubles ChatGPT Pro usage limits after backlash over planned 50% cut](https://www.bleepingcomputer.com/news/artificial-intelligence/openai-doubles-chatgpt-pro-usage-limits-after-backlash-over-planned-50-percent-cut/) — BleepingComputer
-- [Hugging Face malware campaign returns to hijack GPUs for crypto mining](https://www.bleepingcomputer.com/news/security/hugging-face-malware-campaign-returns-to-hijack-gpus-for-crypto-mining/) — BleepingComputer
-- [Fake crypto app on Apple App Store linked to $23K wallet theft](https://www.bleepingcomputer.com/news/security/fake-crypto-app-on-apple-app-store-linked-to-23k-wallet-theft/) — BleepingComputer
-- [ThreatsDay: Critical Firewall Flaws, Banking Trojans Rented, Weaponized PDF, Token Theft + 26 More Stories](https://thehackernews.com/2026/10/threatsday-critical-firewall-flaws.html) — The Hacker News
-- [When Risk Becomes Personal: What Security Leaders Can Learn From a Cancer Diagnosis](https://www.securityweek.com/when-risk-becomes-personal-what-security-leaders-can-learn-from-a-cancer-diagnosis/) — SecurityWeek
+- [Trezor Warns of Suspected Hardware Implant in One of Its Wallets Sold by CryptoBilis](https://thehackernews.com/2026/10/trezor-warns-of-suspected-hardware.html) — The Hacker News
+- [Why Urgent Security Fixes Aren't Fixed. Observe, Prove, Act, Confirm Gets Them Moving](https://thehackernews.com/2026/10/why-urgent-security-fixes-arent-fixed.html) — The Hacker News
+- [Syrian Hacker Behind Fake Tweet That Triggered $136 Billion Market Drop Gets 42 Months in Prison](https://thehackernews.com/2026/10/syrian-hacker-behind-fake-tweet-that.html) — The Hacker News
+- [Binance links $6.3 billion crypto theft to compromised DevOps laptop](https://www.bleepingcomputer.com/news/security/binance-links-63-billion-crypto-theft-to-compromised-devops-laptop/) — BleepingComputer
+- [Official Claude Code Extension on Cursor Marketplace Trojanized with Persistent SSH Backdoor](https://thehackernews.com/2026/10/official-claude-code-vs-code-extension.html) — The Hacker News
+- [$6 Billion Binance Hack Bears Hallmarks of North Korea’s TraderTraitor](https://www.securityweek.com/6-billion-binance-hack-bears-hallmarks-of-north-koreas-tradertraitor/) — SecurityWeek
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 10 critical · 86 important · 53 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 14 critical · 87 important · 48 FYI_
