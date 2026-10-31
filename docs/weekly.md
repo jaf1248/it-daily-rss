@@ -1,25 +1,35 @@
 # IT Weekly Intelligence Briefing
 **Period:** October 24 – October 31, 2026  
-**Generated:** 2026-10-31 08:16 UTC  
+**Generated:** 2026-10-31 15:00 UTC  
 **Items reviewed:** 150  
 
 ## ⚡ Top Actions This Week
 
 1. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
+   _Chainalysis discloses data breach from "offensive agentic techniques"_  
+   Source: BleepingComputer  
+
+2. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
+   _Chainalysis Confirms Intrusion Into Internal Tools and Exposure of Customer Identity Data_  
+   Source: The Hacker News  
+
+3. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
    _In Other News: Anthropic Breach Dispute, UEFI Flaw Hits Most Servers, Cloudflare AI Data Leak_  
    Source: SecurityWeek  
-
-2. **Validate backups, confirm EDR coverage, and brief incident response team.**  
-   _Bulletproof Host Virtualine Loses Its Domain to FBI Seizure_  
-   Source: SecurityWeek  
-
-3. **Review and assess impact on your environment.**  
-   _CISA says max severity GitLab flaw now exploited in the wild_  
-   Source: BleepingComputer  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [Chainalysis discloses data breach from "offensive agentic techniques"](https://www.bleepingcomputer.com/news/security/chainalysis-discloses-data-breach-from-offensive-agentic-techniques/)
+**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Oct 31  
+**Why it matters:** Potential credential or data exposure.  
+**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
+
+### [Chainalysis Confirms Intrusion Into Internal Tools and Exposure of Customer Identity Data](https://thehackernews.com/2026/10/chainalysis-confirms-intrusion-into.html)
+**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Oct 31  
+**Why it matters:** Potential credential or data exposure.  
+**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
 ### [In Other News: Anthropic Breach Dispute, UEFI Flaw Hits Most Servers, Cloudflare AI Data Leak](https://www.securityweek.com/in-other-news-anthropic-breach-dispute-uefi-flaw-hits-most-servers-cloudflare-ai-data-leak/)
 **Source:** SecurityWeek &nbsp;·&nbsp; **Date:** Oct 30  
@@ -41,19 +51,12 @@
 **Why it matters:** General awareness item.  
 **Recommended action:** Prioritize patching of affected systems; check for internet-exposed attack surface.  
 
-### [$2 Million+ Drained From Polymarket Traders in New Supply Chain Attack](https://www.securityweek.com/2-million-drained-from-polymarket-traders-in-new-supply-chain-attack/)
-**Source:** SecurityWeek &nbsp;·&nbsp; **Date:** Oct 30  
-**Why it matters:** Third-party/software supply chain integrity risk.  
-**Recommended action:** Audit third-party software dependencies and review vendor access.  
-
-### [CISA Adds Actively Exploited GitLab RCE and Cisco Firewall DoS Flaws to KEV](https://thehackernews.com/2026/10/cisa-adds-actively-exploited-gitlab-rce.html)
-**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Oct 30  
-**Why it matters:** General awareness item.  
-**Recommended action:** Prioritize patching of affected systems; check for internet-exposed attack surface.  
-
 ---
 
 ## 🟠 Important — Review This Week
+
+- [Attackers Chain Three Ivanti Connect Secure Flaws to Gain Unauthenticated Root Access](https://thehackernews.com/2026/10/attackers-chain-three-ivanti-connect.html)  
+  **The Hacker News** · Oct 31 · _General awareness item._  
 
 - [Critical Linux kernel flaw allows remote root attacks on MPTCP servers](https://www.bleepingcomputer.com/news/security/critical-linux-kernel-flaw-allows-remote-root-attacks-on-mptcp-servers/)  
   **BleepingComputer** · Oct 30 · _General awareness item._  
@@ -76,20 +79,17 @@
 - [Microsoft finally fixes VPN issues caused by September updates](https://www.bleepingcomputer.com/news/microsoft/microsoft-finally-fixes-vpn-issues-caused-by-september-updates/)  
   **BleepingComputer** · Oct 30 · _General awareness item._  
 
-- [Drupal warns of critical Commerce Core flaw exploited in attacks](https://www.bleepingcomputer.com/news/security/drupal-warns-of-critical-commerce-core-flaw-exploited-in-attacks/)  
-  **BleepingComputer** · Oct 30 · _General awareness item._  
-
 ---
 
 ## 🔵 FYI — General Awareness
 
-- [A Shared ChatGPT Link Could Run Attacker Code in Your Session and Read Private Chats](https://thehackernews.com/2026/10/a-shared-chatgpt-link-could-run.html) — The Hacker News
-- [Cloudflare Reports 18.2 Million Network-Layer DDoS Attacks in Q3, Up 38%](https://thehackernews.com/2026/10/cloudflare-reports-182-million-network.html) — The Hacker News
-- [Inside a malicious Claude Code-branded extension and its persistent SSH backdoor](https://www.microsoft.com/en-us/security/blog/2026/10/30/inside-malicious-claude-code-branded-cursor-extension-persistent-ssh-backdoor/) — Microsoft Security Blog
-- [Chinese Hackers Use AI-Powered ARTEX to Target Over 200 Organizations Worldwide](https://thehackernews.com/2026/10/chinese-hackers-use-ai-powered-artex-to.html) — The Hacker News
-- [From help desk impersonation to AD CS abuse: Investigating ESC1 and ESC8 intrusion paths](https://www.microsoft.com/en-us/security/blog/2026/10/30/help-desk-impersonation-ad-cs-abuse-investigating-esc1-esc8-intrusion-paths/) — Microsoft Security Blog
-- [Trezor warns of suspected crypto-theft implant in hardware wallet](https://www.bleepingcomputer.com/news/security/trezor-warns-of-suspected-crypto-theft-implant-in-hardware-wallet/) — BleepingComputer
+- [Reddit to lock content behind logins to fight scrapers](https://www.bleepingcomputer.com/news/security/reddit-to-lock-content-behind-logins-to-fight-scrapers/) — BleepingComputer
+- [From Beginner to Bug Hunter: Learning Cybersecurity in the AI Era.](https://www.bleepingcomputer.com/news/security/from-beginner-to-bug-hunter-learning-cybersecurity-in-the-ai-era/) — BleepingComputer
+- [Syrian Hacker Gets Prison Time in US After Over a Decade on the Run](https://www.securityweek.com/syrian-hacker-gets-prison-time-in-us-after-over-a-decade-on-the-run/) — SecurityWeek
+- [Wireshark 5.0.0rc1 Release, (Sat, Oct 31st)](https://isc.sans.edu/diary/rss/33476) — SANS Internet Storm Center
+- [YARA-X 1.22.1 Release, (Sat, Oct 31st)](https://isc.sans.edu/diary/rss/33474) — SANS Internet Storm Center
+- [YARA-X 1.22.0 Release, (Sun, Oct 25th)](https://isc.sans.edu/diary/rss/33454) — SANS Internet Storm Center
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 14 critical · 85 important · 51 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 15 critical · 85 important · 50 FYI_
