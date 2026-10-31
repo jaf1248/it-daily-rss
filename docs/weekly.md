@@ -1,25 +1,30 @@
 # IT Weekly Intelligence Briefing
 **Period:** October 24 – October 31, 2026  
-**Generated:** 2026-10-31 15:00 UTC  
+**Generated:** 2026-10-31 19:13 UTC  
 **Items reviewed:** 150  
 
 ## ⚡ Top Actions This Week
 
 1. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _Chainalysis discloses data breach from "offensive agentic techniques"_  
+   _Northflank security breach leads to abuse of customers' AI API keys_  
    Source: BleepingComputer  
 
 2. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _Chainalysis Confirms Intrusion Into Internal Tools and Exposure of Customer Identity Data_  
-   Source: The Hacker News  
+   _Chainalysis discloses data breach from "offensive agentic techniques"_  
+   Source: BleepingComputer  
 
 3. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _In Other News: Anthropic Breach Dispute, UEFI Flaw Hits Most Servers, Cloudflare AI Data Leak_  
-   Source: SecurityWeek  
+   _Chainalysis Confirms Intrusion Into Internal Tools and Exposure of Customer Identity Data_  
+   Source: The Hacker News  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [Northflank security breach leads to abuse of customers' AI API keys](https://www.bleepingcomputer.com/news/security/northflank-security-breach-leads-to-abuse-of-customers-ai-api-keys/)
+**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Oct 31  
+**Why it matters:** Potential credential or data exposure.  
+**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
 ### [Chainalysis discloses data breach from "offensive agentic techniques"](https://www.bleepingcomputer.com/news/security/chainalysis-discloses-data-breach-from-offensive-agentic-techniques/)
 **Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Oct 31  
@@ -46,50 +51,45 @@
 **Why it matters:** General awareness item.  
 **Recommended action:** Review and assess impact on your environment.  
 
-### [Drupal Commerce Core Vulnerability Exploited Against Online Stores](https://www.securityweek.com/drupal-commerce-core-vulnerability-exploited-against-online-stores/)
-**Source:** SecurityWeek &nbsp;·&nbsp; **Date:** Oct 30  
-**Why it matters:** General awareness item.  
-**Recommended action:** Prioritize patching of affected systems; check for internet-exposed attack surface.  
-
 ---
 
 ## 🟠 Important — Review This Week
 
-- [Attackers Chain Three Ivanti Connect Secure Flaws to Gain Unauthenticated Root Access](https://thehackernews.com/2026/10/attackers-chain-three-ivanti-connect.html)  
-  **The Hacker News** · Oct 31 · _General awareness item._  
+- [New Android SMS of Death exploit can remotely crash unpatched phones](https://www.bleepingcomputer.com/news/security/new-android-sms-of-death-exploit-can-remotely-crash-unpatched-phones/)  
+  **BleepingComputer** · Oct 31 · _General awareness item._  
 
-- [Critical Linux kernel flaw allows remote root attacks on MPTCP servers](https://www.bleepingcomputer.com/news/security/critical-linux-kernel-flaw-allows-remote-root-attacks-on-mptcp-servers/)  
-  **BleepingComputer** · Oct 30 · _General awareness item._  
+- [Chromium: CVE-2026-118304 Improper input validation in SVG](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-118304)  
+  **Microsoft Security Response Center** · Oct 31 · _General awareness item._  
 
-- [WordPress RCE Flaw Draws Nearly 63,000 Attack Attempts in Just 24 Hours](https://thehackernews.com/2026/10/wordpress-rce-flaw-draws-nearly-63000.html)  
-  **The Hacker News** · Oct 30 · _General awareness item._  
+- [Chromium: CVE-2026-118313 Use after free in Video](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-118313)  
+  **Microsoft Security Response Center** · Oct 31 · _General awareness item._  
 
-- [CVE-2026-70125 Microsoft Office Outlook Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-70125)  
-  **Microsoft Security Response Center** · Oct 30 · _General awareness item._  
+- [Chromium: CVE-2026-118311 Memory corruption in Media](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-118311)  
+  **Microsoft Security Response Center** · Oct 31 · _General awareness item._  
 
-- [CVE-2026-118147 Visual Studio Spoofing Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-118147)  
-  **Microsoft Security Response Center** · Oct 30 · _General awareness item._  
+- [Chromium: CVE-2026-118317 Memory corruption in HTML](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-118317)  
+  **Microsoft Security Response Center** · Oct 31 · _General awareness item._  
 
-- [CVE-2026-69446 Microsoft Edge (Chromium-based) Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69446)  
-  **Microsoft Security Response Center** · Oct 30 · _General awareness item._  
+- [Chromium: CVE-2026-118315 Improper input validation in SVG](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-118315)  
+  **Microsoft Security Response Center** · Oct 31 · _General awareness item._  
 
-- [Fresh WordPress Vulnerability in Attackers’ Crosshairs](https://www.securityweek.com/fresh-wordpress-vulnerability-in-attackers-crosshairs/)  
-  **SecurityWeek** · Oct 30 · _General awareness item._  
+- [Chromium: CVE-2026-118312 Memory corruption in Paint](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-118312)  
+  **Microsoft Security Response Center** · Oct 31 · _General awareness item._  
 
-- [Microsoft finally fixes VPN issues caused by September updates](https://www.bleepingcomputer.com/news/microsoft/microsoft-finally-fixes-vpn-issues-caused-by-september-updates/)  
-  **BleepingComputer** · Oct 30 · _General awareness item._  
+- [Chromium: CVE-2026-118316 Improper input validation in V8](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-118316)  
+  **Microsoft Security Response Center** · Oct 31 · _General awareness item._  
 
 ---
 
 ## 🔵 FYI — General Awareness
 
 - [Reddit to lock content behind logins to fight scrapers](https://www.bleepingcomputer.com/news/security/reddit-to-lock-content-behind-logins-to-fight-scrapers/) — BleepingComputer
-- [From Beginner to Bug Hunter: Learning Cybersecurity in the AI Era.](https://www.bleepingcomputer.com/news/security/from-beginner-to-bug-hunter-learning-cybersecurity-in-the-ai-era/) — BleepingComputer
 - [Syrian Hacker Gets Prison Time in US After Over a Decade on the Run](https://www.securityweek.com/syrian-hacker-gets-prison-time-in-us-after-over-a-decade-on-the-run/) — SecurityWeek
 - [Wireshark 5.0.0rc1 Release, (Sat, Oct 31st)](https://isc.sans.edu/diary/rss/33476) — SANS Internet Storm Center
 - [YARA-X 1.22.1 Release, (Sat, Oct 31st)](https://isc.sans.edu/diary/rss/33474) — SANS Internet Storm Center
 - [YARA-X 1.22.0 Release, (Sun, Oct 25th)](https://isc.sans.edu/diary/rss/33454) — SANS Internet Storm Center
+- [A Shared ChatGPT Link Could Run Attacker Code in Your Session and Read Private Chats](https://thehackernews.com/2026/10/a-shared-chatgpt-link-could-run.html) — The Hacker News
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 15 critical · 85 important · 50 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 15 critical · 87 important · 48 FYI_
