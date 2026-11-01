@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
 **Period:** October 25 – November 01, 2026  
-**Generated:** 2026-11-01 17:37 UTC  
+**Generated:** 2026-11-01 21:40 UTC  
 **Items reviewed:** 150  
 
 ## ⚡ Top Actions This Week
@@ -83,12 +83,12 @@
 
 ## 🔵 FYI — General Awareness
 
+- [FBI links $6.3 billion Binance crypto heist to North Korean hackers](https://www.bleepingcomputer.com/news/security/fbi-links-63-billion-binance-crypto-heist-to-north-korean-hackers/) — BleepingComputer
 - [OpenAI says it's doubling Pro usage limits and bringing Work features to Chat](https://www.bleepingcomputer.com/news/artificial-intelligence/openai-says-its-doubling-pro-usage-limits-and-bringing-work-features-to-chat/) — BleepingComputer
 - [Northstar Security Exits Stealth With $7M to Expose Toxic Risk Combinations](https://www.securityweek.com/northstar-security-exits-stealth-with-7m-to-expose-toxic-risk-combinations/) — SecurityWeek
 - [OneNote File Extraction, (Sun, Nov 1st)](https://isc.sans.edu/diary/rss/33478) — SANS Internet Storm Center
 - [CVSS 10.0 LXD, MicroCloud Flaw Lets Attackers Impersonate Trusted Clients Without a Private Key](https://thehackernews.com/2026/11/critical-lxd-and-microcloud-flaw-cvss.html) — The Hacker News
 - [Hackers Steal About $2.7 Million From Polymarket Traders via Hijacked DebugBear Script](https://thehackernews.com/2026/11/hackers-steal-about-27-million-from.html) — The Hacker News
-- [FBI Links North Korea's TraderTraitor to Record $6.43 Billion Binance Crypto Heist](https://thehackernews.com/2026/11/fbi-links-north-koreas-tradertraitor-to.html) — The Hacker News
 
 ---
 
