@@ -3,7 +3,7 @@
 <channel>
   <title>Joe — Vendor Security Advisories</title>
   <description>Security advisories and PSIRTs from network and infrastructure vendors in use.</description>
-  <lastBuildDate>Wed, 04 Nov 2026 02:53:34 +0000</lastBuildDate>
+  <lastBuildDate>Wed, 04 Nov 2026 10:25:56 +0000</lastBuildDate>
   
 <item>
   <title>🟠 CISA Adds One Known Exploited Vulnerability to Catalog</title>
@@ -17,7 +17,7 @@
 </ul>
 <p>This type of vulnerability is a frequent attack vector for malicious cyber actors and poses significant risks to the federal enterprise.</p>
 <p><a href="https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk">Binding Operational Directive (BOD) 26-04: Prioritizing Security Updates Based on Risk</a> establishes vulnerability management requirements for Federal Civilian Executive Branch (FCEB) agencies. BOD 26-04 reinforces the importance of the KEV Catalog and requires federal agencies to prioritize rapid remediation of high-risk vulnerabilities, specifically those identified by Common Vulnerabilities and Exposures (CVEs) listed in CISA’s KEV Catalog on publicly exposed assets that grant total control of the asset post-exploitation, while deferring action for lower-risk vulnerabilities. BOD 26-04 further establishes basic expectations for when agencies must check whether threat actors compromised the system before the patch was applied.</p>
-<p>While BOD 26-04 applies only to FCEB agencies, CIS…<br/><br/><b>Source:</b> CISA Alerts &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 14h]]></description>
+<p>While BOD 26-04 applies only to FCEB agencies, CIS…<br/><br/><b>Source:</b> CISA Alerts &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 22h]]></description>
 </item>
 
 <item>
@@ -33,7 +33,7 @@
  9.8
 </p>
 <p>
- CVE-2026-98432:ipv4: free inet_opt and ireq_opt after an RCU grace period tcp_v4_syn_recv_sock() transfers ownership of ireq-&gt;ireq_opt to the child socket (newinet-&gt;inet_opt) without copying it. Another cpu can concurrently process a retransmitted SYN for the same request socket, and send a SYNACK from tcp_check_req(). tcp_v4_send_synack() and inet_csk_route_req() read ireq-&gt;ireq_opt under rcu_read_lock() only, and ip_build_and_send_pkt() and ip_options_build() then read opt-&gt;optlen twice. Note that the SYNACK timer itself is not an issue: it holds a reference on its request socket, and inet_csk_reqsk_queue_drop() calls timer_delete_sync() before the child can be freed. Since commit 079096f103fa ("tcp/dccp: install syn_recv requests into ehash table"), request sockets are processed without holding the listener lock, so nothing prevents the child socket from being freed while the SYNACK is still being built. TCP child sockets do not have SOCK_RCU_FREE, and inet_sock_destruct() frees inet_opt with a plain kfree(), leading to a use-after-free in ip_options_build(). A similar issue exists with request socket migration (net.ipv4.tcp_migrate_req=1, or a BPF_SK_REUSEPORT_SELECT_OR_MIGRATE program). reqsk_timer_handler() clones the request socket with inet_reqsk_clone(), so that the old request socket and its clone share the same ireq_opt, then reqsk_migrate_reset() clears the pointer in the old one. Another cpu hold…<br/><br/><b>Source:</b> Fortinet PSIRT &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1d]]></description>
+ CVE-2026-98432:ipv4: free inet_opt and ireq_opt after an RCU grace period tcp_v4_syn_recv_sock() transfers ownership of ireq-&gt;ireq_opt to the child socket (newinet-&gt;inet_opt) without copying it. Another cpu can concurrently process a retransmitted SYN for the same request socket, and send a SYNACK from tcp_check_req(). tcp_v4_send_synack() and inet_csk_route_req() read ireq-&gt;ireq_opt under rcu_read_lock() only, and ip_build_and_send_pkt() and ip_options_build() then read opt-&gt;optlen twice. Note that the SYNACK timer itself is not an issue: it holds a reference on its request socket, and inet_csk_reqsk_queue_drop() calls timer_delete_sync() before the child can be freed. Since commit 079096f103fa ("tcp/dccp: install syn_recv requests into ehash table"), request sockets are processed without holding the listener lock, so nothing prevents the child socket from being freed while the SYNACK is still being built. TCP child sockets do not have SOCK_RCU_FREE, and inet_sock_destruct() frees inet_opt with a plain kfree(), leading to a use-after-free in ip_options_build(). A similar issue exists with request socket migration (net.ipv4.tcp_migrate_req=1, or a BPF_SK_REUSEPORT_SELECT_OR_MIGRATE program). reqsk_timer_handler() clones the request socket with inet_reqsk_clone(), so that the old request socket and its clone share the same ireq_opt, then reqsk_migrate_reset() clears the pointer in the old one. Another cpu hold…<br/><br/><b>Source:</b> Fortinet PSIRT &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2d]]></description>
 </item>
 
 <item>
@@ -42,7 +42,7 @@
   <guid isPermaLink="false">https://security.paloaltonetworks.com/cve-2026-111497</guid>
   <pubDate>Sat, 31 Oct 2026 03:15:00 +0000</pubDate>
   <source>Palo Alto Networks Security Advisories</source>
-  <description><![CDATA[<b>Why this matters: Infrastructure/vendor signal — compare your installed versions and support status.</b><br/><br/><b>Source:</b> Palo Alto Networks Security Advisories &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3d]]></description>
+  <description><![CDATA[<b>Why this matters: Infrastructure/vendor signal — compare your installed versions and support status.</b><br/><br/><b>Source:</b> Palo Alto Networks Security Advisories &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4d]]></description>
 </item>
 
 <item>
@@ -220,7 +220,7 @@
 <tr>
 <th>Indicators of Compromise</th>
 <td>
-<p>For a downloadable copy of indicators of compromise, se…<br/><br/><b>Source:</b> CISA Known Exploited Vulnerabilities &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 90d]]></description>
+<p>For a downloadable copy of indicators of compromise, se…<br/><br/><b>Source:</b> CISA Known Exploited Vulnerabilities &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 91d]]></description>
 </item>
 
 </channel>
