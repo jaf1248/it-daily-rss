@@ -3,8 +3,38 @@
 <channel>
   <title>Joe — Vendor Security Advisories</title>
   <description>Security advisories and PSIRTs from network and infrastructure vendors in use.</description>
-  <lastBuildDate>Thu, 05 Nov 2026 07:41:24 +0000</lastBuildDate>
+  <lastBuildDate>Thu, 05 Nov 2026 22:31:04 +0000</lastBuildDate>
   
+<item>
+  <title>🟠 CISA Adds One Known Exploited Vulnerability to Catalog</title>
+  <link>https://www.cisa.gov/news-events/alerts/2026/11/04/cisa-adds-one-known-exploited-vulnerability-catalog</link>
+  <guid isPermaLink="false">https://www.cisa.gov/news-events/alerts/2026/11/04/cisa-adds-one-known-exploited-vulnerability-catalog</guid>
+  <pubDate>Wed, 04 Nov 2026 12:00:00 +0000</pubDate>
+  <source>CISA Alerts</source>
+  <description><![CDATA[<b>Why this matters: Could affect sign-ins, MFA, or Conditional Access — watch for authentication issues.</b><br/><p>CISA has added one new vulnerability to its&nbsp;<a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog">Known Exploited Vulnerabilities (KEV) Catalog</a>, based on evidence of active exploitation.</p>
+<ul type="disc">
+<li><a href="https://www.cve.org/CVERecord?id=CVE-2024-27834" target="_blank">CVE-2024-27834</a> Apple Multiple Products Improper Authentication Vulnerability</li>
+</ul>
+<p>This type of vulnerability is a frequent attack vector for malicious cyber actors and poses significant risks to the federal enterprise.</p>
+<p><a href="https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk">Binding Operational Directive (BOD) 26-04: Prioritizing Security Updates Based on Risk</a> establishes vulnerability management requirements for Federal Civilian Executive Branch (FCEB) agencies. BOD 26-04 reinforces the importance of the KEV Catalog and requires federal agencies to prioritize rapid remediation of high-risk vulnerabilities, specifically those identified by Common Vulnerabilities and Exposures (CVEs) listed in CISA’s KEV Catalog on publicly exposed assets that grant total control of the asset post-exploitation, while deferring action for lower-risk vulnerabilities. BOD 26-04 further establishes basic expectations for when agencies must check whether threat actors compromised the system before the patch was applied.</p>
+<p>While BOD 26-04 applies only to FCEB agencies, CISA encourages all or…<br/><br/><b>Source:</b> CISA Alerts &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 1d]]></description>
+</item>
+
+<item>
+  <title>🟠 CISA Adds One Known Exploited Vulnerability to Catalog</title>
+  <link>https://www.cisa.gov/news-events/alerts/2026/11/03/cisa-adds-one-known-exploited-vulnerability-catalog</link>
+  <guid isPermaLink="false">https://www.cisa.gov/news-events/alerts/2026/11/03/cisa-adds-one-known-exploited-vulnerability-catalog</guid>
+  <pubDate>Tue, 03 Nov 2026 12:00:00 +0000</pubDate>
+  <source>CISA Alerts</source>
+  <description><![CDATA[<b>Why this matters: Hospitality-system impact — consider guest services, PMS/POS, and property operations.</b><br/><p>CISA has added one new vulnerability to its&nbsp;<a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog">Known Exploited Vulnerabilities (KEV) Catalog</a>, based on evidence of active exploitation.</p>
+<ul type="disc">
+<li><a href="https://www.cve.org/CVERecord?id=CVE-2026-119977" target="_blank">CVE-2026-119977</a> WordPress Core Time-of-check Time-of-use (TOCTOU) Race Condition Vulnerability</li>
+</ul>
+<p>This type of vulnerability is a frequent attack vector for malicious cyber actors and poses significant risks to the federal enterprise.</p>
+<p><a href="https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk">Binding Operational Directive (BOD) 26-04: Prioritizing Security Updates Based on Risk</a> establishes vulnerability management requirements for Federal Civilian Executive Branch (FCEB) agencies. BOD 26-04 reinforces the importance of the KEV Catalog and requires federal agencies to prioritize rapid remediation of high-risk vulnerabilities, specifically those identified by Common Vulnerabilities and Exposures (CVEs) listed in CISA’s KEV Catalog on publicly exposed assets that grant total control of the asset post-exploitation, while deferring action for lower-risk vulnerabilities. BOD 26-04 further establishes basic expectations for when agencies must check whether threat actors compromised the system before the patch was applied.</p>
+<p>While BOD 26-04 applies only to FCEB agencies, CIS…<br/><br/><b>Source:</b> CISA Alerts &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2d]]></description>
+</item>
+
 <item>
   <title>🟠 Linux kernel RCE CVE-2026-98432</title>
   <link>https://fortiguard.fortinet.com/psirt/FG-IR-26-188</link>
@@ -18,7 +48,7 @@
  9.8
 </p>
 <p>
- CVE-2026-98432:ipv4: free inet_opt and ireq_opt after an RCU grace period tcp_v4_syn_recv_sock() transfers ownership of ireq-&gt;ireq_opt to the child socket (newinet-&gt;inet_opt) without copying it. Another cpu can concurrently process a retransmitted SYN for the same request socket, and send a SYNACK from tcp_check_req(). tcp_v4_send_synack() and inet_csk_route_req() read ireq-&gt;ireq_opt under rcu_read_lock() only, and ip_build_and_send_pkt() and ip_options_build() then read opt-&gt;optlen twice. Note that the SYNACK timer itself is not an issue: it holds a reference on its request socket, and inet_csk_reqsk_queue_drop() calls timer_delete_sync() before the child can be freed. Since commit 079096f103fa ("tcp/dccp: install syn_recv requests into ehash table"), request sockets are processed without holding the listener lock, so nothing prevents the child socket from being freed while the SYNACK is still being built. TCP child sockets do not have SOCK_RCU_FREE, and inet_sock_destruct() frees inet_opt with a plain kfree(), leading to a use-after-free in ip_options_build(). A similar issue exists with request socket migration (net.ipv4.tcp_migrate_req=1, or a BPF_SK_REUSEPORT_SELECT_OR_MIGRATE program). reqsk_timer_handler() clones the request socket with inet_reqsk_clone(), so that the old request socket and its clone share the same ireq_opt, then reqsk_migrate_reset() clears the pointer in the old one. Another cpu hold…<br/><br/><b>Source:</b> Fortinet PSIRT &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 2d]]></description>
+ CVE-2026-98432:ipv4: free inet_opt and ireq_opt after an RCU grace period tcp_v4_syn_recv_sock() transfers ownership of ireq-&gt;ireq_opt to the child socket (newinet-&gt;inet_opt) without copying it. Another cpu can concurrently process a retransmitted SYN for the same request socket, and send a SYNACK from tcp_check_req(). tcp_v4_send_synack() and inet_csk_route_req() read ireq-&gt;ireq_opt under rcu_read_lock() only, and ip_build_and_send_pkt() and ip_options_build() then read opt-&gt;optlen twice. Note that the SYNACK timer itself is not an issue: it holds a reference on its request socket, and inet_csk_reqsk_queue_drop() calls timer_delete_sync() before the child can be freed. Since commit 079096f103fa ("tcp/dccp: install syn_recv requests into ehash table"), request sockets are processed without holding the listener lock, so nothing prevents the child socket from being freed while the SYNACK is still being built. TCP child sockets do not have SOCK_RCU_FREE, and inet_sock_destruct() frees inet_opt with a plain kfree(), leading to a use-after-free in ip_options_build(). A similar issue exists with request socket migration (net.ipv4.tcp_migrate_req=1, or a BPF_SK_REUSEPORT_SELECT_OR_MIGRATE program). reqsk_timer_handler() clones the request socket with inet_reqsk_clone(), so that the old request socket and its clone share the same ireq_opt, then reqsk_migrate_reset() clears the pointer in the old one. Another cpu hold…<br/><br/><b>Source:</b> Fortinet PSIRT &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3d]]></description>
 </item>
 
 <item>
@@ -31,6 +61,21 @@
 </item>
 
 <item>
+  <title>🟠 CISA Adds Two Known Exploited Vulnerabilities to Catalog</title>
+  <link>https://www.cisa.gov/news-events/alerts/2026/10/30/cisa-adds-two-known-exploited-vulnerabilities-catalog</link>
+  <guid isPermaLink="false">https://www.cisa.gov/news-events/alerts/2026/10/30/cisa-adds-two-known-exploited-vulnerabilities-catalog</guid>
+  <pubDate>Fri, 30 Oct 2026 12:00:00 +0000</pubDate>
+  <source>CISA Alerts</source>
+  <description><![CDATA[<b>Why this matters: Could affect sign-ins, MFA, or Conditional Access — watch for authentication issues.</b><br/><p>CISA has added two new vulnerabilities to its <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog">Known Exploited Vulnerabilities (KEV) Catalog</a>, based on evidence of active exploitation.</p>
+<ul>
+<li><a href="https://www.cve.org/CVERecord?id=CVE-2026-111357" target="_blank">CVE-2026-111357</a> Ivanti Connect Secure Missing Authentication for Critical Function Vulnerability</li>
+<li><a href="https://www.cve.org/CVERecord?id=CVE-2026-118527" target="_blank">CVE-2026-118527</a> Ivanti Connect Secure Generation of Predictable Numbers or Identifiers Vulnerability</li>
+</ul>
+<p>These types of vulnerabilities are a frequent attack vector for malicious cyber actors and pose significant risks to the federal enterprise.&nbsp;</p>
+<p><a href="https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk">Binding Operational Directive (BOD) 26-04: Prioritizing Security Updates Based on Risk</a> establishes vulnerability management requirements for Federal Civilian Executive Branch (FCEB) agencies. BOD 26-04 reinforces the importance of the KEV Catalog and requires federal agencies to prioritize rapid remediation of high-risk vulnerabilities, specifically those identified by Common Vulnerabilities and Exposures (CVEs) listed in CISA’s KEV Catalog on publicly exposed assets that grant total control of the asset post-exploitation, while deferring action for lower-risk vulnerabilities. BOD 26-04 further establ…<br/><br/><b>Source:</b> CISA Alerts &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 6d]]></description>
+</item>
+
+<item>
   <title>🟠 CVE-2026-109618 Impact of Critical Vulnerabilities in PHP (CVE-2026-109618, CVE-2026-109619) on Palo Alto Networks Products  (Severity: CRITICAL)</title>
   <link>https://security.paloaltonetworks.com/CVE-2026-109618</link>
   <guid isPermaLink="false">https://security.paloaltonetworks.com/cve-2026-109618</guid>
@@ -40,144 +85,150 @@
 </item>
 
 <item>
-  <title>🔴 Node2Shell CVEs</title>
-  <link>https://fortiguard.fortinet.com/psirt/FG-IR-26-187</link>
-  <guid isPermaLink="false">https://fortiguard.fortinet.com/psirt/fg-ir-26-187</guid>
-  <pubDate>Mon, 26 Oct 2026 07:00:00 +0000</pubDate>
-  <source>Fortinet PSIRT</source>
-  <description><![CDATA[<b>Why this matters: Remote-code-execution risk — assess exposure and patch or mitigate quickly.</b><br/><p>
- <strong>
-  CVSSv3 Score:
- </strong>
- 9.8
-</p>
-<p>
- CVE-2026-105482 - (high)This vulnerability affects Node.js 26.x, 24.x, and 22.x.CVE-2026-105483 - (high)This vulnerability affects Node.js 26.x and 24.x.CVE-2026-106069 - (high)This vulnerability affects Node.js 26.x, 24.x, and 22.x.CVE-2026-111497 - (high)A flaw in Node.js can cause Node.js Brotli decoder out-of-bounds write permits remote code execution.This vulnerability affects Node.js 26.x, 24.x, and 22.x.CVE-2026-105481 - (medium)This vulnerability affects Node.js 26.x, 24.x, and 22.x.CVE-2026-106072 - (medium)This vulnerability affects Node.js 26.x, 24.x, and 22.x.CVE-2026-106074 - (medium)This vulnerability affects Node.js 26.x, 24.x, and 22.x.CVE-2026-106070 - (low)This vulnerability affects Node.js 26.x.CVE-2026-106071 - (low)This vulnerability affects Node.js 26.x.CVE-2026-106073 - (low)This vulnerability affects Node.js 26.x, 24.x, and 22.x.
-</p>
-<p>
- <em>
-  Revised on 2026-11-03 00:00:00
- </em>
-</p><br/><br/><b>Source:</b> Fortinet PSIRT &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 10d]]></description>
+  <title>🔴 #StopRansomware: SafePay Ransomware</title>
+  <link>https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a</link>
+  <guid isPermaLink="false">https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a</guid>
+  <pubDate>Mon, 19 Oct 2026 15:18:07 +0000</pubDate>
+  <source>CISA Known Exploited Vulnerabilities</source>
+  <description><![CDATA[<b>Why this matters: Elevated ransomware risk — validate backups, endpoint protection, and recovery readiness.</b><br/><h2><strong>Advisory at a Glance</strong></h2>
+<table>
+<tbody>
+<tr>
+<th>Title</th>
+<td>#StopRansomware: SafePay Ransomware</td>
+</tr>
+<tr>
+<th>Original Publication&nbsp;</th>
+<td>October 20, 2026</td>
+</tr>
+<tr>
+<th>Executive Summary</th>
+<td>
+<p>This advisory details recent activity by the SafePay ransomware group. SafePay actors have been highly active since August 2024, targeting businesses and critical infrastructure across North America, South America, Europe, and Australia. SafePay actors typically gain access to networks by stealing or guessing passwords, exploiting vulnerabilities in security systems, and using phishing tactics.&nbsp;</p>
+<p>Once inside the network, SafePay actors establish control by creating new accounts or taking over existing ones. They then use legitimate system tools to move through the network, identify valuable files, and disable security protections to avoid detection. Next, they encrypt the victim’s files, making them inaccessible, and leave a ransom note demanding payment in cryptocurrency. This advisory urges organizations to follow recommended security measures to reduce the risk and impact of SafePay ransomware attacks.</p>
+</td>
+</tr>
+<tr>
+<th>Affected Products</th>
+<td>
+<ul type="square">
+<li><a href="https://www.cve.org/CVERecord?id=CVE-2020-3259" target="_blank">CVE-2020-3259</a> [<a href="https://cwe.mitre.org/data/definitions/200.html" target="_blank">Common Weakness Enumeration (CWE)-200: Exposure of Sensitive Information to an Un…<br/><br/><b>Source:</b> CISA Known Exploited Vulnerabilities &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 17d]]></description>
 </item>
 
 <item>
-  <title>🔴 PHP2Shell core RCE vulnerability patches (CVE-2026-109618 and CVE-2026-109619)</title>
-  <link>https://fortiguard.fortinet.com/psirt/FG-IR-26-186</link>
-  <guid isPermaLink="false">https://fortiguard.fortinet.com/psirt/fg-ir-26-186</guid>
-  <pubDate>Wed, 21 Oct 2026 07:00:00 +0000</pubDate>
-  <source>Fortinet PSIRT</source>
-  <description><![CDATA[<b>Why this matters: Remote-code-execution risk — assess exposure and patch or mitigate quickly.</b><br/><p>
- <strong>
-  CVSSv3 Score:
- </strong>
- 9.8
-</p>
-<p>
- CVE-2026-109618PHP uses longjmp() for out-of-memory (OOM) errors to exit the current context and abort handling of the request. Some contexts may not properly account for this scenario and leave request memory in an uninitialized state before performing an allocation. The subsequent request cleanup procedure may read or branch on this memory. Multiple OOM strategies can consistently trigger this condition and lead to remote code execution (RCE).CVE-2026-109619PHP has various global state that temporarily points into request memory. In some scenarios, global state may not be correctly reset, or may be repopulated after being reset. The global state may then refer to request memory even after it has been freed. Subsequent requests may read or branch on this stale state before it is fully initialized. Multiple strategies can trigger this condition and produce remote code execution (RCE).
-</p>
-<p>
- <em>
-  Revised on 2026-10-28 00:00:00
- </em>
-</p><br/><br/><b>Source:</b> Fortinet PSIRT &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 15d]]></description>
+  <title>🔴 Chinese Government-linked Cyber Threat Actors Combine Automated and Hands-on Hacking Tools to Steal Sensitive Data</title>
+  <link>https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a</link>
+  <guid isPermaLink="false">https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a</guid>
+  <pubDate>Tue, 06 Oct 2026 12:22:53 +0000</pubDate>
+  <source>CISA Known Exploited Vulnerabilities</source>
+  <description><![CDATA[<b>Why this matters: Elevated ransomware risk — validate backups, endpoint protection, and recovery readiness.</b><br/><div class="OutlineElement Ltr SCXW40950166 BCX8">
+<h2><strong>Advisory at a Glance&nbsp;</strong></h2>
+<table dir="ltr">
+<tbody>
+<tr>
+<th>
+<div class="TableCellContent SCXW40950166 BCX8">
+<div class="OutlineElement Ltr SCXW40950166 BCX8">
+<p><strong>Title&nbsp;</strong></p>
+</div>
+</div>
+</th>
+<td>
+<div class="TableCellContent SCXW40950166 BCX8">
+<div class="OutlineElement Ltr SCXW40950166 BCX8">
+<p>Chinese Government-linked Cyber Threat Actors Combine Automated and Hands-on Hacking Tools to Steal Sensitive Data&nbsp;</p>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<th>
+<div class="TableCellContent SCXW40950166 BCX8">
+<div class="OutlineElement Ltr SCXW40950166 BCX8">
+<p><strong>Original Publication&nbsp;</strong></p>
+</div>
+</div>
+</th>
+<td>
+<div class="TableCellContent SCXW40950166 BCX8">
+<div class="OutlineElement Ltr SCXW40950166 BCX8">
+<p><strong>October 8, 2026</strong>&nbsp;</p>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<th>
+<div class="TableCellContent SCXW40950166 BCX8">
+<div class="OutlineElement Ltr SCXW40950166 BCX8">
+<p><strong>Executive Summary&nbsp;</strong></p>
+</div>
+</div>
+</th>
+<td>
+<div class="TableCellContent SCXW40950166 BCX8">
+<div class="OutlineElement Ltr SCXW40950166 BCX8">
+<p>Chinese government-linked cyber threat actors, enabled by the Integrity Technology Group, are combining automated scanning tools, large-scale botnets, and hands-on exploitation techniques to target and steal sensitive data from organizations worldwide, including US critical infrastructure sectors. Th…<br/><br/><b>Source:</b> CISA Known Exploited Vulnerabilities &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 30d]]></description>
 </item>
 
 <item>
-  <title>🔴 CVE-2026-0322 PAN-OS: Authenticated Remote Code Execution (RCE) in the Management Interface (Severity: HIGH)</title>
-  <link>https://security.paloaltonetworks.com/CVE-2026-0322</link>
-  <guid isPermaLink="false">https://security.paloaltonetworks.com/cve-2026-0322</guid>
-  <pubDate>Thu, 15 Oct 2026 18:30:00 +0000</pubDate>
-  <source>Palo Alto Networks Security Advisories</source>
-  <description><![CDATA[<b>Why this matters: Remote-code-execution risk — assess exposure and patch or mitigate quickly.</b><br/><br/><b>Source:</b> Palo Alto Networks Security Advisories &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 20d]]></description>
+  <title>🔴 Critical Zero-Day Vulnerabilities Exploited in Citrix NetScaler ADC, Gateway</title>
+  <link>https://www.cisa.gov/news-events/alerts/2026/09/27/critical-zero-day-vulnerabilities-exploited-citrix-netscaler-adc-gateway</link>
+  <guid isPermaLink="false">https://www.cisa.gov/news-events/alerts/2026/09/27/critical-zero-day-vulnerabilities-exploited-citrix-netscaler-adc-gateway</guid>
+  <pubDate>Sun, 27 Sep 2026 12:00:00 +0000</pubDate>
+  <source>CISA Alerts</source>
+  <description><![CDATA[<b>Why this matters: Remote-code-execution risk — assess exposure and patch or mitigate quickly.</b><br/><div class="SCXW18458767 BCX8">
+<div class="OutlineElement Ltr SCXW18458767 BCX8">
+<p><strong>Update</strong> <strong>October 9, 2026</strong>:&nbsp;</p>
+</div>
+<div class="OutlineElement Ltr SCXW18458767 BCX8">
+<p><em>CISA has updated this Alert to: (1) include CVE-2026-107406; (2) include CVE-2026-88779 following its addition to the KEV Catalog on Oct. 4, 2026; (3) clarify the potential relationship between CVE-2026-88779 and CVE-2026-88771; and (4) emphasize the importance of promptly applying patches for CVE-2026-88771 through CVE-2026-88779 and CVE-2026-107406, as well as reviewing Citrix guidance for suspected or confirmed compromises involving NetScaler ADC or Gateway.</em>&nbsp;</p>
+</div>
+<div class="OutlineElement Ltr SCXW18458767 BCX8">
+<p><strong>Update</strong> <strong>October 2, 2026</strong>:&nbsp;</p>
+</div>
+<div class="OutlineElement Ltr SCXW18458767 BCX8">
+<p><em>CISA has updated this Alert to provide a SIGMA detection rule resource to help identify potentially suspicious activity.</em>&nbsp;</p>
+</div>
+<div class="OutlineElement Ltr SCXW18458767 BCX8">
+<p>CISA is amplifying Citrix’s disclosure of ten new vulnerabilities affecting Citrix NetScaler ADC and Citrix NetScaler Gateway products: <a href="https://www.cve.org/CVERecord?id=CVE-2026-88771" target="_blank"><u>CVE-2026-88771</u></a>, <a href="https://www.cve.org/CVERecord?id=CVE-2026-88772" target="_blank"><u>CVE-2026-88772</u></a>, <a href="https://www.cve.org/CVERecord?id=CVE-2026-88773" target="_blan…<br/><br/><b>Source:</b> CISA Alerts &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 39d]]></description>
 </item>
 
 <item>
-  <title>🔴 Fabric API Authentication bypass</title>
-  <link>https://fortiguard.fortinet.com/psirt/FG-IR-26-179</link>
-  <guid isPermaLink="false">https://fortiguard.fortinet.com/psirt/fg-ir-26-179</guid>
-  <pubDate>Tue, 13 Oct 2026 07:00:00 +0000</pubDate>
-  <source>Fortinet PSIRT</source>
-  <description><![CDATA[<b>Why this matters: Authentication bypass — review access controls and look for unauthorized access.</b><br/><p>
- <strong>
-  CVSSv3 Score:
- </strong>
- 4.9
-</p>
-<p>
- A Use of Hard-coded Cryptographic Key [CWE-321] in FortiSandbox and FortiSandbox Cloud API may allow an unauthenticated attacker to access some endpoints via specially crafted HTTP requests
-</p>
-<p>
- <em>
-  Revised on 2026-10-13 00:00:00
- </em>
-</p><br/><br/><b>Source:</b> Fortinet PSIRT &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 23d]]></description>
-</item>
-
-<item>
-  <title>🔴 Improper access control and session management in the web management interface</title>
-  <link>https://fortiguard.fortinet.com/psirt/FG-IR-26-185</link>
-  <guid isPermaLink="false">https://fortiguard.fortinet.com/psirt/fg-ir-26-185</guid>
-  <pubDate>Tue, 13 Oct 2026 07:00:00 +0000</pubDate>
-  <source>Fortinet PSIRT</source>
-  <description><![CDATA[<b>Why this matters: Authentication bypass — review access controls and look for unauthorized access.</b><br/><p>
- <strong>
-  CVSSv3 Score:
- </strong>
- 9.6
-</p>
-<p>
- An Authentication Bypass Using an Alternate Path or Channel vulnerability [CWE-288] in FortiSandbox GUI may allow a remote unauthenticated attacker to bypass authentication via crafted HTTP requests.
-</p>
-<p>
- <em>
-  Revised on 2026-10-13 00:00:00
- </em>
-</p><br/><br/><b>Source:</b> Fortinet PSIRT &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 23d]]></description>
-</item>
-
-<item>
-  <title>🔴 Improper limitation of a pathname to a restricted directory</title>
-  <link>https://fortiguard.fortinet.com/psirt/FG-IR-26-175</link>
-  <guid isPermaLink="false">https://fortiguard.fortinet.com/psirt/fg-ir-26-175</guid>
-  <pubDate>Thu, 01 Oct 2026 07:00:00 +0000</pubDate>
-  <source>Fortinet PSIRT</source>
-  <description><![CDATA[<b>Why this matters: Infrastructure/vendor signal — compare your installed versions and support status.</b><br/><p>
- <strong>
-  CVSSv3 Score:
- </strong>
- 9.8
-</p>
-<p>
- An Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')  [CWE-22] and Improper Neutralization of NULL Byte or NULL Character [CWE-158] vulnerability may allow an unauthenticated attacker to write arbitrary files on the underlying system via crafted HTTP or HTTPS requests.This has been reported to be exploited in the wild, customers are urged to apply the workaround below.
-</p>
-<p>
- <em>
-  Revised on 2026-10-07 00:00:00
- </em>
-</p><br/><br/><b>Source:</b> Fortinet PSIRT &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 35d]]></description>
-</item>
-
-<item>
-  <title>🔴 FGFM Authentication Weakening via CLI Configuration</title>
-  <link>https://fortiguard.fortinet.com/psirt/FG-IR-26-160</link>
-  <guid isPermaLink="false">https://fortiguard.fortinet.com/psirt/fg-ir-26-160</guid>
-  <pubDate>Wed, 12 Aug 2026 07:00:00 +0000</pubDate>
-  <source>Fortinet PSIRT</source>
-  <description><![CDATA[<b>Why this matters: Authentication bypass — review access controls and look for unauthorized access.</b><br/><p>
- <strong>
-  CVSSv3 Score:
- </strong>
- 8.1
-</p>
-<p>
- An Authentication Bypass Using an Alternate Path or Channel [CWE-288] vulnerability in FortiManager and FortiManager Cloud may allow a remote unauthenticated attacker to impersonate any FortiGate managed by the FortiManager with a specific CLI option set via crafted FGFM requests if the attacker has a valid certificate.
-</p>
-<p>
- <em>
-  Revised on 2026-08-12 00:00:00
- </em>
-</p><br/><br/><b>Source:</b> Fortinet PSIRT &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 85d]]></description>
+  <title>🔴 #StopRansomware: Gunra Ransomware</title>
+  <link>https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-222a</link>
+  <guid isPermaLink="false">https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-222a</guid>
+  <pubDate>Wed, 05 Aug 2026 08:27:56 +0000</pubDate>
+  <source>CISA Known Exploited Vulnerabilities</source>
+  <description><![CDATA[<b>Why this matters: Elevated ransomware risk — validate backups, endpoint protection, and recovery readiness.</b><br/><h2><strong>Advisory at a Glance</strong></h2>
+<table>
+<tbody>
+<tr>
+<th>Title</th>
+<td>#StopRansomware: Gunra Ransomware</td>
+</tr>
+<tr>
+<th>Original Publication</th>
+<td>August 10, 2026</td>
+</tr>
+<tr>
+<th>Executive Summary</th>
+<td>Gunra is a ransomware-as-a-service (RaaS) used by affiliates to target government, critical infrastructure, and other organizations. The Gunra ransomware variant first appeared in 2025 and expanded to RaaS operations in 2026. The actors leverage a double-extortion model, both encrypting data and threatening to publish exfiltrated data to a dedicated leak site (DLS) if the ransom is not paid. This advisory provides technical details of the activity, as well as tailored detection and mitigation guidance to protect at-risk organizations from Gunra.</td>
+</tr>
+<tr>
+<th>Key Actions</th>
+<td>
+<ul type="square">
+<li><strong>Prioritize patching known exploited vulnerabilities in internet-facing systems</strong>, including virtual private network (VPN) gateways and remote desktop protocol (RDP)-exposed infrastructure.</li>
+<li><strong>Implement and test offline, immutable backups</strong> stored in a physically separate, segmented location to ensure recoverability without ransom payment.</li>
+<li><strong>Segment networks</strong> to restrict lateral movement from an initially compromised device to other systems in the organization.</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Indicators of Compromise</th>
+<td>
+<p>For a downloadable copy of indicators of compromise, se…<br/><br/><b>Source:</b> CISA Known Exploited Vulnerabilities &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 92d]]></description>
 </item>
 
 </channel>

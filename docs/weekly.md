@@ -1,25 +1,45 @@
 # IT Weekly Intelligence Briefing
 **Period:** October 29 – November 05, 2026  
-**Generated:** 2026-11-05 07:41 UTC  
-**Items reviewed:** 154  
+**Generated:** 2026-11-05 22:31 UTC  
+**Items reviewed:** 155  
 
 ## ⚡ Top Actions This Week
 
 1. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _DreamHost confirms data breach exposed FTP logins and webmail sessions_  
+   _DigiCert data breach exposes customer information, identity documents_  
    Source: BleepingComputer  
 
-2. **Audit third-party software dependencies and review vendor access.**  
-   _APT29-Linked Hackers Hijack Web Analytics Script to Deliver iOS and Android Exploits_  
+2. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
+   _ThreatsDay: Apache OFBiz RCE, DreamHost Breach, DeFi Site Hijacks + 17 More Stories_  
    Source: The Hacker News  
 
 3. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _AI-Linked Breaches Mount as WorkOS, Northflank, Trigger.dev Disclose Hacks_  
-   Source: SecurityWeek  
+   _5 Active Cyber Threats That Put US Enterprises at Risk in October 2026_  
+   Source: The Hacker News  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [DigiCert data breach exposes customer information, identity documents](https://www.bleepingcomputer.com/news/security/digicert-data-breach-exposes-customer-information-identity-documents/)
+**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Nov 05  
+**Why it matters:** Potential credential or data exposure.  
+**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
+
+### [ThreatsDay: Apache OFBiz RCE, DreamHost Breach, DeFi Site Hijacks + 17 More Stories](https://thehackernews.com/2026/11/threatsday-apache-ofbiz-rce-dreamhost.html)
+**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Nov 05  
+**Why it matters:** Potential credential or data exposure.  
+**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
+
+### [5 Active Cyber Threats That Put US Enterprises at Risk in October 2026](https://thehackernews.com/2026/11/5-active-cyber-threats-that-put-us.html)
+**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Nov 05  
+**Why it matters:** Potential credential or data exposure.  
+**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
+
+### [Zyxel GS1900 Patch Fails to Block Zero-Day Exploit Allowing Root Command Execution](https://thehackernews.com/2026/11/zyxel-gs1900-patch-fails-to-block-zero.html)
+**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Nov 05  
+**Why it matters:** General awareness item.  
+**Recommended action:** Apply emergency patch or mitigation now; check vendor advisory for workarounds.  
 
 ### [DreamHost confirms data breach exposed FTP logins and webmail sessions](https://www.bleepingcomputer.com/news/security/dreamhost-confirms-data-breach-exposed-ftp-logins-and-webmail-sessions/)
 **Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Nov 04  
@@ -31,65 +51,45 @@
 **Why it matters:** Third-party/software supply chain integrity risk.  
 **Recommended action:** Audit third-party software dependencies and review vendor access.  
 
-### [AI-Linked Breaches Mount as WorkOS, Northflank, Trigger.dev Disclose Hacks](https://www.securityweek.com/ai-linked-breaches-mount-as-workos-northflank-trigger-dev-disclose-hacks/)
-**Source:** SecurityWeek &nbsp;·&nbsp; **Date:** Nov 04  
-**Why it matters:** Potential credential or data exposure.  
-**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
-
-### [CISA flags WordPress RCE flaw as actively exploited in attacks](https://www.bleepingcomputer.com/news/security/cisa-flags-wordpress-rce-flaw-as-actively-exploited-in-attacks/)
-**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Nov 04  
-**Why it matters:** General awareness item.  
-**Recommended action:** Prioritize patching of affected systems; check for internet-exposed attack surface.  
-
-### [Malicious cPGuard Updates Served in OpsShield Supply Chain Attack](https://www.securityweek.com/malicious-cpguard-updates-served-in-opsshield-supply-chain-attack/)
-**Source:** SecurityWeek &nbsp;·&nbsp; **Date:** Nov 04  
-**Why it matters:** Third-party/software supply chain integrity risk.  
-**Recommended action:** Audit third-party software dependencies and review vendor access.  
-
-### [Hackers use n-day exploits in zero-click attacks on iOS, Android devices](https://www.bleepingcomputer.com/news/security/hackers-use-n-day-exploits-in-zero-click-attacks-on-ios-android-devices/)
-**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Nov 04  
-**Why it matters:** General awareness item.  
-**Recommended action:** Review and assess impact on your environment.  
-
 ---
 
 ## 🟠 Important — Review This Week
 
-- [Hackers Exploit Patched Apple Flaw to Deliver Info-Stealing Malware, CISA Says](https://thehackernews.com/2026/11/hackers-exploit-patched-apple-flaw-to.html)  
+- [OpenAI’s GPT-6 Astra silently obstructed safety research tasks](https://www.bleepingcomputer.com/news/security/openais-gpt-6-astra-silently-obstructed-safety-research-tasks/)  
+  **BleepingComputer** · Nov 05 · _General awareness item._  
+
+- [OpenSSH flaw lets attackers log into password-disabled Linux accounts](https://www.bleepingcomputer.com/news/security/openssh-flaw-lets-attackers-log-into-password-disabled-linux-accounts/)  
+  **BleepingComputer** · Nov 05 · _General awareness item._  
+
+- [AI Agents Got Root on Linux via 948 Kernel Flaws in OpenAI Research](https://www.securityweek.com/ai-agents-got-root-on-linux-via-948-kernel-flaws-in-openai-research/)  
+  **SecurityWeek** · Nov 05 · _General awareness item._  
+
+- [Researchers Bypass ChatGPT Lockdown Mode to Exfiltrate Chats Without User Interaction](https://thehackernews.com/2026/11/researchers-bypass-chatgpt-lockdown.html)  
   **The Hacker News** · Nov 05 · _General awareness item._  
 
-- [OpenAI AI Pipeline Generates 948 Linux Root Escalation Exploits in 30-Hour Run](https://thehackernews.com/2026/11/openai-ai-pipeline-generates-948-linux.html)  
+- [Vulnerability Scans for Older Cisco IOS Vulnerability / Opt-Out Headers, (Thu, Nov 5th)](https://isc.sans.edu/diary/rss/33492)  
+  **SANS Internet Storm Center** · Nov 05 · _General awareness item._  
+
+- [Cyberattack Hits French Blood Bank Site but No Blood Products Are Compromised](https://www.securityweek.com/cyberattack-hits-french-blood-bank-site-but-no-blood-products-are-compromised/)  
+  **SecurityWeek** · Nov 05 · _General awareness item._  
+
+- [Cisco, WatchGuard Release Patches; SonicWall Won’t Fix GMS Flaws](https://www.securityweek.com/cisco-watchguard-release-patches-sonicwall-wont-fix-gms-flaws/)  
+  **SecurityWeek** · Nov 05 · _Possible impact to authentication and sign-in flows._  
+
+- [Is Your Exposure Management Platform Leaving You Exposed? Five Tests to Find Out](https://thehackernews.com/2026/11/is-your-exposure-management-platform.html)  
   **The Hacker News** · Nov 05 · _General awareness item._  
-
-- [Zyxel fixes zero-day exploited to hack nearly 1,000 network switches](https://www.bleepingcomputer.com/news/security/zyxel-fixes-zero-day-exploited-to-hack-nearly-1-000-network-switches/)  
-  **BleepingComputer** · Nov 04 · _General awareness item._  
-
-- [SonicWall Won't Patch EoL GMS Flaws That Could Expose Files, Alter Database Records](https://thehackernews.com/2026/11/sonicwall-wont-patch-eol-gms-flaws-that.html)  
-  **The Hacker News** · Nov 04 · _General awareness item._  
-
-- [Chromium CVE-2026-119260: Use after free](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-119260)  
-  **Microsoft Security Response Center** · Nov 04 · _General awareness item._  
-
-- [Chromium CVE-2026-118321: Use after free](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-118321)  
-  **Microsoft Security Response Center** · Nov 04 · _General awareness item._  
-
-- [Chromium CVE-2026-118314: Incorrect reference resolution](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-118314)  
-  **Microsoft Security Response Center** · Nov 04 · _General awareness item._  
-
-- [Chromium CVE-2026-118309: Incorrect reference resolution](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-118309)  
-  **Microsoft Security Response Center** · Nov 04 · _General awareness item._  
 
 ---
 
 ## 🔵 FYI — General Awareness
 
-- [Want to Rent an Internet Address at the White House?](https://krebsonsecurity.com/2026/11/want-to-rent-an-internet-address-at-the-white-house/) — Krebs on Security
-- [Vercel rolls out new protection against stolen session cookie attacks](https://www.bleepingcomputer.com/news/security/vercel-rolls-out-new-protection-against-stolen-session-cookie-attacks/) — BleepingComputer
-- [Cyberattack disrupts blood storage refrigeration systems in France](https://www.bleepingcomputer.com/news/security/cyberattack-disrupts-blood-storage-refrigeration-systems-in-france/) — BleepingComputer
-- [Debian and Ubuntu APT Flaw Lets MitM Attackers Swap Verified Packages and Run Code as Root](https://thehackernews.com/2026/11/debian-and-ubuntu-apt-flaw-lets-mitm.html) — The Hacker News
-- [NIKKE PC game launcher hacked to spread remote access, data-stealing malware](https://www.bleepingcomputer.com/news/security/nikke-pc-game-launcher-hacked-to-spread-remote-access-data-stealing-malware/) — BleepingComputer
-- [Researchers Uncover Prompt Adware Hidden in OpenAI Codex Jailbreak Toolkit](https://thehackernews.com/2026/11/researchers-uncover-prompt-adware.html) — The Hacker News
+- [Fake OpenAI, SpaceX events used to steal Microsoft, Google accounts](https://www.bleepingcomputer.com/news/security/fake-openai-spacex-events-used-to-steal-microsoft-google-accounts/) — BleepingComputer
+- [Nearly 1.5 million exposed secrets targeted in new revocation program](https://www.bleepingcomputer.com/news/security/truffle-security-launches-program-to-revoke-14-million-live-secrets/) — BleepingComputer
+- [New investments to reduce on-premises security risk](https://techcommunity.microsoft.com/blog/microsoft-security-blog/new-investments-to-reduce-on-premises-security-risk/4570381) — Microsoft Security Blog
+- [​​​​What’s new in Microsoft Security: November 2026](https://www.microsoft.com/en-us/security/blog/2026/11/05/whats-new-in-microsoft-security-november-2026/) — Microsoft Security Blog
+- [OpenSSH Issues Emergency Fix for Flaw Letting Long Passwords Bypass SSH Auth on Alpine Linux](https://thehackernews.com/2026/11/openssh-issues-emergency-fix-for-flaw.html) — The Hacker News
+- [Hackers backdoor Linux servers using trojanized CWP web server](https://www.bleepingcomputer.com/news/security/hackers-backdoor-linux-servers-using-trojanized-cwp-web-server/) — BleepingComputer
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 12 critical · 81 important · 61 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 11 critical · 86 important · 58 FYI_
