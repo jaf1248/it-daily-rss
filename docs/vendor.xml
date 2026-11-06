@@ -3,7 +3,7 @@
 <channel>
   <title>Joe — Vendor Security Advisories</title>
   <description>Security advisories and PSIRTs from network and infrastructure vendors in use.</description>
-  <lastBuildDate>Fri, 06 Nov 2026 03:07:01 +0000</lastBuildDate>
+  <lastBuildDate>Fri, 06 Nov 2026 11:47:12 +0000</lastBuildDate>
   
 <item>
   <title>🟠 CISA Adds One Known Exploited Vulnerability to Catalog</title>
@@ -48,7 +48,7 @@
  9.8
 </p>
 <p>
- CVE-2026-98432:ipv4: free inet_opt and ireq_opt after an RCU grace period tcp_v4_syn_recv_sock() transfers ownership of ireq-&gt;ireq_opt to the child socket (newinet-&gt;inet_opt) without copying it. Another cpu can concurrently process a retransmitted SYN for the same request socket, and send a SYNACK from tcp_check_req(). tcp_v4_send_synack() and inet_csk_route_req() read ireq-&gt;ireq_opt under rcu_read_lock() only, and ip_build_and_send_pkt() and ip_options_build() then read opt-&gt;optlen twice. Note that the SYNACK timer itself is not an issue: it holds a reference on its request socket, and inet_csk_reqsk_queue_drop() calls timer_delete_sync() before the child can be freed. Since commit 079096f103fa ("tcp/dccp: install syn_recv requests into ehash table"), request sockets are processed without holding the listener lock, so nothing prevents the child socket from being freed while the SYNACK is still being built. TCP child sockets do not have SOCK_RCU_FREE, and inet_sock_destruct() frees inet_opt with a plain kfree(), leading to a use-after-free in ip_options_build(). A similar issue exists with request socket migration (net.ipv4.tcp_migrate_req=1, or a BPF_SK_REUSEPORT_SELECT_OR_MIGRATE program). reqsk_timer_handler() clones the request socket with inet_reqsk_clone(), so that the old request socket and its clone share the same ireq_opt, then reqsk_migrate_reset() clears the pointer in the old one. Another cpu hold…<br/><br/><b>Source:</b> Fortinet PSIRT &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 3d]]></description>
+ CVE-2026-98432:ipv4: free inet_opt and ireq_opt after an RCU grace period tcp_v4_syn_recv_sock() transfers ownership of ireq-&gt;ireq_opt to the child socket (newinet-&gt;inet_opt) without copying it. Another cpu can concurrently process a retransmitted SYN for the same request socket, and send a SYNACK from tcp_check_req(). tcp_v4_send_synack() and inet_csk_route_req() read ireq-&gt;ireq_opt under rcu_read_lock() only, and ip_build_and_send_pkt() and ip_options_build() then read opt-&gt;optlen twice. Note that the SYNACK timer itself is not an issue: it holds a reference on its request socket, and inet_csk_reqsk_queue_drop() calls timer_delete_sync() before the child can be freed. Since commit 079096f103fa ("tcp/dccp: install syn_recv requests into ehash table"), request sockets are processed without holding the listener lock, so nothing prevents the child socket from being freed while the SYNACK is still being built. TCP child sockets do not have SOCK_RCU_FREE, and inet_sock_destruct() frees inet_opt with a plain kfree(), leading to a use-after-free in ip_options_build(). A similar issue exists with request socket migration (net.ipv4.tcp_migrate_req=1, or a BPF_SK_REUSEPORT_SELECT_OR_MIGRATE program). reqsk_timer_handler() clones the request socket with inet_reqsk_clone(), so that the old request socket and its clone share the same ireq_opt, then reqsk_migrate_reset() clears the pointer in the old one. Another cpu hold…<br/><br/><b>Source:</b> Fortinet PSIRT &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 4d]]></description>
 </item>
 
 <item>
@@ -57,7 +57,7 @@
   <guid isPermaLink="false">https://security.paloaltonetworks.com/cve-2026-111497</guid>
   <pubDate>Sat, 31 Oct 2026 03:15:00 +0000</pubDate>
   <source>Palo Alto Networks Security Advisories</source>
-  <description><![CDATA[<b>Why this matters: Infrastructure/vendor signal — compare your installed versions and support status.</b><br/><br/><b>Source:</b> Palo Alto Networks Security Advisories &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 5d]]></description>
+  <description><![CDATA[<b>Why this matters: Infrastructure/vendor signal — compare your installed versions and support status.</b><br/><br/><b>Source:</b> Palo Alto Networks Security Advisories &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 6d]]></description>
 </item>
 
 <item>
@@ -219,7 +219,7 @@
 <tr>
 <th>Indicators of Compromise</th>
 <td>
-<p>For a downloadable copy of indicators of compromise, se…<br/><br/><b>Source:</b> CISA Known Exploited Vulnerabilities &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 92d]]></description>
+<p>For a downloadable copy of indicators of compromise, se…<br/><br/><b>Source:</b> CISA Known Exploited Vulnerabilities &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 93d]]></description>
 </item>
 
 <item>
@@ -238,7 +238,7 @@
 <p>With support from the UK <a href="https://www.ncsc.gov.uk/information/cyber-league" target="_blank"><u>Cyber League</u></a>, this advisory has been jointly released by the National Cyber Security Centre (NCSC-UK) and international partners:&nbsp;</p>
 <ul>
 <li>Australian Signals Directorate’s (ASD’s) Australian Cyber Security Centre (ACSC)</li>
-<li>Communications Security Establishment Canada’s (CSE’s) Canadian C…<br/><br/><b>Source:</b> CISA Known Exploited Vulnerabilities &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 198d]]></description>
+<li>Communications Security Establishment Canada’s (CSE’s) Canadian C…<br/><br/><b>Source:</b> CISA Known Exploited Vulnerabilities &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 199d]]></description>
 </item>
 
 </channel>
