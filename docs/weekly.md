@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
-**Period:** October 31 – November 07, 2026  
-**Generated:** 2026-11-07 21:25 UTC  
+**Period:** November 01 – November 08, 2026  
+**Generated:** 2026-11-08 01:03 UTC  
 **Items reviewed:** 119  
 
 ## ⚡ Top Actions This Week
@@ -55,14 +55,14 @@
 
 ## 🟠 Important — Review This Week
 
+- [CVE-2026-83844 Windows Paint Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-83844)  
+  **Microsoft Security Response Center** · Nov 07 · _General awareness item._  
+
 - [SonicWall Patches Exploited SonicOS Vulnerability That Weakens VPN Logins](https://www.securityweek.com/sonicwall-patches-exploited-sonicos-bug-that-weakens-vpn-logins/)  
   **SecurityWeek** · Nov 07 · _General awareness item._  
 
 - [SonicWall warns of new SSL-VPN MFA bypass flaw exploited in attacks](https://www.bleepingcomputer.com/news/security/sonicwall-warns-of-new-ssl-vpn-mfa-bypass-flaw-exploited-in-attacks/)  
   **BleepingComputer** · Nov 07 · _General awareness item._  
-
-- [CVE-2026-83844 Windows Paint Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-83844)  
-  **Microsoft Security Response Center** · Nov 06 · _General awareness item._  
 
 - [Hackers Target OpenSSH SSHole Flaw Within Hours of Disclosure, Gain Root on Honeypot](https://thehackernews.com/2026/11/hackers-exploited-openssh-sshole-flaw.html)  
   **The Hacker News** · Nov 06 · _General awareness item._  
