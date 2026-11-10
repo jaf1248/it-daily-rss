@@ -1,25 +1,35 @@
 # IT Weekly Intelligence Briefing
 **Period:** November 03 – November 10, 2026  
-**Generated:** 2026-11-10 01:52 UTC  
-**Items reviewed:** 119  
+**Generated:** 2026-11-10 09:12 UTC  
+**Items reviewed:** 118  
 
 ## ⚡ Top Actions This Week
 
-1. **Validate backups, confirm EDR coverage, and brief incident response team.**  
+1. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
+   _Fireworks AI discloses new breach after cloud provider hack_  
+   Source: BleepingComputer  
+
+2. **Apply emergency patch or mitigation now; check vendor advisory for workarounds.**  
+   _Google Issues Chrome Security Update for Eighth Actively Exploited Zero-Day of 2026_  
+   Source: The Hacker News  
+
+3. **Validate backups, confirm EDR coverage, and brief incident response team.**  
    _Vanderbilt University hit in BYOD ransomware attack, data theft claimed_  
-   Source: BleepingComputer  
-
-2. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _SEGA newsletter data breach exposes 2.2 million email addresses_  
-   Source: BleepingComputer  
-
-3. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _York University breach exposed personal information dating to 2007_  
    Source: BleepingComputer  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [Fireworks AI discloses new breach after cloud provider hack](https://www.bleepingcomputer.com/news/security/fireworks-ai-discloses-new-breach-after-cloud-provider-hack/)
+**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Nov 10  
+**Why it matters:** Potential credential or data exposure.  
+**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
+
+### [Google Issues Chrome Security Update for Eighth Actively Exploited Zero-Day of 2026](https://thehackernews.com/2026/11/google-issues-chrome-security-update.html)
+**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Nov 10  
+**Why it matters:** General awareness item.  
+**Recommended action:** Apply emergency patch or mitigation now; check vendor advisory for workarounds.  
 
 ### [Vanderbilt University hit in BYOD ransomware attack, data theft claimed](https://www.bleepingcomputer.com/news/security/vanderbilt-university-hit-in-byod-ransomware-attack-data-theft-claimed/)
 **Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Nov 09  
@@ -41,19 +51,21 @@
 **Why it matters:** Potential credential or data exposure.  
 **Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
-### [Binance denies data breach after alleged ShinyHunters claims](https://www.bleepingcomputer.com/news/security/binance-denies-data-breach-after-alleged-shinyhunters-claims/)
-**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Nov 09  
-**Why it matters:** Potential credential or data exposure.  
-**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
-
-### [Hackers exploit SSHole OpenSSH flaw to breach Linux systems](https://www.bleepingcomputer.com/news/security/hackers-exploit-sshole-openssh-flaw-to-breach-linux-systems/)
-**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Nov 09  
-**Why it matters:** Potential credential or data exposure.  
-**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
-
 ---
 
 ## 🟠 Important — Review This Week
+
+- [Google patches eighth Chrome zero-day exploited in attacks this year](https://www.bleepingcomputer.com/news/security/google-patches-eighth-chrome-zero-day-exploited-in-attacks-this-year/)  
+  **BleepingComputer** · Nov 10 · _General awareness item._  
+
+- [N-able Takes N-central Cloud Offline After Researcher Discloses 33 Zero-Days with PoC Exploits](https://thehackernews.com/2026/11/n-able-takes-hosted-n-central-offline.html)  
+  **The Hacker News** · Nov 10 · _Possible impact to authentication and sign-in flows._  
+
+- [CISA Warns of Active Exploitation of OpenSSH, GPUStack, FreeSWITCH, and IBM Flaws](https://thehackernews.com/2026/11/cisa-warns-of-active-exploitation-of.html)  
+  **The Hacker News** · Nov 10 · _General awareness item._  
+
+- [Chrome Update Patches Exploited XML Zero-Day, Eighth This Year](https://www.securityweek.com/chrome-update-patches-exploited-xml-zero-day-eighth-this-year/)  
+  **SecurityWeek** · Nov 10 · _General awareness item._  
 
 - [N-able takes cloud platform offline after 30+ "zero-days" published](https://www.bleepingcomputer.com/news/security/n-able-takes-cloud-platform-offline-after-30-plus-zero-days-published/)  
   **BleepingComputer** · Nov 09 · _Possible impact to authentication and sign-in flows._  
@@ -67,29 +79,17 @@
 - [U.S. Agencies Warn Refrigeration Controller Attacks Could Cause Fires and Inventory Losses](https://thehackernews.com/2026/11/us-agencies-warn-refrigeration.html)  
   **The Hacker News** · Nov 09 · _General awareness item._  
 
-- [CISA Flags SonicWall SonicOS MFA Bypass Flaw Amid Reports of Possible Exploitation](https://thehackernews.com/2026/11/cisa-flags-sonicwall-sonicos-mfa-bypass.html)  
-  **The Hacker News** · Nov 09 · _General awareness item._  
-
-- [Scans for Sshole Vulnerability (CVE-2026-123158), (Sun, Nov 8th)](https://isc.sans.edu/diary/rss/33498)  
-  **SANS Internet Storm Center** · Nov 08 · _General awareness item._  
-
-- [CVE-2026-83844 Windows Paint Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-83844)  
-  **Microsoft Security Response Center** · Nov 07 · _General awareness item._  
-
-- [SonicWall Patches Exploited SonicOS Vulnerability That Weakens VPN Logins](https://www.securityweek.com/sonicwall-patches-exploited-sonicos-bug-that-weakens-vpn-logins/)  
-  **SecurityWeek** · Nov 07 · _General awareness item._  
-
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [France Blames Iran for Sabotage Attack on Refrigeration Controllers at About 700 Retail Sites](https://thehackernews.com/2026/11/france-blames-iran-for-sabotage-attack.html) — The Hacker News
+- [Anthropic's Claude Fable 5.2 Beats GPT-6 Cyber in Multi-Stage Cyberattack Benchmark](https://thehackernews.com/2026/11/anthropics-claude-fable-52-beats-gpt-6.html) — The Hacker News
+- [France Blames Iran for a Cyberattack That Heated Supermarket Refrigerators](https://www.securityweek.com/france-blames-iran-for-a-cyberattack-that-heated-supermarket-refrigerators/) — SecurityWeek
+- [ISC Stormcast For Tuesday, November 10th, 2026 https://isc.sans.edu/podcastdetail/10172, (Tue, Nov 10th)](https://isc.sans.edu/diary/rss/33504) — SANS Internet Storm Center
 - [FORGE Lab uses agentic tools to identify memory safety issues in Rust](https://www.microsoft.com/en-us/security/blog/2026/11/09/forge-lab-uses-agentic-tools-to-identify-memory-safety-issues-in-rust/) — Microsoft Security Blog
 - [France blames Iranian hackers for supermarket attacks that sparked fires](https://www.bleepingcomputer.com/news/security/france-blames-iranian-hackers-for-supermarket-attacks-that-sparked-fires/) — BleepingComputer
-- [Attackers Searching for SAP Netweaver Webshells, (Mon, Nov 9th)](https://isc.sans.edu/diary/rss/33502) — SANS Internet Storm Center
-- [Russian cloud firm Beget rebuilds from scratch after data wiper attack](https://www.bleepingcomputer.com/news/security/russian-cloud-firm-beget-rebuilds-from-scratch-after-data-wiper-attack/) — BleepingComputer
-- [Hackers Compromise Ethersphere's bee-js and Swarm Desktop to Deliver Wallet-Stealing Malware](https://thehackernews.com/2026/11/hackers-compromise-etherspheres-bee-js.html) — The Hacker News
-- [The Biggest Threat to Your GRC Job Isn’t AI. It’s Ignoring AI.](https://www.bleepingcomputer.com/news/security/the-biggest-threat-to-your-grc-job-isnt-ai-its-ignoring-ai/) — BleepingComputer
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 21 critical · 48 important · 50 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 22 critical · 49 important · 47 FYI_
