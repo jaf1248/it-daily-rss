@@ -1,25 +1,35 @@
 # IT Weekly Intelligence Briefing
 **Period:** November 04 – November 11, 2026  
-**Generated:** 2026-11-11 10:18 UTC  
-**Items reviewed:** 155  
+**Generated:** 2026-11-11 18:21 UTC  
+**Items reviewed:** 156  
 
 ## ⚡ Top Actions This Week
 
-1. **Apply emergency patch or mitigation now; check vendor advisory for workarounds.**  
-   _CISA flags Cisco BroadWorks flaw as actively exploited in attacks_  
+1. **Validate backups, confirm EDR coverage, and brief incident response team.**  
+   _Who Runs the Ransomware Group Qilin?_  
+   Source: Krebs on Security  
+
+2. **Validate backups, confirm EDR coverage, and brief incident response team.**  
+   _Maersk confirms data breach as WhiteArmor ransomware demands $5 million_  
    Source: BleepingComputer  
 
-2. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _Railway Says Stolen Customer AI Keys Led to $740,000 in Estimated Unauthorized Usage Charges_  
-   Source: The Hacker News  
-
 3. **Apply emergency patch or mitigation now; check vendor advisory for workarounds.**  
-   _Cisco BroadWorks and Openwave Flaws Actively Exploited Despite Available Patches_  
-   Source: The Hacker News  
+   _CISA flags Cisco BroadWorks flaw as actively exploited in attacks_  
+   Source: BleepingComputer  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [Who Runs the Ransomware Group Qilin?](https://krebsonsecurity.com/2026/11/who-runs-the-ransomware-group-qilin/)
+**Source:** Krebs on Security &nbsp;·&nbsp; **Date:** Nov 11  
+**Why it matters:** Elevated ransomware risk across the sector.  
+**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
+
+### [Maersk confirms data breach as WhiteArmor ransomware demands $5 million](https://www.bleepingcomputer.com/news/security/maersk-confirms-data-breach-as-whitearmor-ransomware-demands-5-million/)
+**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Nov 11  
+**Why it matters:** Elevated ransomware risk across the sector.  
+**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
 
 ### [CISA flags Cisco BroadWorks flaw as actively exploited in attacks](https://www.bleepingcomputer.com/news/security/cisa-flags-cisco-broadworks-flaw-as-actively-exploited-in-attacks/)
 **Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Nov 11  
@@ -41,55 +51,45 @@
 **Why it matters:** Potential credential or data exposure.  
 **Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
-### [Hackers exploit trusted AWS access to breach multiple cloud environments](https://www.bleepingcomputer.com/news/security/hackers-exploit-trusted-aws-access-to-breach-multiple-cloud-environments/)
-**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Nov 10  
-**Why it matters:** Potential credential or data exposure.  
-**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
-
-### [SGLang RCE Exploit Breaches NEAR AI, Steals Data From 18 Agents and About 100 Users](https://thehackernews.com/2026/11/sglang-rce-exploit-breaches-near-ai.html)
-**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Nov 10  
-**Why it matters:** Potential credential or data exposure.  
-**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
-
 ---
 
 ## 🟠 Important — Review This Week
 
-- [Microsoft fixes Exchange sign-ins broken by Windows Server updates](https://www.bleepingcomputer.com/news/microsoft/microsoft-fixes-exchange-sign-ins-broken-by-october-windows-server-updates/)  
-  **BleepingComputer** · Nov 11 · _Potential email disruption for users._  
+- [Lessons from 59 Linux Kernel Bug Reports](https://www.microsoft.com/en-us/security/blog/2026/11/11/lessons-from-59-linux-kernel-bug-reports/)  
+  **Microsoft Security Blog** · Nov 11 · _General awareness item._  
 
-- [Threat Actors Exploit Openwave, Cisco BroadWorks Vulnerabilities](https://www.securityweek.com/threat-actors-exploit-openwave-cisco-broadworks-vulnerabilities/)  
-  **SecurityWeek** · Nov 11 · _General awareness item._  
-
-- [Chipmaker Patch Tuesday: Over 200 Vulnerabilities Addressed by Intel, AMD](https://www.securityweek.com/chipmaker-patch-tuesday-over-200-vulnerabilities-addressed-by-intel-amd/)  
-  **SecurityWeek** · Nov 11 · _General awareness item._  
-
-- [Microsoft Patches 1,259 Flaws, Including Exploited Outlook Bug That May Expose NTLMv2 Hashes](https://thehackernews.com/2026/11/microsoft-patches-1259-flaws-including.html)  
+- [Critical Zoom Workplace Flaw Could Allow Unauthenticated Remote Privilege Escalation](https://thehackernews.com/2026/11/critical-zoom-workplace-flaw-could.html)  
   **The Hacker News** · Nov 11 · _General awareness item._  
 
-- [Recently Patched Barracuda Vulnerabilities Exploited in Attacks](https://www.securityweek.com/recently-patched-barracuda-vulnerabilities-exploited-in-attacks/)  
-  **SecurityWeek** · Nov 11 · _General awareness item._  
+- [CVE-2026-105544 .NET Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-105544)  
+  **Microsoft Security Response Center** · Nov 11 · _General awareness item._  
 
-- [Bluetooth, AirPlay Pairing Vulnerabilities Patched Across Apple Platforms](https://www.securityweek.com/bluetooth-airplay-pairing-vulnerabilities-patched-across-apple-platforms/)  
-  **SecurityWeek** · Nov 11 · _General awareness item._  
+- [CVE-2026-109475 .NET Denial of Service Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-109475)  
+  **Microsoft Security Response Center** · Nov 11 · _General awareness item._  
 
-- [Microsoft Fixes Nearly 1,100 Security Vulnerabilities](https://krebsonsecurity.com/2026/11/microsoft-fixes-nearly-1100-security-vulnerabilities/)  
-  **Krebs on Security** · Nov 10 · _General awareness item._  
+- [CVE-2026-109476 ASP.NET Core Information Disclosure Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-109476)  
+  **Microsoft Security Response Center** · Nov 11 · _General awareness item._  
 
-- [Microsoft releases Windows 10 KB5131096 extended security update](https://www.bleepingcomputer.com/news/microsoft/microsoft-releases-windows-10-kb5131096-extended-security-update/)  
-  **BleepingComputer** · Nov 10 · _General awareness item._  
+- [CVE-2026-109478 ASP.NET Core Denial of Service Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-109478)  
+  **Microsoft Security Response Center** · Nov 11 · _General awareness item._  
+
+- [CVE-2026-109481 ASP.NET Core Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-109481)  
+  **Microsoft Security Response Center** · Nov 11 · _General awareness item._  
+
+- [CVE-2026-114146 ASP.NET Core Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-114146)  
+  **Microsoft Security Response Center** · Nov 11 · _General awareness item._  
 
 ---
 
 ## 🔵 FYI — General Awareness
 
-- [Microsoft Researchers Show AI Agents Can Be Backdoored by Editing Fewer Than 10 Neurons](https://thehackernews.com/2026/11/microsoft-researchers-show-ai-agents.html) — The Hacker News
-- [ISC Stormcast For Wednesday, November 11th, 2026 https://isc.sans.edu/podcastdetail/10174, (Wed, Nov 11th)](https://isc.sans.edu/diary/rss/33510) — SANS Internet Storm Center
-- [Detecting sleeper agents hiding in AI model neurons](https://www.microsoft.com/en-us/security/blog/2026/11/10/detecting-sleeper-agents-hiding-in-ai-model-neurons/) — Microsoft Security Blog
-- [Japanese furniture giant Nitori says hackers stole 37.6M customer records](https://www.bleepingcomputer.com/news/security/japanese-furniture-giant-nitori-says-hackers-stole-376m-customer-records/) — BleepingComputer
-- [Three China-Nexus Espionage Campaigns Linked Through Sparrow Malware Ecosystem](https://thehackernews.com/2026/11/three-china-nexus-espionage-campaigns.html) — The Hacker News
-- [Software Transparency Is Changing: Allan Friedman on SBOM, AI BOMs and What Comes Next](https://www.securityweek.com/software-transparency-is-changing-allan-friedman-on-sbom-ai-boms-and-what-comes-next/) — SecurityWeek
+- [Today: CISO Forum Virtual Summit 2026 Day 2 – Join Cybersecurity Leaders Online](https://www.securityweek.com/today-ciso-forum-virtual-summit-2026-join-global-cybersecurity-leaders/) — SecurityWeek
+- [AntiFox AI Pentesting Platform Linked to Attacks That Accessed AWS Production Secrets](https://thehackernews.com/2026/11/antifox-ai-pentesting-platform-linked.html) — The Hacker News
+- [Hackers use AntiFox AI agents in AWS credential-theft attacks](https://www.bleepingcomputer.com/news/security/hackers-use-antifox-ai-agents-in-aws-credential-theft-attacks/) — BleepingComputer
+- [eBPF Rootkits: Why Underground Actors Are Taking Notice](https://www.bleepingcomputer.com/news/security/ebpf-rootkits-why-underground-actors-are-taking-notice/) — BleepingComputer
+- [Hackers Target Qlik Sense Servers With Reverse Shells, Stage ActiveMQ and Veeam Exploits](https://thehackernews.com/2026/11/hackers-target-qlik-sense-servers-with.html) — The Hacker News
+- [Finite State Raises $27 Million to Secure Software and Firmware in Connected Devices](https://www.securityweek.com/finite-state-raises-27-million-to-secure-software-and-firmware-in-connected-devices/) — SecurityWeek
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 17 critical · 96 important · 42 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 16 critical · 94 important · 46 FYI_
