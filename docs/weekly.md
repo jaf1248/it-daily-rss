@@ -1,25 +1,40 @@
 # IT Weekly Intelligence Briefing
 **Period:** November 04 – November 11, 2026  
-**Generated:** 2026-11-11 02:31 UTC  
+**Generated:** 2026-11-11 10:18 UTC  
 **Items reviewed:** 155  
 
 ## ⚡ Top Actions This Week
 
-1. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _Railway breach leads to $740,000 in fraudulent AI charges_  
+1. **Apply emergency patch or mitigation now; check vendor advisory for workarounds.**  
+   _CISA flags Cisco BroadWorks flaw as actively exploited in attacks_  
    Source: BleepingComputer  
 
 2. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _Hackers exploit trusted AWS access to breach multiple cloud environments_  
-   Source: BleepingComputer  
+   _Railway Says Stolen Customer AI Keys Led to $740,000 in Estimated Unauthorized Usage Charges_  
+   Source: The Hacker News  
 
-3. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _SGLang RCE Exploit Breaches NEAR AI, Steals Data From 18 Agents and About 100 Users_  
+3. **Apply emergency patch or mitigation now; check vendor advisory for workarounds.**  
+   _Cisco BroadWorks and Openwave Flaws Actively Exploited Despite Available Patches_  
    Source: The Hacker News  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [CISA flags Cisco BroadWorks flaw as actively exploited in attacks](https://www.bleepingcomputer.com/news/security/cisa-flags-cisco-broadworks-flaw-as-actively-exploited-in-attacks/)
+**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Nov 11  
+**Why it matters:** General awareness item.  
+**Recommended action:** Apply emergency patch or mitigation now; check vendor advisory for workarounds.  
+
+### [Railway Says Stolen Customer AI Keys Led to $740,000 in Estimated Unauthorized Usage Charges](https://thehackernews.com/2026/11/railway-says-stolen-customer-ai-keys.html)
+**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Nov 11  
+**Why it matters:** Potential credential or data exposure.  
+**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
+
+### [Cisco BroadWorks and Openwave Flaws Actively Exploited Despite Available Patches](https://thehackernews.com/2026/11/cisco-broadworks-and-openwave-flaws.html)
+**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Nov 11  
+**Why it matters:** General awareness item.  
+**Recommended action:** Apply emergency patch or mitigation now; check vendor advisory for workarounds.  
 
 ### [Railway breach leads to $740,000 in fraudulent AI charges](https://www.bleepingcomputer.com/news/apple/railway-breach-leads-to-740-000-in-fraudulent-ai-charges/)
 **Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Nov 10  
@@ -36,24 +51,27 @@
 **Why it matters:** Potential credential or data exposure.  
 **Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
-### [Microsoft November 2026 Patch Tuesday fixes 1,235 flaws, Outlook zero-day](https://www.bleepingcomputer.com/news/microsoft/microsoft-november-2026-patch-tuesday-fixes-1-235-flaws-outlook-zero-day/)
-**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Nov 10  
-**Why it matters:** General awareness item.  
-**Recommended action:** Apply emergency patch or mitigation now; check vendor advisory for workarounds.  
-
-### [Hackers Exploit Critical Xen Orchestra Auth Bypass Flaw to Gain Admin Access](https://thehackernews.com/2026/11/hackers-exploit-critical-xen-orchestra.html)
-**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Nov 10  
-**Why it matters:** General awareness item.  
-**Recommended action:** Review access logs for unauthorized sessions; apply vendor patch immediately.  
-
-### [Critical Xen Orchestra auth bypass flaw exploited to hijack VM servers](https://www.bleepingcomputer.com/news/security/critical-xen-orchestra-auth-bypass-flaw-exploited-to-hijack-vm-servers/)
-**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Nov 10  
-**Why it matters:** General awareness item.  
-**Recommended action:** Review access logs for unauthorized sessions; apply vendor patch immediately.  
-
 ---
 
 ## 🟠 Important — Review This Week
+
+- [Microsoft fixes Exchange sign-ins broken by Windows Server updates](https://www.bleepingcomputer.com/news/microsoft/microsoft-fixes-exchange-sign-ins-broken-by-october-windows-server-updates/)  
+  **BleepingComputer** · Nov 11 · _Potential email disruption for users._  
+
+- [Threat Actors Exploit Openwave, Cisco BroadWorks Vulnerabilities](https://www.securityweek.com/threat-actors-exploit-openwave-cisco-broadworks-vulnerabilities/)  
+  **SecurityWeek** · Nov 11 · _General awareness item._  
+
+- [Chipmaker Patch Tuesday: Over 200 Vulnerabilities Addressed by Intel, AMD](https://www.securityweek.com/chipmaker-patch-tuesday-over-200-vulnerabilities-addressed-by-intel-amd/)  
+  **SecurityWeek** · Nov 11 · _General awareness item._  
+
+- [Microsoft Patches 1,259 Flaws, Including Exploited Outlook Bug That May Expose NTLMv2 Hashes](https://thehackernews.com/2026/11/microsoft-patches-1259-flaws-including.html)  
+  **The Hacker News** · Nov 11 · _General awareness item._  
+
+- [Recently Patched Barracuda Vulnerabilities Exploited in Attacks](https://www.securityweek.com/recently-patched-barracuda-vulnerabilities-exploited-in-attacks/)  
+  **SecurityWeek** · Nov 11 · _General awareness item._  
+
+- [Bluetooth, AirPlay Pairing Vulnerabilities Patched Across Apple Platforms](https://www.securityweek.com/bluetooth-airplay-pairing-vulnerabilities-patched-across-apple-platforms/)  
+  **SecurityWeek** · Nov 11 · _General awareness item._  
 
 - [Microsoft Fixes Nearly 1,100 Security Vulnerabilities](https://krebsonsecurity.com/2026/11/microsoft-fixes-nearly-1100-security-vulnerabilities/)  
   **Krebs on Security** · Nov 10 · _General awareness item._  
@@ -61,35 +79,17 @@
 - [Microsoft releases Windows 10 KB5131096 extended security update](https://www.bleepingcomputer.com/news/microsoft/microsoft-releases-windows-10-kb5131096-extended-security-update/)  
   **BleepingComputer** · Nov 10 · _General awareness item._  
 
-- [Git Patches Flaw That Lets Malicious Repositories Execute Code During Recursive Clones](https://thehackernews.com/2026/11/git-patches-flaw-that-lets-malicious.html)  
-  **The Hacker News** · Nov 10 · _General awareness item._  
-
-- [Exploited Outlook Zero-Day Among 1,094 Flaws Patched by Microsoft](https://www.securityweek.com/exploited-outlook-zero-day-among-1094-flaws-patched-by-microsoft/)  
-  **SecurityWeek** · Nov 10 · _General awareness item._  
-
-- [Microsoft Patch Tuesday November 2027 , (Tue, Nov 10th)](https://isc.sans.edu/diary/rss/33508)  
-  **SANS Internet Storm Center** · Nov 10 · _General awareness item._  
-
-- [Windows 11 KB5132061 & KB5131087 cumulative updates released](https://www.bleepingcomputer.com/news/microsoft/windows-11-kb5132061-and-kb5131087-cumulative-updates-released/)  
-  **BleepingComputer** · Nov 10 · _General awareness item._  
-
-- [Adobe Patches 110 Vulnerabilities Across 9 Products](https://www.securityweek.com/adobe-patches-110-vulnerabilities-across-9-products/)  
-  **SecurityWeek** · Nov 10 · _General awareness item._  
-
-- [Attackers Exploit AhsayCBS Flaws to Deploy Sandbox-Evading Python Backdoor](https://thehackernews.com/2026/11/attackers-exploit-ahsaycbs-flaws-to.html)  
-  **The Hacker News** · Nov 10 · _General awareness item._  
-
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [Microsoft Researchers Show AI Agents Can Be Backdoored by Editing Fewer Than 10 Neurons](https://thehackernews.com/2026/11/microsoft-researchers-show-ai-agents.html) — The Hacker News
 - [ISC Stormcast For Wednesday, November 11th, 2026 https://isc.sans.edu/podcastdetail/10174, (Wed, Nov 11th)](https://isc.sans.edu/diary/rss/33510) — SANS Internet Storm Center
 - [Detecting sleeper agents hiding in AI model neurons](https://www.microsoft.com/en-us/security/blog/2026/11/10/detecting-sleeper-agents-hiding-in-ai-model-neurons/) — Microsoft Security Blog
 - [Japanese furniture giant Nitori says hackers stole 37.6M customer records](https://www.bleepingcomputer.com/news/security/japanese-furniture-giant-nitori-says-hackers-stole-376m-customer-records/) — BleepingComputer
 - [Three China-Nexus Espionage Campaigns Linked Through Sparrow Malware Ecosystem](https://thehackernews.com/2026/11/three-china-nexus-espionage-campaigns.html) — The Hacker News
 - [Software Transparency Is Changing: Allan Friedman on SBOM, AI BOMs and What Comes Next](https://www.securityweek.com/software-transparency-is-changing-allan-friedman-on-sbom-ai-boms-and-what-comes-next/) — SecurityWeek
-- [Google Widens Gemini 4 Carbon Access After AI Agents Verify Signal Code](https://www.securityweek.com/google-widens-gemini-4-carbon-access-after-ai-agents-verify-signal-code/) — SecurityWeek
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 18 critical · 95 important · 42 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 17 critical · 96 important · 42 FYI_
