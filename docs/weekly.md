@@ -1,25 +1,30 @@
 # IT Weekly Intelligence Briefing
 **Period:** November 05 – November 12, 2026  
-**Generated:** 2026-11-12 17:54 UTC  
-**Items reviewed:** 154  
+**Generated:** 2026-11-12 23:11 UTC  
+**Items reviewed:** 155  
 
 ## ⚡ Top Actions This Week
 
-1. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
+1. **Audit third-party software dependencies and review vendor access.**  
+   _Trained to betray: How post-training supply chain attacks hijack coding agents_  
+   Source: Microsoft Security Blog  
+
+2. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
    _Apify rotates API tokens, prompts 2FA resets after breach_  
    Source: BleepingComputer  
 
-2. **Validate backups, confirm EDR coverage, and brief incident response team.**  
+3. **Validate backups, confirm EDR coverage, and brief incident response team.**  
    _Maersk Confirms Data Theft Amid $5 Million Extortion Attempt_  
    Source: SecurityWeek  
-
-3. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _Baker Tilly notifies clients of data breach at third-party provider_  
-   Source: BleepingComputer  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [Trained to betray: How post-training supply chain attacks hijack coding agents](https://www.microsoft.com/en-us/security/blog/2026/11/12/trained-to-betray-how-post-training-supply-chain-attacks-hijack-coding-agents/)
+**Source:** Microsoft Security Blog &nbsp;·&nbsp; **Date:** Nov 12  
+**Why it matters:** Third-party/software supply chain integrity risk.  
+**Recommended action:** Audit third-party software dependencies and review vendor access.  
 
 ### [Apify rotates API tokens, prompts 2FA resets after breach](https://www.bleepingcomputer.com/news/security/apify-rotates-api-tokens-prompts-2fa-resets-after-breach/)
 **Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Nov 12  
@@ -41,11 +46,6 @@
 **Why it matters:** Potential credential or data exposure.  
 **Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
-### [Notion says Fireworks breach exposed customer AI chat transcripts](https://www.bleepingcomputer.com/news/security/notion-says-fireworks-breach-exposed-customer-ai-chat-transcripts/)
-**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Nov 11  
-**Why it matters:** Potential credential or data exposure.  
-**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
-
 ### [Who Runs the Ransomware Group Qilin?](https://krebsonsecurity.com/2026/11/who-runs-the-ransomware-group-qilin/)
 **Source:** Krebs on Security &nbsp;·&nbsp; **Date:** Nov 11  
 **Why it matters:** Elevated ransomware risk across the sector.  
@@ -54,6 +54,21 @@
 ---
 
 ## 🟠 Important — Review This Week
+
+- [Microsoft 365 Outage Disrupts Outlook, Exchange Online and Teams](https://www.securityweek.com/microsoft-365-outage-disrupts-outlook-exchange-online-and-teams/)  
+  **SecurityWeek** · Nov 12 · _Service continuity risk to users._  
+
+- [Massive Microsoft 365 outage disrupts Outlook, Teams, Copilot worldwide](https://www.bleepingcomputer.com/news/microsoft/massive-microsoft-365-outage-disrupts-outlook-teams-copilot-worldwide/)  
+  **BleepingComputer** · Nov 12 · _Service continuity risk to users._  
+
+- [New N-able "4EverAble2Shell" zero-day exploited hours after PoC released](https://www.bleepingcomputer.com/news/security/new-n-able-4everable2shell-zero-day-exploited-hours-after-poc-released/)  
+  **BleepingComputer** · Nov 12 · _Possible impact to authentication and sign-in flows._  
+
+- [Apache HTTP Server patches critical HTTP/2 remote code execution flaw](https://www.bleepingcomputer.com/news/security/apache-http-server-patches-critical-http-2-remote-code-execution-flaw/)  
+  **BleepingComputer** · Nov 12 · _General awareness item._  
+
+- [New SignDrop Zero-Day Exploit Turns Windows CLFS Security Feature Into SYSTEM Access](https://thehackernews.com/2026/11/new-signdrop-zero-day-exploit-turns.html)  
+  **The Hacker News** · Nov 12 · _General awareness item._  
 
 - [New Windows SignDrop zero-day gives hackers SYSTEM privileges](https://www.bleepingcomputer.com/news/security/new-windows-signdrop-zero-day-gives-hackers-system-privileges/)  
   **BleepingComputer** · Nov 12 · _General awareness item._  
@@ -64,32 +79,17 @@
 - [Citrix Patches 12 NetScaler and Secure Access Client Flaws, Including Authentication Bypass](https://thehackernews.com/2026/11/citrix-patches-12-netscaler-and-secure.html)  
   **The Hacker News** · Nov 12 · _General awareness item._  
 
-- [Apache Patches Critical HTTP Server RCE Found by Anthropic, Google](https://www.securityweek.com/apache-patches-critical-http-server-rce-found-by-anthropic-google/)  
-  **SecurityWeek** · Nov 12 · _General awareness item._  
-
-- [Chrome, Firefox Updates Patch Over 180 Vulnerabilities](https://www.securityweek.com/chrome-firefox-updates-patch-180-vulnerabilities/)  
-  **SecurityWeek** · Nov 12 · _General awareness item._  
-
-- [SCKit Malware Turns ScreenConnect Support Sessions Into Potential MSP Attack Paths](https://thehackernews.com/2026/11/sckit-malware-targets-screenconnect.html)  
-  **The Hacker News** · Nov 12 · _General awareness item._  
-
-- [Microsoft: Recent Windows updates cause SQL Server performance issues](https://www.bleepingcomputer.com/news/microsoft/microsoft-recent-windows-updates-cause-sql-server-performance-issues/)  
-  **BleepingComputer** · Nov 12 · _General awareness item._  
-
-- [Google Cloud Warns Three AMD Turin CPU Flaws Could Leak Data Across Processes in VMs](https://thehackernews.com/2026/11/google-cloud-warns-three-amd-turin-cpu.html)  
-  **The Hacker News** · Nov 12 · _General awareness item._  
-
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [New worm-like 'SCKit' malware targets MSPs in ScreenConnect attacks](https://www.bleepingcomputer.com/news/security/new-worm-like-sckit-malware-targets-msps-in-screenconnect-attacks/) — BleepingComputer
+- [Hackers compromise 4,800 GitHub accounts to steal cloud credentials](https://www.bleepingcomputer.com/news/security/hackers-compromise-4-800-github-accounts-to-steal-cloud-credentials/) — BleepingComputer
+- [Webinar: See How Identity Blind Spots Put Your SOC at Risk and How to Close Them](https://thehackernews.com/2026/11/your-soc-sees-alert-but-does-it-know.html) — The Hacker News
+- [ThreatsDay: 59 Linux Kernel Bugs, Falcon Spyware, GSocket Backdoors + 17 More Stories](https://thehackernews.com/2026/11/threatsday-59-linux-kernel-bugs-falcon.html) — The Hacker News
 - [Critical Red Hat Quay Flaw Lets Attackers Read and Overwrite All Private Container Images in a Registry](https://thehackernews.com/2026/11/critical-red-hat-quay-flaw-lets.html) — The Hacker News
 - [186 Fake AI Domains Redirect Users to ClickFix Lures, Browser Malware, and Search Hijackers](https://thehackernews.com/2026/11/186-fake-ai-domains-redirect-users-to.html) — The Hacker News
-- [Police dismantle Gootloader, CastleRAT, StealC malware infrastructure](https://www.bleepingcomputer.com/news/security/police-dismantles-gootloader-castlerat-stealc-malware-infrastructure/) — BleepingComputer
-- [Your Endpoint Management Platform Could Be Your Biggest Security Risk](https://www.bleepingcomputer.com/news/security/your-endpoint-management-platform-could-be-your-biggest-security-risk/) — BleepingComputer
-- [Attacker Targets 60,000 GitHub Repositories in Credential Theft Campaign](https://www.securityweek.com/attacker-targets-60000-github-repositories-in-credential-theft-campaign/) — SecurityWeek
-- [Daylight Lands $80 Million for AI-Powered Security Operations](https://www.securityweek.com/daylight-lands-80-million-for-ai-powered-security-operations/) — SecurityWeek
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 14 critical · 95 important · 45 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 13 critical · 98 important · 44 FYI_
