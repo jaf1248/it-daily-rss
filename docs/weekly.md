@@ -1,25 +1,30 @@
 # IT Weekly Intelligence Briefing
 **Period:** November 05 – November 12, 2026  
-**Generated:** 2026-11-12 01:17 UTC  
-**Items reviewed:** 157  
+**Generated:** 2026-11-12 09:15 UTC  
+**Items reviewed:** 156  
 
 ## ⚡ Top Actions This Week
 
-1. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
+1. **Validate backups, confirm EDR coverage, and brief incident response team.**  
+   _Maersk Confirms Data Theft Amid $5 Million Extortion Attempt_  
+   Source: SecurityWeek  
+
+2. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
    _Baker Tilly notifies clients of data breach at third-party provider_  
    Source: BleepingComputer  
 
-2. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _Active ScreenConnect attacks breach MSPs, impact dozens of organizations_  
-   Source: BleepingComputer  
-
 3. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _Notion says Fireworks breach exposed customer AI chat transcripts_  
+   _Active ScreenConnect attacks breach MSPs, impact dozens of organizations_  
    Source: BleepingComputer  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [Maersk Confirms Data Theft Amid $5 Million Extortion Attempt](https://www.securityweek.com/maersk-confirms-data-theft-amid-5-million-extortion-attempt/)
+**Source:** SecurityWeek &nbsp;·&nbsp; **Date:** Nov 12  
+**Why it matters:** Elevated ransomware risk across the sector.  
+**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
 
 ### [Baker Tilly notifies clients of data breach at third-party provider](https://www.bleepingcomputer.com/news/security/baker-tilly-notifies-clients-of-data-breach-at-third-party-provider/)
 **Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Nov 11  
@@ -46,14 +51,15 @@
 **Why it matters:** Elevated ransomware risk across the sector.  
 **Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
 
-### [CISA flags Cisco BroadWorks flaw as actively exploited in attacks](https://www.bleepingcomputer.com/news/security/cisa-flags-cisco-broadworks-flaw-as-actively-exploited-in-attacks/)
-**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Nov 11  
-**Why it matters:** General awareness item.  
-**Recommended action:** Apply emergency patch or mitigation now; check vendor advisory for workarounds.  
-
 ---
 
 ## 🟠 Important — Review This Week
+
+- [Critical Apache HTTP/2 Flaw Could Let Unauthenticated Attackers Execute Code Remotely](https://thehackernews.com/2026/11/critical-apache-http2-flaw-could-let.html)  
+  **The Hacker News** · Nov 12 · _General awareness item._  
+
+- [ScreenConnect Attacks Target at Least 288 Endpoints Across 48 Organizations With Rogue Clients](https://thehackernews.com/2026/11/screenconnect-attacks-target-at-least.html)  
+  **The Hacker News** · Nov 12 · _General awareness item._  
 
 - [eMudhra revokes 8 more CA certificates after private key mishap](https://www.bleepingcomputer.com/news/security/emudhra-revokes-8-more-ca-certificates-after-private-key-mishap/)  
   **BleepingComputer** · Nov 11 · _General awareness item._  
@@ -73,23 +79,17 @@
 - [CVE-2026-105544 .NET Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-105544)  
   **Microsoft Security Response Center** · Nov 11 · _General awareness item._  
 
-- [CVE-2026-109475 .NET Denial of Service Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-109475)  
-  **Microsoft Security Response Center** · Nov 11 · _General awareness item._  
-
-- [CVE-2026-109476 ASP.NET Core Information Disclosure Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-109476)  
-  **Microsoft Security Response Center** · Nov 11 · _General awareness item._  
-
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [Node.js Fixes 16 Flaws, Including HTTP/2 Bugs That Crash Servers and Leak Other Connections' Data](https://thehackernews.com/2026/11/nodejs-fixes-16-flaws-including-http2.html) — The Hacker News
+- [Attacker Used 4,837 Hijacked GitHub Accounts to Run a CI Secret Stealer in 1,806+ Repositories](https://thehackernews.com/2026/11/4837-hijacked-github-accounts-ran-ci.html) — The Hacker News
+- [ISC Stormcast For Thursday, November 12th, 2026 https://isc.sans.edu/podcastdetail/10176, (Thu, Nov 12th)](https://isc.sans.edu/diary/rss/33512) — SANS Internet Storm Center
 - [Today: CISO Forum Virtual Summit 2026 Day 2 – Join Cybersecurity Leaders Online](https://www.securityweek.com/today-ciso-forum-virtual-summit-2026-join-global-cybersecurity-leaders/) — SecurityWeek
 - [AntiFox AI Pentesting Platform Linked to Attacks That Accessed AWS Production Secrets](https://thehackernews.com/2026/11/antifox-ai-pentesting-platform-linked.html) — The Hacker News
 - [Hackers use AntiFox AI agents in AWS credential-theft attacks](https://www.bleepingcomputer.com/news/security/hackers-use-antifox-ai-agents-in-aws-credential-theft-attacks/) — BleepingComputer
-- [eBPF Rootkits: Why Underground Actors Are Taking Notice](https://www.bleepingcomputer.com/news/security/ebpf-rootkits-why-underground-actors-are-taking-notice/) — BleepingComputer
-- [Hackers Target Qlik Sense Servers With Reverse Shells, Stage ActiveMQ and Veeam Exploits](https://thehackernews.com/2026/11/hackers-target-qlik-sense-servers-with.html) — The Hacker News
-- [Finite State Raises $27 Million to Secure Software and Firmware in Connected Devices](https://www.securityweek.com/finite-state-raises-27-million-to-secure-software-and-firmware-in-connected-devices/) — SecurityWeek
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 17 critical · 94 important · 46 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 18 critical · 93 important · 45 FYI_
