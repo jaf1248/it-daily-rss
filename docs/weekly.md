@@ -1,25 +1,40 @@
 # IT Weekly Intelligence Briefing
 **Period:** November 09 – November 16, 2026  
-**Generated:** 2026-11-16 07:37 UTC  
+**Generated:** 2026-11-16 17:54 UTC  
 **Items reviewed:** 154  
 
 ## ⚡ Top Actions This Week
 
-1. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _FBI warns ARTEX AI hacking tool is powering global cyberattacks_  
-   Source: BleepingComputer  
+1. **Audit third-party software dependencies and review vendor access.**  
+   _Cursor Supply Chain Attack Started at Fireworks AI_  
+   Source: SecurityWeek  
 
 2. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _TSMC employee data breach linked to cloud provider_  
+   _Fandango says hackers stole payment card details from checkout pages_  
    Source: BleepingComputer  
 
 3. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _Cursor Says Stolen Fireworks AI Key Led to Trojanized Claude Code Extension Incident_  
-   Source: The Hacker News  
+   _Uber Data Breach Impacts 150,000 People_  
+   Source: SecurityWeek  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [Cursor Supply Chain Attack Started at Fireworks AI](https://www.securityweek.com/cursor-supply-chain-attack-started-at-fireworks/)
+**Source:** SecurityWeek &nbsp;·&nbsp; **Date:** Nov 16  
+**Why it matters:** Third-party/software supply chain integrity risk.  
+**Recommended action:** Audit third-party software dependencies and review vendor access.  
+
+### [Fandango says hackers stole payment card details from checkout pages](https://www.bleepingcomputer.com/news/security/fandango-says-hackers-stole-payment-card-details-from-checkout-pages/)
+**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Nov 16  
+**Why it matters:** Potential credential or data exposure.  
+**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
+
+### [Uber Data Breach Impacts 150,000 People](https://www.securityweek.com/uber-data-breach-impacts-150000-people/)
+**Source:** SecurityWeek &nbsp;·&nbsp; **Date:** Nov 16  
+**Why it matters:** Potential credential or data exposure.  
+**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
 ### [FBI warns ARTEX AI hacking tool is powering global cyberattacks](https://www.bleepingcomputer.com/news/security/fbi-warns-artex-ai-hacking-tool-is-powering-global-cyberattacks/)
 **Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Nov 15  
@@ -36,60 +51,45 @@
 **Why it matters:** Potential credential or data exposure.  
 **Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
-### [Cursor confirms security breach led to malicious Claude Code extension](https://www.bleepingcomputer.com/news/security/cursor-confirms-security-breach-led-to-malicious-claude-code-extension/)
-**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Nov 14  
-**Why it matters:** Potential credential or data exposure.  
-**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
-
-### [In Other News: New CISA Director Nominee, Connected Car Hacking, Baker Tilly Data Breach](https://www.securityweek.com/in-other-news-new-cisa-director-nominee-connected-car-hacking-baker-tilly-data-breach/)
-**Source:** SecurityWeek &nbsp;·&nbsp; **Date:** Nov 13  
-**Why it matters:** Potential credential or data exposure.  
-**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
-
-### [Operation Endgame Takes Down Gootloader, CastleRAT and StealC Servers, Seizes 6.4M Stolen Logins](https://thehackernews.com/2026/11/operation-endgame-takes-down-gootloader.html)
-**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Nov 13  
-**Why it matters:** Elevated ransomware risk across the sector.  
-**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
-
 ---
 
 ## 🟠 Important — Review This Week
 
-- [Attackers Exploit UnrealIRCd Flaw That Enables Server-Level Command Injection](https://thehackernews.com/2026/11/attackers-exploit-unrealircd-flaw-that.html)  
-  **The Hacker News** · Nov 14 · _General awareness item._  
+- [Microsoft says months-old bug caused global Microsoft 365 outage](https://www.bleepingcomputer.com/news/microsoft/microsoft-says-months-old-bug-caused-global-microsoft-365-outage/)  
+  **BleepingComputer** · Nov 16 · _Service continuity risk to users._  
 
-- [No Signs of Hacking in FAA Ground Stop as FBI Reportedly Probes Software Update](https://www.securityweek.com/no-signs-of-hacking-in-faa-ground-stop-as-fbi-reportedly-probes-software-update/)  
-  **SecurityWeek** · Nov 14 · _Service continuity risk to users._  
+- [Google Project Zero Sets Course for 30-Day Disclosure Deadline](https://www.securityweek.com/google-project-zero-sets-course-for-30-day-disclosure-deadline/)  
+  **SecurityWeek** · Nov 16 · _General awareness item._  
 
-- [German military drone operations disrupted by cyberattack](https://www.bleepingcomputer.com/news/security/german-military-drone-operations-disrupted-by-cyberattack/)  
-  **BleepingComputer** · Nov 13 · _General awareness item._  
+- [Google warns that fully-automated AI attacks are coming soon](https://www.bleepingcomputer.com/news/security/google-warns-that-fully-automated-ai-attacks-are-coming-soon/)  
+  **BleepingComputer** · Nov 16 · _General awareness item._  
 
-- [PostgreSQL Patches 52 Flaws, Including 22-Year-Old Bug Enabling Authenticated RCE](https://thehackernews.com/2026/11/postgresql-patches-52-flaws-including.html)  
-  **The Hacker News** · Nov 13 · _General awareness item._  
+- [Google Finds Hackers Using AI Agents to Build and Run Exploits From Software Patches](https://thehackernews.com/2026/11/google-finds-hackers-using-ai-agents-to.html)  
+  **The Hacker News** · Nov 16 · _General awareness item._  
 
-- [CVE-2026-94522 Windows Kernel Transaction Manager Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-94522)  
-  **Microsoft Security Response Center** · Nov 13 · _General awareness item._  
+- [⚡ Weekly Recap: N-able 0-Days, Windows 0-Days, Chrome 0-Days, Fridge 0-Days, and More Bad Days](https://thehackernews.com/2026/11/weekly-recap-n-able-0-days-windows-0.html)  
+  **The Hacker News** · Nov 16 · _General awareness item._  
 
-- [CVE-2026-95922 Windows Graphics Kernel Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-95922)  
-  **Microsoft Security Response Center** · Nov 13 · _General awareness item._  
+- [Scans for LiteLLM/Starlette (CVE-2026-42271, CVE-2026-48710), (Mon, Nov 16th)](https://isc.sans.edu/diary/rss/33522)  
+  **SANS Internet Storm Center** · Nov 16 · _General awareness item._  
 
-- [CVE-2026-95942 Windows Graphics Kernel Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-95942)  
-  **Microsoft Security Response Center** · Nov 13 · _General awareness item._  
+- [Microsoft: Windows Server 2016 reaches end of support in 60 days](https://www.bleepingcomputer.com/news/microsoft/microsoft-windows-server-2016-reaches-end-of-support-in-60-days/)  
+  **BleepingComputer** · Nov 16 · _General awareness item._  
 
-- [CVE-2026-95953 Windows Graphics Kernel Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-95953)  
-  **Microsoft Security Response Center** · Nov 13 · _General awareness item._  
+- [Six Unpatched Danfoss Refrigeration Controller Flaws Could Allow Remote Takeover Without Login](https://thehackernews.com/2026/11/six-unpatched-danfoss-refrigeration.html)  
+  **The Hacker News** · Nov 16 · _General awareness item._  
 
 ---
 
 ## 🔵 FYI — General Awareness
 
-- [ISC Stormcast For Monday, November 16th, 2026 https://isc.sans.edu/podcastdetail/10180, (Mon, Nov 16th)](https://isc.sans.edu/diary/rss/33520) — SANS Internet Storm Center
-- [YARA-X 1.23.0 Release, (Sun, Nov 15th)](https://isc.sans.edu/diary/rss/33496) — SANS Internet Storm Center
-- [Pentagon Renames CDAO ‘Super Intelligence Office’](https://www.securityweek.com/pentagon-renames-cdao-super-intelligence-office/) — SecurityWeek
-- [Italy Fines Meta €805 Million Over Facebook's Android Gallery Access Without Explicit Consent](https://thehackernews.com/2026/11/italy-fines-meta-805-million-over.html) — The Hacker News
-- [Meta Fined $887 Million in Italy Over Android Gallery Photos and Videos on Facebook](https://www.securityweek.com/meta-fined-887-million-in-italy-over-android-gallery-photos-and-videos-on-facebook/) — SecurityWeek
-- [US disrupts North Korean campaign behind $400 million crypto theft](https://www.bleepingcomputer.com/news/security/us-disrupts-north-korean-campaign-behind-400-million-crypto-theft/) — BleepingComputer
+- [Barracuda Hacked Amid Surge in Artex-Powered Cyberattacks](https://www.securityweek.com/barracuda-hacked-amid-surge-in-artex-powered-cyberattacks/) — SecurityWeek
+- [7 Tips For Complying with CJIS Password and MFA Requirements](https://www.bleepingcomputer.com/news/security/7-tips-for-complying-with-cjis-password-and-mfa-requirements/) — BleepingComputer
+- [Telegram Widgets Hit by RCE Demos, Malware Warning Days After Launch](https://www.securityweek.com/telegram-widgets-hit-by-rce-demos-malware-warning-days-after-launch/) — SecurityWeek
+- [Hackers Probe Newly Disclosed Flaws in Copeland Refrigeration Controllers](https://www.securityweek.com/hackers-probe-newly-disclosed-flaws-in-copeland-refrigeration-controllers/) — SecurityWeek
+- [Anthropic’s Claude Fable 5.2 blocks fewer security tasks, while Mythos gets better at finding bugs](https://www.bleepingcomputer.com/news/artificial-intelligence/anthropics-claude-fable-52-blocks-fewer-security-tasks-while-mythos-gets-better-at-finding-bugs/) — BleepingComputer
+- [SANSAR Linux Cryptomining Malware Uses Modified NVIDIA Library to Hide GPU Activity](https://thehackernews.com/2026/11/sansar-linux-cryptomining-malware-uses.html) — The Hacker News
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 13 critical · 91 important · 50 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 14 critical · 98 important · 42 FYI_
