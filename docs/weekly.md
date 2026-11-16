@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
 **Period:** November 09 – November 16, 2026  
-**Generated:** 2026-11-16 00:43 UTC  
+**Generated:** 2026-11-16 07:37 UTC  
 **Items reviewed:** 154  
 
 ## ⚡ Top Actions This Week
@@ -83,12 +83,12 @@
 
 ## 🔵 FYI — General Awareness
 
+- [ISC Stormcast For Monday, November 16th, 2026 https://isc.sans.edu/podcastdetail/10180, (Mon, Nov 16th)](https://isc.sans.edu/diary/rss/33520) — SANS Internet Storm Center
 - [YARA-X 1.23.0 Release, (Sun, Nov 15th)](https://isc.sans.edu/diary/rss/33496) — SANS Internet Storm Center
 - [Pentagon Renames CDAO ‘Super Intelligence Office’](https://www.securityweek.com/pentagon-renames-cdao-super-intelligence-office/) — SecurityWeek
 - [Italy Fines Meta €805 Million Over Facebook's Android Gallery Access Without Explicit Consent](https://thehackernews.com/2026/11/italy-fines-meta-805-million-over.html) — The Hacker News
 - [Meta Fined $887 Million in Italy Over Android Gallery Photos and Videos on Facebook](https://www.securityweek.com/meta-fined-887-million-in-italy-over-android-gallery-photos-and-videos-on-facebook/) — SecurityWeek
 - [US disrupts North Korean campaign behind $400 million crypto theft](https://www.bleepingcomputer.com/news/security/us-disrupts-north-korean-campaign-behind-400-million-crypto-theft/) — BleepingComputer
-- [Is AI Making Us Worse at Cybersecurity?](https://www.securityweek.com/is-ai-making-us-worse-at-cybersecurity/) — SecurityWeek
 
 ---
 
