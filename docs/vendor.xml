@@ -3,8 +3,43 @@
 <channel>
   <title>Joe — Vendor Security Advisories</title>
   <description>Security advisories and PSIRTs from network and infrastructure vendors in use.</description>
-  <lastBuildDate>Tue, 17 Nov 2026 19:35:26 +0000</lastBuildDate>
+  <lastBuildDate>Wed, 18 Nov 2026 02:04:25 +0000</lastBuildDate>
   
+<item>
+  <title>🔴 Critical Java Vulnerability Requires Immediate Patching</title>
+  <link>https://www.cisa.gov/news-events/alerts/2026/11/17/critical-java-vulnerability-requires-immediate-patching</link>
+  <guid isPermaLink="false">https://www.cisa.gov/news-events/alerts/2026/11/17/critical-java-vulnerability-requires-immediate-patching</guid>
+  <pubDate>Tue, 17 Nov 2026 12:00:00 +0000</pubDate>
+  <source>CISA Alerts</source>
+  <description><![CDATA[<b>Why this matters: Remote-code-execution risk — assess exposure and patch or mitigate quickly.</b><br/><h2><strong>Purpose</strong></h2>
+<p>CISA strongly urges organizations to immediately patch the recently disclosed Oracle Java vulnerability <a href="https://www.cve.org/CVERecord?id=CVE-2026-114938" target="_blank">CVE-2026-114938</a>. This critical memory-corruption vulnerability, known as “Java4Shell,” affects the Base64 decoder of the x86-64 HotSpot Java Virtual Machine (JVM), which is part of the Java Development Kit (JDK). Specially crafted Base64 input could crash the JVM and allow for unauthenticated remote code execution.</p>
+<h2><strong>Actions to take</strong></h2>
+<p>CISA urges organizations to take the following actions:</p>
+<ul>
+<li>Identify affected Java installations. Review your software inventory for JDKs and Java runtimes, including those bundled with third-party applications or included in container images and appliances. <strong>Note:</strong> JDKs and Java runtimes may not appear as separate entries in software inventories.</li>
+<li>Apply relevant Java and vendor patches as soon as they are available, prioritizing internet-facing systems.
+<ul>
+<li>If immediate patching is not feasible, implement temporary compensating controls, such as restricting and validating Base64 input at the application boundary, enforcing input-size limits, and limiting unauthenticated access.</li>
+</ul>
+</li>
+<li>Review <a href="https://www.oracle.com/security-alerts/cspunov2026.html" target="_blank">Oracle’s security advisory</a> for guidance on patching and affected products a…<br/><br/><b>Source:</b> CISA Alerts &nbsp;|&nbsp; <b>Severity:</b> Critical &nbsp;|&nbsp; <b>Age:</b> 14h]]></description>
+</item>
+
+<item>
+  <title>🟠 CISA Adds One Known Exploited Vulnerability to Catalog</title>
+  <link>https://www.cisa.gov/news-events/alerts/2026/11/17/cisa-adds-one-known-exploited-vulnerability-catalog</link>
+  <guid isPermaLink="false">https://www.cisa.gov/news-events/alerts/2026/11/17/cisa-adds-one-known-exploited-vulnerability-catalog</guid>
+  <pubDate>Tue, 17 Nov 2026 12:00:00 +0000</pubDate>
+  <source>CISA Alerts</source>
+  <description><![CDATA[<b>Why this matters: Hospitality-system impact — consider guest services, PMS/POS, and property operations.</b><br/><p>CISA has added one new vulnerability to its&nbsp;<a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog">Known Exploited Vulnerabilities (KEV) Catalog</a>, based on evidence of active exploitation.</p>
+<ul type="disc">
+<li><a href="https://www.cve.org/CVERecord?id=CVE-2026-115731" target="_blank">CVE-2026-115731</a> Perforce Puppet Enterprise Deserialization of Untrusted Data Vulnerability</li>
+</ul>
+<p>This type of vulnerability is a frequent attack vector for malicious cyber actors and poses significant risks to the federal enterprise.</p>
+<p><a href="https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk">Binding Operational Directive (BOD) 26-04: Prioritizing Security Updates Based on Risk</a> establishes vulnerability management requirements for Federal Civilian Executive Branch (FCEB) agencies. BOD 26-04 reinforces the importance of the KEV Catalog and requires federal agencies to prioritize rapid remediation of high-risk vulnerabilities, specifically those identified by Common Vulnerabilities and Exposures (CVEs) listed in CISA’s KEV Catalog on publicly exposed assets that grant total control of the asset post-exploitation, while deferring action for lower-risk vulnerabilities. BOD 26-04 further establishes basic expectations for when agencies must check whether threat actors compromised the system before the patch was applied.</p>
+<p>While BOD 26-04 applies only to FCEB agencies, CISA en…<br/><br/><b>Source:</b> CISA Alerts &nbsp;|&nbsp; <b>Severity:</b> Important &nbsp;|&nbsp; <b>Age:</b> 14h]]></description>
+</item>
+
 <item>
   <title>🟠 CISA Adds Two Known Exploited Vulnerabilities to Catalog</title>
   <link>https://www.cisa.gov/news-events/alerts/2026/11/13/cisa-adds-two-known-exploited-vulnerabilities-catalog</link>
