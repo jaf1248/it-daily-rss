@@ -1,95 +1,95 @@
 # IT Weekly Intelligence Briefing
 **Period:** November 12 – November 19, 2026  
-**Generated:** 2026-11-19 09:51 UTC  
-**Items reviewed:** 154  
+**Generated:** 2026-11-19 18:51 UTC  
+**Items reviewed:** 153  
 
 ## ⚡ Top Actions This Week
 
-1. **Validate backups, confirm EDR coverage, and brief incident response team.**  
-   _NVIDIA investigating Gentlemen ransomware breach claims_  
+1. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
+   _Transport for London breach exposes 265,000 Oyster card users' data_  
    Source: BleepingComputer  
 
 2. **Validate backups, confirm EDR coverage, and brief incident response team.**  
-   _Ukraine, FBI arrest ransomware gang members tied to $40M in ransoms_  
+   _Five warning signs of ransomware breach before encryption or data theft_  
    Source: BleepingComputer  
 
-3. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _Data breach impacts 40 Irish credit unions in reported IT provider hack_  
-   Source: BleepingComputer  
+3. **Validate backups, confirm EDR coverage, and brief incident response team.**  
+   _Nvidia Responds to Gentlemen Ransomware Claim_  
+   Source: SecurityWeek  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [Transport for London breach exposes 265,000 Oyster card users' data](https://www.bleepingcomputer.com/news/security/transport-for-london-breach-exposes-265-000-oyster-card-users-data/)
+**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Nov 19  
+**Why it matters:** Potential credential or data exposure.  
+**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
+
+### [Five warning signs of ransomware breach before encryption or data theft](https://www.bleepingcomputer.com/news/security/five-warning-signs-of-ransomware-breach-before-encryption-or-data-theft/)
+**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Nov 19  
+**Why it matters:** Elevated ransomware risk across the sector.  
+**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
+
+### [Nvidia Responds to Gentlemen Ransomware Claim](https://www.securityweek.com/nvidia-responds-to-gentlemen-ransomware-claim/)
+**Source:** SecurityWeek &nbsp;·&nbsp; **Date:** Nov 19  
+**Why it matters:** Elevated ransomware risk across the sector.  
+**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
+
+### [Hackers Breach N-able Cloud Server, Disrupting Email Security Management Across 3 Regions](https://thehackernews.com/2026/11/n-able-confirms-hackers-accessed-cloud.html)
+**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Nov 19  
+**Why it matters:** Potential credential or data exposure.  
+**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
 ### [NVIDIA investigating Gentlemen ransomware breach claims](https://www.bleepingcomputer.com/news/security/nvidia-investigating-gentlemen-ransomware-breach-claims/)
 **Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Nov 19  
 **Why it matters:** Elevated ransomware risk across the sector.  
 **Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
 
-### [Ukraine, FBI arrest ransomware gang members tied to $40M in ransoms](https://www.bleepingcomputer.com/news/security/ukraine-fbi-arrest-ransomware-gang-members-tied-to-40m-in-ransoms/)
-**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Nov 18  
+### [CISA Warns of 4 Exploited Flaws Linked to Ransomware, Cryptomining, and LLMjacking Attacks](https://thehackernews.com/2026/11/cisa-warns-of-4-exploited-flaws-linked.html)
+**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Nov 19  
 **Why it matters:** Elevated ransomware risk across the sector.  
 **Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
-
-### [Data breach impacts 40 Irish credit unions in reported IT provider hack](https://www.bleepingcomputer.com/news/security/data-breach-impacts-40-irish-credit-unions-in-reported-it-provider-hack/)
-**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Nov 18  
-**Why it matters:** Potential credential or data exposure.  
-**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
-
-### [Russian APT Poses as Employee of Hacked Firm to Breach Another US Organization](https://www.securityweek.com/russian-apt-poses-as-employee-of-hacked-firm-to-breach-another-us-organization/)
-**Source:** SecurityWeek &nbsp;·&nbsp; **Date:** Nov 18  
-**Why it matters:** Potential credential or data exposure.  
-**Recommended action:** Elevate monitoring posture; brief security team on threat actor TTPs.  
-
-### [Russian COLD RELIC Hackers Use Stolen Google Workspace Data to Breach Second U.S. Organization](https://thehackernews.com/2026/11/russian-cold-relic-hackers-use-stolen.html)
-**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Nov 18  
-**Why it matters:** Potential credential or data exposure.  
-**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
-
-### [Japan takes Fugaku supercomputer offlline after cyberattack](https://www.bleepingcomputer.com/news/security/japan-takes-fugaku-supercomputer-offlline-after-cyberattack/)
-**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Nov 17  
-**Why it matters:** Potential credential or data exposure.  
-**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
 ---
 
 ## 🟠 Important — Review This Week
 
-- [Ruby Releases Fixes for 7 Regex and String Flaws, Warns 5 Have Proof-of-Concept RCE](https://thehackernews.com/2026/11/ruby-releases-fixes-for-7-regex-and.html)  
+- [phpAfterShell Explained: How Hackers Could Turn a PHP Session Flaw Into Code Execution](https://thehackernews.com/2026/11/phpaftershell-explained-how-hackers.html)  
   **The Hacker News** · Nov 19 · _General awareness item._  
 
-- [PHP Readies Critical Security Updates to Patch Another RCE Flaw](https://www.securityweek.com/php-readies-critical-security-updates-to-patch-another-rce-flaw/)  
+- [PHP security updates fix 18 flaws, including critical RCE bugs](https://www.bleepingcomputer.com/news/security/php-security-updates-fix-18-flaws-including-critical-rce-bugs/)  
+  **BleepingComputer** · Nov 19 · _General awareness item._  
+
+- [PHP Patches Seven Critical RCE Vulnerabilities](https://www.securityweek.com/php-patches-seven-critical-rce-vulnerabilities/)  
   **SecurityWeek** · Nov 19 · _General awareness item._  
 
-- [Java4Shell, NGINX2Shell and more: Why we are not at "Yellow", (Wed, Nov 18th)](https://isc.sans.edu/diary/rss/33532)  
-  **SANS Internet Storm Center** · Nov 18 · _Service continuity risk to users._  
+- [PHP Fixes 7 Critical Flaws, Including Bugs That Could Allow Remote Code Execution](https://thehackernews.com/2026/11/php-fixes-7-critical-flaws-including.html)  
+  **The Hacker News** · Nov 19 · _General awareness item._  
 
-- [10-Year-Old NGINX HTTP/2 Flaw Lets Unauthenticated Attackers Execute Code on Servers](https://thehackernews.com/2026/11/10-year-old-nginx-http2-flaw-lets.html)  
-  **The Hacker News** · Nov 18 · _General awareness item._  
+- [Drupal Patches Critical Installer Flaw That Could Give Unauthenticated Attackers Control of Sites](https://thehackernews.com/2026/11/drupal-patches-critical-installer-flaw.html)  
+  **The Hacker News** · Nov 19 · _General awareness item._  
 
-- [Critical Apache Roller RCE Flaw Under Active Exploitation, No Authentication Required](https://thehackernews.com/2026/11/critical-apache-roller-rce-flaw-under.html)  
-  **The Hacker News** · Nov 18 · _General awareness item._  
+- [Hackers Exploit Cisco Expressway Vulnerability Soon After PoC Release](https://www.securityweek.com/hackers-exploit-cisco-expressway-vulnerability-soon-after-poc-release/)  
+  **SecurityWeek** · Nov 19 · _General awareness item._  
 
-- [CVE-2026-118148 Active Directory Domain Services Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-118148)  
-  **Microsoft Security Response Center** · Nov 18 · _General awareness item._  
+- [Drupal patches critical RCE flaw, warns exploits may surface quickly](https://www.bleepingcomputer.com/news/security/drupal-patches-critical-rce-flaw-warns-exploits-may-surface-quickly/)  
+  **BleepingComputer** · Nov 19 · _General awareness item._  
 
-- [AI Pentesting Checklist for Web Apps: 15 Questions to Ask Before Choosing a Vendor](https://thehackernews.com/2026/11/ai-pentesting-checklist-for-web-apps-15.html)  
-  **The Hacker News** · Nov 18 · _General awareness item._  
-
-- [Microsoft Takes Perception Agentic Security Platform Out of Preview](https://www.securityweek.com/microsoft-takes-perception-agentic-security-platform-out-of-preview/)  
-  **SecurityWeek** · Nov 18 · _General awareness item._  
+- [Everything Is a Web Application, Including Your Firewall](https://thehackernews.com/2026/11/everything-is-web-application-including.html)  
+  **The Hacker News** · Nov 19 · _General awareness item._  
 
 ---
 
 ## 🔵 FYI — General Awareness
 
-- [Java4Shell Exploitation Attempts Begin as Vendors Rush Out Advisories](https://www.securityweek.com/java4shell-exploitation-attempts-begin-as-vendors-rush-out-advisories/) — SecurityWeek
-- [Researcher Demonstrates Database RCE Exploits Affecting PostgreSQL, MySQL and Oracle](https://thehackernews.com/2026/11/researcher-demonstrates-database-rce.html) — The Hacker News
-- [PHP Warns of Critical Security Flaws Affecting All Supported Versions, Fixes Coming November 19](https://thehackernews.com/2026/11/php-warns-of-critical-security-flaws.html) — The Hacker News
-- [Palo Alto Networks to Buy AI Startup Applied Compute for $4.5 Billion](https://www.securityweek.com/palo-alto-networks-to-buy-ai-startup-applied-compute-for-4-5-billion/) — SecurityWeek
-- [ISC Stormcast For Thursday, November 19th, 2026 https://isc.sans.edu/podcastdetail/10186, (Thu, Nov 19th)](https://isc.sans.edu/diary/rss/33536) — SANS Internet Storm Center
-- [Treat Your Honeypot Analysis Like Code: Git, Pull Requests and a Human Gate for AI &#x5b;Guest Diary&#x5d;, (Wed, Nov 18th)](https://isc.sans.edu/diary/rss/33534) — SANS Internet Storm Center
+- [Critical VMware vCenter Flaw (CVSS 9.8) Lets Network Attackers Bypass Authentication](https://thehackernews.com/2026/11/critical-vmware-vcenter-flaw-cvss-98.html) — The Hacker News
+- [Critical NGINX ‘NGINX2Root’ bugs let attackers hijack servers](https://www.bleepingcomputer.com/news/security/critical-nginx-nginx2root-bugs-let-attackers-hijack-servers/) — BleepingComputer
+- [StepSecurity Secures $20 Million to Expand Supply Chain Protection](https://www.securityweek.com/stepsecurity-secures-20-million-to-expand-supply-chain-protection/) — SecurityWeek
+- [Critical Apache Roller, Axis Vulnerabilities Exploited in Attacks](https://www.securityweek.com/critical-apache-roller-axis-vulnerabilities-exploited-in-attacks/) — SecurityWeek
+- [The Governance Gap in Open-Weight AI and What to Do About It](https://www.securityweek.com/the-governance-gap-in-open-weight-ai-and-what-to-do-about-it/) — SecurityWeek
+- [Microsoft tests new Edge Lockdown Mode that disables GPU APIs](https://www.bleepingcomputer.com/news/microsoft/microsoft-tests-new-edge-lockdown-mode-that-disables-gpu-apis/) — BleepingComputer
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 10 critical · 91 important · 53 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 12 critical · 96 important · 45 FYI_
