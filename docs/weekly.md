@@ -1,95 +1,95 @@
 # IT Weekly Intelligence Briefing
 **Period:** November 13 – November 20, 2026  
-**Generated:** 2026-11-20 09:38 UTC  
-**Items reviewed:** 152  
+**Generated:** 2026-11-20 18:16 UTC  
+**Items reviewed:** 153  
 
 ## ⚡ Top Actions This Week
 
 1. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _Transport for London breach exposes 265,000 Oyster card users' data_  
+   _Vendor data breach exposes Chase, Visa, Mastercard customer info_  
    Source: BleepingComputer  
 
-2. **Validate backups, confirm EDR coverage, and brief incident response team.**  
-   _Five warning signs of ransomware breach before encryption or data theft_  
+2. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
+   _N-able says recent security breach led to major service outage_  
    Source: BleepingComputer  
 
-3. **Validate backups, confirm EDR coverage, and brief incident response team.**  
-   _Nvidia Responds to Gentlemen Ransomware Claim_  
+3. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
+   _SBC Medical Group Data Breach Impacts Over 2 Million_  
    Source: SecurityWeek  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
 
+### [Vendor data breach exposes Chase, Visa, Mastercard customer info](https://www.bleepingcomputer.com/news/security/vendor-data-breach-exposes-chase-visa-mastercard-customer-info/)
+**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Nov 20  
+**Why it matters:** Potential credential or data exposure.  
+**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
+
+### [N-able says recent security breach led to major service outage](https://www.bleepingcomputer.com/news/microsoft/n-able-says-recent-security-breach-led-to-major-service-outage/)
+**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Nov 20  
+**Why it matters:** Potential credential or data exposure.  
+**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
+
+### [SBC Medical Group Data Breach Impacts Over 2 Million](https://www.securityweek.com/sbc-medical-group-data-breach-impacts-over-2-million/)
+**Source:** SecurityWeek &nbsp;·&nbsp; **Date:** Nov 20  
+**Why it matters:** Potential credential or data exposure.  
+**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
+
+### [European Commission Confirms AI-Assisted Cyberattack Disrupted Services](https://www.securityweek.com/european-commission-confirms-ai-assisted-cyberattack-disrupted-services/)
+**Source:** SecurityWeek &nbsp;·&nbsp; **Date:** Nov 20  
+**Why it matters:** Potential credential or data exposure.  
+**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
+
+### [Hackers Exploit Critical Cisco Expressway Flaw, Breach Four Devices and Reach Internal Network](https://thehackernews.com/2026/11/hackers-exploit-critical-cisco.html)
+**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Nov 20  
+**Why it matters:** Potential credential or data exposure.  
+**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
+
 ### [Transport for London breach exposes 265,000 Oyster card users' data](https://www.bleepingcomputer.com/news/security/transport-for-london-breach-exposes-265-000-oyster-card-users-data/)
 **Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Nov 19  
 **Why it matters:** Potential credential or data exposure.  
 **Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
-### [Five warning signs of ransomware breach before encryption or data theft](https://www.bleepingcomputer.com/news/security/five-warning-signs-of-ransomware-breach-before-encryption-or-data-theft/)
-**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Nov 19  
-**Why it matters:** Elevated ransomware risk across the sector.  
-**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
-
-### [Nvidia Responds to Gentlemen Ransomware Claim](https://www.securityweek.com/nvidia-responds-to-gentlemen-ransomware-claim/)
-**Source:** SecurityWeek &nbsp;·&nbsp; **Date:** Nov 19  
-**Why it matters:** Elevated ransomware risk across the sector.  
-**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
-
-### [Hackers Breach N-able Cloud Server, Disrupting Email Security Management Across 3 Regions](https://thehackernews.com/2026/11/n-able-confirms-hackers-accessed-cloud.html)
-**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Nov 19  
-**Why it matters:** Potential credential or data exposure.  
-**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
-
-### [NVIDIA investigating Gentlemen ransomware breach claims](https://www.bleepingcomputer.com/news/security/nvidia-investigating-gentlemen-ransomware-breach-claims/)
-**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Nov 19  
-**Why it matters:** Elevated ransomware risk across the sector.  
-**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
-
-### [CISA Warns of 4 Exploited Flaws Linked to Ransomware, Cryptomining, and LLMjacking Attacks](https://thehackernews.com/2026/11/cisa-warns-of-4-exploited-flaws-linked.html)
-**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Nov 19  
-**Why it matters:** Elevated ransomware risk across the sector.  
-**Recommended action:** Validate backups, confirm EDR coverage, and brief incident response team.  
-
 ---
 
 ## 🟠 Important — Review This Week
 
-- [N-able Blames Service Disruption on Cyberattack](https://www.securityweek.com/n-able-blames-service-disruption-on-cyberattack/)  
+- [Hackers use autonomous AI tool Cairn to find zero-day, take over server](https://www.bleepingcomputer.com/news/security/hackers-use-autonomous-ai-tool-cairn-to-find-zero-day-take-over-server/)  
+  **BleepingComputer** · Nov 20 · _General awareness item._  
+
+- [WhatsApp Fixes Flaw Uncovered While Disrupting Scam Campaign](https://www.securityweek.com/whatsapp-fixes-flaw-uncovered-while-disrupting-scam-campaign/)  
   **SecurityWeek** · Nov 20 · _General awareness item._  
 
-- [Chromium: CVE-2024-7533 Use after free in Sharing](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-7532)  
-  **Microsoft Security Response Center** · Nov 20 · _General awareness item._  
+- [Industry Reactions to Major Outages and AI Patching Debate: Feedback Friday](https://www.securityweek.com/industry-reactions-to-major-outages-and-ai-patching-questions-feedback-friday/)  
+  **SecurityWeek** · Nov 20 · _Service continuity risk to users._  
 
-- [Chromium: CVE-2023-1531 Use after free in ANGLE](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-1531)  
-  **Microsoft Security Response Center** · Nov 20 · _General awareness item._  
+- [Linux KVM Flaw CVE-2026-99312 Lets Guest VMs Access Host Memory on AMD Hosts](https://thehackernews.com/2026/11/new-linux-kvm-flaw-cve-2026-99312-lets.html)  
+  **The Hacker News** · Nov 20 · _General awareness item._  
 
-- [JPMorgan, Visa, Mastercard Cite Third-Party Incidents Amid Data Leak](https://www.securityweek.com/jpmorgan-visa-mastercard-cite-third-party-incidents-amid-data-leak/)  
+- [F5 releases emergency patches for critical BIG-IP RCE flaws](https://www.bleepingcomputer.com/news/security/f5-releases-emergency-patches-for-critical-big-ip-rce-flaws/)  
+  **BleepingComputer** · Nov 20 · _General awareness item._  
+
+- [SonicWall Warns Gen 6 Firewalls Won't Get Security Patches, Even for Critical Flaws](https://thehackernews.com/2026/11/sonicwall-warns-gen-6-firewalls-wont.html)  
+  **The Hacker News** · Nov 20 · _General awareness item._  
+
+- [Ruby Patches Ruby2Shell Vulnerability That Could Lead to RCE](https://www.securityweek.com/ruby-patches-ruby2shell-vulnerability-that-could-lead-to-rce/)  
   **SecurityWeek** · Nov 20 · _General awareness item._  
 
 - [China-Linked Hackers Exploit Critical VMware vCenter Zero-Day to Gain Admin Access and Steal Data](https://thehackernews.com/2026/11/china-linked-hackers-exploit-critical.html)  
   **The Hacker News** · Nov 20 · _General awareness item._  
 
-- [New Unpatched Windows 0-Day FastUnlock Lets Someone Holding a Locked PC Run Programs on It](https://thehackernews.com/2026/11/new-unpatched-windows-0-day-fastunlock.html)  
-  **The Hacker News** · Nov 20 · _General awareness item._  
-
-- [VMware patches vCenter zero-day exploited in attacks since September](https://www.bleepingcomputer.com/news/security/vmware-patches-vcenter-zero-day-exploited-in-attacks-since-september/)  
-  **BleepingComputer** · Nov 20 · _General awareness item._  
-
-- [Hackers steal data of 1.6 million SBC Medical Group customers](https://www.bleepingcomputer.com/news/security/hackers-steal-data-of-16-million-sbc-medical-group-customers/)  
-  **BleepingComputer** · Nov 19 · _Potential email disruption for users._  
-
 ---
 
 ## 🔵 FYI — General Awareness
 
-- [Windows 11 KB5132057 update released with 28 changes and fixes](https://www.bleepingcomputer.com/news/microsoft/windows-11-kb5132057-update-released-with-28-changes-and-fixes/) — BleepingComputer
-- [ROMULUS ClickFix Attacks Deliver RAT That Can Spy on Users and Control PCs](https://thehackernews.com/2026/11/romulus-clickfix-attacks-deliver-rat.html) — The Hacker News
-- [ISC Stormcast For Friday, November 20th, 2026 https://isc.sans.edu/podcastdetail/10188, (Fri, Nov 20th)](https://isc.sans.edu/diary/rss/33538) — SANS Internet Storm Center
-- [ASUS warns of critical hard-coded key flaw in Control Center Express](https://www.bleepingcomputer.com/news/security/asus-warns-of-critical-hard-coded-key-flaw-in-control-center-express/) — BleepingComputer
-- [Critical NGINX ‘NGINX2Root’ bugs let attackers hijack servers](https://www.bleepingcomputer.com/news/security/critical-nginx-nginx2root-bugs-let-attackers-hijack-servers/) — BleepingComputer
-- [StepSecurity Secures $20 Million to Expand Supply Chain Protection](https://www.securityweek.com/stepsecurity-secures-20-million-to-expand-supply-chain-protection/) — SecurityWeek
+- [Microsoft named a Leader in the 2026 Gartner® Magic Quadrant™ for SIEM](https://www.microsoft.com/en-us/security/blog/2026/11/20/microsoft-named-a-leader-in-the-2026-gartner-magic-quadrant-for-siem/) — Microsoft Security Blog
+- [Bazuka Android Malware Uses Fake Screen Overlays to Hide Credential Theft and Device Control](https://thehackernews.com/2026/11/bazuka-android-malware-uses-fake-screen.html) — The Hacker News
+- [Still tracking company passwords in spreadsheets? You’re flying blind.](https://www.bleepingcomputer.com/news/security/still-tracking-company-passwords-in-spreadsheets-youre-flying-blind/) — BleepingComputer
+- [In Other News: Norwegian Energy Firm Cyberattacks, Supercomputer Hack, New Nightmare Eclipse Exploit](https://www.securityweek.com/in-other-news-norwegian-energy-firm-cyberattacks-supercomputer-hack-new-nightmare-eclipse-exploit/) — SecurityWeek
+- [Microsoft now automatically installs Windows 11 26H2 on unmanaged devices](https://www.bleepingcomputer.com/news/microsoft/microsoft-now-automatically-installs-windows-11-26h2-on-personal-and-unmanaged-pcs/) — BleepingComputer
+- [The Path to AI Autonomy in the SOC](https://thehackernews.com/2026/11/the-path-to-ai-autonomy-in-soc.html) — The Hacker News
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 11 critical · 101 important · 40 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 12 critical · 103 important · 38 FYI_
