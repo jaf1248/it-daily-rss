@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
 **Period:** November 13 – November 20, 2026  
-**Generated:** 2026-11-20 01:01 UTC  
+**Generated:** 2026-11-20 09:38 UTC  
 **Items reviewed:** 152  
 
 ## ⚡ Top Actions This Week
@@ -55,41 +55,41 @@
 
 ## 🟠 Important — Review This Week
 
+- [N-able Blames Service Disruption on Cyberattack](https://www.securityweek.com/n-able-blames-service-disruption-on-cyberattack/)  
+  **SecurityWeek** · Nov 20 · _General awareness item._  
+
+- [Chromium: CVE-2024-7533 Use after free in Sharing](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-7532)  
+  **Microsoft Security Response Center** · Nov 20 · _General awareness item._  
+
+- [Chromium: CVE-2023-1531 Use after free in ANGLE](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-1531)  
+  **Microsoft Security Response Center** · Nov 20 · _General awareness item._  
+
+- [JPMorgan, Visa, Mastercard Cite Third-Party Incidents Amid Data Leak](https://www.securityweek.com/jpmorgan-visa-mastercard-cite-third-party-incidents-amid-data-leak/)  
+  **SecurityWeek** · Nov 20 · _General awareness item._  
+
+- [China-Linked Hackers Exploit Critical VMware vCenter Zero-Day to Gain Admin Access and Steal Data](https://thehackernews.com/2026/11/china-linked-hackers-exploit-critical.html)  
+  **The Hacker News** · Nov 20 · _General awareness item._  
+
+- [New Unpatched Windows 0-Day FastUnlock Lets Someone Holding a Locked PC Run Programs on It](https://thehackernews.com/2026/11/new-unpatched-windows-0-day-fastunlock.html)  
+  **The Hacker News** · Nov 20 · _General awareness item._  
+
 - [VMware patches vCenter zero-day exploited in attacks since September](https://www.bleepingcomputer.com/news/security/vmware-patches-vcenter-zero-day-exploited-in-attacks-since-september/)  
   **BleepingComputer** · Nov 20 · _General awareness item._  
 
 - [Hackers steal data of 1.6 million SBC Medical Group customers](https://www.bleepingcomputer.com/news/security/hackers-steal-data-of-16-million-sbc-medical-group-customers/)  
   **BleepingComputer** · Nov 19 · _Potential email disruption for users._  
 
-- [Newly Patched VMware vCenter Flaw Exploited as Zero-Day by Chinese APT](https://www.securityweek.com/newly-patched-vmware-vcenter-flaw-exploited-as-zero-day-by-chinese-apt/)  
-  **SecurityWeek** · Nov 19 · _General awareness item._  
-
-- [ThreatsDay: GPT-6.2 Jailbreak Flaws, BubbleLoader PNG Malware, $500M Ransom Demands + 17 More Stories](https://thehackernews.com/2026/11/threatsday-gpt-62-jailbreak-flaws.html)  
-  **The Hacker News** · Nov 19 · _Service continuity risk to users._  
-
-- [phpAfterShell Explained: How Hackers Could Turn a PHP Session Flaw Into Code Execution](https://thehackernews.com/2026/11/phpaftershell-explained-how-hackers.html)  
-  **The Hacker News** · Nov 19 · _General awareness item._  
-
-- [PHP security updates fix 18 flaws, including critical RCE bugs](https://www.bleepingcomputer.com/news/security/php-security-updates-fix-18-flaws-including-critical-rce-bugs/)  
-  **BleepingComputer** · Nov 19 · _General awareness item._  
-
-- [CVE-2026-105584 Windows Inventory Backup Information Disclosure Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-105584)  
-  **Microsoft Security Response Center** · Nov 19 · _General awareness item._  
-
-- [CVE-2026-95874 Xbox Gaming Services Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-95874)  
-  **Microsoft Security Response Center** · Nov 19 · _General awareness item._  
-
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [Windows 11 KB5132057 update released with 28 changes and fixes](https://www.bleepingcomputer.com/news/microsoft/windows-11-kb5132057-update-released-with-28-changes-and-fixes/) — BleepingComputer
+- [ROMULUS ClickFix Attacks Deliver RAT That Can Spy on Users and Control PCs](https://thehackernews.com/2026/11/romulus-clickfix-attacks-deliver-rat.html) — The Hacker News
+- [ISC Stormcast For Friday, November 20th, 2026 https://isc.sans.edu/podcastdetail/10188, (Fri, Nov 20th)](https://isc.sans.edu/diary/rss/33538) — SANS Internet Storm Center
 - [ASUS warns of critical hard-coded key flaw in Control Center Express](https://www.bleepingcomputer.com/news/security/asus-warns-of-critical-hard-coded-key-flaw-in-control-center-express/) — BleepingComputer
-- [Critical VMware vCenter Flaw (CVSS 9.8) Lets Network Attackers Bypass Authentication](https://thehackernews.com/2026/11/critical-vmware-vcenter-flaw-cvss-98.html) — The Hacker News
 - [Critical NGINX ‘NGINX2Root’ bugs let attackers hijack servers](https://www.bleepingcomputer.com/news/security/critical-nginx-nginx2root-bugs-let-attackers-hijack-servers/) — BleepingComputer
 - [StepSecurity Secures $20 Million to Expand Supply Chain Protection](https://www.securityweek.com/stepsecurity-secures-20-million-to-expand-supply-chain-protection/) — SecurityWeek
-- [Critical Apache Roller, Axis Vulnerabilities Exploited in Attacks](https://www.securityweek.com/critical-apache-roller-axis-vulnerabilities-exploited-in-attacks/) — SecurityWeek
-- [The Governance Gap in Open-Weight AI and What to Do About It](https://www.securityweek.com/the-governance-gap-in-open-weight-ai-and-what-to-do-about-it/) — SecurityWeek
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 12 critical · 97 important · 43 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 11 critical · 101 important · 40 FYI_
