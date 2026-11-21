@@ -1,25 +1,30 @@
 # IT Weekly Intelligence Briefing
 **Period:** November 14 – November 21, 2026  
-**Generated:** 2026-11-21 07:58 UTC  
+**Generated:** 2026-11-21 15:57 UTC  
 **Items reviewed:** 153  
 
 ## ⚡ Top Actions This Week
 
-1. **Validate backups, confirm EDR coverage, and brief incident response team.**  
+1. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
+   _FBI reportedly hacked again, this time targeting nationwide police database_  
+   Source: BleepingComputer  
+
+2. **Validate backups, confirm EDR coverage, and brief incident response team.**  
    _CTO of ‘RansomwareHelp’ Indicted for Wire Fraud_  
    Source: Krebs on Security  
 
-2. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _Bell Canada says 'agentic' hacker stole enterprise customer data_  
-   Source: BleepingComputer  
-
 3. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _Vendor data breach exposes Chase, Visa, Mastercard customer info_  
+   _Bell Canada says 'agentic' hacker stole enterprise customer data_  
    Source: BleepingComputer  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [FBI reportedly hacked again, this time targeting nationwide police database](https://www.bleepingcomputer.com/news/security/fbi-reportedly-hacked-again-this-time-targeting-nationwide-police-database/)
+**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Nov 21  
+**Why it matters:** Potential credential or data exposure.  
+**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
 ### [CTO of ‘RansomwareHelp’ Indicted for Wire Fraud](https://krebsonsecurity.com/2026/11/cto-of-ransomwarehelp-indicted-for-wire-fraud/)
 **Source:** Krebs on Security &nbsp;·&nbsp; **Date:** Nov 21  
@@ -46,14 +51,21 @@
 **Why it matters:** Potential credential or data exposure.  
 **Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
-### [European Commission Confirms AI-Assisted Cyberattack Disrupted Services](https://www.securityweek.com/european-commission-confirms-ai-assisted-cyberattack-disrupted-services/)
-**Source:** SecurityWeek &nbsp;·&nbsp; **Date:** Nov 20  
-**Why it matters:** Potential credential or data exposure.  
-**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
-
 ---
 
 ## 🟠 Important — Review This Week
+
+- [Amazon: China-Linked Hackers’ AI Agents Exploited Medical Software Zero-Day](https://www.securityweek.com/amazon-china-linked-hackers-ai-agents-exploited-medical-software-zero-day/)  
+  **SecurityWeek** · Nov 21 · _General awareness item._  
+
+- [GnuPG Warns Critical GPGME Flaw Could Expose App Data via Malicious OpenPGP Keys](https://thehackernews.com/2026/11/gnupg-warns-critical-gpgme-flaw-could.html)  
+  **The Hacker News** · Nov 21 · _General awareness item._  
+
+- [Attackers' AI Agents Found a Zero-Day in Medical-Imaging Software and Gained Root Access](https://thehackernews.com/2026/11/attackers-ai-agents-found-zero-day-in.html)  
+  **The Hacker News** · Nov 21 · _General awareness item._  
+
+- [Hackers Exploit Critical VMware, Cisco, and Apache Flaws as Espionage Attacks Emerge](https://thehackernews.com/2026/11/hackers-exploit-critical-vmware-cisco.html)  
+  **The Hacker News** · Nov 21 · _General awareness item._  
 
 - [WhatsApp Patches 3 Security Flaws, Including Android Bug Suspected of Use in Scams](https://thehackernews.com/2026/11/whatsapp-patches-3-security-flaws.html)  
   **The Hacker News** · Nov 20 · _General awareness item._  
@@ -67,29 +79,17 @@
 - [Industry Reactions to Major Outages and AI Patching Debate: Feedback Friday](https://www.securityweek.com/industry-reactions-to-major-outages-and-ai-patching-questions-feedback-friday/)  
   **SecurityWeek** · Nov 20 · _Service continuity risk to users._  
 
-- [Linux KVM Flaw CVE-2026-99312 Lets Guest VMs Access Host Memory on AMD Hosts](https://thehackernews.com/2026/11/new-linux-kvm-flaw-cve-2026-99312-lets.html)  
-  **The Hacker News** · Nov 20 · _General awareness item._  
-
-- [F5 releases emergency patches for critical BIG-IP RCE flaws](https://www.bleepingcomputer.com/news/security/f5-releases-emergency-patches-for-critical-big-ip-rce-flaws/)  
-  **BleepingComputer** · Nov 20 · _General awareness item._  
-
-- [SonicWall Warns Gen 6 Firewalls Won't Get Security Patches, Even for Critical Flaws](https://thehackernews.com/2026/11/sonicwall-warns-gen-6-firewalls-wont.html)  
-  **The Hacker News** · Nov 20 · _General awareness item._  
-
-- [Ruby Patches Ruby2Shell Vulnerability That Could Lead to RCE](https://www.securityweek.com/ruby-patches-ruby2shell-vulnerability-that-could-lead-to-rce/)  
-  **SecurityWeek** · Nov 20 · _General awareness item._  
-
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [BADBOX 3.0 botnet returns with record-breaking 40 billion daily ad requests](https://www.bleepingcomputer.com/news/security/badbox-30-botnet-returns-with-record-breaking-40-billion-daily-ad-requests/) — BleepingComputer
+- [A Single Malicious Webpage Let Researchers Hijack Meta Muse and Access Private Chats](https://thehackernews.com/2026/11/a-single-malicious-webpage-let.html) — The Hacker News
+- [Signal Blocks AI Agents From Reading Private Chats via Screenshots on Android and iOS](https://thehackernews.com/2026/11/signal-blocks-ai-agents-from-reading.html) — The Hacker News
 - [Microsoft named a Leader in the 2026 Gartner® Magic Quadrant™ for SIEM](https://www.microsoft.com/en-us/security/blog/2026/11/20/microsoft-named-a-leader-in-the-2026-gartner-magic-quadrant-for-siem/) — Microsoft Security Blog
 - [Bazuka Android Malware Uses Fake Screen Overlays to Hide Credential Theft and Device Control](https://thehackernews.com/2026/11/bazuka-android-malware-uses-fake-screen.html) — The Hacker News
 - [Still tracking company passwords in spreadsheets? You’re flying blind.](https://www.bleepingcomputer.com/news/security/still-tracking-company-passwords-in-spreadsheets-youre-flying-blind/) — BleepingComputer
-- [In Other News: Norwegian Energy Firm Cyberattacks, Supercomputer Hack, New Nightmare Eclipse Exploit](https://www.securityweek.com/in-other-news-norwegian-energy-firm-cyberattacks-supercomputer-hack-new-nightmare-eclipse-exploit/) — SecurityWeek
-- [Microsoft now automatically installs Windows 11 26H2 on unmanaged devices](https://www.bleepingcomputer.com/news/microsoft/microsoft-now-automatically-installs-windows-11-26h2-on-personal-and-unmanaged-pcs/) — BleepingComputer
-- [The Path to AI Autonomy in the SOC](https://thehackernews.com/2026/11/the-path-to-ai-autonomy-in-soc.html) — The Hacker News
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 13 critical · 103 important · 37 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 13 critical · 105 important · 35 FYI_
