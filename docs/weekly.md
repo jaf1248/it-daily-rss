@@ -1,6 +1,6 @@
 # IT Weekly Intelligence Briefing
 **Period:** November 15 – November 22, 2026  
-**Generated:** 2026-11-22 17:36 UTC  
+**Generated:** 2026-11-22 23:12 UTC  
 **Items reviewed:** 153  
 
 ## ⚡ Top Actions This Week
@@ -55,6 +55,9 @@
 
 ## 🟠 Important — Review This Week
 
+- [Hackers exploit GL.iNet cloud flaw to infect routers, KVM devices](https://www.bleepingcomputer.com/news/security/hackers-exploit-glinet-cloud-flaw-to-infect-routers-kvm-devices/)  
+  **BleepingComputer** · Nov 22 · _General awareness item._  
+
 - [Researchers Demonstrate Ghostscript Sandbox-Escape RCE via Crafted File Uploads in Popular Apps](https://thehackernews.com/2026/11/researchers-demonstrate-ghostscript.html)  
   **The Hacker News** · Nov 22 · _General awareness item._  
 
@@ -76,19 +79,16 @@
 - [Hackers use autonomous AI tool Cairn to find zero-day, take over server](https://www.bleepingcomputer.com/news/security/hackers-use-autonomous-ai-tool-cairn-to-find-zero-day-take-over-server/)  
   **BleepingComputer** · Nov 20 · _General awareness item._  
 
-- [WhatsApp Fixes Flaw Uncovered While Disrupting Scam Campaign](https://www.securityweek.com/whatsapp-fixes-flaw-uncovered-while-disrupting-scam-campaign/)  
-  **SecurityWeek** · Nov 20 · _General awareness item._  
-
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [A brief history of syslog timestamps, (Sun, Nov 22nd)](https://isc.sans.edu/diary/rss/33530) — SANS Internet Storm Center
 - [Signal to block Siri, Gemini AI from capturing chats on iOS, Android](https://www.bleepingcomputer.com/news/security/signal-to-block-siri-gemini-ai-from-capturing-chats-on-ios-android/) — BleepingComputer
 - [OpenRouter Drops 3 Providers After Researchers Catch Months of Prompt Theft at AI Hosting Firms](https://thehackernews.com/2026/11/openrouter-drops-3-providers-after.html) — The Hacker News
 - [FBI Investigating Apparent Hack of Its Key National Criminal Justice Database, AP Source Says](https://www.securityweek.com/fbi-investigating-apparent-hack-of-its-key-national-criminal-justice-database-ap-source-says/) — SecurityWeek
 - [BADBOX botnet returns with record-breaking 40 billion daily ad requests](https://www.bleepingcomputer.com/news/security/badbox-30-botnet-returns-with-record-breaking-40-billion-daily-ad-requests/) — BleepingComputer
 - [President Trump Taps Kirsten Davies as National Cyber Director](https://www.securityweek.com/president-trump-taps-kirsten-davies-as-national-cyber-director/) — SecurityWeek
-- [A Single Malicious Webpage Let Researchers Hijack Meta Muse and Access Private Chats](https://thehackernews.com/2026/11/a-single-malicious-webpage-let.html) — The Hacker News
 
 ---
 
