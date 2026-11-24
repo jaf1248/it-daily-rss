@@ -1,25 +1,30 @@
 # IT Weekly Intelligence Briefing
-**Period:** November 16 – November 23, 2026  
-**Generated:** 2026-11-23 20:15 UTC  
-**Items reviewed:** 153  
+**Period:** November 17 – November 24, 2026  
+**Generated:** 2026-11-24 03:47 UTC  
+**Items reviewed:** 151  
 
 ## ⚡ Top Actions This Week
 
 1. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _Spanish LaLiga confirms hackers stole soccer fans’ personal data_  
+   _South Korea’s power giant KEPCO confirms data breach impacting 1.5 million_  
    Source: BleepingComputer  
 
 2. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _⚡ Weekly Recap: VMware 0-Day, Java4Shell, NGINX2Root, Ruby2Shell, and a Whole Lot of Shell Trouble_  
-   Source: The Hacker News  
+   _Spanish LaLiga confirms hackers stole soccer fans’ personal data_  
+   Source: BleepingComputer  
 
 3. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _N-able Discloses Critical Mail Assure Vulnerability Found During Breach Investigation_  
+   _⚡ Weekly Recap: VMware 0-Day, Java4Shell, NGINX2Root, Ruby2Shell, and a Whole Lot of Shell Trouble_  
    Source: The Hacker News  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [South Korea’s power giant KEPCO confirms data breach impacting 1.5 million](https://www.bleepingcomputer.com/news/security/south-koreas-power-giant-kepco-confirms-data-breach-impacting-15-million/)
+**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Nov 23  
+**Why it matters:** Potential credential or data exposure.  
+**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
 ### [Spanish LaLiga confirms hackers stole soccer fans’ personal data](https://www.bleepingcomputer.com/news/security/spanish-laliga-confirms-hackers-stole-soccer-fans-personal-data/)
 **Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Nov 23  
@@ -46,11 +51,6 @@
 **Why it matters:** General awareness item.  
 **Recommended action:** Prioritize patching of affected systems; check for internet-exposed attack surface.  
 
-### [Cleverbridge warns hackers stole credit card numbers, CVVs in data breach](https://www.bleepingcomputer.com/news/security/cleverbridge-warns-hackers-stole-credit-card-numbers-cvvs-in-data-breach/)
-**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Nov 22  
-**Why it matters:** Potential credential or data exposure.  
-**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
-
 ---
 
 ## 🟠 Important — Review This Week
@@ -58,38 +58,38 @@
 - [Microsoft Azure flaw exploited to steal customers' API credentials](https://www.bleepingcomputer.com/news/security/microsoft-azure-flaw-exploited-to-steal-customers-api-credentials/)  
   **BleepingComputer** · Nov 23 · _General awareness item._  
 
-- [N-able Patches Critical Flaw Disclosed After Mail Assure Cyberattack](https://www.securityweek.com/n-able-patches-critical-flaw-disclosed-after-mail-assure-cyberattack/)  
-  **SecurityWeek** · Nov 23 · _General awareness item._  
+- [CVE-2026-69291 Windows Volume Manager Extension Driver Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69291)  
+  **Microsoft Security Response Center** · Nov 23 · _General awareness item._  
 
-- [phpAfterShell Vulnerability Revives PHP2Shell’s Attack Path](https://www.securityweek.com/phpaftershell-vulnerability-revives-php2shells-attack-path/)  
-  **SecurityWeek** · Nov 23 · _General awareness item._  
+- [CVE-2026-78462 Visual Studio Code Security Feature Bypass Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-78462)  
+  **Microsoft Security Response Center** · Nov 23 · _General awareness item._  
 
-- [Critical binary-parser Flaw Enables JavaScript Injection via Malicious Parser Definitions](https://thehackernews.com/2026/11/critical-binary-parser-flaw-enables.html)  
-  **The Hacker News** · Nov 23 · _General awareness item._  
+- [CVE-2026-72965 Windows WebClient Service Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-72965)  
+  **Microsoft Security Response Center** · Nov 23 · _General awareness item._  
 
-- [Hackers Exploit Critical ScreenConnect Flaw to Hijack MSP Technician PCs Without Warning](https://thehackernews.com/2026/11/hackers-exploit-critical-screenconnect.html)  
-  **The Hacker News** · Nov 23 · _General awareness item._  
+- [CVE-2026-87697 .NET Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-87697)  
+  **Microsoft Security Response Center** · Nov 23 · _General awareness item._  
 
-- [Microsoft confirms Windows printing issues affecting Forcepoint users](https://www.bleepingcomputer.com/news/microsoft/microsoft-confirms-printing-issues-after-kb5132043-windows-hotpatch/)  
-  **BleepingComputer** · Nov 23 · _General awareness item._  
+- [CVE-2026-70175 ASP.NET Core Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-70175)  
+  **Microsoft Security Response Center** · Nov 23 · _General awareness item._  
 
-- [Hackers Exploited GL.iNet Cloud Flaw to Install Malware on Routers and KVM Devices](https://thehackernews.com/2026/11/hackers-exploited-glinet-cloud-flaw-to.html)  
-  **The Hacker News** · Nov 23 · _General awareness item._  
+- [CVE-2026-70197 .NET and Visual Studio Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-70197)  
+  **Microsoft Security Response Center** · Nov 23 · _General awareness item._  
 
-- [Hackers exploit GL.iNet cloud flaw to infect routers, KVM devices](https://www.bleepingcomputer.com/news/security/hackers-exploit-glinet-cloud-flaw-to-infect-routers-kvm-devices/)  
-  **BleepingComputer** · Nov 22 · _General awareness item._  
+- [CVE-2026-96225 .NET Elevation of Privilege Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-96225)  
+  **Microsoft Security Response Center** · Nov 23 · _General awareness item._  
 
 ---
 
 ## 🔵 FYI — General Awareness
 
+- [Scanning from Subnet 109.160.32.0/24, (Mon, Nov 23rd)](https://isc.sans.edu/diary/rss/33550) — SANS Internet Storm Center
+- [ISC Stormcast For Tuesday, November 24th, 2026 https://isc.sans.edu/podcastdetail/10192, (Tue, Nov 24th)](https://isc.sans.edu/diary/rss/33552) — SANS Internet Storm Center
 - [OpenRouter drops AI providers over leaked prompts and secrets](https://www.bleepingcomputer.com/news/security/openrouter-drops-ai-providers-over-leaked-prompts-and-secrets/) — BleepingComputer
 - [Webworm Suspected of Modifying SoftEther VPN to Evade Detection and Hide Remote Access](https://thehackernews.com/2026/11/webworm-suspected-of-modifying.html) — The Hacker News
 - [GlobeTopper loses $2.5 million after hackers steal $70k in gift cards](https://www.bleepingcomputer.com/news/security/globetopper-loses-25-million-after-hackers-steal-70k-in-gift-cards/) — BleepingComputer
 - [Azure Flaw Exploited to Target Secrets at Norwegian Energy Firms](https://www.securityweek.com/azure-flaw-exploited-to-target-secrets-at-norwegian-energy-firms/) — SecurityWeek
-- [AI Agents Are Creating a Shared Responsibility Gap](https://www.bleepingcomputer.com/news/security/ai-agents-are-creating-a-shared-responsibility-gap/) — BleepingComputer
-- [Microsoft testing fix for Windows 11 Bluetooth audio quality drops](https://www.bleepingcomputer.com/news/microsoft/microsoft-testing-fix-for-windows-11-bluetooth-audio-quality-drops/) — BleepingComputer
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 13 critical · 95 important · 45 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 14 critical · 93 important · 44 FYI_
