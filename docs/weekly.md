@@ -1,25 +1,35 @@
 # IT Weekly Intelligence Briefing
 **Period:** November 18 – November 25, 2026  
-**Generated:** 2026-11-25 06:54 UTC  
-**Items reviewed:** 146  
+**Generated:** 2026-11-25 17:47 UTC  
+**Items reviewed:** 147  
 
 ## ⚡ Top Actions This Week
 
-1. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _An Unclassified CIA System Was Breached in a Cyberattack, AP Source Says_  
-   Source: SecurityWeek  
+1. **Prioritize patching of affected systems; check for internet-exposed attack surface.**  
+   _Hackers now exploit critical Drupal RCE flaw to hijack sites_  
+   Source: BleepingComputer  
 
 2. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _Rackspace shuts down Spot cloud platform after security breach_  
+   _Hackers reportedly breached CIA intelligence analysis system_  
    Source: BleepingComputer  
 
 3. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _Radware discloses breach exposing customer cloud access keys_  
-   Source: BleepingComputer  
+   _An Unclassified CIA System Was Breached in a Cyberattack, AP Source Says_  
+   Source: SecurityWeek  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [Hackers now exploit critical Drupal RCE flaw to hijack sites](https://www.bleepingcomputer.com/news/security/hackers-now-exploit-critical-drupal-rce-flaw-to-hijack-sites/)
+**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Nov 25  
+**Why it matters:** General awareness item.  
+**Recommended action:** Prioritize patching of affected systems; check for internet-exposed attack surface.  
+
+### [Hackers reportedly breached CIA intelligence analysis system](https://www.bleepingcomputer.com/news/security/hackers-reportedly-breached-cia-intelligence-analysis-system/)
+**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Nov 25  
+**Why it matters:** Potential credential or data exposure.  
+**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
 ### [An Unclassified CIA System Was Breached in a Cyberattack, AP Source Says](https://www.securityweek.com/an-unclassified-cia-system-was-breached-in-a-cyberattack-ap-source-says/)
 **Source:** SecurityWeek &nbsp;·&nbsp; **Date:** Nov 24  
@@ -41,55 +51,45 @@
 **Why it matters:** Potential credential or data exposure.  
 **Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
-### [European Commission Uncovers Data Breach in Cyberattack Investigation](https://www.securityweek.com/european-commission-uncovers-data-breach-in-cyberattack-investigation/)
-**Source:** SecurityWeek &nbsp;·&nbsp; **Date:** Nov 24  
-**Why it matters:** Potential credential or data exposure.  
-**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
-
-### [McDonald's Japan data breach exposes customer location information](https://www.bleepingcomputer.com/news/security/mcdonalds-japan-data-breach-exposes-customer-location-information/)
-**Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Nov 24  
-**Why it matters:** Potential credential or data exposure.  
-**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
-
 ---
 
 ## 🟠 Important — Review This Week
 
-- [VMware Updates Patch Critical ESX, vCenter Vulnerabilities](https://www.securityweek.com/vmware-updates-patch-critical-esx-vcenter-vulnerabilities/)  
-  **SecurityWeek** · Nov 24 · _General awareness item._  
+- [CISA warns of critical unpatched flaw in Danfoss refrigeration controllers](https://www.bleepingcomputer.com/news/security/cisa-warns-of-critical-unpatched-flaw-in-danfoss-refrigeration-controllers/)  
+  **BleepingComputer** · Nov 25 · _General awareness item._  
 
-- [CVE-2026-112732 Microsoft Office Visio Remote Code Execution Vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-112732)  
-  **Microsoft Security Response Center** · Nov 24 · _General awareness item._  
+- [US Treasury’s FinCEN Disconnects Systems Following Cyber Incident](https://www.securityweek.com/us-treasurys-fincen-disconnects-systems-following-cyber-incident/)  
+  **SecurityWeek** · Nov 25 · _General awareness item._  
 
-- [From Vulnerability Noise to Resilience: Rethinking Security in the AI Era](https://www.bleepingcomputer.com/news/security/from-vulnerability-noise-to-resilience-rethinking-security-in-the-ai-era/)  
-  **BleepingComputer** · Nov 24 · _Third-party/software supply chain integrity risk._  
+- [Hackers Exploit Two GeoServer Flaws as Researchers Warn of Unauthenticated RCE Chains](https://thehackernews.com/2026/11/hackers-exploit-two-geoserver-flaws-as.html)  
+  **The Hacker News** · Nov 25 · _General awareness item._  
 
-- [New Shirudo tool uses AI to shield unpatched Linux systems from exploits](https://www.bleepingcomputer.com/news/security/new-shirudo-tool-uses-ai-to-shield-unpatched-linux-systems-from-exploits/)  
-  **BleepingComputer** · Nov 24 · _General awareness item._  
+- [U.S. Treasury's Financial Crimes Agency Takes Some Systems Offline After Cyber Intrusion](https://thehackernews.com/2026/11/us-treasurys-fincen-takes-some-systems.html)  
+  **The Hacker News** · Nov 25 · _General awareness item._  
 
-- [VMware vCenter Hit by Another Critical 9.8-Rated Auth Bypass Flaw After Zero-Day Exploitation](https://thehackernews.com/2026/11/vmware-vcenter-hit-by-another-critical.html)  
-  **The Hacker News** · Nov 24 · _General awareness item._  
+- [Drupal Fail2Install Exploit Details Emerge as Critical RCE Flaw Faces Active Exploitation](https://thehackernews.com/2026/11/drupal-fail2install-exploit-details.html)  
+  **The Hacker News** · Nov 25 · _General awareness item._  
 
-- [OpenAI, Cisco Unveil Open Source Tool to Shield Unpatched Linux Systems](https://www.securityweek.com/openai-cisco-unveil-open-source-tool-to-shield-unpatched-linux-systems/)  
-  **SecurityWeek** · Nov 24 · _General awareness item._  
+- [Plagiarism Checker Turnitin Investigating Cyberattack](https://www.securityweek.com/plagiarism-checker-turnitin-investigating-cyberattack/)  
+  **SecurityWeek** · Nov 25 · _General awareness item._  
 
-- [Google Researcher Shows How a Single Bit Change in .NET Files Bypassed Windows Code Integrity](https://thehackernews.com/2026/11/google-researcher-shows-how-single-bit.html)  
-  **The Hacker News** · Nov 24 · _General awareness item._  
+- [Hackers Exploited CVSS 10.0 Hex.pm RCE Flaw to Compromise 6 Package Registry Servers](https://thehackernews.com/2026/11/hackers-exploited-cvss-100-hexpm-rce.html)  
+  **The Hacker News** · Nov 25 · _General awareness item._  
 
-- [Microsoft Fixes Azure API Management Classic Flaw as Actor Targets Customer Secrets](https://thehackernews.com/2026/11/microsoft-fixes-azure-api-management.html)  
-  **The Hacker News** · Nov 24 · _General awareness item._  
+- [Hackers Exploit Unpatched Flaw in Defunct Idunno AntiCsrf Library](https://www.securityweek.com/hackers-exploit-unpatched-flaw-in-defunct-idunno-anticsrf-library/)  
+  **SecurityWeek** · Nov 25 · _General awareness item._  
 
 ---
 
 ## 🔵 FYI — General Awareness
 
-- [WordPress Blocks Six Backdoored WP Connect Plugins Before Malicious Releases Go Live](https://thehackernews.com/2026/11/wordpress-blocks-six-backdoored-wp.html) — The Hacker News
-- [ISC Stormcast For Wednesday, November 25th, 2026 https://isc.sans.edu/podcastdetail/10194, (Wed, Nov 25th)](https://isc.sans.edu/diary/rss/33554) — SANS Internet Storm Center
-- [New Inception extortion gang launches large-scale vishing campaign](https://www.bleepingcomputer.com/news/security/new-inception-extortion-gang-launches-large-scale-vishing-campaign/) — BleepingComputer
-- [Turnitin discloses cyberattack affecting customer-facing systems](https://www.bleepingcomputer.com/news/security/turnitin-discloses-cyberattack-affecting-customer-facing-systems/) — BleepingComputer
-- [Iran-Aligned Volant Manticore Uses IPFS-Based KuboShell Backdoor in Espionage Campaigns](https://thehackernews.com/2026/11/iran-aligned-volant-manticore-uses-ipfs.html) — The Hacker News
-- [ShinyHunters claims to return after FBI arrests, uses old PGP keys as proof](https://www.bleepingcomputer.com/news/security/shinyhunters-resurfaces-after-fbi-arrests-uses-old-pgp-keys-as-proof/) — BleepingComputer
+- [Microsoft named a Leader in the 2026 Gartner® Magic Quadrant™ for Email Security](https://www.microsoft.com/en-us/security/blog/2026/11/25/microsoft-named-a-leader-in-the-2026-gartner-magic-quadrant-for-email-security/) — Microsoft Security Blog
+- [Two Newly Disclosed GeoServer Vulnerabilities Under Attack](https://www.securityweek.com/two-newly-disclosed-geoserver-vulnerabilities-under-attack/) — SecurityWeek
+- [More Pentests Without More Pentesters: Where AI Safely Helps](https://www.bleepingcomputer.com/news/security/more-pentests-without-more-pentesters-where-ai-safely-helps/) — BleepingComputer
+- [InfraTrust warns of exploited supply chain flaws in network appliances](https://www.bleepingcomputer.com/news/security/infratrust-warns-of-exploited-supply-chain-flaws-in-network-appliances/) — BleepingComputer
+- [ShinyHunters Claims Comeback, New Inception Group Rejects Alleged Ties](https://www.securityweek.com/shinyhunters-claims-comeback-new-inception-group-rejects-alleged-ties/) — SecurityWeek
+- [Ground Truth: CISO Matt Martin on Building a Real Security Program Without an Enterprise Budget](https://www.securityweek.com/ground-truth-ciso-matt-martin-on-building-a-real-security-program-without-an-enterprise-budget/) — SecurityWeek
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 17 critical · 92 important · 37 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 13 critical · 95 important · 39 FYI_
