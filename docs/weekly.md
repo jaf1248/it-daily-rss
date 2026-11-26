@@ -1,25 +1,30 @@
 # IT Weekly Intelligence Briefing
 **Period:** November 19 – November 26, 2026  
-**Generated:** 2026-11-26 10:25 UTC  
-**Items reviewed:** 145  
+**Generated:** 2026-11-26 19:58 UTC  
+**Items reviewed:** 98  
 
 ## ⚡ Top Actions This Week
 
 1. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
+   _1Password Hacked, Customer Data and Source Code Stolen in GitHub Account Breach_  
+   Source: The Hacker News  
+
+2. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
    _1Password Breach Exposes Customer Data, Internal Source Code_  
    Source: SecurityWeek  
 
-2. **Review and assess impact on your environment.**  
+3. **Review and assess impact on your environment.**  
    _Drupal Warns of New Highly Critical Site Takeover Vulnerability Under Active Exploitation_  
-   Source: The Hacker News  
-
-3. **Verify no credential overlap; confirm DLP and SIEM alerting is active.**  
-   _1Password Hacked, Customer Data and Source Code Stolen in GitHub Account Breach_  
    Source: The Hacker News  
 
 ---
 
 ## 🔴 Critical — Immediate Awareness
+
+### [1Password Hacked, Customer Data and Source Code Stolen in GitHub Account Breach](https://thehackernews.com/2026/11/1password-hacked-customer-data-and.html)
+**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Nov 26  
+**Why it matters:** Potential credential or data exposure.  
+**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
 ### [1Password Breach Exposes Customer Data, Internal Source Code](https://www.securityweek.com/1password-breach-exposes-customer-data-internal-source-code/)
 **Source:** SecurityWeek &nbsp;·&nbsp; **Date:** Nov 26  
@@ -30,11 +35,6 @@
 **Source:** The Hacker News &nbsp;·&nbsp; **Date:** Nov 26  
 **Why it matters:** General awareness item.  
 **Recommended action:** Review and assess impact on your environment.  
-
-### [1Password Hacked, Customer Data and Source Code Stolen in GitHub Account Breach](https://thehackernews.com/2026/11/1password-hacked-customer-data-and.html)
-**Source:** The Hacker News &nbsp;·&nbsp; **Date:** Nov 26  
-**Why it matters:** Potential credential or data exposure.  
-**Recommended action:** Verify no credential overlap; confirm DLP and SIEM alerting is active.  
 
 ### [1Password customer data stolen after employee GitHub account breach](https://www.bleepingcomputer.com/news/security/1password-customer-data-stolen-after-employee-github-account-breach/)
 **Source:** BleepingComputer &nbsp;·&nbsp; **Date:** Nov 25  
@@ -55,6 +55,15 @@
 
 ## 🟠 Important — Review This Week
 
+- [Remus malware steals Gmail messages via fake Google Sheets extension](https://www.bleepingcomputer.com/news/security/remus-malware-steals-gmail-messages-via-fake-google-sheets-extension/)  
+  **BleepingComputer** · Nov 26 · _General awareness item._  
+
+- [Critical Juniper Session Smart Conductor Flaw Exploited in Attacks](https://www.securityweek.com/critical-juniper-session-smart-conductor-flaw-exploited-in-attacks/)  
+  **SecurityWeek** · Nov 26 · _General awareness item._  
+
+- [Mitel MiCollab Zero-Days Exploited in Suspected AI-Assisted Attacks](https://www.securityweek.com/mitel-micollab-zero-days-exploited-in-suspected-ai-assisted-attacks/)  
+  **SecurityWeek** · Nov 26 · _General awareness item._  
+
 - [Drupal Installer Patch Left a Gap Attackers Are Already Exploiting](https://www.securityweek.com/drupal-installer-patch-left-a-gap-attackers-are-already-exploiting/)  
   **SecurityWeek** · Nov 26 · _General awareness item._  
 
@@ -70,26 +79,17 @@
 - [Hackers Exploit Two GeoServer Flaws as Researchers Warn of Unauthenticated RCE Chains](https://thehackernews.com/2026/11/hackers-exploit-two-geoserver-flaws-as.html)  
   **The Hacker News** · Nov 25 · _General awareness item._  
 
-- [U.S. Treasury's Financial Crimes Agency Takes Some Systems Offline After Cyber Intrusion](https://thehackernews.com/2026/11/us-treasurys-fincen-takes-some-systems.html)  
-  **The Hacker News** · Nov 25 · _General awareness item._  
-
-- [Drupal Fail2Install Exploit Details Emerge as Critical RCE Flaw Faces Active Exploitation](https://thehackernews.com/2026/11/drupal-fail2install-exploit-details.html)  
-  **The Hacker News** · Nov 25 · _General awareness item._  
-
-- [Plagiarism Checker Turnitin Investigating Cyberattack](https://www.securityweek.com/plagiarism-checker-turnitin-investigating-cyberattack/)  
-  **SecurityWeek** · Nov 25 · _General awareness item._  
-
 ---
 
 ## 🔵 FYI — General Awareness
 
-- [13 Malicious NuGet Packages Turn Fake .NET Job Assessments Into Malware Delivery Traps](https://thehackernews.com/2026/11/13-malicious-nuget-packages-turn-fake.html) — The Hacker News
-- [Palo Alto Networks warns of Fragnesia flaw exploited in PAN-OS attacks](https://www.bleepingcomputer.com/news/security/palo-alto-networks-warns-of-fragnesia-flaw-exploited-in-pan-os-attacks/) — BleepingComputer
-- [Italy and Switzerland warn of autonomous AI-driven cyberattacks](https://www.bleepingcomputer.com/news/security/italy-and-switzerland-warn-of-autonomous-ai-driven-cyberattacks/) — BleepingComputer
-- [What defenders need to know about ARTEX, the agentic AI framework threat actors abuse](https://www.microsoft.com/en-us/security/blog/2026/11/25/what-defenders-need-to-know-artex-agentic-ai-framework-threat-actors-abuse/) — Microsoft Security Blog
-- [Microsoft named a Leader in the 2026 Gartner® Magic Quadrant™ for Email Security](https://www.microsoft.com/en-us/security/blog/2026/11/25/microsoft-named-a-leader-in-the-2026-gartner-magic-quadrant-for-email-security/) — Microsoft Security Blog
-- [Two Newly Disclosed GeoServer Vulnerabilities Under Attack](https://www.securityweek.com/two-newly-disclosed-geoserver-vulnerabilities-under-attack/) — SecurityWeek
+- [NordVPN Black Friday Deal: Get 78% off VPN plans in 2026](https://www.bleepingcomputer.com/news/security/nordvpn-black-friday-deal-get-78-percent-off-vpn-plans-in-2026/) — BleepingComputer
+- [Fake paid expert interviews impersonate brands to steal Google logins](https://www.bleepingcomputer.com/news/apple/fake-paid-expert-interviews-impersonate-brands-to-steal-google-logins/) — BleepingComputer
+- [FIFA Says It Has Been Victim of a Cyberattack Accessing ‘Personal and Business Information’](https://www.securityweek.com/fifa-says-it-has-been-victim-of-a-cyberattack-accessing-personal-and-business-information/) — SecurityWeek
+- [North Korea-Linked PolinRider Poisons Over 7,600 GitHub Repositories to Spread Malware](https://thehackernews.com/2026/11/north-korea-linked-polinrider-poisons.html) — The Hacker News
+- [SYS010 malware abuses browser management to spy on Gmail, Outlook](https://www.bleepingcomputer.com/news/security/sys010-malware-abuses-browser-management-to-spy-on-gmail-outlook/) — BleepingComputer
+- [Most Wanted: The Phishing Kits and Techniques Getting Past Security Controls](https://thehackernews.com/2026/11/most-wanted-phishing-kits-and.html) — The Hacker News
 
 ---
 
-_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 14 critical · 92 important · 39 FYI_
+_Auto-generated by [it-daily-rss](https://jaf1248.github.io/it-daily-rss/) · 13 critical · 43 important · 42 FYI_
